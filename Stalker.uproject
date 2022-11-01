@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{87DC6DFD-4B42-14D1-6A38-CA8F8C9F0966}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "Stalker",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		},
+		{
+			"Name": "XRayEngineCore",
+			"Enabled": false
+		}
+	]
+}
