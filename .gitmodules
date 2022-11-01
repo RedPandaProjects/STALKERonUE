@@ -1,0 +1,3 @@
+[submodule "Plugins/XRayEngine/Source/ThirdParty"]
+	path = Plugins/XRayEngine/Source/ThirdParty
+	url = https://github.com/RedPandaProjects/XRayEngine
