@@ -4,7 +4,6 @@
 #include "XrCore/stdafx.h"
 #include "Async/AsyncWork.h"
 #include "Core/XRayMemory.h"
-XRayMemory GXRayMemory;
 #define LOCTEXT_NAMESPACE "FXRayEngineModule"
 
 ENGINE_API int EngineLaunch(EGamePath Game);
@@ -28,8 +27,6 @@ public:
 	/*This function is executed when we tell our task to execute*/
 	void DoWork()
 	{
-		MemoryInterface = &GXRayMemory;
-		Core._initialize("xray", NULL, TRUE, "E:\\GameDev\\Perforce\\Stalker\\fsgame.ltx", false, EGamePath::COP_1602);
 		EngineLaunch(EGamePath::NONE);
 		GLog->Log("--------------------------------------------------------------------");
 		GLog->Log("End of prime numbers calculation on background thread");
@@ -39,12 +36,15 @@ public:
 
 void FXRayEngineModule::StartupModule()
 {
+	GXRayMemory = new XRayMemory;
+	Core.Initialize(GXRayMemory, "E:\\GameDev\\Perforce\\Stalker\\fsgame.ltx", false, EGamePath::COP_1602);
 	(new FAutoDeleteAsyncTask<PrimeCalculationAsyncTask>())->StartBackgroundTask();
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 }
 
 void FXRayEngineModule::ShutdownModule()
 {
+	delete GXRayMemory;
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
 }
