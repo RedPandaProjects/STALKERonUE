@@ -1,11 +1,12 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "XRayEngine.h"
-#include "XrCore/stdafx.h"
-#include "Async/AsyncWork.h"
+#include "XRayEngineModule.h"
 #include "Core/XRayMemory.h"
+#include "Core/XRayLog.h"
+#include "Core/XRayDebug.h"
 #define LOCTEXT_NAMESPACE "FXRayEngineModule"
 
+DEFINE_LOG_CATEGORY(LogXRayEngine);
 ENGINE_API int EngineLaunch(EGamePath Game);
 /*PrimeCalculateAsyncTask is the name of our task
 FNonAbandonableTask is the name of the class I've located from the source code of the engine*/
@@ -37,16 +38,27 @@ public:
 void FXRayEngineModule::StartupModule()
 {
 	GXRayMemory = new XRayMemory;
-	Core.Initialize(GXRayMemory, "E:\\GameDev\\Perforce\\Stalker\\fsgame.ltx", false, EGamePath::COP_1602);
-	(new FAutoDeleteAsyncTask<PrimeCalculationAsyncTask>())->StartBackgroundTask();
-	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	GXRayDebug = new XRayDebug;
+	GXRayLog = new XRayLog;
+	FString FSName = FPaths::GetProjectFilePath();
+	if (GIsEditor)
+	{
+		FSName = FPaths::Combine(FSName, TEXT("fs.ltx"));
+	}
+	else
+	{
+		FSName = FPaths::Combine(FSName, TEXT("fsgame.ltx"));
+	}
+	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), false, EGamePath::COP_1602);
+	//(new FAutoDeleteAsyncTask<PrimeCalculationAsyncTask>())->StartBackgroundTask();
 }
 
 void FXRayEngineModule::ShutdownModule()
 {
+	Core.Destroy();
 	delete GXRayMemory;
-	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
-	// we call this function before unloading the module.
+	delete GXRayDebug;
+	delete GXRayLog;
 }
 
 #undef LOCTEXT_NAMESPACE

@@ -1,9 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-#include "XRayEngine.h"
-#include "CoreMinimal.h"
-#include "Modules/ModuleManager.h"
 
 class FXRayEngineModule : public IModuleInterface
 {
@@ -13,5 +10,7 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 private:
-	class XRayMemory*  GXRayMemory;
+	class XRayMemory*	GXRayMemory;
+	class XRayLog*		GXRayLog;
+	class XRayDebug*	GXRayDebug;
 };
