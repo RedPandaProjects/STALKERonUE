@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
-
+#include "XRayEngine.h"
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 

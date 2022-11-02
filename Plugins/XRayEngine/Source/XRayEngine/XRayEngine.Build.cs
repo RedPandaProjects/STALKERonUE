@@ -26,6 +26,8 @@ public class XRayEngine : ModuleRules
 			new string[]
 			{
 				"Core",
+                "Engine",
+                "XRayEngineModules",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -34,10 +36,9 @@ public class XRayEngine : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"CoreUObject",
-				"Engine",
-				"Slate",
-				"SlateCore",
+                "CoreUObject",
+                "Slate",
+                "SlateCore",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
