@@ -17,8 +17,14 @@
 	"Modules": [
 		{
 			"Name": "XRayImporter",
-			"Type": "Runtime",
+			"Type": "Editor",
 			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "XRayEngine",
+			"Enabled": true
 		}
 	]
 }

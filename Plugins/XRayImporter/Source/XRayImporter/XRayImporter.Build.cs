@@ -6,9 +6,10 @@ public class XRayImporter : ModuleRules
 {
 	public XRayImporter(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
-		PublicIncludePaths.AddRange(
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        PrivatePCHHeaderFile = "Private/XRayImporterPCH.h";
+
+        PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
 			}
@@ -38,6 +39,20 @@ public class XRayImporter : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "Engine",
+                "Slate",
+                "SlateCore",
+                "RenderCore",
+                "Projects",
+                "UnrealEd",
+                "InputCore",
+                "MeshDescription",
+                "StaticMeshDescription",
+                "MaterialEditor",
+                "MaterialUtilities",
+                "XRayEngine",
+                "XRayEngineModules",
+                "XRayEditorModules",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -1,8 +1,9 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "XRayImporter.h"
+#include "XRayImporterModule.h"
 
 #define LOCTEXT_NAMESPACE "FXRayImporterModule"
+DEFINE_LOG_CATEGORY(LogXRayImporter);
 
 void FXRayImporterModule::StartupModule()
 {

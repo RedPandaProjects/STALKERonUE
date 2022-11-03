@@ -40,7 +40,7 @@ void FXRayEngineModule::StartupModule()
 	GXRayMemory = new XRayMemory;
 	GXRayDebug = new XRayDebug;
 	GXRayLog = new XRayLog;
-	FString FSName = FPaths::GetProjectFilePath();
+	FString FSName = FPaths::ProjectDir();
 	if (GIsEditor)
 	{
 		FSName = FPaths::Combine(FSName, TEXT("fs.ltx"));
@@ -49,7 +49,7 @@ void FXRayEngineModule::StartupModule()
 	{
 		FSName = FPaths::Combine(FSName, TEXT("fsgame.ltx"));
 	}
-	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), false, EGamePath::COP_1602);
+	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, EGamePath::COP_1602);
 	//(new FAutoDeleteAsyncTask<PrimeCalculationAsyncTask>())->StartBackgroundTask();
 }
 
