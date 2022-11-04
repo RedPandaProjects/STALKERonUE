@@ -155,6 +155,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	}
 	UPackage* AssetPackage = CreatePackage(*Path);
 	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), ObjectFlags);
+	FAssetRegistryModule::AssetCreated(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
 
 	FStaticParameterSet NewStaticParameterSet;
@@ -213,7 +214,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 			{
 				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Height")), HeightTexture);
 			}
-			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height);
+			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height/5.f);
 		}
 		if (THM._Format().detail_name.size())
 		{
@@ -353,8 +354,8 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	ImageBumpError.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
 
 	NormalMapImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight());
-	SpecularImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight());
-	HeightImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight());
+	SpecularImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(),1,1,RedImageTool::RedTexturePixelFormat::R8);
+	HeightImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(), 1,1,RedImageTool::RedTexturePixelFormat::R8);
 
 	for (size_t x = 0; x < ImageBump.GetWidth(); x++)
 	{
@@ -376,9 +377,28 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 			HeightImage.SetPixel(HeightPixel, x, y);
 		}
 	}
+	float MaxHeight = 0;
+	for (size_t x = 0; x < ImageBump.GetWidth(); x++)
+	{
+		for (size_t y = 0; y < ImageBump.GetHeight(); y++)
+		{
+			RedImageTool::RedColor Pixel = HeightImage.GetPixel(x, y);
+			MaxHeight = std::max(Pixel.R32F, MaxHeight);
+		}
+	}
+	for (size_t x = 0; x < ImageBump.GetWidth(); x++)
+	{
+		for (size_t y = 0; y < ImageBump.GetHeight(); y++)
+		{
+			RedImageTool::RedColor Pixel = HeightImage.GetPixel(x, y);
+			Pixel.R32F = Pixel.R32F/ MaxHeight;
+			Pixel.SetAsFloat(Pixel.R32F, Pixel.R32F, Pixel.R32F, Pixel.R32F);
+			HeightImage.SetPixel(Pixel,x,y);
+		}
+	}
 	NormalMapImage.SwapRB();
-	SpecularImage.SwapRB();
-	HeightImage.SwapRB();
+	//SpecularImage.SwapRB();
+	//HeightImage.SwapRB();
 	if (!NormalMap)
 	{
 		UPackage* AssetPackage = CreatePackage(*PackageName);
@@ -386,8 +406,9 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		FAssetRegistryModule::AssetCreated(NormalMap);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 		NormalMapImage.GenerateMipmap();
-		NormalMap->Source.Init(NormalMapImage.GetWidth(), NormalMapImage.GetHeight(), 1, NormalMapImage.GetMips(), SourceFormat, (uint8*)*NormalMapImage);
 		NormalMap->CompressionSettings = TextureCompressionSettings::TC_Normalmap;
+		NormalMap->SRGB = false;
+		NormalMap->Source.Init(NormalMapImage.GetWidth(), NormalMapImage.GetHeight(), 1, NormalMapImage.GetMips(), SourceFormat, (uint8*)*NormalMapImage);
 		NormalMap->MarkPackageDirty();
 		NormalMap->PostEditChange();
 	}
@@ -396,22 +417,25 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		UPackage* AssetPackage = CreatePackage(*PackageNameSpecular);
 		Specular = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameSpecular), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(Specular);
-		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
+		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
 		SpecularImage.GenerateMipmap();
+		Specular->CompressionSettings = TextureCompressionSettings::TC_Alpha;
+		Specular->SRGB = false;
 		Specular->Source.Init(SpecularImage.GetWidth(), SpecularImage.GetHeight(), 1, SpecularImage.GetMips(), SourceFormat, (uint8*)*SpecularImage);
-		Specular->CompressionSettings = TextureCompressionSettings::TC_Grayscale;
 		Specular->MarkPackageDirty();
 		Specular->PostEditChange();
 	}
 	if (!Height)
 	{
+		
 		UPackage* AssetPackage = CreatePackage(*PackageNameHeight);
 		Height = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameHeight), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(Specular);
-		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
+		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
 		HeightImage.GenerateMipmap();
+		Height->CompressionSettings = TextureCompressionSettings::TC_Alpha;
+		Height->SRGB = false;
 		Height->Source.Init(HeightImage.GetWidth(), HeightImage.GetHeight(), 1, HeightImage.GetMips(), SourceFormat, (uint8*)*HeightImage);
-		Height->CompressionSettings = TextureCompressionSettings::TC_Grayscale;
 		Height->MarkPackageDirty();
 		Height->PostEditChange();
 	}
