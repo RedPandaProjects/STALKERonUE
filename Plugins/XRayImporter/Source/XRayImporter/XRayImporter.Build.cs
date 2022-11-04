@@ -53,6 +53,7 @@ public class XRayImporter : ModuleRules
                 "XRayEngine",
                 "XRayEngineModules",
                 "XRayEditorModules",
+                "RedImage",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

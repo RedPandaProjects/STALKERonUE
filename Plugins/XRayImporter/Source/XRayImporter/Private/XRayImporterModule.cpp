@@ -5,15 +5,29 @@
 #define LOCTEXT_NAMESPACE "FXRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
 
+static void* RedImageMemoryAllocationFunction(void* pointer, size_t size)
+{
+	if (!size)
+	{
+		FMemory::Free(pointer);
+		return nullptr;
+	}
+	if (pointer)
+	{
+		return 	FMemory::Realloc(pointer, size);
+	}
+	return FMemory::Malloc(size);
+}
+
 void FXRayImporterModule::StartupModule()
 {
-	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	Lib.OnCreate();
+	RedImageTool::MemoryAllocationFunction = &RedImageMemoryAllocationFunction;
 }
 
 void FXRayImporterModule::ShutdownModule()
 {
-	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
-	// we call this function before unloading the module.
+	Lib.OnDestroy();
 }
 
 #undef LOCTEXT_NAMESPACE

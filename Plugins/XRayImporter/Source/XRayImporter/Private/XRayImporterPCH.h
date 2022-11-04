@@ -84,5 +84,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrECore/Editor/ImageManager.h"
 #include "XrECore/Editor/EditMesh.h"
 #include "XrECore/Editor/EditObject.h"
+#include "XrECore/Editor/Library.h"
+#include "RedImageTool/RedImage.hpp"
 THIRD_PARTY_INCLUDES_END
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);

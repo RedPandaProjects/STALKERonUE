@@ -27,7 +27,7 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
 	XRayEngineFactory Factory(ParentPackage, Flags);
-	Object = Factory.ImportObjectAsStaticMesh(Filename);
+	Object = Factory.ImportObject(Filename);
 	if (!IsValid(Object))
 	{
 		bOutOperationCanceled = true;
