@@ -193,7 +193,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 		default:
 			break;
 		}
-		if (THM._Format().bump_mode == STextureParams::tbmUse)
+		if (THM._Format().bump_mode == STextureParams::tbmUse|| THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
 			FStaticSwitchParameter SwitchParameter;
 			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
@@ -257,6 +257,10 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 				}
 			}
 		}
+	}
+	else
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), Surface->_Texture());
 	}
 	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
 	NewMaterial->InitStaticPermutation();
