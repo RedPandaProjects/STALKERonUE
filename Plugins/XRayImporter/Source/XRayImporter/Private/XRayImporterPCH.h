@@ -87,4 +87,10 @@ THIRD_PARTY_INCLUDES_START
 #include "XrECore/Editor/Library.h"
 #include "RedImageTool/RedImage.hpp"
 THIRD_PARTY_INCLUDES_END
+#include "Scene/ESceneClassList.h"
+#include "Scene/iniStreamImpl.h"
+#include "Scene/Entitys/CustomObject.h"
+#include "Scene/Tools/Base/ESceneCustomMTools.h"
+#include "Scene/Tools/Base/ESceneCustomOTools.h"
+#include "Scene/Scene.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);

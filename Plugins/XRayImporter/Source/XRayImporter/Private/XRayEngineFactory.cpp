@@ -30,8 +30,17 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 {
 	UStaticMesh* StaticMesh = nullptr;
 
-	const FString FileName = Object->GetName();
-	const FString PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
+	FString FileName = Object->GetName();
+	FString PackageName;
+	if (UseOnlyFullPath)
+	{
+		FileName.ReplaceCharInline(TEXT('\\'),TEXT('/'));
+		PackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Meshes") / FPaths::GetBaseFilename(FileName,false));
+	}
+	else
+	{
+		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
+	}
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath);
 	if(StaticMesh)
@@ -40,6 +49,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	UPackage* AssetPackage = CreatePackage(*PackageName);
 	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
 	FAssetRegistryModule::AssetCreated(StaticMesh);
+	ObjectCreated.Add(StaticMesh);
 	TArray<FStaticMaterial> Materials;
 	FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
 	int32 MaterialIndex = 0;
@@ -149,6 +159,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
 		NewParentMaterial->Parent = UnkownMaterial;
 		FAssetRegistryModule::AssetCreated(NewParentMaterial);
+		ObjectCreated.Add(NewParentMaterial);
 		NewParentMaterial->PostEditChange();
 		NewParentMaterial->MarkPackageDirty();
 		ParentMaterial = NewParentMaterial;
@@ -156,6 +167,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	UPackage* AssetPackage = CreatePackage(*Path);
 	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), ObjectFlags);
 	FAssetRegistryModule::AssetCreated(NewMaterial);
+	ObjectCreated.Add(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
 
 	FStaticParameterSet NewStaticParameterSet;
@@ -293,6 +305,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	UPackage* AssetPackage = CreatePackage(*PackageName);
 	Texture2D = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
 	FAssetRegistryModule::AssetCreated(Texture2D);
+	ObjectCreated.Add(Texture2D);
 	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
 	size_t CountPixel = Image.GetSizeInMemory()/4;
 	for (size_t x = 0; x < CountPixel; x++)
@@ -408,6 +421,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		UPackage* AssetPackage = CreatePackage(*PackageName);
 		NormalMap = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(NormalMap);
+		ObjectCreated.Add(NormalMap);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 		NormalMapImage.GenerateMipmap();
 		NormalMap->CompressionSettings = TextureCompressionSettings::TC_Normalmap;
@@ -421,6 +435,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		UPackage* AssetPackage = CreatePackage(*PackageNameSpecular);
 		Specular = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameSpecular), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(Specular);
+		ObjectCreated.Add(Specular);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
 		SpecularImage.GenerateMipmap();
 		Specular->CompressionSettings = TextureCompressionSettings::TC_Alpha;
@@ -434,7 +449,8 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		
 		UPackage* AssetPackage = CreatePackage(*PackageNameHeight);
 		Height = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameHeight), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(Specular);
+		FAssetRegistryModule::AssetCreated(Height);
+		ObjectCreated.Add(Height);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
 		HeightImage.GenerateMipmap();
 		Height->CompressionSettings = TextureCompressionSettings::TC_Alpha;

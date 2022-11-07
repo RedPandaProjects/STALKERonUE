@@ -1,9 +1,5 @@
 #pragma once
 #include "XRayObjectImporterFactory.generated.h"
-/**
- *
- */
-
 UCLASS(transient)
 class UXRayObjectImporterFactory : public UFactory
 {
