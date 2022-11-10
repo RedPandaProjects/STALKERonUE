@@ -23,7 +23,7 @@ void FXRayImporterModule::StartupModule()
 {
 	Lib.OnCreate();
 	RedImageTool::MemoryAllocationFunction = &RedImageMemoryAllocationFunction;
-	for (float x = 0; x < 360.f; x += 30.f)
+	/*for (float x = 0; x < 360.f; x += 30.f)
 	{
 		for (float y = 0; y < 360.f; y += 30.f)
 		{
@@ -47,7 +47,7 @@ void FXRayImporterModule::StartupModule()
 				UE_LOG(LogXRayImporter, Log, TEXT("Rotation [%s] Matrix[%s] XRay Matrxi[%s]"), *Rotation.ToString(), *UTest.ToString(), *XUTest.ToString());
 			}
 		}
-	}
+	}*/
 }
 
 void FXRayImporterModule::ShutdownModule()

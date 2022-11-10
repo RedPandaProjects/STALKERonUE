@@ -4,39 +4,16 @@
 #include "Core/XRayMemory.h"
 #include "Core/XRayLog.h"
 #include "Core/XRayDebug.h"
+#include "Core/XRayEngine.h"
+#include "Base/ResourcesManager/XRayResourcesManager.h"
 #define LOCTEXT_NAMESPACE "FXRayEngineModule"
-
 DEFINE_LOG_CATEGORY(LogXRayEngine);
-ENGINE_API int EngineLaunch(EGamePath Game);
-/*PrimeCalculateAsyncTask is the name of our task
-FNonAbandonableTask is the name of the class I've located from the source code of the engine*/
-class PrimeCalculationAsyncTask : public FNonAbandonableTask
-{
-public:
-	/*Default constructor*/
-	PrimeCalculationAsyncTask()
-	{
-	}
-
-	/*This function is needed from the API of the engine.
-	My guess is that it provides necessary information
-	about the thread that we occupy and the progress of our task*/
-	FORCEINLINE TStatId GetStatId() const
-	{
-		RETURN_QUICK_DECLARE_CYCLE_STAT(PrimeCalculationAsyncTask, STATGROUP_ThreadPoolAsyncTasks);
-	}
-	/*This function is executed when we tell our task to execute*/
-	void DoWork()
-	{
-		EngineLaunch(EGamePath::NONE);
-		GLog->Log("--------------------------------------------------------------------");
-		GLog->Log("End of prime numbers calculation on background thread");
-		GLog->Log("--------------------------------------------------------------------");
-	}
-};
 
 void FXRayEngineModule::StartupModule()
 {
+	GXRayResourcesManager = NewObject< UXRayResourcesManager>();
+	GXRayResourcesManager->AddToRoot();
+
 	GXRayMemory = new XRayMemory;
 	GXRayDebug = new XRayDebug;
 	GXRayLog = new XRayLog;
@@ -50,15 +27,22 @@ void FXRayEngineModule::StartupModule()
 		FSName = FPaths::Combine(FSName, TEXT("fsgame.ltx"));
 	}
 	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, EGamePath::COP_1602);
-	//(new FAutoDeleteAsyncTask<PrimeCalculationAsyncTask>())->StartBackgroundTask();
+
+	g_Engine = new XRayEngine;
+	g_Engine->Initialize();
+
 }
 
 void FXRayEngineModule::ShutdownModule()
 {
+	g_Engine->Destroy();
+	delete g_Engine;
 	Core.Destroy();
 	delete GXRayMemory;
 	delete GXRayDebug;
 	delete GXRayLog;
+
+	GXRayResourcesManager->RemoveFromRoot();
 }
 
 #undef LOCTEXT_NAMESPACE

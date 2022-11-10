@@ -1,6 +1,6 @@
-#include "XRayObjectImporterFactory.h"
+#include "XRayTextureTHMImporterFactory.h"
 #include "XRayEngineFactory.h"
-UXRayObjectImporterFactory::UXRayObjectImporterFactory(const FObjectInitializer& ObjectInitializer)
+UXRayTextureTHMImporterFactory::UXRayTextureTHMImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bCreateNew = false;
@@ -10,11 +10,11 @@ UXRayObjectImporterFactory::UXRayObjectImporterFactory(const FObjectInitializer&
 
 	SupportedClass = ULevel::StaticClass();
 
-	Formats.Add(TEXT("object;XRayObject"));
+	Formats.Add(TEXT("thm;XRay Texture THM"));
 }
 
 
-UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
+UObject* UXRayTextureTHMImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 {
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();
@@ -27,7 +27,7 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
 	XRayEngineFactory Factory(ParentPackage, Flags);
-	Object = Factory.ImportObject(Filename);
+	Object = Factory.ImportTextureTHM(Filename);
 	if (!IsValid(Object))
 	{
 		bOutOperationCanceled = true;
@@ -37,22 +37,17 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 	return Object;
 }
 
-void UXRayObjectImporterFactory::CleanUp()
+void UXRayTextureTHMImporterFactory::CleanUp()
 {
 
 }
 
-bool UXRayObjectImporterFactory::FactoryCanImport(const FString& Filename)
+bool UXRayTextureTHMImporterFactory::FactoryCanImport(const FString& Filename)
 {
 	const FString Extension = FPaths::GetExtension(Filename);
-	if (Extension == TEXT("object"))
+	if (Extension == TEXT("thm"))
 	{
-		CEditableObject Test("Test");
-		if (Test.Load(TCHAR_TO_ANSI(*Filename)))
-		{
-			return true;
-		}
-		return false;
+		return true;
 	}
 	return false;
 }

@@ -247,7 +247,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 				{
 					NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
 				}
-				if (THM._Format().bump_mode == STextureParams::tbmUse)
+				if (THMDetail._Format().bump_mode == STextureParams::tbmUse|| THMDetail._Format().bump_mode == STextureParams::tbmUse)
 				{
 					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
 					SwitchParameter.Value = true;
@@ -279,6 +279,63 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	NewMaterial->PostEditChange();
 	NewMaterial->MarkPackageDirty();
 	return NewMaterial;
+}
+
+UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
+{
+
+	string_path TexturesGamedataPath;
+	FCStringAnsi::Strcpy(TexturesGamedataPath,  FS.get_path(_game_textures_)->m_Path);
+	FString FileName = InFileName;
+	for (int32 i = 0; TexturesGamedataPath[i]; i++)
+	{
+		if (TexturesGamedataPath[i] == '\\')
+		{
+			TexturesGamedataPath[i] = '/';
+		}
+	}
+	if (!FileName.StartsWith(TexturesGamedataPath, ESearchCase::IgnoreCase))
+	{
+		return nullptr;
+	}
+	FileName.RightChopInline(FCStringAnsi::Strlen(TexturesGamedataPath));
+	while (FileName[0] &&  FileName[0] == TEXT('/'))
+	{
+		FileName.RemoveAt(0);
+	}
+
+	ETextureThumbnail THM(TCHAR_TO_ANSI(*FileName));
+	if (THM.Load(TCHAR_TO_ANSI(*FileName)))
+	{
+		TObjectPtr<UTexture2D> BaseTexture = ImportTexture(FPaths::GetBaseFilename(FileName, false));
+		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
+		{
+			TObjectPtr<UTexture2D> NormalMapTexture;
+			TObjectPtr<UTexture2D> SpecularTexture;
+			TObjectPtr<UTexture2D> HeightTexture;
+			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, SpecularTexture, HeightTexture);
+		}
+		if (THM._Format().detail_name.size())
+		{
+			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
+			TObjectPtr<UTexture2D> NormalMapTextureDetail;
+			TObjectPtr<UTexture2D> SpecularTextureDetail;
+			TObjectPtr<UTexture2D> HeightTextureDetail;
+
+			ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
+			if (THMDetail.Load(THM._Format().detail_name.c_str()))
+			{
+				
+				if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUseParallax)
+				{
+				
+					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, SpecularTextureDetail, HeightTextureDetail);
+				}
+			}
+		}
+		return BaseTexture;
+	}
+	return nullptr;
 }
 
 UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
