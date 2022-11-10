@@ -1,6 +1,6 @@
 #include "XRayResourcesManager.h"
 
-UXRayResourcesManager* GXRayResourcesManager = nullptr;
+
 
 USlateBrushAsset* UXRayResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
 {
@@ -110,4 +110,12 @@ USlateBrushAsset* UXRayResourcesManager::Copy(USlateBrushAsset* Brush)
 	check(Counter);
 	(*Counter)++;
 	return Brush;
+}
+
+void UXRayResourcesManager::CheckLeak()
+{
+	check(Brushes.Num() == 0);
+	check(BrushesCounter.Num() == 0);
+	check(BrushesMaterials.Num() == 0);
+	check(BrushesInfo.Num() == 0);
 }

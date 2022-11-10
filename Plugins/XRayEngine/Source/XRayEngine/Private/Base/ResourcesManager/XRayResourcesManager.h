@@ -9,6 +9,7 @@ public:
 	USlateBrushAsset* GetBrush(FName NameMaterial, FName NameTexture);
 	void			  Free(USlateBrushAsset* Brush);
 	USlateBrushAsset* Copy(USlateBrushAsset* Brush);
+	void			  CheckLeak();
 private:
 	UPROPERTY(Transient)
 	TMap<USlateBrushAsset*,int32> BrushesCounter;
@@ -23,4 +24,3 @@ private:
 	};
 	TMap<USlateBrushAsset*, BrushInfo> BrushesInfo;
 };
-extern UXRayResourcesManager* GXRayResourcesManager;

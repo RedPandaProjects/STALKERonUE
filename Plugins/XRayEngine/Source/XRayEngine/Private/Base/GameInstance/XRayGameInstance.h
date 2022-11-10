@@ -13,4 +13,7 @@ public:
 	void Shutdown() override;
 
 private:
+protected:
+	void OnStart() override;
+
 };

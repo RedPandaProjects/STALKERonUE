@@ -10,7 +10,4 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 private:
-	class XRayMemory*	GXRayMemory;
-	class XRayLog*		GXRayLog;
-	class XRayDebug*	GXRayDebug;
 };

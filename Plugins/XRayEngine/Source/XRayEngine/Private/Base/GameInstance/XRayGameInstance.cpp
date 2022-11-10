@@ -2,6 +2,7 @@
 
 
 #include "XRayGameInstance.h"
+#include "../EngineManager/XRayEngineManager.h"
 
 void UXRayGameInstance::Init()
 {
@@ -10,5 +11,12 @@ void UXRayGameInstance::Init()
 
 void UXRayGameInstance::Shutdown()
 {
+	GXRayEngineManager->DetachViewport(GetGameViewportClient());
 	Super::Shutdown();
+}
+
+void UXRayGameInstance::OnStart()
+{
+	Super::OnStart();
+	GXRayEngineManager->AttachViewport(GetGameViewportClient());
 }

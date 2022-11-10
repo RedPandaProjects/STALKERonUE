@@ -1,4 +1,5 @@
 #include "XRayUIRender.h"
+#include "Base/EngineManager/XRayEngineManager.h"
 #include "Base/ResourcesManager/XRayResourcesManager.h"
 
 XRayUIShader::XRayUIShader()
@@ -18,7 +19,7 @@ void XRayUIShader::Copy(IUIShader& _in)
 	TextureName = static_cast<XRayUIShader&>(_in).TextureName; 
 	if (static_cast<XRayUIShader&>(_in).Brush)
 	{
-		Brush = GXRayResourcesManager->Copy(static_cast<XRayUIShader&>(_in).Brush);
+		Brush = GXRayEngineManager->GetResourcesManager()->Copy(static_cast<XRayUIShader&>(_in).Brush);
 	}
 }
 
@@ -30,7 +31,7 @@ void XRayUIShader::create(LPCSTR sh, LPCSTR tex)
 
 bool XRayUIShader::inited()
 {
-	 Brush = GXRayResourcesManager->GetBrush(MaterialName, TextureName);
+	 Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
 	 return !!Brush;
 }
 
@@ -38,7 +39,7 @@ void XRayUIShader::destroy()
 {
 	if (Brush)
 	{
-		GXRayResourcesManager->Free(Brush);
+		GXRayEngineManager->GetResourcesManager()->Free(Brush);
 		Brush = nullptr;
 	}
 }
@@ -109,7 +110,7 @@ void XRayUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePoint
 	Items.Last().ScissorsID = CurrentScissor;
 	Items.Last().PrimitiveType = primType;
 	Items.Last().PointType = pointType;
-	Items.Last().Brush = GXRayResourcesManager->Copy(CurrentShader.Brush);
+	Items.Last().Brush = GXRayEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush);
 }
 void XRayUIRender::FlushPrimitive()
 {
