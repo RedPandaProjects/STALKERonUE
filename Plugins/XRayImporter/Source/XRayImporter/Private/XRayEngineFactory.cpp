@@ -11,13 +11,13 @@ XRayEngineFactory::~XRayEngineFactory()
 {
 	for (CEditableObject* Object :Objects)
 	{
-		Lib.RemoveEditObject(Object);
+		GRayObjectLibrary->RemoveEditObject(Object);
 	}
 }
 
 UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFullPath)
 {
-	CEditableObject* Object =  Lib.CreateEditObject(TCHAR_TO_ANSI(*FileName));
+	CEditableObject* Object = GRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*FileName));
 	if (Object)
 	{
 		Objects.Add(Object); 
@@ -35,7 +35,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	if (UseOnlyFullPath)
 	{
 		FileName.ReplaceCharInline(TEXT('\\'),TEXT('/'));
-		PackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Meshes") / FPaths::GetBaseFilename(FileName,false));
+		PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName,false));
 	}
 	else
 	{
@@ -139,7 +139,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	UMaterialInterface* ParentMaterial = nullptr;
 	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Materials")/ ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials")/ ParentName);
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath);
 	}
@@ -153,7 +153,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	{
 		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/XRayEngine/Materials/Unkown.Unkown"));
 		check (IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Materials") / ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
 		
 		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
 		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
@@ -190,7 +190,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 			SwitchParameter.ParameterInfo.Name = TEXT("IsPhongMetal");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 		}
 		break;
 		case STextureParams::tmMetal_OrenNayar:
@@ -199,7 +199,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 			SwitchParameter.ParameterInfo.Name = TEXT("IsMetalOrenNayar");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 		}
 		break;
 		default:
@@ -211,7 +211,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 
 			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, SpecularTexture, HeightTexture);
 			if (NormalMapTexture)
@@ -242,7 +242,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 				SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
 				SwitchParameter.Value = true;
 				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+				NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 				if (DetailTexture)
 				{
 					NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
@@ -252,7 +252,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
 					SwitchParameter.Value = true;
 					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, SpecularTextureDetail, HeightTextureDetail);
 
 					if (NormalMapTextureDetail)
@@ -344,7 +344,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	 
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Textures") / PackageFileName);
+	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileName);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
 	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath);
@@ -382,18 +382,18 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 {
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Textures") / PackageFileName);
+	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath()/TEXT("Textures") / PackageFileName);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
 
 	FString PackageFileNameSpecular = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_specular");
 	PackageFileNameSpecular.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameSpecular = UPackageTools::SanitizePackageName(TEXT("/Game/Textures") / PackageFileNameSpecular);
+	const FString PackageNameSpecular = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameSpecular);
 	const FString NewObjectPathSpecular = PackageNameSpecular + TEXT(".") + FPaths::GetBaseFilename(PackageNameSpecular);
 
 	FString PackageFileNameHeight = FPaths::ChangeExtension(FileName, TEXT("")) + TEXT("_height");
 	PackageFileNameHeight.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameHeight = UPackageTools::SanitizePackageName(TEXT("/Game/Textures") / PackageFileNameHeight);
+	const FString PackageNameHeight = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameHeight);
 	const FString NewObjectPathHeight = PackageNameHeight + TEXT(".") + FPaths::GetBaseFilename(PackageNameHeight);
 
 	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath);
@@ -515,5 +515,18 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		Height->Source.Init(HeightImage.GetWidth(), HeightImage.GetHeight(), 1, HeightImage.GetMips(), SourceFormat, (uint8*)*HeightImage);
 		Height->MarkPackageDirty();
 		Height->PostEditChange();
+	}
+}
+
+FString XRayEngineFactory::GetGamePath()
+{
+	switch (xrGameManager::GetGame())
+	{
+	case EGame::CS:
+		return TEXT("/Game/CS");
+	case EGame::SHOC:
+		return TEXT("/Game/SHOC");
+	default:
+		return TEXT("/Game/COP");
 	}
 }

@@ -1,5 +1,7 @@
 #include "XRayRenderInterface.h"
 #include "XRayRenderTarget.h"
+#include "../Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
+#include "../Resources/Visual/XRaySkeletonVisual.h"
 XRayRenderInterface GRenderInterface;
 
 XRayRenderInterface::XRayRenderInterface()
@@ -123,24 +125,199 @@ void XRayRenderInterface::clear_static_wallmarks()
 void XRayRenderInterface::flush()
 {
 }
+class XRayRenderObjectSpecific :public IRender_ObjectSpecific
+{
 
+public:
+	XRayRenderObjectSpecific(){}
+	~XRayRenderObjectSpecific() override {}
+	void force_mode(u32 mode) override
+	{
+	}
+
+
+	float get_luminocity() override
+	{
+		return 1;
+	}
+
+
+	float get_luminocity_hemi() override
+	{
+		return 1;
+	}
+
+
+	float* get_luminocity_hemi_cube() override
+	{
+		static float Result[6]={};
+		return Result;
+	}
+
+};
 IRender_ObjectSpecific* XRayRenderInterface::ros_create(IRenderable* parent)
 {
-	return nullptr;
+	return new XRayRenderObjectSpecific;
 }
 
-void XRayRenderInterface::ros_destroy(IRender_ObjectSpecific*&)
+void XRayRenderInterface::ros_destroy(IRender_ObjectSpecific*& V)
 {
+	if(V) 
+	delete V;
+	V= nullptr;
 }
+class XrayRenderLight :public IRender_Light
+{
+	public:
 
+		void set_type(LT type) override
+		{
+		}
+
+		bool IsActive = true;
+		void set_active(bool InIsActive) override
+		{
+			IsActive = InIsActive;
+		}
+
+
+		bool get_active() override
+		{
+			return IsActive;
+		}
+
+
+		void set_shadow(bool) override
+		{
+		}
+
+
+		void set_volumetric(bool) override
+		{
+		}
+
+
+		void set_volumetric_quality(float) override
+		{
+		}
+
+
+		void set_volumetric_intensity(float) override
+		{
+		}
+
+
+		void set_volumetric_distance(float) override
+		{
+		}
+
+
+		void set_position(const Fvector& P) override
+		{
+		}
+
+
+		void set_rotation(const Fvector& D, const Fvector& R) override
+		{
+		}
+
+
+		void set_cone(float angle) override
+		{
+		}
+
+
+		void set_range(float R) override
+		{
+		}
+
+
+		void set_virtual_size(float R) override
+		{
+		}
+
+
+		void set_texture(LPCSTR name) override
+		{
+		}
+
+
+		void set_color(const Fcolor& C) override
+		{
+		}
+
+
+		void set_color(float r, float g, float b) override
+		{
+		}
+
+		bool IsHUD = false;
+		void set_hud_mode(bool b) override
+		{
+			IsHUD = b;
+		}
+
+
+		bool get_hud_mode() override
+		{
+			return IsHUD;;
+		}
+
+};
 IRender_Light* XRayRenderInterface::light_create()
 {
-	return nullptr;
+	return new XrayRenderLight;
 }
+class XRayRenderGlow :public IRender_Glow
+{
 
+public:
+	bool IsActive = true;
+	void set_active(bool InIsActive) override
+	{
+		IsActive = InIsActive;
+	}
+
+
+	bool get_active() override
+	{
+		return IsActive;
+	}
+
+
+	void set_position(const Fvector& P) override
+	{
+	}
+
+
+	void set_direction(const Fvector& P) override
+	{
+	}
+
+
+	void set_radius(float R) override
+	{
+	}
+
+
+	void set_texture(LPCSTR name) override
+	{
+	}
+
+
+	void set_color(const Fcolor& C) override
+	{
+	}
+
+
+	void set_color(float r, float g, float b) override
+	{
+	}
+
+};
 IRender_Glow* XRayRenderInterface::glow_create()
 {
-	return nullptr;
+	return new XRayRenderGlow;
 }
 
 IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
@@ -150,7 +327,7 @@ IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
-	return nullptr;
+	return GXRaySkeletonMeshManager->Get(name);
 }
 
 IRenderVisual* XRayRenderInterface::model_CreateChild(LPCSTR name, IReader* data)
@@ -165,6 +342,11 @@ IRenderVisual* XRayRenderInterface::model_Duplicate(IRenderVisual* V)
 
 void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 {
+	if (V)
+	{
+		GXRaySkeletonMeshManager->Destroy(V->CastToRaySkeletonVisual());
+		V = nullptr;
+	}
 }
 
 void XRayRenderInterface::model_Logging(BOOL bEnable)
@@ -259,3 +441,22 @@ void XRayRenderInterface::Calculate()
 void XRayRenderInterface::ScreenshotImpl(ScreenshotMode mode, LPCSTR name, CMemoryWriter* memory_writer)
 {
 }
+
+void XRayRenderInterface::light_destroy(IRender_Light* p_)
+{
+	if (p_)
+	{
+		delete p_;
+	}
+	p_ = nullptr;
+}
+
+void XRayRenderInterface::glow_destroy(IRender_Glow* p_)
+{
+	if (p_)
+	{
+		delete p_;
+	}
+	p_ = nullptr;
+}
+

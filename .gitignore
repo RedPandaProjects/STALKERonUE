@@ -6,3 +6,7 @@ Binaries
 *.sln
 Saved
 gamedata/
+rawdata/
+gamedata_soc/
+rawdata_soc/
+_appdata_/

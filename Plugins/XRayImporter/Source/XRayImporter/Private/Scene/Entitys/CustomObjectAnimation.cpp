@@ -26,8 +26,6 @@ void CCustomObject::AnimationUpdate(float t)
     m_CO_Flags.set			(flAutoKey,FALSE);
     UpdateTransform			(true);
     m_CO_Flags.set			(flAutoKey,bAK);
-    if (m_CO_Flags.is(flCameraView))
-    	EDevice->m_Camera.Set	(-r.y,-r.x,-r.z,P.x,P.y,P.z);
 }
 
 void CCustomObject::AnimationOnFrame()
@@ -37,6 +35,6 @@ void CCustomObject::AnimationOnFrame()
     if (Selected()&&m_MotionParams->bPlay)
     {
     	AnimationUpdate			(m_MotionParams->Frame());
-        m_MotionParams->Update	(EDevice->fTimeDelta,1.f,true);
+        m_MotionParams->Update	(Device->fTimeDelta,1.f,true);
     }
 }

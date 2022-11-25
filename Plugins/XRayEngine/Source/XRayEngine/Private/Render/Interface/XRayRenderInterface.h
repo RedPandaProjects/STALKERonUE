@@ -89,5 +89,11 @@ public:
 	virtual void ScreenshotImpl(ScreenshotMode mode, LPCSTR name, CMemoryWriter* memory_writer);
 
 	
+
+	void light_destroy(IRender_Light* p_) override;
+
+
+	void glow_destroy(IRender_Glow* p_) override;
+
 };
  extern XRayRenderInterface GRenderInterface;

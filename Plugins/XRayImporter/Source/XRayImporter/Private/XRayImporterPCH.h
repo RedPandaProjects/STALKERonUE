@@ -23,7 +23,6 @@
 #include "Materials/MaterialExpressionVectorParameter.h"
 #include "Materials/MaterialInstanceConstant.h"
 #include "Engine/SkeletalMesh.h"
-#include "EditorStyleSet.h"
 #include "HAL/PlatformProcess.h"
 #include "IDetailsView.h"
 #include "Modules/ModuleManager.h"
@@ -81,11 +80,11 @@
 #include "RendererInterface.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrECore/stdafx.h"
-#include "XrECore/Editor/ImageManager.h"
 #include "XrECore/Editor/EditMesh.h"
 #include "XrECore/Editor/EditObject.h"
 #include "XrECore/Editor/Library.h"
 #include "RedImageTool/RedImage.hpp"
+#include "XrECore/Editor/EThumbnail.h"
 THIRD_PARTY_INCLUDES_END
 #include "Scene/ESceneClassList.h"
 #include "Scene/iniStreamImpl.h"

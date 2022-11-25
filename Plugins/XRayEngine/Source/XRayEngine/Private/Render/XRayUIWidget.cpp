@@ -5,6 +5,8 @@
 #include "Interface/UI/XRayUIRender.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IGame_Persistent.h"
+#include "../Source/XrEngine/CustomHUD.h"
+#include "../Source/XrEngine/IGame_Level.h"
 THIRD_PARTY_INCLUDES_END
 ENGINE_API BOOL g_bRendering;
 bool UXRayUIWidget::Initialize()
@@ -19,13 +21,28 @@ int32 UXRayUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& Allott
 		LastFrame = Device->dwFrame;
 		g_bRendering = true;
 		GXRayUIRender.Flush();
+		if(g_hud&& g_pGameLevel)
+		g_hud->RenderUI();
 		Device->seqRenderUI.Process(rp_RenderUI);
 		if (g_pGamePersistent)	g_pGamePersistent->OnRenderPPUI_main();
 		g_bRendering = false;
 	}
 
+	FVector2D ScreenSize(Device->dwWidth, Device->dwHeight);
+	FVector2D MultiplerSize = AllottedGeometry.GetLocalSize() / ScreenSize;
 	for (XRayUIRender::Item& Item : GXRayUIRender.Items)
 	{
+		if (Item.TextID >= 0)
+		{
+			XRayUIRender::Text& TextItem = GXRayUIRender.Texts[Item.TextID];
+			FSlateFontInfo FontInfo = TextItem.Font->GetLegacySlateFontInfo();
+			FontInfo.OutlineSettings.OutlineColor = TextItem.Color.ReinterpretAsLinear();
+			FontInfo.OutlineSettings.OutlineSize = 0.5f;
+
+			FontInfo.Size = TextItem.FontSize;
+			FSlateDrawElement::MakeText(OutDrawElements, LayerId, AllottedGeometry.ToPaintGeometry(FVector2D(TextItem.Position.X, TextItem.Position.Y - (FontInfo.Size * 0.5f)) / TextItem.Scale, AllottedGeometry.GetLocalSize(), FMath::Sqrt(MultiplerSize.X * MultiplerSize.Y) * TextItem.Scale), TextItem.Data, FontInfo, ESlateDrawEffect::NoGamma, TextItem.Color.ReinterpretAsLinear());
+
+		}
 		if (Item.StartVertex == Item.EndVertex)
 		{
 			continue;
@@ -61,7 +78,7 @@ int32 UXRayUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& Allott
 			XRayUIRender::Vertex Vertex = GXRayUIRender.Vertices[i];
 			VerticesCahce.AddDefaulted();
 			FSlateVertex& NewVert = VerticesCahce.Last();
-			NewVert.Position = FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position)));
+			NewVert.Position = FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position) * MultiplerSize));
 			NewVert.Color = Vertex.Color;
 			NewVert.TexCoords[0] = StartUV.X + Vertex.UV.X* SizeUV.X;
 			NewVert.TexCoords[1] = StartUV.Y + Vertex.UV.Y * SizeUV.Y;
@@ -95,8 +112,8 @@ int32 UXRayUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& Allott
 			FVector2D XY(GXRayUIRender.Scissors[Item.ScissorsID].X, GXRayUIRender.Scissors[Item.ScissorsID].Y);
 			FVector2D ZW(GXRayUIRender.Scissors[Item.ScissorsID].Z, GXRayUIRender.Scissors[Item.ScissorsID].W);
 
-			XY = AllottedGeometry.LocalToAbsolute(XY);
-			ZW = AllottedGeometry.LocalToAbsolute(ZW);
+			XY = AllottedGeometry.LocalToAbsolute(XY) * MultiplerSize;
+			ZW = AllottedGeometry.LocalToAbsolute(ZW) * MultiplerSize;
 
 			FSlateRect ClipRect(XY,ZW);
 			FSlateClippingZone Clip(ClipRect);
@@ -108,6 +125,6 @@ int32 UXRayUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& Allott
 			OutDrawElements.PopClip();
 		}
 	}
-
+	LayerId++;
 	return LayerId;
 }

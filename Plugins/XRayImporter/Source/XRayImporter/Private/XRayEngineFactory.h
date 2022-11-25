@@ -12,6 +12,7 @@ public:
 	void		ImportBump2D  (const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Specular, TObjectPtr<UTexture2D>& Height);
 	inline UObject* GetCreatedObject() { if (ObjectCreated.Num())return ObjectCreated[0]; return nullptr; }
 private:
+	FString	GetGamePath();
 	UObject* ParentPackage;
 	EObjectFlags ObjectFlags;
 	TArray< CEditableObject*> Objects;

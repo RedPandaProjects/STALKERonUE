@@ -19,19 +19,6 @@ AXRayGameModeBase::AXRayGameModeBase(const FObjectInitializer& ObjectInitializer
 void AXRayGameModeBase::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	FVector2D ScreenSize;
-	GetWorld()->GetGameViewport()->GetViewportSize(ScreenSize);
-	if (u32(ScreenSize.X) != Device->dwWidth || u32(ScreenSize.Y) != Device->dwHeight)
-	{
-		Device->dwWidth = u32(ScreenSize.X);
-		Device->dwHeight = u32(ScreenSize.Y);
-		Device->seqResolutionChanged.Process(rp_ScreenResolutionChanged);
-	}
-
-	Device->dwTimeDelta = DeltaSeconds;
-	Device->dwTimeGlobal = static_cast<u32>(GetWorld()->TimeSeconds*1000);
-	Device->seqFrame.Process(rp_Frame);
-	Device->dwFrame++;
 }
 
 void AXRayGameModeBase::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
@@ -43,7 +30,7 @@ void AXRayGameModeBase::InitGame(const FString& MapName, const FString& Options,
 void AXRayGameModeBase::StartPlay()
 {
 	Super::StartPlay();
-	Console->Execute("main_menu on");
+	Engine->Event.Defer("KERNEL:start", u64(xr_strdup("editor/single/alife/new")), u64(xr_strdup("localhost")));
 }
 
 void AXRayGameModeBase::ResetLevel()

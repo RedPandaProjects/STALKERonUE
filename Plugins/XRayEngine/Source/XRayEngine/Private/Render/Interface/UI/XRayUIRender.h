@@ -27,6 +27,7 @@ public:
 	 void	SetScissor					(Irect* rect = NULL) override;
 	 void	GetActiveTextureResolution	(Fvector2 &res) override;
 	 void	PushPoint					(float x, float y, float z, u32 C, float u, float v) override;
+	 void	PushText					(float x, float y, float Scale, u32 C, UFont* Font,float FontSize, const TCHAR* String);
 
 	 void	StartPrimitive				(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType) override;
 	 void	FlushPrimitive				() override;
@@ -38,8 +39,20 @@ public:
 
 	 XRayUIShader	  CurrentShader;
 	 TArray<FVector4f> Scissors;
+	 struct Text
+	 {
+		 FString	Data;
+		 FVector2f	Position;
+		 FColor		Color;
+		 float		Scale;
+		 float		FontSize;
+		 UFont*		Font;
+
+	 };
+	 TArray<Text> Texts;
 	 struct Item
 	 {
+		int32							TextID = -1;
 		TObjectPtr<USlateBrushAsset>	Brush;
 		uint32							StartVertex;
 		uint32							EndVertex;

@@ -7,10 +7,15 @@ class UXRayResourcesManager : public UObject
 	GENERATED_BODY()
 public:
 	USlateBrushAsset* GetBrush(FName NameMaterial, FName NameTexture);
+	UFont*			  GetFont(FName Name);
 	void			  Free(USlateBrushAsset* Brush);
 	USlateBrushAsset* Copy(USlateBrushAsset* Brush);
 	void			  CheckLeak();
 private:
+
+	UPROPERTY(Transient)
+	TMap<FName, UFont*> Fonts;
+
 	UPROPERTY(Transient)
 	TMap<USlateBrushAsset*,int32> BrushesCounter;
 	UPROPERTY(Transient)

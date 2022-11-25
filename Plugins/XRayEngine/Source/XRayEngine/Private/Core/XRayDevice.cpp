@@ -6,6 +6,7 @@ XRayDevice::XRayDevice()
 	// default initialization
 	dwMaximized = 0;
 	dwWidth = dwHeight = 256;
+	fWidth_2 = fHeight_2 = 128;
 	mProject.identity();
 	mFullTransform.identity();
 	mView.identity();

@@ -22,16 +22,43 @@ USlateBrushAsset* UXRayResourcesManager::GetBrush(FName InNameMaterial, FName In
 	UE_LOG(LogXRayEngine, Log, TEXT("Create slate brush:[%s]%s"), *NameMaterial,*NameTexture);
 
 	UMaterialInterface* ParentMaterial = nullptr;
+
+	switch (xrGameManager::GetGame())
+	{
+	default:
+	{
+		const FString ParentPackageName = TEXT("/Game/COP/Materials") / NameMaterial;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+		break;
+	case EGame::CS:
+	{
+		const FString ParentPackageName = TEXT("/Game/CS/Materials") / NameMaterial;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+		break;
+	case EGame::SHOC:
+	{
+		const FString ParentPackageName = TEXT("/Game/SHOC/Materials") / NameMaterial;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath,nullptr, LOAD_NoWarn);
+	}
+		break;
+	}
+
+	if (!IsValid(ParentMaterial))
 	{
 		const FString ParentPackageName = TEXT("/Game/Materials") / NameMaterial;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
 	if (!IsValid(ParentMaterial))
 	{
 		const FString ParentPackageName = TEXT("/XRayEngine/Materials") / NameMaterial;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
 	if (!IsValid(ParentMaterial))
 	{
@@ -44,16 +71,42 @@ USlateBrushAsset* UXRayResourcesManager::GetBrush(FName InNameMaterial, FName In
 	UTexture2D* Texture = nullptr;
 	if(InNameTexture!=NAME_None)
 	{
+		
+		switch (xrGameManager::GetGame())
+		{
+		default:
+		{
+			const FString ParentPackageName = TEXT("/Game/COP/Textures") / NameTexture;
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		}
+			break;
+		case EGame::CS:
+		{
+			const FString ParentPackageName = TEXT("/Game/CS/Textures") / NameTexture;
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		}
+			break;
+		case EGame::SHOC:
+		{
+			const FString ParentPackageName = TEXT("/Game/SHOC/Textures") / NameTexture;
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		}
+			break;
+		}
+		if (!IsValid(Texture))
 		{
 			const FString ParentPackageName = TEXT("/Game/Textures") / NameTexture;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath);
+			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 		if (!IsValid(Texture))
 		{
 			const FString ParentPackageName = TEXT("/XRayEngine/Textures") / NameTexture;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath);
+			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 		if (!IsValid(Texture))
 		{
@@ -84,6 +137,36 @@ USlateBrushAsset* UXRayResourcesManager::GetBrush(FName InNameMaterial, FName In
 	BrushInfo Info ={ InNameMaterial ,InNameTexture };
 	BrushesInfo.Add(NewSlateBrushAsset, Info);
 	return NewSlateBrushAsset;
+}
+
+UFont* UXRayResourcesManager::GetFont(FName Name)
+{
+	if (Fonts.Contains(Name))
+	{
+		return Fonts[Name];
+	}
+	FString FontPath;
+	FString DefaultFontPath = TEXT("/Engine/EngineFonts/Roboto.Roboto");
+	FontPath = DefaultFontPath;
+	if (Name != TEXT("default"))
+	{
+		const FString NameFont = Name.ToString();
+		const FString ParentPackageName = TEXT("/XRayEngine/Fonts") / NameFont;
+		FontPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+	}
+
+	UFont*  Font = LoadObject<UFont>(nullptr, *FontPath, nullptr, LOAD_NoWarn);
+	if (!IsValid(Font))
+	{	
+		if (DefaultFontPath != FontPath)
+		{
+			UE_LOG(LogXRayEngine, Warning, TEXT("Can't found font:%s"), *Name.ToString());
+		}
+		Font = LoadObject<UFont>(nullptr, *DefaultFontPath);
+		check(IsValid(Font));
+	}
+	Fonts.Add(Name,Font);
+	return Font;
 }
 
 void UXRayResourcesManager::Free(USlateBrushAsset* Brush)

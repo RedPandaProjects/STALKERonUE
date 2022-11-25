@@ -31,8 +31,8 @@ void XRayUIShader::create(LPCSTR sh, LPCSTR tex)
 
 bool XRayUIShader::inited()
 {
-	 Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
-	 return !!Brush;
+	Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
+	return !!Brush;
 }
 
 void XRayUIShader::destroy()
@@ -65,6 +65,10 @@ void XRayUIRender::DestroyUIGeom()
 
 void XRayUIRender::SetShader(IUIShader& shader)
 {
+	if (!static_cast<XRayUIShader&>(shader).Brush)
+	{
+		check(shader.inited());
+	}
 	CurrentShader.Copy(shader);
 }
 
@@ -95,10 +99,27 @@ void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
 {
 	Vertex InVertex;
 	InVertex.Position.Set(x,y);
-	InVertex.Color = FColor(C);
+	InVertex.Color = FColor(color_rgba(color_get_B(C), color_get_G(C), color_get_R(C), color_get_A(C)));
 	InVertex.UV.Set(u,v);
 	Vertices.Push(InVertex);
 	
+}
+
+void XRayUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, float FontSize, const TCHAR* String)
+{
+	Text InText;
+	InText.Position.Set(x, y);
+	InText.Color = FColor(color_rgba(color_get_B(C), color_get_G(C), color_get_R(C), color_get_A(C)));
+	InText.Data = String;
+	InText.Scale = Scale;
+	InText.Font = Font;
+	InText.FontSize = FontSize;
+	Texts.Push(InText);
+
+	Items.AddDefaulted();
+	Items.Last().StartVertex = Vertices.Num();
+	Items.Last().EndVertex = Vertices.Num();
+	Items.Last().TextID = Texts.Num()-1;
 }
 
 void XRayUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType)
@@ -114,6 +135,7 @@ void XRayUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePoint
 }
 void XRayUIRender::FlushPrimitive()
 {
+	check(Items.Last().TextID==-1);
 	Items.Last().EndVertex = Vertices.Num();
 }
 
@@ -122,6 +144,7 @@ void XRayUIRender::Flush()
 	Items.Empty(Items.Num());
 	Scissors.Empty(Scissors.Num());
 	Vertices.Empty(Vertices.Num());
+	Texts.Empty(Texts.Num());
 	CurrentScissor = -1;
 	CurrentShader.destroy();
 

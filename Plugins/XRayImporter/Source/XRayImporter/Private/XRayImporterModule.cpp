@@ -21,8 +21,9 @@ static void* RedImageMemoryAllocationFunction(void* pointer, size_t size)
 
 void FXRayImporterModule::StartupModule()
 {
-	Lib.OnCreate();
 	RedImageTool::MemoryAllocationFunction = &RedImageMemoryAllocationFunction;
+	GRayObjectLibrary = new XRayObjectLibrary;
+	GRayObjectLibrary->OnCreate();
 	/*for (float x = 0; x < 360.f; x += 30.f)
 	{
 		for (float y = 0; y < 360.f; y += 30.f)
@@ -52,7 +53,8 @@ void FXRayImporterModule::StartupModule()
 
 void FXRayImporterModule::ShutdownModule()
 {
-	Lib.OnDestroy();
+	GRayObjectLibrary->OnDestroy();
+	delete GRayObjectLibrary;
 }
 
 #undef LOCTEXT_NAMESPACE
