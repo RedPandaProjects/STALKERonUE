@@ -13,7 +13,7 @@ UXRayLevelImporterFactory::UXRayLevelImporterFactory(const FObjectInitializer& O
 	Formats.Add(TEXT("level;XRaySDKLevel"));
 }
 UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
-{
+{ 
 
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();

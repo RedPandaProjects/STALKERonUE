@@ -48,6 +48,7 @@ void UXRayEngineManager::DetachViewport(class UGameViewportClient* InGameViewpor
 	if (GameViewportClient&&GameViewportClient == InGameViewportClient)
 	{
 		Engine->Event.Defer("KERNEL:disconnect");
+		Device->seqParallel.clear_not_free();
 		g_Engine->OnFrame();
 		Device->b_is_Active = FALSE;
 		Device->seqAppEnd.Process(rp_AppEnd);
@@ -55,6 +56,7 @@ void UXRayEngineManager::DetachViewport(class UGameViewportClient* InGameViewpor
 		GameViewportClient->OnTick().Remove(DelegateHandleOnTick);
 		GameViewportClient->OnCloseRequested().Remove(DelegateHandleOnViewportCloseRequested);
 		GameViewportClient = nullptr	;
+		GXRaySkeletonMeshManager->Flush();
 		GameWorld = nullptr;
 	}
 }
@@ -139,6 +141,12 @@ void UXRayEngineManager::OnTick(float Delta)
 		g_Engine->OnFrame();
 		Device->dwFrame++;
 		GXRaySkeletonMeshManager->Flush();
+		{
+			for (u32 pit = 0; pit < Device->seqParallel.size(); pit++)
+				Device->seqParallel[pit]();
+			Device->seqParallel.clear_not_free();
+			Device->seqFrameMT.Process(rp_Frame);
+		}
 	}
 
 }

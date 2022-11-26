@@ -11,6 +11,7 @@ public:
 	void Initialized();
 	void Destroy();
 	inline class UXRayResourcesManager*GetResourcesManager(){return ResourcesManager;	}
+	inline class UWorld*GetGameWorld(){return GameWorld; }
 private:
 	void	OnViewportResized(FViewport*, uint32);
 	void	OnViewportCloseRequested(FViewport* InViewport);

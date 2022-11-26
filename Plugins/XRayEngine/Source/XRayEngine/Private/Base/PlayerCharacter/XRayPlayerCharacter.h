@@ -18,6 +18,8 @@ public:
 
 	void PossessedBy(AController* NewController) override;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "XRay|Player", meta = (AllowPrivateAccess = "true"))
+	UCameraComponent* FirstPersonCameraComponent;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -1,4 +1,6 @@
 #include "XRayResourcesManager.h"
+#include "SkeletonMesh/XRaySkeletonMesh.h"
+#include "../EngineManager/XRayEngineManager.h"
 
 
 
@@ -201,4 +203,23 @@ void UXRayResourcesManager::CheckLeak()
 	check(BrushesCounter.Num() == 0);
 	check(BrushesMaterials.Num() == 0);
 	check(BrushesInfo.Num() == 0);
+	check(Meshes.Num() == 0);
+}
+
+class AXRaySkeletonMesh* UXRayResourcesManager::SpawnSkeletonMesh(class XRayKinematics* Kinematics)
+{
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+	AXRaySkeletonMesh* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AXRaySkeletonMesh>(SpawnParameters);
+	Result->SetKinematics(Kinematics);
+	Meshes.Add(Result);
+	return Result;
+}
+
+void UXRayResourcesManager::Destroy(AXRaySkeletonMesh* Mesh)
+{
+	checkSlow(Meshes.Contains(Mesh));
+	Meshes.Remove(Mesh);
+	Mesh->Destroy();
+
 }

@@ -1,4 +1,6 @@
 #include "XRayKinematics.h"
+#include "Base/EngineManager/XRayEngineManager.h"
+#include "../../../Base/ResourcesManager/XRayResourcesManager.h"
  
 bool	pred_sort_N(const std::pair<shared_str, u32>& A, const std::pair<shared_str, u32>& B) {
 	return xr_strcmp(A.first, B.first) < 0;
@@ -242,10 +244,15 @@ void XRayKinematics::Spawn()
 	//ClearWallmarks();
 	Visibility_Invalidate();
 	LL_SetBoneRoot(0);
+	check(UnrealParent == nullptr);
+	UnrealParent = GXRayEngineManager->GetResourcesManager()->SpawnSkeletonMesh(this);
 }
 
 void XRayKinematics::Depart()
 {
+	if(UnrealParent)
+		GXRayEngineManager->GetResourcesManager()->Destroy(UnrealParent);
+	UnrealParent = nullptr;
 	// wallmarks
 	//ClearWallmarks();
 	Children.insert(Children.end(), children_invisible.begin(), children_invisible.end());
@@ -392,7 +399,7 @@ shared_str XRayKinematics::getDebugName()
 
 XRayKinematics::~XRayKinematics()
 {
-
+	check(UnrealParent==nullptr);
 	IBoneInstances_Destroy();
 	// wallmarks
 	if (m_lod)
@@ -403,6 +410,7 @@ XRayKinematics::~XRayKinematics()
 
 XRayKinematics::XRayKinematics()
 {
+	UnrealParent = nullptr;
 	Update_Callback = 0;
 #ifdef DEBUG
 	dbg_single_use_marker = FALSE;

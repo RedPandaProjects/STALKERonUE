@@ -6,11 +6,16 @@ class UXRayResourcesManager : public UObject
 {
 	GENERATED_BODY()
 public:
-	USlateBrushAsset* GetBrush(FName NameMaterial, FName NameTexture);
-	UFont*			  GetFont(FName Name);
-	void			  Free(USlateBrushAsset* Brush);
-	USlateBrushAsset* Copy(USlateBrushAsset* Brush);
-	void			  CheckLeak();
+	USlateBrushAsset*			GetBrush(FName NameMaterial, FName NameTexture);
+	UFont*						GetFont(FName Name);
+	void						Free(USlateBrushAsset* Brush);
+	USlateBrushAsset*			Copy(USlateBrushAsset* Brush);
+	void						CheckLeak();
+
+	class AXRaySkeletonMesh*	SpawnSkeletonMesh(class XRayKinematics* Kinematics);
+	void						Destroy(class AXRaySkeletonMesh*Mesh);
+	UPROPERTY(Transient)
+	TObjectPtr < class UWorld>	GameWorld;
 private:
 
 	UPROPERTY(Transient)
@@ -28,4 +33,7 @@ private:
 		FName Texture;
 	};
 	TMap<USlateBrushAsset*, BrushInfo> BrushesInfo;
+	
+	UPROPERTY(Transient)
+	TSet<AXRaySkeletonMesh*> Meshes;
 };

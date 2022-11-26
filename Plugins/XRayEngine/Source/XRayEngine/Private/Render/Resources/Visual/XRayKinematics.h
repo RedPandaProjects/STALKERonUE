@@ -187,4 +187,5 @@ protected:
 
 private:
 	bool m_is_original_lod;
+	class AXRaySkeletonMesh*UnrealParent;
 };
