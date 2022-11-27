@@ -67,10 +67,11 @@ CStatsPhysics* _BCL XRayDevice::StatPhysics()
 
 void _BCL XRayDevice::AddSeqFrame(pureFrame* f, bool mt)
 {
+	seqFrame.Add(f, REG_PRIORITY_LOW);
 }
 
 void _BCL XRayDevice::RemoveSeqFrame(pureFrame* f)
 {
-
+	seqFrame.Remove(f);
 }
 

@@ -26,11 +26,16 @@ void XRayUIShader::Copy(IUIShader& _in)
 void XRayUIShader::create(LPCSTR sh, LPCSTR tex)
 {
 	MaterialName = sh;
+	check(MaterialName != NAME_None);
 	TextureName = tex? FName(tex) : NAME_None;
 }
 
 bool XRayUIShader::inited()
 {
+	if (MaterialName == NAME_None)
+	{
+		return false;
+	}
 	Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
 	return !!Brush;
 }
@@ -65,10 +70,6 @@ void XRayUIRender::DestroyUIGeom()
 
 void XRayUIRender::SetShader(IUIShader& shader)
 {
-	if (!static_cast<XRayUIShader&>(shader).Brush)
-	{
-		check(shader.inited());
-	}
 	CurrentShader.Copy(shader);
 }
 
@@ -124,19 +125,19 @@ void XRayUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, f
 
 void XRayUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType)
 {
-	check(CurrentShader.Brush);
 	Items.AddDefaulted();
 	Items.Last().StartVertex = Vertices.Num();
 	Items.Last().EndVertex = Vertices.Num();
 	Items.Last().ScissorsID = CurrentScissor;
 	Items.Last().PrimitiveType = primType;
 	Items.Last().PointType = pointType;
-	Items.Last().Brush = GXRayEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush);
+	Items.Last().Brush = CurrentShader.Brush ? GXRayEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush) : nullptr;
 }
 void XRayUIRender::FlushPrimitive()
 {
 	check(Items.Last().TextID==-1);
 	Items.Last().EndVertex = Vertices.Num();
+	CurrentShader.destroy();
 }
 
 void XRayUIRender::Flush()

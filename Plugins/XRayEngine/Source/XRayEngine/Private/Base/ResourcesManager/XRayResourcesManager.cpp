@@ -6,13 +6,24 @@
 
 USlateBrushAsset* UXRayResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
 {
+	bool NeedReload = false;
+	check(InNameMaterial!=NAME_None);
 	if (Brushes.Find(InNameMaterial))
 	{
 		if (Brushes[InNameMaterial].Find(InNameTexture))
 		{
+
+			
 			USlateBrushAsset*  Result = Brushes[InNameMaterial][InNameTexture];
-			BrushesCounter[Result]++;
-			return Result;
+			if (BrushesNeedReloading.Find(Result))
+			{
+				NeedReload = true;
+			}
+			else
+			{
+				BrushesCounter[Result]++;
+				return Result;
+			}
 		}
 	}
 
@@ -124,7 +135,20 @@ USlateBrushAsset* UXRayResourcesManager::GetBrush(FName InNameMaterial, FName In
 	{
 		Material->SetTextureParameterValue(TEXT("Base"), Texture);
 	}
-
+	if (NeedReload)
+	{
+		USlateBrushAsset* NewSlateBrushAsset = Brushes[InNameMaterial][InNameTexture];
+		NewSlateBrushAsset->SetFlags(RF_Transient);
+		FVector2D TextureSize = FVector2D(32, 32);
+		if (InNameTexture != NAME_None)
+		{
+			TextureSize = Texture->GetImportedSize();
+		}
+		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material, TextureSize);
+		BrushesNeedReloading.Remove(NewSlateBrushAsset);
+		BrushesCounter[NewSlateBrushAsset]++;
+		return NewSlateBrushAsset;
+	}
 	USlateBrushAsset* NewSlateBrushAsset = NewObject<USlateBrushAsset>(this);
 	NewSlateBrushAsset->SetFlags(RF_Transient);
 	FVector2D TextureSize = FVector2D(32,32);
@@ -179,6 +203,7 @@ void UXRayResourcesManager::Free(USlateBrushAsset* Brush)
 	{
 		UE_LOG(LogXRayEngine, Log, TEXT("Destroy slate brush:[%s]%s"), *BrushesInfo[Brush].Matrrial.ToString(), *BrushesInfo[Brush].Texture.ToString());
 		BrushesCounter.Remove(Brush);
+		BrushesNeedReloading.Remove(Brush);
 		BrushesMaterials.Remove(Brush);
 		Brushes[BrushesInfo[Brush].Matrrial].Remove(BrushesInfo[Brush].Texture);
 		if (Brushes[BrushesInfo[Brush].Matrrial].Num() == 0)
@@ -199,11 +224,20 @@ USlateBrushAsset* UXRayResourcesManager::Copy(USlateBrushAsset* Brush)
 
 void UXRayResourcesManager::CheckLeak()
 {
+	check(BrushesNeedReloading.Num() == 0);
 	check(Brushes.Num() == 0);
 	check(BrushesCounter.Num() == 0);
 	check(BrushesMaterials.Num() == 0);
 	check(BrushesInfo.Num() == 0);
 	check(Meshes.Num() == 0);
+}
+
+void UXRayResourcesManager::Reload()
+{
+	for (auto& [Key, Data] : BrushesCounter)
+	{
+		BrushesNeedReloading.FindOrAdd(Key);
+	}
 }
 
 class AXRaySkeletonMesh* UXRayResourcesManager::SpawnSkeletonMesh(class XRayKinematics* Kinematics)

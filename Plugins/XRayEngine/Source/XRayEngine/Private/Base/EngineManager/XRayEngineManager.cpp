@@ -9,6 +9,8 @@
 #include "Core/XRayEngine.h"
 #include "Base/ResourcesManager/XRayResourcesManager.h"
 #include "Render/Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
+#include "../GameViewportClient/XRayGameViewportClient.h"
+#include "../../Core/XRayInput.h"
 THIRD_PARTY_INCLUDES_START
 #include "../Source/XrEngine/XrDeviceInterface.h"
 THIRD_PARTY_INCLUDES_END
@@ -21,7 +23,8 @@ void UXRayEngineManager::AttachViewport(class UGameViewportClient* InGameViewpor
 	{
 		return;
 	}
-	GameViewportClient = InGameViewportClient;
+	GetResourcesManager()->Reload();
+	GameViewportClient =CastChecked<UXRayGameViewportClient>(InGameViewportClient);
 	GameWorld = InGameViewportClient->GetWorld();
 	DelegateHandleOnViewportResized = FViewport::ViewportResizedEvent.AddUObject(this, &UXRayEngineManager::OnViewportResized);
 	FVector2D ScreenSize;
@@ -37,9 +40,11 @@ void UXRayEngineManager::AttachViewport(class UGameViewportClient* InGameViewpor
 		Device->seqResolutionChanged.Process(rp_ScreenResolutionChanged);
 	}
 	DelegateHandleOnViewportCloseRequested = GameViewportClient->OnCloseRequested().AddUObject(this, &UXRayEngineManager::OnViewportCloseRequested);
-	DelegateHandleOnTick = GameViewportClient->OnTick().AddUObject(this, &UXRayEngineManager::OnTick);
-
 	Device->seqAppStart.Process(rp_AppStart);
+	if (GameViewportClient->IsActive)
+	{
+		Device->seqAppActivate.Process(rp_AppActivate);
+	}
 	Device->b_is_Active = TRUE;
 }
 
@@ -53,10 +58,10 @@ void UXRayEngineManager::DetachViewport(class UGameViewportClient* InGameViewpor
 		Device->b_is_Active = FALSE;
 		Device->seqAppEnd.Process(rp_AppEnd);
 		FViewport::ViewportResizedEvent.Remove(DelegateHandleOnViewportResized);
-		GameViewportClient->OnTick().Remove(DelegateHandleOnTick);
 		GameViewportClient->OnCloseRequested().Remove(DelegateHandleOnViewportCloseRequested);
 		GameViewportClient = nullptr	;
 		GXRaySkeletonMeshManager->Flush();
+		MyXRayInput->ClearStates();
 		GameWorld = nullptr;
 	}
 }
@@ -64,7 +69,7 @@ void UXRayEngineManager::DetachViewport(class UGameViewportClient* InGameViewpor
 void UXRayEngineManager::Initialized()
 {
 	ResourcesManager = NewObject<UXRayResourcesManager>(this);
-	
+	GXRayInput = nullptr;
 	GXRayMemory = new XRayMemory;
 	GXRayDebug = new XRayDebug;
 	GXRayLog = new XRayLog;
@@ -72,7 +77,7 @@ void UXRayEngineManager::Initialized()
 	if (GIsEditor)
 	{
 		FSName = FPaths::Combine(FSName, TEXT("fs.ltx"));
-	}
+	} 
 	else
 	{
 		FSName = FPaths::Combine(FSName, TEXT("fsgame.ltx"));
@@ -98,7 +103,19 @@ void UXRayEngineManager::Destroy()
 	ResourcesManager->CheckLeak();
 }
 
+void UXRayEngineManager::SetInput(class XRayInput* InXRayInput)
+{
+	if (InXRayInput == nullptr) 
+	{ 
+		MyXRayInput = nullptr;
+		return;
+	}
+	check(!MyXRayInput);
+	MyXRayInput = InXRayInput;
+}
+
 void UXRayEngineManager::OnViewportResized(FViewport* InViewport, uint32)
+
 {
 	if (GameViewportClient && GameViewportClient->Viewport == InViewport)
 	{
@@ -121,32 +138,4 @@ void UXRayEngineManager::OnViewportCloseRequested(FViewport* InViewport)
 {
 	check(GameViewportClient->Viewport== InViewport);
 	DetachViewport(GameViewportClient);
-}
-
-void UXRayEngineManager::OnTick(float Delta)
-{
-	if (g_loading_events->size())
-	{
-		if (g_loading_events->front()())
-			g_loading_events->pop_front();
-		return;
-	}
-	else
-	{
-		Device->fTimeDelta = Delta;
-		Device->fTimeGlobal = GameWorld->TimeSeconds;
-		Device->dwTimeDelta = static_cast<u32>(Delta * 1000);
-		Device->dwTimeGlobal = static_cast<u32>(GameWorld->TimeSeconds * 1000);
-		Device->dwTimeContinual = static_cast<u32>(GameWorld->UnpausedTimeSeconds * 1000);
-		g_Engine->OnFrame();
-		Device->dwFrame++;
-		GXRaySkeletonMeshManager->Flush();
-		{
-			for (u32 pit = 0; pit < Device->seqParallel.size(); pit++)
-				Device->seqParallel[pit]();
-			Device->seqParallel.clear_not_free();
-			Device->seqFrameMT.Process(rp_Frame);
-		}
-	}
-
 }

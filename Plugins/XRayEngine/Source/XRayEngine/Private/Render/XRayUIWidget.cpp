@@ -40,10 +40,14 @@ int32 UXRayUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& Allott
 			FontInfo.OutlineSettings.OutlineSize = 0.5f;
 
 			FontInfo.Size = TextItem.FontSize;
-			FSlateDrawElement::MakeText(OutDrawElements, LayerId, AllottedGeometry.ToPaintGeometry(FVector2D(TextItem.Position.X, TextItem.Position.Y - (FontInfo.Size * 0.5f)) / TextItem.Scale, AllottedGeometry.GetLocalSize(), FMath::Sqrt(MultiplerSize.X * MultiplerSize.Y) * TextItem.Scale), TextItem.Data, FontInfo, ESlateDrawEffect::NoGamma, TextItem.Color.ReinterpretAsLinear());
-
+			FSlateDrawElement::MakeText(OutDrawElements, LayerId++, AllottedGeometry.ToPaintGeometry(FVector2D(TextItem.Position.X, TextItem.Position.Y - (FontInfo.Size * 0.5f)) / TextItem.Scale, AllottedGeometry.GetLocalSize(), FMath::Sqrt(MultiplerSize.X * MultiplerSize.Y) * TextItem.Scale), TextItem.Data, FontInfo, ESlateDrawEffect::NoGamma, TextItem.Color.ReinterpretAsLinear());
+			continue;
 		}
 		if (Item.StartVertex == Item.EndVertex)
+		{
+			continue;
+		}
+		if (Item.Brush == nullptr)
 		{
 			continue;
 		}
@@ -112,19 +116,18 @@ int32 UXRayUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& Allott
 			FVector2D XY(GXRayUIRender.Scissors[Item.ScissorsID].X, GXRayUIRender.Scissors[Item.ScissorsID].Y);
 			FVector2D ZW(GXRayUIRender.Scissors[Item.ScissorsID].Z, GXRayUIRender.Scissors[Item.ScissorsID].W);
 
-			XY = AllottedGeometry.LocalToAbsolute(XY) * MultiplerSize;
-			ZW = AllottedGeometry.LocalToAbsolute(ZW) * MultiplerSize;
+			XY = AllottedGeometry.LocalToAbsolute(XY * MultiplerSize) ;
+			ZW = AllottedGeometry.LocalToAbsolute(ZW * MultiplerSize) ;
 
 			FSlateRect ClipRect(XY,ZW);
 			FSlateClippingZone Clip(ClipRect);
 			OutDrawElements.PushClip(Clip);
 		}
-		FSlateDrawElement::MakeCustomVerts(OutDrawElements, LayerId, Handle, VerticesCahce, IndexesCahce, nullptr, 0, 0);
+		FSlateDrawElement::MakeCustomVerts(OutDrawElements, LayerId++, Handle, VerticesCahce, IndexesCahce, nullptr, 0, 0);
 		if (Item.ScissorsID >= 0)
 		{
 			OutDrawElements.PopClip();
 		}
 	}
-	LayerId++;
 	return LayerId;
 }

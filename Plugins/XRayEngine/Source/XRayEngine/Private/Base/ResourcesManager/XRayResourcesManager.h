@@ -11,6 +11,7 @@ public:
 	void						Free(USlateBrushAsset* Brush);
 	USlateBrushAsset*			Copy(USlateBrushAsset* Brush);
 	void						CheckLeak();
+	void						Reload();
 
 	class AXRaySkeletonMesh*	SpawnSkeletonMesh(class XRayKinematics* Kinematics);
 	void						Destroy(class AXRaySkeletonMesh*Mesh);
@@ -25,7 +26,9 @@ private:
 	TMap<USlateBrushAsset*,int32> BrushesCounter;
 	UPROPERTY(Transient)
 	TMap<USlateBrushAsset*, UMaterialInstanceDynamic*> BrushesMaterials;
-
+#if WITH_EDITORONLY_DATA
+	TSet< USlateBrushAsset*>	 BrushesNeedReloading;
+#endif
 	TMap<FName, TMap<FName, USlateBrushAsset*>> Brushes;
 	struct  BrushInfo
 	{
