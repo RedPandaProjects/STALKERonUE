@@ -2,7 +2,7 @@
 
 #include "XRayImporterModule.h"
 
-#define LOCTEXT_NAMESPACE "FXRayImporterModule"
+#define LOCTEXT_NAMESPACE "XRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
 
 static void* RedImageMemoryAllocationFunction(void* pointer, size_t size)

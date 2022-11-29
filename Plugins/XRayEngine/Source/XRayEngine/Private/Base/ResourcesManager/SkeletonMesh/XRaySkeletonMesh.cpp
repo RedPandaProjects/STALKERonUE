@@ -35,6 +35,7 @@ void AXRaySkeletonMesh::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (Kinematics&& Kinematics->Renderable)
 	{
+		Kinematics->CalculateBones(true);
 		Fquaternion XRayQuat;
 		XRayQuat.set(Kinematics->Renderable->renderable.xform);
 		FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
