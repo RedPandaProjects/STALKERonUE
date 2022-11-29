@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "XRayGameViewportClient.h"
-#include "../EngineManager/XRayEngineManager.h"
-#include "../../Core/XRayInput.h"
+#include "Base/XRayGameViewportClient.h"
+#include "Base/XRayEngineManager.h"
+#include "Core/XRayInput.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
 #include "XrEngine/XRayEngineInterface.h"

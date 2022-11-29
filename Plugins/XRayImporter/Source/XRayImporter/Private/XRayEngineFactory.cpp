@@ -1002,7 +1002,6 @@ void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMes
 			Fquaternion InQuat; InQuat.set(InRotation);
 			Box.Rotation = FRotator(FQuat(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w));
 			NewBodySetup->AggGeom.BoxElems.Add(Box);
-			NewBodySetup->CalculateMass()
 			break;
 		}
 

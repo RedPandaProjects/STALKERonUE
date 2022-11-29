@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "XRayPlayerController.h"
+#include "Entities/XRayPlayerController.h"
 #include "Render/XRayUIWidget.h"
 
 void AXRayPlayerController::CreateHUD()

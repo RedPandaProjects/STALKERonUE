@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "XRayEngineModule.h"
-#include "Base/EngineManager/XRayEngineManager.h"
+#include "Base/XRayEngineManager.h"
 #define LOCTEXT_NAMESPACE "FXRayEngineModule"
 DEFINE_LOG_CATEGORY(LogXRayEngine);
 

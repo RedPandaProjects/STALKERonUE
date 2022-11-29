@@ -2,8 +2,8 @@
 THIRD_PARTY_INCLUDES_START
 #include "xrEngine/GameFont.h"
 THIRD_PARTY_INCLUDES_END
-#include "Base/EngineManager/XRayEngineManager.h"
-#include "Base/ResourcesManager/XRayResourcesManager.h"
+#include "Base/XRayEngineManager.h"
+#include "Resources/XRayResourcesManager.h"
 ENGINE_API extern  Fvector2 g_current_font_scale;
 
 XRayFontRender::XRayFontRender() /*: m_index_count(0), m_vertex_count(0)*/

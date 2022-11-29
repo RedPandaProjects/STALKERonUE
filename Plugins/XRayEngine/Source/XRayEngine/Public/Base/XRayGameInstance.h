@@ -1,8 +1,6 @@
 #pragma once
 #include "XRayGameInstance.generated.h"
-/**
- *
- */
+
 UCLASS()
 class XRAYENGINE_API UXRayGameInstance : public UGameInstance
 {

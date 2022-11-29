@@ -6,7 +6,7 @@
 #include "../Render/Interface/XRayDebugRender.h"
 #include "../Render/Interface/UI/XRayUIRender.h"
 #include "XRayInput.h"
-#include "../Base/EngineManager/XRayEngineManager.h"
+#include "Base/XRayEngineManager.h"
 XRayRenderFactory GRenderFactory;
 XRayDUInterface  GDUInterface;
 XRayDebugRender GDebugRender;

@@ -1,7 +1,7 @@
-#include "XRaySkeletonMesh.h"
+#include "Entities/XRaySkeletonMesh.h"
 #include "Render/Resources/Visual/XRayKinematics.h"
 THIRD_PARTY_INCLUDES_START
-#include "../Source/XrEngine/IRenderable.h"
+#include "XrEngine/IRenderable.h"
 THIRD_PARTY_INCLUDES_END
 
 // Sets default values

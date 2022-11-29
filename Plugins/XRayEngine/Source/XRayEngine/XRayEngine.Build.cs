@@ -12,16 +12,17 @@ public class XRayEngine : ModuleRules
         PrivatePCHHeaderFile = "Private/XRayEnginePCH.h";
 
         PublicIncludePaths.AddRange(
-			new string[] {
-				// ... add public include paths required here ...
-			}
+			new string[] 
+			{
+            "Public"
+            }
 			);
 				
 		
 		PrivateIncludePaths.AddRange(
 			new string[] {
-				// ... add other private include paths required here ...
-			}
+            "Private"
+            }
 			);
 			
 		

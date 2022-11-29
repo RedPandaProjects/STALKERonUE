@@ -1,6 +1,6 @@
 #include "XRayUIRender.h"
-#include "Base/EngineManager/XRayEngineManager.h"
-#include "Base/ResourcesManager/XRayResourcesManager.h"
+#include "Base/XRayEngineManager.h"
+#include "Resources/XRayResourcesManager.h"
 
 XRayUIShader::XRayUIShader()
 {

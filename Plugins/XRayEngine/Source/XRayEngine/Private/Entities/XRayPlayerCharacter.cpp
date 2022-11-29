@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Base/PlayerCharacter/XRayPlayerCharacter.h"
-#include "../PlayerController/XRayPlayerController.h"
+#include "Entities/XRayPlayerCharacter.h"
+#include "Entities/XRayPlayerController.h"
 
 // Sets default values
 AXRayPlayerCharacter::AXRayPlayerCharacter()

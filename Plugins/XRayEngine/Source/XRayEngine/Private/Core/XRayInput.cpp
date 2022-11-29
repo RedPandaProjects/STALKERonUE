@@ -1,6 +1,6 @@
 #include "XRayInput.h"
 THIRD_PARTY_INCLUDES_START
-#include "../Source/XrEngine/IInputReceiver.h"
+#include "XrEngine/IInputReceiver.h"
 THIRD_PARTY_INCLUDES_END
 
 XRayInput::XRayInput()

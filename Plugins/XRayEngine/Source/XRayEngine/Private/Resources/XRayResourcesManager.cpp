@@ -1,6 +1,6 @@
-#include "XRayResourcesManager.h"
-#include "SkeletonMesh/XRaySkeletonMesh.h"
-#include "../EngineManager/XRayEngineManager.h"
+#include "Resources/XRayResourcesManager.h"
+#include "Entities/XRaySkeletonMesh.h"
+#include "Base/XRayEngineManager.h"
 
 
 

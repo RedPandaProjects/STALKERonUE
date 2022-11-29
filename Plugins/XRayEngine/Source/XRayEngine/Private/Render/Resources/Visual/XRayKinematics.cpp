@@ -1,6 +1,6 @@
 #include "XRayKinematics.h"
-#include "Base/EngineManager/XRayEngineManager.h"
-#include "../../../Base/ResourcesManager/XRayResourcesManager.h"
+#include "Base/XRayEngineManager.h"
+#include "Resources/XRayResourcesManager.h"
  
 bool	pred_sort_N(const std::pair<shared_str, u32>& A, const std::pair<shared_str, u32>& B) {
 	return xr_strcmp(A.first, B.first) < 0;

@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "XRayGameModeBase.h"
+#include "Base/XRayGameModeBase.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XR_IOConsole.h"
 THIRD_PARTY_INCLUDES_END
+#include "Entities/XRayPlayerCharacter.h"
+#include "Entities/XRayPlayerController.h"
 
-#include "../PlayerCharacter/XRayPlayerCharacter.h"
-#include "../PlayerController/XRayPlayerController.h"
 AXRayGameModeBase::AXRayGameModeBase(const FObjectInitializer& ObjectInitializer):Super(ObjectInitializer)
 {
 	PrimaryActorTick.bCanEverTick = true;

@@ -1,16 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "XRayEngineManager.h"
-#include "../ResourcesManager/XRayResourcesManager.h"
+#include "Base/XRayEngineManager.h"
+#include "Resources/XRayResourcesManager.h"
 #include "Core/XRayMemory.h"
 #include "Core/XRayLog.h"
 #include "Core/XRayDebug.h"
 #include "Core/XRayEngine.h"
-#include "Base/ResourcesManager/XRayResourcesManager.h"
+#include "Resources/XRayResourcesManager.h"
 #include "Render/Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
-#include "../GameViewportClient/XRayGameViewportClient.h"
-#include "../../Core/XRayInput.h"
+#include "Base/XRayGameViewportClient.h"
+#include "Core/XRayInput.h"
 THIRD_PARTY_INCLUDES_START
 #include "../Source/XrEngine/XrDeviceInterface.h"
 THIRD_PARTY_INCLUDES_END
@@ -94,6 +94,7 @@ void UXRayEngineManager::Initialized()
 void UXRayEngineManager::Destroy()
 {
 	delete GXRaySkeletonMeshManager;
+	GXRaySkeletonMeshManager = nullptr;
 	g_Engine->Destroy();
 	delete g_Engine;
 	Core.Destroy();
