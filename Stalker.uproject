@@ -20,10 +20,6 @@
 			"TargetAllowList": [
 				"Editor"
 			]
-		},
-		{
-			"Name": "XRayEngineCore",
-			"Enabled": false
 		}
 	]
 }

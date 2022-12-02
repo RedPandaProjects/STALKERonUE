@@ -8,7 +8,8 @@ public class StalkerEditorTarget : TargetRules
 	public StalkerEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "Stalker" } );
+		ExtraModuleNames.AddRange( new string[] { "StalkerEditor" } );
 	}
 }
