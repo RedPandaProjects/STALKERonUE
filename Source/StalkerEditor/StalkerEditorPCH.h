@@ -92,4 +92,5 @@ THIRD_PARTY_INCLUDES_END
 #include "Importer/Scene/Tools/Base/ESceneCustomMTools.h"
 #include "Importer/Scene/Tools/Base/ESceneCustomOTools.h"
 #include "Importer/Scene/Scene.h"
+#include "Kernel/StalkerMath.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);

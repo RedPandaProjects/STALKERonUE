@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 #pragma once
-class FXRayImporterModule : public IModuleInterface
+class FStalkerEditorModule : public IModuleInterface
 {
 public:
 

@@ -11,6 +11,15 @@
 			"AdditionalDependencies": [
 				"Engine"
 			]
+		},
+		{
+			"Name": "StalkerEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"AdditionalDependencies": [
+				"Stalker",
+				"Engine"
+			]
 		}
 	],
 	"Plugins": [

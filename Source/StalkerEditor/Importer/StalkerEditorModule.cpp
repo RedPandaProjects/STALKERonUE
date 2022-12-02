@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "XRayImporterModule.h"
+#include "StalkerEditorModule.h"
 
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
@@ -19,7 +19,7 @@ static void* RedImageMemoryAllocationFunction(void* pointer, size_t size)
 	return FMemory::Malloc(size);
 }
 
-void FXRayImporterModule::StartupModule()
+void FStalkerEditorModule::StartupModule()
 {
 	RedImageTool::MemoryAllocationFunction = &RedImageMemoryAllocationFunction;
 	GRayObjectLibrary = new XRayObjectLibrary;
@@ -51,7 +51,7 @@ void FXRayImporterModule::StartupModule()
 	}*/
 }
 
-void FXRayImporterModule::ShutdownModule()
+void FStalkerEditorModule::ShutdownModule()
 {
 	GRayObjectLibrary->OnDestroy();
 	delete GRayObjectLibrary;
@@ -59,4 +59,4 @@ void FXRayImporterModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FXRayImporterModule, XRayImporter)
+IMPLEMENT_MODULE(FStalkerEditorModule, StalkerEditor)

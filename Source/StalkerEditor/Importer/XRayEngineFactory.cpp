@@ -2,6 +2,50 @@
 #include "PhysicsEngine/PhysicsAsset.h"
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
+
+#pragma pack( push,2 )
+struct  XRayVertBoned1W			// (3+3+3+3+2+1)*4 = 15*4 = 60 bytes
+{
+	Fvector	P;
+	Fvector	N;
+	Fvector	T;
+	Fvector	B;
+	float	u, v;
+	u32		matrix;
+};
+struct  XRayVertBoned2W			// (1+3+3 + 1+3+3 + 2)*4 = 16*4 = 64 bytes
+{
+	u16		matrix0;
+	u16		matrix1;
+	Fvector	P;
+	Fvector	N;
+	Fvector	T;
+	Fvector	B;
+	float	w;
+	float	u, v;
+};
+struct XRayVertBoned3W          // 70 bytes
+{
+	u16		m[3];
+	Fvector	P;
+	Fvector	N;
+	Fvector	T;
+	Fvector	B;
+	float	w[2];
+	float	u, v;
+};
+struct XRayVertBoned4W       //76 bytes
+{
+	u16		m[4];
+	Fvector	P;
+	Fvector	N;
+	Fvector	T;
+	Fvector	B;
+	float	w[3];
+	float	u, v;
+};
+#pragma pack(pop)
+
 XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFlags)
 {
 	ParentPackage = InParentPackage;
@@ -14,6 +58,414 @@ XRayEngineFactory::~XRayEngineFactory()
 	{
 		GRayObjectLibrary->RemoveEditObject(Object);
 	}
+}
+
+USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
+{
+	USkeletalMesh* SkeletalMesh = nullptr;
+	FString PackageName;
+	PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
+
+	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (SkeletalMesh)
+		return SkeletalMesh;
+	
+	IReader* FileData = FS.r_open(TCHAR_TO_ANSI(*FileName));
+	if (!FileData)
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s"), *FileName);
+		return nullptr;
+	}
+
+
+	ogf_header	Header;
+	if (!FileData->r_chunk_safe(OGF_HEADER, &Header, sizeof(Header)))
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_HEADER"), *FileName);
+
+		FS.r_close(FileData);
+		return nullptr;
+	}
+
+	if(Header.type != MT_SKELETON_RIGID&& Header.type != MT_SKELETON_ANIM)
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s unkown type 0x%x"), *FileName, Header.type);
+
+		FS.r_close(FileData);
+		return nullptr;
+	}
+	TArray<shared_str> BoneParents;
+	TArray<TSharedPtr<CBoneData>> Bones;
+	TMap<shared_str, CBoneData*> BonesMap;
+	if (!FileData->find_chunk(OGF_S_BONE_NAMES))
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_S_BONE_NAMES"), *FileName);
+
+		FS.r_close(FileData);
+		return nullptr;
+	}
+	else
+	{
+		uint32 CountBones = FileData->r_u32();
+		string256	BufferString;
+		Bones.Empty(CountBones);
+		for (uint32 ID = 0; ID < CountBones; ID++)
+		{
+			Bones.Add(MakeShared<CBoneData>(ID));
+			FileData->r_stringZ(BufferString, sizeof(BufferString));	xr_strlwr(BufferString);
+			Bones.Last()->name = shared_str(BufferString);
+			FileData->r_stringZ(BufferString, sizeof(BufferString)); xr_strlwr(BufferString);
+			BoneParents.Add(BufferString);
+			FileData->r(&Bones.Last()->obb, sizeof(Fobb));
+			BonesMap.FindOrAdd(Bones.Last()->name, Bones.Last().Get());
+		}
+		for (uint32 ID = 0; ID < CountBones; ID++)
+		{
+			if (!BoneParents[ID].size())
+			{
+				Bones[ID]->SetParentID(BI_NONE);
+				continue;
+			}
+			Bones[ID]->SetParentID(BonesMap[BoneParents[ID]]->GetSelfID());
+		}
+	}
+	BonesMap.Empty();
+	BoneParents.Empty();
+
+	IReader* IKD = FileData->open_chunk(OGF_S_IKDATA);
+	if (!IKD) 
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_S_IKDATA"), *FileName);
+
+		FS.r_close(FileData);
+		return nullptr;
+	}
+
+	for (int32 i = 0; i < Bones.Num(); i++)
+	{
+		CBoneData* B = Bones[i].Get();
+		u16 vers = (u16)IKD->r_u32();
+		IKD->r_stringZ(B->game_mtl_name);
+		IKD->r(&B->shape, sizeof(SBoneShape));
+		B->IK_data.Import(*IKD, vers);
+		Fvector vXYZ, vT;
+		IKD->r_fvector3(vXYZ);
+		IKD->r_fvector3(vT);
+		B->bind_transform.setXYZi(vXYZ);
+		B->bind_transform.translate_over(vT);
+		B->mass = IKD->r_float();
+		IKD->r_fvector3(B->center_of_mass);
+	}
+	IKD->close();
+	
+	TArray<TPair<shared_str, shared_str>> MaterialsAndTextures;
+	TArray<TArray<st_MeshVertex>>  Vertices;
+
+	if (!FileData->find_chunk(OGF_CHILDREN))
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_CHILDREN"), *FileName);
+
+		FS.r_close(FileData);
+		return nullptr;
+	}
+	else
+	{
+		// From stream
+		IReader* OBJ = FileData->open_chunk(OGF_CHILDREN);
+		if (OBJ)
+		{
+			IReader* O = OBJ->open_chunk(0);
+			for (int32 CountElement = 1; O; CountElement++)
+			{
+				TArray<st_MeshVertex> ElementVertices;
+				TArray<u16> Indicies;
+				check(O->find_chunk(OGF_INDICES));
+				uint32 IndiciesCount = O->r_u32();
+				for(uint32 i =0;i< IndiciesCount;i++)
+					Indicies.Add(O->r_u16());
+
+				check(O->find_chunk(OGF_VERTICES));
+				uint32 dwVertType = O->r_u32();
+				uint32 dwVertCount = O->r_u32();
+
+				switch (dwVertType)
+				{
+				case OGF_VERTEXFORMAT_FVF_1L: // 1-Link
+				case 1:
+				{
+					XRayVertBoned1W*InVertices = (XRayVertBoned1W*)O->pointer();
+					for (uint32 i = 0; i < IndiciesCount; i++)
+					{
+						XRayVertBoned1W InVertex = InVertices[Indicies[i]];
+						st_MeshVertex OutVertex;
+
+						for (uint32 a = 0; a < 4; a++)
+							OutVertex.BoneID[a] = BI_NONE;
+
+						OutVertex.Position = InVertex.P;
+						OutVertex.Normal = InVertex.N;
+						OutVertex.UV.set(InVertex.u, InVertex.v);
+						OutVertex.BoneID[0] = InVertex.matrix;
+						OutVertex.BoneWeight[0] = 1;
+						ElementVertices.Add(OutVertex);
+					}
+				}
+				break;
+				case OGF_VERTEXFORMAT_FVF_2L: // 2-Link
+				case 2:
+				{
+					XRayVertBoned2W* InVertices = (XRayVertBoned2W*)O->pointer();
+					for (uint32 i = 0; i < IndiciesCount; i++)
+					{
+						XRayVertBoned2W InVertex = InVertices[Indicies[i]];
+						st_MeshVertex OutVertex;
+
+						for (uint32 a = 0; a < 4; a++)
+							OutVertex.BoneID[a] = BI_NONE;
+
+						OutVertex.Position = InVertex.P;
+						OutVertex.Normal = InVertex.N;
+						OutVertex.UV.set(InVertex.u, InVertex.v);
+						OutVertex.BoneID[0] = InVertex.matrix0;
+						OutVertex.BoneID[1] = InVertex.matrix1;
+						OutVertex.BoneWeight[0] = InVertex.w;
+						OutVertex.BoneWeight[1] = 1 - InVertex.w;
+						ElementVertices.Add(OutVertex);
+					}
+				}break;
+				case OGF_VERTEXFORMAT_FVF_3L: // 3-Link
+				case 3:
+				{
+					XRayVertBoned3W* InVertices = (XRayVertBoned3W*)O->pointer();
+					for (uint32 i = 0; i < IndiciesCount; i++)
+					{
+						XRayVertBoned3W InVertex = InVertices[Indicies[i]];
+						st_MeshVertex OutVertex;
+
+						for (uint32 a = 0; a < 4; a++)
+							OutVertex.BoneID[a] = BI_NONE;
+
+						OutVertex.Position = InVertex.P;
+						OutVertex.Normal = InVertex.N;
+						OutVertex.UV.set(InVertex.u, InVertex.v);
+						OutVertex.BoneID[0] = InVertex.m[0];
+						OutVertex.BoneID[1] = InVertex.m[1];
+						OutVertex.BoneID[2] = InVertex.m[2];
+						OutVertex.BoneWeight[0] = InVertex.w[0];
+						OutVertex.BoneWeight[1] =  InVertex.w[1];
+						OutVertex.BoneWeight[2] = 1 - InVertex.w[1];
+						ElementVertices.Add(OutVertex);
+					}
+				}break;
+				case OGF_VERTEXFORMAT_FVF_4L: // 4-Link
+				case 4:
+				{
+					XRayVertBoned4W* InVertices = (XRayVertBoned4W*)O->pointer();
+					for (uint32 i = 0; i < IndiciesCount; i++)
+					{
+						XRayVertBoned4W InVertex = InVertices[Indicies[i]];
+						st_MeshVertex OutVertex;
+
+						for (uint32 a = 0; a < 4; a++)
+							OutVertex.BoneID[a] = BI_NONE;
+
+						OutVertex.Position = InVertex.P;
+						OutVertex.Normal = InVertex.N;
+						OutVertex.UV.set(InVertex.u, InVertex.v);
+						OutVertex.BoneID[0] = InVertex.m[0];
+						OutVertex.BoneID[1] = InVertex.m[1];
+						OutVertex.BoneID[2] = InVertex.m[2];
+						OutVertex.BoneID[3] = InVertex.m[3];
+						OutVertex.BoneWeight[0] = InVertex.w[0];
+						OutVertex.BoneWeight[1] = InVertex.w[1];
+						OutVertex.BoneWeight[2] =  InVertex.w[2];
+						OutVertex.BoneWeight[3] = 1 - InVertex.w[2];
+						ElementVertices.Add(OutVertex);
+					}
+				}break;
+				default:
+					break;
+				}
+
+				IReader*LodData = O->open_chunk(OGF_SWIDATA);
+				if (LodData)
+				{
+					LodData->r_u32();
+					LodData->r_u32();
+					LodData->r_u32();
+					LodData->r_u32();
+
+					TArray<FSlideWindow> SlideWindows;
+					SlideWindows.AddDefaulted(LodData->r_u32());
+					LodData->r(SlideWindows.GetData(), SlideWindows.Num() * sizeof(FSlideWindow));
+					LodData->close();
+
+					Vertices.AddDefaulted();
+					for (uint32 i = 0; i <static_cast<uint32>( SlideWindows[0].num_tris*3); i++)
+					{
+						Vertices.Last().Add(ElementVertices[i+ SlideWindows[0].offset]);
+					}
+				} 
+				else
+				{
+					Vertices.Add(ElementVertices);
+				}
+				if (O->find_chunk(OGF_TEXTURE)) 
+				{
+					string256		fnT, fnS;
+					O->r_stringZ(fnT, sizeof(fnT));
+					O->r_stringZ(fnS, sizeof(fnS));
+					MaterialsAndTextures.Add(TPair<shared_str, shared_str>(fnS,fnT));
+				}
+				else
+				{
+					MaterialsAndTextures.Add(TPair<shared_str, shared_str>("default", "Unkown"));
+				}
+
+				
+
+				O->close();
+				O = OBJ->open_chunk(CountElement);
+			}
+		}
+
+	}
+	check(MaterialsAndTextures.Num()==Vertices.Num());
+	FS.r_close(FileData);
+	UPackage* AssetPackage = CreatePackage(*PackageName);
+	SkeletalMesh = NewObject<USkeletalMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+
+	TArray<SkeletalMeshImportData::FBone> UBones;
+	UBones.AddDefaulted(Bones.Num());
+	for (int32 BoneIndex = 0; BoneIndex < Bones.Num(); BoneIndex++)
+	{
+		SkeletalMeshImportData::FBone& Bone = UBones[BoneIndex];
+		Bone.Flags = 0;
+		Bone.ParentIndex = INDEX_NONE;
+		Bone.NumChildren = 0;
+	}
+	TArray<uint32> OutBones;
+	for (TSharedPtr<CBoneData>&Bone : Bones)
+	{
+		FindBoneIDOrAdd(OutBones, Bones, Bone.Get());
+	}
+
+	check(OutBones.Num());
+	check(Bones[OutBones[0]]->GetParentID() == BI_NONE);
+
+	for (int32 BoneIndex = 0; BoneIndex < Bones.Num(); BoneIndex++)
+	{
+		SkeletalMeshImportData::FBone& Bone = UBones[BoneIndex];
+		CBoneData&BoneData = *Bones[OutBones[BoneIndex]].Get();
+		Bone.Flags = 0;
+		Bone.ParentIndex = INDEX_NONE;
+		Bone.NumChildren = 0;
+		if (BoneIndex != 0)
+		{
+			Bone.ParentIndex = FindBoneIDOrAdd(OutBones, Bones, Bones[BoneData.GetParentID()].Get());
+			UBones[Bone.ParentIndex].NumChildren++;
+		}
+		Bone.BonePos.Transform.SetRotation(StalkerMath::XRayQuatToUnreal(BoneData.bind_transform));
+		Bone.BonePos.Transform.SetLocation(StalkerMath::XRayLocationToUnreal(BoneData.bind_transform.c));
+		Bone.Name = BoneData.name.c_str();
+	}
+
+	TArray< FSkeletalMeshImportData> SkeletalMeshImportDataList;
+	TArray<FSkeletalMaterial> InMaterials;
+	SkeletalMeshImportDataList.AddDefaulted(1);
+	int32 MaterialIndex = 0;
+	for (int32 LodIndex = 0; LodIndex < 1; LodIndex++)
+	{
+		FSkeletalMeshImportData& InSkeletalMeshImportData = SkeletalMeshImportDataList[LodIndex];
+		InSkeletalMeshImportData.NumTexCoords = 1;
+		InSkeletalMeshImportData.bHasNormals = true;
+		InSkeletalMeshImportData.RefBonesBinary = UBones;
+
+		for (size_t ElementID = 0; ElementID < MaterialsAndTextures.Num(); ElementID++)
+		{
+			TArray< st_MeshVertex>&OutVertices  = Vertices[ElementID];
+			if (OutVertices.Num() == 0)
+			{
+				continue;
+			}
+			const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / TEXT("Mat_") + FString::FromInt(ElementID));
+
+
+			SkeletalMeshImportData::FMaterial Material;
+			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value);
+			Material.MaterialImportName = TEXT("Mat_") + FString::FromInt(ElementID);
+			InMaterials.Add(FSkeletalMaterial(Material.Material.Get(), true, false, FName(Material.MaterialImportName), FName(Material.MaterialImportName)));
+			int32 MaterialID = InSkeletalMeshImportData.Materials.Add(Material);
+
+			for (size_t FaceID = 0; FaceID < OutVertices.Num() / 3; FaceID++)
+			{
+				SkeletalMeshImportData::FTriangle Triangle;
+				Triangle.MatIndex = MaterialID;
+				for (size_t VirtualVertexID = 0; VirtualVertexID < 3; VirtualVertexID++)
+				{
+					SkeletalMeshImportData::FVertex Wedge;
+					static size_t VirtualVertices[3] = { 0,2,1 };
+					size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
+
+					FVector3f VertexPositions;
+					VertexPositions.X = -OutVertices[VertexID].Position.x * 100;
+					VertexPositions.Y = OutVertices[VertexID].Position.z * 100;
+					VertexPositions.Z = OutVertices[VertexID].Position.y * 100;
+					int32 OutVertexID = InSkeletalMeshImportData.Points.Add(VertexPositions);
+
+					for (size_t InfluencesID = 0; InfluencesID < 4; InfluencesID++)
+					{
+						if (OutVertices[VertexID].BoneID[InfluencesID] == BI_NONE)
+						{
+							break;
+						}
+						SkeletalMeshImportData::FRawBoneInfluence BoneInfluence;
+						BoneInfluence.BoneIndex = FindBoneIDOrAdd(OutBones, Bones,Bones[OutVertices[VertexID].BoneID[InfluencesID]].Get());
+						BoneInfluence.Weight = OutVertices[VertexID].BoneWeight[InfluencesID];
+						BoneInfluence.VertexIndex = OutVertexID;
+						InSkeletalMeshImportData.Influences.Add(BoneInfluence);
+					}
+					Wedge.VertexIndex = OutVertexID;
+					Wedge.MatIndex = MaterialID;
+					Wedge.UVs[0] = FVector2f(OutVertices[VertexID].UV.x, OutVertices[VertexID].UV.y);
+					Triangle.WedgeIndex[VirtualVertexID] = InSkeletalMeshImportData.Wedges.Add(Wedge);
+					Triangle.TangentZ[VirtualVertexID].X = -OutVertices[VertexID].Normal.x;
+					Triangle.TangentZ[VirtualVertexID].Y = OutVertices[VertexID].Normal.z;
+					Triangle.TangentZ[VirtualVertexID].Z = OutVertices[VertexID].Normal.y;
+				}
+				InSkeletalMeshImportData.Faces.Add(Triangle);;
+
+
+
+			}
+
+		}
+
+		InSkeletalMeshImportData.MaxMaterialIndex = MaterialIndex;
+	}
+	//FSkeleto
+
+	if (!CreateSkeletalMesh(SkeletalMesh, SkeletalMeshImportDataList, UBones))
+	{
+		SkeletalMesh->MarkAsGarbage();
+		return nullptr;
+	}
+	FAssetRegistryModule::AssetCreated(SkeletalMesh);
+	ObjectCreated.Add(SkeletalMesh);
+
+	SkeletalMesh->SetMaterials(InMaterials);
+	SkeletalMesh->PostEditChange();
+
+	USkeleton* Skeleton = CreateSkeleton(PackageName + "_Skeleton", SkeletalMesh);
+
+	Skeleton->SetPreviewMesh(SkeletalMesh);
+	SkeletalMesh->SetSkeleton(Skeleton);
+
+	SkeletalMesh->PostEditChange();
+	//CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, Object);
+	//CreateAnims(PackageName / FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Object);
+	return SkeletalMesh;
 }
 
 UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFullPath)
@@ -50,7 +502,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath);
+	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if(StaticMesh)
 		return StaticMesh;
 
@@ -149,7 +601,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath);
+	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath,nullptr, LOAD_NoWarn);
 	if (SkeletalMesh)
 		return SkeletalMesh;
 
@@ -302,34 +754,39 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 
 UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurface* Surface)
 {
-	if(!Surface->_Texture()||!Surface->_Texture()[0])
+	return ImportSurface(Path,Surface->_ShaderName(),Surface->_Texture());
+}
+
+UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName)
+{
+	if (ShaderName.size()==0)
 		return nullptr;
-	ETextureThumbnail THM(Surface->_Texture());
+	ETextureThumbnail THM(TextureName.c_str());
 
 	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
-	UMaterialInterface*  Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath);
+	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (Material)
 		return Material;
-	FString ParentName = FString(Surface->_ShaderName());
+	FString ParentName = FString(ShaderName.c_str());
 	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	UMaterialInterface* ParentMaterial = nullptr;
 	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials")/ ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
-	if(!IsValid(ParentMaterial))
+	if (!IsValid(ParentMaterial))
 	{
 		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
 	if (!IsValid(ParentMaterial))
 	{
 		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
-		check (IsValid(UnkownMaterial));
+		check(IsValid(UnkownMaterial));
 		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
-		
+
 		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
 		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
 		NewParentMaterial->Parent = UnkownMaterial;
@@ -347,12 +804,12 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 
 	FStaticParameterSet NewStaticParameterSet;
 
-	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(Surface->_Texture());
+	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
 	if (BaseTexture)
 	{
 		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Default")), BaseTexture);
 	}
-	if (THM.Load(Surface->_Texture()))
+	if (THM.Load(TextureName.c_str()))
 	{
 		TObjectPtr<UTexture2D> NormalMapTexture;
 		TObjectPtr<UTexture2D> SpecularTexture;
@@ -380,7 +837,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 		default:
 			break;
 		}
-		if (THM._Format().bump_mode == STextureParams::tbmUse|| THM._Format().bump_mode == STextureParams::tbmUseParallax)
+		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
 			FStaticSwitchParameter SwitchParameter;
 			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
@@ -401,7 +858,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 			{
 				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Height")), HeightTexture);
 			}
-			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height/5.f);
+			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height / 5.f);
 		}
 		if (THM._Format().detail_name.size())
 		{
@@ -422,7 +879,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 				{
 					NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
 				}
-				if (THMDetail._Format().bump_mode == STextureParams::tbmUse|| THMDetail._Format().bump_mode == STextureParams::tbmUse)
+				if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUse)
 				{
 					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
 					SwitchParameter.Value = true;
@@ -447,7 +904,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	}
 	else
 	{
-		UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), Surface->_Texture());
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
 	}
 	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
 	NewMaterial->InitStaticPermutation();
@@ -522,7 +979,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileName);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
-	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath);
+	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (Texture2D)
 		return Texture2D;
 
@@ -571,9 +1028,9 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	const FString PackageNameHeight = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameHeight);
 	const FString NewObjectPathHeight = PackageNameHeight + TEXT(".") + FPaths::GetBaseFilename(PackageNameHeight);
 
-	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath);
-	Specular = LoadObject<UTexture2D>(nullptr, *NewObjectPathSpecular);
-	Height = LoadObject<UTexture2D>(nullptr, *NewObjectPathHeight);
+	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	Specular = LoadObject<UTexture2D>(nullptr, *NewObjectPathSpecular, nullptr, LOAD_NoWarn);
+	Height = LoadObject<UTexture2D>(nullptr, *NewObjectPathHeight, nullptr, LOAD_NoWarn);
 	if (NormalMap&& Specular&& Height)
 		return;
 
@@ -710,6 +1167,21 @@ int32 XRayEngineFactory::FindBoneIDOrAdd(TArray<CBone*>& InBones, CBone* InBone)
 		InBones.Add(InBone);
 	}
 	return InBones.Num()-1;
+}
+
+int32 XRayEngineFactory::FindBoneIDOrAdd(TArray<uint32>& OutBones, TArray<TSharedPtr<CBoneData>>& InBones, CBoneData* InBone)
+{
+	if (OutBones.Find(InBone->GetSelfID()) != INDEX_NONE)
+	{
+		return OutBones.Find(InBone->GetSelfID());
+	}
+
+	if (InBone->GetParentID() != BI_NONE && OutBones.Find(InBone->GetParentID()) == INDEX_NONE)
+	{
+		FindBoneIDOrAdd(OutBones,InBones, InBones[InBone->GetParentID()].Get());
+	}
+
+	return OutBones.Add(InBone->GetSelfID());
 }
 
 bool XRayEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<FSkeletalMeshImportData>& LODIndexToSkeletalMeshImportData, const TArray<SkeletalMeshImportData::FBone>& InSkeletonBones)
@@ -861,7 +1333,7 @@ bool XRayEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<F
 USkeleton* XRayEngineFactory::CreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
 {
 	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
-	USkeleton* Skeleton = LoadObject<USkeleton>(nullptr, *NewObjectPath);
+	USkeleton* Skeleton = LoadObject<USkeleton>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (Skeleton)
 	{
 		return Skeleton;
@@ -886,7 +1358,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 {
 	const FString MotionPath = FullName / FString( InMotion->name.c_str());
 	const FString MotionFullPath = MotionPath + TEXT(".") + FPaths::GetBaseFilename(MotionPath);
-	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath);
+	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
 	if (IsValid(Anim))
 	{
 		return;
@@ -974,7 +1446,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh, CEditableObject* Object)
 {
 	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
-	UPhysicsAsset* PhysicsAsset = LoadObject<UPhysicsAsset>(nullptr, *NewObjectPath);
+	UPhysicsAsset* PhysicsAsset = LoadObject<UPhysicsAsset>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (PhysicsAsset)
 	{
 		return;

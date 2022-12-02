@@ -22,11 +22,5 @@ THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/KinematicsAnimated.h"
 #include "XrRender/Public/Kinematics.h"
 THIRD_PARTY_INCLUDES_END
-
-FORCEINLINE uint32 GetTypeHash(shared_str Name)
-{
-	// This must match the GetTypeHash behavior of FString
-	return FCrc::StrCrc32(Name.c_str(), Name.size());
-}
-
+#include "Kernel/StalkerMath.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogStalker, Log, All);
