@@ -9,7 +9,7 @@ UXRayOGFImporterFactory::UXRayOGFImporterFactory(const FObjectInitializer& Objec
 	bEditorImport = true;   // binary / general file source
 	bText = false;  // text source
 
-	SupportedClass = ULevel::StaticClass();
+	SupportedClass = USkeletalMesh::StaticClass();
 
 	Formats.Add(TEXT("ogf;XRay Sekeleton Mesh"));
 }
@@ -51,4 +51,28 @@ bool UXRayOGFImporterFactory::FactoryCanImport(const FString& Filename)
 		return true;
 	}
 	return false;
+}
+
+TArray<FString> UXRayOGFImporterFactory::GetFormats() const
+{
+	TArray<FString> FormatArray;
+	const bool bUseLegacyOgf = true;
+
+	for (const FString& Format : Formats)
+	{
+	
+		if (Format.StartsWith(TEXT("obj")))
+		{
+			//Skip if interchange obj is enabled
+			if (bUseLegacyOgf)
+			{
+				FormatArray.Add(Format);
+			}
+		}
+		else
+		{
+			FormatArray.Add(Format);
+		}
+	}
+	return FormatArray;
 }

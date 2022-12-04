@@ -8,7 +8,7 @@ UXRayObjectImporterFactory::UXRayObjectImporterFactory(const FObjectInitializer&
 	bEditorImport = true;   // binary / general file source
 	bText = false;  // text source
 
-	SupportedClass = ULevel::StaticClass();
+	SupportedClass = UStaticMesh::StaticClass();
 
 	Formats.Add(TEXT("object;XRayObject"));
 }

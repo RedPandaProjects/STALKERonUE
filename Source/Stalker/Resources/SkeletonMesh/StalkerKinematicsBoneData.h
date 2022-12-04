@@ -25,7 +25,7 @@ struct STALKER_API FStalkerKinematicsBoneShape
 	GENERATED_BODY()
 	UPROPERTY(EditAnywhere)
 	EStalkerShapeType	Type = EStalkerShapeType::EST_None;
-	UPROPERTY(EditAnywhere, Meta = (Bitmask, BitmaskEnum = "EStalkerShapeFlags"))
+	UPROPERTY(EditAnywhere, Meta = (Bitmask, BitmaskEnum = "/Script/Stalker.EStalkerShapeFlags"))
 	int32				Flags;
 	UPROPERTY(EditAnywhere)
 	FKBoxElem			Obb;

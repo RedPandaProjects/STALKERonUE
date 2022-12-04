@@ -10,5 +10,6 @@ public:
 	virtual void		CleanUp() override;
 	virtual bool		FactoryCanImport(const FString& Filename) override;
 
+	virtual  TArray<FString> GetFormats() const override;
 
 };

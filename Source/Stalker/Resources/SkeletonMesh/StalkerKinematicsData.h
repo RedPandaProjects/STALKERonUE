@@ -1,5 +1,6 @@
 #pragma once
 #include "StalkerKinematicsBoneData.h"
+#include "StalkerKinematicsAnimsData.h"
 #include "StalkerKinematicsData.generated.h"
 
 
@@ -14,6 +15,9 @@ public:
 	FString	UserData;
 	UPROPERTY(EditAnywhere)
 	TMap<FName,FStalkerKinematicsBone> Bones;
+	UPROPERTY(EditAnywhere)
+	TArray<UStalkerKinematicsAnimsData*> Anims;
+
 
 	void BuildFromLegacy(const  TArray<TSharedPtr<CBoneData>>& LegacyBones);
 	void BuildToLegacy(TArray<TSharedPtr<CBoneData>>& LegacyBones);

@@ -2,6 +2,7 @@
 #include "PhysicsEngine/PhysicsAsset.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsData.h"
+#include "Engine/EngineTypes.h"
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
 
@@ -575,11 +576,15 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		UD->close();
 	}
 	StalkerKinematicsData->BuildFromLegacy(Bones);
-
-	//CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, Object);
+	TArray<IBoneData*>  BonesPtr;
+	for (TSharedPtr<CBoneData>& Bone : Bones)
+	{
+		BonesPtr.Add(Bone.Get());
+	}
+	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
 	if(Header.type == MT_SKELETON_ANIM)
 	{
-		CreateAnims(PackageName / FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Bones, FileData);
+		CreateAnims(PackageName  / TEXT("Anims"), StalkerKinematicsData, Bones, FileData);
 	}
 	g_pMotionsContainer->clean(false);
 	FS.r_close(FileData);
@@ -865,7 +870,12 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 	SkeletalMesh->SetSkeleton(Skeleton);
 
 	SkeletalMesh->PostEditChange();
-	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, Object);
+	TArray<IBoneData*>  BonesPtr;
+	for (CBone* Bone : InBones)
+	{
+		BonesPtr.Add(Bone);
+	}
+	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
 	CreateAnims(PackageName/FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Object);
 	return SkeletalMesh;
 }
@@ -1471,7 +1481,7 @@ USkeleton* XRayEngineFactory::FindOrCreateSkeleton(const FString& FullName, USke
 		bool bResult = true;
 		for (int32 i = 1; i < MeshRefSkel.GetNum(); i++)
 		{
-			if (Bones[MeshRefSkel.GetBoneName(i)] != MeshRefSkel.GetBoneName(MeshRefSkel.GetParentIndex(i)))
+			if (!Bones.Contains(MeshRefSkel.GetBoneName(i))||Bones[MeshRefSkel.GetBoneName(i)] != MeshRefSkel.GetBoneName(MeshRefSkel.GetParentIndex(i)))
 			{
 				bResult = false;
 			}
@@ -1506,7 +1516,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* InMesh, 
 
 void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton, CSMotion* InMotion)
 {
-	const FString MotionPath = FullName / FString( InMotion->name.c_str());
+	const FString MotionPath = UPackageTools::SanitizePackageName(FullName / FString( InMotion->name.c_str()));
 	const FString MotionFullPath = MotionPath + TEXT(".") + FPaths::GetBaseFilename(MotionPath);
 	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
 	if (IsValid(Anim))
@@ -1593,7 +1603,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 }
 
-void XRayEngineFactory::CreateAnims(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, IReader* InMotion)
+void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData* InMesh, TArray<TSharedPtr<CBoneData>>&BonesData, IReader* InMotion)
 {
 	shared_motions Motions;
 	if (InMotion->find_chunk(OGF_S_MOTION_REFS))
@@ -1606,6 +1616,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, USkeleton* InMesh, TArr
 		for (size_t k = 0; k < set_cnt; ++k)
 		{
 			_GetItem(items_nm, k, nm);
+			FString NameOmf = nm;
 			xr_strcat(nm, ".omf");
 
 			string_path	fn;
@@ -1623,7 +1634,9 @@ void XRayEngineFactory::CreateAnims(const FString& Name, USkeleton* InMesh, TArr
 			}
 
 			IReader* MS = FS.r_open(fn);
-
+			NameOmf.ReplaceInline(TEXT("\\"), TEXT("/"));
+			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / NameOmf);
+			CreateAnims(PackageNameAnims, InMesh, BonesData, MS);
 			FS.r_close(MS);
 		}
 	}
@@ -1651,50 +1664,84 @@ void XRayEngineFactory::CreateAnims(const FString& Name, USkeleton* InMesh, TArr
 				}
 			}
 			IReader* MS = FS.r_open(fn);
+			NameOmf.ReplaceInline(TEXT("\\"), TEXT("/"));
 			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / NameOmf);
-			CreateAnims(PackageNameAnims, InMesh, BoneData, MS);
+			CreateAnims(PackageNameAnims, InMesh, BonesData, MS);
 			FS.r_close(MS);
 		}
 	}
 	else
 	{
-		string_path	nm;
-		strconcat(sizeof(nm), nm, TCHAR_TO_ANSI(*Name), ".ogf");
-		xr_vector<CBoneData*> bones;
-		for (size_t i = 0; i < BoneData.Num(); i++)
+		const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
+		const FString NewObjectPath = CorrectName + TEXT(".") + FPaths::GetBaseFilename(CorrectName);
+		UStalkerKinematicsAnimsData* StalkerKinematicsAnimsData = LoadObject<UStalkerKinematicsAnimsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+		if (StalkerKinematicsAnimsData)
 		{
-			bones.push_back(BoneData[i].Get());
+			InMesh->Anims.Add(StalkerKinematicsAnimsData);
+			return;
+		}
+		UPackage* AssetPackage = CreatePackage(*CorrectName);
+		StalkerKinematicsAnimsData = NewObject<UStalkerKinematicsAnimsData>(AssetPackage, *FPaths::GetBaseFilename(CorrectName), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(StalkerKinematicsAnimsData);
+		ObjectCreated.Add(StalkerKinematicsAnimsData);
+
+		string_path	nm;
+		strconcat(sizeof(nm), nm, TCHAR_TO_ANSI(*CorrectName), ".ogf");
+		xr_vector<CBoneData*> bones;
+		for (size_t i = 0; i < BonesData.Num(); i++)
+		{
+			bones.push_back(BonesData[i].Get());
 		}
 		Motions.create(nm, InMotion,& bones);
-
+		
 		for(auto&[Key,Value]:*Motions.motion_map())
 		{
+			FStalkerKinematicsAnimData OutAnim;
+
 			const FString MotionPath = Name / FString(Key.c_str());
-			CreateAnims(MotionPath, InMesh, BoneData, Motions, Value);
+			OutAnim.Amim = CreateAnim(MotionPath, InMesh->Mesh->GetSkeleton(), BonesData, Motions, Value);
+			if (!OutAnim.Amim)
+			{
+				continue;
+			}
+			OutAnim.BuildFromLegacy(*Motions.motion_def(Value), BonesData, *Motions.partition());
+			StalkerKinematicsAnimsData->Anims.Add(FName(Key.c_str()), OutAnim);
 		}
+		for (u8 i = 0; i < Motions.partition()->count()&&i<4; i++)
+		{
+			const CPartDef& Part =  Motions.partition()->part(i);
+			FStalkerKinematicsAnimsBonesPart&BonesPart =  StalkerKinematicsAnimsData->BonesParts.Add(Part.Name.c_str());
+			for (u32 ID : Part.bones)
+			{
+				BonesPart.Bones.Add(FName(BonesData[ID]->name.c_str()));
+			}
+		}
+
+		InMesh->Anims.Add(StalkerKinematicsAnimsData);
 	}
 }
 
-void XRayEngineFactory::CreateAnims(const FString& MotionPath, USkeleton* Skeleton, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions& InMotion, u16 ID)
+UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion, u16 ID)
 {
-	const FString MotionFullPath = MotionPath + TEXT(".") + FPaths::GetBaseFilename(MotionPath);
+	const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
+	const FString MotionFullPath = CorrectName + TEXT(".") + FPaths::GetBaseFilename(CorrectName);
 	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
 	if (IsValid(Anim))
 	{
-		return;
+		return Anim;
 	}
-	UPackage* AssetPackage = CreatePackage(*MotionPath);
-	UAnimSequence* AnimSequence = NewObject<UAnimSequence>(AssetPackage, *FPaths::GetBaseFilename(MotionPath), ObjectFlags);
 
-	AnimSequence->SetSkeleton(Skeleton);
-	AnimSequence->SetPreviewMesh(Skeleton->GetPreviewMesh());
+	UPackage* AssetPackage = CreatePackage(*CorrectName);
+	UAnimSequence* AnimSequence = NewObject<UAnimSequence>(AssetPackage, *FPaths::GetBaseFilename(CorrectName), ObjectFlags);
+	AnimSequence->SetSkeleton(InMesh);
+	AnimSequence->SetPreviewMesh(InMesh->GetPreviewMesh());
 
 
 	// In a regular import workflow this NameMapping will exist and be populated with the blend shape names we imported, if any
-	const FSmartNameMapping* NameMapping = Skeleton->GetSmartNameContainer(USkeleton::AnimCurveMappingName);
+	const FSmartNameMapping* NameMapping = InMesh->GetSmartNameContainer(USkeleton::AnimCurveMappingName);
 	if (!NameMapping)
 	{
-		return;
+		return nullptr;
 	}
 	IAnimationDataController& Controller = AnimSequence->GetController();
 
@@ -1782,9 +1829,10 @@ void XRayEngineFactory::CreateAnims(const FString& MotionPath, USkeleton* Skelet
 	AnimSequence->MarkPackageDirty();
 	ObjectCreated.Add(AnimSequence);
 	FAssetRegistryModule::AssetCreated(AnimSequence);
+	return AnimSequence;
 }	
 
-void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh, CEditableObject* Object)
+void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh,const TArray<IBoneData*>&Bones)
 {
 	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
 	UPhysicsAsset* PhysicsAsset = LoadObject<UPhysicsAsset>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
@@ -1795,25 +1843,44 @@ void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMes
 	UPackage* AssetPackage = CreatePackage(*FullName);
 	PhysicsAsset = NewObject<UPhysicsAsset>(AssetPackage, *FPaths::GetBaseFilename(FullName), ObjectFlags);
 
-	for (CBone* Bone : Object->Bones())
+	for (IBoneData* Bone:Bones)
 	{
-		
+
+		ECollisionEnabled::Type CollisionEnabled = ECollisionEnabled::NoCollision;
 		TObjectPtr<USkeletalBodySetup> NewBodySetup = NewObject<USkeletalBodySetup>(PhysicsAsset);
 		NewBodySetup->BodySetupGuid = FGuid::NewGuid();
-		NewBodySetup->BoneName = Bone->Name().c_str();
-		switch (Bone->shape.type)
+		NewBodySetup->BoneName = Bone->GetName().c_str();
+		if (Bone->get_shape().flags.is(SBoneShape::sfNoPhysics | SBoneShape::sfNoPickable))
+		{
+			CollisionEnabled = ECollisionEnabled::NoCollision;
+		}
+		else if(Bone->get_shape().flags.test(SBoneShape::sfNoPhysics))
+		{
+			CollisionEnabled = ECollisionEnabled::QueryOnly;
+		}
+		else if (Bone->get_shape().flags.test(SBoneShape::sfNoPickable))
+		{
+			CollisionEnabled = ECollisionEnabled::PhysicsOnly;
+		}
+		else 
+		{
+			CollisionEnabled = ECollisionEnabled::QueryAndPhysics;
+		}
+
+		switch (Bone->get_shape().type)
 		{
 		case SBoneShape::EShapeType::stBox:
 		{
 			FKBoxElem Box;
-			Box.Center = FVector(-Bone->shape.box.m_translate.x * 100, Bone->shape.box.m_translate.z * 100, Bone->shape.box.m_translate.y * 100);
-			Box.X = Bone->shape.box.m_halfsize.x * 200;
-			Box.Y = Bone->shape.box.m_halfsize.z * 200;
-			Box.Z = Bone->shape.box.m_halfsize.y * 200;
+			Box.Center = FVector(-Bone->get_shape().box.m_translate.x * 100, Bone->get_shape().box.m_translate.z * 100, Bone->get_shape().box.m_translate.y * 100);
+			Box.X = Bone->get_shape().box.m_halfsize.x * 200;
+			Box.Y = Bone->get_shape().box.m_halfsize.z * 200;
+			Box.Z = Bone->get_shape().box.m_halfsize.y * 200;
 			Fmatrix InRotation;
-			Bone->shape.box.xform_get(InRotation);
+			Bone->get_shape().box.xform_get(InRotation);
 			Fquaternion InQuat; InQuat.set(InRotation);
 			Box.Rotation = FRotator(FQuat(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w));
+			Box.SetCollisionEnabled(CollisionEnabled);
 			NewBodySetup->AggGeom.BoxElems.Add(Box);
 			break;
 		}
@@ -1821,24 +1888,26 @@ void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMes
 		case SBoneShape::EShapeType::stCylinder:
 		{
 			FKSphylElem Sphyl;
-			Sphyl.Center = FVector(-Bone->shape.cylinder.m_center.x * 100, Bone->shape.cylinder.m_center.z * 100, Bone->shape.cylinder.m_center.y * 100);
-			Sphyl.Radius = Bone->shape.cylinder.m_radius * 100;
-			Sphyl.Length = Bone->shape.cylinder.m_height * 100;
+			Sphyl.Center = FVector(-Bone->get_shape().cylinder.m_center.x * 100, Bone->get_shape().cylinder.m_center.z * 100, Bone->get_shape().cylinder.m_center.y * 100);
+			Sphyl.Radius = Bone->get_shape().cylinder.m_radius * 100;
+			Sphyl.Length = Bone->get_shape().cylinder.m_height * 100;
 			Fmatrix InRotation;
-			InRotation.k.set(Bone->shape.cylinder.m_direction);
+			InRotation.k.set(Bone->get_shape().cylinder.m_direction);
 			Fvector::generate_orthonormal_basis(InRotation.k, InRotation.j, InRotation.i);
 			Fquaternion InQuat; InQuat.set(InRotation);
 			FRotator RotationToUnreal(0, 0, -90);
 			FRotator OutRotation(FQuat(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w) * FQuat(RotationToUnreal));
 			Sphyl.Rotation = OutRotation;
+			Sphyl.SetCollisionEnabled(CollisionEnabled);
 			NewBodySetup->AggGeom.SphylElems.Add(Sphyl);
 		break;
 		}
 		case SBoneShape::EShapeType::stSphere:
 		{
 			FKSphereElem Sphere;
-			Sphere.Center = FVector( -Bone->shape.sphere.P.x * 100, Bone->shape.sphere.P.z * 100, Bone->shape.sphere.P.y * 100);
-			Sphere.Radius = Bone->shape.sphere.R*100;
+			Sphere.Center = FVector( -Bone->get_shape().sphere.P.x * 100, Bone->get_shape().sphere.P.z * 100, Bone->get_shape().sphere.P.y * 100);
+			Sphere.Radius = Bone->get_shape().sphere.R * 100;
+			Sphere.SetCollisionEnabled(CollisionEnabled);
 			NewBodySetup->AggGeom.SphereElems.Add(Sphere);
 			break;
 		}
@@ -1851,7 +1920,7 @@ void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMes
 		}
 		}
 
-		NewBodySetup->DefaultInstance.SetMassOverride(Bone->mass);
+		NewBodySetup->DefaultInstance.SetMassOverride(Bone->get_mass());
 		PhysicsAsset->SkeletalBodySetups.Add(NewBodySetup);
 		NewBodySetup->PostEditChange();
 	}

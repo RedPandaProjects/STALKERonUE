@@ -21,9 +21,9 @@ private:
 	USkeleton*					FindOrCreateSkeleton				(const FString&Name , USkeletalMesh* InMesh);
 	void						CreateAnims					(const FString& Name, USkeleton* InMesh, CEditableObject* Object);
 	void						CreateAnims					(const FString& Name, USkeleton* InMesh, CSMotion* InMotion);
-	void						CreateAnims					(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, IReader* InMotion);
-	void						CreateAnims					(const FString& Name, USkeleton* InMesh,TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion,u16 ID);
-	void						CreatePhysicsAsset			(const FString& Name, USkeletalMesh* InMesh, CEditableObject* Object);
+	void						CreateAnims					(const FString& Name, UStalkerKinematicsData*InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, IReader* InMotion);
+	UAnimSequence* CreateAnim (const FString& Name, USkeleton* InMesh,TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion,u16 ID);
+	void						CreatePhysicsAsset			(const FString& Name, USkeletalMesh* InMesh, const TArray<IBoneData*>& Bones);
 	FString						GetGamePath					();
 	UObject*					ParentPackage;
 	EObjectFlags				ObjectFlags;
