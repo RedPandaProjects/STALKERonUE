@@ -11,7 +11,7 @@ AStalkerPlayerCharacter::AStalkerPlayerCharacter()
 
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetRootComponent());
-	FirstPersonCameraComponent->bUsePawnControlRotation = true;
+	FirstPersonCameraComponent->bUsePawnControlRotation = true; 
 }
 
 void AStalkerPlayerCharacter::PossessedBy(AController* NewController)

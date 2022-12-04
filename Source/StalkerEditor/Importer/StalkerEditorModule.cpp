@@ -58,5 +58,5 @@ void FStalkerEditorModule::ShutdownModule()
 }
 
 #undef LOCTEXT_NAMESPACE
-	
-IMPLEMENT_MODULE(FStalkerEditorModule, StalkerEditor)
+
+IMPLEMENT_GAME_MODULE(FStalkerEditorModule, StalkerEditor);

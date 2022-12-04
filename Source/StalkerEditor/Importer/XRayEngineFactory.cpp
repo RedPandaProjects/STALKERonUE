@@ -1,5 +1,7 @@
 #include "XRayEngineFactory.h"
 #include "PhysicsEngine/PhysicsAsset.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsBoneData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
 
@@ -46,10 +48,45 @@ struct XRayVertBoned4W       //76 bytes
 };
 #pragma pack(pop)
 
+IC	void QR2Quat(const CKeyQR& K, Fquaternion& Q)
+{
+	Q.x = float(K.x) * KEY_QuantI;
+	Q.y = float(K.y) * KEY_QuantI;
+	Q.z = float(K.z) * KEY_QuantI;
+	Q.w = float(K.w) * KEY_QuantI;
+}
+
+IC void QT8_2T(const CKeyQT8& K, const CMotion& M, Fvector& T)
+{
+	T.x = float(K.x1) * M._sizeT.x + M._initT.x;
+	T.y = float(K.y1) * M._sizeT.y + M._initT.y;
+	T.z = float(K.z1) * M._sizeT.z + M._initT.z;
+}
+
+IC void QT16_2T(const CKeyQT16& K, const CMotion& M, Fvector& T)
+{
+	T.x = float(K.x1) * M._sizeT.x + M._initT.x;
+	T.y = float(K.y1) * M._sizeT.y + M._initT.y;
+	T.z = float(K.z1) * M._sizeT.z + M._initT.z;
+}
+\
 XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFlags)
 {
 	ParentPackage = InParentPackage;
 	ObjectFlags = InFlags;
+
+	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath());
+	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+	TArray<FAssetData> AssetData;
+	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData,true);
+	for (FAssetData& Data : AssetData)
+	{
+		USkeleton* Skeleton = Cast<USkeleton>(Data.GetAsset());
+		if (Skeleton)
+		{
+			Skeletons.Add(Skeleton);
+		}
+	}
 }
 
 XRayEngineFactory::~XRayEngineFactory()
@@ -59,17 +96,75 @@ XRayEngineFactory::~XRayEngineFactory()
 		GRayObjectLibrary->RemoveEditObject(Object);
 	}
 }
-
-USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
+inline bool operator == (const Fmatrix33& Left, const Fmatrix33& Right)
 {
-	USkeletalMesh* SkeletalMesh = nullptr;
+	return Left.i == Right.i&& Left.j == Right.j && Left.k == Right.k;
+
+}
+
+inline bool operator == (const Fobb&Left, const Fobb& Right)
+{
+	return Left.m_halfsize == Right.m_halfsize&&Left.m_rotate == Right.m_rotate&&Left.m_translate == Right.m_translate;
+
+}
+inline bool operator == (const Fsphere& Left, const Fsphere& Right)
+{
+	return Left.P == Right.P && FMath::IsNearlyEqual(Left.R , Right.R, 0.0000001);
+
+}
+inline bool operator == (const Fcylinder& Left, const Fcylinder& Right)
+{
+	return Left.m_center == Right.m_center && Left.m_direction == Right.m_direction&&FMath::IsNearlyEqual(Left.m_radius , Right.m_radius, 0.0000001);
+
+}
+inline bool operator == (const SBoneShape& Left, const SBoneShape& Right)
+{
+	if(Left.type != Right.type|| !Left.flags.equal(Right.flags) )
+	{
+		return false;
+	}
+	switch (Right.type)
+	{
+	default:
+		return true;
+	case SBoneShape::stBox:
+		return Left.box == Right.box;
+	case SBoneShape::stSphere:
+		return Left.sphere == Right.sphere;
+	case SBoneShape::stCylinder:
+		return Left.cylinder == Right.cylinder;
+	}
+	return false;
+}
+inline bool operator == (const SJointLimit& Left, const SJointLimit& Right)
+{
+	return Left.damping_factor == Right.damping_factor && Left.limit.x == Right.limit.x && Left.limit.y == Right.limit.y && Left.spring_factor == Right.spring_factor;
+
+}
+inline bool operator == (const SJointIKData& Left, const SJointIKData& Right)
+{
+	return Left.break_force == Right.break_force && 
+	Left.break_torque == Right.break_torque &&
+	Left.damping_factor == Right.damping_factor &&
+	Left.friction == Right.friction &&
+	Left.ik_flags == Right.ik_flags&&
+		Left.limits[0] == Right.limits[0] &&
+		Left.limits[1] == Right.limits[1] &&
+		Left.limits[2] == Right.limits[2] &&
+		Left.spring_factor == Right.spring_factor &&
+		Left.type == Right.type;
+
+}
+UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
+{
+	UStalkerKinematicsData* StalkerKinematicsData = nullptr;
 	FString PackageName;
 	PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (SkeletalMesh)
-		return SkeletalMesh;
+	StalkerKinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (StalkerKinematicsData)
+		return StalkerKinematicsData;
 	
 	IReader* FileData = FS.r_open(TCHAR_TO_ANSI(*FileName));
 	if (!FileData)
@@ -161,7 +256,6 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 	
 	TArray<TPair<shared_str, shared_str>> MaterialsAndTextures;
 	TArray<TArray<st_MeshVertex>>  Vertices;
-
 	if (!FileData->find_chunk(OGF_CHILDREN))
 	{
 		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_CHILDREN"), *FileName);
@@ -254,7 +348,7 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.BoneID[2] = InVertex.m[2];
 						OutVertex.BoneWeight[0] = InVertex.w[0];
 						OutVertex.BoneWeight[1] =  InVertex.w[1];
-						OutVertex.BoneWeight[2] = 1 - InVertex.w[1];
+						OutVertex.BoneWeight[2] = 1 - InVertex.w[1] - InVertex.w[0];
 						ElementVertices.Add(OutVertex);
 					}
 				}break;
@@ -280,7 +374,7 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.BoneWeight[0] = InVertex.w[0];
 						OutVertex.BoneWeight[1] = InVertex.w[1];
 						OutVertex.BoneWeight[2] =  InVertex.w[2];
-						OutVertex.BoneWeight[3] = 1 - InVertex.w[2];
+						OutVertex.BoneWeight[3] = 1 - InVertex.w[2] - InVertex.w[1] - InVertex.w[0];
 						ElementVertices.Add(OutVertex);
 					}
 				}break;
@@ -332,9 +426,9 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 
 	}
 	check(MaterialsAndTextures.Num()==Vertices.Num());
-	FS.r_close(FileData);
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	SkeletalMesh = NewObject<USkeletalMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	// Load animation
+	UPackage* AssetPackage = CreatePackage(*(PackageName+"_SkeletalMesh"));
+	USkeletalMesh* SkeletalMesh = NewObject<USkeletalMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName + "_SkeletalMesh"), ObjectFlags);
 
 	TArray<SkeletalMeshImportData::FBone> UBones;
 	UBones.AddDefaulted(Bones.Num());
@@ -420,6 +514,10 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 						{
 							break;
 						}
+						if (OutVertices[VertexID].BoneWeight[InfluencesID] == 0)
+						{
+							continue;
+						}
 						SkeletalMeshImportData::FRawBoneInfluence BoneInfluence;
 						BoneInfluence.BoneIndex = FindBoneIDOrAdd(OutBones, Bones,Bones[OutVertices[VertexID].BoneID[InfluencesID]].Get());
 						BoneInfluence.Weight = OutVertices[VertexID].BoneWeight[InfluencesID];
@@ -434,9 +532,7 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 					Triangle.TangentZ[VirtualVertexID].Y = OutVertices[VertexID].Normal.z;
 					Triangle.TangentZ[VirtualVertexID].Z = OutVertices[VertexID].Normal.y;
 				}
-				InSkeletalMeshImportData.Faces.Add(Triangle);;
-
-
+				InSkeletalMeshImportData.Faces.Add(Triangle);
 
 			}
 
@@ -457,15 +553,37 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 	SkeletalMesh->SetMaterials(InMaterials);
 	SkeletalMesh->PostEditChange();
 
-	USkeleton* Skeleton = CreateSkeleton(PackageName + "_Skeleton", SkeletalMesh);
+	USkeleton* Skeleton = FindOrCreateSkeleton(PackageName + "_Skeleton", SkeletalMesh);
 
 	Skeleton->SetPreviewMesh(SkeletalMesh);
 	SkeletalMesh->SetSkeleton(Skeleton);
 
 	SkeletalMesh->PostEditChange();
+
+	AssetPackage = CreatePackage(*PackageName);
+	StalkerKinematicsData = NewObject<UStalkerKinematicsData>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+
+	FAssetRegistryModule::AssetCreated(StalkerKinematicsData);
+	ObjectCreated.Add(StalkerKinematicsData);
+	StalkerKinematicsData->Mesh = SkeletalMesh;
+	IReader* UD = FileData->open_chunk(OGF_S_USERDATA);
+	if(UD)
+	{
+		xr_string str;
+		UD->r_stringZ(str);
+		StalkerKinematicsData->UserData = str.c_str();
+		UD->close();
+	}
+	StalkerKinematicsData->BuildFromLegacy(Bones);
+
 	//CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, Object);
-	//CreateAnims(PackageName / FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Object);
-	return SkeletalMesh;
+	if(Header.type == MT_SKELETON_ANIM)
+	{
+		CreateAnims(PackageName / FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Bones, FileData);
+	}
+	g_pMotionsContainer->clean(false);
+	FS.r_close(FileData);
+	return StalkerKinematicsData;
 }
 
 UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFullPath)
@@ -741,7 +859,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 	SkeletalMesh->SetMaterials(InMaterials);
 	SkeletalMesh->PostEditChange();
 
-	USkeleton * Skeleton = CreateSkeleton(PackageName+"_Skeleton", SkeletalMesh);
+	USkeleton * Skeleton = FindOrCreateSkeleton(PackageName+"_Skeleton", SkeletalMesh);
 
 	Skeleton->SetPreviewMesh(SkeletalMesh);
 	SkeletalMesh->SetSkeleton(Skeleton);
@@ -1330,8 +1448,39 @@ bool XRayEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<F
 	return true;
 }
 
-USkeleton* XRayEngineFactory::CreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
+USkeleton* XRayEngineFactory::FindOrCreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
 {
+	for (USkeleton* Skeleton : Skeletons)
+	{
+		const FReferenceSkeleton& SkeletonRefSkel = Skeleton->GetReferenceSkeleton();
+		const FReferenceSkeleton& MeshRefSkel = InMesh->GetRefSkeleton();
+
+		if (SkeletonRefSkel.GetNum() != MeshRefSkel.GetNum())
+		{
+			continue;
+		}
+		if (SkeletonRefSkel.GetBoneName(0) != MeshRefSkel.GetBoneName(0))
+		{
+			continue;
+		}
+		TMap<FName,FName> Bones;
+		for (int32 i=1;i< SkeletonRefSkel.GetNum();i++)
+		{
+			Bones.Add(SkeletonRefSkel.GetBoneName(i), SkeletonRefSkel.GetBoneName(SkeletonRefSkel.GetParentIndex(i)));
+		}
+		bool bResult = true;
+		for (int32 i = 1; i < MeshRefSkel.GetNum(); i++)
+		{
+			if (Bones[MeshRefSkel.GetBoneName(i)] != MeshRefSkel.GetBoneName(MeshRefSkel.GetParentIndex(i)))
+			{
+				bResult = false;
+			}
+		}
+		if (bResult)
+		{
+			return Skeleton;
+		}
+	}
 	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
 	USkeleton* Skeleton = LoadObject<USkeleton>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (Skeleton)
@@ -1343,6 +1492,7 @@ USkeleton* XRayEngineFactory::CreateSkeleton(const FString& FullName, USkeletalM
 	Skeleton->MergeAllBonesToBoneTree(InMesh);
 	ObjectCreated.Add(Skeleton);
 	FAssetRegistryModule::AssetCreated(Skeleton);
+	Skeletons.Add(Skeleton);
 	return Skeleton;
 }
 
@@ -1442,6 +1592,197 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	ObjectCreated.Add(AnimSequence);
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 }
+
+void XRayEngineFactory::CreateAnims(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, IReader* InMotion)
+{
+	shared_motions Motions;
+	if (InMotion->find_chunk(OGF_S_MOTION_REFS))
+	{
+		string_path		items_nm;
+		InMotion->r_stringZ(items_nm, sizeof(items_nm));
+		size_t set_cnt = _GetItemCount(items_nm);
+		R_ASSERT(set_cnt < MAX_ANIM_SLOT);
+		string_path		nm;
+		for (size_t k = 0; k < set_cnt; ++k)
+		{
+			_GetItem(items_nm, k, nm);
+			xr_strcat(nm, ".omf");
+
+			string_path	fn;
+			if (!FS.exist(fn, "$level$", nm))
+			{
+				if (!FS.exist(fn, "$game_meshes$", nm))
+				{
+#ifdef _EDITOR
+					Msg("!Can't find motion file '%s'.", nm);
+					return;
+#else
+					Debug.fatal(DEBUG_INFO, "Can't find motion file '%s'.", nm);
+#endif
+				}
+			}
+
+			IReader* MS = FS.r_open(fn);
+
+			FS.r_close(MS);
+		}
+	}
+	else  if (InMotion->find_chunk(OGF_S_MOTION_REFS2))
+	{
+		u32 set_cnt = InMotion->r_u32();
+		string_path		nm;
+		for (u32 k = 0; k < set_cnt; ++k)
+		{
+			InMotion->r_stringZ(nm, sizeof(nm));
+			FString NameOmf = nm;
+			xr_strcat(nm, ".omf");
+			// Check compatibility
+			string_path	fn;
+			if (!FS.exist(fn, "$level$", nm))
+			{
+				if (!FS.exist(fn, "$game_meshes$", nm))
+				{
+#ifdef _EDITOR
+					Msg("!Can't find motion file '%s'.", nm);
+					return;
+#else
+					Debug.fatal(DEBUG_INFO, "Can't find motion file '%s'.", nm);
+#endif
+				}
+			}
+			IReader* MS = FS.r_open(fn);
+			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / NameOmf);
+			CreateAnims(PackageNameAnims, InMesh, BoneData, MS);
+			FS.r_close(MS);
+		}
+	}
+	else
+	{
+		string_path	nm;
+		strconcat(sizeof(nm), nm, TCHAR_TO_ANSI(*Name), ".ogf");
+		xr_vector<CBoneData*> bones;
+		for (size_t i = 0; i < BoneData.Num(); i++)
+		{
+			bones.push_back(BoneData[i].Get());
+		}
+		Motions.create(nm, InMotion,& bones);
+
+		for(auto&[Key,Value]:*Motions.motion_map())
+		{
+			const FString MotionPath = Name / FString(Key.c_str());
+			CreateAnims(MotionPath, InMesh, BoneData, Motions, Value);
+		}
+	}
+}
+
+void XRayEngineFactory::CreateAnims(const FString& MotionPath, USkeleton* Skeleton, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions& InMotion, u16 ID)
+{
+	const FString MotionFullPath = MotionPath + TEXT(".") + FPaths::GetBaseFilename(MotionPath);
+	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
+	if (IsValid(Anim))
+	{
+		return;
+	}
+	UPackage* AssetPackage = CreatePackage(*MotionPath);
+	UAnimSequence* AnimSequence = NewObject<UAnimSequence>(AssetPackage, *FPaths::GetBaseFilename(MotionPath), ObjectFlags);
+
+	AnimSequence->SetSkeleton(Skeleton);
+	AnimSequence->SetPreviewMesh(Skeleton->GetPreviewMesh());
+
+
+	// In a regular import workflow this NameMapping will exist and be populated with the blend shape names we imported, if any
+	const FSmartNameMapping* NameMapping = Skeleton->GetSmartNameContainer(USkeleton::AnimCurveMappingName);
+	if (!NameMapping)
+	{
+		return;
+	}
+	IAnimationDataController& Controller = AnimSequence->GetController();
+
+	// If we should transact, we'll already have a transaction from somewhere else. We should suppress this because
+	// it will also create a transaction when importing into UE assets, and the level sequence assets can emit some warnings about it
+	const bool bShouldTransact = false;
+	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "XRayEngineFactory Animation Data"), bShouldTransact);
+	Controller.ResetModel(bShouldTransact);
+
+	// Bake the animation for each frame.
+	// An alternative route would be to convert the time samples into TransformCurves, add them to UAnimSequence::RawCurveData,
+	// and then call UAnimSequence::BakeTrackCurvesToRawAnimation. Doing it this way provides a few benefits though: The main one is that the way with which
+	// UAnimSequence bakes can lead to artifacts on problematic joints (e.g. 90 degree rotation joints children of -1 scale joints, etc.) as it compounds the
+	// transformation with the rest pose. Another benefit is that that doing it this way lets us offload the interpolation to USD, so that it can do it
+	// however it likes, and we can just sample the joints at the target framerate
+	u32 Count = u32(-1);
+	for (int32 BoneIndex = 0; BoneIndex < BoneData.Num(); ++BoneIndex)
+	{
+		shared_str InBoneName = BoneData[BoneIndex]->name;
+		FName BoneName = FName(InBoneName.c_str());
+		TArray<FVector> PosKeys;
+		TArray<FQuat>   RotKeys;
+		TArray<FVector> ScaleKeys;
+
+		MotionVec* BoneMotion = InMotion.bone_motions(InBoneName);
+		if(!BoneMotion)continue;
+		CMotion&Motion = BoneMotion->at(ID);
+		if (Count == u32(-1))
+		{
+			Count = Motion.get_count();
+		}
+		check(Count == Motion.get_count());
+		for (uint32 FrameIndex = 0; FrameIndex < Count; ++FrameIndex)
+		{
+			Fvector3 InLocation;
+			Fquaternion InQuat;
+			if (!Motion.test_flag(flRKeyAbsent))
+			{
+				QR2Quat(Motion._keysR[FrameIndex], InQuat);
+
+			}
+			else
+			{
+				QR2Quat(Motion._keysR[0], InQuat);
+			}
+			if (Motion.test_flag(flTKeyPresent))
+			{
+				if (Motion.test_flag(flTKey16IsBit))
+					QT16_2T(Motion._keysT16[FrameIndex], Motion, InLocation);
+				else
+					QT8_2T(Motion._keysT8[FrameIndex], Motion, InLocation);
+			}
+			else
+				InLocation.set(Motion._initT);
+
+			FVector3f PosKey = StalkerMath::XRayLocationToUnreal(InLocation);
+			FQuat4f   RotKey = StalkerMath::XRayQuatToUnreal(InQuat);
+			FVector3f ScaleKey(1, 1, 1);
+			PosKeys.Add(FVector(PosKey.X, PosKey.Y, PosKey.Z));
+			RotKeys.Add(FQuat(RotKey.X, RotKey.Y, RotKey.Z, RotKey.W));
+			ScaleKeys.Add(FVector(ScaleKey.X, ScaleKey.Y, ScaleKey.Z));
+		}
+
+		Controller.AddBoneTrack(BoneName, bShouldTransact);
+		Controller.SetBoneTrackKeys(BoneName, PosKeys, RotKeys, ScaleKeys, bShouldTransact);
+	}
+
+	AnimSequence->Interpolation = EAnimInterpolationType::Linear;
+	AnimSequence->RateScale = InMotion.motion_def(ID)->Speed();
+
+
+
+	Controller.SetPlayLength(static_cast<float>(Count - 1)*SAMPLE_SPF, bShouldTransact);
+
+	FFrameRate FrameRate;
+	FrameRate.Denominator = 1;
+	for (; !FMath::IsNearlyZero(FMath::Frac(SAMPLE_FPS * FrameRate.Denominator)); FrameRate.Denominator *= 10) {}
+	FrameRate.Numerator = FMath::FloorToInt32(SAMPLE_FPS * FrameRate.Denominator);
+
+	Controller.SetFrameRate(FrameRate, bShouldTransact);
+	Controller.NotifyPopulated(); // This call is important to get the controller to not use the sampling frequency as framerate
+	Controller.CloseBracket(bShouldTransact);
+
+	AnimSequence->PostEditChange();
+	AnimSequence->MarkPackageDirty();
+	ObjectCreated.Add(AnimSequence);
+	FAssetRegistryModule::AssetCreated(AnimSequence);
+}	
 
 void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh, CEditableObject* Object)
 {

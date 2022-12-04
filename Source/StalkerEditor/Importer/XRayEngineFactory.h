@@ -4,7 +4,7 @@ class XRayEngineFactory
 public:
 								XRayEngineFactory			(UObject* InParentPackage, EObjectFlags InFlags);
 								~XRayEngineFactory			();
-	USkeletalMesh*				ImportOGF					(const FString& FileName);
+	class UStalkerKinematicsData*ImportOGF					(const FString& FileName);
 	UObject*					ImportObject				(const FString& FileName, bool UseOnlyFullPath = false);
 	UStaticMesh*				ImportObjectAsStaticMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
 	USkeletalMesh*				ImportObjectAsDynamicMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
@@ -18,13 +18,16 @@ private:
 	int32						FindBoneIDOrAdd				( TArray<CBone*>& InBones, CBone* InBone);
 	int32						FindBoneIDOrAdd				(TArray<uint32>& OutBones, TArray<TSharedPtr<CBoneData>>& InBones, CBoneData* InBone);
 	bool						CreateSkeletalMesh			(USkeletalMesh* SkeletalMesh, TArray<FSkeletalMeshImportData>& LODIndexToSkeletalMeshImportData, const TArray<SkeletalMeshImportData::FBone>& InSkeletonBones);
-	USkeleton*					CreateSkeleton				(const FString&Name , USkeletalMesh* InMesh);
+	USkeleton*					FindOrCreateSkeleton				(const FString&Name , USkeletalMesh* InMesh);
 	void						CreateAnims					(const FString& Name, USkeleton* InMesh, CEditableObject* Object);
 	void						CreateAnims					(const FString& Name, USkeleton* InMesh, CSMotion* InMotion);
+	void						CreateAnims					(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, IReader* InMotion);
+	void						CreateAnims					(const FString& Name, USkeleton* InMesh,TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion,u16 ID);
 	void						CreatePhysicsAsset			(const FString& Name, USkeletalMesh* InMesh, CEditableObject* Object);
 	FString						GetGamePath					();
 	UObject*					ParentPackage;
 	EObjectFlags				ObjectFlags;
 	TArray< CEditableObject*>	Objects;
 	TArray< UObject*>			ObjectCreated;
+	TArray< USkeleton*>			Skeletons;
 };

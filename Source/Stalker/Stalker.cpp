@@ -1,10 +1,12 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "Stalker.h"
+#include "Kernel/StalkerEngineManager.h"
+
 #define LOCTEXT_NAMESPACE "StalkerModule"
 DEFINE_LOG_CATEGORY(LogStalker);
 
-void FXRayEngineModule::StartupModule()
+void FStalkerModule::StartupModule()
 {
 	GXRayEngineManager = NewObject< UStalkerEngineManager>();
 	GXRayEngineManager->AddToRoot();
@@ -13,12 +15,11 @@ void FXRayEngineModule::StartupModule()
 
 }
 
-void FXRayEngineModule::ShutdownModule()
+void FStalkerModule::ShutdownModule()
 {
 	GXRayEngineManager->Destroy();
 	GXRayEngineManager->RemoveFromRoot();
 }
 
 #undef LOCTEXT_NAMESPACE
-
-IMPLEMENT_MODULE(FXRayEngineModule, XRayEngine)
+IMPLEMENT_PRIMARY_GAME_MODULE(FStalkerModule, Stalker, "Stalker");

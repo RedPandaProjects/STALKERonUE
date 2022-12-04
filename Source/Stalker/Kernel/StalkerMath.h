@@ -33,6 +33,27 @@ namespace StalkerMath
 		Matrix.setXYZi(Rotation.x, Rotation.y, Rotation.z);
 		return XRayQuatToUnreal(Matrix);
 	}
+
+
+
+	inline Fvector UnrealLocationToXRay(FVector3f Location)
+	{
+		return Fvector().set(-Location.X / 100.f, Location.Z / 100.f, Location.Y / 100.f);
+	}
+	inline Fvector UnrealLocationToXRay(FVector Location)
+	{
+		return Fvector().set(-Location.X / 100.f, Location.Z / 100.f, Location.Y / 100.f);
+	}
+
+	inline Fquaternion	UnrealQuatToXRay(const FQuat4f& Quat)
+	{
+		return Fquaternion().set(Quat.W, Quat.X, -Quat.Z, -Quat.Y);
+	}
+
+	inline Fquaternion	UnrealQuatToXRay(const FQuat& Quat)
+	{
+		return Fquaternion().set(Quat.W, Quat.X, -Quat.Z, -Quat.Y);
+	}
 }
 
 FORCEINLINE uint32 GetTypeHash(shared_str Name)

@@ -1,6 +1,6 @@
 #pragma once
 
-class FXRayEngineModule : public FDefaultGameModuleImpl
+class FStalkerModule : public FDefaultGameModuleImpl
 {
 public:
 

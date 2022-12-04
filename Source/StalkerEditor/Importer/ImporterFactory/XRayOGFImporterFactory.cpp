@@ -1,5 +1,6 @@
 #include "XRayOGFImporterFactory.h"
 #include "../XRayEngineFactory.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
 UXRayOGFImporterFactory::UXRayOGFImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
