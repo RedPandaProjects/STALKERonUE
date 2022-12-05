@@ -11,6 +11,7 @@ THIRD_PARTY_INCLUDES_END
 #include "XRay/Core/XRayLog.h"
 #include "XRay/Core/XRayInput.h"
 #include "XRay/Core/XRayEngine.h"
+#include "Unreal/Console/StalkerConsole.h"
 
 UStalkerEngineManager* GXRayEngineManager = nullptr;
 
@@ -80,6 +81,8 @@ void UStalkerEngineManager::Initialized()
 		FSName = FPaths::Combine(FSName, TEXT("fsgame.ltx"));
 	}
 	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, EGamePath::COP_1602);
+
+	StalkerConsole::Init();
 
 	g_Engine = new XRayEngine;
 	g_Engine->Initialize();
