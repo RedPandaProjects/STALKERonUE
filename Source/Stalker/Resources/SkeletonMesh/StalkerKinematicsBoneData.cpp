@@ -1,21 +1,26 @@
 #include "StalkerKinematicsBoneData.h"
-void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& Legacy)
-{
-	Mass  =  Legacy.mass;
-	PhysicsMaterialName = Legacy.game_mtl_name.c_str();
-	CenterOfMass = StalkerMath::XRayLocationToUnreal(Legacy.center_of_mass);
+#include "StalkerKinematicsBone.h"
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/XrGameMaterialLibraryInterface.h"
+THIRD_PARTY_INCLUDES_END
 
-	Obb.Center = FVector( StalkerMath::XRayLocationToUnreal(Legacy.obb.m_translate));
-	Obb.X = Legacy.obb.m_halfsize.x * 200;
-	Obb.Y = Legacy.obb.m_halfsize.z * 200;
-	Obb.Z = Legacy.obb.m_halfsize.y * 200;
+void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& BoneData)
+{
+	Mass  =  BoneData.mass;
+	PhysicsMaterialName = BoneData.game_mtl_name.c_str();
+	CenterOfMass = StalkerMath::XRayLocationToUnreal(BoneData.center_of_mass);
+
+	Obb.Center = FVector( StalkerMath::XRayLocationToUnreal(BoneData.obb.m_translate));
+	Obb.X = BoneData.obb.m_halfsize.x * 200;
+	Obb.Y = BoneData.obb.m_halfsize.z * 200;
+	Obb.Z = BoneData.obb.m_halfsize.y * 200;
 	Fmatrix InRotation;
-	Legacy.obb.xform_get(InRotation);
+	BoneData.obb.xform_get(InRotation);
 	Obb.Rotation = FRotator(FQuat(StalkerMath::XRayQuatToUnreal(InRotation)));
 	
 	//shape
 	{
-		switch (Legacy.shape.type)
+		switch (BoneData.shape.type)
 		{
 		case SBoneShape::stBox:
 			Shape.Type = EStalkerShapeType::EST_Box;
@@ -32,51 +37,51 @@ void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& Legacy)
 		}
 		Shape.Flags = 0 ;
 
-		if(Legacy.shape.flags .test(int32(SBoneShape::sfNoPickable)))
+		if(BoneData.shape.flags .test(int32(SBoneShape::sfNoPickable)))
 			Shape.Flags |=int32(EStalkerShapeFlags::ESF_NoPickable);
 
-		if (Legacy.shape.flags.test(int32(SBoneShape::sfNoPhysics)))
+		if (BoneData.shape.flags.test(int32(SBoneShape::sfNoPhysics)))
 			Shape.Flags |= int32(EStalkerShapeFlags::ESF_NoPhysics);
 
-		if (Legacy.shape.flags.test(int32(SBoneShape::sfNoFogCollider)))
+		if (BoneData.shape.flags.test(int32(SBoneShape::sfNoFogCollider)))
 			Shape.Flags |= int32(EStalkerShapeFlags::ESF_NoFogCollider);
 
-		if (Legacy.shape.flags.test(int32(SBoneShape::sfRemoveAfterBreak)))
+		if (BoneData.shape.flags.test(int32(SBoneShape::sfRemoveAfterBreak)))
 			Shape.Flags |= int32(EStalkerShapeFlags::ESF_RemoveAfterBreak);
 
-		Shape.Obb.Center = FVector(StalkerMath::XRayLocationToUnreal(Legacy.shape.box.m_translate));
-		Shape.Obb.X = Legacy.shape.box.m_halfsize.x * 200;
-		Shape.Obb.Y = Legacy.shape.box.m_halfsize.z * 200;
-		Shape.Obb.Z = Legacy.shape.box.m_halfsize.y * 200;
-		Legacy.shape.box.xform_get(InRotation);
+		Shape.Obb.Center = FVector(StalkerMath::XRayLocationToUnreal(BoneData.shape.box.m_translate));
+		Shape.Obb.X = BoneData.shape.box.m_halfsize.x * 200;
+		Shape.Obb.Y = BoneData.shape.box.m_halfsize.z * 200;
+		Shape.Obb.Z = BoneData.shape.box.m_halfsize.y * 200;
+		BoneData.shape.box.xform_get(InRotation);
 		Shape.Obb.Rotation = FRotator(FQuat(StalkerMath::XRayQuatToUnreal(InRotation)));
 
 
-		Shape.Cylinder.Center = FVector(StalkerMath::XRayLocationToUnreal(Legacy.shape.cylinder.m_center));
-		Shape.Cylinder.Radius = Legacy.shape.cylinder.m_radius * 100;
-		Shape.Cylinder.Length = Legacy.shape.cylinder.m_height * 100;
+		Shape.Cylinder.Center = FVector(StalkerMath::XRayLocationToUnreal(BoneData.shape.cylinder.m_center));
+		Shape.Cylinder.Radius = BoneData.shape.cylinder.m_radius * 100;
+		Shape.Cylinder.Length = BoneData.shape.cylinder.m_height * 100;
 		InRotation.identity();
-		InRotation.k.set(Legacy.shape.cylinder.m_direction);
+		InRotation.k.set(BoneData.shape.cylinder.m_direction);
 		Fvector::generate_orthonormal_basis(InRotation.k, InRotation.j, InRotation.i);
 		Fquaternion InQuat; InQuat.set(InRotation);
 		FRotator RotationToUnreal(0, 0, -90);
 		FRotator OutRotation(FQuat(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w) * FQuat(RotationToUnreal));
 		Shape.Cylinder.Rotation = OutRotation;
 
-		Shape.Sphere.Center = FVector(StalkerMath::XRayLocationToUnreal(Legacy.shape.sphere.P));
-		Shape.Sphere.Radius = Legacy.shape.sphere.R * 100;
+		Shape.Sphere.Center = FVector(StalkerMath::XRayLocationToUnreal(BoneData.shape.sphere.P));
+		Shape.Sphere.Radius = BoneData.shape.sphere.R * 100;
 	}
 	{
-		IKData.BreakForce = Legacy.IK_data.break_force;
-		IKData.BreakTorque = Legacy.IK_data.break_torque;
-		IKData.DampingFactor = Legacy.IK_data.damping_factor;
-		IKData.Friction = Legacy.IK_data.friction;
-		IKData.IsBreakable = Legacy.IK_data.ik_flags.test(SJointIKData::flBreakable);
-		IKData.LimitsX.Set(Legacy.IK_data.limits[0].limit.x, Legacy.IK_data.limits[0].limit.y, Legacy.IK_data.limits[0].spring_factor, Legacy.IK_data.limits[0].damping_factor);
-		IKData.LimitsY.Set(Legacy.IK_data.limits[1].limit.x, Legacy.IK_data.limits[1].limit.y, Legacy.IK_data.limits[1].spring_factor, Legacy.IK_data.limits[1].damping_factor);
-		IKData.LimitsZ.Set(Legacy.IK_data.limits[2].limit.x, Legacy.IK_data.limits[2].limit.y, Legacy.IK_data.limits[2].spring_factor, Legacy.IK_data.limits[2].damping_factor);
-		IKData.SpringFactor = Legacy.IK_data.spring_factor;
-		switch (Legacy.IK_data.type)
+		IKData.BreakForce = BoneData.IK_data.break_force;
+		IKData.BreakTorque = BoneData.IK_data.break_torque;
+		IKData.DampingFactor = BoneData.IK_data.damping_factor;
+		IKData.Friction = BoneData.IK_data.friction;
+		IKData.IsBreakable = BoneData.IK_data.ik_flags.test(SJointIKData::flBreakable);
+		IKData.LimitsX.Set(BoneData.IK_data.limits[0].limit.x, BoneData.IK_data.limits[0].limit.y, BoneData.IK_data.limits[0].spring_factor, BoneData.IK_data.limits[0].damping_factor);
+		IKData.LimitsY.Set(BoneData.IK_data.limits[1].limit.x, BoneData.IK_data.limits[1].limit.y, BoneData.IK_data.limits[1].spring_factor, BoneData.IK_data.limits[1].damping_factor);
+		IKData.LimitsZ.Set(BoneData.IK_data.limits[2].limit.x, BoneData.IK_data.limits[2].limit.y, BoneData.IK_data.limits[2].spring_factor, BoneData.IK_data.limits[2].damping_factor);
+		IKData.SpringFactor = BoneData.IK_data.spring_factor;
+		switch (BoneData.IK_data.type)
 		{
 		case jtRigid:
 			IKData.Type = EStalkerJointType::EJT_Rigid;
@@ -100,110 +105,110 @@ void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& Legacy)
 	}
 }
 
-void FStalkerKinematicsBone::BuildToLegacy(CBoneData& Legacy)
+void FStalkerKinematicsBone::Build(StalkerKinematicsBone& BoneData)
 {
-	Legacy.mass = Mass;
-	Legacy.game_mtl_name = TCHAR_TO_ANSI(*PhysicsMaterialName.ToString());
-	Legacy.center_of_mass = StalkerMath::UnrealLocationToXRay(CenterOfMass);
+	BoneData.Mass = Mass;
+	BoneData.GameMaterialID = GameMaterialLibrary->GetMaterialIdx(TCHAR_TO_ANSI(*PhysicsMaterialName.ToString()));
+	BoneData.CenterOfMass = StalkerMath::UnrealLocationToXRay(CenterOfMass);
 	
-	Legacy.obb.m_halfsize.x = Obb.X / 200.f;
-	Legacy.obb.m_halfsize.y = Obb.Z / 200.f;
-	Legacy.obb.m_halfsize.z = Obb.Y / 200.f;
+	BoneData.Obb.m_halfsize.x = Obb.X / 200.f;
+	BoneData.Obb.m_halfsize.y = Obb.Z / 200.f;
+	BoneData.Obb.m_halfsize.z = Obb.Y / 200.f;
 
 	Fmatrix InRotation;
 	InRotation.rotation(StalkerMath::UnrealQuatToXRay(FQuat(Obb.Rotation)));
-	Legacy.obb.xform_set(InRotation);
-	Legacy.obb.m_translate = StalkerMath::UnrealLocationToXRay(Obb.Center);
+	BoneData.Obb.xform_set(InRotation);
+	BoneData.Obb.m_translate = StalkerMath::UnrealLocationToXRay(Obb.Center);
 	
 	//shape
 	{
 		switch (Shape.Type)
 		{
 		case EStalkerShapeType::EST_None:
-			Legacy.shape.type = SBoneShape::stNone;
+			BoneData.Shape.type = SBoneShape::stNone;
 			break;
 		case EStalkerShapeType::EST_Box:
-			Legacy.shape.type = SBoneShape::stBox;
+			BoneData.Shape.type = SBoneShape::stBox;
 			break;
 		case EStalkerShapeType::EST_Sphere:
-			Legacy.shape.type = SBoneShape::stSphere;
+			BoneData.Shape.type = SBoneShape::stSphere;
 			break;
 		case EStalkerShapeType::EST_Cylinder:
-			Legacy.shape.type = SBoneShape::stCylinder;
+			BoneData.Shape.type = SBoneShape::stCylinder;
 			break;
 		default:
-			Legacy.shape.type = SBoneShape::stNone;
+			BoneData.Shape.type = SBoneShape::stNone;
 			break;
 		}
-		Legacy.shape.flags.zero();
+		BoneData.Shape.flags.zero();
 
-		Legacy.shape.flags.set(int32(SBoneShape::sfNoPickable), Shape.Flags & int32(EStalkerShapeFlags::ESF_NoPickable));
-		Legacy.shape.flags.set(int32(SBoneShape::sfNoPhysics), Shape.Flags & int32(EStalkerShapeFlags::ESF_NoPhysics));
-		Legacy.shape.flags.set(int32(SBoneShape::sfNoFogCollider), Shape.Flags & int32(EStalkerShapeFlags::ESF_NoFogCollider));
-		Legacy.shape.flags.set(int32(SBoneShape::sfRemoveAfterBreak), Shape.Flags & int32(EStalkerShapeFlags::ESF_RemoveAfterBreak));
+		BoneData.Shape.flags.set(int32(SBoneShape::sfNoPickable), Shape.Flags & int32(EStalkerShapeFlags::ESF_NoPickable));
+		BoneData.Shape.flags.set(int32(SBoneShape::sfNoPhysics), Shape.Flags & int32(EStalkerShapeFlags::ESF_NoPhysics));
+		BoneData.Shape.flags.set(int32(SBoneShape::sfNoFogCollider), Shape.Flags & int32(EStalkerShapeFlags::ESF_NoFogCollider));
+		BoneData.Shape.flags.set(int32(SBoneShape::sfRemoveAfterBreak), Shape.Flags & int32(EStalkerShapeFlags::ESF_RemoveAfterBreak));
 
-		Legacy.shape.box.m_halfsize.x = Shape.Obb.X / 200.f;
-		Legacy.shape.box.m_halfsize.y = Shape.Obb.Z / 200.f;
-		Legacy.shape.box.m_halfsize.z = Shape.Obb.Y / 200.f;
+		BoneData.Shape.box.m_halfsize.x = Shape.Obb.X / 200.f;
+		BoneData.Shape.box.m_halfsize.y = Shape.Obb.Z / 200.f;
+		BoneData.Shape.box.m_halfsize.z = Shape.Obb.Y / 200.f;
 
 		InRotation.rotation(StalkerMath::UnrealQuatToXRay(FQuat(Shape.Obb.Rotation)));
-		Legacy.shape.box.xform_set(InRotation);
-		Legacy.shape.box.m_translate = StalkerMath::UnrealLocationToXRay(Shape.Obb.Center);
-		Legacy.shape.cylinder.m_center = StalkerMath::UnrealLocationToXRay(Shape.Cylinder.Center);
-		Legacy.shape.cylinder.m_radius = Shape.Cylinder.Radius / 100.f;
-		Legacy.shape.cylinder.m_height = Shape.Cylinder.Length / 100.f;
+		BoneData.Shape.box.xform_set(InRotation);
+		BoneData.Shape.box.m_translate = StalkerMath::UnrealLocationToXRay(Shape.Obb.Center);
+		BoneData.Shape.cylinder.m_center = StalkerMath::UnrealLocationToXRay(Shape.Cylinder.Center);
+		BoneData.Shape.cylinder.m_radius = Shape.Cylinder.Radius / 100.f;
+		BoneData.Shape.cylinder.m_height = Shape.Cylinder.Length / 100.f;
 
 		FRotator RotationToXRay(0, 0, 90);
 		Fquaternion CylinderQuat = StalkerMath::UnrealQuatToXRay(FQuat(Shape.Cylinder.Rotation) * FQuat(RotationToXRay));
 		InRotation.rotation(CylinderQuat);
-		Legacy.shape.cylinder.m_direction = InRotation.k;
+		BoneData.Shape.cylinder.m_direction = InRotation.k;
 
-		Legacy.shape.sphere.P = StalkerMath::UnrealLocationToXRay(Shape.Sphere.Center);
-		Legacy.shape.sphere.R  = Shape.Sphere.Radius / 100.f;
+		BoneData.Shape.sphere.P = StalkerMath::UnrealLocationToXRay(Shape.Sphere.Center);
+		BoneData.Shape.sphere.R  = Shape.Sphere.Radius / 100.f;
 	}
 	{
-		Legacy.IK_data.break_force = IKData.BreakForce;
-		Legacy.IK_data.break_torque = IKData.BreakTorque;
-		Legacy.IK_data.damping_factor = IKData.DampingFactor;
-		Legacy.IK_data.friction = IKData.Friction;
-		Legacy.IK_data.ik_flags.zero();
-		Legacy.IK_data.ik_flags.set(SJointIKData::flBreakable, IKData.IsBreakable);
+		BoneData.IKData.break_force = IKData.BreakForce;
+		BoneData.IKData.break_torque = IKData.BreakTorque;
+		BoneData.IKData.damping_factor = IKData.DampingFactor;
+		BoneData.IKData.friction = IKData.Friction;
+		BoneData.IKData.ik_flags.zero();
+		BoneData.IKData.ik_flags.set(SJointIKData::flBreakable, IKData.IsBreakable);
 
-		Legacy.IK_data.limits[0].limit.x = IKData.LimitsX.X;
-		Legacy.IK_data.limits[0].limit.y = IKData.LimitsX.Y;
-		Legacy.IK_data.limits[0].spring_factor = IKData.LimitsX.Z;
-		Legacy.IK_data.limits[0].damping_factor = IKData.LimitsX.W;
+		BoneData.IKData.limits[0].limit.x = IKData.LimitsX.X;
+		BoneData.IKData.limits[0].limit.y = IKData.LimitsX.Y;
+		BoneData.IKData.limits[0].spring_factor = IKData.LimitsX.Z;
+		BoneData.IKData.limits[0].damping_factor = IKData.LimitsX.W;
 
-		Legacy.IK_data.limits[1].limit.x = IKData.LimitsY.X;
-		Legacy.IK_data.limits[1].limit.y = IKData.LimitsY.Y;
-		Legacy.IK_data.limits[1].spring_factor = IKData.LimitsY.Z;
-		Legacy.IK_data.limits[1].damping_factor = IKData.LimitsY.W;
+		BoneData.IKData.limits[1].limit.x = IKData.LimitsY.X;
+		BoneData.IKData.limits[1].limit.y = IKData.LimitsY.Y;
+		BoneData.IKData.limits[1].spring_factor = IKData.LimitsY.Z;
+		BoneData.IKData.limits[1].damping_factor = IKData.LimitsY.W;
 
-		Legacy.IK_data.limits[2].limit.x = IKData.LimitsZ.X;
-		Legacy.IK_data.limits[2].limit.y = IKData.LimitsZ.Y;
-		Legacy.IK_data.limits[2].spring_factor = IKData.LimitsZ.Z;
-		Legacy.IK_data.limits[2].damping_factor = IKData.LimitsZ.W;
+		BoneData.IKData.limits[2].limit.x = IKData.LimitsZ.X;
+		BoneData.IKData.limits[2].limit.y = IKData.LimitsZ.Y;
+		BoneData.IKData.limits[2].spring_factor = IKData.LimitsZ.Z;
+		BoneData.IKData.limits[2].damping_factor = IKData.LimitsZ.W;
 
-		Legacy.IK_data.spring_factor = IKData.SpringFactor;
+		BoneData.IKData.spring_factor = IKData.SpringFactor;
 		switch (IKData.Type)
 		{
 		default:
-			Legacy.IK_data.type = jtNone;
+			BoneData.IKData.type = jtNone;
 			break;
 		case EStalkerJointType::EJT_Rigid:
-			Legacy.IK_data.type = jtRigid;
+			BoneData.IKData.type = jtRigid;
 			break;
 		case EStalkerJointType::EJT_Cloth:
-			Legacy.IK_data.type = jtCloth;
+			BoneData.IKData.type = jtCloth;
 			break;
 		case EStalkerJointType::EJT_Joint:
-			Legacy.IK_data.type = jtJoint;
+			BoneData.IKData.type = jtJoint;
 			break;
 		case EStalkerJointType::EJT_Wheel:
-			Legacy.IK_data.type = jtWheel;
+			BoneData.IKData.type = jtWheel;
 			break;
 		case EStalkerJointType::EJT_Slider:
-			Legacy.IK_data.type = jtSlider;
+			BoneData.IKData.type = jtSlider;
 			break;
 		}
 	}

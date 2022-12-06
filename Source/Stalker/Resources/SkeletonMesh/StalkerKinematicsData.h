@@ -20,5 +20,5 @@ public:
 
 
 	void BuildFromLegacy(const  TArray<TSharedPtr<CBoneData>>& LegacyBones);
-	void BuildToLegacy(TArray<TSharedPtr<CBoneData>>& LegacyBones);
+	void BuildBones(TArray<StalkerKinematicsBone>& LegacyBones);
 };

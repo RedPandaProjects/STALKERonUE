@@ -2,6 +2,10 @@
 #include "XRayRenderTarget.h"
 #include "../Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
 #include "../Resources/Visual/XRaySkeletonVisual.h"
+#include "../../../StalkerEngineManager.h"
+#include "Resources/StalkerResourcesManager.h"
+#include "Entities/Kinematics/StalkerKinematics.h"
+#include "Entities/Levels/Light/StalkerLight.h"
 XRayRenderInterface GRenderInterface;
 
 XRayRenderInterface::XRayRenderInterface()
@@ -266,7 +270,7 @@ class XrayRenderLight :public IRender_Light
 };
 IRender_Light* XRayRenderInterface::light_create()
 {
-	return new XrayRenderLight;
+	return GXRayEngineManager->GetResourcesManager()->CreateLight();
 }
 class XRayRenderGlow :public IRender_Glow
 {
@@ -327,6 +331,12 @@ IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
+	
+	AStalkerKinematics* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name);
+	if (Kinematics)
+	{
+		return Kinematics;
+	}
 	return GXRaySkeletonMeshManager->Get(name);
 }
 
@@ -343,8 +353,15 @@ IRenderVisual* XRayRenderInterface::model_Duplicate(IRenderVisual* V)
 void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 {
 	if (V)
-	{
-		GXRaySkeletonMeshManager->Destroy(V->CastToRaySkeletonVisual());
+	{	
+		if (V->CastToAStalkerKinematics())
+		{
+			GXRayEngineManager->GetResourcesManager()->Destroy(V->CastToAStalkerKinematics());
+		}
+		else
+		{
+			GXRaySkeletonMeshManager->Destroy(V->CastToRaySkeletonVisual());
+		}
 		V = nullptr;
 	}
 }
@@ -446,7 +463,7 @@ void XRayRenderInterface::light_destroy(IRender_Light* p_)
 {
 	if (p_)
 	{
-		delete p_;
+		GXRayEngineManager->GetResourcesManager()->Desotry(p_);
 	}
 	p_ = nullptr;
 }

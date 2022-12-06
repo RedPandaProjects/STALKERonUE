@@ -97,7 +97,6 @@ struct STALKER_API FStalkerKinematicsBone
 	FStalkerKinematicsBoneIKData IKData;
 
 	void BuildFromLegacy(const  CBoneData&Legacy);
-	
-	void BuildToLegacy( CBoneData&Legacy);
+	void Build(class StalkerKinematicsBone&Bone);
 
 };

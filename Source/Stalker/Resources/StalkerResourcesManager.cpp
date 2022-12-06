@@ -1,6 +1,9 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "../Kernel/StalkerEngineManager.h"
 #include "../Entities/Kinematics/StalkerKinematicsLegacy.h"
+#include "../Entities/Kinematics/StalkerKinematics.h"
+#include "SkeletonMesh/StalkerKinematicsData.h"
+#include "../Entities/Levels/Light/StalkerLight.h"
 
 
 USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
@@ -62,12 +65,6 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 
 	if (!IsValid(ParentMaterial))
 	{
-		const FString ParentPackageName = TEXT("/Game/Materials") / NameMaterial;
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
 		const FString ParentPackageName = TEXT("/Game/Base/Materials") / NameMaterial;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
@@ -107,12 +104,6 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 			break;
-		}
-		if (!IsValid(Texture))
-		{
-			const FString ParentPackageName = TEXT("/Game/Textures") / NameTexture;
-			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 		if (!IsValid(Texture))
 		{
@@ -229,6 +220,8 @@ void UStalkerResourcesManager::CheckLeak()
 	check(BrushesMaterials.Num() == 0);
 	check(BrushesInfo.Num() == 0);
 	check(Meshes.Num() == 0);
+	check(MeshesLegacy.Num() == 0);
+	check(Lights.Num() == 0);
 }
 
 void UStalkerResourcesManager::Reload()
@@ -239,20 +232,102 @@ void UStalkerResourcesManager::Reload()
 	}
 }
 
+
+class AStalkerLight* UStalkerResourcesManager::CreateLight()
+{
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+	AStalkerLight* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerLight>(SpawnParameters);
+	Lights.Add(Result);
+	return Result;
+}
+
+void UStalkerResourcesManager::Desotry(class IRender_Light* InLight)
+{
+	AStalkerLight*Light =  static_cast<AStalkerLight*>(InLight);
+	checkSlow(Lights.Contains(Light));
+	Lights.Remove(Light);
+	Light->Destroy();
+}
+
+class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
+{
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+	AStalkerKinematics* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerKinematics>(SpawnParameters);
+	Result->Initilize(KinematicsData);
+	return Result;
+}
+
+class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char* InName)
+{
+	UStalkerKinematicsData* KinematicsData = nullptr;
+	FString Name = InName;
+	Name.ReplaceInline(TEXT("\\"),TEXT("/"));
+	switch (xrGameManager::GetGame())
+	{
+	default:
+	{
+		const FString ParentPackageName = TEXT("/Game/COP/Meshes") / Name;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	break;
+	case EGame::CS:
+	{
+		const FString ParentPackageName = TEXT("/Game/CS/Meshes") / Name;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	break;
+	case EGame::SHOC:
+	{
+		const FString ParentPackageName = TEXT("/Game/SHOC/Meshes") / Name;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	break;
+	}
+	if (!IsValid(KinematicsData))
+	{
+		const FString ParentPackageName = TEXT("/Game/Base/Meshes") / Name;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	if (IsValid(KinematicsData))
+	{
+		if (!IsValid(KinematicsData->Mesh) || KinematicsData->Anims.Num() != 0)
+		{
+			return nullptr;
+		}
+		class AStalkerKinematics*Result= CreateKinematics(KinematicsData);
+		Meshes.Add(Result);
+		return Result;
+	}
+	return nullptr;
+}
+
 class AStalkerKinematicsLegacy* UStalkerResourcesManager::SpawnSkeletonMesh(class XRayKinematicsLegacy* Kinematics)
 {
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerKinematicsLegacy* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerKinematicsLegacy>(SpawnParameters);
 	Result->SetKinematics(Kinematics);
-	Meshes.Add(Result);
+	MeshesLegacy.Add(Result);
 	return Result;
 }
 
 void UStalkerResourcesManager::Destroy(AStalkerKinematicsLegacy* Mesh)
 {
+	checkSlow(MeshesLegacy.Contains(Mesh));
+	MeshesLegacy.Remove(Mesh);
+	Mesh->Destroy();
+
+}
+
+void UStalkerResourcesManager::Destroy(AStalkerKinematics* Mesh)
+{
 	checkSlow(Meshes.Contains(Mesh));
 	Meshes.Remove(Mesh);
 	Mesh->Destroy();
-
 }

@@ -12,6 +12,11 @@ public:
 	USlateBrushAsset*			Copy(USlateBrushAsset* Brush);
 	void						CheckLeak();
 	void						Reload();
+	class AStalkerLight*		CreateLight();
+	void						Desotry(class IRender_Light*Light);
+	class AStalkerKinematics*	CreateKinematics(const char*Name);
+	class AStalkerKinematics*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
+	void						Destroy(class AStalkerKinematics* Mesh);
 
 	class AStalkerKinematicsLegacy*	SpawnSkeletonMesh(class XRayKinematicsLegacy* Kinematics);
 	void						Destroy(class AStalkerKinematicsLegacy*Mesh);
@@ -38,5 +43,11 @@ private:
 	TMap<USlateBrushAsset*, BrushInfo> BrushesInfo;
 	
 	UPROPERTY(Transient)
-	TSet<AStalkerKinematicsLegacy*> Meshes;
+	TSet<AStalkerKinematicsLegacy*> MeshesLegacy;	
+	
+	UPROPERTY(Transient)
+	TSet<AStalkerKinematics*> Meshes;
+
+	UPROPERTY(Transient)
+	TSet<class AStalkerLight*> Lights;
 };
