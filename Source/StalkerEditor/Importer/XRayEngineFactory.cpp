@@ -566,6 +566,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 
 	FAssetRegistryModule::AssetCreated(StalkerKinematicsData);
 	ObjectCreated.Add(StalkerKinematicsData);
+
 	StalkerKinematicsData->Mesh = SkeletalMesh;
 	IReader* UD = FileData->open_chunk(OGF_S_USERDATA);
 	if(UD)
@@ -588,6 +589,9 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	}
 	g_pMotionsContainer->clean(false);
 	FS.r_close(FileData);
+
+	StalkerKinematicsData->PostEditChange();
+	StalkerKinematicsData->MarkPackageDirty();
 	return StalkerKinematicsData;
 }
 
@@ -1718,6 +1722,9 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 		}
 
 		InMesh->Anims.Add(StalkerKinematicsAnimsData);
+
+		StalkerKinematicsAnimsData->PostEditChange();
+		StalkerKinematicsAnimsData->MarkPackageDirty();
 	}
 }
 

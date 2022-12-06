@@ -1,6 +1,6 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "../Kernel/StalkerEngineManager.h"
-#include "../Entities/Kinematics/StalkerKinematics.h"
+#include "../Entities/Kinematics/StalkerKinematicsLegacy.h"
 
 
 USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
@@ -239,17 +239,17 @@ void UStalkerResourcesManager::Reload()
 	}
 }
 
-class AStalkerKinematics* UStalkerResourcesManager::SpawnSkeletonMesh(class XRayKinematics* Kinematics)
+class AStalkerKinematicsLegacy* UStalkerResourcesManager::SpawnSkeletonMesh(class XRayKinematicsLegacy* Kinematics)
 {
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
-	AStalkerKinematics* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerKinematics>(SpawnParameters);
+	AStalkerKinematicsLegacy* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerKinematicsLegacy>(SpawnParameters);
 	Result->SetKinematics(Kinematics);
 	Meshes.Add(Result);
 	return Result;
 }
 
-void UStalkerResourcesManager::Destroy(AStalkerKinematics* Mesh)
+void UStalkerResourcesManager::Destroy(AStalkerKinematicsLegacy* Mesh)
 {
 	checkSlow(Meshes.Contains(Mesh));
 	Meshes.Remove(Mesh);

@@ -1,4 +1,4 @@
-#include "XRayKinematicsAnimated.h"
+#include "XRayKinematicsAnimatedLegacy.h"
 #include "XrRender/Private/AnimationKeyCalculate.h"
 #include "XrRender/Private/KinematicAnimatedDefs.h"
 extern int	psSkeletonUpdate;
@@ -29,29 +29,29 @@ void		CBlendInstance::blend_remove(CBlend* H)
 }
 
 // Motion control
-void	XRayKinematicsAnimated::Bone_Motion_Start(CBoneData* bd, CBlend* handle)
+void	XRayKinematicsAnimatedLegacy::Bone_Motion_Start(CBoneData* bd, CBlend* handle)
 {
 	LL_GetBlendInstance(bd->GetSelfID()).blend_add(handle);
 	for (vecBonesIt I = bd->children.begin(); I != bd->children.end(); I++)
 		Bone_Motion_Start(*I, handle);
 }
-void	XRayKinematicsAnimated::Bone_Motion_Stop(CBoneData* bd, CBlend* handle)
+void	XRayKinematicsAnimatedLegacy::Bone_Motion_Stop(CBoneData* bd, CBlend* handle)
 {
 	LL_GetBlendInstance(bd->GetSelfID()).blend_remove(handle);
 	for (vecBonesIt I = bd->children.begin(); I != bd->children.end(); I++)
 		Bone_Motion_Stop(*I, handle);
 }
-void	XRayKinematicsAnimated::Bone_Motion_Start_IM(CBoneData* bd, CBlend* handle)
+void	XRayKinematicsAnimatedLegacy::Bone_Motion_Start_IM(CBoneData* bd, CBlend* handle)
 {
 	LL_GetBlendInstance(bd->GetSelfID()).blend_add(handle);
 }
-void	XRayKinematicsAnimated::Bone_Motion_Stop_IM(CBoneData* bd, CBlend* handle)
+void	XRayKinematicsAnimatedLegacy::Bone_Motion_Stop_IM(CBoneData* bd, CBlend* handle)
 {
 	LL_GetBlendInstance(bd->GetSelfID()).blend_remove(handle);
 }
 
 
-std::pair<LPCSTR, LPCSTR> XRayKinematicsAnimated::LL_MotionDefName_dbg(MotionID ID)
+std::pair<LPCSTR, LPCSTR> XRayKinematicsAnimatedLegacy::LL_MotionDefName_dbg(MotionID ID)
 {
 	shared_motions& s_mots = m_Motions[ID.slot].motions;
 	accel_map::iterator _I, _E = s_mots.motion_map()->end();
@@ -79,7 +79,7 @@ static LPCSTR name_blend_type(CBlend::ECurvature blend)
 	return get_token_name(token_blend, blend);
 }
 
-static void dump_blend(XRayKinematicsAnimated* K, CBlend& B, u32 index)
+static void dump_blend(XRayKinematicsAnimatedLegacy* K, CBlend& B, u32 index)
 {
 	VERIFY(K);
 	Msg("----------------------------------------------------------");
@@ -100,7 +100,7 @@ static void dump_blend(XRayKinematicsAnimated* K, CBlend& B, u32 index)
 	Msg("----------------------------------------------------------");
 }
 
-void	XRayKinematicsAnimated::LL_DumpBlends_dbg()
+void	XRayKinematicsAnimatedLegacy::LL_DumpBlends_dbg()
 {
 	Msg("==================dump blends=================================================");
 	CBlend* I = blend_pool.begin(), * E = blend_pool.end();
@@ -109,18 +109,18 @@ void	XRayKinematicsAnimated::LL_DumpBlends_dbg()
 }
 
 
-u32	XRayKinematicsAnimated::LL_PartBlendsCount(u32 bone_part_id)
+u32	XRayKinematicsAnimatedLegacy::LL_PartBlendsCount(u32 bone_part_id)
 {
 	return blend_cycle(bone_part_id).size();
 }
 
-CBlend* XRayKinematicsAnimated::LL_PartBlend(u32 bone_part_id, u32 n)
+CBlend* XRayKinematicsAnimatedLegacy::LL_PartBlend(u32 bone_part_id, u32 n)
 {
 	if (LL_PartBlendsCount(bone_part_id) <= n)
 		return 0;
 	return blend_cycle(bone_part_id)[n];
 }
-void	XRayKinematicsAnimated::LL_IterateBlends(IterateBlendsCallback& callback)
+void	XRayKinematicsAnimatedLegacy::LL_IterateBlends(IterateBlendsCallback& callback)
 {
 	CBlend* I = blend_pool.begin(), * E = blend_pool.end();
 	for (; I != E; I++)
@@ -147,7 +147,7 @@ LPCSTR XRayKinematicsAnimated::LL_MotionDefName_dbg	(LPVOID ptr)
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
 //////////////////////////////////////////////////////////////////////
-MotionID XRayKinematicsAnimated::LL_MotionID(LPCSTR B)
+MotionID XRayKinematicsAnimatedLegacy::LL_MotionID(LPCSTR B)
 {
 	MotionID motion_ID;
 	for (int k = int(m_Motions.size()) - 1; k >= 0; --k) {
@@ -157,7 +157,7 @@ MotionID XRayKinematicsAnimated::LL_MotionID(LPCSTR B)
 	}
 	return motion_ID;
 }
-u16 XRayKinematicsAnimated::LL_PartID(LPCSTR B)
+u16 XRayKinematicsAnimatedLegacy::LL_PartID(LPCSTR B)
 {
 	if (0 == m_Partition)	return BI_NONE;
 	for (u16 id = 0; id < MAX_PARTS; id++) {
@@ -169,7 +169,7 @@ u16 XRayKinematicsAnimated::LL_PartID(LPCSTR B)
 }
 
 // cycles
-MotionID XRayKinematicsAnimated::ID_Cycle_Safe(LPCSTR  N)
+MotionID XRayKinematicsAnimatedLegacy::ID_Cycle_Safe(LPCSTR  N)
 {
 	MotionID motion_ID;
 	for (int k = int(m_Motions.size()) - 1; k >= 0; --k) {
@@ -179,12 +179,12 @@ MotionID XRayKinematicsAnimated::ID_Cycle_Safe(LPCSTR  N)
 	}
 	return motion_ID;
 }
-MotionID XRayKinematicsAnimated::ID_Cycle(shared_str  N)
+MotionID XRayKinematicsAnimatedLegacy::ID_Cycle(shared_str  N)
 {
 	MotionID motion_ID = ID_Cycle_Safe(N);	R_ASSERT3(motion_ID.valid(), "! MODEL: can't find cycle: ", N.c_str());
 	return motion_ID;
 }
-MotionID XRayKinematicsAnimated::ID_Cycle_Safe(shared_str  N)
+MotionID XRayKinematicsAnimatedLegacy::ID_Cycle_Safe(shared_str  N)
 {
 	MotionID motion_ID;
 	for (int k = int(m_Motions.size()) - 1; k >= 0; --k) {
@@ -194,12 +194,12 @@ MotionID XRayKinematicsAnimated::ID_Cycle_Safe(shared_str  N)
 	}
 	return motion_ID;
 }
-MotionID XRayKinematicsAnimated::ID_Cycle(LPCSTR  N)
+MotionID XRayKinematicsAnimatedLegacy::ID_Cycle(LPCSTR  N)
 {
 	MotionID motion_ID = ID_Cycle_Safe(N);	R_ASSERT3(motion_ID.valid(), "! MODEL: can't find cycle: ", N);
 	return motion_ID;
 }
-void	XRayKinematicsAnimated::LL_FadeCycle(u16 part, float falloff, u8 mask_channel /*= (1<<0)*/)
+void	XRayKinematicsAnimatedLegacy::LL_FadeCycle(u16 part, float falloff, u8 mask_channel /*= (1<<0)*/)
 {
 	BlendSVec& Blend = blend_cycles[part];
 
@@ -215,7 +215,7 @@ void	XRayKinematicsAnimated::LL_FadeCycle(u16 part, float falloff, u8 mask_chann
 		if (B.stop_at_end)  B.stop_at_end_callback = FALSE;		// callback не должен приходить!
 	}
 }
-void	XRayKinematicsAnimated::LL_CloseCycle(u16 part, u8 mask_channel /*= (1<<0)*/)
+void	XRayKinematicsAnimatedLegacy::LL_CloseCycle(u16 part, u8 mask_channel /*= (1<<0)*/)
 {
 	if (BI_NONE == part)		return;
 	if (part >= MAX_PARTS)	return;
@@ -239,7 +239,7 @@ void	XRayKinematicsAnimated::LL_CloseCycle(u16 part, u8 mask_channel /*= (1<<0)*
 	//blend_cycles[part].clear	(); // ?
 }
 
-float XRayKinematicsAnimated::get_animation_length(MotionID motion_ID)
+float XRayKinematicsAnimatedLegacy::get_animation_length(MotionID motion_ID)
 {
 	VERIFY(motion_ID.slot < m_Motions.size());
 
@@ -258,7 +258,7 @@ float XRayKinematicsAnimated::get_animation_length(MotionID motion_ID)
 	return							bone_motions->at(motion_ID.idx).GetLength() / anim_speed;
 }
 
-void XRayKinematicsAnimated::IBlendSetup(CBlend& B, u16 part, u8 channel, MotionID motion_ID, BOOL  bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam)
+void XRayKinematicsAnimatedLegacy::IBlendSetup(CBlend& B, u16 part, u8 channel, MotionID motion_ID, BOOL  bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam)
 {
 	VERIFY(B.channel < MAX_CHANNELS);
 	// Setup blend params
@@ -290,7 +290,7 @@ void XRayKinematicsAnimated::IBlendSetup(CBlend& B, u16 part, u8 channel, Motion
 	B.channel = channel;
 	B.fall_at_end = B.stop_at_end && (channel > 1);
 }
-void XRayKinematicsAnimated::IFXBlendSetup(CBlend& B, MotionID motion_ID, float blendAccrue, float blendFalloff, float Power, float Speed, u16 bone)
+void XRayKinematicsAnimatedLegacy::IFXBlendSetup(CBlend& B, MotionID motion_ID, float blendAccrue, float blendFalloff, float Power, float Speed, u16 bone)
 {
 	//B.blend			= CBlend::eAccrue;
 	B.set_accrue_state();
@@ -314,7 +314,7 @@ void XRayKinematicsAnimated::IFXBlendSetup(CBlend& B, MotionID motion_ID, float 
 	B.channel = 0;
 	B.fall_at_end = FALSE;
 }
-CBlend* XRayKinematicsAnimated::LL_PlayCycle(u16 part, MotionID motion_ID, BOOL  bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam, u8 channel/*=0*/)
+CBlend* XRayKinematicsAnimatedLegacy::LL_PlayCycle(u16 part, MotionID motion_ID, BOOL  bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam, u8 channel/*=0*/)
 {
 	// validate and unroll
 	if (!motion_ID.valid())	return 0;
@@ -346,7 +346,7 @@ CBlend* XRayKinematicsAnimated::LL_PlayCycle(u16 part, MotionID motion_ID, BOOL 
 	blend_cycles[part].push_back(B);
 	return		B;
 }
-CBlend* XRayKinematicsAnimated::LL_PlayCycle(u16 part, MotionID motion_ID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*=0*/)
+CBlend* XRayKinematicsAnimatedLegacy::LL_PlayCycle(u16 part, MotionID motion_ID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*=0*/)
 {
 	VERIFY(motion_ID.valid());
 	CMotionDef* m_def = m_Motions[motion_ID.slot].motions.motion_def(motion_ID.idx);
@@ -355,13 +355,13 @@ CBlend* XRayKinematicsAnimated::LL_PlayCycle(u16 part, MotionID motion_ID, BOOL 
 		m_def->Accrue(), m_def->Falloff(), m_def->Speed(), m_def->StopAtEnd(),
 		Callback, CallbackParam, channel);
 }
-CBlend* XRayKinematicsAnimated::PlayCycle(LPCSTR  N, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel  /*= 0*/)
+CBlend* XRayKinematicsAnimatedLegacy::PlayCycle(LPCSTR  N, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel  /*= 0*/)
 {
 	MotionID motion_ID = ID_Cycle(N);
 	if (motion_ID.valid())	return PlayCycle(motion_ID, bMixIn, Callback, CallbackParam, channel);
 	else { Debug.fatal(DEBUG_INFO, "! MODEL: can't find cycle: %s", N); return 0; }
 }
-CBlend* XRayKinematicsAnimated::PlayCycle(MotionID motion_ID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
+CBlend* XRayKinematicsAnimatedLegacy::PlayCycle(MotionID motion_ID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
 {
 	VERIFY(motion_ID.valid());
 	CMotionDef* m_def = m_Motions[motion_ID.slot].motions.motion_def(motion_ID.idx);
@@ -371,7 +371,7 @@ CBlend* XRayKinematicsAnimated::PlayCycle(MotionID motion_ID, BOOL bMixIn, PlayC
 		Callback, CallbackParam, channel);
 }
 
-CBlend* XRayKinematicsAnimated::PlayCycle(u16 partition, MotionID motion_ID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
+CBlend* XRayKinematicsAnimatedLegacy::PlayCycle(u16 partition, MotionID motion_ID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
 {
 	VERIFY(motion_ID.valid());
 	CMotionDef* m_def = m_Motions[motion_ID.slot].motions.motion_def(motion_ID.idx);
@@ -382,7 +382,7 @@ CBlend* XRayKinematicsAnimated::PlayCycle(u16 partition, MotionID motion_ID, BOO
 }
 
 // fx'es
-MotionID XRayKinematicsAnimated::ID_FX_Safe(LPCSTR  N)
+MotionID XRayKinematicsAnimatedLegacy::ID_FX_Safe(LPCSTR  N)
 {
 	MotionID motion_ID;
 	for (int k = int(m_Motions.size()) - 1; k >= 0; --k) {
@@ -392,12 +392,12 @@ MotionID XRayKinematicsAnimated::ID_FX_Safe(LPCSTR  N)
 	}
 	return motion_ID;
 }
-MotionID XRayKinematicsAnimated::ID_FX(LPCSTR  N)
+MotionID XRayKinematicsAnimatedLegacy::ID_FX(LPCSTR  N)
 {
 	MotionID motion_ID = ID_FX_Safe(N); R_ASSERT3(motion_ID.valid(), "! MODEL: can't find FX: ", N);
 	return motion_ID;
 }
-CBlend* XRayKinematicsAnimated::PlayFX(MotionID motion_ID, float power_scale)
+CBlend* XRayKinematicsAnimatedLegacy::PlayFX(MotionID motion_ID, float power_scale)
 {
 	VERIFY(motion_ID.valid());
 	CMotionDef* m_def = m_Motions[motion_ID.slot].motions.motion_def(motion_ID.idx);
@@ -406,14 +406,14 @@ CBlend* XRayKinematicsAnimated::PlayFX(MotionID motion_ID, float power_scale)
 		m_def->Accrue(), m_def->Falloff(),
 		m_def->Speed(), m_def->Power() * power_scale);
 }
-CBlend* XRayKinematicsAnimated::PlayFX(LPCSTR  N, float power_scale)
+CBlend* XRayKinematicsAnimatedLegacy::PlayFX(LPCSTR  N, float power_scale)
 {
 	MotionID motion_ID = ID_FX(N);
 	return PlayFX(motion_ID, power_scale);
 }
 //u16 part,u8 channel, MotionID motion_ID, BOOL  bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback callback(), LPVOID CallbackParam)
 
-CBlend* XRayKinematicsAnimated::LL_PlayFX(u16 bone, MotionID motion_ID, float blendAccrue, float blendFalloff, float Speed, float Power)
+CBlend* XRayKinematicsAnimatedLegacy::LL_PlayFX(u16 bone, MotionID motion_ID, float blendAccrue, float blendFalloff, float Speed, float Power)
 {
 	if (!motion_ID.valid())	return 0;
 	if (blend_fx.size() >= MAX_BLENDED) return 0;
@@ -428,7 +428,7 @@ CBlend* XRayKinematicsAnimated::LL_PlayFX(u16 bone, MotionID motion_ID, float bl
 	return			B;
 }
 
-void	XRayKinematicsAnimated::DestroyCycle(CBlend& B)
+void	XRayKinematicsAnimatedLegacy::DestroyCycle(CBlend& B)
 {
 	if (GetBlendDestroyCallback())
 		GetBlendDestroyCallback()->BlendDestroy(B);
@@ -442,7 +442,7 @@ void	XRayKinematicsAnimated::DestroyCycle(CBlend& B)
 
 //returns true if play time out
 
-void XRayKinematicsAnimated::LL_UpdateTracks(float dt, bool b_force, bool leave_blends)
+void XRayKinematicsAnimatedLegacy::LL_UpdateTracks(float dt, bool b_force, bool leave_blends)
 {
 	BlendSVecIt I, E;
 	// Cycles
@@ -478,7 +478,7 @@ void XRayKinematicsAnimated::LL_UpdateTracks(float dt, bool b_force, bool leave_
 
 	LL_UpdateFxTracks(dt);
 }
-void	XRayKinematicsAnimated::LL_UpdateFxTracks(float dt)
+void	XRayKinematicsAnimatedLegacy::LL_UpdateFxTracks(float dt)
 {
 	// FX
 	BlendSVecIt I, E;
@@ -522,7 +522,7 @@ void	XRayKinematicsAnimated::LL_UpdateFxTracks(float dt)
 		}
 	}
 }
-void XRayKinematicsAnimated::UpdateTracks()
+void XRayKinematicsAnimatedLegacy::UpdateTracks()
 {
 	;
 	if (Update_LastTime == Device->dwTimeGlobal) return;
@@ -541,12 +541,12 @@ void XRayKinematicsAnimated::UpdateTracks()
 }
 
 
-XRayKinematicsAnimated::~XRayKinematicsAnimated()
+XRayKinematicsAnimatedLegacy::~XRayKinematicsAnimatedLegacy()
 {
 	IBoneInstances_Destroy();
 }
-XRayKinematicsAnimated::XRayKinematicsAnimated() :
-	XRayKinematics(),
+XRayKinematicsAnimatedLegacy::XRayKinematicsAnimatedLegacy() :
+	XRayKinematicsLegacy(),
 	IKinematicsAnimated(),
 	blend_instances(NULL),
 	m_Partition(NULL),
@@ -557,7 +557,7 @@ XRayKinematicsAnimated::XRayKinematicsAnimated() :
 
 }
 
-void	XRayKinematicsAnimated::IBoneInstances_Create()
+void	XRayKinematicsAnimatedLegacy::IBoneInstances_Create()
 {
 	inherited::IBoneInstances_Create();
 	size_t				size = bones->size();
@@ -566,7 +566,7 @@ void	XRayKinematicsAnimated::IBoneInstances_Create()
 		blend_instances[i].construct();
 }
 
-void	XRayKinematicsAnimated::IBoneInstances_Destroy()
+void	XRayKinematicsAnimatedLegacy::IBoneInstances_Destroy()
 {
 	inherited::IBoneInstances_Destroy();
 	if (blend_instances) {
@@ -576,18 +576,18 @@ void	XRayKinematicsAnimated::IBoneInstances_Destroy()
 }
 
 #define PCOPY(a)	a = pFrom->a
-void XRayKinematicsAnimated::Copy(XRaySkeletonVisual* P)
+void XRayKinematicsAnimatedLegacy::Copy(XRaySkeletonVisual* P)
 {
 	inherited::Copy(P);
 
-	XRayKinematicsAnimated* pFrom = (XRayKinematicsAnimated*)P;
+	XRayKinematicsAnimatedLegacy* pFrom = (XRayKinematicsAnimatedLegacy*)P;
 	PCOPY(m_Motions);
 	PCOPY(m_Partition);
 
 	IBlend_Startup();
 }
 
-void XRayKinematicsAnimated::Spawn()
+void XRayKinematicsAnimatedLegacy::Spawn()
 {
 	inherited::Spawn();
 
@@ -600,30 +600,30 @@ void XRayKinematicsAnimated::Spawn()
 
 }
 
-IKinematicsAnimated* XRayKinematicsAnimated::dcast_PKinematicsAnimated()
+IKinematicsAnimated* XRayKinematicsAnimatedLegacy::dcast_PKinematicsAnimated()
 {
 	return this;
 }
 
-IRenderVisual* XRayKinematicsAnimated::dcast_RenderVisual()
+IRenderVisual* XRayKinematicsAnimatedLegacy::dcast_RenderVisual()
 {
 	return this;
 }
 
-IKinematics* XRayKinematicsAnimated::dcast_PKinematics()
+IKinematics* XRayKinematicsAnimatedLegacy::dcast_PKinematics()
 {
 	return this;
 }
 
-void XRayKinematicsAnimated::ChannelFactorsStartup()
+void XRayKinematicsAnimatedLegacy::ChannelFactorsStartup()
 {
 	channels.init();
 }
-void	XRayKinematicsAnimated::LL_SetChannelFactor(u16	channel, float factor)
+void	XRayKinematicsAnimatedLegacy::LL_SetChannelFactor(u16	channel, float factor)
 {
 	channels.set_factor(channel, factor);
 }
-void XRayKinematicsAnimated::IBlend_Startup()
+void XRayKinematicsAnimatedLegacy::IBlend_Startup()
 {
 	;
 	CBlend B; FMemory::Memzero(&B, sizeof(B));
@@ -650,7 +650,7 @@ void XRayKinematicsAnimated::IBlend_Startup()
 	ChannelFactorsStartup();
 }
 
-CBlend* XRayKinematicsAnimated::IBlend_Create()
+CBlend* XRayKinematicsAnimatedLegacy::IBlend_Create()
 {
 	UpdateTracks();
 	;
@@ -660,7 +660,7 @@ CBlend* XRayKinematicsAnimated::IBlend_Create()
 	FATAL("Too many blended motions requisted");
 	return 0;
 }
-void XRayKinematicsAnimated::Load(const char* N, IReader* data, u32 dwFlags)
+void XRayKinematicsAnimatedLegacy::Load(const char* N, IReader* data, u32 dwFlags)
 {
 
 	inherited::Load(N, data, dwFlags);
@@ -787,7 +787,7 @@ void XRayKinematicsAnimated::Load(const char* N, IReader* data, u32 dwFlags)
 }
 
 
-void	XRayKinematicsAnimated::LL_BuldBoneMatrixDequatize(const CBoneData* bd, u8 channel_mask, SKeyTable& keys)
+void	XRayKinematicsAnimatedLegacy::LL_BuldBoneMatrixDequatize(const IBoneData* bd, u8 channel_mask, SKeyTable& keys)
 {
 	u16							SelfID = bd->GetSelfID();
 	CBlendInstance& BLEND_INST = LL_GetBlendInstance(SelfID);
@@ -824,7 +824,7 @@ void	XRayKinematicsAnimated::LL_BuldBoneMatrixDequatize(const CBoneData* bd, u8 
 }
 
 // calculate single bone with key blending 
-void	XRayKinematicsAnimated::LL_BoneMatrixBuild(CBoneInstance& bi, const Fmatrix* parent, const SKeyTable& keys)
+void	XRayKinematicsAnimatedLegacy::LL_BoneMatrixBuild(IBoneInstance& bi, const Fmatrix* parent, const SKeyTable& keys)
 {
 	// Blend them together
 	CKey					channel_keys[MAX_CHANNELS];
@@ -846,7 +846,9 @@ void	XRayKinematicsAnimated::LL_BoneMatrixBuild(CBoneInstance& bi, const Fmatrix
 
 	Fmatrix					RES;
 	RES.mk_xform(Result.Q, Result.T);
-	bi.mTransform.mul_43(*parent, RES);
+	Fmatrix Mat =  bi.GetTransform();
+	Mat.mul_43(*parent, RES);
+	bi.SetTransform(Mat);
 #ifdef DEBUG
 #ifndef _EDITOR
 	if (!check_scale(RES))
@@ -869,7 +871,7 @@ void	XRayKinematicsAnimated::LL_BoneMatrixBuild(CBoneInstance& bi, const Fmatrix
 #endif
 }
 
-void	XRayKinematicsAnimated::BuildBoneMatrix(const CBoneData* bd, CBoneInstance& bi, const Fmatrix* parent, u8 channel_mask /*= (1<<0)*/)
+void	XRayKinematicsAnimatedLegacy::BuildBoneMatrix(const CBoneData* bd, IBoneInstance& bi, const Fmatrix* parent, u8 channel_mask /*= (1<<0)*/)
 {
 
 	//CKey				R						[MAX_CHANNELS][MAX_BLENDED];	//all keys 
@@ -941,27 +943,27 @@ void	XRayKinematicsAnimated::BuildBoneMatrix(const CBoneData* bd, CBoneInstance&
 
 
 
-void XRayKinematicsAnimated::OnCalculateBones()
+void XRayKinematicsAnimatedLegacy::OnCalculateBones()
 {
 	UpdateTracks();
 }
-IBlendDestroyCallback* XRayKinematicsAnimated::GetBlendDestroyCallback()
+IBlendDestroyCallback* XRayKinematicsAnimatedLegacy::GetBlendDestroyCallback()
 {
 	return m_blend_destroy_callback;
 }
 
-void	XRayKinematicsAnimated::SetUpdateTracksCalback(IUpdateTracksCallback* callback)
+void	XRayKinematicsAnimatedLegacy::SetUpdateTracksCalback(IUpdateTracksCallback* callback)
 {
 	m_update_tracks_callback = callback;
 }
 
-void	XRayKinematicsAnimated::SetBlendDestroyCallback(IBlendDestroyCallback* cb)
+void	XRayKinematicsAnimatedLegacy::SetBlendDestroyCallback(IBlendDestroyCallback* cb)
 {
 	m_blend_destroy_callback = cb;
 }
 
 #ifdef _EDITOR
-MotionID XRayKinematicsAnimated::ID_Motion(LPCSTR  N, u16 slot)
+MotionID XRayKinematicsAnimatedLegacy::ID_Motion(LPCSTR  N, u16 slot)
 {
 	MotionID 				motion_ID;
 	if (slot < MAX_ANIM_SLOT) {

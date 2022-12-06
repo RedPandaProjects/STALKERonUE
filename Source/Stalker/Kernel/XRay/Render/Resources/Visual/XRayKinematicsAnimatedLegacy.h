@@ -1,6 +1,6 @@
 #pragma once
 #include "..\SkeletonMesh\Animation.h"
-#include "XRayKinematics.h"
+#include "XRayKinematicsLegacy.h"
 //*** Bone Instance *******************************************************************************
 #pragma pack(push,8)
 class 		CBlendInstance	// Bone Instance Blend List (per-bone data)
@@ -22,9 +22,9 @@ public:
 };
 #pragma pack(pop)
 
-class XRayKinematicsAnimated:public  XRayKinematics,public IKinematicsAnimated
+class XRayKinematicsAnimatedLegacy:public  XRayKinematicsLegacy,public IKinematicsAnimated
 {
-	typedef XRayKinematics							inherited;
+	typedef XRayKinematicsLegacy							inherited;
 	friend class								CBoneData;
 	friend class								CMotionDef;
 	friend class								CSkeletonX;
@@ -40,9 +40,9 @@ public:
 	// Calculation
 private:
 
-	void						LL_BuldBoneMatrixDequatize(const CBoneData* bd, u8 channel_mask, SKeyTable& keys);
-	void						LL_BoneMatrixBuild(CBoneInstance& bi, const Fmatrix* parent, const SKeyTable& keys);
-	virtual	void					BuildBoneMatrix(const CBoneData* bd, CBoneInstance& bi, const Fmatrix* parent, u8 mask_channel = (1 << 0));
+	void						LL_BuldBoneMatrixDequatize(const IBoneData* bd, u8 channel_mask, SKeyTable& keys) override;
+	void						LL_BoneMatrixBuild(IBoneInstance& bi, const Fmatrix* parent, const SKeyTable& keys);
+	virtual	void					BuildBoneMatrix(const CBoneData* bd, IBoneInstance& bi, const Fmatrix* parent, u8 mask_channel = (1 << 0));
 public:
 
 	virtual void				OnCalculateBones();
@@ -152,8 +152,8 @@ public:
 	IRenderVisual*		 dcast_RenderVisual() override;
 	IKinematics* 		 dcast_PKinematics() override ;
 
-	virtual						~XRayKinematicsAnimated();
-	XRayKinematicsAnimated();
+	virtual						~XRayKinematicsAnimatedLegacy();
+	XRayKinematicsAnimatedLegacy();
 
 
 	IC	const BlendSVec& blend_cycle(const size_t& bone_part_id) const

@@ -1,13 +1,14 @@
 #pragma once
 #include "XRaySkeletonVisual.h"
+#include "XRayBoneInstanceLegacy.h"
 #include "../SkeletonMesh/XRaySkeletonX.h"
-class XRayKinematics : public XRaySkeletonVisual, public IKinematics
+class XRayKinematicsLegacy : public XRaySkeletonVisual, public IKinematics
 {
 public:
-	void CLBone(const CBoneData* bd, CBoneInstance& bi, const Fmatrix* parent, u8 mask_channel = (1 << 0));
+	void CLBone(const CBoneData* bd, XRayBoneInstanceLegacy& bi, const Fmatrix* parent, u8 mask_channel = (1 << 0));
 	virtual CBoneData* CreateBoneData(u16 ID) { return xr_new<CBoneData>(ID); }
-	virtual void BuildBoneMatrix(const CBoneData* bd, CBoneInstance& bi, const Fmatrix* parent, u8 mask_channel = (1 << 0));
-	void BoneChain_Calculate(const CBoneData* bd, CBoneInstance& bi, u8 channel_mask, bool ignore_callbacks);
+	virtual void BuildBoneMatrix(const CBoneData* bd, IBoneInstance& bi, const Fmatrix* parent, u8 mask_channel = (1 << 0));
+	void BoneChain_Calculate(const CBoneData* bd, XRayBoneInstanceLegacy& bi, u8 channel_mask, bool ignore_callbacks);
 	XRaySkeletonX* LL_GetChild(u32 idx);
 	virtual void				OnCalculateBones() {}
 	void LL_Validate();
@@ -31,13 +32,16 @@ public:
 	virtual void				IBoneInstances_Create();
 	virtual void				IBoneInstances_Destroy();
 
-	class XRayKinematics* CastToXRayKinematics() override;
+	class XRayKinematicsLegacy* CastToXRayKinematics() override;
+
+
+	void LL_SetTransform(u16 bone_id, const Fmatrix& Matrix)  override;
 
 public:
 	virtual shared_str				getDebugName();
-	virtual ~XRayKinematics();
-	XRayKinematics();
-	virtual void Bone_Calculate(CBoneData* bd, Fmatrix* parent);
+	virtual ~XRayKinematicsLegacy();
+	XRayKinematicsLegacy();
+	virtual void Bone_Calculate(const IBoneData* bd,const Fmatrix* parent);
 
 	virtual void Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks);
 
@@ -52,10 +56,9 @@ public:
 	virtual CInifile* LL_UserData() { return pUserData; }
 	virtual accel* LL_Bones() { return bone_map_N; }
 
-	virtual CBoneInstance& LL_GetBoneInstance(u16 bone_id)
+	virtual IBoneInstance& LL_GetBoneInstance(u16 bone_id)
 	{
 		check(bone_id < LL_BoneCount());
-		check(bone_instances);
 		return bone_instances[bone_id];
 	}
 
@@ -108,11 +111,10 @@ public:
 		}
 		return (u16)CountBone;
 	}
-	const	CBoneInstance& LL_GetBoneInstance(u16 bone_id) const { check(bone_id < LL_BoneCount()); check(bone_instances); return bone_instances[bone_id]; }
+	const	IBoneInstance& LL_GetBoneInstance(u16 bone_id) const { check(bone_id < LL_BoneCount());return bone_instances[bone_id]; }
 
-	virtual  Fmatrix& LL_GetTransform(u16 bone_id) { return LL_GetBoneInstance(bone_id).mTransform; }
-	virtual const Fmatrix& LL_GetTransform(u16 bone_id) const { return LL_GetBoneInstance(bone_id).mTransform; }
-	virtual   Fmatrix& LL_GetTransform_R(u16 bone_id) { return LL_GetBoneInstance(bone_id).mRenderTransform; } // rendering only
+	virtual const Fmatrix& LL_GetTransform(u16 bone_id) const { return LL_GetBoneInstance(bone_id).GetTransform(); }
+	virtual  const Fmatrix& LL_GetTransform_R(u16 bone_id) { return static_cast<const XRayBoneInstanceLegacy&>( LL_GetBoneInstance(bone_id)).mRenderTransform; } // rendering only
 
 	virtual Fobb& LL_GetBox(u16 bone_id)
 	{
@@ -164,7 +166,7 @@ public:
 public:
 	XRaySkeletonVisual *m_lod;
 
-	CBoneInstance* bone_instances; // bone instances
+	TArray<XRayBoneInstanceLegacy> bone_instances; // bone instances
 protected:
 	//SkeletonWMVec				wallmarks;
 	u32 wm_frame;
@@ -187,5 +189,5 @@ protected:
 
 private:
 	bool m_is_original_lod;
-	class AStalkerKinematics*UnrealParent;
+	class AStalkerKinematicsLegacy*UnrealParent;
 };

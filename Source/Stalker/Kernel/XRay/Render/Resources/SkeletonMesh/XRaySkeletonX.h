@@ -1,5 +1,5 @@
 #pragma once
-class XRayKinematics;
+class XRayKinematicsLegacy;
 class XRaySkeletonVisual;
 
 class XRaySkeletonX
@@ -14,7 +14,7 @@ protected:
 		RM_SKINNING_4B 
 	};
 
-	XRayKinematics* ParentKinematics;		// setted up by parent
+	XRayKinematicsLegacy* ParentKinematics;		// setted up by parent
 	ref_smem<vertBoned1W>	Vertices1W;		// shared
 	ref_smem<vertBoned2W>	Vertices2W;		// shared
 	ref_smem<vertBoned3W>	Vertices3W;		// shared
@@ -49,8 +49,8 @@ protected:
 public:
 	XRaySkeletonX() { ParentKinematics = 0; ChildIDX = u16(-1); }
 
-	virtual void			SetParent(XRayKinematics* K) { ParentKinematics = K; }
-	virtual void			AfterLoad(XRayKinematics* parent, u16 child_idx) = 0;
+	virtual void			SetParent(XRayKinematicsLegacy* K) { ParentKinematics = K; }
+	virtual void			AfterLoad(XRayKinematicsLegacy* parent, u16 child_idx) = 0;
 	virtual void			EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id) = 0;
 	virtual BOOL			PickBone(IKinematics::pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id) = 0;
 

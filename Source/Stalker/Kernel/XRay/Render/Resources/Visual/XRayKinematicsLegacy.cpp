@@ -1,7 +1,9 @@
-#include "XRayKinematics.h"
+#include "XRayKinematicsLegacy.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Kernel/StalkerEngineManager.h"
- 
+THIRD_PARTY_INCLUDES_START
+#include "xrEngine/XrGameMaterialLibraryInterface.h"
+THIRD_PARTY_INCLUDES_END
 bool	pred_sort_N(const std::pair<shared_str, u32>& A, const std::pair<shared_str, u32>& B) {
 	return xr_strcmp(A.first, B.first) < 0;
 }
@@ -16,7 +18,7 @@ IC void iBuildGroups(CBoneData* B, U16Vec& tgt, u16 id, u16& last_id)
 	for (xr_vector<CBoneData*>::iterator bone_it = B->children.begin(); bone_it != B->children.end(); bone_it++)
 		iBuildGroups(*bone_it, tgt, id, last_id);
 }
-void XRayKinematics::LL_Validate()
+void XRayKinematicsLegacy::LL_Validate()
 {
 	BOOL bCheckBreakable = FALSE;
 	for (u16 k = 0; k < LL_BoneCount(); k++) {
@@ -59,10 +61,10 @@ void XRayKinematics::LL_Validate()
 		}
 	}
 }
-void XRayKinematics::DebugRender(Fmatrix& XFORM)
+void XRayKinematicsLegacy::DebugRender(Fmatrix& XFORM)
 {
 }
- bool	XRayKinematics::Release()
+ bool	XRayKinematicsLegacy::Release()
 {
 	if(XRaySkeletonVisual::Release())
 	{
@@ -81,7 +83,7 @@ void XRayKinematics::DebugRender(Fmatrix& XFORM)
 	 }
 	 return false;
 }
-void XRayKinematics::Load(const char* N, IReader* data, u32 dwFlags)
+void XRayKinematicsLegacy::Load(const char* N, IReader* data, u32 dwFlags)
 {
 	XRaySkeletonVisual::Load(N,data,dwFlags);
 
@@ -101,7 +103,7 @@ void XRayKinematics::Load(const char* N, IReader* data, u32 dwFlags)
 	bone_map_N = xr_new<accel>();
 	bone_map_P = xr_new<accel>();
 	bones = xr_new<vecBones>();
-	bone_instances = NULL;
+	bone_instances.Empty();
 
 	// Load bones
 #pragma todo("container is created in stack!")
@@ -168,6 +170,7 @@ void XRayKinematics::Load(const char* N, IReader* data, u32 dwFlags)
 			CBoneData* B = (*bones)[i];
 			u16 vers = (u16)IKD->r_u32();
 			IKD->r_stringZ(B->game_mtl_name);
+			B->game_mtl_idx = GameMaterialLibrary->GetMaterialIdx(GameMaterialLibrary->GetMaterialID(B->game_mtl_name.c_str()));
 			IKD->r(&B->shape, sizeof(SBoneShape));
 			B->IK_data.Import(*IKD, vers);
 			Fvector vXYZ, vT;
@@ -211,10 +214,10 @@ void XRayKinematics::Load(const char* N, IReader* data, u32 dwFlags)
 	LL_Validate();
 }
 
-void XRayKinematics::Copy(XRaySkeletonVisual* from)
+void XRayKinematicsLegacy::Copy(XRaySkeletonVisual* from)
 {
 	XRaySkeletonVisual::Copy(from);
-	XRayKinematics* pFrom = from->CastToXRayKinematics();
+	XRayKinematicsLegacy* pFrom = from->CastToXRayKinematics();
 	VERIFY(pFrom);
 	pUserData = pFrom->pUserData;
 	bones = pFrom->bones;
@@ -233,7 +236,7 @@ void XRayKinematics::Copy(XRaySkeletonVisual* from)
 	m_lod = (pFrom->m_lod) ? (XRaySkeletonVisual*)::Render->model_Duplicate(pFrom->m_lod) : 0;
 }
 
-void XRayKinematics::Spawn()
+void XRayKinematicsLegacy::Spawn()
 {
 	// bones
 	for (u32 i = 0; i < bones->size(); i++)
@@ -248,7 +251,7 @@ void XRayKinematics::Spawn()
 	UnrealParent = GXRayEngineManager->GetResourcesManager()->SpawnSkeletonMesh(this);
 }
 
-void XRayKinematics::Depart()
+void XRayKinematicsLegacy::Depart()
 {
 	if(UnrealParent)
 		GXRayEngineManager->GetResourcesManager()->Destroy(UnrealParent);
@@ -273,7 +276,7 @@ void XRayKinematics::Depart()
 
 }
 
-void XRayKinematics::CLBone(const CBoneData* bd, CBoneInstance& bi, const Fmatrix* parent, u8 channel_mask)
+void XRayKinematicsLegacy::CLBone(const CBoneData* bd, XRayBoneInstanceLegacy& bi, const Fmatrix* parent, u8 channel_mask)
 {
 	u16							SelfID = bd->GetSelfID();
 
@@ -285,26 +288,28 @@ void XRayKinematics::CLBone(const CBoneData* bd, CBoneInstance& bi, const Fmatri
 
 			BuildBoneMatrix(bd, bi, parent, channel_mask);
 #ifndef MASTER_GOLD
-			R_ASSERT2(_valid(bi.mTransform), "anim kils bone matrix");
+			R_ASSERT2(_valid(bi.GetTransform()), "anim kils bone matrix");
 #endif // #ifndef MASTER_GOLD
 			if (bi.callback())
 			{
 				bi.callback()(&bi);
 #ifndef MASTER_GOLD
-				R_ASSERT2(_valid(bi.mTransform), make_string("callback kils bone matrix bone: %s ", bd->name.c_str()));
+				R_ASSERT2(_valid(bi.GetTransform()), make_string("callback kils bone matrix bone: %s ", bd->name.c_str()));
 #endif // #ifndef MASTER_GOLD
 			}
 		}
-		bi.mRenderTransform.mul_43(bi.mTransform, bd->m2b_transform);
+		bi.mRenderTransform.mul_43(bi.GetTransform(), bd->m2b_transform);
 	}
 }
 
-void XRayKinematics::BuildBoneMatrix(const CBoneData* bd, CBoneInstance& bi, const Fmatrix* parent, u8 mask_channel)
+void XRayKinematicsLegacy::BuildBoneMatrix(const CBoneData* bd, IBoneInstance& bi, const Fmatrix* parent, u8 mask_channel)
 {
-	bi.mTransform.mul_43(*parent, bd->bind_transform);
+ 	Fmatrix Transform = bi.GetTransform();
+	Transform.mul_43(*parent, bd->bind_transform);
+	bi.SetTransform(Transform);
 }
 
-void XRayKinematics::BoneChain_Calculate(const CBoneData* bd, CBoneInstance& bi, u8 channel_mask, bool ignore_callbacks)
+void XRayKinematicsLegacy::BoneChain_Calculate(const CBoneData* bd, XRayBoneInstanceLegacy& bi, u8 channel_mask, bool ignore_callbacks)
 {
 	u16 SelfID = bd->GetSelfID();
 	//CBlendInstance& BLEND_INST	= LL_GetBlendInstance(SelfID);
@@ -327,21 +332,21 @@ void XRayKinematics::BoneChain_Calculate(const CBoneData* bd, CBoneInstance& bi,
 	u16 ParentID = bd->GetParentID();
 	R_ASSERT(ParentID != BI_NONE);
 	CBoneData* ParrentDT = &LL_GetData(ParentID);
-	CBoneInstance parrent_bi = LL_GetBoneInstance(ParentID);
-	BoneChain_Calculate(ParrentDT, parrent_bi, channel_mask, ignore_callbacks);
-	CLBone(bd, bi, &parrent_bi.mTransform, channel_mask);
+	IBoneInstance&parrent_bi = LL_GetBoneInstance(ParentID);
+	BoneChain_Calculate(ParrentDT, static_cast<XRayBoneInstanceLegacy&>( parrent_bi), channel_mask, ignore_callbacks);
+	CLBone(bd, bi, &parrent_bi.GetTransform(), channel_mask);
 	//restore callback
 	bi.set_callback(bi.callback_type(), bc, bi.callback_param(), ow);
 }
 
-XRaySkeletonX* XRayKinematics::LL_GetChild(u32 idx)
+XRaySkeletonX* XRayKinematicsLegacy::LL_GetChild(u32 idx)
 {
 	XRaySkeletonVisual* V = Children[idx];
 	XRaySkeletonX* B = V->CastToXRaySkeletonX();
 	return			B;
 }
 
-void XRayKinematics::Visibility_Update()
+void XRayKinematicsLegacy::Visibility_Update()
 {Update_Visibility	= FALSE		;
 	// check visible
 	for (u32 c_it=0; c_it<Children.size(); c_it++)		
@@ -369,35 +374,37 @@ void XRayKinematics::Visibility_Update()
 	}
 }
 
-void	XRayKinematics::IBoneInstances_Create()
+void	XRayKinematicsLegacy::IBoneInstances_Create()
 {
 	// VERIFY2				(bones->size() < 64, "More than 64 bones is a crazy thing!");
 	size_t				size = bones->size();
-	bone_instances = xr_alloc<CBoneInstance>(size);
+	bone_instances.AddDefaulted(size);
 	for (size_t i = 0; i < size; i++)
 		bone_instances[i].construct();
 }
 
-void	XRayKinematics::IBoneInstances_Destroy()
+void	XRayKinematicsLegacy::IBoneInstances_Destroy()
 {
-	if (bone_instances) {
-		xr_free(bone_instances);
-		bone_instances = NULL;
-	}
+	bone_instances.Empty();
 }
 
 
-class XRayKinematics* XRayKinematics::CastToXRayKinematics()
+class XRayKinematicsLegacy* XRayKinematicsLegacy::CastToXRayKinematics()
 {
 	return this;
 }
 
-shared_str XRayKinematics::getDebugName()
+void XRayKinematicsLegacy::LL_SetTransform(u16 bone_id, const Fmatrix& Matrix) 
+{
+	LL_GetBoneInstance(bone_id).SetTransform(Matrix);
+}
+
+shared_str XRayKinematicsLegacy::getDebugName()
 {
 	return "";
 }
 
-XRayKinematics::~XRayKinematics()
+XRayKinematicsLegacy::~XRayKinematicsLegacy()
 {
 	check(UnrealParent==nullptr);
 	IBoneInstances_Destroy();
@@ -408,7 +415,7 @@ XRayKinematics::~XRayKinematics()
 	}
 }
 
-XRayKinematics::XRayKinematics()
+XRayKinematicsLegacy::XRayKinematicsLegacy()
 {
 	UnrealParent = nullptr;
 	Update_Callback = 0;
@@ -419,28 +426,30 @@ XRayKinematics::XRayKinematics()
 	m_is_original_lod = false;
 }
 
-void XRayKinematics::Bone_Calculate(CBoneData* bd, Fmatrix* parent)
+void XRayKinematicsLegacy::Bone_Calculate(const IBoneData* bd,const Fmatrix* parent)
 {
 	u16							SelfID = bd->GetSelfID();
-	CBoneInstance& BONE_INST = LL_GetBoneInstance(SelfID);
-	CLBone(bd, BONE_INST, parent, u8(-1));
+	XRayBoneInstanceLegacy& BONE_INST = static_cast<XRayBoneInstanceLegacy&>( LL_GetBoneInstance(SelfID));
+	CLBone(static_cast<const CBoneData*>( bd), BONE_INST, parent, u8(-1));
 	// Calculate Children
-	for (xr_vector<CBoneData*>::iterator C = bd->children.begin(); C != bd->children.end(); C++)
-		Bone_Calculate(*C, &BONE_INST.mTransform);
+	for (xr_vector<CBoneData*>::const_iterator C = static_cast<const CBoneData*>(bd)->children.begin(); C != static_cast<const CBoneData*>(bd)->children.end(); C++)
+	{
+		Bone_Calculate(*C, &BONE_INST.GetTransform());
+	}
 }
 
-void XRayKinematics::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks)
+void XRayKinematicsLegacy::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks)
 {
 	R_ASSERT(id < LL_BoneCount());
-	CBoneInstance bi = LL_GetBoneInstance(id);
+	XRayBoneInstanceLegacy& bi = static_cast<XRayBoneInstanceLegacy&>(LL_GetBoneInstance(id));
 	BoneChain_Calculate(&LL_GetData(id), bi, channel_mask, ignore_callbacks);
 #ifndef MASTER_GOLD
-	R_ASSERT(_valid(bi.mTransform));
+	R_ASSERT(_valid(bi.GetTransform()));
 #endif
-	pos.set(bi.mTransform);
+	pos.set(bi.GetTransform());
 }
 
-bool XRayKinematics::PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id)
+bool XRayKinematicsLegacy::PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id)
 {
 	Fvector S, D;//normal		= {0,0,0}
 	// transform ray from world to model
@@ -459,14 +468,14 @@ bool XRayKinematics::PickBone(const Fmatrix& parent_xform, pick_result& r, float
 	return false;
 }
 
-void XRayKinematics::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
+void XRayKinematicsLegacy::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
 {
 	for (u32 i = 0; i < Children.size(); i++)
 		LL_GetChild(i)->EnumBoneVertices(C, bone_id);
 }
 
 
-LPCSTR XRayKinematics::LL_BoneName_dbg(u16 ID)
+LPCSTR XRayKinematicsLegacy::LL_BoneName_dbg(u16 ID)
 {
 	accel::iterator _I, _E = bone_map_N->end();
 	for (_I = bone_map_N->begin(); _I != _E; ++_I)	if (_I->second == ID) return *_I->first;
@@ -477,7 +486,7 @@ inline bool	pred_N(const std::pair<shared_str, u32>& N, LPCSTR B)
 {
 	return xr_strcmp(*N.first, B) < 0;
 }
-u16		XRayKinematics::LL_BoneID(LPCSTR B) 
+u16		XRayKinematicsLegacy::LL_BoneID(LPCSTR B) 
 {
 	accel::iterator I = std::lower_bound(bone_map_N->begin(), bone_map_N->end(), B, pred_N);
 	if (I == bone_map_N->end())			return BI_NONE;
@@ -488,14 +497,14 @@ inline bool	pred_P(const std::pair<shared_str, u32>& N, const shared_str& B)
 {
 	return N.first._get() < B._get();
 }
-u16		XRayKinematics::LL_BoneID(const shared_str& B)
+u16		XRayKinematicsLegacy::LL_BoneID(const shared_str& B)
 {
 	accel::iterator I = std::lower_bound(bone_map_P->begin(), bone_map_P->end(), B, pred_P);
 	if (I == bone_map_P->end())			return BI_NONE;
 	if (I->first._get() != B._get())	return BI_NONE;
 	return				u16(I->second);
 }
-inline void RecursiveBindTransform(XRayKinematics* K, xr_vector<Fmatrix>& matrices, u16 bone_id, const Fmatrix& parent)
+inline void RecursiveBindTransform(XRayKinematicsLegacy* K, xr_vector<Fmatrix>& matrices, u16 bone_id, const Fmatrix& parent)
 {
 	CBoneData& BD = K->LL_GetData(bone_id);
 	Fmatrix& BM = matrices[bone_id];
@@ -505,13 +514,13 @@ inline void RecursiveBindTransform(XRayKinematics* K, xr_vector<Fmatrix>& matric
 		RecursiveBindTransform(K, matrices, (*C)->GetSelfID(), BM);
 }
 
-void XRayKinematics::LL_GetBindTransform(xr_vector<Fmatrix>& matrices)
+void XRayKinematicsLegacy::LL_GetBindTransform(xr_vector<Fmatrix>& matrices)
 {
 	matrices.resize(LL_BoneCount());
 	RecursiveBindTransform(this, matrices, iRoot, Fidentity);
 }
 
-int XRayKinematics::LL_GetBoneGroups(xr_vector<xr_vector<u16>>& groups)
+int XRayKinematicsLegacy::LL_GetBoneGroups(xr_vector<xr_vector<u16>>& groups)
 {
 	groups.resize(Children.size());
 	for (u16 bone_idx = 0; bone_idx < (u16)bones->size(); bone_idx++) {
@@ -525,24 +534,24 @@ int XRayKinematics::LL_GetBoneGroups(xr_vector<xr_vector<u16>>& groups)
 	return groups.size();
 }
 
-void XRayKinematics::LL_SetBoneVisible(u16 bone_id, BOOL val, BOOL bRecursive)
+void XRayKinematicsLegacy::LL_SetBoneVisible(u16 bone_id, BOOL val, BOOL bRecursive)
 {
 	check(bone_id < LL_BoneCount());
 	bonesvisible.set(bone_id, val);
 	if (!bonesvisible.is(bone_id)) {
-		bone_instances[bone_id].mTransform.scale(0.f, 0.f, 0.f);
+		bone_instances[bone_id].SetTransform(Fmatrix().scale(0.f, 0.f, 0.f));
 	}
 	else {
 		CalculateBones_Invalidate();
 	}
-	bone_instances[bone_id].mRenderTransform.mul_43(bone_instances[bone_id].mTransform, (*bones)[bone_id]->m2b_transform);
+	bone_instances[bone_id].mRenderTransform.mul_43(bone_instances[bone_id].GetTransform(), (*bones)[bone_id]->m2b_transform);
 	if (bRecursive) {
 		for (xr_vector<CBoneData*>::iterator C = (*bones)[bone_id]->children.begin(); C != (*bones)[bone_id]->children.end(); C++)
 			LL_SetBoneVisible((*C)->GetSelfID(), val, bRecursive);
 	}
 	Visibility_Invalidate();
 }
-void XRayKinematics::LL_SetBonesVisible(BonesVisible mask)
+void XRayKinematicsLegacy::LL_SetBonesVisible(BonesVisible mask)
 {
 	bonesvisible.zero();
 	for (u32 b = 0; b < bones->size(); b++) {
@@ -550,7 +559,7 @@ void XRayKinematics::LL_SetBonesVisible(BonesVisible mask)
 			bonesvisible.set(b, TRUE);
 		}
 		else {
-			Fmatrix& A = bone_instances[b].mTransform;
+			Fmatrix A = bone_instances[b].GetTransform();
 			Fmatrix& B = bone_instances[b].mRenderTransform;
 			A.scale(0.f, 0.f, 0.f);
 			B.mul_43(A, (*bones)[b]->m2b_transform);
@@ -559,7 +568,7 @@ void XRayKinematics::LL_SetBonesVisible(BonesVisible mask)
 	CalculateBones_Invalidate();
 	Visibility_Invalidate();
 }
-void XRayKinematics::CalculateBones(BOOL bForceExact)
+void XRayKinematicsLegacy::CalculateBones(BOOL bForceExact)
 {
 	// early out.
 	// check if the info is still relevant
@@ -597,7 +606,7 @@ void XRayKinematics::CalculateBones(BOOL bForceExact)
 		{
 			if (!LL_GetBoneVisible(u16(b)))		continue;
 			Fobb& obb = (*bones)[b]->obb;
-			Fmatrix& Mbone = bone_instances[b].mTransform;
+			Fmatrix  Mbone = bone_instances[b].GetTransform();
 			Fmatrix		Mbox;	obb.xform_get(Mbox);
 			Fmatrix		X;		X.mul_43(Mbone, Mbox);
 			Fvector& S = obb.m_halfsize;
@@ -640,7 +649,7 @@ void XRayKinematics::CalculateBones(BOOL bForceExact)
 	if (Update_Callback)	Update_Callback(this);
 }
 
-void XRayKinematics::CalculateBones_Invalidate()
+void XRayKinematicsLegacy::CalculateBones_Invalidate()
 {
 	UCalc_Time = 0x0;
 	UCalc_Visibox = psSkeletonUpdate;

@@ -1,15 +1,15 @@
 #pragma once
-#include "StalkerKinematics.generated.h"
+#include "StalkerKinematicsLegacy.generated.h"
 
 UCLASS()
-class AStalkerKinematics : public AActor
+class AStalkerKinematicsLegacy : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AStalkerKinematics();
-	void SetKinematics(class XRayKinematics* Kinematics);
+	AStalkerKinematicsLegacy();
+	void SetKinematics(class XRayKinematicsLegacy* Kinematics);
 	// Called every frame
 	void Tick(float DeltaTime) override;
 	void PostInitProperties() override;
@@ -19,6 +19,6 @@ protected:
 	UPROPERTY(EditAnywhere)
 	USceneComponent* SceneComponent;
 private:
-	class XRayKinematics* Kinematics;
+	class XRayKinematicsLegacy* Kinematics;
 
 };

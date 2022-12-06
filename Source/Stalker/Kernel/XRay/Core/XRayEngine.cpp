@@ -7,6 +7,7 @@
 #include "../Render/Interface/UI/XRayUIRender.h"
 #include "XRayInput.h"
 #include "../../StalkerEngineManager.h"
+#include "XRayConsole.h"
 XRayRenderFactory GRenderFactory;
 XRayDUInterface  GDUInterface;
 XRayDebugRender GDebugRender;
@@ -18,6 +19,8 @@ XRayEngine::XRayEngine()
 void XRayEngine::Initialize()
 {
 	Device = new XRayDevice;
+	Console = new  XRayConsole;
+
 	XRayInput* MyInput = new XRayInput;
 	GXRayEngineManager->SetInput(MyInput);
 	GXRayInput = MyInput;
@@ -34,5 +37,6 @@ void XRayEngine::Destroy()
 	GXRayEngineManager->SetInput(nullptr);
 	XRayEngineInterface::Destroy();
 	delete GXRayInput;
+	delete Console;
 	delete Device;
 }

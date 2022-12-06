@@ -1,8 +1,8 @@
 #include "XRaySkeletonMeshManager.h"
 #include "../Visual/XRaySkeletonVisual.h"
 #include "../Visual/XRayFSkinned.h"
-#include "../Visual/XRayKinematics.h"
-#include "../Visual/XRayKinematicsAnimated.h"
+#include "../Visual/XRayKinematicsLegacy.h"
+#include "../Visual/XRayKinematicsAnimatedLegacy.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IGame_Persistent.h"
 THIRD_PARTY_INCLUDES_END
@@ -135,8 +135,8 @@ XRaySkeletonVisual* XRaySkeletonMeshManager::Create(u32 Type)
 {
 	switch (Type)
 	{
-	case MT_SKELETON_ANIM:			return new XRayKinematicsAnimated();
-	case MT_SKELETON_RIGID:			return new XRayKinematics();
+	case MT_SKELETON_ANIM:			return new XRayKinematicsAnimatedLegacy();
+	case MT_SKELETON_RIGID:			return new XRayKinematicsLegacy();
 	case MT_SKELETON_GEOMDEF_PM:	
 	case MT_SKELETON_GEOMDEF_ST:	return new XRaySkeletonMesh();//  xr_new < CSkeletonX_ST>(); break;
 	default:

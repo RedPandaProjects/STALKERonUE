@@ -30,7 +30,7 @@ public:
 	virtual	XRaySkeletonX*	CastToXRaySkeletonX() { return this; }
 	virtual void			Load(const char* N, IReader* data, u32 dwFlags);
 	virtual void			Copy(XRaySkeletonVisual* pFrom);
-	virtual void			AfterLoad(XRayKinematics* parent, u16 child_idx);
+	virtual void			AfterLoad(XRayKinematicsLegacy* parent, u16 child_idx);
 	virtual void			EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id);
 	virtual BOOL			PickBone(IKinematics::pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id);
 

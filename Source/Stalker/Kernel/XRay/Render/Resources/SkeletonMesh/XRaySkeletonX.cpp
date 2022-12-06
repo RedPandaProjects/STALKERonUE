@@ -1,5 +1,5 @@
 #include "XRaySkeletonX.h"
-#include "../Visual/XRayKinematics.h"
+#include "../Visual/XRayKinematicsLegacy.h"
 #include "../Source/XrSound/cl_intersect.h"
 
 void XRaySkeletonX::_Copy(XRaySkeletonX* B)
@@ -19,7 +19,7 @@ void XRaySkeletonX::_Copy(XRaySkeletonX* B)
 
 	m_Indices = B->m_Indices;
 }
-void XRaySkeletonX::AfterLoad(XRayKinematics* parent, u16 child_idx)
+void XRaySkeletonX::AfterLoad(XRayKinematicsLegacy* parent, u16 child_idx)
 {
 	SetParent(parent);
 	ChildIDX = child_idx;
@@ -67,28 +67,28 @@ void XRaySkeletonX::_Load(const char* N, IReader* data, size_t& dwVertCount)
 }
 
 
-inline void 	get_pos_bones(const vertBoned1W& v, Fvector& p, XRayKinematics* Parent)
+inline void 	get_pos_bones(const vertBoned1W& v, Fvector& p, XRayKinematicsLegacy* Parent)
 {
-	const Fmatrix& xform = Parent->LL_GetBoneInstance((u16)v.matrix).mRenderTransform;
+	const Fmatrix& xform = Parent->LL_GetTransform_R((u16)v.matrix);
 	xform.transform_tiny(p, v.P);
 }
 
-inline void 	get_pos_bones(const vertBoned2W& vert, Fvector& p, XRayKinematics* Parent)
+inline void 	get_pos_bones(const vertBoned2W& vert, Fvector& p, XRayKinematicsLegacy* Parent)
 {
 	Fvector		P0, P1;
 
-	Fmatrix& xform0 = Parent->LL_GetBoneInstance(vert.matrix0).mRenderTransform;
-	Fmatrix& xform1 = Parent->LL_GetBoneInstance(vert.matrix1).mRenderTransform;
+	const Fmatrix& xform0 = Parent->LL_GetTransform_R(vert.matrix0);
+	const Fmatrix& xform1 = Parent->LL_GetTransform_R(vert.matrix1);
 	xform0.transform_tiny(P0, vert.P);
 	xform1.transform_tiny(P1, vert.P);
 	p.lerp(P0, P1, vert.w);
 }
 
-inline void 	get_pos_bones(const vertBoned3W& vert, Fvector& p, XRayKinematics* Parent)
+inline void 	get_pos_bones(const vertBoned3W& vert, Fvector& p, XRayKinematicsLegacy* Parent)
 {
-	Fmatrix& M0 = Parent->LL_GetBoneInstance(vert.m[0]).mRenderTransform;
-	Fmatrix& M1 = Parent->LL_GetBoneInstance(vert.m[1]).mRenderTransform;
-	Fmatrix& M2 = Parent->LL_GetBoneInstance(vert.m[2]).mRenderTransform;
+	const Fmatrix& M0 = Parent->LL_GetTransform_R(vert.m[0]);
+	const Fmatrix& M1 = Parent->LL_GetTransform_R(vert.m[1]);
+	const Fmatrix& M2 = Parent->LL_GetTransform_R(vert.m[2]);
 
 	Fvector	P0, P1, P2;
 	M0.transform_tiny(P0, vert.P); P0.mul(vert.w[0]);
@@ -99,12 +99,12 @@ inline void 	get_pos_bones(const vertBoned3W& vert, Fvector& p, XRayKinematics* 
 	p.add(P1);
 	p.add(P2);
 }
-inline void 	get_pos_bones(const vertBoned4W& vert, Fvector& p, XRayKinematics* Parent)
+inline void 	get_pos_bones(const vertBoned4W& vert, Fvector& p, XRayKinematicsLegacy* Parent)
 {
-	Fmatrix& M0 = Parent->LL_GetBoneInstance(vert.m[0]).mRenderTransform;
-	Fmatrix& M1 = Parent->LL_GetBoneInstance(vert.m[1]).mRenderTransform;
-	Fmatrix& M2 = Parent->LL_GetBoneInstance(vert.m[2]).mRenderTransform;
-	Fmatrix& M3 = Parent->LL_GetBoneInstance(vert.m[3]).mRenderTransform;
+	const Fmatrix& M0 =Parent->LL_GetTransform_R(vert.m[0]);
+	const Fmatrix& M1 = Parent->LL_GetTransform_R(vert.m[1]);
+	const Fmatrix& M2 = Parent->LL_GetTransform_R(vert.m[2]);
+	const Fmatrix& M3 = Parent->LL_GetTransform_R(vert.m[3]);
 
 	Fvector	P0, P1, P2, P3;
 	M0.transform_tiny(P0, vert.P); P0.mul(vert.w[0]);
@@ -118,7 +118,7 @@ inline void 	get_pos_bones(const vertBoned4W& vert, Fvector& p, XRayKinematics* 
 	p.add(P3);
 }
 template<typename T_vertex, typename T_buffer >
-inline BOOL pick_bone(T_buffer vertices, XRayKinematics* Parent, IKinematics::pick_result& r, float dist, const Fvector& S, const Fvector& D, u16* indices, CBoneData::FacesVec& faces)
+inline BOOL pick_bone(T_buffer vertices, XRayKinematicsLegacy* Parent, IKinematics::pick_result& r, float dist, const Fvector& S, const Fvector& D, u16* indices, CBoneData::FacesVec& faces)
 {
 
 

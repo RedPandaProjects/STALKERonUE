@@ -21,7 +21,7 @@ public:
 	int32									RefCount;
 	XRaySkeletonVisual*						Parent;
 	virtual	class	XRaySkeletonX*			CastToXRaySkeletonX() { return nullptr; }
-	virtual	class XRayKinematics*			CastToXRayKinematics(){return nullptr;}
+	virtual	class XRayKinematicsLegacy*			CastToXRayKinematics(){return nullptr;}
 	virtual XRaySkeletonVisual*				CastToRaySkeletonVisual() { return this; }
 
 	size_t	CountVertex;

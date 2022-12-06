@@ -10,18 +10,13 @@ THIRD_PARTY_INCLUDES_END
 /**
  * 
  */
-class STALKER_API StalkerConsole : public ConsoleBase
+class STALKER_API XRayConsole : public XRayConsoleInterface
 {
-	StalkerConsole(StalkerConsole&&) = delete;
-	StalkerConsole(StalkerConsole&) = delete;
-
-	StalkerConsole() = default;
-
 private:
 	static void		ExecuteCommandUE(IConsole_Command* cc, const TArray< FString >& Args);
 public:
-	static void		Init();
-	virtual ~StalkerConsole();
+	XRayConsole();
+	virtual ~XRayConsole();
 
 	void			AddCommand(IConsole_Command* cc) override;
 	void			RemoveCommand(IConsole_Command* cc) override;

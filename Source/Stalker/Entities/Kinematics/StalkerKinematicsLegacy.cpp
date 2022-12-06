@@ -1,10 +1,10 @@
-#include "StalkerKinematics.h"
+#include "StalkerKinematicsLegacy.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IRenderable.h"
 THIRD_PARTY_INCLUDES_END
-#include "Kernel/XRay/Render/Resources/Visual/XRayKinematics.h"
+#include "Kernel/XRay/Render/Resources/Visual/XRayKinematicsLegacy.h"
 // Sets default values
-AStalkerKinematics::AStalkerKinematics()
+AStalkerKinematicsLegacy::AStalkerKinematicsLegacy()
 {
 	Kinematics = nullptr;
 	PrimaryActorTick.bCanEverTick = true;
@@ -14,7 +14,7 @@ AStalkerKinematics::AStalkerKinematics()
 	MeshComponent->SetupAttachment(SceneComponent);
 }
 
-void AStalkerKinematics::SetKinematics(XRayKinematics* InKinematics)
+void AStalkerKinematicsLegacy::SetKinematics(XRayKinematicsLegacy* InKinematics)
 {
 	check(InKinematics&& Kinematics == nullptr);
 	Kinematics = InKinematics; 
@@ -29,7 +29,7 @@ void AStalkerKinematics::SetKinematics(XRayKinematics* InKinematics)
 }
 
 // Called every frame
-void AStalkerKinematics::Tick(float DeltaTime)
+void AStalkerKinematicsLegacy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	if (Kinematics&& Kinematics->Renderable)
@@ -44,7 +44,7 @@ void AStalkerKinematics::Tick(float DeltaTime)
 	}
 }
 
-void AStalkerKinematics::PostInitProperties()
+void AStalkerKinematicsLegacy::PostInitProperties()
 {
 	Super::PostInitProperties();
 	if (HasAnyFlags(RF_NeedLoad | RF_WasLoaded | RF_ClassDefaultObject) == false)

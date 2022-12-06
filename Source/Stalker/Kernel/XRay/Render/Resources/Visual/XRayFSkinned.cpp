@@ -1,5 +1,5 @@
 #include "XRayFSkinned.h"
-#include "XRayKinematics.h"
+#include "XRayKinematicsLegacy.h"
 static shared_str sbones_array;
 
 #pragma pack(push, 1)
@@ -75,12 +75,12 @@ struct vertHW_1W
 		return (u16)color_get_A(_N_I) / 3;
 	}
 
-	void get_pos_bones(Fvector& p, XRayKinematics* Parent) const
+	/*void get_pos_bones(Fvector& p, XRayKinematicsLegacy* Parent) const
 	{
 		const Fmatrix& xform = Parent->LL_GetBoneInstance(get_bone()).mRenderTransform;
 		get_pos(p);
 		xform.transform_tiny(p);
-	}
+	}*/
 
 	void get_pos(Fvector& p) const
 	{
@@ -137,7 +137,7 @@ struct vertHW_2W
 		p.z = _P[2];
 	}
 
-	void get_pos_bones(Fvector& p, XRayKinematics* Parent) const
+	/*void get_pos_bones(Fvector& p, XRayKinematicsLegacy* Parent) const
 	{
 		Fvector P0, P1;
 
@@ -150,7 +150,7 @@ struct vertHW_2W
 		xform1.transform_tiny(P1);
 
 		p.lerp(P0, P1, get_weight());
-	}
+	}*/
 };
 
 
@@ -216,32 +216,32 @@ struct vertHW_3W
 		p.z = _P[2];
 	}
 
-	void get_pos_bones(Fvector& p, XRayKinematics* Parent) const
-	{
-		Fvector P0, P1, P2;
+	//void get_pos_bones(Fvector& p, XRayKinematicsLegacy* Parent) const
+	//{
+	//	Fvector P0, P1, P2;
 
-		Fmatrix& xform0 = Parent->LL_GetBoneInstance(get_bone(0)).mRenderTransform;
-		Fmatrix& xform1 = Parent->LL_GetBoneInstance(get_bone(1)).mRenderTransform;
-		Fmatrix& xform2 = Parent->LL_GetBoneInstance(get_bone(2)).mRenderTransform;
+	//	Fmatrix& xform0 = Parent->LL_GetBoneInstance(get_bone(0)).mRenderTransform;
+	//	Fmatrix& xform1 = Parent->LL_GetBoneInstance(get_bone(1)).mRenderTransform;
+	//	Fmatrix& xform2 = Parent->LL_GetBoneInstance(get_bone(2)).mRenderTransform;
 
-		get_pos(P0);
-		xform0.transform_tiny(P0);
-		get_pos(P1);
-		xform1.transform_tiny(P1);
-		get_pos(P2);
-		xform2.transform_tiny(P2);
+	//	get_pos(P0);
+	//	xform0.transform_tiny(P0);
+	//	get_pos(P1);
+	//	xform1.transform_tiny(P1);
+	//	get_pos(P2);
+	//	xform2.transform_tiny(P2);
 
-		float w0 = get_weight0();
-		float w1 = get_weight1();
+	//	float w0 = get_weight0();
+	//	float w1 = get_weight1();
 
-		P0.mul(w0);
-		P1.mul(w1);
-		P2.mul(1 - w0 - w1);
+	//	P0.mul(w0);
+	//	P1.mul(w1);
+	//	P2.mul(1 - w0 - w1);
 
-		p = P0;
-		p.add(P1);
-		p.add(P2);
-	}
+	//	p = P0;
+	//	p.add(P1);
+	//	p.add(P2);
+	//}
 };
 
 
@@ -317,34 +317,34 @@ struct vertHW_4W
 		p.z = _P[2];
 	}
 
-	void get_pos_bones(Fvector& p, XRayKinematics* Parent) const
-	{
-		Fvector P[4];
+	//void get_pos_bones(Fvector& p, XRayKinematicsLegacy* Parent) const
+	//{
+	//	Fvector P[4];
 
-		for (u16 i = 0; i < 4; ++i)
-		{
-			Fmatrix& xform = Parent->LL_GetBoneInstance(get_bone(i)).mRenderTransform;
-			get_pos(P[i]);
+	//	for (u16 i = 0; i < 4; ++i)
+	//	{
+	//		Fmatrix& xform = Parent->LL_GetBoneInstance(get_bone(i)).mRenderTransform;
+	//		get_pos(P[i]);
 
-			xform.transform_tiny(P[i]);
-		}
+	//		xform.transform_tiny(P[i]);
+	//	}
 
-		float w[3];
+	//	float w[3];
 
-		w[0] = get_weight0();
-		w[1] = get_weight1();
-		w[2] = get_weight2();
+	//	w[0] = get_weight0();
+	//	w[1] = get_weight1();
+	//	w[2] = get_weight2();
 
-		for (int j = 0; j < 3; ++j)
-			P[j].mul(w[j]);
+	//	for (int j = 0; j < 3; ++j)
+	//		P[j].mul(w[j]);
 
-		P[3].mul(1 - w[0] - w[1] - w[2]);
+	//	P[3].mul(1 - w[0] - w[1] - w[2]);
 
-		p = P[0];
+	//	p = P[0];
 
-		for (int k = 1; k < 4; ++k)
-			p.add(P[k]);
-	}
+	//	for (int k = 1; k < 4; ++k)
+	//		p.add(P[k]);
+	//}
 };
 
 #pragma pack(pop)
@@ -496,18 +496,18 @@ void XRaySkeletonXExt::_CollectBoneFaces(XRaySkeletonVisual* V, size_t OffsetInd
 	
 }
 
-void XRaySkeletonMesh::AfterLoad(XRayKinematics* parent, u16 child_idx)
+void XRaySkeletonMesh::AfterLoad(XRayKinematicsLegacy* parent, u16 child_idx)
 {
 	inherited2::AfterLoad(parent, child_idx);
 	inherited2::_CollectBoneFaces(this, OffsetIndex, CountIndex);
 }
 
-
-template <typename T>
-IC void get_pos_bones(const T& v, Fvector& p, XRayKinematics* Parent)
-{
-	v.get_pos_bones(p, Parent);
-}
+//
+//template <typename T>
+//IC void get_pos_bones(const T& v, Fvector& p, XRayKinematicsLegacy* Parent)
+//{
+//	v.get_pos_bones(p, Parent);
+//}
 
 BOOL XRaySkeletonXExt::_PickBone(IKinematics::pick_result& r, float dist, const Fvector& start, const Fvector& dir, XRaySkeletonVisual* V, u16 bone_id, size_t OffsetIndex, size_t CountIndex)
 {

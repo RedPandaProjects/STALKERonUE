@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Kernel/Unreal/Console/StalkerConsole.h"
+#include "XRayConsole.h"
 #include "Framework/Commands/Commands.h"
 
-void StalkerConsole::ExecuteCommandUE(IConsole_Command* cc, const TArray<FString>& Args)
+void XRayConsole::ExecuteCommandUE(IConsole_Command* cc, const TArray<FString>& Args)
 {
 	if (cc && cc->bEnabled)
 	{
@@ -42,30 +42,31 @@ void StalkerConsole::ExecuteCommandUE(IConsole_Command* cc, const TArray<FString
 	}
 }
 
-void StalkerConsole::Init()
+
+XRayConsole::XRayConsole()
 {
-	Console = new StalkerConsole();
+
 }
 
-StalkerConsole::~StalkerConsole()
+XRayConsole::~XRayConsole()
 {
-	Console = nullptr;
+	checkSlow(m_game_to_ue.Num()  == 0);
 }
 
-void StalkerConsole::AddCommand(IConsole_Command* cc)
+void XRayConsole::AddCommand(IConsole_Command* cc)
 {
 	FString name = "xray." + FString(cc->Name());
-	auto pUECommand = IConsoleManager::Get().RegisterConsoleCommand(*name, *name, FConsoleCommandWithArgsDelegate::CreateLambda([cc](const TArray<FString>& Args) {StalkerConsole::ExecuteCommandUE(cc, Args); }));
+	auto pUECommand = IConsoleManager::Get().RegisterConsoleCommand(*name, *name, FConsoleCommandWithArgsDelegate::CreateLambda([cc](const TArray<FString>& Args) {XRayConsole::ExecuteCommandUE(cc, Args); }));
 	m_game_to_ue.Add(cc, pUECommand);
 
-	ConsoleBase::AddCommand(cc);
+	XRayConsoleInterface::AddCommand(cc);
 }
 
-void StalkerConsole::RemoveCommand(IConsole_Command* cc)
+void XRayConsole::RemoveCommand(IConsole_Command* cc)
 {
 	auto pUECommand = m_game_to_ue.FindAndRemoveChecked(cc);
 	IConsoleManager::Get().UnregisterConsoleObject(pUECommand);
 	delete pUECommand; //?
 
-	ConsoleBase::RemoveCommand(cc);
+	XRayConsoleInterface::RemoveCommand(cc);
 }

@@ -13,8 +13,8 @@ public:
 	void						CheckLeak();
 	void						Reload();
 
-	class AStalkerKinematics*	SpawnSkeletonMesh(class XRayKinematics* Kinematics);
-	void						Destroy(class AStalkerKinematics*Mesh);
+	class AStalkerKinematicsLegacy*	SpawnSkeletonMesh(class XRayKinematicsLegacy* Kinematics);
+	void						Destroy(class AStalkerKinematicsLegacy*Mesh);
 	UPROPERTY(Transient)
 	TObjectPtr < class UWorld>	GameWorld;
 private:
@@ -38,5 +38,5 @@ private:
 	TMap<USlateBrushAsset*, BrushInfo> BrushesInfo;
 	
 	UPROPERTY(Transient)
-	TSet<AStalkerKinematics*> Meshes;
+	TSet<AStalkerKinematicsLegacy*> Meshes;
 };
