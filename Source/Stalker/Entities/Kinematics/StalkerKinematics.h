@@ -69,8 +69,11 @@ private:
 	TMap<u16, shared_str>					BonesID2Name;
 	BonesVisible							SelfBonesVisible;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* MeshComponent;
+
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* SceneComponent;
 
 public:
 	class AStalkerKinematics* CastToAStalkerKinematics() override;

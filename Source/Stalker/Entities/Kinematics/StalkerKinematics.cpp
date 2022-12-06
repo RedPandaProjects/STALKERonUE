@@ -3,13 +3,17 @@
 THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/RenderVisual.h"
 #include "XrEngine/IRenderable.h"
+#include "XrCDB/ISpatial.h"
 THIRD_PARTY_INCLUDES_END
 AStalkerKinematics::AStalkerKinematics()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	KinematicsData = nullptr;
+	SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
+	SetRootComponent(SceneComponent);
 	MeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
 	MeshComponent->SetupAttachment(GetRootComponent());
+	SetHidden(true);
 }
 
 void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsData)
@@ -276,9 +280,13 @@ shared_str AStalkerKinematics::getDebugName()
 void AStalkerKinematics::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	if(Renderable&& Renderable->MySpatial)
+		SetActorHiddenInGame(!(Renderable->MySpatial->spatial.type & STYPE_RENDERABLE));
+	else
+		SetActorHiddenInGame(true);
 	if (Renderable)
 	{
+		
 		//Kinematics->CalculateBones(true);
 		Fquaternion XRayQuat;
 		XRayQuat.set(Renderable->renderable.xform);

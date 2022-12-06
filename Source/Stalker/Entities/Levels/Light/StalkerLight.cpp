@@ -97,7 +97,7 @@ void AStalkerLight::set_indirect(bool)
 
 void AStalkerLight::set_position(const Fvector& P)
 {
-	StartPosition = FVector(StalkerMath::XRayLocationToUnreal(P));
+	StartPosition = FVector(StalkerMath::XRayLocationToUnreal(P))+FVector(0,0,-10);
 	SetActorLocation(StartPosition);
 }
 

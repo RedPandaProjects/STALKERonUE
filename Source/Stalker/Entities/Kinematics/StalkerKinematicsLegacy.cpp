@@ -1,6 +1,7 @@
 #include "StalkerKinematicsLegacy.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IRenderable.h"
+#include "XrCDB/ISpatial.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/XRay/Render/Resources/Visual/XRayKinematicsLegacy.h"
 // Sets default values
@@ -12,6 +13,8 @@ AStalkerKinematicsLegacy::AStalkerKinematicsLegacy()
 	SceneComponent->SetupAttachment(GetRootComponent());
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	MeshComponent->SetupAttachment(SceneComponent);
+
+	SetHidden(true);
 }
 
 void AStalkerKinematicsLegacy::SetKinematics(XRayKinematicsLegacy* InKinematics)
@@ -32,6 +35,10 @@ void AStalkerKinematicsLegacy::SetKinematics(XRayKinematicsLegacy* InKinematics)
 void AStalkerKinematicsLegacy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (Kinematics->Renderable && Kinematics->Renderable->MySpatial)
+		SetActorHiddenInGame(!(Kinematics->Renderable->MySpatial->spatial.type & STYPE_RENDERABLE));
+	else
+		SetActorHiddenInGame(true);
 	if (Kinematics&& Kinematics->Renderable)
 	{
 		Kinematics->CalculateBones(true);
