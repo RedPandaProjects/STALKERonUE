@@ -40,3 +40,47 @@ void FStalkerKinematicsAnimData::BuildFromLegacy(CMotionDef& Def, TArray<TShared
 		}
 	}
 }
+
+void FStalkerKinematicsAnimData::BuildToLegacy(CMotionDef& Def, TMap<shared_str, u16>& BonesName2ID, TMap<shared_str, u32>& BonesPartsName2ID)
+{
+	Def.motion = BI_NONE;
+	Def.flags = 0;
+	Def.flags |= Flags & int32(EStalkerKinematicsAnimFlags::FX) ? esmFX : 0;
+	Def.flags |= Flags & int32(EStalkerKinematicsAnimFlags::Idle) ? esmIdle : 0;
+	Def.flags |= Flags & int32(EStalkerKinematicsAnimFlags::RootMover) ? esmRootMover : 0;
+	Def.flags |= Flags & int32(EStalkerKinematicsAnimFlags::StopAtEnd) ? esmStopAtEnd : 0;
+	Def.flags |= Flags & int32(EStalkerKinematicsAnimFlags::SyncPart) ? esmSyncPart : 0;
+	Def.flags |= Flags & int32(EStalkerKinematicsAnimFlags::UseFootSteps) ? esmUseFootSteps : 0;
+
+	Def.accrue = Def.Quantize(Accrue / fQuantizerRangeExt);
+	Def.falloff = Def.Quantize(Falloff / fQuantizerRangeExt);
+	Def.power = Def.Quantize(Power);
+	Def.speed = 0;
+	Def.bone_or_part = BI_NONE;
+	if (!FXBoneOrPart.IsNone())
+	{
+		shared_str Name = TCHAR_TO_ANSI(*FXBoneOrPart.ToString());
+		if (Def.flags & esmFX)
+		{
+
+			Def.bone_or_part = BonesName2ID[Name];
+
+		}
+		else
+		{
+			Def.bone_or_part = BonesPartsName2ID[Name];
+		}
+	}
+	Def.marks.clear();
+	for (auto& Mark : Marks)
+	{
+		Def.marks.push_back(motion_marks());
+		for (auto& Interval : Mark.Intervals)
+		{
+			motion_marks::interval interval;
+			interval.first = Interval.Start;
+			interval.second = Interval.End;
+			Def.marks.back().intervals.push_back(interval);
+		}
+	}
+}

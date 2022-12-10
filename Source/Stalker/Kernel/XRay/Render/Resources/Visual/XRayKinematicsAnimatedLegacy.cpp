@@ -51,6 +51,30 @@ void	XRayKinematicsAnimatedLegacy::Bone_Motion_Stop_IM(CBoneData* bd, CBlend* ha
 }
 
 
+bool XRayKinematicsAnimatedLegacy::AnimsEqual(IKinematicsAnimated* InAnimated)
+{
+	XRayKinematicsAnimatedLegacy* RightAnimated = static_cast<XRayKinematicsAnimatedLegacy*>(InAnimated);
+
+	if(RightAnimated->LL_MotionsSlotCount() != LL_MotionsSlotCount())
+	{
+		return false;
+	}
+
+	for(u16 i=0;i< LL_MotionsSlotCount();i++)
+	{
+		if(!(RightAnimated->LL_MotionsSlot(i) == LL_MotionsSlot(i)))
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+float XRayKinematicsAnimatedLegacy::LL_GetMotionTime(MotionID id)
+{
+	return LL_GetRootMotion(id)->GetLength()/LL_GetMotionDef(id)->Speed();
+}
+
 std::pair<LPCSTR, LPCSTR> XRayKinematicsAnimatedLegacy::LL_MotionDefName_dbg(MotionID ID)
 {
 	shared_motions& s_mots = m_Motions[ID.slot].motions;

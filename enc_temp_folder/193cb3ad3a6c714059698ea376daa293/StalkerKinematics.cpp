@@ -36,7 +36,7 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 		IReader Reader(UserDataMemory.GetData(), UserDataMemory.Num());
 		UserData = MakeShared<CInifile>(&Reader, FS.get_path("$game_config$")->m_Path);
 	}
-	
+
 	for(StalkerKinematicsBone&Bone: Bones)
 	{
 		BonesName2ID.Add(Bone.GetName(), Bone.SelfID);
@@ -87,10 +87,6 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 	LL_SetChannelFactor(2, 1);
 	LL_SetChannelFactor(3, 1);
 	RootBone = 0;
-	for (int32 i = 0; i < BonesInstance.Num(); i++)
-	{
-		BonesInstance[i].SetTransform(Bones[i].get_bind_transform());
-	}
 	MeshComponent->SetSkeletalMesh(KinematicsData->Mesh);
 	{
 		FBox Box = KinematicsData->Mesh->GetBounds().GetBox();
@@ -654,12 +650,11 @@ u16 AStalkerKinematics::LL_VisibleBoneCount()
 
 const Fmatrix& AStalkerKinematics::LL_GetTransform(u16 bone_id) const
 {
-	return BonesInstance[bone_id].GetTransform();
+	return Bones[bone_id].BindTransformation;
 }
 
 const Fmatrix& AStalkerKinematics::LL_GetTransform_R(u16 bone_id)
 {
-	UE_DEBUG_BREAK();
 	return Fidentity;
 }
 

@@ -294,16 +294,13 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
-	if (IsValid(KinematicsData))
+	if (IsValid(KinematicsData)&& IsValid(KinematicsData->Mesh))
 	{
-		if (!IsValid(KinematicsData->Mesh) || KinematicsData->Anims.Num() != 0)
-		{
-			return nullptr;
-		}
 		class AStalkerKinematics*Result= CreateKinematics(KinematicsData);
 		Meshes.Add(Result);
 		return Result;
 	}
+	check(false);
 	return nullptr;
 }
 

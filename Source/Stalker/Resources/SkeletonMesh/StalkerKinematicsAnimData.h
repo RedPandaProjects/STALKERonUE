@@ -57,4 +57,5 @@ struct STALKER_API FStalkerKinematicsAnimData
 	int32					Flags;
 
 	void BuildFromLegacy(CMotionDef&Def,TArray<TSharedPtr<CBoneData>>&Bones, CPartition& Partition);
+	void BuildToLegacy	(CMotionDef& Def, TMap<shared_str, u16>&BonesName2ID, TMap<shared_str, u32>& BonesPartsName2ID);
 };

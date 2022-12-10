@@ -133,14 +133,15 @@ XRaySkeletonVisual* XRaySkeletonMeshManager::Load(shared_str InName)
 
 XRaySkeletonVisual* XRaySkeletonMeshManager::Create(u32 Type)
 {
-	switch (Type)
-	{
-	case MT_SKELETON_ANIM:			return new XRayKinematicsAnimatedLegacy();
-	case MT_SKELETON_RIGID:			return new XRayKinematicsLegacy();
-	case MT_SKELETON_GEOMDEF_PM:	
-	case MT_SKELETON_GEOMDEF_ST:	return new XRaySkeletonMesh();//  xr_new < CSkeletonX_ST>(); break;
-	default:
-		check(false);
-		return nullptr;
-	}
+	//switch (Type)
+	//{
+	////case MT_SKELETON_ANIM:			return new XRayKinematicsAnimatedLegacy();
+	////case MT_SKELETON_RIGID:			return new XRayKinematicsLegacy();
+	////case MT_SKELETON_GEOMDEF_PM:	
+	////case MT_SKELETON_GEOMDEF_ST:	return new XRaySkeletonMesh();//  xr_new < CSkeletonX_ST>(); break;
+	//default:
+	//	check(false);
+	//	return nullptr;
+	//}
+	return nullptr;
 }

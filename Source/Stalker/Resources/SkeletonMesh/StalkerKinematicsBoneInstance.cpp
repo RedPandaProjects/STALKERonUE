@@ -2,10 +2,10 @@
 
 const Fmatrix& StalkerKinematicsBoneInstance::GetTransform() const
 {
-	return Fidentity;
+	return Transform;
 }
 
 void StalkerKinematicsBoneInstance::SetTransform(const Fmatrix& val)
 {
-	
+	Transform = val;
 }

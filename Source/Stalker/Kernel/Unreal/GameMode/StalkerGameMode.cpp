@@ -28,7 +28,6 @@ void AStalkerGameMode::InitGame(const FString& MapName, const FString& Options, 
 void AStalkerGameMode::StartPlay()
 {
 	Super::StartPlay();
-	Engine->Event.Defer("KERNEL:start", u64(xr_strdup("editor/single/alife/new")), u64(xr_strdup("localhost")));
 }
 
 void AStalkerGameMode::ResetLevel()

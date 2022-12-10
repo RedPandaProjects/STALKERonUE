@@ -12,6 +12,7 @@ void UStalkerKinematicsData::BuildFromLegacy(const TArray<TSharedPtr<CBoneData>>
 
 void UStalkerKinematicsData::BuildBones(TArray<StalkerKinematicsBone>& InBones)
 {
+	
 	InBones.Empty(Mesh->RefSkeleton.GetNum());
 	InBones.AddDefaulted(Mesh->RefSkeleton.GetNum());
 	if (IsValid(Mesh))
@@ -32,6 +33,12 @@ void UStalkerKinematicsData::BuildBones(TArray<StalkerKinematicsBone>& InBones)
 				InBones[ParentID].Childs.Add(&InBones[i]);
 				InBones[i].ParentID = static_cast<u16>(ParentID);
 			}
+
+			FMatrix BindTransformation =  Mesh->GetRefPoseMatrix(i);
+			FQuat BoneRotation =  BindTransformation.ToQuat();
+			FVector BonePosition = BindTransformation.GetOrigin();
+			InBones[i].BindTransformation.rotation(StalkerMath::UnrealQuatToXRay(BoneRotation));
+			InBones[i].BindTransformation.translate_over(StalkerMath::UnrealLocationToXRay(BonePosition));
 		}
 	}
 }

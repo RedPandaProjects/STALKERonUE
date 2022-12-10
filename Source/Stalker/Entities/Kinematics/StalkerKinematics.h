@@ -1,19 +1,26 @@
 #pragma once
 #include "Resources/SkeletonMesh/StalkerKinematicsBone.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneInstance.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
+THIRD_PARTY_INCLUDES_START
+#include "XrRender/Public/animation_blend.h"
+THIRD_PARTY_INCLUDES_END
 #include "StalkerKinematics.generated.h"
 
-UCLASS()
-class STALKER_API AStalkerKinematics : public AActor,public IKinematics,public IRenderVisual
+UCLASS(BlueprintType)
+class STALKER_API AStalkerKinematics : public AActor, public IRenderVisual,public IKinematics,public IKinematicsAnimated
 {
 	GENERATED_BODY()
 	
 public:	
 	AStalkerKinematics();
+
+	UFUNCTION(BlueprintCallable)
 	void Initilize(class UStalkerKinematicsData* KinematicsData);
 
-
 	virtual void Tick(float DeltaTime) override;
+//IKinematics
 	void Bone_Calculate(const IBoneData* bd, const Fmatrix* parent) override;
 	void Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks) override;
 	bool PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id) override;
@@ -32,7 +39,6 @@ public:
 	Fobb& LL_GetBox(u16 bone_id) override;
 	const Fbox& GetBox() const override;
 	void LL_GetBindTransform(xr_vector<Fmatrix>& matrices) override;
-	int LL_GetBoneGroups(xr_vector<xr_vector<u16>>& groups) override;
 	u16 LL_GetBoneRoot() override;
 	void LL_SetBoneRoot(u16 bone_id) override;
 	BOOL LL_GetBoneVisible(u16 bone_id) override;
@@ -53,29 +59,113 @@ public:
 	vis_data& _BCL getVisData() override;
 	u32 getType() override;
 	IKinematics* _BCL dcast_PKinematics() override;
+//IKinematicsAnimated
+	class AStalkerKinematics*	CastToAStalkerKinematics() override;
+	void						OnCalculateBones() override;
+	std::pair<LPCSTR, LPCSTR>	LL_MotionDefName_dbg(MotionID ID) override;
+	void						LL_DumpBlends_dbg() override;
 
+
+	CMotionDef*					LL_GetMotionDef(MotionID id) override;
+
+	u32							LL_PartBlendsCount(u32 bone_part_id) override;
+	CBlend*						LL_PartBlend(u32 bone_part_id, u32 n) override;
+
+
+	void						LL_BuldBoneMatrixDequatize(const IBoneData* bd, u8 channel_mask, SKeyTable& keys) override;
+	void						LL_BoneMatrixBuild(IBoneInstance& bi, const Fmatrix* parent, const SKeyTable& keys) override;
+
+
+	void						LL_IterateBlends(IterateBlendsCallback& callback) override;
+
+	IBlendDestroyCallback*		GetBlendDestroyCallback() override;
+	void						SetBlendDestroyCallback(IBlendDestroyCallback* cb) override;
+	void						SetUpdateTracksCalback(IUpdateTracksCallback* callback) override;
+	IUpdateTracksCallback*		GetUpdateTracksCalback() override;
+
+
+	void						LL_CloseCycle(u16 BonesPartID, u8 mask_channel = (1 << 0)) override;
+	void						LL_SetChannelFactor(u16 channel, float factor) override;
+
+	void						UpdateTracks() override;
+	void						LL_UpdateTracks(float dt, bool b_force, bool leave_blends) override;
+
+	MotionID					ID_Cycle(LPCSTR N) override;
+	MotionID					ID_Cycle_Safe(LPCSTR N) override;
+	MotionID					ID_Cycle(shared_str N) override;
+	MotionID					ID_Cycle_Safe(shared_str N) override;
+
+	CBlend*						PlayCycle(LPCSTR N, BOOL bMixIn = TRUE, PlayCallback Callback = 0, LPVOID CallbackParam = 0, u8 channel = 0) override;
+	CBlend*						PlayCycle(MotionID InMotionID, BOOL bMixIn = TRUE, PlayCallback Callback = 0, LPVOID CallbackParam = 0, u8 channel = 0) override;
+	CBlend*						PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn = TRUE, PlayCallback Callback = 0, LPVOID CallbackParam = 0, u8 channel = 0) override;
+	CBlend*						LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam, u8 channel = 0) override;
+	CBlend*						LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel = 0) override;
+
+	MotionID					ID_FX(LPCSTR N) override;
+	MotionID					ID_FX_Safe(LPCSTR N) override;
+
+	CBlend*						PlayFX(LPCSTR N, float power_scale) override;
+	CBlend*						PlayFX(MotionID M, float power_scale) override;
+
+	MotionID					LL_MotionID	(LPCSTR B) override;
+	float						LL_GetMotionTime(MotionID id) override;
+	float						get_animation_length(MotionID motion_ID) override;
+
+	u16							LL_PartID	(LPCSTR B) override;
+	u32							BonesPartsCount() const override;
+
+	bool						AnimsEqual(IKinematicsAnimated* Animated) override;
+
+
+
+
+	UPROPERTY()
+	class UStalkerKinematicsData* KinematicsData;
+
+	TArray<StalkerKinematicsBone>				Bones;
+	TMap<u16, shared_str>						BonesID2Name;
+
+	TArray<FStalkerKinematicsAnimData>			Anims;
+	TArray <TSharedPtr<CBlend>>					BlendsCycles[4];
+	TArray<TSharedPtr<CBlend>>					BlendsFX;
+
+	TArray< FStalkerKinematicsAnimsBonesPart>	BonesParts;
+
+	float										ChannelsFactor[4];
+
+	u16											RootBone;
+	TArray<StalkerKinematicsBoneInstance>		BonesInstance;
 protected:
 	virtual void BeginPlay() override;
 private:
-	UPROPERTY()
-	class UStalkerKinematicsData*			KinematicsData;
+	void						BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool  IsMixing, float BlendAccrue,  float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam);
+	void						FXBlendSetup(CBlend& Blend, MotionID InMotionID, float BlendAccrue, float BlendFalloff, float Power, float Speed, u16 Bone);
+
+	
+	vis_data									VisData;
+    TSharedPtr<CInifile>						UserData;
+	TMap<shared_str, u16>						BonesName2ID;
+	BonesVisible								SelfBonesVisible;
+
+	TArray<CMotionDef>							AnimsDef;
+	TMap<shared_str, u32>						AnimsName2ID;
+
+	TMap<shared_str, u32>						BonesPartsName2ID;
 
 
-	TArray<StalkerKinematicsBone>			Bones;
-	TArray<StalkerKinematicsBoneInstance>	BonesInstance;
-	vis_data								VisData;
-    TSharedPtr<CInifile>					UserData;
-	TMap<shared_str, u16>					BonesName2ID;
-	TMap<u16, shared_str>					BonesID2Name;
-	BonesVisible							SelfBonesVisible;
 
+	IBlendDestroyCallback*						BlendDestroyCallback;
+	IUpdateTracksCallback*						UpdateTracksCallback;
 	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* MeshComponent;
 
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneComponent;
 
+	UPROPERTY(Transient)
+	float		SkipDeltaTime;
+
+
 public:
-	class AStalkerKinematics* CastToAStalkerKinematics() override;
 
 };
