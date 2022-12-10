@@ -174,11 +174,11 @@ void XRayInput::KeyEvent(const FInputKeyEventArgs& InEvent)
 	}
 	else if (InEvent.Key == EKeys::MiddleMouseButton && (InEvent.Event == IE_Pressed || InEvent.Event == IE_Released))
 	{
-		MouseState[1] = InEvent.Event == IE_Pressed ? KS_Down : KS_Up;
+		MouseState[2] = InEvent.Event == IE_Pressed ? KS_Down : KS_Up;
 	}
 	else if (InEvent.Key == EKeys::RightMouseButton && (InEvent.Event == IE_Pressed || InEvent.Event == IE_Released))
 	{
-		MouseState[2] = InEvent.Event == IE_Pressed ? KS_Down : KS_Up;
+		MouseState[1] = InEvent.Event == IE_Pressed ? KS_Down : KS_Up;
 	}
 	else if (InEvent.Key == EKeys::ThumbMouseButton && (InEvent.Event == IE_Pressed || InEvent.Event == IE_Released))
 	{

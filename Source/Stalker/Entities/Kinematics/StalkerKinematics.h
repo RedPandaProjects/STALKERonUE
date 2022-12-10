@@ -20,6 +20,7 @@ public:
 	void Initilize(class UStalkerKinematicsData* KinematicsData);
 
 	virtual void Tick(float DeltaTime) override;
+
 //IKinematics
 	void Bone_Calculate(const IBoneData* bd, const Fmatrix* parent) override;
 	void Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks) override;
@@ -59,6 +60,8 @@ public:
 	vis_data& _BCL getVisData() override;
 	u32 getType() override;
 	IKinematics* _BCL dcast_PKinematics() override;
+
+
 //IKinematicsAnimated
 	class AStalkerKinematics*	CastToAStalkerKinematics() override;
 	void						OnCalculateBones() override;
@@ -117,6 +120,7 @@ public:
 	bool						AnimsEqual(IKinematicsAnimated* Animated) override;
 
 
+	void						SetRenderMode(EVisualRenderMode RenderMode) override;
 
 
 	UPROPERTY()
@@ -156,6 +160,7 @@ private:
 
 	IBlendDestroyCallback*						BlendDestroyCallback;
 	IUpdateTracksCallback*						UpdateTracksCallback;
+	EVisualRenderMode							VisualRenderMode;
 	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* MeshComponent;
 
@@ -165,7 +170,7 @@ private:
 	UPROPERTY(Transient)
 	float		SkipDeltaTime;
 
+	
 
-public:
 
 };

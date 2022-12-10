@@ -94,6 +94,8 @@ public:
 
 
 	void glow_destroy(IRender_Glow* p_) override;
-
+private:
+	Fmatrix* InMatrix;
+	bool     InVisible;
 };
  extern XRayRenderInterface GRenderInterface;

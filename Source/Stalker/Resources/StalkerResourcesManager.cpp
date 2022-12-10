@@ -263,7 +263,8 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 {
 	UStalkerKinematicsData* KinematicsData = nullptr;
 	FString Name = InName;
-	Name.ReplaceInline(TEXT("\\"),TEXT("/"));
+	Name.ReplaceInline(TEXT("\\"), TEXT("/"));
+	Name.ReplaceInline(TEXT("#"), TEXT("_"));
 	switch (xrGameManager::GetGame())
 	{
 	default:
@@ -271,6 +272,17 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 		const FString ParentPackageName = TEXT("/Game/COP/Meshes") / Name;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		if (!IsValid(KinematicsData))
+		{
+			if (Name.StartsWith(TEXT("meshes/")))
+			{
+				FString NewName = Name;
+				NewName.RemoveFromStart(TEXT("meshes/"));
+				const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/Levels")/GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+				const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
+				KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
+			}
+		}
 	}
 	break;
 	case EGame::CS:
@@ -278,6 +290,17 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 		const FString ParentPackageName = TEXT("/Game/CS/Meshes") / Name;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		if (!IsValid(KinematicsData))
+		{
+			if (Name.StartsWith(TEXT("meshes/")))
+			{
+				FString NewName = Name;
+				NewName.RemoveFromStart(TEXT("meshes/"));
+				const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/Levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+				const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
+				KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
+			}
+		}
 	}
 	break;
 	case EGame::SHOC:
@@ -285,6 +308,17 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 		const FString ParentPackageName = TEXT("/Game/SHOC/Meshes") / Name;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		if (!IsValid(KinematicsData))
+		{
+			if (Name.StartsWith(TEXT("meshes/")))
+			{
+				FString NewName = Name;
+				NewName.RemoveFromStart(TEXT("meshes/"));
+				const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/Levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+				const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
+				KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
+			}
+		}
 	}
 	break;
 	}

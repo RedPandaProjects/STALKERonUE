@@ -14,13 +14,13 @@ public:
 	virtual void Update_AnyThread(const FAnimationUpdateContext& Context) override;
 	virtual void Evaluate_AnyThread(FPoseContext& Output) override;
 	virtual void GatherDebugData(FNodeDebugData& DebugData) override;
-
+	virtual bool CanUpdateInWorkerThread() const override { return false; }
 
 private:
 	UPROPERTY()
 	class AStalkerKinematics*	Owner;
 	TArray<FBoneReference>		Bones;
-	TArray<TArray<FBoneReference>>	BonesParts;
+	TMap<FName,int32> BonesParts;
 
 	TArray<TSharedPtr<CBlend>>	BlendOfChannal[4];
 

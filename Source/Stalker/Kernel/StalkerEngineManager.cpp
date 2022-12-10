@@ -63,6 +63,15 @@ void UStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameView
 	}
 }
 
+FName UStalkerEngineManager::GetCurrentLevel()
+{
+	if (MyXRayEngine)
+	{
+		return MyXRayEngine->CurrentLevelName;
+	}
+	return NAME_None;
+}
+
 void UStalkerEngineManager::Initialized()
 {
 	ResourcesManager = NewObject<UStalkerResourcesManager>(this);
@@ -81,10 +90,10 @@ void UStalkerEngineManager::Initialized()
 	}
 	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, EGamePath::COP_1602);
 
-	g_Engine = new XRayEngine;
+	MyXRayEngine = new XRayEngine;
+	g_Engine = MyXRayEngine;
 	g_Engine->Initialize();
 	GXRaySkeletonMeshManager = new XRaySkeletonMeshManager;
-	
 	//FViewport::ViewportResizedEvent.AddUObject(this, &UGameEngine::OnViewportResized);
 }
 
@@ -94,6 +103,7 @@ void UStalkerEngineManager::Destroy()
 	GXRaySkeletonMeshManager = nullptr;
 	g_Engine->Destroy();
 	delete g_Engine;
+	MyXRayEngine = nullptr;
 	Core.Destroy();
 	delete GXRayMemory;
 	delete GXRayDebug;

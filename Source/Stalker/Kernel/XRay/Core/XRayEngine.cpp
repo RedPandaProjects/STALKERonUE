@@ -40,3 +40,30 @@ void XRayEngine::Destroy()
 	delete Console;
 	delete Device;
 }
+
+void XRayEngine::Level_Scan()
+{
+	XRayEngineInterface::Level_Scan();
+}
+
+int XRayEngine::Level_ID(LPCSTR name, LPCSTR ver, bool bSet)
+{
+	return XRayEngineInterface::Level_ID(name,ver,bSet);
+}
+
+void XRayEngine::Level_Set(u32 ID)
+{
+	XRayEngineInterface::Level_Set(ID);
+	string_path Name;
+	FCStringAnsi::Strcpy(Name, Levels[ID].folder);
+	if (FCStringAnsi::Strlen(Name) && Name[FCStringAnsi::Strlen(Name) - 1] == '\\')
+	{
+		Name[FCStringAnsi::Strlen(Name) - 1]=0;
+	}
+	CurrentLevelName = Name;
+	
+}
+
+void XRayEngine::LoadAllArchives()
+{
+}

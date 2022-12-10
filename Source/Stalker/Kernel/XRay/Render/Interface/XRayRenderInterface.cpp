@@ -10,7 +10,8 @@ XRayRenderInterface GRenderInterface;
 
 XRayRenderInterface::XRayRenderInterface()
 {
-
+	InMatrix = nullptr;
+	InVisible = false;
 }
 
 bool XRayRenderInterface::is_sun_static()
@@ -79,6 +80,7 @@ IRender_Target* XRayRenderInterface::getTarget()
 
 void XRayRenderInterface::set_Transform(Fmatrix* M)
 {
+	InMatrix = M;
 }
 
 void XRayRenderInterface::set_HUD(BOOL V)
@@ -92,6 +94,7 @@ BOOL XRayRenderInterface::get_HUD()
 
 void XRayRenderInterface::set_Invisible(BOOL V)
 {
+	InVisible = V;
 }
 
 void XRayRenderInterface::set_Object(IRenderable* O)
@@ -104,6 +107,10 @@ void XRayRenderInterface::add_Occluder(Fbox2& bb_screenspace)
 
 void XRayRenderInterface::add_Visual(IRenderVisual* V)
 {
+	if (InVisible)
+	{
+		return;
+	}
 }
 
 void XRayRenderInterface::add_Geometry(IRenderVisual* V)

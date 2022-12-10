@@ -5,6 +5,7 @@
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
 #include "XrEngine/XRayEngineInterface.h"
+#include "XrEngine/CustomHUD.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/XRay/Core/XRayInput.h"

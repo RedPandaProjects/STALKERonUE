@@ -89,7 +89,12 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 	RootBone = 0;
 	for (int32 i = 0; i < BonesInstance.Num(); i++)
 	{
-		BonesInstance[i].SetTransform(Bones[i].get_bind_transform());
+		Fmatrix Parent; Parent.identity();
+		if (Bones[i].GetParentID() != BI_NONE)
+		{
+			Parent = BonesInstance[i].GetTransform();
+		}
+		BonesInstance[i].Transform.mul_43(Parent,Bones[i].get_bind_transform());
 	}
 	MeshComponent->SetSkeletalMesh(KinematicsData->Mesh);
 	{
@@ -102,6 +107,7 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 		VisData.box.getcenter(Center);
 		VisData.sphere.set(Center, VisData.box.getradius());
 	}
+	XFormMatrix.identity();
 }
 
 void AStalkerKinematics::BeginPlay()
@@ -174,6 +180,12 @@ void AStalkerKinematics::FXBlendSetup(CBlend& Blend, MotionID InMotionID, float 
 	Blend.channel = 0;
 	Blend.fall_at_end = FALSE;
 }
+
+void AStalkerKinematics::SetRenderMode(EVisualRenderMode RenderMode)
+{
+	VisualRenderMode = RenderMode;
+}
+
 
 bool AStalkerKinematics::AnimsEqual(IKinematicsAnimated* Animated)
 {
@@ -659,13 +671,15 @@ const Fmatrix& AStalkerKinematics::LL_GetTransform(u16 bone_id) const
 
 const Fmatrix& AStalkerKinematics::LL_GetTransform_R(u16 bone_id)
 {
-	UE_DEBUG_BREAK();
-	return Fidentity;
+	return BonesInstance[bone_id].GetTransform();
 }
 
 void AStalkerKinematics::LL_SetTransform(u16 bone_id, const Fmatrix& Matrix)
 {
-	UE_DEBUG_BREAK();
+	if (BonesInstance[bone_id].callback_overwrite())
+	{
+		BonesInstance[bone_id].SetTransform(Matrix);
+	}
 }
 
 Fobb& AStalkerKinematics::LL_GetBox(u16 bone_id)
@@ -721,6 +735,28 @@ void AStalkerKinematics::LL_SetBonesVisible(BonesVisible mask)
 
 void AStalkerKinematics::CalculateBones(BOOL bForceExact /*= FALSE*/)
 {
+	if (bForceExact)
+	{
+		for (int32 BoneID = 0; BoneID < Bones.Num(); BoneID++)
+		{
+			if (LL_GetBoneVisible(u16(BoneID)))
+			{
+				StalkerKinematicsBoneInstance& BoneInstance = BonesInstance[BoneID];
+				if (BoneInstance.callback_overwrite())
+				{
+					if (BoneInstance.callback())
+						BoneInstance.callback()(&BoneInstance);
+				}
+				else
+				{
+					if (BoneInstance.callback())
+					{
+						BoneInstance.callback()(&BoneInstance);
+					}
+				}
+			}
+		}
+	}
 	
 }
 
@@ -777,33 +813,37 @@ shared_str AStalkerKinematics::getDebugName()
 void AStalkerKinematics::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if(Renderable&& Renderable->MySpatial)
-		SetActorHiddenInGame(!(Renderable->MySpatial->spatial.type & STYPE_RENDERABLE)|| (Renderable->MySpatial->spatial.type & STYPE_LIGHTSOURCE));
-	else
+
+
+	switch (VisualRenderMode)
+	{
+	case EVisualRenderMode::None:
 		SetActorHiddenInGame(true);
-	if (Renderable)
-	{
-		
-		//Kinematics->CalculateBones(true);
-		Fquaternion XRayQuat;
-		XRayQuat.set(Renderable->renderable.xform);
-		FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
-		Fvector InLocation = Renderable->renderable.xform.c;
-		FVector Location(-InLocation.x * 100, InLocation.z * 100, InLocation.y * 100);
-		SetActorLocationAndRotation(Location, Quat);
-	}
-
-	{
-
-		if (GetUpdateTracksCalback())
+		break;
+	case EVisualRenderMode::FromRenderable:
+		if (!Renderable || !Renderable->MySpatial)
 		{
-			SkipDeltaTime += DeltaTime;
-			if ((*GetUpdateTracksCalback())(DeltaTime, *this))
-				SkipDeltaTime = 0;
-			return;
+			break;
 		}
-		LL_UpdateTracks(DeltaTime+ SkipDeltaTime, false, false);
-		SkipDeltaTime = 0;
+		SetActorHiddenInGame(!(Renderable->MySpatial->spatial.type & STYPE_RENDERABLE) || (Renderable->MySpatial->spatial.type & STYPE_LIGHTSOURCE));
+		{
+			SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(Renderable->renderable.xform.c)), FQuat(StalkerMath::XRayQuatToUnreal(Renderable->renderable.xform)));
+		}
+		break;
+	case EVisualRenderMode::FromSelfXForm:
+		SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(XFormMatrix.c)), FQuat(StalkerMath::XRayQuatToUnreal(XFormMatrix)));
+		break;
+	default:
+		break;
 	}
+	if (GetUpdateTracksCalback())
+	{
+		SkipDeltaTime += DeltaTime;
+		if ((*GetUpdateTracksCalback())(DeltaTime, *this))
+			SkipDeltaTime = 0;
+		return;
+	}
+	LL_UpdateTracks(DeltaTime + SkipDeltaTime, false, false);
+	SkipDeltaTime = 0;
 }
 
