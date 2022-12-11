@@ -3,11 +3,6 @@
 #include "XrRender/Public/Kinematics.h"
 #include "../SkeletonMesh/XRaySkeletonX.h"
 #include "XRaySkeletonVisual.h"
-struct SEnumVerticesCallback
-{
-	virtual void operator () (const Fvector& p) = 0;
-};
-
 
 class		XRaySkeletonXExt : public XRaySkeletonX	// shared code for SkeletonX derivates
 {

@@ -1,5 +1,8 @@
 #include "XRayFSkinned.h"
 #include "XRayKinematicsLegacy.h"
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/EnnumerateVertices.h"
+THIRD_PARTY_INCLUDES_END
 static shared_str sbones_array;
 
 #pragma pack(push, 1)

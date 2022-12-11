@@ -1,4 +1,7 @@
 #pragma once
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/Shader_xrLC.h"
+THIRD_PARTY_INCLUDES_END
 class XRayEngineFactory
 {
 public:
@@ -30,4 +33,5 @@ private:
 	TArray< CEditableObject*>	Objects;
 	TArray< UObject*>			ObjectCreated;
 	TArray< USkeleton*>			Skeletons;
+	Shader_xrLC_LIB			ShaderXRLC;
 };

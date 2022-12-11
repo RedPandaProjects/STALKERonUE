@@ -70,7 +70,7 @@ IC void QT16_2T(const CKeyQT16& K, const CMotion& M, Fvector& T)
 	T.y = float(K.y1) * M._sizeT.y + M._initT.y;
 	T.z = float(K.z1) * M._sizeT.z + M._initT.z;
 }
-\
+
 XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFlags)
 {
 	ParentPackage = InParentPackage;
@@ -88,10 +88,21 @@ XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFl
 			Skeletons.Add(Skeleton);
 		}
 	}
+
+	string_path fn;
+	FS.update_path(fn, _game_data_, "shaders_xrlc.xr");
+	if (FS.exist(fn)) {
+		ShaderXRLC.Load(fn);
+	}
+	else 
+	{
+		
+	}
 }
 
 XRayEngineFactory::~XRayEngineFactory()
 {
+	ShaderXRLC.Unload();
 	for (CEditableObject* Object :Objects)
 	{
 		GRayObjectLibrary->RemoveEditObject(Object);
@@ -640,6 +651,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	TArray<FStaticMaterial> Materials;
 	FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
 	int32 MaterialIndex = 0;
+	TArray<bool> IsEnableMaterials;
 	for (int32 LodIndex = 0; LodIndex < 1; LodIndex++)
 	{
 		FMeshDescription* MeshDescription = StaticMesh->CreateMeshDescription(LodIndex);
@@ -661,6 +673,14 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 				{
 					Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
+				}
+				if(ShaderXRLC.Get( Object->Surfaces()[ElementID]->_ShaderXRLCName()))
+				{
+					IsEnableMaterials.Add(ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision);
+				}
+				else
+				{
+					IsEnableMaterials.Add(true);
 				}
 				if (Vertices.size() == 0)
 				{
@@ -705,6 +725,15 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	SourceModel.BuildSettings.DstLightmapIndex = 1;
 	SourceModel.BuildSettings.MinLightmapResolution = 128;
 	StaticMesh->SetStaticMaterials(Materials);
+
+	for(size_t i=0;i< Object->SurfaceCount();i++)
+	{
+		FMeshSectionInfo MeshSectionInfo  = StaticMesh->GetSectionInfoMap().Get(0, i);
+		MeshSectionInfo.bEnableCollision = IsEnableMaterials[i];
+		MeshSectionInfo.bCastShadow = IsEnableMaterials[i];
+		StaticMesh->GetSectionInfoMap().Set(0,i, MeshSectionInfo);
+		
+	}
 	StaticMesh->Build();
 	StaticMesh->MarkPackageDirty();
 	StaticMesh->PostEditChange();
