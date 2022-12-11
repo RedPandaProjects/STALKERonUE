@@ -7,7 +7,12 @@
 
 FStalkerAnimNode_Kinematics::FStalkerAnimNode_Kinematics()
 {
+	AnimMode = EStalkerKinematicsAnimMode::Base;
+}
 
+void FStalkerAnimNode_Kinematics::SetAnimMode(EStalkerKinematicsAnimMode NewMode)
+{
+	AnimMode = NewMode;
 }
 
 void FStalkerAnimNode_Kinematics::Initialize_AnyThread(const FAnimationInitializeContext& Context)
@@ -54,7 +59,13 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 		Output.ResetToRefPose();
 		return;
 	}
+	if (AnimMode == EStalkerKinematicsAnimMode::GetBoneInMotionBlend)
+	{
+		Evaluate_Blend(Output, *GetBoneInMotionBlend);
+		return;
+	}
 
+	const bool bInGameThread = IsInGameThread();
 	const FBoneContainer& BoneContainer = Output.AnimInstanceProxy->GetRequiredBones();
 	TArray<FPoseContext, TInlineAllocator<4>> PosesOfPart;
 	if(Owner->KinematicsData->Anims.Num())
@@ -133,7 +144,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 
 				if (BoneInstance.callback_overwrite())
 				{
-					if (BoneInstance.callback())
+					if (BoneInstance.callback() && (AnimMode != EStalkerKinematicsAnimMode::GetAnimPose || !GetAnimPosIgnoreCallbacks))
 						BoneInstance.callback()(&BoneInstance);
 				}
 				else
@@ -160,10 +171,8 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 					BoneInstance.Transform.rotation(StalkerMath::UnrealQuatToXRay(BoneTM.GetRotation()));
 					BoneInstance.Transform.translate_over(StalkerMath::UnrealLocationToXRay(BoneTM.GetLocation()));
 
-					if (BoneInstance.callback())
-					{
+					if (BoneInstance.callback() && (AnimMode != EStalkerKinematicsAnimMode::GetAnimPose || !GetAnimPosIgnoreCallbacks))
 						BoneInstance.callback()(&BoneInstance);
-					}
 				}
 
 				BoneTM.SetRotation(FQuat(StalkerMath::XRayQuatToUnreal(BoneInstance.Transform)));
@@ -199,6 +208,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 		Output.ResetToRefPose();
 		return;
 	}
+	const bool bInGameThread = IsInGameThread();
 	TArray<int32, TInlineAllocator<4>> PosesToEvaluate;
 	TArray<FCompactPose, TInlineAllocator<4>> FilteredPoses;
 	TArray<FBlendedCurve, TInlineAllocator<4>> FilteredCurve;
@@ -211,8 +221,18 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 		CBlend& Blend = *Owner->BlendsCycles[PartID][BlendID];
 		checkSlow(Blend.channel < 4);
 		if(Blend.channel>1)continue;
+
 		if (Blend.fall_at_end)
 			continue;;
+
+		if (bInGameThread && AnimMode == EStalkerKinematicsAnimMode::GetAnimPose)
+		{
+			if (!(GetAnimPosChannelMask & 1 << Blend.channel))
+			{
+				continue;
+			}
+		}
+
 		if (BlendOfChannal[Blend.channel].Num() == 16)
 		{
 			float Min = BlendOfChannal[Blend.channel][0]->blendAmount;

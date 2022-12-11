@@ -75,8 +75,8 @@ public:
 	CBlend*						LL_PartBlend(u32 bone_part_id, u32 n) override;
 
 
-	void						LL_BuldBoneMatrixDequatize(const IBoneData* bd, u8 channel_mask, SKeyTable& keys) override;
-	void						LL_BoneMatrixBuild(IBoneInstance& bi, const Fmatrix* parent, const SKeyTable& keys) override;
+
+	void						GetBoneInMotion(Fmatrix& OutPosition, u16 BoneID, CBlend* InBlend) override;
 
 
 	void						LL_IterateBlends(IterateBlendsCallback& callback) override;
@@ -133,19 +133,27 @@ public:
 	TArray <TSharedPtr<CBlend>>					BlendsCycles[4];
 	TArray<TSharedPtr<CBlend>>					BlendsFX;
 
+
 	TArray< FStalkerKinematicsAnimsBonesPart>	BonesParts;
 
 	float										ChannelsFactor[4];
 
 	u16											RootBone;
 	TArray<StalkerKinematicsBoneInstance>		BonesInstance;
+
+
+
 protected:
 	virtual void BeginPlay() override;
 private:
 	void						BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool  IsMixing, float BlendAccrue,  float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam);
 	void						FXBlendSetup(CBlend& Blend, MotionID InMotionID, float BlendAccrue, float BlendFalloff, float Power, float Speed, u16 Bone);
 
-	
+
+	TArray <TSharedPtr<CBlend>>					BlendsPool;
+	TSharedPtr<CBlend>							CreateBlend();
+	void										DestroyBlend(TSharedPtr<CBlend>&Blend);
+
 	vis_data									VisData;
     TSharedPtr<CInifile>						UserData;
 	TMap<shared_str, u16>						BonesName2ID;
@@ -161,6 +169,9 @@ private:
 	IBlendDestroyCallback*						BlendDestroyCallback;
 	IUpdateTracksCallback*						UpdateTracksCallback;
 	EVisualRenderMode							VisualRenderMode;
+
+	UpdateCallback								MyUpdateCallback;
+	void*										UpdateCallbackParam;
 	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* MeshComponent;
 
@@ -170,7 +181,8 @@ private:
 	UPROPERTY(Transient)
 	float		SkipDeltaTime;
 
-	
+	UPROPERTY(Transient)
+	class UStalkerKinematicsAnimInstance_Default* KinematicsAnimInstanceForCompute;
 
 
 };

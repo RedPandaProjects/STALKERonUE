@@ -117,6 +117,7 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 		Device->dwTimeDelta = static_cast<u32>(DeltaTime * 1000);
 		Device->dwTimeGlobal = static_cast<u32>(GXRayEngineManager->GetGameWorld()->TimeSeconds * 1000);
 		Device->dwTimeContinual = static_cast<u32>(GXRayEngineManager->GetGameWorld()->UnpausedTimeSeconds * 1000);
+		Device->mFullTransform.mul(Device->mProject, Device->mView);
 		g_Engine->OnFrame();
 		Device->dwFrame++;
 		GXRaySkeletonMeshManager->Flush();

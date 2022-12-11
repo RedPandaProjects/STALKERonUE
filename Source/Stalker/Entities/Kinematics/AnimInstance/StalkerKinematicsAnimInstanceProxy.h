@@ -10,7 +10,7 @@ struct STALKER_API FStalkerKinematicsAnimInstanceProxy:public FAnimInstanceProxy
 public:
 	FStalkerKinematicsAnimInstanceProxy();
 	FStalkerKinematicsAnimInstanceProxy(UAnimInstance* Instance);
-
+	FStalkerAnimNode_Kinematics& GetKinematicsRootNode() {return KinematicsRootNode;}
 protected:
 	FAnimNode_Base* GetCustomRootNode() override;
 	UPROPERTY()

@@ -28,15 +28,14 @@ void XRayUIShader::create(LPCSTR sh, LPCSTR tex)
 	MaterialName = sh;
 	check(MaterialName != NAME_None);
 	TextureName = tex? FName(tex) : NAME_None;
+	if (MaterialName != NAME_None)
+	{
+		Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
+	}
 }
 
 bool XRayUIShader::inited()
 {
-	if (MaterialName == NAME_None)
-	{
-		return false;
-	}
-	Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
 	return !!Brush;
 }
 
@@ -100,7 +99,7 @@ void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
 {
 	Vertex InVertex;
 	InVertex.Position.Set(x,y);
-	InVertex.Color = FColor(color_rgba(color_get_B(C), color_get_G(C), color_get_R(C), color_get_A(C)));
+	InVertex.Color = FColor(color_rgba(color_get_R(C), color_get_G(C), color_get_B(C), color_get_A(C)));
 	InVertex.UV.Set(u,v);
 	Vertices.Push(InVertex);
 	
@@ -110,7 +109,7 @@ void XRayUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, f
 {
 	Text InText;
 	InText.Position.Set(x, y);
-	InText.Color = FColor(color_rgba(color_get_B(C), color_get_G(C), color_get_R(C), color_get_A(C)));
+	InText.Color = FColor(color_rgba(color_get_R(C), color_get_G(C), color_get_B(C), color_get_A(C)));
 	InText.Data = String;
 	InText.Scale = Scale;
 	InText.Font = Font;

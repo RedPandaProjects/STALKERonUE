@@ -84,12 +84,13 @@ void XRayFontRender::OnRender(CGameFont& owner)
 		{
 		case CGameFont::alCenter:
 			X -= (iFloor(fSize * 0.5f));
+
 			break;
 		case CGameFont::alRight:
 			X -= iFloor(fSize);
 			break;
 		}
-		GXRayUIRender.PushText(X,PS.y, PS.height*g_current_font_scale.y,PS.c,Font,FontSize, *Text);
+		GXRayUIRender.PushText(X,PS.y+ (FontSize /2.f)* PS.height, PS.height*g_current_font_scale.y,PS.c,Font,FontSize, *Text);
 	} 
 //	if (!FontShader.Brush)
 //	{
