@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.4.0",
+	"FriendlyName": "Optick",
+	"Description": "Super Lightweight Performance Profiler",
+	"Category": "Performance",
+	"CreatedBy": "Vadim Slyusarev",
+	"CreatedByURL": "https://github.com/bombomby/optick",
+	"DocsURL": "https://github.com/bombomby/optick/wiki/UE5-Optick-Plugin",
+	"SupportURL": "https://github.com/bombomby/optick/issues",
+	"EngineVersion": "5.1.0",
+	"CanContainContent": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "OptickPlugin",
+			"Type": "DeveloperTool",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"Linux",
+				"Android"
+			]
+		}
+	]
+}

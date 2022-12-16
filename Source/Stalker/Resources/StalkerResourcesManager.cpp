@@ -278,7 +278,7 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 			{
 				FString NewName = Name;
 				NewName.RemoveFromStart(TEXT("meshes/"));
-				const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/Levels")/GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+				const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/levels")/GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
 				const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 				KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 			}
@@ -296,7 +296,7 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 			{
 				FString NewName = Name;
 				NewName.RemoveFromStart(TEXT("meshes/"));
-				const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/Levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+				const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
 				const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 				KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 			}
@@ -314,7 +314,7 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 			{
 				FString NewName = Name;
 				NewName.RemoveFromStart(TEXT("meshes/"));
-				const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/Levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+				const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
 				const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 				KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 			}

@@ -25,6 +25,11 @@ XRayDevice::XRayDevice()
 	dwPrecacheFrame = 0;
 }
 
+XRayDevice::~XRayDevice()
+{
+
+}
+
 bool XRayDevice::IsEditorMode()
 {
 	return GIsEditor;
@@ -62,16 +67,16 @@ void XRayDevice::End()
 
 CStatsPhysics* _BCL XRayDevice::StatPhysics()
 {
-	return nullptr;
+	return Statistic;
 }
 
 void _BCL XRayDevice::AddSeqFrame(pureFrame* f, bool mt)
 {
-	seqFrame.Add(f, REG_PRIORITY_LOW);
+	seqFrameMT.Add(f, REG_PRIORITY_LOW);
 }
 
 void _BCL XRayDevice::RemoveSeqFrame(pureFrame* f)
 {
-	seqFrame.Remove(f);
+	seqFrameMT.Remove(f);
 }
 

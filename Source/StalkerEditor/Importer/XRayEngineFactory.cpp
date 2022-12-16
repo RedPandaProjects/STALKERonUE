@@ -3,6 +3,7 @@
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsData.h"
 #include "Engine/EngineTypes.h"
+#include "ImportUtils/StaticMeshImportUtils.h"
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
 
@@ -626,32 +627,42 @@ UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFu
 
 UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, bool UseOnlyFullPath)
 {
-	UStaticMesh* StaticMesh = nullptr;
+
 
 	FString FileName = Object->GetName();
 	FString PackageName;
 	if (UseOnlyFullPath)
 	{
-		FileName.ReplaceCharInline(TEXT('\\'),TEXT('/'));
-		PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName,false));
+		FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+		PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
 	}
 	else
 	{
 		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	return ImportObjectAsStaticMesh(Object, PackageName);
+}
+
+
+UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& PackageName)
+{
+	UStaticMesh* StaticMesh = nullptr;
+
+
+	const FString& LocalPackageName = PackageName;
+	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
 	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if(StaticMesh)
+	if (StaticMesh)
 		return StaticMesh;
 
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
+	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), ObjectFlags);
 	FAssetRegistryModule::AssetCreated(StaticMesh);
 	ObjectCreated.Add(StaticMesh);
 	TArray<FStaticMaterial> Materials;
+	TArray<bool> EnableColision;
 	FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
 	int32 MaterialIndex = 0;
-	TArray<bool> IsEnableMaterials;
 	for (int32 LodIndex = 0; LodIndex < 1; LodIndex++)
 	{
 		FMeshDescription* MeshDescription = StaticMesh->CreateMeshDescription(LodIndex);
@@ -669,34 +680,46 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 
 			for (size_t ElementID = 0; ElementID < Object->SurfaceCount(); ElementID++)
 			{
+				bool bRendering = true;
+				if (ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName()))
+				{
+					if (!ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision && !ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering)
+					{
+						continue;
+					}
+					bRendering = ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;
+				}
+			
+
 				xr_vector< st_MeshVertex> Vertices;
 				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 				{
 					Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
 				}
-				if(ShaderXRLC.Get( Object->Surfaces()[ElementID]->_ShaderXRLCName()))
-				{
-					IsEnableMaterials.Add(ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision);
-				}
-				else
-				{
-					IsEnableMaterials.Add(true);
-				}
+
 				if (Vertices.size() == 0)
 				{
 					continue;
+				}
+				if (ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName()))
+				{
+					EnableColision.Add(ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision);
+				}
+				else
+				{
+					EnableColision.Add(true);
 				}
 				VertexInstanceUVs.SetNumChannels(1);
 				FPolygonGroupID CurrentPolygonGroupID = MeshDescription->CreatePolygonGroup();
 				PolygonGroupImportedMaterialSlotNames[CurrentPolygonGroupID] = *FString::Printf(TEXT("mat_%d"), MaterialIndex);
 				TArray<FVertexInstanceID> VertexInstanceIDs;
 				VertexInstanceIDs.SetNum(3);
-				for (size_t FaceID = 0; FaceID < Vertices.size()/3; FaceID++)
+				for (size_t FaceID = 0; FaceID < Vertices.size() / 3; FaceID++)
 				{
-					for (size_t VirtualVertexID = 0; VirtualVertexID <3; VirtualVertexID++)
+					for (size_t VirtualVertexID = 0; VirtualVertexID < 3; VirtualVertexID++)
 					{
-						static size_t VirtualVertices[3] ={0,2,1};
-						size_t VertexID = VirtualVertices[ VirtualVertexID]+ FaceID*3;
+						static size_t VirtualVertices[3] = { 0,2,1 };
+						size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
 						FVertexID VertexIDs = MeshDescription->CreateVertex();
 						VertexPositions[VertexIDs].X = -Vertices[VertexID].Position.x * 100;
 						VertexPositions[VertexIDs].Y = Vertices[VertexID].Position.z * 100;
@@ -712,9 +735,20 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 					}
 					const FPolygonID NewPolygonID = MeshDescription->CreatePolygon(CurrentPolygonGroupID, VertexInstanceIDs);
 				}
-				const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
-			;
-				Materials.AddUnique(FStaticMaterial(ImportSurface(SurfacePackageName, Object->Surfaces()[ElementID]), *FString::Printf(TEXT("mat_%d"), MaterialIndex), *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
+				if (bRendering)
+				{
+					const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
+					Materials.AddUnique(FStaticMaterial(ImportSurface(SurfacePackageName, Object->Surfaces()[ElementID]), *FString::Printf(TEXT("mat_%d"), MaterialIndex), *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
+				}
+				else
+				{
+
+					UMaterialInterface* NoRenderMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/NoRender.NoRender"));
+					check(IsValid(NoRenderMaterial));
+					Materials.AddUnique(FStaticMaterial(NoRenderMaterial, *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
+				}
+
+				MaterialIndex++;
 			}
 		}
 
@@ -725,21 +759,22 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	SourceModel.BuildSettings.DstLightmapIndex = 1;
 	SourceModel.BuildSettings.MinLightmapResolution = 128;
 	StaticMesh->SetStaticMaterials(Materials);
-
-	for(size_t i=0;i< Object->SurfaceCount();i++)
+	check(Materials.Num() == EnableColision.Num());
+	for (size_t i = 0; i < Materials.Num(); i++)
 	{
-		FMeshSectionInfo MeshSectionInfo  = StaticMesh->GetSectionInfoMap().Get(0, i);
-		MeshSectionInfo.bEnableCollision = IsEnableMaterials[i];
-		MeshSectionInfo.bCastShadow = IsEnableMaterials[i];
-		StaticMesh->GetSectionInfoMap().Set(0,i, MeshSectionInfo);
-		
+		FMeshSectionInfo MeshSectionInfo = StaticMesh->GetSectionInfoMap().Get(0, i);
+		MeshSectionInfo.bEnableCollision = EnableColision[i];
+		MeshSectionInfo.bCastShadow = true;
+		StaticMesh->GetSectionInfoMap().Set(0, i, MeshSectionInfo);
+
 	}
 	StaticMesh->Build();
 	StaticMesh->MarkPackageDirty();
 	StaticMesh->PostEditChange();
+	StaticMesh->GetBodySetup()->CollisionTraceFlag = ECollisionTraceFlag::CTF_UseSimpleAndComplex;
+	StaticMesh->PostEditChange();
 	return StaticMesh;
 }
-
 
 USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Object, bool UseOnlyFullPath /*= false*/)
 {
@@ -973,31 +1008,10 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	if (THM.Load(TextureName.c_str()))
 	{
 		TObjectPtr<UTexture2D> NormalMapTexture;
-		TObjectPtr<UTexture2D> SpecularTexture;
+		TObjectPtr<UTexture2D> GlossTexture;
 		TObjectPtr<UTexture2D> HeightTexture;
-		switch (THM._Format().material)
-		{
-		case STextureParams::tmPhong_Metal:
-		{
-			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("IsPhongMetal");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
-		}
-		break;
-		case STextureParams::tmMetal_OrenNayar:
-		{
-			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("IsMetalOrenNayar");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
-		}
-		break;
-		default:
-			break;
-		}
+		NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), ((static_cast<float>(THM._Format().material) + static_cast<float>(THM._Format().material_weight)) + .5f) / 4.f);
+		
 		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
 			FStaticSwitchParameter SwitchParameter;
@@ -1006,14 +1020,14 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 			SwitchParameter.bOverride = true;
 			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 
-			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, SpecularTexture, HeightTexture);
+			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
 			if (NormalMapTexture)
 			{
 				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
 			}
-			if (SpecularTexture)
+			if (GlossTexture)
 			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Specular")), SpecularTexture);
+				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Gloss")), GlossTexture);
 			}
 			if (HeightTexture)
 			{
@@ -1025,7 +1039,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 		{
 			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
 			TObjectPtr<UTexture2D> NormalMapTextureDetail;
-			TObjectPtr<UTexture2D> SpecularTextureDetail;
+			TObjectPtr<UTexture2D> GlossTextureDetail;
 			TObjectPtr<UTexture2D> HeightTextureDetail;
 
 			ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
@@ -1046,16 +1060,16 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 					SwitchParameter.Value = true;
 					SwitchParameter.bOverride = true;
 					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
-					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, SpecularTextureDetail, HeightTextureDetail);
+					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
 
 					if (NormalMapTextureDetail)
 					{
 						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
 					}
 
-					if (SpecularTextureDetail)
+					if (GlossTextureDetail)
 					{
-						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("SpecularDetail")), SpecularTextureDetail);
+						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("GlossDetail")), GlossTextureDetail);
 					}
 
 					NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), THM._Format().detail_scale);
@@ -1104,15 +1118,15 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
 			TObjectPtr<UTexture2D> NormalMapTexture;
-			TObjectPtr<UTexture2D> SpecularTexture;
+			TObjectPtr<UTexture2D> GlossTexture;
 			TObjectPtr<UTexture2D> HeightTexture;
-			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, SpecularTexture, HeightTexture);
+			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
 		}
 		if (THM._Format().detail_name.size())
 		{
 			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
 			TObjectPtr<UTexture2D> NormalMapTextureDetail;
-			TObjectPtr<UTexture2D> SpecularTextureDetail;
+			TObjectPtr<UTexture2D> GlossTextureDetail;
 			TObjectPtr<UTexture2D> HeightTextureDetail;
 
 			ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
@@ -1122,7 +1136,7 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 				if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUseParallax)
 				{
 				
-					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, SpecularTextureDetail, HeightTextureDetail);
+					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
 				}
 			}
 		}
@@ -1171,7 +1185,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	return Texture2D;
 }
 
-void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Specular, TObjectPtr<UTexture2D>& Height)
+void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Gloss, TObjectPtr<UTexture2D>& Height)
 {
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1179,10 +1193,10 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
 
-	FString PackageFileNameSpecular = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_specular");
-	PackageFileNameSpecular.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameSpecular = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameSpecular);
-	const FString NewObjectPathSpecular = PackageNameSpecular + TEXT(".") + FPaths::GetBaseFilename(PackageNameSpecular);
+	FString PackageFileNameGloss = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_Gloss");
+	PackageFileNameGloss.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString PackageNameGloss = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameGloss);
+	const FString NewObjectPathGloss = PackageNameGloss + TEXT(".") + FPaths::GetBaseFilename(PackageNameGloss);
 
 	FString PackageFileNameHeight = FPaths::ChangeExtension(FileName, TEXT("")) + TEXT("_height");
 	PackageFileNameHeight.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1190,9 +1204,9 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	const FString NewObjectPathHeight = PackageNameHeight + TEXT(".") + FPaths::GetBaseFilename(PackageNameHeight);
 
 	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	Specular = LoadObject<UTexture2D>(nullptr, *NewObjectPathSpecular, nullptr, LOAD_NoWarn);
+	Gloss = LoadObject<UTexture2D>(nullptr, *NewObjectPathGloss, nullptr, LOAD_NoWarn);
 	Height = LoadObject<UTexture2D>(nullptr, *NewObjectPathHeight, nullptr, LOAD_NoWarn);
-	if (NormalMap&& Specular&& Height)
+	if (NormalMap&& Gloss&& Height)
 		return;
 
 	RedImageTool::RedImage ImageBump, ImageBumpError;
@@ -1212,7 +1226,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	if (ImageBump.GetHeight() != ImageBumpError.GetHeight())return;
 
 	RedImageTool::RedImage NormalMapImage;
-	RedImageTool::RedImage SpecularImage;
+	RedImageTool::RedImage GlossImage;
 	RedImageTool::RedImage HeightImage;
 
 	ImageBump.ClearMipLevels();
@@ -1221,7 +1235,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	ImageBumpError.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
 
 	NormalMapImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight());
-	SpecularImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(),1,1,RedImageTool::RedTexturePixelFormat::R8);
+	GlossImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(),1,1,RedImageTool::RedTexturePixelFormat::R8);
 	HeightImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(), 1,1,RedImageTool::RedTexturePixelFormat::R8);
 
 	for (size_t x = 0; x < ImageBump.GetWidth(); x++)
@@ -1230,17 +1244,17 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		{
 			RedImageTool::RedColor Pixel = ImageBump.GetPixel(x, y);
 			RedImageTool::RedColor PixelError = ImageBumpError.GetPixel(x, y);
-			RedImageTool::RedColor  NormalMapPixel, SpecularPixel, HeightPixel;
+			RedImageTool::RedColor  NormalMapPixel, GlossPixel, HeightPixel;
 
 			NormalMapPixel.R32F = Pixel.A32F + (PixelError.R32F - 0.5f);
 			NormalMapPixel.G32F = Pixel.B32F + (PixelError.G32F - 0.5f);
 			NormalMapPixel.B32F = Pixel.G32F + (PixelError.B32F - 0.5f);
 			NormalMapPixel.A32F = 1.f;
 			NormalMapPixel.SetAsFloat(NormalMapPixel.R32F, NormalMapPixel.G32F, NormalMapPixel.B32F, NormalMapPixel.A32F);
-			SpecularPixel.SetAsFloat(Pixel.R32F, Pixel.R32F, Pixel.R32F, Pixel.R32F);
+			GlossPixel.SetAsFloat(Pixel.R32F, Pixel.R32F, Pixel.R32F, Pixel.R32F);
 			HeightPixel.SetAsFloat(PixelError.A32F, PixelError.A32F, PixelError.A32F, PixelError.A32F);
 			NormalMapImage.SetPixel(NormalMapPixel, x, y);
-			SpecularImage.SetPixel(SpecularPixel, x, y);
+			GlossImage.SetPixel(GlossPixel, x, y);
 			HeightImage.SetPixel(HeightPixel, x, y);
 		}
 	}
@@ -1264,7 +1278,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		}
 	}
 	NormalMapImage.SwapRB();
-	//SpecularImage.SwapRB();
+	//GlossImage.SwapRB();
 	//HeightImage.SwapRB();
 	if (!NormalMap)
 	{
@@ -1280,19 +1294,19 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		NormalMap->MarkPackageDirty();
 		NormalMap->PostEditChange();
 	}
-	if (!Specular)
+	if (!Gloss)
 	{
-		UPackage* AssetPackage = CreatePackage(*PackageNameSpecular);
-		Specular = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameSpecular), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(Specular);
-		ObjectCreated.Add(Specular);
+		UPackage* AssetPackage = CreatePackage(*PackageNameGloss);
+		Gloss = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameGloss), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(Gloss);
+		ObjectCreated.Add(Gloss);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
-		SpecularImage.GenerateMipmap();
-		Specular->CompressionSettings = TextureCompressionSettings::TC_Alpha;
-		Specular->SRGB = false;
-		Specular->Source.Init(SpecularImage.GetWidth(), SpecularImage.GetHeight(), 1, SpecularImage.GetMips(), SourceFormat, (uint8*)*SpecularImage);
-		Specular->MarkPackageDirty();
-		Specular->PostEditChange();
+		GlossImage.GenerateMipmap();
+		Gloss->CompressionSettings = TextureCompressionSettings::TC_Alpha;
+		Gloss->SRGB = false;
+		Gloss->Source.Init(GlossImage.GetWidth(), GlossImage.GetHeight(), 1, GlossImage.GetMips(), SourceFormat, (uint8*)*GlossImage);
+		Gloss->MarkPackageDirty();
+		Gloss->PostEditChange();
 	}
 	if (!Height)
 	{

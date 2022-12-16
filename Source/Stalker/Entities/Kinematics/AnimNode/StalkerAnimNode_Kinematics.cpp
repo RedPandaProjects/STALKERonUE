@@ -53,6 +53,7 @@ void FStalkerAnimNode_Kinematics::Update_AnyThread(const FAnimationUpdateContext
 
 void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 {
+	TempBoneTransforms.Empty(Bones.Num());
 	//check(IsInGameThread());
 	if (!IsValid(Owner))
 	{
@@ -67,6 +68,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 
 	const bool bInGameThread = IsInGameThread();
 	const FBoneContainer& BoneContainer = Output.AnimInstanceProxy->GetRequiredBones();
+
 	TArray<FPoseContext, TInlineAllocator<4>> PosesOfPart;
 	if(Owner->KinematicsData->Anims.Num())
 	{
@@ -78,6 +80,12 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 			PosesOfPart.Add(Output);
 			Evaluate_PartID(PosesOfPart.Last(), PartID);
 		}
+		for (int32 BoneID = 0; BoneID < Bones.Num(); BoneID++)
+		{
+			const FCompactPoseBoneIndex BoneIndex = Bones[BoneID].GetCompactPoseIndex(BoneContainer);
+			int32 PartID = BonesParts[Bones[BoneID].BoneName];
+			Output.Pose[BoneIndex] = PosesOfPart[PartID].Pose[BoneIndex];
+		}
 	}
 	else
 	{
@@ -87,37 +95,11 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 	{
 		const FCompactPoseBoneIndex BoneIndex = Bones[i].GetCompactPoseIndex(BoneContainer);
 		Output.Pose[BoneIndex].SetFromMatrix(FMatrix::Identity);
-		
 	}
 
 
 	{
-
-		const  bool UseAnims = Owner->KinematicsData->Anims.Num()>0;
-		TArray<FComponentSpacePoseContext, TInlineAllocator<4>> CSPosesOfPart;
-
-		for (int32 PartID = 0; PartID < PosesOfPart.Num(); PartID++)
-		{
-			CSPosesOfPart.Add(PosesOfPart[PartID].AnimInstanceProxy);
-			FComponentSpacePoseContext&InputCSPose = CSPosesOfPart.Last();
-			FTransform ComponentTransform = InputCSPose.AnimInstanceProxy->GetComponentTransform();
-			InputCSPose.SetNodeIds(PosesOfPart[PartID]);
-			InputCSPose.Pose.InitPose(PosesOfPart[PartID].Pose);
-			InputCSPose.Curve = MoveTemp(PosesOfPart[PartID].Curve);
-			InputCSPose.CustomAttributes = MoveTemp(PosesOfPart[PartID].CustomAttributes);
-		}
 		
-		FComponentSpacePoseContext InputCSPose(Output.AnimInstanceProxy);
-		FTransform ComponentTransform = InputCSPose.AnimInstanceProxy->GetComponentTransform();
-
-		// We need to preserve the node ID chain as we use the proxy-based constructor above
-		InputCSPose.SetNodeIds(Output);
-
-		InputCSPose.Pose.InitPose(Output.Pose);
-		InputCSPose.Curve = MoveTemp(Output.Curve);
-		InputCSPose.CustomAttributes = MoveTemp(Output.CustomAttributes);
-
-		TArray<FBoneTransform> BoneTransforms;
 		for (int32 BoneID = 0; BoneID < Bones.Num(); BoneID++)
 		{
 			FCompactPoseBoneIndex CompactPoseBoneToModify = Bones[BoneID].GetCompactPoseIndex(BoneContainer);
@@ -130,69 +112,62 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 			check(ParentId < BoneID);
 
 			FTransform BoneTM;
+			BoneTM = Output.Pose[CompactPoseBoneToModify];
 			if (!Owner->LL_GetBoneVisible(u16(BoneID)))
 			{
-				BoneTM = InputCSPose.Pose.GetComponentSpaceTransform(CompactPoseBoneToModify);
-				FAnimationRuntime::ConvertCSTransformToBoneSpace(ComponentTransform, InputCSPose.Pose, BoneTM, CompactPoseBoneToModify, EBoneControlSpace::BCS_ComponentSpace);
 				BoneTM.SetScale3D(FVector(0,0,0));
-				BoneTransforms.Add(FBoneTransform(CompactPoseBoneToModify, BoneTM));
+				Output.Pose[CompactPoseBoneToModify] = BoneTM;
+				TempBoneTransforms.Add(BoneTM);
 			}
 			else
 			{
 
 				StalkerKinematicsBoneInstance& BoneInstance = Owner->BonesInstance[BoneID];
 
+				
 				if (BoneInstance.callback_overwrite())
 				{
 					if (BoneInstance.callback() && (AnimMode != EStalkerKinematicsAnimMode::GetAnimPose || !GetAnimPosIgnoreCallbacks))
 						BoneInstance.callback()(&BoneInstance);
+
 				}
 				else
 				{
-					if (UseAnims)
-					{
-						int32 PartID = BonesParts[Bones[BoneID].BoneName];
-						BoneTM = CSPosesOfPart[PartID].Pose.GetComponentSpaceTransform(CompactPoseBoneToModify);
-						FAnimationRuntime::ConvertCSTransformToBoneSpace(ComponentTransform, CSPosesOfPart[PartID].Pose, BoneTM, CompactPoseBoneToModify, EBoneControlSpace::BCS_ParentBoneSpace);
-						//FAnimationRuntime::ConvertBoneSpaceTransformToCS(ComponentTransform, InputCSPose.Pose, BoneTM, CompactPoseBoneToModify, EBoneControlSpace::BCS_ParentBoneSpace);
-						if (ParentId != INDEX_NONE)
-						{
-							BoneTM *= BoneTransforms[ParentId].Transform;
-						}
+					TempBoneTransforms.Add(BoneTM);
+					if (ParentId != INDEX_NONE)
+					{ 
+						TempBoneTransforms.Last() *= TempBoneTransforms[ParentId];
 					}
-					else
-					{
-						BoneTM = InputCSPose.Pose.GetComponentSpaceTransform(CompactPoseBoneToModify);
-						FAnimationRuntime::ConvertCSTransformToBoneSpace(ComponentTransform, InputCSPose.Pose, BoneTM, CompactPoseBoneToModify, EBoneControlSpace::BCS_ComponentSpace);
-					}
-
-				
-
-					BoneInstance.Transform.rotation(StalkerMath::UnrealQuatToXRay(BoneTM.GetRotation()));
-					BoneInstance.Transform.translate_over(StalkerMath::UnrealLocationToXRay(BoneTM.GetLocation()));
-
+					BoneInstance.Transform.rotation(StalkerMath::UnrealQuatToXRay(TempBoneTransforms.Last().GetRotation()));
+					BoneInstance.Transform.translate_over(StalkerMath::UnrealLocationToXRay(TempBoneTransforms.Last().GetLocation()));
 					if (BoneInstance.callback() && (AnimMode != EStalkerKinematicsAnimMode::GetAnimPose || !GetAnimPosIgnoreCallbacks))
+					{
 						BoneInstance.callback()(&BoneInstance);
+					}
+				}
+				
+				if(BoneInstance.bUpdated|| BoneInstance.callback_overwrite())
+				{
+					BoneInstance.bUpdated = false;
+					BoneTM.SetRotation(FQuat(StalkerMath::XRayQuatToUnreal(BoneInstance.Transform)));
+					BoneTM.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(BoneInstance.Transform.c)));
+					BoneTM.SetScale3D(FVector(1, 1, 1));
+					if (BoneInstance.callback_overwrite())
+					{
+						TempBoneTransforms.Add(BoneTM);
+					}
+					if (ParentId != INDEX_NONE)
+					{
+						BoneTM.SetToRelativeTransform(TempBoneTransforms[ParentId]);
+					}
+					Output.Pose[CompactPoseBoneToModify] = BoneTM;
 				}
 
-				BoneTM.SetRotation(FQuat(StalkerMath::XRayQuatToUnreal(BoneInstance.Transform)));
-				BoneTM.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(BoneInstance.Transform.c)));
-				BoneTM.SetScale3D(FVector(1,1,1));
 
 			}
-			// Convert back to Component Space.
-			FAnimationRuntime::ConvertBoneSpaceTransformToCS(ComponentTransform, InputCSPose.Pose, BoneTM, CompactPoseBoneToModify, EBoneControlSpace::BCS_ComponentSpace);
-			BoneTransforms.Add(FBoneTransform(CompactPoseBoneToModify, BoneTM));
-		}
-	
-		InputCSPose.Pose.LocalBlendCSBoneTransforms(BoneTransforms, 1.f);
-		checkSlow(InputCSPose.Pose.GetPose().IsValid());
-		FCSPose<FCompactPose>::ConvertComponentPosesToLocalPoses(MoveTemp(InputCSPose.Pose), Output.Pose);
-		Output.Curve = MoveTemp(InputCSPose.Curve);
-		Output.CustomAttributes = MoveTemp(InputCSPose.CustomAttributes);
-	}
 
-		
+		}
+	}	
 }
 
 void FStalkerAnimNode_Kinematics::GatherDebugData(FNodeDebugData& DebugData)
@@ -215,15 +190,12 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 	TArray<UE::Anim::FStackAttributeContainer, TInlineAllocator<4>> FilteredAttributes;
 	TArray<float, TInlineAllocator<4>> BlendWeights;
 	
-	int32 MaxChannel = 0;
+	int32 MaxBlendChannel = 0;
+	int32 MaxAddChannel = 0;
 	for (int32 BlendID = 0; BlendID < Owner->BlendsCycles[PartID].Num(); BlendID++)
 	{
 		CBlend& Blend = *Owner->BlendsCycles[PartID][BlendID];
 		checkSlow(Blend.channel < 4);
-		if(Blend.channel>1)continue;
-
-		if (Blend.fall_at_end)
-			continue;;
 
 		if (bInGameThread && AnimMode == EStalkerKinematicsAnimMode::GetAnimPose)
 		{
@@ -235,6 +207,8 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 
 		if (BlendOfChannal[Blend.channel].Num() == 16)
 		{
+			if (Blend.fall_at_end)
+				continue;;
 			float Min = BlendOfChannal[Blend.channel][0]->blendAmount;
 			int32 IDToRemove = 0;
 			for (int32 i =1;i< BlendOfChannal[Blend.channel].Num(); i++) 
@@ -247,58 +221,92 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 			}
 			BlendOfChannal[Blend.channel].RemoveAt(IDToRemove);
 		}
-		MaxChannel = FMath::Max(MaxChannel,int32(Blend.channel));
+		if (Blend.channel > 1)
+			MaxAddChannel = FMath::Max(MaxAddChannel, int32(Blend.channel-1));
+		else
+			MaxBlendChannel = FMath::Max(MaxBlendChannel,int32(Blend.channel+1));
 
 	
 		BlendOfChannal[Blend.channel].Add(Owner->BlendsCycles[PartID][BlendID]);
 	}
-	FilteredPoses.SetNum(MaxChannel+1, false);
-	FilteredCurve.SetNum(MaxChannel + 1, false);
-	FilteredAttributes.SetNum(MaxChannel + 1, false);
-	BlendWeights.Add(1);
-	for (int32 i = 0; i < MaxChannel+1; ++i)
-	{
-		PosesToEvaluate.Add(i);
-		FPoseContext EvaluateContext(Output);
-		Evaluate_Channal(EvaluateContext, i);
 
-		FilteredPoses[i].MoveBonesFrom(EvaluateContext.Pose);
-		FilteredCurve[i].MoveFrom(EvaluateContext.Curve);
-		FilteredAttributes[i].MoveFrom(EvaluateContext.CustomAttributes);
-	}
-	float SumWeight = 1;
-	float   TotalWeights = Owner->ChannelsFactor[0];
-	for (int32 i = 1; i < MaxChannel + 1; ++i)
+	FAnimationPoseData OutAnimationPoseData(Output);
+	float   TotalWeights = 0;
+	if (MaxBlendChannel)
 	{
-		TotalWeights += Owner->ChannelsFactor[i];
-		if (FMath::IsNearlyZero(TotalWeights))
-			BlendWeights.Add(0);
-		else
-			BlendWeights.Add(Owner->ChannelsFactor[i] / TotalWeights);
-		BlendWeights.Last() = FMath::Clamp(BlendWeights.Last(),0.f,1.f);
-		SumWeight += BlendWeights.Last();
-	}
-	if ((SumWeight > ZERO_ANIMWEIGHT_THRESH) && (FMath::Abs<float>(SumWeight - 1.0f) > ZERO_ANIMWEIGHT_THRESH))
-	{
-		float ReciprocalSum = 1.0f / SumWeight;
-		for (int32 i = 0; i < BlendWeights.Num(); ++i)
+		FilteredPoses.SetNum(MaxBlendChannel, false);
+		FilteredCurve.SetNum(MaxBlendChannel, false);
+		FilteredAttributes.SetNum(MaxBlendChannel, false);
+		BlendWeights.Add(1);
+		for (int32 i = 0; i < MaxBlendChannel; ++i)
 		{
-			BlendWeights[i] *= ReciprocalSum;
+			PosesToEvaluate.Add(i);
+			FPoseContext EvaluateContext(Output);
+			float   TotalWeightsForFX = Evaluate_Channal(EvaluateContext, i);
+
+			if (i == 0)
+			{
+				Evaluate_FX(EvaluateContext, PartID, TotalWeightsForFX);
+			}
+
+			FilteredPoses[i].MoveBonesFrom(EvaluateContext.Pose);
+			FilteredCurve[i].MoveFrom(EvaluateContext.Curve);
+			FilteredAttributes[i].MoveFrom(EvaluateContext.CustomAttributes);
+		}
+		float SumWeight = 1;
+		TotalWeights = Owner->ChannelsFactor[0];
+		for (int32 i = 1; i < MaxBlendChannel; ++i)
+		{
+			TotalWeights += Owner->ChannelsFactor[i];
+			if (FMath::IsNearlyZero(TotalWeights))
+				BlendWeights.Add(0);
+			else
+				BlendWeights.Add(Owner->ChannelsFactor[i] / TotalWeights);
+			BlendWeights.Last() = FMath::Clamp(BlendWeights.Last(), 0.f, 1.f);
+			SumWeight += BlendWeights.Last();
+		}
+		if ((SumWeight > ZERO_ANIMWEIGHT_THRESH) && (FMath::Abs<float>(SumWeight - 1.0f) > ZERO_ANIMWEIGHT_THRESH))
+		{
+			float ReciprocalSum = 1.0f / SumWeight;
+			for (int32 i = 0; i < BlendWeights.Num(); ++i)
+			{
+				BlendWeights[i] *= ReciprocalSum;
+			}
+		}
+		FAnimationRuntime::BlendPosesTogether(FilteredPoses, FilteredCurve, FilteredAttributes, BlendWeights, PosesToEvaluate, OutAnimationPoseData);
+	}
+
+	if (MaxAddChannel)
+	{
+		FilteredPoses.SetNum(MaxAddChannel, false);
+		FilteredCurve.SetNum(MaxAddChannel, false);
+		FilteredAttributes.SetNum(MaxAddChannel, false);
+		for (int32 i = 0; i < MaxAddChannel; ++i)
+		{
+			FPoseContext EvaluateContext(Output,true);
+			Evaluate_Channal(EvaluateContext, i + 2);
+			FilteredPoses[i].MoveBonesFrom(EvaluateContext.Pose);
+			FilteredCurve[i].MoveFrom(EvaluateContext.Curve);
+			FilteredAttributes[i].MoveFrom(EvaluateContext.CustomAttributes);
+		}
+		for (int32 i = 0; i < MaxAddChannel; i++)
+		{
+			const FAnimationPoseData AdditiveAnimationPoseData(FilteredPoses[i], FilteredCurve[i], FilteredAttributes[i]);
+			FAnimationRuntime::AccumulateAdditivePose(OutAnimationPoseData, AdditiveAnimationPoseData, Owner->ChannelsFactor[i + 2], AAT_LocalSpaceBase);
+			Output.Pose.NormalizeRotations();
 		}
 	}
-	FAnimationPoseData OutAnimationPoseData(Output);
-	FAnimationRuntime::BlendPosesTogether(FilteredPoses, FilteredCurve, FilteredAttributes, BlendWeights, PosesToEvaluate, OutAnimationPoseData);
+
 }
 
-void FStalkerAnimNode_Kinematics::Evaluate_Channal(FPoseContext& Output, int32 Channal)
-{
-	if (Channal > 1)
+float FStalkerAnimNode_Kinematics::Evaluate_Channal(FPoseContext& Output, int32 Channal)
+{	
+	if (BlendOfChannal[Channal].Num() == 0)
 	{
 		Output.ResetToRefPose();
 		BlendOfChannal[Channal].Empty(BlendOfChannal[Channal].Num());
-		return;
+		return 0;
 	}
-	checkSlow(BlendOfChannal[Channal].Num());
 	TArray<int32, TInlineAllocator<16>> PosesToEvaluate;
 	TArray<FCompactPose, TInlineAllocator<16>> FilteredPoses;
 	TArray<FBlendedCurve, TInlineAllocator<16>> FilteredCurve;
@@ -326,7 +334,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_Channal(FPoseContext& Output, int32 C
 	float SumWeight = 1;
 	for (int32 i = 1; i < BlendOfChannal[Channal].Num(); ++i)
 	{
-		TotalWeights += Owner->ChannelsFactor[i];
+		TotalWeights += BlendOfChannal[Channal][i]->blendAmount;
 		if (FMath::IsNearlyZero(TotalWeights))	
 			BlendWeights.Add(0);
 		else	
@@ -347,9 +355,54 @@ void FStalkerAnimNode_Kinematics::Evaluate_Channal(FPoseContext& Output, int32 C
 
 	BlendOfChannal[Channal].Empty(BlendOfChannal[Channal].Num());
 	FAnimationPoseData OutAnimationPoseData(Output);
-
-	
 	FAnimationRuntime::BlendPosesTogether(FilteredPoses, FilteredCurve, FilteredAttributes, BlendWeights, PosesToEvaluate, OutAnimationPoseData);
+	return TotalWeights;
+}
+
+void FStalkerAnimNode_Kinematics::Evaluate_FX(FPoseContext& Output, int32 PartID, float TotalWeights)
+{
+	TArray<int32, TInlineAllocator<16>> PosesToEvaluate;
+	TArray<FCompactPose, TInlineAllocator<16>> FilteredPoses;
+	TArray<FBlendedCurve, TInlineAllocator<16>> FilteredCurve;
+	TArray<UE::Anim::FStackAttributeContainer, TInlineAllocator<16>> FilteredAttributes;
+
+	const FBoneContainer& BoneContainer = Output.AnimInstanceProxy->GetRequiredBones();
+
+	FilteredPoses.SetNum(Owner->BlendsFX[PartID].Num(), false);
+	FilteredCurve.SetNum(Owner->BlendsFX[PartID].Num(), false);
+	FilteredAttributes.SetNum(Owner->BlendsFX[PartID].Num(), false);
+
+	for (int32 i = 0; i < Owner->BlendsFX[PartID].Num(); ++i)
+	{
+		PosesToEvaluate.Add(i);
+
+		FPoseContext EvaluateContext(Output);
+		Evaluate_Blend(EvaluateContext, *Owner->BlendsFX[PartID][i]);
+
+		FilteredPoses[i].MoveBonesFrom(EvaluateContext.Pose);
+		FilteredCurve[i].MoveFrom(EvaluateContext.Curve);
+		FilteredAttributes[i].MoveFrom(EvaluateContext.CustomAttributes);
+	}
+
+	TMap<u16,float> BoneTotalWeights;
+	for (int32 i = 0; i < Owner->BlendsFX[PartID].Num(); ++i)
+	{
+		float*Weights = BoneTotalWeights.Find(Owner->BlendsFX[PartID][i]->bone_or_part);
+		if (Weights == nullptr)
+		{
+			Weights = &BoneTotalWeights.Add(Owner->BlendsFX[PartID][i]->bone_or_part,TotalWeights);
+		}
+		*Weights += Owner->BlendsFX[PartID][i]->blendAmount;
+
+		FCompactPoseBoneIndex CompactPoseBoneToModify = Bones[Owner->BlendsFX[PartID][i]->bone_or_part].GetCompactPoseIndex(BoneContainer);
+		float BlendWeights=0;
+		if (!FMath::IsNearlyZero(TotalWeights))
+			BlendWeights =FMath::Clamp(Owner->BlendsFX[PartID][i]->blendAmount / *Weights,0,1.f);
+
+		FTransform CurrentTransform =  Output.Pose[CompactPoseBoneToModify];
+		Output.Pose[CompactPoseBoneToModify].Blend(CurrentTransform, FilteredPoses[i][CompactPoseBoneToModify], BlendWeights);
+	}
+
 }
 
 void FStalkerAnimNode_Kinematics::Evaluate_Blend(FPoseContext& Output, CBlend& AnimBlend)
@@ -357,5 +410,13 @@ void FStalkerAnimNode_Kinematics::Evaluate_Blend(FPoseContext& Output, CBlend& A
 	checkSlow(AnimBlend.motionID.valid());
 	FAnimationPoseData AnimationPoseData(Output);
 	FDeltaTimeRecord DeltaTimeRecord;
-	Owner->Anims[AnimBlend.motionID.val].Amim->GetAnimationPose(AnimationPoseData, FAnimExtractContext(AnimBlend.timeCurrent, Output.AnimInstanceProxy->ShouldExtractRootMotion(), DeltaTimeRecord, false));
+	bool NeedAdditive = AnimBlend.channel>1;
+	UAnimSequence* Anim = Owner->Anims[AnimBlend.motionID.val].Amim;
+	Anim->GetAnimationPose(AnimationPoseData, FAnimExtractContext(AnimBlend.timeCurrent, Output.AnimInstanceProxy->ShouldExtractRootMotion(), DeltaTimeRecord, false));
+	if (Anim->IsValidAdditive() != NeedAdditive)
+	{
+		FString Name;
+		Anim->GetName(Name);
+		UE_LOG(LogStalker,Error,TEXT("AnimSequence %s need %s be Additive"),*Name, NeedAdditive?TEXT(""): TEXT("not"));
+	}
 }

@@ -131,7 +131,7 @@ public:
 
 	TArray<FStalkerKinematicsAnimData>			Anims;
 	TArray <TSharedPtr<CBlend>>					BlendsCycles[4];
-	TArray<TSharedPtr<CBlend>>					BlendsFX;
+	TArray<TSharedPtr<CBlend>>					BlendsFX[4];
 
 
 	TArray< FStalkerKinematicsAnimsBonesPart>	BonesParts;
@@ -163,6 +163,7 @@ private:
 	TMap<shared_str, u32>						AnimsName2ID;
 
 	TMap<shared_str, u32>						BonesPartsName2ID;
+	TMap<u32, u32>								BonesPartsBoneID2ID;
 
 
 

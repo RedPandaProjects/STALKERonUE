@@ -4,7 +4,7 @@ class XRayDevice :public XrDeviceInterface
 {
 public:
 	XRayDevice();
-
+	~XRayDevice() override;
 
 
 	bool IsEditorMode() override;

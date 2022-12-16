@@ -10,6 +10,7 @@ public:
 	class UStalkerKinematicsData*ImportOGF					(const FString& FileName);
 	UObject*					ImportObject				(const FString& FileName, bool UseOnlyFullPath = false);
 	UStaticMesh*				ImportObjectAsStaticMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
+	UStaticMesh*				ImportObjectAsStaticMesh	(CEditableObject* Object,const FString&Name);
 	USkeletalMesh*				ImportObjectAsDynamicMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
 	UMaterialInterface*			ImportSurface				(const FString& Path, CSurface* Surface);
 	UMaterialInterface*			ImportSurface				(const FString& Path, shared_str ShaderName, shared_str TextureName);

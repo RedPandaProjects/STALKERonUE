@@ -25,6 +25,11 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 		g_hud->RenderUI();
 		Device->seqRenderUI.Process(rp_RenderUI);
 		if (g_pGamePersistent)	g_pGamePersistent->OnRenderPPUI_main();
+		{
+			bool bTest = psDeviceFlags.is_any(rsCameraPos) || psDeviceFlags.is_any(rsStatistic) || !Device->Statistic->errors.empty();
+			if (bTest)
+				Device->Statistic->Show();
+		}
 		g_bRendering = false;
 	}
 

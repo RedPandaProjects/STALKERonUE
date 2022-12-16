@@ -38,6 +38,8 @@ private:
 	TArray<TSharedPtr<CBlend>>					BlendOfChannal[4];
 
 	void Evaluate_PartID						(FPoseContext& Output, int32 PartID);
-	void Evaluate_Channal						(FPoseContext& Output,  int32 Channal);
+	float Evaluate_Channal						(FPoseContext& Output,  int32 Channal);
+	void Evaluate_FX							(FPoseContext& Output, int32 PartID,float TotalWeights);
 	void Evaluate_Blend							(FPoseContext& Output, CBlend&AnimBlend);
+	TArray<FTransform>							TempBoneTransforms;
 };

@@ -10,6 +10,8 @@ THIRD_PARTY_INCLUDES_START
 #include "AnimInstance/StalkerKinematicsAnimInstanceProxy.h"
 #include "XrEngine/EnnumerateVertices.h"
 THIRD_PARTY_INCLUDES_END
+
+DECLARE_CYCLE_STAT(TEXT("XRay ~ Kinematics Frame"), STAT_XRayEngineKinematics, STATGROUP_XRayEngine);
 AStalkerKinematics::AStalkerKinematics()
 {
 	MyUpdateCallback = nullptr;
@@ -60,7 +62,16 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 			BonesPartID++;
 		}
 	}
-
+	int32 BonesPartsID = 0;
+	for (FStalkerKinematicsAnimsBonesPart& BonesPart : BonesParts)
+	{
+		for (FName& BoneOfPart : BonesPart.Bones)
+		{
+			shared_str BoneName = TCHAR_TO_ANSI(*BoneOfPart.ToString());
+			BonesPartsBoneID2ID.Add(BonesName2ID[BoneName], BonesPartsID);
+		}
+		BonesPartsID++;
+	}
 	u32 AnimID = 0;
 	for (int32 i = 0; i < KinematicsData->Anims.Num(); i++)
 	{
@@ -112,7 +123,7 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 		VisData.sphere.set(Center, VisData.box.getradius());
 	}
 	XFormMatrix.identity();
-	MeshComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	MeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	KinematicsAnimInstanceForCompute = NewObject< UStalkerKinematicsAnimInstance_Default>(MeshComponent, TEXT("KinematicsAnimInstance"), RF_Transient);
 	KinematicsAnimInstanceForCompute->InitializeAnimation();
@@ -314,11 +325,12 @@ void AStalkerKinematics::LL_IterateBlends(IterateBlendsCallback& callback)
 		{
 			callback(*BlendsCycles[PartID][i]);
 		}
+		for (int32 i = 0; i < BlendsFX[PartID].Num(); i++)
+		{
+			callback(*BlendsFX[PartID][i]);
+		}
 	}
-	for (int32 i = 0; i < BlendsFX.Num(); i++)
-	{
-		callback(*BlendsFX[i]);
-	}
+
 }
 
 
@@ -482,52 +494,53 @@ void AStalkerKinematics::LL_UpdateTracks(float Delta, bool b_force, bool leave_b
 				i++;
 			}
 		}
+		for (int32 i = 0; i < BlendsFX[PartID].Num();)
+		{
+			CBlend& B = *BlendsFX[PartID][i];
+			if (!B.stop_at_end_callback)
+			{
+				B.playing = FALSE;
+				i++;
+				continue;
+			}
+			B.update_time(Delta);
+			switch (B.blend_state())
+			{
+			case CBlend::eFREE_SLOT:
+				checkSlow(false);
+				i++;
+				break;
+			case CBlend::eAccrue:
+				B.blendAmount += Delta * B.blendAccrue * B.blendPower * B.speed;
+				if (B.blendAmount >= B.blendPower)
+				{
+					B.blendAmount = B.blendPower;
+					B.set_falloff_state();
+				}
+				i++;
+				break;
+			case CBlend::eFalloff:
+				B.blendAmount -= Delta * B.blendFalloff * B.blendPower * B.speed;
+				if (B.blendAmount <= 0)
+				{
+					B.set_free_state();
+					DestroyBlend(BlendsFX[PartID][i]);
+					BlendsFX[PartID].RemoveAt(i);
+				}
+				else
+				{
+					i++;
+				}
+				break;
+			default:
+				checkSlow(false);
+				i++;
+				break;
+			}
+		}
 	}
 
-	for (int32 i = 0; i < BlendsFX.Num();)
-	{
-		CBlend& B = *BlendsFX[i];
-		if (!B.stop_at_end_callback)
-		{
-			B.playing = FALSE;
-			i++;
-			continue;
-		}
-		B.update_time(Delta);
-		switch (B.blend_state())
-		{
-		case CBlend::eFREE_SLOT:
-			checkSlow(false);
-			i++;
-			break;
-		case CBlend::eAccrue:
-			B.blendAmount += Delta * B.blendAccrue * B.blendPower * B.speed;
-			if (B.blendAmount >= B.blendPower) 
-			{
-				B.blendAmount = B.blendPower;
-				B.set_falloff_state();
-			}
-			i++;
-			break;
-		case CBlend::eFalloff:
-			B.blendAmount -= Delta * B.blendFalloff * B.blendPower * B.speed;
-			if (B.blendAmount <= 0) 
-			{
-				B.set_free_state();
-				DestroyBlend(BlendsFX[i]);
-				BlendsFX.RemoveAt(i);
-			}
-			else
-			{
-				i++;
-			}
-			break;
-		default: 	
-			checkSlow(false);
-			i++;
-			break;
-		}
-	}
+	
 		
 }
 
@@ -611,15 +624,15 @@ CBlend* AStalkerKinematics::PlayFX(LPCSTR Name, float PowerScale)
 CBlend* AStalkerKinematics::PlayFX(MotionID InMotionID, float PowerScale)
 {
 	if (!InMotionID.valid())	return 0;
-	if (BlendsFX.Num() >= MAX_BLENDED) return 0;
 	CMotionDef& MotionDef = AnimsDef[InMotionID.val];
-
+	
 	u16 BoneID  = MotionDef.bone_or_part;
 	if (BI_NONE == BoneID)		BoneID = 0;
-
-	BlendsFX.Add(CreateBlend());
-	FXBlendSetup(*BlendsFX.Last(), InMotionID, MotionDef.Accrue(), MotionDef.Falloff(), MotionDef.Power(), MotionDef.Speed(), BoneID);
-	return BlendsFX.Last().Get();
+	u32 BonesPartID = BonesPartsBoneID2ID[BoneID];
+	if (BlendsFX[BonesPartID].Num() >= MAX_BLENDED) return 0;
+	BlendsFX[BonesPartID].Add(CreateBlend());
+	FXBlendSetup(*BlendsFX[BonesPartID].Last(), InMotionID, MotionDef.Accrue(), MotionDef.Falloff(), MotionDef.Power(), MotionDef.Speed(), BoneID);
+	return BlendsFX[BonesPartID].Last().Get();
 }
 
 float AStalkerKinematics::get_animation_length(MotionID InMotionID)
@@ -708,16 +721,16 @@ bool AStalkerKinematics::PickBone(const Fmatrix& parent_xform, pick_result& r, f
 	{
 		if (HitResult.GetActor() == this&& HitResult.BoneName == BoneName)
 		{
-			DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Green, false, 10000.f);
-			DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Green, false, 1000);
+		//	DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Green, false, 10000.f);
+			//DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Green, false, 1000);
 
 			r.dist = HitResult.Distance /100.f;
 			r.normal = Fvector().set(- HitResult.Normal.X, HitResult.Normal.Z, HitResult.Normal.Y);
 			return true;
 		}
 	}
-	DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
-	DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
+	//DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
+	//DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
 
 	return false;
 }
@@ -954,12 +967,14 @@ shared_str AStalkerKinematics::getDebugName()
 // Called every frame
 void AStalkerKinematics::Tick(float DeltaTime)
 {
+	SCOPE_CYCLE_COUNTER(STAT_XRayEngineKinematics);
 	Super::Tick(DeltaTime);
 
 
 	switch (VisualRenderMode)
 	{
 	case EVisualRenderMode::None:
+		PrimaryActorTick.TickInterval = 0.1f;
 		SetActorHiddenInGame(true);
 		break;
 	case EVisualRenderMode::FromRenderable:
@@ -968,11 +983,14 @@ void AStalkerKinematics::Tick(float DeltaTime)
 			break;
 		}
 		SetActorHiddenInGame(!(Renderable->MySpatial->spatial.type & STYPE_RENDERABLE) || (Renderable->MySpatial->spatial.type & STYPE_LIGHTSOURCE));
+		PrimaryActorTick.TickInterval = (Renderable->MySpatial->spatial.type & STYPE_RENDERABLE) &&!(Renderable->MySpatial->spatial.type & STYPE_LIGHTSOURCE)?0:0.1f;
+		if(!IsHidden())
 		{
 			SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(Renderable->renderable.xform.c)), FQuat(StalkerMath::XRayQuatToUnreal(Renderable->renderable.xform)));
 		}
 		break;
 	case EVisualRenderMode::FromSelfXForm:
+		PrimaryActorTick.TickInterval = 0.f;
 		SetActorHiddenInGame(false);
 		SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(XFormMatrix.c)), FQuat(StalkerMath::XRayQuatToUnreal(XFormMatrix)));
 		break;
