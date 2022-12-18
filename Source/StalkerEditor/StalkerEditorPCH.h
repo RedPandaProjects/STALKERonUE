@@ -78,6 +78,7 @@
 #include "Engine/TextureCube.h"
 #include "MaterialUtilities/Public/MaterialUtilities.h"
 #include "RendererInterface.h"
+#include "LevelEditor/Public/LevelEditor.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrECore/stdafx.h"
 #include "XrECore/Editor/EditMesh.h"

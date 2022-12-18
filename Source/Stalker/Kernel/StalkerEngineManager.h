@@ -1,6 +1,12 @@
 #pragma once
 #include "StalkerEngineManager.generated.h"
-
+UENUM(BlueprintType)
+enum class EStalkerGame:uint8
+{
+	COP UMETA(DisplayName = "Call of Pripyat"),
+	CS UMETA(DisplayName = "Clear Sky"),
+	SHOC UMETA(DisplayName = "Shadow of Chernobyl"),
+};
 UCLASS()
 class UStalkerEngineManager : public UObject
 {
@@ -10,6 +16,7 @@ public:
 	void										DetachViewport			(class UGameViewportClient* InGameViewportClient);
 	FName										GetCurrentLevel			();
 	void										Initialized				();
+	void										ReInitialized			(EStalkerGame Game);
 	void										Destroy					();
 	inline class UStalkerResourcesManager*		GetResourcesManager		()								{return ResourcesManager;	}
 	inline class UWorld*						GetGameWorld			()								{return GameWorld; }
@@ -19,21 +26,23 @@ public:
 private:
 	void										OnViewportCloseRequested (FViewport* InViewport);
 	void										OnViewportResized(FViewport* InViewport, uint32);
+	void										OnEndPlayMap	();
 
 	UPROPERTY(Transient)
 	TObjectPtr<class UStalkerResourcesManager>		ResourcesManager;
 	UPROPERTY(Transient)
-	TObjectPtr < class UStalkerGameViewportClient> GameViewportClient;
+	TObjectPtr < class UStalkerGameViewportClient>	GameViewportClient;
 	UPROPERTY(Transient)
-	TObjectPtr < class UWorld>					GameWorld;
+	TObjectPtr < class UWorld>						GameWorld;
 
-	class XRayEngine*							MyXRayEngine;
-	class XRayMemory*							GXRayMemory;
-	class XRayLog*								GXRayLog;
-	class XRayDebug*							GXRayDebug;
-	class XRayInput*							MyXRayInput;
-	FDelegateHandle								DelegateHandleOnViewportResized;
-	FDelegateHandle								DelegateHandleOnViewportCloseRequested;
+	class XRayEngine*								MyXRayEngine;
+	class XRayMemory*								GXRayMemory;
+	class XRayLog*									GXRayLog;
+	class XRayDebug*								GXRayDebug;
+	class XRayInput*								MyXRayInput;
+	FDelegateHandle									DelegateHandleOnViewportResized;
+	FDelegateHandle									DelegateHandleOnViewportCloseRequested;
+	EStalkerGame									CurrentGame;
 };
 
 extern UStalkerEngineManager* GXRayEngineManager;

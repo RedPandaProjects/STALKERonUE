@@ -13,4 +13,6 @@ class AStalkerWorldSettings : public AWorldSettings
 public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	FString AlifeName;
+	UPROPERTY(Transient)
+	class AStalkerDebugRender* DebugRender;
 };

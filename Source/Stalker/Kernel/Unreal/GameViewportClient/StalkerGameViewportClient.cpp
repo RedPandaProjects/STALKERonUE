@@ -10,6 +10,7 @@ THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/XRay/Core/XRayInput.h"
 #include "Kernel/XRay/Render/Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
+#include "../GameMode/StalkerGameMode.h"
 DECLARE_CYCLE_STAT(TEXT("XRay ~ Frame"), STAT_XRayEngineFrame, STATGROUP_XRayEngine);
 DECLARE_CYCLE_STAT(TEXT("XRay ~ MT Frame"), STAT_XRayEngineMTFrame, STATGROUP_XRayEngine);
 void UStalkerGameViewportClient::Activated(FViewport* InViewport, const FWindowActivateEvent& InActivateEvent)
@@ -121,10 +122,10 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 		Device->dwTimeContinual = static_cast<u32>(GXRayEngineManager->GetGameWorld()->UnpausedTimeSeconds * 1000);
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
 		g_bEnableStatGather = psDeviceFlags.is_any(rsStatistic);
+	
 		g_Engine->OnFrame();
+
 		Device->dwFrame++;
-
-
 		GXRaySkeletonMeshManager->Flush();
 		{
 			SCOPE_CYCLE_COUNTER(STAT_XRayEngineMTFrame);

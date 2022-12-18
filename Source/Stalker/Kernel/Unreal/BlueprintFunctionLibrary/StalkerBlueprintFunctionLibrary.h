@@ -15,5 +15,7 @@ class STALKER_API UStalkerBlueprintFunctionLibrary : public UBlueprintFunctionLi
 	GENERATED_BODY()
 public:
 	UFUNCTION(BlueprintCallable, Category = "XRay", meta = (WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))
-	static void XRayConnect(const UObject* WorldContextObject,const FString&Server = TEXT("editor/single/alife/new"), const FString& Client = TEXT("localhost"));
+	static void XRayConnect(const UObject* WorldContextObject, const FString& Server = TEXT("editor/single/alife/new"), const FString& Client = TEXT("localhost"));
+	UFUNCTION(BlueprintCallable, Category = "XRay", meta = (WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))
+	static void XRayShowMenu(const UObject* WorldContextObject, bool Show);
 };

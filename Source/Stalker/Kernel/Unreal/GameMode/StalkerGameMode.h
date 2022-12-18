@@ -16,5 +16,4 @@ public:
 	void StartPlay() override;
 	void ResetLevel() override;
 	void Reset() override;
-
 };

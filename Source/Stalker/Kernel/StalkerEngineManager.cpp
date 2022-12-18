@@ -11,6 +11,8 @@ THIRD_PARTY_INCLUDES_END
 #include "XRay/Core/XRayLog.h"
 #include "XRay/Core/XRayInput.h"
 #include "XRay/Core/XRayEngine.h"
+#include "Unreal/GameSettings/StalkerGameSettings.h"
+#include "GameDelegates.h"
 
 UStalkerEngineManager* GXRayEngineManager = nullptr;
 
@@ -79,22 +81,90 @@ void UStalkerEngineManager::Initialized()
 	GXRayMemory = new XRayMemory;
 	GXRayDebug = new XRayDebug;
 	GXRayLog = new XRayLog;
-	FString FSName = FPaths::ProjectDir();
+	FString FSName;
+	EGamePath GamePath = EGamePath::COP_1602;
 	if (GIsEditor)
 	{
-		FSName = FPaths::Combine(FSName, TEXT("fs.ltx"));
-	} 
+		FSName = TEXT("fs");
+		switch (GetDefault<UStalkerGameSettings>()->EditorStartupGame)
+		{
+		case EStalkerGame::CS:
+			GamePath = EGamePath::CS_1510;
+			FSName += TEXT("_cs");
+			break;
+		case EStalkerGame::SHOC:
+			GamePath = EGamePath::SHOC_10006;
+			FSName += TEXT("_soc");
+			break;
+		}
+		CurrentGame = GetDefault<UStalkerGameSettings>()->EditorStartupGame;
+	}
 	else
 	{
-		FSName = FPaths::Combine(FSName, TEXT("fsgame.ltx"));
+		CurrentGame = EStalkerGame::COP;
+		FSName = TEXT("fsgame");
 	}
-	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, EGamePath::COP_1602);
+
+	FSName += TEXT(".ltx");
+	FSName = FPaths::Combine(FPaths::ProjectDir(), FSName);
+	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
 
 	MyXRayEngine = new XRayEngine;
 	g_Engine = MyXRayEngine;
 	g_Engine->Initialize();
 	GXRaySkeletonMeshManager = new XRaySkeletonMeshManager;
-	//FViewport::ViewportResizedEvent.AddUObject(this, &UGameEngine::OnViewportResized);
+#if WITH_EDITOR
+	FGameDelegates::Get().GetEndPlayMapDelegate().AddUObject(this, &UStalkerEngineManager::OnEndPlayMap);
+#endif
+}
+
+void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
+{
+#if WITH_EDITOR
+	if (GameWorld)
+	{ 
+		return;
+	}
+#endif
+	if (CurrentGame == Game)
+	{
+		return;
+	}
+	g_Engine->Destroy();
+	MyXRayEngine = nullptr;
+	delete g_Engine;
+	Core.Destroy();
+	FString FSName;
+	EGamePath GamePath = EGamePath::COP_1602;
+
+	if (GIsEditor)
+	{
+		FSName = TEXT("fs");
+	}
+	else
+	{
+		FSName = TEXT("fsgame");
+	}
+	CurrentGame = Game;
+	switch (Game)
+	{
+	case EStalkerGame::CS:
+		GamePath = EGamePath::CS_1510;
+		FSName += TEXT("_cs");
+		break;
+	case EStalkerGame::SHOC:
+		GamePath = EGamePath::SHOC_10006;
+		FSName += TEXT("_soc");
+		break;
+	}
+
+	FSName += TEXT(".ltx");
+	FSName = FPaths::Combine(FPaths::ProjectDir(), FSName);
+
+	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
+	MyXRayEngine = new XRayEngine;
+	g_Engine = MyXRayEngine;
+	g_Engine->Initialize();
 }
 
 void UStalkerEngineManager::Destroy()
@@ -140,6 +210,14 @@ void UStalkerEngineManager::OnViewportResized(FViewport* InViewport, uint32)
 			Device->seqResolutionChanged.Process(rp_ScreenResolutionChanged);
 		}
 	}
+}
+
+void UStalkerEngineManager::OnEndPlayMap()
+{
+#if WITH_EDITOR
+	ReInitialized(GetDefault<UStalkerGameSettings>()->EditorStartupGame);
+#endif
+
 }
 
 void UStalkerEngineManager::OnViewportCloseRequested(FViewport* InViewport)

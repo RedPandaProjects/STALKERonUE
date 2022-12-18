@@ -39,6 +39,9 @@ void XRayEngine::Destroy()
 	delete GXRayInput;
 	delete Console;
 	delete Device;
+	Console	= nullptr;
+	Device = nullptr;
+	GXRayInput = nullptr;
 }
 
 void XRayEngine::Level_Scan()

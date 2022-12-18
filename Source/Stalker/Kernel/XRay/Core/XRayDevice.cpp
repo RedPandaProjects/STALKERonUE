@@ -11,6 +11,10 @@ XRayDevice::XRayDevice()
 	mFullTransform.identity();
 	mView.identity();
 
+	vCameraPosition.set(0,0,0);
+	vCameraTop.set(1, 0, 0);
+	vCameraDirection.set(0, 1, 0);
+	vCameraRight.set(0, 0, 1);
 	b_is_Ready = FALSE;
 	b_is_Active = FALSE;
 

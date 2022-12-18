@@ -21,5 +21,5 @@ public:
 	void			AddCommand(IConsole_Command* cc) override;
 	void			RemoveCommand(IConsole_Command* cc) override;
 private:
-	TMap<IConsole_Command*, IConsoleCommand*>	m_game_to_ue;
+	TMap<IConsole_Command*, IConsoleCommand*>	UEConsoleCommands;
 };

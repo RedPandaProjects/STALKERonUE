@@ -50,23 +50,21 @@ XRayConsole::XRayConsole()
 
 XRayConsole::~XRayConsole()
 {
-	checkSlow(m_game_to_ue.Num()  == 0);
+	checkSlow(UEConsoleCommands.Num()  == 0);
 }
 
 void XRayConsole::AddCommand(IConsole_Command* cc)
 {
 	FString name = "xray." + FString(cc->Name());
 	auto pUECommand = IConsoleManager::Get().RegisterConsoleCommand(*name, *name, FConsoleCommandWithArgsDelegate::CreateLambda([cc](const TArray<FString>& Args) {XRayConsole::ExecuteCommandUE(cc, Args); }));
-	m_game_to_ue.Add(cc, pUECommand);
+	UEConsoleCommands.Add(cc, pUECommand);
 
 	XRayConsoleInterface::AddCommand(cc);
 }
 
 void XRayConsole::RemoveCommand(IConsole_Command* cc)
 {
-	auto pUECommand = m_game_to_ue.FindAndRemoveChecked(cc);
+	auto pUECommand = UEConsoleCommands.FindAndRemoveChecked(cc);
 	IConsoleManager::Get().UnregisterConsoleObject(pUECommand);
-	delete pUECommand; //?
-
 	XRayConsoleInterface::RemoveCommand(cc);
 }

@@ -11,12 +11,13 @@ THIRD_PARTY_INCLUDES_END
 ENGINE_API BOOL g_bRendering;
 bool UStalkerUIWidget::Initialize()
 {
+	LastFrame = Device->dwFrame+1;
 	return Super::Initialize();
 }
 
 int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& AllottedGeometry, const FSlateRect& MyCullingRect, FSlateWindowElementList& OutDrawElements, int32 LayerId, const FWidgetStyle& InWidgetStyle, bool bParentEnabled) const
 {
-	if(Device->dwFrame!=LastFrame)
+	if(Device->dwFrame>LastFrame)
 	{
 		LastFrame = Device->dwFrame;
 		g_bRendering = true;
@@ -24,8 +25,9 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 		if(g_hud&& g_pGameLevel)
 		g_hud->RenderUI();
 		Device->seqRenderUI.Process(rp_RenderUI);
-		if (g_pGamePersistent)	g_pGamePersistent->OnRenderPPUI_main();
+		if (g_pGamePersistent)	
 		{
+			g_pGamePersistent->OnRenderPPUI_main();
 			bool bTest = psDeviceFlags.is_any(rsCameraPos) || psDeviceFlags.is_any(rsStatistic) || !Device->Statistic->errors.empty();
 			if (bTest)
 				Device->Statistic->Show();
