@@ -8,7 +8,6 @@ UXRayOGFImporterFactory::UXRayOGFImporterFactory(const FObjectInitializer& Objec
 	bEditAfterNew = false;
 	bEditorImport = true;   // binary / general file source
 	bText = false;  // text source
-
 	SupportedClass = USkeletalMesh::StaticClass();
 
 	Formats.Add(TEXT("ogf;XRay Sekeleton Mesh"));

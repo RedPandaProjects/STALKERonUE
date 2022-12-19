@@ -4,6 +4,8 @@
 #include "Resources/SkeletonMesh/StalkerKinematicsData.h"
 #include "Engine/EngineTypes.h"
 #include "ImportUtils/StaticMeshImportUtils.h"
+#include "../StalkerEditorManager.h"
+#include "Kernel/StalkerEngineManager.h"
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
 
@@ -334,10 +336,18 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.Position = InVertex.P;
 						OutVertex.Normal = InVertex.N;
 						OutVertex.UV.set(InVertex.u, InVertex.v);
-						OutVertex.BoneID[0] = InVertex.matrix0;
-						OutVertex.BoneID[1] = InVertex.matrix1;
-						OutVertex.BoneWeight[0] = InVertex.w;
-						OutVertex.BoneWeight[1] = 1 - InVertex.w;
+						if(InVertex.matrix0!= InVertex.matrix1)
+						{
+							OutVertex.BoneID[0] = InVertex.matrix0;
+							OutVertex.BoneID[1] = InVertex.matrix1;
+							OutVertex.BoneWeight[0] = 1 - InVertex.w;
+							OutVertex.BoneWeight[1] = InVertex.w;
+						}
+						else
+						{
+							OutVertex.BoneID[0] = InVertex.matrix0;
+							OutVertex.BoneWeight[0] = 1.f;
+						}
 						ElementVertices.Add(OutVertex);
 					}
 				}break;
@@ -478,10 +488,40 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		Bone.Name = BoneData.name.c_str();
 	}
 
+	TArray<st_MeshVertex> Bone7;
+	TArray<st_MeshVertex> Bone3;
+
+	for (size_t ElementID = 0; ElementID < MaterialsAndTextures.Num(); ElementID++)
+	{
+		TArray< st_MeshVertex>& OutVertices = Vertices[ElementID];
+		if (OutVertices.Num() == 0)
+		{
+			continue;
+		}
+		for (size_t FaceID = 0; FaceID < OutVertices.Num(); FaceID++)
+		{
+			for (size_t InfluencesID = 0; InfluencesID < 4; InfluencesID++)
+			{
+				if (OutVertices[FaceID].BoneID[InfluencesID] == BI_NONE)
+				{
+					continue;
+				}
+				if (OutVertices[FaceID].BoneID[InfluencesID] == 3)
+				{
+					Bone3.Add(OutVertices[FaceID]);
+				}
+				if (OutVertices[FaceID].BoneID[InfluencesID] == 7)
+				{
+					Bone7.Add(OutVertices[FaceID]);
+				}
+			}
+		}
+	}
 	TArray< FSkeletalMeshImportData> SkeletalMeshImportDataList;
 	TArray<FSkeletalMaterial> InMaterials;
 	SkeletalMeshImportDataList.AddDefaulted(1);
 	int32 MaterialIndex = 0;
+
 	for (int32 LodIndex = 0; LodIndex < 1; LodIndex++)
 	{
 		FSkeletalMeshImportData& InSkeletalMeshImportData = SkeletalMeshImportDataList[LodIndex];
@@ -525,10 +565,6 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 					{
 						if (OutVertices[VertexID].BoneID[InfluencesID] == BI_NONE)
 						{
-							break;
-						}
-						if (OutVertices[VertexID].BoneWeight[InfluencesID] == 0)
-						{
 							continue;
 						}
 						SkeletalMeshImportData::FRawBoneInfluence BoneInfluence;
@@ -537,6 +573,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 						BoneInfluence.VertexIndex = OutVertexID;
 						InSkeletalMeshImportData.Influences.Add(BoneInfluence);
 					}
+					
 					Wedge.VertexIndex = OutVertexID;
 					Wedge.MatIndex = MaterialID;
 					Wedge.UVs[0] = FVector2f(OutVertices[VertexID].UV.x, OutVertices[VertexID].UV.y);
@@ -545,12 +582,12 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 					Triangle.TangentZ[VirtualVertexID].Y = OutVertices[VertexID].Normal.z;
 					Triangle.TangentZ[VirtualVertexID].Z = OutVertices[VertexID].Normal.y;
 				}
+			
 				InSkeletalMeshImportData.Faces.Add(Triangle);
 
 			}
-
+		
 		}
-
 		InSkeletalMeshImportData.MaxMaterialIndex = MaterialIndex;
 	}
 	//FSkeleto
@@ -957,6 +994,10 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 {
 	if (ShaderName.size()==0)
 		return nullptr;
+	if(GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	{
+		return ImportSurfaceSOC(Path,ShaderName,TextureName);
+	}
 	ETextureThumbnail THM(TextureName.c_str());
 
 	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
@@ -1088,6 +1129,144 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	return NewMaterial;
 }
 
+UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName)
+{
+	if (ShaderName.size() == 0)
+		return nullptr;
+
+	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
+	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (Material)
+		return Material;
+	FString ParentName = FString(ShaderName.c_str());
+	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	UMaterialInterface* ParentMaterial = nullptr;
+	{
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	if (!IsValid(ParentMaterial))
+	{
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	if (!IsValid(ParentMaterial))
+	{
+		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
+		check(IsValid(UnkownMaterial));
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
+
+		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
+		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
+		NewParentMaterial->Parent = UnkownMaterial;
+		FAssetRegistryModule::AssetCreated(NewParentMaterial);
+		ObjectCreated.Add(NewParentMaterial);
+		NewParentMaterial->PostEditChange();
+		NewParentMaterial->MarkPackageDirty();
+		ParentMaterial = NewParentMaterial;
+	}
+	UPackage* AssetPackage = CreatePackage(*Path);
+	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), ObjectFlags);
+	FAssetRegistryModule::AssetCreated(NewMaterial);
+	ObjectCreated.Add(NewMaterial);
+	NewMaterial->Parent = ParentMaterial;
+
+	FStaticParameterSet NewStaticParameterSet;
+
+	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
+	if (BaseTexture)
+	{
+		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Default")), BaseTexture);
+	}
+	if(GStalkerEditorManager->GetSOCMaterials().GetTexture2Details().Contains(TextureName))
+	{
+		const TPair<shared_str, float>& Detail = GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName];
+		TObjectPtr<UTexture2D> DetailTexture = ImportTexture(Detail.Key.c_str() );
+	
+		TObjectPtr<UTexture2D> NormalMapTextureDetail;
+		TObjectPtr<UTexture2D> GlossTextureDetail;
+		TObjectPtr<UTexture2D> HeightTextureDetail;
+		{
+			FStaticSwitchParameter SwitchParameter;
+			SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
+			SwitchParameter.Value = true;
+			SwitchParameter.bOverride = true;
+			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			if (DetailTexture)
+			{
+				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
+			}
+			if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(Detail.Key))
+			{
+				const TPair<shared_str, float>& DetailBump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[Detail.Key];
+				if(DetailBump.Key.size())
+				{
+					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
+					SwitchParameter.Value = true;
+					SwitchParameter.bOverride = true;
+					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+					ImportBump2D(DetailBump.Key.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
+
+					if (NormalMapTextureDetail)
+					{
+						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
+					}
+
+					if (GlossTextureDetail)
+					{
+						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("GlossDetail")), GlossTextureDetail);
+					}
+				}
+				NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName].Value);
+			}
+		}
+	}
+
+	if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(TextureName))
+	{
+		const TPair<shared_str, float>& Bump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[TextureName];
+		TObjectPtr<UTexture2D> NormalMapTexture;
+		TObjectPtr<UTexture2D> GlossTexture;
+		TObjectPtr<UTexture2D> HeightTexture;
+		NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), (Bump.Value + .5f) / 4.f);
+
+		if (Bump.Key.size())
+		{
+			FStaticSwitchParameter SwitchParameter;
+			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
+			SwitchParameter.Value = true;
+			SwitchParameter.bOverride = true;
+			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+
+			ImportBump2D(Bump.Key.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
+			if (NormalMapTexture)
+			{
+				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
+			}
+			if (GlossTexture)
+			{
+				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Gloss")), GlossTexture);
+			}
+			if (HeightTexture)
+			{
+				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Height")), HeightTexture);
+			}
+			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), 0.05f/ 5.f);
+		}
+	}
+	else
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
+	}
+	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
+	NewMaterial->InitStaticPermutation();
+	NewMaterial->PostEditChange();
+	NewMaterial->MarkPackageDirty();
+	return NewMaterial;
+}
+
 UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 {
 
@@ -1145,6 +1324,15 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 	return nullptr;
 }
 
+UTexture2D* XRayEngineFactory::ImportTextureDDS(const FString& InFileName)
+{
+	const FString PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(InFileName));
+
+	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(InFileName, PackageName);
+
+	return BaseTexture;
+}
+
 UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 {
 	UTexture2D*   Texture2D = nullptr;
@@ -1175,6 +1363,42 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	for (size_t x = 0; x < CountPixel; x++)
 	{
 		uint8*Pixel = ((uint8*)*Image) + x*4;
+		Swap(Pixel[0], Pixel[2]);
+
+	}
+	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
+	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
+	Texture2D->MarkPackageDirty();
+	Texture2D->PostEditChange();
+	return Texture2D;
+}
+
+UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FString& PacketName)
+{
+	UTexture2D* Texture2D = nullptr;
+
+	const FString PackageName = UPackageTools::SanitizePackageName(PacketName);
+	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+
+	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (Texture2D)
+		return Texture2D;
+
+	RedImageTool::RedImage Image;
+	if (!Image.LoadFromFile(TCHAR_TO_ANSI(*FileName)))
+	{
+		return nullptr;
+	}
+
+	UPackage* AssetPackage = CreatePackage(*PackageName);
+	Texture2D = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	FAssetRegistryModule::AssetCreated(Texture2D);
+	ObjectCreated.Add(Texture2D);
+	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
+	size_t CountPixel = Image.GetSizeInMemory() / 4;
+	for (size_t x = 0; x < CountPixel; x++)
+	{
+		uint8* Pixel = ((uint8*)*Image) + x * 4;
 		Swap(Pixel[0], Pixel[2]);
 
 	}

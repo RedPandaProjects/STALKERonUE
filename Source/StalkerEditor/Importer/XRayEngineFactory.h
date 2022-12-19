@@ -14,8 +14,11 @@ public:
 	USkeletalMesh*					ImportObjectAsDynamicMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
 	UMaterialInterface*				ImportSurface				(const FString& Path, CSurface* Surface);
 	UMaterialInterface*				ImportSurface				(const FString& Path, shared_str ShaderName, shared_str TextureName);
+	UMaterialInterface*				ImportSurfaceSOC			(const FString& Path, shared_str ShaderName, shared_str TextureName);
 	UTexture2D*						ImportTextureTHM			(const FString& FileName);
+	UTexture2D*						ImportTextureDDS			(const FString& FileName);
 	UTexture2D*						ImportTexture				(const FString& FileName);
+	UTexture2D*						ImportTexture				(const FString& FileName,const FString& PacketName);
 	void							ImportBump2D				(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Specular, TObjectPtr<UTexture2D>& Height);
 	inline UObject*					GetCreatedObject			() { if (ObjectCreated.Num())return ObjectCreated[0]; return nullptr; }
 private:

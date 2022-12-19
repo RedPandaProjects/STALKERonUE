@@ -19,6 +19,7 @@ void FStalkerModule::ShutdownModule()
 {
 	GXRayEngineManager->Destroy();
 	GXRayEngineManager->RemoveFromRoot();
+	GXRayEngineManager->MarkAsGarbage();
 }
 
 #undef LOCTEXT_NAMESPACE

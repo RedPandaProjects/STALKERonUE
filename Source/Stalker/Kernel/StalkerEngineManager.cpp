@@ -14,7 +14,7 @@ THIRD_PARTY_INCLUDES_END
 #include "Unreal/GameSettings/StalkerGameSettings.h"
 #include "GameDelegates.h"
 
-UStalkerEngineManager* GXRayEngineManager = nullptr;
+STALKER_API UStalkerEngineManager* GXRayEngineManager = nullptr;
 
 void UStalkerEngineManager::AttachViewport(class UGameViewportClient* InGameViewportClient)
 {
@@ -114,7 +114,7 @@ void UStalkerEngineManager::Initialized()
 	g_Engine->Initialize();
 	GXRaySkeletonMeshManager = new XRaySkeletonMeshManager;
 #if WITH_EDITOR
-	FGameDelegates::Get().GetEndPlayMapDelegate().AddUObject(this, &UStalkerEngineManager::OnEndPlayMap);
+	DelegateHandleOnEndPlayMap=FGameDelegates::Get().GetEndPlayMapDelegate().AddUObject(this, &UStalkerEngineManager::OnEndPlayMap);
 #endif
 }
 
@@ -126,7 +126,7 @@ void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
 		return;
 	}
 #endif
-	if (CurrentGame == Game)
+	if (GetCurrentGame() == Game)
 	{
 		return;
 	}
@@ -165,10 +165,15 @@ void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
 	MyXRayEngine = new XRayEngine;
 	g_Engine = MyXRayEngine;
 	g_Engine->Initialize();
+
+	ReInitializedMulticastDelegate.Broadcast();
 }
 
 void UStalkerEngineManager::Destroy()
 {
+#if WITH_EDITOR
+	FGameDelegates::Get().GetEndPlayMapDelegate().Remove(DelegateHandleOnEndPlayMap);
+#endif
 	delete GXRaySkeletonMeshManager;
 	GXRaySkeletonMeshManager = nullptr;
 	g_Engine->Destroy();

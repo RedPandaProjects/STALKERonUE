@@ -12,13 +12,14 @@ AStalkerLight::AStalkerLight()
 
 	LightPoint = CreateDefaultSubobject<UPointLightComponent>(TEXT("Point"));
 	LightPoint->SetupAttachment(GetRootComponent());
-	LightPoint->bAutoActivate = false;
-
+	LightPoint->SetVisibility(false);
 	SpotPoint = CreateDefaultSubobject<USpotLightComponent>(TEXT("Spot"));
 	SpotPoint->SetupAttachment(GetRootComponent());
-	SpotPoint->bAutoActivate = false;
+	SpotPoint->SetVisibility(false);
 	LightType = IRender_Light::DIRECT;
 	SpotPoint->SetRelativeRotation(FRotator(0,90,0));
+	LightPoint->Intensity = 1000;
+	SpotPoint->Intensity = 1000;
 }
 
 // Called when the game starts or when spawned
@@ -37,15 +38,18 @@ void AStalkerLight::set_type(LT type)
 
 void AStalkerLight::set_active(bool InActive)
 {
+	SpotPoint->SetVisibility(false);
+	LightPoint->SetVisibility(false);
 	switch (LightType)
 	{
 	case IRender_Light::POINT:
-		LightPoint->SetActive(InActive);
+		LightPoint->SetVisibility(InActive);
 		break;
 	case IRender_Light::SPOT:
-		SpotPoint->SetActive(InActive);
+		SpotPoint->SetVisibility(InActive);
 		break;
 	}
+
 }
 
 bool AStalkerLight::get_active()
@@ -53,10 +57,10 @@ bool AStalkerLight::get_active()
 	switch (LightType)
 	{
 	case IRender_Light::POINT:
-		return LightPoint->IsActive();
+		return LightPoint->GetVisibleFlag();
 		break;
 	case IRender_Light::SPOT:
-		return SpotPoint->IsActive();
+		return SpotPoint->GetVisibleFlag();
 		break;
 	}
 	return false;
@@ -97,7 +101,7 @@ void AStalkerLight::set_indirect(bool)
 
 void AStalkerLight::set_position(const Fvector& P)
 {
-	StartPosition = FVector(StalkerMath::XRayLocationToUnreal(P))+FVector(0,0,-10);
+	StartPosition = FVector(StalkerMath::XRayLocationToUnreal(P));
 	SetActorLocation(StartPosition);
 }
 
@@ -138,8 +142,8 @@ void AStalkerLight::set_rotation(const Fvector& D, const Fvector& R)
 
 void AStalkerLight::set_cone(float angle)
 {
-	SpotPoint->SetInnerConeAngle(angle);
-	SpotPoint->SetOuterConeAngle(angle);
+	SpotPoint->SetInnerConeAngle(rad2deg(angle)*0.125f);
+	SpotPoint->SetOuterConeAngle(rad2deg(angle) * 0.5f);
 }
 
 void AStalkerLight::set_range(float R)
@@ -169,21 +173,18 @@ void AStalkerLight::set_texture(LPCSTR name)
 
 void AStalkerLight::set_color(const Fcolor& C)
 {
-	switch (LightType)
-	{
-	case IRender_Light::POINT:
-		LightPoint->SetLightColor(FLinearColor(C.r, C.g, C.b, C.a));
-		break;
-	case IRender_Light::SPOT:
-		SpotPoint->SetLightColor(FLinearColor(C.r, C.g, C.b, C.a));
-		break;
-	}
+	set_color(C.r,C.g,C.b);
 
 }
 
 void AStalkerLight::set_color(float r, float g, float b)
 {
-	LightPoint->SetLightColor(FLinearColor(r,g, b, 1.0f));
+	float Mag = FMath::Sqrt(r*r+g*g+b*b);
+	LightPoint->Intensity = 500 * Mag;
+	SpotPoint->Intensity = 500 * Mag;
+	
+	LightPoint->SetLightColor(FLinearColor(r/ Mag, g / Mag, b / Mag, 1.0f));
+	SpotPoint->SetLightColor(FLinearColor(r / Mag, g / Mag, b / Mag, 1.0f));
 }
 
 void AStalkerLight::set_hud_mode(bool b)
