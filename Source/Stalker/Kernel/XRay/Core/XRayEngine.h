@@ -10,6 +10,10 @@ public:
 	void	Destroy				() override;
 
 	FName	CurrentLevelName;
+
+	class XRayUnrealProxyInterface* CreateUnrealProxy(class CObject*) override;
+	void Destroy(class XRayUnrealProxyInterface*) override;
+
 protected:
 	void	Level_Scan		() override;
 	int		Level_ID		(LPCSTR name, LPCSTR ver, bool bSet) override;

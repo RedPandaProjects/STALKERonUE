@@ -28,7 +28,7 @@ public:
 	CBlend*										GetBoneInMotionBlend;
 private:
 	UPROPERTY()
-	class AStalkerKinematics*					Owner;
+	class UStalkerKinematicsComponent*					Owner;
 
 	EStalkerKinematicsAnimMode					AnimMode;
 

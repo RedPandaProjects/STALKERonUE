@@ -339,7 +339,7 @@ IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
 	
-	AStalkerKinematics* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name);
+	UStalkerKinematicsComponent* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name);
 	if (Kinematics)
 	{
 		return Kinematics;
@@ -361,13 +361,14 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 {
 	if (V)
 	{	
-		if (V->CastToAStalkerKinematics())
+		if (V->CastToStalkerKinematicsComponent())
 		{
-			GXRayEngineManager->GetResourcesManager()->Destroy(V->CastToAStalkerKinematics());
+			GXRayEngineManager->GetResourcesManager()->Destroy(V->CastToStalkerKinematicsComponent());
 		}
 		else
 		{
-			GXRaySkeletonMeshManager->Destroy(V->CastToRaySkeletonVisual());
+			check(false);
+			//GXRaySkeletonMeshManager->Destroy(V->CastToRaySkeletonVisual());
 		}
 		V = nullptr;
 	}

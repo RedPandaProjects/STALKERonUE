@@ -248,13 +248,13 @@ void XRayKinematicsLegacy::Spawn()
 	Visibility_Invalidate();
 	LL_SetBoneRoot(0);
 	check(UnrealParent == nullptr);
-	UnrealParent = GXRayEngineManager->GetResourcesManager()->SpawnSkeletonMesh(this);
+	//UnrealParent = GXRayEngineManager->GetResourcesManager()->SpawnSkeletonMesh(this);
 }
 
 void XRayKinematicsLegacy::Depart()
 {
-	if(UnrealParent)
-		GXRayEngineManager->GetResourcesManager()->Destroy(UnrealParent);
+	//if(UnrealParent)
+		//GXRayEngineManager->GetResourcesManager()->Destroy(UnrealParent);
 	UnrealParent = nullptr;
 	// wallmarks
 	//ClearWallmarks();

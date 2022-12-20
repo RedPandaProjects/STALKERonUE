@@ -38,7 +38,6 @@ private:
 
 public:
 
-	bool AnimsEqual(IKinematicsAnimated* Animated) override;
 
 
 	float LL_GetMotionTime(MotionID id) override;

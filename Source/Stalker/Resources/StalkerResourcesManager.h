@@ -14,12 +14,14 @@ public:
 	void						Reload();
 	class AStalkerLight*		CreateLight();
 	void						Desotry(class IRender_Light*Light);
-	class AStalkerKinematics*	CreateKinematics(const char*Name);
-	class AStalkerKinematics*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
-	void						Destroy(class AStalkerKinematics* Mesh);
+	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name);
+	class UStalkerKinematicsComponent*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
+	void						Destroy(class UStalkerKinematicsComponent* Mesh);
 
-	class AStalkerKinematicsLegacy*	SpawnSkeletonMesh(class XRayKinematicsLegacy* Kinematics);
-	void						Destroy(class AStalkerKinematicsLegacy*Mesh);
+
+	class AStalkerProxy * CreateProxy(class CObject*Object);
+	void Destroy(class AStalkerProxy* Proxy);
+
 	UPROPERTY(Transient)
 	TObjectPtr < class UWorld>	GameWorld;
 private:
@@ -43,10 +45,11 @@ private:
 	TMap<USlateBrushAsset*, BrushInfo> BrushesInfo;
 	
 	UPROPERTY(Transient)
-	TSet<AStalkerKinematicsLegacy*> MeshesLegacy;	
-	
+	TSet<UStalkerKinematicsComponent*> Meshes;
+
+
 	UPROPERTY(Transient)
-	TSet<AStalkerKinematics*> Meshes;
+	TSet<AStalkerProxy*>			ProxyArray;
 
 	UPROPERTY(Transient)
 	TSet<class AStalkerLight*> Lights;

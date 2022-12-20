@@ -1,9 +1,13 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "../Kernel/StalkerEngineManager.h"
-#include "../Entities/Kinematics/StalkerKinematicsLegacy.h"
 #include "../Entities/Kinematics/StalkerKinematics.h"
 #include "SkeletonMesh/StalkerKinematicsData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
+#include "../Entities/Levels/Proxy/StalkerProxy.h"
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/xr_object.h"
+#include "ObjectTools.h"
+THIRD_PARTY_INCLUDES_END
 
 
 USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
@@ -220,7 +224,7 @@ void UStalkerResourcesManager::CheckLeak()
 	check(BrushesMaterials.Num() == 0);
 	check(BrushesInfo.Num() == 0);
 	check(Meshes.Num() == 0);
-	check(MeshesLegacy.Num() == 0);
+	//check(MeshesLegacy.Num() == 0);
 	check(Lights.Num() == 0);
 }
 
@@ -250,16 +254,15 @@ void UStalkerResourcesManager::Desotry(class IRender_Light* InLight)
 	Light->Destroy();
 }
 
-class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
+class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
 {
-	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
-	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
-	AStalkerKinematics* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerKinematics>(SpawnParameters);
+	UStalkerKinematicsComponent* Result =  NewObject< UStalkerKinematicsComponent>();
+	Result->SetFlags(EObjectFlags::RF_Transient);
 	Result->Initilize(KinematicsData);
 	return Result;
 }
 
-class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char* InName)
+class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(const char* InName)
 {
 	UStalkerKinematicsData* KinematicsData = nullptr;
 	FString Name = InName;
@@ -330,7 +333,7 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 	}
 	if (IsValid(KinematicsData)&& IsValid(KinematicsData->Mesh))
 	{
-		class AStalkerKinematics*Result= CreateKinematics(KinematicsData);
+		class UStalkerKinematicsComponent*Result= CreateKinematics(KinematicsData);
 		Meshes.Add(Result);
 		return Result;
 	}
@@ -338,27 +341,37 @@ class AStalkerKinematics* UStalkerResourcesManager::CreateKinematics(const char*
 	return nullptr;
 }
 
-class AStalkerKinematicsLegacy* UStalkerResourcesManager::SpawnSkeletonMesh(class XRayKinematicsLegacy* Kinematics)
-{
-	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
-	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
-	AStalkerKinematicsLegacy* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerKinematicsLegacy>(SpawnParameters);
-	Result->SetKinematics(Kinematics);
-	MeshesLegacy.Add(Result);
-	return Result;
-}
 
-void UStalkerResourcesManager::Destroy(AStalkerKinematicsLegacy* Mesh)
-{
-	checkSlow(MeshesLegacy.Contains(Mesh));
-	MeshesLegacy.Remove(Mesh);
-	Mesh->Destroy();
-
-}
-
-void UStalkerResourcesManager::Destroy(AStalkerKinematics* Mesh)
+void UStalkerResourcesManager::Destroy(UStalkerKinematicsComponent* Mesh)
 {
 	checkSlow(Meshes.Contains(Mesh));
 	Meshes.Remove(Mesh);
-	Mesh->Destroy();
+	Mesh->MarkAsGarbage();
+}
+
+void UStalkerResourcesManager::Destroy(class AStalkerProxy* Proxy)
+{
+	checkSlow(ProxyArray.Contains(Proxy));
+	ProxyArray.Remove(Proxy);
+	Proxy->DetachAll();
+	Proxy->Destroy();
+}
+
+AStalkerProxy* UStalkerResourcesManager::CreateProxy(class CObject* Object)
+{
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+
+	FString Name = Object->cName().c_str();
+	for (; Name.Len() && FChar::IsDigit(Name[Name.Len() - 1]);)
+	{
+		Name.RemoveAt(Name.Len() - 1);
+	}
+	SpawnParameters.NameMode = FActorSpawnParameters::ESpawnActorNameMode::Requested;
+	SpawnParameters.Name = *Name;
+	AStalkerProxy* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerProxy>(SpawnParameters);
+	Result->Initilize(Object);
+	Result->SetActorLabel(Object->cName().c_str());
+	ProxyArray.Add(Result);
+	return Result;
 }

@@ -8,7 +8,7 @@ struct FStalkerKinematicsAnimInstanceProxy& UStalkerKinematicsAnimInstance_Defau
 
 bool UStalkerKinematicsAnimInstance_Default::CanRunParallelWork() const
 {
-	return true;
+	return false;
 }
 
 FAnimInstanceProxy* UStalkerKinematicsAnimInstance_Default::CreateAnimInstanceProxy()

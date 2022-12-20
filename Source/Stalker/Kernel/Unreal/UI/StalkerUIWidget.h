@@ -20,5 +20,6 @@ protected:
 private:
 	mutable uint32 LastFrame = -1;
 	mutable TArray<FSlateVertex> VerticesCahce;
+	mutable TArray<FVector2f> VerticesLineCahce;
 	mutable TArray<SlateIndex>   IndexesCahce;;
 };

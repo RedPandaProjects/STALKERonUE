@@ -9,17 +9,18 @@ THIRD_PARTY_INCLUDES_END
 #include "StalkerKinematics.generated.h"
 
 UCLASS(BlueprintType)
-class STALKER_API AStalkerKinematics : public AActor, public IRenderVisual,public IKinematics,public IKinematicsAnimated
+class STALKER_API UStalkerKinematicsComponent : public USkeletalMeshComponent, public IRenderVisual,public IKinematics,public IKinematicsAnimated
 {
 	GENERATED_BODY()
 	
 public:	
-	AStalkerKinematics();
+	UStalkerKinematicsComponent();
 
 	UFUNCTION(BlueprintCallable)
 	void Initilize(class UStalkerKinematicsData* KinematicsData);
 
-	virtual void Tick(float DeltaTime) override;
+
+	void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 //IKinematics
 	void Bone_Calculate(const IBoneData* bd, const Fmatrix* parent) override;
@@ -63,7 +64,7 @@ public:
 
 
 //IKinematicsAnimated
-	class AStalkerKinematics*	CastToAStalkerKinematics() override;
+	class UStalkerKinematicsComponent*	CastToStalkerKinematicsComponent() override;
 	void						OnCalculateBones() override;
 	std::pair<LPCSTR, LPCSTR>	LL_MotionDefName_dbg(MotionID ID) override;
 	void						LL_DumpBlends_dbg() override;
@@ -117,11 +118,7 @@ public:
 	u16							LL_PartID	(LPCSTR B) override;
 	u32							BonesPartsCount() const override;
 
-	bool						AnimsEqual(IKinematicsAnimated* Animated) override;
-
-
-	void						SetRenderMode(EVisualRenderMode RenderMode) override;
-
+	shared_str					GetNameData() override;
 
 	UPROPERTY()
 	class UStalkerKinematicsData* KinematicsData;
@@ -141,13 +138,9 @@ public:
 	u16											RootBone;
 	TArray<StalkerKinematicsBoneInstance>		BonesInstance;
 
-
-
-protected:
-	virtual void BeginPlay() override;
-private:
-	void						BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool  IsMixing, float BlendAccrue,  float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam);
-	void						FXBlendSetup(CBlend& Blend, MotionID InMotionID, float BlendAccrue, float BlendFalloff, float Power, float Speed, u16 Bone);
+private:	
+	void										BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool  IsMixing, float BlendAccrue,  float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam);
+	void										FXBlendSetup(CBlend& Blend, MotionID InMotionID, float BlendAccrue, float BlendFalloff, float Power, float Speed, u16 Bone);
 
 
 	TArray <TSharedPtr<CBlend>>					BlendsPool;
@@ -164,17 +157,14 @@ private:
 
 	TMap<shared_str, u32>						BonesPartsName2ID;
 	TMap<u32, u32>								BonesPartsBoneID2ID;
-
+	shared_str									DataName;
 
 
 	IBlendDestroyCallback*						BlendDestroyCallback;
 	IUpdateTracksCallback*						UpdateTracksCallback;
-	EVisualRenderMode							VisualRenderMode;
 
 	UpdateCallback								MyUpdateCallback;
 	void*										UpdateCallbackParam;
-	UPROPERTY(VisibleAnywhere)
-	USkeletalMeshComponent* MeshComponent;
 
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* SceneComponent;
@@ -184,6 +174,5 @@ private:
 
 	UPROPERTY(Transient)
 	class UStalkerKinematicsAnimInstance_Default* KinematicsAnimInstanceForCompute;
-
 
 };

@@ -68,12 +68,40 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 		case IUIRender::ptTriStrip:
 		break;
 		case IUIRender::ptLineStrip:
+		{
+			if (Item.EndVertex - Item.StartVertex)
+			{
+				for (uint32 i = Item.StartVertex; i < Item.EndVertex-1; i++)
+				{
+					VerticesLineCahce.Empty(2);
+					XRayUIRender::Vertex Vertex = GXRayUIRender.Vertices[i];
+					VerticesLineCahce.Add(FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position) * MultiplerSize)));
+					Vertex = GXRayUIRender.Vertices[i+1];
+					VerticesLineCahce.Add(FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position) * MultiplerSize)));
+					FSlateDrawElement::MakeLines(OutDrawElements, LayerId++, AllottedGeometry.ToPaintGeometry(), VerticesLineCahce);
+				}
+			}
+			
+		}
 			continue;
 		case IUIRender::ptLineList:
+		{
+			for (uint32 i = Item.StartVertex; i < Item.EndVertex; i++)
+			{
+				VerticesLineCahce.Empty(2);
+				XRayUIRender::Vertex Vertex = GXRayUIRender.Vertices[i++];
+				VerticesLineCahce.Add(FVector2f(FVector2D(Vertex.Position) * MultiplerSize));
+				Vertex = GXRayUIRender.Vertices[i];
+				VerticesLineCahce.Add(FVector2f(FVector2D(Vertex.Position) * MultiplerSize));
+				FSlateDrawElement::MakeLines(OutDrawElements, LayerId++, AllottedGeometry.ToPaintGeometry(FVector2D(0,0), AllottedGeometry.GetLocalSize(),1.f), VerticesLineCahce);
+			}
+		}
 			continue;
 		default:
 			continue;
 		}
+
+
 		FSlateResourceHandle Handle = Item.Brush->Brush.GetRenderingResource();
 		const FSlateShaderResourceProxy* ResourceProxy = Handle.GetResourceProxy();
 		FVector2f StartUV = FVector2f(0,0);

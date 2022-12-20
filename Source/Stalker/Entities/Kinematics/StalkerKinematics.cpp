@@ -3,31 +3,25 @@
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
 #include "Animation/AnimSequence.h"
 #include "AnimInstance/StalkerKinematicsAnimInstance_Default.h"
+#include "AnimInstance/StalkerKinematicsAnimInstanceProxy.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/RenderVisual.h"
 #include "XrEngine/IRenderable.h"
 #include "XrCDB/ISpatial.h"
-#include "AnimInstance/StalkerKinematicsAnimInstanceProxy.h"
 #include "XrEngine/EnnumerateVertices.h"
 THIRD_PARTY_INCLUDES_END
 
+
 DECLARE_CYCLE_STAT(TEXT("XRay ~ Kinematics Frame"), STAT_XRayEngineKinematics, STATGROUP_XRayEngine);
-AStalkerKinematics::AStalkerKinematics()
+UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 {
 	MyUpdateCallback = nullptr;
 	UpdateCallbackParam = nullptr;
-	PrimaryActorTick.bCanEverTick = true;
-	KinematicsData = nullptr;
-	SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
-	SetRootComponent(SceneComponent);
-	MeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
-	MeshComponent->SetupAttachment(GetRootComponent());
-	MeshComponent->SetAnimationMode(EAnimationMode::Type::AnimationBlueprint);
-	MeshComponent->AnimClass = UStalkerKinematicsAnimInstance_Default::StaticClass();
-	//SetHidden(true);
+	SetAnimationMode(EAnimationMode::Type::AnimationBlueprint);
+	AnimClass = UStalkerKinematicsAnimInstance_Default::StaticClass();
 }
 
-void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsData)
+void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKinematicsData)
 {
 	check(KinematicsData == nullptr);
 	check(InKinematicsData);
@@ -107,11 +101,11 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 		Fmatrix Parent; Parent.identity();
 		if (Bones[i].GetParentID() != BI_NONE)
 		{
-			Parent = BonesInstance[i].GetTransform();
+			Parent = BonesInstance[Bones[i].GetParentID()].GetTransform();
 		}
 		BonesInstance[i].Transform.mul_43(Parent,Bones[i].get_bind_transform());
 	}
-	MeshComponent->SetSkeletalMesh(KinematicsData->Mesh);
+	SetSkeletalMesh(KinematicsData->Mesh);
 	{
 		FBox Box = KinematicsData->Mesh->GetBounds().GetBox();
 
@@ -122,30 +116,17 @@ void AStalkerKinematics::Initilize(class UStalkerKinematicsData* InKinematicsDat
 		VisData.box.getcenter(Center);
 		VisData.sphere.set(Center, VisData.box.getradius());
 	}
-	XFormMatrix.identity();
-	MeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-	KinematicsAnimInstanceForCompute = NewObject< UStalkerKinematicsAnimInstance_Default>(MeshComponent, TEXT("KinematicsAnimInstance"), RF_Transient);
+	KinematicsAnimInstanceForCompute = NewObject< UStalkerKinematicsAnimInstance_Default>(this, TEXT("KinematicsAnimInstance"), RF_Transient);
 	KinematicsAnimInstanceForCompute->InitializeAnimation();
+	FString InDataName;
+	InKinematicsData->GetName(InDataName);
+	DataName = TCHAR_TO_ANSI(*InDataName);
+	TickAnimation(0,false);
 }
 
-void AStalkerKinematics::BeginPlay()
-{
-	Super::BeginPlay();
-	FVector Location,BoxExtent;
-	FBox Box = GetComponentsBoundingBox();
-	
-	VisData.box.invalidate();
-	VisData.box.modify(StalkerMath::UnrealLocationToXRay(Box.Min));
-	VisData.box.modify(StalkerMath::UnrealLocationToXRay(Box.Max));
-	Fvector Center;
-	VisData.box.getcenter(Center);
-	VisData.sphere.set(Center, VisData.box.getradius());
-	SkipDeltaTime = 0;
-
-}
-
-void AStalkerKinematics::BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool IsMixing, float BlendAccrue, float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam)
+void UStalkerKinematicsComponent::BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool IsMixing, float BlendAccrue, float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam)
 {
 	VERIFY(Blend.channel < MAX_CHANNELS);
 	if (IsMixing)
@@ -176,7 +157,7 @@ void AStalkerKinematics::BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, Motio
 	Blend.fall_at_end = Blend.stop_at_end && (Channel > 1);
 }
 
-void AStalkerKinematics::FXBlendSetup(CBlend& Blend, MotionID InMotionID, float BlendAccrue, float BlendFalloff, float Power, float Speed, u16 Bone)
+void UStalkerKinematicsComponent::FXBlendSetup(CBlend& Blend, MotionID InMotionID, float BlendAccrue, float BlendFalloff, float Power, float Speed, u16 Bone)
 {
 	Blend.set_accrue_state();
 	Blend.blendAmount = EPS_S;
@@ -200,7 +181,7 @@ void AStalkerKinematics::FXBlendSetup(CBlend& Blend, MotionID InMotionID, float 
 	Blend.fall_at_end = FALSE;
 }
 
-TSharedPtr<CBlend> AStalkerKinematics::CreateBlend()
+TSharedPtr<CBlend> UStalkerKinematicsComponent::CreateBlend()
 {
 	if (BlendsPool.Num())
 	{
@@ -209,35 +190,24 @@ TSharedPtr<CBlend> AStalkerKinematics::CreateBlend()
 	return MakeShared<CBlend>();
 }
 
-void AStalkerKinematics::DestroyBlend(TSharedPtr<CBlend>& Blend)
+void UStalkerKinematicsComponent::DestroyBlend(TSharedPtr<CBlend>& Blend)
 {
 	BlendsPool.Add(Blend);
 }
 
-void AStalkerKinematics::SetRenderMode(EVisualRenderMode RenderMode)
+
+
+shared_str UStalkerKinematicsComponent::GetNameData()
 {
-	VisualRenderMode = RenderMode;
+	if (KinematicsData)
+	{
+		return DataName;
+	}
+	return "";
 }
 
 
-bool AStalkerKinematics::AnimsEqual(IKinematicsAnimated* Animated)
-{
-	AStalkerKinematics *Left = Animated->dcast_RenderVisual()->CastToAStalkerKinematics();
-	if (KinematicsData->Anims.Num() != Left->KinematicsData->Anims.Num())
-	{
-		return false;
-	}
-	for (int32 i = 0; i < KinematicsData->Anims.Num(); i++)
-	{
-		if (KinematicsData->Anims[i] != Left->KinematicsData->Anims[i])
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
-float AStalkerKinematics::LL_GetMotionTime(MotionID id)
+float UStalkerKinematicsComponent::LL_GetMotionTime(MotionID id)
 {
 	if (id.valid())
 	{
@@ -246,40 +216,40 @@ float AStalkerKinematics::LL_GetMotionTime(MotionID id)
 	return 0;
 }
 
-class AStalkerKinematics* AStalkerKinematics::CastToAStalkerKinematics()
+class UStalkerKinematicsComponent* UStalkerKinematicsComponent::CastToStalkerKinematicsComponent()
 {
 	return this;
 }
 
-void AStalkerKinematics::OnCalculateBones()
+void UStalkerKinematicsComponent::OnCalculateBones()
 {
 	//throw std::logic_error("The method or operation is not implemented.");
 	//MeshComponent->TickAnimation(0,false);
 }
 
-std::pair<LPCSTR, LPCSTR> AStalkerKinematics::LL_MotionDefName_dbg(MotionID ID)
+std::pair<LPCSTR, LPCSTR> UStalkerKinematicsComponent::LL_MotionDefName_dbg(MotionID ID)
 {
 	return std::pair<LPCSTR, LPCSTR>("","");
 }
 
-void AStalkerKinematics::LL_DumpBlends_dbg()
+void UStalkerKinematicsComponent::LL_DumpBlends_dbg()
 {
 	
 }
 
-u32 AStalkerKinematics::LL_PartBlendsCount(u32 bone_part_id)
+u32 UStalkerKinematicsComponent::LL_PartBlendsCount(u32 bone_part_id)
 {
 	checkSlow(bone_part_id<4);
 	return BlendsCycles[bone_part_id].Num();
 }
 
-CBlend* AStalkerKinematics::LL_PartBlend(u32 bone_part_id, u32 ID)
+CBlend* UStalkerKinematicsComponent::LL_PartBlend(u32 bone_part_id, u32 ID)
 {
 	checkSlow(bone_part_id < 4);
 	return BlendsCycles[bone_part_id][ID].Get();
 }
 
-void AStalkerKinematics::GetBoneInMotion(Fmatrix& OutPosition, u16 BoneID, CBlend* InBlend)
+void UStalkerKinematicsComponent::GetBoneInMotion(Fmatrix& OutPosition, u16 BoneID, CBlend* InBlend)
 {
 	bool Result = false;
 #if WITH_EDITOR
@@ -311,13 +281,13 @@ void AStalkerKinematics::GetBoneInMotion(Fmatrix& OutPosition, u16 BoneID, CBlen
 
 	BonesTransform.AddDefaulted(Bones.Num());
 
-	MeshComponent->PerformAnimationProcessing(MeshComponent->SkeletalMesh, KinematicsAnimInstanceForCompute,true, BonesTransform, OutBoneSpaceTransforms, OutRootBoneTranslation, OutCurve);
+	PerformAnimationProcessing(SkeletalMesh, KinematicsAnimInstanceForCompute,true, BonesTransform, OutBoneSpaceTransforms, OutRootBoneTranslation, OutCurve);
 
 	OutPosition.rotation(StalkerMath::UnrealQuatToXRay(BonesTransform[BoneID].GetRotation()));
 	OutPosition.translate_over(StalkerMath::UnrealLocationToXRay(BonesTransform[BoneID].GetTranslation()));
 }
 
-void AStalkerKinematics::LL_IterateBlends(IterateBlendsCallback& callback)
+void UStalkerKinematicsComponent::LL_IterateBlends(IterateBlendsCallback& callback)
 {
 	for (int32 PartID = 0; PartID < 4; PartID++)
 	{
@@ -335,7 +305,7 @@ void AStalkerKinematics::LL_IterateBlends(IterateBlendsCallback& callback)
 
 
 
-CMotionDef* AStalkerKinematics::LL_GetMotionDef(MotionID id)
+CMotionDef* UStalkerKinematicsComponent::LL_GetMotionDef(MotionID id)
 {
 	if (id.valid())
 	{
@@ -345,27 +315,27 @@ CMotionDef* AStalkerKinematics::LL_GetMotionDef(MotionID id)
 }
 
 
-IBlendDestroyCallback* AStalkerKinematics::GetBlendDestroyCallback()
+IBlendDestroyCallback* UStalkerKinematicsComponent::GetBlendDestroyCallback()
 {
 	return BlendDestroyCallback;
 }
 
-void AStalkerKinematics::SetBlendDestroyCallback(IBlendDestroyCallback* cb)
+void UStalkerKinematicsComponent::SetBlendDestroyCallback(IBlendDestroyCallback* cb)
 {
 	BlendDestroyCallback = cb;
 }
 
-void AStalkerKinematics::SetUpdateTracksCalback(IUpdateTracksCallback* callback)
+void UStalkerKinematicsComponent::SetUpdateTracksCalback(IUpdateTracksCallback* callback)
 {
 	UpdateTracksCallback = callback;
 }
 
-IUpdateTracksCallback* AStalkerKinematics::GetUpdateTracksCalback()
+IUpdateTracksCallback* UStalkerKinematicsComponent::GetUpdateTracksCalback()
 {
 	return UpdateTracksCallback;
 }
 
-MotionID AStalkerKinematics::LL_MotionID(LPCSTR B)
+MotionID UStalkerKinematicsComponent::LL_MotionID(LPCSTR B)
 {
 	MotionID ResultMotionID;
 	u32*ID =  AnimsName2ID.Find(B);
@@ -376,7 +346,7 @@ MotionID AStalkerKinematics::LL_MotionID(LPCSTR B)
 	return ResultMotionID;
 }
 
-u16 AStalkerKinematics::LL_PartID(LPCSTR B)
+u16 UStalkerKinematicsComponent::LL_PartID(LPCSTR B)
 {
 	u32* ID = BonesPartsName2ID.Find(B);
 	if (ID)
@@ -386,12 +356,12 @@ u16 AStalkerKinematics::LL_PartID(LPCSTR B)
 	return BI_NONE;
 }
 
-u32 AStalkerKinematics::BonesPartsCount() const
+u32 UStalkerKinematicsComponent::BonesPartsCount() const
 {
 	return BonesParts.Num();
 }
 
-CBlend* AStalkerKinematics::LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
+CBlend* UStalkerKinematicsComponent::LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixing, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
 {
 	if (!InMotionID.valid())
 	{
@@ -432,14 +402,14 @@ CBlend* AStalkerKinematics::LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, B
 	return		BlendsCycles[BonesPartID].Last().Get();
 }
 
-CBlend* AStalkerKinematics::LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
+CBlend* UStalkerKinematicsComponent::LL_PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel /*= 0*/)
 {
 	checkSlow(InMotionID.valid());
 	CMotionDef&MotionDef = AnimsDef[InMotionID.val];
 	return LL_PlayCycle(BonesPartID, InMotionID, bMixIn, MotionDef.Accrue(), MotionDef.Falloff(), MotionDef.Speed(), MotionDef.StopAtEnd(),Callback, CallbackParam, channel);
 }
 
-void AStalkerKinematics::LL_CloseCycle(u16 BonePartID, u8 mask_channel /*= (1 << 0)*/)
+void UStalkerKinematicsComponent::LL_CloseCycle(u16 BonePartID, u8 mask_channel /*= (1 << 0)*/)
 {
 	for (int32 i = 0; i < BlendsCycles[BonePartID].Num();)
 	{
@@ -458,18 +428,18 @@ void AStalkerKinematics::LL_CloseCycle(u16 BonePartID, u8 mask_channel /*= (1 <<
 	}
 }
 
-void AStalkerKinematics::LL_SetChannelFactor(u16 channel, float factor)
+void UStalkerKinematicsComponent::LL_SetChannelFactor(u16 channel, float factor)
 {
 	check(channel<MAX_CHANNELS);
 	ChannelsFactor[channel] = factor;
 }
 
-void AStalkerKinematics::UpdateTracks()
+void UStalkerKinematicsComponent::UpdateTracks()
 {
 
 }
 
-void AStalkerKinematics::LL_UpdateTracks(float Delta, bool b_force, bool leave_blends)
+void UStalkerKinematicsComponent::LL_UpdateTracks(float Delta, bool b_force, bool leave_blends)
 {
 	for (int32 PartID = 0; PartID < 4; PartID++)
 	{
@@ -544,24 +514,24 @@ void AStalkerKinematics::LL_UpdateTracks(float Delta, bool b_force, bool leave_b
 		
 }
 
-MotionID AStalkerKinematics::ID_Cycle(LPCSTR Name)
+MotionID UStalkerKinematicsComponent::ID_Cycle(LPCSTR Name)
 {
 	return ID_Cycle(shared_str(Name));
 }
 
-MotionID AStalkerKinematics::ID_Cycle(shared_str Name)
+MotionID UStalkerKinematicsComponent::ID_Cycle(shared_str Name)
 {
 	MotionID Result = ID_Cycle_Safe(Name);
 	check(Result.valid());
 	return Result;
 }
 
-MotionID AStalkerKinematics::ID_Cycle_Safe(LPCSTR Name)
+MotionID UStalkerKinematicsComponent::ID_Cycle_Safe(LPCSTR Name)
 {
 	return ID_Cycle_Safe(shared_str(Name));
 }
 
-MotionID AStalkerKinematics::ID_Cycle_Safe(shared_str Name)
+MotionID UStalkerKinematicsComponent::ID_Cycle_Safe(shared_str Name)
 {
 	MotionID ResultMotionID;
 	u32* ID = AnimsName2ID.Find(Name);
@@ -576,31 +546,31 @@ MotionID AStalkerKinematics::ID_Cycle_Safe(shared_str Name)
 	return ResultMotionID;
 }
 
-CBlend* AStalkerKinematics::PlayCycle(LPCSTR Name, BOOL bMixIn /*= TRUE*/, PlayCallback Callback /*= 0*/, LPVOID CallbackParam /*= 0*/, u8 channel /*= 0*/)
+CBlend* UStalkerKinematicsComponent::PlayCycle(LPCSTR Name, BOOL bMixIn /*= TRUE*/, PlayCallback Callback /*= 0*/, LPVOID CallbackParam /*= 0*/, u8 channel /*= 0*/)
 {
 	return PlayCycle(ID_Cycle(Name),bMixIn, Callback, CallbackParam, channel);
 }
 
-CBlend* AStalkerKinematics::PlayCycle(MotionID InMotionID, BOOL bMixIn /*= TRUE*/, PlayCallback Callback /*= 0*/, LPVOID CallbackParam /*= 0*/, u8 channel /*= 0*/)
+CBlend* UStalkerKinematicsComponent::PlayCycle(MotionID InMotionID, BOOL bMixIn /*= TRUE*/, PlayCallback Callback /*= 0*/, LPVOID CallbackParam /*= 0*/, u8 channel /*= 0*/)
 {
 	checkSlow(InMotionID.valid());
 	CMotionDef& MotionDef = AnimsDef[InMotionID.val];
 	return LL_PlayCycle(MotionDef.bone_or_part, InMotionID, bMixIn, MotionDef.Accrue(), MotionDef.Falloff(), MotionDef.Speed(), MotionDef.StopAtEnd(), Callback, CallbackParam, channel);
 }
 
-CBlend* AStalkerKinematics::PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn /*= TRUE*/, PlayCallback Callback /*= 0*/, LPVOID CallbackParam /*= 0*/, u8 channel /*= 0*/)
+CBlend* UStalkerKinematicsComponent::PlayCycle(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn /*= TRUE*/, PlayCallback Callback /*= 0*/, LPVOID CallbackParam /*= 0*/, u8 channel /*= 0*/)
 {
 	return LL_PlayCycle(BonesPartID, InMotionID, bMixIn, Callback, CallbackParam, channel);
 }
 
-MotionID AStalkerKinematics::ID_FX(LPCSTR Name)
+MotionID UStalkerKinematicsComponent::ID_FX(LPCSTR Name)
 {
 	MotionID Result = ID_FX_Safe(Name);
 	check(Result.valid());
 	return Result;
 }
 
-MotionID AStalkerKinematics::ID_FX_Safe(LPCSTR Name)
+MotionID UStalkerKinematicsComponent::ID_FX_Safe(LPCSTR Name)
 {
 	MotionID ResultMotionID;
 	u32* ID = AnimsName2ID.Find(Name);
@@ -615,13 +585,13 @@ MotionID AStalkerKinematics::ID_FX_Safe(LPCSTR Name)
 	return ResultMotionID;
 }
 
-CBlend* AStalkerKinematics::PlayFX(LPCSTR Name, float PowerScale)
+CBlend* UStalkerKinematicsComponent::PlayFX(LPCSTR Name, float PowerScale)
 {
 	MotionID InMotionID = ID_FX(Name);
 	return PlayFX(InMotionID,PowerScale);
 }
 
-CBlend* AStalkerKinematics::PlayFX(MotionID InMotionID, float PowerScale)
+CBlend* UStalkerKinematicsComponent::PlayFX(MotionID InMotionID, float PowerScale)
 {
 	if (!InMotionID.valid())	return 0;
 	CMotionDef& MotionDef = AnimsDef[InMotionID.val];
@@ -635,33 +605,33 @@ CBlend* AStalkerKinematics::PlayFX(MotionID InMotionID, float PowerScale)
 	return BlendsFX[BonesPartID].Last().Get();
 }
 
-float AStalkerKinematics::get_animation_length(MotionID InMotionID)
+float UStalkerKinematicsComponent::get_animation_length(MotionID InMotionID)
 {
 	return LL_GetMotionTime(InMotionID);
 	//throw std::logic_error("The method or operation is not implemented.");
 }
 
-vis_data& _BCL AStalkerKinematics::getVisData()
+vis_data& _BCL UStalkerKinematicsComponent::getVisData()
 {
 	return VisData;
 }
 
-u32 AStalkerKinematics::getType()
+u32 UStalkerKinematicsComponent::getType()
 {
 	return Anims.Num() ? MT_SKELETON_ANIM : MT_SKELETON_RIGID;
 }
 
-IKinematics* _BCL AStalkerKinematics::dcast_PKinematics()
+IKinematics* _BCL UStalkerKinematicsComponent::dcast_PKinematics()
 {
 	return this;
 }
 
-void AStalkerKinematics::Bone_Calculate(const IBoneData* bd, const Fmatrix* parent)
+void UStalkerKinematicsComponent::Bone_Calculate(const IBoneData* bd, const Fmatrix* parent)
 {
 	
 }
 
-void AStalkerKinematics::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks)
+void UStalkerKinematicsComponent::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks)
 {
 	pos = LL_GetTransform(id);
 	if (!ignore_callbacks)
@@ -702,40 +672,41 @@ void AStalkerKinematics::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 channel_mask, 
 	pos.translate_over(StalkerMath::UnrealLocationToXRay(BonesTransform[id].GetTranslation()));*/
 }
 
-bool AStalkerKinematics::PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id)
+bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id)
 {
 	//ÍÀÄÎ ÍÀÑÒÐÎÈÒÜ !!!!
-	FCollisionQueryParams CollisionQueryParams;
-	FCollisionResponseParams CollisionResponseParams = FCollisionResponseParams::DefaultResponseParam;
-	CollisionResponseParams.CollisionResponse.SetAllChannels(ECR_Overlap);
+	return false;
+	//FCollisionQueryParams CollisionQueryParams;
+	//FCollisionResponseParams CollisionResponseParams = FCollisionResponseParams::DefaultResponseParam;
+	//CollisionResponseParams.CollisionResponse.SetAllChannels(ECR_Overlap);
 
-	Fvector InStartLocation = start;
-	Fvector InStartRotation = dir;
+	//Fvector InStartLocation = start;
+	//Fvector InStartRotation = dir;
 
-	//Fmatrix P;	P.invert(parent_xform);
-	//P.transform_tiny(InStartLocation, start);
+	////Fmatrix P;	P.invert(parent_xform);
+	////P.transform_tiny(InStartLocation, start);
 
-	FName BoneName = Bones[bone_id].GetName().c_str();
-	FHitResult HitResult;
-	if (GetWorld()->LineTraceSingleByChannel(HitResult, FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), ECC_WorldDynamic, CollisionQueryParams, CollisionResponseParams))
-	{
-		if (HitResult.GetActor() == this&& HitResult.BoneName == BoneName)
-		{
-		//	DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Green, false, 10000.f);
-			//DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Green, false, 1000);
+	//FName BoneName = Bones[bone_id].GetName().c_str();
+	//FHitResult HitResult;
+	//if (GetWorld()->LineTraceSingleByChannel(HitResult, FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), ECC_WorldDynamic, CollisionQueryParams, CollisionResponseParams))
+	//{
+	//	if (HitResult.GetActor() == this&& HitResult.BoneName == BoneName)
+	//	{
+	//	//	DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Green, false, 10000.f);
+	//		//DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Green, false, 1000);
 
-			r.dist = HitResult.Distance /100.f;
-			r.normal = Fvector().set(- HitResult.Normal.X, HitResult.Normal.Z, HitResult.Normal.Y);
-			return true;
-		}
-	}
-	//DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
-	//DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
+	//		r.dist = HitResult.Distance /100.f;
+	//		r.normal = Fvector().set(- HitResult.Normal.X, HitResult.Normal.Z, HitResult.Normal.Y);
+	//		return true;
+	//	}
+	//}
+	////DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
+	////DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
 
 	return false;
 }
 
-void AStalkerKinematics::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
+void UStalkerKinematicsComponent::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
 {
 	FSkeletalMeshRenderData* RenderResource = KinematicsData->Mesh->GetResourceForRendering();
 	FStaticMeshVertexBuffers* StaticVertexBuffers = &RenderResource->LODRenderData[0].StaticVertexBuffers;
@@ -760,45 +731,45 @@ void AStalkerKinematics::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
 
 }
 
-u16 AStalkerKinematics::LL_BoneID(LPCSTR B)
+u16 UStalkerKinematicsComponent::LL_BoneID(LPCSTR B)
 {
 	u16 *ID = BonesName2ID.Find(B);
 	return ID?*ID:BI_NONE;
 }
 
-u16 AStalkerKinematics::LL_BoneID(const shared_str& B)
+u16 UStalkerKinematicsComponent::LL_BoneID(const shared_str& B)
 {
 	u16* ID = BonesName2ID.Find(B);
 	return ID ? *ID : BI_NONE;
 }
 
-LPCSTR AStalkerKinematics::LL_BoneName_dbg(u16 ID)
+LPCSTR UStalkerKinematicsComponent::LL_BoneName_dbg(u16 ID)
 {
 	shared_str* Name = BonesID2Name.Find(ID);
 	return Name ? Name->c_str() : "";
 }
 
-CInifile* AStalkerKinematics::LL_UserData()
+CInifile* UStalkerKinematicsComponent::LL_UserData()
 {
 	return UserData.Get();
 }
 
-IBoneInstance& AStalkerKinematics::LL_GetBoneInstance(u16 bone_id)
+IBoneInstance& UStalkerKinematicsComponent::LL_GetBoneInstance(u16 bone_id)
 {
 	return BonesInstance[bone_id];
 }
 
-const IBoneData& AStalkerKinematics::GetBoneData(u16 bone_id) const
+const IBoneData& UStalkerKinematicsComponent::GetBoneData(u16 bone_id) const
 {
 	return Bones[bone_id];
 }
 
-u16 AStalkerKinematics::LL_BoneCount() const
+u16 UStalkerKinematicsComponent::LL_BoneCount() const
 {
 	return Bones.Num();
 }
 
-u16 AStalkerKinematics::LL_VisibleBoneCount()
+u16 UStalkerKinematicsComponent::LL_VisibleBoneCount()
 {
 	u32 Count = (LL_BoneCount() / 64) + 1;
 	u64 CountBone = 0;
@@ -814,17 +785,17 @@ u16 AStalkerKinematics::LL_VisibleBoneCount()
 	return (u16)CountBone;
 }
 
-const Fmatrix& AStalkerKinematics::LL_GetTransform(u16 bone_id) const
+const Fmatrix& UStalkerKinematicsComponent::LL_GetTransform(u16 bone_id) const
 {
 	return BonesInstance[bone_id].GetTransform();
 }
 
-const Fmatrix& AStalkerKinematics::LL_GetTransform_R(u16 bone_id)
+const Fmatrix& UStalkerKinematicsComponent::LL_GetTransform_R(u16 bone_id)
 {
 	return BonesInstance[bone_id].GetTransform();
 }
 
-void AStalkerKinematics::LL_SetTransform(u16 bone_id, const Fmatrix& Matrix)
+void UStalkerKinematicsComponent::LL_SetTransform(u16 bone_id, const Fmatrix& Matrix)
 {
 	if (BonesInstance[bone_id].callback_overwrite())
 	{
@@ -832,17 +803,17 @@ void AStalkerKinematics::LL_SetTransform(u16 bone_id, const Fmatrix& Matrix)
 	}
 }
 
-Fobb& AStalkerKinematics::LL_GetBox(u16 bone_id)
+Fobb& UStalkerKinematicsComponent::LL_GetBox(u16 bone_id)
 {
 	return Bones[bone_id].Obb;
 }
 
-const Fbox& AStalkerKinematics::GetBox() const
+const Fbox& UStalkerKinematicsComponent::GetBox() const
 {
 	return VisData.box;
 }
 
-void AStalkerKinematics::LL_GetBindTransform(xr_vector<Fmatrix>& matrices)
+void UStalkerKinematicsComponent::LL_GetBindTransform(xr_vector<Fmatrix>& matrices)
 {
 	matrices.clear();
 	for (IBoneData &BoneData : Bones)
@@ -852,38 +823,38 @@ void AStalkerKinematics::LL_GetBindTransform(xr_vector<Fmatrix>& matrices)
 }
 
 
-u16 AStalkerKinematics::LL_GetBoneRoot()
+u16 UStalkerKinematicsComponent::LL_GetBoneRoot()
 {
 	return RootBone;
 }
 
-void AStalkerKinematics::LL_SetBoneRoot(u16 bone_id)
+void UStalkerKinematicsComponent::LL_SetBoneRoot(u16 bone_id)
 {
 	RootBone = bone_id;
 }
 
-BOOL AStalkerKinematics::LL_GetBoneVisible(u16 bone_id)
+BOOL UStalkerKinematicsComponent::LL_GetBoneVisible(u16 bone_id)
 {
 	return SelfBonesVisible.is(bone_id);
 }
 
-void AStalkerKinematics::LL_SetBoneVisible(u16 bone_id, BOOL val, BOOL bRecursive)
+void UStalkerKinematicsComponent::LL_SetBoneVisible(u16 bone_id, BOOL val, BOOL bRecursive)
 {
 	VERIFY(bone_id < LL_BoneCount());
 	SelfBonesVisible.set(bone_id, val);
 }
 
-BonesVisible AStalkerKinematics::LL_GetBonesVisible()
+BonesVisible UStalkerKinematicsComponent::LL_GetBonesVisible()
 {
 	return SelfBonesVisible;
 }
 
-void AStalkerKinematics::LL_SetBonesVisible(BonesVisible mask)
+void UStalkerKinematicsComponent::LL_SetBonesVisible(BonesVisible mask)
 {
 	SelfBonesVisible = mask;
 }
 
-void AStalkerKinematics::CalculateBones(BOOL bForceExact /*= FALSE*/)
+void UStalkerKinematicsComponent::CalculateBones(BOOL bForceExact /*= FALSE*/)
 {
 	if (bForceExact)
 	{
@@ -911,92 +882,64 @@ void AStalkerKinematics::CalculateBones(BOOL bForceExact /*= FALSE*/)
 	
 }
 
-void AStalkerKinematics::CalculateBones_Invalidate()
+void UStalkerKinematicsComponent::CalculateBones_Invalidate()
 {
 
 }
 
-void AStalkerKinematics::Callback(UpdateCallback C, void* Param)
+void UStalkerKinematicsComponent::Callback(UpdateCallback C, void* Param)
 {
 	MyUpdateCallback = C;
 	UpdateCallbackParam = Param;
 }
 
-void AStalkerKinematics::SetUpdateCallback(UpdateCallback pCallback)
+void UStalkerKinematicsComponent::SetUpdateCallback(UpdateCallback pCallback)
 {
 	MyUpdateCallback = pCallback;
 }
 
-void AStalkerKinematics::SetUpdateCallbackParam(void* pCallbackParam)
+void UStalkerKinematicsComponent::SetUpdateCallbackParam(void* pCallbackParam)
 {
 	UpdateCallbackParam = pCallbackParam;
 }
 
-UpdateCallback AStalkerKinematics::GetUpdateCallback()
+UpdateCallback UStalkerKinematicsComponent::GetUpdateCallback()
 {
 	return MyUpdateCallback;
 }
 
-void* AStalkerKinematics::GetUpdateCallbackParam()
+void* UStalkerKinematicsComponent::GetUpdateCallbackParam()
 {
 	return UpdateCallbackParam;
 }
 
-IRenderVisual* AStalkerKinematics::dcast_RenderVisual()
+IRenderVisual* UStalkerKinematicsComponent::dcast_RenderVisual()
 {
 	return this;
 }
 
-IKinematicsAnimated* AStalkerKinematics::dcast_PKinematicsAnimated()
+IKinematicsAnimated* UStalkerKinematicsComponent::dcast_PKinematicsAnimated()
 {
 	return  Anims.Num() ? this : nullptr;
 }
 
-void AStalkerKinematics::DebugRender(Fmatrix& XFORM)
+void UStalkerKinematicsComponent::DebugRender(Fmatrix& XFORM)
 {
 	
 }
 
-shared_str AStalkerKinematics::getDebugName()
+shared_str UStalkerKinematicsComponent::getDebugName()
 {
 	FString Name;
 	GetName(Name);
 	return shared_str(TCHAR_TO_ANSI(*Name));
 }
 
-// Called every frame
-void AStalkerKinematics::Tick(float DeltaTime)
+void UStalkerKinematicsComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	SCOPE_CYCLE_COUNTER(STAT_XRayEngineKinematics);
-	Super::Tick(DeltaTime);
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-
-	switch (VisualRenderMode)
-	{
-	case EVisualRenderMode::None:
-		PrimaryActorTick.TickInterval = 0.1f;
-		SetActorHiddenInGame(true);
-		break;
-	case EVisualRenderMode::FromRenderable:
-		if (!Renderable || !Renderable->MySpatial)
-		{
-			break;
-		}
-		SetActorHiddenInGame(!(Renderable->MySpatial->spatial.type & STYPE_RENDERABLE) || (Renderable->MySpatial->spatial.type & STYPE_LIGHTSOURCE));
-		PrimaryActorTick.TickInterval = (Renderable->MySpatial->spatial.type & STYPE_RENDERABLE) &&!(Renderable->MySpatial->spatial.type & STYPE_LIGHTSOURCE)?0:0.1f;
-		if(!IsHidden())
-		{
-			SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(Renderable->renderable.xform.c)), FQuat(StalkerMath::XRayQuatToUnreal(Renderable->renderable.xform)));
-		}
-		break;
-	case EVisualRenderMode::FromSelfXForm:
-		PrimaryActorTick.TickInterval = 0.f;
-		SetActorHiddenInGame(false);
-		SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(XFormMatrix.c)), FQuat(StalkerMath::XRayQuatToUnreal(XFormMatrix)));
-		break;
-	default:
-		break;
-	}
 
 
 	if (GetUpdateTracksCalback())
@@ -1010,5 +953,5 @@ void AStalkerKinematics::Tick(float DeltaTime)
 	SkipDeltaTime = 0;
 
 	if (MyUpdateCallback)	MyUpdateCallback(this);
-}
 
+}

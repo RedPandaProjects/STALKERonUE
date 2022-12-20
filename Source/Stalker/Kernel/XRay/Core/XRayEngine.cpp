@@ -8,6 +8,8 @@
 #include "XRayInput.h"
 #include "../../StalkerEngineManager.h"
 #include "XRayConsole.h"
+#include "Entities/Levels/Proxy/StalkerProxy.h"
+#include "Resources/StalkerResourcesManager.h"
 XRayRenderFactory GRenderFactory;
 XRayDUInterface  GDUInterface;
 XRayDebugRender GDebugRender;
@@ -42,6 +44,23 @@ void XRayEngine::Destroy()
 	Console	= nullptr;
 	Device = nullptr;
 	GXRayInput = nullptr;
+}
+
+void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
+{
+	if (!InProxy)
+	{
+		return;
+	}
+	AStalkerProxy * StalkerProxy = InProxy->CastToStalkerProxy();
+	GXRayEngineManager->GetResourcesManager()->Destroy(StalkerProxy);
+	
+}
+
+class XRayUnrealProxyInterface* XRayEngine::CreateUnrealProxy(class CObject*InObject)
+{
+
+	return GXRayEngineManager->GetResourcesManager()->CreateProxy(InObject);
 }
 
 void XRayEngine::Level_Scan()

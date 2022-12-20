@@ -17,7 +17,7 @@ void FStalkerAnimNode_Kinematics::SetAnimMode(EStalkerKinematicsAnimMode NewMode
 
 void FStalkerAnimNode_Kinematics::Initialize_AnyThread(const FAnimationInitializeContext& Context)
 {
-	Owner = Cast<AStalkerKinematics>(CastChecked<UAnimInstance>(Context.GetAnimInstanceObject())->GetOwningActor());	
+	Owner = Cast<UStalkerKinematicsComponent>(CastChecked<UAnimInstance>(Context.GetAnimInstanceObject())->GetOwningComponent());	
 }
 
 void FStalkerAnimNode_Kinematics::CacheBones_AnyThread(const FAnimationCacheBonesContext& Context)
