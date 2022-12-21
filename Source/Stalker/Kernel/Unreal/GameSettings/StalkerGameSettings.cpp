@@ -16,6 +16,7 @@ void UStalkerGameSettings::ReInitilizeXRay()
 #endif
 }
 
+#if WITH_EDITOR
 void UStalkerGameSettings::PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -26,3 +27,5 @@ void UStalkerGameSettings::PostEditChangeProperty(struct FPropertyChangedEvent& 
 
 
 }
+
+#endif

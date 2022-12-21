@@ -15,6 +15,7 @@ public:
 
 	
 	void ReInitilizeXRay();
+#if WITH_EDITOR
 	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
-
+#endif
 };

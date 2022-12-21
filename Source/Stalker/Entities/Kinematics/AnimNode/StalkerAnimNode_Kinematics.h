@@ -8,7 +8,7 @@ enum class EStalkerKinematicsAnimMode
 	GetBoneInMotionBlend,
 };
 USTRUCT(BlueprintInternalUseOnly)
-struct FStalkerAnimNode_Kinematics : public FAnimNode_Base
+struct STALKER_API FStalkerAnimNode_Kinematics : public FAnimNode_Base
 {
 	GENERATED_USTRUCT_BODY()
 public:

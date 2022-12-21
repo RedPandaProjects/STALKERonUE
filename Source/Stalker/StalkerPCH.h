@@ -11,7 +11,6 @@
 #include "Engine/GameViewportClient.h"
 #include "Engine/DataAsset.h"
 #include "Animation/AnimNodeBase.h"
-#include "AnimGraph/Public/AnimGraphNode_Base.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrAPI/xrGameManager.h"
 #include "XrCore/stdafx.h"

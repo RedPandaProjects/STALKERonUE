@@ -1,7 +1,7 @@
 #pragma once
-#include "StalkerAnimNode_Kinematics.h"
+#include "Entities/Kinematics/AnimNode/StalkerAnimNode_Kinematics.h"
+#include "AnimGraphNode_Base.h"
 #include "StalkerAnimGraphNode_Kinematics.generated.h"
-
 UCLASS(MinimalAPI)
 class UStalkerAnimGraphNode_Kinematics : public UAnimGraphNode_Base
 {

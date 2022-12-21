@@ -6,7 +6,6 @@
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
-#include "ObjectTools.h"
 THIRD_PARTY_INCLUDES_END
 
 
@@ -21,11 +20,13 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 
 			
 			USlateBrushAsset*  Result = Brushes[InNameMaterial][InNameTexture];
+#if WITH_EDITORONLY_DATA
 			if (BrushesNeedReloading.Find(Result))
 			{
 				NeedReload = true;
 			}
 			else
+#endif
 			{
 				BrushesCounter[Result]++;
 				return Result;
@@ -139,7 +140,9 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 			TextureSize = Texture->GetImportedSize();
 		}
 		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material, TextureSize);
+#if WITH_EDITORONLY_DATA
 		BrushesNeedReloading.Remove(NewSlateBrushAsset);
+#endif
 		BrushesCounter[NewSlateBrushAsset]++;
 		return NewSlateBrushAsset;
 	}
@@ -197,7 +200,9 @@ void UStalkerResourcesManager::Free(USlateBrushAsset* Brush)
 	{
 		UE_LOG(LogStalker, Log, TEXT("Destroy slate brush:[%s]%s"), *BrushesInfo[Brush].Matrrial.ToString(), *BrushesInfo[Brush].Texture.ToString());
 		BrushesCounter.Remove(Brush);
+#if WITH_EDITORONLY_DATA
 		BrushesNeedReloading.Remove(Brush);
+#endif
 		BrushesMaterials.Remove(Brush);
 		Brushes[BrushesInfo[Brush].Matrrial].Remove(BrushesInfo[Brush].Texture);
 		if (Brushes[BrushesInfo[Brush].Matrrial].Num() == 0)
@@ -218,7 +223,9 @@ USlateBrushAsset* UStalkerResourcesManager::Copy(USlateBrushAsset* Brush)
 
 void UStalkerResourcesManager::CheckLeak()
 {
+#if WITH_EDITORONLY_DATA
 	check(BrushesNeedReloading.Num() == 0);
+#endif
 	check(Brushes.Num() == 0);
 	check(BrushesCounter.Num() == 0);
 	check(BrushesMaterials.Num() == 0);
@@ -230,10 +237,12 @@ void UStalkerResourcesManager::CheckLeak()
 
 void UStalkerResourcesManager::Reload()
 {
+#if WITH_EDITORONLY_DATA
 	for (auto& [Key, Data] : BrushesCounter)
 	{
 		BrushesNeedReloading.FindOrAdd(Key);
 	}
+#endif
 }
 
 
@@ -371,7 +380,9 @@ AStalkerProxy* UStalkerResourcesManager::CreateProxy(class CObject* Object)
 	SpawnParameters.Name = *Name;
 	AStalkerProxy* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerProxy>(SpawnParameters);
 	Result->Initilize(Object);
+#if WITH_EDITORONLY_DATA
 	Result->SetActorLabel(Object->cName().c_str());
+#endif
 	ProxyArray.Add(Result);
 	return Result;
 }

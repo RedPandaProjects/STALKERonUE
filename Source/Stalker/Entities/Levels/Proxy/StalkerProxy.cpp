@@ -77,10 +77,13 @@ void AStalkerProxy::DetachAll()
 {
 	for(USceneComponent*Component: XRayComponents)
 	{
-		FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
-		Component->DetachFromComponent(DetachmentTransformRules);
-		Component->UnregisterComponent();
-		Component->Rename(nullptr, GXRayEngineManager->GetResourcesManager());
+		if (Component)
+		{
+			FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+			Component->DetachFromComponent(DetachmentTransformRules);
+			Component->UnregisterComponent();
+			Component->Rename(nullptr, GXRayEngineManager->GetResourcesManager());
+		}
 	}
 	XRayComponents.Empty();
 }
