@@ -24,7 +24,6 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 		GXRayUIRender.Flush();
 		if(g_hud&& g_pGameLevel)
 		g_hud->RenderUI();
-		Device->seqRenderUI.Process(rp_RenderUI);
 		if (g_pGamePersistent)	
 		{
 			g_pGamePersistent->OnRenderPPUI_main();
@@ -32,6 +31,7 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 			if (bTest)
 				Device->Statistic->Show();
 		}
+		Device->seqRenderUI.Process(rp_RenderUI);
 		g_bRendering = false;
 	}
 

@@ -20,7 +20,7 @@ void UStalkerKinematicsData::BuildBones(TArray<StalkerKinematicsBone>& InBones)
 		for (int32 i = 0; i < Mesh->RefSkeleton.GetNum(); i++)
 		{
 			FName Name = Mesh->RefSkeleton.GetBoneName(i);
-			InBones[i].Name = TCHAR_TO_ANSI(*Name.ToString());
+			InBones[i].Name = TCHAR_TO_ANSI(*Name.ToString().ToLower());
 			if (Bones.Contains(Name))
 			{
 				Bones[Name].Build(InBones[i]);

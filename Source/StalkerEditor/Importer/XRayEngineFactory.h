@@ -31,11 +31,10 @@ private:
 	void							CreateAnims					(const FString& Name, UStalkerKinematicsData*InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, IReader* InMotion);
 	UAnimSequence*					CreateAnim					(const FString& Name, USkeleton* InMesh,TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion,u16 ID);
 	void							CreatePhysicsAsset			(const FString& Name, USkeletalMesh* InMesh, const TArray<IBoneData*>& Bones);
-	FString							GetGamePath					();
+
 	UObject*						ParentPackage;
 	EObjectFlags					ObjectFlags;
 	TArray< CEditableObject*>		Objects;
 	TArray< UObject*>				ObjectCreated;
-	TArray< USkeleton*>				Skeletons;
 	Shader_xrLC_LIB					ShaderXRLC;
 };

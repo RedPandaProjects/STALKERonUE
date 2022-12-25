@@ -70,6 +70,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 			}
 		}
 	}
+	
 	Scene = nullptr;
 	return true;
 }

@@ -51,7 +51,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		for (auto& [Name, BonesPart] : KinematicsData->Anims[0]->BonesParts)
 		{
 			if(BonesPart.Bones.Num() == 0)continue;
-			BonesPartsName2ID.Add(TCHAR_TO_ANSI(*Name.ToString()), BonesPartID);
+			BonesPartsName2ID.Add(TCHAR_TO_ANSI(*Name.ToString().ToLower()), BonesPartID);
 			BonesParts.Add(BonesPart);
 			BonesPartID++;
 		}
@@ -61,7 +61,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	{
 		for (FName& BoneOfPart : BonesPart.Bones)
 		{
-			shared_str BoneName = TCHAR_TO_ANSI(*BoneOfPart.ToString());
+			shared_str BoneName = TCHAR_TO_ANSI(*BoneOfPart.ToString().ToLower());
 			BonesPartsBoneID2ID.Add(BonesName2ID[BoneName], BonesPartsID);
 		}
 		BonesPartsID++;
@@ -81,7 +81,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 				checkSlow(false);
 				continue;
 			}
-			AnimsName2ID.Add(TCHAR_TO_ANSI(*Name.ToString()),AnimID);
+			AnimsName2ID.Add(TCHAR_TO_ANSI(*Name.ToString().ToLower()),AnimID);
 			Anims.Add(AnimData);
 			AnimID++;
 			AnimsDef.AddDefaulted();

@@ -1,7 +1,5 @@
 #include "StalkerAnimNode_Kinematics.h"
 #include "Entities/Kinematics/StalkerKinematics.h"
-#include "Animation/AnimInstanceProxy.h"
-#include "Animation/AnimSequence.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
 

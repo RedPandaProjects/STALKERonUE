@@ -101,8 +101,9 @@ void UStalkerEngineManager::Initialized()
 	}
 	else
 	{
-		CurrentGame = EStalkerGame::COP;
-		FSName = TEXT("fsgame");
+		CurrentGame = EStalkerGame::SHOC;
+		GamePath = EGamePath::SHOC_10006;
+		FSName = TEXT("fsgame_soc");
 	}
 
 	FSName += TEXT(".ltx");
@@ -174,6 +175,7 @@ void UStalkerEngineManager::Destroy()
 #if WITH_EDITOR
 	FGameDelegates::Get().GetEndPlayMapDelegate().Remove(DelegateHandleOnEndPlayMap);
 #endif
+	DetachViewport(GameViewportClient);
 	delete GXRaySkeletonMeshManager;
 	GXRaySkeletonMeshManager = nullptr;
 	g_Engine->Destroy();
@@ -181,8 +183,11 @@ void UStalkerEngineManager::Destroy()
 	MyXRayEngine = nullptr;
 	Core.Destroy();
 	delete GXRayMemory;
+	GXRayMemory = nullptr;
 	delete GXRayDebug;
+	GXRayDebug = nullptr;
 	delete GXRayLog;
+	GXRayLog = nullptr;
 	ResourcesManager->CheckLeak();
 }
 

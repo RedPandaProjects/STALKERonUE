@@ -140,6 +140,7 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 			TextureSize = Texture->GetImportedSize();
 		}
 		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material, TextureSize);
+		BrushesMaterials.Add(NewSlateBrushAsset, Material);
 #if WITH_EDITORONLY_DATA
 		BrushesNeedReloading.Remove(NewSlateBrushAsset);
 #endif
@@ -226,11 +227,22 @@ void UStalkerResourcesManager::CheckLeak()
 #if WITH_EDITORONLY_DATA
 	check(BrushesNeedReloading.Num() == 0);
 #endif
-	check(Brushes.Num() == 0);
-	check(BrushesCounter.Num() == 0);
-	check(BrushesMaterials.Num() == 0);
-	check(BrushesInfo.Num() == 0);
-	check(Meshes.Num() == 0);
+	if (GIsEditor || UE_BUILD_SHIPPING || UE_BUILD_DEBUG|| UE_BUILD_TEST)
+	{
+		check(Brushes.Num() == 0);
+		check(BrushesCounter.Num() == 0);
+		check(BrushesMaterials.Num() == 0);
+		check(BrushesInfo.Num() == 0);
+		check(Meshes.Num() == 0);
+	}
+	else
+	{
+		Brushes.Empty();
+		BrushesCounter.Empty();
+		BrushesMaterials.Empty();
+		BrushesInfo.Empty();
+		Meshes.Empty();
+	}
 	//check(MeshesLegacy.Num() == 0);
 	check(Lights.Num() == 0);
 }
@@ -265,7 +277,7 @@ void UStalkerResourcesManager::Desotry(class IRender_Light* InLight)
 
 class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
 {
-	UStalkerKinematicsComponent* Result =  NewObject< UStalkerKinematicsComponent>();
+	UStalkerKinematicsComponent* Result =  NewObject< UStalkerKinematicsComponent>(this);
 	Result->SetFlags(EObjectFlags::RF_Transient);
 	Result->Initilize(KinematicsData);
 	return Result;

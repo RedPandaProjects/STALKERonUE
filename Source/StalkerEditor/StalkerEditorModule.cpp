@@ -27,11 +27,18 @@ void FStalkerEditorModule::StartupModule()
 	GStalkerEditorManager->AddToRoot();
 	GStalkerEditorManager->Initialized();
 	MainMenu.Initialize();
+	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerEditorModule::OnPreExit);
 }
 
 void FStalkerEditorModule::ShutdownModule()
 {
 	MainMenu.Destroy();
+	FCoreDelegates::OnPreExit.RemoveAll(this);
+}
+
+void FStalkerEditorModule::OnPreExit()
+{
+
 	GStalkerEditorManager->Destroy();
 	GStalkerEditorManager->RemoveFromRoot();
 	GStalkerEditorManager->MarkAsGarbage();

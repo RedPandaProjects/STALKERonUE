@@ -59,7 +59,7 @@ void FStalkerKinematicsAnimData::BuildToLegacy(CMotionDef& Def, TMap<shared_str,
 	Def.bone_or_part = BI_NONE;
 	if (!FXBoneOrPart.IsNone())
 	{
-		shared_str Name = TCHAR_TO_ANSI(*FXBoneOrPart.ToString());
+		shared_str Name = TCHAR_TO_ANSI(*FXBoneOrPart.ToString().ToLower());
 		if (Def.flags & esmFX)
 		{
 

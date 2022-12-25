@@ -17,6 +17,7 @@ void UStalkerEditorManager::Initialized()
 	{
 		GInterchangeEnableDDSImportVar->Set(false);
 	}
+	ScanSkeletons();
 }
 
 void UStalkerEditorManager::Destroy()
@@ -24,6 +25,19 @@ void UStalkerEditorManager::Destroy()
 	GXRayEngineManager->ReInitializedMulticastDelegate.Remove(DelegateHandleOnReInitialized);
 	GRayObjectLibrary->OnDestroy();
 	delete GRayObjectLibrary;
+}
+
+FString UStalkerEditorManager::GetGamePath()
+{
+	switch (xrGameManager::GetGame())
+	{
+	case EGame::CS:
+		return TEXT("/Game/CS");
+	case EGame::SHOC:
+		return TEXT("/Game/SHOC");
+	default:
+		return TEXT("/Game/COP");
+	}
 }
 
 void UStalkerEditorManager::OnReInitialized()
@@ -35,5 +49,23 @@ void UStalkerEditorManager::OnReInitialized()
 	{
 		SOCMaterials.Load();
 	}
+}
+
+void UStalkerEditorManager::ScanSkeletons()
+{
+	Skeletons.Empty();
+	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath());
+	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+	TArray<FAssetData> AssetData;
+	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData, true);
+	for (FAssetData& Data : AssetData)
+	{
+		USkeleton* Skeleton = Cast<USkeleton>(Data.GetAsset());
+		if (Skeleton)
+		{
+			Skeletons.Add(Skeleton);
+		}
+	}
+
 }
 

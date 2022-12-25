@@ -50,7 +50,11 @@ XRayConsole::XRayConsole()
 
 XRayConsole::~XRayConsole()
 {
-	checkSlow(UEConsoleCommands.Num()  == 0);
+	for (auto&[Key,Var]: UEConsoleCommands)
+	{
+		IConsoleManager::Get().UnregisterConsoleObject(Var);
+	}
+	UEConsoleCommands.Empty();
 }
 
 void XRayConsole::AddCommand(IConsole_Command* cc)

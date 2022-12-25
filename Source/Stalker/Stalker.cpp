@@ -11,15 +11,21 @@ void FStalkerModule::StartupModule()
 	GXRayEngineManager = NewObject< UStalkerEngineManager>();
 	GXRayEngineManager->AddToRoot();
 	GXRayEngineManager->Initialized();
-
+	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerModule::OnPreExit);
 
 }
 
 void FStalkerModule::ShutdownModule()
 {
+	FCoreDelegates::OnPreExit.RemoveAll(this);
+}
+
+void FStalkerModule::OnPreExit()
+{
 	GXRayEngineManager->Destroy();
 	GXRayEngineManager->RemoveFromRoot();
 	GXRayEngineManager->MarkAsGarbage();
+
 }
 
 #undef LOCTEXT_NAMESPACE

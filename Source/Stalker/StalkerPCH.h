@@ -11,6 +11,8 @@
 #include "Engine/GameViewportClient.h"
 #include "Engine/DataAsset.h"
 #include "Animation/AnimNodeBase.h"
+#include "Animation/AnimInstanceProxy.h"
+#include "Animation/AnimSequence.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrAPI/xrGameManager.h"
 #include "XrCore/stdafx.h"
@@ -24,6 +26,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/Kinematics.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerMath.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 
 DECLARE_STATS_GROUP(TEXT("XRayEngine"), STATGROUP_XRayEngine, STATCAT_XRayEngine);
 DECLARE_LOG_CATEGORY_EXTERN(LogStalker, Log, All);

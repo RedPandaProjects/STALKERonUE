@@ -79,19 +79,7 @@ XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFl
 	ParentPackage = InParentPackage;
 	ObjectFlags = InFlags;
 
-	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath());
-	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
-	TArray<FAssetData> AssetData;
-	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData,true);
-	for (FAssetData& Data : AssetData)
-	{
-		USkeleton* Skeleton = Cast<USkeleton>(Data.GetAsset());
-		if (Skeleton)
-		{
-			Skeletons.Add(Skeleton);
-		}
-	}
-
+	
 	string_path fn;
 	FS.update_path(fn, _game_data_, "shaders_xrlc.xr");
 	if (FS.exist(fn)) {
@@ -671,7 +659,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	if (UseOnlyFullPath)
 	{
 		FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
+		PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
 	}
 	else
 	{
@@ -822,7 +810,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 	if (UseOnlyFullPath)
 	{
 		FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
+		PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
 	}
 	else
 	{
@@ -1008,7 +996,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	UMaterialInterface* ParentMaterial = nullptr;
 	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
@@ -1022,7 +1010,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	{
 		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
 		check(IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
 
 		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
 		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
@@ -1142,7 +1130,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	UMaterialInterface* ParentMaterial = nullptr;
 	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
@@ -1156,7 +1144,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	{
 		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
 		check(IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Materials") / ParentName);
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
 
 		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
 		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
@@ -1339,7 +1327,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	 
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileName);
+	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileName);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
 	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
@@ -1413,18 +1401,18 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 {
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GetGamePath()/TEXT("Textures") / PackageFileName);
+	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath()/TEXT("Textures") / PackageFileName);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
 
 	FString PackageFileNameGloss = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_Gloss");
 	PackageFileNameGloss.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameGloss = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameGloss);
+	const FString PackageNameGloss = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileNameGloss);
 	const FString NewObjectPathGloss = PackageNameGloss + TEXT(".") + FPaths::GetBaseFilename(PackageNameGloss);
 
 	FString PackageFileNameHeight = FPaths::ChangeExtension(FileName, TEXT("")) + TEXT("_height");
 	PackageFileNameHeight.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameHeight = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Textures") / PackageFileNameHeight);
+	const FString PackageNameHeight = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileNameHeight);
 	const FString NewObjectPathHeight = PackageNameHeight + TEXT(".") + FPaths::GetBaseFilename(PackageNameHeight);
 
 	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
@@ -1731,7 +1719,7 @@ bool XRayEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<F
 
 USkeleton* XRayEngineFactory::FindOrCreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
 {
-	for (USkeleton* Skeleton : Skeletons)
+	for (USkeleton* Skeleton : GStalkerEditorManager->Skeletons)
 	{
 		const FReferenceSkeleton& SkeletonRefSkel = Skeleton->GetReferenceSkeleton();
 		const FReferenceSkeleton& MeshRefSkel = InMesh->GetRefSkeleton();
@@ -1773,7 +1761,7 @@ USkeleton* XRayEngineFactory::FindOrCreateSkeleton(const FString& FullName, USke
 	Skeleton->MergeAllBonesToBoneTree(InMesh);
 	ObjectCreated.Add(Skeleton);
 	FAssetRegistryModule::AssetCreated(Skeleton);
-	Skeletons.Add(Skeleton);
+	GStalkerEditorManager->Skeletons.Add(Skeleton);
 	return Skeleton;
 }
 
@@ -1906,7 +1894,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 
 			IReader* MS = FS.r_open(fn);
 			NameOmf.ReplaceInline(TEXT("\\"), TEXT("/"));
-			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / NameOmf);
+			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Meshes") / NameOmf);
 			CreateAnims(PackageNameAnims, InMesh, BonesData, MS);
 			FS.r_close(MS);
 		}
@@ -1936,7 +1924,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 			}
 			IReader* MS = FS.r_open(fn);
 			NameOmf.ReplaceInline(TEXT("\\"), TEXT("/"));
-			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GetGamePath() / TEXT("Meshes") / NameOmf);
+			const FString PackageNameAnims = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Meshes") / NameOmf);
 			CreateAnims(PackageNameAnims, InMesh, BonesData, MS);
 			FS.r_close(MS);
 		}
@@ -2206,18 +2194,5 @@ void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMes
 	PhysicsAsset->PostEditChange();
 	ObjectCreated.Add(PhysicsAsset);
 	FAssetRegistryModule::AssetCreated(PhysicsAsset);
-}
-
-FString XRayEngineFactory::GetGamePath()
-{
-	switch (xrGameManager::GetGame())
-	{
-	case EGame::CS:
-		return TEXT("/Game/CS");
-	case EGame::SHOC:
-		return TEXT("/Game/SHOC");
-	default:
-		return TEXT("/Game/COP");
-	}
 }
 #undef LOCTEXT_NAMESPACE 
