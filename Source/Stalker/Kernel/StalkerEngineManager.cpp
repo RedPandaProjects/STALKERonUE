@@ -52,7 +52,7 @@ void UStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameView
 	if (GameViewportClient&&GameViewportClient == InGameViewportClient)
 	{
 		Engine->Event.Defer("KERNEL:disconnect");
-		Device->seqParallel.clear_not_free();
+		Device->seqParallel.clear();
 		g_Engine->OnFrame();
 		Device->b_is_Active = FALSE;
 		Device->seqAppEnd.Process(rp_AppEnd);

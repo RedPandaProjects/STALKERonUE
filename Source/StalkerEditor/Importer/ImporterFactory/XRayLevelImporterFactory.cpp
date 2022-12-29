@@ -28,7 +28,7 @@ UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* 
 	if (!Factory.ImportLevel(Filename))
 	{
 		bOutOperationCanceled = true;
-		return false;
+		return nullptr;
 	}
 
 	UObject* Object = Factory.GetCreatedObject();

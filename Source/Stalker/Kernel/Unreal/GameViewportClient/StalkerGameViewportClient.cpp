@@ -131,7 +131,7 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 			SCOPE_CYCLE_COUNTER(STAT_XRayEngineMTFrame);
 			for (u32 pit = 0; pit < Device->seqParallel.size(); pit++)
 				Device->seqParallel[pit]();
-			Device->seqParallel.clear_not_free();
+			Device->seqParallel.clear();
 			Device->seqFrameMT.Process(rp_Frame);
 		}
 	}

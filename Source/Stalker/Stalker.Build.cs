@@ -5,8 +5,9 @@ using UnrealBuildTool;
 public class Stalker : ModuleRules
 {
 	public Stalker(ReadOnlyTargetRules Target) : base(Target)
-	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+    {
+        CppStandard = CppStandardVersion.Cpp20;
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PrivatePCHHeaderFile = "StalkerPCH.h";
 
         PublicIncludePaths.Add(ModuleDirectory);

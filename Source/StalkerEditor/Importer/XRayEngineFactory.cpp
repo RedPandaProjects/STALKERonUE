@@ -673,13 +673,13 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 {
 	UStaticMesh* StaticMesh = nullptr;
 
-
 	const FString& LocalPackageName = PackageName;
 	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
 	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (StaticMesh)
 		return StaticMesh;
 
+	UE_LOG(LogXRayImporter, Log, TEXT("Import object %S"), Object->GetName());
 	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
 	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), ObjectFlags);
 	FAssetRegistryModule::AssetCreated(StaticMesh);
@@ -1043,11 +1043,21 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 		
 		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
-			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			{
+				FStaticSwitchParameter SwitchParameter;
+				SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
+				SwitchParameter.Value = true;
+				SwitchParameter.bOverride = true;
+				NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			}
+
+			{
+				FStaticSwitchParameter SwitchParameter;
+				SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
+				SwitchParameter.Value = THM._Format().bump_mode == STextureParams::tbmUseParallax;
+				SwitchParameter.bOverride = true;
+				NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			}
 
 			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
 			if (NormalMapTexture)
@@ -1195,6 +1205,12 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 					SwitchParameter.Value = true;
 					SwitchParameter.bOverride = true;
 					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+
+					SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
+					SwitchParameter.Value = true;
+					SwitchParameter.bOverride = true;
+					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+
 					ImportBump2D(DetailBump.Key.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
 
 					if (NormalMapTextureDetail)
@@ -1383,6 +1399,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FStr
 	FAssetRegistryModule::AssetCreated(Texture2D);
 	ObjectCreated.Add(Texture2D);
 	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
+	Image.SaveToPng("E:\\test.png");
 	size_t CountPixel = Image.GetSizeInMemory() / 4;
 	for (size_t x = 0; x < CountPixel; x++)
 	{

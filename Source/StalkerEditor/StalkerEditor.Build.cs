@@ -5,7 +5,8 @@ public class StalkerEditor : ModuleRules
 {
 	public StalkerEditor(ReadOnlyTargetRules Target) : base(Target)
     {
-        
+
+        CppStandard = CppStandardVersion.Cpp20;
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PrivatePCHHeaderFile = "StalkerEditorPCH.h";
 

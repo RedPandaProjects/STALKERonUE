@@ -30,7 +30,7 @@ UObject* UXRayDDSImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 	if (!IsValid(Object))
 	{
 		bOutOperationCanceled = true;
-		return false;
+		return nullptr;
 	}
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPostImport(this, Object);
 	return Object;

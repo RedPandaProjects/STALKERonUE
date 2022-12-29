@@ -1,5 +1,6 @@
 #include "XRayWallMarkArray.h"
 
+FACTORY_PTR_INSTANCIATE(UIShader)
 XRayWallMarkArray::XRayWallMarkArray()
 {
 }
