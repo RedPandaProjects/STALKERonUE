@@ -10,3 +10,7 @@ rawdata/
 gamedata_soc/
 rawdata_soc/
 _appdata_/
+_appdata_soc_/
+Build/
+Plugins/Marketplace/
+savedgames/

@@ -79,6 +79,7 @@
 #include "MaterialUtilities/Public/MaterialUtilities.h"
 #include "RendererInterface.h"
 #include "LevelEditor/Public/LevelEditor.h"
+#include "ToolMenus/Public/ToolMenus.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrECore/stdafx.h"
 #include "XrECore/Editor/EditMesh.h"
@@ -95,3 +96,4 @@ THIRD_PARTY_INCLUDES_END
 #include "Importer/Scene/Scene.h"
 #include "Kernel/StalkerMath.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(LogStalkerEditor, Log, All);

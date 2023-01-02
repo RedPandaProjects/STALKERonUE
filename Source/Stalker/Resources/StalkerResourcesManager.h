@@ -6,18 +6,19 @@ class UStalkerResourcesManager : public UObject
 {
 	GENERATED_BODY()
 public:
-	USlateBrushAsset*			GetBrush(FName NameMaterial, FName NameTexture);
-	UFont*						GetFont(FName Name);
-	void						Free(USlateBrushAsset* Brush);
-	USlateBrushAsset*			Copy(USlateBrushAsset* Brush);
-	void						CheckLeak();
-	void						Reload();
-	class AStalkerLight*		CreateLight();
-	void						Desotry(class IRender_Light*Light);
+	USlateBrushAsset*					GetBrush		(FName NameMaterial, FName NameTexture);
+	UFont*								GetFont			(FName Name);
+	void								Free			(USlateBrushAsset* Brush);
+	USlateBrushAsset*					Copy			(USlateBrushAsset* Brush);
+	void								CheckLeak		();
+	void								Reload			();
+	class AStalkerLight*				CreateLight		();
+	void								Desotry			(class IRender_Light*Light);
 	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name);
 	class UStalkerKinematicsComponent*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
-	void						Destroy(class UStalkerKinematicsComponent* Mesh);
+	void								Destroy			(class UStalkerKinematicsComponent* Mesh);
 
+	FString								GetGamePath		();
 
 	class AStalkerProxy * CreateProxy(class CObject*Object);
 	void Destroy(class AStalkerProxy* Proxy);

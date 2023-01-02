@@ -1,6 +1,7 @@
 #pragma once
 #include "Importer/XRaySOCMaterials.h"
 #include "StalkerEditorManager.generated.h"
+
 UCLASS()
 class UStalkerEditorManager : public UObject
 {
@@ -12,10 +13,11 @@ public:
 	FString											GetGamePath		();
 	UPROPERTY(Transient)
 	TArray< USkeleton*>								Skeletons;
+	UPROPERTY(Transient)
+	class UStalkerEditorCForm*						EditorCFrom;
 private:
 	void											OnReInitialized	();
 	void											ScanSkeletons	();
-	FDelegateHandle									DelegateHandleOnReInitialized;
 	XRaySOCMaterials								SOCMaterials;
 
 };

@@ -48,6 +48,8 @@ public class StalkerEditor : ModuleRules
                 "MaterialEditor",
                 "MaterialUtilities",
                 "Stalker",
+                "ToolMenus",
+                "Landscape",
                 "XRayEngineModules",
                 "XRayEditorModules",
                 "RedImage", "AnimGraph","BlueprintGraph",

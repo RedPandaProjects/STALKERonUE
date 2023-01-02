@@ -13,6 +13,7 @@ THIRD_PARTY_INCLUDES_END
 #include "XRay/Core/XRayEngine.h"
 #include "Unreal/GameSettings/StalkerGameSettings.h"
 #include "GameDelegates.h"
+#include "../Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 
 STALKER_API UStalkerEngineManager* GXRayEngineManager = nullptr;
 
@@ -39,6 +40,7 @@ void UStalkerEngineManager::AttachViewport(class UGameViewportClient* InGameView
 		Device->seqResolutionChanged.Process(rp_ScreenResolutionChanged);
 	}
 	DelegateHandleOnViewportCloseRequested = GameViewportClient->OnCloseRequested().AddUObject(this, &UStalkerEngineManager::OnViewportCloseRequested);
+	PhysicalMaterialsManager->Build();
 	Device->seqAppStart.Process(rp_AppStart);
 	if (GameViewportClient->IsActive)
 	{
@@ -62,6 +64,7 @@ void UStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameView
 		GXRaySkeletonMeshManager->Flush();
 		MyXRayInput->ClearStates();
 		GameWorld = nullptr;
+		PhysicalMaterialsManager->Clear();
 	}
 }
 
@@ -77,6 +80,7 @@ FName UStalkerEngineManager::GetCurrentLevel()
 void UStalkerEngineManager::Initialized()
 {
 	ResourcesManager = NewObject<UStalkerResourcesManager>(this);
+	PhysicalMaterialsManager = NewObject<UStalkerPhysicalMaterialsManager>(this);
 	MyXRayInput = nullptr;
 	GXRayMemory = new XRayMemory;
 	GXRayDebug = new XRayDebug;
@@ -112,6 +116,7 @@ void UStalkerEngineManager::Initialized()
 
 	MyXRayEngine = new XRayEngine;
 	g_Engine = MyXRayEngine;
+	GameMaterialLibrary = PhysicalMaterialsManager;
 	g_Engine->Initialize();
 	GXRaySkeletonMeshManager = new XRaySkeletonMeshManager;
 #if WITH_EDITOR
@@ -188,6 +193,7 @@ void UStalkerEngineManager::Destroy()
 	GXRayDebug = nullptr;
 	delete GXRayLog;
 	GXRayLog = nullptr;
+	GameMaterialLibrary = nullptr;
 	ResourcesManager->CheckLeak();
 }
 

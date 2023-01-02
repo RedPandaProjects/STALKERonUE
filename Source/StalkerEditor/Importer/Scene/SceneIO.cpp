@@ -78,6 +78,89 @@ void st_LevelOptions::ReadLTX(CInifile& ini)
     }
 }
 
+#pragma pack(push,4)
+struct b_params
+{
+	// Normals & optimization
+	float		m_sm_angle;				// normal smooth angle		- 89.0
+	float		m_weld_distance;		// by default 0.005f		- 5mm
+
+	// Light maps
+	float		m_lm_pixels_per_meter;	// LM - by default: 4 ppm
+	u32			m_lm_jitter_samples;	// 1/4/9 - by default		- 4
+	u32			m_lm_rms_zero;			// RMS - after what the lightmap will be shrinked to ZERO pixels
+	u32			m_lm_rms;				// RMS - shrink and recalc
+
+	// build quality
+	u16			m_quality;
+	u16			u_reserved;
+
+	// Progressive
+	float		f_reserved[6];
+
+	void SaveLTX(CInifile& ini)
+	{
+		LPCSTR section = "build_params";
+		ini.w_float(section, "smooth_angle", m_sm_angle);
+		ini.w_float(section, "weld_distance", m_weld_distance);
+		ini.w_float(section, "light_pixel_per_meter", m_lm_pixels_per_meter);
+		ini.w_u32(section, "light_jitter_samples", m_lm_jitter_samples);
+		ini.w_u32(section, "light_rms_zero", m_lm_rms_zero);
+		ini.w_u32(section, "light_rms", m_lm_rms);
+		ini.w_u16(section, "light_quality", m_quality);
+		ini.w_u16(section, "light_quality_reserved", u_reserved);
+		for (u32 i = 0; i < 6; ++i)
+		{
+			string128	buff;
+			xr_sprintf(buff, sizeof(buff), "reserved_%d", i);
+			ini.w_float(section, buff, f_reserved[i]);
+		}
+	}
+	void LoadLTX(CInifile& ini)
+	{
+		LPCSTR section = "build_params";
+		m_sm_angle = ini.r_float(section, "smooth_angle");
+		m_weld_distance = ini.r_float(section, "weld_distance");
+		m_lm_pixels_per_meter = ini.r_float(section, "light_pixel_per_meter");
+		m_lm_jitter_samples = ini.r_u32(section, "light_jitter_samples");
+		m_lm_rms_zero = ini.r_u32(section, "light_rms_zero");
+		m_lm_rms = ini.r_u32(section, "light_rms");
+		m_quality = ini.r_u16(section, "light_quality");
+		u_reserved = ini.r_u16(section, "light_quality_reserved");
+		for (u32 i = 0; i < 6; ++i)
+		{
+			string128		buff;
+			xr_sprintf(buff, sizeof(buff), "reserved_%d", i);
+			f_reserved[i] = ini.r_float(section, buff);
+		}
+	}
+
+	void        Init()
+	{
+		// Normals & optimization
+		m_sm_angle = 75.f;
+		m_weld_distance = 0.005f;
+
+		// Light maps
+		m_lm_rms_zero = 4;
+		m_lm_rms = 4;
+
+		setHighQuality();
+	}
+	void		setDraftQuality()
+	{
+		m_quality = ebqDraft;
+		m_lm_pixels_per_meter = 0.1f;
+		m_lm_jitter_samples = 1;
+	}
+	void		setHighQuality()
+	{
+		m_quality = ebqHigh;
+		m_lm_pixels_per_meter = 10;
+		m_lm_jitter_samples = 9;
+	}
+};
+#pragma pack(pop)
 void st_LevelOptions::Read(IReader& F)
 {
 	R_ASSERT(F.find_chunk(CHUNK_LO_VERSION));
@@ -102,8 +185,16 @@ void st_LevelOptions::Read(IReader& F)
     vers = 0;
     if (F.find_chunk(CHUNK_LO_BP_VERSION))
 	    vers = F.r_u32( );
-
-
+    b_params m_BuildParams;
+	if (CURRENT_LEVELOP_BP_VERSION == vers) {
+		if (F.find_chunk(CHUNK_BUILD_PARAMS))
+			F.r(&m_BuildParams, sizeof(m_BuildParams));
+	}
+	else {
+		ELog.DlgMsg(mtError, "Skipping bad version of build params.");
+		m_BuildParams.Init();
+	}
+    UE_LOG(LogXRayImporter,Log,TEXT("Level Smoth angle %f"), m_BuildParams.m_sm_angle);
     if (F.find_chunk(CHUNK_MAP_USAGE))
     {
     	if(vers > 0x00000008)

@@ -1,30 +1,44 @@
 #include "StalkerEditorManager.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Managers/CFrom/StalkerEditorCForm.h"
+#include "UI/StalkerEditorStyle.h"
 UStalkerEditorManager* GStalkerEditorManager = nullptr;
 
 void UStalkerEditorManager::Initialized()
 {
-	GRayObjectLibrary = new XRayObjectLibrary;
-	GRayObjectLibrary->OnCreate();
-	if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	if (GIsEditor)
 	{
-		SOCMaterials.Load();
-	}
-	DelegateHandleOnReInitialized = GXRayEngineManager->ReInitializedMulticastDelegate.AddUObject(this,&UStalkerEditorManager::OnReInitialized);
+		GRayObjectLibrary = new XRayObjectLibrary;
+		GRayObjectLibrary->OnCreate();
+		if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+		{
+			SOCMaterials.Load();
+		}
+		GXRayEngineManager->ReInitializedMulticastDelegate.AddUObject(this, &UStalkerEditorManager::OnReInitialized);
 
-	auto GInterchangeEnableDDSImportVar = IConsoleManager::Get().FindConsoleVariable(TEXT("Interchange.FeatureFlags.Import.DDS"));
-	if (GInterchangeEnableDDSImportVar)
-	{
-		GInterchangeEnableDDSImportVar->Set(false);
+		auto GInterchangeEnableDDSImportVar = IConsoleManager::Get().FindConsoleVariable(TEXT("Interchange.FeatureFlags.Import.DDS"));
+		if (GInterchangeEnableDDSImportVar)
+		{
+			GInterchangeEnableDDSImportVar->Set(false);
+		}
+
+		ScanSkeletons();
+		EditorCFrom = NewObject<UStalkerEditorCForm>();
+		EditorCFrom->Initialize();
+	
 	}
-	ScanSkeletons();
 }
 
 void UStalkerEditorManager::Destroy()
 {
-	GXRayEngineManager->ReInitializedMulticastDelegate.Remove(DelegateHandleOnReInitialized);
-	GRayObjectLibrary->OnDestroy();
-	delete GRayObjectLibrary;
+	if (GIsEditor)
+	{
+		EditorCFrom->Destroy();
+		EditorCFrom->MarkAsGarbage();
+		GXRayEngineManager->ReInitializedMulticastDelegate.RemoveAll(this);
+		GRayObjectLibrary->OnDestroy();
+		delete GRayObjectLibrary;
+	}
 }
 
 FString UStalkerEditorManager::GetGamePath()

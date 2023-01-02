@@ -26,6 +26,7 @@ public:
 
 	FSimpleMulticastDelegate						ReInitializedMulticastDelegate;
 	inline	EStalkerGame							GetCurrentGame			() const { return CurrentGame; }
+	inline class UStalkerPhysicalMaterialsManager*	GetPhysicalMaterialsManager(){return PhysicalMaterialsManager.Get(); }
 private:
 	void											OnViewportCloseRequested (FViewport* InViewport);
 	void											OnViewportResized(FViewport* InViewport, uint32);
@@ -37,6 +38,8 @@ private:
 	TObjectPtr < class UStalkerGameViewportClient>	GameViewportClient;
 	UPROPERTY(Transient)
 	TObjectPtr < class UWorld>						GameWorld;
+	UPROPERTY(Transient)
+	TObjectPtr<class UStalkerPhysicalMaterialsManager>PhysicalMaterialsManager;
 
 	class XRayEngine*								MyXRayEngine;
 	class XRayMemory*								GXRayMemory;

@@ -13,9 +13,11 @@ public:
 	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object,const FString&Name);
 	USkeletalMesh*					ImportObjectAsDynamicMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
 	UMaterialInterface*				ImportSurface				(const FString& Path, CSurface* Surface);
-	UMaterialInterface*				ImportSurface				(const FString& Path, shared_str ShaderName, shared_str TextureName);
-	UMaterialInterface*				ImportSurfaceSOC			(const FString& Path, shared_str ShaderName, shared_str TextureName);
+	UMaterialInterface*				ImportSurface				(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial);
+	UMaterialInterface*				ImportSurfaceSOC			(const FString& Path, shared_str ShaderName, shared_str TextureName,  shared_str GameMaterial);
 	UTexture2D*						ImportTextureTHM			(const FString& FileName);
+	UObject*						ImportPhysicsMaterials		(const FString& FileName);
+	class UStalkerPhysicalMaterial* ImportPhysicsMaterial (class SGameMtl*Materials);
 	UTexture2D*						ImportTextureDDS			(const FString& FileName);
 	UTexture2D*						ImportTexture				(const FString& FileName);
 	UTexture2D*						ImportTexture				(const FString& FileName,const FString& PacketName);

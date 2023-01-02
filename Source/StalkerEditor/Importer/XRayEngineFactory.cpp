@@ -6,6 +6,11 @@
 #include "ImportUtils/StaticMeshImportUtils.h"
 #include "../StalkerEditorManager.h"
 #include "Kernel/StalkerEngineManager.h"
+THIRD_PARTY_INCLUDES_START
+#include "Editors/XrECore/Engine/GameMtlLib.h"
+THIRD_PARTY_INCLUDES_END
+#include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
+#include "Resources/PhysicalMaterial/StalkerPhysicalMaterialPairsData.h"
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
 
@@ -79,50 +84,50 @@ XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFl
 	ParentPackage = InParentPackage;
 	ObjectFlags = InFlags;
 
-	
+
 	string_path fn;
 	FS.update_path(fn, _game_data_, "shaders_xrlc.xr");
 	if (FS.exist(fn)) {
 		ShaderXRLC.Load(fn);
 	}
-	else 
+	else
 	{
-		
+
 	}
 }
 
 XRayEngineFactory::~XRayEngineFactory()
 {
 	ShaderXRLC.Unload();
-	for (CEditableObject* Object :Objects)
+	for (CEditableObject* Object : Objects)
 	{
 		GRayObjectLibrary->RemoveEditObject(Object);
 	}
 }
 inline bool operator == (const Fmatrix33& Left, const Fmatrix33& Right)
 {
-	return Left.i == Right.i&& Left.j == Right.j && Left.k == Right.k;
+	return Left.i == Right.i && Left.j == Right.j && Left.k == Right.k;
 
 }
 
-inline bool operator == (const Fobb&Left, const Fobb& Right)
+inline bool operator == (const Fobb& Left, const Fobb& Right)
 {
-	return Left.m_halfsize == Right.m_halfsize&&Left.m_rotate == Right.m_rotate&&Left.m_translate == Right.m_translate;
+	return Left.m_halfsize == Right.m_halfsize && Left.m_rotate == Right.m_rotate && Left.m_translate == Right.m_translate;
 
 }
 inline bool operator == (const Fsphere& Left, const Fsphere& Right)
 {
-	return Left.P == Right.P && FMath::IsNearlyEqual(Left.R , Right.R, 0.0000001);
+	return Left.P == Right.P && FMath::IsNearlyEqual(Left.R, Right.R, 0.0000001);
 
 }
 inline bool operator == (const Fcylinder& Left, const Fcylinder& Right)
 {
-	return Left.m_center == Right.m_center && Left.m_direction == Right.m_direction&&FMath::IsNearlyEqual(Left.m_radius , Right.m_radius, 0.0000001);
+	return Left.m_center == Right.m_center && Left.m_direction == Right.m_direction && FMath::IsNearlyEqual(Left.m_radius, Right.m_radius, 0.0000001);
 
 }
 inline bool operator == (const SBoneShape& Left, const SBoneShape& Right)
 {
-	if(Left.type != Right.type|| !Left.flags.equal(Right.flags) )
+	if (Left.type != Right.type || !Left.flags.equal(Right.flags))
 	{
 		return false;
 	}
@@ -146,11 +151,11 @@ inline bool operator == (const SJointLimit& Left, const SJointLimit& Right)
 }
 inline bool operator == (const SJointIKData& Left, const SJointIKData& Right)
 {
-	return Left.break_force == Right.break_force && 
-	Left.break_torque == Right.break_torque &&
-	Left.damping_factor == Right.damping_factor &&
-	Left.friction == Right.friction &&
-	Left.ik_flags == Right.ik_flags&&
+	return Left.break_force == Right.break_force &&
+		Left.break_torque == Right.break_torque &&
+		Left.damping_factor == Right.damping_factor &&
+		Left.friction == Right.friction &&
+		Left.ik_flags == Right.ik_flags &&
 		Left.limits[0] == Right.limits[0] &&
 		Left.limits[1] == Right.limits[1] &&
 		Left.limits[2] == Right.limits[2] &&
@@ -168,7 +173,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	StalkerKinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (StalkerKinematicsData)
 		return StalkerKinematicsData;
-	
+
 	IReader* FileData = FS.r_open(TCHAR_TO_ANSI(*FileName));
 	if (!FileData)
 	{
@@ -186,7 +191,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		return nullptr;
 	}
 
-	if(Header.type != MT_SKELETON_RIGID&& Header.type != MT_SKELETON_ANIM)
+	if (Header.type != MT_SKELETON_RIGID && Header.type != MT_SKELETON_ANIM)
 	{
 		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s unkown type 0x%x"), *FileName, Header.type);
 
@@ -232,7 +237,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	BoneParents.Empty();
 
 	IReader* IKD = FileData->open_chunk(OGF_S_IKDATA);
-	if (!IKD) 
+	if (!IKD)
 	{
 		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_S_IKDATA"), *FileName);
 
@@ -256,7 +261,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		IKD->r_fvector3(B->center_of_mass);
 	}
 	IKD->close();
-	
+
 	TArray<TPair<shared_str, shared_str>> MaterialsAndTextures;
 	TArray<TArray<st_MeshVertex>>  Vertices;
 	if (!FileData->find_chunk(OGF_CHILDREN))
@@ -279,7 +284,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 				TArray<u16> Indicies;
 				check(O->find_chunk(OGF_INDICES));
 				uint32 IndiciesCount = O->r_u32();
-				for(uint32 i =0;i< IndiciesCount;i++)
+				for (uint32 i = 0; i < IndiciesCount; i++)
 					Indicies.Add(O->r_u16());
 
 				check(O->find_chunk(OGF_VERTICES));
@@ -291,7 +296,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 				case OGF_VERTEXFORMAT_FVF_1L: // 1-Link
 				case 1:
 				{
-					XRayVertBoned1W*InVertices = (XRayVertBoned1W*)O->pointer();
+					XRayVertBoned1W* InVertices = (XRayVertBoned1W*)O->pointer();
 					for (uint32 i = 0; i < IndiciesCount; i++)
 					{
 						XRayVertBoned1W InVertex = InVertices[Indicies[i]];
@@ -324,7 +329,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.Position = InVertex.P;
 						OutVertex.Normal = InVertex.N;
 						OutVertex.UV.set(InVertex.u, InVertex.v);
-						if(InVertex.matrix0!= InVertex.matrix1)
+						if (InVertex.matrix0 != InVertex.matrix1)
 						{
 							OutVertex.BoneID[0] = InVertex.matrix0;
 							OutVertex.BoneID[1] = InVertex.matrix1;
@@ -358,7 +363,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.BoneID[1] = InVertex.m[1];
 						OutVertex.BoneID[2] = InVertex.m[2];
 						OutVertex.BoneWeight[0] = InVertex.w[0];
-						OutVertex.BoneWeight[1] =  InVertex.w[1];
+						OutVertex.BoneWeight[1] = InVertex.w[1];
 						OutVertex.BoneWeight[2] = 1 - InVertex.w[1] - InVertex.w[0];
 						ElementVertices.Add(OutVertex);
 					}
@@ -384,7 +389,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.BoneID[3] = InVertex.m[3];
 						OutVertex.BoneWeight[0] = InVertex.w[0];
 						OutVertex.BoneWeight[1] = InVertex.w[1];
-						OutVertex.BoneWeight[2] =  InVertex.w[2];
+						OutVertex.BoneWeight[2] = InVertex.w[2];
 						OutVertex.BoneWeight[3] = 1 - InVertex.w[2] - InVertex.w[1] - InVertex.w[0];
 						ElementVertices.Add(OutVertex);
 					}
@@ -393,7 +398,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 					break;
 				}
 
-				IReader*LodData = O->open_chunk(OGF_SWIDATA);
+				IReader* LodData = O->open_chunk(OGF_SWIDATA);
 				if (LodData)
 				{
 					LodData->r_u32();
@@ -407,28 +412,28 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 					LodData->close();
 
 					Vertices.AddDefaulted();
-					for (uint32 i = 0; i <static_cast<uint32>( SlideWindows[0].num_tris*3); i++)
+					for (uint32 i = 0; i < static_cast<uint32>(SlideWindows[0].num_tris * 3); i++)
 					{
-						Vertices.Last().Add(ElementVertices[i+ SlideWindows[0].offset]);
+						Vertices.Last().Add(ElementVertices[i + SlideWindows[0].offset]);
 					}
-				} 
+				}
 				else
 				{
 					Vertices.Add(ElementVertices);
 				}
-				if (O->find_chunk(OGF_TEXTURE)) 
+				if (O->find_chunk(OGF_TEXTURE))
 				{
 					string256		fnT, fnS;
 					O->r_stringZ(fnT, sizeof(fnT));
 					O->r_stringZ(fnS, sizeof(fnS));
-					MaterialsAndTextures.Add(TPair<shared_str, shared_str>(fnS,fnT));
+					MaterialsAndTextures.Add(TPair<shared_str, shared_str>(fnS, fnT));
 				}
 				else
 				{
 					MaterialsAndTextures.Add(TPair<shared_str, shared_str>("default", "Unkown"));
 				}
 
-				
+
 
 				O->close();
 				O = OBJ->open_chunk(CountElement);
@@ -436,9 +441,9 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		}
 
 	}
-	check(MaterialsAndTextures.Num()==Vertices.Num());
+	check(MaterialsAndTextures.Num() == Vertices.Num());
 	// Load animation
-	UPackage* AssetPackage = CreatePackage(*(PackageName+"_SkeletalMesh"));
+	UPackage* AssetPackage = CreatePackage(*(PackageName + "_SkeletalMesh"));
 	USkeletalMesh* SkeletalMesh = NewObject<USkeletalMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName + "_SkeletalMesh"), ObjectFlags);
 
 	TArray<SkeletalMeshImportData::FBone> UBones;
@@ -451,7 +456,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		Bone.NumChildren = 0;
 	}
 	TArray<uint32> OutBones;
-	for (TSharedPtr<CBoneData>&Bone : Bones)
+	for (TSharedPtr<CBoneData>& Bone : Bones)
 	{
 		FindBoneIDOrAdd(OutBones, Bones, Bone.Get());
 	}
@@ -462,7 +467,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	for (int32 BoneIndex = 0; BoneIndex < Bones.Num(); BoneIndex++)
 	{
 		SkeletalMeshImportData::FBone& Bone = UBones[BoneIndex];
-		CBoneData&BoneData = *Bones[OutBones[BoneIndex]].Get();
+		CBoneData& BoneData = *Bones[OutBones[BoneIndex]].Get();
 		Bone.Flags = 0;
 		Bone.ParentIndex = INDEX_NONE;
 		Bone.NumChildren = 0;
@@ -519,7 +524,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 
 		for (size_t ElementID = 0; ElementID < MaterialsAndTextures.Num(); ElementID++)
 		{
-			TArray< st_MeshVertex>&OutVertices  = Vertices[ElementID];
+			TArray< st_MeshVertex>& OutVertices = Vertices[ElementID];
 			if (OutVertices.Num() == 0)
 			{
 				continue;
@@ -528,7 +533,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 
 
 			SkeletalMeshImportData::FMaterial Material;
-			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value);
+			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value,"default");
 			Material.MaterialImportName = TEXT("Mat_") + FString::FromInt(ElementID);
 			InMaterials.Add(FSkeletalMaterial(Material.Material.Get(), true, false, FName(Material.MaterialImportName), FName(Material.MaterialImportName)));
 			int32 MaterialID = InSkeletalMeshImportData.Materials.Add(Material);
@@ -556,12 +561,12 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 							continue;
 						}
 						SkeletalMeshImportData::FRawBoneInfluence BoneInfluence;
-						BoneInfluence.BoneIndex = FindBoneIDOrAdd(OutBones, Bones,Bones[OutVertices[VertexID].BoneID[InfluencesID]].Get());
+						BoneInfluence.BoneIndex = FindBoneIDOrAdd(OutBones, Bones, Bones[OutVertices[VertexID].BoneID[InfluencesID]].Get());
 						BoneInfluence.Weight = OutVertices[VertexID].BoneWeight[InfluencesID];
 						BoneInfluence.VertexIndex = OutVertexID;
 						InSkeletalMeshImportData.Influences.Add(BoneInfluence);
 					}
-					
+
 					Wedge.VertexIndex = OutVertexID;
 					Wedge.MatIndex = MaterialID;
 					Wedge.UVs[0] = FVector2f(OutVertices[VertexID].UV.x, OutVertices[VertexID].UV.y);
@@ -570,11 +575,11 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 					Triangle.TangentZ[VirtualVertexID].Y = OutVertices[VertexID].Normal.z;
 					Triangle.TangentZ[VirtualVertexID].Z = OutVertices[VertexID].Normal.y;
 				}
-			
+
 				InSkeletalMeshImportData.Faces.Add(Triangle);
 
 			}
-		
+
 		}
 		InSkeletalMeshImportData.MaxMaterialIndex = MaterialIndex;
 	}
@@ -606,7 +611,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 
 	StalkerKinematicsData->Mesh = SkeletalMesh;
 	IReader* UD = FileData->open_chunk(OGF_S_USERDATA);
-	if(UD)
+	if (UD)
 	{
 		xr_string str;
 		UD->r_stringZ(str);
@@ -620,9 +625,9 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 		BonesPtr.Add(Bone.Get());
 	}
 	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
-	if(Header.type == MT_SKELETON_ANIM)
+	if (Header.type == MT_SKELETON_ANIM)
 	{
-		CreateAnims(PackageName  / TEXT("Anims"), StalkerKinematicsData, Bones, FileData);
+		CreateAnims(PackageName / TEXT("Anims"), StalkerKinematicsData, Bones, FileData);
 	}
 	g_pMotionsContainer->clean(false);
 	FS.r_close(FileData);
@@ -637,7 +642,7 @@ UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFu
 	CEditableObject* Object = GRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*FileName));
 	if (Object)
 	{
-		Objects.Add(Object); 
+		Objects.Add(Object);
 		if (Object->IsSkeleton())
 		{
 			return ImportObjectAsDynamicMesh(Object, UseOnlyFullPath);
@@ -645,7 +650,7 @@ UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFu
 		else
 		{
 			return ImportObjectAsStaticMesh(Object, UseOnlyFullPath);
-		} 
+		}
 	}
 	return nullptr;
 }
@@ -714,7 +719,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 					}
 					bRendering = ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;
 				}
-			
+
 
 				xr_vector< st_MeshVertex> Vertices;
 				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
@@ -767,10 +772,32 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 				}
 				else
 				{
+					const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
+					const FString SurfaceObjectPath = SurfacePackageName + TEXT(".") + FPaths::GetBaseFilename(SurfacePackageName);
+					UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *SurfaceObjectPath, nullptr, LOAD_NoWarn);
+					if (!Material)
+					{
+						UMaterialInterface* NoRenderMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/NoRender.NoRender"));
+						check(IsValid(NoRenderMaterial));
 
-					UMaterialInterface* NoRenderMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/NoRender.NoRender"));
-					check(IsValid(NoRenderMaterial));
-					Materials.AddUnique(FStaticMaterial(NoRenderMaterial, *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
+						UPackage* AssetPackageMaterial = CreatePackage(*SurfacePackageName);
+						UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackageMaterial, *FPaths::GetBaseFilename(SurfacePackageName), ObjectFlags);
+						FAssetRegistryModule::AssetCreated(NewMaterial);
+						ObjectCreated.Add(NewMaterial);
+						NewMaterial->Parent = NoRenderMaterial;
+
+						FString NameGameMtl = Object->Surfaces()[ElementID]->_GameMtlName();
+						NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+						const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
+						const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
+						UStalkerPhysicalMaterial* PhysicalMaterial= LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
+						NewMaterial->PhysMaterial = PhysicalMaterial;
+						NewMaterial->InitStaticPermutation();
+						NewMaterial->PostEditChange();
+						NewMaterial->MarkPackageDirty();
+						Material = NewMaterial;
+					}
+					Materials.AddUnique(FStaticMaterial(Material, *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
 				}
 
 				MaterialIndex++;
@@ -817,7 +844,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath,nullptr, LOAD_NoWarn);
+	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (SkeletalMesh)
 		return SkeletalMesh;
 
@@ -834,15 +861,15 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 		Bone.NumChildren = 0;
 	}
 	TArray<CBone*> InBones;
-	for (CBone* Bone: Object->Bones())
+	for (CBone* Bone : Object->Bones())
 	{
-		FindBoneIDOrAdd(InBones,Bone);
+		FindBoneIDOrAdd(InBones, Bone);
 	}
 	check(InBones.Num());
 	check(InBones[0]->IsRoot());
 
 	;
-	for (int32 BoneIndex = 0; BoneIndex<Bones.Num(); BoneIndex++)
+	for (int32 BoneIndex = 0; BoneIndex < Bones.Num(); BoneIndex++)
 	{
 		SkeletalMeshImportData::FBone& Bone = Bones[BoneIndex];
 		Bone.Flags = 0;
@@ -891,7 +918,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 			}
 			const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
 
-		
+
 			SkeletalMeshImportData::FMaterial Material;
 			Material.Material = ImportSurface(SurfacePackageName, Object->Surfaces()[ElementID]);
 			Material.MaterialImportName = Object->Surfaces()[ElementID]->_Name();
@@ -907,7 +934,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 					SkeletalMeshImportData::FVertex Wedge;
 					static size_t VirtualVertices[3] = { 0,2,1 };
 					size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
-					
+
 					FVector3f VertexPositions;
 					VertexPositions.X = -Vertices[VertexID].Position.x * 100;
 					VertexPositions.Y = Vertices[VertexID].Position.z * 100;
@@ -936,12 +963,12 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 				}
 				InSkeletalMeshImportData.Faces.Add(Triangle);;
 
-		
-			
+
+
 			}
-			
+
 		}
-			
+
 		InSkeletalMeshImportData.MaxMaterialIndex = MaterialIndex;
 	}
 	//FSkeleto
@@ -957,7 +984,7 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 	SkeletalMesh->SetMaterials(InMaterials);
 	SkeletalMesh->PostEditChange();
 
-	USkeleton * Skeleton = FindOrCreateSkeleton(PackageName+"_Skeleton", SkeletalMesh);
+	USkeleton* Skeleton = FindOrCreateSkeleton(PackageName + "_Skeleton", SkeletalMesh);
 
 	Skeleton->SetPreviewMesh(SkeletalMesh);
 	SkeletalMesh->SetSkeleton(Skeleton);
@@ -969,22 +996,22 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 		BonesPtr.Add(Bone);
 	}
 	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
-	CreateAnims(PackageName/FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Object);
+	CreateAnims(PackageName / FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Object);
 	return SkeletalMesh;
 }
 
 UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurface* Surface)
 {
-	return ImportSurface(Path,Surface->_ShaderName(),Surface->_Texture());
+	return ImportSurface(Path, Surface->_ShaderName(), Surface->_Texture(),Surface->_GameMtlName());
 }
 
-UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName)
+UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial)
 {
-	if (ShaderName.size()==0)
+	if (ShaderName.size() == 0)
 		return nullptr;
-	if(GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
 	{
-		return ImportSurfaceSOC(Path,ShaderName,TextureName);
+		return ImportSurfaceSOC(Path, ShaderName, TextureName, GameMaterial);
 	}
 	ETextureThumbnail THM(TextureName.c_str());
 
@@ -1026,7 +1053,14 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	FAssetRegistryModule::AssetCreated(NewMaterial);
 	ObjectCreated.Add(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
-
+	{
+		FString NameGameMtl = GameMaterial.c_str();
+		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
+		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
+		UStalkerPhysicalMaterial* PhysicalMaterial = LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
+		NewMaterial->PhysMaterial = PhysicalMaterial;
+	}
 	FStaticParameterSet NewStaticParameterSet;
 
 	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
@@ -1040,7 +1074,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 		TObjectPtr<UTexture2D> GlossTexture;
 		TObjectPtr<UTexture2D> HeightTexture;
 		NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), ((static_cast<float>(THM._Format().material) + static_cast<float>(THM._Format().material_weight)) + .5f) / 4.f);
-		
+
 		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
 			{
@@ -1127,7 +1161,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	return NewMaterial;
 }
 
-UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName)
+UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial)
 {
 	if (ShaderName.size() == 0)
 		return nullptr;
@@ -1170,7 +1204,14 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	FAssetRegistryModule::AssetCreated(NewMaterial);
 	ObjectCreated.Add(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
-
+	{
+		FString NameGameMtl = GameMaterial.c_str();
+		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
+		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
+		UStalkerPhysicalMaterial* PhysicalMaterial = LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
+		NewMaterial->PhysMaterial = PhysicalMaterial;
+	}
 	FStaticParameterSet NewStaticParameterSet;
 
 	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
@@ -1178,11 +1219,11 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	{
 		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Default")), BaseTexture);
 	}
-	if(GStalkerEditorManager->GetSOCMaterials().GetTexture2Details().Contains(TextureName))
+	if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Details().Contains(TextureName))
 	{
 		const TPair<shared_str, float>& Detail = GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName];
-		TObjectPtr<UTexture2D> DetailTexture = ImportTexture(Detail.Key.c_str() );
-	
+		TObjectPtr<UTexture2D> DetailTexture = ImportTexture(Detail.Key.c_str());
+
 		TObjectPtr<UTexture2D> NormalMapTextureDetail;
 		TObjectPtr<UTexture2D> GlossTextureDetail;
 		TObjectPtr<UTexture2D> HeightTextureDetail;
@@ -1199,7 +1240,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 			if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(Detail.Key))
 			{
 				const TPair<shared_str, float>& DetailBump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[Detail.Key];
-				if(DetailBump.Key.size())
+				if (DetailBump.Key.size())
 				{
 					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
 					SwitchParameter.Value = true;
@@ -1257,7 +1298,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 			{
 				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Height")), HeightTexture);
 			}
-			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), 0.05f/ 5.f);
+			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), 0.05f / 5.f);
 		}
 	}
 	else
@@ -1275,7 +1316,7 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 {
 
 	string_path TexturesGamedataPath;
-	FCStringAnsi::Strcpy(TexturesGamedataPath,  FS.get_path(_game_textures_)->m_Path);
+	FCStringAnsi::Strcpy(TexturesGamedataPath, FS.get_path(_game_textures_)->m_Path);
 	FString FileName = InFileName;
 	for (int32 i = 0; TexturesGamedataPath[i]; i++)
 	{
@@ -1289,7 +1330,7 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 		return nullptr;
 	}
 	FileName.RightChopInline(FCStringAnsi::Strlen(TexturesGamedataPath));
-	while (FileName[0] &&  FileName[0] == TEXT('/'))
+	while (FileName[0] && FileName[0] == TEXT('/'))
 	{
 		FileName.RemoveAt(0);
 	}
@@ -1315,10 +1356,10 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 			ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
 			if (THMDetail.Load(THM._Format().detail_name.c_str()))
 			{
-				
+
 				if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUseParallax)
 				{
-				
+
 					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
 				}
 			}
@@ -1326,6 +1367,72 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 		return BaseTexture;
 	}
 	return nullptr;
+}
+
+UObject* XRayEngineFactory::ImportPhysicsMaterials(const FString& FileName)
+{
+	CGameMtlLibrary Library;
+	Library.Load(TCHAR_TO_ANSI(*FileName));
+
+	UStalkerPhysicalMaterial* Result = nullptr;
+
+	TMap<int32, UStalkerPhysicalMaterial*> ID2PhysicalMaterial;
+	{
+		u32 CountMaterials = Library.CountMaterial();
+		for (u16 i = 0; i < CountMaterials; i++)
+		{
+			Result = ImportPhysicsMaterial(Library.GetMaterialByIdx(i));
+			ID2PhysicalMaterial.Add(Library.GetMaterialByIdx(i)->GetID(), Result);
+		}
+	}
+	{
+		const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") /TEXT("MaterialPairs"));
+		const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+
+		UStalkerPhysicalMaterialPairsData* PhysicalMaterialPairs = LoadObject<UStalkerPhysicalMaterialPairsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+		if (!PhysicalMaterialPairs)
+		{
+			UPackage* AssetPackage = CreatePackage(*PackageName);
+			PhysicalMaterialPairs = NewObject<UStalkerPhysicalMaterialPairsData>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+			FAssetRegistryModule::AssetCreated(PhysicalMaterialPairs);
+			ObjectCreated.Add(PhysicalMaterialPairs);
+		}
+
+		PhysicalMaterialPairs->Pairs.Empty();
+
+		for (auto i = Library.FirstMaterialPair(); i != Library.LastMaterialPair(); i++)
+		{
+			FStalkerPhysicalMaterialPair&Pair =  PhysicalMaterialPairs->Pairs.FindOrAdd(ID2PhysicalMaterial[(*i)->GetMtl0()]).Materials.Add(ID2PhysicalMaterial[(*i)->GetMtl1()]);
+			Pair.BuildFromLegacy(*(*i));
+		}
+		PhysicalMaterialPairs->MarkPackageDirty();
+	}
+
+	Library.Unload();
+	return ObjectCreated.Num()? ObjectCreated.Last(): nullptr;
+}
+
+
+UStalkerPhysicalMaterial* XRayEngineFactory::ImportPhysicsMaterial(class SGameMtl*Materials)
+{
+	FString Name =  Materials->m_Name.c_str();
+	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials")/ TEXT("Materials") / Name);
+	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+
+	UStalkerPhysicalMaterial* PhysicalMaterial = LoadObject<UStalkerPhysicalMaterial>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (PhysicalMaterial)
+		return PhysicalMaterial;
+		
+	UPackage* AssetPackage = CreatePackage(*PackageName);
+	PhysicalMaterial = NewObject<UStalkerPhysicalMaterial>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	FAssetRegistryModule::AssetCreated(PhysicalMaterial);
+	ObjectCreated.Add(PhysicalMaterial);
+
+	PhysicalMaterial->BuildFromLegacy(*Materials);
+	PhysicalMaterial->MarkPackageDirty();
+	return PhysicalMaterial;
+
 }
 
 UTexture2D* XRayEngineFactory::ImportTextureDDS(const FString& InFileName)

@@ -2,9 +2,12 @@
 
 #include "StalkerEditorModule.h"
 #include "StalkerEditorManager.h"
+#include "UI/StalkerEditorStyle.h"
+#include "UI/Commands/StalkerEditorCommands.h"
 
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
+DEFINE_LOG_CATEGORY(LogStalkerEditor);
 
 static void* RedImageMemoryAllocationFunction(void* pointer, size_t size)
 {
@@ -23,17 +26,34 @@ static void* RedImageMemoryAllocationFunction(void* pointer, size_t size)
 void FStalkerEditorModule::StartupModule()
 {
 	RedImageTool::MemoryAllocationFunction = &RedImageMemoryAllocationFunction;
-	GStalkerEditorManager = NewObject< UStalkerEditorManager>();
-	GStalkerEditorManager->AddToRoot();
-	GStalkerEditorManager->Initialized();
-	MainMenu.Initialize();
-	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerEditorModule::OnPreExit);
+	if(GIsEditor)
+	{
+		StalkerEditorCommands::Register();
+		GStalkerEditorManager = NewObject< UStalkerEditorManager>();
+		GStalkerEditorManager->AddToRoot();
+		GStalkerEditorManager->Initialized();
+
+		FStalkerEditorStyle::Initialize();
+		FStalkerEditorStyle::ReloadTextures();
+		MainMenu.Initialize();
+		ToolBarMenu.Initialize();
+		BuildMenu.Initialize();
+
+		FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerEditorModule::OnPreExit);
+	}
 }
 
 void FStalkerEditorModule::ShutdownModule()
 {
-	MainMenu.Destroy();
-	FCoreDelegates::OnPreExit.RemoveAll(this);
+	if (GIsEditor)
+	{
+		ToolBarMenu.Destroy();
+		MainMenu.Destroy();
+		BuildMenu.Destroy();
+		FStalkerEditorStyle::Shutdown();
+		FCoreDelegates::OnPreExit.RemoveAll(this);
+		StalkerEditorCommands::Unregister();
+	}
 }
 
 void FStalkerEditorModule::OnPreExit()

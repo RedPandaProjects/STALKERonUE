@@ -67,6 +67,9 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 				AStaticMeshActor* StaticMeshActor = World->SpawnActor<AStaticMeshActor>(Location, Rotation);
 				StaticMeshActor->GetStaticMeshComponent()->SetStaticMesh(StaticMesh);
 				StaticMeshActor->SetActorScale3D(Scale3D);
+				FString Label = EditableObject->GetName();
+				Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+				StaticMeshActor->SetActorLabel(Label);
 			}
 		}
 	}

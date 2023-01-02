@@ -378,6 +378,19 @@ void UStalkerResourcesManager::Destroy(class AStalkerProxy* Proxy)
 	Proxy->Destroy();
 }
 
+FString UStalkerResourcesManager::GetGamePath()
+{
+	switch (xrGameManager::GetGame())
+	{
+	case EGame::CS:
+		return TEXT("/Game/CS");
+	case EGame::SHOC:
+		return TEXT("/Game/SHOC");
+	default:
+		return TEXT("/Game/COP");
+	}
+}
+
 AStalkerProxy* UStalkerResourcesManager::CreateProxy(class CObject* Object)
 {
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();

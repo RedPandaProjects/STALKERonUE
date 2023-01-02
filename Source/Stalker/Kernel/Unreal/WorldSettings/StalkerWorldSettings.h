@@ -1,18 +1,19 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 #include "StalkerWorldSettings.generated.h"
 
-/**
- * 
- */
 UCLASS()
-class AStalkerWorldSettings : public AWorldSettings
+class STALKER_API AStalkerWorldSettings : public AWorldSettings
 {
 	GENERATED_BODY()
 public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
-	FString AlifeName;
+	FString						AlifeName;
 	UPROPERTY(Transient)
-	class AStalkerDebugRender* DebugRender;
+	class AStalkerDebugRender*	DebugRender;
+	
+	class UStalkerCForm*		GetOrCreateCForm	();
+	class UStalkerCForm*		GetCForm			();
+private:
+	UPROPERTY()
+	class UStalkerCForm* CForm;
 };
