@@ -35,7 +35,8 @@ public class StalkerEditor : ModuleRules
                 "CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore",
+                "EditorStyle",
+                "SlateCore",
                 "Engine",
                 "Slate",
                 "SlateCore",
@@ -52,7 +53,7 @@ public class StalkerEditor : ModuleRules
                 "Landscape",
                 "XRayEngineModules",
                 "XRayEditorModules",
-                "RedImage", "AnimGraph","BlueprintGraph",
+                "RedImage", "AnimGraph","BlueprintGraph","EditorFramework"
                 // ... add private dependencies that you statically link with here ...
             }
             );

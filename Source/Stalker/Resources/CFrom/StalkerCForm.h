@@ -26,7 +26,9 @@ public:
 	FBox3f							AABB;
 
 	void Serialize(FArchive& Ar) override;
+#if WITH_EDITORONLY_DATA
 	void InvalidCForm();
+#endif
 private:
 	const int32 Version = 0;
 };

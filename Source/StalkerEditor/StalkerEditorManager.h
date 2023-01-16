@@ -15,6 +15,8 @@ public:
 	TArray< USkeleton*>								Skeletons;
 	UPROPERTY(Transient)
 	class UStalkerEditorCForm*						EditorCFrom;
+	UPROPERTY(Transient)
+	class UStalkerEditorAIMap*						EditorAIMap;
 private:
 	void											OnReInitialized	();
 	void											ScanSkeletons	();

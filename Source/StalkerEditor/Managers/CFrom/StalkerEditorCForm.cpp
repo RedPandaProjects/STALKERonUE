@@ -237,7 +237,10 @@ void UStalkerEditorCForm::Build()
 						{
 							PhysicalMaterial = LandscapeProxy->GetLandscapeMaterial() ? LandscapeProxy->GetLandscapeMaterial()->GetPhysicalMaterial() : nullptr;
 						}
-
+						if (!PhysicalMaterial)
+						{
+							PhysicalMaterial = LandscapeProxy->DefaultPhysMaterial;
+						}
 						int32* IndexMaterial = PhysicalMaterial2ID.Find(Cast<UStalkerPhysicalMaterial>(PhysicalMaterial));
 						Triangle.MaterialIndex = IndexMaterial ? static_cast<uint32>(*IndexMaterial) : DefaultID;
 
@@ -257,7 +260,10 @@ void UStalkerEditorCForm::Build()
 						{
 							PhysicalMaterial = LandscapeProxy->GetLandscapeMaterial() ? LandscapeProxy->GetLandscapeMaterial()->GetPhysicalMaterial() : nullptr;
 						}
-
+						if (!PhysicalMaterial)
+						{
+							PhysicalMaterial = LandscapeProxy->DefaultPhysMaterial;
+						}
 						IndexMaterial = PhysicalMaterial2ID.Find(Cast<UStalkerPhysicalMaterial>(PhysicalMaterial));
 						Triangle.MaterialIndex = IndexMaterial ? static_cast<uint32>(*IndexMaterial) : DefaultID;
 						Triangle.VertexIndex0 = StartIndex;

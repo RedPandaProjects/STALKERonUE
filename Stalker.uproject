@@ -17,7 +17,6 @@
 		{
 			"Name": "StalkerEditor",
 			"Type": "Editor",
-			"LoadingPhase": "PostEngineInit",
 			"AdditionalDependencies": [
 				"Stalker",
 				"Engine"
@@ -31,6 +30,11 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "TodoLogging",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/7a92da877bc742929fa9c52972cb05ac"
 		}
 	]
 }

@@ -1,6 +1,7 @@
 #include "scene.h"
 #include "Tools/StaticObject/ESceneObjectTools.h"
 #include "Tools/Base/ESceneDummyTools.h"
+#include "Tools/AIMap/ESceneAIMapTools.h"
 
 
 EScene* Scene;
@@ -170,6 +171,7 @@ void EScene::CreateSceneTools()
 {
 	RegisterSceneTools(xr_new<ESceneDummyTool>()); //+
 	RegisterSceneTools(xr_new<ESceneObjectTool>()); //+
+	RegisterSceneTools(xr_new<ESceneAIMapTool>()); //+
 }
 
 void EScene::DestroySceneTools()

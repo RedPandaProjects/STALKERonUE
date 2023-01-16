@@ -13,6 +13,8 @@
 #include "Animation/AnimNodeBase.h"
 #include "Animation/AnimInstanceProxy.h"
 #include "Animation/AnimSequence.h"
+#include "Components/BrushComponent.h"
+#include "GameFramework/Volume.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrAPI/xrGameManager.h"
 #include "XrCore/stdafx.h"

@@ -5,6 +5,10 @@ namespace StalkerMath
 	{
 		return FVector3f(-Location.x * 100, Location.z * 100, Location.y * 100);
 	}
+	inline FVector3f XRayNormalToUnreal(Fvector Location)
+	{
+		return FVector3f(-Location.x , Location.z , Location.y );
+	}
 	inline FQuat4f	XRayQuatToUnreal(const Fquaternion&Rotation)
 	{
 		return FQuat4f(Rotation.x, -Rotation.z, -Rotation.y, Rotation.w);

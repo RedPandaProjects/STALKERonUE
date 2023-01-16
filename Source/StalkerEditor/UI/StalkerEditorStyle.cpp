@@ -3,6 +3,7 @@
 #include "Slate/SlateGameResources.h"
 #include "SlateCore/Public/Styling/SlateStyleRegistry.h"
 #include "Projects/Public/Interfaces/IPluginManager.h"
+#include "EditorViewportClient.h"
 
 TSharedPtr< FSlateStyleSet > FStalkerEditorStyle::StyleInstance = NULL;
 
@@ -43,8 +44,10 @@ TSharedRef< FSlateStyleSet > FStalkerEditorStyle::Create()
 	TSharedRef< FSlateStyleSet > Style = MakeShareable(new FSlateStyleSet("StalkerEditorStyle"));
 	Style->SetContentRoot(FPaths::ProjectDir() / TEXT("Resources"));
 
-	Style->Set("StalkerEditor.BuildCForm", new IMAGE_BRUSH(*FPaths::Combine( TEXT("Icon40"),TEXT("cform")), Icon40x40));
-
+	Style->Set("StalkerEditor.BuildCForm", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("cform")), Icon40x40));
+	Style->Set("StalkerEditor.BuildAIMap", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("aimap")), Icon40x40));
+	Style->Set("StalkerEditor.Select", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("Select_40x")), Icon20x20));
+	Style->Set("StalkerEditor.Paint", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("Paint_40x")), Icon20x20));
 	return Style;
 }
 

@@ -1,3 +1,4 @@
+#pragma once
 #include "StalkerEditorCForm.generated.h"
 UCLASS()
 class UStalkerEditorCForm : public UObject
@@ -7,7 +8,7 @@ public:
 	void	Initialize				();
 	void	Destroy					();
 private:
-	void	OnGetOnScreenMessages(FCoreDelegates::FSeverityMessageMap& Out);
+	void	OnGetOnScreenMessages	(FCoreDelegates::FSeverityMessageMap& Out);
 	void	Build					();
 	void	OnPreBeginPIE			(const bool);
 	TSharedPtr< FUICommandList>		CFormCommands;

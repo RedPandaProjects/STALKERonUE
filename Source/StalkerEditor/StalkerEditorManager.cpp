@@ -2,6 +2,7 @@
 #include "Kernel/StalkerEngineManager.h"
 #include "Managers/CFrom/StalkerEditorCForm.h"
 #include "UI/StalkerEditorStyle.h"
+#include "Managers/AIMap/StalkerEditorAIMap.h"
 UStalkerEditorManager* GStalkerEditorManager = nullptr;
 
 void UStalkerEditorManager::Initialized()
@@ -25,6 +26,8 @@ void UStalkerEditorManager::Initialized()
 		ScanSkeletons();
 		EditorCFrom = NewObject<UStalkerEditorCForm>();
 		EditorCFrom->Initialize();
+		EditorAIMap = NewObject<UStalkerEditorAIMap>();
+		EditorAIMap->Initialize();
 	
 	}
 }
@@ -33,8 +36,12 @@ void UStalkerEditorManager::Destroy()
 {
 	if (GIsEditor)
 	{
+		EditorAIMap->Destroy();
+		EditorAIMap->MarkAsGarbage();
+		EditorAIMap = nullptr;
 		EditorCFrom->Destroy();
 		EditorCFrom->MarkAsGarbage();
+		EditorCFrom = nullptr;
 		GXRayEngineManager->ReInitializedMulticastDelegate.RemoveAll(this);
 		GRayObjectLibrary->OnDestroy();
 		delete GRayObjectLibrary;

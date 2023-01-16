@@ -23,6 +23,7 @@ void UStalkerCForm::Serialize(FArchive& Ar)
 	}
 }
 
+#if WITH_EDITORONLY_DATA
 void UStalkerCForm::InvalidCForm()
 {
 	Vertices.Empty();
@@ -30,3 +31,4 @@ void UStalkerCForm::InvalidCForm()
 	AABB = FBox3f(ForceInit);
 	MarkPackageDirty();
 }
+#endif
