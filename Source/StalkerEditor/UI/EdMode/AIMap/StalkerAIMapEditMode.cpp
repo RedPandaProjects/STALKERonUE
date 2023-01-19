@@ -191,6 +191,7 @@ bool FStalkerAIMapEditMode::HandleClick(FEditorViewportClient* InViewportClient,
 				{
 					NewNode = StalkerAIMap->FindOrCreateNode(TempNode.Position, 1.f,false,false);
 					check(NewNode);
+					StalkerAIMap->MarkPackageDirty();
 					NewNode->Plane = TempNode.Plane;
 					if(bAutoLink)GStalkerEditorManager->EditorAIMap->AutoLink(World, NewNode,bIgnoreConstraints);
 					StalkerAIMap->PostEditChange();
@@ -311,6 +312,7 @@ void FStalkerAIMapEditMode::ClearAIMap()
 		StalkerAIMap->PreEditChange(nullptr);
 		StalkerAIMap->ClearAIMap();
 		StalkerAIMap->PostEditChange();
+		StalkerAIMap->MarkPackageDirty();
 		GEditor->EndTransaction();
 	}
 }
@@ -568,6 +570,7 @@ void FStalkerAIMapEditMode::LinkLeft()
 	StalkerAIMap->PreEditChange(nullptr);
 	Link(2);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -589,6 +592,7 @@ void FStalkerAIMapEditMode::LinkRight()
 	StalkerAIMap->PreEditChange(nullptr);
 	Link(0);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -610,6 +614,7 @@ void FStalkerAIMapEditMode::LinkForward()
 	StalkerAIMap->PreEditChange(nullptr);
 	Link(3);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -631,6 +636,7 @@ void FStalkerAIMapEditMode::LinkBackward()
 	StalkerAIMap->PreEditChange(nullptr);
 	Link(1);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -719,6 +725,7 @@ void FStalkerAIMapEditMode::LinkAll()
 		Link(i);
 	}
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -778,6 +785,7 @@ bool FStalkerAIMapEditMode::EndTracking(FEditorViewportClient* InViewportClient,
 	if (NeedBeginTransaction)
 	{
 		StalkerAIMap->PostEditChange();
+		StalkerAIMap->MarkPackageDirty();
 		GEditor->EndTransaction();
 	}
 
@@ -802,6 +810,7 @@ void FStalkerAIMapEditMode::GenerateSelect()
 	StalkerAIMap->PreEditChange(nullptr);
 	GStalkerEditorManager->EditorAIMap->Generate(World, true);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -823,6 +832,7 @@ void FStalkerAIMapEditMode::GenerateFull()
 	StalkerAIMap->PreEditChange(nullptr);
 	GStalkerEditorManager->EditorAIMap->Generate(World);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -894,6 +904,7 @@ void FStalkerAIMapEditMode::SmoothFull()
 	StalkerAIMap->PreEditChange(nullptr);
 	GStalkerEditorManager->EditorAIMap->Smooth(World);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -915,6 +926,7 @@ void FStalkerAIMapEditMode::SmoothSelect()
 	StalkerAIMap->PreEditChange(nullptr);
 	GStalkerEditorManager->EditorAIMap->Smooth(World,true);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -936,6 +948,7 @@ void FStalkerAIMapEditMode::ResetSelect()
 	StalkerAIMap->PreEditChange(nullptr);
 	GStalkerEditorManager->EditorAIMap->Reset(World, true);
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 }
 
@@ -957,6 +970,7 @@ void FStalkerAIMapEditMode::RemoveSelectNodes()
 	StalkerAIMap->PreEditChange(nullptr);
 	StalkerAIMap->RemoveSelect();
 	StalkerAIMap->PostEditChange();
+	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 
 }
