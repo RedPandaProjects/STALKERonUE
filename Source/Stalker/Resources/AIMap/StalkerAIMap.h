@@ -19,6 +19,17 @@ public:
 	void						HashClear			();
 	void						RemoveSelect		();
 	TArray<FStalkerAIMapNode*>* GetEditorHashMap	(const FVector3f&Position);
+
+	bool*						GetEditorHashSelected(const FVector3f&Position);
+	int32						GetCountSelected	();
+	bool						HasSelected			();
+	void						RefreshHashSelected ();
+	void						SelectNode			(FStalkerAIMapNode*Node);
+	void						UnSelectNode		(FStalkerAIMapNode*Node);
+	void						ClearSelected		();
+	void						GetSelectedNodes	(TArray<FStalkerAIMapNode*>&Result);
+	bool						GetFirstSelectedNode(FStalkerAIMapNode*&Result);
+
 	FStalkerAIMapNode*			FindOrCreateNode	(const FVector3f&Position, float ErrorToleranceForZ = 50.f,bool NotFind = false,bool AutLink=true);
 	FStalkerAIMapNode*			FindNode			(const FVector3f&Position,float ErrorToleranceForZ = 50.f);
 	FStalkerAIMapNode*			FindNeighbour		(FStalkerAIMapNode* Node, int32 ID);
@@ -34,6 +45,7 @@ public:
 	TArray<FStalkerAIMapNode*>	Nodes;
 	static const int32			NodesHashSize = 256;
 	TArray<FStalkerAIMapNode*>	NodesHash[NodesHashSize + 1][NodesHashSize + 1];
+	bool						NodesHashSelected[NodesHashSize + 1][NodesHashSize + 1];
 #endif
 
 private:

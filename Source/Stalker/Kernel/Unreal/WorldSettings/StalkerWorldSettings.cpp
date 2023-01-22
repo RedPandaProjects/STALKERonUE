@@ -57,7 +57,7 @@ UStalkerAIMap* AStalkerWorldSettings::GetOrCreateAIMap()
 		UPackage* BuiltDataPackage = CreatePackageAIMap();
 
 		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
-		AIMap = NewObject<UStalkerAIMap>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public| RF_Transactional);
+		AIMap = NewObject<UStalkerAIMap>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public | RF_Transactional);
 		MarkPackageDirty();
 	}
 	return AIMap;

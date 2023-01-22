@@ -207,6 +207,27 @@ bool UStalkerEditorAIMap::CanTravel(UWorld* InWorld, const FVector& InFrom, cons
 	float MaxZ1 = GetMaxZ(InPlaneFrom, InFrom);
 	float MaxZ2 = GetMaxZ(InPlaneTo, InTo);
 
+	{
+		float TestZFrom = FMath::RayPlaneIntersection((FVector3f(InFrom) + FVector3f(InTo)) / 2.f, FVector3f(0, 0, -1), InPlaneFrom).Z;
+		float TestZTo = FMath::RayPlaneIntersection((FVector3f(InFrom) + FVector3f(InTo)) / 2.f, FVector3f(0, 0, -1), InPlaneTo).Z;
+		if (TestZFrom > TestZTo)
+		{
+			if (StalkerWorldSettings->AIMapCanDOWN < TestZFrom - TestZTo)
+			{
+				return false;
+			}
+		}
+		else
+		{
+			if (StalkerWorldSettings->AIMapCanUP < TestZTo - TestZFrom)
+			{
+				return false;
+			}
+		}
+
+	}
+
+
 	FVector3f BoxStart1 = (FVector3f(From.X, From.Y, MaxZ1 + 6.f) + FVector3f(To.X, To.Y, MaxZ1 + 6.f)) * 0.5;
 	FVector3f BoxStart2 = (FVector3f(From.X, From.Y, MaxZ2 + 6.f) + FVector3f(To.X, To.Y, MaxZ2 + 6.f)) * 0.5;
 	FBox TestBox1(ForceInit), TestBox2(ForceInit);
@@ -231,7 +252,33 @@ bool UStalkerEditorAIMap::CanTravel(UWorld* InWorld, const FVector& InFrom, cons
 		TestBox2 += FVector(BoxStart2) + FVector(0, 0, FMath::Max((MaxZ1 > MaxZ2) ? (MaxZ1 - MaxZ2) : 0, StalkerWorldSettings->AIMapTestHeight));
 
 	}
+
+	FBox CheckBox(ForceInit);
+	if (MaxZ2 > MaxZ1)
+	{
+		CheckBox += FVector(From.X - NodeSize * 0.5f * 0.9f, From.Y - NodeSize * 0.5f * 0.9f, MaxZ1 + 6.f);
+		CheckBox += FVector(From.X + NodeSize * 0.5f * 0.9f, From.Y + NodeSize * 0.5f * 0.9f, MaxZ1 + 6.f + (MaxZ2 - MaxZ1) + StalkerWorldSettings->AIMapTestHeight);
+	}
+	else
+	{
+		CheckBox += FVector(To.X - NodeSize * 0.5f * 0.9f, To.Y - NodeSize * 0.5f * 0.9f, MaxZ2 + 6.f);
+		CheckBox += FVector(To.X + NodeSize * 0.5f * 0.9f, To.Y + NodeSize * 0.5f * 0.9f, MaxZ2 + 6.f + (MaxZ1 - MaxZ2) + StalkerWorldSettings->AIMapTestHeight);
+	}
+
+
 	TArray<FHitResult> HitResults;
+	InWorld->SweepMultiByChannel(HitResults, CheckBox.GetCenter(), CheckBox.GetCenter(), FQuat::Identity, ECC_WorldStatic, FCollisionShape::MakeBox(TestBox1.GetExtent()), CollisionQueryParams, FCollisionResponseParams(ECR_Block));
+	for (FHitResult& HitResult : HitResults)
+	{
+		if (HitResult.bBlockingHit)
+		{
+			DrawDebugBox(InWorld, CheckBox.GetCenter(), CheckBox.GetExtent(), FColor::Red, true, 10.f);
+			return false;
+		}
+	}
+	//DrawDebugBox(InWorld, CheckBox.GetCenter(), CheckBox.GetExtent(), FColor::Green, true, 10.f);
+	HitResults.Empty();
+
 	InWorld->SweepMultiByChannel(HitResults, TestBox1.GetCenter(), TestBox1.GetCenter(), FQuat::Identity, ECC_WorldStatic, FCollisionShape::MakeBox(TestBox1.GetExtent()), CollisionQueryParams, FCollisionResponseParams(ECR_Block));
 	bool bResult = true;
 	for (FHitResult& HitResult : HitResults)
@@ -266,7 +313,7 @@ bool UStalkerEditorAIMap::CanTravel(UWorld* InWorld, const FVector& InFrom, cons
 		//DrawDebugBox(InWorld, TestBox2.GetCenter(), TestBox2.GetExtent(), FColor::Green, true, 10.f);
 		return true;
 	}
-	//DrawDebugBox(InWorld, TestBox2.GetCenter(), TestBox2.GetExtent(), FColor::Red, true, 10.f);
+	DrawDebugBox(InWorld, TestBox2.GetCenter(), TestBox2.GetExtent(), FColor::Red, true, 10.f);
 	return false;
 }
 

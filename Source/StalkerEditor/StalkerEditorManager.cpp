@@ -3,6 +3,7 @@
 #include "Managers/CFrom/StalkerEditorCForm.h"
 #include "UI/StalkerEditorStyle.h"
 #include "Managers/AIMap/StalkerEditorAIMap.h"
+#include "Entities/EditorRender/StalkerEditorRenderProxy.h"
 UStalkerEditorManager* GStalkerEditorManager = nullptr;
 
 void UStalkerEditorManager::Initialized()
@@ -28,7 +29,7 @@ void UStalkerEditorManager::Initialized()
 		EditorCFrom->Initialize();
 		EditorAIMap = NewObject<UStalkerEditorAIMap>();
 		EditorAIMap->Initialize();
-	
+		FWorldDelegates::OnPostWorldInitialization.AddUObject(this, &UStalkerEditorManager::OnPostWorldInitialization);
 	}
 }
 
@@ -36,6 +37,7 @@ void UStalkerEditorManager::Destroy()
 {
 	if (GIsEditor)
 	{
+		FWorldDelegates::OnPostWorldInitialization.RemoveAll(this);
 		EditorAIMap->Destroy();
 		EditorAIMap->MarkAsGarbage();
 		EditorAIMap = nullptr;
@@ -88,5 +90,19 @@ void UStalkerEditorManager::ScanSkeletons()
 		}
 	}
 
+}
+
+void UStalkerEditorManager::OnPostWorldInitialization(UWorld* World, const UWorld::InitializationValues)
+{
+	for (TActorIterator<AStalkerEditorRenderProxy> AactorItr(World); AactorItr; ++AactorItr)
+	{
+		if (AactorItr)
+		{
+			return;
+		}
+	}
+	FActorSpawnParameters ActorSpawnParameters;
+	ActorSpawnParameters.ObjectFlags = RF_Transient;
+	World->SpawnActor< AStalkerEditorRenderProxy>(ActorSpawnParameters);
 }
 

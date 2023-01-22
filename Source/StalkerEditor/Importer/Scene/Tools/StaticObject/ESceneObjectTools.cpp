@@ -19,7 +19,7 @@ void ESceneObjectTool::Clear		()
 
 CCustomObject* ESceneObjectTool::CreateObject(LPVOID data, LPCSTR name)
 {
-	CCustomObject* O	= xr_new<CSceneObject>(data,name);                     
+	CCustomObject* O	= new CSceneObject(data,name);                     
     O->FParentTools		= this;
     return O;
 }

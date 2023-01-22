@@ -5,6 +5,7 @@
 #include "UI/StalkerEditorStyle.h"
 #include "UI/Commands/StalkerEditorCommands.h"
 #include "UI/EdMode/AIMap/StalkerAIMapEditMode.h"
+#include "UI/EdMode/WayPoints/StalkerWayObjectEditMode.h"
 
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
@@ -46,6 +47,12 @@ void FStalkerEditorModule::StartupModule()
 			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), TEXT("StalkerEditor.BuildAIMap")),
 			true, 500
 			);
+
+		FEditorModeRegistry::Get().RegisterMode<FStalkerWayObjectEditMode>(
+			FStalkerWayObjectEditMode::EM_WayObject, FText::FromString("Way Points Editor"),
+			FSlateIcon(/*FStalkerEditorStyle::GetStyleSetName(), TEXT("StalkerEditor.BuildAIMap")*/),
+			true, 500
+			);
 	}
 	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerEditorModule::OnPreExit);
 }
@@ -58,6 +65,7 @@ void FStalkerEditorModule::ShutdownModule()
 		MainMenu.Destroy();
 		BuildMenu.Destroy();
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerAIMapEditMode::EM_AIMap);
+		FEditorModeRegistry::Get().UnregisterMode(FStalkerWayObjectEditMode::EM_WayObject);
 		FStalkerEditorStyle::Shutdown();
 		FCoreDelegates::OnPreExit.RemoveAll(this);
 		StalkerEditorCommands::Unregister();

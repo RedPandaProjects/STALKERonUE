@@ -2,6 +2,7 @@
 #include "Tools/StaticObject/ESceneObjectTools.h"
 #include "Tools/Base/ESceneDummyTools.h"
 #include "Tools/AIMap/ESceneAIMapTools.h"
+#include "Tools/WayPoint/ESceneWayTools.h"
 
 
 EScene* Scene;
@@ -169,9 +170,10 @@ void EScene::RegisterSceneTools(ESceneToolBase* mt)
 
 void EScene::CreateSceneTools()
 {
-	RegisterSceneTools(xr_new<ESceneDummyTool>()); //+
-	RegisterSceneTools(xr_new<ESceneObjectTool>()); //+
-	RegisterSceneTools(xr_new<ESceneAIMapTool>()); //+
+	RegisterSceneTools(new ESceneDummyTool); //+
+	RegisterSceneTools(new ESceneObjectTool); //+
+	RegisterSceneTools(new ESceneAIMapTool); //+
+	RegisterSceneTools(new ESceneWayTool); //+
 }
 
 void EScene::DestroySceneTools()
@@ -180,8 +182,12 @@ void EScene::DestroySceneTools()
 	SceneToolsMapPairIt _E = m_SceneTools.end();
 	for (; _I != _E; _I++)
 	{
-		delete _I->second;
-        _I->second = nullptr;
+		if (_I->second)
+		{
+			delete _I->second;
+			_I->second = nullptr;
+		}
+		
 	}
 	m_SceneTools.clear();
 }

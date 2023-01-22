@@ -13,6 +13,8 @@
 #include "../../../Managers/AIMap/StalkerEditorAIMap.h"
 
 const FEditorModeID FStalkerAIMapEditMode::EM_AIMap(TEXT("EM_AIMap"));
+
+
 FStalkerAIMapEditMode::FStalkerAIMapEditMode()
 {
 	FStalkerAIMapEditorCommands::Register();
@@ -26,20 +28,15 @@ FStalkerAIMapEditMode::FStalkerAIMapEditMode()
 FStalkerAIMapEditMode::~FStalkerAIMapEditMode()
 {
 	FStalkerAIMapEditorCommands::Unregister();
-}/*
-
-UTurnOneNavigationSystem* FStalkerAIMapEditMode::GetTurnOneNavigationSystem()
-{
-	UWorld* World = GetWorld();
-	ATurnOneWorldSettings* TurnOneWorldSettings = Cast<ATurnOneWorldSettings>(World->GetWorldSettings());
-	check(TurnOneWorldSettings);
-	check(TurnOneWorldSettings->GetTurnOneNavigationSystem());
-	return TurnOneWorldSettings->GetTurnOneNavigationSystem();
-}*/
+}
 
 void FStalkerAIMapEditMode::Render(const FSceneView* View, FViewport* Viewport, FPrimitiveDrawInterface* PDI)
 {
 	UWorld* World = GetWorld();
+	if (!World)
+	{
+		return;
+	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
@@ -119,46 +116,86 @@ void FStalkerAIMapEditMode::Render(const FSceneView* View, FViewport* Viewport, 
 
 bool FStalkerAIMapEditMode::HandleClick(FEditorViewportClient* InViewportClient, HHitProxy* HitProxy, const FViewportClick& Click)
 {
+	if (!IsEnabled())
+	{
+		return false;
+	}
 	UWorld* World = GetWorld();
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
 		return false;
 	}
-
 	UStalkerAIMap* StalkerAIMap = StalkerWorldSettings->GetOrCreateAIMap();
 	if (!StalkerAIMap)
 	{ 
 		return false;
 	}
-	int32 bIsSelected = 0;
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
+
+	bool bIsSelected = StalkerAIMap->HasSelected();
+
+	const double DistanceRenderAIMap = (StalkerWorldSettings->DistanceRenderAIMap) * 0.5f;
+
+	const float NodeSize = (StalkerAIMap->NodeSize) * 0.5f;
+
+	auto GetBox = [NodeSize](FStalkerAIMapNode* Node)
 	{
-		if (EnumHasAnyFlags(Node->Flags,EStalkerAIMapNodeFlags::Selected))
-		{
-			bIsSelected++;
-		}
-	}
+		FBox AABB = FBox(ForceInit);
+		const FVector3f PlaneNormalRender = FVector3f(0, 0, 1);
+		FVector3f Vertex1 = FMath::RayPlaneIntersection(Node->Position + FVector3f(-NodeSize, -NodeSize, -2.f), PlaneNormalRender, Node->Plane);
+		FVector3f Vertex2 = FMath::RayPlaneIntersection(Node->Position + FVector3f(-NodeSize, +NodeSize, 2.f), PlaneNormalRender, Node->Plane);
+		FVector3f Vertex3 = FMath::RayPlaneIntersection(Node->Position + FVector3f(+NodeSize, -NodeSize, -2.f), PlaneNormalRender, Node->Plane);
+		FVector3f Vertex4 = FMath::RayPlaneIntersection(Node->Position + FVector3f(+NodeSize, +NodeSize, 2.f), PlaneNormalRender, Node->Plane);
+		AABB += FVector(Vertex1);
+		AABB += FVector(Vertex2);
+		AABB += FVector(Vertex3);
+		AABB += FVector(Vertex4);
+		return AABB;
+	};
+
+
 	FStalkerAIMapNode*ClickNode = nullptr;
 	if (HitProxy && HitProxy->IsA(HStalkerAIMapNodeProxy::StaticGetType()))
 	{
 		ClickNode = StalkerAIMap->FindNode(FVector3f(GEditor->ClickLocation+FVector(StalkerAIMap->NodeSize*0.5f, StalkerAIMap->NodeSize * 0.5f,0)),50.f);
+		if (false)
+		{
+			FVector ResultLocation, ResultNormal; float HitTime;
+			FVector EndRay = Click.GetOrigin() + Click.GetDirection() * WORLD_MAX;
+			
+			TArray<FStalkerAIMapNode*>* Nodes = StalkerAIMap->GetEditorHashMap(FVector3f(GEditor->ClickLocation + FVector(StalkerAIMap->NodeSize * 0.5f, StalkerAIMap->NodeSize * 0.5f, 0)));
+			if (Nodes)
+			{
+				for (FStalkerAIMapNode* Node : *Nodes)
+				{
+					if (FMath::LineSphereIntersection(Click.GetOrigin(), Click.GetDirection(), WORLD_MAX, FVector(Node->Position), double(NodeSize)))
+					{
+						if (FMath::LineExtentBoxIntersection(GetBox(Node), Click.GetOrigin(), EndRay, FVector(0, 0, 0), ResultLocation, ResultNormal, HitTime))
+						{
+							EndRay = ResultLocation;
+							ClickNode = Node;
+						}
+					}
+				}
+			}
+			
+		}
 	}
-	if ((!bIsAddMode && Click.GetKey() == EKeys::LeftMouseButton) || (bIsSelected <= 1 && !Click.IsControlDown() && Click.GetKey() == EKeys::RightMouseButton))
+	if ((!bIsAddMode && Click.GetKey() == EKeys::LeftMouseButton) || (!bIsSelected  && !Click.IsControlDown() && Click.GetKey() == EKeys::RightMouseButton))
 	{
 		if (ClickNode)
 		{
 			if (!Click.IsControlDown())
 			{
-				ClearSelectionNodes();
+				 ClearSelectionNodes();
 			}
 			if (EnumHasAnyFlags(ClickNode->Flags, EStalkerAIMapNodeFlags::Selected))
 			{
-				EnumRemoveFlags(ClickNode->Flags, EStalkerAIMapNodeFlags::Selected);
+				StalkerAIMap->UnSelectNode(ClickNode);
 			}
 			else
 			{
-				ClickNode->Flags |= EStalkerAIMapNodeFlags::Selected;
+				StalkerAIMap->SelectNode(ClickNode);
 			}
 			if (bIsAddMode && Click.GetKey() == EKeys::LeftMouseButton)
 			{
@@ -174,7 +211,7 @@ bool FStalkerAIMapEditMode::HandleClick(FEditorViewportClient* InViewportClient,
 		}
 
 	}
-	
+
 	if (bIsAddMode && Click.GetKey() == EKeys::LeftMouseButton)
 	{
 		ClearSelectionNodes();
@@ -212,41 +249,26 @@ bool FStalkerAIMapEditMode::HandleClick(FEditorViewportClient* InViewportClient,
 		}
 		return true;
 	}
-	bIsSelected = 0;
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
-	{
-		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
-		{
-			bIsSelected++;
-		}
-	}
+	bIsSelected = StalkerAIMap->HasSelected();
 	if (bIsSelected &&Click.GetKey() == EKeys::RightMouseButton)
 	{
-		bool IsSelected = false;
-		for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
-		{
-			IsSelected |= EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected);
-		}
-		if (IsSelected)
-		{
-			FMenuBuilder MenuBuilder(true, NULL);
-			MenuBuilder.PushCommandList(AIMapEdModeActions.ToSharedRef());
-			MenuBuilder.BeginSection("AIMap Section");
-			MenuBuilder.AddMenuEntry(FStalkerAIMapEditorCommands::Get().DeleteNode);
-			MenuBuilder.EndSection();
-			MenuBuilder.PopCommandList();
-			FSlateApplication::Get().PushMenu(
-				Owner->GetToolkitHost()->GetParentWidget(),
-				FWidgetPath(),
-				MenuBuilder.MakeWidget(),
-				FSlateApplication::Get().GetCursorPos(),
-				FPopupTransitionEffect(FPopupTransitionEffect::ContextMenu));
-			return true;
-		}
+		FMenuBuilder MenuBuilder(true, NULL);
+		MenuBuilder.PushCommandList(AIMapEdModeActions.ToSharedRef());
+		MenuBuilder.BeginSection("AIMap Section");
+		MenuBuilder.AddMenuEntry(FStalkerAIMapEditorCommands::Get().DeleteNode);
+		MenuBuilder.EndSection();
+		MenuBuilder.PopCommandList();
+		FSlateApplication::Get().PushMenu(
+			Owner->GetToolkitHost()->GetParentWidget(),
+			FWidgetPath(),
+			MenuBuilder.MakeWidget(),
+			FSlateApplication::Get().GetCursorPos(),
+			FPopupTransitionEffect(FPopupTransitionEffect::ContextMenu));
+		return true;
 
 	}
 
-	return false;
+	return true;
 }
 
 void FStalkerAIMapEditMode::Enter()
@@ -293,6 +315,10 @@ void FStalkerAIMapEditMode::SetSelectionMode()
 void FStalkerAIMapEditMode::ClearAIMap()
 {
 	UWorld* World = GetWorld();
+	if (!World)
+	{
+		return;
+	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
@@ -320,6 +346,10 @@ void FStalkerAIMapEditMode::ClearAIMap()
 void FStalkerAIMapEditMode::ClearSelectionNodes()
 {
 	UWorld* World = GetWorld();
+	if (!World)
+	{
+		return;
+	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
@@ -331,10 +361,7 @@ void FStalkerAIMapEditMode::ClearSelectionNodes()
 	{
 		return;
 	}
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
-	{
-		EnumRemoveFlags(Node->Flags,EStalkerAIMapNodeFlags::Selected);
-	}
+	StalkerAIMap->ClearSelected();
 
 }
 
@@ -358,8 +385,11 @@ bool FStalkerAIMapEditMode::BoxSelect(FBox& InBox, bool InSelect /*= true*/)
 	{
 		return true;
 	}
-
-	if(! InSelect) 
+	if (!IsEnabled())
+	{
+		return false;
+	}
+	if(InSelect) 
 	{
 		AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 		if (!StalkerWorldSettings)
@@ -402,6 +432,7 @@ bool FStalkerAIMapEditMode::BoxSelect(FBox& InBox, bool InSelect /*= true*/)
 			}
 			
 		}
+		StalkerAIMap->RefreshHashSelected();
 		return true;
 	}
 	return false;
@@ -415,7 +446,10 @@ bool FStalkerAIMapEditMode::FrustumSelect(const FConvexVolume& InFrustum, FEdito
 	{
 		return true;
 	}
-
+	if (!IsEnabled())
+	{
+		return false;
+	}
 	bool bStrictDragSelection = GetDefault<ULevelEditorViewportSettings>()->bStrictBoxSelection;
 	if ( InSelect)
 	{
@@ -450,6 +484,7 @@ bool FStalkerAIMapEditMode::FrustumSelect(const FConvexVolume& InFrustum, FEdito
 				Node->Flags |= EStalkerAIMapNodeFlags::Selected;
 			}
 		}
+		StalkerAIMap->RefreshHashSelected();
 		return true;
 	}
 	return false;
@@ -462,7 +497,10 @@ bool FStalkerAIMapEditMode::InputDelta(FEditorViewportClient* InViewportClient, 
 	{
 		return false;
 	}
-
+	if (!IsEnabled())
+	{
+		return false;
+	}
 	UWorld* World = GetWorld();
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
@@ -475,19 +513,18 @@ bool FStalkerAIMapEditMode::InputDelta(FEditorViewportClient* InViewportClient, 
 	{
 		return false;
 	}
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
+	TArray< FStalkerAIMapNode*> Nodes;
+	StalkerAIMap->GetSelectedNodes(Nodes);
+	for (FStalkerAIMapNode* Node : Nodes)
 	{
-		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
+		Node->Position.Z += InDrag.Z;
+		FVector3f NewNormal = Node->Plane.GetNormal() + (FVector3f(InRot.Quaternion().GetUpVector()) - FVector3f(0, 0, 1));
+		NewNormal.Normalize();
+		if (FMath::RadiansToDegrees(FMath::Acos(NewNormal | FVector3f(0, 0, 1))) > 75.f)
 		{
-			Node->Position.Z += InDrag.Z;
-			FVector3f NewNormal = Node->Plane.GetNormal() + (FVector3f(InRot.Quaternion().GetUpVector())-FVector3f(0,0,1));
-			NewNormal.Normalize();
-			if (FMath::RadiansToDegrees(FMath::Acos(NewNormal | FVector3f(0, 0, 1))) > 75.f)
-			{
-				NewNormal = Node->Plane.GetNormal();
-			}
-			Node->Plane = FPlane4f(Node->Position,NewNormal);
+			NewNormal = Node->Plane.GetNormal();
 		}
+		Node->Plane = FPlane4f(Node->Position, NewNormal);
 	}
 	return true;
 }
@@ -495,6 +532,10 @@ bool FStalkerAIMapEditMode::InputDelta(FEditorViewportClient* InViewportClient, 
 FVector FStalkerAIMapEditMode::GetWidgetLocation() const
 {
 	UWorld* World = GetWorld();
+	if (!World)
+	{
+		return  FEdMode::GetWidgetLocation();
+	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
@@ -506,13 +547,10 @@ FVector FStalkerAIMapEditMode::GetWidgetLocation() const
 	{
 		return  FEdMode::GetWidgetLocation();
 	}
-
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
+	FStalkerAIMapNode* Node;
+	if (StalkerAIMap->GetFirstSelectedNode(Node))
 	{
-		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
-		{
-			return FVector(Node->Position);
-		}
+		return FVector(Node->Position);
 	}
 	return FEdMode::GetWidgetLocation();
 }
@@ -529,8 +567,12 @@ bool FStalkerAIMapEditMode::ShowModeWidgets() const
 
 bool FStalkerAIMapEditMode::ShouldDrawWidget() const
 {
+	
 	UWorld* World = GetWorld();
-
+	if (!World)
+	{
+		return false;
+	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
@@ -542,12 +584,10 @@ bool FStalkerAIMapEditMode::ShouldDrawWidget() const
 	{
 		return false;
 	}
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
+	FStalkerAIMapNode* Node;
+	if (StalkerAIMap->GetFirstSelectedNode(Node))
 	{
-		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
-		{
-			return true;
-		}
+		return true;
 	}
 	return false;
 }
@@ -731,7 +771,7 @@ void FStalkerAIMapEditMode::LinkAll()
 
 bool FStalkerAIMapEditMode::StartTracking(FEditorViewportClient* InViewportClient, FViewport* InViewport)
 {
-	UWorld* World = GetWorld();
+	/*UWorld* World = GetWorld();
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
 	{
@@ -744,24 +784,22 @@ bool FStalkerAIMapEditMode::StartTracking(FEditorViewportClient* InViewportClien
 		return  false;
 	}
 	bool NeedBeginTransaction = false;
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
+	FStalkerAIMapNode* Node;
+	if (StalkerAIMap->GetFirstSelectedNode(Node))
 	{
-		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
-		{
-			NeedBeginTransaction=true;
-		}
+		NeedBeginTransaction = true;
 	}
 	if (NeedBeginTransaction)
 	{
 		GEditor->BeginTransaction(FText::FromString(TEXT(" AI Map Move Node's")));
 		StalkerAIMap->PreEditChange(nullptr);
-	}
+	}*/
 
-	return true;
+	return FEdMode::StartTracking(InViewportClient, InViewport);
 }
 
 bool FStalkerAIMapEditMode::EndTracking(FEditorViewportClient* InViewportClient, FViewport* InViewport)
-{
+{/*
 	UWorld* World = GetWorld();
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
@@ -775,21 +813,19 @@ bool FStalkerAIMapEditMode::EndTracking(FEditorViewportClient* InViewportClient,
 		return  false;
 	}
 	bool NeedBeginTransaction = false;
-	for (FStalkerAIMapNode* Node : StalkerAIMap->Nodes)
+	FStalkerAIMapNode* Node;
+	if (StalkerAIMap->GetFirstSelectedNode(Node))
 	{
-		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
-		{
-			NeedBeginTransaction = true;
-		}
+		NeedBeginTransaction = true;
 	}
 	if (NeedBeginTransaction)
 	{
-		StalkerAIMap->PostEditChange();
+		StalkerAIMap->Modify();
 		StalkerAIMap->MarkPackageDirty();
 		GEditor->EndTransaction();
-	}
+	}*/
 
-	return true;
+	return FEdMode::EndTracking(InViewportClient,InViewport);
 }
 
 void FStalkerAIMapEditMode::GenerateSelect()
@@ -973,4 +1009,38 @@ void FStalkerAIMapEditMode::RemoveSelectNodes()
 	StalkerAIMap->MarkPackageDirty();
 	GEditor->EndTransaction();
 
+}
+bool FStalkerAIMapEditMode::Select(AActor* InActor, bool bInSelected)
+{
+	return !bInSelected;
+}
+
+bool FStalkerAIMapEditMode::IsSelectionAllowed(AActor* InActor, bool bInSelection) const
+{
+	return !bInSelection;
+}
+
+bool FStalkerAIMapEditMode::IsEnabled()
+{
+	UWorld* World = GetWorld();
+
+	if (GEditor->bIsSimulatingInEditor)
+	{
+		return false;
+	}
+	else if (GEditor->PlayWorld != nullptr)
+	{
+		return false;
+	}
+	else if (World == nullptr)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool FStalkerAIMapEditMode::IsEnabledAction()
+{
+	return IsEnabled()&& bIsAddMode==false;
 }

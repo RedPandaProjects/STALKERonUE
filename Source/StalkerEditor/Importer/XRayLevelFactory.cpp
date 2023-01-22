@@ -3,6 +3,9 @@
 #include "Scene/Tools/AIMap/ESceneAIMapTools.h"
 #include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
 #include "Resources/AIMap/StalkerAIMap.h"
+#include "Scene/Entitys/WayObject/WayPoint.h"
+#include "../Entities/AI/WayObject/StalkerWayObject.h"
+#include "../Entities/AI/WayObject/StalkerWayPointComponent.h"
 
 XRayLevelFactory::XRayLevelFactory(UObject* InParentPackage, EObjectFlags InFlags):EngineFactory(InParentPackage, InFlags),ParentPackage(InParentPackage),ObjectFlags(InFlags)
 {
@@ -49,8 +52,8 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 		return false;
 	}
 	
-	ObjectList&List = Scene->ListObj(OBJCLASS_SCENEOBJECT);
-	for(CCustomObject*Object: List)
+	ObjectList&ListObj = Scene->ListObj(OBJCLASS_SCENEOBJECT);
+	for(CCustomObject*Object: ListObj)
 	{
 		CSceneObject* SceneObject =  reinterpret_cast<CSceneObject*>(Object->QueryInterface(OBJCLASS_SCENEOBJECT));
 		CEditableObject * EditableObject =  SceneObject->GetReference();
@@ -74,6 +77,33 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 				Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 				StaticMeshActor->SetActorLabel(Label);
 			}
+		}
+	}
+	ObjectList& ListWay = Scene->ListObj(OBJCLASS_WAY);
+	for (CCustomObject* Object : ListWay)
+	{
+		CWayObject* WayObject = reinterpret_cast<CWayObject*>(Object->QueryInterface(OBJCLASS_WAY));
+		if (WayObject&& WayObject->m_WayPoints.size())
+		{
+			AStalkerWayObject* WayObjectActor = World->SpawnActor<AStalkerWayObject>(FVector(StalkerMath::XRayLocationToUnreal( WayObject->m_WayPoints[0]->m_vPosition)),FRotator(0,0,0));
+			for (int32 i = 0; i < WayObject->m_WayPoints.size()-1; i++)
+			{
+				WayObjectActor->CreatePoint(FVector(StalkerMath::XRayLocationToUnreal(WayObject->m_WayPoints[0]->m_vPosition)),false);
+			}
+			for (int32 i = 0; i < WayObject->m_WayPoints.size() ; i++)
+			{
+				WayObjectActor->Points[i]->SetWorldLocation(FVector(StalkerMath::XRayLocationToUnreal(WayObject->m_WayPoints[i]->m_vPosition)));
+				WayObjectActor->Points[i]->PointName = WayObject->m_WayPoints[i]->m_Name.c_str();
+				WayObjectActor->Points[i]->Flags = WayObject->m_WayPoints[i]->m_Flags.get();
+				for (SWPLink*Link:WayObject->m_WayPoints[i]->m_Links)
+				{
+					auto Iterator =  std::find_if(WayObject->m_WayPoints.begin(), WayObject->m_WayPoints.end(),[Link](CWayPoint*Left){return Left==Link->way_point;});
+					check(Iterator != WayObject->m_WayPoints.end());
+					int32 Id = Iterator- WayObject->m_WayPoints.begin();
+					WayObjectActor->Points[i]->AddLink(WayObjectActor->Points[Id], Link->probability);
+				}
+			}
+			WayObjectActor->SetActorLabel(WayObject->GetName());
 		}
 	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());

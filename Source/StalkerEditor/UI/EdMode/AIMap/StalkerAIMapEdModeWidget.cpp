@@ -41,9 +41,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 				[
 					SNew(SButton)
 					.Text(FText::FromString(TEXT("Generate Full")))
-					.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->GenerateFull(); return  FReply::Handled(); })
-				/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-					.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+					.OnClicked_Lambda([this]() { GetEdMode()->GenerateFull(); return  FReply::Handled(); })
+					.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 				]
 			
 			]
@@ -59,9 +58,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 				[
 					SNew(SButton)
 					.Text(FText::FromString(TEXT("Generate Select")))
-					.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->GenerateSelect(); return  FReply::Handled(); })
-				/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-					.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+					.OnClicked_Lambda([this]() { GetEdMode()->GenerateSelect(); return  FReply::Handled(); })
+					.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 				]
 			
 			]
@@ -77,9 +75,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 				[
 					SNew(SButton)
 					.Text(FText::FromString(TEXT("Smooth Full")))
-					.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->SmoothFull(); return  FReply::Handled(); })
-				/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-					.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+					.OnClicked_Lambda([this]() { GetEdMode()->SmoothFull(); return  FReply::Handled(); })
+					.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 				]
 			
 			]
@@ -95,9 +92,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 				[
 					SNew(SButton)
 					.Text(FText::FromString(TEXT("Smooth Select")))
-					.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->SmoothSelect(); return  FReply::Handled(); })
-				/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-					.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+					.OnClicked_Lambda([this]() { GetEdMode()->SmoothSelect(); return  FReply::Handled(); })
+					.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 				]
 			
 			]
@@ -113,9 +109,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 				[
 					SNew(SButton)
 					.Text(FText::FromString(TEXT("Reset Select")))
-					.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->ResetSelect(); return  FReply::Handled(); })
-				/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-					.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+					.OnClicked_Lambda([this]() { GetEdMode()->ResetSelect(); return  FReply::Handled(); })
+					.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 				]
 			
 			]
@@ -131,7 +126,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 				[
 					SNew(SButton)
 					.Text(FText::FromString(TEXT("Clear AI Map")))
-					.OnClicked_Lambda([this](){ static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->ClearAIMap();return  FReply::Handled();})
+					.OnClicked_Lambda([this](){ GetEdMode()->ClearAIMap();return  FReply::Handled();})
+					.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 				]
 			
 			]
@@ -151,12 +147,13 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 			.Padding(0.f, 5.f, 0.f, 0.f)
 			[
 				SNew(SCheckBox)
-				.IsChecked_Lambda([this]() { return static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->bIgnoreConstraints? ECheckBoxState::Checked:ECheckBoxState::Unchecked; })
-				.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->bIgnoreConstraints = InState==ECheckBoxState::Checked;})
+				.IsChecked_Lambda([this]() { return GetEdMode()->bIgnoreConstraints? ECheckBoxState::Checked:ECheckBoxState::Unchecked; })
+				.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {GetEdMode()->bIgnoreConstraints = InState==ECheckBoxState::Checked;})
+				.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabled(); })
 				[
 					SNew(STextBlock)
 					.Font(StandardFont)
-				.Text(FText::FromString(TEXT("Ignore Constraints")))
+					.Text(FText::FromString(TEXT("Ignore Constraints")))
 				]
 			]
 			+ SVerticalBox::Slot()
@@ -164,12 +161,13 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 			.Padding(0.f, 5.f, 0.f, 0.f)
 			[
 				SNew(SCheckBox)
-				.IsChecked_Lambda([this]() { return static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->bAutoLink ? ECheckBoxState::Checked : ECheckBoxState::Unchecked; })
-				.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->bAutoLink = InState == ECheckBoxState::Checked; })
+				.IsChecked_Lambda([this]() { return GetEdMode()->bAutoLink ? ECheckBoxState::Checked : ECheckBoxState::Unchecked; })
+				.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {GetEdMode()->bAutoLink = InState == ECheckBoxState::Checked; })
+				.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabled(); })
 				[
 					SNew(STextBlock)
 					.Font(StandardFont)
-				.Text(FText::FromString(TEXT("Auto Link")))
+					.Text(FText::FromString(TEXT("Auto Link")))
 				]
 			]
 			+ SVerticalBox::Slot()
@@ -201,9 +199,9 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 						.AutoWidth()
 						[
 							SNew(SCheckBox).Style(FAppStyle::Get(), "RadioButton")
-							.IsEnabled(true) // Todo: enable after adding this functionality
-							.IsChecked_Lambda([this]() { return static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkMode == FStalkerAIMapEditMode::LM_Add? ECheckBoxState::Checked: ECheckBoxState::Unchecked; })
-							.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {if (InState == ECheckBoxState::Checked) { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkMode = FStalkerAIMapEditMode::LM_Add; } })
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
+							.IsChecked_Lambda([this]() { return GetEdMode()->LinkMode == FStalkerAIMapEditMode::LM_Add? ECheckBoxState::Checked: ECheckBoxState::Unchecked; })
+							.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {if (InState == ECheckBoxState::Checked) { GetEdMode()->LinkMode = FStalkerAIMapEditMode::LM_Add; } })
 						]
 						+ SHorizontalBox::Slot()
 						.AutoWidth()
@@ -221,9 +219,9 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 						.AutoWidth()
 						[
 							SNew(SCheckBox).Style(FAppStyle::Get(), "RadioButton")
-							.IsEnabled(true) // Todo: enable after adding this functionality
-							.IsChecked_Lambda([this]() { return  static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkMode == FStalkerAIMapEditMode::LM_Remove ? ECheckBoxState::Checked : ECheckBoxState::Unchecked;  })
-							.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {if (InState == ECheckBoxState::Checked) { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkMode = FStalkerAIMapEditMode::LM_Remove; }})
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
+							.IsChecked_Lambda([this]() { return  GetEdMode()->LinkMode == FStalkerAIMapEditMode::LM_Remove ? ECheckBoxState::Checked : ECheckBoxState::Unchecked;  })
+							.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) {if (InState == ECheckBoxState::Checked) { GetEdMode()->LinkMode = FStalkerAIMapEditMode::LM_Remove; }})
 						]
 						+ SHorizontalBox::Slot()
 						.AutoWidth()
@@ -241,9 +239,9 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 						.AutoWidth()
 						[
 							SNew(SCheckBox).Style(FAppStyle::Get(), "RadioButton")
-							.IsEnabled(true) // Todo: enable after adding this functionality
-							.IsChecked_Lambda([this]() { return static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkMode == FStalkerAIMapEditMode::LM_Invert ? ECheckBoxState::Checked : ECheckBoxState::Unchecked; ; })
-							.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) { if(InState== ECheckBoxState::Checked) { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkMode = FStalkerAIMapEditMode::LM_Invert; }})
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
+							.IsChecked_Lambda([this]() { return GetEdMode()->LinkMode == FStalkerAIMapEditMode::LM_Invert ? ECheckBoxState::Checked : ECheckBoxState::Unchecked; ; })
+							.OnCheckStateChanged_Lambda([this](ECheckBoxState InState) { if(InState== ECheckBoxState::Checked) { GetEdMode()->LinkMode = FStalkerAIMapEditMode::LM_Invert; }})
 						]
 						+ SHorizontalBox::Slot()
 						.AutoWidth()
@@ -268,6 +266,7 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 						.VAlign(VAlign_Center)
 						[
 							SNew(SButton)
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 							.Text(FText::FromString(TEXT("X"))).Visibility(EVisibility::Hidden)
 						]
 						+ SHorizontalBox::Slot()
@@ -288,9 +287,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 									.Font(SmallFont)
 								]
 							]
-							.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkForward(); return  FReply::Handled(); })
-						/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-							.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+							.OnClicked_Lambda([this]() { GetEdMode()->LinkForward(); return  FReply::Handled(); })
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 						]
 					]
 					+ SVerticalBox::Slot().MaxHeight(20)
@@ -314,10 +312,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 									.Font(SmallFont)
 								]
 							]
-							.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkLeft(); return  FReply::Handled(); })
-
-						/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-							.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+							.OnClicked_Lambda([this]() { GetEdMode()->LinkLeft(); return  FReply::Handled(); })
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 						]
 						+ SHorizontalBox::Slot()
 						.MaxWidth(20)
@@ -337,9 +333,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 									.Font(SmallFont)
 								]
 							]
-							.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkAll(); return  FReply::Handled(); })
-						/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-							.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+							.OnClicked_Lambda([this]() { GetEdMode()->LinkAll(); return  FReply::Handled(); })
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 						]
 						+ SHorizontalBox::Slot()
 						.MaxWidth(20)
@@ -359,9 +354,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 									.Font(SmallFont)
 								]
 							]
-							.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkRight(); return  FReply::Handled(); })
-						/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-							.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+							.OnClicked_Lambda([this]() { GetEdMode()->LinkRight(); return  FReply::Handled(); })
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 						]
 					]
 					+ SVerticalBox::Slot().MaxHeight(20)
@@ -392,9 +386,8 @@ void SStalkerAIMapEdModeWidget::Construct(const FArguments& InArgs)
 									.Font(SmallFont)
 								]
 							]
-							.OnClicked_Lambda([this]() { static_cast<FStalkerAIMapEditMode*>(GLevelEditorModeTools().GetActiveMode(FStalkerAIMapEditMode::EM_AIMap))->LinkBackward(); return  FReply::Handled(); })
-						/*	.OnClicked(this, &SExampleEdModeWidget::OnAddPoint)
-							.IsEnabled(this, &SExampleEdModeWidget::CanAddPoint)*/
+							.OnClicked_Lambda([this]() { GetEdMode()->LinkBackward(); return  FReply::Handled(); })
+							.IsEnabled_Lambda([this]() { return GetEdMode()->IsEnabledAction(); })
 						]
 					]
 				]

@@ -148,8 +148,11 @@ void UStalkerAIMap::HashFill(const FBox3f& NewAABB)
 	for (FStalkerAIMapNode* Node : Nodes)
 	{
 		TArray<FStalkerAIMapNode*>* NodesHashList = GetEditorHashMap(Node->Position);
+		bool* NodesHashSelect = GetEditorHashSelected(Node->Position);
 		check(NodesHashList);
+		check(NodesHashSelect);
 		NodesHashList->Add(Node);
+		*NodesHashSelect |= EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected);
 	}
 }
 
@@ -160,6 +163,7 @@ void UStalkerAIMap::HashClear()
 		for (int32 y = 0; y <= NodesHashSize; y++)
 		{
 			NodesHash[x][y].Reset(0);
+			NodesHashSelected[x][y] = false;
 		}
 	}
 
@@ -196,6 +200,7 @@ void UStalkerAIMap::RemoveSelect()
 			i = 0;
 		}
 	}
+	HashFill();
 }
 
 TArray<FStalkerAIMapNode*>* UStalkerAIMap::GetEditorHashMap(const FVector3f& InPosition)
@@ -214,6 +219,159 @@ TArray<FStalkerAIMapNode*>* UStalkerAIMap::GetEditorHashMap(const FVector3f& InP
 	int32 iy = VMscale.Y == 0 ? 0 : static_cast<int32>(FMath::Floor((Position.Y - AABB.Min.Y) * Scale.Y));
 
 	return (ix <= NodesHashSize && ix >= 0 && iy <= NodesHashSize && iy >= 0) ? &NodesHash[ix][iy] : 0;
+}
+
+bool* UStalkerAIMap::GetEditorHashSelected(const FVector3f& InPosition)
+{
+	if (!AABB.IsValid)
+	{
+		return nullptr;
+	}
+	FVector3f	VMscale, Scale, Position = FVector3f(FMath::Floor(InPosition.X / NodeSize) * NodeSize, FMath::Floor(InPosition.Y / NodeSize) * NodeSize, InPosition.Z);
+
+	VMscale.Set(AABB.Max.X - AABB.Min.X, AABB.Max.Y - AABB.Min.Y, AABB.Max.Z - AABB.Min.Z);
+	Scale.Set(float(NodesHashSize), float(NodesHashSize), 0);
+	Scale /= VMscale;
+
+	int32 ix = VMscale.X == 0 ? 0 : static_cast<int32>(FMath::Floor((Position.X - AABB.Min.X) * Scale.X));
+	int32 iy = VMscale.Y == 0 ? 0 : static_cast<int32>(FMath::Floor((Position.Y - AABB.Min.Y) * Scale.Y));
+
+	return (ix <= NodesHashSize && ix >= 0 && iy <= NodesHashSize && iy >= 0) ? &NodesHashSelected[ix][iy] : 0;
+}
+
+int32 UStalkerAIMap::GetCountSelected()
+{
+	int32 Counter = 0;
+	for (int32 x = 0; x <= NodesHashSize; x++)
+	{
+		for (int32 y = 0; y <= NodesHashSize; y++)
+		{
+			if (NodesHashSelected[x][y])
+			{
+				for (FStalkerAIMapNode* Node : NodesHash[x][y])
+				{
+					if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
+					{
+						Counter++;
+					}
+				}
+			}
+		
+		}
+	}
+	return Counter;
+}
+
+bool UStalkerAIMap::HasSelected()
+{
+	for (int32 x = 0; x <= NodesHashSize; x++)
+	{
+		for (int32 y = 0; y <= NodesHashSize; y++)
+		{
+			if (NodesHashSelected[x][y])
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+void UStalkerAIMap::RefreshHashSelected()
+{
+	for (int32 x = 0; x <= NodesHashSize; x++)
+	{
+		for (int32 y = 0; y <= NodesHashSize; y++)
+		{
+			NodesHashSelected[x][y] = false;
+			for (FStalkerAIMapNode* Node : NodesHash[x][y])
+			{
+				NodesHashSelected[x][y] |= EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected);
+			}
+		}
+	}
+}
+
+void UStalkerAIMap::SelectNode(FStalkerAIMapNode* Node)
+{
+	bool*Select = GetEditorHashSelected(Node->Position);
+	check(Select);
+	*Select = true;
+	Node->Flags |= EStalkerAIMapNodeFlags::Selected;
+
+}
+
+void UStalkerAIMap::UnSelectNode(FStalkerAIMapNode* InNode)
+{
+	EnumRemoveFlags(InNode->Flags, EStalkerAIMapNodeFlags::Selected);
+	TArray<FStalkerAIMapNode*>* NodesHashList = GetEditorHashMap(InNode->Position);
+	check(NodesHashList);
+	bool* Select = GetEditorHashSelected(InNode->Position);
+	check(Select);
+	*Select = false;
+	for (FStalkerAIMapNode* Node : *NodesHashList)
+	{
+		*Select |= EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected);
+	}
+}
+
+void UStalkerAIMap::ClearSelected()
+{
+	for (int32 x = 0; x <= NodesHashSize; x++)
+	{
+		for (int32 y = 0; y <= NodesHashSize; y++)
+		{
+			if (NodesHashSelected[x][y])
+			{
+				for (FStalkerAIMapNode* Node : NodesHash[x][y])
+				{
+					EnumRemoveFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected);
+				}
+			}
+		}
+	}
+}
+
+void UStalkerAIMap::GetSelectedNodes(TArray<FStalkerAIMapNode*>& Result)
+{
+	for (int32 x = 0; x <= NodesHashSize; x++)
+	{
+		for (int32 y = 0; y <= NodesHashSize; y++)
+		{
+			if (NodesHashSelected[x][y])
+			{
+				for (FStalkerAIMapNode* Node : NodesHash[x][y])
+				{
+					if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
+					{
+						Result.Add(Node);
+					}
+				}
+			}
+		}
+	}
+}
+
+bool UStalkerAIMap::GetFirstSelectedNode(FStalkerAIMapNode*& Result)
+{
+	for (int32 x = 0; x <= NodesHashSize; x++)
+	{
+		for (int32 y = 0; y <= NodesHashSize; y++)
+		{
+			if (NodesHashSelected[x][y])
+			{
+				for (FStalkerAIMapNode* Node : NodesHash[x][y])
+				{
+					if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
+					{
+						Result = Node;
+						return true;
+					}
+				}
+			}
+		}
+	}
+	return false;
 }
 
 FStalkerAIMapNode* UStalkerAIMap::FindOrCreateNode(const FVector3f& InPosition, float ErrorToleranceForZ, bool NotFind, bool bAutoLink)

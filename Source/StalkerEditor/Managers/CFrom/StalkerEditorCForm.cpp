@@ -169,6 +169,7 @@ void UStalkerEditorCForm::Build()
 		
 				}
 
+				CForm->AABB +=	FBox3f(StaticMeshComponent->Bounds.GetBox());
 			}
 
 		}
@@ -273,6 +274,7 @@ void UStalkerEditorCForm::Build()
 
 					}
 				}
+				CForm->AABB += FBox3f(LandscapeComponent->Bounds.GetBox());
 			}
 		}
 		

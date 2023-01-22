@@ -9,9 +9,7 @@ ESceneCustomOTool::~ESceneCustomOTool()
 {
 	for (CCustomObject *Obj : m_Objects)
 	{
-		{
-			delete			Obj;
-		}
+		delete			Obj;
 	}
 }
 
