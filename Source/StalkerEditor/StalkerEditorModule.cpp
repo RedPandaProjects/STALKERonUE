@@ -6,6 +6,9 @@
 #include "UI/Commands/StalkerEditorCommands.h"
 #include "UI/EdMode/AIMap/StalkerAIMapEditMode.h"
 #include "UI/EdMode/WayPoints/StalkerWayObjectEditMode.h"
+#include "IPlacementModeModule.h"
+#include "ComponentTypeRegistry.h"
+#include "Managers/SEFactory/StalkerSEFactoryManager.h"
 
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
@@ -54,6 +57,7 @@ void FStalkerEditorModule::StartupModule()
 			true, 500
 			);
 	}
+	FCoreDelegates::OnPostEngineInit.AddRaw(this, &FStalkerEditorModule::OnPostEngineInit);
 	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerEditorModule::OnPreExit);
 }
 
@@ -67,14 +71,20 @@ void FStalkerEditorModule::ShutdownModule()
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerAIMapEditMode::EM_AIMap);
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerWayObjectEditMode::EM_WayObject);
 		FStalkerEditorStyle::Shutdown();
+		FCoreDelegates::OnPostEngineInit.RemoveAll(this);
 		FCoreDelegates::OnPreExit.RemoveAll(this);
 		StalkerEditorCommands::Unregister();
 	}
 }
 
+void FStalkerEditorModule::OnPostEngineInit()
+{
+	GStalkerEditorManager->SEFactoryManager->Initialized();
+	FComponentTypeRegistry::Get().Invalidate();
+}
+
 void FStalkerEditorModule::OnPreExit()
 {
-
 	GStalkerEditorManager->Destroy();
 	GStalkerEditorManager->RemoveFromRoot();
 	GStalkerEditorManager->MarkAsGarbage();

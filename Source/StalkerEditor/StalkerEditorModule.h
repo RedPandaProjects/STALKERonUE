@@ -7,11 +7,12 @@ class FStalkerEditorModule : public IModuleInterface
 public:
 
 	/** IModuleInterface implementation */
-	virtual void StartupModule() override;
-	virtual void ShutdownModule() override;
-
+	virtual void StartupModule	() override;
+	virtual void ShutdownModule	() override;
+	
 private:
-	void	OnPreExit();
+	void		OnPostEngineInit();
+	void		OnPreExit		();
 	StalkerMainMenu MainMenu;
 	StalkerToolbarMenu ToolBarMenu;
 	StalkerBuildMenu	BuildMenu;

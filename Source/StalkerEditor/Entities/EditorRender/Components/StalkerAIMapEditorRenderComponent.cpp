@@ -9,7 +9,7 @@ UStalkerAIMapEditorRenderComponent::UStalkerAIMapEditorRenderComponent()
 	bAutoActivate = true;
 	bTickInEditor = true;
 	PrimaryComponentTick.bCanEverTick = true;
-
+	PrimaryComponentTick.TickInterval = 0.5;
 	SetCollisionProfileName(UCollisionProfile::NoCollision_ProfileName);
 
 	bUseEditorCompositing = true;
@@ -173,17 +173,9 @@ FBoxSphereBounds UStalkerAIMapEditorRenderComponent::CalcBounds(const FTransform
 		return FBoxSphereBounds(LocalToWorld.GetLocation(), BoxExtent, 1.f);
 	}
 	UStalkerAIMap* StalkerAIMap = StalkerWorldSettings->GetAIMap();
-	if (!StalkerAIMap)
+	if (StalkerAIMap)
 	{
-		const FVector BoxExtent(1.f);
-		return FBoxSphereBounds(LocalToWorld.GetLocation(), BoxExtent, 1.f);
-	}
-
-	for (auto* Node : StalkerAIMap->Nodes)
-	{
-		BBox += FVector(Node->Position.X - StalkerAIMap->NodeSize * 0.5f, Node->Position.Y - StalkerAIMap->NodeSize * 0.5f, Node->Position.Z - 2.0);
-		BBox += FVector(Node->Position.X + StalkerAIMap->NodeSize * 0.5f, Node->Position.Y + StalkerAIMap->NodeSize * 0.5f, Node->Position.Z + 2.0);
-
+		BBox = FBox(StalkerAIMap->AABB);
 	}
 
 	if (BBox.IsValid)

@@ -11,16 +11,21 @@ public:
 	void											Destroy						();
 	inline const XRaySOCMaterials&					GetSOCMaterials				() const { return SOCMaterials; }
 	FString											GetGamePath					();
+	
+
+
 	UPROPERTY(Transient)
 	TArray< USkeleton*>								Skeletons;
 	UPROPERTY(Transient)
 	class UStalkerEditorCForm*						EditorCFrom;
 	UPROPERTY(Transient)
 	class UStalkerEditorAIMap*						EditorAIMap;
+	UPROPERTY(Transient)
+	class UStalkerSEFactoryManager*					SEFactoryManager;
 private:
 	void											OnReInitialized				();
 	void											ScanSkeletons				();
-	void											OnPostWorldInitialization	(UWorld* World, const UWorld::InitializationValues);
+	void											OnPostWorldInitialization(UWorld* World, const UWorld::InitializationValues);
 	XRaySOCMaterials								SOCMaterials;
 
 };

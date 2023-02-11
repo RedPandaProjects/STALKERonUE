@@ -79,26 +79,6 @@ void AStalkerLight::set_shadow(bool InShadow)
 	}
 }
 
-void AStalkerLight::set_volumetric(bool)
-{
-}
-
-void AStalkerLight::set_volumetric_quality(float)
-{
-}
-
-void AStalkerLight::set_volumetric_intensity(float)
-{
-}
-
-void AStalkerLight::set_volumetric_distance(float)
-{
-}
-
-void AStalkerLight::set_indirect(bool)
-{
-}
-
 void AStalkerLight::set_position(const Fvector& P)
 {
 	StartPosition = FVector(StalkerMath::XRayLocationToUnreal(P));
@@ -163,12 +143,16 @@ void AStalkerLight::set_range(float R)
 	}
 }
 
-void AStalkerLight::set_virtual_size(float R)
+void AStalkerLight::set_intensity(float InIntensity)
 {
+	LightPoint->Intensity = InIntensity;
+	SpotPoint->Intensity = InIntensity;
 }
 
-void AStalkerLight::set_texture(LPCSTR name)
+
+void AStalkerLight::set_material(LPCSTR name)
 {
+
 }
 
 void AStalkerLight::set_color(const Fcolor& C)
@@ -180,10 +164,12 @@ void AStalkerLight::set_color(const Fcolor& C)
 void AStalkerLight::set_color(float r, float g, float b)
 {
 	float Mag = FMath::Sqrt(r*r+g*g+b*b);
-	LightPoint->Intensity = 500 * Mag;
-	SpotPoint->Intensity = 500 * Mag;
-	
-	LightPoint->SetLightColor(FLinearColor(r/ Mag, g / Mag, b / Mag, 1.0f));
+	if (Mag > 1)
+	{
+		LightPoint->Intensity = 500 * Mag;
+		SpotPoint->Intensity = 500 * Mag;
+	}
+	LightPoint->SetLightColor(FLinearColor(r / Mag, g / Mag, b / Mag, 1.0f));
 	SpotPoint->SetLightColor(FLinearColor(r / Mag, g / Mag, b / Mag, 1.0f));
 }
 

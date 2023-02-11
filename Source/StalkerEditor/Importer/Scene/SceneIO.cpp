@@ -277,12 +277,12 @@ BOOL EScene::LoadLevelPartStream(ESceneToolBase* M, LPCSTR map_name)
         xrGUID			guid;
         R->r(&guid, sizeof(guid));
 
-        if (guid != m_GUID)
+    /*    if (guid != m_GUID)
         {
             ELog.DlgMsg(mtError, "Skipping invalid version of level part: '%s\\%s.part'", EFS.ExtractFileName(map_name).c_str(), M->ClassName());
             FS.r_close(R);
             return 			FALSE;
-        }
+        }*/
         // read data
         IReader* chunk = R->open_chunk(CHUNK_TOOLS_DATA + M->FClassID);
         if (chunk != NULL)

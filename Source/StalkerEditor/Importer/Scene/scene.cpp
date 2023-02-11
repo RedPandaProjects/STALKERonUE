@@ -3,6 +3,8 @@
 #include "Tools/Base/ESceneDummyTools.h"
 #include "Tools/AIMap/ESceneAIMapTools.h"
 #include "Tools/WayPoint/ESceneWayTools.h"
+#include "Tools/Shape/ESceneShapeTools.h"
+#include "Tools/Spawn/ESceneSpawnTools.h"
 
 
 EScene* Scene;
@@ -174,6 +176,8 @@ void EScene::CreateSceneTools()
 	RegisterSceneTools(new ESceneObjectTool); //+
 	RegisterSceneTools(new ESceneAIMapTool); //+
 	RegisterSceneTools(new ESceneWayTool); //+
+	RegisterSceneTools(new ESceneShapeTool); //+
+	RegisterSceneTools(new ESceneSpawnTool); //+
 }
 
 void EScene::DestroySceneTools()

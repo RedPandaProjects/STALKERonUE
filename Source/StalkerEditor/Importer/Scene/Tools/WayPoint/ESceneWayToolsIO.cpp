@@ -2,7 +2,7 @@
 
 // chunks
 static const u16 WAY_TOOLS_VERSION  	= 0x0000;
-
+#undef CHUNK_VERSION
 enum{
     CHUNK_VERSION			= 0x1001ul,
 };

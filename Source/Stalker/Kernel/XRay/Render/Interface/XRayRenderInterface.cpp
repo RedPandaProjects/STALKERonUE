@@ -177,104 +177,6 @@ void XRayRenderInterface::ros_destroy(IRender_ObjectSpecific*& V)
 	delete V;
 	V= nullptr;
 }
-class XrayRenderLight :public IRender_Light
-{
-	public:
-
-		void set_type(LT type) override
-		{
-		}
-
-		bool IsActive = true;
-		void set_active(bool InIsActive) override
-		{
-			IsActive = InIsActive;
-		}
-
-
-		bool get_active() override
-		{
-			return IsActive;
-		}
-
-
-		void set_shadow(bool) override
-		{
-		}
-
-
-		void set_volumetric(bool) override
-		{
-		}
-
-
-		void set_volumetric_quality(float) override
-		{
-		}
-
-
-		void set_volumetric_intensity(float) override
-		{
-		}
-
-
-		void set_volumetric_distance(float) override
-		{
-		}
-
-
-		void set_position(const Fvector& P) override
-		{
-		}
-
-
-		void set_rotation(const Fvector& D, const Fvector& R) override
-		{
-		}
-
-
-		void set_cone(float angle) override
-		{
-		}
-
-
-		void set_range(float R) override
-		{
-		}
-
-
-		void set_virtual_size(float R) override
-		{
-		}
-
-
-		void set_texture(LPCSTR name) override
-		{
-		}
-
-
-		void set_color(const Fcolor& C) override
-		{
-		}
-
-
-		void set_color(float r, float g, float b) override
-		{
-		}
-
-		bool IsHUD = false;
-		void set_hud_mode(bool b) override
-		{
-			IsHUD = b;
-		}
-
-
-		bool get_hud_mode() override
-		{
-			return IsHUD;;
-		}
-
-};
 IRender_Light* XRayRenderInterface::light_create()
 {
 	return GXRayEngineManager->GetResourcesManager()->CreateLight();
@@ -340,6 +242,7 @@ IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
 	
 	UStalkerKinematicsComponent* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name);
+	check(Kinematics);
 	if (Kinematics)
 	{
 		return Kinematics;

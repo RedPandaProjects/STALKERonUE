@@ -126,6 +126,12 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	TickAnimation(0,false);
 }
 
+void UStalkerKinematicsComponent::InitilizeEditor()
+{
+	bUpdateAnimationInEditor = true;
+	InitAnim(false);
+}
+
 void UStalkerKinematicsComponent::BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool IsMixing, float BlendAccrue, float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam)
 {
 	VERIFY(Blend.channel < MAX_CHANNELS);
@@ -563,6 +569,17 @@ CBlend* UStalkerKinematicsComponent::PlayCycle(u16 BonesPartID, MotionID InMotio
 	return LL_PlayCycle(BonesPartID, InMotionID, bMixIn, Callback, CallbackParam, channel);
 }
 
+void UStalkerKinematicsComponent::EditorPlay(MotionID InMotionID, bool InLoop)
+{
+	if(!bUpdateAnimationInEditor)
+	{
+		InitilizeEditor();
+	}
+	checkSlow(InMotionID.valid());
+	CMotionDef& MotionDef = AnimsDef[InMotionID.val];
+	LL_PlayCycle(MotionDef.bone_or_part, InMotionID, FALSE, MotionDef.Accrue(), MotionDef.Falloff(), MotionDef.Speed(), !InLoop, nullptr, nullptr, 0);
+}
+
 MotionID UStalkerKinematicsComponent::ID_FX(LPCSTR Name)
 {
 	MotionID Result = ID_FX_Safe(Name);
@@ -949,7 +966,7 @@ void UStalkerKinematicsComponent::TickComponent(float DeltaTime, enum ELevelTick
 			SkipDeltaTime = 0;
 		return;
 	}
-	LL_UpdateTracks(DeltaTime + SkipDeltaTime, false, false);
+	LL_UpdateTracks(DeltaTime + SkipDeltaTime, bUpdateAnimationInEditor, false);
 	SkipDeltaTime = 0;
 
 	if (MyUpdateCallback)	MyUpdateCallback(this);

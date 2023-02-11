@@ -136,6 +136,9 @@ void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
 	{
 		return;
 	}
+
+	PreReInitializedMulticastDelegate.Broadcast();
+
 	g_Engine->Destroy();
 	MyXRayEngine = nullptr;
 	delete g_Engine;
@@ -172,7 +175,7 @@ void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
 	g_Engine = MyXRayEngine;
 	g_Engine->Initialize();
 
-	ReInitializedMulticastDelegate.Broadcast();
+	PostReInitializedMulticastDelegate.Broadcast();
 }
 
 void UStalkerEngineManager::Destroy()

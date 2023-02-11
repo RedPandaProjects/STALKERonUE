@@ -4,8 +4,14 @@
 #include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Scene/Entitys/WayObject/WayPoint.h"
-#include "../Entities/AI/WayObject/StalkerWayObject.h"
-#include "../Entities/AI/WayObject/StalkerWayPointComponent.h"
+#include "../Entities/Scene/WayObject/StalkerWayObject.h"
+#include "../Entities/Scene/WayObject/StalkerWayPointComponent.h"
+#include "Scene/Entitys/SpawnObject/SpawnPoint.h"
+#include "../Entities/Scene/SpawnObject/StalkerSpawnObject.h"
+#include "../Entities/Scene/SpawnObject/Components/StalkerSpawnObjectBoxShapeComponent.h"
+#include "Scene/Entitys/ShapeObject/EShape.h"
+#include "../Entities/Scene/SpawnObject/Components/StalkerSpawnObjectSphereShapeComponent.h"
+
 
 XRayLevelFactory::XRayLevelFactory(UObject* InParentPackage, EObjectFlags InFlags):EngineFactory(InParentPackage, InFlags),ParentPackage(InParentPackage),ObjectFlags(InFlags)
 {
@@ -106,6 +112,139 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 			WayObjectActor->SetActorLabel(WayObject->GetName());
 		}
 	}
+	ObjectList& ListSpawn = Scene->ListObj(OBJCLASS_SPAWNPOINT);
+	for (CCustomObject* Object : ListSpawn)
+	{
+		CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(OBJCLASS_SPAWNPOINT));
+		if (SpawnObject && SpawnObject->m_SpawnData.m_Data)
+		{
+			SpawnObject->UpdateTransform(true);
+			Fquaternion XRayQuat;
+			XRayQuat.set(SpawnObject->FTransformR);
+			FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
+			FVector Location(-SpawnObject->GetPosition().x * 100, SpawnObject->GetPosition().z * 100, SpawnObject->GetPosition().y * 100);
+			FRotator Rotation(Quat);
+			FVector Scale3D(SpawnObject->GetScale().x, SpawnObject->GetScale().z, SpawnObject->GetScale().y);
+			AStalkerSpawnObject* SpawnObjectActor = World->SpawnActor<AStalkerSpawnObject>(Location, Rotation);
+			SpawnObjectActor->SetActorScale3D(Scale3D);
+			SpawnObjectActor->DestroyEntity();
+			SpawnObjectActor->SetActorLabel(SpawnObject->GetName());
+			{
+				SpawnObjectActor->SectionName = SpawnObject->m_SpawnData.m_Data->name();
+				SpawnObjectActor->EntityData.Reset();
+				NET_Packet 			Packet;
+				SpawnObject->m_SpawnData.m_Data->Spawn_Write(Packet, TRUE);
+				for (u32 i = 0; i < Packet.B.count; i++)
+				{
+					SpawnObjectActor->EntityData.Add(Packet.B.data[i]);
+				}
+			}
+			SpawnObjectActor->SpawnRead();
+
+			if (SpawnObject->m_AttachedObject)
+			{
+				CEditShape* Shape = reinterpret_cast<CEditShape*>(SpawnObject->m_AttachedObject->QueryInterface(OBJCLASS_SHAPE));
+				Shape->UpdateTransform(true);
+				if (Shape)
+				{
+					for (CShapeData::shape_def& ShapeData : Shape->GetShapes())
+					{
+						if (ShapeData.type == CShapeData::cfSphere)
+						{
+							UStalkerSpawnObjectSphereShapeComponent* NewShapeComponent = NewObject< UStalkerSpawnObjectSphereShapeComponent>(SpawnObjectActor, NAME_None, RF_Transactional);
+							SpawnObjectActor->AddInstanceComponent(NewShapeComponent);
+							NewShapeComponent->AttachToComponent(SpawnObjectActor->GetRootComponent(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+							NewShapeComponent->OnComponentCreated();
+							NewShapeComponent->RegisterComponent();
+							FTransform ShapeTransform;
+							Fmatrix MShape = Shape->_Transform();
+							ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(Fvector().add( MShape.c,ShapeData.data.sphere.P))));
+							NewShapeComponent->SphereRadius = ShapeData.data.sphere.R*100.f;
+							{
+								
+								Fvector A, B[8];
+								A.set(-.5f, -.5f, -.5f);	MShape.transform_tiny(B[0], A);
+								A.set(-.5f, -.5f, +.5f);	MShape.transform_tiny(B[1], A);
+								A.set(-.5f, +.5f, +.5f);	MShape.transform_tiny(B[2], A);
+								A.set(-.5f, +.5f, -.5f);	MShape.transform_tiny(B[3], A);
+								A.set(+.5f, +.5f, +.5f);	MShape.transform_tiny(B[4], A);
+								A.set(+.5f, +.5f, -.5f);	MShape.transform_tiny(B[5], A);
+								A.set(+.5f, -.5f, +.5f);	MShape.transform_tiny(B[6], A);
+								A.set(+.5f, -.5f, -.5f);	MShape.transform_tiny(B[7], A);
+
+								Fvector TangetX;
+								Fvector TangetY;
+								Fvector TangetZ;
+								TangetX.sub(B[0], B[7]);
+								TangetX.normalize_safe();
+								TangetY.sub(B[0], B[3]);
+								TangetY.normalize_safe();
+								TangetZ.sub(B[0], B[1]);
+								TangetZ.normalize_safe();
+								FVector UnrealTangetX = FVector(StalkerMath::XRayNormalToUnreal(TangetX));
+								FVector UnrealTangetZ = FVector(StalkerMath::XRayNormalToUnreal(TangetY));
+								FVector UnrealTangetY = FVector(StalkerMath::XRayNormalToUnreal(TangetZ));
+
+								FMatrix MatrixRotate(UnrealTangetX, UnrealTangetY, UnrealTangetZ, FVector(0, 0, 0));
+								ShapeTransform.SetRotation(MatrixRotate.ToQuat());
+
+								ShapeTransform.SetScale3D(FVector(B[0].distance_to(B[7]), B[0].distance_to(B[1]), B[0].distance_to(B[3])) / 2.f);
+							}
+							NewShapeComponent->UpdateBounds();
+							NewShapeComponent->MarkRenderStateDirty();
+						}
+						else if (ShapeData.type == CShapeData::cfBox)
+						{
+							UStalkerSpawnObjectBoxShapeComponent* NewShapeComponent = NewObject< UStalkerSpawnObjectBoxShapeComponent>(SpawnObjectActor, NAME_None, RF_Transactional);
+							SpawnObjectActor->AddInstanceComponent(NewShapeComponent);
+							NewShapeComponent->AttachToComponent(SpawnObjectActor->GetRootComponent(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+							NewShapeComponent->OnComponentCreated();
+							NewShapeComponent->RegisterComponent();
+
+							Fmatrix MBox = ShapeData.data.box;
+							MBox.mulA_43(Shape->_Transform());
+
+							FTransform ShapeTransform;
+							ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(MBox.c)));
+							{
+								Fvector A, B[8];
+								A.set(-.5f, -.5f, -.5f);	MBox.transform_tiny(B[0], A);
+								A.set(-.5f, -.5f, +.5f);	MBox.transform_tiny(B[1], A);
+								A.set(-.5f, +.5f, +.5f);	MBox.transform_tiny(B[2], A);
+								A.set(-.5f, +.5f, -.5f);	MBox.transform_tiny(B[3], A);
+								A.set(+.5f, +.5f, +.5f);	MBox.transform_tiny(B[4], A);
+								A.set(+.5f, +.5f, -.5f);	MBox.transform_tiny(B[5], A);
+								A.set(+.5f, -.5f, +.5f);	MBox.transform_tiny(B[6], A);
+								A.set(+.5f, -.5f, -.5f);	MBox.transform_tiny(B[7], A);
+
+								Fvector TangetX;
+								Fvector TangetY;
+								Fvector TangetZ;
+								TangetX.sub(B[0], B[7]);
+								TangetX.normalize_safe();
+								TangetY.sub(B[0], B[3]);
+								TangetY.normalize_safe();
+								TangetZ.sub(B[0], B[1]);
+								TangetZ.normalize_safe();
+								FVector UnrealTangetX = FVector(StalkerMath::XRayNormalToUnreal(TangetX));
+								FVector UnrealTangetZ = FVector(StalkerMath::XRayNormalToUnreal(TangetY));
+								FVector UnrealTangetY = FVector(StalkerMath::XRayNormalToUnreal(TangetZ));
+							
+								FMatrix MatrixRotate(UnrealTangetX, UnrealTangetY, UnrealTangetZ,FVector(0,0,0));
+								ShapeTransform.SetRotation(MatrixRotate.ToQuat());
+
+								ShapeTransform.SetScale3D(FVector(B[0].distance_to(B[7]), B[0].distance_to(B[1]) , B[0].distance_to(B[3])) / 2.f);
+							}
+
+							NewShapeComponent->SetWorldTransform(ShapeTransform);
+						}
+					}
+				
+				}
+
+			}
+		}
+	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (StalkerWorldSettings)
 	{
@@ -137,6 +276,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 			}
 		}
 		INAIMap->HashFill();
+		INAIMap->MarkPackageDirty();
 	}
 	Scene = nullptr;
 	return true;

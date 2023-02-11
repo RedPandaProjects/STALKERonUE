@@ -2,7 +2,7 @@
 #include "StalkerWayObject.h"
 #include "../../../UI/EdMode/WayPoints/StalkerWayObjectEditMode.h"
 
-TCustomShowFlag<> StalkerShowWayPoint(TEXT("StalkerShowWayPoint"), false /*DefaultEnabled*/, SFG_Normal, FText::FromString(TEXT("Way point")));
+TCustomShowFlag<> StalkerShowWayPoint(TEXT("StalkerShowWayPoint"), true /*DefaultEnabled*/, SFG_Normal, FText::FromString(TEXT("Way point")));
 
 constexpr float WayPointSize = 1.5f * 100;
 constexpr float WayPointRadius = WayPointSize * .5f;

@@ -53,8 +53,11 @@ public class StalkerEditor : ModuleRules
                 "Landscape",
                 "XRayEngineModules",
                 "XRayEditorModules",
-                "RedImage", "AnimGraph","BlueprintGraph","EditorFramework"
-                // ... add private dependencies that you statically link with here ...
+                "RedImage",
+                "AnimGraph",
+                "BlueprintGraph",
+                "EditorFramework",
+                "PlacementMode"
             }
             );
     }

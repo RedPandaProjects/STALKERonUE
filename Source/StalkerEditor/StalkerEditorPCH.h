@@ -88,6 +88,10 @@
 #include "Editor.h"
 #include "EditorModeManager.h"
 #include "HitProxies.h"
+#include "IDetailCustomization.h"
+#include "DetailLayoutBuilder.h"
+#include "DetailCategoryBuilder.h"
+#include "DetailWidgetRow.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrECore/stdafx.h"
 #include "XrECore/Editor/EditMesh.h"

@@ -5,6 +5,19 @@ UStalkerGameSettings::UStalkerGameSettings()
 	EditorStartupGame = EStalkerGame::COP;
 }
 
+const TMap<FName, FStalkerLevelInfo>& UStalkerGameSettings::GetCurrentLevels() const
+{
+	switch (GXRayEngineManager->GetCurrentGame())
+	{
+	default:
+		return LevelsCOP;
+	case EStalkerGame::CS:
+		return LevelsCS;
+	case EStalkerGame::SHOC:
+		return LevelsSOC;
+	}
+}
+
 void UStalkerGameSettings::ReInitilizeXRay()
 {
 #if WITH_EDITOR

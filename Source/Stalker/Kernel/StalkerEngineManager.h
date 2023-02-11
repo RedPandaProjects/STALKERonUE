@@ -24,7 +24,8 @@ public:
 	inline class XRayInput*							GetInput				()								{return MyXRayInput;}
 	inline class UStalkerGameViewportClient*		GetGameViewportClient	()								{return GameViewportClient;}
 
-	FSimpleMulticastDelegate						ReInitializedMulticastDelegate;
+	FSimpleMulticastDelegate						PreReInitializedMulticastDelegate;
+	FSimpleMulticastDelegate						PostReInitializedMulticastDelegate;
 	inline	EStalkerGame							GetCurrentGame			() const { return CurrentGame; }
 	inline class UStalkerPhysicalMaterialsManager*	GetPhysicalMaterialsManager(){return PhysicalMaterialsManager.Get(); }
 private:

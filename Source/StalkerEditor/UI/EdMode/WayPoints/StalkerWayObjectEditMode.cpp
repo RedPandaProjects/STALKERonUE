@@ -2,8 +2,8 @@
 #include "StalkerWayObjectEditorCommands.h"
 #include "StalkerWayObjectEdModeToolkit.h"
 #include "EditorViewportClient.h"
-#include "../../../Entities/AI/WayObject/StalkerWayObject.h"
-#include "../../../Entities/AI/WayObject/StalkerWayPointComponent.h"
+#include "../../../Entities/Scene/WayObject/StalkerWayObject.h"
+#include "../../../Entities/Scene/WayObject/StalkerWayPointComponent.h"
 
 const FEditorModeID FStalkerWayObjectEditMode::EM_WayObject(TEXT("EM_WayObject"));
 

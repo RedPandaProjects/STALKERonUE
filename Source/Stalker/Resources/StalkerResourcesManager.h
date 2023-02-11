@@ -1,8 +1,8 @@
 #pragma once
 #include "StalkerResourcesManager.generated.h"
-
+class USlateBrushAsset;
 UCLASS()
-class UStalkerResourcesManager : public UObject
+class STALKER_API UStalkerResourcesManager : public UObject
 {
 	GENERATED_BODY()
 public:
@@ -14,6 +14,7 @@ public:
 	void								Reload			();
 	class AStalkerLight*				CreateLight		();
 	void								Desotry			(class IRender_Light*Light);
+	class UStalkerKinematicsData*		GetKinematics	(const char* Name);
 	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name);
 	class UStalkerKinematicsComponent*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
 	void								Destroy			(class UStalkerKinematicsComponent* Mesh);
