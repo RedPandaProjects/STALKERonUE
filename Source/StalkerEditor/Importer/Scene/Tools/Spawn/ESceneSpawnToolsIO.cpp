@@ -2,12 +2,8 @@
 
 // chunks
 static const u16 SPAWN_TOOLS_VERSION  	= 0x0000;
-
-enum
-{
-    CHUNK_VERSION			= 0x1001ul,
-    CHUNK_FLAGS				= 0x1002ul,
-};
+#define CHUNK_VERSION 0x1001ul
+#define CHUNK_FLAGS  0x1002ul
 
 bool ESceneSpawnTool::LoadLTX(CInifile& ini)
 {

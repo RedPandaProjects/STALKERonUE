@@ -14,4 +14,7 @@ private:
 protected:
 	AActor* SpawnActor(UObject* InAsset, ULevel* InLevel, const FTransform& InTransform, const FActorSpawnParameters& InSpawnParams) override;
 
+
+	FString GetDefaultActorLabel(UObject* Asset) const override;
+
 };

@@ -632,8 +632,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	g_pMotionsContainer->clean(false);
 	FS.r_close(FileData);
 
-	StalkerKinematicsData->PostEditChange();
-	StalkerKinematicsData->MarkPackageDirty();
+	StalkerKinematicsData->Modify();
 	return StalkerKinematicsData;
 }
 
@@ -793,8 +792,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 						UStalkerPhysicalMaterial* PhysicalMaterial= LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
 						NewMaterial->PhysMaterial = PhysicalMaterial;
 						NewMaterial->InitStaticPermutation();
-						NewMaterial->PostEditChange();
-						NewMaterial->MarkPackageDirty();
+						NewMaterial->Modify();
 						Material = NewMaterial;
 					}
 					Materials.AddUnique(FStaticMaterial(Material, *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
@@ -821,10 +819,8 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 
 	}
 	StaticMesh->Build();
-	StaticMesh->MarkPackageDirty();
-	StaticMesh->PostEditChange();
 	StaticMesh->GetBodySetup()->CollisionTraceFlag = ECollisionTraceFlag::CTF_UseSimpleAndComplex;
-	StaticMesh->PostEditChange();
+	StaticMesh->Modify();
 	return StaticMesh;
 }
 
@@ -1044,8 +1040,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 		NewParentMaterial->Parent = UnkownMaterial;
 		FAssetRegistryModule::AssetCreated(NewParentMaterial);
 		ObjectCreated.Add(NewParentMaterial);
-		NewParentMaterial->PostEditChange();
-		NewParentMaterial->MarkPackageDirty();
+		NewParentMaterial->Modify();
 		ParentMaterial = NewParentMaterial;
 	}
 	UPackage* AssetPackage = CreatePackage(*Path);
@@ -1156,8 +1151,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	}
 	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
 	NewMaterial->InitStaticPermutation();
-	NewMaterial->PostEditChange();
-	NewMaterial->MarkPackageDirty();
+	NewMaterial->Modify();
 	return NewMaterial;
 }
 
@@ -1195,8 +1189,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 		NewParentMaterial->Parent = UnkownMaterial;
 		FAssetRegistryModule::AssetCreated(NewParentMaterial);
 		ObjectCreated.Add(NewParentMaterial);
-		NewParentMaterial->PostEditChange();
-		NewParentMaterial->MarkPackageDirty();
+		NewParentMaterial->Modify();
 		ParentMaterial = NewParentMaterial;
 	}
 	UPackage* AssetPackage = CreatePackage(*Path);
@@ -1247,10 +1240,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 					SwitchParameter.bOverride = true;
 					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 
-					SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
-					SwitchParameter.Value = true;
-					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+
 
 					ImportBump2D(DetailBump.Key.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
 
@@ -1284,6 +1274,10 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
 			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
+			SwitchParameter.Value = true;
+			SwitchParameter.bOverride = true;
+			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
 
 			ImportBump2D(Bump.Key.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
 			if (NormalMapTexture)
@@ -1307,8 +1301,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	}
 	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
 	NewMaterial->InitStaticPermutation();
-	NewMaterial->PostEditChange();
-	NewMaterial->MarkPackageDirty();
+	NewMaterial->Modify();
 	return NewMaterial;
 }
 
@@ -1405,7 +1398,7 @@ UObject* XRayEngineFactory::ImportPhysicsMaterials(const FString& FileName)
 			FStalkerPhysicalMaterialPair&Pair =  PhysicalMaterialPairs->Pairs.FindOrAdd(ID2PhysicalMaterial[(*i)->GetMtl0()]).Materials.Add(ID2PhysicalMaterial[(*i)->GetMtl1()]);
 			Pair.BuildFromLegacy(*(*i));
 		}
-		PhysicalMaterialPairs->MarkPackageDirty();
+		PhysicalMaterialPairs->Modify();
 	}
 
 	Library.Unload();
@@ -1430,7 +1423,7 @@ UStalkerPhysicalMaterial* XRayEngineFactory::ImportPhysicsMaterial(class SGameMt
 	ObjectCreated.Add(PhysicalMaterial);
 
 	PhysicalMaterial->BuildFromLegacy(*Materials);
-	PhysicalMaterial->MarkPackageDirty();
+	PhysicalMaterial->Modify();
 	return PhysicalMaterial;
 
 }
@@ -1479,8 +1472,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	}
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
-	Texture2D->MarkPackageDirty();
-	Texture2D->PostEditChange();
+	Texture2D->Modify();
 	return Texture2D;
 }
 
@@ -1516,8 +1508,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FStr
 	}
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
-	Texture2D->MarkPackageDirty();
-	Texture2D->PostEditChange();
+	Texture2D->Modify();
 	return Texture2D;
 }
 
@@ -1627,8 +1618,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		NormalMap->CompressionSettings = TextureCompressionSettings::TC_Normalmap;
 		NormalMap->SRGB = false;
 		NormalMap->Source.Init(NormalMapImage.GetWidth(), NormalMapImage.GetHeight(), 1, NormalMapImage.GetMips(), SourceFormat, (uint8*)*NormalMapImage);
-		NormalMap->MarkPackageDirty();
-		NormalMap->PostEditChange();
+		NormalMap->Modify();
 	}
 	if (!Gloss)
 	{
@@ -1641,8 +1631,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		Gloss->CompressionSettings = TextureCompressionSettings::TC_Alpha;
 		Gloss->SRGB = false;
 		Gloss->Source.Init(GlossImage.GetWidth(), GlossImage.GetHeight(), 1, GlossImage.GetMips(), SourceFormat, (uint8*)*GlossImage);
-		Gloss->MarkPackageDirty();
-		Gloss->PostEditChange();
+		Gloss->Modify();
 	}
 	if (!Height)
 	{
@@ -1656,8 +1645,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		Height->CompressionSettings = TextureCompressionSettings::TC_Alpha;
 		Height->SRGB = false;
 		Height->Source.Init(HeightImage.GetWidth(), HeightImage.GetHeight(), 1, HeightImage.GetMips(), SourceFormat, (uint8*)*HeightImage);
-		Height->MarkPackageDirty();
-		Height->PostEditChange();
+		Height->Modify();
 	}
 }
 
@@ -1980,8 +1968,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	Controller.NotifyPopulated(); // This call is important to get the controller to not use the sampling frequency as framerate
 	Controller.CloseBracket(bShouldTransact);
 
-	AnimSequence->PostEditChange();
-	AnimSequence->MarkPackageDirty();
+	AnimSequence->Modify();
 	ObjectCreated.Add(AnimSequence);
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 }
@@ -2102,8 +2089,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 
 		InMesh->Anims.Add(StalkerKinematicsAnimsData);
 
-		StalkerKinematicsAnimsData->PostEditChange();
-		StalkerKinematicsAnimsData->MarkPackageDirty();
+		StalkerKinematicsAnimsData->Modify();
 	}
 }
 
@@ -2211,8 +2197,7 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 	Controller.NotifyPopulated(); // This call is important to get the controller to not use the sampling frequency as framerate
 	Controller.CloseBracket(bShouldTransact);
 
-	AnimSequence->PostEditChange();
-	AnimSequence->MarkPackageDirty();
+	AnimSequence->Modify();
 	ObjectCreated.Add(AnimSequence);
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 	return AnimSequence;

@@ -29,6 +29,6 @@ void UStalkerCForm::InvalidCForm()
 	Vertices.Empty();
 	Triangles.Empty();
 	AABB = FBox3f(ForceInit);
-	MarkPackageDirty();
+	Modify();
 }
 #endif

@@ -12,51 +12,20 @@
 #include "LandscapeProxy.h"
 #include "LandscapeComponent.h"
 #include "PhysicalMaterials/PhysicalMaterialMask.h"
+#include "../../StalkerEditorManager.h"
 
 void UStalkerEditorCForm::Initialize()
 {
-	//FCoreDelegates::OnGetOnScreenMessages.AddUObject(this,&UStalkerEditorCForm::OnGetOnScreenMessages);
-	/*CFormCommands = MakeShareable(new FUICommandList);
-
-	CFormCommands->MapAction(
-		StalkerEditorCommands::Get().BuildCForm,
-		FExecuteAction::CreateUObject(this, &UStalkerEditorCForm::Build),
-		FCanExecuteAction());*/
-	//LevelEditor.Tab
-	FEditorDelegates::PreBeginPIE.AddUObject(this, &UStalkerEditorCForm::OnPreBeginPIE);
+	GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().BuildCForm,FExecuteAction::CreateUObject(this, &UStalkerEditorCForm::Build));
 }
 
 void UStalkerEditorCForm::Destroy()
 {
-	CFormCommands.Reset();
-	FEditorDelegates::PreBeginPIE.RemoveAll(this);
 	PhysicalMaterial2ID.Empty();
-}
-
-void UStalkerEditorCForm::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessageMap& Out)
-{
-	/*FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
-	if (!WorldContext)
-		return;
-
-	UWorld* World = WorldContext->World();
-	if (!IsValid(World))
-		return;
-
-	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
-	if (!StalkerWorldSettings)
-	{
-		return;
-	}
-	if (StalkerWorldSettings->CForm == nullptr || StalkerWorldSettings->CForm->IsInvalid)
-	{
-		Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("NEED REBUILD CFORM!")));
-	}*/
 }
 
 void UStalkerEditorCForm::Build()
 {
-
 	GXRayEngineManager->GetPhysicalMaterialsManager()->Build();
 	if (!GXRayEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial)
 	{
@@ -284,9 +253,9 @@ void UStalkerEditorCForm::Build()
 
 
 	GXRayEngineManager->GetPhysicalMaterialsManager()->Clear();
-}
-
-void UStalkerEditorCForm::OnPreBeginPIE(const bool)
-{
-	Build();
+	CForm->Modify();
+	if (CForm->Triangles.Num() == 0)
+	{
+		UE_LOG(LogStalkerEditor,Warning,TEXT("CFrom is empty in world %s"),*World->GetPathName())
+	}
 }

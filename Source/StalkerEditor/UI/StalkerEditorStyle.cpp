@@ -46,6 +46,11 @@ TSharedRef< FSlateStyleSet > FStalkerEditorStyle::Create()
 
 	Style->Set("StalkerEditor.BuildCForm", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("cform")), Icon40x40));
 	Style->Set("StalkerEditor.BuildAIMap", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("aimap")), Icon40x40));
+	Style->Set("StalkerEditor.BuildLevelSpawn", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("level_spawn")), Icon40x40));
+	Style->Set("StalkerEditor.BuildGameSpawn", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("game_spawn")), Icon40x40));
+	Style->Set("StalkerEditor.Reload", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("reload")),			 Icon40x40));
+	Style->Set("StalkerEditor.Stalker40x", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("stalker_40x")), Icon40x40));
+	Style->Set("StalkerEditor.Stalker20x", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon20"), TEXT("stalker_20x")), Icon20x20));
 	Style->Set("StalkerEditor.Select", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("Select_40x")), Icon20x20));
 	Style->Set("StalkerEditor.Paint", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("Paint_40x")), Icon20x20));
 	return Style;

@@ -16,7 +16,10 @@ public:
 	struct FStalkerAIMapNode*	BuildNode				(UWorld* InWorld, struct FStalkerAIMapNode* Node, int32 ID, bool bSelectedOnly);
 	void						Smooth					(UWorld* InWorld, bool bSelectedOnly = false);
 	void						Reset					(UWorld* InWorld, bool bSelectedOnly = false);
+	void						Build					();
+	void						BuildIfNeeded			();
 private:
+	TSharedPtr< FUICommandList>	AIMapCommands;
 	FBox3f						GenerateAABB;
 	TArray<FBox3f>				GenerateAABBs;
 };

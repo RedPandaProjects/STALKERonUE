@@ -9,7 +9,11 @@ StalkerEditorCommands::StalkerEditorCommands() : TCommands<StalkerEditorCommands
 
 void StalkerEditorCommands::RegisterCommands()
 {
-	UI_COMMAND(BuildCForm, "BuildCForm", "Build CForm", EUserInterfaceActionType::Button, FInputGesture());
+	UI_COMMAND(BuildCForm, "BuildCForm", "Build CForm", EUserInterfaceActionType::Button, FInputChord())
+	UI_COMMAND(BuildAIMap, "BuildAIMap", "Build AIMap", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(BuildLevelSpawn, "BuildLevelSpawn", "Build LevelSpawn", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(BuildGameSpawn, "BuildGameSpawn", "Build GameSpawn", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(ReloadConfigsAndScript, "ReloadConfigsAndScript", "Reload configs and script", EUserInterfaceActionType::Button, FInputChord());
 }
 
 #undef  LOCTEXT_NAMESPACE 

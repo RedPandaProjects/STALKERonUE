@@ -13,7 +13,6 @@ public:
 	FString											GetGamePath					();
 	
 
-
 	UPROPERTY(Transient)
 	TArray< USkeleton*>								Skeletons;
 	UPROPERTY(Transient)
@@ -22,7 +21,15 @@ public:
 	class UStalkerEditorAIMap*						EditorAIMap;
 	UPROPERTY(Transient)
 	class UStalkerSEFactoryManager*					SEFactoryManager;
+	UPROPERTY(Transient)
+	class UStalkerEditorSpawn*						EditorSpawn;
+
+
+	TSharedPtr< FUICommandList>						UICommandList;
 private:
+	void											OnPreBeginPIE				(const bool);
+	void											OnPostPIEStarted			(const bool);
+	void											OnEndPIE					(const bool);
 	void											OnReInitialized				();
 	void											ScanSkeletons				();
 	void											OnPostWorldInitialization(UWorld* World, const UWorld::InitializationValues);

@@ -1,17 +1,26 @@
 #include "StalkerEditorManager.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Resources/StalkerResourcesManager.h"
 #include "Managers/CFrom/StalkerEditorCForm.h"
-#include "UI/StalkerEditorStyle.h"
 #include "Managers/AIMap/StalkerEditorAIMap.h"
+#include "UI/StalkerEditorStyle.h"
 #include "Entities/EditorRender/StalkerEditorRenderProxy.h"
 #include "PlacementMode/Public/IPlacementModeModule.h"
 #include "Entities/Scene/SpawnObject/StalkerSpawnObject.h"
 #include "Entities/Scene/SpawnObject/StalkerSpawnObjectFactory.h"
 #include "Managers/SEFactory/StalkerSEFactoryManager.h"
+#include "Managers/Spawn/StalkerEditorSpawn.h"
+#include "Resources/Spawn/StalkerGameSpawn.h"
+#include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 ///////////////////////////////////////////////////////////////////////////////////////////
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypes.h"
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypeCustomization.h"
 ///////////////////////////////////////////////////////////////////////////////////////////
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/XRayEngineInterface.h"
+THIRD_PARTY_INCLUDES_END
+
 UStalkerEditorManager* GStalkerEditorManager = nullptr;
 #define LOCTEXT_NAMESPACE "StalkerEditor"
 void UStalkerEditorManager::Initialized()
@@ -19,6 +28,7 @@ void UStalkerEditorManager::Initialized()
 
 	if (GIsEditor)
 	{
+		UICommandList = MakeShareable(new FUICommandList);
 		GRayObjectLibrary = new XRayObjectLibrary;
 		GRayObjectLibrary->OnCreate();
 		if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
@@ -39,6 +49,8 @@ void UStalkerEditorManager::Initialized()
 		EditorAIMap = NewObject<UStalkerEditorAIMap>(this);
 		EditorAIMap->Initialize();
 		SEFactoryManager = NewObject<UStalkerSEFactoryManager>(this);
+		EditorSpawn = NewObject<UStalkerEditorSpawn>(this);
+		EditorSpawn->Initialize();
 
 		FWorldDelegates::OnPostWorldInitialization.AddUObject(this, &UStalkerEditorManager::OnPostWorldInitialization);
 
@@ -56,13 +68,19 @@ void UStalkerEditorManager::Initialized()
 			PropertyModule.RegisterCustomPropertyTypeLayout(FStalkerSpawnData_SmartCoverDescription::StaticStruct()->GetFName(), FOnGetPropertyTypeCustomizationInstance::CreateStatic(&FStalkerSpawnData_SmartCoverDescriptionCustomization::MakeInstance));
 
 		}
+		FEditorDelegates::PreBeginPIE.AddUObject(this, &UStalkerEditorManager::OnPreBeginPIE);
+		FEditorDelegates::PostPIEStarted.AddUObject(this, &UStalkerEditorManager::OnPostPIEStarted);
+		FEditorDelegates::EndPIE.AddUObject(this, &UStalkerEditorManager::OnEndPIE);
 	}
+
+	
 }
 
 void UStalkerEditorManager::Destroy()
 {
 	if (GIsEditor)
 	{
+		FEditorDelegates::PreBeginPIE.RemoveAll(this);
 		if (FModuleManager::Get().IsModuleLoaded("PropertyEditor"))
 		{
 			FPropertyEditorModule& PropertyModule = FModuleManager::GetModuleChecked<FPropertyEditorModule>("PropertyEditor");
@@ -76,6 +94,8 @@ void UStalkerEditorManager::Destroy()
 			PropertyModule.UnregisterCustomPropertyTypeLayout(FStalkerSpawnData_CharacterProfile::StaticStruct()->GetFName());
 			PropertyModule.UnregisterCustomPropertyTypeLayout(FStalkerSpawnData_SmartCoverDescription::StaticStruct()->GetFName());
 		}
+
+		UICommandList.Reset();
 		FWorldDelegates::OnPostWorldInitialization.RemoveAll(this);
 		SEFactoryManager->UnLoad();
 		SEFactoryManager->Destroy();
@@ -87,6 +107,9 @@ void UStalkerEditorManager::Destroy()
 		EditorCFrom->Destroy();
 		EditorCFrom->MarkAsGarbage();
 		EditorCFrom = nullptr;
+		EditorSpawn->Destroy();
+		EditorSpawn->MarkAsGarbage();
+		EditorSpawn = nullptr;
 		GXRayEngineManager->PostReInitializedMulticastDelegate.RemoveAll(this);
 		GRayObjectLibrary->OnDestroy();
 		delete GRayObjectLibrary;
@@ -104,6 +127,58 @@ FString UStalkerEditorManager::GetGamePath()
 	default:
 		return TEXT("/Game/COP");
 	}
+}
+
+void UStalkerEditorManager::OnPreBeginPIE(const bool)
+{
+
+	const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>();
+	if (SGSettings->NeedAutoBuildCForm)
+	{
+		EditorCFrom->Build();
+	}
+	if (SGSettings->NeedAutoBuildAIMap)
+	{
+		EditorAIMap->BuildIfNeeded();
+	}
+	class UStalkerLevelSpawn* LevelSpawn = nullptr;
+	if (SGSettings->NeedAutoBuildLevelSpawn)
+	{
+		LevelSpawn = EditorSpawn->BuildLevelSpawnIfNeeded();
+	}
+	if (SGSettings->NeedAutoBuildGameSpawn)
+	{
+		if (SGSettings->UseCurrentWorldSpawn)
+		{
+			if (LevelSpawn)
+			{
+				EditorSpawn->BuildGameSpawn(LevelSpawn, true);
+			}
+			else
+			{
+				UStalkerGameSpawn* GameSpawn = GXRayEngineManager->GetResourcesManager()->GetOrCreateGameSpawn();
+				check(GameSpawn);
+				GameSpawn->InvalidGameSpawn();
+			}
+		}
+		else
+		{
+			EditorSpawn->BuildGameSpawn(nullptr,true);
+		}
+	}
+	GXRayEngineManager->GetResourcesManager()->Reload();
+	GXRayEngineManager->AppStart();
+}
+
+void UStalkerEditorManager::OnPostPIEStarted(const bool)
+{
+	g_Engine->RunGame();
+}
+
+void UStalkerEditorManager::OnEndPIE(const bool)
+{
+	g_Engine->StopGame();
+	GXRayEngineManager->AppEnd();
 }
 
 void UStalkerEditorManager::OnReInitialized()

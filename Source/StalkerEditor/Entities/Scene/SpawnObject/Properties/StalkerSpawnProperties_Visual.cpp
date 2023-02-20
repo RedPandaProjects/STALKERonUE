@@ -68,7 +68,12 @@ void UStalkerSpawnProperties_Visual::PostEditChangeProperty(struct FPropertyChan
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_Visual, Anim))
 	{
 		FName AnimName;
-		if (CheckAnim(Anim, AnimName))
+		if (Anim == nullptr)
+		{
+			EntityVisual->startup_animation = "";
+			Entity->set_editor_flag(ISE_Abstract::flVisualAnimationChange);
+		}
+		else if (CheckAnim(Anim, AnimName))
 		{
 			EntityVisual->startup_animation = TCHAR_TO_ANSI(*AnimName.ToString().ToLower());
 			Entity->set_editor_flag(ISE_Abstract::flVisualAnimationChange);

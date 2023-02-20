@@ -276,7 +276,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 			}
 		}
 		INAIMap->HashFill();
-		INAIMap->MarkPackageDirty();
+		INAIMap->Modify();
 	}
 	Scene = nullptr;
 	return true;

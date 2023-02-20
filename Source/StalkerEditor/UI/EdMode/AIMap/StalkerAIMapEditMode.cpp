@@ -517,6 +517,7 @@ bool FStalkerAIMapEditMode::InputDelta(FEditorViewportClient* InViewportClient, 
 	StalkerAIMap->GetSelectedNodes(Nodes);
 	for (FStalkerAIMapNode* Node : Nodes)
 	{
+		StalkerAIMap->NeedRebuild = true;
 		Node->Position.Z += InDrag.Z;
 		FVector3f NewNormal = Node->Plane.GetNormal() + (FVector3f(InRot.Quaternion().GetUpVector()) - FVector3f(0, 0, 1));
 		NewNormal.Normalize();
@@ -694,7 +695,7 @@ void FStalkerAIMapEditMode::Link(int32 ID)
 	{
 		return;
 	}
-
+	
 	int32 Link = ConvertV2L(ID);
 
 	if (LinkMode == LM_Remove)
@@ -703,6 +704,7 @@ void FStalkerAIMapEditMode::Link(int32 ID)
 		{
 			if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
 			{
+				StalkerAIMap->NeedRebuild = true;
 				Node->Nodes[Link] = nullptr;
 			}
 		}
@@ -714,6 +716,7 @@ void FStalkerAIMapEditMode::Link(int32 ID)
 
 			if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
 			{
+				StalkerAIMap->NeedRebuild = true;
 				if(!Node->Nodes[Link]) 
 					Node->Nodes[Link] = StalkerAIMap->FindNeighbour(Node, Link);
 			}
@@ -733,6 +736,7 @@ void FStalkerAIMapEditMode::Link(int32 ID)
 				}
 				if (!Node->Nodes[Link] || !Neighbour->Nodes[InvertLink[Link]])
 				{
+					StalkerAIMap->NeedRebuild = true;
 					FStalkerAIMapNode* SwapNode1 = Node->Nodes[Link];
 					FStalkerAIMapNode* SwapNode2 = Neighbour->Nodes[InvertLink[Link]];
 					Node->Nodes[Link] = SwapNode2 ? Neighbour : nullptr;

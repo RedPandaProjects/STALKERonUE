@@ -18,8 +18,8 @@ AStalkerLight::AStalkerLight()
 	SpotPoint->SetVisibility(false);
 	LightType = IRender_Light::DIRECT;
 	SpotPoint->SetRelativeRotation(FRotator(0,90,0));
-	LightPoint->Intensity = 1000;
-	SpotPoint->Intensity = 1000;
+	SpotPoint->SetIntensityUnits(ELightUnits::Lumens);
+	LightPoint->SetIntensityUnits(ELightUnits::Lumens);
 }
 
 // Called when the game starts or when spawned
@@ -138,15 +138,15 @@ void AStalkerLight::set_range(float R)
 		LightPoint->SetSourceRadius(R * 100);
 		break;
 	case IRender_Light::SPOT:
-		SpotPoint->SetSourceRadius(R * 100);
+		SpotPoint->SetAttenuationRadius(R * 100);
 		break;
 	}
 }
 
 void AStalkerLight::set_intensity(float InIntensity)
 {
-	LightPoint->Intensity = InIntensity;
-	SpotPoint->Intensity = InIntensity;
+	LightPoint->SetIntensity(InIntensity);
+	SpotPoint->SetIntensity(InIntensity);
 }
 
 

@@ -7,4 +7,8 @@ public:
 	void RegisterCommands() override;
 public:
 	TSharedPtr< FUICommandInfo > BuildCForm;
+	TSharedPtr< FUICommandInfo > BuildAIMap;
+	TSharedPtr< FUICommandInfo > BuildLevelSpawn;
+	TSharedPtr< FUICommandInfo > BuildGameSpawn;
+	TSharedPtr< FUICommandInfo > ReloadConfigsAndScript;
 };

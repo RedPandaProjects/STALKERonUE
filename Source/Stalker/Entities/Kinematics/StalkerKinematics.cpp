@@ -15,18 +15,68 @@ THIRD_PARTY_INCLUDES_END
 DECLARE_CYCLE_STAT(TEXT("XRay ~ Kinematics Frame"), STAT_XRayEngineKinematics, STATGROUP_XRayEngine);
 UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 {
+	BlendDestroyCallback = nullptr;
+	UpdateTracksCallback = nullptr;
 	MyUpdateCallback = nullptr;
 	UpdateCallbackParam = nullptr;
 	SetAnimationMode(EAnimationMode::Type::AnimationBlueprint);
 	AnimClass = UStalkerKinematicsAnimInstance_Default::StaticClass();
+	SkipDeltaTime = 0;
 }
 
 void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKinematicsData)
 {
-	check(KinematicsData == nullptr);
-	check(InKinematicsData);
-
+	if (KinematicsData)
+	{
+		ClearAnimScriptInstance();
+	
+		for (TArray <TSharedPtr<CBlend>>& InBlendsCycles : BlendsCycles)
+		{
+			InBlendsCycles.Empty();
+		}
+		for (TArray <TSharedPtr<CBlend>>& InBlendsFX : BlendsFX)
+		{
+			InBlendsFX.Empty();
+		}
+	
+		Anims.Empty();
+		SkipDeltaTime = 0;
+		BonesInstance.Empty();
+		Bones.Empty();
+		BonesName2ID.Empty();
+		BonesID2Name.Empty();
+		VisData.clear();
+		BlendsPool.Empty();
+		UserData.Reset();
+		SelfBonesVisible.zero();
+		AnimsDef.Empty();
+		AnimsName2ID.Empty();
+		BonesPartsName2ID.Empty();
+		BonesPartsBoneID2ID.Empty();
+		BonesParts.Empty();
+		DataName = "";
+		BlendDestroyCallback  = nullptr;
+		UpdateTracksCallback = nullptr;
+		MyUpdateCallback = nullptr;
+		UpdateCallbackParam = nullptr;
+		if (KinematicsAnimInstanceForCompute)
+		{
+			KinematicsAnimInstanceForCompute->MarkAsGarbage();
+		}
+		KinematicsAnimInstanceForCompute = nullptr;
+		SetSkeletalMesh(nullptr);
+	}
 	KinematicsData = InKinematicsData;
+	if (!KinematicsData)
+	{
+		return;
+	}
+	for (float& Factor : ChannelsFactor)
+	{
+		Factor = 0;
+	}
+	ChannelsFactor[0] = 1;
+
 	KinematicsData->BuildBones(Bones);
 	BonesInstance.AddDefaulted(Bones.Num());
 	if (KinematicsData->UserData.Len())
@@ -117,9 +167,6 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		VisData.sphere.set(Center, VisData.box.getradius());
 	}
 	SetCollisionEnabled(ECollisionEnabled::NoCollision);
-
-	KinematicsAnimInstanceForCompute = NewObject< UStalkerKinematicsAnimInstance_Default>(this, TEXT("KinematicsAnimInstance"), RF_Transient);
-	KinematicsAnimInstanceForCompute->InitializeAnimation();
 	FString InDataName;
 	InKinematicsData->GetName(InDataName);
 	DataName = TCHAR_TO_ANSI(*InDataName);
@@ -203,6 +250,17 @@ void UStalkerKinematicsComponent::DestroyBlend(TSharedPtr<CBlend>& Blend)
 
 
 
+void UStalkerKinematicsComponent::PostLoad()
+{
+	Super::PostLoad();
+	UStalkerKinematicsData *InKinematicsData = KinematicsData;
+	if (InKinematicsData)
+	{
+		Initilize(nullptr);
+		Initilize(InKinematicsData);
+	}
+}
+
 shared_str UStalkerKinematicsComponent::GetNameData()
 {
 	if (KinematicsData)
@@ -282,6 +340,12 @@ void UStalkerKinematicsComponent::GetBoneInMotion(Fmatrix& OutPosition, u16 Bone
 	TArray<FTransform>	OutBoneSpaceTransforms;
 	FBlendedHeapCurve   OutCurve;
 	FVector				OutRootBoneTranslation;
+
+	if (!IsValid(KinematicsAnimInstanceForCompute))
+	{
+		KinematicsAnimInstanceForCompute = NewObject< UStalkerKinematicsAnimInstance_Default>(this, TEXT("KinematicsAnimInstance"), RF_Transient);
+		KinematicsAnimInstanceForCompute->InitializeAnimation();
+	}
 	KinematicsAnimInstanceForCompute->GetProxy().GetKinematicsRootNode().SetAnimMode(EStalkerKinematicsAnimMode::GetBoneInMotionBlend);
 	KinematicsAnimInstanceForCompute->GetProxy().GetKinematicsRootNode().GetBoneInMotionBlend = InBlend;
 

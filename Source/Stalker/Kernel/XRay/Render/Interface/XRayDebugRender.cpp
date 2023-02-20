@@ -13,11 +13,11 @@ void XRayDebugRender::Render()
 
 void XRayDebugRender::add_lines(Fvector const* vertices, u32 const& vertex_count, u16 const* pairs, u32 const& pair_count, u32 const& color)
 {
-	if (!IsValid(GXRayEngineManager->GetGameWorld()))
+	if (!IsValid(GWorld))
 	{
 		return;
 	}
-	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>( GXRayEngineManager->GetGameWorld()->GetWorldSettings());
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>( GWorld->GetWorldSettings());
 	if (!IsValid(StalkerWorldSettings))
 	{
 		return;
@@ -80,11 +80,11 @@ void XRayDebugRender::DestroyDebugShader(dbgShaderHandle shdHandle)
 
 void XRayDebugRender::dbg_DrawTRI(Fmatrix& T, Fvector& Inp1, Fvector& Inp2, Fvector& Inp3, u32 C)
 {
-	if (!IsValid(GXRayEngineManager->GetGameWorld()))
+	if (!IsValid(GWorld))
 	{
 		return;
 	}
-	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GXRayEngineManager->GetGameWorld()->GetWorldSettings());
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings());
 	if (!IsValid(StalkerWorldSettings))
 	{
 		return;

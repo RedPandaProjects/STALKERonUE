@@ -36,6 +36,8 @@ public:
 	bool						bIsSelected = false;
 	UPROPERTY()
 	bool						bIsMain = false;
+	UPROPERTY(Transient)
+	int32						Index =-1;
 private:
 	FString						TempPointName;
 };

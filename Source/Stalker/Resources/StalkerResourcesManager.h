@@ -15,11 +15,15 @@ public:
 	class AStalkerLight*				CreateLight		();
 	void								Desotry			(class IRender_Light*Light);
 	class UStalkerKinematicsData*		GetKinematics	(const char* Name);
-	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name);
+	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name, bool NeedRefence = false);
 	class UStalkerKinematicsComponent*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
 	void								Destroy			(class UStalkerKinematicsComponent* Mesh);
-
+	void								Refresh			();
 	FString								GetGamePath		();
+	class UStalkerGameSpawn*			GetGameSpawn	();
+#if WITH_EDITORONLY_DATA
+	class UStalkerGameSpawn*			GetOrCreateGameSpawn();
+#endif
 
 	class AStalkerProxy * CreateProxy(class CObject*Object);
 	void Destroy(class AStalkerProxy* Proxy);
@@ -55,4 +59,7 @@ private:
 
 	UPROPERTY(Transient)
 	TSet<class AStalkerLight*> Lights;
+	
+	UPROPERTY(Transient)
+	class UStalkerGameSpawn* GameSpawn;
 };

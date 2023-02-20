@@ -13,12 +13,15 @@ public class Stalker : ModuleRules
         PublicIncludePaths.Add(ModuleDirectory);
 
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore","UMG","XRayEngineModules", "Slate",  "SlateCore", "DeveloperSettings" });
-
-        /*
-		
-		 
-		 */
-
         PrivateDependencyModuleNames.AddRange(new string[] {  });
-	}
+        if (Target.bBuildEditor == true)
+        {
+            PrivateDependencyModuleNames.AddRange(
+                new string[]
+                {
+                        "UnrealEd"
+                }
+            );
+        }
+    }
 }

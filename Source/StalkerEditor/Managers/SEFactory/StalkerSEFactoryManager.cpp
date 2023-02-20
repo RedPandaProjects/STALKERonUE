@@ -1,6 +1,7 @@
 #include "StalkerSEFactoryManager.h"
 #include "../../Entities/Scene/SpawnObject/StalkerSpawnObject.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "../../UI/StalkerEditorStyle.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/LightAnimLibrary.h"
 THIRD_PARTY_INCLUDES_END
@@ -266,7 +267,7 @@ void UStalkerSEFactoryManager::OnPlacementModeCategoryRefreshed(FName InName)
 
 void UStalkerSEFactoryManager::CreatePlaceableSpawn()
 {
-	FPlacementCategoryInfo Info(LOCTEXT("StalkerSpawnCategoryName", "Stalker Spawn"), FSlateIcon(), NAME_StalkerSpawn, TEXT("PMStalkerSpawn"), 25);
+	FPlacementCategoryInfo Info(LOCTEXT("StalkerSpawnCategoryName", "Stalker Spawn"), FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), TEXT("StalkerEditor.Stalker20x")), NAME_StalkerSpawn, TEXT("PMStalkerSpawn"), 25);
 	IPlacementModeModule::Get().RegisterPlacementCategory(Info);
 	IPlacementModeModule::Get().OnPlacementModeCategoryRefreshed().AddUObject(this, &UStalkerSEFactoryManager::OnPlacementModeCategoryRefreshed);
 }

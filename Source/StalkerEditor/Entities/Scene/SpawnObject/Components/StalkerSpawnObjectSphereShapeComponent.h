@@ -11,12 +11,11 @@ public:
 	FBoxSphereBounds			CalcBounds			(const FTransform& InLocalToWorld) const override;
 	void						UpdateColor			();
 	void						OnComponentCreated	() override;
-
+	
 	UPROPERTY()
 	FColor						ShapeColor			;
 
 	UPROPERTY(EditAnywhere,Category="Shape")
 	float						SphereRadius = 100;
-
 
 };

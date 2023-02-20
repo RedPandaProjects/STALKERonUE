@@ -21,9 +21,8 @@ void UStalkerGameViewportClient::Activated(FViewport* InViewport, const FWindowA
 		if (GXRayEngineManager->GetGameViewportClient() == this)
 		{
 			Device->seqAppActivate.Process(rp_AppActivate);
+			IsActive = true;
 		}
-		
-		IsActive = true;
 	}
 }
 
@@ -116,10 +115,10 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 	{
 		SCOPE_CYCLE_COUNTER(STAT_XRayEngineFrame);
 		Device->fTimeDelta = DeltaTime;
-		Device->fTimeGlobal = GXRayEngineManager->GetGameWorld()->TimeSeconds;
+		Device->fTimeGlobal = GWorld->TimeSeconds;
 		Device->dwTimeDelta = static_cast<u32>(DeltaTime * 1000);
-		Device->dwTimeGlobal = static_cast<u32>(GXRayEngineManager->GetGameWorld()->TimeSeconds * 1000);
-		Device->dwTimeContinual = static_cast<u32>(GXRayEngineManager->GetGameWorld()->UnpausedTimeSeconds * 1000);
+		Device->dwTimeGlobal = static_cast<u32>(GWorld->TimeSeconds * 1000);
+		Device->dwTimeContinual = static_cast<u32>(GWorld->UnpausedTimeSeconds * 1000);
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
 		g_bEnableStatGather = psDeviceFlags.is_any(rsStatistic);
 	

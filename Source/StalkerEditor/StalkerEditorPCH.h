@@ -99,6 +99,11 @@ THIRD_PARTY_INCLUDES_START
 #include "XrECore/Editor/Library.h"
 #include "RedImageTool/RedImage.hpp"
 #include "XrECore/Editor/EThumbnail.h"
+#include "XrEngine/graph_abstract.h"
+#include "XrEngine/graph_vertex.h"
+#include "XrEngine/game_graph.h"
+#include "XrEngine/game_level_cross_table.h"
+#include "XrEngine/level_graph.h"
 THIRD_PARTY_INCLUDES_END
 #include "Importer/Scene/ESceneClassList.h"
 #include "Importer/Scene/iniStreamImpl.h"
@@ -107,5 +112,6 @@ THIRD_PARTY_INCLUDES_END
 #include "Importer/Scene/Tools/Base/ESceneCustomOTools.h"
 #include "Importer/Scene/Scene.h"
 #include "Kernel/StalkerMath.h"
+#include "ScopedTransaction.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);
 DECLARE_LOG_CATEGORY_EXTERN(LogStalkerEditor, Log, All);

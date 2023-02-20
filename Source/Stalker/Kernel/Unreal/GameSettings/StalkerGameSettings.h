@@ -25,10 +25,13 @@ class STALKER_API UStalkerGameSettings : public UDeveloperSettings
 	GENERATED_BODY()
 
 public:
+	UStalkerGameSettings();
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	EStalkerGame EditorStartupGame;
 
-	
+
+#if WITH_EDITORONLY_DATA
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game",meta = (DisplayName = "Levels Of Shadow of Chernobyl"))
 	TMap<FName, FStalkerLevelInfo> LevelsSOC;
 
@@ -38,8 +41,19 @@ public:
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game", meta = (DisplayName = "Levels Of Call of Pripyat"))
 	TMap<FName, FStalkerLevelInfo> LevelsCOP;
 
-
-	UStalkerGameSettings();
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	NeedAutoBuildCForm		= true;
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	NeedAutoBuildAIMap		= true;
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	NeedAutoBuildLevelSpawn = true;
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	NeedAutoBuildGameSpawn	= true;
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	UseCurrentWorldSpawn	= true;
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	IgnoreIncludeInBuildSpawn = false;
+#endif
 
 	const TMap<FName, FStalkerLevelInfo> & GetCurrentLevels() const;
 

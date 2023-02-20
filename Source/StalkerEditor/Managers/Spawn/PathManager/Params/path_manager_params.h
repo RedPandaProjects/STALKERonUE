@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////////////////////////////
+//	Module 		: path_manager_params.h
+//	Created 	: 21.03.2002
+//  Modified 	: 03.03.2004
+//	Author		: Dmitriy Iassenev
+//	Description : Base path manager parameters
+////////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+template <
+	typename _dist_type,
+	typename _index_type,
+	typename _iteration_type
+>
+struct SBaseParameters {
+	_dist_type		max_range;
+	_iteration_type	max_iteration_count;
+	u32				max_visited_node_count;
+
+	SBaseParameters(
+			_dist_type		max_range				= std::numeric_limits<_dist_type>::max(),
+			_iteration_type	max_iteration_count		= _iteration_type(-1),
+			u32				max_visited_node_count	= u32(-1)
+		) :
+			max_range				(max_range),
+			max_iteration_count		(max_iteration_count),
+			max_visited_node_count	(max_visited_node_count)
+	{
+	}
+
+	IC	bool actual () const
+	{
+		return		(true);
+	}
+};

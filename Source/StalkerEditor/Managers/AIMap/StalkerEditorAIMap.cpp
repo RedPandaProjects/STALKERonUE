@@ -3,9 +3,13 @@
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Resources/AIMap/StalkerAIMapNode.h"
 #include "../../Entities/Tools/AIMapBoundsVolume/StalkerAIMapBoundsVolume.h"
+#include "../../UI/Commands/StalkerEditorCommands.h"
+#include "../../StalkerEditorManager.h"
+#include "Resources/Spawn/StalkerLevelSpawn.h"
 
 void UStalkerEditorAIMap::Initialize()
 {
+	GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().BuildAIMap, FExecuteAction::CreateUObject(this, &UStalkerEditorAIMap::Build));
 }
 
 void UStalkerEditorAIMap::Destroy()
@@ -25,6 +29,8 @@ bool UStalkerEditorAIMap::CreateNode(FStalkerAIMapNode& Result,UWorld* InWorld, 
 	{
 		return false;
 	}
+
+	StalkerAIMap->NeedRebuild = true;
 
 	const float NodeSize = StalkerAIMap->NodeSize;
 	const int32	RCAST_MaxTris = (2 * 1024);
@@ -462,6 +468,8 @@ void UStalkerEditorAIMap::Generate(UWorld* InWorld, bool bSelectedOnly /*= false
 	{
 		return;
 	}
+
+	StalkerAIMap->NeedRebuild = true;
 	GenerateAABB = FBox3f(ForceInit);
 	GenerateAABBs.Reset();
 	for (TActorIterator<AStalkerAIMapBoundsVolume> It(InWorld); It; ++It)
@@ -616,6 +624,8 @@ void UStalkerEditorAIMap::Smooth(UWorld* InWorld, bool bSelectedOnly /*= false*/
 	{
 		return;
 	}
+
+	StalkerAIMap->NeedRebuild = true;
 	const float NodeSize = StalkerAIMap->NodeSize;
 
 
@@ -844,5 +854,164 @@ void UStalkerEditorAIMap::Reset(UWorld* InWorld, bool bSelectedOnly /*= false*/)
 		{
 			StalkerAIMap->Nodes[i]->Plane = FPlane4f(StalkerAIMap->Nodes[i]->Position,FVector3f(0,0,1));
 		}
+	}
+}
+
+
+
+void UStalkerEditorAIMap::Build()
+{
+	constexpr float high_cover_height = 1.5f;
+	constexpr float low_cover_height = 0.6f;
+	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
+	if (!WorldContext)
+		return;
+
+	UWorld* World = WorldContext->World();
+	if (!IsValid(World))
+		return;
+
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
+	if (!StalkerWorldSettings)
+	{
+		return;
+	}
+	UStalkerAIMap* AIMap = StalkerWorldSettings->GetOrCreateAIMap();
+	const float NodeSize = AIMap->NodeSize/100.f;
+	auto CNodePositionCompressor = [NodeSize](NodePosition & Pdest,const Fvector & Psrc, hdrNODES & H)
+	{
+		float sp = 1 / NodeSize;
+		int row_length = iFloor((H.aabb.max.z - H.aabb.min.z) / H.size + EPS_L + 1.5f);
+		int pxz = iFloor((Psrc.x - H.aabb.min.x) * sp + EPS_L + .5f) * row_length + iFloor((Psrc.z - H.aabb.min.z) * sp + EPS_L + .5f);
+		int py = iFloor(65535.f * (Psrc.y - H.aabb.min.y) / (H.size_y) + EPS_L);
+		VERIFY(pxz < (1 << MAX_NODE_BIT_COUNT) - 1);
+		Pdest.xz(pxz);
+		clamp(py, 0, 65535);	Pdest.y(u16(py));
+	};
+	auto CompressNode  = [](NodeCompressed & Dest, FStalkerAIMapNode* Src)
+	{
+		constexpr int32 InvalidNode = (1 << 24) - 1;
+		Dest.light(15);
+		for (u8 L = 0; L < 4; ++L)
+			Dest.link(L, Src->Nodes[L] ? Src->Nodes[L]->Index : InvalidNode);
+	};
+	auto CompressCover = [](float c, int max_value)
+	{
+		int	cover = iFloor(c * float(max_value) + .5f);
+		clamp(cover, 0, max_value);
+		return BYTE(cover);
+	};
+	auto	Compress = [low_cover_height, high_cover_height, CompressCover, CompressNode, CNodePositionCompressor](NodeCompressed & Dest, FStalkerAIMapNode * Src, hdrNODES & H)
+	{
+		Dest.plane = pvCompress(StalkerMath::UnrealNormalToXRay(Src->Plane.GetNormal()));
+		CNodePositionCompressor(Dest.p, StalkerMath::UnrealLocationToXRay(Src->Position), H);
+		CompressNode(Dest, Src);
+		Dest.high.cover0 = CompressCover(high_cover_height, 15);
+		Dest.high.cover1 = CompressCover(high_cover_height, 15);
+		Dest.high.cover2 = CompressCover(high_cover_height, 15);
+		Dest.high.cover3 = CompressCover(high_cover_height, 15);
+		Dest.low.cover0 = CompressCover(low_cover_height, 15);
+		Dest.low.cover1 = CompressCover(low_cover_height, 15);
+		Dest.low.cover2 = CompressCover(low_cover_height, 15);
+		Dest.low.cover3 = CompressCover(low_cover_height, 15);
+	};
+	auto CNodeRenumberer = [](
+		TArray<ILevelGraph::CVertex>& nodes,
+		xr_vector<u32>&sorted,
+		xr_vector<u32>&renumbering
+	)
+	{
+		u32					N = (u32)nodes.Num();
+		sorted.resize(N);
+		renumbering.resize(N);
+
+		for (u32 i = 0; i < N; ++i)
+			sorted[i] = i;
+
+		std::stable_sort(sorted.begin(), sorted.end(), [&nodes](u32 vertex_id0, u32 vertex_id1)
+			{
+				return		(nodes[vertex_id0].p.xz() < nodes[vertex_id1].p.xz());
+			});
+
+		for (u32 i = 0; i < N; ++i)
+			renumbering[sorted[i]] = i;
+
+		for (u32 i = 0; i < N; ++i) {
+			for (u32 j = 0; j < 4; ++j) {
+				u32			vertex_id = nodes[i].link(u8(j));
+				if (vertex_id >= N)
+					continue;
+				nodes[i].link(u8(j), renumbering[vertex_id]);
+			}
+		}
+		nodes.StableSort([](const NodeCompressed& vertex0, const NodeCompressed& vertex1)
+			{
+				return		(vertex0.p.xz() < vertex1.p.xz());
+			});
+	};
+
+
+	AIMap->InvalidAIMap();
+	UStalkerLevelSpawn *LevelSpawn =  StalkerWorldSettings->GetSpawn();
+	if (LevelSpawn)
+	{
+		LevelSpawn->NeedRebuild = true;
+		LevelSpawn->Modify();
+	}
+	if (AIMap->Nodes.Num() == 0)
+	{
+		UE_LOG(LogStalkerEditor,Warning,TEXT("AIMap [%s] is empty !"), *AIMap->GetPathName())
+		return;
+	}
+	AIMap->NeedRebuild = false;
+	AIMap->HashFill();
+	AIMap->CalculateIndex();
+	AIMap->AIMapGuid = FGuid::NewGuid();
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).version = XRAI_CURRENT_VERSION;
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).count = AIMap->Nodes.Num();
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).size = NodeSize;
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).size_y = (AIMap->AABB.Max.Z - AIMap->AABB.Min.Z)/100.f +EPS_L;
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb.invalidate();
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb.modify(StalkerMath::UnrealLocationToXRay(AIMap->AABB.Min));
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb.modify(StalkerMath::UnrealLocationToXRay(AIMap->AABB.Max));
+	FMemory::Memcpy(&static_cast<hdrNODES&>(AIMap->LevelGraphHeader).guid, &AIMap->AIMapGuid,sizeof(FGuid));
+	AIMap->LevelGraphVertices.Empty(AIMap->Nodes.Num());
+
+	for (FStalkerAIMapNode* Node : AIMap->Nodes)
+	{
+		ILevelGraph::CVertex	NC;
+		Compress(NC, Node, static_cast<hdrNODES&>(AIMap->LevelGraphHeader));
+		AIMap->LevelGraphVertices.Add(NC);
+	}
+	xr_vector<u32>	sorted;
+	xr_vector<u32>	renumbering;
+	CNodeRenumberer(AIMap->LevelGraphVertices, sorted, renumbering);
+	AIMap->RefreshAIMapMetadata();
+	AIMap->Modify();
+}
+
+void UStalkerEditorAIMap::BuildIfNeeded()
+{
+	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
+	if (!WorldContext)
+		return;
+
+	UWorld* World = WorldContext->World();
+	if (!IsValid(World))
+		return;
+
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
+	if (!StalkerWorldSettings)
+	{
+		return;
+	}
+	UStalkerAIMap* AIMap = StalkerWorldSettings->GetOrCreateAIMap();
+	if (AIMap->NeedRebuild || !AIMap->AIMapGuid.IsValid())
+	{
+		Build();
+	}
+	else
+	{
+		UE_LOG(LogStalkerEditor, Log, TEXT("This AIMap[%s] not needed rebuild!"), *AIMap->GetPathName());
 	}
 }

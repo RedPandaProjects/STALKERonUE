@@ -241,7 +241,7 @@ IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
 	
-	UStalkerKinematicsComponent* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name);
+	UStalkerKinematicsComponent* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name,true);
 	check(Kinematics);
 	if (Kinematics)
 	{

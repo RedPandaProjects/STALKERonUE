@@ -6,10 +6,14 @@ class STALKER_API AStalkerWorldSettings : public AWorldSettings
 {
 	GENERATED_BODY()
 public:
-	class UStalkerCForm*		GetOrCreateCForm	();
 	class UStalkerCForm*		GetCForm			();
-	class UStalkerAIMap*		GetOrCreateAIMap	();
 	class UStalkerAIMap*		GetAIMap			();
+#if WITH_EDITORONLY_DATA
+	class UStalkerCForm*		GetOrCreateCForm	();
+	class UStalkerAIMap*		GetOrCreateAIMap	();
+	class UStalkerLevelSpawn*	GetOrCreateSpawn	();
+	class UStalkerLevelSpawn*	GetSpawn			();
+#endif
 
 	void						PostInitProperties	() override;
 
@@ -34,4 +38,8 @@ private:
 	class UStalkerCForm* CForm;
 	UPROPERTY()
 	class UStalkerAIMap* AIMap;
+#if WITH_EDITORONLY_DATA
+	UPROPERTY()
+	class UStalkerLevelSpawn* Spawn;
+#endif
 };

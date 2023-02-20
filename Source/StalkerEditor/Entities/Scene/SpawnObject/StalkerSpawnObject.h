@@ -11,7 +11,8 @@ public:
 
 	void								PostActorCreated			() override;
 	void								BeginDestroy				() override;
-	void								PostInitProperties			() override;
+	void								PostEditImport				() override;
+	FString								GetDefaultActorLabel		() const override;
 
 	void								Attach						(class USceneComponent* InComponent);
 	void								Detach						(class USceneComponent* InComponent);
@@ -25,6 +26,7 @@ public:
 	void								CreateEntity				();
 	void								SpawnWrite					();
 	void								SpawnRead					();
+	void								Destroyed					() override;
 
 	UPROPERTY(Transient)
 	FString								DisplayName;
@@ -32,10 +34,19 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	FString								SectionName;
 
-
+	UPROPERTY(SkipSerialization)
 	TArray<uint8>						EntityData;
 
 
+	ISE_Abstract*						XRayEntity;
+
+
+
+
+
+
+
+	bool Modify(bool bAlwaysMarkDirty = true) override;
 
 private:
 	void								CreateSpawnData				();
@@ -43,36 +54,35 @@ private:
 	void								CreateInventoryItemData		();
 	void								CreateNCPData				();
 
-	UPROPERTY(EditInstanceOnly)
+	UPROPERTY(EditInstanceOnly,TextExportTransient)
 	class USceneComponent*				SceneComponent;
 
-	UPROPERTY(Transient)
-	TSet<USceneComponent*>				XRayComponents;
+	UPROPERTY()
+	class UStalkerSpawnObjectGraphPointComponent *GraphPointComponent;
 
-	UPROPERTY(Transient)
-	class UStalkerKinematicsComponent*	MainVisual;
+	UPROPERTY()
+	class UStalkerKinematicsComponent*		MainVisual;
 
-	UPROPERTY(Transient)
-	TArray<class UStalkerKinematicsComponent*>  Visuals;
+	UPROPERTY()
+	TArray<class UStalkerKinematicsComponent*>Visuals;
 	
-	UPROPERTY(Transient)
+	UPROPERTY(NonTransactional)
 	class UPointLightComponent*			PointLight;
 	
-	UPROPERTY(Transient)
+	UPROPERTY(NonTransactional)
 	class USpotLightComponent*			SpotLight;
 
-	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient)
+	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient, TextExportTransient)
 	class UStalkerSpawnProperties_Base*	SpawnData;
-	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient)
+	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient, TextExportTransient)
 	class UStalkerSpawnProperties_Visual*VisualData;
-	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient)
+	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient, TextExportTransient)
 	class UStalkerSpawnProperties_ALifeInventoryItem* InventoryItemData;
-	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient)
+	UPROPERTY(EditAnywhere, EditFixedSize, NoClear, Transient, TextExportTransient)
 	class UStalkerSpawnProperties_ALifeTraderAbstract* NCPData;
 	UPROPERTY()
 	UBillboardComponent*				SpawnBillboard;
 
-	ISE_Abstract*						XRayEntity;
 	class CLAItem*						LightAnim;
 
 

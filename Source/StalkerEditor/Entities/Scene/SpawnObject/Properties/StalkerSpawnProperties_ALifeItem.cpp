@@ -41,7 +41,7 @@ void UStalkerSpawnProperties_ALifeItemWeapon::PostEditChangeProperty(struct FPro
 	}
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeItemWeapon, AmmoInMagazine))
 	{
-		ALifeItemWeapon->ammo_type = AmmoInMagazine;
+		ALifeItemWeapon->a_elapsed = AmmoInMagazine;
 	}
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeItemWeapon, AddonsScope))
 	{

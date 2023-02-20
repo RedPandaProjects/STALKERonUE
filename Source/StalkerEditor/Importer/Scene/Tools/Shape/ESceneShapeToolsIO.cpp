@@ -2,10 +2,7 @@
 
 // chunks
 static const u16 SHAPE_TOOLS_VERSION  	= 0x0000;
-
-enum{
-    CHUNK_VERSION			= 0x1001ul,
-};
+#define CHUNK_VERSION 0x1001ul
 
 bool ESceneShapeTool::LoadLTX(CInifile& ini)
 {

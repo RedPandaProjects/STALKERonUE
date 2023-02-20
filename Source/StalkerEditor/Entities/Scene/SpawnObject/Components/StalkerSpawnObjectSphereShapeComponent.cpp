@@ -1,5 +1,7 @@
 #include "StalkerSpawnObjectSphereShapeComponent.h"
 #include "../StalkerSpawnObject.h"
+#include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
+#include "Resources/Spawn/StalkerLevelSpawn.h"
 
 FPrimitiveSceneProxy* UStalkerSpawnObjectSphereShapeComponent::CreateSceneProxy()
 {
@@ -46,7 +48,7 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectSphereShapeComponent::CreateSceneProxy(
 						Color.A = Color.A * 2;
 					}
 					const FMaterialRenderProxy* const ColoredMeshInstance = &Collector.AllocateOneFrameResource<FColoredMaterialRenderProxy>(GEngine->DebugMeshMaterial->GetRenderProxy(), Color);
-					GetSphereMesh(Position , GetBounds().GetBox().GetExtent(), 10, 7, ColoredMeshInstance, SDPG_World, false, ViewIndex, Collector, false, new HActor(SphereShapeComponent->GetOwner(), SphereShapeComponent.Get()));
+					GetSphereMesh(Position, GetBounds().GetBox().GetExtent(), 10, 7, ColoredMeshInstance, SDPG_World, false, ViewIndex, Collector, false, new HActor(SphereShapeComponent->GetOwner(), SphereShapeComponent.Get()));
 				}
 			}
 
@@ -68,7 +70,7 @@ FBoxSphereBounds UStalkerSpawnObjectSphereShapeComponent::CalcBounds(const FTran
 
 void UStalkerSpawnObjectSphereShapeComponent::UpdateColor()
 {
-	AStalkerSpawnObject*SpawnObject = Cast<AStalkerSpawnObject>(GetOwner());
+	AStalkerSpawnObject* SpawnObject = Cast<AStalkerSpawnObject>(GetOwner());
 	ShapeColor = FColor(0x3C808080);
 	if (SpawnObject && SpawnObject->SectionName.Len())
 	{

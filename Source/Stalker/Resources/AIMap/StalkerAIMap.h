@@ -3,12 +3,16 @@
 #include "StalkerAIMap.generated.h"
 
 UCLASS()
-class STALKER_API UStalkerAIMap : public UObject
+class STALKER_API UStalkerAIMap : public UObject,public ILevelGraph
 {
 	GENERATED_BODY()
 public:
-
+								UStalkerAIMap		();
 	void						Serialize			(FArchive& Ar) override;
+
+	const						CHeader& header		() const override;
+	const						CVertex* get_nodes	() const override;
+	void						RefreshAIMapMetadata();
 #if WITH_EDITORONLY_DATA
 	void						AutoLink			(FStalkerAIMapNode* Node);
 	void						BeginDestroy		() override;
@@ -38,6 +42,11 @@ public:
 	
 	UPROPERTY()
 	FBox3f	AABB;
+	UPROPERTY()
+	FGuid	AIMapGuid;
+	UPROPERTY()
+	bool	NeedRebuild = true;
+
 #if WITH_EDITORONLY_DATA
 	UPROPERTY()
 	float NodeSize = 70.f;
@@ -48,10 +57,13 @@ public:
 	bool						NodesHashSelected[NodesHashSize + 1][NodesHashSize + 1];
 #endif
 
-private:
 
+
+	CHeader						LevelGraphHeader;
+	TArray< CVertex>			LevelGraphVertices;
+private:
 #if WITH_EDITORONLY_DATA
-	void ClearNodes();
+	void						ClearNodes			();
 #endif
-	const int32 Version = 0;
+	const int32					Version = 1;
 };

@@ -1,6 +1,11 @@
 #include "StalkerAIMap.h"
 
-#if WITH_EDITORONLY_DATA
+
+
+UStalkerAIMap::UStalkerAIMap()
+{
+	InvalidAIMap();
+}
 
 void UStalkerAIMap::Serialize(FArchive& Ar)
 {
@@ -9,39 +14,83 @@ void UStalkerAIMap::Serialize(FArchive& Ar)
 	{
 		int32 CurrentVersion = Version;
 		Ar << CurrentVersion;
-		check(CurrentVersion == 0);
+		check(CurrentVersion >= 0&& CurrentVersion <= 1);
 
-		int32 Count = Nodes.Num();
-		Ar << Count;
-		if (Ar.IsLoading())
+		if (CurrentVersion == 1)
 		{
-			ClearNodes();
-			Nodes.Empty(Count);
-			Nodes.AddDefaulted(Count);
-			for (FStalkerAIMapNode*& Node : Nodes)
+			Ar << LevelGraphHeader.count << LevelGraphHeader.size << LevelGraphHeader.size_y << static_cast<hdrNODES&>(LevelGraphHeader).version;
+			if (Ar.IsLoading()&& LevelGraphHeader.count)
 			{
-				Node = new FStalkerAIMapNode;
+				LevelGraphHeader.aabb.invalidate();
+				LevelGraphHeader.aabb.modify(StalkerMath::UnrealLocationToXRay(AABB.Min));
+				LevelGraphHeader.aabb.modify(StalkerMath::UnrealLocationToXRay(AABB.Max));
+				static_assert(sizeof(FGuid)==sizeof(xrGUID));
+				FMemory::Memcpy(&static_cast<hdrNODES&>(LevelGraphHeader).guid,&AIMapGuid,sizeof(FGuid));
+			}
+			int32 Count = LevelGraphVertices.Num();
+			Ar << Count;
+			if (Ar.IsLoading())
+			{
+				LevelGraphVertices.Empty(Count);
+				LevelGraphVertices.AddDefaulted(Count);
+			}
+			for (CVertex& Node : LevelGraphVertices)
+			{
+				Ar.Serialize(&Node,sizeof(CVertex));
+			}
+			if (Ar.IsLoading())
+			{
+				RefreshAIMapMetadata();
 			}
 		}
-		if (Ar.IsSaving())
+		
+#if WITH_EDITORONLY_DATA
+		else if (Ar.IsLoading())
 		{
-			CalculateIndex();
+			InvalidAIMap();
 		}
-		for (FStalkerAIMapNode* Node : Nodes)
+		if (!Ar.IsCooking())
 		{
-			Node->Serialize(Ar, this);
+			int32 Count = Nodes.Num();
+			Ar << Count;
+			if (Ar.IsLoading())
+			{
+				bool SavedNeedRebuild = NeedRebuild;
+				ClearNodes();
+				Nodes.Empty(Count);
+				Nodes.AddDefaulted(Count);
+				for (FStalkerAIMapNode*& Node : Nodes)
+				{
+					Node = new FStalkerAIMapNode;
+				}
+				NeedRebuild			= SavedNeedRebuild;
+			}
+			if (Ar.IsSaving())
+			{
+				CalculateIndex();
+			}
+			for (FStalkerAIMapNode* Node : Nodes)
+			{
+				Node->Serialize(Ar, this);
+			}
+			if (Ar.IsLoading())
+			{
+				HashFill();
+			}
 		}
-		if (Ar.IsLoading())
-		{
-			HashFill();
-		}
+#endif
+		
 	}
 
 }
-
+#if WITH_EDITORONLY_DATA
 void UStalkerAIMap::InvalidAIMap()
 {
-
+	NeedRebuild = true;
+	LevelGraphVertices.Empty();
+	FMemory::Memzero(LevelGraphHeader);
+	AIMapGuid.Invalidate();
+	Modify();
 }
 
 void UStalkerAIMap::AutoLink(FStalkerAIMapNode* Node)
@@ -171,6 +220,7 @@ void UStalkerAIMap::HashClear()
 
 void UStalkerAIMap::RemoveSelect()
 {
+	NeedRebuild = true;
 	for (FStalkerAIMapNode* Node : Nodes)
 	{
 		if (EnumHasAnyFlags(Node->Flags, EStalkerAIMapNodeFlags::Selected))
@@ -409,6 +459,8 @@ FStalkerAIMapNode* UStalkerAIMap::FindOrCreateNode(const FVector3f& InPosition, 
 			return Result;
 		}
 	}
+
+	NeedRebuild = true;
 	Nodes.Add(new FStalkerAIMapNode);
 	Nodes.Last()->Position = Position;
 	Nodes.Last()->Plane = FPlane4f(Position, FVector3f(0, 0, 1));
@@ -497,8 +549,38 @@ void UStalkerAIMap::CalculateIndex()
 
 }
 
+const ILevelGraph::CHeader& UStalkerAIMap::header() const
+{
+	return LevelGraphHeader;
+}
+
+const ILevelGraph::CVertex* UStalkerAIMap::get_nodes() const
+{
+	return LevelGraphVertices.GetData();
+}
+
+void UStalkerAIMap::RefreshAIMapMetadata()
+{
+	if (!LevelGraphHeader.count)
+	{
+		m_row_length = 0;
+		m_column_length = 0;
+		m_level_id = -1;
+		m_max_x = 0;
+		m_max_z = 0;
+		m_access_mask.clear();
+		return;
+	}
+	m_row_length = FMath::FloorToInt((header().box().max.z - header().box().min.z) / header().cell_size() + EPS_L + 1.5f);
+	m_column_length = FMath::FloorToInt((header().box().max.x - header().box().min.x) / header().cell_size() + EPS_L + 1.5f);
+	m_access_mask.assign(header().vertex_count(), true);
+	unpack_xz(vertex_position(header().box().max), m_max_x, m_max_z);
+	m_level_id = -1;
+}
+
 void UStalkerAIMap::ClearNodes()
 {
+	NeedRebuild = true;
 	for (FStalkerAIMapNode* Node : Nodes)
 	{
 		delete Node;

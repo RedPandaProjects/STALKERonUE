@@ -7,11 +7,9 @@ class UStalkerEditorCForm : public UObject
 public:
 	void	Initialize				();
 	void	Destroy					();
-private:
-	void	OnGetOnScreenMessages	(FCoreDelegates::FSeverityMessageMap& Out);
 	void	Build					();
-	void	OnPreBeginPIE			(const bool);
-	TSharedPtr< FUICommandList>		CFormCommands;
+private:
+	//void	OnGetOnScreenMessages	(FCoreDelegates::FSeverityMessageMap& Out);
 
 	UPROPERTY()
 	TMap<class UStalkerPhysicalMaterial*,int32> 	PhysicalMaterial2ID;

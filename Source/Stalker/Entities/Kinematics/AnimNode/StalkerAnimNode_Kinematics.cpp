@@ -51,13 +51,19 @@ void FStalkerAnimNode_Kinematics::Update_AnyThread(const FAnimationUpdateContext
 
 void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 {
-	TempBoneTransforms.Empty(Bones.Num());
-	//check(IsInGameThread());
+	if (Bones.Num() == 0)
+	{
+		Output.ResetToRefPose();
+		return;
+	}	
 	if (!IsValid(Owner))
 	{
 		Output.ResetToRefPose();
 		return;
 	}
+	TempBoneTransforms.Empty(Bones.Num());
+	//check(IsInGameThread());
+
 	if (AnimMode == EStalkerKinematicsAnimMode::GetBoneInMotionBlend)
 	{
 		Evaluate_Blend(Output, *GetBoneInMotionBlend);

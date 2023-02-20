@@ -2,6 +2,7 @@
 #include "UI/Menu/StalkerMainMenu.h"
 #include "UI/Menu/StalkerToolbarMenu.h"
 #include "UI/Menu/StalkerBuildMenu.h"
+#include "UI/Menu/StalkerPlayMenu.h"
 class FStalkerEditorModule : public IModuleInterface
 {
 public:
@@ -16,4 +17,5 @@ private:
 	StalkerMainMenu MainMenu;
 	StalkerToolbarMenu ToolBarMenu;
 	StalkerBuildMenu	BuildMenu;
+	StalkerPlayMenu		PlayMenu;
 };

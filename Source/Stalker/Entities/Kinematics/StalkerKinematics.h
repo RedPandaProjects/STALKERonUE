@@ -123,7 +123,7 @@ public:
 	shared_str					GetNameData() override;
 
 	UPROPERTY()
-	class UStalkerKinematicsData* KinematicsData;
+	class UStalkerKinematicsData*				KinematicsData;
 
 	TArray<StalkerKinematicsBone>				Bones;
 	TMap<u16, shared_str>						BonesID2Name;
@@ -176,5 +176,8 @@ private:
 
 	UPROPERTY(Transient)
 	class UStalkerKinematicsAnimInstance_Default* KinematicsAnimInstanceForCompute;
+
+public:
+	void PostLoad() override;
 
 };

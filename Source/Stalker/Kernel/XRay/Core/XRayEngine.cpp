@@ -14,6 +14,8 @@
 #include "Resources/CFrom/StalkerCForm.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
+#include "Resources/AIMap/StalkerAIMap.h"
+#include "Resources/Spawn/StalkerGameSpawn.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -64,42 +66,44 @@ void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
 	
 }
 
+class ILevelGraph* XRayEngine::GetLevelGraph(const char* Name)
+{
+	return GXRayEngineManager->GetLevelGraph(Name);
+}
+
+class IGameGraph* XRayEngine::GetGameGraph()
+{
+	UStalkerGameSpawn*GameSpawn =  GXRayEngineManager->GetResourcesManager()->GetGameSpawn();
+	if (IsValid(GameSpawn))
+	{
+		GameSpawn->GameGraph.ResetEnabled();
+		return &GameSpawn->GameGraph;
+	}
+	return nullptr;
+}
+
+IReader XRayEngine::GetGameSpawn()
+{
+	UStalkerGameSpawn* GameSpawn = GXRayEngineManager->GetResourcesManager()->GetGameSpawn();
+	if (IsValid(GameSpawn))
+	{
+		return  { GameSpawn->SpawnData.GetData(),GameSpawn->SpawnData.Num() };;
+	}
+	return {nullptr,0};
+}
+
+bool XRayEngine::LoadWorld(const char* Name)
+{
+	return GXRayEngineManager->LoadWorld(Name);
+}
+
 class XRayUnrealProxyInterface* XRayEngine::CreateUnrealProxy(class CObject*InObject)
 {
-
 	return GXRayEngineManager->GetResourcesManager()->CreateProxy(InObject);
 }
-
-void XRayEngine::Level_Scan()
-{
-	XRayEngineInterface::Level_Scan();
-}
-
-int XRayEngine::Level_ID(LPCSTR name, LPCSTR ver, bool bSet)
-{
-	return XRayEngineInterface::Level_ID(name,ver,bSet);
-}
-
-void XRayEngine::Level_Set(u32 ID)
-{
-	XRayEngineInterface::Level_Set(ID);
-	string_path Name;
-	FCStringAnsi::Strcpy(Name, Levels[ID].folder);
-	if (FCStringAnsi::Strlen(Name) && Name[FCStringAnsi::Strlen(Name) - 1] == '\\')
-	{
-		Name[FCStringAnsi::Strlen(Name) - 1]=0;
-	}
-	CurrentLevelName = Name;
-	
-}
-
-void XRayEngine::LoadAllArchives()
-{
-}
-
 void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback)
 {
-	UWorld*World = GXRayEngineManager->GetGameWorld();
+	UWorld*World = GWorld;
 	check(World);
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	check(StalkerWorldSettings);
@@ -150,4 +154,26 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 	LegacyCFormHeader.version = CFORM_CURRENT_VERSION;
 
 	ObjectSpace.Create(LegacyCFormVertices.GetData(), LegacyCFormTriangles.GetData(), LegacyCFormHeader, build_callback);
+}
+
+EXRayWorldStatus XRayEngine::GetWorldStatus()
+{
+	switch (GXRayEngineManager->GetWorldStatus())
+	{
+	default:
+		return EXRayWorldStatus::Failure;
+		break;
+	case EStalkerWorldStatus::None:
+		return EXRayWorldStatus::None;
+		break;
+	case EStalkerWorldStatus::Ready:
+		return EXRayWorldStatus::Ready;
+		break;
+	case EStalkerWorldStatus::Loading:
+		return EXRayWorldStatus::Loading;
+		break;
+	case EStalkerWorldStatus::Failure:
+		return EXRayWorldStatus::Failure;
+		break;
+	} 
 }

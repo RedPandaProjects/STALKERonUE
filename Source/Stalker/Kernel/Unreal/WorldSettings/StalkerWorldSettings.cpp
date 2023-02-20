@@ -4,46 +4,24 @@
 #include "StalkerWorldSettings.h"
 #include "Resources/CFrom/StalkerCForm.h"
 #include "Resources/AIMap/StalkerAIMap.h"
-
-UStalkerCForm* AStalkerWorldSettings::GetOrCreateCForm()
-{
-	auto CreatePackageCForm = [this]()
-	{
-		FString PackageName = GetOutermost()->GetName() + TEXT("_CForm");
-		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
-		BuiltDataPackage->SetPackageFlags(PKG_ContainsMapData);
-		return BuiltDataPackage;
-	};
-
-	if (!CForm || !CForm->HasAllFlags(RF_Public | RF_Standalone))
-	{
-		if (CForm)
-		{
-			CForm->ClearFlags(RF_Standalone);
-		}
-
-		UPackage* BuiltDataPackage = CreatePackageCForm();
-
-		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
-		CForm = NewObject<UStalkerCForm>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public);
-		MarkPackageDirty();
-	}
-	return CForm;
-
-}
+#include "Resources/Spawn/StalkerLevelSpawn.h"
 
 UStalkerCForm* AStalkerWorldSettings::GetCForm()
 {
 	return CForm;
 }
 
+UStalkerAIMap* AStalkerWorldSettings::GetAIMap()
+{
+	return AIMap;
+}
+#if WITH_EDITORONLY_DATA
 UStalkerAIMap* AStalkerWorldSettings::GetOrCreateAIMap()
 {
 	auto CreatePackageAIMap = [this]()
 	{
 		FString PackageName = GetOutermost()->GetName() + TEXT("_AIMap");
 		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
-		BuiltDataPackage->SetPackageFlags(PKG_ContainsMapData);
 		return BuiltDataPackage;
 	};
 
@@ -58,16 +36,67 @@ UStalkerAIMap* AStalkerWorldSettings::GetOrCreateAIMap()
 
 		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
 		AIMap = NewObject<UStalkerAIMap>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public | RF_Transactional);
-		MarkPackageDirty();
+		Modify();
 	}
 	return AIMap;
 }
 
-UStalkerAIMap* AStalkerWorldSettings::GetAIMap()
+UStalkerCForm* AStalkerWorldSettings::GetOrCreateCForm()
 {
-	return AIMap;
+	auto CreatePackageCForm = [this]()
+	{
+		FString PackageName = GetOutermost()->GetName() + TEXT("_CForm");
+		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
+		return BuiltDataPackage;
+	};
+
+	if (!CForm || !CForm->HasAllFlags(RF_Public | RF_Standalone))
+	{
+		if (CForm)
+		{
+			CForm->ClearFlags(RF_Standalone);
+		}
+
+		UPackage* BuiltDataPackage = CreatePackageCForm();
+
+		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
+		CForm = NewObject<UStalkerCForm>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public);
+		Modify();
+	}
+	return CForm;
+
 }
 
+UStalkerLevelSpawn* AStalkerWorldSettings::GetOrCreateSpawn()
+{
+	auto CreatePackageCForm = [this]()
+	{
+		FString PackageName = GetOutermost()->GetName() + TEXT("_Spawn");
+		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
+		return BuiltDataPackage;
+	};
+
+	if (!Spawn || !Spawn->HasAllFlags(RF_Public | RF_Standalone))
+	{
+		if (Spawn)
+		{
+			Spawn->ClearFlags(RF_Standalone);
+		}
+
+		UPackage* BuiltDataPackage = CreatePackageCForm();
+
+		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
+		Spawn = NewObject<UStalkerLevelSpawn>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public);
+		Modify();
+	}
+	return Spawn;
+}
+
+UStalkerLevelSpawn* AStalkerWorldSettings::GetSpawn()
+{
+	return Spawn;
+}
+#endif
 void AStalkerWorldSettings::PostInitProperties()
 {
 	Super::PostInitProperties();

@@ -1,6 +1,8 @@
 #include "StalkerWayObject.h"
 #include "StalkerWayPointComponent.h"
 #include "Components/BillboardComponent.h"
+#include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
+#include "Resources/Spawn/StalkerLevelSpawn.h"
 AStalkerWayObject::AStalkerWayObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 	bIsEditorOnlyActor = true;
@@ -21,7 +23,7 @@ class UStalkerWayPointComponent* AStalkerWayObject::CreatePoint(const FVector& P
 {
 	
 
-	UStalkerWayPointComponent* Point = NewObject<UStalkerWayPointComponent>(this);
+	UStalkerWayPointComponent* Point = NewObject<UStalkerWayPointComponent>(this,NAME_None,RF_Transactional);
 	Point->SetWorldLocation(Position);
 	if (Point->AttachToComponent(SceneComponent, FAttachmentTransformRules(EAttachmentRule::KeepWorld, false)))
 	{
@@ -175,6 +177,53 @@ bool AStalkerWayObject::CheckName(const FString& Name)
 		}
 	}
 	return Count>1;
+}
+
+void AStalkerWayObject::CalculateIndex()
+{
+	for (int32 i = 0; i < Points.Num(); i++)
+	{
+		Points[i]->Index = i;
+	}
+}
+
+void AStalkerWayObject::Destroyed()
+{
+	Super::Destroyed();
+	if (!IsValid(GetWorld()))
+	{
+		return;
+	}
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GetWorld()->GetWorldSettings());
+	if (IsValid(StalkerWorldSettings))
+	{
+		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
+		if (IsValid(Spawn))
+		{
+			Spawn->NeedRebuild = true;
+			Spawn->Modify();
+		}
+	}
+}
+
+bool AStalkerWayObject::Modify(bool bAlwaysMarkDirty /*= true*/)
+{
+	bool bResult = Super::Modify(bAlwaysMarkDirty);
+	if (!IsValid(GetWorld()))
+	{
+		return bResult;
+	}
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GetWorld()->GetWorldSettings());
+	if (IsValid(StalkerWorldSettings))
+	{
+		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
+		if (IsValid(Spawn))
+		{
+			Spawn->NeedRebuild = true;
+			Spawn->Modify();
+		}
+	}
+	return bResult;
 }
 
 void AStalkerWayObject::GetSelectedPoint(TArray<UStalkerWayPointComponent*>& SelectedPoints)

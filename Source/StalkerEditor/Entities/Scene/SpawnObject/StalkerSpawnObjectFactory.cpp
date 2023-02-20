@@ -21,3 +21,12 @@ AActor* UStalkerSpawnObjectFactory::SpawnActor(UObject* InAsset, ULevel* InLevel
 	SpawnParams.Template = Cast<AActor>(InAsset);
 	return Super::SpawnActor(InAsset, InLevel, InTransform, SpawnParams);
 }
+
+FString UStalkerSpawnObjectFactory::GetDefaultActorLabel(UObject* InAsset) const
+{
+	if (AActor* Actor = Cast<AActor>(InAsset))
+	{
+		return Actor->GetDefaultActorLabel();
+	}
+	return Super::GetDefaultActorLabel(InAsset);
+}

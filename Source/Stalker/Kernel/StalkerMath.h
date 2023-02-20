@@ -44,9 +44,17 @@ namespace StalkerMath
 	{
 		return Fvector().set(-Location.X / 100.f, Location.Z / 100.f, Location.Y / 100.f);
 	}
+	inline Fvector UnrealNormalToXRay(FVector3f Normal)
+	{
+		return Fvector().set(-Normal.X, Normal.Z , Normal.Y);
+	}
 	inline Fvector UnrealLocationToXRay(FVector Location)
 	{
 		return Fvector().set(-Location.X / 100.f, Location.Z / 100.f, Location.Y / 100.f);
+	}
+	inline Fvector UnrealNormalToXRay(FVector Normal)
+	{
+		return Fvector().set(-Normal.X, Normal.Z, Normal.Y);
 	}
 
 	inline Fquaternion	UnrealQuatToXRay(const FQuat4f& Quat)

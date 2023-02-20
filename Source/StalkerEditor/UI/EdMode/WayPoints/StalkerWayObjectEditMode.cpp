@@ -478,12 +478,15 @@ void FStalkerWayObjectEditMode::OnLevelActorRemoved(AActor*InActor)
 
 void FStalkerWayObjectEditMode::InvertLinkSelect()
 {
+
 	if (!IsEnabled())
 	{
 		return;
 	}
 	if (WayObject)
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Convert to 1 link")));
+		WayObject->Modify();
 		WayObject->InvertLinkSelect();
 	}
 }
@@ -496,6 +499,8 @@ void FStalkerWayObjectEditMode::RemoveLinkSelect()
 	}
 	if (WayObject)
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Remove links")));
+		WayObject->Modify();
 		WayObject->RemoveLinkSelect();
 	}
 }
@@ -508,6 +513,8 @@ void FStalkerWayObjectEditMode::Convert1LinkSelect()
 	}
 	if (WayObject)
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Convert to 1 link")));
+		WayObject->Modify();
 		WayObject->Convert1LinkSelect();
 	}
 }
@@ -520,6 +527,8 @@ void FStalkerWayObjectEditMode::Convert2LinkSelect()
 	}
 	if (WayObject)
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Convert to 2 links")));
+		WayObject->Modify();
 		WayObject->Convert2LinkSelect();
 	}
 }
@@ -532,6 +541,8 @@ void FStalkerWayObjectEditMode::Add1LinkSelect()
 	}
 	if (WayObject)
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Add 1 link")));
+		WayObject->Modify();
 		WayObject->Add1LinkSelect();
 	}
 }
@@ -544,6 +555,8 @@ void FStalkerWayObjectEditMode::Add2LinkSelect()
 	}
 	if (WayObject)
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Add 2 link")));
+		WayObject->Modify();
 		WayObject->Add2LinkSelect();
 	}
 }

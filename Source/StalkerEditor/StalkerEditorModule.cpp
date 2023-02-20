@@ -37,12 +37,14 @@ void FStalkerEditorModule::StartupModule()
 		GStalkerEditorManager = NewObject< UStalkerEditorManager>();
 		GStalkerEditorManager->AddToRoot();
 		GStalkerEditorManager->Initialized();
-
-		FStalkerEditorStyle::Initialize();
-		FStalkerEditorStyle::ReloadTextures();
 		MainMenu.Initialize();
 		ToolBarMenu.Initialize();
 		BuildMenu.Initialize();
+		PlayMenu.Initialize();
+
+		FStalkerEditorStyle::Initialize();
+		FStalkerEditorStyle::ReloadTextures();
+	
 
 
 		FEditorModeRegistry::Get().RegisterMode<FStalkerAIMapEditMode>(
@@ -65,14 +67,15 @@ void FStalkerEditorModule::ShutdownModule()
 {
 	if (GIsEditor)
 	{
-		ToolBarMenu.Destroy();
-		MainMenu.Destroy();
-		BuildMenu.Destroy();
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerAIMapEditMode::EM_AIMap);
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerWayObjectEditMode::EM_WayObject);
 		FStalkerEditorStyle::Shutdown();
 		FCoreDelegates::OnPostEngineInit.RemoveAll(this);
 		FCoreDelegates::OnPreExit.RemoveAll(this);
+		PlayMenu.Destroy();
+		ToolBarMenu.Destroy();
+		MainMenu.Destroy();
+		BuildMenu.Destroy();
 		StalkerEditorCommands::Unregister();
 	}
 }

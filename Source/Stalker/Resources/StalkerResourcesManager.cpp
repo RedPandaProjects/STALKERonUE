@@ -4,6 +4,7 @@
 #include "SkeletonMesh/StalkerKinematicsData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
+#include "Spawn/StalkerGameSpawn.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
 THIRD_PARTY_INCLUDES_END
@@ -262,7 +263,7 @@ class AStalkerLight* UStalkerResourcesManager::CreateLight()
 {
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
-	AStalkerLight* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerLight>(SpawnParameters);
+	AStalkerLight* Result = GWorld->SpawnActor< AStalkerLight>(SpawnParameters);
 	Lights.Add(Result);
 	return Result;
 }
@@ -298,7 +299,7 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 				{
 					FString NewName = Name;
 					NewName.RemoveFromStart(TEXT("meshes/"));
-					const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+					const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/levels") / GXRayEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
@@ -316,7 +317,7 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 				{
 					FString NewName = Name;
 					NewName.RemoveFromStart(TEXT("meshes/"));
-					const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+					const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/levels") / GXRayEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
@@ -334,7 +335,7 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 				{
 					FString NewName = Name;
 					NewName.RemoveFromStart(TEXT("meshes/"));
-					const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/levels") / GXRayEngineManager->GetCurrentLevel().ToString() / NewName;
+					const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/levels") / GXRayEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
@@ -364,12 +365,17 @@ class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(cl
 	return Result;
 }
 
-class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(const char* InName)
+class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(const char* InName, bool NeedRefence)
 {
 	UStalkerKinematicsData* KinematicsData = GetKinematics(InName);
 	if (IsValid(KinematicsData))
 	{
-		return CreateKinematics(KinematicsData);;
+		UStalkerKinematicsComponent* Result = CreateKinematics(KinematicsData);;
+		if (NeedRefence)
+		{
+			Meshes.Add(Result);
+		}
+		return Result;
 	}
 	return nullptr;
 }
@@ -390,6 +396,11 @@ void UStalkerResourcesManager::Destroy(class AStalkerProxy* Proxy)
 	Proxy->Destroy();
 }
 
+void UStalkerResourcesManager::Refresh()
+{
+	GameSpawn = nullptr;
+}
+
 FString UStalkerResourcesManager::GetGamePath()
 {
 	switch (xrGameManager::GetGame())
@@ -401,6 +412,42 @@ FString UStalkerResourcesManager::GetGamePath()
 	default:
 		return TEXT("/Game/COP");
 	}
+}
+
+UStalkerGameSpawn* UStalkerResourcesManager::GetGameSpawn()
+{
+	if (!GameSpawn)
+	{
+		const FString ParentPackageName = GetGamePath() / TEXT("GlobalSpawn");
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		GameSpawn = LoadObject<UStalkerGameSpawn>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+;	return GameSpawn;
+}
+
+UStalkerGameSpawn* UStalkerResourcesManager::GetOrCreateGameSpawn()
+{
+	GetGameSpawn();
+	auto CreatePackageSpawn = [this]()
+	{
+		FString PackageName = GetGamePath() / TEXT("GlobalSpawn");
+		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
+		return BuiltDataPackage;
+	};
+
+	if (!GameSpawn || !GameSpawn->HasAllFlags(RF_Public | RF_Standalone))
+	{
+		if (GameSpawn)
+		{
+			GameSpawn->ClearFlags(RF_Standalone);
+		}
+
+		UPackage* BuiltDataPackage = CreatePackageSpawn();
+
+		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
+		GameSpawn = NewObject<UStalkerGameSpawn>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public);
+	}
+	return GameSpawn;
 }
 
 AStalkerProxy* UStalkerResourcesManager::CreateProxy(class CObject* Object)
@@ -415,7 +462,7 @@ AStalkerProxy* UStalkerResourcesManager::CreateProxy(class CObject* Object)
 	}
 	SpawnParameters.NameMode = FActorSpawnParameters::ESpawnActorNameMode::Requested;
 	SpawnParameters.Name = *Name;
-	AStalkerProxy* Result = GXRayEngineManager->GetGameWorld()->SpawnActor< AStalkerProxy>(SpawnParameters);
+	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(SpawnParameters);
 	Result->Initilize(Object);
 #if WITH_EDITORONLY_DATA
 	Result->SetActorLabel(Object->cName().c_str());

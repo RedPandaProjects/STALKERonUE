@@ -16,7 +16,7 @@ public:
 protected:
 	ISE_ALifeObject*	ALifeObject = nullptr;
 
-	UPROPERTY(EditAnywhere, Category = "Base")
+	UPROPERTY(EditAnywhere, Category = "Base", meta = (MultiLine = true))
 	FString				CustomData;
 
 	UPROPERTY(EditAnywhere, Category = "ALife")

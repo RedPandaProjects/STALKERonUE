@@ -1,3 +1,4 @@
+#pragma once
 #include "StalkerSpawnProperties_ALifeObject.h"
 #include "StalkerSpawnProperties_ALifeDynamicObjectVisual.generated.h"
 
