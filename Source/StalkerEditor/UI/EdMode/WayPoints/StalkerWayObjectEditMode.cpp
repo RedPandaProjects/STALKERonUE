@@ -48,6 +48,8 @@ void FStalkerWayObjectEditMode::RemoveSelectPoints()
 	{
 		return;
 	}
+	const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Remove Select Points")));
+	WayObject->Modify();
 	WayObject->RemoveSelect();
 }
 
@@ -116,6 +118,8 @@ bool FStalkerWayObjectEditMode::HandleClick(FEditorViewportClient* InViewportCli
 
 	if (bIsAddWayPointMode&&IsEnabled()&& !Click.IsControlDown())
 	{
+		const FScopedTransaction Transaction(FText::FromString(TEXT("Way: Create point")));
+		WayObject->Modify();
 		UStalkerWayPointComponent* NewPoint = WayObject->CreatePoint(GEditor->ClickLocation, bAutoLink);
 		ClearSelectedPoint();
 		NewPoint->bIsSelected = true;

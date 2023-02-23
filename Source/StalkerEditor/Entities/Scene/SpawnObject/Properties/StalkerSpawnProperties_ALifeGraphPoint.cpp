@@ -84,15 +84,25 @@ void UStalkerSpawnProperties_ALifeGraphPoint::PostEditChangeProperty(struct FPro
 	}
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeGraphPoint, Map))
 	{
-		FName MapName;
-		if (CheckLevel(Map, MapName))
+		if (Map.IsNull())
 		{
-			ALifeGraphPoint->m_caConnectionLevelName = TCHAR_TO_ANSI(*MapName.ToString());
+			ALifeGraphPoint->m_caConnectionLevelName = "";
+			ALifeGraphPoint->m_caConnectionPointName = "";
+			PointName = TEXT("");
 		}
 		else
 		{
-			SetMap();
+			FName MapName;
+			if (CheckLevel(Map, MapName))
+			{
+				ALifeGraphPoint->m_caConnectionLevelName = TCHAR_TO_ANSI(*MapName.ToString());
+			}
+			else
+			{
+				SetMap();
+			}
 		}
+	
 	}
 
 	if (!PropertyChangedEvent.MemberProperty)

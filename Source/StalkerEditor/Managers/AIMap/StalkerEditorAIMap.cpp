@@ -861,6 +861,10 @@ void UStalkerEditorAIMap::Reset(UWorld* InWorld, bool bSelectedOnly /*= false*/)
 
 void UStalkerEditorAIMap::Build()
 {
+	if (FApp::IsGame())
+	{
+		return;
+	}
 	constexpr float high_cover_height = 1.5f;
 	constexpr float low_cover_height = 0.6f;
 	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);

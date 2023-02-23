@@ -27,6 +27,7 @@ public:
 	void								SpawnWrite					();
 	void								SpawnRead					();
 	void								Destroyed					() override;
+	bool								Modify						(bool bAlwaysMarkDirty = true) override;
 
 	UPROPERTY(Transient)
 	FString								DisplayName;
@@ -36,17 +37,9 @@ public:
 
 	UPROPERTY(SkipSerialization)
 	TArray<uint8>						EntityData;
-
-
 	ISE_Abstract*						XRayEntity;
-
-
-
-
-
-
-
-	bool Modify(bool bAlwaysMarkDirty = true) override;
+protected:
+	void								BeginPlay					() override;
 
 private:
 	void								CreateSpawnData				();

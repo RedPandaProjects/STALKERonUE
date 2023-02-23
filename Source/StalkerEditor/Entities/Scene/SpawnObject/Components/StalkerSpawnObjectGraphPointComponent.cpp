@@ -38,11 +38,16 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectGraphPointComponent::CreateSceneProxy()
 				{
 					const FSceneView* View = Views[ViewIndex];
 					FVector Position = GetLocalToWorld().GetOrigin();
-					FColor Color = GraphPointComponent->GraphPointColor;
-					if (IsSelected())
+					FColor Color = FColor::Green;
+					if (IsValid(GraphPointComponent.Get()))
 					{
-						Color.A = Color.A * 2;
+						Color = GraphPointComponent->GraphPointColor;
+						if (IsSelected())
+						{
+							Color.A = Color.A * 2;
+						}
 					}
+				
 
 					const FMaterialRenderProxy* const ColoredMeshInstance = &Collector.AllocateOneFrameResource<FColoredMaterialRenderProxy>(GEngine->DebugMeshMaterial->GetRenderProxy(), Color);
 					TArray<FDynamicMeshVertex> MeshVerts;

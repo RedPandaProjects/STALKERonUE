@@ -22,7 +22,6 @@ AStalkerWayObject::AStalkerWayObject(const FObjectInitializer& ObjectInitializer
 class UStalkerWayPointComponent* AStalkerWayObject::CreatePoint(const FVector& Position, bool AutoLink)
 {
 	
-
 	UStalkerWayPointComponent* Point = NewObject<UStalkerWayPointComponent>(this,NAME_None,RF_Transactional);
 	Point->SetWorldLocation(Position);
 	if (Point->AttachToComponent(SceneComponent, FAttachmentTransformRules(EAttachmentRule::KeepWorld, false)))
@@ -190,7 +189,7 @@ void AStalkerWayObject::CalculateIndex()
 void AStalkerWayObject::Destroyed()
 {
 	Super::Destroyed();
-	if (!IsValid(GetWorld()))
+	if (!IsValid(GetWorld()) || GetWorld()->IsGameWorld())
 	{
 		return;
 	}
@@ -209,7 +208,7 @@ void AStalkerWayObject::Destroyed()
 bool AStalkerWayObject::Modify(bool bAlwaysMarkDirty /*= true*/)
 {
 	bool bResult = Super::Modify(bAlwaysMarkDirty);
-	if (!IsValid(GetWorld()))
+	if (!IsValid(GetWorld())|| GetWorld()->IsGameWorld() || !bAlwaysMarkDirty)
 	{
 		return bResult;
 	}

@@ -26,6 +26,10 @@ void UStalkerEditorCForm::Destroy()
 
 void UStalkerEditorCForm::Build()
 {
+	if (FApp::IsGame())
+	{
+		return;
+	}
 	GXRayEngineManager->GetPhysicalMaterialsManager()->Build();
 	if (!GXRayEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial)
 	{

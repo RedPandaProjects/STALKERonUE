@@ -11,7 +11,7 @@ public:
 	void											Destroy						();
 	inline const XRaySOCMaterials&					GetSOCMaterials				() const { return SOCMaterials; }
 	FString											GetGamePath					();
-	
+	void											ReloadConfigs				();
 
 	UPROPERTY(Transient)
 	TArray< USkeleton*>								Skeletons;

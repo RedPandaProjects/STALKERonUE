@@ -17,6 +17,7 @@
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypes.h"
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypeCustomization.h"
 ///////////////////////////////////////////////////////////////////////////////////////////
+#include "UI/Commands/StalkerEditorCommands.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XRayEngineInterface.h"
 THIRD_PARTY_INCLUDES_END
@@ -71,8 +72,9 @@ void UStalkerEditorManager::Initialized()
 		FEditorDelegates::PreBeginPIE.AddUObject(this, &UStalkerEditorManager::OnPreBeginPIE);
 		FEditorDelegates::PostPIEStarted.AddUObject(this, &UStalkerEditorManager::OnPostPIEStarted);
 		FEditorDelegates::EndPIE.AddUObject(this, &UStalkerEditorManager::OnEndPIE);
-	}
 
+		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ReloadConfigsAndScript, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ReloadConfigs));
+	}
 	
 }
 
@@ -127,6 +129,24 @@ FString UStalkerEditorManager::GetGamePath()
 	default:
 		return TEXT("/Game/COP");
 	}
+}
+
+void UStalkerEditorManager::ReloadConfigs()
+{
+	if (!FApp::IsGame())
+	{
+		return;
+	}
+	SEFactoryManager->UnLoad();
+	delete pSettings;
+	string_path 			si_name;
+	FS.update_path(si_name, "$game_config$", "system.ltx");
+	pSettings = xr_new<CInifile>(si_name, TRUE);// FALSE,TRUE,TRUE);
+	delete pGameIni;
+	string_path					fname;
+	FS.update_path(fname, "$game_config$", "game.ltx");
+	pGameIni = xr_new<CInifile>(fname, TRUE);
+	SEFactoryManager->Load();
 }
 
 void UStalkerEditorManager::OnPreBeginPIE(const bool)

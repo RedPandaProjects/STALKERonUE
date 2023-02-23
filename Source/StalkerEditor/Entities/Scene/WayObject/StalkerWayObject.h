@@ -24,7 +24,7 @@ public:
 	TArray<class UStalkerWayPointComponent*>	Points;
 
 private:
-	void										GetSelectedPoint	(TArray<class UStalkerWayPointComponent*>& SelectedPoints);
+	void										GetSelectedPoint			(TArray<class UStalkerWayPointComponent*>& SelectedPoints);
 	UPROPERTY()
 	class USceneComponent*						SceneComponent;
 

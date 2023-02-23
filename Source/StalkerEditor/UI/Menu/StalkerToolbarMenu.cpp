@@ -9,6 +9,7 @@ void StalkerToolbarMenu::Initialize()
 	if (UToolMenu* ProfileMenu = UToolMenus::Get()->ExtendMenu(TEXT("LevelEditor.LevelEditorToolBar.User")))
 	{
 		FToolMenuSection& Section = ProfileMenu->AddSection("Stalker Tools", FText::FromString(TEXT("Stalker Tools")));
+		
 		Section.AddSeparator(NAME_None);
 		
 		Section.AddEntry(FToolMenuEntry::InitToolBarButton(StalkerEditorCommands::Get().BuildCForm,

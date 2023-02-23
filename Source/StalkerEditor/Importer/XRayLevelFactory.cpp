@@ -79,6 +79,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 				AStaticMeshActor* StaticMeshActor = World->SpawnActor<AStaticMeshActor>(Location, Rotation);
 				StaticMeshActor->GetStaticMeshComponent()->SetStaticMesh(StaticMesh);
 				StaticMeshActor->SetActorScale3D(Scale3D);
+				StaticMeshActor->SetFolderPath(TEXT("StaticMeshes"));
 				FString Label = EditableObject->GetName();
 				Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 				StaticMeshActor->SetActorLabel(Label);
@@ -92,6 +93,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 		if (WayObject&& WayObject->m_WayPoints.size())
 		{
 			AStalkerWayObject* WayObjectActor = World->SpawnActor<AStalkerWayObject>(FVector(StalkerMath::XRayLocationToUnreal( WayObject->m_WayPoints[0]->m_vPosition)),FRotator(0,0,0));
+			WayObjectActor->SetFolderPath(TEXT("Ways"));
 			for (int32 i = 0; i < WayObject->m_WayPoints.size()-1; i++)
 			{
 				WayObjectActor->CreatePoint(FVector(StalkerMath::XRayLocationToUnreal(WayObject->m_WayPoints[0]->m_vPosition)),false);
@@ -126,6 +128,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName)
 			FRotator Rotation(Quat);
 			FVector Scale3D(SpawnObject->GetScale().x, SpawnObject->GetScale().z, SpawnObject->GetScale().y);
 			AStalkerSpawnObject* SpawnObjectActor = World->SpawnActor<AStalkerSpawnObject>(Location, Rotation);
+			SpawnObjectActor->SetFolderPath(TEXT("Spawns"));
 			SpawnObjectActor->SetActorScale3D(Scale3D);
 			SpawnObjectActor->DestroyEntity();
 			SpawnObjectActor->SetActorLabel(SpawnObject->GetName());

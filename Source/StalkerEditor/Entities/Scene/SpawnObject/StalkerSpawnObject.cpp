@@ -379,6 +379,10 @@ void AStalkerSpawnObject::CreateEntity()
 	{
 		return;
 	}
+	if (GetWorld()->IsGameWorld())
+	{
+		return;
+	}
 	if (GStalkerEditorManager->SEFactoryManager->IsVoid())
 	{
 		return;
@@ -475,7 +479,7 @@ void AStalkerSpawnObject::SpawnRead()
 void AStalkerSpawnObject::Destroyed()
 {
 	Super::Destroyed();
-	if (!IsValid(GetWorld()))
+	if (!IsValid(GetWorld()) || GetWorld()->IsGameWorld())
 	{
 		return;
 	}
@@ -494,7 +498,7 @@ void AStalkerSpawnObject::Destroyed()
 bool AStalkerSpawnObject::Modify(bool bAlwaysMarkDirty /*= true*/)
 {
 	bool bResult = Super::Modify(bAlwaysMarkDirty);
-	if (!IsValid(GetWorld()))
+	if (!IsValid(GetWorld()) || GetWorld()->IsGameWorld()||!bAlwaysMarkDirty)
 	{
 		return bResult;
 	}
@@ -708,4 +712,13 @@ void AStalkerSpawnObject::CreateNCPData()
 
 	NCPData = NewObject<UStalkerSpawnProperties_ALifeTraderAbstract>(this, NAME_None, RF_Transactional | RF_TextExportTransient);
 	NCPData->SetEntity(XRayEntity);
+}
+
+void AStalkerSpawnObject::BeginPlay()
+{
+	Super::BeginPlay();
+	if (IsValid(GetWorld())||GetWorld()->IsGameWorld())
+	{
+		Destroy();
+	}
 }
