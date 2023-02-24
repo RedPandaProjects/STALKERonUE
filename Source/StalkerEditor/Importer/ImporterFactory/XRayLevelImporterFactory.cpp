@@ -1,5 +1,7 @@
 #include "XRayLevelImporterFactory.h"
 #include "../XRayLevelFactory.h"
+#include "UI/StalkerImporterOptionsWindow.h"
+#include "XRayLevelImportOptions.h"
 UXRayLevelImporterFactory::UXRayLevelImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
@@ -15,23 +17,54 @@ UXRayLevelImporterFactory::UXRayLevelImporterFactory(const FObjectInitializer& O
 UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 { 
 
+	auto ShowOptionsWindow = [](const FString& FileName, const FString& PackagePath, UXRayLevelImportOptions& ImporterOptions)->bool
+	{
+		TSharedPtr<SWindow> ParentWindow;
+		if (FModuleManager::Get().IsModuleLoaded("MainFrame"))
+		{
+			IMainFrameModule& MainFrame = FModuleManager::LoadModuleChecked<IMainFrameModule>("MainFrame");
+			ParentWindow = MainFrame.GetParentWindow();
+		}
+
+		TSharedRef<SWindow> Window = SNew(SWindow).Title(FText::FromString( TEXT("XRay Level Import Options"))).SizingRule(ESizingRule::Autosized);
+
+		TSharedPtr<SStalkerImporterOptionsWindow> OptionsWindow;
+		Window->SetContent(
+			SAssignNew(OptionsWindow, SStalkerImporterOptionsWindow)
+			.ImportOptions(&ImporterOptions)
+			.WidgetWindow(Window)
+			.FileNameText(FText::FromString(FString::Printf(TEXT(	"Import File  :    %s"),*FPaths::GetCleanFilename(FileName))))
+			.FilePathText(FText::FromString(FileName))
+			.PackagePathText(FText::FromString(FString::Printf(TEXT("Import To    :    %s"), *PackagePath))));
+
+		FSlateApplication::Get().AddModalWindow(Window, ParentWindow, false);
+		return OptionsWindow->ShouldImport();
+	};
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();
 
 	Warn->Log(Filename);
 	// show import options window
-
+	TStrongObjectPtr<UXRayLevelImportOptions> ImporterOptions(NewObject<UXRayLevelImportOptions>(GetTransientPackage(),TEXT("XRay Level Importer Options")));
+	
 	const FString NewPackageName = UPackageTools::SanitizePackageName(*(FPaths::GetPath(InParent->GetName())));
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
-
-	XRayLevelFactory Factory(ParentPackage, Flags);
-	if (!Factory.ImportLevel(Filename))
+	UObject* Object = nullptr;
+	if(ShowOptionsWindow(Filename, NewPackageName,*ImporterOptions))
 	{
-		bOutOperationCanceled = true;
-		return nullptr;
+		XRayLevelFactory Factory(ParentPackage, Flags);
+		if (!Factory.ImportLevel(Filename,*ImporterOptions))
+		{
+			bOutOperationCanceled = true;
+			return nullptr;
+		}
+		Object = Factory.GetCreatedObject();
 	}
-
-	UObject* Object = Factory.GetCreatedObject();
+	else
+	{
+			bOutOperationCanceled = true;
+			return nullptr;
+	}
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPostImport(this, Object);
 	return Object;
 }
