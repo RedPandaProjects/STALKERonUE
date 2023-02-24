@@ -30,7 +30,6 @@ UObject* UXRayTextureTHMImporterFactory::FactoryCreateFile(UClass* InClass, UObj
 	Object = Factory.ImportTextureTHM(Filename);
 	if (!IsValid(Object))
 	{
-		bOutOperationCanceled = true;
 		return nullptr;
 	}
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPostImport(this, Object);

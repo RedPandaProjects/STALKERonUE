@@ -57,7 +57,8 @@ public class StalkerEditor : ModuleRules
                 "AnimGraph",
                 "BlueprintGraph",
                 "EditorFramework",
-                "PlacementMode"
+                "PlacementMode",
+                "MessageLog"
             }
             );
     }

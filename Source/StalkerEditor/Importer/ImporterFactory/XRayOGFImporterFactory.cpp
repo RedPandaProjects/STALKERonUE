@@ -28,9 +28,8 @@ UObject* UXRayOGFImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 
 	XRayEngineFactory Factory(ParentPackage, Flags);
 	Object = Factory.ImportOGF(Filename);
-	if (!IsValid(Object))
+	if (!ensure(IsValid(Object)))
 	{
-		bOutOperationCanceled = true;
 		return nullptr;
 	}
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPostImport(this, Object);

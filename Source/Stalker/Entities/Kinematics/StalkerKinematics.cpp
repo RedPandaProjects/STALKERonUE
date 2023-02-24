@@ -11,7 +11,6 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/EnnumerateVertices.h"
 THIRD_PARTY_INCLUDES_END
 
-
 DECLARE_CYCLE_STAT(TEXT("XRay ~ Kinematics Frame"), STAT_XRayEngineKinematics, STATGROUP_XRayEngine);
 UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 {
@@ -22,6 +21,7 @@ UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 	SetAnimationMode(EAnimationMode::Type::AnimationBlueprint);
 	AnimClass = UStalkerKinematicsAnimInstance_Default::StaticClass();
 	SkipDeltaTime = 0;
+	bIsErrorMesh = false;
 }
 
 void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKinematicsData)
@@ -55,6 +55,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		BonesPartsBoneID2ID.Empty();
 		BonesParts.Empty();
 		DataName = "";
+		bIsErrorMesh = false;
 		BlendDestroyCallback  = nullptr;
 		UpdateTracksCallback = nullptr;
 		MyUpdateCallback = nullptr;
@@ -71,6 +72,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	{
 		return;
 	}
+	bIsErrorMesh =  InKinematicsData->GetPathName() == TEXT("/Game/Base/Meshes/Error_KinematicsData.Error_KinematicsData");
 	for (float& Factor : ChannelsFactor)
 	{
 		Factor = 0;
@@ -603,6 +605,14 @@ MotionID UStalkerKinematicsComponent::ID_Cycle_Safe(LPCSTR Name)
 
 MotionID UStalkerKinematicsComponent::ID_Cycle_Safe(shared_str Name)
 {
+#if WITH_EDITORONLY_DATA
+	if (bIsErrorMesh)
+	{
+		MotionID ResultMotionID;
+		ResultMotionID.val = 0;
+		return ResultMotionID;
+	}
+#endif
 	MotionID ResultMotionID;
 	u32* ID = AnimsName2ID.Find(Name);
 	if (ID)
@@ -653,6 +663,14 @@ MotionID UStalkerKinematicsComponent::ID_FX(LPCSTR Name)
 
 MotionID UStalkerKinematicsComponent::ID_FX_Safe(LPCSTR Name)
 {
+#if WITH_EDITORONLY_DATA
+	if (bIsErrorMesh)
+	{
+		MotionID ResultMotionID;
+		ResultMotionID.val = 0;
+		return ResultMotionID;
+	}
+#endif
 	MotionID ResultMotionID;
 	u32* ID = AnimsName2ID.Find(Name);
 	if (ID)
@@ -814,12 +832,24 @@ void UStalkerKinematicsComponent::EnumBoneVertices(SEnumVerticesCallback& C, u16
 
 u16 UStalkerKinematicsComponent::LL_BoneID(LPCSTR B)
 {
+#if WITH_EDITORONLY_DATA
+	if (bIsErrorMesh)
+	{
+		return 0;
+	}
+#endif
 	u16 *ID = BonesName2ID.Find(B);
 	return ID?*ID:BI_NONE;
 }
 
 u16 UStalkerKinematicsComponent::LL_BoneID(const shared_str& B)
 {
+#if WITH_EDITORONLY_DATA
+	if (bIsErrorMesh)
+	{
+		return 0;
+	}
+#endif
 	u16* ID = BonesName2ID.Find(B);
 	return ID ? *ID : BI_NONE;
 }

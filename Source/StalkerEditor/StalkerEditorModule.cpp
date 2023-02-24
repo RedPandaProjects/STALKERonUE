@@ -9,6 +9,7 @@
 #include "IPlacementModeModule.h"
 #include "ComponentTypeRegistry.h"
 #include "Managers/SEFactory/StalkerSEFactoryManager.h"
+#include "MessageLogModule.h"
 
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 DEFINE_LOG_CATEGORY(LogXRayImporter);
@@ -67,6 +68,11 @@ void FStalkerEditorModule::ShutdownModule()
 {
 	if (GIsEditor)
 	{
+		if ( FModuleManager::Get().IsModuleLoaded("MessageLog") )
+		{
+			FMessageLogModule& MessageLogModule = FModuleManager::LoadModuleChecked<FMessageLogModule>("MessageLog");
+			MessageLogModule.UnregisterLogListing("StalkerEditor");
+		}
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerAIMapEditMode::EM_AIMap);
 		FEditorModeRegistry::Get().UnregisterMode(FStalkerWayObjectEditMode::EM_WayObject);
 		FStalkerEditorStyle::Shutdown();
@@ -84,6 +90,8 @@ void FStalkerEditorModule::OnPostEngineInit()
 {
 	GStalkerEditorManager->SEFactoryManager->Initialized();
 	FComponentTypeRegistry::Get().Invalidate();
+	FMessageLogModule& MessageLogModule = FModuleManager::LoadModuleChecked<FMessageLogModule>("MessageLog");
+	MessageLogModule.RegisterLogListing( "StalkerEditor",FText::FromString(TEXT("StalkerEditor Errors")));
 }
 
 void FStalkerEditorModule::OnPreExit()

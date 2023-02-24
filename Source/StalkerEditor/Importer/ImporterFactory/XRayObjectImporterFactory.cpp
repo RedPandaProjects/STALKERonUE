@@ -57,8 +57,7 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 
 
 	TStrongObjectPtr<UXRayObjectImportOptions> ImporterOptions(NewObject<UXRayObjectImportOptions>(GetTransientPackage(),TEXT("XRay Object Importer Options")));
-
-	if(ShowOptionsWindow(Filename, NewPackageName,*ImporterOptions))
+	if(IsAutomatedImport()||ShowOptionsWindow(Filename, NewPackageName,*ImporterOptions))
 	{
 		GRayObjectLibrary->AngleSmooth = ImporterOptions->AngleNormalSmoth;
 		switch (ImporterOptions->ObjectImportGameFormat)
@@ -77,9 +76,13 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 		XRayEngineFactory Factory(ParentPackage, Flags);
 		Object = Factory.ImportObject(Filename);
 	}
-	if (!IsValid(Object))
+	else
 	{
 		bOutOperationCanceled = true;
+		return nullptr;
+	}
+	if (!IsValid(Object))
+	{
 		return nullptr;
 	}
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPostImport(this, Object);

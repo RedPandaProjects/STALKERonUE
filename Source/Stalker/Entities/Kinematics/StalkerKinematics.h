@@ -175,5 +175,8 @@ private:
 
 	UPROPERTY(Transient)
 	class UStalkerKinematicsAnimInstance_Default*	KinematicsAnimInstanceForCompute;
-
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(Transient)
+	bool											bIsErrorMesh;
+#endif
 };

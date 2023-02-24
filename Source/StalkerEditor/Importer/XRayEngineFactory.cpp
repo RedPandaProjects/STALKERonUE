@@ -793,6 +793,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 						NewMaterial->PhysMaterial = PhysicalMaterial;
 						NewMaterial->InitStaticPermutation();
 						NewMaterial->Modify();
+						NewMaterial->PostEditChange();
 						Material = NewMaterial;
 					}
 					Materials.AddUnique(FStaticMaterial(Material, *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
@@ -821,6 +822,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	StaticMesh->Build();
 	StaticMesh->GetBodySetup()->CollisionTraceFlag = ECollisionTraceFlag::CTF_UseSimpleAndComplex;
 	StaticMesh->Modify();
+	StaticMesh->PostEditChange();
 	return StaticMesh;
 }
 
@@ -1041,6 +1043,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 		FAssetRegistryModule::AssetCreated(NewParentMaterial);
 		ObjectCreated.Add(NewParentMaterial);
 		NewParentMaterial->Modify();
+		NewParentMaterial->PostEditChange();
 		ParentMaterial = NewParentMaterial;
 	}
 	UPackage* AssetPackage = CreatePackage(*Path);
@@ -1152,6 +1155,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
 	NewMaterial->InitStaticPermutation();
 	NewMaterial->Modify();
+	NewMaterial->PostEditChange();
 	return NewMaterial;
 }
 
@@ -1190,6 +1194,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 		FAssetRegistryModule::AssetCreated(NewParentMaterial);
 		ObjectCreated.Add(NewParentMaterial);
 		NewParentMaterial->Modify();
+		NewParentMaterial->PostEditChange();
 		ParentMaterial = NewParentMaterial;
 	}
 	UPackage* AssetPackage = CreatePackage(*Path);
@@ -1302,6 +1307,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
 	NewMaterial->InitStaticPermutation();
 	NewMaterial->Modify();
+	NewMaterial->PostEditChange();
 	return NewMaterial;
 }
 
@@ -1399,6 +1405,7 @@ UObject* XRayEngineFactory::ImportPhysicsMaterials(const FString& FileName)
 			Pair.BuildFromLegacy(*(*i));
 		}
 		PhysicalMaterialPairs->Modify();
+		PhysicalMaterialPairs->PostEditChange();
 	}
 
 	Library.Unload();
@@ -1424,6 +1431,7 @@ UStalkerPhysicalMaterial* XRayEngineFactory::ImportPhysicsMaterial(class SGameMt
 
 	PhysicalMaterial->BuildFromLegacy(*Materials);
 	PhysicalMaterial->Modify();
+	PhysicalMaterial->PostEditChange();
 	return PhysicalMaterial;
 
 }
@@ -1473,6 +1481,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
 	Texture2D->Modify();
+	Texture2D->PostEditChange();
 	return Texture2D;
 }
 
@@ -1509,6 +1518,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FStr
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
 	Texture2D->Modify();
+	Texture2D->PostEditChange();
 	return Texture2D;
 }
 
@@ -1619,6 +1629,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		NormalMap->SRGB = false;
 		NormalMap->Source.Init(NormalMapImage.GetWidth(), NormalMapImage.GetHeight(), 1, NormalMapImage.GetMips(), SourceFormat, (uint8*)*NormalMapImage);
 		NormalMap->Modify();
+		NormalMap->PostEditChange();
 	}
 	if (!Gloss)
 	{
@@ -1632,6 +1643,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		Gloss->SRGB = false;
 		Gloss->Source.Init(GlossImage.GetWidth(), GlossImage.GetHeight(), 1, GlossImage.GetMips(), SourceFormat, (uint8*)*GlossImage);
 		Gloss->Modify();
+		Gloss->PostEditChange();
 	}
 	if (!Height)
 	{
@@ -1646,6 +1658,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		Height->SRGB = false;
 		Height->Source.Init(HeightImage.GetWidth(), HeightImage.GetHeight(), 1, HeightImage.GetMips(), SourceFormat, (uint8*)*HeightImage);
 		Height->Modify();
+		Height->PostEditChange();
 	}
 }
 
@@ -1942,9 +1955,14 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 			InMatrixRotation.setXYZi(InRotation.x, InRotation.y, InRotation.z);
 			Fquaternion InQuat; InQuat.set(InMatrixRotation);
 			PosKey.Set(-InLocation.x * 100, InLocation.z * 100, InLocation.y * 100);
+			if(!ensure(!PosKey.ContainsNaN()))
+			{
+				PosKey = FVector3f(0,0,0);
+			}
 			RotKey = FQuat4f(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w);
 			PosKeys.Add(FVector(PosKey.X, PosKey.Y, PosKey.Z));
 			RotKeys.Add(FQuat(RotKey.X, RotKey.Y, RotKey.Z, RotKey.W));
+		
 			ScaleKeys.Add(FVector(ScaleKey.X, ScaleKey.Y, ScaleKey.Z));
 		}
 
@@ -1969,6 +1987,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	Controller.CloseBracket(bShouldTransact);
 
 	AnimSequence->Modify();
+	AnimSequence->PostEditChange();
 	ObjectCreated.Add(AnimSequence);
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 }
@@ -2090,6 +2109,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 		InMesh->Anims.Add(StalkerKinematicsAnimsData);
 
 		StalkerKinematicsAnimsData->Modify();
+		StalkerKinematicsAnimsData->PostEditChange();
 	}
 }
 
@@ -2170,6 +2190,10 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 				InLocation.set(Motion._initT);
 
 			FVector3f PosKey = StalkerMath::XRayLocationToUnreal(InLocation);
+			if(!ensure(!PosKey.ContainsNaN()))
+			{
+				PosKey = FVector3f(0,0,0);
+			}
 			FQuat4f   RotKey = StalkerMath::XRayQuatToUnreal(InQuat);
 			FVector3f ScaleKey(1, 1, 1);
 			PosKeys.Add(FVector(PosKey.X, PosKey.Y, PosKey.Z));
@@ -2198,6 +2222,7 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 	Controller.CloseBracket(bShouldTransact);
 
 	AnimSequence->Modify();
+	AnimSequence->PostEditChange();
 	ObjectCreated.Add(AnimSequence);
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 	return AnimSequence;

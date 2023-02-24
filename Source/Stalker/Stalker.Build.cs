@@ -19,7 +19,8 @@ public class Stalker : ModuleRules
             PrivateDependencyModuleNames.AddRange(
                 new string[]
                 {
-                        "UnrealEd"
+                        "UnrealEd",
+                        "MessageLog"
                 }
             );
         }
