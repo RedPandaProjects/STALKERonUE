@@ -346,6 +346,12 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 	}
 	if (!IsValid(KinematicsData))
 	{
+		const FString ParentPackageName = TEXT("/Game/Base/Meshes") / Name;
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	if (!ensure(IsValid(KinematicsData))||!ensure(IsValid(KinematicsData->Mesh)))
+	{
 #ifdef WITH_EDITOR
 		FMessageLog StalkerEditorFMessageLog("StalkerEditor");
 		if(FApp::IsGame())
@@ -355,12 +361,6 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 		}
 #endif
 		UE_LOG(LogStalker, Error, TEXT("Can't found mesh %S"),InName);
-		const FString ParentPackageName = TEXT("/Game/Base/Meshes") / Name;
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(KinematicsData)||!IsValid(KinematicsData->Mesh))
-	{
 		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr,TEXT("/Game/Base/Meshes/Error_KinematicsData.Error_KinematicsData"));
 		check(KinematicsData);
 		check(KinematicsData->Mesh);
