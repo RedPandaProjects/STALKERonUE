@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dar_explorer_dialog_1">
+		<text>Ich habe einen Auftrag.</text>
+	</string>
+	<string id="dar_explorer_dialog_11">
+		<text>Hmm. Was fьr eine Art Auftrag? Suchst du etwas? Oder hast du es bereits gefunden? Ich habe gehцrt, dass es hier viele nette Sachen geben soll ...</text>
+	</string>
+	<string id="dar_explorer_dialog_111">
+		<text>Tut mir Leid, das kann ich dir nicht sagen. AuЯerdem habe ich sowieso keine Zeit.</text>
+	</string>
+	<string id="dar_explorer_dialog_1111">
+		<text>Moment mal, lauf doch nicht gleich davon. Dafьr wirst du noch genug Gelegenheiten haben. Was hast du denn gefunden? WeiЯt du, ich hдnge hier auch nicht grundlos rum ...</text>
+	</string>
+	<string id="dar_explorer_dialog_11111">
+		<text>Was ich gefunden habe, ist meine Sache.</text>
+	</string>
+	<string id="dar_explorer_dialog_11112">
+		<text>Ich habe ein paar Dokumente von X18 gefunden. Der Wirt hat mir versprochen, mich gut dafьr zu bezahlen.</text>
+	</string>
+	<string id="dar_explorer_dialog_112">
+		<text>Nein, ich habe nichts gefunden.</text>
+	</string>
+	<string id="dar_explorer_dialog_2">
+		<text>Ich weiЯ nicht einmal, wie ich hierher gekommen bin. Ich mцchte so schnell wie mцglich wieder von hier verschwinden.</text>
+	</string>
+	<string id="dar_explorer_dialog_21">
+		<text>Du hast hier doch nichts Erwдhnenswertes gefunden, oder? Man sagt, es gдbe hier ein paar Informationen ьber wissenschaftliche Experimente. Die wдren schon eine Menge Geld wert ...</text>
+	</string>
+	<string id="dar_explorer_dialog_211">
+		<text>Nein, habe ich nicht.</text>
+	</string>
+	<string id="dar_explorer_dialog_2111">
+		<text>Ach, ja? Und was, wenn du etwas anderes denkst? Versteckst du vielleicht etwas vor mir?</text>
+	</string>
+	<string id="dar_explorer_dialog_21111">
+		<text>Nein.</text>
+	</string>
+	<string id="dar_explorer_dialog_21112">
+		<text>Was fьr eine Frage ist das denn?</text>
+	</string>
+	<string id="dar_explorer_dialog_21113">
+		<text>Willst du mich bedrohen?</text>
+	</string>
+	<string id="dar_explorer_dialog_212">
+		<text>Zum Teufel mit diesen Informationen. Ich schaffe es ja kaum, hier zu ьberleben.</text>
+	</string>
+	<string id="dar_explorer_dialog_2121">
+		<text>In Ordnung, dann verschwinde. Wenn du etwas finden solltest - ich bin hier ...</text>
+	</string>
+	<string id="dar_explorer_dialog_25">
+		<text>Hцr zu, Kumpel, ich habe in dieser stinkenden Zone Feuer, Anomalien und Monster erlebt. Und wie du sehen kannst, lebe ich noch immer! Erzдhl mir also nicht, was ich sagen darf oder nicht. Ich bin wegen der Dokumente hierher gekommen, und ich werde nicht ohne sie weggehen. Wenn du sie bei dir hast, dann rate ich dir, sie mir zu geben oder in Frieden in diesem Loch zu ruhen! Verstanden?</text>
+	</string>
+	<string id="dar_explorer_dialog_251">
+		<text>Verstanden.</text>
+	</string>
+	<string id="dar_explorer_dialog_2511">
+		<text>Wenn du mich anlьgst, steckst du tief in der ScheiЯe. Wenn du vorhast, mich zu verarschen, steckst du tief in der ScheiЯe. Und wenn du mir Mist erzдhlst, steckst du tief in der ScheiЯe. Im Grunde genommen steckst du so tief in der ScheiЯe, dass du sehr krдftig schwimmen musst, um oben zu bleiben! Jetzt versuche ich es noch einmal ganz langsam fьr die anwesenden Trottel: Hast du diese Dokumente gefunden?</text>
+	</string>
+	<string id="dar_explorer_dialog_2521">
+		<text>Na gut. Und beim nдchsten Mal passt du auf, was du sagst. Du kannst jetzt gehen. Solltest du etwas finden, werde ich hier sein ...</text>
+	</string>
+	<string id="dar_explorer_dialog_253">
+		<text>Die Konversation ist beendet. Geh mir aus dem Weg.</text>
+	</string>
+	<string id="dar_explorer_dialog_26">
+		<text>Ich habe keine Dokumente.</text>
+	</string>
+	<string id="dar_explorer_dialog_271">
+		<text>Das ist schon besser, Drecksack. Jetzt gib mir alle Informationen, die du hast, jeden noch so kleinen Fetzen Papier. Und versuche erst gar nicht, irgendetwas Lustiges hervorzuholen, denn das wдre dein letzter Scherz ...</text>
+	</string>
+	<string id="dar_explorer_dialog_51">
+		<text>Hцr auf, habe ich gesagt! Ich ziehe nicht grundlos durch dieses Rattenloch. Hцr auf, herumzublцken und sag mir, was du gefunden hast. Wir kцnnten es ja auch unter uns teilen ...</text>
+	</string>
+	<string id="dar_explorer_dialog_511">
+		<text>Ich werde gar nichts teilen.</text>
+	</string>
+	<string id="dar_explorer_dialog_5111">
+		<text>Na gut, jetzt reicht es ... Ich habe einen letzten Tipp fьr dich: Pass auf, wo du hingehst, Stalker!</text>
+	</string>
+	<string id="dar_explorer_dialog_512">
+		<text>Bedrohst du mich etwa?</text>
+	</string>
+	<string id="dar_explorer_dialog_5121">
+		<text>Okay, okay, beruhige dich ... Immer, wenn ich neugierig werde, fummelst du an deiner Wumme rum! Keine Fragen mehr. Sei einfach nur vorsichtig, das ist alles.</text>
+	</string>
+	<string id="dar_explorer_dialog_61">
+		<text>Dokumente, hm? Nur, damit du es weiЯt - die sind genau das, weshalb ich hierher gekommen bin. Und jetzt gibst du sie mir und machst dich wieder auf den Weg. Verstanden?</text>
+	</string>
+	<string id="dar_explorer_dialog_6111">
+		<text>Ich biete dir etwas an.</text>
+	</string>
+	<string id="dar_explorer_dialog_6121">
+		<text>Ach, Kumpel, hцr auf mit diesen Spielchen. Machen wir einen Deal. Ich gebe dir ein schцnes Bьndel Geld - es wird dir nicht Leid tun.</text>
+	</string>
+	<string id="dar_explorer_dialog_6131">
+		<text>Hцr zu, mein Leben hдngt von diesen Dokumenten ab. Schauen wir mal, was du hast - Ich glaube, wir kцnnen eine Abmachung treffen ...</text>
+	</string>
+	<string id="dar_explorer_dialog_8011">
+		<text>Es ist so dunkel hier, dass ich nichts sehen kann. Ьberall diese Viecher ... Warum habe ich mich ьberhaupt darauf eingelassen?! Was ist mit dir? Wie bist du hierher gelangt?</text>
+	</string>
+	<string id="dar_explorer_dialog_8021">
+		<text>Weitergehen, Stalker.</text>
+	</string>
+	<string id="dar_explorer_dialog_8031">
+		<text>Ich hasse es, wenn mich jemand unterbricht. Na ja, ich bin wegen ein paar wichtiger Dokumente hierher gekommen. Wenn du etwas gefunden hast, dann spuck es aus, sonst bekommst du Probleme. Wenn du nichts gefunden hast, dann verschwinde und vergeude meine Zeit nicht weiter.</text>
+	</string>
+	<string id="dar_explorer_dialog_8041">
+		<text>Ich hasse es, wenn mich jemand unterbricht. Du solltest mir diese Dokumente geben, wenn du dich noch nicht von deinem Leben verabschieden mцchtest.</text>
+	</string>
+	<string id="dar_explorer_dialog_9">
+		<text>Ich werde es im Hinterkopf behalten.</text>
+	</string>
+</string_table>

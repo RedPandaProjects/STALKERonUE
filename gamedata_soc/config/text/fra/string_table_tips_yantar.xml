@@ -1,0 +1,24 @@
+	<string id="general_ecolog_tip_1">
+		<text>Qu'est-ce qui s'est passé ? Il est mort ? Reviens immédiatement !</text>
+	</string>
+	<string id="general_ecolog_tip_2">
+		<text>Qu'est-ce qui s'est passé ? Il est mort ? Récupère les échantillons et reviens immédiatement !</text>
+	</string>
+	<string id="storyline_ghost_tip">
+		<text>Enregistrement sonore d'un spectre.</text>
+	</string>
+	<string id="storyline_vasilyev_tip">
+		<text>Enregistrement sonore de Vasiliev.</text>
+	</string>
+	<string id="tips_labx16switcher_press">
+		<text>Pour activer le levier, appuyez sur ($$ACTION_USE$$)</text>
+	</string>
+	<string id="yan_saharov_message">
+		<text>Bon sang, le Tatoué, vous avez réussi. Il est de la plus haute importance qu'on étudie la machine qui est dans le labo. Essayez de l'éteindre pour qu'on puisse y jeter un coup d'oeil.</text>
+	</string>
+	<string id="yan_saharov_message_2">
+		<text>Écoutez, ce prototype ne vous protégera pas longtemps des émissions les plus puissantes. Je m'y attendais, alors chaque fois qu'une émission est détectée, un chronomètre se déclenche. Lorsque le délai est écoulé, le prototype ne protège plus, alors soyez prudent et gardez un oeil sur le chrono.</text>
+	</string>
+	<string id="yan_saharov_message_3">
+		<text>Bien joué, le Tatoué. L'émission a été désactivée et vous êtes toujours en vie. Mais, je dois vous mettre en garde. On a appelé des hélicoptères militaires pour débarrasser le secteur des zombies. Évitez au maximum les déplacements. Oh, au fait, faites un saut jusqu'à notre bunker à l'occasion, d'accord ?</text>
+	</string>

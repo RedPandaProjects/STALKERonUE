@@ -1,0 +1,75 @@
+	<string id="bar_darklab_documents_txt">
+		<text>Barista: "Secondo i documenti che hai portato dall'istituto Agroprom, le cose ora sono un po' più chiare, ma mancano alcuni dati. Ci sono prove della presenza di un Bruciacervella che blocca la strada verso nord, ma nessuno sa esattamente che cosa sia. Inoltre, si parla del laboratorio X18, la cui descrizione corrisponde a quella di alcune strutture sotterranee abbandonate nella Valle Oscura. Non si sa quali attività vi si svolgano al momento e inoltre i banditi hanno la loro base nella Valle Oscura.\n Parecchi esploratori dei Duty ci sono andati di recente, ma non hanno ancora mandato notizie.\n Per entrare nel laboratorio, ti serviranno due chiavi elettroniche: una te la posso dare io, ma dovrai prendere la seconda a Borov, il capo dei banditi. \n\n Quindi devi recuperare la seconda chiave del laboratorio da Borov, intrufolarti nel laboratorio e prendere i documenti.</text>
+	</string>
+	<string id="bar_darklab_documents2_txt">
+		<text>È necessario trovare i documenti sulle ricerche condotte in precedenza nel laboratorio X18, perché potrebbero dirci qualcosa del "Bruciacervella".</text>
+	</string>
+	<string id="dar_codedoor_1_txt">
+		<text>Una serratura a combinazione blocca l'accesso al cuore del laboratorio. Devi trovare chi conosce la combinazione.</text>
+	</string>
+	<string id="dar_codedoor_2_txt">
+		<text>C'è un'altra porta, dietro la quale c'è sicuramente qualcosa. Devi scoprire il codice che apre questa porta.</text>
+	</string>
+	<string id="dar_document1">
+		<text>L'inizio dell'esperimento</text>
+	</string>
+	<string id="dar_document2">
+		<text>Il secondo stadio dell'esperimento</text>
+	</string>
+	<string id="dar_document3">
+		<text>Rapporto sulla sicurezza</text>
+	</string>
+	<string id="dar_document4">
+		<text>Attacco al personale</text>
+	</string>
+	<string id="dar_document5">
+		<text>L'ultimo stadio dell'esperimento</text>
+	</string>
+	<string id="documents_1">
+		<text>Una settimana fa si è deciso di aumentare l'intensità delle radiazioni sui soggetti sottoposti al test. Per i primi giorni non sono stati rilevati cambiamenti. Dopo diversi giorni, hanno cominciato a manifestarsi delle strane trasformazioni, come perdita di peli o aumento dell'aggressività. Numerosi soggetti sono stati letteralmente calpestati dai loro simili.</text>
+	</string>
+	<string id="documents_2">
+		<text>Le condizioni dei soggetti si sono stabilizzate. Il pelo ammonta ora al 10% rispetto all'inizio del test. Denti e unghie sono cresciuti considerevolmente. La loro attività si manifesta apparentemente in modo casuale e non è diretta agli altri soggetti. A.N. Burnov, tecnico senior di laboratorio, ha ipotizzato che ciò possa indicare un amento nelle capacità intellettive dei soggetti. Si è quindi deciso di testare i soggetti con la nuova modulazione di emissioni psioniche.</text>
+	</string>
+	<string id="documents_3">
+		<text>Capo della sicurezza: Ieri, la guardia della sicurezza G.P. Glebov ha lanciato un pezzo di carne ai soggetti, per puro divertimento. I soggetti lo hanno fatto a pezzi e lo hanno divorato in pochi secondi. Successivamente, parecchi soggetti hanno tentato di uscire dalle celle. Di conseguenza, i tecnici di laboratorio non hanno potuto raccogliere i campioni necessari per il test. Sebbene G.P. Glebov si sia reso colpevole di un gesto sconsiderato, propongo che il personale della manutenzione sia dotato di armi ad aria compressa per potersi difendere in caso di emergenza.</text>
+	</string>
+	<string id="documents_4">
+		<text>Capo della sicurezza: Ieri, l'esperimento è quasi sfuggito al controllo. Una ventina di soggetti sottoposti al test sono riusciti a liberarsi e hanno distrutto due stanze del laboratorio. Fortunatamente, il personale di ricerca ha potuto mettersi in salvo al piano superiore. Ci è stato ordinato di sgombrare la stanza principale del laboratorio. Nel corso dell'operazione, tre guardie sono state morse. Fortunatamente, guariranno presto. Spero che l'esperimento finisca presto.</text>
+	</string>
+	<string id="documents_5">
+		<text>Ieri abbiamo sottoposto i soggetti del test a una nuova modulazione di emissioni psioniche. Tuttavia, pare che il loro cervello sia semplicemente finito arrosto. Non oso pensare a quali effetti potrebbero avere sugli esseri umani queste emissioni. Abbiamo testato tutti i tipi di emissioni e i risultati corrispondono a quelli ottenuti in altri laboratori. Ora l'esperimento può considerarsi terminato. Presumibilmente, nel giro di una settimana saremo pronti a condurre l'esperimento su creature di dimensioni maggiori.</text>
+	</string>
+	<string id="LabX18 first key">
+		<text>Codice di accesso, livello 2</text>
+	</string>
+	<string id="LabX18 second key">
+		<text>Codice di accesso, livello 1</text>
+	</string>
+	<string id="LabX18_information">
+		<text>Informazioni dall'X18</text>
+	</string>
+	<string id="pass_to_1st_door">
+		<text>Ottimo, collega. Sono lieto che tu abbia ottenuto l'accesso al secondo livello. Finalmente potrai scoprire cosa si fa nel nostro laboratorio. Il tuo codice d'accesso è 1243. Il direttore del laboratorio X18, Piotr Ilyitch Kalugin.</text>
+	</string>
+	<string id="pass_to_2nd_door">
+		<text>Caro collega, mi permetto di ricordarti che a partire da domani ti occuperai dei contenitori nel laboratorio centrale. Dovrai ispezionarli ogni due ore e segnalare tutto direttamente a me. Il codice del laboratorio centrale è 9524. Il direttore del laboratorio X18, Piotr Ilyitch Kalugin.</text>
+	</string>
+	<string id="sl_x18_dream_name">
+		<text>Uno strano sogno</text>
+	</string>
+	<string id="sl_x18_dream_text">
+		<text>Ho fatto uno strano sogno. La colossale centrale di Chernobyl si staglia nella luce del crepuscolo. Tutto è tranquillo. Appare un uomo. Lo vedo di spalle, sullo sfondo della centrale. Si alza il vento. Improvvisamente, orde di topi iniziano a fuggire dalla centrale in tutte le direzioni. L'uomo, continuando a volgermi le spalle, spara ai topi. All'improvviso si sente un grido: "Strelok!". L'uomo sussulta, resta un attimo immobile e inizia a voltarsi lentamente nella mia direzione. Ma... un attimo prima che riesca a vederlo in faccia, mi sveglio. Cosa significa il sogno? Non lo so, ma dev'essere qualcosa che ho già visto.</text>
+	</string>
+	<string id="val_captive_help_txt">
+		<text>Uno dei membri dei Duty, Pallottola, mi ha chiesto di liberare il suo compagno. È prigioniero dei banditi e verrà presto trasferito nella fabbrica abbandonata.</text>
+	</string>
+	<string id="val_prisoner_help_art_txt">
+		<text>Duty: "Hanno catturato un altro dei nostri, Serega. Lo tengono nella cantina di un edificio di grandi dimensioni... ancora in costruzione... Tiralo fuori di lì o farà pure lui una brutta fine..."</text>
+	</string>
+	<string id="val_x18_conclusion">
+		<text>Laboratorio X18</text>
+	</string>
+	<string id="val_x18_conclusion_txt">
+		<text>Andare nel laboratorio X18 non è stata una passeggiata... E quello che c'è lì dentro... Beh, non pensavo neppure che certe cose esistessero. Ho trovato dei documenti... Non ho capito granché di quello che c'era scritto, tranne che contenevano le specifiche tecniche per alcuni componenti degli emettitori Kaimanov. La cosa interessante è che quei pezzi erano destinati a un altro laboratorio, probabilmente altrettanto segreto, con nome in codice X16.</text>
+	</string>

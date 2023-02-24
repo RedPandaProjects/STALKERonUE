@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor">
+		<text>Solo</text>
+	</string>
+	<string id="actor_dolg">
+		<text>Devoir</text>
+	</string>
+	<string id="actor_freedom">
+		<text>Libertй</text>
+	</string>
+	<string id="arena_enemy">
+		<text>Mercenaire</text>
+	</string>
+	<string id="bad">
+		<text>nйgative</text>
+	</string>
+	<string id="bandit">
+		<text>Bandit</text>
+	</string>
+	<string id="dolg">
+		<text>Devoir</text>
+	</string>
+	<string id="ecolog">
+		<text>Йcologiste</text>
+	</string>
+	<string id="enemy">
+		<text>ennemi(e)</text>
+	</string>
+	<string id="excellent">
+		<text>excellent(e)</text>
+	</string>
+	<string id="exo_outfit_name_m1">
+		<text>Exosquelette PNB-4UZ</text>
+	</string>
+	<string id="experienced">
+		<text>Expйriment.</text>
+	</string>
+	<string id="Found_PDA">
+		<text>PDA dйcouvert(s)</text>
+	</string>
+	<string id="freedom">
+		<text>Libertй</text>
+	</string>
+	<string id="friendly">
+		<text>ami(e)</text>
+	</string>
+	<string id="good">
+		<text>positive</text>
+	</string>
+	<string id="indifferent">
+		<text>neutre</text>
+	</string>
+	<string id="killer">
+		<text>Mercenaire</text>
+	</string>
+	<string id="l01_escape">
+		<text>Cordon</text>
+	</string>
+	<string id="l02_garbage">
+		<text>Dйcharge</text>
+	</string>
+	<string id="l03_agroprom">
+		<text>Institut Rech. Agroprom</text>
+	</string>
+	<string id="l04_darkvalley">
+		<text>La Vallйe obscure</text>
+	</string>
+	<string id="l05_bar">
+		<text>Bar</text>
+	</string>
+	<string id="l06_rostok">
+		<text>Les Terres abandonnйes</text>
+	</string>
+	<string id="l07_military">
+		<text>Entrepфts militaires</text>
+	</string>
+	<string id="l08_yantar">
+		<text>Yantar</text>
+	</string>
+	<string id="l10_radar">
+		<text>La Forкt rouge</text>
+	</string>
+	<string id="l11_pripyat">
+		<text>Pripyat</text>
+	</string>
+	<string id="l12_stancia">
+		<text>Tchernobyl</text>
+	</string>
+	<string id="l12_stancia_2">
+		<text>Tchernobyl</text>
+	</string>
+	<string id="master">
+		<text>expert</text>
+	</string>
+	<string id="military">
+		<text>Militaire</text>
+	</string>
+	<string id="monolith">
+		<text>Monolithe</text>
+	</string>
+	<string id="neutral">
+		<text>neutre</text>
+	</string>
+	<string id="novice">
+		<text>Nouveau</text>
+	</string>
+	<string id="st_no_active_task">
+		<text>Aucune mission en cours</text>
+	</string>
+	<string id="st_time_till_surge">
+		<text>Temps restant avant le cataclysme</text>
+	</string>
+	<string id="stalker">
+		<text>Solo</text>
+	</string>
+	<string id="terrible">
+		<text>terrible</text>
+	</string>
+	<string id="trader">
+		<text>Marchand</text>
+	</string>
+	<string id="ui_st_community">
+		<text>groupe</text>
+	</string>
+	<string id="ui_st_price">
+		<text>prix</text>
+	</string>
+	<string id="ui_st_rank">
+		<text>rang</text>
+	</string>
+	<string id="ui_st_relation">
+		<text>attitude</text>
+	</string>
+	<string id="ui_st_reputation">
+		<text>rйputation</text>
+	</string>
+	<string id="very_bad">
+		<text>trиs nйg.</text>
+	</string>
+	<string id="very_good">
+		<text>trиs posit.</text>
+	</string>
+	<string id="veteran">
+		<text>vйtйran</text>
+	</string>
+	<string id="zombied">
+		<text>Zombifiй</text>
+	</string>
+	<string id="Btn_Cancel">
+		<text>Annuler</text>
+	</string>
+	<string id="Btn_No">
+		<text>Non</text>
+	</string>
+	<string id="Btn_OK">
+		<text>OK</text>
+	</string>
+	<string id="Btn_Yes">
+		<text>Oui</text>
+	</string>
+	<string id="global_map">
+		<text>Carte de la Zone</text>
+	</string>
+	<string id="st_autosave">
+		<text>Sauvegarde automatique</text>
+	</string>
+	<string id="st_game_over">
+		<text>Partie terminйe.</text>
+	</string>
+	<string id="st_item_used">
+		<text>Utilisй</text>
+	</string>
+	<string id="st_not_enough_money">
+		<text>Pas assez d'argent</text>
+	</string>
+	<string id="st_not_enough_money_npc">
+		<text>le PNJ n'a pas assez d'argent</text>
+	</string>
+	<string id="ui_st_opponent_items">
+		<text>Sac а dos PNJ</text>
+	</string>
+	<string id="st_search_treasure">
+		<text>Chercher la planque ($$ACTION_USE$$)</text>
+	</string>
+	<string id="inventory_item_use">
+		<text>Prenez l'objet ($$ACTION_USE$$)</text>
+	</string>
+	<string id="ui_mm_check_updates">
+		<text>Vйrif.  m.а.j.</text>
+	</string>
+	<string id="ui_mm_alternative">
+		<text>Alternative</text>
+	</string>
+	<string id="ui_inv_health">
+		<text>Santй</text>
+	</string>
+	<string id="ui_inv_radiation">
+		<text>Radiation</text>
+	</string>
+	<string id="ui_inv_satiety">
+		<text>Faim</text>
+	</string>
+	<string id="ui_inv_power">
+		<text>Endurance</text>
+	</string>
+	<string id="ui_inv_bleeding">
+		<text>Saignement</text>
+	</string>
+	<string id="st_mp_say_to_all">
+		<text>А tous</text>
+	</string>
+	<string id="st_mp_say_to_team">
+		<text>А l'йquipe</text>
+	</string>
+	<string id="st_knife">
+		<text>Couteau</text>
+	</string>
+	<string id="st_mp_disabled_voting">
+		<text>Le vote n'est pas disponible sur ce serveur.</text>
+	</string>
+	<string id="st_mp_no_current_voting">
+		<text>Aucun vote actif.</text>
+	</string>
+	<string id="st_mp_ready">
+		<text>prкt</text>
+	</string>
+	<string id="st_mp_voting_succeed">
+		<text>Vote rйussi !</text>
+	</string>
+	<string id="st_mp_voting_failed">
+		<text>Йchec du vote !</text>
+	</string>
+	<string id="l03u_agr_underground">
+		<text>Sous-terrain Agroprom</text>
+	</string>
+	<string id="l04u_labx18">
+		<text>Labo X-18</text>
+	</string>
+	<string id="l08u_brainlab">
+		<text>Labo X-16</text>
+	</string>
+	<string id="l10u_bunker">
+		<text>Labo X-10</text>
+	</string>
+	<string id="l12u_sarcofag">
+		<text>Sarcophage</text>
+	</string>
+	<string id="l12u_control_monolith">
+		<text>Contrфle Monolithe</text>
+	</string>
+</string_table>

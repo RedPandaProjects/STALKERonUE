@@ -1,0 +1,36 @@
+	<string id="mil_actor_blockpost">
+		<text>Du näherst dich der Barriere. Denk nicht mal dran, Dummheiten zu machen. Aber wenn wir Hilfe bekommen könnten, wäre das gut.</text>
+	</string>
+	<string id="mil_after_sniper_dead">
+		<text>Gezeichneter, hol dir hier deinen Anteil und weitere Anweisungen.</text>
+	</string>
+	<string id="mil_fblockpost_warning">
+		<text>Gezeichneter, zurück auf deinen Posten</text>
+	</string>
+	<string id="mil_info_freedom_radio">
+		<text>Wenn du die ganze Nacht beim Turm im Dorf verbringst, passiert GARANTIERT etwas ...</text>
+	</string>
+	<string id="mil_info_max_mines">
+		<text>Denk an die Minen! Ein Fehler und du bist im Eimer.</text>
+	</string>
+	<string id="mil_info_max_village">
+		<text>Vorsicht, Gezeichneter. Anscheinend gibt es im Dorf eine neue Anomalie. Das Schwein ist schnell und unsichtbar!</text>
+	</string>
+	<string id="mil_info_to_all">
+		<text>Achtung an alle, die ihr Hirn raus haben wollen: Die Straße zum Roten Wald wird von einer Monolitheneinheit bewacht und wie ihr wisst, schießen diese Jungs zuerst, und Fragen stellen sie später keine. Viel Glück.</text>
+	</string>
+	<string id="mil_max_attack_signal">
+		<text>Angriff! Gebt den Schweinen Saures!</text>
+	</string>
+	<string id="mil_mission_complete">
+		<text>Unser Job hier ist erledigt. Zurück zum Bauernhof. Wir kümmern uns dort um die Bezahlung.</text>
+	</string>
+	<string id="mil_scull_attack_signal">
+		<text>Vorwärts, Jungs! Die Luft ist rein!</text>
+	</string>
+	<string id="mil_scull_info">
+		<text>Gezeichneter, knall die Scharfschützen ab!</text>
+	</string>
+	<string id="mil_sniper_to_player_warning">
+		<text>Vorsicht, Gezeichneter, sonst fängst du dir eine Kugel ein!</text>
+	</string>

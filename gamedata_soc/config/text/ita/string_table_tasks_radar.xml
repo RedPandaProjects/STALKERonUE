@@ -1,0 +1,21 @@
+	<string id="pripyat_task_objective_1">
+		<text>Segui il gruppo</text>
+	</string>
+	<string id="pripyat_task_objective_2">
+		<text>Trova la via per Chernobyl NPP</text>
+	</string>
+	<string id="pripyat_task_title">
+		<text>Incontra il gruppo di stalker</text>
+	</string>
+	<string id="rad_antenna">
+		<text>Antenne</text>
+	</string>
+	<string id="rad_get_to_aes">
+		<text>Raggiungi la centrale</text>
+	</string>
+	<string id="rad_get_to_aes_0">
+		<text>Entra nella centrale</text>
+	</string>
+	<string id="rad_get_to_aes_1">
+		<text>Trova l'ingresso del sarcofago</text>
+	</string>

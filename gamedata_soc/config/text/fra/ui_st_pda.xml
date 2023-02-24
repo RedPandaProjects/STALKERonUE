@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_btn_hint">
+		<text>Centrer sur le personnage</text>
+	</string>
+	<string id="add_spot_btn_hint">
+		<text>Ajouter un nouveau marqueur</text>
+	</string>
+	<string id="Contacts">
+		<text>Contacts</text>
+	</string>
+	<string id="Encyclopedia">
+		<text>Encycl.</text>
+	</string>
+	<string id="global_map_btn_hint">
+		<text>Vers la carte de la Zone</text>
+	</string>
+	<string id="level_changer_invitation">
+		<text>Passer au secteur suivant ?</text>
+	</string>
+	<string id="Name">
+		<text>Nom</text>
+	</string>
+	<string id="pda_btn_accomplished">
+		<text>Accomplies</text>
+	</string>
+	<string id="pda_btn_accomplished_hint">
+		<text>Afficher les missions accomplies</text>
+	</string>
+	<string id="pda_btn_active">
+		<text>Actives</text>
+	</string>
+	<string id="pda_btn_active_hint">
+		<text>Afficher les missions actives</text>
+	</string>
+	<string id="pda_btn_contacts">
+		<text>Contacts</text>
+	</string>
+	<string id="pda_btn_contacts_hint">
+		<text>Afficher la liste des contacts du Stalker</text>
+	</string>
+	<string id="pda_btn_diary">
+		<text>Journal</text>
+	</string>
+	<string id="pda_btn_diary_hint">
+		<text>Afficher le journal du joueur</text>
+	</string>
+	<string id="pda_btn_encyclopedia">
+		<text>Encycl.</text>
+	</string>
+	<string id="pda_btn_encyclopedia_hint">
+		<text>Afficher l'encyclopйdie de la Zone</text>
+	</string>
+	<string id="pda_btn_failed">
+		<text>Manquйes</text>
+	</string>
+	<string id="pda_btn_failed_hint">
+		<text>Afficher les missions manquйes</text>
+	</string>
+	<string id="pda_btn_info">
+		<text>Informations</text>
+	</string>
+	<string id="pda_btn_journal">
+		<text>Journal</text>
+	</string>
+	<string id="pda_btn_journal_hint">
+		<text>Afficher les entrйes du joueur</text>
+	</string>
+	<string id="pda_btn_map">
+		<text>Carte</text>
+	</string>
+	<string id="pda_btn_map_hint">
+		<text>Afficher la carte de la Zone</text>
+	</string>
+	<string id="pda_btn_news">
+		<text>Messages</text>
+	</string>
+	<string id="pda_btn_news_hint">
+		<text>Afficher l'historique des messages</text>
+	</string>
+	<string id="pda_btn_off_hint">
+		<text>Dйsactiver</text>
+	</string>
+	<string id="pda_btn_own">
+		<text>Mes marqueurs</text>
+	</string>
+	<string id="pda_btn_own_hint">
+		<text>Afficher mes marqueurs sur la carte</text>
+	</string>
+	<string id="pda_btn_quests">
+		<text>Missions</text>
+	</string>
+	<string id="pda_btn_quests_hint">
+		<text>Afficher des informations sur la quкte</text>
+	</string>
+	<string id="pda_btn_ranking">
+		<text>Class.</text>
+	</string>
+	<string id="pda_btn_ranking_hint">
+		<text>Afficher les Stalkers les mieux classйs</text>
+	</string>
+	<string id="pda_btn_reputation">
+		<text>Rйputation</text>
+	</string>
+	<string id="pda_btn_statistics">
+		<text>Statistiques</text>
+	</string>
+	<string id="pda_btn_statistics_hint">
+		<text>Afficher les statistiques de progression</text>
+	</string>
+	<string id="pda_edit_user_task_btn_hint">
+		<text>Modifier la description</text>
+	</string>
+	<string id="pda_remove_btn_hint">
+		<text>Supprimer le marqueur</text>
+	</string>
+	<string id="pda_show_descr_btn_hint">
+		<text>Go</text>
+	</string>
+	<string id="pda_show_location_btn_hint">
+		<text>Afficher les marqueurs sur la carte</text>
+	</string>
+	<string id="pda_show_pointer_btn_hint">
+		<text>Activer le marqueur</text>
+	</string>
+	<string id="pda_switch_description_btn_hint">
+		<text>Choisir carte / texte</text>
+	</string>
+	<string id="Rank">
+		<text>Rang</text>
+	</string>
+	<string id="remove_spot_btn_hint">
+		<text>Supprimer le marqueur</text>
+	</string>
+	<string id="st_detail_list_for_artefacts">
+		<text>Artefacts gagnйs</text>
+	</string>
+	<string id="st_detail_list_for_community_relations">
+		<text>Relations avec les factions</text>
+	</string>
+	<string id="st_detail_list_for_monsterkills">
+		<text>Mutants tuйs</text>
+	</string>
+	<string id="st_detail_list_for_quests">
+		<text>Quкtes accomplies</text>
+	</string>
+	<string id="st_detail_list_for_stalkerkills">
+		<text>Stalkers tuйs</text>
+	</string>
+	<string id="st_map_actor">
+		<text>Vous</text>
+	</string>
+	<string id="st_news">
+		<text>Nouvelles</text>
+	</string>
+	<string id="st_pda_artefacts">
+		<text>Artefacts </text>
+	</string>
+	<string id="st_pda_detail_info">
+		<text>Informations dйtaillйes</text>
+	</string>
+	<string id="st_pda_monster_kills">
+		<text>Mutants tuйs</text>
+	</string>
+	<string id="st_pda_player_statistic">
+		<text>Statistiques du joueur</text>
+	</string>
+	<string id="st_pda_quest_complete">
+		<text>Quкtes accomplies</text>
+	</string>
+	<string id="st_pda_stalker_kills">
+		<text>Stalkers tuйs</text>
+	</string>
+	<string id="st_pda_statistic_reputation">
+		<text>Rйputation :</text>
+	</string>
+	<string id="st_pda_statistic_score">
+		<text>Statistiques</text>
+	</string>
+	<string id="st_pda_task_detail_information">
+		<text>Informations dйtaillйes sur les missions</text>
+	</string>
+	<string id="st_pda_top20">
+		<text>20 meilleurs Stalkers</text>
+	</string>
+	<string id="st_pda_total">
+		<text>Total</text>
+	</string>
+	<string id="st_tip">
+		<text>Message</text>
+	</string>
+	<string id="svoboda_outfit_description_m1">
+		<text>Un treillis mйtallique intйgrй а la combinaison protиge des champs йlectriques et magnйtiques. Elle comprend йgalement un instrument de vision nocturne.</text>
+	</string>
+	<string id="Tasks">
+		<text>Missions</text>
+	</string>
+	<string id="Time">
+		<text>Heure</text>
+	</string>
+	<string id="zoom_in_btn_hint">
+		<text>Zoom avant</text>
+	</string>
+	<string id="zoom_out_btn_hint">
+		<text>Zoom arriиre</text>
+	</string>
+</string_table>

@@ -1,0 +1,150 @@
+	<string id="esc_bandits_on_factory">
+		<text>Zabij bandity v továrnì</text>
+	</string>
+	<string id="esc_bandits_on_factory_0">
+		<text>Zabij bandity v továrnì</text>
+	</string>
+	<string id="esc_bandits_on_factory_1">
+		<text>Zabij bandity v továrnì</text>
+	</string>
+	<string id="esc_bandits_on_factory_2">
+		<text>Promluv si s pøekupníkem</text>
+	</string>
+	<string id="esc_bandits_on_factory_3">
+		<text>Promluv si s Wolfem</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader">
+		<text>Ukradni krabici</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_0">
+		<text>Ukradni z armádního stanovištì krabici s dùležitými dokumenty.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_1">
+		<text>Ukradni krabici</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_2">
+		<text>Dones krabici pøekupníkovi</text>
+	</string>
+	<string id="esc_defend_lager">
+		<text>Ochraò tábor nováèkù</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_0">
+		<text>Ochraò tábor nováèkù</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_1">
+		<text>Zniè Žoldáky</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_2">
+		<text>Promluv si s velitelem</text>
+	</string>
+	<string id="esc_dinamit_to_volk">
+		<text>Zabij bandity na parkovišti</text>
+	</string>
+	<string id="esc_dinamit_to_volk_0">
+		<text>Zabij bandity na parkovišti</text>
+	</string>
+	<string id="esc_dinamit_to_volk_1">
+		<text>Setkej se s Wolfovými lidmi</text>
+	</string>
+	<string id="esc_dinamit_to_volk_2">
+		<text>Zabij všechny bandity</text>
+	</string>
+	<string id="esc_dinamit_to_volk_3">
+		<text>Promluv si s Wolfem</text>
+	</string>
+	<string id="esc_help_wounded_from_raid">
+		<text>Zjisti od Lišáka nìco o Støelci</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_0">
+		<text>Pomoz zranìnému stalkerovi</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_1">
+		<text>Pomoz Lišákovi</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_2">
+		<text>Získej informace o Støelci</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift">
+		<text>Dodej balíèek pøekupníkovi</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift_0">
+		<text>Dodej balíèek pøekupníkovi. Pomùže ti.</text>
+	</string>
+	<string id="garbage_meet_stalker">
+		<text>Setkej se se Šedivákem</text>
+	</string>
+	<string id="garbage_meet_stalker_0">
+		<text>Setkej se se Šedivákem na smetišti.</text>
+	</string>
+	<string id="meet_with_doctor">
+		<text>Setkej se s Doktorem</text>
+	</string>
+	<string id="meet_with_doctor_1">
+		<text>Setkej se s Doktorem</text>
+	</string>
+	<string id="meet_with_doctor_2">
+		<text>Setkej se s Doktorem u Støelcovy skrýše</text>
+	</string>
+	<string id="storyline_escape_eliminate_gunslinger">
+		<text>Zabij Støelce</text>
+	</string>
+	<string id="storyline_escape_find_gunslinger">
+		<text>Najdi Støelce</text>
+	</string>
+	<string id="tutorial_find_artefact">
+		<text>Najdi artefakt</text>
+	</string>
+	<string id="tutorial_find_artefact_0">
+		<text>Najdi svùj první artefakt.</text>
+	</string>
+	<string id="tutorial_find_artefact_1">
+		<text>Najdi artefakt</text>
+	</string>
+	<string id="tutorial_find_artefact_2">
+		<text>Zanes artefakt pøekupníkovi.</text>
+	</string>
+	<string id="tutorial_help_wounded">
+		<text>Získej od prùzkumníka informace</text>
+	</string>
+	<string id="tutorial_help_wounded_0">
+		<text>Dones informace pøekupníkovi</text>
+	</string>
+	<string id="tutorial_help_wounded_1">
+		<text>Promluv si s Wolfem</text>
+	</string>
+	<string id="tutorial_help_wounded_2">
+		<text>Získej od Šikuly flashdisk</text>
+	</string>
+	<string id="tutorial_help_wounded_3">
+		<text>Dones flashdisk pøekupníkovi</text>
+	</string>
+	<string id="esc_trader_job">
+		<text>Práce pro pøekupníka</text>
+	</string>
+	<string id="esc_trader_job_text">
+		<text>Získej od pøekupníka speciální úkol</text>
+	</string>
+	<string id="bar_barman_job">
+		<text>Práce pro Barmana</text>
+	</string>
+	<string id="bar_barman_job_text">
+		<text>Zeptej se Barmana, jestli nemá práci</text>
+	</string>
+	<string id="yan_scientist_job">
+		<text>Pomoc vìdcùm</text>
+	</string>
+	<string id="yan_scientist_job_text">
+		<text>Nabídni svou pomoc vìdcùm</text>
+	</string>
+	<string id="find_railroad_passage">
+		<text>Dostaò se k železniènímu valu</text>
+	</string>
+	<string id="find_railroad_passage_1">
+		<text>Setkej se s prùvodcem</text>
+	</string>
+	<string id="find_railroad_passage_2">
+		<text>Dostaò se pøes železnièní val</text>
+	</string>
+	<string id="find_railroad_passage_text">
+		<text>Pøed proniknutím hloubìji do Zóny se musíš dostat pøes starý železnièní val. Jediný bezpeèný prùchod hlídá armáda. Na levé stranì je ale malý tunel, kterým vìtšinou procházejí nováèkové. Tam na tebe bude èekat jeden z mých dlužníkù.</text>
+	</string>

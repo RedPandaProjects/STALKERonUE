@@ -1,0 +1,21 @@
+	<string id="pripyat_task_objective_1">
+		<text>Suivre le groupe de Stalkers.</text>
+	</string>
+	<string id="pripyat_task_objective_2">
+		<text>Trouver l'entrée de la centrale.</text>
+	</string>
+	<string id="pripyat_task_title">
+		<text>Rencontrer le groupe de Stalkers.</text>
+	</string>
+	<string id="rad_antenna">
+		<text>Antennes</text>
+	</string>
+	<string id="rad_get_to_aes">
+		<text>Rejoindre la centrale</text>
+	</string>
+	<string id="rad_get_to_aes_0">
+		<text>Entrer dans la centrale</text>
+	</string>
+	<string id="rad_get_to_aes_1">
+		<text>Trouver l'entrée qui mène au sarcophage</text>
+	</string>

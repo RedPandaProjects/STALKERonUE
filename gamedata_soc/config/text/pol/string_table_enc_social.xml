@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Army">
+		<text>Wojsko</text>
+	</string>
+	<string id="Bandits">
+		<text>Bandyci</text>
+	</string>
+	<string id="Duty">
+		<text>Frakcja "Powinnoњж"</text>
+	</string>
+	<string id="enc_social_military_army">
+		<text>Їoіnierze zawodowi. Strzeg№ wszystkich drуg do Zony, patroluj№ granice, zabijaj№ mutantуw i tropi№ szabrownikуw. \nSpecnaz - oddziaіy elitarne zazwyczaj wysyіane do Zony w celu przeprowadzenia akcji ratunkowych lub wypeіniania innych misji specjalnych. </text>
+	</string>
+	<string id="enc_social_military_milstalkers">
+		<text>Їoіnierze specjalnie przeszkoleni do sіuїby w Zonie lub stalkerzy, ktуrzy dobrowolnie podpisali umowк z wojskiem. Zazwyczaj wyposaїeni w rуїnego rodzaju sprzкt pomocniczy i dobrze uzbrojeni. Najczкњciej wykorzystywani do badania przyczyn i skutkуw katastrofy oraz do tworzenia map Zony. Mog№ pracowaж samodzielnie lub w niewielkich oddziaіach skіadaj№cych siк z maksymalnie piкciu osуb. Wojskowi stalkerzy nie pozwalaj№ siк zbliїyж zwykіym stalkerom i strzelaj№ bez ostrzeїenia.</text>
+	</string>
+	<string id="enc_social_scientists_mobile-groups">
+		<text>Usuniкte</text>
+	</string>
+	<string id="enc_social_scientists_mobile-labs">
+		<text>Laboratorium polowe przypomina niewielki, opancerzony bunkier z miniaturowymi oknami z przydymionego szkіa. Laboratorium moїe wytrzymaж wiele uszkodzeс, a dziкki niezawodnej aparaturze podtrzymuj№cej funkcje їyciowe, potrafi samodzielnie dziaіaж przez kilka miesiкcy. Bunkier jest dostarczany do Zony przez helikopter transportowy. Pracownicy laboratorium nie wpuszczaj№ obcych dalej niї do zewnкtrznej komory powietrznej, wiкc їaden stalker nigdy nie byі wewn№trz.</text>
+	</string>
+	<string id="enc_social_stalker-clans_bandits">
+		<text>Czіonkowie њwiata przestкpczego, ktуrzy przybyli do Zony z rуїnych powodуw: їeby ukryж siк przed prawem, handlowaж broni№, lub dla pieniкdzy ze sprzedaїy artefaktуw. W Zonie peіno jest bandytуw, od zwykіych bandziorуw po powaїnych przestкpcуw, z ktуrych wiкkszoњж naleїy do ktуrejњ z band. Choж bandy w Zonie czкsto walcz№ miкdzy sob№, kryminaliњci i tak stanowi№ powaїny problem dla zwykіych stalkerуw.</text>
+	</string>
+	<string id="enc_social_stalker-clans_duty">
+		<text>Organizacja paramilitarna znana z dyscypliny - jej czіonkowie postкpuj№ wedіug њciњle okreњlonego kodeksu. Czіonkowie "Powinnoњci" jako jedyni nie sprzedaj№ unikatowych przedmiotуw z Zony ludziom z zewn№trz. Podobno wszelkie artefakty znalezione przez grupк zostaj№ przekazane naukowcom. Czіonkowie "Powinnoњci" za swуj podstawowy obowi№zek uwaїaj№ ochronк њwiata zewnкtrznego przed niebezpieczeсstwami Zony. Wiкkszoњж przeprowadzanych przez nich akcji dotyczy eksterminacji potworуw, st№d teї ich wypady czкsto oszczкdzaj№ stalkerom powaїnych kіopotуw. Frakcja ta od dawna prowadzi wojnк z "Wolnoњci№". </text>
+	</string>
+	<string id="enc_social_stalker-clans_freedom">
+		<text>Anarchiњci i њmiaіkowie, ktуrzy - jak sami twierdz№ - walcz№ o swobodny dostкp do Zony, w zawi№zku z czym s№ w nieustannym konflikcie z wojskowymi stalkerami i "Powinnoњci№". Ci tak zwani bojownicy o wolnoњж chc№ siк podzieliж z reszt№ њwiata wiedz№ o Zonie i znieњж monopol paсstwa na sekrety i cuda Zony.</text>
+	</string>
+	<string id="enc_social_stalker-clans_killers">
+		<text>Najtajniejsza i najbardziej tajemnicza frakcja w Zonie - niektуrzy nie wierz№ nawet w jej istnienie. S№ tacy, co regularnie korzystaj№ z usіug najemnikуw, prawdziwych profesjonalistуw, ktуrzy szybko radz№ sobie z kaїdym stalkerem, a nawet z wiкksz№ grup№ przeciwnikуw. Ich usіugi nie s№ tanie - najemnicy ї№daj№ bajoсskich sum lub artefaktуw. Lokalizacja ich bazy pozostaje nieznana, co wskazuje na to, їe znajduje siк ona w gікbi Zony. </text>
+	</string>
+	<string id="enc_social_stalker-clans_loners">
+		<text>Stalkerzy, ktуrzy samotnie przemierzaj№ Zonк. Wiкkszoњж z nich wybiera tak№ drogк, gdyї przynaleїnoњж do grupy zabiera cenny czas i czкњж zdobyczy. S№ teї tacy, ktуrzy po prostu wol№ samotnoњж i niezaleїnoњж. </text>
+	</string>
+	<string id="enc_social_stalker-clans_monolith">
+		<text>W tej grupie moїna zauwaїyж wiele cech sekty religijnej. Jej czіonkowie wierz№ w istnienie jakiegoњ zіoїonego krysztaіu z kosmosu, Monolitu, znajduj№cego siк gdzieњ w centrum Zony. Wiкkszoњж stalkerуw traktuje czіonkуw Monolitu z pogard№ i uwaїa ich za szaleсcуw. Od swego powstania grupa ta usiіuje zapobiec wszelkim prуbom dotarcia do centrum Zony, by chroniж Monolit przed innymi stalkerami. Jeњli wierzyж plotkom, maj№ duї№ bazк w gікbi Zony, ale jej dokіadna lokalizacja znana jest jedynie czіonkom frakcji.</text>
+	</string>
+	<string id="enc_social_stalker-clans_zomstalkers">
+		<text>Biedaczyska poddane dіugotrwaіemu promieniowaniu w okolicy Jantaru i w kilku innych sektorach. Nieostroїni stalkerzy, ktуrzy oszaleli i zmienili siк w chodz№ce trupy. Wiele takich stworzeс waікsa siк po Zonie, a niektуre docieraj№ aї do granicy. Nie moїna im w їaden sposуb pomуc, gdyї proces ten jest nieodwracalny. Uzombifikowani stalkerzy mog№ uїywaж broni, ale s№ tкpi i mamrocz№ do siebie bezsensowne, urwane zdania. Stopniowo trac№ wszelkie umiejкtnoњci i zamieniaj№ siк w zombi. Zazwyczaj s№ bardzo agresywni i w duїych grupach mog№ stanowiж powaїne zagroїenie. </text>
+	</string>
+	<string id="Freedom">
+		<text>Frakcja "Wolnoњж"</text>
+	</string>
+	<string id="Killers">
+		<text>Najemnicy</text>
+	</string>
+	<string id="Loners">
+		<text>Samotni stalkerzy</text>
+	</string>
+	<string id="Military">
+		<text>Jednostki militarne</text>
+	</string>
+	<string id="Milstalkers">
+		<text>Wojskowi stalkerzy</text>
+	</string>
+	<string id="Mobile-groups">
+		<text>Grupy badawcze</text>
+	</string>
+	<string id="Mobile-labs">
+		<text>Laboratorium polowe</text>
+	</string>
+	<string id="Monolith">
+		<text>Frakcja "Monolit"</text>
+	</string>
+	<string id="Scientists">
+		<text>Naukowcy</text>
+	</string>
+	<string id="Social">
+		<text>Frakcje</text>
+	</string>
+	<string id="Stalker-clans">
+		<text>Klany stalkerуw</text>
+	</string>
+	<string id="Zomstalkers">
+		<text>Uzombifikowani stalkerzy</text>
+	</string>
+</string_table>

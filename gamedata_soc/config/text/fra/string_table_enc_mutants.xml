@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Blind">
+		<text>Chien aveugle</text>
+	</string>
+	<string id="Bloodsucker">
+		<text>Sangsue</text>
+	</string>
+	<string id="Boar">
+		<text>Sanglier</text>
+	</string>
+	<string id="Crow">
+		<text>Le corbeau</text>
+	</string>
+	<string id="enc_mutant_blind_general">
+		<text>Depuis la premiиre catastrophe, les chiens ont donnй naissance а plusieurs gйnйrations, qui ont toutes йtй de plus en plus affectйes par la Zone. Les mutations et le dйveloppement en pleine йvolution de ces chiens ont menй а une amйlioration de leurs capacitйs pйriphйriques, souvent aux dйpens des anciennes. Le changement physiologique principal a йtй la perte de la vue, qui est devenue presque inutile aprиs une amйlioration rapide de l'odorat. Par exemple, les chiots aveugles ont survйcu dans la Zone comme les autres, voire mieux. Du coup, la race des chiens normaux s'est vite йteinte pour laisser la place aux nouveaux chiens aveugles. Ces animaux repиrent et йvitent les anomalies, les radiations et les autres dangers invisibles qui assaillent la Zone. Tout comme leurs ancкtres, les chiens aveugles chassent en meute. Tomber sur une meute reprйsente un grand danger, mкme pour un Stalker bien armй.</text>
+	</string>
+	<string id="enc_mutant_bloodsucker_general">
+		<text>Ce monstre semi-lйgendaire est dйcrit par des Stalkers expйrimentйs comme un grand humanoпde voыtй avec des tentacules en guise de bouche. Selon ces Stalkers, la crйature utilise ses tentacules pour se nourrir. Elle se cramponne а sa victime au niveau de la gorge, le paralysant et lui aspirant tout son sang. Puis, elle abandonne le corps exsangue, comme momifiй, de ce qui йtait, quelques secondes plus tфt, un кtre humain. La caractйristique la plus surprenante de la sangsue est de pouvoir se rendre invisible. Ces crйatures sont sans doute responsables de la mort de nombreux Stalkers. Peu de ceux qui en ont vu, ont eu la chance de survivre. Selon ces veinards, les sangsues apprйcient les endroits humides, prиs des marйcages, et les lieux souterrains.</text>
+	</string>
+	<string id="enc_mutant_boar_general">
+		<text>Cet animal massif peut atteindre 1,50 m au collet. La capacitй de survie du sanglier et son agressivitй dйpassent celles de ses congйnиres hors de la Zone et ressemblent plus а celles des mutants. Les mutations engendrйes par les radiations et les anomalies ont tenu un rфle essentiel dans la constitution de ce mammifиre. Il a perdu tous ses poils а certains endroits, alors qu'ailleurs, sa fourrure est devenue longue et drue. Ses sabots se sont aiguisйs, plus similaires а des griffes dйsormais. Ses pupilles ont perdu leur couleur, la pigmentation de sa peau est perturbйe et des rides profondes sont apparues sur sa tкte lisse. Le sanglier de la Zone rйsiste aux radiations ce qui lui permet de passer de longs moments dans des zones hautement contaminйes. Pour attaquer, il charge sa victime et tente de la dйchiqueter avec ses griffes ou de l'assommer.</text>
+	</string>
+	<string id="enc_mutant_crow_general">
+		<text>Seule race d'oiseaux а survйcu dans la Zone. Les autres n'ont pas rйsistй aux radiations et ont йtй incapables de dйjouer les anomalies. Les pilotes militaires se servent de dйtecteurs complexes pour йviter les perturbations gravitationnelles, mais le secret des corbeaux est sur le point de rendre fous les biologistes et les ornithologues. De nombreuses thйories tentent d'expliquer l'existence de ce phйnomиne et toutes concluent que ce miracle ne peut кtre dы qu'а l'йvolution des cerveaux des corbeaux.</text>
+	</string>
+	<string id="enc_mutant_flesh_general">
+		<text>Comme beaucoup d'autres crйatures vivantes, les cochons domestiques de la Zone ont subi de graves mutations. Les gиnes responsables de leur mйtabolisme ont йtй affectйs, ce qui a entraоnй une modification notable du phйnotype de l'animal. Un cochon mutant de ce type, surnommй "le croque-mort" par les Stalkers, est l'un des plus beaux exemples de perversion de la Zone sur la nature. Ces cochons ont dйveloppй une couche protectrice composйe d'йcailles et d'os. Leur potentiel de rйgйnйration s'est considйrablement amйliorй et leur systиme nerveux est devenu plus complexe. Comme un cochon normal, "le croque-mort" est omnivore et il s'en prendra а un Stalker s'il a faim.</text>
+	</string>
+	<string id="enc_mutant_poltergeist_general">
+		<text>Cette crйature invisible vraiment surnaturelle se trouve au fin fond de la Zone et vit la plupart du temps dans des bвtiments en ruine. Ses origines sont inconnues, mais des rumeurs circulent et racontent qu'il s'agit de l'esprit de Stalkers, touchйs par une vague massive de radiations. Le mйcanisme de son apparition correspond aux lйgendes des poltergeists (d'oщ leur nom). Il peut apparaоtre accompagnй d'йclats de rire, de dangereuses boules de feu ou sans le moindre effet. Malheureusement, tous les renseignements sur ce phйnomиne ont йtй recueillis а partir d'histoires peu claires, contradictoires et de sources douteuses.</text>
+	</string>
+	<string id="enc_mutant_pseudodog_general">
+		<text>Malgrй leur nom de pseudo-chiens, ils proviennent du loup. Ces animaux sauvages vivaient dans la forкt de la Zone quand la catastrophe a donnй naissance а une des espиces mutantes les plus dangereuses. Les pseudo-chiens n'ont pas grand-chose а voir avec les chiens en fait. Ces crйatures marquent et gardent leur territoire, attaquant sans merci ceux qui y pйnиtrent. Grвce а leur rйactivitй, leur mobilitй et leurs dents acйrйes, les pseudo-chiens sont des ennemis de poids face а de grands mutants ou а des Stalkers bien armйs.</text>
+	</string>
+	<string id="enc_mutant_pseudogiant_general">
+		<text>Le pseudo-gйant est une sorte de ventre йnorme avec quatre membres disproportionnйs, deux bras et deux jambes qui lui servent а se dйplacer et а attraper ses victimes. Un pseudo-gйant adulte pиse jusqu'а 2 tonnes et mesure jusqu'а 2 mиtres. Son allure maladroite est trompeuse, car il se dйplace vite, ses muscles sont exceptionnellement puissants et ses os durs comme de l'acier. Le cerveau de la crйature est protйgй par une boоte crвnienne йpaisse (100 mm !), et de nombreuses fonctions complexes sont contrфlйes par la moelle йpiniиre. Une autre caractйristique йtonnante de cette bкte est sa capacitй а crйer des ondes de chocs localisйs, qui infligent des dйgвts а tout chose vivante alentour.</text>
+	</string>
+	<string id="enc_mutant_snork_general">
+		<text>А une йpoque, cette crйature йtait humaine, mкme s'il est difficile а croire que des йvйnements aient rйussi а transformer un кtre humain en animal si rйpugnant. Le snork est une crйature cinglйe qui vit comme un animal et qui diffиre peu des autres monstres carnivores de la Zone. Il se dйplace а quatre pattes, saute et renifle constamment le sol а la recherche d'une proie. Il chasse mйthodiquement et prend en embuscade les Stalkers. Ses bons rйflexes et ses puissants muscles lui permettent de sauter avec prйcision et de dйchiqueter ses victimes en quelques secondes. Les snorks sont parfois vкtus de bouts d'uniformes de l'armйe, ce qui laisse penser qu'il pourrait s'agir de Stalkers militaires disparus.</text>
+	</string>
+	<string id="enc_mutant_tushkano">
+		<text>En rйalitй, ces animaux n'ont aucun rapport avec les gerboises, bien que la ressemblance soit indйniable. Jusqu'а maintenant, il a йtй impossible de dйterminer l'origine des rongeurs de la Zone, mкme s'il est certain que leurs ancкtres йtaient des rongeurs grйgaires. Hauts de 40 cm, ils sont plus mobiles, plus agressifs et plus voraces. Les rongeurs mutants vivent surtout dans les caves et les bвtiments en ruine. Ils se nourrissent de tout ce qu'ils peuvent croquer, des plantes aux Stalkers imprudents. Parfois, les rongeurs attaquent en groupe et tuent des animaux massifs et des mutants qui se font dйchiqueter avant de pouvoir s'enfuir.</text>
+	</string>
+	<string id="enc_mutant_zombie_general">
+		<text>Le lobotomisateur arrache le cerveau de sa victime. Celle-ci se transforme alors en zombie, suit ses instincts de base et erre а l'aventure dans la Zone, sans arme ni vкtements. Les zombies sont plus que des cadavres ambulants et lйthargiques qui ne cherchent qu'а manger et а dormir. Ils mangent et ils boivent tout ce qu'ils trouvent et sont, dиs lors, imbibйs de dйchets radioactifs et toxiques. Ils errent gйnйralement dans la Zone, sans but apparent, ou dans des bвtiments abandonnйs. Mais chaque fois qu'ils dйtectent une prйsence humaine, ils attaquent. Les Stalkers expйrimentйs ont appris а les йviter chaque fois qu'ils en avaient la possibilitй.</text>
+	</string>
+	<string id="Flesh">
+		<text>Croque-mort</text>
+	</string>
+	<string id="General">
+		<text>Informations gйnйrales</text>
+	</string>
+	<string id="mutant_boar_leg">
+		<text>Sabot de sanglier</text>
+	</string>
+	<string id="mutant_boar_leg_description">
+		<text>Les sabots de sangliers peuvent кtre utilisйs pour fabriquer des mйdicaments, notamment un sйrum antiradiation.</text>
+	</string>
+	<string id="mutant_dog_tail">
+		<text>Queue de chien</text>
+	</string>
+	<string id="mutant_dog_tail_description">
+		<text>La rйsistance des chiens mutants а l'йlectricitй et aux agents chimiques a longtemps suscitй l'intйrкt des scientifiques. La queue de ces animaux йtait quasiment dйpourvue de tissus graisseurs, elle est particuliиrement adaptйe а un examen en laboratoire.</text>
+	</string>
+	<string id="mutant_flesh_eye">
+		<text>Oeil de croque-mort</text>
+	</string>
+	<string id="mutant_flesh_eye_description">
+		<text>L'oeil mutant et enflй du croque-mort a acquis d'йtranges caractйristiques, la plus utile йtant sa capacitй а rйgйnйrer la lentille. Les spйcificitйs du processus ne sont pas connues, mais une telle dйcouverte ne manquerait pas de rйvolutionner la mйdecine moderne. Vous pouvez participer au dйveloppement scientifique en vendant des yeux de croque-morts aux scientifiques et leur permettre de mener des expйriences.</text>
+	</string>
+	<string id="mutant_krovosos_jaw">
+		<text>Tentacule de sangsue</text>
+	</string>
+	<string id="mutant_krovosos_jaw_description">
+		<text>Les tentacules des sangsues contiennent une glande spйcifique qui produit un ferment capable simultanйment de dissoudre la peau et d'empкcher le sang de coaguler. La composition dйtaillйe de ce ferment permettrait de faire d'importantes dйcouvertes mйdicales.</text>
+	</string>
+	<string id="mutant_psevdodog_tail">
+		<text>Queue pseudo-chien</text>
+	</string>
+	<string id="mutant_psevdodog_tail_description">
+		<text>La rйsistance des chiens mutants а l'йlectricitй et aux agents chimiques a longtemps suscitй l'intйrкt des scientifiques. La queue de ces animaux йtait quasiment dйpourvue de tissus graisseurs, elle est particuliиrement adaptйe а un examen en laboratoire.</text>
+	</string>
+	<string id="mutant_snork_leg">
+		<text>Pied de snork</text>
+	</string>
+	<string id="mutant_snork_leg_description">
+		<text>Le pied de snork contient plusieurs tendons d'une grande souplesse. Cela explique pourquoi l'animal peut effectuer de si longs sauts.</text>
+	</string>
+	<string id="Mutants">
+		<text>Animaux et mutants</text>
+	</string>
+	<string id="Poltergeist">
+		<text>Poltergeist</text>
+	</string>
+	<string id="Pseudodog">
+		<text>Pseudo-chien</text>
+	</string>
+	<string id="Pseudogiant">
+		<text>Pseudo-gйant</text>
+	</string>
+	<string id="Snork">
+		<text>Le snork</text>
+	</string>
+	<string id="Tushkano">
+		<text>Rongeur</text>
+	</string>
+	<string id="Zombie">
+		<text>Zombie</text>
+	</string>
+	<string id="Controller">
+		<text>Manipulateur</text>
+	</string>
+	<string id="enc_mutant_controller_general">
+		<text>Mutant rare observй au centre de la Zone. D'apparence humanoпde, il possиde une grosse tкte disproportionnйe. Douй d'une excellente perception, il a йgalement la facultй de contrфler le comportement des crйatures les moins dйveloppйes. Les spйcimens adultes sont mкme capables de prendre le contrфle du cerveau humain. Il s'agit d'un ennemi fйroce redoutй de tous les Stalkers, mкme des plus chevronnйs.</text>
+	</string>
+</string_table>

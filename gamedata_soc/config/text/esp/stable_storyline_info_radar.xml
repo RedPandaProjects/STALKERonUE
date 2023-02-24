@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>Hay un número que me obsesiona, como si me persiguiera de una vida anterior. Lo sabía entonces, cuando no creía. Ahora lo recuerdo: 342089. Es el código de una puerta, pero no me acuerdo de dónde está.</text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>PDA de Monolith</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>El científico muerto tiene un mapa con una puerta marcada. Código 1287975</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Código de la puerta</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Tabernero: "La gente se volvió loca cuando se enteró. Todos los que han podido han empezado a avanzar hacia el centro de la Zona: independientes, miembros de Deber y Libertad, e incluso mercenarios. ¡El primero que llegue se llevará todo! El Genio, montones de artefactos y a saber cuántas cosas más. Deprisa; si el Genio está en el sarcófago de la estación, el que primero llegue verá concedidos todos sus deseos. Ahora mismo hay un destacamento de veteranos reunido frente a Pripyat. Si te das prisa podrás ir con ellos."</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>Desactivé el Cauterizador. Por alguna razón, perdí la conciencia cuando lo hice. Entonces tuve un sueño: aparecía la enorme central nuclear de Chernóbil y el sarcófago. Después se pasaba a otra cosa: el Monolito brillante dentro del sarcófago. Supongo que será el Genio. Un stalker exhausto y harapiento que sale de allí a duras penas... Un destello brillante, y vuelvo a ver un fragmento del primer sueño... Un hombre está de espaldas a mí y no deja de disparar. Alguien grita: "¡Strelok!" El hombre se estremece, se queda inmóvil durante un momento y luego empieza a girarse lentamente... Pero las imágenes retroceden, como si se estuviera rebobinando una película, y veo cómo utiliza su arma para forzar a las ratas a volver a la central... Entonces me di cuenta de que estaba allí. Tengo que ir al Monolito.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>El Cauterizador está destruido</text>
+	</string>

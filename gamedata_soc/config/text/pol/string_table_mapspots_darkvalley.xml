@@ -1,0 +1,54 @@
+	<string id="bar_darklab_documents_1_hint">
+		<text>Dzik</text>
+	</string>
+	<string id="bar_darklab_documents_2_hint">
+		<text>Tunel</text>
+	</string>
+	<string id="bar_darklab_documents_3_hint">
+		<text>Wejœcie do laboratorium</text>
+	</string>
+	<string id="bar_darklab_documents_4_hint">
+		<text>Rura</text>
+	</string>
+	<string id="bar_darklab_documents2_1_hint">
+		<text>Dokumenty z laboratorium</text>
+	</string>
+	<string id="bar_darklab_documents2_2_hint">
+		<text>Barman</text>
+	</string>
+	<string id="val_captive_help_1_hint">
+		<text>Nabój</text>
+	</string>
+	<string id="val_captive_help_2_hint">
+		<text>Wiêzieñ</text>
+	</string>
+	<string id="val_come_to_trader_1_hint">
+		<text>Brama po³udniowa</text>
+	</string>
+	<string id="val_come_to_trader_2_hint">
+		<text>Handlarz</text>
+	</string>
+	<string id="val_prisoner_help_main_hint">
+		<text>Jeniec z "Powinnoœci"</text>
+	</string>
+	<string id="val_sos_help_main_hint">
+		<text>Ranny stalker</text>
+	</string>
+	<string id="val_zone_bandits_hint">
+		<text>Obóz bandytów</text>
+	</string>
+	<string id="val_zone_farm_hint">
+		<text>Gospodarstwo.\nKup Gaussa.</text>
+	</string>
+	<string id="val_zone_monolith_hint">
+		<text>Stara fabryka</text>
+	</string>
+	<string id="val_zone_pipe_hint">
+		<text>Rura kanalizacyjna</text>
+	</string>
+	<string id="val_zone_robbers_hint">
+		<text>Opuszczona chlewnia</text>
+	</string>
+	<string id="val_zone_south_gate_hint">
+		<text>Bramy</text>
+	</string>

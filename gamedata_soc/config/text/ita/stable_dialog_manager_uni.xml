@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dm_general_action_info">
+		<text>Che ci fai qui?</text>
+	</string>
+	<string id="dm_general_cool_info">
+		<text>Puoi dirmi qualcosa d'interessante?</text>
+	</string>
+	<string id="dm_general_cool_info_no_more">
+		<text>Non so nient'altro.</text>
+	</string>
+	<string id="dm_general_help_bandage">
+		<text>Prendi le bende.</text>
+	</string>
+	<string id="dm_general_help_medkit">
+		<text>Prendi il kit di pronto soccorso.</text>
+	</string>
+	<string id="dm_general_trade_info">
+		<text>Interessato alle informazioni. Interessato ai soldi.</text>
+	</string>
+	<string id="dm_general_trade_info_caption">
+		<text>Posso offrirti questo:</text>
+	</string>
+	<string id="dm_general_trade_info_hasno">
+		<text>Non posso offrirti nulla.</text>
+	</string>
+	<string id="dm_general_trade_info_nothing">
+		<text>Un'altra volta, magari.</text>
+	</string>
+</string_table>

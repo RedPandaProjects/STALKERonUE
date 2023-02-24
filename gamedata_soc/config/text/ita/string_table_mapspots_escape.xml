@@ -1,0 +1,48 @@
+	<string id="blokpost_case">
+		<text>Valigetta con doc.</text>
+	</string>
+	<string id="esc_fox">
+		<text>Volpe ferito.</text>
+	</string>
+	<string id="esc_mill">
+		<text>Mulino abbandonato. Il fratello ferito è stato visto da queste parti l'ultima volta.</text>
+	</string>
+	<string id="escape_trader">
+		<text>Trafficante</text>
+	</string>
+	<string id="factory_bandits">
+		<text>Banditi alla fabbrica.</text>
+	</string>
+	<string id="killers_team">
+		<text>Gruppo sconosciuto di mercenari.</text>
+	</string>
+	<string id="novice_leader">
+		<text>Capo dell'accampamento reclute.</text>
+	</string>
+	<string id="soldiers_bridge">
+		<text>Checkpoint militare vicino al ponte distrutto. È risaputo che i soldati lasciano passare la gente in cambio di tangenti.</text>
+	</string>
+	<string id="tutorial_artefact">
+		<text>Reperto.</text>
+	</string>
+	<string id="tutorial_bandits">
+		<text>Banditi che si sono fermati o esplorano.</text>
+	</string>
+	<string id="tutorial_secret">
+		<text>Nascondiglio dello stalker morto.</text>
+	</string>
+	<string id="tutorial_secret_place1">
+		<text>Nascondiglio dello stalker morto.</text>
+	</string>
+	<string id="tutorial_secret_shustryi">
+		<text>Nascondiglio dello Svelto.</text>
+	</string>
+	<string id="tutorial_wounded">
+		<text>Lo Svelto, un prigioniero.</text>
+	</string>
+	<string id="volk">
+		<text>Lupo, capo dell'accampamento dei novellini</text>
+	</string>
+	<string id="wolfs_rangers">
+		<text>Esploratori del Lupo.</text>
+	</string>

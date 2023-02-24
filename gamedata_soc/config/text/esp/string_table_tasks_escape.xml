@@ -1,0 +1,150 @@
+	<string id="esc_bandits_on_factory">
+		<text>Mata a los bandidos de la fábrica</text>
+	</string>
+	<string id="esc_bandits_on_factory_0">
+		<text>Mata a los bandidos escondidos en la fábrica.</text>
+	</string>
+	<string id="esc_bandits_on_factory_1">
+		<text>Mata a todos los bandidos de la fábrica</text>
+	</string>
+	<string id="esc_bandits_on_factory_2">
+		<text>Habla con el comerciante</text>
+	</string>
+	<string id="esc_bandits_on_factory_3">
+		<text>Habla con Wolf</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader">
+		<text>Roba la caja de la avanzadilla militar</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_0">
+		<text>Roba la caja con documentos importantes de la avanzadilla militar.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_1">
+		<text>Roba la caja de la avanzadilla militar</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_2">
+		<text>Lleva la caja al comerciante</text>
+	</string>
+	<string id="esc_defend_lager">
+		<text>Defiende de los mercenarios el campamento de novatos</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_0">
+		<text>Defiende de los mercenarios el campamento de novatos.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_1">
+		<text>Acaba con los mercenarios.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_2">
+		<text>Habla con el comandante de los novatos</text>
+	</string>
+	<string id="esc_dinamit_to_volk">
+		<text>Mata a los bandidos del aparcamiento</text>
+	</string>
+	<string id="esc_dinamit_to_volk_0">
+		<text>Mata a los bandidos del aparcamiento e informa a Wolf.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_1">
+		<text>Reúnete con la gente de Wolf</text>
+	</string>
+	<string id="esc_dinamit_to_volk_2">
+		<text>Mata a todos los bandidos</text>
+	</string>
+	<string id="esc_dinamit_to_volk_3">
+		<text>Habla con Wolf</text>
+	</string>
+	<string id="esc_help_wounded_from_raid">
+		<text>Fox te dirá algo sobre Strelok</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_0">
+		<text>Ayuda al stalker herido</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_1">
+		<text>Ayuda a Fox</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_2">
+		<text>Obtén información sobre Strelok</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift">
+		<text>Entrega el paquete al comerciante.</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift_0">
+		<text>Entrega el paquete al comerciante. Él podrá ayudarte.</text>
+	</string>
+	<string id="garbage_meet_stalker">
+		<text>Reúnete con Gris.</text>
+	</string>
+	<string id="garbage_meet_stalker_0">
+		<text>Reúnete con Gris en el vertedero.</text>
+	</string>
+	<string id="meet_with_doctor">
+		<text>Reúnete con Doc.</text>
+	</string>
+	<string id="meet_with_doctor_1">
+		<text>Reúnete con Doc.</text>
+	</string>
+	<string id="meet_with_doctor_2">
+		<text>Reúnete con Doc en el escondite de Strelok</text>
+	</string>
+	<string id="storyline_escape_eliminate_gunslinger">
+		<text>Mata a Strelok.</text>
+	</string>
+	<string id="storyline_escape_find_gunslinger">
+		<text>Encuentra a Strelok.</text>
+	</string>
+	<string id="tutorial_find_artefact">
+		<text>Encuentra un artefacto</text>
+	</string>
+	<string id="tutorial_find_artefact_0">
+		<text>Encuentra tu primer artefacto.</text>
+	</string>
+	<string id="tutorial_find_artefact_1">
+		<text>Encuentra un artefacto</text>
+	</string>
+	<string id="tutorial_find_artefact_2">
+		<text>Lleva el artefacto al comerciante.</text>
+	</string>
+	<string id="tutorial_help_wounded">
+		<text>Obtén información del explorador</text>
+	</string>
+	<string id="tutorial_help_wounded_0">
+		<text>Lleva la información al comerciante</text>
+	</string>
+	<string id="tutorial_help_wounded_1">
+		<text>Habla con Wolf</text>
+	</string>
+	<string id="tutorial_help_wounded_2">
+		<text>Consigue de Nimble la unidad de información.</text>
+	</string>
+	<string id="tutorial_help_wounded_3">
+		<text>Lleva la unidad de información al comerciante.</text>
+	</string>
+	<string id="esc_trader_job">
+		<text>Trabaja para el comerciante</text>
+	</string>
+	<string id="esc_trader_job_text">
+		<text>Ve a preguntarle al comerciante por el trabajo especial</text>
+	</string>
+	<string id="bar_barman_job">
+		<text>Trabaja para el tabernero</text>
+	</string>
+	<string id="bar_barman_job_text">
+		<text>Pide un trabajo al tabernero</text>
+	</string>
+	<string id="yan_scientist_job">
+		<text>Ayuda a los científicos</text>
+	</string>
+	<string id="yan_scientist_job_text">
+		<text>Ofrece ayuda a los científicos</text>
+	</string>
+	<string id="find_railroad_passage">
+		<text>Ve al terraplén del ferrocarril</text>
+	</string>
+	<string id="find_railroad_passage_1">
+		<text>Reúnete con el viajante</text>
+	</string>
+	<string id="find_railroad_passage_2">
+		<text>Atraviesa el terraplén del ferrocarril</text>
+	</string>
+	<string id="find_railroad_passage_text">
+		<text>Antes de adentrarte más en la Zona, es necesario atravesar el antiguo terraplén del ferrocarril. El único pasaje seguro está protegido por los militares. Sin embargo, hay un pequeño túnel a la izquierda por el que pasan normalmente los novatos. Allí te esperará uno de mis hombres.</text>
+	</string>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="oso_chernobyl_crush_0">
+		<text>Anche tu lavori sull'esplosione dell'86?</text>
+	</string>
+	<string id="oso_chernobyl_crush_1">
+		<text>No, con quello non c'entriamo niente. All'epoca avevamo appena iniziato ad occuparci di scienza. И solo dal 1989 che la Zona Chernobyl viene usata come area di collaudo per gli esperimenti.</text>
+	</string>
+	<string id="oso_death_truck_0">
+		<text>Che cosa sono i "camion della morte"?</text>
+	</string>
+	<string id="oso_death_truck_1">
+		<text>Sono i trasporti che usiamo per mandare i nostri "agenti" marchiati nella Zona. Gli agenti si infiltrano nella "comunitа" degli stalker e, senza saperlo, eseguono i nostri ordini. Sfortunatamente la Zona и molto instabile e metа degli stalker muore durante il trasporto. Tu sei uno dei nostri agenti. Per errore, ti era stato ordinato di uccidere Strelok, e ora stiamo cercando di capire come ciт sia potuto accadere.</text>
+	</string>
+	<string id="oso_no_0">
+		<text>Non ti aiuterт in questa farsa.</text>
+	</string>
+	<string id="oso_osoznanie_start_11">
+		<text>Salve, Strelok. Vedo che hai molte domande per me. Chiedimi pure quello che vuoi sapere, e poi decideremo cosa fare di te.</text>
+	</string>
+	<string id="oso_osoznanie_start_21">
+		<text>A te la scelta, Strelok.</text>
+	</string>
+	<string id="oso_stalker_0">
+		<text>Cosa significa il tatuaggio S.T.A.L.K.E.R.?</text>
+	</string>
+	<string id="oso_stalker_1">
+		<text>S.T.A.L.K.E.R. и un acronimo in codice che usiamo per designare agenti programmati per particolari missioni. La tua missione, come nostro agente, era quella di uccidere Strelok e il suo gruppo. Erano troppo vicini alla veritа, e non potevamo permettere che la scoprissero. Per reclutare agenti, abbiamo creato una rete di campi psionici sulla via che conduce al centro della Zona. Uno di quei campi lo conosci, и quello che chiamano Bruciacervella. Quando uno stalker tenta di raggiungere il centro della Zona per veder esaudito un suo desiderio, assumiamo il controllo della sua coscienza e lo programmiamo perchй esegua una specifica missione per noi. Nel tuo caso c'и stato un errore, e la tua missione era quella di uccidere te stesso.</text>
+	</string>
+	<string id="oso_what_about_me_0">
+		<text>Che cosa mi и successo?</text>
+	</string>
+	<string id="oso_what_about_me_1">
+		<text>Tu sei la scheggia impazzita. Sfortunatamente, и passato molto tempo prima che ce ne accorgessimo. Da quando la Zona si и formata, molte persone hanno cercato di raggiungerne il centro, e noi non possiamo permettere che ciт accada. L'umanitа non и pronta per la veritа. И per questo che abbiamo reclutato degli stalker, con la promessa di esaudire i loro desideri piщ struggenti. Una volta reclutati, li mandavamo a proteggere il segreto della Zona.</text>
+	</string>
+	<string id="oso_what_is_the_zone_0">
+		<text>Che cos'и la Zona? E come ha avuto origine?</text>
+	</string>
+	<string id="oso_what_is_the_zone_1">
+		<text>Ciт che vedi и il risultato di alcuni sconsiderati interventi sulla noosfera della Terra. Tali interventi hanno determinato una fessurazione a livello locale, di cui la Zona non и altro che la manifestazione visibile. Il problema и molto piщ vasto di quanto tu possa immaginare. </text>
+	</string>
+	<string id="oso_what_next_0">
+		<text>E adesso che cosa succederа?</text>
+	</string>
+	<string id="oso_what_next_1">
+		<text>Dipende da te. La Zona si sta allargando. Noi stiamo cercando di contenere la sua espansione, ma l'umanitа continua a metterci i bastoni tra le ruote. Le nostre risorse non sono illimitate e i corpi connessi alla Coscienza-C prima o poi muoiono. Se ti unisci a noi, potremo arrestare la crescita della Zona. Se rifiuti... non siamo in grado di elaborare una stima attendibile delle conseguenze.</text>
+	</string>
+	<string id="oso_who_are_you_0">
+		<text>Chi sei tu?</text>
+	</string>
+	<string id="oso_who_are_you_1">
+		<text>Siamo il risultato di un esperimento il cui obiettivo era quello di creare una super-coscienza, la cosiddetta "Coscienza-C". Siamo nati dalla connessione tra le coscienze di sette volontari, e il nostro primo atto и stato quello di soggiogare gli scienziati che conducevano l'esperimento e di usarli per i nostri fini. Avevamo appurato che la Terra и circondata da uno speciale campo di informazioni, la noosfera, che abbraccia tutti gli abitanti del pianeta dotati di abilitа cognitive, e ci proponevamo di apportare qualche piccola modifica per rimuovere dal pianeta fattori negativi come la rabbia, la crudeltа e l'aviditа. A differenza dei singoli individui, Coscienza-C и in grado di incidere sulla noosfera. Purtroppo perт abbiamo commesso un errore e la nostra interferenza ha portato alla nascita della Zona. Da allora, il nostro obiettivo и diventato quello di contenerne l'espansione.</text>
+	</string>
+	<string id="oso_why_chernobyl_0">
+		<text>Perchй и successo tutto proprio qui?</text>
+	</string>
+	<string id="oso_why_chernobyl_1">
+		<text>Questo era il posto piщ adatto. Dopo l'esplosione del 1986 in quest'area erano rimaste pochissime persone e potevamo lavorare senza timore di essere scoperti. Inoltre qui c'erano molte antenne potenti, che sono estremamente importanti nei nostri esperimenti di ottimizzazione cognitiva.</text>
+	</string>
+	<string id="oso_yes_0">
+		<text>Ho accettato di far parte del progetto Coscienza-C.</text>
+	</string>
+</string_table>

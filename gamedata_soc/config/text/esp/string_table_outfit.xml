@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bandit_outfit_description">
+		<text>Equipo tradicional de bandido: una chaqueta de cuero con elementos kevlar. Proporciona una protecciуn bastante insuficiente para las condiciones adversas de la Zona.</text>
+	</string>
+	<string id="bandit_outfit_description_m">
+		<text>Tнpica protecciуn blanda de bandido con malla cosida por la espalda. Casi todo el mundo puede hacerlo, pero no todos tienen la paciencia suficiente.</text>
+	</string>
+	<string id="bandit_outfit_name">
+		<text>Chaqueta de bandido</text>
+	</string>
+	<string id="bandit_outfit_name_m">
+		<text>Chaqueta de malla</text>
+	</string>
+	<string id="dolg_outfit_description">
+		<text>Producido por uno de los institutos de investigaciуn de Kiev y financiado por la facciуn Deber. Es tan sencillo y fiable como el modelo estбndar PSZ-9, pero gracias a los nuevos materiales proporciona buena protecciуn contra impactos como los de las armas de fuego y otros. Es necesario seguir trabajando en el chaleco, ya que no tiene un sistema de protecciуn respiratorio.</text>
+	</string>
+	<string id="dolg_outfit_description_m1">
+		<text>El blindaje de Deber estб dotado de nuevos parбmetros de protecciуn contra mordeduras y cortes.</text>
+	</string>
+	<string id="dolg_outfit_name">
+		<text>Blind. Deber PSZ-9d</text>
+	</string>
+	<string id="dolg_outfit_name_m1">
+		<text>Cazador PSZ-9d</text>
+	</string>
+	<string id="dolg_scientific_outfit_description">
+		<text>Un excelente traje protector para la Zona. Los stalkers lo aprecian porque combina excelentes propiedades de blindaje contra anomalнas y contra balas. Incluye el traje PSZ-9d, un sistema respiratorio de ciclo cerrado y un sistema integrado de supresiуn de anomalнas. Proporciona una magnнfica protecciуn contra balas y fragmentos. </text>
+	</string>
+	<string id="dolg_scientific_outfit_name">
+		<text>Universal Protection PSZ-9Md</text>
+	</string>
+	<string id="ecolog_outfit_description">
+		<text>Un traje quнmicamente protegido SSP-99, especialmente diseсado para las condiciones de la Zona. Lo utilizan los miembros de las expediciones cientнficas y los stalkers ecologistas que colaboran con ellos. Contiene un sistema integrado de filtrado de aire y de aire acondicionado. Resiste el calor y la electricidad y proporciona buena protecciуn contra la radiaciуn y las anomalнas biolуgicas. Es resistente a los ambientes quнmicamente agresivos. No estб diseсado para combatir, asн que no tiene protecciуn contra balas o fragmentos.</text>
+	</string>
+	<string id="ecolog_outfit_name">
+		<text>SSP-99 Ecologist</text>
+	</string>
+	<string id="exo_outfit_description">
+		<text>Un prototipo de exoesqueleto militar. Nunca llegу a producirse en serie debido a su elevado coste y a algunos defectos de diseсo. Sin embargo, continъa elaborбndose en pequeсos lotes en pequeсas fбbricas ilegales de los alrededores de Ucrania. Se trata de un exoesqueleto de tercera generaciуn. Se han eliminado los defectos de diseсo que entorpecнan su movilidad y se ha reforzado el blindaje. Proporciona una excelente protecciуn contra los fragmentos y las balas. Sin embargo, su nivel de protecciуn frente a las anomalнas es mнnimo.</text>
+	</string>
+	<string id="exo_outfit_description_m1">
+		<text>Se ha sustituido el dispositivo bбsico de visiуn nocturna por un modelo mбs moderno con filtraciуn digital de la seсal emitida.</text>
+	</string>
+	<string id="exo_outfit_name">
+		<text>Exoesqueleto</text>
+	</string>
+	<string id="killer_outfit_description">
+		<text>Traje de stalker del grupo de los mercenarios. Su diseсo estб basado en el traje que utilizan las fuerzas especiales de los ejйrcitos occidentales. Gracias a un tratamiento especial del tejido, el blindaje tiene mayor estabilidad durante el movimiento fнsico de sus placas. Tiene propiedades de protecciуn ligeramente mejores que las de los trajes antibalas PSZ-7 del ejйrcito.</text>
+	</string>
+	<string id="killer_outfit_description_m1">
+		<text>El forro lleva cosida una cota de malla que aumenta la protecciуn frente a los ataques con armas de fuego y los mordiscos de los monstruos. El set tambiйn incluye un PNV.</text>
+	</string>
+	<string id="killer_outfit_name">
+		<text>Traje de mercenario</text>
+	</string>
+	<string id="killer_outfit_name_m1">
+		<text>Traje reforzado</text>
+	</string>
+	<string id="military_outfit_description">
+		<text>El traje militar antibalas Skat-9M ha sido diseсado para operaciones de asalto en бreas con actividad anуmala. Incluye un traje militar antibalas pesado PSZ-12p, un traje de compensaciуn integrado y un casco Sphere-12M. Protege totalmente de balas y fragmentos y no dificulta la movilidad del soldado. Estб equipado con un sistema compensado de protecciуn contra anomalнas.</text>
+	</string>
+	<string id="military_outfit_name">
+		<text>Traje blindado</text>
+	</string>
+	<string id="monolit_outfit_description">
+		<text>Traje de stalker de la facciуn Monolith. Se desconoce el fabricante. Sus propiedades de protecciуn son algo peores que las de los chalecos antibalas PSZ-9a del ejйrcito. Tiene una estructura similar a la del traje comъn de los stalkers neutrales, que combina un chaleco antibalas y un traje de protecciуn contra la radiaciуn. Ofrece buena protecciуn contra las armas de fuego. Su nivel de protecciуn contra anomalнas es bajo, ya que carece de un sistema de filtraciуn de aire.</text>
+	</string>
+	<string id="monolit_outfit_name">
+		<text>Traje de Monolith</text>
+	</string>
+	<string id="novice_outfit_description_m">
+		<text>Este traje se lo quitaron a un stalker que muriу en la anomalнa Ponche de frutas. Al estar mucho tiempo en la anomalнa, el traje ha adquirido la capacidad de acelerar el metabolismo.</text>
+	</string>
+	<string id="novice_outfit_name_m">
+		<text>Anomalнa Dermatуn</text>
+	</string>
+	<string id="outfit_soldier_description">
+		<text>Una chaqueta gruesa ordinaria, una de tantas. Aumenta ligeramente la protecciуn contra los fragmentos y las balas. No protege de las anomalнas y otros peligros.</text>
+	</string>
+	<string id="outfit_soldier_name">
+		<text>Chaqueta de cuero</text>
+	</string>
+	<string id="protection_outfit_description">
+		<text>Traje SSP-99 modificado de alta calidad. Proporciona mayor protecciуn contra balas y fragmentos. Se ha diseсado para los guardias que acompaсan a las expediciones cientнficas. Protege eficazmente de la radiaciуn y de las anomalнas biolуgicas. Ofrece resistencia en los entornos quнmicamente agresivos y frente a otros elementos daсinos.</text>
+	</string>
+	<string id="protection_outfit_name">
+		<text>Traje SSP-99M</text>
+	</string>
+	<string id="scientific_outfit_description">
+		<text>Este traje se fabricу en uno de los institutos de investigaciуn militar de Kiev y constituye una alternativa excelente a los trajes de stalker hechos a mano. Es una excelente combinaciуn de chaleco antibalas, sistema respiratorio de ciclo cerrado y sistema integrado de supresiуn de campos anуmalos. Por la perfecta elecciуn de sus materiales, este traje es una buena opciуn. La ъnica desventaja es el precio.</text>
+	</string>
+	<string id="scientific_outfit_name">
+		<text>Traje SEVA</text>
+	</string>
+	<string id="specnaz_outfit_description_m1">
+		<text>El tejido del traje estб tratado con una lociуn estreptozoidal que acelera la curaciуn de las heridas.</text>
+	</string>
+	<string id="specnaz_outfit_name_m1">
+		<text>Berilio sanador</text>
+	</string>
+	<string id="specops_outfit_description">
+		<text>Un traje de las fuerzas especiales, el Berill-5M, modificado para adaptarse al ambiente de la Zona. Incluye un chaleco antibalas militar PSZ-9a recubierto de berilio y un casco Sphere-08. Estб diseсado para operaciones de asalto en бreas con gran riesgo de radiaciуn. Su nivel de protecciуn contra anomalнas es bajo.</text>
+	</string>
+	<string id="specops_outfit_name">
+		<text>Traje blindado Berill-5M</text>
+	</string>
+	<string id="stalker_outfit_description">
+		<text>Traje de stalker fabricado por "artesanos". Es una combinaciуn efectiva de chaleco militar antibalas ligero y traje de caucho. Estб reforzado con placas kevlar insertadas, y proporciona buena protecciуn contra disparos poco potentes. No es muy eficiente para incursiones en profundidad u operaciones serias en los puntos clave de la Zona.</text>
+	</string>
+	<string id="stalker_outfit_description_m1">
+		<text>Hay un rumor que dice que el stalker fantasma nunca lleva consigo un botiquнn. Todo se le cura solo, como a los perros. Dicen que tiene un traje fuera de lo comъn que consiguiу en una anomalнa.</text>
+	</string>
+	<string id="stalker_outfit_description_m2">
+		<text>El anterior propietario del traje era un turista muy especial al que, segъn parece, le gustaba embarcarse en viajes muy difнciles que desafiaban la resistencia humana. Sabнa cуmo distribuir correctamente el peso que llevaba y a quй cosas darles preferencia. Los bolsillos del traje y la mochila permiten al propietario llevar objetos pesados.</text>
+	</string>
+	<string id="stalker_outfit_name">
+		<text>Traje de stalker</text>
+	</string>
+	<string id="stalker_outfit_name_m1">
+		<text>Traje de fantasma</text>
+	</string>
+	<string id="stalker_outfit_name_m2">
+		<text>Traje de turista</text>
+	</string>
+	<string id="svoboda_heavy_outfit_description">
+		<text>Traje reforzado de stalker fabricado por los armeros de la facciуn Libertad. Estб compuesto de un chaleco antibalas militar medio, reforzado con elementos de circonio; proporciona buena protecciуn contra balas de fusil y fragmentos a medio y largo alcance. El traje tiene dos capas: una de cuero especialmente tratado y otra de amianto. El traje proporciona buena protecciуn contra la radiaciуn, asн como contra diversas anomalнas dйbiles.</text>
+	</string>
+	<string id="svoboda_heavy_outfit_name">
+		<text>Tr. guardia Libertad</text>
+	</string>
+	<string id="svoboda_light_outfit_description">
+		<text>Traje ligero de stalker fabricado por los armeros de la facciуn Libertad. Consiste en un chaleco militar antibalas ligero con placas kevlar de refuerzo. Protege contra armas poco potentes. El tejido del traje estб tratado con una mezcla especial que aumenta la resistencia a las anomalнas.</text>
+	</string>
+	<string id="svoboda_light_outfit_name">
+		<text>Viento de Libertad</text>
+	</string>
+	<string id="mp_exo_outfit_description">
+		<text>El exoesqueleto ofrece una magnнfica protecciуn contra balas y fragmentos; sin embargo, dificulta la movilidad. No es efectivo contra balas antiblindaje.</text>
+	</string>
+	<string id="mp_exo_outfit_name">
+		<text>Exoesqueleto PNB-4UZ</text>
+	</string>
+	<string id="mp_military_outfit_description">
+		<text>Traje antibalas del ejйrcito creado para operaciones "relбmpago". Proporciona excelente protecciуn contra balas y fragmentos sin dificultar la movilidad del soldado. No es efectivo contra balas antiblindaje.</text>
+	</string>
+	<string id="mp_military_outfit_name">
+		<text>Traje antibalas del ejйrcito.</text>
+	</string>
+	<string id="mp_scientific_outfit_description">
+		<text>Este traje se ha diseсado para realizar investigaciones en la Zona. Estб equipado con un sistema de respiraciуn de ciclo cerrado e incorpora un sistema que anula la actividad de los campos anуmalos, ofreciendo una excelente protecciуn contra las anomalнas. Muy vulnerable porque sуlo proporciona una ligera protecciуn. Incorpora un recipiente para el transporte de artefactos.</text>
+	</string>
+	<string id="mp_scientific_outfit_name">
+		<text>Traje de cientнfico</text>
+	</string>
+</string_table>

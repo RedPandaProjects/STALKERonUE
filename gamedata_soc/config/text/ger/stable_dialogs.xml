@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_break_dialog_0">
+		<text>Bis dann!</text>
+	</string>
+	<string id="actor_help_wounded_0">
+		<text>Bist du in Ordnung?</text>
+	</string>
+	<string id="actor_help_wounded_1">
+		<text>Ich in verletzt, verdammt noch mal, siehst du das denn nicht? Ich brauche ein Verbandskasten oder wenigstens einen Verband.</text>
+	</string>
+	<string id="actor_help_wounded_11">
+		<text>Hier, nimm diesen Verbandskasten.</text>
+	</string>
+	<string id="actor_help_wounded_111">
+		<text>Danke, Bruder. Das werde ich dir nicht vergessen.</text>
+	</string>
+	<string id="actor_help_wounded_12">
+		<text>Hier, nimm diesen Verband.</text>
+	</string>
+	<string id="actor_help_wounded_13">
+		<text>Tut mir Leid, habe ich nicht.</text>
+	</string>
+	<string id="actor_help_wounded_131">
+		<text>Wie kommst du dann durch die Zone? Was ist, wenn du dich infizierst oder so? Dann wirst du dir nicht einmal selber helfen kцnnen!</text>
+	</string>
+	<string id="actor_help_wounded_14">
+		<text>Tja, Pech, Mann. Tut mir Leid, aber wenn ich dir meinen gebe, habe ich keinen mehr fьr mich selbst.</text>
+	</string>
+	<string id="actor_help_wounded_141">
+		<text>Das ist natьrlich deine Sache, Kumpel, aber so machst du dir keine Freunde.</text>
+	</string>
+	<string id="hello_dialog_2">
+		<text>He!</text>
+	</string>
+	<string id="hello_dialog_3">
+		<text>Kannst du mir mal helfen, Kumpel?</text>
+	</string>
+</string_table>

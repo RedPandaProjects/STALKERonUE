@@ -1,0 +1,48 @@
+	<string id="descr_yan_find_ghost_task">
+		<text>Vasiljev: "...queste sono le coordinate dell'ingresso del laboratorio X16. L'ingresso si trova nel seminterrato dell'edificio centrale: non si sa a che cosa serva quell'edificio. Penso che venga usato per l'assistenza tecnica agli emettitori sotterranei: in base alla documentazione di N***, lo scopo dichiarato di questo progetto è lo sviluppo completo di armi psioniche ad ampio raggio su...\n\n ...tutti i documenti necessari sono in nostro possesso e sappiamo come disattivare l'emettitore. Stiamo andando giù nel laboratorio col Fantasma. Stanno uscendo zombie dappertutto... \n\n ...sta andando tutto a rotoli, il Fantasma è impazzito e sta delirando. Sembra che sia stato colpito dalle emissioni. Ho mollato tutto e ho fatto marcia indietro lungo i tunnel...\n\n ...Sono nelle paludi, dov'è il bunker? Cazzo, cazzo, cazzo!!! Non riesco a determinare la mia posizione! Quel codardo di Sakharov non risponde!!! Che cosa succede??? ...ci sono zombie ovunque e sto finendo le munizioni..."</text>
+	</string>
+	<string id="descr_yan_find_lab">
+		<text>Sakharov: "Devi solo trovare il cadavere di Vasiliev e recuperare informazioni precise sulla posizione del laboratorio. Poi entrare nel laboratorio e trovare il Fantasma. Il Fantasma sapeva come spegnere le emissioni e come uscire."</text>
+	</string>
+	<string id="descr_yan_find_scientist">
+		<text>Sakharov: "Se riesci a effettuare i rilievi con il nostro socio, ti darò un prototipo calibrato che ti permetterà di entrare nel laboratorio."</text>
+	</string>
+	<string id="descr_yan_find_scientist_semenov">
+		<text>Sakharov: "Se riesci a effettuare i rilievi con il nostro socio, ti darò un prototipo calibrato che ti permetterà di entrare nel laboratorio."</text>
+	</string>
+	<string id="descr_yan_kill_brain">
+		<text>Sakharov: "Bel lavoro, Marchiato, e così sei riuscito a raggiungere il laboratorio. È della massima importanza per noi studiare il meccanismo che si trova nel laboratorio. Cerca di disattivarlo per consentirci di studiarlo.\n\n ...ascolta, il prototipo non è in grado di proteggerti contro le radiazioni più pericolose. Ci ho già pensato, quindi ho inserito un timer nell'armatura, che comincerà a ticchettare non appena sarai esposto a un campo forte. Allo scadere del tempo, non sarai più protetto dal prototipo. Fai molta attenzione e non scordarti del timer."</text>
+	</string>
+	<string id="descr_yan_kill_brain_2">
+		<text>Il dispositivo è spento. Dovrai solo uscire vivo da lì.</text>
+	</string>
+	<string id="descr_yan_provodnik_task">
+		<text>Fantasma: "Annotazione n. 257\n >>Guida, ti sto mandando un uomo, abbiamo informazioni importanti per il Dottore: aiutalo a uscire." \n\n >>Guida: "Bene!. Ma Fantasma, che non si ripeta quello che è successo l'ultima volta. Vieni tu stesso, è da tanto che voglio fare due chiacchiere con te. Ti aspetto al solito posto, nel campo vicino al ponte. Non perderti e non farti prendere dalle pattuglie dell'esercito."</text>
+	</string>
+	<string id="descr_yan_scientist_return_task">
+		<text>Sakharov: "Cos'è successo??? È morto??? Completa i rilievi e torna immediatamente!!!"</text>
+	</string>
+	<string id="journal_after_find_ghost">
+		<text>Sono sconvolto! Il Fantasma è la stessa persona nella foto del documento della missione per uccidere Strelok. Non capisco più niente. Ci dev'essere un errore, ma chi l'ha commesso? Per ora non lo so. Dalle registrazioni del Fantasma ho scoperto il nome del loro "conoscente comune", il quarto uomo del gruppo di Strelok, ovvero il Dottore. Per molto tempo ha aiutato il gruppo fungendo un po' da "base". Lo si può raggiungere grazie a uno stalker chiamato la Guida, che frequenta il Cordon. Mi auguro che la Guida non muoia improvvisamente prima che l'abbia incontrata. Sul cadavere del Fantasma ho trovato anche dei documenti sul dispositivo psionico. Quell'arnese copriva l'intero quartiere e ha trasformato in zombie tutti quelli che sono entrati nel suo raggio d'azione. Ho scoperto che nel laboratorio X19 c'è un altro dispositivo, probabilmente il Bruciacervella. Inoltre ho saputo che quegli impianti non funzionano sempre al massimo. Ci sono dei periodi in cui la potenza viene ridotta per lasciarli raffreddare.</text>
+	</string>
+	<string id="journal_after_find_ghost_name">
+		<text>Un altro enigma</text>
+	</string>
+	<string id="journal_after_kill_brain">
+		<text>Dopo aver disattivato quell'orrendo "cervello in scatola" ho perso i sensi. Forse la pressione degli ultimi giorni mi aveva sfinito. Mentre ero svenuto ho fatto un sogno... Una foto. La tiene in mano un uomo dai capelli grigi, con un enorme cane ai piedi. L'uomo guarda lontano, ma attorno a lui c'è solo palude; il panorama non somiglia per niente a quello della foto. Nella nebbia intravedo qualcuno che si allontana. L'uomo parla fra sé: "Se è tanto importante, perché non mi hai detto che posto è questo e dove hai trovato la foto?"... Poi... a fianco vedo un giovane sorridente sulla soglia della baracca, che dice allegramente: "Se solo tu sapessi dov'ero e cos'ho visto!" Protende il braccio mostrando un meraviglioso congegno che illumina l'intera baracca. Il cane inizia a ringhiare e si acquatta in un angolo; l'uomo dai capelli grigi mormora: "Un giorno quei giochini ti metteranno nei guai."... un lampo... Il giovanotto di prima, con il viso coperto di sangue, entra annaspando nella baracca e cade... il cielo viene rigato dai fulmini, inizia una pioggia fitta... un lampo... Il letto della baracca, il giovanotto giace tutto bendato. È privo di sensi; l'uomo dai capelli grigi mormora: "Figliolo, resisti". In un angolo sono ammucchiati alcuni effetti personali, fra cui c'è la strana foto... un lampo... La foto è in mano all'uomo dai capelli grigi. Il giovane, che ora ha il viso pieno di cicatrici, sta per andarsene. L'uomo dai capelli grigi chiede: "E ora dove andrai?" Lui risponde in tono cupo: "A nord"... un lampo... e mi sono risvegliato.</text>
+	</string>
+	<string id="journal_after_kill_brain_name">
+		<text>Il secondo sogno</text>
+	</string>
+	<string id="journal_before_vasilyev_pda">
+		<text>Sono a un passo da uno degli uomini di Strelok. Il Fantasma è andato al laboratorio sotterraneo X16 con uno degli scienziati. C'è un solo problema: dubito che lo troverò vivo. Lo scienziato è stato ucciso vicino all'accampamento, mentre tornava da solo. Gli scienziati mi hanno dato una specie di congegno per proteggermi da quelle strane emissioni. Spero che funzioni. Vogliono che vada là dentro e stacchi l'emettitore, così potranno studiarlo sul posto. Che Dio mi aiuti.</text>
+	</string>
+	<string id="journal_before_vasilyev_pda_name">
+		<text>A un passo dal Fantasma</text>
+	</string>
+	<string id="storyline_ghost_info">
+		<text>Annotazione n. 257\n >>Guida, sto mandando qualcuno a incontrarti. Abbiamo delle informazioni importanti per il Dottore, vedi di dargli una mano\n >>> Bene. Ma Fantasma, evitiamo che finisca come l'altra volta. Vieni di persona, è un pezzo che volevo parlarti. Ti aspetto al solito posto, nell'accampamento vicino al fiume. Cerca di non perderti e di non farti beccare dalle pattuglie dell'esercito."\n\n Annotazione n. 384\n ...Vasiljev si è tirato indietro all'ultimo momento e, invece di scollegare la console inferiore, è scappato via non appena la porta si è aperta. Non avrei dovuto fare affidamento su di lui. Strelok aveva ragione a non fidarsi di questi stronzi bugiardi. La mia unica speranza è raggiungere la porta prima del controllore...</text>
+	</string>
+	<string id="storyline_vasilyev_info">
+		<text>...queste sono le coordinate dell'entrata del laboratorio X16. L'ingresso si trova nel seminterrato dell'edificio centrale; non sappiamo a cosa sia adibita la struttura, ma penso la usino per la manutenzione degli emettitori sotterranei. In base alla documentazione di N***, il progetto è finalizzato allo sviluppo di armi psicotroniche in grado di produrre un impatto enorme su...\n\n ...abbiamo tutti i documenti necessari e sappiamo come disattivare l'emettitore. Stiamo entrando nel laboratorio con il Fantasma. Gli zombie ci vengono addosso da ogni lato...\n\n ...Sta andando tutto a rotoli, il Fantasma è impazzito e sta delirando. Credo che sia vittima delle emissioni. Ho lasciato perdere ogni cosa e sto tornando indietro, risalendo le gallerie...\n\n ...Sono nelle paludi, dov'è il bunker? Maledizione!!! Non riesco a identificare la mia posizione e quel vigliacco di Sakharov non risponde!!! Che sta succedendo??? ...Ci sono zombie ovunque e sto finendo le munizioni...</text>
+	</string>

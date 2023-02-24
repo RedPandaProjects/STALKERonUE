@@ -1,0 +1,48 @@
+	<string id="sar_monolith">
+		<text>Wunschgönner</text>
+	</string>
+	<string id="sar_monolith_0">
+		<text>Zum Monolithen gelangen.</text>
+	</string>
+	<string id="sar_monolith_1">
+		<text>Unter den Mantel schleichen.</text>
+	</string>
+	<string id="sar_monolith_2">
+		<text>Den Wunschgönner finden.</text>
+	</string>
+	<string id="sar_monolith_destroy">
+		<text>Das Monolith-Geheimnis.</text>
+	</string>
+	<string id="sar_monolith_destroy_0">
+		<text>In das geheime Labor eindringen.</text>
+	</string>
+	<string id="sar_monolith_destroy_1">
+		<text>Das Monolith-Geheimnis lösen.</text>
+	</string>
+	<string id="sar_monolith_destroy_2">
+		<text>Die Generatoren des Monolithen zerstören.</text>
+	</string>
+	<string id="sar_perception">
+		<text>Das Geheimnis der Zone.</text>
+	</string>
+	<string id="sar_perception_1">
+		<text>Die Person treffen, die hinter dem Monolithen steckt.</text>
+	</string>
+	<string id="sar_perception_2">
+		<text>Das geheime Labor finden und die "Puppenspieler" treffen.</text>
+	</string>
+	<string id="sar_secret_lab">
+		<text>Geheimes Labor</text>
+	</string>
+	<string id="sar_secret_lab_0">
+		<text>Den geheimen Bunker betreten.</text>
+	</string>
+	<string id="sar_secret_lab_1">
+		<text>Die versteckte Tür finden.</text>
+	</string>
+	<string id="sar_secret_lab_2">
+		<text>Die Tür mit Hilfe des Dekoders öffnen.</text>
+	</string>
+	<string id="sar_secret_lab_3">
+		<text>Herausfinden, was sich hinter der Tür befindet.</text>
+	</string>

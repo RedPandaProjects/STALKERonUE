@@ -1,0 +1,51 @@
+	<string id="mil_actor_main_quest_descr">
+		<text>Podle generála Voronina má takovou zbraò jenom Svoboda. Jak ji dostanu, to je moje vìc. Prı bych se mìl poptat stalkera Svobody jménem Šéfkuchaø. Generál øíkal, e rád chlastá. Asi bych se mìl pro sichr vybavit pár lahvema vodky.</text>
+	</string>
+	<string id="mil_blockpost_job_descr">
+		<text>Je nutné chránit Bariéru pøed útokem ze smìru od vypalovaèe mozku.</text>
+	</string>
+	<string id="mil_blockpost_job2_descr">
+		<text>Lukáš: "Pokud na to máš, mùeš jít k postavení u vıchodu z Rudıho lesa. Nejspíš se tamtudy brzy pokusej prorazit muáci nebo Monolit."</text>
+	</string>
+	<string id="mil_courier_doc_descr">
+		<text>1: Svoboda získala granátomety Bulldog 6. Dva. Jeden je v arzenálu, druhı nìkde ve vesnici.\n\n</text>
+	</string>
+	<string id="mil_courier_job_descr">
+		<text>Lukáš: "Je to smutnı, ale máme mezi sebou práskaèe. Jmenuje se Pavlík. Pouští informace ven a to musí skonèit. Sleduj ho na farmu a zjisti, komu donáší. Pøed chvílí odešel, take ho budeš muset dohonit. A nezapomeò, zabij ho, ale a kdy zjistíš, komu donáší. A toho druhıho budeš muset asi taky odstøelit."</text>
+	</string>
+	<string id="mil_crazy_flash_info">
+		<text>Dneska jsme vyrazili do vesnice na lov. Jako vdycky. \n\n Odkud ty bestie vylezly? Musely se nìjak proplíit kolem rudıho lesa. Všichni chlapi to schytali, já jsem poslední... zkusím se v noci vyplíit a zmizet... \n\n Nepamatuju si, jak jsem se dostal ven. Bylo to peklo. Hlava mi praská, vidím obrázky, slyším zvuky, nevím, odkud to pøichází. Zasraná radiace. Kromì toho je ten mizernej detektor kaput. Musím si chvilku odpoèinout.</text>
+	</string>
+	<string id="mil_dolg_kill_lukash_descr">
+		<text>Vstup do základny s èleny Povinnosti.\nZlikviduj tøi snajpery. \nZabij Lukáše.</text>
+	</string>
+	<string id="mil_dolg_kill_sniper_descr">
+		<text>Zabij odstøelovaèe na vìi. Dávej si bacha, a od nìj nechytíš kulku mezi oèi.</text>
+	</string>
+	<string id="mil_flash_bandit_descr">
+		<text>Sakra, ti debilové od Povinnosti nás vykopali z fakt dobrıho místa. Zakopali se poblí naší farmy. Nemìli jsme ani èas vytáhnout svı vìci schovanı na pùdì. Ale to ani tak moc nevadí, základna Svobody je kousek, take se tam dlouho nezdrej.</text>
+	</string>
+	<string id="mil_flash_max_descr">
+		<text>Dneska jsme sundali pár vojákù na cestì k Rudımu lesu - sebrali jsme jim pár Bulldogù 6. Jsou úasnı. Jednu si vzal Lukáš, druhou Mraèoun schoval ve vesnici, v jednom sklepì.</text>
+	</string>
+	<string id="mil_flash_ugrumy_descr">
+		<text>1. K Rudımu lesu mì snad poslali sami èerti. Sotva jsem to dal, bejt o trochu pomalejší byl by ze mì další exponát s rozpuštìnım mozkem.\n\n 2: Obklíèili mì ètyøi mizerové, nechal jsem se nachytat jako tøíletı dìcko, pøehlídl jsem jejich past. Zachránila mì jenom jejich ukecanost a nenaranost. Místo aby mì osypali olovem, skoèili po mnì a zaèali mì svlíkat, mùj oblek se jim zalíbil. To byla ale jejich poslední chyba, i kdy jeden z nich mì staèil provrtat... heh, zaèínám na to bejt starej...\n\n 3: Ne jsem dorazil, u Støelcùv posel nedejchal. Tøi upíøi staèí skoro na kadıho, ale ten chlap dostal ètyøi a vedly odtamtud další krvavı stopy. Našel jsem u nìj jenom kód ke dveøím (19840519), ale nemám tušení, ke kterım dveøím by to mohlo bıt.\n\n 4: Odchytli jsme pár vojákù míøících k Rudımu lesu. Nemìli ádné dokumenty ani písemnı rozkazy, ale byli solidnì vybavení. Myslím, e ten Bulldog 6 nechám ve sklepì, dokud ho nebudu potøebovat.</text>
+	</string>
+	<string id="mil_freedom_rg6_task_descr">
+		<text>Voronin: "Svoboda se nìjak dostala k pár vıbornım granátometùm Bulldog. Jestli se ti podaøí dostat se na jejich území a ukrást aspoò jeden, tak se ti dobøe odmìním. Jeliko nepatøíš k naší frakci, budeš moct se Svobodou snadno navázat kontakt a s trochou štìstí jim ten granátomet ukrást. Dám ti souøadnice základny Svobody. Tam musíš najít chlapa, kterımu øíkají Šéfkuchaø, ten by mìl vìdìt, kde ty granátomety jsou. Je to starı ochlasta, tak mu zkus podstrèit nìco k pití, vem si s sebou pár flašek vodky."</text>
+	</string>
+	<string id="mil_go_to_miser_descr">
+		<text>Hrm. Odmìnu dostanu na základnì Svobody od nìjakého Lakomce... Hezké jméno. Asi se doèkám plechovky lunchmeatu s prošlou záruèní dobou.</text>
+	</string>
+	<string id="mil_hunters_task_descr">
+		<text>Vyèistit upíry ve vesnici. Musím si dát bacha, jinak mi vysajou krev.</text>
+	</string>
+	<string id="mil_hunters_task_descr2">
+		<text>Vyèistit upíry ve vesnici. Musím si dát bacha, jinak mi vysajou krev.</text>
+	</string>
+	<string id="mil_lukash_job_descr">
+		<text>Lukáš se rozhodl provést protiútok na jednotku Povinnosti v chatì. Operaci povede Max, jeden z veteránù Svobody. Mám za úkol jim pomoct.</text>
+	</string>
+	<string id="mil_mad_flash_job_descr">
+		<text>Zajímalo by mì, co by mohl vìdìl ten magor v bainì. Budu na to muset pøijít. Hlavnì se musím vyhnout starım minám. Ale s trochou štìstí budou tak zarezlı, e je spustí i hozená matka.</text>
+	</string>

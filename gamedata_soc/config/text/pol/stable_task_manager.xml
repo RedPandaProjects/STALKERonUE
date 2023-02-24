@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="artefact">
+		<text>Zdob№dџ artefakt</text>
+	</string>
+	<string id="barmen_defend_camp_1">
+		<text>Obroс obуz na Wysypisku</text>
+	</string>
+	<string id="barmen_defend_camp_1_descr">
+		<text>Obroс obуz stalkerуw na Wysypisku przed atakiem bandytуw.</text>
+	</string>
+	<string id="barmen_defend_camp_1_text">
+		<text>Grupa stalkerуw przybкdzie do mnie z wizyt№ i bardzo mi zaleїy na tym, їeby dotarli tu bezpiecznie. Zatrzymaj№ siк niedaleko baru. Pewien skruszony przestкpca niemal dobrowolnie poinformowaі nas, їe wkrуtce zostan№ zaatakowani. Udaj siк wiкc w tamtym kierunku i obroс ich obуz przed atakiem.</text>
+	</string>
+	<string id="barmen_defend_camp_2">
+		<text>Pomуї stalkerom odeprzeж bandytуw w Agropromie</text>
+	</string>
+	<string id="barmen_defend_camp_2_descr">
+		<text>Pomуї stalkerom odeprzeж bandytуw w Agropromie.</text>
+	</string>
+	<string id="barmen_defend_camp_2_text">
+		<text>Sprawa wygl№da tak: niedawno grupa stalkerуw wybraіa siк do Agropromu. Kiedy ostatni raz siк kontaktowali, powiedzieli, їe w podziemiach jest coњ wartoњciowego, ale їe cisn№ ich bandyci. Trzymaj№ siк jakoњ, ale nie mog№ siк wydostaж. Pomoїesz im?</text>
+	</string>
+	<string id="barmen_eliminate_camp_1">
+		<text>Zabij bandytуw</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_descr">
+		<text>Zlikwiduj grupк bandytуw, ktуrzy zadomowili siк na Wysypisku. Akcja musi zostaж przeprowadzona szybko i skutecznie. </text>
+	</string>
+	<string id="barmen_eliminate_camp_1_text">
+		<text>Praca, tak? Niech zobaczк, co my tu mamy... Aha! Proszк: moїesz siк pozbyж grupy bandytуw z Wysypiska? "Powinnoњж", mimo tych ci№gіych gadek o prawie i porz№dku, jakoњ nie moїe siк do tego zabraж. To s№ wyj№tkowe gnoje, wiкc i tak dіugo nie poci№gn№. Ale ktoњ, kto dorwie ich pierwszy, zgarnie grub№ kasк... a gorzaік stawiam oczywiњcie ja.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2">
+		<text>Zabij najemnikуw i bandytуw z Rostoku.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_descr">
+		<text>Pozb№dџ siк najemnikуw i bandytуw, ktуrzy zagradzaj№ przejњcie przez Rostok.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_text">
+		<text>Niedaleko st№d, w Rostoku, jest banda najemnikуw. Skumplowali siк z bandytami i teraz planuj№ zablokowaж przejњcie przez fabrykк. Nie muszк chyba wyjaњniaж, їe to problem, ktуry trzeba natychmiast rozwi№zaж. Kolesie z "Powinnoњci" i kilku weteranуw juї siк tam wybraіo, їeby daж im nauczkк, ale od jakiegoњ czasu siк nie odzywaj№... Wiкc moїe... ten... wybierz siк tam i sprawdџ, co siк dzieje. Moїesz dobrze zarobiж.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3">
+		<text>Zabij bandytуw z gospodarstwa.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_descr">
+		<text>Prosta sprawa: pozb№dџ siк bandytуw z gospodarstwa.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_text">
+		<text>Niedaleko starych magazynуw leїy gospodarstwo. Kiedyњ byіo to idealne miejsce na spotkania, wymianк towarуw - no wiesz... tego typu rzeczy. Ale teraz zajкli je bandyci i nie wygl№da na to, їeby mieli siк stamt№d wynieњж. A mi to zupeіnie nie odpowiada. Potrzebujк tego gospodarstwa jak najszybciej. Nie obchodzi mnie, co siк stanie z obecnymi lokatorami. </text>
+	</string>
+	<string id="barmen_eliminate_camp_4">
+		<text>Zlikwiduj obуz bandytуw w Dziczy</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_descr">
+		<text>Zlikwiduj obуz bandytуw w Dziczy.</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_text">
+		<text>W Dziczy s№ bandyci. Nie moїemy pozwoliж tym wyrzutkom spoіeczeсstwa szerzyж zepsucie tuї obok baru. Trzeba zmieњж ich obуz z powierzchni ziemi.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5">
+		<text>Zniszcz legowisko zmutowanych psуw w Dziczy.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_descr">
+		<text>Zniszcz legowisko zmutowanych psуw w Dziczy.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_text">
+		<text>Kilku naszych wybraіo siк na wyprawк, wrуcili pojedynczo. Cali poszarpani, zakrwawieni, ze szklistymi oczami. Najwyraџniej natknкli siк na psy. Jest ich tam caіe stado. Znajdџ ich legowisko i wyrїnij co do jednego.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6">
+		<text>Zlikwiduj grupк bandytуw w Agropromie</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_descr">
+		<text>Zlikwiduj grupк bandytуw w Agropromie.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_text">
+		<text>Pamiкtam, jak w 1994 rekieterzy doczepili siк do mnie, powiedzieli, їebym wyskoczyі z kasy. Czіowieku, przeszedіem wtedy piekіo - miaіem restauracjк i w ogуle. Wtedy nie moїna im byіo nic zrobiж! A tu nagle dowiadujк siк, їe ten sam gang pracuje w Agropromie, zarabiaj№c sobie na artefaktach, ktуre tam znajduj№. Teraz jednak mogк coњ zrobiж... Wiem nawet dokіadnie, gdzie siк ukrywaj№. Wyњwiadcz mi przysіugк - ukarz ich.</text>
+	</string>
+	<string id="barmen_eliminate_camp_7">
+		<text>Zniszcz legowisko snorkуw w Dolinie Mroku</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_descr">
+		<text>Zniszcz legowisko snorkуw w Dolinie Mroku</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_text">
+		<text>Taa.. Wygl№da na to, їe ci, co mуwi№, їe Zona siк powiкksza, jednak maj№ racjк. W Dolinie Mroku pojawiіo siк kilka snorkуw, a wczeњniej nigdy ich tam nie widywano. No i niektуrzy zaczкli panikowaж. Kolesie z "Powinnoњci" obiecali zlikwidowaж snorki, ale jakoњ nie mog№ siк do tego zabraж. Zaіatwisz to?</text>
+	</string>
+	<string id="barmen_find_artefact_1">
+		<text>Znajdџ "kotlet"</text>
+	</string>
+	<string id="barmen_find_artefact_1_descr">
+		<text>Znajdџ "kotlet", ktуry leczy rany i choroby.</text>
+	</string>
+	<string id="barmen_find_artefact_1_text">
+		<text>Byli tu jacyњ duchowni - zostawili zamуwienie na "kotleta". No wiesz, interesuj№ siк tym lecz№cym artefaktem... Zasrani cudotwуrcy! Niewaїne... Zdobкdziesz go? Decyzja naleїy do ciebie.</text>
+	</string>
+	<string id="barmen_find_artefact_2">
+		<text>Znajdџ "krysztaіowy kolec" </text>
+	</string>
+	<string id="barmen_find_artefact_2_descr">
+		<text>Znajdџ "krysztaіowy kolec", ktуry chroni przed atakami psionicznymi.</text>
+	</string>
+	<string id="barmen_find_artefact_2_text">
+		<text>"Bolec"? Nie, to nie to... "Krysztaіowy palec "? Nie, to teї nie to... Kurde! "Krysztaіowy kolec"! Tak! Sprawa wygl№da tak: mam zlecenie na artefakt zwany "krysztaіowym kolcem". Sіyszaіeњ o nim? Podobno jak masz taki przy sobie, nikt nie bкdzie mуgі grzebaж w twoim mуzgu. Co ty na to?</text>
+	</string>
+	<string id="barmen_find_artefact_3">
+		<text>Znajdџ "gwiazdк wieczorn№" </text>
+	</string>
+	<string id="barmen_find_artefact_3_descr">
+		<text>Znajdџ "gwiazdк wieczorn№", їeby pomуc wojskowym instytucjom badawczym.</text>
+	</string>
+	<string id="barmen_find_artefact_3_text">
+		<text>Potrzebujк "gwiazdy wieczornej". Przykro mi to mуwiж, ale nie speіnia їyczeс - wiem to z autopsji - moїe natomiast przynieњж sporo kasy. Naukowcy duїo za to wybul№. Podobno robi№ z tego jakiњ wojskowy sprzкt... Czujesz siк na siіach?</text>
+	</string>
+	<string id="barmen_find_artefact_4">
+		<text>Znajdџ "bіysk"</text>
+	</string>
+	<string id="barmen_find_artefact_4_descr">
+		<text>Znajdџ "bіysk".</text>
+	</string>
+	<string id="barmen_find_artefact_4_text">
+		<text>Zlecenie jest proste, a zapіata dobra. Masz znaleџж artefakt "bіysk". Nawet nie pytaj, dla kogo i po co. Zrobisz to?</text>
+	</string>
+	<string id="barmen_find_artefact_5">
+		<text>Znajdџ "zіot№ rybkк"</text>
+	</string>
+	<string id="barmen_find_artefact_5_descr">
+		<text>Znajdџ "zіot№ rybkк".</text>
+	</string>
+	<string id="barmen_find_artefact_5_text">
+		<text>Naznaczony, znasz opowieњж o zіotej rybce? Tak, tak, wіaњnie tк. Jest rуwnieї sporo dowcipуw na ten temat. No, ale do rzeczy - jest taki stary czіowiek, ktуry caіy czas chce j№ zіapaж. Podsumowuj№c, potrzebujк jedynego w swoim rodzaju artefaktu, zwanego "zіot№ rybk№". To szanowany klient. Z zewn№trz. Pomoїesz?</text>
+	</string>
+	<string id="barmen_find_item_1">
+		<text>Znajdџ kombinezon psioniczny</text>
+	</string>
+	<string id="barmen_find_item_1_descr">
+		<text>Znajdџ kombinezon, ktуry skutecznie chroni przed emisjami psionicznymi. Szukaj w opuszczonych laboratoriach w Dolinie Mroku.</text>
+	</string>
+	<string id="barmen_find_item_1_text">
+		<text>W tych laboratoriach w Dolinie Mroku usiіowano znaleџж sposуb na ochronк ludzkiego mуzgu przed emisjami psionicznymi. Nie њpieszyli siк, to pewne... Tak czy inaczej - jedna z prуb udaіa siк i podobno istnieje kombinezon, po ktуrego wіoїeniu moїesz nawet daж buziaka Kontrolerowi. Fajna rzecz. Jeњli przyniesiesz mi to coњ, nigdy ci tego nie zapomnк.</text>
+	</string>
+	<string id="barmen_find_item_2">
+		<text>Znajdџ broс obcokrajowca.</text>
+	</string>
+	<string id="barmen_find_item_2_descr">
+		<text>Ciekawe zadanie. Sk№dњ znam to nazwisko... ale sk№d?</text>
+	</string>
+	<string id="barmen_find_item_2_text">
+		<text>Kiedyњ w tych stronach pojawiі siк pewien obcokrajowiec... Nazywaі siк chyba Gordon. Widaж byіo po nim, їe to doњwiadczony stalker, ale mуwiі, їe nigdy wczeњniej nie byі w Zonie. Niewaїne, nie o to chodzi. W koсcu znikn№і gdzieњ w Zonie. Miaі jedn№ ciekaw№ rzecz - "Black Kite'a". Gdybym tylko mуgі mu siк dokіadniej przyjrzeж...</text>
+	</string>
+	<string id="barmen_find_item_3">
+		<text>Znajdџ ulepszonego Wintara</text>
+	</string>
+	<string id="barmen_find_item_3_descr">
+		<text>Znajdџ ulepszonego Wintara. Wygl№da na to, їe powinieneњ szukaж w okolicy Czerwonego Lasu. </text>
+	</string>
+	<string id="barmen_find_item_3_text">
+		<text>Kr№їyіa taka dziwna opowieњж. Pojawiі siк jakiњ koleњ z kieszeniami wypchanymi fors№. Wynaj№і bandк ludzi, ale nie weteranуw, tylko takich њwieїszych. Kupiі tony sprzкtu... Miaіem takiego nowiutkiego Wintara - cudowna broс! I byіem na tyle gіupi, їe mu go sprzedaіem. Nie bкdк њciemniaж, zarobiіem na tym kupк kasy... Tyle їe caіa ekipa oberwaіa niedaleko Czerwonego Lasu. Cуї mogк powiedzieж, zginкli na darmo... Jaki z tego moraі? Drogi przez Zonк nie utorujesz sobie pieniкdzmi. Tak czy inaczej... Nie mogк przestaж myњleж o tym Wintarze - taka wspaniaіa pukawka gdzieњ tam rdzewieje! Znajdziesz j№ dla mnie? Dobrze zapіacк!</text>
+	</string>
+	<string id="barmen_kill_stalker_1">
+		<text>Zabij їoіnierza</text>
+	</string>
+	<string id="barmen_kill_stalker_1_descr">
+		<text>Jakiњ їoіnierz ma gryџж ziemiк. To їaden problem, ale... dziwne jest to, їe celem jest wojskowy. A klient jest naprawdк wkurzony. </text>
+	</string>
+	<string id="barmen_kill_stalker_1_text">
+		<text>Chcк, їebyњ wykoсczyі tego trepa... Nie pytaj mnie, kim jest - co mnie to obchodzi?! Po prostu to zrуb. To jak? Mogк na ciebie liczyж?</text>
+	</string>
+	<string id="barmen_kill_stalker_2">
+		<text>Zabij stalkera</text>
+	</string>
+	<string id="barmen_kill_stalker_2_descr">
+		<text>Wykoсcz jednego ze stalkerуw. Њmierж oszustowi - taka jest zemsta handlarza.</text>
+	</string>
+	<string id="barmen_kill_stalker_2_text">
+		<text>Wiesz, s№ tacy ludzie, o ktуrych nigdy nie powiesz zіego sіowa... Ufasz takiemu komuњ jak bratu, nie? Liczysz na niego... Ale nagle dowiadujesz siк, їe to najpodlejszy i najbardziej nikczemny sukinsyn... Sprawa wygl№da tak: ten problem musi zostaж rozwi№zany. Zrуb to, a ja zajmк siк reszt№. </text>
+	</string>
+	<string id="barmen_kill_stalker_3">
+		<text>Zabij stalkera z frakcji Monolit</text>
+	</string>
+	<string id="barmen_kill_stalker_3_descr">
+		<text>Znajdџ byіego przyjaciela handlarza i pomуї mu umrzeж.</text>
+	</string>
+	<string id="barmen_kill_stalker_3_text">
+		<text>Miaіem kiedyњ przyjaciela... ciкїko w to uwierzyж, nie? Hm. Przybyliњmy razem do Zony, kiedy jeszcze tego wszystkiego tu nie byіo. Czego myњmy nie robili, gdzie myњmy nie byli... No cуї, byliњmy mіodzi i nic nas nie obchodziіo... Ale jemu ci№gle byіo maіo. Chciaі siк wybraж do centrum Zony i namawiaі mnie na to, ale ja odmуwiіem - i sіusznie... Strasznie siк pokіуciliњmy i wyruszyі sam... A teraz podobno ktoњ go widziaі... trzyma z Monolitem. Naznaczony, oto, czego od ciebie chcк... Jako przyjaciel - znajdџ go i... nie sprawiaj mu cierpienia, i tak musi bardzo cierpieж... Byі dla mnie jak brat, rozumiesz?</text>
+	</string>
+	<string id="barmen_kill_stalker_4">
+		<text>Zabij stalkera zwanego Wampirem</text>
+	</string>
+	<string id="barmen_kill_stalker_4_descr">
+		<text>Znajdџ i zabij stalkera zwanego Wampirem.</text>
+	</string>
+	<string id="barmen_kill_stalker_4_text">
+		<text>Tego juї za wiele, mam doњж tego drania! Mуwiк o Wampirze - znasz go? Sukinsyn! Wysysa z ludzi szczкњcie zamiast krwi. Wszyscy co z nim id№, gin№ co do jednego, a on zawsze wraca caіy i zdrowy! Juї piкж razy tak siк dziaіo! To jakieњ chore, nie s№dzisz? Wspaniale byіoby mуc zіoїyж kwiaty na jego grobie... To jak, bierzesz zlecenie? </text>
+	</string>
+	<string id="barmen_kill_stalker_5">
+		<text>Zabij stalkera zwanego Wrуblem</text>
+	</string>
+	<string id="barmen_kill_stalker_5_descr">
+		<text>Znajdџ Wrуbla i pomњcij њmierж innego stalkera.</text>
+	</string>
+	<string id="barmen_kill_stalker_5_text">
+		<text>Cholerni muszkieterzy! Dupki, bawi№ siк w d'Artagnana! Jak gdyby omijanie anomalii i chowanie siк przed kulami im nie starczaіo - teraz siк wziкli za pojedynki! Byіa jakaњ kіуtnia, nikt teraz nawet nie pamiкta, o co poszіo. A te dwa tкpaki postanowiіy przelaж trochк krwi. No i proszк - jeden nie їyje. I to dobry stalker. A drugi, Wrуbel, wyparowaі, bo jako pierwszy wsadziіbym mu kulkк w іeb. Znajdџ go. Jestem pewien, їe ci№gle przebywa w Zonie. Zrobisz to?</text>
+	</string>
+	<string id="barmen_monster_part_1">
+		<text>Zdob№dџ oko miкsacza</text>
+	</string>
+	<string id="barmen_monster_part_1_descr">
+		<text>Zdob№dџ oko miкsacza</text>
+	</string>
+	<string id="barmen_monster_part_1_text">
+		<text>Niedіugo mamy przyjкcie - bкdzie wykwintny obiad, a pewni miejscowi smakosze w wyj№tkowo dobrych nastrojach (nie musimy wskazywaж palcem) niew№tpliwie bкd№ chcieli sprуbowaж mojej specjalnoњci,  oczu "miкsacza" w sosie z wieprzowiny. To znaczy, we wіasnym sosie z majonezem. Krуtko mуwi№c, potrzebujк oka tego stwora, i to szybko.</text>
+	</string>
+	<string id="barmen_monster_part_2">
+		<text>Przynieњ kopyto dzika</text>
+	</string>
+	<string id="barmen_monster_part_2_descr">
+		<text>Przynieњ kopyto dzika.</text>
+	</string>
+	<string id="barmen_monster_part_2_text">
+		<text>Wiesz, їe preparujemy rogi i kopyta? S№ rzadkoњci№. Z kopyt zmutowanych zwierz№t robi siк wspaniaі№ biїuteriк - znam takiego jednego jubilera, jest zainteresowany. Wiкc њmiaіo, zdob№dџ kopyto dzika, a w twojej kieszeni pojawi№ siк pieni№їki.</text>
+	</string>
+	<string id="dolg_defend_lager_1">
+		<text>Obroс posterunek "Powinnoњci"</text>
+	</string>
+	<string id="dolg_defend_lager_1_descr">
+		<text>Obroс posterunek "Powinnoњci"</text>
+	</string>
+	<string id="dolg_defend_lager_1_text">
+		<text>Obroс posterunek "Powinnoњci"</text>
+	</string>
+	<string id="dolg_eliminate_lager_1">
+		<text>Zlikwiduj zombi</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_descr">
+		<text>Zlikwiduj zombi nad Jantarem.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_text">
+		<text>Niedawno wysіaliњmy grupк ludzi nad Jantar. Niestety, їaden z nich nie wrуciі. Otrzymaіem informacje, їe niedaleko laboratorium nad Jantarem widziano kilku uzombifikowanych stalkerуw z tej grupy . Nie moїemy pozwoliж, їeby pozostali w tym okropnym stanie. Twoje zadanie: znajdџ i zniszcz to, czym siк stali.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10">
+		<text>Likwidacja celu</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_descr">
+		<text>Pozb№dџ siк stada psуw na Wysypisku.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_text">
+		<text>Oczywiњcie nie zlecamy misji obcym stalkerom. Ale to rutynowe zadanie, wiкc nie ma co zawracaж gіowy naszym. Oto jak siк przedstawia sytuacja: na Wysypisku trzeba zniszczyж niewielkie legowisko stworуw. Jedna z naszych grup juї siк tym zajmuje, wiкc w razie problemуw, bкdziesz siк miaі gdzie wycofaж. Nie przewidujк jednak їadnych problemуw, bo bestii nie ma za wiele - najwyїej dziesiкж. To prawdopodobnie psy: podobno w tej okolicy dostrzeїono caіkiem spore stado. Moїesz rozpocz№ж misjк.</text>
+	</string>
+	<string id="dolg_eliminate_lager_11">
+		<text>Zniszcz obуz stalkerуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_descr">
+		<text>Zniszcz obуz stalkerуw w Agropromie.</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_text">
+		<text>Jest pewna delikatna sprawa, ale nasi ludzie zdecydowanie nie powinni siк w to mieszaж. Obecnoњж neutralnych w fabryce w Agropromie nie jest poї№dana przez naszych sprzymierzeсcуw. Oto zadanie: oczyњж okolicк ze stalkerуw bez wzglкdu na to, kim s№ albo do jakiej grupy naleї№. Jasne?</text>
+	</string>
+	<string id="dolg_eliminate_lager_12">
+		<text>Zlikwiduj oddziaі najemnikуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_descr">
+		<text>Zlikwiduj oddziaі najemnikуw w Dziczy.</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_text">
+		<text>Oto twoje zadanie: zlikwiduj oddziaі snajperуw z grupy najemnikуw. Sytuacja wygl№da nastкpuj№co: zajкli najwyїsze piкtro na placu budowy. Prawdopodobna liczba: nie mniej niї dwуch, nie wiкcej niї piкciu. Wedіug wszelkich przesіanek s№ uzbrojeni w karabiny snajperskie. Rada: nie pokazuj siк tam za dnia.</text>
+	</string>
+	<string id="dolg_eliminate_lager_13">
+		<text>Ochroс bazк bandytуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_descr">
+		<text>Ochroс gіуwn№ bazк bandytуw w Dolinie Mroku</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_text">
+		<text>Koniecznie trzeba napaњж na gіуwn№ bazк bandytуw i zlikwidowaж jak najwiкcej wrogуw. Baza znajduje siк w Dolinie Mroku, przy niedokoсczonym centrum naukowym. Bojownikуw wroga jest okoіo trzydziestu - uzbrojeni w lekk№ broс automatyczn№, pistolety, strzelby. Wszystko jasne?</text>
+	</string>
+	<string id="dolg_eliminate_lager_14">
+		<text>Zlikwiduj snorki.</text>
+	</string>
+	<string id="dolg_eliminate_lager_14_descr">
+		<text>Zlikwiduj snorki w tunelach nad Jantarem.</text>
+	</string>
+	<string id="dolg_eliminate_lager_14_text">
+		<text>Tym razem chodzi o czystkк. Tunele nad Jantarem wprost uginaj№ siк pod ciкїarem snorkуw: jest ich tam okoіo dziesiкciu. Cуї, nie moїna juї tam przeczekaж burzy jak kiedyњ...</text>
+	</string>
+	<string id="dolg_eliminate_lager_2">
+		<text>Zlikwiduj stado miкsaczy</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_descr">
+		<text>Zlikwiduj stado miкsaczy w Dziczy.</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_text">
+		<text>Namierzyliњmy przemieszczaj№ce siк caіkiem duїe stado stworуw... To dosyж obrzydliwe њwiniopodobne mutanty, ktуre wszyscy nazywaj№ miкsaczami. S№ teraz w okolicy Wysypiska. Wszyscy nasi ludzie maj№ robotк, ale te stwory trzeba zlikwidowaж. To wyj№tkowe zadanie - zapіacimy.</text>
+	</string>
+	<string id="dolg_eliminate_lager_3">
+		<text>Pozb№dџ siк nibypsуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_descr">
+		<text>Zniszcz legowisko nibypsуw niedaleko magazynуw wojskowych.</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_text">
+		<text>Sprzymierzeсcy powiadomili nas o odkryciu legowiska potworуw na terenie magazynуw wojskowych. S№dzimy, їe to stado nibypsуw. Nie powinniњmy siк teraz pokazywaж na tamtym terenie, wiкc to idealne zadanie dla kogoњ neutralnego. Wchodzisz w to?</text>
+	</string>
+	<string id="dolg_eliminate_lager_4">
+		<text>Zniszcz posterunek najemnikуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_descr">
+		<text>Zniszcz posterunek najemnikуw niedaleko magazynуw wojskowych.</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_text">
+		<text>Ostatnio daіo siк zauwaїyж wzrost aktywnoњci grup najemnikуw - odnotowano kilka atakуw na naukowcуw i badaczy pracuj№cych w Zonie. Nie moїemy tego pozostawiж bez odpowiedzi. Trzeba przeprowadziж niewielk№ akcjк odwetow№. Cel: posterunek najemnikуw niedaleko magazynуw wojskowych za opuszczon№ wiosk№.</text>
+	</string>
+	<string id="dolg_eliminate_lager_5">
+		<text>Zlikwiduj najemnikуw w Dziczy</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_descr">
+		<text>Zlikwiduj najemnikуw w Dziczy.</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_text">
+		<text>Grupa naukowcуw planuje zbadaж Dzicz. Ale ostatnio nie jest tam zbyt bezpiecznie, pojawili siк najemnicy... Dopilnuj, їeby stamt№d zniknкli.</text>
+	</string>
+	<string id="dolg_eliminate_lager_6">
+		<text>Zabij bandytуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_descr">
+		<text>Zabij bandytуw, ktуrzy dostali siк do Dziczy.</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_text">
+		<text>Ujmк to wprost - bandyci ominкli nasze posterunki przy barze i teraz s№ w Dziczy. Trzeba ich zlikwidowaж.</text>
+	</string>
+	<string id="dolg_eliminate_lager_7">
+		<text>Zniszcz Kontrolera</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_descr">
+		<text>Zniszcz Kontrolera nad Jantarem.</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_text">
+		<text>Do tego zadania potrzebne s№ specjalne umiejкtnoњci. Wiemy od naukowcуw, їe zauwaїyli Kontrolera nad Jantarem, przy wejњciu do podziemnego laboratorium (w centralnym budynku). Kontrolerzy s№ bardzo niebezpieczni, ale jestem pewny, їe sobie poradzisz.</text>
+	</string>
+	<string id="dolg_eliminate_lager_8">
+		<text>Zlikwiduj czіonkуw "Wolnoњci"</text>
+	</string>
+	<string id="dolg_eliminate_lager_8_descr">
+		<text>Zlikwiduj czіonkуw "Wolnoњci" przebywaj№cych w opuszczonej wiosce niedaleko magazynуw wojskowych.</text>
+	</string>
+	<string id="dolg_eliminate_lager_8_text">
+		<text>Patrol "Wolnoњci" przebywaj№cy w opuszczonej wiosce, niedaleko magazynуw wojskowych ostatnio wzmуgі dziaіania. Pozb№dџ siк ich stamt№d. Za wykonanie tego zadania bкdzie na ciebie czekaж specjalna nagroda.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9">
+		<text>Zlikwiduj bandytуw</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_descr">
+		<text>Zlikwiduj bandytуw na Wysypisku.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_text">
+		<text>Obecna sytuacja nie jest za ciekawa - bandyci gromadz№ siк w okolicy Wysypiska i Doliny Mroku. Najlepszym wyjњciem jest przeprowadzenie dwуch atakуw wyprzedzaj№cych w tym samym czasie! Nasi bojownicy zajm№ siк dolin№, tobie przypada Wysypisko.</text>
+	</string>
+	<string id="dolg_find_item_1">
+		<text>Znajdџ ulepszony karabin</text>
+	</string>
+	<string id="dolg_find_item_1_descr">
+		<text>Znajdџ egzemplarz ulepszonego TRs 301 niedaleko magazynуw wojskowych.</text>
+	</string>
+	<string id="dolg_find_item_1_text">
+		<text>Ktoњ pomaga najemnikom. Niedawno dostali karabiny maszynowe ulepszone tak, їe moїna z nich strzelaж jak ze snajperek. Rozumiesz, їe to niebezpieczna zabawka? Chciaіbym mieж tak№ broс. Na pewno siк stosownie odwdziкczк.</text>
+	</string>
+	<string id="dolg_kill_stalker_1">
+		<text>Zlikwiduj bandytк</text>
+	</string>
+	<string id="dolg_kill_stalker_1_descr">
+		<text>Zlikwiduj bandytк Pogrzebacza.</text>
+	</string>
+	<string id="dolg_kill_stalker_1_text">
+		<text>Ksywka goњcia to Pogrzebacz. Jest jednym z najokrutniejszych przywуdcуw bandytуw, kanali№ i gwaіcicielem... Niew№tpliwie ma coњ z gіow№ - podobno zіapaі jak№њ rzadk№ chorobк w Zonie. Teraz czкsto traci przytomnoњж, a kiedy dochodzi do siebie, nie pamiкta, kim jest i gdzie siк znajduje. Mimo to zawsze jest uzbrojony po zкby i bardzo agresywny. Prawdopodobne miejsce pobytu: Dolina Mroku. Gotуw do rozpoczкcia misji?</text>
+	</string>
+	<string id="drunk_dolg_find_item">
+		<text>Broс czіonka "Powinnoњci"</text>
+	</string>
+	<string id="drunk_dolg_find_item_descr">
+		<text>Czіonek "Powinnoњci" prosi, їebyњ znalazі broс, ktуr№ zgubiі gdzieњ w Dolinie Mroku w trakcie wyprawy zwiadowczej.</text>
+	</string>
+	<string id="drunk_dolg_find_item_text">
+		<text>Niepotrzebnie tak panikowaіem. Zona na rуїne sposoby miesza mi w gіowie. S№dziіem, їe mam nerwy ze stali, їe niczego siк nie bojк - a tu proszк. To wycie rozbrzmiewaj№ce w uszach. Wszystko byіo jak zwykle. Szliњmy na ekspedycjк zwiadowcz№ do Doliny Mroku, zeszliњmy z Kriwym do okopуw, їeby kryж resztк oddziaіu, a tu nagle usіyszaіem to wycie i strach mnie chwyciі za gardіo. Cholera, nawet nie pamiкtam, jak dotarіem na miejsce. Kiedy wrуciіem do bazy, Woronin o maіo co mnie nie zastrzeliі na miejscu - przecieї dopiero co daі mi ulepszon№ giwerк, jak to mуwi№: "za zasіugi"... A tu nagle... spanikowaіem i zwiaіem tak szybko, їe przez myњl mi nie przeszіo, їeby j№ zabraж. Odnajdziesz j№ dla mnie? Bez porz№dnej broni nie mam dok№d pуjњж. </text>
+	</string>
+	<string id="ecolog_eliminate_lager_1">
+		<text>Zniszcz legowisko snorkуw</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_descr">
+		<text>Zniszcz legowisko snorkуw nad Jantarem.</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_text">
+		<text>Otrzymasz niewielk№ iloњж pieniкdzy, jeњli mieszkaj№ce na bagnach snorki przestan№ naprzykrzaж siк mnie i moim kolegom. Czasem, gdy przeprowadzamy eksperymenty, kompletnie nie moїemy siк skupiж.</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2">
+		<text>Zniszcz legowisko dzikich psуw</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_descr">
+		<text>Zniszcz legowisko dzikich psуw w Dziczy</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_text">
+		<text>W Dziczy znajduje siк legowisko zmutowanych psуw. Chcк, їebyњ tam wyruszyі i je zniszczyі. Te mutanty stanowi№ wyj№tkowe zagroїenie dla naszych ekspedycji. Wiem, їe zoologowie tego nie pochwal№, ale to przecieї nie zoo. Takie stwory roznosz№ wњciekliznк, zarazк i Bуg wie, co jeszcze.</text>
+	</string>
+	<string id="ecolog_find_artefact_1">
+		<text>Znajdџ "kulк ognist№"</text>
+	</string>
+	<string id="ecolog_find_artefact_1_descr">
+		<text>Dostarcz "kulк ognist№" naukowcom do badaс.</text>
+	</string>
+	<string id="ecolog_find_artefact_1_text">
+		<text>Udaіo nam siк stworzyж artefakt w warunkach laboratoryjnych! To przeіom! Caіy њwiat usіyszy o naszym sukcesie - Nobel na wyci№gniкcie rкki! To wіaњnie ten wyj№tkowy artefakt: "bіona". Jego gіуwn№ zalet№ jest to, їe chroni przed oparzeniami chemicznymi. Chcesz, їebym ci go daі w imieniu naukowcуw? Mam jednak proњbк - w zamian potrzebujк "kuli ognistej", sіyszaіeњ o takim artefakcie? Trzeba go dokіadnie zbadaж ze wzglкdu na wyj№tkowe wіaњciwoњci termiczne jego powierzchni.</text>
+	</string>
+	<string id="ecolog_find_artefact_2">
+		<text>Znajdџ "grawi"</text>
+	</string>
+	<string id="ecolog_find_artefact_2_descr">
+		<text>Przynieњ naukowcom "grawi".</text>
+	</string>
+	<string id="ecolog_find_artefact_2_text">
+		<text>Jesteњmy juї blisko zrozumienia istoty grawitacji. Juї wkrуtce bкdziemy w stanie stworzyж now№ generacjк silnikуw na bazie antygrawitacji. Bardzo moїliwe, їe dziкki temu droga do gwiazd stanie przed nami otworem. Potrzebujemy jednak "grawi", i to szybko.</text>
+	</string>
+	<string id="ecolog_find_artefact_3">
+		<text>Znajdџ "meduzк"</text>
+	</string>
+	<string id="ecolog_find_artefact_3_descr">
+		<text>Naukowcy potrzebuj№ "meduzy" do przeprowadzenia badaс czasoprzestrzeni.</text>
+	</string>
+	<string id="ecolog_find_artefact_3_text">
+		<text>Nasza ekipa badawcza jest na granicy odkrycia tajemnicy czasoprzestrzeni. Moїliwoњж teleportacji nie jest juї mrzonk№! Wir to anomalia, ktуra њciska przestrzeс, zamiast oddziaіywaж na obiekty siі№ grawitacji, w co wierz№ niektуrzy z moich zramolaіych kolegуw naukowcуw, ktуrzy siedz№ w ciepіym oњrodku badawczym, przeїuwaj№c kredк. Zaparuj№ im okulary, jak siк dowiedz№, do czego zdolna jest nauka, jeњli pracujesz w terenie! Proszк, zdob№dџ dla mnie "meduzк".</text>
+	</string>
+	<string id="ecolog_find_artefact_4">
+		<text>Znajdџ "blask ksiкїyca"</text>
+	</string>
+	<string id="ecolog_find_artefact_4_descr">
+		<text>Znajdџ dla naukowcуw znad Jantaru "blask ksiкїyca". Wspaniaіy artefakt...</text>
+	</string>
+	<string id="ecolog_find_artefact_4_text">
+		<text>Rozpaczliwie potrzebujemy nowych materiaіуw, їeby kontynuowaж badania z zakresu energetyki. Widzisz, nauczyliњmy siк wytwarzaж energiк z pomoc№ artefaktуw. Normalnie nie moїemy liczyж na zbyt wysok№ wydajnoњж, ale dziкki "blaskowi ksiкїyca" osi№gamy o wiele lepsze wyniki. Przynieњ nam prуbkк takiego artefaktu do eksperymentуw.</text>
+	</string>
+	<string id="ecolog_find_artefact_5">
+		<text>Znajdџ "jeїowca"</text>
+	</string>
+	<string id="ecolog_find_artefact_5_descr">
+		<text>Naukowcy potrzebuj№ "jeїowca", їeby ulepszyж swoje kombinezony.</text>
+	</string>
+	<string id="ecolog_find_artefact_5_text">
+		<text>Zdajesz sobie chyba sprawк, їe nasze kombinezony zapewniaj№ najlepsz№ ochronк przed promieniowaniem. Ich sekret tkwi w tym, їe nas№czamy je pіynem stworzonym z dosyж rzadkiego artefaktu. Teraz potrzebujemy kolejnego, їeby wyprodukowaж now№ partiк kombinezonуw. Wy mуwicie na niego "jeїowiec".</text>
+	</string>
+	<string id="ecolog_find_item_1">
+		<text>Przynieњ unikatowy kombinezon</text>
+	</string>
+	<string id="ecolog_find_item_1_descr">
+		<text>Przynieњ unikatowy kombinezon z podziemnego laboratorium X16.</text>
+	</string>
+	<string id="ecolog_find_item_1_text">
+		<text>Mamy do ciebie sprawк. Niedawno wynajкliњmy stalkera, їeby dostaі siк do laboratorium. Zauwaїyіem, їe ma niezwykіy kombinezon, ktуry wydziela odczuwalne ciepіo. Stalker powiedziaі, їe kombinezon leczy rany. A teraz siк okazuje, їe stalker nie wrуciі z laboratorium. O nie! Nawet tak nie myњl - nie mieliњmy z tym nic wspуlnego! Jego kombinezon prawdopodobnie ci№gle tam jest. Byіbym przeszczкњliwy, gdybym mуgі go zbadaж. </text>
+	</string>
+	<string id="ecolog_monster_part_1">
+		<text>Przynieњ czкњж ciaіa snorka</text>
+	</string>
+	<string id="ecolog_monster_part_1_descr">
+		<text>W tych okolicach znalezienie czкњci ciaіa snorka to їaden problem.</text>
+	</string>
+	<string id="ecolog_monster_part_1_text">
+		<text>Poznaliњmy siк z Siemienowem jeszcze na uniwersytecie, gdzie miaіem wykіady z genetyki - byі moim studentem. W ten sposуb zostaіem jego naukowym zwierzchnikiem. Wtedy jeszcze odsіanianie tajemnicy modyfikacji genomu znajdowaіo siк w powijakach. O czym to ja mуwiіem? Ach, tak. Do eksperymentуw bкdziemy potrzebowaж њwieїych komуrek tkanki miкњniowej snorka. Їeby zdobyж ten materiaі genetyczny, trzeba bкdzie przetrz№sn№ж mokradіa. Istnieje hipoteza, wedіug ktуrej snorki jako gatunek stanowi№ nastкpne stadium ewolucji czіowieka. Їeby siк co do tego upewniж, potrzebujemy DNA do badaс!</text>
+	</string>
+	<string id="ecolog_monster_part_2">
+		<text>Przynieњ oko miкsacza</text>
+	</string>
+	<string id="ecolog_monster_part_2_descr">
+		<text>Chyba lepiej, їebym siк nie zbliїaі do tych jajogіowych - tak na wszelki wypadek! W porz№dku, zdobкdк dla nich oko miкsacza, a potem mog№ z tymi swoimi ochotnikami robiж, co im siк podoba.</text>
+	</string>
+	<string id="ecolog_monster_part_2_text">
+		<text>Dobre wieњci, mіody czіowieku: mamy dla ciebie bardzo ciekawe zadanie! S№dzк, їe jako istota myњl№ca z pewnym doњwiadczeniem bкdziesz w stanie doceniж teorie moich kolegуw. Nasze badania wykazaіy, їe stworzenia zwane miкsaczami s№ wyposaїone w... nad№їasz?... w receptory wкchowe! Dziкki temu mog№ nie tylko widzieж, ale rуwnieї w№chaж oczami! Przygotowujemy siк do wszczepienia tych wspaniaіych oczu... jednemu z naszych asystentуw-ochotnikуw. S№dzк, їe zapocz№tkujemy nowy trend! A tak przy okazji - chciaіbyњ otrzymaж ten niezwykіy narz№d?</text>
+	</string>
+	<string id="ecolog_monster_part_3">
+		<text>Przynieњ ogon nibypsa</text>
+	</string>
+	<string id="ecolog_monster_part_3_descr">
+		<text>Tylko spуjrz na tк Naukк! Prуbuj№ znaleџж u ludzi drugi mуzg? Biedne pieski - teraz jeden z nich bкdzie sobie musiaі radziж bez ogona... </text>
+	</string>
+	<string id="ecolog_monster_part_3_text">
+		<text>Witaj, chіopcze! Chciaіbyњ nam jeszcze raz pomуc? Mam nadziejк, їe wiesz, iї psy naleї№ do krкgowcуw... co znaczy, їe ich krкgosіup zaczyna siк od gіowy, a koсczy na ogonie. I tu tkwi haczyk! Jeden z moich mіodych kolegуw udowodniі teoretycznie, їe krкgosіup nibypsуw - gdyї tak nazwaliњcie te zwierzкta - zaczyna siк od ogona, nie od gіowy! Tylko siк zastanуw - to zupeіnie podwaїa wszelkie nasze zaіoїenia dotycz№ce tej dziedziny wiedzy. Powstaіy juї nawet odwaїne teorie, ktуre zakіadaj№, їe istoty ludzkie wokуі koњci krzyїowej maj№... no, ale na ten temat s№ jeszcze prowadzone dyskusje. Krуtko mуwi№c, potrzebujemy gіowy nibypsa, ktуr№ przez wіasn№ niewiedzк uwaїaliњmy za jego ogon. </text>
+	</string>
+	<string id="ecolog_monster_part_4">
+		<text>Przynieњ nogк dzika</text>
+	</string>
+	<string id="ecolog_monster_part_4_descr">
+		<text>Poszukiwacze dreszczyka emocji... W porz№dku, zdobкdк dla nich trochк szynki.</text>
+	</string>
+	<string id="ecolog_monster_part_4_text">
+		<text>Witaj, hm... podrуїniku! Tak siк cieszк, їe wpadіeњ - potrzebujemy kogoњ, kto weџmie udziaі w bardzo waїnym eksperymencie. Mуj kolega, Brenter, chce sporz№dziж posiіek na bazie miejscowej fauny, їeby zbadaж w praktyce wpіyw zmutowanego biaіka na organizm ludzki. Na pocz№tek postanowiі wyprуbowaж dziki. Potrzebujemy szynki - nogi dzika, jasne? A jeњli siк podejmiesz tego zadania, wybierz, proszк, najzdrowszy okaz.</text>
+	</string>
+	<string id="ecolog_monster_part_5">
+		<text>Przynieњ macki pijawki</text>
+	</string>
+	<string id="ecolog_monster_part_5_descr">
+		<text>Nie obchodzi mnie, co chc№ zrobiж ze szczкk№ pijawki. Obchodzi mnie za to, ile dostanк za ten rarytas.</text>
+	</string>
+	<string id="ecolog_monster_part_5_text">
+		<text>Cieszк siк, їe ciк widzк, stalkerze! Hm… Miaіeњ juї do czynienia z pijawkami, prawda? Jeњli nie, chcielibyњmy, їeby to nast№piіo. Przynieњ nam doln№ szczкkк przedstawiciela tego gatunku z caіym - jak by to uj№ж - serwisem obiadowym. Niestety, nie mogк zdradziж ci szczegуіуw dotycz№cych eksperymentu. Poza tym chyba i tak џle by to wpіynкіo na twoj№ psychikк. Bкdziemy czekaж.</text>
+	</string>
+	<string id="eliminate_lager">
+		<text>Likwidacja grupy</text>
+	</string>
+	<string id="find_item">
+		<text>Znajdџ przedmiot</text>
+	</string>
+	<string id="freedom_defend_lager_1">
+		<text>Ochroс stalkerуw w Agropromie</text>
+	</string>
+	<string id="freedom_defend_lager_1_descr">
+		<text>Odeprzyj bandytуw atakuj№cych obуz stalkerуw w Agropromie.</text>
+	</string>
+	<string id="freedom_defend_lager_1_text">
+		<text>Pewna grupa stalkerуw mieszka w Agropromie. Normalni goњcie - rozumiej№, їe Zona to miejsce peіne wolnoњci, їe prawo tu nie obowi№zuje i їe trzeba postкpowaж zgodnie z wіasnym sumieniem. A teraz zaczкli rozwaїaж przyі№czenie siк do nas. Pomoїesz im odeprzeж bandytуw? Przeњlemy ci amunicjк.</text>
+	</string>
+	<string id="freedom_defend_lager_2">
+		<text>Ochroс granicк</text>
+	</string>
+	<string id="freedom_defend_lager_2_descr">
+		<text>Ochroс przed potworami granicк niedaleko magazynуw wojskowych.</text>
+	</string>
+	<string id="freedom_defend_lager_2_text">
+		<text>Znowu od strony Zwкglacza zbliїaj№ siк potwory. Pomуї ludziom na granicy je powstrzymaж. Gwarantujк, їe dostaniesz nagrodк.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1">
+		<text>Zniszcz obуz wojskowy</text>
+	</string>
+	<string id="freedom_eliminate_camp_1_descr">
+		<text>Zniszcz obуz wojskowy przy Instytucie Badawczym Agroprom.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1_text">
+		<text>Wojsko przygotowuje stopniowe przejкcie Zony. Musimy ich spowolniж, w przeciwnym wypadku Zona zmieni siк w jedno wielkie zoo. Jeden z ich obozуw znajduje siк tuї przy Agropromie. Nawet jeњli nie zniszczysz go doszczкtnie, i tak opуџnisz przejкcie Zony przez armiк. </text>
+	</string>
+	<string id="freedom_eliminate_camp_2">
+		<text>Zniszcz obуz najemnikуw</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_descr">
+		<text>Zniszcz obуz najemnikуw przy magazynach.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_text">
+		<text>Sprawa wygl№da tak: trzeba zniszczyж obуz najemnikуw. Moglibyњmy daж im spokуj, w koсcu dobrzy z nich strzelcy... Ale naprawdк sami siк prosz№ o kіopoty - wkradaj№ siк na nasze terytorium, prуbuj№ przekupywaж moich ludzi. Juї czas daж im nauczkк. Zrobisz to?</text>
+	</string>
+	<string id="freedom_eliminate_camp_3">
+		<text>Zniszcz oddziaі "Powinnoњci"</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_descr">
+		<text>Zniszcz czyњcicieli "Powinnoњci" w Rostoku.</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_text">
+		<text>A moїe by siк tak wybraж na polowanie? Oddziaі czyњcicieli "Powinnoњci" pojawiі siк w Rostoku. To њwietna okazja, їeby wzi№ж ich z zaskoczenia. "Powinnoњж" ci№gle wysyіa ludzi na polowania na potwory, ale nie wahaj№ siк zabiж nikogo, kto choж trochк im siк nie podoba. Trzeba zlikwidowaж ten oddziaі, zanim "Powinnoњж" przybкdzie do Rostoku. Nie powinno byж ich zbyt wielu: trzech lub czterech weteranуw i kilku kotуw.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4">
+		<text>Zniszcz placуwkк "Powinnoњci"</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_descr">
+		<text>Najszybciej jak to moїliwe zniszcz placуwkк "Powinnoњci" na Wysypisku.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_text">
+		<text>Mam niezmiernie pilne zlecenie. Trzeba usun№ж jednostkк "Powinnoњci" z drogi z Wysypiska do baru... Zaczкli siк tam ukrywaж i okradaж tych, ktуrzy tamtкdy przejeїdїaj№. Czekamy na bardzo waїn№ przesyіkк, ale w takiej sytuacji musimy braж pod uwagк, їe "Powinnoњж" juї o niej wie i їe bкdzie chciaіa napaњж na kuriera. Musimy siк pozbyж tej przeszkody - nawet jeњli tylko na jakiњ czas. Okej?</text>
+	</string>
+	<string id="freedom_eliminate_camp_5">
+		<text>Oczyњж wioskк.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_descr">
+		<text>Oczyњж wioskк z pijawek i - jeњli to moїliwe - zlikwiduj Kontrolera. </text>
+	</string>
+	<string id="freedom_eliminate_camp_5_text">
+		<text>Czіowieku! Spуjrz na te cholerne pijawki, od ktуrych aї siк roi w wiosce! Nikt poza zupeіnymi idiotami nie podchodzi bliїej niї na sto metrуw. A niektуrzy mуwi№, їe ich oczom ukazuj№ siк rуїne rzeczy... jeszcze tylko Kontrolera nam tam brakuje! Najwyїszy czas to zakoсczyж. Nie zmuszam ciк - prawdк mуwi№c, sam bym tam nie poszedі. Ale jeњli siк nie boisz, moja wdziкcznoњж nie bкdzie znaіa granic. </text>
+	</string>
+	<string id="freedom_eliminate_camp_6">
+		<text>Zlikwiduj stado dzikуw i miкsaczy.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_descr">
+		<text>Zlikwiduj stado dzikуw i miкsaczy w pobliїu magazynуw wojskowych.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_text">
+		<text>Nasz snajper jest przy wejњciu do bazy. Siedzi w nocy na wieїy... jest cicho, ciemno... a tu nagle sіychaж wybuch, dzikie piski, bіysk! Co, do... ? Okazuje siк, їe dziki i miкsacze przyzwyczaiіy siк do wycieczek w okolice pola minowego. Czort jeden wie, po co tam іaї№, ale przynajmniej raz na tydzieс jedna z tych bestii zostaje rozerwana przez minк. Zadanie jest proste - wybij te tкpe stwory. Zrobisz to?</text>
+	</string>
+	<string id="freedom_eliminate_camp_7">
+		<text>Zniszcz stado gryzoni</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_descr">
+		<text>Zniszcz stado gryzoni w Dziczy</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_text">
+		<text>W pobliїu naszej bazy nie ma gryzoni, a przecieї one mog№ dotrzeж wszкdzie! Jednak caіkiem niedawno byіo tu ich tyle, їe byњ nie uwierzyі. Dwa miesi№ce siк z nimi uїeraliњmy... he, he, he. Wykombinowaliњmy, sk№d przylazіy do nas do bazy. Z Dziczy, kapujesz? Boimy siк, їe te skacz№ce szczury siк rozmnoї№ i wrуc№. Potrzebujemy kogoњ, kto siк tym dla nas zajmie. Zrobisz to?</text>
+	</string>
+	<string id="freedom_find_item_1">
+		<text>Ukradnij karabin snajperski</text>
+	</string>
+	<string id="freedom_find_item_1_descr">
+		<text>Ukradnij z magazynu "Powinnoњci" ulepszony SWD-M 2.</text>
+	</string>
+	<string id="freedom_find_item_1_text">
+		<text>Mam wyj№tkowe zlecenie... i caіkiem ciкїkie. Musisz odzyskaж ulepszonego Dragunowa z magazynu "Powinnoњci". Karabin ma nawet swoj№ nazwк, ale to nieistotne. Najwaїniejsze, їe dziкki niesamowitemu celownikowi i redukcji siіy odrzutu moїesz z odlegіoњci 400 metrуw trafiж wiewiуrkк w oko. Ufam, їe siк tym zajmiesz!</text>
+	</string>
+	<string id="freedom_find_item_2">
+		<text>Zdob№dџ ulepszonego Chasera 13</text>
+	</string>
+	<string id="freedom_find_item_2_descr">
+		<text>Zdob№dџ od naukowcуw ulepszonego Chasera 13.</text>
+	</string>
+	<string id="freedom_find_item_2_text">
+		<text>Sіyszaіem, їe jajogіowym udaіo siк ulepszyж strzelbк Chaser przy pomocy artefaktu. Siік raїenia ma tak№ sam№ jak haubica. Zіуї im wizytк i sprawdџ, czy moїesz ubiж interes. Pokryjк wszystkie wydatki!</text>
+	</string>
+	<string id="freedom_find_item_3">
+		<text>Przynieњ kamizelkк kuloodporn№</text>
+	</string>
+	<string id="freedom_find_item_3_descr">
+		<text>Przynieњ egzemplarz nowej kamizelki kuloodpornej.</text>
+	</string>
+	<string id="freedom_find_item_3_text">
+		<text>Niektуre trepy paraduj№ w nowych kamizelkach kuloodpornych. Podszewka zostaіa nas№czona jak№њ maњci№ lecznicz№ czy czymњ takim... tak czy inaczej, niewielkie rany bardzo szybko siк goj№. I posіuchaj, jakie szczкњcie: nie tak dawno dziesiкciu goњci ruszyіo nad Jantar, ale wrуciіo tylko szeњciu, nios№c trzech kolejnych. Juї rozumiesz? Jeden tam zostaі. Jeњli zdobкdziesz dla nas jego kamizelkк, rozіoїymy j№ na czкњci i zrobimy sobie takie same.</text>
+	</string>
+	<string id="freedom_kill_stalker_1">
+		<text>Zabij szefa ochrony "Powinnoњci"</text>
+	</string>
+	<string id="freedom_kill_stalker_1_descr">
+		<text>Zabij szefa ochrony "Powinnoњci" i postaraj siк to zrobiж jak najciszej siк da.</text>
+	</string>
+	<string id="freedom_kill_stalker_1_text">
+		<text>Byіoby wspaniale, gdyby szef ochrony "Powinnoњci" nagle znikn№і. A kiedy zapanuje chaos, bкdк w stanie umieњciж w ich bandzie kilku swoich ludzi. Wtedy bкdzie moїna wyci№ж kaїdy numer... dobra, lepiej juї siк zamknк. Sugerujк, їebyњ siк nim zaj№і z pewnej odlegіoњci, nie robi№c zamieszania. </text>
+	</string>
+	<string id="freedom_kill_stalker_2">
+		<text>Zabij kapitana Iwancowa</text>
+	</string>
+	<string id="freedom_kill_stalker_2_descr">
+		<text>Zabij kapitana Iwancowa, praw№ rкkк przywуdcy "Powinnoњci". </text>
+	</string>
+	<string id="freedom_kill_stalker_2_text">
+		<text>Od razu ciк ostrzegam, їe to ciкїkie zadanie, ale warto je wykonaж. Iwancow, bliski wspуіpracownik przywуdcy "Powinnoњci", aї siк prosi o kіopoty. Zajmuje siк caі№ brudn№ robot№: akcjami odwetowymi, nalotami... Gdybyњ tylko wiedziaі, ilu naszych chіopcуw juї zabiі! Najwyїszy czas, їebyњmy skoсczyli z t№ gnid№. Jeњli siк zdecydujesz to zrobiж, proponujк, їebyњ siк dobrze uzbroiі.</text>
+	</string>
+	<string id="freedom_kill_stalker_3">
+		<text>Zabij puіkownika Pietrienkк</text>
+	</string>
+	<string id="freedom_kill_stalker_3_descr">
+		<text>Zabij puіkownika Pietrienkк, jednego z zaіoїycieli "Powinnoњci".</text>
+	</string>
+	<string id="freedom_kill_stalker_3_text">
+		<text>Puіkownik Pietrienko... Moїe sіyszaіeњ to nazwisko, a moїe go poznaіeњ, ale byіoby dobrze, gdybyњcie siк spotkali. Ten czіowiek to jeden z zaіoїycieli "Powinnoњci" i jeden z naszych њmiertelnych wrogуw. Postaraj siк, їeby wasza rozmowa zakoсczyіa siк jak najszybciej... dla niego. Poradzisz sobie?</text>
+	</string>
+	<string id="freedom_kill_stalker_4">
+		<text>Wykoсcz neutralnego stalkera</text>
+	</string>
+	<string id="freedom_kill_stalker_4_descr">
+		<text>Znajdџ i wykoсcz neutralnego stalkera.</text>
+	</string>
+	<string id="freedom_kill_stalker_4_text">
+		<text>Krкci siк tu niedaleko koleњ, ktуry kiedyњ zastrzeliі jednego z naszych. Czegoњ takiego nie moїna puњciж pіazem. Zajmiesz siк tym? Zapіacimy, nie martw siк.</text>
+	</string>
+	<string id="freedom_kill_stalker_5">
+		<text>Zabij jednego z dowуdcуw "Powinnoњci"</text>
+	</string>
+	<string id="freedom_kill_stalker_5_descr">
+		<text>Zabij jednego z dowуdcуw "Powinnoњci"</text>
+	</string>
+	<string id="freedom_kill_stalker_5_text">
+		<text>Zapіacк za gіowк kaїdego z szefуw "Powinnoњci"! Sprz№tnij jakiegoњ i wrуж po nagrodк.</text>
+	</string>
+	<string id="freedom_kill_stalker_6">
+		<text>Zabij stalkera zwanego Strachem</text>
+	</string>
+	<string id="freedom_kill_stalker_6_descr">
+		<text>Zlikwiduj stalkera zwanego Strachem.</text>
+	</string>
+	<string id="freedom_kill_stalker_6_text">
+		<text>Likwidujemy potwory - z tym, їe dla nas to kwestia przetrwania, a nie zysku. Populacje mutantуw nie s№ tak liczne, a poza tym to teї їywe stworzenia, wiкc nie moїemy pozwoliж na ich wytкpienie. Niektуrzy nie chc№ tego zrozumieж - њwietnym tego przykіadem jest stalker zwany Strachem. Nie bez powodu dostaі tк ksywkк, gdyї sprzedaje wypchane mutanty. Juї go ostrzegaliњmy, ale na nic. Moїe wiкc speіnisz dobry uczynek dla matki natury?</text>
+	</string>
+	<string id="freedom_kill_stalker_7">
+		<text>Zabij stalkera zwanego Barin</text>
+	</string>
+	<string id="freedom_kill_stalker_7_descr">
+		<text>Zabij stalkera zwanego Barinem, gіуwnego kwatermistrza "Powinnoњci".</text>
+	</string>
+	<string id="freedom_kill_stalker_7_text">
+		<text>Јajdak, wazeliniarz, hipokryta i na dodatek tchуrz... dla ciebie Barin. Jak widzisz, ma wspaniaіy charakter, dziкki czemu dostaі siк na szczyt "Powinnoњci". Obecnie zaopatruje grupк w zapasy, choж od czasu do czasu bierze rуwnieї udziaі w wypadach. Musimy siк go pozbyж, szczegуlnie їe wszystkie tropy dotycz№ce logistyki "Powinnoњci" prowadz№ do Barina.</text>
+	</string>
+	<string id="freedom_monster_part_1">
+		<text>Przynieњ nogк dzika</text>
+	</string>
+	<string id="freedom_monster_part_1_descr">
+		<text>Przynieњ nogк dzika.</text>
+	</string>
+	<string id="freedom_monster_part_1_text">
+		<text>Planujemy wydaж przyjкcie z okazji urodzin Boba Marleya. Moїe wiкc zdobкdziesz trochк pysznej szynki? Im wiкcej, tym lepiej! Jahwe nigdy ci tego nie zapomni!</text>
+	</string>
+	<string id="hunter_eliminate_lager">
+		<text>Zniszcz legowisko pijawek</text>
+	</string>
+	<string id="hunter_eliminate_lager_descr">
+		<text>Јowca prosi o zniszczenie legowiska pijawek we wsi, niedaleko magazynуw wojskowych. W nagrodк obiecuje rzadki artefakt. </text>
+	</string>
+	<string id="hunter_eliminate_lager_text">
+		<text>Spotkaіeњ kiedyњ pijawkк? Przeraїaj№ce stworzenie, prawda? Pewnego razu poszedіem do wsi niedaleko magazynуw wojskowych - pomyњlaіem sobie, їe poszukam artefaktуw. I wyobraџ sobie - nagle widzк pijawkк... czarn№, z bliznami na caіym ciele. Kuca przy swojej ofierze, nie widzi mnie. Spanikowaіem i spieprzyіem stamt№d. Nie powinienem byі jednak biec, bo mnie usіyszaіa i zaczкіa goniж. Wszкdzie wokуі sіyszaіem wycie i zrozumiaіem, їe nie byіa sama. S№dzк, їe maj№ tam legowisko. Jeњli przepкdzisz je daleko st№d, dam ci rzadki artefakt, ktуry znalazіem kilka dni temu.</text>
+	</string>
+	<string id="kill_stalker">
+		<text>Zabij stalkera</text>
+	</string>
+	<string id="lisiy_kill_stalker">
+		<text>Zabij zdrajcк</text>
+	</string>
+	<string id="lisiy_kill_stalker_descr">
+		<text>Јysol chce, їebyњ zabiі stalkera, ktуry uciekі z bardzo rzadkim artefaktem.</text>
+	</string>
+	<string id="lisiy_kill_stalker_text">
+		<text>Jakiњ czas temu razem z innym stalkerem wybraliњmy siк w podrуї niedaleko Zwкglacza. Znaleџliњmy mnуstwo rzeczy, w tym kilka artefaktуw, jakich nigdy wczeњniej nie widziaіem nawet na zdjкciach. A ten sukinsyn mnie wykiwaі. Ostatniej nocy wykradі siк i schowaі najcenniejsze artefakty, a potem prуbowaі mi wmуwiж, їe same zniknкіy. Kilka dni temu widziaіem jeden z nich u Barmana. Ale siк wkurzyіem... W kaїdym razie, jeњli dasz radк go znaleџж, przekaї mu ode mnie oіowiane pozdrowienia. A tak przy okazji - moїe od razu uda ci siк dowiedzieж, gdzie jest jego schowek i zdobyж drugi artefakt? Warto, wierz mi.</text>
+	</string>
+	<string id="mercenary_kill_stalker">
+		<text>Zabij mistrza stalkerуw</text>
+	</string>
+	<string id="mercenary_kill_stalker_descr">
+		<text>Najemnicy powinni zapіaciж za zabуjstwo kaїdego mistrza. Im mniej jest mistrzуw, tym іatwiej dla najemnikуw.</text>
+	</string>
+	<string id="mercenary_kill_stalker_text">
+		<text>Nie mamy interesu w tym, їeby do Zony zawitaіy chodz№ce pancerniki - uzbrojeni po zкby stalkerzy w egzoszkieletach. Praca stanie siк przez to niebezpieczniejsza i ciкїsza. Im jest ich mniej, tym lepiej dla nas. Zabij ktуregoњ, a otrzymasz nagrodк.</text>
+	</string>
+	<string id="monster_part">
+		<text>Zdob№dџ czкњж ciaіa potwora</text>
+	</string>
+	<string id="petrenko_kill_stalker">
+		<text>Zlikwiduj stalkera z "Wolnoњci".</text>
+	</string>
+	<string id="petrenko_kill_stalker_descr">
+		<text>Pewien stalker, byіy czіonek "Powinnoњci", ktуry posiadaі wiele waїnych informacji o obiektach w Prypeci, przeszedі na stronк "Wolnoњci". Trzeba go usun№ж, zanim powie za duїo.</text>
+	</string>
+	<string id="petrenko_kill_stalker_text">
+		<text>Posіuchaj. Mamy plany Prypeci - nie wspуіczesne, ale stare, zrobione we wczesnych latach dziewiкжdziesi№tych. Najwaїniejsze na nich s№ oznaczenia wszelkich obiektуw wojskowych: podziemnych magazynуw czy schronуw przeciwbombowych. Oczywiњcie teraz nie mamy z tych planуw zbyt wiele poїytku, ale jeњli znajdziemy drogк do Prypeci, informacje te stan№ siк bezcenne. Jest jednak pewien problem. Jeden z naszych oficerуw przeszedі na stronк "Wolnoњci", a wiedziaі o tym wszystkim. Krуtko mуwi№c, trzeba go zlikwidowaж, zanim powie za duїo.</text>
+	</string>
+	<string id="return_for_reward">
+		<text>Wrуж po nagrodк</text>
+	</string>
+	<string id="return_for_reward_bring">
+		<text>Dostarcz klientowi obiecany przedmiot</text>
+	</string>
+	<string id="shustriy_find_item">
+		<text>Znajdџ ulepszony kombinezon</text>
+	</string>
+	<string id="shustriy_find_item_descr">
+		<text>Їwawy powiedziaі mi o schowku, w ktуrym bandyci ukryli іup. Chce skradziony kombinezon, a w zamian oczywiњcie proponuje nagrodк.</text>
+	</string>
+	<string id="shustriy_find_item_text">
+		<text>Kiedy byіem jeсcem, sіyszaіem, jak bandyci rozmawiaj№ o ukrytym schowku, w ktуrym trzymaj№ іup. Podobno ukryli tam super kurtkк, a dzieс pуџniej jakiњ stwуr upatrzyі sobie ten schowek i teraz boj№ siк tam pуjњж. Zrуb mi przysіugк - przynieњ tк kurtkк, a dobrze ci zapіacк.</text>
+	</string>
+	<string id="tm_barman_has_no_job">
+		<text>W tej chwili nic nie mogк zaproponowaж.</text>
+	</string>
+	<string id="tm_barman_job_ask">
+		<text>A o czym chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_barman_job_complete">
+		<text>Dobra robota, zasіuїyіeњ na nagrodк!</text>
+	</string>
+	<string id="tm_barman_job_what">
+		<text>Co tam?</text>
+	</string>
+	<string id="tm_barman_list_job">
+		<text>Spуjrz, co teraz mamy:</text>
+	</string>
+	<string id="tm_defend_camp_1">
+		<text>Ochroс oddziaі "Powinnoњci" przed atakiem bandytуw w Dolinie Mroku.</text>
+	</string>
+	<string id="tm_defend_camp_1_descr">
+		<text>Ochroс oddziaі "Powinnoњci" przed atakiem bandytуw w Dolinie Mroku.</text>
+	</string>
+	<string id="tm_defend_camp_1_text">
+		<text>W koсcu mi siк udaіo wbiж w te zakute іby czіonkуw "Powinnoњci", їe juї najwyїszy czas wykurzyж bandytуw z Wysypiska. "Powinnoњж" zwiкkszy w ten sposуb swуj teren i nie bкdzie juї tak czкsto szkodziж moim staіym klientom. Oto jak wygl№da sytuacja: na pocz№tek przywуdcy "Powinnoњci" postanowili zatrzymaж napіyw bandytуw z Doliny Mroku. Ustawili wiкc blokadк i odkryli, їe bandytom siк to nie podoba. Kto by pomyњlaі?! Wiкc zastanawiam siк, czy nie mуgіbyњ pomуc im zabezpieczyж wejњcia do Doliny. Bardzo hojnie ci podziкkujк.</text>
+	</string>
+	<string id="tm_dolg_has_no_job">
+		<text>W tej chwili nie ma їadnych zadaс.</text>
+	</string>
+	<string id="tm_dolg_job_ask">
+		<text>O czym chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_dolg_job_complete">
+		<text>Zuch chіopak! Њwietnie siк spisaіeњ!</text>
+	</string>
+	<string id="tm_dolg_job_what">
+		<text>Sіucham.</text>
+	</string>
+	<string id="tm_dolg_list_job">
+		<text>Oto nowe informacje dotycz№ce zadania:</text>
+	</string>
+	<string id="tm_drunk_dolg_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_drunk_dolg_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_drunk_dolg_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_drunk_dolg_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_drunk_dolg_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_ecolog_has_no_job">
+		<text>Przykro mi, ale w tym momencie nie mamy їadnych zleceс.</text>
+	</string>
+	<string id="tm_ecolog_job_ask">
+		<text>Co to za zlecenie, o ktуrym chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_ecolog_job_complete">
+		<text>Њwietnie siк spisaіeњ! Pozwуl, їe wrкczк ci nagrodк.</text>
+	</string>
+	<string id="tm_ecolog_job_what">
+		<text>Sіucham.</text>
+	</string>
+	<string id="tm_ecolog_list_job">
+		<text>Tyle ci mogк zaproponowaж:</text>
+	</string>
+	<string id="tm_eliminate_camp_1">
+		<text>Zniszcz obуz bandytуw na Wysypisku</text>
+	</string>
+	<string id="tm_eliminate_camp_1_descr">
+		<text>Zlikwiduj przebywaj№cych na Wysypisku bandytуw, ktуrzy okradaj№ stalkerуw wracaj№cych z Zony. Handlarz siк ucieszy.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_text">
+		<text>Niedawno bandyci siк zjednoczyli i wchodz№ w paradк uczciwym ludziom, ktуrzy chc№ handlowaж... Wiкc ruszaj prosto na Wysypisko - sіyszaіem, їe te gnojki siedz№ niedaleko zіomowiska. Jeњli siк zajmiesz t№ spraw№, wszyscy bкd№ ci wdziкczni i hojnie ciк nagrodz№. Zgoda?</text>
+	</string>
+	<string id="tm_eliminate_camp_2">
+		<text>Zniszcz obуz bandytуw na parkingu.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_descr">
+		<text>Zlikwiduj bandytуw na parkingu. Wygl№da na to, їe s№ nowi w Zonie, wiкc robota nie powinna byж trudna.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_text">
+		<text>Bandyci znowu krкc№ siк w okolicy parkingu. Juї pewnie wiesz, na czym polega zadanie? No to... do roboty! Przekaї im od nas gor№ce pozdrowienia i wrуж - wtedy ci podziкkujк. Umowa stoi? </text>
+	</string>
+	<string id="tm_eliminate_camp_3">
+		<text>Zlikwiduj bandytуw</text>
+	</string>
+	<string id="tm_eliminate_camp_3_descr">
+		<text>Zlikwiduj bandytуw w okolicy Instytutu Badawczego Agroprom. Lepiej zostaж w przyjacielskich stosunkach z handlarzem.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_text">
+		<text>W okolicy Instytutu Agroprom pojawili siк bandyci. Przeszkadzaj№ moim kopaczom przegl№daж odpadki. Rozwi№ї ten problem, a bкdк twoim dіuїnikiem.</text>
+	</string>
+	<string id="tm_eliminate_camp_4">
+		<text>Oczyњж teren z mutantуw</text>
+	</string>
+	<string id="tm_eliminate_camp_4_descr">
+		<text>Oczyњж teren z mutantуw.</text>
+	</string>
+	<string id="tm_eliminate_camp_4_text">
+		<text>Jest jedna rzecz - caіkiem іatwa. Chc№ tu przywieџж jakiegoњ turystк obcokrajowca. Zapіaciі kupк kasy moim ziomkom, їeby mуc spojrzeж na Zonк. A teren, ktуry mu pokaї№, trzeba oczyњciж z mutantуw. Zrobisz to?</text>
+	</string>
+	<string id="tm_eliminate_camp_5">
+		<text>Zlikwiduj dwуch bandytуw na Wysypisku.</text>
+	</string>
+	<string id="tm_eliminate_camp_5_descr">
+		<text>Zabezpiecz drogк do jednego z najlepszych ogуlnodostкpnych miejsc w Zonie.</text>
+	</string>
+	<string id="tm_eliminate_camp_5_text">
+		<text>Niedawno jedno z najlepszych miejsc w Zonie staіo siк niedostкpne dla miіoњnikуw piкkna. Na Wysypisku... tak, na Wysypisku jest takie jedno urocze miejsce, zupeіnie inne niї wszystkie, gdzie opuszcza ciк wszelki smutek, gdzie zapominasz o brudzie, pieni№dzach, o krwi. Zapominaіeњ, znaczy siк. Bo teraz jest tam dwуch jeіopуw, ktуrzy groї№, їe zabij№ kaїdego, kto im nie zapіaci za wejњcie. Pozb№dџ siк ich - tylko tam mogк zabieraж turystуw.</text>
+	</string>
+	<string id="tm_eliminate_camp_6">
+		<text>Zabij pijawkк w Dolinie Mroku</text>
+	</string>
+	<string id="tm_eliminate_camp_6_descr">
+		<text>Zabij pijawkк w Dolinie Mroku.</text>
+	</string>
+	<string id="tm_eliminate_camp_6_text">
+		<text>Podobno oddziaіy wojska opuњciіy Dolinк Mroku. A wtedy z kaїdej szczeliny zaczкіy wyіaziж potwory. Stalkerzy dostrzegli juї tam pijawkк, i to niezwykі№ - tak№, ktуra nie boi siк otwartych przestrzeni. Jak wieњci o tym dotr№ do naukowcуw, na pewno bкd№ chcieli j№ zbadaж. A ja chcк byж tym, kto da im jej ciaіo. Twoim zadaniem jest zabicie pijawki, a ja siк zajmк reszt№.</text>
+	</string>
+	<string id="tm_find_artefact_1">
+		<text>Znajdџ "meduzк"</text>
+	</string>
+	<string id="tm_find_artefact_1_descr">
+		<text>Znajdџ "meduzк", ktуra powstaіa w anomalii zwanej "Trampolin№".</text>
+	</string>
+	<string id="tm_find_artefact_1_text">
+		<text>Jakiњ koleњ z Wielkiej Krainy poprosiі o "meduzк". Nie ma za to duїo pieniкdzy, ale teї zadanie jest bajecznie proste. Bierz!</text>
+	</string>
+	<string id="tm_find_artefact_2">
+		<text>Znajdџ "kamienny kwiat"</text>
+	</string>
+	<string id="tm_find_artefact_2_descr">
+		<text>Znajdџ "kamienny kwiat", ktуry powstaі w anomalii zwanej "Trampolin№". Podobno dobrze za to pіac№.</text>
+	</string>
+	<string id="tm_find_artefact_2_text">
+		<text>Mam zamуwienie na "kamienny kwiat". Tak przy okazji - zlecenie pochodzi od jubilerуw, wiкc nie zawiedџmy piкknych paс, co? Jeњli go zdobкdziesz, dostaniesz pieni№dze i butelkк, їebyњ mуgі wypiж za ich zdrowie... </text>
+	</string>
+	<string id="tm_find_artefact_3">
+		<text>Znajdџ "gwiazdк wieczorn№" </text>
+	</string>
+	<string id="tm_find_artefact_3_descr">
+		<text>Znajdџ "gwiazdк wieczorn№", rzadko spotykany i drogi artefakt. </text>
+	</string>
+	<string id="tm_find_artefact_3_text">
+		<text>Mam jedno zlecenie... dosyж nieprzyjemna robota. Wojskowi pracuj№ nad jakimiњ nowymi sposobami ochrony. Potrzebuj№ do tego "gwiazdy wieczornej". To dosyж rzadko spotykany artefakt, ale podobno caіkiem nieџle chroni przed kulami... Zrobisz to? Dobrze ci zapіacк! </text>
+	</string>
+	<string id="tm_find_artefact_4">
+		<text>Znajdџ artefakt zwany "kotletem"</text>
+	</string>
+	<string id="tm_find_artefact_4_descr">
+		<text>Znajdџ artefakt zwany "kotletem".</text>
+	</string>
+	<string id="tm_find_artefact_4_text">
+		<text>Mam zamуwienie na artefakt lecz№cy rany - nazywaj№ go "kotletem"! Maj№ jak№њ klinikк czy coњ. Jeњli go zdobкdziesz, zapіac№ ci i jednoczeњnie pomoїesz ludziom.</text>
+	</string>
+	<string id="tm_find_item_1">
+		<text>Znajdџ ulepszony pistolet</text>
+	</string>
+	<string id="tm_find_item_1_descr">
+		<text>Zdob№dџ pistolet Fort, ktуry podobno moїe pomieњciж wiкcej nabojуw w magazynku. Ostatnim znanym wіaњcicielem broni byі dowуdca placуwki wojskowej pod zniszczonym mostem.</text>
+	</string>
+	<string id="tm_find_item_1_text">
+		<text>Nie rozumiem tej mody na wypasion№ broс - nawet koty nie chc№ juї strzelaж z normalnych pukawek! Niewaїne, mam zlecenie na ulepszony karabin maszynowy. Podobno dowуdca wojskowy - ten, co bierze іapуwki za przejњcie pod mostem - ma Forta z peіnym magazynkiem? Zdobкdziesz go?</text>
+	</string>
+	<string id="tm_freedom_has_no_job">
+		<text>Teraz nie ma їadnych zadaс...</text>
+	</string>
+	<string id="tm_freedom_job_ask">
+		<text>To o czym chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_freedom_job_complete">
+		<text>Oto porz№dny mіody czіowiek! Dobra robota - zapіata jest twoja.</text>
+	</string>
+	<string id="tm_freedom_job_what">
+		<text>Co tam?</text>
+	</string>
+	<string id="tm_freedom_list_job">
+		<text>Oto co mam:</text>
+	</string>
+	<string id="tm_hunter_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_hunter_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_hunter_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_hunter_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_hunter_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_job_nothing">
+		<text>Nie ma problemu. Moїe innym razem.</text>
+	</string>
+	<string id="tm_job_refuse">
+		<text>Nie wezmк tego zlecenia.</text>
+	</string>
+	<string id="tm_kill_stalker_1">
+		<text>Zabij przywуdcк bandytуw</text>
+	</string>
+	<string id="tm_kill_stalker_1_descr">
+		<text>Zabij przywуdcк bandytуw, ktуry wszedі w paradк handlarzowi. Najprawdopodobniej nie bкdzie sam... Ciкїka robota, ale zapіata wynagrodzi ci wszystkie trudy... Szukaj go w Dolinie Mroku.</text>
+	</string>
+	<string id="tm_kill_stalker_1_text">
+		<text>Musisz wykoсczyж tego elegancika, jednego z przywуdcуw bandytуw. Nie tak dawno na jego rozkaz bandyci przechwycili mojego kuriera i dojechali go, a ja szkoda sobie jкzyk strzкpiж na takich, co czepiaj№ siк moich ludzi... Jednym sіowem, jeњli wykonasz zadanie, odwdziкczк ci siк. Piszesz siк na to?</text>
+	</string>
+	<string id="tm_kill_stalker_2">
+		<text>Zabij stalkera handlarza</text>
+	</string>
+	<string id="tm_kill_stalker_2_descr">
+		<text>Zabij stalkera... No tak, to niezbyt ciekawa sprawa - podnosiж rкkк na kolegк po fachu... Ale zapіata jest solidna, a to chyba siк liczy najbardziej. </text>
+	</string>
+	<string id="tm_kill_stalker_2_text">
+		<text>Poprztykaіem siк z jednym handlarzem. Jeњli nie chce wspуіpracowaж, to do diabіa z nim! Nie pozwolк nikomu rozpuszczaж o mnie podіych plotek. Krуtko mуwi№c - sprz№tnij go, їeby inni nie wymknкli siк spod kontroli. Chcк, їeby wszyscy wiedzieli, kto tu jest szefem...</text>
+	</string>
+	<string id="tm_kill_stalker_3">
+		<text>Zabij stalkera їуіtodzioba</text>
+	</string>
+	<string id="tm_kill_stalker_3_descr">
+		<text>Wykoсcz stalkera їуіtodzioba, ktуry byж moїe wcale nie jest їуіtodziobem... Kim wiкc jest? Eee, kogo to obchodzi? Pod warunkiem, їe nie spaprasz roboty.</text>
+	</string>
+	<string id="tm_kill_stalker_3_text">
+		<text>Krкci siк tu pewien koleњ, ktуry udaje їуіtodzioba, ale jest jakiњ dziwny... Wiкc jeњli nagle zniknie, wyњwiadczysz mi ogromn№ przysіugк. Wiesz, o czym mуwiк?</text>
+	</string>
+	<string id="tm_kill_stalker_4">
+		<text>Zabij stalkera zwanego Demonem</text>
+	</string>
+	<string id="tm_kill_stalker_4_descr">
+		<text>Zlikwiduj jednego z rywali handlarza Sidorowicza, stalkera zwanego Demonem. </text>
+	</string>
+	<string id="tm_kill_stalker_4_text">
+		<text>Demon, znany rуwnieї jako Oleg Gusarow... sіuїyі kiedyњ w Specnazie. Dopуki zajmowaі siк swoimi sprawami, nie miaіem nic przeciwko niemu - jak samotnik, to samotnik. Ale podobno organizuje bandк, ktуra ma zniszczyж Kordon i przej№ж kontrolк nad przemytem z Zony. Coњ takiego to juї powaїny problem, wiкc trzeba go bіyskawicznie rozwi№zaж. Zrobisz to?</text>
+	</string>
+	<string id="tm_kill_stalker_5">
+		<text>Zabij ojca Diodora</text>
+	</string>
+	<string id="tm_kill_stalker_5_descr">
+		<text>Zabiж czіowieka, ktуry wygіasza w Zonie kazania potкpiaj№ce zbieranie i sprzedaї artefaktуw? Dokіadnie.</text>
+	</string>
+	<string id="tm_kill_stalker_5_text">
+		<text>Zawsze powtarzaіem, їe interesy i religia nie id№ w parze, a ludzie zajmuj№cy siк nimi nie powinni siк wtr№caж w nie swoje sprawy! Ten ojczulek - Boїe, wybacz mi - Diodor... no cуї... nie dostrzega oczywistej prawdy. Ci№gle bredzi o polowaniu na artefakty, mуwi, їe handel nimi skіania ludzi do grzechu - i to nie tylko w Zonie, ale na caіym њwiecie... i takie tam... Co wiкcej, on namawia do niszczenia artefaktуw!!! Rozumiesz, w czym rzecz? A najgorsze jest to, їe zaleџli siк tacy, co go sіuchaj№! Prуbowaіem tego Diodora podejњж na rуїne sposoby, ale on uparcie siк trzyma swego. Umowa jest taka: wyњlij go do Bozi, gdzie bкdzie sobie mуgі bez koсca prawiж kazania... kapujesz, prawda? A ja ci dam њwietny artefakt. Zgoda?</text>
+	</string>
+	<string id="tm_kill_stalker_6">
+		<text>Zabij stalkera</text>
+	</string>
+	<string id="tm_kill_stalker_6_descr">
+		<text>Zabij "przedstawiciela handlowego". Handlarzowi zaleїy na reputacji.</text>
+	</string>
+	<string id="tm_kill_stalker_6_text">
+		<text>Wyobraџ sobie, їe pojawiі siк jakiњ wariat, ktуry przedstawia siк jako mуj "przedstawiciel handlowy", wykorzystuje moj№ dobr№ reputacjк i prуbuje wcisn№ж ludziom wybrakowany towar! Pкkniкte lufy, rozpadaj№ce siк kombinezony, przeterminowane konserwy. Juї siк musiaіem uїeraж z kilkoma niezadowolonymi klientami. Krуtko mуwi№c, niewaїne, jak tego dokonasz - chcк, їebyњ przemуwiі temu "przedstawicielowi handlowemu" do rozs№dku.</text>
+	</string>
+	<string id="tm_lisiy_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_lisiy_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_lisiy_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_lisiy_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_lisiy_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_mercenary_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_mercenary_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_mercenary_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_mercenary_job_what">
+		<text>Jak tam zadanie?</text>
+	</string>
+	<string id="tm_mercenary_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_monster_part_1">
+		<text>Zdob№dџ macki pijawki</text>
+	</string>
+	<string id="tm_monster_part_1_descr">
+		<text>A wiкc macka pijawki przynosi szczкњcie? Zobaczymy, czy pijawce przyniesie.</text>
+	</string>
+	<string id="tm_monster_part_1_text">
+		<text>Sіyszaіem taki przes№d, їe macka pijawki przynosi szczкњcie. Їe niby ktoњ, kto ma tak№ mackк zawieszon№ na szyi, omija anomalie i їe artefakty same wpadaj№ mu w rкce. To oczywiњcie gуwno prawda, ale niektуre palanty w to wierz№ i s№ gotowe sporo za tak№ mackк zapіaciж. Jeњli dostarczysz mi mackк pijawki, dobrze ci zapіacк.</text>
+	</string>
+	<string id="tm_monster_part_2">
+		<text>Zdob№dџ ogon nibypsa</text>
+	</string>
+	<string id="tm_monster_part_2_descr">
+		<text>Zdob№dџ ogon nibypsa.</text>
+	</string>
+	<string id="tm_monster_part_2_text">
+		<text>Nadchodzi zima. A co w zimie nosz№ laski z Wielkiej Krainy? Zgadza siк, futra. Pojawiіa siк nowa moda na robienie dodatkуw z ogonуw nibypsуw. To podobno jakaњ wyj№tkowa sierњж! Mуwi№c w skrуcie: mam zamуwienie na taki ogon. Bierzesz tк robotк?</text>
+	</string>
+	<string id="tm_petrenko_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_petrenko_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_petrenko_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_petrenko_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_petrenko_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_reward_job">
+		<text>Przyszedіem tu w sprawie zlecenia.</text>
+	</string>
+	<string id="tm_seek_job_abandon">
+		<text>Nie interesuj№ mnie takie zadania.</text>
+	</string>
+	<string id="tm_seek_job_no">
+		<text>Innym razem.</text>
+	</string>
+	<string id="tm_seek_job_yes">
+		<text>Jestem gotуw.</text>
+	</string>
+	<string id="tm_seek_new_job">
+		<text>Potrzebujк zlecenia. Masz coњ dla mnie?</text>
+	</string>
+	<string id="tm_shustriy_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_shustriy_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_shustriy_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_shustriy_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_shustriy_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_trader_has_no_job">
+		<text>Nie ma teraz zleceс.</text>
+	</string>
+	<string id="tm_trader_job_ask">
+		<text>O jakim zleceniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_trader_job_complete">
+		<text>Zadanie wykonane... a oto nagroda! </text>
+	</string>
+	<string id="tm_trader_job_what">
+		<text>Co z robot№?</text>
+	</string>
+	<string id="tm_trader_list_job">
+		<text>Oto co trzeba zrobiж:</text>
+	</string>
+	<string id="tm_wolf_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_wolf_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_wolf_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_wolf_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_wolf_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="tm_zastava_commander_has_no_job">
+		<text>Chwilowo nic nie ma.</text>
+	</string>
+	<string id="tm_zastava_commander_job_ask">
+		<text>O jakim zadaniu chcesz porozmawiaж?</text>
+	</string>
+	<string id="tm_zastava_commander_job_complete">
+		<text>Zadanie wykonane - a oto i nagroda!</text>
+	</string>
+	<string id="tm_zastava_commander_job_what">
+		<text>A co z zadaniem?</text>
+	</string>
+	<string id="tm_zastava_commander_list_job">
+		<text>Mam coњ:</text>
+	</string>
+	<string id="wolf_eliminate_lager_1">
+		<text>Zniszcz legowisko dzikуw</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_descr">
+		<text>Dziki maj№ legowisko niedaleko miejsca, w ktуrym Wilk i jego kumpel zrobili sobie skіad. Wilk prosi o zniszczenie legowiska - obiecaі, їe godnie mnie wynagrodzi.</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_text">
+		<text>Razem z kumplem mieliњmy skіad tu, niedaleko parkingu, gdzie las jest gкstszy. Wydawaіo siк, їe to idealne miejsce. Ale niedawno dziki sobie je upatrzyіy na legowisko i nie moїemy siк tam dostaж. Pomуї nam - zabij dziki, a podziкkujк ci w imieniu swoim i kolegi.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2">
+		<text>Zlikwiduj mutanty w gospodarstwie</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_descr">
+		<text>Wilk prosi, їeby oczyњciж gospodarstwo z mutantуw, bo chce tam zaіoїyж placуwkк.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_text">
+		<text>Choж to granica Zony, nawet nowicjusze maj№ tutaj ciкїkie їycie. Bandyci to tylko czкњж problemu - przynajmniej rozumiej№ po rosyjsku. Ale mutanty... s№ o wiele gorsze. Zrobiіy sobie legowisko w opuszczonym gospodarstwie i zajкіy jedyne miejsce, ktуre nadaje siк na placуwkк. Jeњli uda ci siк ich stamt№d pozbyж, bкdк twoim dіuїnikiem.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager">
+		<text>Zlikwiduj legowisko psуw</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_descr">
+		<text>Niedaleko poіudniowego posterunku koіo baru wіуczy siк stado psуw. Dowуdca prosi, їebyњ siк nimi zaj№і i obiecuje nagrodк.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_text">
+		<text>Pomimo naszych wysiіkуw z Wysypiska ci№gle dostaj№ siк tu rуїne stwory. Pewnie nawet sam widziaіeњ stado psуw na poіudnie od nas. Jeњli je zabijesz, dostaniesz nagrodк.</text>
+	</string>
+	<string id="defend_lager">
+		<text>Obrona obozu</text>
+	</string>
+</string_table>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="af-ameba-mica">
+		<text>Slнda</text>
+	</string>
+	<string id="af-ameba-slime">
+		<text>Sliz</text>
+	</string>
+	<string id="af-ameba-slug">
+		<text>Slimбk</text>
+	</string>
+	<string id="af-blood">
+		<text>Kamennб krev</text>
+	</string>
+	<string id="af-cristall">
+		<text>Krystal</text>
+	</string>
+	<string id="af-cristall-flower">
+		<text>Kamennэ kvмt</text>
+	</string>
+	<string id="af-drops">
+		<text>Kapky</text>
+	</string>
+	<string id="af-dummy-battery">
+		<text>Baterka</text>
+	</string>
+	<string id="af-dummy-dummy">
+		<text>Skoшбpka</text>
+	</string>
+	<string id="af-dummy-glassbeads">
+		<text>Mбminy korбlky</text>
+	</string>
+	<string id="af-dummy-pellicle">
+		<text>Pavuиina</text>
+	</string>
+	<string id="af-dummy-spring">
+		<text>Pruћina</text>
+	</string>
+	<string id="af-electra-flash">
+		<text>Bleskovka</text>
+	</string>
+	<string id="af-electra-moonlight">
+		<text>Mмsниnн svмtlo</text>
+	</string>
+	<string id="af-electra-sparkler">
+		<text>Jiskшiи</text>
+	</string>
+	<string id="af-fireball">
+		<text>Ohnivбk</text>
+	</string>
+	<string id="af-fuzz-kolobok">
+		<text>Koblнћek</text>
+	</string>
+	<string id="af-gold-fish">
+		<text>Zlatб rybka</text>
+	</string>
+	<string id="af-gravi">
+		<text>Gravi</text>
+	</string>
+	<string id="af-medusa">
+		<text>Medъza</text>
+	</string>
+	<string id="af-mincer-meat">
+		<text>Masovб kuliиka</text>
+	</string>
+	<string id="af-night-star">
+		<text>Noиnн hvмzda</text>
+	</string>
+	<string id="af-rusty-kristall">
+		<text>Krystalickэ drбp</text>
+	</string>
+	<string id="af-rusty-sea-urchin">
+		<text>Moшskэ jeћek</text>
+	</string>
+	<string id="af-rusty-thorn">
+		<text>Trn</text>
+	</string>
+	<string id="af-soul">
+		<text>Duљe</text>
+	</string>
+	<string id="af-vyvert">
+		<text>Kшivбk</text>
+	</string>
+	<string id="Agroprom">
+		<text>Agroprom</text>
+	</string>
+	<string id="Ameba">
+		<text>Иarodмjnickй ћelй</text>
+	</string>
+	<string id="Anomalies">
+		<text>Anomбlie</text>
+	</string>
+	<string id="Artifacts">
+		<text>Artefakty</text>
+	</string>
+	<string id="Bald">
+		<text>Trampolнna</text>
+	</string>
+	<string id="Bar">
+		<text>Bar</text>
+	</string>
+	<string id="Darkdolina">
+		<text>Temnй ъdolн</text>
+	</string>
+	<string id="Deadcity">
+		<text>Vymazбno</text>
+	</string>
+	<string id="Electra">
+		<text>Elektra</text>
+	</string>
+	<string id="enc_weapons1_wpn-winchester_m1">
+		<text>Upravenб verze Chaseru. V hlavni je zabudovanэ kousek artefaktu gravi, kterэ zvyљuje ъsќovou rychlost stшel.</text>
+	</string>
+	<string id="enc_zone_anomalies_ameba">
+		<text>Anomбlie neznбmй povahy. Pшi kontaktu zpщsobuje zranмnн podobnй ъиinkщm silnй kyseliny. Vytvбшн tшi druhy artefaktщ: sliz, slimбk a slнda.</text>
+	</string>
+	<string id="enc_zone_anomalies_bald">
+		<text>Jedna z prvnнch zaznamenanэch anomбliн - nestabilnн gravitaиnн pole, kterй kaћdйmu v dosahu dokбћe zpщsobit zranмnн љokem. V prщmмru zщstбvб aktivnн tэden. Bмhem ћivota anomбlie se sнla zpщsobovanэch poљkozenн mмnн, od slabэch odшenin aћ po moћnost okamћitй smrti. Za dne se dб snadno objevit. Je doprovбzena vмtrnэm vнrem objevujнcнm se nad anomбliн, ve kterйm tanин listн a drobnй ъtrћky, navнc na zemi zanechбvб snadno rozpoznatelnй rudй skvrny. Trampolнna se dб odhalit vљemi druhy detektorщ иi vhozenнm pшedmмtu do anomбlie. Vytvбшн tшi druhy artefaktщ: medъza, kamennэ kvмt a noиnн hvмzda.</text>
+	</string>
+	<string id="enc_zone_anomalies_electra">
+		<text>Anomбlnн formace pшibliћnм deset metrщ v prщmмru, kterб obsahuje znaиnй mnoћstvн statickй elektшiny. Po aktivaci z anomбlie vyletн tucet miniaturnнch bleskщ schopnэch zabнt tйmмш vљe ћivй. V dennнm svмtle se dб rozeznat podle namodralй mlhy, kterб se nad nн vznбљн. V noci je moћnй odhalit Elektru kterэmkoli detektorem nebo hozenнm kovovйho pшedmмtu do anomбlie. Vytvбшн tшi druhy artefaktщ: jiskшiи, bleskovka a mмsниnн svмtlo.</text>
+	</string>
+	<string id="enc_zone_anomalies_fuzz">
+		<text>Jeden z druhщ mutovanй vegetace Zуny. Rychle reaguje na blнћнcн se ћivй bytosti vypuљtмnнm oblaku projektilщ, kterй dokбћн pшi kontaktu vбћnм poљkodit nekrytou nebo slabм chrбnмnou kщћi. Nereaguje na pomalu se pohybujнcн cнle. Vytvбшн tшi druhy artefaktщ (pravdмpodobnм jde o semena rostliny): osten, krystalickэ drбp a moшskэ jeћek.</text>
+	</string>
+	<string id="enc_zone_anomalies_gravi">
+		<text>Anomбlie pravdмpodobnм gravitaиnн povahy. Po aktivaci pшitбhne sнla vortexu vљechny pшedmмty z okolн deseti aћ patnбcti metrщ ke svйmu stшedu. Obмti vtaћenй dovnitш nemajн љanci na pшeћitн, jejich tмla jsou rychle zkomprimovбna do malйho tvrdйho pшedmмtu, kterэ nбslednм exploduje. Anomбlie zщstбvб bмhem svй иinnosti (pшibliћnм tэden) stacionбrnн. Dб se za dne snadno rozeznat podle fluktuacн vzduchu nad sebou, fragmenty rozervanэch tмl a temnou skvrnou ve stшedu. V noci je velmi nebezpeиnб, jelikoћ se dб odhalit pouze pomocн detektoru nebo vrћenнm kovovйho pшedmмtu. Vytvбшн tшi druhy artefaktщ: kшivбk, gravi a zlatб rybka. </text>
+	</string>
+	<string id="enc_zone_anomalies_lift">
+		<text>Neљkodnб anomбlie, kterб doиasnм ruљн normбlnн gravitaci. Jde o oblast o prщmмru nмkolika metrщ, kde je gravitaиnн pole znaиnм zmenљeno. Vytvбшн artefakt pavuиina.</text>
+	</string>
+	<string id="enc_zone_anomalies_meat">
+		<text>Anomбlie vyhazuje svй obмti do vzduchu a bleskurychle je roztoин. Pшesnб povaha masomlejnku zщstбvб neznбmб. Dб se rozeznat podle drobnйho praљnйho vнru nad sebou a kusy tмl rozsetэch v okolн. Obмti chycenй na okraji anomбlie, dostateиnм daleko od stшedu, majн љanci uniknout z masomlejnku s relativnм drobnэmi zranмnнmi. Vytvбшн tшi druhy artefaktщ: kamennб krev, masovб kuliиka a duљe.</text>
+	</string>
+	<string id="enc_zone_anomalies_radioactive">
+		<text>Oblast zvэљenй radiace, pшes 50 mR/h. Nenн doporuиovбno zщstбvat v oblasti zvэљenй radiace delљн dobu.</text>
+	</string>
+	<string id="enc_zone_anomalies_time">
+		<text>Opravdu zбzraиnб anomбlie: oblast o prщmмru nмkolika metrщ, kde je tok иasu znaиnм zpomalen. Zdб se, ћe na lidskй zdravн nemб ћбdnэ vliv. Mщћe bэt vљak docela obtнћnй dostat se ze stroje иasu ven. Je zajнmavй, ћe odstranмnнm mбminэch korбlkщ, artefaktu nalйzajнcнm se vмtљinou ve stшedu anomбlie, stroj иasu zmizн.</text>
+	</string>
+	<string id="enc_zone_anomalies_zharka">
+		<text>Neaktivnн anomбlie vypadб jako sotva viditelnэ oblak horkйho vzduchu. Po aktivaci objektem nebo ћivou bytostн se okamћitм zahшeje na smrtнcн teploty aћ 1500 stupтщ Kelvina. V noci je moћnй odhalit ji silnэmi detektory nebo hбzenнm kovovэch objektщ. Vytvбшн tшi druhy artefaktщ: kapky, ohnivбk a krystal.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-mica">
+		<text>Anomбlie Иarodмjnickй ћelй dokбћe ve vzбcnйm pшнpadм vytvoшit tento poloprщsvitnэ pevnэ objekt. Velmi vzбcnэ a cennэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slime">
+		<text>Tento artefkat vytvбшн anomбlie Иarodejnickй ћelй. Artefakt noљenэ na opasku zpomaluje krvбcenн, ale tмlo nositele se stбvб citlivмjљнm na ћбr.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slug">
+		<text>Tento artefkat vytvбшн anomбlie Иarodejnickй ћelй. Jeho negativnн vlastnosti vyvaћuje schopnost zlepљovat srбћlivost krve. Jde o relativnм vzбcnэ a cennэ artefakt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-blood">
+		<text>Tento artefakt se objevuje poblнћ anomбlie masomlejnek. Deformovanэ zarudlэ objekt vzniklэ stlaиenэmi podivnм pokroucenэmi a polymerizovanэmi ъtrћky rostlin, pщdy a kostн. Vcelku rozљншenэ a mбlo efektivnн.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall">
+		<text>Tento artefakt vznikб, kdyћ se do anomбlie Vypalovaи dostanou tмћkй kovy. Dokбћe vэbornм pohlcovat zбшenн. Mezi stalkery je velmi cennэ a je obtнћnм sehnatelnэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall-flower">
+		<text>Tento artefakt vznikб v anomбlii Trampolнna. Dб se najнt jenom na nмkolika mнstech v Zуnм. Dнky kouskщm kovu uvnitш artefaktu vznikб na jeho povrchu krбsnб hra svмtla. Studovбnн artefaktu v noci u tбborovйho ohnм je hroznм uklidтujнcн.</text>
+	</string>
+	<string id="enc_zone_artifact_af-drops">
+		<text>Vznikб pшi vysokэch teplotбch v anomбlii Vypalovaи. Mб kapkovitэ tvar a sklovitэ popraskanэ povrch.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-battery">
+		<text>Pщvod tohoto objektu je vмdeckou zбhadou. Je jasnй, ћe obsahuje dielektrickй elementy, ale vмda zatнm neuspмla v odhalenн podmнnek, za jakэch vznikб.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-dummy">
+		<text>Pшi noљenн tohoto artefaktu se proteiny mnohem pomaleji denaturujн. Jinэmi slovy dokбћe tмlo vydrћet vyљљн ћбr. Jde o velmi vzбcnэ a cennэ artefakt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-glassbeads">
+		<text>Nбdhernэ artefakt. Dбvej na nмj pozor, mб spoustu vэhodnэch vlastnostн. Vмdcщm se zatнm nic takovйho v laboratoшi vyrobit nepodaшilo.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-pellicle">
+		<text>Tento artefakt je tak vzбcnэ, ћe si vмtљina vмdcщ ani nedovede pшedstavit, ћe by nмco takovйho mohlo existovat. Vychбzн z nмj chemickй slouиeniny s vysokou kyselostн.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-spring">
+		<text>Podle nбzorщ nмkterэch vэzkumnнkщ teoretikщ je tento artefakt hybridem mezi artefakty baterka a skoшбpka.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-flash">
+		<text>Tento artefakt obиas vznikб v anomбlii Elektra. Stalkeшi ho majн v oblibм, protoћe mб uћiteиnй vlastnosti. Je docela cennэ a dнky vzhledu po nмm touћн i sbмratelй.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-moonlight">
+		<text>Vznikб vlivem anomбlie Elektra. Nбdhernэ kulatэ artefakt zшejmм vznikб, kdyћ je anomбlie vystavena tepelnэm vlivщm. Velmi cennэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-sparkler">
+		<text>Nachбzн se poblнћ anomбlie Elektra. Pomмrnм rozљншenэ a mбlo cennэ artefakt, vэzkumnнci v Zуnм jej vљak potшebujн na svй experimenty.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fireball">
+		<text>Krystalizuje v anomбlii Vypalovaи. Dokбћe dobшe brбnit pшed radiacн, ale zvэљenб ъroveт metabolismu unavuje svalstvo. Jinэmi slovy se s nнm nedб moc bмhat. Artefakt vyzaшuje ћбr.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fuzz-kolobok">
+		<text>Kdyћ drћнљ v rukou tuto zбhadu Zуny, cнtнљ, jak se tvб kщћe stбvб silnмjљн a mйnм citlivou. Kulky tм stбle zraтujн, ale jsi mnohem odolnмjљн vщиi шeznэm ranбm.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gold-fish">
+		<text>Artefakt vznikajнcн v anomбlii Vortex. Aktivuje se tмlesnэm teplem. Je tшeba se rozhodnout, co je horљн: radiace, nebo seиnй rбny, a pak si vybrat, co je menљн zlo. V kaћdйm pшнpadм se artefakt dб dobшe prodat.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gravi">
+		<text>Dб se najнt u anomбliн Vortex, nebo u jinэch stalkerщ. Artefakt posiluje schopnost tмla zbavovat se radiace. Cennэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-medusa">
+		<text>Vznikб v Trampolнnм. Vytvбшн slabй ochrannй pole, ale vedlejљнm efektem je slabб radiace. Jde o pomмrnм rozљншenэ artefakt, kterэ tedy nenн pшнliљ cennэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-mincer-meat">
+		<text>Artefakt vznikajнcн v anomбlii Masomlejnek. Zrychluje rщst bunмk, ale novм vzniklй buтky jsou mnohem nбchylnмjљн vщиi fyzickйmu zranмnн. Artefakt sice nenн bмћnэ, ale rozhodnм se nedб oznaиit za vzбcnэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-night-star">
+		<text>Tento nбdhernэ artefakt vznikб v anomбlii Trampolнna. Pro pouћнvбnн artefaktu je nutnй nмjak neutralizovat jeho smrtнcн radiaci. Jde o velmi vzбcnэ a cennэ artefakt, ћбdanэ mezi vмdeckэmi expedicemi a vэzkumnнky v Zуnм.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-kristall">
+		<text>Artefakt krystalizujнcн v anomбlii Pбlivй chmэшн. Napomбhб vyluиovбnн radiace z tмla, mщћe vљak zpщsobovat krvбcenн z uљн a sliznic. Rozљншenэ, ale pomмrnм ъиinnэ, proto je jeho cena stabilnн.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-sea-urchin">
+		<text>Anomбlie Pбlivй chmэшн obиas vytvбшн tento artefakt, kterэ zpщsobuje nбrщst krevnнho tlaku a nutн tмlo zbavovat se rudэch krvinek, se kterэmi vљak odchбzн z tмla i radiace. Vэzkumnнk Sacharov ve svй prбci "Ionizace a polarizace komponentщ vzбcnэch artefaktщ" tvrdн, ћe dosaћenн kritickй stability nutnй ke vzniku artefaktu je velmi nepravdмpodobnй a ћe se tedy nedб oиekбvat moћnost vyrбbмnн artefaktu v laboratornнch podmнnkбch minimбlnм po dalљнch deset let.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-thorn">
+		<text>Jde o vэsledek iterakce mezi anomбliн Pбlivй chmэшн a neopatrnэm stalkerem. Artefakt trn zraтuje tмlo svйho majitele, ale zбroveт ho zbavuje radiace. Pomмrnм rozљншenэ a tedy levnэ.</text>
+	</string>
+	<string id="enc_zone_artifact_af-soul">
+		<text>Velmi vzбcnэ artefakt, obиas nalйzanэ u anomбlie Masomlejnek. Jen velice zшнdka se podaшн nмkterйmu љќastlivci tento artefakt u nмkoho zahlйdnout, natoћ ho najнt. Artefakt je na pohled velmi hezkэ a jeho cena tomu odpovнdб.</text>
+	</string>
+	<string id="enc_zone_artifact_af-vyvert">
+		<text>Nalйzб se u anomбlie Vortex. Po kontaktu s tмlem zaиne vyzaшovat radiaci, ale vytvбшн slabй ochrannй pole brбnнcн nositele pшed zranмnнm. Dб se snadno najнt, takћe nenн pшнliљ cennэ.</text>
+	</string>
+	<string id="enc_zone_locations_agroprom">
+		<text>Podivnб silnм kontaminovanб oblast. Pokud bys do nн zabloudil hloubмji, objevil bys mмlkй jezero, zaplnмnй vyhozenэm vybavenнm a dalљнmi troskami. Mщћeљ takй navљtнvit opuљtмnэ institut a tovбrnu, aиkoli v poslednн dobм se v okolн potuluje armбda.</text>
+	</string>
+	<string id="enc_zone_locations_bar">
+		<text>Frakce Povinnost si na okraji planiny vystavмla tбbor a vћdy je u sebe ochotnб uvнtat stalkery potшebujнcн odpoиinek. Opuљtмnб oбza mнru, mнsto, kde nejsou ћбdnй anomбlie ani mutanti. Nezapomeт se stavit ve sklepм v baru U 100 radщ, ve kterйm se setkбvajн stalkeшi z celй Zуny. Bar vede mнstnн pшekupnнk, takћe kromм poslechnutн si novinek tady mщћeљ i obchodovat. Severnм od baru se nachбzн vojenskб zбkladna, jiћnм smetiљtм.</text>
+	</string>
+	<string id="enc_zone_locations_darkdolina">
+		<text>Vћdy pochmurnй, zamlиenй a deљtivй mнsto. Stalkeшi troufajнcн si do Temnйho ъdolн majн љanci najнt cennй artefakty, okamћitou smrt, иi obojн. Sem chodн ti nejzkuљenмjљн veterбni, aиkoli se tady dб narazit i na obyиejnй bandity. Nмkde by se tady mмla nachбzet podzemnн laboratoш, takћe se vyplatн dнvat se cestou po skrytйm vstupu do podzemн. Z podzemн se ale zatнm nikdo nevrбtil ћivэ a nikdo nevн, jakб nepшнjemnб pшekvapenн tam mohou инhat.</text>
+	</string>
+	<string id="enc_zone_locations_escape">
+		<text>Vstupnн ибst Zуny je dobrй mнsto pro novбиky, kteшн se nauин, jak to tady chodн. Ve sklepenнch vzadu ve vesnici kousek od vojenskйho opevnмnн mщћeљ najнt pшekupnнka, rozhodnм se za nнm stav a promluv si s nнm. K vojбkщm se ale nepшibliћuj. Pokud tм zahlйdnou, pravdмpodobnм budou nejdшнve stшнlet a aћ pak se ptбt. Ale jak uћ to tak chodн, dokud se velenн dнvб stranou, dajн se podplatit. Nedoporuиuje se ъtoиit na vojбky, pokud nebudou pшedstavovat pшнmou hrozbu.</text>
+	</string>
+	<string id="enc_zone_locations_garbage">
+		<text>Rozsбhlй vrakoviљtм. Hned po prvnн nehodм sem byly uloћeny hromady radioaktivnнho materiбlu. Vмtљinou jsou zde rozpadlй budovy zamoшenй mutanty. Podobnм jako na okraji Zуny i tady je spousta novбиkщ a obиasnэ bandita инhajнcн na lehkou koшist. Dajн se tady najнt i nмjakй artefakty, ale vмtљina z nich nestojн za nбmahu. Lepљн je zkusit љtмstн jinde. Severnм leћн Divokб oblast, na zбpad vstup do Temnйho ъdolн, na vэchodм je silnice k vэzkumnйmu institutu Agroprom.</text>
+	</string>
+	<string id="enc_zone_locations_military-loc">
+		<text>Opuљtмnб vojenskб zбkladna poblнћ rozpadlй vesniиky a malй baћiny. Vesnice je straљidelnй mнsto plnй mutantщ, jen samotnэch upнrщ je tam celб legie. Stalkeшi se jн snaћн vyhэbat, i kdyћ to znamenб nмkolika kilometrovou zachбzku. Ve vojenskй zбkladnм se usadili anarchisti z frakce Svoboda. Silnice vedoucн ze zбkladny do Zуny chrбnн vypalovaи mozku, kterэ blokuje pшнstup do Pripjatм a Иernobylu. </text>
+	</string>
+	<string id="enc_zone_locations_pripiat">
+		<text>Toto mмsto bylo postaveno pro inћenэry pracujнcн v иernobylskй elektrбrnм. Bэvalo to velkй mмsto, ale teп je z nмj mмsto duchщ, kterй obэvajн jenom mutanti a zombie. Zшejmм neexistuje zpщsob, jak se tam dostat, cestu blokuje vypalovaи mozku. </text>
+	</string>
+	<string id="enc_zone_locations_radar">
+		<text>Hrozivй mнsto. Dб se tam snadno zmizet beze stopy, bez ohledu na to, jakй jsi mмl zatнm љtмstн. Kaћdэ, kdo se pшiblнћн k vypalovaиi mozku, okamћitм zeљнlн, zmмnн se na zombie a zaиne bezcнlnм prochбzet Zуnu. Zщstane jenom lidskб skoшбpka. Zatнm se odsud nikdo se zachovanэm mozkem nevrбtil. </text>
+	</string>
+	<string id="enc_zone_locations_rostok">
+		<text>Divokб oblast byla dшнve domovem velkй tovбrny, kterб se vљak uћ dбvno sesypala na hromadu ruin. Na tomto mнstм nachбzн smrt mnoho stalkerщ, prohбnн se zde velkй mnoћstvн rщznэch monster. Mншн sem bestie doslova z celй Zуny. Prэ je na tomto mнstм skryto nмco velmi dщleћitйho, takћe se vћdy najde nмjakэ odvбћlivec, kterэ zde zkusн svй љtмstн. </text>
+	</string>
+	<string id="enc_zone_locations_stancia">
+		<text>Svмtovм proslulб jadernб elektrбrna. Toto je srdce Zуny. A pokud vмшнљ legendбm, tak je to takй mнsto, kde se nachбzн monolit - tajemnб vмc schopnб splnit jakйkoli pшбnн. </text>
+	</string>
+	<string id="enc_zone_locations_yantar">
+		<text>Legendбrnн jezero v sektoru stejnйho jmйna uћ dбvno vyschlo a zщstala po nмm jen mмlkб baћina. Je to morbidnн mнsto plnй smrti. Odvбћlivce tady иekб mnohй nebezpeин. Kaћdэ, kdo se dostane pшнliљ daleko, zeљнlн. Po celйm sektoru se potulujн zombie a иekajн na novй obмti. Pokud se ti podaшн obejнt jezero a dostat se pшes chodнcн mrtvoly, narazнљ na vмdeckэ tбbor, kde vмdбtoшi pшivezenн vrtulnнky provбdн podivnй pokusy. Mщћeљ si s nimi pokecat, kupujн artefakty a obиas dohazujн stalkerщm prбci.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2006">
+		<text>Kontaminovanou zуnu rozzбшila jasnб svмtla, pro lidskэ zrak tйmмш nesnesitelnм silnб. Skoro se dalo vidмt, jak se oblaka na nebi vypaшujн. Po chvнli mrtvйho ticha pшiљlo burбcenн hromu a zemм se otшбsla. Lidй popadali na zem, zavнrali oиi a ucpбvali si uљi. Ti, kteшн dokбzali bмhat, se pokusili uprchnout. Vypadalo to, jako by jadernй palivo pohшbenй pod sarkofбgem nбhle explodovalo. Dalљн den armбda obklниila novou Zуnu. Satelity dokбzaly urиit epicentrum vэbuchu, kterй nebylo pшнmo u reaktorщ elektrбrny, ale vнce neћ pщl kilometru od nich. Pшedpoklбdб se, ћe obsluha elektrбrny zemшela okamћitм, aиkoli v obklниenй oblasti zщstalo mnoho lidн. Zбchrannй operace se brzy prokбzaly jako zbyteиnб snaha, jelikoћ lidй a stroje poslanн do Zуny umнrali nebo selhбvali tйmмш okamћitм. Krбtce po katastrofм se prщmмr Zуny roztбhnul o nмkolik dalљнch kilometrщ. Vмtљina vlбdnнch vojбkщ hlнdajнcнch linii a vэzkumnй tэmy uvnitш zemшely okamћitм. Doљlo k panice a lidй zaиali utнkat. Obyvatelй okolnнch mмst a vesnic byli evakuovбni. Na svмtм teп pшebэvб obrovskй nebezpeин a nikdo nedokбћe odhadnout, jakй budou koneиnй nбsledky.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2008">
+		<text>Od katastrofy v kontaminovanй zуnм kolem иernobylskй elektrбrny uplynuly dva roky. Obrovskэ poиet mrtvэch, bezpoиet ztracenэch, umнrajнcн dobytek, rozpadajнcн se budovy, poniиenй lesy... dodnes nemajн vмdci vysvмtlenн, co pшesnм se v Иernobylu stalo. Mezitнm byly v oblasti objeveny neuvмшitelnй anomбlie a samotnб Zуna se stбle rozљiшuje. Nмkolik expedic narazilo na mutovanй druhy zvншat, pшedvбdмjнcн neuvмшitelnй schopnosti.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2010">
+		<text>Ve stopбch blбznivэch samotбшщ, kteшн se sami nazэvajн stalkeшi, se do Zуny vracн vэzkumnй expedice. Perimetr hlнdanэ armбdou mб vљak novй nebezpeиnй obyvatele - od obyиejnэch pytlбkщ aћ po ty nejhorљн kriminбlnнky. Vмtљina stalkerщ prohledбvб Zуnu ve snaze objevit anomбlie a tzv. artefakty, na kterэch mohou vydмlat spoustu penмz.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-raid">
+		<text>Armбda vиetnм speciбlnнch jednotek vedenэch paravojenskэm oddнlem stalkerщ zahбjila masivnн nбjezdy hluboko do Zуny. Ъkolem bylo prorazit aћ k иernobylskй elektrбrnм a zniиit to, co zpщsobuje anomбlnн pole, nebo alespoт zнskat pшesnй informace. Akce zahrnujнcн tisнce lidн a tмћkй vybavenн skonиila naprostэm selhбnнm. Izolovanй skupinky pшeћivљнch se musely usadit v Zуnм jenom s mizivou nadмjн na zбchranu.</text>
+	</string>
+	<string id="Escape">
+		<text>Stanoviљtм</text>
+	</string>
+	<string id="Fuzz">
+		<text>Pбlivй chmэшн</text>
+	</string>
+	<string id="Garbage">
+		<text>Smetiљtм</text>
+	</string>
+	<string id="Gravi">
+		<text>Vortex</text>
+	</string>
+	<string id="Lift">
+		<text>Vэtah</text>
+	</string>
+	<string id="Locations">
+		<text>Lokace</text>
+	</string>
+	<string id="Meat">
+		<text>Masomlejnek</text>
+	</string>
+	<string id="Military-loc">
+		<text>Armбdnн zбkladna</text>
+	</string>
+	<string id="Pripiat">
+		<text>Pripjaќ</text>
+	</string>
+	<string id="Radar">
+		<text>Vypalovaи</text>
+	</string>
+	<string id="Radioactive">
+		<text>Zdroj radioaktivity</text>
+	</string>
+	<string id="Rostok">
+		<text>Divokб oblast</text>
+	</string>
+	<string id="Stancia">
+		<text>Elektrбrna Иernobyl</text>
+	</string>
+	<string id="Story-2006">
+		<text>12. kvмtna 2008, 14:33</text>
+	</string>
+	<string id="Story-2008">
+		<text>Rok 2010</text>
+	</string>
+	<string id="Story-2010">
+		<text>Rok 2011</text>
+	</string>
+	<string id="Story-raid">
+		<text>Armбdnн nбjezd do Zуny. 2011</text>
+	</string>
+	<string id="Time_machine">
+		<text>Stroj иasu</text>
+	</string>
+	<string id="Yantar">
+		<text>Jantar</text>
+	</string>
+	<string id="Zharka">
+		<text>Vypalovaи</text>
+	</string>
+	<string id="Zone">
+		<text>Zуna</text>
+	</string>
+	<string id="Zone-story">
+		<text>Historie Zуny</text>
+	</string>
+</string_table>

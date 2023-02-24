@@ -1,0 +1,63 @@
+	<string id="gar_seryi_info">
+		<text>La Talpa e i suoi amici hanno scoperto il nascondiglio di Strelok all'Agroprom, non lontano dalla fabbrica abbandonata. Perché non fai un salto laggiù a controllare? In fondo, lui ci ha invitato a partecipare alle ricerche.</text>
+	</string>
+	<string id="memuars">
+		<text>Nota personale</text>
+	</string>
+	<string id="sl_beginning">
+		<text>Chi sono io?</text>
+	</string>
+	<string id="sl_beginning_text">
+		<text>Maledizione, è tutto confuso... Ricordo un'auto... Mi hanno portato da qualche parte guidando a lungo e mi doleva tutto il corpo... Era buio... Cos'era successo prima? Non ne ho idea... Troppa confusione... Poi c'è un ciccione che mi chiama Marchiato, forse a causa dello strano tatuaggio che ho sul braccio, e poi sul mio palmare trovo una strana missione: uccidere un certo Strelok... Ma il palmare è mio? Guardando la foto di Strelok non riesco a capire se lo conoscevo o no... Accidenti! È come un brutto sogno da cui non riesci a svegliarti. Cosa faccio? Dove vado? Ma soprattutto, chi sono? OK, OK, calmati, controllati. La prima cosa che devo fare è finire qualche lavoro per quel tipo, Sidorovich. Dopotutto, dice di avermi salvato la vita... Non sembra una brutta cosa. Farò due passi, mi darò una calmata e forse mi si schiariranno le idee.</text>
+	</string>
+	<string id="sl_first_deep_raid">
+		<text>La prima incursione in profondità</text>
+	</string>
+	<string id="sl_first_deep_raid_text">
+		<text>E così sto per fare la mia prima incursione nel cuore della Zona. L'obiettivo è l'istituto di ricerca Agroprom. Devo recuperare dei documenti che appartengono a una spedizione militare. Il trafficante mi ha anche dato alcune informazioni su una regione a nord, lungo la strada per il centro della Zona, dove il cervello "brucia"... Forse è solo una leggenda, ma siccome nella mia testa c'è qualcosa che non va, mi conviene dare un'occhiata laggiù e parlare con qualcuno. Non si sa mai, potrei già esserci stato. Il trafficante mi ha anche detto che Strelok aveva scoperto un modo per attraversare quella regione e i trafficanti vogliono saperlo. È facile capire perché: vogliono raggiungere i giacimenti di reperti ancora intatti. Beh, credo che li aiuterò.</text>
+	</string>
+	<string id="sl_first_opinions">
+		<text>Prime impressioni</text>
+	</string>
+	<string id="sl_first_opinions_text">
+		<text>Bene, bene... Ho preso un po' d'aria, ho visto la fauna locale... È curioso, mi pare di ricordarla, ma ho una gran nebbia in testa... Ho anche avuto modo di vedere le "amenità" locali chiamate anomalie... Siccome sono sopravvissuto, dovrei averle già affrontate in passato, ma la mia mente si rifiuta ostinatamente di ricordare... Sidorovich è un astuto bastardo: sa che può sfruttarmi senza pagare nulla e lo fa senza scrupoli. Però forse mi aiuterà a trovare quel maledetto Strelok... È l'unico legame col mio passato.</text>
+	</string>
+	<string id="sl_fox_meet">
+		<text>Incontro con il Volpe</text>
+	</string>
+	<string id="sl_fox_meet_text">
+		<text>Ho incontrato il Volpe. Mi ha dato una notizia buona e una cattiva. Quella cattiva è che sa ben poco di Strelok. Quella buona è che suo fratello Seriy ne sa di più. Si trova in un hangar di una discarica piena di rifiuti radioattivi, un paio di chilometri a nord. Il mio compito è semplice: raggiungerlo prima che se ne vada.</text>
+	</string>
+	<string id="sl_monolith_off">
+		<text>Disattivare il Monolite</text>
+	</string>
+	<string id="sl_monolith_off_text">
+		<text>Sono a un passo dai creatori della maledetta rete di unità psioniche nella Zona. Il Monolite sembra solo uno dei tanti creatori di zombie, con la differenza che qualcuno si è preso il disturbo di creare nel sarcofago l'ologramma di un enorme cristallo. Quando qualche "fortunato" si avvicina, quel coso gli confonde la mente. Forse gli fa anche credere che i suoi desideri siano stati esauditi, chi lo sa? E io, sono già stato toccato da quella merda? Non lo so, ma chiunque abbia organizzato tutto dovrà rispondere alle mie domande. Mi hanno perfino invitato... Sto arrivando, bastardi!</text>
+	</string>
+	<string id="sl_provodnik">
+		<text>Guida</text>
+	</string>
+	<string id="sl_provodnik_text">
+		<text>La Guida ha detto che il Dottore crede di essere seguito e resterà nel vecchio nascondiglio di Strelok. Beh, penso che gli farò una visitina.</text>
+	</string>
+	<string id="sl_seryi_meet">
+		<text>Incontro con Seriy</text>
+	</string>
+	<string id="sl_seryi_meet_text">
+		<text>Le mie speranze di scoprire qualcosa su Strelok dovranno aspettare ancora un po': Seriy mi ha detto di incontrare uno stalker detto la Talpa, che dovrebbe sapere dov'è il nascondiglio segreto di Strelok... Non è molto, ma se ha ragione, almeno avrò qualcosa in mano. Chissà, potrei anche scoprire qualcosa di utile.</text>
+	</string>
+	<string id="sl_usefull_info">
+		<text>Le informazioni utili del trafficante</text>
+	</string>
+	<string id="sl_usefull_info_text">
+		<text>Mmm... Il trafficante non mi ha deluso, e io gliene sono grato. Mi ha dato un bell'aiuto nella ricerca di Strelok. Sembra che uno stalker chiamato il Volpe sia apparso nei paraggi con una richiesta di aiuto. Sidorovich dice che potrebbe conoscere Strelok.</text>
+	</string>
+	<string id="sl_wishmaster_legend">
+		<text>La leggenda dell'Esauditore di desideri</text>
+	</string>
+	<string id="sl_wishmaster_legend_text">
+		<text>Ho scoperto un po' di folklore locale: secondo una leggenda, nel cuore della Zona c'è una macchina che esaudisce i desideri... La sua ubicazione precisa è sconosciuta, ma si trova vicino al centro. Uno deve solo raggiungerla, e poi... di colpo la vita diventa molto ma molto più facile. Mmm... potrei trovarla e chiedere: "Voglio ricordare tutto del mio passato!". Ma sarebbe un peccato sprecare un desiderio. E se una volta ricordato tutto scopro di essere un perfetto disgraziato? Forse mi strapperei i capelli. Però chissà quanti desideri esaudisce.</text>
+	</string>
+	<string id="storyline_seriy_flash_info">
+		<text>Il Picchiatore scrive a Seriy: La Talpa e i suoi hanno trovato il nascondiglio di Strelok all'Istituto. Scopri cosa sta succedendo. Seriy al Picchiatore: Dopo andranno di sicuro al bar; li aspetterò sulla strada per la Discarica.</text>
+	</string>

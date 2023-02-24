@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cant_walk">
+		<text>Jesteњ zbyt wyczerpany, їeby iњж</text>
+	</string>
+	<string id="cant_walk_weight">
+		<text>Jesteњ zbyt obci№їony, їeby iњж dalej</text>
+	</string>
+	<string id="dar_poltergeist_hold_the_door">
+		<text>Ktoњ przytrzymuje drzwi.</text>
+	</string>
+	<string id="Global Map">
+		<text>Mapa њwiata</text>
+	</string>
+	<string id="gun_jammed">
+		<text>Broс siк zaciкіa. Musisz przeіadowaж.</text>
+	</string>
+	<string id="inventory_box_use">
+		<text>Przeszukaj skrzyniк ($$ACTION_USE$$)</text>
+	</string>
+	<string id="Local Map">
+		<text>Mapa okolicy</text>
+	</string>
+	<string id="st_game_saved">
+		<text>gra zapisana</text>
+	</string>
+	<string id="tip_car_locked">
+		<text>Zablokowane</text>
+	</string>
+	<string id="tip_car_use">
+		<text>Otwуrz drzwi ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_close">
+		<text>Wciњnij ($$ACTION_USE$$), їeby zamkn№ж drzwi</text>
+	</string>
+	<string id="tip_door_coded">
+		<text>Drzwi s№ zamkniкte na zamek szyfrowy</text>
+	</string>
+	<string id="tip_door_decode">
+		<text>Wciњnij ($$ACTION_USE$$), їeby otworzyж zamek szyfrowy.</text>
+	</string>
+	<string id="tip_door_decoding">
+		<text>Trwa otwieranie zamka szyfrowego</text>
+	</string>
+	<string id="tip_door_locked">
+		<text>Drzwi s№ zamkniкte</text>
+	</string>
+	<string id="tip_door_open">
+		<text>Wciњnij ($$ACTION_USE$$), їeby otworzyж drzwi</text>
+	</string>
+	<string id="tip_gate_close">
+		<text>Wciњnij ($$ACTION_USE$$), їeby zamkn№ж bramк</text>
+	</string>
+	<string id="tip_gate_locked">
+		<text>Brama jest zablokowana</text>
+	</string>
+	<string id="tip_gate_open">
+		<text>Wciњnij ($$ACTION_USE$$), їeby otworzyж bramк</text>
+	</string>
+	<string id="tip_monolith">
+		<text>POMYЊL ЇYCZENIE ($$ACTION_USE$$)</text>
+	</string>
+</string_table>

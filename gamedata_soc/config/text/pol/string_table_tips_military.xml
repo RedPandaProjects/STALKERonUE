@@ -1,0 +1,36 @@
+	<string id="mil_actor_blockpost">
+		<text>Zbli¿asz siê do Bariery. Nawet nie myœl o sprawianiu k³opotów, jeœli jednak oferujesz pomoc, z radoœci¹ j¹ przyjmiemy.</text>
+	</string>
+	<string id="mil_after_sniper_dead">
+		<text>Naznaczony, chodŸ tu po swoj¹ dzia³kê i dalsze instrukcje.</text>
+	</string>
+	<string id="mil_fblockpost_warning">
+		<text>Naznaczony, wróæ na pozycjê.</text>
+	</string>
+	<string id="mil_info_freedom_radio">
+		<text>Jeœli spêdzisz ca³¹ noc w wie¿y we wsi, coœ siê NA PEWNO wydarzy...</text>
+	</string>
+	<string id="mil_info_max_mines">
+		<text>Pamiêtaj o minach! Jeden b³¹d i zostanie z ciebie grzanka...</text>
+	</string>
+	<string id="mil_info_max_village">
+		<text>B¹dŸ ostro¿ny. NajwyraŸniej w wiosce mamy now¹ anomaliê. Cholerstwo jest szybkie i niewidzialne!</text>
+	</string>
+	<string id="mil_info_to_all">
+		<text>Uwaga wszyscy, którzy chc¹ stopiæ sobie mózg: drogi do Czerwonego Lasu broni jednostka Monolitu, a - jak pewnie wiecie - ci kolesie najpierw strzelaj¹, a póŸniej nie zadaj¹ pytañ. Powodzenia.</text>
+	</string>
+	<string id="mil_max_attack_signal">
+		<text>Naprzód! Rozwaliæ sukinsynów!</text>
+	</string>
+	<string id="mil_mission_complete">
+		<text>Wykonaliœmy ju¿ swoje zadanie. Wycofajmy siê do gospodarstwa. Tam zajmiemy siê zap³at¹.</text>
+	</string>
+	<string id="mil_scull_attack_signal">
+		<text>Naprzód, ch³opcy! Droga wolna!</text>
+	</string>
+	<string id="mil_scull_info">
+		<text>Naznaczony, zdejmij tych snajperów!</text>
+	</string>
+	<string id="mil_sniper_to_player_warning">
+		<text>Naznaczony, uwa¿aj albo dostaniesz kulkê!</text>
+	</string>

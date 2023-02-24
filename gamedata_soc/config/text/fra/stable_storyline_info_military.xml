@@ -1,0 +1,51 @@
+	<string id="mil_actor_main_quest_descr">
+		<text>D'après le général Voronin, seule la Liberté possède ce genre d'armes. Comment je me la suis procurée, ça me regarde. On m'a dit qu'il fallait que je fréquente un Stalker de la Liberté, un certain Chef. D'après le général, il a tendance à boire. Je vais prévoir de la vodka au cas où.</text>
+	</string>
+	<string id="mil_blockpost_job_descr">
+		<text>Il faut à tout prix protéger la Barrière des attaques émanant du lobotomisateur.</text>
+	</string>
+	<string id="mil_blockpost_job2_descr">
+		<text>Lukash : "Essaie de rejoindre le poste de contrôle de la sécurité par la sortie de la Forêt rouge. Visiblement, ils s'attendent à voir arriver des mutants ou le Monolithe</text>
+	</string>
+	<string id="mil_courier_doc_descr">
+		<text>La Liberté s'est procurée des lance-grenades Bulldog 6. Deux. Il y en a un dans l'arsenal et l'autre, quelque part dans le village.\n\n</text>
+	</string>
+	<string id="mil_courier_job_descr">
+		<text>Lukash : "C'est terrible, il y a une Balance parmi nous... Il s'appelle Pavlik. Il envoie des informations à l'ennemi et ça ne peut pas continuer. Tu vas devoir le suivre jusqu'à la ferme pour savoir à qui il donne ces informations. Il est parti il n'y a pas longtemps et tu devrais pouvoir le rattraper. Attention, tu peux et tu dois l'éliminer, mais pas avant de savoir à qui il donne ces informations. Et lui aussi, tu devras l'éliminer."</text>
+	</string>
+	<string id="mil_crazy_flash_info">
+		<text>... Aujourd'hui, on est encore allés au village. C'est toujours la même chose. \n\n D'où venait cette bête ? Elle a dû se faufiler à travers la Forêt rouge. Les gars sont morts et je suis le seul à tenir encore debout... Je vais tâcher d'y aller cette nuit... \n\n Je sais pas comment je m'en suis sorti. C'était l'enfer... Des tas d'images défilent et des tas de bruits résonnent dans ma tête et je ne sais pas d'où ils viennent. Fichues radiations. Et pour couronner le tout, le détecteur marche plus. Un peu de repos et ça ira mieux.</text>
+	</string>
+	<string id="mil_dolg_kill_lukash_descr">
+		<text>Pénètre sur la base avec les membres du Devoir.\n Élimine trois snipers. \nTue Lukash.</text>
+	</string>
+	<string id="mil_dolg_kill_sniper_descr">
+		<text>Tue le sniper de la tour. Mais attention, ne te fais pas descendre.</text>
+	</string>
+	<string id="mil_flash_bandit_descr">
+		<text>Bon sang, ces enfoirés du Devoir nous ont chassés de ce fichu endroit. Ils s'étaient retranchés près de notre ferme. On a même pas eu le temps de récupérer les trucs qu'on avait au grenier. Enfin, c'est pas grave... La base de la Liberté est pas loin, et ils vont pas rester bien longtemps.</text>
+	</string>
+	<string id="mil_flash_max_descr">
+		<text>Aujourd'hui, on a descendu quelques soldats qui se dirigeaient vers la Forêt rouge équipés de Bulldog 6. Ils sont redoutables. Lukash en a pris un et le Magouilleur en a caché un autre dans un des souterrains du village.</text>
+	</string>
+	<string id="mil_flash_ugrumy_descr">
+		<text>1. Le diable m'a entraîné dans la Forêt rouge. J'y suis à peine arrivé... J'étais à deux doigts de me liquéfier.\n\n 2. Quatre voyous m'ont encerclé comme si j'étais un gamin de trois ans. J'ai pas vu leur piège. Si j'ai réussi à m'en sortir, c'est grâce à leur bêtise. Au lieu de m'étouffer, ils m'ont sauté dessus pour me déshabiller et je me suis accrochée à ma combi. Mais un deux m'a dégommé avec une balle... Ah, je me fais vieux...\n\n 3. Quand je suis arrivé, le messager de Strelok ne respirait plus. Ces sangsues sont redoutables, mais ce type en avait eu quatre, et des traces de sang menaient vers différentes directions. La seule information qu'il avait sur lui, c'est un code de porte (19840519), mais trouver cette porte semble impossible.\n\n 4. On a intercepté plusieurs militaires qui se dirigeaient vers la Forêt rouge. Ils n'avaient ni documents ni ordres, mais étaient drôlement bien équipés. Je crois que je vais laisser ce Bulldog 6 dans le souterrain tant que j'en ai pas besoin.</text>
+	</string>
+	<string id="mil_freedom_rg6_task_descr">
+		<text>Voronin : "L'ennemi possède plusieurs excellents lance-grenades Bulldog 6. Si tu réussissais à t'en procurer t'en procurer un, je te récompenserais comme il se doit. Puisque tu ne fais pas partie de notre faction, tu devrais pouvoir approcher la Liberté et, avec un peu de chance, lui piquer un Bulldog 6. Je t'indiquerai l'endroit où se trouve la Liberté. Là, il faudra que tu trouves un certain Chef, un membre du groupe ; il sait où sont stockés les Bulldog 6. Il a tendance à boire, alors essaie de le saouler. Pour ça, apporte beaucoup de vodka."</text>
+	</string>
+	<string id="mil_go_to_miser_descr">
+		<text>Hrm. Le Radin va me donner ma récompense... Joli nom ! J'espère un boite de viande avec une date de péremption datant de l'année dernière.</text>
+	</string>
+	<string id="mil_hunters_task_descr">
+		<text>Élimine les sangsues du village. Fais gaffe, sinon elles vont te vider de ton sang et te laisser pour mort.</text>
+	</string>
+	<string id="mil_hunters_task_descr2">
+		<text>Élimine les sangsues du village. Fais gaffe, sinon elles vont te vider de mon sang et te laisser pour mort.</text>
+	</string>
+	<string id="mil_lukash_job_descr">
+		<text>Lukash a décidé de contre-attaquer le détachement du Devoir. Max, un des vétérans de la Liberté, va diriger l'opération. Je dois lui prêter main-forte.</text>
+	</string>
+	<string id="mil_mad_flash_job_descr">
+		<text>Je me demande ce que ce dingue du marécage peut bien savoir. Je vais trouver. Mais il faut à tout prix éviter ces vieilles mines. D'accord, elles sont rouillées, mais ça ne les empêche pas d'exploser.</text>
+	</string>

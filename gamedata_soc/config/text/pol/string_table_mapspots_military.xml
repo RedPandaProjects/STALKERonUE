@@ -1,0 +1,60 @@
+	<string id="mil_cap_hint">
+		<text>Porozmawiaj z dowódc¹ posterunku przy Barierze</text>
+	</string>
+	<string id="mil_courier_hint1">
+		<text>IdŸ za kablem</text>
+	</string>
+	<string id="mil_courier_hint2">
+		<text>Poczekaj, a¿ kabel zawo³a agenta</text>
+	</string>
+	<string id="mil_courier_hint3">
+		<text>Zabij kabla</text>
+	</string>
+	<string id="mil_courier_hint4">
+		<text>Zabij informatora</text>
+	</string>
+	<string id="mil_crazy_hint">
+		<text>Zabierz szalonemu stalkerowi jego pendrive'a</text>
+	</string>
+	<string id="mil_dolg_khutor">
+		<text>Gospodarstwo "Powinnoœci"</text>
+	</string>
+	<string id="mil_freedom_sniper">
+		<text>Zabij snajpera</text>
+	</string>
+	<string id="mil_hunters_hint1">
+		<text>Porozmawiaj z Mrukiem</text>
+	</string>
+	<string id="mil_hunters_hint2">
+		<text>Wróæ do Kutwy</text>
+	</string>
+	<string id="mil_kill_dolg_hint">
+		<text>Zlikwiduj oddzia³ "Powinnoœci"</text>
+	</string>
+	<string id="mil_kill_lukash_hint">
+		<text>Zabij £ukasza</text>
+	</string>
+	<string id="mil_miser_hint">
+		<text>Kutwa</text>
+	</string>
+	<string id="mil_report_to_max_hint">
+		<text>Zg³oœ siê do Maksa</text>
+	</string>
+	<string id="mil_return_to_lukash_hint">
+		<text>Zg³oœ siê do £ukasza</text>
+	</string>
+	<string id="mil_return_to_max_hint">
+		<text>Daj Maksowi pendrive'a</text>
+	</string>
+	<string id="mil_rg6_hint1">
+		<text>ZnajdŸ kucharza w bazie "Wolnoœci"</text>
+	</string>
+	<string id="mil_rg6_hint2">
+		<text>Porozmawiaj z Kuchmistrzem</text>
+	</string>
+	<string id="mil_rg6_hint3">
+		<text>Zabierz Bulldoga 6 ze schowka w wiosce</text>
+	</string>
+	<string id="mil_watertower_hint">
+		<text>Wie¿a ciœnieñ</text>
+	</string>

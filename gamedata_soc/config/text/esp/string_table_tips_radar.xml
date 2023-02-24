@@ -1,0 +1,12 @@
+	<string id="rad_barman_spam">
+		<text>¡¿Marcado?! ¡¿Estás vivo?! ¡Estupendo! Así que conseguiste desactivar el Cauterizador, ¿no? Todo el mundo está intentando llegar al centro de la Zona por Pripyat. Nadie sabe lo que hay allí..., quizás cantidades ingentes de artefactos, o algo que haga que se cumplan los deseos.\n Hay un grupo de veteranos que se está preparando para ir allí ahora mismo. Si te das prisa, podrías llegar a tiempo de unirte a ellos. Les diré que vas a ir para que te esperen.</text>
+	</string>
+	<string id="tips_bun_komand">
+		<text>Equipos uno y dos, comprobad la planta baja. Equipo tres, vestíbulo principal. Equipos cuatro y cinco, primera planta.</text>
+	</string>
+	<string id="tips_rad_sos_suicide">
+		<text>... Socorro, me muero...</text>
+	</string>
+	<string id="tips_rad_switcher_press">
+		<text>Para desactivar la máquina, presiona ($$ACTION_USE$$)</text>
+	</string>

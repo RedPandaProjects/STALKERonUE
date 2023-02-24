@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_activate_artefact">
+		<text>activer l'artefact</text>
+	</string>
+	<string id="st_attach_gl_to_rifle">
+		<text>fixer le lance-grenades au fusil</text>
+	</string>
+	<string id="st_attach_scope_to_pistol">
+		<text>fixer la lunette au pistolet</text>
+	</string>
+	<string id="st_attach_scope_to_rifle">
+		<text>fixer la lunette au fusil</text>
+	</string>
+	<string id="st_attach_silencer_to_pistol">
+		<text>fixer le silencieux au pistolet</text>
+	</string>
+	<string id="st_attach_silencer_to_rifle">
+		<text>fixer le silencieux au fusil</text>
+	</string>
+	<string id="st_base_cost">
+		<text>prix</text>
+	</string>
+	<string id="st_condition">
+		<text>йtat</text>
+	</string>
+	<string id="st_detach_gl">
+		<text>dйmonter le lance-grenades</text>
+	</string>
+	<string id="st_detach_scope">
+		<text>dйmonter la lunette</text>
+	</string>
+	<string id="st_detach_silencer">
+		<text>dйmonter le silencieux</text>
+	</string>
+	<string id="st_dress_outfit">
+		<text>mettre combinaison</text>
+	</string>
+	<string id="st_drop">
+		<text>abandonner</text>
+	</string>
+	<string id="st_drop_all">
+		<text>tout abandonner</text>
+	</string>
+	<string id="st_eat">
+		<text>manger</text>
+	</string>
+	<string id="st_move_on_belt">
+		<text>fixer а la ceinture</text>
+	</string>
+	<string id="st_move_to_bag">
+		<text>dйplacer vers le sac а dos</text>
+	</string>
+	<string id="st_move_to_slot">
+		<text>dйplacer vers la case</text>
+	</string>
+	<string id="st_sell_item">
+		<text>vendre l'objet</text>
+	</string>
+	<string id="st_undress_outfit">
+		<text>enlever la combinaison</text>
+	</string>
+	<string id="st_unload_magazine">
+		<text>dйcharger</text>
+	</string>
+	<string id="st_use">
+		<text>utiliser</text>
+	</string>
+	<string id="st_weight">
+		<text>poids</text>
+	</string>
+	<string id="ui_inv_accuracy">
+		<text>Prйcision</text>
+	</string>
+	<string id="ui_inv_bag">
+		<text>Sac а dos</text>
+	</string>
+	<string id="ui_inv_belt">
+		<text>Ceinture</text>
+	</string>
+	<string id="ui_inv_cancel">
+		<text>Annuler</text>
+	</string>
+	<string id="ui_inv_clear">
+		<text>Effacer</text>
+	</string>
+	<string id="ui_inv_damage">
+		<text>Dйgвts</text>
+	</string>
+	<string id="ui_inv_description">
+		<text>Description</text>
+	</string>
+	<string id="ui_inv_drop">
+		<text>Enlever</text>
+	</string>
+	<string id="ui_inv_equipment">
+		<text>Йquipement</text>
+	</string>
+	<string id="ui_inv_exit">
+		<text>Quitter</text>
+	</string>
+	<string id="ui_inv_granades_rifle">
+		<text>Acheter des grenades pour le lance-grenades (E)</text>
+	</string>
+	<string id="ui_inv_handling">
+		<text>Prise en main</text>
+	</string>
+	<string id="ui_inv_heavy_weapons">
+		<text>Lourd(e)</text>
+	</string>
+	<string id="ui_inv_items_list">
+		<text>Liste d'objets</text>
+	</string>
+	<string id="ui_inv_money">
+		<text>Argent</text>
+	</string>
+	<string id="ui_inv_ok">
+		<text>OK</text>
+	</string>
+	<string id="ui_inv_outfit_burn_protection">
+		<text>Brыlure</text>
+	</string>
+	<string id="ui_inv_outfit_chemical_burn_protection">
+		<text>Brыlure chim.</text>
+	</string>
+	<string id="ui_inv_outfit_explosion_protection">
+		<text>Explosion</text>
+	</string>
+	<string id="ui_inv_outfit_fire_wound_protection">
+		<text>Perforation</text>
+	</string>
+	<string id="ui_inv_outfit_params">
+		<text>Paramиtres</text>
+	</string>
+	<string id="ui_inv_outfit_radiation_protection">
+		<text>Radiations</text>
+	</string>
+	<string id="ui_inv_outfit_shock_protection">
+		<text>Dйcharge йlec.</text>
+	</string>
+	<string id="ui_inv_outfit_strike_protection">
+		<text>Impact</text>
+	</string>
+	<string id="ui_inv_outfit_telepatic_protection">
+		<text>Tйlйpathie</text>
+	</string>
+	<string id="ui_inv_outfit_wound_protection">
+		<text>Entailles</text>
+	</string>
+	<string id="ui_inv_outfits">
+		<text>Combinaisons</text>
+	</string>
+	<string id="ui_inv_personal">
+		<text>Combi.</text>
+	</string>
+	<string id="ui_inv_pistols">
+		<text>Pistolets</text>
+	</string>
+	<string id="ui_inv_primary_weapons">
+		<text>Arme principale</text>
+	</string>
+	<string id="ui_inv_rate_of_fire">
+		<text>Cadence de tir</text>
+	</string>
+	<string id="ui_inv_rest">
+		<text>Repos</text>
+	</string>
+	<string id="ui_inv_rifles">
+		<text>Fusils d'assaut</text>
+	</string>
+	<string id="ui_inv_shop">
+		<text>Magasin</text>
+	</string>
+	<string id="ui_inv_shotguns">
+		<text>Fusils</text>
+	</string>
+	<string id="ui_inv_sniper_rifles">
+		<text>Sniper</text>
+	</string>
+	<string id="ui_inv_time">
+		<text>Heure</text>
+	</string>
+	<string id="ui_inv_total_money">
+		<text>Argent total</text>
+	</string>
+	<string id="ui_inv_weight">
+		<text>Poids</text>
+	</string>
+	<string id="ui_inv_ammo_pistol">
+		<text>Acheter des munitions de base pour le pistolet (A)</text>
+	</string>
+	<string id="ui_inv_ammo_rifle">
+		<text>Acheter des munitions de base pour le fusil (W)</text>
+	</string>
+	<string id="ui_inv_granadelauncher_rifle">
+		<text>Acheter un lance-grenades pour le fusil (D)</text>
+	</string>
+	<string id="ui_inv_granades">
+		<text>Grenades</text>
+	</string>
+	<string id="ui_inv_scope_rifle">
+		<text>Acheter une lunette pour le fusil (S)</text>
+	</string>
+	<string id="ui_inv_silencer_pistol">
+		<text>Acheter un silencieux pour le pistolet (Q)</text>
+	</string>
+	<string id="ui_inv_silencer_rifle">
+		<text>Acheter un silencieux pour le fusil (F)</text>
+	</string>
+	<string id="ui_inv_last_buy">
+		<text>Acheter l'ensemble prйcйdent</text>
+	</string>
+	<string id="ui_inv_sell_items(X)">
+		<text>Vendre tous les objets du sac а dos (X)</text>
+	</string>
+	<string id="ui_st_preset_stored_to">
+		<text>Ensemble achetй enregistrй sous</text>
+	</string>
+	<string id="ui_inv_preset1(F1)">
+		<text>Prйrйglage 1 (F1)</text>
+	</string>
+	<string id="ui_inv_preset2(F2)">
+		<text>Prйrйglage 2 (F2)</text>
+	</string>
+	<string id="ui_inv_preset3(F3)">
+		<text>Prйrйglage 3 (F3)</text>
+	</string>
+	<string id="ui_inv_last_buy(F4)">
+		<text>Derniers objets (F4)</text>
+	</string>
+	<string id="ui_inv_default(F5)">
+		<text>Objets par dйfaut (F5)</text>
+	</string>
+	<string id="ui_st_preset_def">
+		<text>Objets par dйfaut</text>
+	</string>
+	<string id="ui_inv_reset_items(C)">
+		<text>Rйinitialiser objets (C)</text>
+	</string>
+	<string id="ui_inv_cant_buy_item">
+		<text>Impossible d'acheter l'objet</text>
+	</string>
+	<string id="ui_inv_rank_restr">
+		<text>Restriction de rang</text>
+	</string>
+	<string id="ui_inv_not_enought_money">
+		<text>Pas assez d'argent</text>
+	</string>
+	<string id="ui_inv_count_restr">
+		<text>Restriction d'argent</text>
+	</string>
+	<string id="ui_inv_has">
+		<text>Actuel</text>
+	</string>
+	<string id="ui_inv_need">
+		<text>Requis</text>
+	</string>
+	<string id="ui_inv_you_already_have">
+		<text>Vous avez dйjа</text>
+	</string>
+	<string id="ui_st_err_gs_not_available">
+		<text>Service en ligne pour S.T.A.L.K.E.R. indisponible</text>
+	</string>
+	<string id="ui_st_err_sb_master_server_conn_fail">
+		<text>Impossible de se connecter au serveur maоtre</text>
+	</string>
+</string_table>

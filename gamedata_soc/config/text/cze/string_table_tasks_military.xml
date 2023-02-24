@@ -1,0 +1,150 @@
+	<string id="mil_blockpost_job">
+		<text>Pomoz Svobodì u Bariéry</text>
+	</string>
+	<string id="mil_courier">
+		<text>Práskaè</text>
+	</string>
+	<string id="mil_courier_job">
+		<text>Postarej se o práskaèe</text>
+	</string>
+	<string id="mil_courier_phase1">
+		<text>Dostaò se na farmu</text>
+	</string>
+	<string id="mil_courier_phase2">
+		<text>Poèkej na pøíchod agenta</text>
+	</string>
+	<string id="mil_courier_phase3">
+		<text>Zbav se práskaèe</text>
+	</string>
+	<string id="mil_courier_phase4">
+		<text>Zbav se agenta</text>
+	</string>
+	<string id="mil_courier_phase5">
+		<text>Dej Lukášovi hlášení o misi</text>
+	</string>
+	<string id="mil_crazy">
+		<text>Šílenı stalker</text>
+	</string>
+	<string id="mil_dolg">
+		<text>Frakce Povinnost</text>
+	</string>
+	<string id="mil_dolg_assault_freedom">
+		<text>Pomoz Povinnosti eliminovat Lukáše</text>
+	</string>
+	<string id="mil_kill_lukash">
+		<text>Zabij Lukáše</text>
+	</string>
+	<string id="mil_dolg_assault_support">
+		<text>Zbav se odstøelovaèe</text>
+	</string>
+	<string id="mil_dolg_return_to_khutor">
+		<text>Vra se k farmì Povinnosti</text>
+	</string>
+	<string id="mil_dolg_return_to_skull">
+		<text>Vra se k Lebkovi</text>
+	</string>
+	<string id="mil_fblockpost_commander">
+		<text>Velitel pevnùstky Klobouk</text>
+	</string>
+	<string id="mil_fblockpost_phase2">
+		<text>Pomoz znièit jednotku Monolitu</text>
+	</string>
+	<string id="mil_fblockpost_phase3">
+		<text>Promluv si s velitelem Bariéry</text>
+	</string>
+	<string id="mil_find_cook">
+		<text>Najdi kuchaøe Svobody</text>
+	</string>
+	<string id="mil_freedom_rg6_task">
+		<text>Získej od Svobody Bulldog 6</text>
+	</string>
+	<string id="mil_go_max">
+		<text>Ohlas se u Maxe</text>
+	</string>
+	<string id="mil_go_to_miser_task">
+		<text>Jdi do základny Svobody za Lakomcem a získej od nìj odmìnu</text>
+	</string>
+	<string id="mil_go_to_miser_task_main">
+		<text>Jdi si pro odmìnu za zabité upíry</text>
+	</string>
+	<string id="mil_hunters_phase1">
+		<text>Najdi ve vesnici Mraèouna</text>
+	</string>
+	<string id="mil_hunters_phase2">
+		<text>Zabij upíry</text>
+	</string>
+	<string id="mil_hunters_phase3">
+		<text>Vra se k Lakomci pro artefakt</text>
+	</string>
+	<string id="mil_hunters_task">
+		<text>Zabij upíry ve vesnici</text>
+	</string>
+	<string id="mil_kill_controller">
+		<text>Zabij upíry</text>
+	</string>
+	<string id="mil_kill_controller_main">
+		<text>Zabij upíry</text>
+	</string>
+	<string id="mil_kill_dolg">
+		<text>Zniè jednotku Povinnosti.</text>
+	</string>
+	<string id="mil_lukash">
+		<text>Lukáš</text>
+	</string>
+	<string id="mil_max">
+		<text>Max</text>
+	</string>
+	<string id="mil_put_flash_to_max">
+		<text>Dej Maxovi flashdisk</text>
+	</string>
+	<string id="mil_kill_sniper">
+		<text>Zabij snajpra na vìi</text>
+	</string>
+	<string id="mil_quest_report_dolg">
+		<text>Podej Povinnosti hlášení</text>
+	</string>
+	<string id="mil_return_lukash">
+		<text>Vra se k Lukášovi</text>
+	</string>
+	<string id="mil_return_to_ugrumy">
+		<text>Ohlas se u Mraèouna, dostaneš misi</text>
+	</string>
+	<string id="mil_return_to_voronin">
+		<text>Pøines  Bulldog 6 generálu Voroninovi</text>
+	</string>
+	<string id="mil_rg6">
+		<text>Najdi Bulldog 6</text>
+	</string>
+	<string id="mil_secret">
+		<text>Zásobárna banditù</text>
+	</string>
+	<string id="mil_sniper">
+		<text>Snajpr</text>
+	</string>
+	<string id="mil_mad_job">
+		<text>Získej flashdisk šíleného stalkera</text>
+	</string>
+	<string id="mil_talk_cook">
+		<text>Promluv si s Šéfkuchaøem</text>
+	</string>
+	<string id="mil_talk_with_cap">
+		<text>Promluv si s panem Kloboukem - velitel pevnùstky Svobody</text>
+	</string>
+	<string id="mil_test_task_phase1">
+		<text>Vejdi do restriktoru 1</text>
+	</string>
+	<string id="mil_test_task_phase2">
+		<text>Vejdi do restriktoru 2</text>
+	</string>
+	<string id="mil_test_task_phase3">
+		<text>Pokud je mise splnìna, zvedni Bulldog 6, pokud ne, tak TRs 301.</text>
+	</string>
+	<string id="mil_test_task_title">
+		<text>Test mise</text>
+	</string>
+	<string id="mil_ugrumy">
+		<text>Mraèoun</text>
+	</string>
+	<string id="mil_lukash_job">
+		<text>Zniè jednotku Povinnosti</text>
+	</string>

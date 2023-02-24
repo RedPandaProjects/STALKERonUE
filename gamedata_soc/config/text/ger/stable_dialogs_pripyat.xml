@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="pri_followers_start_dlg_21">
+		<text>Gehen wir die StraЯe entlang. Wenn etwas passiert, dann gib mir Deckung.</text>
+	</string>
+	<string id="pri_followers_start_dlg_211">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="pri_followers_start_dlg_31">
+		<text>Danke fьr die Hilfe, Gezeichneter. Das war ein schwerer Kampf. Wir kцnnen hier ausruhen. Falls du weitergehen willst, erzдhle ich dir mehr ьber diese Gegend. Wenn du umdrehst und rechts abbiegst, erreichst du den Parkplatz. Das ist offenes Gelдnde und nicht sehr sicher. Wenn du weitergehst, kommst du zum Hotel. Rechts davon befindet sich die Monolith-Basis. Diese Typen kennen keine Grenzen. Hinter der Basis ist das Stadion. Unser Plan ist es, durch dieses Stadion zum Parkplatz zu kommen. Das ist alles.</text>
+	</string>
+	<string id="pri_followers_start_dlg_311">
+		<text>Danke.</text>
+	</string>
+	<string id="pri_followers_start_dlg_41">
+		<text>Danke fьr die Hilfe. Viel Glьck.</text>
+	</string>
+	<string id="pri_followers_start_dlg_411">
+		<text>Tschьs.</text>
+	</string>
+</string_table>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="af-ameba-mica">
+		<text>Mika</text>
+	</string>
+	<string id="af-ameba-slime">
+		<text>Schleim</text>
+	</string>
+	<string id="af-ameba-slug">
+		<text>Schnecke</text>
+	</string>
+	<string id="af-blood">
+		<text>Steinblut</text>
+	</string>
+	<string id="af-cristall">
+		<text>Kristall</text>
+	</string>
+	<string id="af-cristall-flower">
+		<text>Steinblume</text>
+	</string>
+	<string id="af-drops">
+		<text>Tropfen</text>
+	</string>
+	<string id="af-dummy-battery">
+		<text>Batterie</text>
+	</string>
+	<string id="af-dummy-dummy">
+		<text>Muschel</text>
+	</string>
+	<string id="af-dummy-glassbeads">
+		<text>Mamas Perlen</text>
+	</string>
+	<string id="af-dummy-pellicle">
+		<text>Pellicula</text>
+	</string>
+	<string id="af-dummy-spring">
+		<text>Sprungfeder</text>
+	</string>
+	<string id="af-electra-flash">
+		<text>Blitz</text>
+	</string>
+	<string id="af-electra-moonlight">
+		<text>Mondlicht</text>
+	</string>
+	<string id="af-electra-sparkler">
+		<text>Funkensprьher</text>
+	</string>
+	<string id="af-fireball">
+		<text>Feuerball</text>
+	</string>
+	<string id="af-fuzz-kolobok">
+		<text>KloЯ</text>
+	</string>
+	<string id="af-gold-fish">
+		<text>Goldfisch</text>
+	</string>
+	<string id="af-gravi">
+		<text>Gravit</text>
+	</string>
+	<string id="af-medusa">
+		<text>Qualle</text>
+	</string>
+	<string id="af-mincer-meat">
+		<text>Fleischklumpen</text>
+	</string>
+	<string id="af-night-star">
+		<text>Nachtstern</text>
+	</string>
+	<string id="af-rusty-kristall">
+		<text>Dornenkristall</text>
+	</string>
+	<string id="af-rusty-sea-urchin">
+		<text>Seeigel</text>
+	</string>
+	<string id="af-rusty-thorn">
+		<text>Dorn</text>
+	</string>
+	<string id="af-soul">
+		<text>Seele</text>
+	</string>
+	<string id="af-vyvert">
+		<text>Gepresstes</text>
+	</string>
+	<string id="Agroprom">
+		<text>Agroprom</text>
+	</string>
+	<string id="Ameba">
+		<text>Gallert</text>
+	</string>
+	<string id="Anomalies">
+		<text>Anomalien</text>
+	</string>
+	<string id="Artifacts">
+		<text>Artefakte</text>
+	</string>
+	<string id="Bald">
+		<text>Sprungbrett</text>
+	</string>
+	<string id="Bar">
+		<text>Bar</text>
+	</string>
+	<string id="Darkdolina">
+		<text>Dunkles Tal</text>
+	</string>
+	<string id="Deadcity">
+		<text>Gelцscht</text>
+	</string>
+	<string id="Electra">
+		<text>Elektro</text>
+	</string>
+	<string id="enc_weapons1_wpn-winchester_m1">
+		<text>Eine Variation des Chasers. Ein kleines Fragment des Artefaktes "Gravit" wurde in den Lauf eingebaut, um die Fluggeschwindigkeit des Kugel zu erhцhen.</text>
+	</string>
+	<string id="enc_zone_anomalies_ameba">
+		<text>Eine Anomalie unbekannter Natur. Verursacht bei Kontakt Verletzungen wie durch starke Sдureeinwirkung. Bildet drei Arten von Artefakten: Schleim, Schnecke und Mika.</text>
+	</string>
+	<string id="enc_zone_anomalies_bald">
+		<text>Eine der ersten dokumentierten Anomalien. Das instabile Gravitationsfeld verursacht innerhalb seines Radius Schockschдden. Bleibt durchschnittlich eine Woche aktiv. Die Schadensmenge variiert wдhrenddessen zwischen leichten Prellungen und ernsthaften Wunden bis hin zu sofortigem Tod. Bei Tageslicht leicht zu erkennen, da Luftflimmern, wirbelnde Blдtter und typische purpurne Flecken auf dem Boden die Anomalie begleiten. Wird von allen Detektoren erkannt. Das Sprungbrett kann auЯerdem lokalisiert werden, indem Objekte hineingeworfen werden. Bildet drei Arten von Artefakten: Qualle, Steinblume und Nachtstern.</text>
+	</string>
+	<string id="enc_zone_anomalies_electra">
+		<text>Eine anomale Formation, die ca. 10 m im Durchmesser aufweist und statische Elektrizitдt in groЯen Mengen ansammelt. Wenn sie ausgelцst wird, zerplatzt die Anomalie in Dutzende von Miniaturgewittern, die elektrische Schocks verursachen, die fьr alle Lebewesen fast immer tцdlich sind. Bei Tageslicht erkennbar am blдulichen Nebel der darьber schwebt. In der Nacht kann Elektro durch jeden Detektor und durch Hineinwerfen von Gegenstдnden erkannt werden. Bildet drei Typen Artefakte: "Funkensprьher", "Blitz" und "Mondlicht".</text>
+	</string>
+	<string id="enc_zone_anomalies_fuzz">
+		<text>Dieses Zonenbeispiel fьr mutierte Vegetation reagiert auf sich schnell nдhernde Lebewesen mit der Absonderung einer Projektilwolke, die bei Kontakt bloЯe oder nur leicht geschьtzte Haut ernsthaft verletzt. Reagiert nicht auf sich langsam bewegende Ziele und bildet drei Arten von Artefakten (mцglicherweise Samen): Dorn, Dornenkristall und Seeigel.</text>
+	</string>
+	<string id="enc_zone_anomalies_gravi">
+		<text>Bei Auslцsung dieser Gravitations-Anomalie zieht die immense Kraft des Vortex alles innerhalb eines Radius von 10 bis 15 Metern ins Zentrum. In den Kern gezogene Opfer haben keinerlei Ьberlebenschancen: Ihre Kцrper werden schnell zu einer festen Masse zusammengedrьckt, die einen kurzen Moment spдter in einem starken EnergiestoЯ explodiert. Die Anomalie дndert ihren Standort wдhrend ihrer Lebenszeit (durchschnittlich eine Woche) nicht. Bei Tageslicht leicht erkennbar durch Luftflimmern ьber ihr, wirbelnde Blдtter, herumliegende Kцrperteile und einen typischen dunklen Fleck im Zentrum. Bei Nacht hochgefдhrlich, da sie nur durch einen Detektor oder Einwurf von Metallobjekten erkennbar ist. Bildet drei Typen von Artefakten: Gepresstes, Gravit und Goldfisch. </text>
+	</string>
+	<string id="enc_zone_anomalies_lift">
+		<text>Harmlose Anomalie, die zeitweise die Schwerkraft aufhebt. Manifestiert sich als Gebiet von gewцhnlich mehreren Metern Durchmesser mit stark reduzierter Schwerkraft. Bildet das Artefakt "Pellicula".</text>
+	</string>
+	<string id="enc_zone_anomalies_meat">
+		<text>Schleudert ihre Opfer in die Luft und wirbelt sie in wahnwitzigem Tempo herum. Die genaue Natur des Karussells ist immer noch ein Rдtsel. Die Anomalie ist erkennbar durch einen Staubwirbel ьber ihr und verstreute Kцrperteile in ihrer Nдhe. Opfer, die mit dem Rand in Berьhrung kommen - weit entfernt von der effektivsten Zone im Zentrum - kцnnen dem Strudel mit leichteren Verletzungen entkommen. Bildet drei Arten von Artefakten: Steinblut, Fleischklumpen und Seele.</text>
+	</string>
+	<string id="enc_zone_anomalies_radioactive">
+		<text>Ein Bereich mit erhцhter Strahlung ьber 50 mR/h. Es wird dringend davon abgeraten, fьr einen lдngeren Zeitraum in einer Strahlungszone zu verbleiben.</text>
+	</string>
+	<string id="enc_zone_anomalies_time">
+		<text>Anomalie, die an ein Wunder erinnert: In einem Bereich von mehreren Metern Durchmesser ist der Zeitfluss erheblich langsamer als normal. Scheint keinerlei negative Effekte auf die menschliche Gesundheit zu haben. Es kann sich jedoch als schwierig erweisen, die Zeitmaschine wieder zu verlassen. Durch Mamas Perlen - das Artefakt, das fьr gewцhnlich im Zentrum der Anomalie zu finden ist - kann die Zeitmaschine aufgelцst werden.</text>
+	</string>
+	<string id="enc_zone_anomalies_zharka">
+		<text>Im inaktiven Zustand manifestiert diese Anomalie sich als kaum sichtbare Ansammlung heiЯer Luft. Bei Auslцsung durch ein Objekt oder Lebewesen heizt sie sich spontan auf tцdliche Temperaturen von bis zu 1500K auf. Bei Nacht kann sie von starken Detektoren oder durch das Werfen von Metallobjekten in den Auslцserbereich geortet werden. Bildet drei Arten von Artefakten: Tropfen, Feuerball und Kristall.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-mica">
+		<text>Die Anomalie "Gallert" kann solche Artefakte unter extrem seltenen physikalischen Bedingungen erzeugen. Das Ergebnis ist ein halb durchsichtiges, hartes Objekt; ein seltenes und teueres Artefakt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slime">
+		<text>Dieses Artefakt wird mit Sicherheit durch die Anomalie "Gallert" erzeugt. Bei optimalem Einsatz bluten Wunden damit weniger, obwohl der Trдger empfindsamer gegenьber Verbrennungen wird.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slug">
+		<text>Gebildet durch die Anomalie "Gallert". Die negativen Eigenschaften dieses Artefakts werden durch eine erhцhte Blutgerinnungsfдhigkeit ausgeglichen. Auf ein solches Artefakt trifft man nicht hдufig, so dass es hoch im Kurs steht.</text>
+	</string>
+	<string id="enc_zone_artifact_af-blood">
+		<text>Dieses Artefakt ist in der Nдhe der Anomalie "Karussell" zu finden. Das unansehnliche rцtliche Objekt besteht aus gepressten und merkwьrdig verformten Resten von polymerisierten Pflanzen, Erde und Knochen. Weit verbreitet und nicht sehr effektiv.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall">
+		<text>Entsteht durch den Eintritt von Schwermetallen in die Anomalie "Brenner". Dieses Artefakt eliminiert Strahlung hervorragend, wird von Stalkern hoch geschдtzt und ist schwer zu finden.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall-flower">
+		<text>Das in der Anomalie "Sprungbrett" gebildete Artefakt kann nur in einigen wenigen Bereichen der Zone gefunden werden. Seine Bestandteile aus Metall erzeugen ein wunderschцnes Lichtspiel, wodurch es sehr beruhigend wirkt, das Artefakt bei Nacht am Feuer zu betrachten. </text>
+	</string>
+	<string id="enc_zone_artifact_af-drops">
+		<text>In der Anomalie "Brenner" bei hohen Temperaturen gebildet. Wirkt von auЯen wie ein Schatten in Trдnenform mit glдnzender, gerissener Oberflдche.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-battery">
+		<text>
+Der Ursprung dieses Objektes ist ein Rдtsel fьr die Wissenschaft. Teilweise besteht es aus dielektrischen Elementen, doch die physikalischen Bedingungen, unter denen es gebildet wird, sind nicht bekannt.
+</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-dummy">
+		<text>Durch das Tragen dieses teuren und seltenen Artefakts wird die Zerstцrung von Proteinen verlangsamt. Der Kцrper kann also hцhere Temperaturen besser ertragen und ist weniger leicht entzьndlich.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-glassbeads">
+		<text>Dieses wundervolle Artefakt sollte sicher verwahrt werden - es ist so wertvoll, da es ausschlieЯlich positive Eigenschaften besitzt. Wissenschaftler haben bislang keinen Weg entdeckt, das Artefakt unter Laborbedingungen zu produzieren.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-pellicle">
+		<text>Dieses Artefakt ist so selten, dass manche Forscher sich nicht vorstellen kцnnen, dass eine solche Substanz in einer natьrlichen Umgebung zu finden sein kann. StцЯt chemische Sдuren aus.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-spring">
+		<text>Nach Meinung einiger Theoretiker ist dieses Artefakt eine Mischung zwischen den Artefakten "Batterie" und "Muschel".</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-flash">
+		<text>Zuweilen durch "Elektro" gebildetes Artefakt, das von Stalkern gern wegen seiner positiven Eigenschaften genutzt wird. Durch seinen guten Preis und ansprechendes Aussehen beliebt bei Sammlern.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-moonlight">
+		<text>Nebenprodukt der Aktivitдt der Anomalie "Elektro". Die wunderschцne Rundform entsteht, wenn die Anomalie bestimmten thermischen Einflьssen ausgesetzt ist. Wertvolles Artefakt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-sparkler">
+		<text>Das gьnstige und weit verbreitete, aber dennoch bei Forschern beliebte Artefakt ist in der Nдhe der Anomalie "Elektro" zu finden.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fireball">
+		<text>Kristallisiert in der Anomalie "Brenner". Der guten Wirksamkeit gegen Strahlung steht der erhцhte Energieaustausch entgegen, der sich auf die Muskeln des Bewegungsapparates auswirkt. Keine dauerhafte Leistung und Abgabe von Hitze.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fuzz-kolobok">
+		<text>Wenn man dieses Mysterium der Zone in Hдnden hдlt, fьhlt man, wie die Haut stдrker und weniger empfindlich wird. Sie lдsst Kugeln immer noch durch, ist aber weniger anfдllig gegen Stichwaffen.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gold-fish">
+		<text>Das in der Anomalie "Vortex" gebildete Artefakt wird durch Kцrperwдrme aktiviert und stellt seinen Nutzer vor die Wahl, ob Strahlung oder Stichwunden das kleinere Ьbel sind. Das Artefakt kann auf jeden Fall mit gutem Gewinn verдuЯert werden.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gravi">
+		<text>Zu finden in der Nдhe von Anomalien wie "Vortex" oder in Hдnden anderer Stalker. Beim Tragen wird ein kleiner Teil der Strahlung im Kцrper gespeichert, wдhrend der Rest seitlich verstreut wird. Erzielt einen guten Preis.</text>
+	</string>
+	<string id="enc_zone_artifact_af-medusa">
+		<text>Wird in der Anomalie "Sprungbrett" gebildet und erzeugt ein schwaches Schutzfeld mit dem Nebeneffekt leichter Strahlung. Weit verbreitet und nicht sehr wertvoll.</text>
+	</string>
+	<string id="enc_zone_artifact_af-mincer-meat">
+		<text>Wird durch die Anomalie "Karussell" gebildet und verursacht erhцhtes Zellwachstum. Die neuen Zellen sind jedoch wesentlich empfдnglicher fьr die Auswirkungen von Uran. Das Artefakt kommt nicht sehr hдufig vor, ist aber auch nicht wirklich selten.</text>
+	</string>
+	<string id="enc_zone_artifact_af-night-star">
+		<text>Dieses wunderbare Artefakt wird durch die Anomalie "Sprungbrett" gebildet. Der Gebrauch des Artefakts bewirkt die Neutralisierung tцdlicher Strahlung. Das wertvolle und seltene Artefakt ist immens interessant fьr wissenschaftliche Expeditionen und andere Forschungsaktivitдten in der Zone.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-kristall">
+		<text>Kristallisiert in der Anomalie "Brennflaum". Entzieht dem Organismus die Strahlung auf natьrlichem Wege ьber ein gewisse Menge Blut aus den Ohren. Der Blutverlust kann auch aus anderen Kцrperцffnungen erfolgen. Weit verbreitet und sehr effektiv, was den stabilen Preis auf dem Markt erklдrt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-sea-urchin">
+		<text>Selten durch die Anomalie "Brennflaum" gebildetes Artefakt, das durch einen Anstieg des Blutdrucks fьr eine Verringerung der roten Blutkцrperchen sorgt. Gleichzeitig wird dem Kцrper jedoch auch die angesammelte Strahlung entzogen. In seinem wegweisenden Werk "Ionisierung und Polarisierung der Bestandteile seltener Artefakte", merkte Sacharow an, dass die Stabilitдt der Bestandteile dieses Artefakts kritisch und seine Produktion unter Laborbedingungen innerhalb der nдchsten zehn Jahre daher nicht wahrscheinlich sei.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-thorn">
+		<text>Ergebnis der Interaktion zwischen der Anomalie "Brennflaum" und dem Kцrper eines unachtsamen Stalkers. Das Artefakt "Dorn" durchstцЯt den Kцrper seines Trдgers, reinigt den Kцrper aber auch von Radionukliden. Weit verbreitet und gьnstig.</text>
+	</string>
+	<string id="enc_zone_artifact_af-soul">
+		<text>Sehr seltenes Artefakt neben der Anomalie "Karussell". Nur sehr wenige schaffen es, das Artefakt zu sehen, geschweige denn zu erlangen. Es hat sowohl eine angenehme Gestalt als auch einen angenehmen Preis.</text>
+	</string>
+	<string id="enc_zone_artifact_af-vyvert">
+		<text>Zu finden in der Anomalie "Vortex". Bei Kцrperkontakt verteilt es die Richtung der Strahlung im Kцrper und schьtzt vor durch Waffen verursachte Kratzer oder Wunden. Dieses Artefakt ist leicht zu finden, erzielt daher aber keinen besonders guten Preis.</text>
+	</string>
+	<string id="enc_zone_locations_agroprom">
+		<text>Ein sonderbarer, stark kontaminierter Bereich mit einem flachen See im Inneren, der von Ufer zu Ufer mit weggeworfener Ausrьstung und anderem Schrott vollgestopft ist. Hier befinden sich auch das verlassene Institut und die Fabrik. Das Militдr hat sich in letzter Zeit relativ hдufig hier aufgehalten.</text>
+	</string>
+	<string id="enc_zone_locations_bar">
+		<text>Die Wдchterfraktion hat ihr Lager am Rande der Ebene errichtet und heiЯt Stalker, die eine Pause brauchen, stets willkommen in dieser ganz besonderen Wьstenoase - frei von Anomalien und Mutanten. Die Bar 100 Rad in den Gewцlben ist auf jeden Fall einen Besuch wert, denn sie ist Treffpunkt fьr Stalker aus der gesamten Zone. Die Bar wird von einem цrtlichen Hдndler gefьhrt, so dass sie nicht nur ein guter Ort zum Quatschen, sondern auch zum Kauf oder Verkauf von Waren ist. Nцrdlich der Bar liegt die Militдrbasis, sьdlich die Mьllhalde.</text>
+	</string>
+	<string id="enc_zone_locations_darkdolina">
+		<text>Immer dьster, immer neblig und immer verregnet. Stalker, die sich ins Dunkle Tal begeben, kцnnen wertvolle Artefakte, aber auch einen schnellen Tod zu finden. Der Ort wird von den Erfahrensten aufgesucht, doch man kann ebenso gemeine Banditen antreffen. Angeblich befindet sich dort irgendwo ein unterirdisches Labor; es kцnnte sich also lohnen, nach einem versteckten Eingang Ausschau zu halten. Doch niemand ist je lebendig von dort zurьckgekehrt, so dass unklar ist, welche unangenehmen Ьberraschungen dort warten kцnnten ...</text>
+	</string>
+	<string id="enc_zone_locations_escape">
+		<text>Diesen Ort kann man sich gut als Vorzimmer der Zone vorstellen - hier kцnnen Anfдnger erste Erfahrungen sammeln. In den Gewцlben hinten im Dorf befindet sich ein Hдndler neben dem Armeeposten, mit dem sich ein Gesprдch unbedingt lohnt. Es ist ratsam, den Armeeposten selbst zu vermeiden, da die meisten bei Sichtkontakt schieЯen, ohne Fragen zu stellen. Manche von ihnen kцnnen jedoch bestochen werden, wenn die Offiziere nicht hinschauen. Es ist ebenfalls nicht empfehlenswert, die Soldaten anzugreifen, so lange sie keine direkte Bedrohung darstellen.</text>
+	</string>
+	<string id="enc_zone_locations_garbage">
+		<text>Auf dem riesigen Schrottplatz wurden direkt nach dem ersten Unfall ganze Berge von radioaktivem Mьll abgeladen, zumeist Ruinen alter Gebдude, die von Mutanten besetzt waren. Дhnlich wie in den AuЯenbezirken der Zone wimmelt es hier von Anfдnger-Stalkern und gelegentlich auch Banditen, die immer auf der Suche nach Beute sind. Einige Artefakte kцnnen hier gefunden werden, doch die meisten sind die Mьhe nicht wert, da man woanders bessere Ergebnisse erzielen kann. In Richtung Norden gelangt man zum Wildgebiet, im Westen liegt der Zugang zum Dunklen Tal und цstlich befindet sich die StraЯe zum Agroprom-Forschungsinstitut.</text>
+	</string>
+	<string id="enc_zone_locations_military-loc">
+		<text>Eine verlassene Militдrbasis nahe einem baufдlligen Weiler und einem kleinen Sumpfgebiet. Das Dorf ist ein gruseliger Ort, in dem es vor Mutanten wimmelt - allein die Anzahl der Blutsauger dort hat LegionsgrцЯe. Stalker sind am besten beraten, sich von dort fernzuhalten, selbst wenn das kilometerlange Umwege bedeutet. Die Anarchisten der Freiheitsgruppe haben sich im Militдrlager eingerichtet. Die StraЯe, die die Basis mit der Zone verbindet, wird vom Hirnschmelzer bewacht, der den Weg nach Prypjat und dem Kraftwerk von Tschernobyl blockiert. </text>
+	</string>
+	<string id="enc_zone_locations_pripiat">
+		<text>Dieser Ort war einmal eine relativ groЯe Stadt, die fьr die Ingenieure von Tschernobyl erbaut wurde. Heute ist es eine Geisterstadt, die nur von Mutanten und Zombies bewohnt wird. Es scheint keinen Weg hinein zu geben: Der Hirnschmelzer blockiert den Weg. </text>
+	</string>
+	<string id="enc_zone_locations_radar">
+		<text>Ein schrecklicher Ort, an dem auch Glьckspilze leicht verschwinden kцnnen, ohne eine einzige Spur zu hinterlassen. Wer dem Hirnschmelzer zu nahe kommt, wird unweigerlich verrьckt, verwandelt sich in einen Zombie und wandelt fortan rastlos in der Zone umher. Eine menschliche Hьlle ist alles, was bleibt, denn niemand ist jemals mit gesundem Verstand zurьckgekehrt. </text>
+	</string>
+	<string id="enc_zone_locations_rostok">
+		<text>Das Wildgebiet war frьher eine groЯe Fabrik, die nun in Schutt und Asche liegt. Viele Stalker treffen hier ihren Tod: Es wimmelt von allen Arten von Monstern. Die Kreaturen strцmen aus allen Teilen der Zone dorthin. Man sagt, dass etwas von groЯer Wichtigkeit in dem Gebiet versteckt ist, so dass es immer viele Draufgдnger gibt, die ihr Glьck versuchen wollen. </text>
+	</string>
+	<string id="enc_zone_locations_stancia">
+		<text>Das Areal des weltberьhmten Kernkraftwerks und das Herz der Zone. Wenn man den Legenden Glauben schenkt, ist dies auch der Standort des Monolithen - einem geheimnisvollen Objekt, das jeden Wunsch erfьllen kann. </text>
+	</string>
+	<string id="enc_zone_locations_yantar">
+		<text>Der legendдre See im gleichnamigen Gebiet ist schon vor langer Zeit ausgetrocknet. An seiner Stelle befindet sich dort nun ein seichtes Moorgebiet. Der Ort schmeckt nach Tod, denn ungeheuere Gefahren erwarten abenteuerlustige Narren, die dumm genug sind, sich dorthin zu begeben. Alle, die zu weit gehen, verlieren den Verstand. Zombies durchstreifen das gesamte Gebiet auf der Suche nach neuen Opfern. Wenn man um den See geht und es schafft, den Zombies auszuweichen, gelangt man zum Lager der Wissenschaftler, wo die mit Hubschraubern dorthin gebrachten Experten forschen. Man kann sich mit ihnen unterhalten, sie kaufen Artefakte und haben manchmal sogar Auftrдge zu vergeben.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2006">
+		<text>Die kontaminierte Zone erstrahlte so hell, dass es fast unertrдglich war fьr das menschliche Auge. Man konnte sehen, wie die Wolken am Himmel verdampften. Nach einem Augenblick tцdlicher Stille donnerte es und dann bebte die Erde. Die Menschen warfen sich zu Boden, schьtzten ihre Augen und hielten sich die Ohren zu. Alle, die es noch vermochten, rannten um ihr Leben. Es wirkte, als sei der ganze nukleare Treibstoff, der unter dem Mantel lag, plцtzlich explodiert. Am nдchsten Tag riegelte die Armee die neue Zone ab. Durch Satelliten konnte das Epizentrum der Explosion genau bestimmt werden: Es lag nicht in der Nдhe der Reaktoren, sondern ьber einen halben Kilometer davon entfernt. Man glaubt, dass das Personal der Station sofort tot war, obwohl viele Menschen in dem abgeriegelten Bereich blieben. Die Rettungsaktion erwies sich bald als hoffnungsloses Unterfangen, da alle Menschen und Gerдte, die tiefer in das Gebiet gesandt wurden, sofort vernichtet wurden. Kurze Zeit nach der Katastrophe vergrцЯerte sich der Radius der Zone noch um einige Kilometer. Die meisten Regierungstruppen, die den Grenzbereich bewachten, und die dort stationierten Forschungsteams starben sofort. Die Menschen versuchten in Panik zu fliehen, Anwohner nahe gelegener Dцrfer und Stдdte wurden hastig evakuiert. Eine unglaubliche Gefahr droht der Welt, deren AusmaЯe nur erahnt werden kann.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2008">
+		<text>Zwei Jahre sind vergangen seit der Katastrophe im kontaminierten Bereich um das Kernkraftwerk von Tschernobyl. Zahllose Todesopfer, viele Vermisste, totes Vieh, verfallende Gebдude, zerstцrte Wдlder ... Bis zum heutigen Tag haben Wissenschaftler keine Erklдrung dafьr, was genau in Tschernobyl geschah. Mittlerweile wurden einige unerklдrliche Anomalien in dem Gebiet gesichtet und die Zone wird immer grцЯer. Seltene Expeditionen finden mutierte Tierspezies, die unglaubliche Fдhigkeiten zeigen.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2010">
+		<text>Wieder starten Forschungsexpeditionen auf den Spuren der tollkьhnen Einzelgдnger, die sich "Stalker" nennen, um die Zone zu erkunden. Das von der Armee kontrollierte Gebiet hat nun jedoch neue, gefдhrliche Bewohner - von gewцhnlichen Wilderern bis zum schlimmsten Banditenabschaum. Die meisten Stalker durchstreifen die Zone auf der Suche nach Anomalien und den sogenannten Artefakten, die sich gut verkaufen lassen.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-raid">
+		<text>Die Armee, unterstьtzt durch Spezialkrдfte, die von paramilitдrischen Stalker-Einheiten angefьhrt wurden, starteten einen massiven Angriff tief in die Zone hinein. Ihr Ziel war es, bis zum Kraftwerk von Tschernobyl zu gelangen und die Ursache der anormalen Felder auszulцschen oder doch zumindest Informationen aus erster Hand ьber den gegenwдrtigen Stand der Dinge zu erlangen. Dieses Unterfangen, an dem ьber tausend Menschen und schweres Gerдt beteiligt waren, scheiterte vollstдndig. Einzelne Gruppen Ьberlebender waren gezwungen, sich ohne Hoffnung auf Rettung in der Zone niederzulassen.</text>
+	</string>
+	<string id="Escape">
+		<text>AuЯenposten</text>
+	</string>
+	<string id="Fuzz">
+		<text>Brennflaum</text>
+	</string>
+	<string id="Garbage">
+		<text>Mьllhalde</text>
+	</string>
+	<string id="Gravi">
+		<text>Vortex</text>
+	</string>
+	<string id="Lift">
+		<text>Aufzug</text>
+	</string>
+	<string id="Locations">
+		<text>Positionen</text>
+	</string>
+	<string id="Meat">
+		<text>Karussell</text>
+	</string>
+	<string id="Military-loc">
+		<text>Militдrstьtzpunkt</text>
+	</string>
+	<string id="Pripiat">
+		<text>Prypjat</text>
+	</string>
+	<string id="Radar">
+		<text>Schmelzer</text>
+	</string>
+	<string id="Radioactive">
+		<text>Strahlungsquelle</text>
+	</string>
+	<string id="Rostok">
+		<text>Wildnis</text>
+	</string>
+	<string id="Stancia">
+		<text>Tschernobyl AKW</text>
+	</string>
+	<string id="Story-2006">
+		<text>12. April 2008, 14:33</text>
+	</string>
+	<string id="Story-2008">
+		<text>Jahr 2010</text>
+	</string>
+	<string id="Story-2010">
+		<text>Jahr 2011</text>
+	</string>
+	<string id="Story-raid">
+		<text>Die Armee dringt in die Zone ein. 2011</text>
+	</string>
+	<string id="Time_machine">
+		<text>Zeitmaschine</text>
+	</string>
+	<string id="Yantar">
+		<text>Jantar</text>
+	</string>
+	<string id="Zharka">
+		<text>Brenner</text>
+	</string>
+	<string id="Zone">
+		<text>Die Zone</text>
+	</string>
+	<string id="Zone-story">
+		<text>Geschichte der Zone</text>
+	</string>
+</string_table>

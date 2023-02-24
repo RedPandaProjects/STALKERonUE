@@ -1,0 +1,150 @@
+	<string id="esc_bandits_on_factory">
+		<text>Zabij bandytów w fabryce</text>
+	</string>
+	<string id="esc_bandits_on_factory_0">
+		<text>Zabij bandytów ukrytych w fabryce</text>
+	</string>
+	<string id="esc_bandits_on_factory_1">
+		<text>Zabij wszystkich bandytów w fabryce</text>
+	</string>
+	<string id="esc_bandits_on_factory_2">
+		<text>Porozmawiaj z handlarzem</text>
+	</string>
+	<string id="esc_bandits_on_factory_3">
+		<text>Porozmawiaj z Wilkiem</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader">
+		<text>Ukradnij walizkê z posterunku</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_0">
+		<text>Ukradnij z posterunku wojskowego walizkê z wa¿nymi dokumentami</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_1">
+		<text>Ukradnij walizkê z posterunku</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_2">
+		<text>Zabierz walizkê do handlarza</text>
+	</string>
+	<string id="esc_defend_lager">
+		<text>Ochroñ obóz dla kotów przed najemnikami</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_0">
+		<text>Ochroñ obóz dla kotów przed najemnikami</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_1">
+		<text>Zlikwiduj najemników.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_2">
+		<text>Porozmawiaj z dowódc¹ kotów</text>
+	</string>
+	<string id="esc_dinamit_to_volk">
+		<text>Zabij bandytów na parkingu</text>
+	</string>
+	<string id="esc_dinamit_to_volk_0">
+		<text>Zabij bandytów na parkingu i zg³oœ siê do Wilka</text>
+	</string>
+	<string id="esc_dinamit_to_volk_1">
+		<text>Spotkaj siê z ludŸmi Wilka</text>
+	</string>
+	<string id="esc_dinamit_to_volk_2">
+		<text>Zabij wszystkich bandytów</text>
+	</string>
+	<string id="esc_dinamit_to_volk_3">
+		<text>Porozmawiaj z Wilkiem</text>
+	</string>
+	<string id="esc_help_wounded_from_raid">
+		<text>Pogadaj z Lisem o Strieloku</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_0">
+		<text>Pomó¿ rannemu stalkerowi</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_1">
+		<text>Pomó¿ Lisowi</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_2">
+		<text>Zdob¹dŸ informacje o Strieloku</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift">
+		<text>Dostarcz paczkê handlarzowi.</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift_0">
+		<text>Dostarcz paczkê handlarzowi. On ci pomo¿e.</text>
+	</string>
+	<string id="garbage_meet_stalker">
+		<text>Spotkaj siê z Sieryjem</text>
+	</string>
+	<string id="garbage_meet_stalker_0">
+		<text>Spotkaj siê z Sieryjem na Wysypisku</text>
+	</string>
+	<string id="meet_with_doctor">
+		<text>Spotkaj siê z Doktorem</text>
+	</string>
+	<string id="meet_with_doctor_1">
+		<text>Spotkaj siê z Doktorem</text>
+	</string>
+	<string id="meet_with_doctor_2">
+		<text>Spotkaj siê z Doktorem w kryjówce Strieloka</text>
+	</string>
+	<string id="storyline_escape_eliminate_gunslinger">
+		<text>Zabij Strieloka</text>
+	</string>
+	<string id="storyline_escape_find_gunslinger">
+		<text>ZnajdŸ Strieloka</text>
+	</string>
+	<string id="tutorial_find_artefact">
+		<text>ZnajdŸ artefakt</text>
+	</string>
+	<string id="tutorial_find_artefact_0">
+		<text>ZnajdŸ swój pierwszy artefakt.</text>
+	</string>
+	<string id="tutorial_find_artefact_1">
+		<text>ZnajdŸ artefakt</text>
+	</string>
+	<string id="tutorial_find_artefact_2">
+		<text>Zabierz artefakt do handlarza.</text>
+	</string>
+	<string id="tutorial_help_wounded">
+		<text>Zdob¹dŸ informacje od zwiadowcy</text>
+	</string>
+	<string id="tutorial_help_wounded_0">
+		<text>Dostarcz informacje handlarzowi</text>
+	</string>
+	<string id="tutorial_help_wounded_1">
+		<text>Porozmawiaj z Wilkiem</text>
+	</string>
+	<string id="tutorial_help_wounded_2">
+		<text>Zdob¹dŸ pendrive'a od ¯wawego</text>
+	</string>
+	<string id="tutorial_help_wounded_3">
+		<text>Zabierz pendrive'a do Handlarza</text>
+	</string>
+	<string id="esc_trader_job">
+		<text>Pracuj dla handlarza</text>
+	</string>
+	<string id="esc_trader_job_text">
+		<text>Zdob¹dŸ od handlarza zadanie specjalne</text>
+	</string>
+	<string id="bar_barman_job">
+		<text>Pracuj dla Barmana</text>
+	</string>
+	<string id="bar_barman_job_text">
+		<text>Poproœ Barmana o robotê</text>
+	</string>
+	<string id="yan_scientist_job">
+		<text>Pomó¿ naukowcom</text>
+	</string>
+	<string id="yan_scientist_job_text">
+		<text>Zaoferuj pomoc naukowcom</text>
+	</string>
+	<string id="find_railroad_passage">
+		<text>IdŸ na nasyp kolejowy</text>
+	</string>
+	<string id="find_railroad_passage_1">
+		<text>Spotkaj siê z podró¿nikiem</text>
+	</string>
+	<string id="find_railroad_passage_2">
+		<text>PrzejdŸ przez nasyp kolejowy</text>
+	</string>
+	<string id="find_railroad_passage_text">
+		<text>Zanim zag³êbisz siê w Zonê, musisz przejœæ przez stary nasyp kolejowy. Jedynego bezpiecznego przejœcia strzeg¹ wojskowi, ale na lewo jest niewielki tunel, z którego zazwyczaj korzystaj¹ ¿ó³todzioby. Tam bêdzie na ciebie czeka³ jeden z moich d³u¿ników.</text>
+	</string>

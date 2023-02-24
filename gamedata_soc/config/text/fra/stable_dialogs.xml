@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_break_dialog_0">
+		<text>А plus !</text>
+	</string>
+	<string id="actor_help_wounded_0">
+		<text>Rien de cassй ?</text>
+	</string>
+	<string id="actor_help_wounded_1">
+		<text>Bordel, je suis blessй, tu vois pas ? Il me faut un kit mйdical ou au moins un bandage.</text>
+	</string>
+	<string id="actor_help_wounded_11">
+		<text>Tiens, prends ce kit mйdical.</text>
+	</string>
+	<string id="actor_help_wounded_111">
+		<text>Merci, mon frиre, je te dois une fiиre chandelle.</text>
+	</string>
+	<string id="actor_help_wounded_12">
+		<text>Tiens, prends ce bandage.</text>
+	</string>
+	<string id="actor_help_wounded_13">
+		<text>Dйsolй, j'en ai pas sur moi.</text>
+	</string>
+	<string id="actor_help_wounded_131">
+		<text>Et tu comptes aller dans la Zone comme зa ? Et si t'es contaminй ou quelque chose ? Tu seras mкme pas capable de te soigner !</text>
+	</string>
+	<string id="actor_help_wounded_14">
+		<text>Hй, pas de chance, mec. Dйsolй, mais si je te donne le mien, j'en aurai plus pour moi.</text>
+	</string>
+	<string id="actor_help_wounded_141">
+		<text>C'est toi qui vois, mec, mais c'est pas cool de ta part.</text>
+	</string>
+	<string id="hello_dialog_2">
+		<text>Hй !</text>
+	</string>
+	<string id="hello_dialog_3">
+		<text>Hй, mec, aide-moi, tu veux ?</text>
+	</string>
+</string_table>

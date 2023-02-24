@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="svoboda_outfit_name_m1">
+		<text>Kombes Freiheit M2</text>
+	</string>
+	<string id="team_1_desc">
+		<text>Die Anarchisten der Zone. Sie glauben, dass die Zone ein Refugium der Freiheit ist, und dass alle Gesetze, Regeln und Bedingungen der AuЯenwelt hier nicht gelten. Ihr Motto lautet: "Mach, was du willst, und lass die anderen das auch tun." Sie kдmpfen gegen die Kontrolle der Zone durch die Regierung und gegen die Sцldner. Freiheitskдmpfer benutzen ьberwiegend russische und sowjetische Waffen.</text>
+	</string>
+	<string id="team_1_name">
+		<text>Freiheitsfraktion (Freie Stalker)</text>
+	</string>
+	<string id="team_2_desc">
+		<text>Herumtreiber und Schurken aus der ganzen Welt, die sich fьr nichts zu schade sind. Ihr Motto ist: "Pecunia non olet - Geld stinkt nicht." Hier gibt es Artefakte, also kann man da Geld machen. Sцldner verwenden ьberwiegend Westwaffen.</text>
+	</string>
+	<string id="team_2_name">
+		<text>Sцldnerfraktion (Kopfjдger)</text>
+	</string>
+</string_table>

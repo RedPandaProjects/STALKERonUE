@@ -1,0 +1,48 @@
+	<string id="agr_find_ghost_descr">
+		<text>... Hemos averiguado que uno de los hombres de Strelok se llama Ghost. Por fin una pista. Si encuentro a Ghost, daré también con Strelok.</text>
+	</string>
+	<string id="agr_journal_cache">
+		<text>Bueno, parece que el escondite me ha dado una nueva dirección que seguir. He encontrado una unidad de información con lo que parece ser un diario utilizado por el grupo de Strelok. Había pocas entradas, pero he averiguado que el grupo tenía otros dos miembros: Ghost y Fang. El diario mencionaba también a un "amigo en común", pero no sé si pertenecía al grupo. Lo que es seguro es que les ayudó. Según la entrada de Ghost, Fang murió en una emboscada que les tendieron. Al fin tengo algo claro: Ghost, el nombre de alguien que conoce a Strelok. En cuanto a Strelok, podría estar en algún lugar al norte de la Zona.</text>
+	</string>
+	<string id="agr_journal_krot">
+		<text>Bueno, valió la pena reunirse con Mole. Parece que el escondite del grupo existe de verdad, y está en las catacumbas, debajo del Instituto. Tendré que ir allí. No sé qué me voy a encontrar, pero espero que me ayude a solucionar mi propio misterio...</text>
+	</string>
+	<string id="agr_krot_secret_info">
+		<text>... Baja por la escalera de caracol hasta la habitación de las columnas. Dirígete hacia la salida y entra en la habitación grande con tuberías en el techo. Baja hacia la segunda salida, entra en el túnel y tuerce a la izquierda. Al final, gira a la derecha. Ve directamente a la salida desde la habitación pequeña y tuerce a la derecha. Busca un agujero en la pared de la izquierda al lado de las palabras: "No entrar: peligro de muerte." Esa es la entrada del escondite de Strelok.</text>
+	</string>
+	<string id="agr_krot_secret_info_name">
+		<text>Escondite de Strelok</text>
+	</string>
+	<string id="agr_military_case">
+		<text>\nInforme de la investigación.\n Solo para uso oficial.\n Al Coronel V.M. Kruchelnikov, responsable del proyecto "VERDAD".\n Del Capitán D.F. Maksimenko, \n Comandante del grupo "Investigación-2".\n\n Informe.\n Nuestro grupo de investigadores y un escuadrón de Fuerzas Especiales realizó una investigación de Agroprom, antiguo Inst. de Investigación de los efectos en la Agricultura en suelo afectado por la radiación del 12.05.2012 al 25.05.2012. La mayor parte del equipo y la documentación se perdió, aunque las pocas cosas que pudimos encontrar nos permitieron llegar a la siguiente conclusión: durante el período del 2005 al 2008, el Instituto no realizó ninguna investigación en su campo oficial de estudio. Los resultados de su “trabajo”, enviados al Ministerio de Agricultura, fueron falsificados. Al mismo tiempo, la dirección del Instituto, y concretamente Petr Danilovich Strizh, continuó recibiendo financiación del Estado, equipamiento y artículos, todos ellos transferidos al laboratorio denominado X18, usando notas de envío falsificadas que ofrecieron cobertura para la operación al indicar que los materiales estaban siendo transferidos a una instalación auxiliar para experimentos. Parece ser que X18 es un nombre en clave tomado por las personas implicadas en este asunto, ya que nuestra base de datos no menciona este laboratorio. Analizando los documentos que encontramos, este laboratorio se encuentra a una hora en coche desde el Instituto. Parece una instalación clandestina así que nuestro departamento de análisis debería tomar parte. El campo de investigación del laboratorio no está claro y los documentos diponibles no contienen información útil pero hacen referencias al profesor Chubko y también mencionan un "Grupo". Creo que hemos llegado al final del asunto y que el departamento de análisis tendrá mucho trabajo que hacer ahora.\n\n Adjunto va un documento que contiene notas de envío para materiales y equipo transferido a una instalación auxiliar y un extracto de la correspondencia entre Strizh y Chubko.\n\n Capitán D.F. Maksimenko 26.05.2012\n Al profesor V.M. Chubko de P.D. Strizh, Jefe del Inst. de Investigación Agroprom, doctor de Ciencias de  la Agricultura. QueridoVadim Mikhailovich, como acordamos, te mando la siguiente tandada de materiales y equipo a nuestra instalación experimental para ayudarte con la investigación, tan esencial para la Agricultura. Conseguí la financiación para los experimentos al describirlos como experimentos piloto en campos de estudio del Instituto, así que no habrá ningún problema con el Ministerio. ¿Cómo progresan los experimentos? Todavía estoy realmente impresionado con lo que me enseñaste la última vez. Sinceramente, P.D. Strizh. A P.D. Strizh. Acepta mi gratitud, Petr Danilovich, hemos recibido todo. Estamos impresionados con el espectómetro láser -si no fuese por ti, yo tardaría siglos en conseguir este modelo por mi cuenta-. El Ministerio de Agricultura estará agradecido de recibir NUESTROS resultados... ¡si que me hiciste reír con esa! Los experimentos continúan y lo que viste la última vez es una pequeñez comparado con nuestros últimos logros. Tendrías que visitarnos más frecuentemente -siempre me alegro de verte y está solo a una hora en coche de nuestra "instalación experimental", como tu la llamas :) Casi me olvido, tengo noticias para ti: el próximo lunes discutiré tu candidatura para el grupo. Creo que me apoyarán. Sinceramente, profesor V.M. Chubko. Al profesor V.M. Chubko de P.D. Strizh, Jefe del Instituto de Investigación Agroprom. Querido Vadim Mikhailovich, gracias por tu confianza. Haré lo posible para no desacreditarte. Creo que el sueño de todo científico es tomar parte en un experimento como este y estaré muy agradecido de pertenecer al Grupo. Sinceramente, P.D. Strizh P.S. Me las arreglé para conseguir dos de los últimos osciloscopios de banda ancha japoneses del Ministerio y te los mandaré tan pronto como pueda.</text>
+	</string>
+	<string id="agr_military_case_name">
+		<text>Informe de la investigación</text>
+	</string>
+	<string id="agr_nii_security_plan">
+		<text>El mapa detalla las patrullas, los centinelas y las torres de vigilancia. El cuartel general está en la tercera planta del Instituto. Allí es donde están los documentos. De día, la zona está infestada de patrullas. Por la noche hay menos, y los guardias terminan su turno a las 11 p.m. Hay muy poca gente en el edificio principal en ese momento. Si quieres entrar en la base, ve por las catacumbas. La puerta no es buena opción.</text>
+	</string>
+	<string id="agr_nii_security_plan_name">
+		<text>Mapa de guardia del Instituto Agroprom</text>
+	</string>
+	<string id="agr_rats_n_soldiers_text">
+		<text>De los colectores salen ratas que causan muchas molestias al ejército. A los soldados se les castiga mandándolos a los colectores.</text>
+	</string>
+	<string id="agr_task_case">
+		<text>Comerciante: "En cuanto robes el maletín del Instituto, llévaselo al tabernero. Es el propietario de Los 100 rads, el bar de los stalkers. Está en la antigua fábrica de Rostok."</text>
+	</string>
+	<string id="article_agr_krot_sos">
+		<text>¡SOS, el ejército está matando a un colega stalker! Si podéis oírme, ¡socorro! </text>
+	</string>
+	<string id="article_agr_krot_sos_name">
+		<text>Encuentro con Mole</text>
+	</string>
+	<string id="article_agr_krot_sos1">
+		<text>Mole: "¡Ayudadme, me van a matar!"</text>
+	</string>
+	<string id="st_operation_agroprom">
+		<text>La operación Agroprom</text>
+	</string>
+	<string id="storyline_gunslinger_flash_info">
+		<text>Recibido de Ghost: \n \n Strelok, tengo muy malas noticias. Fang ha muerto. Nos estaban esperando en el pueblo, cerca de los almacenes, y creo que llevaban allí mucho rato. Eran tres. Parecía que eran neutrales. Fang los detectó de algún modo. Sabes que tenía ese sentido muy desarrollado. Cazamos a dos, claramente bandidos, pero el tercero parecía más listo que sus compañeros. Tenía una Vintar BC y estaba a unos 100 metros de distancia. En fin, Fang ya es historia. Así que la próxima vez que vayamos al centro juntos, seremos solo nosotros dos. Y otra cosa más: esos dos tenían una descripción de nosotros. No me puedo imaginar quién querría vernos muertos, aunque es cierto que hay gente que tiene algo en contra nuestra. Dejé escapar al tercero. Creo que era un mercenario. Tenía una cicatriz grande en la cara. Ojos marrones. Intentaré encontrarlo. \n Así que esto es lo que hay. Ándate con ojo y buena suerte. \n Ghost \n \n Para Ghost \n\n "Hola, colega. \n Voy a darte algo de información; no me conecto porque he notado que alguien me sigue. \n Fui al Norte..., ya sabes... Intentaré hacerlo yo solo... Lo siento, pero no tenía tiempo de esperarte... Te lo explicaré más tarde. \n Y el tipo que mató a Fang se arrepentirá de haber nacido... Lo haré picadillo... Tú averigua quién es, yo volveré pronto... Tenemos un asunto pendiente con él. \n Nos reuniremos en el sitio de nuestro amigo común, ya sabes dónde y con quién :) \n Buena suerte.” \n Strelok \n \n Para Strelok \n \n "Hola, he venido, pero no estabas. No deberías haber ido al centro solo. Pero no hay problema. Sé dónde y con quién encontrarte :) \n Ghost"</text>
+	</string>

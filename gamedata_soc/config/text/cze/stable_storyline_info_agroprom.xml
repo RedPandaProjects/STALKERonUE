@@ -1,0 +1,48 @@
+	<string id="agr_find_ghost_descr">
+		<text>…zjistil jsem, e se jeden ze Støelcovıch chlapù se jmenoval Duch. Alespoò nìjaká stopa. Pokud se mi podaøí najít Ducha, moná mì pøivede ke Støelci.</text>
+	</string>
+	<string id="agr_journal_cache">
+		<text>No, ve skrıši jsem našel novou stopu. Byl tam flashdisk, kterı Støelcova skupina zøejmì pouívala jako diáø. I kdy tam bylo jenom pár záznamù, pochopil jsem z nich, e byli ve skupinì dva další èlenové: Duch a Tesák. Taky tam byla zmínka o "spoleèném pøíteli", ale nevím, jestli byl èlenem skupiny. Rozhodnì jim však pomohl. Podle Duchova záznamu zemøel Tesák pøi pøepadu. Take mám koneènì nìco solidního, jméno nìkoho, kdo opravdu znal Støelce. Duch. Co se tıèe Støelce samotného, mohl by bıt nìkde v severní èásti Zóny.</text>
+	</string>
+	<string id="agr_journal_krot">
+		<text>No, setkání s Krtkem se vyplatilo... vypadá to, e sklad skupiny opravdu existuje a je nìkde v katakombách pod institutem... budu tam muset jít. Nevím, co tam najdu... ale doufám, e mi to pomùe vyøešit mou vlastní záhadu...</text>
+	</string>
+	<string id="agr_krot_secret_info">
+		<text>Jdi dolù po schodech do místnosti se sloupy. Jdi pøes místnost k vıchodu a vejdi do velké místnosti s trubkami u stropu. Jdi do druhého vıchodu, vejdi do tunelu a zaboè doleva. Na konci je zatáèka doprava. Z malé místnosti jdi pøímo k vıchodu a zaboè doprava. Hledej díru v levé zdi vedle nápisu "Nevcházej - zemøeš". To je vstup do Støelcovy skrıše.</text>
+	</string>
+	<string id="agr_krot_secret_info_name">
+		<text>Støelcova skrıš</text>
+	</string>
+	<string id="agr_military_case">
+		<text>\nHlášení o vyšetøování.\n Pouze pro interní pouití.\n Pro plukovníka V. M. Kruèelnikova, šéfa projektu "PRAVDA".\n Od kapitána D. F. Maksimenka, \nvelitele skupiny "Pátraè - 2".\n\n Memorandum.\n Naše skupina stávající ze tøí vyšetøovatelù a drustva speciálních sil provedla v dobì od 12. 05. 2012 do 25. 05. 2012 šetøení v Agropromu, døívìjším vızkumném institutu zemìdìlství na radioaktivnì zamoøené pùdì. Vìtšina vybavení a dokumentace se ztratila, ale podaøilo se nám najít pár vìcí, díky kterım jsme došli k tomuto závìru: v dobì od roku 2005 do roku 2008 institut neprovádìl vızkum ve svém oficiálním oboru. Všechny vısledky "práce" zaslané ministerstvu zemìdìlství byly zfalšovány. Stejnì tak vedení institutu, pøedevším Petr Daniloviè Stri, nadále získávali státní finance, vybavení a zásoby a pøevádìli je do laboratoøe oznaèené jako X18 za pomocí zfalšovanıch pøejímek, pomocí kterıch operaci kryli, a zaznamenávali, e se materiál pøevedl na pomocná stanovištì k experimentùm. X18 je zøejmì kódové jméno pouívané skupinou lidí zapletenıch v této události, jeliko v našich databázích zmínka o ádné takové laboratoøi není. Podle analızy nalezenıch dokumentù si myslíme, e se nachází do vzdálenosti hodinové jízdy od institutu. Je to pravdìpodobnì tajné zaøízení, take ádám o zapojení analytického oddìlení. Není jisté, co laboratoø zkoumala, a dostupné dokumenty neobsahují nic uiteèného, pouze se zmiòují o nechvalnì proslulém profesorovi Chubkovi a také o jakési "Skupinì" Jsem pevnì pøesvìdèen, e jsme se dostali a na konec stopy a e analytické oddìlení bude mít teï spousty práce.\n\n Pøipojuji archivovanı soubor obsahující záznamy o pøevozu vybavení a zásob do vedlejšího zaøízení a extrakt z korespondence mezi Striem a Chubkem. \n\n Kapitán D. F. Maksimenko 26 .05. 2012\n Pro: profesor V. M. Chubko. Od: P. D. Stri, øeditel vızkumného institutu Agroprom, doktor zemìdìlskıch vìd. Drahı Vadime Michailovièi, podle dohody vám posílám další dávku zásob a vybavení pro naše experimentální zaøízení, abych vám pomohl s vızkumem, kterı je pro zemìdìlství tak dùleité. Zaøídil jsem financování experimentù tak, e jsem je popsal jako dùleité pro zemìdìlství, take by s ministerstvem nemìly bıt ádné problémy. Jak pokraèují experimenty? Poslednì to na mì udìlalo velkı dojem. Váš P. D. Stri DAS\n Pro: P. D. Stri \n Pøijmìte prosím má díky, Petøe Danilovièi, dostali jsme vše potøebné. Mùj tım obdivuje laserovı spektrometr, bez vás bych jej pomocí svıch kanálù získával sto let. Samozøejmì e se budou ministerstvu zemìdìlství naše vısledky líbit... tím jste mì opravdu rozesmál! Experimenty pokraèují normálnì a to, co jste vidìl poslednì, není v ohledu na naše poslední úspìchy nic. Mìl byste nás navštìvovat èastìji, vdy vás rád uvidím, a do "experimentálního zaøízení" to máte autem jenom hodinu :). Málem jsem zapomnìl, mám nìjaké nové zprávy: pøíští pondìlí budu mluvit o vašem kandidátství se Skupinou. Pøedpokládám, e mì budou podporovat. Váš profesor V. M. Chubko\n Pro: profesor V. M. Chubko, od: P. D. Stri, øeditel vızkumného institutu Agroprom, doktor zemìdìlskıch vìd. \n Drahı Vadime Michailovièi, dìkuji vám za dùvìru. Udìlám vše, co bude v mıch silách, abych dokázal, e jste se ve mnì nespletl. Myslím, e je snem kadého vìdce zúèastnit se takovéhoto experimentu, a pokud budu do Skupiny pøijat, budu nadšením bez sebe. Váš P. D. Stri P.S. Podaøilo se mi z ministerstva dostat dva japonské širokopásmové osciloskopy, pøi nejbliší pøíleitosti vám je pošlu.</text>
+	</string>
+	<string id="agr_military_case_name">
+		<text>Hlášení o vyšetøování</text>
+	</string>
+	<string id="agr_nii_security_plan">
+		<text>Na mapì jsou detailnì rozepsané hlídky a strání vìe. Velitelství se nachází ve tøetím patøe institutu. Tam jsou umístìny dokumenty. Pøes den je oblast plná patrol. V noci je jich ménì, stráe jsou vystøídány v 23:00. V tu dobu je v hlavní budovì jenom málo lidí. Pokud se chceš dostat do základny, bude lepší jít katakombami, hlavní branou to nebude moné.</text>
+	</string>
+	<string id="agr_nii_security_plan_name">
+		<text>Hlídkové trasy v institutu Agroprom</text>
+	</string>
+	<string id="agr_rats_n_soldiers_text">
+		<text>Armádu štve mnoství krys vylézajících z kolektorù. Vojáci jsou èasto do kolektorù posílaní za trest.</text>
+	</string>
+	<string id="agr_task_case">
+		<text>Pøekupník: "Jakmile ukradneš kuføík z institutu, pøines ho Barmanovi. Vede stalkerskou hospodu U 100 radù. Hospodu najdeš na území døívìjší továrny Rostok."</text>
+	</string>
+	<string id="article_agr_krot_sos">
+		<text>SOS, armáda zabíjí stalkera! Chlapi, jestli mì slyšíte, pomoc! </text>
+	</string>
+	<string id="article_agr_krot_sos_name">
+		<text>Setkání s Krtkem</text>
+	</string>
+	<string id="article_agr_krot_sos1">
+		<text>Krtek: "Pomoz mi, zabijou mì!"</text>
+	</string>
+	<string id="st_operation_agroprom">
+		<text>Operace Agroprom</text>
+	</string>
+	<string id="storyline_gunslinger_flash_info">
+		<text>Pøijato od Ducha: \n \n Støelèe, mám pìknì blbı zprávy. Tesák je mrtvej. Èekali na nás ve vesnici u skladiš, tøi, a nejspíš u tam nìjakou dobu byli... vypadali jako normální neutrálové. Tesák je nìjak vycítil, znáš ten jeho instinkt. Dva jsme sundali, bylo to jenom najatı maso, ale tøetí byl chytøejší, èekal o kus dál s Vintorezem a to byl Tesákùv konec. Take pøíštì u pùjdeme do Centra jenom my dva. A ještì nìco: ti dva mìli náš popis. Nemám tušení, kdo na nás vypsal kontrakt. Ale ono je spousta lidí, kteøí nás rádi nemají. Ten tøetí utekl. Myslím, e to byl jeden z tìch oldákù. Mìl na hubì velkou jizvu a svìtlı oèi. Zkusím ho najít. \n To je tak všechno. Dávej si bacha a hodnì štìstí. \n Duch \n \n Pro Ducha \n \n "Nazdar chlape. \n Nechám ti tu nìjakı zprávy. Teï zrovna tì kontaktovat nemùu, sledujou mì. \n Dostal jsem se na sever, tam kde jsme byli pøedtím. Zkusím to na vlastní pìst. Sorry, ale nemùu èekat, vysvìtlím ti to potom. \n Ten hajzl, co zabil Tesáka, bude litovat, e se kdy narodil... rozsekám ho na kusy. Zjisti, kdo to byl. A se vrátím, tak si to s ním vyøídíme. \n Sejdeme se u našeho spoleènıho kamaráda, víš kterıho :)  \n Hodnì štìstí. \n Støelec" \n \n Støelcovi \n \n "Hej. Byl jsem tam, ale nenašel jsem tì. Nemìl bys chodit do centra sám, ale jak chceš, je to tvoje vìc. A jo, vím, koho jsi myslel :) \n Duch"</text>
+	</string>

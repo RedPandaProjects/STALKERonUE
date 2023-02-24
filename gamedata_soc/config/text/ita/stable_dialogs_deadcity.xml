@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cit_doctor_escape_dialog_0">
+		<text>Ho bisogno di alcune risposte.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1">
+		<text>Chiedi, cercherт di aiutarti.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_11">
+		<text>Dov'и la mia roba?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_111">
+		<text>Gli oggetti confiscati li tiene il capo. La sua stanza и al piano superiore. Quando mi hanno preso, le mie cose sono state portate lм.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1111">
+		<text>Grazie!</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_12">
+		<text>Come faccio a uscire di qui?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_121">
+		<text>Mentre mi stavano portando via, ho notato una grata fognaria sotto le scale al piano terra... Se riesci ad aprire la cella, possiamo andarcene attraverso le fogne... Conviene andare a ovest, poi tu potrai usare la galleria per raggiungere i Freedom.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1211">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_14">
+		<text>Chi ci ha catturato?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_141">
+		<text>Siamo prigionieri dei mercenari. Nessuno sa esattamente chi siano, ma corre voce che lavorino per servizi segreti stranieri. La posizione della loro base и segretissima, nessuno sa come entrare nella Cittа dei Morti. Sono in molti a volere queste informazioni, soprattutto i Freedom e i Duty.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1411">
+		<text>Continua.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_14111">
+		<text>Se trovi una mappa della Cittа dei Morti, sarа possibile lanciare un assalto. Forse i mercenari o i banditi ne hanno una. Puoi provare a cercarla.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_141111">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_15">
+		<text>Cosa sai di questo posto?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_151">
+		<text>La cittа и divisa in due parti. Noi siamo in quella dei mercenari. A sud, oltre la piazza, ci sono i banditi, che sono rintanati nella scuola a sud-ovest della cittа. Fra le due basi ci sono un edificio di cinque piani in rovina e qualche altro palazzo piщ o meno intatto. Se ti trovi nei casini puoi rifugiarti lм. Da quelle parti troverai anche qualche garage e un paio di casette. Nella parte dei banditi ci sono un paio di edifici a cinque piani e una decina di garage. Il palazzo del vecchio consiglio cittadino и dalla parte opposta della piazza.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1511">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_16">
+		<text>Chi comanda qui?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_161">
+		<text>Un gran brutto ceffo chiamato Dushman. Un paio di volte l'ho visto in giro con una cartella di documenti. Secondo me lм dentro c'и qualcosa d'interessante.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1611">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_17">
+		<text>No, niente.</text>
+	</string>
+	<string id="cit_doctor_hello_dialog_11">
+		<text>Strelok! Dove cavolo eri finito? И dall'ultimo raid che non vedo te o i ragazzi! Mi stavo preoccupando!</text>
+	</string>
+	<string id="cit_doctor_hello_dialog_21">
+		<text>Allora, ti senti meglio? Sei lucido?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_0">
+		<text>Strelok?!</text>
+	</string>
+	<string id="cit_doctor_main_dialog_1">
+		<text>Sм, tu sei Strelok, e chi altri? Io sono il dottore. Non mi riconosci? Ma cosa ti и successo? Non hai una bella cera. Siamo entrati insieme nella Zona per due anni. Davvero non ti ricordi di me?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_11">
+		<text>No, per niente.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_2">
+		<text>Non ti ricordi?! Strelok, che diavolo...? Mi stai prendendo in giro? Cazzo... E i ragazzi, i nostri ragazzi? Zanna e il Fantasma? Te li ricordi, vero?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_21">
+		<text>Non mi ricordo di Zanna e il Fantasma и morto. Ho trovato il corpo a Yantar.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_3">
+		<text>Il Fantasma... morto?! Per la miseria, com'и possibile? Quei due... erano i migliori. E a te, cos'и successo?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_31">
+		<text>Non lo so cos'и successo, non ricordo niente.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_4">
+		<text>Aspetta, devo riprendermi un attimo. И una notizia schifosa. Secondo me и tutto collegato col tuo ultimo viaggio nella Zona. L'ultima volta che ci siamo visti, mi avevi lasciato la chiave del nascondiglio di Pripjat e la mappa per trovarlo. Sono riuscito a tenerla nascosta ai mercenari. Tieni, nascondila bene. Forse troverai ancora qualcosa. Poi dicevi che il Monolite nascondeva qualche stranezza, ma non ho capito quale. E non lo sapevi neanche tu.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_41">
+		<text>Capisco. Dove siamo? Non ricordo come sono finito qui.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_5">
+		<text>Siamo nella Cittа dei Morti! Nel campo dei mercenari.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_6">
+		<text>Siamo nella Cittа dei Morti! Nel campo dei mercenari...</text>
+	</string>
+	<string id="quest_cit_reward_0">
+		<text>A proposito, ho delle informazioni sui mercenari. Ti interessano?</text>
+	</string>
+	<string id="quest_cit_reward_1">
+		<text>Dipende da cosa si tratta.</text>
+	</string>
+	<string id="quest_cit_reward_11">
+		<text>Ho una mappa che mostra la posizione della loro base, i posti di guardia, come entrare senza essere visti, eccetera.</text>
+	</string>
+	<string id="quest_cit_reward_111">
+		<text>Roba preziosa. Ti offro 3000 bigliettoni.</text>
+	</string>
+	<string id="quest_cit_reward_1111">
+		<text>Affare fatto. Tieni.</text>
+	</string>
+	<string id="quest_cit_reward_11111">
+		<text>Ottimo! Eccoti la tua ricompensa. Presto gli stalker si chiederanno se i mercenari siano veramente esistiti.</text>
+	</string>
+	<string id="quest_cit_reward_1112">
+		<text>No, non basta.</text>
+	</string>
+	<string id="quest_cit_reward_11121">
+		<text>Come vuoi. Io non ho altro.</text>
+	</string>
+	<string id="quest_cit_reward_13">
+		<text>Nulla di interessante. Solo banali pettegolezzi, mi spiace.</text>
+	</string>
+	<string id="quest_cit_reward_131">
+		<text>Se scopri qualcosa di piщ specifico, torna qui. Ti pagherт.</text>
+	</string>
+</string_table>

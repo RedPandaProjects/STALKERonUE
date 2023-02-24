@@ -1,0 +1,12 @@
+	<string id="sar_command_center_text">
+		<text>Doc: "Todo lo que dijiste sobre el Monolito es cierto. No es más que una ilusión creada por un laboratorio que hay cerca del Sarcófago.... Parece que es la única forma de penetrar en el verdadero secreto de la Zona..., el que siempre has intentado averiguar."</text>
+	</string>
+	<string id="sar_monolith_call_text">
+		<text>He oído la llamada del Monolito. Me ha llamado para que vaya hasta él. Debo ir y obtendré respuestas a todas mis preguntas.</text>
+	</string>
+	<string id="sar_secret_lab_text">
+		<text>Doc: "Bueno, pues este es el trato. Hay un decodificador para abrir la puerta que lleva hasta el sistema operativo del Monolito. El decodificador está en un escondite secreto, en Pripyat. Te daré las coordenadas de su ubicación y el código para entrar. Coge el decodificador, encuentra la puerta del sarcófago y después... a ver qué tal va todo."</text>
+	</string>
+	<string id="zones_mystery_text">
+		<text>Al final lo lograste, stalker. Has resultado ser más fuerte de lo que pensábamos. Bien, ha llegado la hora de que hablemos. Dirígete hacia la señal. Estaremos esperándote.</text>
+	</string>

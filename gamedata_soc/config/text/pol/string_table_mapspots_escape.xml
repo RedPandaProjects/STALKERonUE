@@ -1,0 +1,48 @@
+	<string id="blokpost_case">
+		<text>Teczka z dokumentami</text>
+	</string>
+	<string id="esc_fox">
+		<text>Ranny Lis</text>
+	</string>
+	<string id="esc_mill">
+		<text>Opuszczony zak³ad. Gdzieœ tutaj po raz ostatni widziano rannego brata.</text>
+	</string>
+	<string id="escape_trader">
+		<text>Handlarz.</text>
+	</string>
+	<string id="factory_bandits">
+		<text>Bandyci w fabryce.</text>
+	</string>
+	<string id="killers_team">
+		<text>Nieznana grupa najemników.</text>
+	</string>
+	<string id="novice_leader">
+		<text>Dowódca obozu dla kotów.</text>
+	</string>
+	<string id="soldiers_bridge">
+		<text>Posterunek wojskowy przy zniszczonym moœcie. Ogólnie wiadomo, ¿e ¿o³nierze bior¹ ³apówki i przepuszczaj¹ ludzi.</text>
+	</string>
+	<string id="tutorial_artefact">
+		<text>Artefakt.</text>
+	</string>
+	<string id="tutorial_bandits">
+		<text>Bandyci, którzy powstrzymali nasz zwiad.</text>
+	</string>
+	<string id="tutorial_secret">
+		<text>Schowek martwego stalkera.</text>
+	</string>
+	<string id="tutorial_secret_place1">
+		<text>Schowek martwego stalkera.</text>
+	</string>
+	<string id="tutorial_secret_shustryi">
+		<text>Schowek ¯wawego.</text>
+	</string>
+	<string id="tutorial_wounded">
+		<text>¯wawy, wiêzieñ.</text>
+	</string>
+	<string id="volk">
+		<text>Wilk, dowódca obozu dla ¿ó³todziobów.</text>
+	</string>
+	<string id="wolfs_rangers">
+		<text>Zwiadowcy Wilka.</text>
+	</string>

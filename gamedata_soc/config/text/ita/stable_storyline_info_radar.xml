@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>C'è un numero che mi perseguita, come se mi seguisse da una vita precedente. Lo conoscevo già, quando non credevo. Ora lo ricordo: 342089. È il codice di una porta, ma non ricordo come si arriva a quella porta.</text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>Palmare del Monolith</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>Lo scienziato morto aveva una mappa con una porta contrassegnata. Codice 1287975.</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Porta a codice</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Barista: "Quando l'hanno scoperto, tutti sono impazziti e si sono precipitati verso il centro della Zona: stalker solitari, i Freedom, i Duty, perfino i mercenari. Il primo che arriverà si porterà via tutto! L'Esauditore di desideri, una miniera d'oro di reperti e chissà cos'altro. Ma sbrigati: se l'Esauditore è davvero nel sarcofago della stazione, il primo che lo raggiungerà potrà vedere esauditi i suoi desideri. In questo momento una squadra di veterani si sta radunando presso Pripjat. Se ti sbrighi, dovresti riuscire a raggiungerli."</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>Ho disattivato il Bruciacervella. Nello stesso momento, chissà perché, ho perso i sensi. Poi ho fatto un sogno: ho rivisto l'enorme centrale di Chernobyl e il sarcofago. Poi un lampo. Il lucente Monolite dentro il sarcofago. Credo che sia l'Esauditore di desideri. Uno stalker esausto e vestito di stracci si avvicina faticosamente... c'è un lampo accecante, vedo un frammento del primo sogno... Un uomo che mi volta le spalle spara in continuazione. Qualcuno grida: "Strelok!". L'uomo sussulta, resta un attimo immobile e poi inizia lentamente a girarsi... ma le immagini scorrono via come in un film visto al contrario, e lo vedo usare la sua arma per costringere i topi a tornare nella stazione... Mi rendo conto che era lì che mi trovavo. Devo raggiungere il Monolite.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>Il Bruciacervella è neutralizzato</text>
+	</string>

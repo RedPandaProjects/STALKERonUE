@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_break_dialog_0">
+		<text>Na razie!</text>
+	</string>
+	<string id="actor_help_wounded_0">
+		<text>W porz№dku?</text>
+	</string>
+	<string id="actor_help_wounded_1">
+		<text>Ranny jestem, do cholery - nie widzisz?! Potrzebna mi apteczka albo chociaї bandaї.</text>
+	</string>
+	<string id="actor_help_wounded_11">
+		<text>Masz, weџ tк apteczkк.</text>
+	</string>
+	<string id="actor_help_wounded_111">
+		<text>Dziкki, stary, nie zapomnк ci tego.</text>
+	</string>
+	<string id="actor_help_wounded_12">
+		<text>Masz, weџ ten bandaї.</text>
+	</string>
+	<string id="actor_help_wounded_13">
+		<text>Przykro mi, nie mam.</text>
+	</string>
+	<string id="actor_help_wounded_131">
+		<text>To jak ty tak іazisz po Zonie? Powaliіo ciк?! A jak siк zarazisz, to co? Nawet nie dasz rady siк wyleczyж! </text>
+	</string>
+	<string id="actor_help_wounded_14">
+		<text>Przykro mi, stary - gdybym ci oddaі, to juї by dla mnie nie zostaіo. </text>
+	</string>
+	<string id="actor_help_wounded_141">
+		<text>Jak sobie chcesz, ale w niczym ci to nie pomoїe.</text>
+	</string>
+	<string id="hello_dialog_2">
+		<text>Hej!</text>
+	</string>
+	<string id="hello_dialog_3">
+		<text>Pomуgіbyњ mi, co?</text>
+	</string>
+</string_table>

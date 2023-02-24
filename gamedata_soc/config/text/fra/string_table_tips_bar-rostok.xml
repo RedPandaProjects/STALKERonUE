@@ -1,0 +1,144 @@
+	<string id="bar_arena_actor_afraid">
+		<text>Le combat est terminé ! Le challenger s'est dégonflé, il n'est même pas venu se battre !</text>
+	</string>
+	<string id="bar_arena_fight_10">
+		<text>10 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_20">
+		<text>20 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_30">
+		<text>30 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_40">
+		<text>40 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_50">
+		<text>50 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_60">
+		<text>1 minute de combat !</text>
+	</string>
+	<string id="bar_arena_fight_70">
+		<text>1 minute et 10 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_80">
+		<text>1 minute et 20 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_90">
+		<text>1 minute et 30 secondes d'écoulées !</text>
+	</string>
+	<string id="bar_arena_fight_begin">
+		<text>Le combat a commencé !</text>
+	</string>
+	<string id="bar_arena_fight_bloodsucker">
+		<text>Votre attention, s'il vous plaît ! Un nouveau combat va commencer dans l'Arène ! À gauche, le cauchemar de la Zone, l'insatiable Sangsue ! Et à droite... Un homme ? Oui, c'est bien un homme ! Merci d'applaudir le Tatoué !</text>
+	</string>
+	<string id="bar_arena_fight_burer">
+		<text>Votre attention, s'il vous plaît ! Un nouveau combat va commencer dans l'Arène ! À gauche, le maître de kung-fu en personne, j'ai nommé l'horrible monstre ! Et à droite, celui qui est toujours à l'affût, celui qu'on surnomme le Tatoué !</text>
+	</string>
+	<string id="bar_arena_fight_dead">
+		<text>Eh bien, le challenger a été tué ! En voilà une surprise !</text>
+	</string>
+	<string id="bar_arena_fight_lose">
+		<text>Eh bien, le challenger a tué son adversaire, mais... après le gong. Il perd donc le combat !</text>
+	</string>
+	<string id="bar_arena_fight_pseudodog">
+		<text>Votre attention, s'il vous plaît ! Un nouveau combat va commencer dans l'Arène ! À gauche, il est tout blanc, son pelage est tout doux, mais il est redoutable... il s'agit bien sûr du Pseudo-chien ! Et à droite, venu de nulle part et allant on ne sait où, voici celui qu'on appelle le Tatoué !</text>
+	</string>
+	<string id="bar_arena_fight_savage">
+		<text>Votre attention, s'il vous plaît ! Un nouveau combat va commencer dans l'Arène ! À gauche, vous le connaissez et vous l'adorez autant qu'il vous déteste : la Bête, bien sûr ! Et à droite, prêt à en découdre, du moins pour le moment, voici le Tatoué !</text>
+	</string>
+	<string id="bar_arena_fight_snork">
+		<text>Votre attention, s'il vous plaît ! Un nouveau combat va commencer dans l'Arène ! À gauche, notre gourou des arts martiaux et spécialiste de la santé : le Snork ! Et à droite, l'homme sans passé et sans avenir : le Tatoué !</text>
+	</string>
+	<string id="bar_arena_fight_timeout">
+		<text>C'est terminé ! Le challenger a perdu, mais il continue à se battre pour sa survie !</text>
+	</string>
+	<string id="bar_arena_fight_victory">
+		<text>Oh ! Le challenger a tué son adversaire avant le gong ! C'est le vainqueur !</text>
+	</string>
+	<string id="bar_ecolog_attack">
+		<text>Comme vous voudrez.</text>
+	</string>
+	<string id="bar_ecolog_crush_attract_actor">
+		<text>Mon ami, je vous en prie, ne partez pas ! Aidez-nous ! Les anarchistes ont abattu notre hélicoptère et ils sont en route pour nous tuer... Il y a des blessés parmi nous, on a besoin de votre aide !</text>
+	</string>
+	<string id="bar_ecolog_crush_heli_down">
+		<text>Oh ! Où est donc passé votre hélico, bande de rats du gouvernement ? Votre heure a sonné!</text>
+	</string>
+	<string id="bar_ecolog_crush_start_heli">
+		<text>Vous êtes fichu, cette fois, le Doberman. Un hélicoptère militaire est en route. Ils vont vous mettre en bouillie !</text>
+	</string>
+	<string id="bar_ecolog_escape">
+		<text>Kruglov s'est enfui ! Trouvez-le ! Il n'a pas pu aller bien loin.</text>
+	</string>
+	<string id="bar_ecolog_hit">
+		<text>Aidez-moi, le Tatoué ! Ils vont me tuer !!!</text>
+	</string>
+	<string id="bar_ecolog_spam_1">
+		<text>Vous pouvez toujours courir, sale chien ! Commencez par retourner à l'école avant de lancer des ultimatums.</text>
+	</string>
+	<string id="bar_ecolog_spam_2">
+		<text>Si vous m'attaquez, je détruis les données. Vous n'aurez rien !</text>
+	</string>
+	<string id="bar_ecolog_spam_3">
+		<text>N'approchez pas ou je détruis les résultats de mes recherches !</text>
+	</string>
+	<string id="bar_ecolog_spam_4">
+		<text>Emmenez vos chiens, le Doberman, et partez tant que vous pouvez encore marcher.</text>
+	</string>
+	<string id="bar_freedom_attack">
+		<text>Assez parlé. Passons aux choses sérieuses !</text>
+	</string>
+	<string id="bar_freedom_attack_attract_actor">
+		<text>Hé, par ici ! On pourrait liquider les rats du gouvernement ensemble.</text>
+	</string>
+	<string id="bar_freedom_attack_spy">
+		<text>Enfoiré ! Tu vas me le payer. Je te le garantis, le Tatoué.</text>
+	</string>
+	<string id="bar_freedom_chase">
+		<text>Ils nous suivent ?! Hé, le Tatoué, arrête-les !</text>
+	</string>
+	<string id="bar_freedom_spam_1">
+		<text>Je croyais que les scientifiques étaient des gens sensés. De deux choses l'une : soit vous me donnez les documents, soit vous finissez ici dans un sac en plastique.</text>
+	</string>
+	<string id="bar_freedom_spam_2">
+		<text>Je ne comprends peut-être pas le latin, Kruglov, mais je parle couramment le langage de la violence. Vous voulez que je vous montre ? À moins que vous préfériez me donner les infos ?</text>
+	</string>
+	<string id="bar_freedom_spam_3">
+		<text>Vous êtes un homme intelligent, professeur. Donnez-moi les infos et je vous laisse\npartir !</text>
+	</string>
+	<string id="bar_freedom_spam_4">
+		<text>Vous ne comprenez pas, Kruglov. On a descendu votre foutu hélico et on a besoin des informations que vous transportez. Donnez-les-nous et vous pourrez emmener vos amis loin d'ici. Je ne le répéterai pas. Donnez-moi cette clé USB et disparaissez !</text>
+	</string>
+	<string id="bar_psih_come">
+		<text>Par ici, vite ! Mes hommes ont attrapé un Stalker fou près de la Forêt rouge. On essaie de lui soutirer des informations !</text>
+	</string>
+	<string id="bar_territory_dolg_1_hit">
+		<text>Le Tatoué, t'es cinglé ou quoi ? Arrête de tirer ! C'est un ordre !</text>
+	</string>
+	<string id="bar_territory_dolg_2_hit">
+		<text>Arrête de tirer, le Tatoué ! Obéis ou t'es mort !</text>
+	</string>
+	<string id="bar_territory_dolg_3_hit">
+		<text>Tu es viré pour avoir enfreint le règlement, le Tatoué. Désormais, tu n'as plus aucun ami au sein du Devoir.</text>
+	</string>
+	<string id="bar_territory_dolg_kill">
+		<text>Le Tatoué, tu as désobéi à un ordre. Le Devoir ne le tolère pas. Tu es un homme mort.</text>
+	</string>
+	<string id="bar_territory_nodolg_1_hit">
+		<text>Cessez-le-feu ! Il est interdit de tirer sur le territoire du Devoir ! Les coupables seront punis !</text>
+	</string>
+	<string id="bar_territory_nodolg_2_hit">
+		<text>Attention ! Le Tatoué a enfreint la loi en utilisant son arme sur le territoire du Devoir. Il est désormais considéré comme un criminel.</text>
+	</string>
+	<string id="bar_territory_nodolg_kill">
+		<text>Attention ! Il y a un meurtrier sur le territoire du Devoir. Trouvez-le et tuez-le !</text>
+	</string>
+	<string id="rostok_kruglov_spam_1">
+		<text>Vous, Stalker, aidez-nous ! Les Mercenaires nous ont attaqués, ils ont tué la moitié de notre équipe. Aidez-nous, vous ne le regretterez pas.</text>
+	</string>
+	<string id="rostok_kruglov_spam_2">
+		<text>Aidez-nous à sortir de l'embuscade par l'usine. Je vous ai envoyé les coordonnées. Faites attention, le Doberman et ses hommes sont près de l'hélico.</text>
+	</string>

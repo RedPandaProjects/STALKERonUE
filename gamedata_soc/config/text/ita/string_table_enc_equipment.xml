@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Antirad">
+		<text>Farmaci antirad.</text>
+	</string>
+	<string id="Arm-heavy">
+		<text>Attrezzatura pesante da stalker</text>
+	</string>
+	<string id="Arm-light">
+		<text>Attrezzatura leggera da stalker</text>
+	</string>
+	<string id="Arm-medium">
+		<text>Attrezzatura media da stalker</text>
+	</string>
+	<string id="bandage">
+		<text>Bende</text>
+	</string>
+	<string id="Binocul">
+		<text>Binocolo</text>
+	</string>
+	<string id="Bread">
+		<text>Pane</text>
+	</string>
+	<string id="cit_deadcity_maps_desc">
+		<text>Una mappa dettagliata della Cittа dei Morti, con le posizioni dei mercenari.</text>
+	</string>
+	<string id="cit_deadcity_maps_name">
+		<text>Mappa della Cittа dei Morti</text>
+	</string>
+	<string id="cit_doctors_key_desc">
+		<text>La chiave del dottore che apre un nascondiglio segreto a Pripjat</text>
+	</string>
+	<string id="cit_doctors_key_short_desc">
+		<text>Chiave del dottore</text>
+	</string>
+	<string id="Conserva">
+		<text>Delizia del turista</text>
+	</string>
+	<string id="Detect1">
+		<text>Rilevatore anomalie</text>
+	</string>
+	<string id="Devic">
+		<text>Strumentazioni varie</text>
+	</string>
+	<string id="device-PDA">
+		<text>Palmare</text>
+	</string>
+	<string id="device-torch">
+		<text>Torcia</text>
+	</string>
+	<string id="enc_equipment_armors_arm-heavy">
+		<text>Tuta protettiva. Peso: 18 kg. Dettagli: protegge il corpo da Gelatina, Bruciatura peli, da gran parte delle anomalie e da danni fisici. Il torace e la schiena vengono protetti da placche incorporate bio-metalliche. La tuta и completa di casco a tenuta d'aria in plastica rinforzata e due bombolette di ossigeno. Nota: l'uso prolungato danneggia la tuta fino a renderla inutilizzabile.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-light">
+		<text>Tuta protettiva. Peso: 8 kg. Dettagli: protegge il corpo dalle anomalie e dai danni fisici meno gravi. Completa di maschera per ossigeno. Nota: l'uso prolungato danneggia la tuta fino a renderla inutilizzabile.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-medium">
+		<text>Tuta protettiva. Peso: 12 kg. Dettagli: protegge il corpo da Gelatina, Bruciatura pel, molte anomalie e da danni fisici. Completa di casco a tenuta d'aria e una bomboletta di ossigeno. Nota: l'uso prolungato danneggia la tuta fino a renderla inutilizzabile.</text>
+	</string>
+	<string id="enc_equipment_armors_sci2">
+		<text>Una tuta rossa S.C.A.P.E con casco a tenuta d'aria. Peso: 11 kg. Descrizione: protegge il corpo da fuoco, acidi, gas tossici, varie anomalie, Bruciatura pel e danni fisici. Completa di due bombolette di ossigeno. Nota: l'uso prolungato danneggia la tuta fino a renderla inutilizzabile.</text>
+	</string>
+	<string id="enc_equipment_devic_binocul1">
+		<text>Binocolo militare da campo</text>
+	</string>
+	<string id="enc_equipment_devic_detect1">
+		<text>Dispositivo utile per rilevare campi di anomalie e disturbi. Ne indica la presenza con un segnale sonoro. Per funzionare correttamente, deve essere agganciato alla cintura e acceso.</text>
+	</string>
+	<string id="enc_equipment_devic_device-PDA1">
+		<text>Palmare: indispensabile nella Zona.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1">
+		<text>Una torcia potente. Molto utile nelle aree prive di adeguata illuminazione.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1_m1">
+		<text>Una torcia potente. Il tempo di ricarica della batteria и stato ridotto grazie a un moderno trasformatore.</text>
+	</string>
+	<string id="enc_equipment_energydrink">
+		<text>Questo и un eccellente reintegratore a base di caffeina, taurina e di una miscela di vitamine rinvigorenti ed energizzanti. Quello che ci vuole quando sei troppo stanco per continuare!</text>
+	</string>
+	<string id="enc_equipment_food_bread1">
+		<text>Difficile dire chi riesca a infornare queste pagnotte nella Zona, ma non sono contaminate e sono perfettamente commestibili. Be', quanto meno nessuno degli stalker se n'и mai lamentato.</text>
+	</string>
+	<string id="enc_equipment_food_conserva1">
+		<text>Cibo in scatola proveniente da un magazzino militare saccheggiato dagli stalker. E non и ancora scaduto.</text>
+	</string>
+	<string id="enc_equipment_food_kolbasa1">
+		<text>Per uno stalker, la salsiccia "dietetica" a base di pollo e soia и spesso, e in mancanza d'altro, colazione, pranzo e cena insieme.</text>
+	</string>
+	<string id="enc_equipment_food_vodka1">
+		<text>Vodka prodotta dalla GSC. Va giщ come l'acqua e riduce in misura significativa gli effetti delle radiazioni, ma per ovvi motivi dovrebbe essere consumata con moderazione.</text>
+	</string>
+	<string id="enc_equipment_medi_antirad1">
+		<text>Riduce gli effetti delle radiazioni.</text>
+	</string>
+	<string id="enc_equipment_medi_bandage1">
+		<text>Bende. Contribuiscono a contenere le emorragie.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit1">
+		<text>Kit medico universale. Utilizzato per curare lesioni di vario tipo e gravitа come ferite, ustioni, avvelenamenti, ecc.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit2">
+		<text>Kit medico speciale contro lesioni fisiche e perdita di sangue. Comprende un anticoagulante, antibiotici, agenti immunostimolanti e antidolorifici. </text>
+	</string>
+	<string id="enc_equipment_medi_medkit3">
+		<text>Kit medico progettato specificamente per la Zona. Il kit comprende il necessario per curare le ferite ma anche per liberare il corpo dai radionucleotidi. Impedisce l'evoluzione dei disturbi da onde radio e riduce la dose di radiazioni accumulate. </text>
+	</string>
+	<string id="energy_drink_name">
+		<text>Reintegratore</text>
+	</string>
+	<string id="energy_drink_short_name">
+		<text>Reintegratore</text>
+	</string>
+	<string id="Equipment">
+		<text>Cibo e attrezzature</text>
+	</string>
+	<string id="Food">
+		<text>Cibo</text>
+	</string>
+	<string id="Kolbasa">
+		<text>Salsiccia dietetica</text>
+	</string>
+	<string id="Medi">
+		<text>Medicine</text>
+	</string>
+	<string id="Medkit">
+		<text>Kit medico</text>
+	</string>
+	<string id="Medkit_army">
+		<text>Kit medico militare</text>
+	</string>
+	<string id="Medkit_scientific">
+		<text>Kit medico scientif.</text>
+	</string>
+	<string id="Sci2">
+		<text>EXP-4 scientifica</text>
+	</string>
+	<string id="Vodka">
+		<text>Vodka del Cosacco</text>
+	</string>
+	<string id="st_detector">
+		<text>Rilevatore di anomalie</text>
+	</string>
+	<string id="st_detector_descr">
+		<text>Strumento di rilevazione delle zone anomale e dei focolai radioattivi.</text>
+	</string>
+	<string id="st_grenade_gd5">
+		<text>Granata fumogena</text>
+	</string>
+</string_table>

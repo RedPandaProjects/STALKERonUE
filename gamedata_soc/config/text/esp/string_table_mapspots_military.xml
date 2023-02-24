@@ -1,0 +1,60 @@
+	<string id="mil_cap_hint">
+		<text>Habla con el comandante del punto de control de la Barrera</text>
+	</string>
+	<string id="mil_courier_hint1">
+		<text>Sigue al topo</text>
+	</string>
+	<string id="mil_courier_hint2">
+		<text>Espera a que el topo llame al agente</text>
+	</string>
+	<string id="mil_courier_hint3">
+		<text>Mata al topo</text>
+	</string>
+	<string id="mil_courier_hint4">
+		<text>Mata al informante</text>
+	</string>
+	<string id="mil_crazy_hint">
+		<text>Coge la unidad de información del stalker loco</text>
+	</string>
+	<string id="mil_dolg_khutor">
+		<text>Granja de Deber</text>
+	</string>
+	<string id="mil_freedom_sniper">
+		<text>Mata al francotirador</text>
+	</string>
+	<string id="mil_hunters_hint1">
+		<text>Habla con Sombrío</text>
+	</string>
+	<string id="mil_hunters_hint2">
+		<text>Vuelve adonde Roñoso</text>
+	</string>
+	<string id="mil_kill_dolg_hint">
+		<text>Acaba con el pelotón de Deber</text>
+	</string>
+	<string id="mil_kill_lukash_hint">
+		<text>Mata a Lukash</text>
+	</string>
+	<string id="mil_miser_hint">
+		<text>Roñoso</text>
+	</string>
+	<string id="mil_report_to_max_hint">
+		<text>Informa a Max</text>
+	</string>
+	<string id="mil_return_to_lukash_hint">
+		<text>Informa a Lukash</text>
+	</string>
+	<string id="mil_return_to_max_hint">
+		<text>Entrega a Max la unidad de información</text>
+	</string>
+	<string id="mil_rg6_hint1">
+		<text>Encuentra al cocinero de la base de Libertad</text>
+	</string>
+	<string id="mil_rg6_hint2">
+		<text>Habla con Cocinero</text>
+	</string>
+	<string id="mil_rg6_hint3">
+		<text>Coge el Bulldog 6 del escondite del pueblo</text>
+	</string>
+	<string id="mil_watertower_hint">
+		<text>Depósito de agua</text>
+	</string>

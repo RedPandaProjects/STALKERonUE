@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="pri_followers_start_dlg_21">
+		<text>On va remonter la rue. S'il y a un problиme, faut me couvrir.</text>
+	</string>
+	<string id="pri_followers_start_dlg_211">
+		<text>OK.</text>
+	</string>
+	<string id="pri_followers_start_dlg_31">
+		<text>Merci de ton aide, le Tatouй. C'йtait un combat difficile. On peut se reposer ici. Si tu veux continuer, je t'en dirai plus sur la zone. Si tu fais demi-tour et que tu tournes а droite, t'arriveras au parking. L'endroit est exposй et pas trиs sыr. Si tu continues devant, t'arriveras en face de l'hфtel. А sa droite, c'est la base du Monolithe. Ces gars ont aucune limite. Derriиre la base, c'est le stade. On prйvoyait d'aller а la centrale en le traversant. C'est tout.</text>
+	</string>
+	<string id="pri_followers_start_dlg_311">
+		<text>Merci.</text>
+	</string>
+	<string id="pri_followers_start_dlg_41">
+		<text>Merci de ton aide. Bonne chance.</text>
+	</string>
+	<string id="pri_followers_start_dlg_411">
+		<text>Au revoir.</text>
+	</string>
+</string_table>

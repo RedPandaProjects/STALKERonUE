@@ -1,0 +1,9 @@
+	<string id="val_give_escort_task_pda">
+		<text>Necesitamos ayuda para salvar a un amigo.</text>
+	</string>
+	<string id="val_monolith_trader_pda1">
+		<text>El ejército ha atacado la base bandida. La entrada al vertedero está bloqueada, pero hay un viejo camino hacia el Sur. Se puede usar, pero más te vale ir con cuidado. Buena suerte.</text>
+	</string>
+	<string id="val_sos_pda">
+		<text>Socorro, me muero...</text>
+	</string>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="svoboda_outfit_name_m1">
+		<text>Kombez Svoboda M2</text>
+	</string>
+	<string id="team_1_desc">
+		<text>Anarchistй Zуny. Vмшн, ћe Zуna je mнstem svobody a ћe tady neplatн ћбdnй zбkony, pravidla a tradice vnмjљнho svмta. Jejich mottem je "Dмlej si, co chceљ, a taky nech ostatnн dмlat si, co chtмjн". Snaћн se zabrбnit vlбdм v ovlбdnutн Zуny a bojujн proti Ћoldбkщm. Bojovnнci Svobody pouћнvajн hlavnм sovмtskй a ruskй zbranм.</text>
+	</string>
+	<string id="team_1_name">
+		<text>Frakce Svoboda (Svobodnн stalkeшi)</text>
+	</string>
+	<string id="team_2_desc">
+		<text>Hrdloшezovй a dobrodruhovй z celйho svмta, ћбdnб љpнna nenн pod jejich ъroveт. Jejich mottem je "Pecunia non olet - Prachy nesmrdмj." Jsou tady artefakty, takћe se tady dajн vydмlat prachy. Ћoldбci pouћнvajн hlavnм zбpadnн zbranм.</text>
+	</string>
+	<string id="team_2_name">
+		<text>Frakce Ћoldбkщ (Lovci lebek)</text>
+	</string>
+</string_table>

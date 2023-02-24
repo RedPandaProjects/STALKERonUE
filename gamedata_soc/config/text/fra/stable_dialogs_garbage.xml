@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="gar_dolg_blokpost_11">
+		<text>Arrкte Stalker. Tu ne peux pas aller plus loin !</text>
+	</string>
+	<string id="gar_dolg_blokpost_111">
+		<text>Pourquoi ?</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111">
+		<text>Parce que c'est notre territoire, le territoire du Devoir, et on ne laisse pas rentrer n'importe qui dans notre base. Tu ne passeras pas а moins d'avoir quelque chose d'important а dire а nos chefs.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11111">
+		<text>Je vois.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111111">
+		<text>C'est la rиgle.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112">
+		<text>Je dois passer, j'ai une affaire а traiter avec le Barman.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121">
+		<text>Le Barman m'a parlй de toi. Tu peux passer.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111211">
+		<text>Je prйfиre payer. Tiens.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112111">
+		<text>Bien ! Vas-y, mais t'as intйrкt а avoir une affaire importante а traiter avec le Barman, pigй ? Et fais gaffe, le coin est truffй d'anomalies.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212">
+		<text>Quel genre de service ?</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112121">
+		<text>Pas grand-chose. Il faudrait descendre une meute de sangliers qui se balade dans le coin. Tue-les et ton passage sera payй.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121211">
+		<text>OK.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212111">
+		<text>Bonne chance, Stalker.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121212">
+		<text>Je n'ai pas d'argent.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212121">
+		<text>Tu ferais mieux d'en trouver, et vite !</text>
+	</string>
+	<string id="gar_dolg_blokpost_111122">
+		<text>Je n'ai pas d'argent.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111123">
+		<text>Alors tu n'accиderas pas au bar.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1231">
+		<text>Merci de nous avoir aidйs а repousser les sangliers. Voilа une rйcompense bien mйritйe.</text>
+	</string>
+	<string id="gar_dolg_blokpost_12311">
+		<text>Merci !</text>
+	</string>
+	<string id="gar_dolg_blokpost_22">
+		<text>Зa y est, tu as tuй ces sangliers ?</text>
+	</string>
+	<string id="gar_dolg_blokpost_221">
+		<text>Pas encore.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2211">
+		<text>Dommage. Quand tu les auras tuйs, ramиne-moi donc une cфtelette, OK ?</text>
+	</string>
+	<string id="gar_dolg_blokpost_222">
+		<text>Oui, je les ai tous tuйs.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2221">
+		<text>C'est bon, passe. Et salue le Barman de ma part.</text>
+	</string>
+	<string id="gar_dolg_blokpost_33">
+		<text>Dis bonjour au Barman de ma part quand tu le verras. Oh et n'oublie pas, il y a plein d'anomalies dans le coin, soit prudent.</text>
+	</string>
+	<string id="gar_dramm_novice_start_0">
+		<text>Merci vieux, tu m'as rendu un grand service. Je m'en souviendrai.</text>
+	</string>
+	<string id="gar_dramm_novice_start_1">
+		<text>Qu'est-ce qui se passe ici ?</text>
+	</string>
+	<string id="gar_dramm_novice_start_11">
+		<text>OK.</text>
+	</string>
+	<string id="gar_dramm_novice_start_2">
+		<text>On essaie de virer les bandits de la Dйcharge. Mes amis vont tendre une embuscade а une unitй de bandits pas loin. Si on les arrкte pas, ils vont prendre le contrфle de la Dйcharge et personne ne pourra plus s'enfoncer dans la Zone. Va voir notre commandant. Lui et ses hommes sont dans le coin, dans la casse. J'y vais, t'as qu'а m'accompagner si tu veux.</text>
+	</string>
+	<string id="gar_dramm_novice_start_21">
+		<text>Je te suis.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3">
+		<text>Tu peux me parler un peu de la Dйcharge ?</text>
+	</string>
+	<string id="gar_dramm_novice_start_31">
+		<text>Y a pas grand-chose а en dire, vieux. La Dйcharge est... une dйcharge ! Les soldats du Devoir gardent la route nord, prиs du bar. Mieux vaut les йviter, ces mecs, c'est pas des rigolos. А droite, ce sont les chemins qui mиnent а la Vallйe obscure, mais le niveau de radiation y est trиs йlevй. Un peu plus prиs, il y a le Bourbier de Grimpen, de terribles marйcages qui grouillent d'anomalies. Il paraоt qu'on y trouve facilement des artefacts, mais on peut aussi y trouver beaucoup d'ennuis. La seule chose qu'on y a jamais vu finalement, c'est le chien des Baskerville !</text>
+	</string>
+	<string id="gar_dramm_novice_start_311">
+		<text>Continue.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3111">
+		<text>А droite, prиs des marйcages, il y a une cachette. Tu verras une construction mйtallique surplombant une mare. Ma planque est juste en dessous... Зa fait un petit moment que j'y travaille, mais tu m'as sauvй la vie et tu en as sыrement plus besoin que moi. Alors sers-t'en.</text>
+	</string>
+	<string id="gar_dramm_novice_start_31111">
+		<text>Merci vieux, c'est une info utile.</text>
+	</string>
+	<string id="gar_dramm_novice_start_312">
+		<text>Intйressant. Merci !</text>
+	</string>
+	<string id="gar_hellcar_start_11">
+		<text>Hй, Stalker, tu tombes bien ! On a besoin de toi. Ces enfoirйs de bandits essaient de s'emparer de la Dйcharge. Il y a eu une fusillade ici, il y a une demi-heure et on a rйussi а abattre trois de ces chiens. Les autres ont battu en retraite, mais je mettrai ma main а couper qu'ils vont revenir avec des renforts d'une minute а l'autre. On n'est plus beaucoup, un homme de plus nous serait utile.</text>
+	</string>
+	<string id="gar_hellcar_start_111">
+		<text>Continue.</text>
+	</string>
+	<string id="gar_hellcar_start_1111">
+		<text>On leur a tendu une embuscade ici. Ils vont arriver de l'ouest, de l'Institut de Recherche Agroprom. Aide-nous а йliminer leurs renforts, tu ne le regretteras pas !</text>
+	</string>
+	<string id="gar_hellcar_start_11111">
+		<text>OK, je vais vous aider.</text>
+	</string>
+	<string id="gar_hellcar_start_111111">
+		<text>Gйnial.</text>
+	</string>
+	<string id="gar_hellcar_start_11112">
+		<text>C'est pas mes affaires, je veux pas m'en mкler.</text>
+	</string>
+	<string id="gar_hellcar_start_111121">
+		<text>Comme tu veux. Mais tu le regretteras а chaque fois que tu paieras ces crйtins pour passer dans la Zone.</text>
+	</string>
+	<string id="gar_hellcar_start_11113">
+		<text>Je les ai tous tuйs.</text>
+	</string>
+	<string id="gar_hellcar_start_111131">
+		<text>T'es le meilleur ! Mais je vais rester prudent, au cas oщ.</text>
+	</string>
+	<string id="gar_hellcar_start_21">
+		<text>J'ai rien а te dire.</text>
+	</string>
+	<string id="gar_hellcar_start_3111">
+		<text>Merci, tu nous as rendu un sacrй service. Du cash, зa te dirait ? En signe de notre gratitude.</text>
+	</string>
+	<string id="gar_hellcar_start_31111">
+		<text>Bien sыr.</text>
+	</string>
+	<string id="gar_hellcar_start_311111">
+		<text>Tiens, зa devrait couvrir tes frais de santй.</text>
+	</string>
+	<string id="gar_hellcar_start_3111111">
+		<text>Merci.</text>
+	</string>
+	<string id="gar_hellcar_start_31113">
+		<text>Parle-moi de toi.</text>
+	</string>
+	<string id="gar_hellcar_start_311131">
+		<text>Je m'appelle Bes. Je suis arrivй dans le coin y a trois ans. Comme beaucoup dans la Zone, je suis un fugitif, recherchй pour coups et blessures et deux meurtres. Il y a quelques annйes un copain а moi s'est fait mйchamment tabasser ; ils ont dы recoller les morceaux а l'hosto, littйralement. Alors j'ai rendu une petite "visite" aux salauds qui avaient fait зa. Mais les flics sont arrivйs et j'ai dы en descendre un avant de sauter du deuxiиme йtage. Et me voilа. Je m'en sors pas mal ici, mais la liste de mes crimes s'est un peu allongйe. J'essaie de combattre l'anarchie, comme а l'extйrieur. J'entraоne les nouveaux, je leur apprends а survivre dans la Zone.</text>
+	</string>
+	<string id="gar_hellcar_start_3111311">
+		<text>Pourquoi tu rejoins pas le Devoir si c'est ce que tu ressens ?</text>
+	</string>
+	<string id="gar_hellcar_start_31113111">
+		<text>Le Devoir se bat contre la Zone, moi je me bats pour le peuple. Et puis, ils sont trop proches du gouvernement et de l'armйe. J'ai aucune envie de me rйveiller dans une cellule un matin.</text>
+	</string>
+	<string id="gar_hellcar_start_311131111">
+		<text>Bonne chance а toi.</text>
+	</string>
+	<string id="gar_hellcar_start_31114">
+		<text>C'est quoi cet endroit ?</text>
+	</string>
+	<string id="gar_hellcar_start_311141">
+		<text>La Dйcharge. On est comme chez nous ici. Tu vois ce tas d'ordures lа-bas ? Vaut mieux pas s'en approcher, crois-moi. Il y a tellement de dйchets radioactifs que le compteur Geiger pиte les plombs. C'est le meilleur chemin pour aller dans la Zone, mais les bandits y sont de plus en plus actifs. Ils flippent trop de s'aventurer plus avant dans la Zone, sur le territoire du Devoir, comme les Stalkers expйrimentйs. Mais ils se font un plaisir de dйpouiller les nouveaux. Mкme si tout le monde s'en fout, on doit se battre pour ce terrain.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411">
+		<text>Continue.</text>
+	</string>
+	<string id="gar_hellcar_start_31114111">
+		<text>Partout, et surtout ici, tu dois te conduire comme un кtre humain, pas comme une charogne cupide. C'est ma faзon de voir les choses.</text>
+	</string>
+	<string id="gar_hellcar_start_311141112">
+		<text>Il y a des grands bвtiments dans la Dйcharge ?</text>
+	</string>
+	<string id="gar_hellcar_start_31114111211">
+		<text>Merci.</text>
+	</string>
+	<string id="gar_hellcar_start_31115">
+		<text>Merci, tu peux pas m'aider.</text>
+	</string>
+	<string id="gar_hellcar_start_3112">
+		<text>Je sais pas mal de choses, je pourrais te donner des infos.</text>
+	</string>
+	<string id="gar_hellcar_start_41">
+		<text>Y a encore du boulot. On parlera quand зa sera fini.</text>
+	</string>
+	<string id="gar_hellcar_start_51">
+		<text>Hй, le Tatouй !</text>
+	</string>
+	<string id="gar_seriy_start_11">
+		<text>Bon sang mec, c'est pas le moment de discuter ! Dans deux secondes, on entendra plus que les flingues. Aide-moi а les repousser et on pourra parler.</text>
+	</string>
+	<string id="gar_seriy_start_22">
+		<text>Merci pour le coup de main, зa devenait chaud. Qu'est-ce que tu fais lа au fait ?</text>
+	</string>
+	<string id="gar_seriy_start_221">
+		<text>Je cherche des infos sur Strelok. Fox m'a parlй de toi, alors je suis venu discuter.</text>
+	</string>
+	<string id="gar_seriy_start_2211">
+		<text>OK, tu m'as aidй alors je vais te rendre la pareille. Un des types, un ancien "foreur" appelй la Taupe m'attend. Il a dйnichй la planque de Strelok mais je ne sais pas s'il y a trouvй quelque chose. Voilа les coordonnйes de notre point de rencontre. Dis-lui que c'est moi qui t'envoie. Ils vont me chercher, alors je vais me faire discret. Tiens, ce fric t'aidera.</text>
+	</string>
+	<string id="gar_seriy_start_2212">
+		<text>Merci pour le tuyau.</text>
+	</string>
+	<string id="gar_seriy_start_222">
+		<text>Je cherche des infos sur Strelok. Tu sais peut-кtre quelque chose ?</text>
+	</string>
+	<string id="gar_seriy_start_2221">
+		<text>OK, tu m'as aidй alors je vais te rendre la pareille. Un des types, un ancien "foreur" appelй la Taupe m'attend. Il a dйnichй la planque de Strelok et y a dйcouvert des documents intйressants. Il avait des bandits aux trousses, donc il a dы laisser les documents, mais il sait oщ ils sont. Ils vont me chercher, alors je vais me faire discret. Voilа les coordonnйes du point de rencontre avec la Taupe. Dis-lui que c'est moi qui t'envoie. Je vais transfйrer des infos sur ton PDA. Et voilа du cash pour te remercier.</text>
+	</string>
+	<string id="gar_seriy_start_2222">
+		<text>Merci pour les infos.</text>
+	</string>
+	<string id="gar_seriy_start_33">
+		<text>Hй, mec ! C'йtait chaud y a quelques minutes. Mais qu'est-ce que tu fais lа au fait ?</text>
+	</string>
+	<string id="gar_seriy_start_44">
+		<text>Un chemin sыr, Stalker. Un chemin qui йvite les anomalies et mиne droit aux artefacts.</text>
+	</string>
+	<string id="gar_seriy_start_441">
+		<text>Qu'est-ce qu'on trouve dans la Dйcharge ?</text>
+	</string>
+	<string id="gar_seriy_start_4411">
+		<text>Tu peux trouver pas mal d'ennuis en trиs peu de temps ! Mais tu es un aventurier, alors je vais te dire ce que je sais. Il y a une petite forкt а l'est. Tu n'y trouveras rien d'intйressant et c'est plein de chiens, fais gaffe. Cette voie ferrйe te conduira а un tunnel. Il y a plein d'anomalies lа-bas, peut-кtre autre chose, je sais pas, j'ai jamais vraiment cherchй. Tu connais probablement le poste de contrфle du Devoir, au nord. C'est а peu prиs tout ce que je sais.</text>
+	</string>
+	<string id="gar_seriy_start_44112">
+		<text>Merci pour le tuyau.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_0">
+		<text>Vieux, qu'est-ce que je peux trouver dans cette Dйcharge ?</text>
+	</string>
+	<string id="gar_seryi_about_garbage_1">
+		<text>Tu peux trouver pas mal d'ennuis en trиs peu de temps ! Mais tu es un aventurier, alors je vais te dire ce que je sais. Il y a une petite forкt а l'est. T'y trouveras rien d'intйressant et c'est plein de chiens, fais gaffe. Cette voie ferrйe te conduira а un tunnel. Il y a plein d'anomalies lа-bas, peut-кtre autre chose, je sais pas, j'ai jamais vraiment cherchй. Tu connais probablement le poste de contrфle du Devoir, au nord. C'est а peu prиs tout ce que je sais.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_11">
+		<text>Merci pour l'info. Je m'en souviendrai.</text>
+	</string>
+	<string id="gar_stalker_about_level_0">
+		<text>Tu peux me parler de cet endroit ?</text>
+	</string>
+	<string id="gar_stalker_about_level_1">
+		<text>Ouais, йcoute. Tout cet endroit n'est qu'une dйcharge puante. Aprиs l'accident, en 1986, ils ont amenй les dйchets radioactifs, les grues et toute la quincaillerie foutue ici. Au final, c'est un tas de saloperies et quelques anomalies par-ci, par-lа. On trouve mкme quelques artefacts mais rien d'exceptionnel alors il y a surtout des nouveaux ici. Et lа oщ il y a des nouveaux, il y a des bandits donc mieux vaut pas trop traоner ici. Plus а l'est, il y a beaucoup de poches de radiation, impossible d'y aller sans protection. Si tu vas au sud, tu atteindras la frontiиre de la Zone. Au nord, tu trouveras l'usine de Rostok et le bar des Stalkers. А l'est, c'est la Vallйe obscure, un endroit sombre et glauque. А l'ouest, l'Institut de Recherche Agroprom. Je vais indiquer les chemins sыrs sur ta carte.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411121">
+		<text>Il y a un grand hangar dans le centre, c'est assez calme en gйnйral. Au pire, tu peux y passer la nuit. Si tu vas а l'Ouest, vers Agroprom, tu tomberas sur un camp de bandits. C'est de lа que venaient les tarйs qu'on a butйs il y a quelque temps. Mais j'ai l'impression qu'ils sont bien plus nombreux а cet endroit.</text>
+	</string>
+</string_table>

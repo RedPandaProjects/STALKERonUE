@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>Przeœladuje mnie numer - i na pewno pochodzi z mojego poprzedniego ¿ycia. Zna³em go wtedy, kiedy jeszcze nie wierzy³em. Pamiêtam go teraz - 342089. To kod do drzwi, ale nie pamiêtam, jak siê do nich dostaæ. </text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>PDA ¿o³nierza Monolitu</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>Martwy naukowiec mia³ mapê, na której oznaczone s¹ drzwi. Kod 1287975</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Drzwi na zamkiem szyfrowym</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Barman: "Wszyscy tutaj po prostu oszaleli, kiedy siê dowiedzieli! Kto tylko móg³, zacz¹³ siê pchaæ do centrum Zony: "Samotnicy", "Wolnoœæ", "Powinnoœæ", nawet najemnicy. Kto siê tam znajdzie pierwszy, zgarnie wszystko! Spe³niacz ¯yczeñ, kopalniê artefaktów i czort wie, co jeszcze. Poœpiesz siê, jeœli Spe³niacz rzeczywiœcie znajduje siê w sarkofagu - w elektrowni, to spe³ni ¿yczenia tego, kto dotrze tam pierwszy. W tym momencie przed Prypeci¹ zbiera siê oddzia³ weteranów. Jeœli siê poœpieszysz, bêdziesz móg³ wyruszyæ razem z nimi".</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>Wy³¹czy³em Zwêglacz. Z jakiegoœ powodu w momencie, gdy to zrobi³em, straci³em przytomnoœæ. Potem mia³em sen: znowu widzia³em ogromn¹ elektrowniê w Czarnobylu i sarkofag. Potem b³ysk. Lœni¹cy Monolit wewn¹trz sarkofagu. Rozumiem, ¿e to w³aœnie jest ten Spe³niacz ¯yczeñ. Wykoñczony, obdarty stalker z wysi³kiem wyci¹ga w jej kierunku rêkê... jasny b³ysk i widzê fragment pierwszego snu... Jakiœ mê¿czyzna stoi do mnie plecami i ca³y czas strzela. Ktoœ krzyczy: "Strielok!". Mê¿czyzna wzdryga siê, na moment zastyga w bezruchu, a potem powoli zaczyna siê obracaæ w moj¹ stronê... ale obraz zaczyna siê cofaæ, jak na filmie przewijanym do ty³u i widzê, jak przy u¿yciu broni zmusza szczury do powrotu do elektrowni... Uœwiadamiam sobie, ¿e tam by³em. Muszê iœæ do Monolitu.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>Koniec ze Zwêglaczem</text>
+	</string>

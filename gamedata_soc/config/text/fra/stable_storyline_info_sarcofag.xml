@@ -1,0 +1,12 @@
+	<string id="sar_command_center_text">
+		<text>Doc : "Tout ce que tu as dit sur le Monolithe est vrai, ce n'est qu'une illusion créée par un laboratoire situé près du sarcophage... Apparemment, c'est le seul moyen de percer le véritable secret de la Zone... Que tu cherchais toujours à comprendre."</text>
+	</string>
+	<string id="sar_monolith_call_text">
+		<text>J'ai entendu l'appel du Monolithe. Il m'a appelé. Il va falloir que j'aille sur place si je veux obtenir les réponses à toutes mes questions.</text>
+	</string>
+	<string id="sar_secret_lab_text">
+		<text>Doc : "Voilà le marché. Il y a un décodeur pour ouvrir la porte qui mène au système opérationnel du Monolithe. Le décodeur est caché dans une planque secrète à Propyat. Je te donne ses coordonnées et la clé. Prends le décodeur, trouve la bonne porte dans le sarcophage et... et tu aviseras sur place."</text>
+	</string>
+	<string id="zones_mystery_text">
+		<text>Tu as réussi, Stalker. Finalement, tu es plus coriace qu'on le croyait. Bon, il temps qu'on ait une petite discussion. Suis le signal. On t'attend.</text>
+	</string>

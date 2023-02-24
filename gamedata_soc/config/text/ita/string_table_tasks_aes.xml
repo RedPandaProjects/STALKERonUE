@@ -1,0 +1,39 @@
+	<string id="aes_military_task_1">
+		<text>Conquista il cancello</text>
+	</string>
+	<string id="aes_military_task_10">
+		<text>Gruppo Sokol</text>
+	</string>
+	<string id="aes_military_task_11">
+		<text>Gruppo Grif</text>
+	</string>
+	<string id="aes_military_task_12">
+		<text>Gruppo Sova</text>
+	</string>
+	<string id="aes_military_task_13">
+		<text>Gruppo Lun</text>
+	</string>
+	<string id="aes_military_task_2">
+		<text>Tieni la posizione</text>
+	</string>
+	<string id="aes_military_task_3">
+		<text>Penetra nel sarcofago</text>
+	</string>
+	<string id="aes_military_task_4">
+		<text>Distruggi le fortificazioni Monolith 1</text>
+	</string>
+	<string id="aes_military_task_5">
+		<text>Distruggi le fortificazioni Monolith 2</text>
+	</string>
+	<string id="aes_military_task_6">
+		<text>Gruppo Sapsan</text>
+	</string>
+	<string id="aes_military_task_7">
+		<text>Gruppo Korshun</text>
+	</string>
+	<string id="aes_military_task_8">
+		<text>Gruppo Yastreb</text>
+	</string>
+	<string id="aes_military_task_9">
+		<text>Gruppo Pustelga</text>
+	</string>

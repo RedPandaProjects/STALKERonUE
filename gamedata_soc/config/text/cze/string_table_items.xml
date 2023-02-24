@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="item test1">
+		<text>Toto je testovacн text pшedmмtu</text>
+	</string>
+	<string id="item test2">
+		<text>Toto je dalљн testovacн text pшedmмtu</text>
+	</string>
+	<string id="item_case_esc_desc">
+		<text>Nehoшlavэ kufшнk s dokumenty</text>
+	</string>
+	<string id="item_decoder_desc">
+		<text>Silnй elektronickй pбиidlo. Je zvlбљtnн, ћe nejde o univerzбlnн systйm, spнљe bylo vytvoшeno na otevшenн jednoho danйho systйmu a nenн pouћitelnй na nic jinйho.</text>
+	</string>
+	<string id="item_decoder_name">
+		<text>Dekodйr</text>
+	</string>
+	<string id="item_detector_yantar_desc">
+		<text>Detektor psi-emisн</text>
+	</string>
+	<string id="item_detector_yantar_name">
+		<text>Senzor PP-4a</text>
+	</string>
+	<string id="item_doc_x16_desc">
+		<text>Plastovэ soubor s dokumenty. Pro pochopenн vнc neћ jednoho slova bys potшeboval doktorбt z biologie.</text>
+	</string>
+	<string id="item_doc_x16_name">
+		<text>Dokumenty z laboratoшe X16</text>
+	</string>
+	<string id="item_doc_x18_desc">
+		<text>Hromada vмdeckэch dokumentщ. Vzorce, popisy, diagramy.</text>
+	</string>
+	<string id="item_doc_x18p1_name">
+		<text>Dokumenty z laboratoшe X18, ибst 1</text>
+	</string>
+	<string id="item_doc_x18p2_name">
+		<text>Dokumenty z laboratoшe X18, ибst 2</text>
+	</string>
+	<string id="item_doc_x18p3_name">
+		<text>Dokumenty z laboratoшe X18, ибst 3</text>
+	</string>
+	<string id="item_doc_x18p4_name">
+		<text>Dokumenty z laboratoшe X18, ибst 4</text>
+	</string>
+	<string id="item_doc_x18p5_name">
+		<text>Dokumenty z laboratoшe X18, ибst 5</text>
+	</string>
+	<string id="item_docs_hiden_pri_desc">
+		<text>Ohmatanэ rukopis vбzanэ v kщћi. Napsal ho sбm Stшelec. Podle nadpisщ by mohl vysvмtlovat nмkterб z tajemstvн Zуny.</text>
+	</string>
+	<string id="item_docs_hiden_pri_name">
+		<text>Dokumenty z tajnй skrэљe v Pripjati</text>
+	</string>
+	<string id="item_dynamite_esc_desc">
+		<text>Tмћkб dшevмnб bedna s nбpisy "Vэbuљniny" v nмkolika jazycнch</text>
+	</string>
+	<string id="item_dynamite_esc_name">
+		<text>Bedna vэbuљnin</text>
+	</string>
+	<string id="item_flash_crazy_mil_desc">
+		<text>Flashdisk - nejlepљн zpщsob jak uchovбvat a pшenбљet informace.</text>
+	</string>
+	<string id="item_flash_crazy_mil_name">
+		<text>Flashdisk љнlenйho stalkera</text>
+	</string>
+	<string id="item_flash_eco_rost_desc">
+		<text>Flashdisk - nejlepљн zpщsob jak uchovбvat a pшenбљet informace.</text>
+	</string>
+	<string id="item_flash_eco_rost_name">
+		<text>Flashdisk profesor Kruglova</text>
+	</string>
+	<string id="item_flash_esc_desc">
+		<text>Flashdisk - nejlepљн zpщsob jak uchovбvat a pшenбљet informace.</text>
+	</string>
+	<string id="item_flash_esc_name">
+		<text>Flashdisk zajatйho stalkera</text>
+	</string>
+	<string id="item_flash_gslinger_agro_desc">
+		<text>Flashdisk - nejlepљн zpщsob jak uchovбvat a pшenбљet informace.</text>
+	</string>
+	<string id="item_flash_gslinger_agro_name">
+		<text>Stшelcщv flashdisk</text>
+	</string>
+	<string id="item_key_x18_desc">
+		<text>Elektronickэ klни k podzemnн laboratoшi X18.</text>
+	</string>
+	<string id="item_key_x18_name">
+		<text>Borovщv klни</text>
+	</string>
+	<string id="item_krot_flash">
+		<text>Krtkщv flashdisk</text>
+	</string>
+	<string id="item_PDA_lucky_desc">
+		<text>Osobnн elektronickэ diбш. V Zуnм nenahraditelnб ибst vybavenн.</text>
+	</string>
+	<string id="item_PDA_lucky_name">
+		<text>Љtнstkovo PDA</text>
+	</string>
+	<string id="item_PDA_tiran_desc">
+		<text>Osobnн elektronickэ diбш. V Zуnм nenahraditelnб ибst vybavenн.</text>
+	</string>
+	<string id="item_PDA_tiran_name">
+		<text>Tyranovo PDA</text>
+	</string>
+	<string id="item_quest_case_02_desc">
+		<text>Nehoшlavэ kufшнk s dokumenty.</text>
+	</string>
+	<string id="item_quest_case_02_name">
+		<text>Vojenskй dokumenty z vэzkumnйho institutu Agroprom</text>
+	</string>
+	<string id="item_case_esc_name">
+		<text>Dokumenty z kontrolnнho stanoviљtм</text>
+	</string>
+	<string id="yan_bad_psy_helmet_desc">
+		<text>Prototyp vyvinutэ vмdci na ochranu lidн pшed psionickэmi emisemi. Nefunkиnн.</text>
+	</string>
+	<string id="yan_bad_psy_helmet_name">
+		<text>Psi-ochrannб helma. Nefunkиnн</text>
+	</string>
+	<string id="yan_good_psy_helmet_desc">
+		<text>Funkиnн prototyp vyvinutэ vмdci na ochranu lidн pшed psionickэmi emisemi.</text>
+	</string>
+	<string id="yan_good_psy_helmet_name">
+		<text>Protipsionickб helma</text>
+	</string>
+</string_table>

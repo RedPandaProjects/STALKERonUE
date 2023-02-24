@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="esc_bridge_soldiers_start_11">
+		<text>Do tйhle oblasti nemбљ povolenej pшнstup, stalkere.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_12">
+		<text>Ale jб tam potшebuju.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_13">
+		<text>Smщla, vole. Jedinм ћe... kdybys tam FAKT potшeboval jнt, tak "jнzdenka" stojн 500.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_14">
+		<text>Tady mбљ.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_15">
+		<text>Teп poslouchej. Budem na chvнli pшedstнrat, ћe tady v okolн jsou akorбt komбшi a motэlci. Co se stane pak, to uћ je tvoje vмc.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_21">
+		<text>Fajn, tak padej! Zmizni vocaп, neћ si to rozmyslim.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_24">
+		<text>Tolik nemбm.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_25">
+		<text>Tak zalez tam, odkud jsi pшiљel, a seћeт si je. A nezkouљej kolem nбs prolнzt, jasnэ? Vмш mi, nemб smysl kvщli tomu chcнpnout.</text>
+	</string>
+	<string id="esc_lager_no_talk_11">
+		<text>Zmizni vocaп, Oznaиenej. Jdi pryи, nebo tм bude muset nмkdo odnэst, mщћeљ si vybrat.</text>
+	</string>
+	<string id="esc_lager_no_talk_111">
+		<text>Co to do tebe vjelo?</text>
+	</string>
+	<string id="esc_lager_no_talk_21">
+		<text>Nazdбrek. Co potшebujeљ?</text>
+	</string>
+	<string id="esc_lager_no_talk_31">
+		<text>Tady nбљ љйf tм chtмl vidмt. Ale to neznamenб, ћe seљ tady vнtanej host. Takћe padej.</text>
+	</string>
+	<string id="esc_provodnik_start_11">
+		<text>Nazdar, brбcho.</text>
+	</string>
+	<string id="esc_provodnik_start_12">
+		<text>Stopaшi, potшebuju mluvit s Doktorem.</text>
+	</string>
+	<string id="esc_provodnik_start_13">
+		<text>No to se podнvejme. Jak ty vнљ o Doktorovi?</text>
+	</string>
+	<string id="esc_provodnik_start_14">
+		<text>Posнlб mм Duch. Pomoz mi zkontaktovat Doktora. Je to nalйhavэ.</text>
+	</string>
+	<string id="esc_provodnik_start_15">
+		<text>No, proи to neшekneљ hned! Doktor je ve Stшelcovм skrэљi. Pokud mluvнљ pravdu, tak bys mмl vмdмt, kde to je.</text>
+	</string>
+	<string id="esc_provodnik_start_16">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="esc_provodnik_start_21">
+		<text>Nazdar, brбcho.</text>
+	</string>
+	<string id="esc_stalker_talk_level_0">
+		<text>Mohl bys mi шнct nмco vнc o tomhle mнstм?</text>
+	</string>
+	<string id="esc_stalker_talk_level_1">
+		<text>Tohle je cesta do Zуny. Na tvэm mнstм bych se moc nepшibliћoval k vojenskэm stanoviљtнm, ani se nenechal od vojбkщ zahlнdnout: majн rozkazy stшнlet na potkбnн. Kus dбl na sever je rozbitej most, ale tam si taky udмlali stanoviљtм. Otevшenэ oblasti jsou plnэ divokejch psщ, takћe to pro novбиky nenн moc bezpeиnэ mнsto. Jo a sem tam se tady objevн pбr mutantщ.</text>
+	</string>
+	<string id="esc_stalker_talk_level_10">
+		<text>A co ti vojбci u mostu? Nмjak se pшes nм musнm dostat.</text>
+	</string>
+	<string id="esc_stalker_talk_level_11">
+		<text>No, mбљ dvм moћnosti. Pokud je Kuznмcov ve sluћbм, tak nezapomeт, ћe mб rбd prachy. Kdyћ ho uplatнљ, tak tм asi nechб projнt. Jestli mбљ ale mбlo penмz nebo mб љichtu nмkdo jinej, tak je tady dalљн cesta. Jdi k levэ stranм mostu, podйl kolejн. Hlavnм aќ tм nevidмj! Narazнљ na malej tunel, kterej jde skrz bшeh. A jeљtм nмco: dej si bacha, aќ si nмjakб tamnн zombie nedб rande s tvэm mozkem.</text>
+	</string>
+	<string id="esc_stalker_talk_level_2">
+		<text>Co je dбl na sever, za armбdnнm stanoviљtмm?</text>
+	</string>
+	<string id="esc_stalker_talk_level_21">
+		<text>Smetiљtм. To je fakt depresivnн mнsto. Je tam tolik kontaminovanэho svinstva, ћe by bylo snazљн tнm proplavat, neћ to projнt.</text>
+	</string>
+	<string id="escape_factory_assault_start_31">
+		<text>Nazdar, kбmo. Wolf uћ mi o tobм dal vмdмt. Mбљ jeљtм nмjakэ otбzky?</text>
+	</string>
+	<string id="escape_factory_assault_start_311">
+		<text>Ano. Kolik banditщ je v tбboшe?</text>
+	</string>
+	<string id="escape_factory_assault_start_3111">
+		<text>Sedm nebo osm lidн. Dva u brбny, dva dalљн v budovм napravo u ohnм a dalљн dva v barбku nalevo - tam majн zavшenэho Љikulu. Vмtљinou se nмkdo poflakuje i na dvoшe. To je tak vљechno. Mбme se pomodlit a vyrazit?</text>
+	</string>
+	<string id="escape_factory_assault_start_31111">
+		<text>Pщjdeme. Zavolej svэ chlapy.</text>
+	</string>
+	<string id="escape_factory_assault_start_31112">
+		<text>Ne. Nadмlali bychom moc velkэ randбl. Pщjdu sбm. </text>
+	</string>
+	<string id="escape_factory_assault_start_311121">
+		<text>No jak chceљ. Kdyby nмco, tak zaшvi. Do hбje s tebou, ty zatracenej Rambo!</text>
+	</string>
+	<string id="escape_factory_assault_start_41">
+		<text>Љli jsme lovit a zadaшilo se. Wolf bude mнt urиitм radost.</text>
+	</string>
+	<string id="escape_factory_assault_start_51">
+		<text>Je jich vнc! Najdi ty mizery a sundej je!</text>
+	</string>
+	<string id="escape_factory_assault_start_61">
+		<text>No teda, to bylo nмco! Vљechny jsi je zruљil, na nбs nic nezbylo. Nevidмt to na vlastnн oиi, tak tomu neuvмшнm! Tos mм fakt dostal, chlape...</text>
+	</string>
+	<string id="escape_factory_assault_start_71">
+		<text>Tak, kde jsou hromady nepшбtel, cos je pobil? Nakecбљ toho hromadu, ale skutek utek. Zmiz!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_2">
+		<text>Sorry, brбcho, ale nemohl bys odtбhnout nмkam pryи? Na nмkoho tady иekбm...</text>
+	</string>
+	<string id="escape_fox_hello_dialog_21">
+		<text>Mбm pбr otбzek.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_211">
+		<text>Ok, ptej se.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_2111">
+		<text>Co mi mщћeљ шнct o Zуnм?</text>
+	</string>
+	<string id="escape_fox_hello_dialog_21111">
+		<text>To je vљechno, co chceљ vмdмt? Tak si dej tejden padla a pak se za mnou stav. Hele, mщj иas nenн zrovna levnej a taky mбm docela dost prбce. Шeknu ti pбr zбkladщ a pak je to na tobм.\nAsi tшi kilбky severnм vocaп najdeљ smetiљtм. Tam se dшнv hбzel vљechen radioaktivnн odpad z elektrбrny. Spousta radiace, anomбlie jedna vedle druhэ, takћe je tam i spousta artefaktщ... ale ne moc cennejch. Hlavnм bacha na gangy a nenaser nмjak patroly Povinnosti. Zбpadnм od smetiљtм je bejvalej vэzkumnej institut Agropromu. Artefaktщ tam moc nenajdeљ, takћe se na nм klidnм vykaљli. A vэchodnм je Temnэ ъdolн. Иert vн... je to fakt divnэ mнsto. Vypadб docela klidnм, akorбt se tam poflakuje pбr mizerщ. Jenћe jб mбm pocit, ћe je tam nмco vнc. No a pak je tady fabrika Rostok, hned za smetiљtмm. To je teritorium stalkerщ. Najdeљ tam spoustu chytrejch lidн, ti ti шeknou vнc.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_2113">
+		<text>Rozmyslel jsem si to. Dнky.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_3">
+		<text>Dнky. Ok, teп poslouchбm opravdu pozornм.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_31">
+		<text>Pшekupnнk mi шekl, ћe bys mohl vмdмt nмco o Stшelci.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_311">
+		<text>Proи je o nмj v poslednн dobм takovej zбjem? Ok, nemщћu шнct, ћe bych ho znal osobnм. Ale jednou jsme spolu "komunikovali". Mн chlapi po nмm jednou stшнleli. Nikomu se nic nestalo, jeho banda иekala na nмkoho jinэho, a tak jsme se rozeљli v dobrэm. Zanadбvali jsme si navzбjem pшes rokli a pak padali pryи. Mщj brбcha Љedivбk je teп v hangбru na smetiљti - dбm ti jeho souшadnice, aќ si mщћete pokecat. O Stшelcovi nмco mбlo vн. \nDбvej si bacha u vэchodu, usadil se tam malej gang. Jo mimochodem, honн mм pбr potvor a nмjak se na to nechcou vykaљlat. Pнchneљ mi s nima? Bude to pohoda, fakt.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_3111">
+		<text>Dнky za info, to oceтuju.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_5">
+		<text>Lйkбrniиku! Dej mi lйkбrniиku!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_55">
+		<text>Tady mбљ.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_56">
+		<text>Nemбm. Sorry.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_61">
+		<text>Hej, kбmo, uћ jsi mм zachrбnil dvakrбt a na takovэ vмci jб nezapomнnбm. Vem si tohle... vнc nemбm!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_611">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_121">
+		<text>Tady nбљ љйf tм chtмl vidмt. Ale to neznamenб, ћe seљ tady vнtanej host. Takћe padej.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_2">
+		<text>Poиkej, Oznaиenej! Prбvм teп si s tebou v tбboшe nikdo nepokecб.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_21">
+		<text>Proи?</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_212">
+		<text>Jakej idiot by si chtмl pokecat s pasaћйrem "nбklaпбku smrti"? Nejdшнv musнљ prokбzat, ћe seљ v pohodм.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_2121">
+		<text>Jakэ "nбklaпбk smrti"? O иem to mluvнљ?</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_21211">
+		<text>Ale иert vн, co to vlastnм je. Ale je to љpatnэ, fakt moc љpatnэ... \nProи se o tom s tebou vщbec bavнm! Moћnб jsem povмrиivej, ale ty, Oznaиenej, bys fakt mмl radљi jнt, neћ se ti nмco stane.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_2122">
+		<text>Co mщћu udмlat, aby mi lidi uvмшili?</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_21221">
+		<text>Projdi pшekupnнkovэm testem, tak abychom to vidмli. Jestli seљ v pohodм - ћбdnej magor bez kousku mozku - tak se pak nмjak domluvнme, uvidнљ.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_22">
+		<text>No tak dobrб.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_3">
+		<text>Nazdar, Oznaиenej. Co chceљ?</text>
+	</string>
+	<string id="escape_lager_leader_hello_11">
+		<text>Hele, Oznaиenej, mohl by ses nбm hodit! Fakt bychom potшebovali pomoc.</text>
+	</string>
+	<string id="escape_lager_leader_hello_111">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="escape_lager_leader_hello_1111">
+		<text>Jsem Fanatik a zaskakuju tady jako velitel, co Wolf odeљel. Vиera sem pшiљlo pбr Ћoldбkщ - a byly to sakra drsnэ chlapi, to ti povнdбm. Pшiљli sem a zaиali chtнt spoustu vмcн: jako ћe mбme jeden den na zruљenн tбbora, protoћe to bude jejich novб zбkladna. Dneska v noci se vrбtмj a jak si dovedeљ asi pшedstavit, nebudou mнt zrovna nбladu na pokec.</text>
+	</string>
+	<string id="escape_lager_leader_hello_11111">
+		<text>Tak co budete dмlat?</text>
+	</string>
+	<string id="escape_lager_leader_hello_111111">
+		<text>Chystбme na nм past, protoћe pшнmej ъtok by pro nбs asi znamenal konec. Majн spoustu vybavenн, navнc jsou trйnovanэ v taktice, ћe bys nevмшil. A my tu mбme akorбt pбr klukщ. Takћe jsme se rozhodli zщstat v barбcнch, aby to vypadalo, ћe jsme pryи. Pak aћ pшijde vhodnej moment, tak zaъtoинme. Bojovnнci jako ty by se nбm teп fakt hodili. A aћ to celэ skonин, tak ti rozhodnм podмkujem tak, ћe se ti to bude zamlouvat. Vнљ, ћe jsme v tomhle dobrэ. Tak co, pomщћeљ nбm?</text>
+	</string>
+	<string id="escape_lager_leader_hello_1111111">
+		<text>Jo.</text>
+	</string>
+	<string id="escape_lager_leader_hello_11111111">
+		<text>Tak se pшipravнme na boj. Tady je plбn: strинm ty nejhorљн novбиky do barбkщ a sklepщ a шeknu jim, aby se ani nehnuli - jinak by mohli postшнlet naљe vlastnн. Ty, jб a pбr dalљнch, co umмj aspoт trochu stшнlet, si zaberem co nejlepљн pozice, abychom vidмli na plac kolem ohnм. Jakmile pшilezou k ohni, zaиneme to do nich solit. Pщjdou od mostu... a jб si myslнm, ћe uћ brzo. Takћe si najdi dobrej flek a poиkej na mщj rozkaz. Klidnм se rozhlнdni kolem, ale pamatuj, ћe na otevшenэm place moc љancн nemбљ. Je to na tobм.</text>
+	</string>
+	<string id="escape_lager_leader_hello_111111111">
+		<text>Ok.</text>
+	</string>
+	<string id="escape_lager_leader_hello_1111112">
+		<text>Ne, jeљtм nejsem pшipravenэ.</text>
+	</string>
+	<string id="escape_lager_leader_hello_11111121">
+		<text>Ostuda. Chlap jako ty by se nбm fakt hodil. Asi to holt budem muset zvlбdnout sami...</text>
+	</string>
+	<string id="escape_lager_leader_hello_21">
+		<text>Иekбme na ty skautнky. Mбm pocit, ћe uћ jsou za rohem.</text>
+	</string>
+	<string id="escape_lager_leader_hello_31">
+		<text>Ty seљ fakt zabijбk, Oznaиenej! Nechtмl bych se ti dostat do cesty, to fakt nekecбm!</text>
+	</string>
+	<string id="escape_lager_leader_hello_311">
+		<text>Jo, nмco takovэho.</text>
+	</string>
+	<string id="escape_lager_leader_hello_3111">
+		<text>Tady, doufбm, ћe na nбs nezapomeneљ. A mimochodem, fakt moc dнky za pomoc. Zachrбnili jsme mladэ, Oznaиenej.</text>
+	</string>
+	<string id="escape_lager_leader_hello_41">
+		<text>Hej, Oznaиenej, fakt tм rбd vidнm!</text>
+	</string>
+	<string id="escape_lager_leader_hello_411">
+		<text>No jo, buп zdrбv.</text>
+	</string>
+	<string id="escape_lager_leader_hello_412">
+		<text>Mimochodem, kam љel Wolf?</text>
+	</string>
+	<string id="escape_lager_leader_hello_4121">
+		<text>Ale dostal zprбvu od nмjakэho stalkera, co љel kolem, sbalil se, popadl bednu dynamitu a vyrazil hluboko do Zуny. Prбvм jsem se dostбval do formy potom, co jsem to u Kordуnu chytil, takћe mм poprosil, aќ dбm bacha na dмcka.</text>
+	</string>
+	<string id="escape_lager_volk_info_0">
+		<text>Mбm pбr otбzek.</text>
+	</string>
+	<string id="escape_lager_volk_info_1">
+		<text>Jen do toho, zkusнm ti pomoct.</text>
+	</string>
+	<string id="escape_lager_volk_info_10">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="escape_lager_volk_info_2">
+		<text>Co vнљ o Zуnм?</text>
+	</string>
+	<string id="escape_lager_volk_info_21">
+		<text>Vнm toho spoustu. Шekni, co pшesnм chceљ vмdмt.</text>
+	</string>
+	<string id="escape_lager_volk_info_211">
+		<text>Co je ve stшedu Zуny?</text>
+	</string>
+	<string id="escape_lager_volk_info_2111">
+		<text>No, tak to je otбzka do иernэho... pшed dvмma rokama jsem tu odpovмп hledal! Ale nezjistil jsem, jak se do centra dostat, ne tak, abych se mohl vrбtit ћivej. S kбmoљema jsme se pokouљeli nмkolikrбt prorvat dovnitш. Sotva jsem se dostal zpбtky, ale kбmoљi - no nмkterэ to nezvlбdli... \nUrиitм se chceљ zeptat, proи jsme tam vщbec љli. Nahбnмli jsme svэ sny, snaћili jsme se je naplnit.</text>
+	</string>
+	<string id="escape_lager_volk_info_21111">
+		<text>Copak se mщћou sny naplnit?</text>
+	</string>
+	<string id="escape_lager_volk_info_211111">
+		<text>Povнdб se tady krбsnб historka o maљinм, co plnн pшбnн. V centru Zуny je prej flek, kde se mщћou splnit vљecky pшбnн. Ale vнљ co? Jб jsem si celkem jistej, ћe ve stшedu Zуny je milion zpщsobщ, jak zakalit, navнc na tu zбzraиnou maљinu uћ nevмшнm. Neriskuj to. Jб bych to na tvэm mнstм nedмlal.</text>
+	</string>
+	<string id="escape_lager_volk_info_212">
+		<text>Jak Zуna vznikla?</text>
+	</string>
+	<string id="escape_lager_volk_info_2121">
+		<text>V roce 2006 to tady zas poшбdnм bouchlo. Tak se to stalo. Vнm, ћe je to odpovмп o hovnм. Akorбt ћe jenom mбlokdo znб pravdu, jestli vщbec nмkdo.</text>
+	</string>
+	<string id="escape_lager_volk_info_213">
+		<text>Co tм pшivedlo do Zуny? </text>
+	</string>
+	<string id="escape_lager_volk_info_2131">
+		<text>Dшнv jsem makal na љachtм, ale pak ji zavшeli. Nemмl jsem prachy a nic, na co bych se mohl tмљit. Pak jsem zaslechl, ћe prej v Zуnм se dб zнskat dмsnэ bohatstvн. Mмl jsem тбkэ zkuљenosti, tak sem si шek: "A co sakra?". Nedб se шнct, ћe bych zbohatl, ale k nмjakэm prachщm jsem se rozhodnм dostal. Tohle je typickej pшнbмh, vмtљina z nбs sem pшiљla z podobnejch dщvodщ.</text>
+	</string>
+	<string id="escape_lager_volk_info_214">
+		<text>Co je v Zуnм nejvнc nebezpeиnэ?</text>
+	</string>
+	<string id="escape_lager_volk_info_2141">
+		<text>Tмћko шнct. Je tam spousta nebezpeин a hnusnejch pшekvбpek, akorбt na vљechny narazit nemщћeљ. Na jednoho chlapa jich je tam vнc neћ dost. Flaksa mi ukousla palec na noze, vlasy mi vypadбvaj z ozбшenн a pщlku nohy mi usmaћil vypalovaи... je to tam fakt zlэ, kбmo. Jindy se mi zas podaшilo narazit pшнmo do upнra - to je setkбnн, na jakэ jen tak nezapomeneљ. Mohli bychom kecat do nekoneиna, ale dokud to nezaћijeљ na vlastnн kщћi, tak to fakt nemбљ љanci pochopit. Mщћu ti dбt akorбt jednu radu. Dбvej si bacha. Vћdycky a na vљecko.</text>
+	</string>
+	<string id="escape_lager_volk_info_3">
+		<text>Slyљel jsi nмco o chlapovi jmйnem Stшelec?</text>
+	</string>
+	<string id="escape_lager_volk_info_31">
+		<text>Pamatuju si, ћe to bejval jeden z tvrпбkщ. Nikdy jsem ho nepotkal. No, nмjakou dobu jsem se ke stшedu ani nepшiblнћil, a tak vнdбm akorбt novбиky. Mмl bys sehnat nмkoho, kdo leze hluboko do Zуny a pokecat si s nнm.</text>
+	</string>
+	<string id="escape_lager_volk_info_4">
+		<text>Co vнљ o "nбklaпбcнch smrti"?</text>
+	</string>
+	<string id="escape_lager_volk_info_41">
+		<text>Nevнm o nich nic a takhle mi to vyhovuje, dмkuju pмknм! Sorry, vнm, jak na tom seљ. Je kolem toho spousta mystiky. Strбvнљ tady v okolн mмsнc a pak seљ povмrиivej do konce ћivota, tomu se nevyhneљ. Mrtvэ lidi na korbм, mrtvэ lidi za volantem. Co jsou zaи, odkud pшiљli a proи? Mщћu jenom doufat, ћe se nevyhrabali z hrobщ.</text>
+	</string>
+	<string id="escape_lager_volk_talk_11">
+		<text>Ahoj. Proи seљ tady?</text>
+	</string>
+	<string id="escape_lager_volk_talk_111">
+		<text>Ahoj. Potшebuju mluvit se Љikulou. Nevнљ, kde bych ho naљel?</text>
+	</string>
+	<string id="escape_lager_volk_talk_1111">
+		<text>Љikula se dostal do pмknэ kaљe. Jeho grupu napadli nмjacн banditi kousek odsud. Staиil mi akorбt poslat SOS. Vypadalo to, ћe to jeho kбmoљi schytali. Chlapi mi шнkali, ћe ti mizerovй se teп schovбvaj ve starэm autoparku, v tom pшes cestu.</text>
+	</string>
+	<string id="escape_lager_volk_talk_11111">
+		<text>To nezachrбnнte vlastnн lidi z vмzenн? Tohle zrovna za pшбtelskэ nepovaћuju. Nebo jste na to moc slabн?</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111">
+		<text>Nejradљi bych ti jednu vrazil, ale proи se obtмћovat? Nenн to tak snadnэ. Mбm moc mбlo lidн a to, co mбm, jsou vмtљinou novбиci. Nemщћu to riskovat. Jestli pшijdem o tenhle tбbor, tak to bude pro vљechny stalkery o hodnм horљн. A co ty? Jestli nemбљ strach, nestydмl bych se pшijmout pomoc. Tak co, pнchneљ mi s tмma mizerama?</text>
+	</string>
+	<string id="escape_lager_volk_talk_1111111">
+		<text>Myslнљ, ћe to zvlбdnu sбm?</text>
+	</string>
+	<string id="escape_lager_volk_talk_11111111">
+		<text>Ne, sбm nemбљ љanci. Moji zvмdi jsou dobrэ vojбci a prбvм teп jdou po tмch idiotech. Mщћete to zkusit spoleиnм. Co ty na to? Troufбљ si?</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111111">
+		<text>Zkusнm to.</text>
+	</string>
+	<string id="escape_lager_volk_talk_1111111111">
+		<text>Jen tak dбl! Fajn, dбm ti souшadnice svejch chlapщ. Hned jim o tobм dбm vмdмt.</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111112">
+		<text>Troufnul bych si, ale nechce se mi.</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111121">
+		<text>No jasnм. Fajn, tak vypadni!</text>
+	</string>
+	<string id="escape_lager_volk_talk_21">
+		<text>Tak co, jak se vede?</text>
+	</string>
+	<string id="escape_lager_volk_talk_211">
+		<text>S tvejma chlapama jsme to zvlбdli.</text>
+	</string>
+	<string id="escape_lager_volk_talk_2111">
+		<text>Skvмlэ, kбmo! Na, vem si tohle. To je odmмna ode mм osobnм.</text>
+	</string>
+	<string id="escape_lager_volk_talk_212">
+		<text>Poшбdnм jsme to tam proиesali. Uћ je to иistэ.</text>
+	</string>
+	<string id="escape_lager_volk_talk_2121">
+		<text>No teda! Chlapi mi шнkali, ћes jim dal zabrat! Na, tady mбљ nмjakэ prachy... jen takovej bonus, navнc mбљ naљi velkou vdмиnost. A taky pro tebe tady nмco mбm...</text>
+	</string>
+	<string id="escape_lager_volk_talk_21211">
+		<text>Hej.</text>
+	</string>
+	<string id="escape_lager_volk_talk_213">
+		<text>Pracuju na tom.</text>
+	</string>
+	<string id="escape_lager_volk_talk_2131">
+		<text>Dej mi vмdмt, jasnэ?</text>
+	</string>
+	<string id="escape_lager_volk_talk_31">
+		<text>Nemбm иas jen tak kecat. Padej.</text>
+	</string>
+	<string id="escape_lager_volk_talk_311">
+		<text>Chбpu, nejsem tak blbej.</text>
+	</string>
+	<string id="escape_lager_volk_talk_41">
+		<text>Nazdar, Oznaиenej. O co jde?</text>
+	</string>
+	<string id="escape_lager_volk_talk_51">
+		<text>Шekni mi nмco novэho, stalkere.</text>
+	</string>
+	<string id="escape_lager_volk_talk_511">
+		<text>Co ti шнct. V autoparku je pбr banditщ, tak jsme to vyиistili. To je tak vљechno.</text>
+	</string>
+	<string id="escape_lager_volk_talk_5111">
+		<text>No ty nejseљ zrovna chlubivka, co?! Hele, jelikoћ ses o ty mizery postaral, nemщћu tм nechat jen tak jнt...</text>
+	</string>
+	<string id="escape_shustryi_start_11">
+		<text>Dнky, brбcho! Hodnм jsi nбm pomohl. Ani nevнm, jak ti podмkovat...</text>
+	</string>
+	<string id="escape_shustryi_start_111">
+		<text>Hele, potшebuju ten flashdisk, co ho neseљ Pшekupnнkovi. Mбљ ho?</text>
+	</string>
+	<string id="escape_shustryi_start_1111">
+		<text>Jo, rozumнm... Ti debilovй mм nedokбzali ani poшбdnм prohledat. Ale co, vem si ho! Pшece jenom jsi mi zachrбnil kejhбk. Byl dobшe schovanej a ti debilovй byli ъplnм neschopnн.</text>
+	</string>
+	<string id="escape_shustryi_start_11111">
+		<text>Dнky. Kde jsi ho vщbec mмl? Docela rбd bych to vмdмl.</text>
+	</string>
+	<string id="escape_shustryi_start_111111">
+		<text>Tam DOLE jsem ho nemмl, takћe se neboj. Makal jsem dlouho pro Pшekupnнka, dokбћu informace bezpeиnм schovat! Mimochodem, nakecal jsem tмm mizerщm hezkou historku o zбsobбrnм plnэ artefaktщ a oni tam jednoho chlapa poslali. To skladiљtм existuje, ale je tam jenom jeden artefakt. Dбm ti jeho souшadnice, jestli chceљ.</text>
+	</string>
+	<string id="escape_shustryi_start_21">
+		<text>Bezpeиnou cestu, stalkere!</text>
+	</string>
+	<string id="escape_shustryi_start_311">
+		<text>Jasnм, dнky.</text>
+	</string>
+	<string id="escape_shustryi_start_3111">
+		<text>Ale nezapomeт: je tam spousta divokejch zvншat. Kromм toho, ten gangster, co ho tam poslali, s sebou nemб jenom lopatu, takћe bacha. Dнky, kбmo.</text>
+	</string>
+	<string id="escape_shustryi_start_31111">
+		<text>Tobм taky dнk.</text>
+	</string>
+	<string id="escape_shustryi_start_311111">
+		<text>Jasnм, to nenн problйm. Hodnм љtмstн!</text>
+	</string>
+	<string id="escape_trader_done_blockpost_box_0">
+		<text>Mise splnмna. Tady je krabice z armбdnнho stanoviљtм.</text>
+	</string>
+	<string id="escape_trader_done_blockpost_box_2">
+		<text>Hodnej chlap! Moc jsi mi pomohl. Ale samozшejmм za "dмkuju" si nekoupнљ ani kus chleba. Tady mбљ... moment, dva tisнce osmiиek a jsme vyrovnanэ! \nMimochodem, vojбci si urиitм vљimnou, ћe jim nмco zmizelo - bude to tu pмknм horkэ. Radљi rychle zmiz, инm rychlejc, tнm lнp.</text>
+	</string>
+	<string id="escape_trader_jobs_0">
+		<text>Mбљ pro mм nмjakou zajнmavou prбci?</text>
+	</string>
+	<string id="escape_trader_jobs_1">
+		<text>Ne, ani ќuk.</text>
+	</string>
+	<string id="escape_trader_jobs_12">
+		<text>Jakou prбci? Tu poslednн fuљku jsi jeљtм neudмlal!</text>
+	</string>
+	<string id="escape_trader_jobs_5">
+		<text>No, takћe asi takhle... krabice se zprбvama expedice, kterб љla na sever hluboko do Zуny skonиila na vojenskэm stanoviљti. Pшes den ji hlнdaj, jako by byla plnб plutonia, ale z nмjakэho dщvodu jsou tam v noci jenom dva hlнdaиi.</text>
+	</string>
+	<string id="escape_trader_jobs_51">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="escape_trader_jobs_511">
+		<text>Tiљe se tam propliћ a seber tu krabici. Udмlej to a zaplatнm ti jakoukoli rozumnou ибstku. Jdeљ do toho?</text>
+	</string>
+	<string id="escape_trader_jobs_5111">
+		<text>Zkusнm to.</text>
+	</string>
+	<string id="escape_trader_jobs_51111">
+		<text>Pшipravнm prachy - zatнm jsi mм nezklamal, co, Oznaиenej? Jo a jeљtм nмco... hezky potichu jako myљka, jo? Jestli se armбda nasere, tak bychom mмli vљichni pмknм velkэ problйmy.</text>
+	</string>
+	<string id="escape_trader_jobs_52">
+		<text>Ne, na tohle si jeљtм netroufбm.</text>
+	</string>
+	<string id="escape_trader_jobs_521">
+		<text>No tak vole, nenн to tak tмћkэ, jak to vypadб. Pбr oћralejch zбklaпбkщ zelenejch jak trбva a jedinej poddщstojnнk. No, dobшe, ale fakt jsem s tebou poинtal, Oznaиenej...</text>
+	</string>
+	<string id="escape_trader_jobs_6">
+		<text>Hej, Oznaиenej, promэљlel jsem si to a mщћu ti nмco nabнdnout... chceљ najнt Stшelce, co?</text>
+	</string>
+	<string id="escape_trader_jobs_61">
+		<text>Шeknмme, ћe jo.</text>
+	</string>
+	<string id="escape_trader_jobs_611">
+		<text>No, nмco jsem o tom Stшelci zjistil. Za prvэ, fakt existuje. Prej naљel cestu na sever Zуny, na nedotиenэ pole, ъplnou pokladnici... hmmm, jo... \nNo, takћe dohoda je takovб: pomщћu ti ho najнt, ale nebude to zadarmo, budeљ si to muset odmakat. Na druhou stranu, vydмlбme na tom oba - ty seћeneљ toho Stшelce a zjistнљ, co se s tebou stalo, a jб najdu... no, chci шнct, ћe mi z toho taky nмco kбpne. Deљ do toho?</text>
+	</string>
+	<string id="escape_trader_jobs_6111">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="escape_trader_jobs_61111">
+		<text>Jedinej pohled na tebe mi staин, abych poznal, ћe seљ opravdovej chlap. A takovэ potшebujem. S pбr dalљнma pшekupnнkama chystбme malou sviтбrniиku. Chceme se dostat severnм do stшedu Zуny, ale nмco nebo nмkdo nбm blokuje cestu. Иert vн, jak se tam dostal ten tvщj Stшelec... Je tam nмco, co ti uvaшн mozek! Dмsnэ, fakt, ale chlapi, kterэ sundali ten vrtulnнk, sledovali armбdu. Vojбиci nejspнљ nмco naљli v budovм institutu a nejspнљ je to dщleћitэ. Шekl bych, ћe by to mohlo mнt nмco spoleиnэho se stшedem Zуny. Vљechno, co armбda naљla, uloћili v druhэm patшe a docela ostшe to hlнdaj, to si asi dovedeљ pшedstavit. My to ale potшebujem. Chбpeљ, co tнm myslнm?</text>
+	</string>
+	<string id="escape_trader_jobs_611111">
+		<text>Шekl bych, ћe jo.</text>
+	</string>
+	<string id="escape_trader_jobs_6111111">
+		<text>Aћ budeљ mнt kufшнk, nenos ho sem, jdi s nнm k Barmanovi. Vede stalkerskej bar jmйnem U 100 radщ. Nahraju ti souшadnice. Jasnэ?</text>
+	</string>
+	<string id="escape_trader_jobs_61111111">
+		<text>Jasnэ.</text>
+	</string>
+	<string id="escape_trader_jobs_611111111">
+		<text>Budeљ muset jнt na sever pшes smetiљtм, pak zahni na zбpad. Po pбr kilometrech se dostaneљ k vэzkumnэmu institutu Agroprom. A dбvej si bacha, na smetiљti je spousta zбшenн. Radнm ti, kup si pбr antiradщ nebo aspoт vodku. Hodnм љtмstн.</text>
+	</string>
+	<string id="escape_trader_start_dialog_111">
+		<text>Mбm pro tebe kљeft, Oznaиenej... Musнљ najнt stalkera jmйnem Љikula, nesl u sebe dщleћitй informace. Zmizel nмkde poblнћ mostu. Najdi ho, ћivйho nebo mrtvйho, to je mi fuk, hlavnм chci jeho flashdisk. Stav se v tamnнm tбboшe u Wolfa a poptej se u nмho. Urиitм bude vмdмt, kde Љikulu najdeљ.</text>
+	</string>
+	<string id="escape_trader_start_dialog_1111">
+		<text>Je to ono?</text>
+	</string>
+	<string id="escape_trader_start_dialog_171">
+		<text>Hej, Oznaиenej, co novйho?</text>
+	</string>
+	<string id="escape_trader_start_dialog_181">
+		<text>Oznaиenej, co tady dмlбљ? Шнkal jsem ti, najdi Љikulu!</text>
+	</string>
+	<string id="escape_trader_start_dialog_191">
+		<text>Takћe ses stavil v X18? Mбљ ty dokumenty?</text>
+	</string>
+	<string id="escape_trader_start_dialog_1911">
+		<text>Jo, tady jsou.</text>
+	</string>
+	<string id="escape_trader_start_dialog_19111">
+		<text>Ale, ale... ukaћ... no to je zajнmavэ, moc zajнmavэ! Kdybych tohle nмkomu шekl, tak mi neuvмшн! Hmm... Jo... Oh! No koukej na to! To jsem neиekal... to je ale docela zlэ. No vem si to a dej to Barmanovi. A nмco ti dluћнm.</text>
+	</string>
+	<string id="escape_trader_start_dialog_199">
+		<text>Poиkej. Na, vezmi si tuhle pistoli a nбboje. V Zуnм bez zbranм nevydrћнљ ani dvм sekundy. Mimochodem, kdyћ tм sem pшivedli, mмl jsi nщћ. Vzal jsem ti ho, pro pшнpad, ћe bys to nemмl v hlavм v poшбdku. Ale vypadбљ v pohodм, takћe tady mбљ.</text>
+	</string>
+	<string id="escape_trader_start_dialog_1999">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="escape_trader_start_dialog_200">
+		<text>Tak co, Oznaиenej, nмjakej pokrok v naљem spoleиnэm kљeftм?</text>
+	</string>
+	<string id="escape_trader_start_dialog_3">
+		<text>Mщћeљ si vybrat. Buп ti шeknu zбklady jako ostatnнm novбиkщm, nebo ti mщћu rovnou dбt ъkol hodnej zkuљenэho stalkera. Vyber si.</text>
+	</string>
+	<string id="escape_trader_start_dialog_300">
+		<text>Hej, Oznaиenej! Dobrэ naиasovбnн, mбm pro tebe malej kљeftнk.</text>
+	</string>
+	<string id="escape_trader_start_dialog_31">
+		<text>Ber mм jako novбиka, nepamatuju si ani prd.</text>
+	</string>
+	<string id="escape_trader_start_dialog_32">
+		<text>Dej mi ъkol.</text>
+	</string>
+	<string id="escape_trader_start_dialog_321">
+		<text>Mбm pro tebe kљeft, Oznaиenej... Musнљ najнt stalkera jmйnem Љikula, nesl u sebe dщleћitй informace. Zmizel nмkde poblнћ mostu. Najdi ho, ћivйho nebo mrtvйho, to je mi fuk, hlavnм chci jeho flashdisk. Stav se v tбboшe u Wolfa a poptej se u nмho. Urиitм bude vмdмt, kde Љikulu najdeљ.</text>
+	</string>
+	<string id="escape_trader_start_dialog_3211">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="escape_trader_start_dialog_32111">
+		<text>To je zatнm vљechno. Pшines mi flashdisk a jб to budu povaћovat za ибsteиnou splбtku za to, ћe jsem tм zachrбnil.</text>
+	</string>
+	<string id="escape_trader_start_dialog_321111">
+		<text>Ok, Zkusнm to.</text>
+	</string>
+	<string id="escape_trader_start_dialog_4">
+		<text>Hej, Oznaиenej. Rбd tм vidнm ћivэho.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5">
+		<text>Zdravнm, Oznaиenej! Zvlбdnul jsi to?</text>
+	</string>
+	<string id="escape_trader_start_dialog_51">
+		<text>Jo. Tady mбљ artefakt.</text>
+	</string>
+	<string id="escape_trader_start_dialog_511">
+		<text>Skvмlэ, Oznaиenej. Jeљtм jednu laskavost a budem vyrovnanэ. </text>
+	</string>
+	<string id="escape_trader_start_dialog_5111">
+		<text>Jakou laskavost?</text>
+	</string>
+	<string id="escape_trader_start_dialog_52">
+		<text>Tak, a je to.</text>
+	</string>
+	<string id="escape_trader_start_dialog_52111">
+		<text>Kde je flashdisk s informacema?</text>
+	</string>
+	<string id="escape_trader_start_dialog_521111">
+		<text>Tady.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5211111">
+		<text>Skvмlй.</text>
+	</string>
+	<string id="escape_trader_start_dialog_521112">
+		<text>Nemбm ho.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5211121">
+		<text>To je fakt smщla, Oznaиenej, fakt smщla. Dokud mi ho nepшineseљ, tak s tebou obchodnм mluvit nemщћu...</text>
+	</string>
+	<string id="escape_trader_start_dialog_521211">
+		<text>Na, vem si ho.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5212111">
+		<text>Dobшe... Budem teda pшedpoklбdat, ћe jsi testem proљel. Radнm ti vyhejbat se tбboru novбиkщ.</text>
+	</string>
+	<string id="escape_trader_start_dialog_56">
+		<text>Zatнm nic.</text>
+	</string>
+	<string id="escape_trader_start_dialog_571">
+		<text>Tak co, pшinesl si artefakt?</text>
+	</string>
+	<string id="escape_trader_start_dialog_5711">
+		<text>Jeљtм ne.</text>
+	</string>
+	<string id="escape_trader_start_dialog_57111">
+		<text>No, tak dokud ho nepшineseљ, nemбme spolu o иem mluvit. Jasnэ?</text>
+	</string>
+	<string id="escape_trader_start_dialog_6">
+		<text>Oznaиenej, uћ jsem ti шekl vљechno. Takћe vypadni!</text>
+	</string>
+	<string id="escape_trader_start_dialog_661">
+		<text>Tak co, Oznaиenej, nмjakэ novinky?</text>
+	</string>
+	<string id="escape_trader_talk_info_0">
+		<text>Potшebuju odpovмп na pбr otбzek.</text>
+	</string>
+	<string id="escape_trader_talk_info_1">
+		<text>Jen se ptej, ale vљechno nevнm. Sedнm tady celej den, zatнmco ћivot v Zуnм jde dбl. Mщћu ti шнct nмco mбlo o Zуnм jako takovэ a pбr drobnostн o okolnнch oblastech, kde jsem sбm byl.</text>
+	</string>
+	<string id="escape_trader_talk_info_100">
+		<text>Шekni mi nмco o Zуnм.</text>
+	</string>
+	<string id="escape_trader_talk_info_101">
+		<text>Jen se ptej.</text>
+	</string>
+	<string id="escape_trader_talk_info_2">
+		<text>Co dмlб v Zуnм armбda?</text>
+	</string>
+	<string id="escape_trader_talk_info_21">
+		<text>Hlнdajн a chrбnмj, co jinэho? Nikdo fakt nevн, jestli hlнdajн Zуnu, nebo pшed nн chrбnмj okolnн svмt. Nмkdy dovnitш posнlajн expedice nмco hledat... Ale nмco ti шeknu: Nerespektujou Zуnu a Zуna je taky nemб rбda, takћe se docela иasto vracej domщ v plastovejch pytlнch. Co vнc? No, na vљechny koukaj svrchu a chovaj se jako by byli bohovй nebo co. Nemaj respekt k stalkerskэm pravidlщm a nepomщћou ti, i kdyћ jim budeљ pшнmo pшed oиima chcнpat. Klidnм tм sami zastшelej a nic z toho mнt nebudou... mбm mezi nima pбr kontaktщ... vнљ, lidi vћdycky potшebujou vodku a... hmmm... no, znбљ to, ћe jo? Neser je - klidnм tм pro srandu zastшelej.</text>
+	</string>
+	<string id="escape_trader_talk_info_3">
+		<text>Шekni mi nмco o Zуnм.</text>
+	</string>
+	<string id="escape_trader_talk_info_31">
+		<text>Zуna... no vнљ, nenн to jenom kruh pбr kilometrщ v prщmмru s atomovou elektrбrnou ve stшedu. Je to nмco bizarnнho. Fakt bizarnнho. Pochybuju, ћe by ti kdokoli na svмtм mohl dбt pшesnou odpovмп. Cнtнm, ћe Zуna ani nenн souибstн tohohle svмta. Je to jinej, oddмlenej svмt - divnej a nebezpeиnej... a zatracenм atraktivnн. A vнљ proи? Protoћe s trochou љtмstн tady mщћe kdokoli vydмlat balнk. A инm blнћ se dostaneљ do stшedu Zуny, tнm rychlejc nahrabeљ prachy.</text>
+	</string>
+	<string id="escape_trader_talk_info_311">
+		<text>Co je na tom "jinэm svмtм" tak divnэho?</text>
+	</string>
+	<string id="escape_trader_talk_info_3111">
+		<text>Hmm... No, ani moc ne, akorбt ћe mщћeљ kdykoli zakalit a ani si nevљimneљ, co tм trefilo. Kulka nмjakэho blbэho vojбka je ten nejmenљн problйm, i kdyћ sem v poslednн dobм armбda vrazila s velkou slбvou. Bejt zastшelenej, to je asi nejmнт bolestivej druh smrti v Zуnм. Anomбlie - no to uћ je nмco jinэho. Umшнt v anomбlii, to je opravdu hroznej konec. Dokonce i mutanti se jim snaћej vyhejbat. Mimochodem, mutanti, tyhle "dмti Zуny", to je dalљн druh problйmщ, nikam nechoп neozbrojenej. A pokud se chceљ dozvмdмt vнc o dalљнch vмcech, zeptej se ostatnнch stalkerщ.</text>
+	</string>
+	<string id="escape_trader_talk_info_312">
+		<text>Jak se tady dб zbohatnout?</text>
+	</string>
+	<string id="escape_trader_talk_info_3121">
+		<text>No, ty vole, co myslнљ? To si to nepamatujeљ?! Artefakty - to je tady ta nejdщleћitмjљн vмc. V Zуnм se dб najнt fakt kupa divnejch hraиek, kterэ se daj venku prodat za velkэ prachy. Artefakty jsou cennмjљн neћ zlato, diamanty nebo иistэ plutonium. Proи? Protoћe ћбdnб biћuterie na svмtм ti nedб superschopnosti jako artefakty. Jen si to pшedstav: povмsнљ si na opasek malej nesmysl a kulky kolem tebe lнtaj a netrefмj tм! Co jinэho? No, pбr kouskщ mщћeљ najнt i tady kolem. Ale cennэ vмciиky, pro ty musнљ blнћ k centru.</text>
+	</string>
+	<string id="escape_trader_talk_info_313">
+		<text>Vн nмkdo, co se dмje v centru Zуny?</text>
+	</string>
+	<string id="escape_trader_talk_info_3131">
+		<text>Pokaћdэ, kdyћ tuhle historku od nмkoho slyљнљ, tak je jinб neћ ty pшedchozн. Spousta pohбdek... akorбt jб tмm kecщm o jinэm svмtм nevмшнm. Vмшнm akorбt na jednu vмc, ћe v centru Zуny je spousta cennejch artefaktщ. Akorбt jsem jeљtм nepotkal nikoho, kdo by se tam dostal a podaшilo se mu vrбtit ћivej.</text>
+	</string>
+	<string id="escape_trader_talk_info_4">
+		<text>Nevнљ, co se to se mnou stalo?</text>
+	</string>
+	<string id="escape_trader_talk_info_41">
+		<text>A co je tohle jako za otбzku, kбmo? Hele, tohle je fakt dost dмsivэ...  Naљli tм v "nбklaпбku smrti", to je nмco jako... no jako pшevoz mrtvol, jo? Tyhle nбklaпбky jednou za иas vyjнћdмj z centra Zуny, plnэ mrtvol. Nikdo nevн, kam vlastnм jedou. No a jeden z nich do nмиeho narazil a tebe naљli kousek vod nмj. To je na tom to nejъћasnмjљн. Uћ jsme nabouranэ nбklaпбky naљli i dшнv, ale zatнm tam nebyl nikdo ћivej. Je mi lнto, brбcho, ale vнc ti nepovнm. Budeљ si to muset zjistit sбm.</text>
+	</string>
+	<string id="escape_trader_talk_info_5">
+		<text>Kdo je to Stшelec?</text>
+	</string>
+	<string id="escape_trader_talk_info_51">
+		<text>No, o jednom stalkerovi, co se tak jmenoval, jsem slyљel. Prej je jeden z tмch pбr, co se dostali do centra a vrбtili se. Ale o hrdinskejch stalkerech je tady tolik legend, ћe иert vн, co je pravda. V kaћdэm pшнpadм jsem s nнm nikdy nic nemмl, nejspнљ mмl vlastnн obchodnн kanбly. No jen se poptej lidн tady v Zуnм, urиitм ti o nмm nмkdo nмco povн.</text>
+	</string>
+	<string id="escape_trader_talk_info_6">
+		<text>Co je to zaи, ten stalker Duch?</text>
+	</string>
+	<string id="escape_trader_talk_info_61">
+		<text>Heh, to je dalљн mнstnн legenda. Uћ jsme o nмm docela dlouho neslyљeli. Asi zakalil nмkde hluboko v Zуnм.</text>
+	</string>
+	<string id="escape_trader_talk_info_99">
+		<text>Co se dмje tady v okolн?</text>
+	</string>
+	<string id="escape_trader_talk_info_999">
+		<text>Huh! Tohle je vstup do Zуny, nмco jako pшedpokoj. Mбme tady armбdnн kordon. Je to tady docela klidnэ, akorбt se obиas nмjakэ pitomci z armбdy zkouљej zabavit a hrajou si. Zkuљenн stalkeшi sem moc nelezou, vмtљinou jsou tu jenom novбиci. Nмkterэ se tady usadмj na dobro, to jo... Kousek vocaп je farma, ze kterэ vznikl tбbor novбиkщ. Dбvej si ale bacha, nebojej se zaинt stшнlet, kdyћ jde do tuhэho. Co jeљtм? No, tady moc nevydмlбљ, to je jasnэ. Za cestou je opuљtмnб fabrika. Severnм za ћelezniиnнm nбspem jsou trosky nмjakэ farmy. Jiћnм vocaп je armбdnн stanoviљtм. A dej si bacha: armбda do zemм zapнchala pбr min. No a ve stшedu jeљtм bejval most, ale ten se nмjak sesypal. To je fakt asi vљechno.</text>
+	</string>
+	<string id="escape_trader_talk_info_9991">
+		<text>Шekni mi nмco vнc o armбdnнm stanoviљti.</text>
+	</string>
+	<string id="escape_trader_talk_info_99911">
+		<text>Tмch pбr vojбkщ tam mб rozkaz stшнlet na potkбnн, tak to radљi obejdi a moc nevystrkuj prdel. Pokud je nasereљ, mщћou z kordуnu pшivolat jednotku Specnasu. Ti chlapi to dokбћou posrat poшбdnм vљem okolo, zбkaznнky uћ jsem tu nemмl skoro mмsнc... trochu znбm jejich velitele: rбd si dб pбr panбkщ. Pшeћнvбm tady akorбt dнky nмmu.</text>
+	</string>
+	<string id="escape_trader_talk_info_9992">
+		<text>Zajнmalo by mм nмco vнc o tom spadlйm mostu.</text>
+	</string>
+	<string id="escape_trader_talk_info_99922">
+		<text>Je to pбr minut severnм - mщћeљ ho vidмt i vocaп. Byl to silniиnн most, ale bмhem jednэ expanze spadnul. Armбda tam postavila stanoviљtм a nikoho nepouљtмj skrz... ale kdyћ je podmaћeљ, tak vмtљinou nedмlaj problйmy. Ale fakt je lepљн se tam moc neukazovat, pokud nejseљ vбћnм zranмnej nebo naloћenej jako mezek.</text>
+	</string>
+	<string id="escape_trader_talk_info_9993">
+		<text>Vнљ nмco vнc o tй tovбrnм?</text>
+	</string>
+	<string id="escape_trader_talk_info_99933">
+		<text>Jdi kus pшes cestu a uvidнљ cihlovej barбk - to je ono. Vљechno, co mмlo smysl ukrбst, uћ samozшejmм nмkdo sbalil, zbejvaj akorбt zdi. Je to oblнbenej plac banditщ. Nevнm, jestli tam teп zrovna jsou, ale radљi si dбvej bacha. Nemбљ nic cennэho, co by ti mohli vzнt, ale fakt si tнm chceљ projнt?</text>
+	</string>
+	<string id="escape_trader_talk_info_9994">
+		<text>Шekni mi nмco o farmм.</text>
+	</string>
+	<string id="escape_trader_talk_info_99944">
+		<text>Zaинnбљ bejt otravnej, vнљ? Prostм farma, vole. Kdysi to bylo ћivэ mнsto, ale pak pшiљla demokracie.</text>
+	</string>
+	<string id="escape_trader_talk_info_9995">
+		<text>Dнky, to je vљechno.</text>
+	</string>
+	<string id="escape_trader_talk_info_9996">
+		<text>Jeљtм by mм nмco zajнmalo.</text>
+	</string>
+	<string id="escape_trader_talk_level_0">
+		<text>Шekni mi nмco o tomhle mнstм.</text>
+	</string>
+	<string id="escape_trader_talk_level_1">
+		<text>Huh! Tohle je vstup do Zуny, nмco jako pшedpokoj. Mбme tady armбdnн kordуn. Je to tady docela klidnэ, akorбt se obиas nмjakэ pitomci z armбdy zkouљej zabavit a hrajou si. Zkuљenн stalkeшi sem moc nelezou, vмtљinou jsou tu jenom novбиci. Nмkterэ se tady usadмj na dobro, to jo... Kousek vocaп je farma, ze kterэ vznikl tбbor novбиkщ. Dбvej si ale bacha, nebojej se zaинt stшнlet, kdyћ jde do tuhэho. \nCo jeљtм? No, tady moc nevydмlбљ, to je jasnэ. Za cestou je opuљtмnб fabrika. Severnм za ћelezniиnнm nбspem jsou trosky nмjakэ farmy. Jiћnм vocaп je armбdnн stanoviљtм. A dej si bacha: armбda do zemм zapнchala pбr min. No a ve stшedu jeљtм bejval most, ale ten se nмjak sesypal. To je fakt asi vљechno.</text>
+	</string>
+	<string id="escape_trader_talk_level_10">
+		<text>Ok, dнky.</text>
+	</string>
+	<string id="escape_trader_talk_level_2">
+		<text>Шekni mi nмco vнc o armбdnнm stanoviљti.</text>
+	</string>
+	<string id="escape_trader_talk_level_21">
+		<text>Tмch pбr vojбkщ tam mб rozkaz stшнlet na potkбnн, tak to radљi obejdi a moc nevystrkuj prdel. Pokud je nasereљ, mщћou z kordуnu pшivolat jednotku Specnasu. Ti chlapi to dokбћou posrat poшбdnм vљem okolo, zбkaznнky uћ jsem tu nemмl skoro mмsнc... trochu znбm jejich velitele: rбd si dб pбr panбkщ. Pшeћнvбm tady akorбt dнky nмmu.</text>
+	</string>
+	<string id="escape_trader_talk_level_3">
+		<text>Zajнmalo by mм nмco vнc o tom spadlйm mostu.</text>
+	</string>
+	<string id="escape_trader_talk_level_31">
+		<text>Je to pбr minut severnм - mщћeљ ho vidмt i vocaп. Byl to silniиnн most, ale bмhem jednэ expanze spadnul. Armбda tam postavila stanoviљtм a nikoho nepouљtмj skrz... ale kdyћ je podmaћeљ, tak vмtљinou nedмlaj problйmy. Ale fakt je lepљн se tam moc neukazovat, pokud nejseљ vбћnм zranмnej nebo naloћenej jako mezek.</text>
+	</string>
+	<string id="escape_trader_talk_level_4">
+		<text>Vнљ nмco vнc o tй tovбrnм?</text>
+	</string>
+	<string id="escape_trader_talk_level_41">
+		<text>Jdi kus pшes cestu a uvidнљ cihlovej barбk - to je ono. Vљechno, co mмlo smysl ukrбst, uћ samozшejmм nмkdo sbalil, zbejvaj akorбt zdi. Je to oblнbenej plac banditщ. Nevнm, jestli tam teп zrovna jsou, ale radљi si dбvej bacha. Nemбљ nic cennэho, co by ti mohli vzнt, ale fakt si tнm chceљ projнt?</text>
+	</string>
+	<string id="escape_trader_talk_level_5">
+		<text>Шekni mi nмco o farmм.</text>
+	</string>
+	<string id="escape_trader_talk_level_51">
+		<text>Zaинnбљ bejt otravnej, vнљ? Prostм farma, vole. Kdysi to bylo ћivэ mнsto, ale pak pшiљla demokracie.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_1">
+		<text>Ћiju... ale krvбcнm jako prase. Dej mi lйkбrniиku, jo?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_121">
+		<text>Dнky, brбcho!</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_2">
+		<text>Tady mбљ.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_21">
+		<text>Dнky, kбmo. Jeљtм chvilku a asi bych... mбљ to u mм.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_211">
+		<text>Co se sakra stalo?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_2111">
+		<text>Vraceli jsme se z prщzkumu. Narazili jsme na pбr banditщ, jeden z naљich to schytal. Banditi popadli Љikulu, protoћe si vymyslel nмjakou historku o skrэљi plnэ artefaktщ. Jб hrбl mrtvэho a to mi zachrбnilo prdel.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_21111">
+		<text>Potшebuju mluvit s Љikulou... Pщjdu pro nмj. Chceљ jнt taky?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_211111">
+		<text>Oh, иlovмиe... Zrovna teп jsem v boji tak dobrej jako pбr vypranejch ponoћek. Musнm se vrбtit do tбbora a nabrat trochu sнly. Ale dбm vљem vмdмt, ћes mi pomohl! Jeљtм jednou dнky.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_2111111">
+		<text>Ok, tak do toho. Uzdrav se.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_3">
+		<text>Sorry, kбmo. Nemбm lйkбrniиku.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_31">
+		<text>Prohledej mrtvoly... jeden z nich musel mнt... nмkde bude.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_5111">
+		<text>Moc dobrэ to nenн, ale pшeћiju. Sakra, ћe jsem si nenaљetшil na neprщstшelnou vestu. Do Zуny bez nн fakt mщћe jнt jenom debil.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_6">
+		<text>Sakra, to bolн... umнrбm...</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_61">
+		<text>Seљ ћivej?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_7">
+		<text>Ugh...</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_8">
+		<text>Jsi v poшбdku?</text>
+	</string>
+</string_table>

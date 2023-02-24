@@ -1,0 +1,51 @@
+	<string id="descr_bar_crazy_veterans_quest">
+		<text>Barman: "Povinnost si cení své povìsti, proto se o to chtìjí postarat tiše. Staèí zabít vùdce té bandy, Štístka, a pøinést mi jeho PDA jako dùkaz."</text>
+	</string>
+	<string id="descr_bar_dolg_community_quest">
+		<text>Pokud se chceš pøidat k Povinnosti, musíš získat schválení jednoho z nejvíce respektovanıch bojovníkù skupiny a prokázat Povinnosti, e si v ní své místo zaslouíš.</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_ambush_quest">
+		<text>Barman: "Máš za úkol zabít Tyrana, vùdce oldákù. Jeho banda se dostala do divoké oblasti a na staveništi si udìlali základnu. Dávej si pozor, pár jich pøipravilo cestou k základnì pasti. Pøines mi Tyranovo PDA a odmìna je tvá."</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_leader_kill_quest">
+		<text>Generál Voronin: "Válka se Svobodou se blíí ke konci, Oznaèenı. Odehrál jsi svou èást v boji pro naši vìc. Teï chci tuhle válku skonèit. Musíme znièit velitele Svobody."</text>
+	</string>
+	<string id="descr_bar_dolg_test_quest">
+		<text>Kapitán Ivancov: "...ne se rozhodneme, musíš projít lehkım testem. Pøines mi z opuštìnıch budov sloku dokumentù. Není to tìké, prostì tam vlez, vezmi ji a pøines mi ji. Pohodièka, e jo? A mi tu sloku pøineseš, rozhodnu se, jestli si zaslouíš stát se èlenem Povinnosti."</text>
+	</string>
+	<string id="descr_bar_hunter_rifle">
+		<text>Lovec: "Pøines mi zpátky pušku. Ztratil jsem ji tam, co ijou upíøi. Nahraju ti souøadnice. A dávej si bacha, ti hajzlíci si jen tak nehrajou."</text>
+	</string>
+	<string id="descr_bar_kill_professor">
+		<text>Vlkodav: "Máme tady takovej malej lov. Zatlaèili jsme vìdátory támhle za vrtulník. Chlapi na nì sem tam støílejí, aby nikdo nemohl utıct. Pøidej se k nám, zrovna se je chystáme dorazit. Kdy to udìláš, dám ti oblek vìdátorù... našli jsme ho ve vrtulníku, kterej jsme sundali. Tvùj cíl bude profesor Kruglov. Zabij ho, jinak zdrhne, jakmile se zaène støílet, znám takovı jako je on. Kdy ho zabiješ, je oblek tvùj. Kdy ne, nedostaneš ani hovno."</text>
+	</string>
+	<string id="descr_bar_radar_deactivate">
+		<text>Barman: "Musíš mít ochrannej prototyp, jinak tì vypalovaè mozku dostane. Znám souøadnice bunkru. Nezapomeò, e tì prototyp nebude chránit vìènì, take se musíš dostat do bunkru pod anténama a vypnout vypalovaè. Staèí se akorát dostat k anténám a vypnout je."</text>
+	</string>
+	<string id="descr_bar_resque_information">
+		<text>Kruglov: "Stalkere, pomoc! Zaútoèili na nás oldáci a polovina naší skupiny je mrtvá. Pomoz nám a nebudeš toho litovat"\n \n "...dávej si pozor, je jich minimálnì patnáct, ale nevíme to jistì."</text>
+	</string>
+	<string id="descr_bar_resque_information_2">
+		<text>Kruglo: "Vraceli jsme se k Jantaru, kdy oldáci sestøelili náš vrtulník. Prı hledají informace, ale já vím, e nás zabijí. Doveï mì k Jantaru a já ti øeknu, co vím o vypalovaèi mozku, Barman ti za ty informace urèitì dobøe zaplatí. V boji jsem k nièemu, ale znám cestu, take pùjdu první a ty mì budeš krıt."</text>
+	</string>
+	<string id="descr_bar_x16_documents">
+		<text>Barman: "Musíš se dostat pøes vìdce a zjistit, kde je schovaná laboratoø X16. Tam najdeš chybìjící dokumenty."</text>
+	</string>
+	<string id="journal_after_agroprom_documents">
+		<text>Proèetl jsem si dokumenty z institutu. Vypadá to, e se v letech pøed nehodou institut pouíval jako zástìrka pro tajnou laboratoø X18. V té se dìlala spousta velmi nezvyklıch experimentù. Z dokumentù není její umístìní jasné a armáda o ní zøejmì také nic neví. No, zaèíná se nám zápletka komplikovat. Ale moná je to startovní bod, kterı bude pøekupníkùm staèit. Musím jít dál na sever k pøekupníkovi známému jako Barman.</text>
+	</string>
+	<string id="journal_bar_darklab_documents">
+		<text>No sakra. V laboratoøi X18 to rozhodnì nebyla sranda a její souèasní obyvatelé... ani jsem nevìdìl, e takové vìci existují. Našel jsem nìjaké dokumenty. Moc jim nerozumím, ale obsahovaly technické specifikace pro Kaimanovovy emitory. Co je zajímavé, ty souèásti mìly zamíøit do jiné laboratoøe s oznaèením X16 a ta je nejspíš taky tajná.</text>
+	</string>
+	<string id="journal_bar_x16_documents">
+		<text>Hmm... pøekupníci toho o tìch laboratoøích vyhrabali docela dost. Barmana zmínka o emitorech a X16 nepøekvapila. Teï je pøesvìdèenı, e vypalovaè mozku postavili lidi. Podle nìj je X16 poblí tábora vìdcù u Jantarového jezera. Je zajímavé, e tam studují emise s podobnımi úèinky jako má vypalovaè. Take je na èase navštívit vìdeckou komunitu Zóny.</text>
+	</string>
+	<string id="journal_before_darklab_documents">
+		<text>Setkal jsem se s Barmanem. Po proètení dokumentù z institutu si myslí, e ta X18 se nachází v Temném údolí a chce, a se tam podívám po dokumentech a dalších informacích. Prı tam do podzemí poslal prùzkumníky Povinnosti, ale zmizeli. Podle Barmana je zajali banditi, kteøí mají poblí základnu. Pokud je to pravda, skonèí všechno, co ti chlapi najdou, v rukách Borova, šéfa banditù. Barman mi øekl, a si dávám pozor... a nejspíš mi o tom podzemí neøekl všechno. No, nejdøív musím najít Borova, a pokud se "domluvíme", tak vyrazím zkoumat podzemí.</text>
+	</string>
+	<string id="journal_before_radar_task">
+		<text>Jsem pøipravenı vyrazit k vypalovaèi. Od Magora jsem zjistil doby, kdy se úroveò záøení sniuje. Taky mi øekl o bezpeèném místì, kde na tu dobu mùu poèkat. Moje psi-ochrana stejnì mimo ty úrovnì fungovat nebude. Musím najít cestu do podzemního bunkru laboratoøe X19. Uvnitø musím najít ovládání antén vypalovaèe mozku.</text>
+	</string>
+	<string id="st_gordon_diary">
+		<text>Gordonovo PDA</text>
+	</string>

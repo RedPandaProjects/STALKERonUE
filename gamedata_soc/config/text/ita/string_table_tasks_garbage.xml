@@ -1,0 +1,48 @@
+	<string id="gar_car_graveyard_quest">
+		<text>Rispondi alla chiamata di aiuto.</text>
+	</string>
+	<string id="gar_defend_garbage">
+		<text>Respingi l'incursione dei banditi.</text>
+	</string>
+	<string id="gar_dialog_hellcar">
+		<text>Offri il tuo aiuto al capo della squadra neutrale.</text>
+	</string>
+	<string id="gar_dialog_hellcar_1">
+		<text>Offri il tuo aiuto al Bes.</text>
+	</string>
+	<string id="gar_hellcar_alive">
+		<text>Parla con Bes.</text>
+	</string>
+	<string id="gar_help_dymon">
+		<text>Respingi l'incursione dei banditi.</text>
+	</string>
+	<string id="gar_help_tunnel_newbie">
+		<text>Aiuta il novellino della Discarica.</text>
+	</string>
+	<string id="gar_kill_bandits">
+		<text>Stronca l'incursione dei banditi</text>
+	</string>
+	<string id="gar_kill_boars">
+		<text>Supporta il posto di guardia dei Duty</text>
+	</string>
+	<string id="gar_kill_boars_1">
+		<text>Uccidi i cinghiali</text>
+	</string>
+	<string id="gar_kill_boars_2">
+		<text>Parla con il comandante dei Duty</text>
+	</string>
+	<string id="gar_kill_boars_descr">
+		<text>Duty: "Salve, qui è la fazione dei Duty, che vi parla dalla Discarica. Un'ondata di mutanti provenienti dalla Valle Oscura si dirige verso il bar. Chiunque ci aiuterà a uccidere quella marmaglia avrà tutta la nostra gratitudine. Parola dei Duty."</text>
+	</string>
+	<string id="gar_kill_boars_main">
+		<text>La missione per raggiungere il bar.</text>
+	</string>
+	<string id="garbage_meet_stalker_1">
+		<text>Ottieni da Seriy informazioni su Strelok.</text>
+	</string>
+	<string id="graveyard_raid_text">
+		<text>Bes: "I banditi stanno cercando di ottenere il controllo della Discarica. Mezz'ora fa laggiù c'è stato un tafferuglio e abbiamo ucciso tre di quegli invasati. Gli altri si sono ritirati, ma secondo me potranno tornare in qualsiasi momento con dei rinforzi. Siamo in pochi e una mano ci farebbe comodo. Se ci aiuterai a distruggere i rinforzi, ti restituirò il favore."</text>
+	</string>
+	<string id="help_for_neitrals_text">
+		<text>Al cimitero dei veicoli abbandonato c'è stata una sparatoria fra i neutrali e i banditi. I neutrali sono riusciti a tenera a bada i banditi, ma stanno chiedendo aiuto.</text>
+	</string>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="val_escort_captive_dialog_11">
+		<text>Bandidos... Esos desgraciados me llevaban a la vieja fбbrica. No sй lo que planeaban hacer conmigo, pero ya se llevaron una vez a otro tipo allн y nunca volvн a verle. Tienen a otro de los nuestros, Serega. Lo tienen en el sуtano... en ese gran edificio de allн... uno enorme que estб a medio construir. їLe ayudarбs? Si no lo haces, ellos... ya sabes...</text>
+	</string>
+	<string id="val_escort_captive_dialog_2">
+		<text>їSabes lo que tienen en la fбbrica?</text>
+	</string>
+	<string id="val_escort_captive_dialog_21">
+		<text>No sй mucho. Lo ъnico que puedo decirte es que Borov, su jefe, tiene una parte de la clave a las cuevas. Allн habнa un laboratorio, o algo parecido... Charlaban entre ellos y decнan que Borov habнa tratado de entrar, pero no lo habнa conseguido por no tener la segunda mitad de la clave. Esto... Si estбs pensando en entrar ahн, piйnsatelo dos veces. Estб lleno de matones. </text>
+	</string>
+	<string id="val_escort_captive_dialog_211">
+		<text>Vale. Gracias. Lo tendrй en cuenta.</text>
+	</string>
+	<string id="val_escort_captive_dialog_3">
+		<text>Intentarй ayudar a tu hombre.</text>
+	</string>
+	<string id="val_escort_captive_dialog_41">
+		<text>Es una lбstima lo de mi compaсero... Era un buen tipo. Pero te debo una.</text>
+	</string>
+	<string id="val_escort_captive_dialog_411">
+		<text>La vida es asн.</text>
+	</string>
+	<string id="val_escort_captive_dialog_51">
+		<text>Gracias por tu ayuda.</text>
+	</string>
+	<string id="val_escort_captive_dialog_511">
+		<text>Adiуs.</text>
+	</string>
+	<string id="val_escort_captive_dialog_61">
+		<text>La gente no te importa un carajo. їDe quй tenemos que hablar?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21">
+		<text>Gracias, tнo. ЎSacaste a mi compaсero de allн! Mira, toma esto. Te lo doy de corazуn. </text>
+	</string>
+	<string id="val_escort_nap1_dialog_2111">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212">
+		<text>Supongo que conoces bien esta бrea. їQuй hay de interesante aquн?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121">
+		<text>Al Norte hay un campamento de bandidos. Al Este, una vieja fбbrica. Al Sudoeste hay una granja de cerdos abandonada y tras ella algъn tipo de puerta... No puedo decirte lo que hay allн, nunca he llegado tan lejos.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21211">
+		<text>їPodrнas contarme algo mбs del campamento de bandidos?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212111">
+		<text>Um, no hay mucho que contar... Se instalaron en un edificio a medio construir al norte de aquн. Su lнder es Borov, un verdadero animal, un malnacido. Por eso nos enviaron aquн, para eliminarlo.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212">
+		<text>їQuй pasa con la fбbrica?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212121">
+		<text>Descubrimos que allн hay una especie de cбmara. Pero estб tan vigilada como Fort Knox.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121211">
+		<text>їQuй tipo de cбmara? їQuй hay en su interior?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212111">
+		<text>No sй nada mбs, de verdad: no entramos. Lo ъnico que sй es que Borov tiene la mitad de la clave de la entrada.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21213">
+		<text>їUna autйntica granja de cerdos? їCon cerdos y cosas por el estilo?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212131">
+		<text>Se te hace la boca agua pensando en unas chuletas, їeh? La zona estб llena de jabalнes. Prueba un bocado de uno y no necesitarбs una linterna nunca mбs. ЎTe volverбs fosforescente! Vale, vale, era broma... La granja lleva tiempo abandonada, y ahora es hogar de algunos stalkers. No me causaron una buena impresiуn, y mi instinto no suele fallarme.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21214">
+		<text>їCуmo es esa puerta de la que hablabas?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212141">
+		<text>No te lo sabrнa decir. Solo es una puerta vieja, pero estб cerrada con llave y bien guardada. Nunca nos hemos aventurado hasta aquel lugar.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21215">
+		<text>Ya veo, gracias.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212151">
+		<text>De nada. Vuelve cuando quieras.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_213">
+		<text>їFuisteis a explorar los dos solos? </text>
+	</string>
+	<string id="val_escort_nap1_dialog_2131">
+		<text>Habнa otro tipo, Serega. No sй, se fue y no he vuelto a tener noticias suyas... Seguramente el grupo lo habrб matado.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_214">
+		<text>Ten cuidado.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_31">
+		<text>Ah, colega... їQuй va a ser de mн ahora, amigo? Gracias, hermano. Al menos, trataste de ayudar. Y yo mantengo mi palabra.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41">
+		<text>Gracias por tu ayuda. їQuй mбs querнas saber?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_61">
+		<text>No me ayudaste cuando te lo pedн. No hay nada mбs que hablar, piйrdete.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_611">
+		<text>Adiуs.</text>
+	</string>
+	<string id="val_prisoner_hello_11">
+		<text>ЎEh, chico! ЎAyъdame! Soy un explorador de Deber. ЎAyъdame a salir!</text>
+	</string>
+	<string id="val_prisoner_hello_111">
+		<text>Lo intentarй.</text>
+	</string>
+	<string id="val_prisoner_hello_112">
+		<text>No puedo hacer nada por ti.</text>
+	</string>
+	<string id="val_prisoner_hello_21">
+		<text>Gracias, hermano. Te debo una. Mira de lo que me he enterado; podrнa serte ъtil, quiйn sabe... Borov, que es quien dirige el cotarro, ha reunido un montуn de mercancнa. Tiene una parte de la clave que abre el piso inferior de la vieja fбbrica. Oн a los guardias hablar; decнan que allн habнa una especie de laboratorio. El problema es que acercarse a Borov no es tan sencillo.</text>
+	</string>
+	<string id="val_prisoner_hello_211">
+		<text>Gracias por la informaciуn.</text>
+	</string>
+	<string id="val_prisoner_hello_2111">
+		<text>Es hora de volver con los nuestros. Algo me dice que tendremos suerte si logramos salir vivos...</text>
+	</string>
+	<string id="val_prisoner_hello_21111">
+		<text>Buena suerte.</text>
+	</string>
+	<string id="val_prisoner_hello_31">
+		<text>ЎTenemos que salir de aquн antes de que esos cabrones nos descubran! їNecesitas algo? ЎRбpido!</text>
+	</string>
+	<string id="val_prisoner_hello_311">
+		<text>No, nada.</text>
+	</string>
+	<string id="val_prisoner_hello_41">
+		<text>ЎEh, chico! En la pared hay un interruptor que abre la puerta de la celda.</text>
+	</string>
+	<string id="val_prisoner_hello_411">
+		<text>De acuerdo, irй a ver.</text>
+	</string>
+	<string id="val_rob_dialog_11">
+		<text>їQuieres un arma increнble? Encontrй algo cerca de Yantar... Parecнa una especie de alijo. Entre otras cosas habнa un fusil Gauss. Lo que te digo, ese trasto es la leche; hace papilla todo lo que alcanza en un radio de cien metros... ЎSi me das 800 lo tendrбs aquн en un momento!</text>
+	</string>
+	<string id="val_rob_dialog_111">
+		<text>Aquн estб el dinero.</text>
+	</string>
+	<string id="val_rob_dialog_112">
+		<text>Gracias, pero no.</text>
+	</string>
+	<string id="val_rob_dialog_113">
+		<text>No, guбrdalo. El dinero es difнcil de conseguir.</text>
+	</string>
+	<string id="val_rob_dialog_21">
+		<text>їTienes el dinero? Date prisa, tengo un montуn de clientes... Volverбn pronto.</text>
+	</string>
+	<string id="val_rob_dialog_3">
+		<text>ЎExcelente! Espera aquн e irй a buscarlo.</text>
+	</string>
+	<string id="val_rob_dialog_31">
+		<text>Espera.</text>
+	</string>
+	<string id="val_sos_dialog_11">
+		<text>ЎDame un botiquнn!</text>
+	</string>
+	<string id="val_sos_dialog_111">
+		<text>Aquн lo tienes.</text>
+	</string>
+	<string id="val_sos_dialog_112">
+		<text>Lo siento, no tengo botiquнn.</text>
+	</string>
+	<string id="val_sos_dialog_21">
+		<text>Gracias compaсero, me has sacado de йsta. Si vivo lo suficiente para volver a verte, te devolverй el favor. Ahora mismo lo ъnico que puedo dejarte es una buena propina. De acuerdo, al sur de aquн hay una granja donde unos stalkers despreocupados han establecido su campamento. Uno de ellos quiere vender un fusil Gauss realmente barato; solo pide 800. Iba a comprarlo, pero entonces me metн de lleno en toda esta mierda. Asн que si tienes la pasta, ve allн. </text>
+	</string>
+	<string id="val_sos_dialog_211">
+		<text>Gracias por la informaciуn.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4111">
+		<text>Estoy en deuda contigo, y yo siempre pago mis deudas. Vamos.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41111">
+		<text>Excelente. Ahora destrozaremos a todo el mundo.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4112">
+		<text>Lo siento, tengo otros planes.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41121">
+		<text>Bueno, entonces buena suerte.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_412">
+		<text>Adiуs.</text>
+	</string>
+</string_table>

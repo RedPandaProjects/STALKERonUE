@@ -1,0 +1,81 @@
+	<string id="about_enciclopedia">
+		<text>Questa è l'enciclopedia. Man mano che avanzi nel gioco, in questa scheda verranno aggiunte informazioni sul mondo che ti circonda, suddivise per argomento.</text>
+	</string>
+	<string id="about_pda">
+		<text>Informazioni sull'enciclopedia</text>
+	</string>
+	<string id="Bandit's flash">
+		<text>Palmare da bandito</text>
+	</string>
+	<string id="blokpost_case_text">
+		<text>Trafficante: entra nell'avamposto dell'esercito e ruba la cassetta che contiene il rapporto sulla spedizione militare nella parte settentrionale della Zona.</text>
+	</string>
+	<string id="Dead novice's flash">
+		<text>Palm. pivello morto</text>
+	</string>
+	<string id="defend_lager_text">
+		<text>Fanatico: Aiutaci a difenderci dai mercenari che hanno ordinato ai pivelli di sgombrare il campo. Il piano è questo. Ci nascondiamo tutti, così il campo sembra abbandonato, lasciamo che i mercenari entrino poi attacchiamo quando il capitano ce lo ordina.</text>
+	</string>
+	<string id="doctor_meet">
+		<text>Palmare della Guida</text>
+	</string>
+	<string id="doctor_meet_2">
+		<text>Incontro col Dottore</text>
+	</string>
+	<string id="doctor_meet_quest_text">
+		<text>Dottore: Aspetterò un uomo di Strelok nel nascondiglio usato da Strelok e dai suoi. Se è il nostro uomo, conosce il posto.</text>
+	</string>
+	<string id="doctor_meet_text">
+		<text>OK, incontrerò l'uomo del Fantasma. Lo aspetterò nel nascondiglio di Strelock. Se è uno dei nostri, saprà dove trovarmi. Il Dottore.</text>
+	</string>
+	<string id="esc_flash_task_descr">
+		<text>Trafficante: "...i miei ragazzi stavano tornando da una missione e sono scomparsi. Uno di loro, chiamato Svelto, mi stava portando delle informazioni... E sono tutti scomparsi non lontano da qui, perché hanno mancato il ponte. Non so cosa pensare. In ogni caso, trova Svelto, vivo o morto che sia, l'importante è che abbia la chiavetta. Portamela. Svelto era un uomo del Lupo e il Lupo è qui nel campo. Parlagli, probabilmente sa qualcosa. Ti aiuterà con le armi e l'attrezzatura."</text>
+	</string>
+	<string id="esc_fox_info">
+		<text>Da Seriy a Volpe: un amico vuole che aiuti un gruppo di stalker a scoprire dove si trova il nascondiglio di Strelok. Vado all'hangar della Discarica coi miei ragazzi. Puoi trovarmi là. </text>
+	</string>
+	<string id="esc_kolyan_lost">
+		<text>Ieri, un fratello è andato al mulino abbandonato e non ne abbiamo più saputo niente. Dobbiamo andare a vedere dove è scomparso.</text>
+	</string>
+	<string id="factory_dynamit_text">
+		<text>Lupo: Porta la dinamite rubata dai banditi alla fabbrica. Sotto al ponte ci sono degli scout che possono aiutarti; raggiungili e pronuncia la password: "Saluti dall'aldilà". Guidali in battaglia.</text>
+	</string>
+	<string id="factory_trader_text">
+		<text>Lupo: Elimina i banditi alla fattoria con l'aiuto dei miei scout che si trovano dietro al ponte, poi torna a fare rapporto.</text>
+	</string>
+	<string id="Flash dead stalker">
+		<text>Palm. stalker morto</text>
+	</string>
+	<string id="gunslinger_clan_cache">
+		<text>...finito nel rifugio di qualcuno, ma non ricordo nulla. Con me ho solo un palmare con la foto di una persona. Nel palmare c'è un solo messaggio: uccidi Strelok.</text>
+	</string>
+	<string id="help_to_fox">
+		<text>Trafficante: "Volpe è tornato dalla sua incursione e sta chiedendo aiuto. Forse sa qualcosa su Strelok."</text>
+	</string>
+	<string id="meet_seryi_text">
+		<text>Volpe: "Il Grigio si trova nell'hangar della Discarica. Ha altre informazioni su Strelok."</text>
+	</string>
+	<string id="military_case_text">
+		<text>Trafficante: "Ruba il rapporto della spedizione ai militari presso l'istituto di ricerca Agroprom, portalo al Bar 100 Rad e dallo al Barista."</text>
+	</string>
+	<string id="Seryi flash">
+		<text>Palmare del Volpe</text>
+	</string>
+	<string id="storyline_fox_flash_info">
+		<text>Diario di Tolik. Il trafficante ci aveva mandati a spiare i militari all'Istituto di ricerca Agroprom. Una volta sul posto, abbiamo ammazzato tutti quanti, banditi e militari. Abbiamo trovato della roba interessante; il resto lo scriverò in codice *testo incomprensibile, apparentemente cifrato*</text>
+	</string>
+	<string id="storyline_seryi_info">
+		<text>Grigio alla Volpe: un tizio che conosco ha chiesto di incontrarsi con un gruppo di stalker che hanno scovato il nascondiglio di Strelok. Sarò alla Discarica, raggiungimi lì se ti va.</text>
+	</string>
+	<string id="Tolik flash">
+		<text>Palmare di Tolik</text>
+	</string>
+	<string id="tutorial_artefact_find">
+		<text>Trafficante: c'è un campo dell'anomalia Mulinello qui vicino e al centro c'è un reperto. Va' e prendilo.</text>
+	</string>
+	<string id="tutorial_moving_anomaly_text">
+		<text>Qui c'è un'anomalia molto strana. Sembra che si muova. Cercherò di calcolare la velocità e la direzione del movimento, perché non ho i soldi per pagare il pedaggio ai soldati.</text>
+	</string>
+	<string id="tutorial_secret_place">
+		<text>Ho nascosto della roba nella fattoria abbandonata. Cibo e munizioni. Sono troppo debole per portarli con me adesso. Non credo di farcela a raggiungere l'accampamento.</text>
+	</string>

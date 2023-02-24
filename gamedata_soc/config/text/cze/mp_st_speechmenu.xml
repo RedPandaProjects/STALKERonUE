@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="speech_attack">
+		<text>Ъtok!</text>
+	</string>
+	<string id="speech_covermeartifact">
+		<text>Jdu pro artefakt! Krej mм.</text>
+	</string>
+	<string id="speech_followme">
+		<text>Nбsleduj mм!</text>
+	</string>
+	<string id="speech_guardartifact">
+		<text>Hlнdej artefakt. Jeљtм neъtoиit!</text>
+	</string>
+	<string id="speech_holdingpos">
+		<text>Drћнm pozici</text>
+	</string>
+	<string id="speech_holdpos">
+		<text>Drћ pozici!</text>
+	</string>
+	<string id="speech_icoverartifact">
+		<text>Jdi pro artefakt! Budu tм krэt.</text>
+	</string>
+	<string id="speech_needhelp">
+		<text>Potшebuju pomoc</text>
+	</string>
+	<string id="speech_needmoney">
+		<text>Nemбm prachy, kup nмjakй vybavenн.</text>
+	</string>
+	<string id="speech_no">
+		<text>Ne</text>
+	</string>
+	<string id="speech_noenemy">
+		<text>Nikde nikdo</text>
+	</string>
+	<string id="speech_report">
+		<text>Ohlas situaci!</text>
+	</string>
+	<string id="speech_retreat">
+		<text>Stбhnout se!</text>
+	</string>
+	<string id="speech_roger">
+		<text>Potvrzuju.</text>
+	</string>
+	<string id="speech_silence">
+		<text>Buпte vљichni ticho!</text>
+	</string>
+	<string id="speech_sticktogether">
+		<text>Drћte se u sebe</text>
+	</string>
+	<string id="speech_takeartifact">
+		<text>Jdi pro artefakt!</text>
+	</string>
+</string_table>

@@ -1,0 +1,24 @@
+	<string id="general_ecolog_tip_1">
+		<text>Was ist passiert? Ist er tot? Komm sofort zurück!</text>
+	</string>
+	<string id="general_ecolog_tip_2">
+		<text>Was ist passiert? Ist er tot? Schnapp dir die Proben und komm sofort zurück!</text>
+	</string>
+	<string id="storyline_ghost_tip">
+		<text>Ghosts Tonaufnahme.</text>
+	</string>
+	<string id="storyline_vasilyev_tip">
+		<text>Wasiliews Tonaufnahme.</text>
+	</string>
+	<string id="tips_labx16switcher_press">
+		<text>Drücken Sie ($$ACTION_USE$$), um die Wundermaschine abzustellen.</text>
+	</string>
+	<string id="yan_saharov_message">
+		<text>Du bist gut, Gezeichneter, du hast es geschafft. Wir müssen die Maschine unbedingt im Labor studieren. Versuch sie abzustellen, damit wir sie angucken können.</text>
+	</string>
+	<string id="yan_saharov_message_2">
+		<text>Hör mal, dieser Prototyp wird dich vor starken Emissionen nicht lange schützen. Damit habe ich gerechnet, also wird beim Entdecken jeder Emission ein Timer aktiviert. Wenn die Zeit abläuft, dann auch dein Schutz, also pass auf und achte auf die Zeit.</text>
+	</string>
+	<string id="yan_saharov_message_3">
+		<text>Gut gemacht, Gezeichneter. Die Emission ist abgestellt und du lebst noch. Aber ich muss dich warnen. Wir haben ein paar Militärhubschraubern gesagt, sie sollen die Zombies im Gebiet platt machen. Du spazierst besser nicht da herum. Oh, und noch was: Lass dich doch ab und zu bei unserem Bunker blicken, okay?</text>
+	</string>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="val_escort_captive_dialog_11">
+		<text>Banditй... ti parchanti mм vedli do starй tovбrny. Nevнm, co se mnou chtмli udмlat, ale pшedtнm tam vzali jinйho chlapa a toho uћ jsem pak nikdy nevidмl.\nMajн jeљtм jednoho z nбs, Seregu. Drћej ho ve sklepм... v tom velkэm barбku, v tom nedokonиenэm. Pomщћeљ mu? Jinak ho... vљak vнљ...</text>
+	</string>
+	<string id="val_escort_captive_dialog_2">
+		<text>Vнљ, co v tэ tovбrnм majн?</text>
+	</string>
+	<string id="val_escort_captive_dialog_21">
+		<text>Moc nevнm. Akorбt ћe jejich љйf Borov tam mб ибst klниe k jeskynнm. Bejvala tam laboratoш nebo co... bavili se o tom, ћe prej Borov chce dovnitш, ale nemщћe ani za boha sehnat druhej kus klниe.\nUmm... jestli se chceљ dostat dovnitш, tak si to radљi rozmysli. Je to tam plnэ tмch mizerщ.</text>
+	</string>
+	<string id="val_escort_captive_dialog_211">
+		<text>Jasnм. Dнky, budu na to pamatovat.</text>
+	</string>
+	<string id="val_escort_captive_dialog_3">
+		<text>Zkusнm tomu chlapovi pomoct.</text>
+	</string>
+	<string id="val_escort_captive_dialog_41">
+		<text>Љkoda mэho partnera... byl to skvмlej chlap. Ale i tak, mбљ to u mм.</text>
+	</string>
+	<string id="val_escort_captive_dialog_411">
+		<text>Takovэ vмci se stбvajн.</text>
+	</string>
+	<string id="val_escort_captive_dialog_51">
+		<text>Dнky za pomoc!</text>
+	</string>
+	<string id="val_escort_captive_dialog_511">
+		<text>Sbohem.</text>
+	</string>
+	<string id="val_escort_captive_dialog_61">
+		<text>Ty na ostatnн prostм kaљleљ. O иem bychom se jako my dva mмli bavit?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21">
+		<text>Dнky, brбcho! Dostaт odtamtud mэho parќбka. Na, vem si tohle - a dмkuju.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2111">
+		<text>Dohodnuto.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212">
+		<text>Asi to tady dobшe znбљ. Je tady nмco zajнmavйho?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121">
+		<text>Na severu je tбbor banditщ. Na vэchodм starб tovбrna. A jihovэchodnм je opuљtмnб praseин farma a nмjakб brбna. Kam ale vede, to nevнm, nikdy jsem tak daleko nebyl.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21211">
+		<text>Mщћeљ mi шнct nмco vнc o tбboшe banditщ?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212111">
+		<text>Hmm, co шнct... usadili se v nedostavenэm barбku pшнmo na sever odsaп. Vede je Borov - je to fakt bestie, ten chlap. Proto nбs poslali sem, abychom ho zlikvidovali.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212">
+		<text>Co se dмje v tovбrnм?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212121">
+		<text>Podaшilo se nбm zjistit, ћe je tam nмjakej trezor, ale je hlнdanej jako Fort Knox.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121211">
+		<text>Jakэ trezor? Co je uvnitш?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212111">
+		<text>Co nevнm, to nevнm, neodvбћili jsme se vlнzt dovnitш. Akorбt ћe Borov mб polovinu klниe od vstupu do nмj.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21213">
+		<text>Opravdovб praseин farma? Jsou tam fakt prasata a tak?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212131">
+		<text>Copak, pшi pomyљlenн na vepшovэ se ti sbнhaj sliny, co? Heh, Zуna je plnб kancщ! Zkus seћrat jednoho z nich a uћ nikdy nebudeљ potшebovat baterku, protoћe si ve tmм posvнtнљ sбm! No jo, jen si dмlбm srandu... Ta farma uћ je dбvno opuљtмnб, teп tam bydlн nмjacн stalkeшi. Moc dobrej dojem na mм neudмlali a jб svэm instinktщm vмtљinou vмшнm.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21214">
+		<text>Co ta brбna, o kterэ jsi mluvil?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212141">
+		<text>Nemбm tuљenн. Prostм starб brбna, akorбt ћe je zamиenб a hlнdanб. Tam jsme neљli.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21215">
+		<text>Aha, dнky.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212151">
+		<text>Nemбљ zaи! Zase se nмkdy zastav.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_213">
+		<text>Jen vy dva jste vyrazili na nбjezd, jo?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2131">
+		<text>Jeљtм jsme mмli jednoho chlapa, Seregu. Nevнm, jak se to stalo, ale je pryи a netuљнm, co s nнm je. Gang se o nмj nespнљ nakonec postaral.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_214">
+		<text>Dбvej na sebe bacha.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_31">
+		<text>Sakra, co se mnou teп bude, kбmo? Dнky, brбcho, aspoт ses pokusil pomoct. A jб svэ slovo drћнm.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41">
+		<text>Dнky za pomoc! Co jeљtм chceљ vмdмt?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_61">
+		<text>Kdyћ jsem tм prosil, odmнtnul jsi mi pomoct. Nemбme se o иem bavit, takћe vypadni.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_611">
+		<text>Sbohem.</text>
+	</string>
+	<string id="val_prisoner_hello_11">
+		<text>Hej, kбmo! Pomoz mi! Jsem zvмd Povinnosti. Pomoz mi dostat se pryи!</text>
+	</string>
+	<string id="val_prisoner_hello_111">
+		<text>Zkusнm to.</text>
+	</string>
+	<string id="val_prisoner_hello_112">
+		<text>Nemщћu pro tebe nic udмlat.</text>
+	</string>
+	<string id="val_prisoner_hello_21">
+		<text>Dнky, brбcho! Mбљ to u mnм. Hele co jsem naљel - tшeba by se ti to mohlo hodit. Borov, ten co tomu tady љйfuje, si nasbнral docela dost zajнmavejch vмcн. Mб kus klниe ke spodnнmu patru starэ tovбrny. Strбћnн o tom kecali, prej tam bejvala nмjakб laboratoш. Ale dostat se blнzko k Borovovi nenн tak snadnэ.</text>
+	</string>
+	<string id="val_prisoner_hello_211">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="val_prisoner_hello_2111">
+		<text>Je иas vrбtit se k naљim. Nмco mi шнkб, ћe budeme mнt љtмstн, jestli se odsud dostaneme ћivн...</text>
+	</string>
+	<string id="val_prisoner_hello_21111">
+		<text>Hodnм љtмstн.</text>
+	</string>
+	<string id="val_prisoner_hello_31">
+		<text>Musнme se odsud dostat, neћ se to tady ty svinм rozhodnout zkontrolovat. Potшebujeљ nмco? Tak to rychle seber!</text>
+	</string>
+	<string id="val_prisoner_hello_311">
+		<text>Ne, nic.</text>
+	</string>
+	<string id="val_prisoner_hello_41">
+		<text>Hej, kбmo! Tбmhle na zdi je tlaинtko - otevнrб dveшe cely.</text>
+	</string>
+	<string id="val_prisoner_hello_411">
+		<text>Ok, podнvбm se.</text>
+	</string>
+	<string id="val_rob_dialog_11">
+		<text>Hej, chceљ skvмlou bouchaиku? Naљel jsem nмco pмknэho kousek od Jantaru... v podstatм asi nмjakou skrэљ. Kromм pбr dalљнch vмcн tam byla Gauss puљka. Povнdбm ti, je to nбшez, kaћdej na sto metrщ od tebe uћ je mrtvej. Za osm kilo ti ji prodбm, hned teп a tady!</text>
+	</string>
+	<string id="val_rob_dialog_111">
+		<text>Tady mбљ prachy.</text>
+	</string>
+	<string id="val_rob_dialog_112">
+		<text>Dнky, ale ne.</text>
+	</string>
+	<string id="val_rob_dialog_113">
+		<text>Na, nech si to. Penнze se љpatnм hledajн.</text>
+	</string>
+	<string id="val_rob_dialog_21">
+		<text>Mбљ prachy? Ale pohni sebou, mбm spoustu zбkaznнkщ... brzy se vrбtн.</text>
+	</string>
+	<string id="val_rob_dialog_3">
+		<text>Skvмlй. Poиkej tady, pщjdu pro to.</text>
+	</string>
+	<string id="val_rob_dialog_31">
+		<text>Иekбm.</text>
+	</string>
+	<string id="val_sos_dialog_11">
+		<text>Hej, dej mi lйkбrniиku!</text>
+	</string>
+	<string id="val_sos_dialog_111">
+		<text>Tady mбљ.</text>
+	</string>
+	<string id="val_sos_dialog_112">
+		<text>Sorry, nemбm lйkбrniиku.</text>
+	</string>
+	<string id="val_sos_dialog_21">
+		<text>Dнky, kбmo, fakt jsi mм dostal pryи. Jestli budu ћнt dost dlouho, abych tм jeљtм potkal, zkusнm se ti odvdмиit. Prбvм teп ti mщћu dбt jenom dobrej tip. Jiћnм ocaп je farma, kde si pбr pohodovejch stalkerщ udмlalo tбbor. Jeden z nich prodбvб gauss puљku fakt levnм, jenom za osm kil. Chtмl jsem si ji koupit a pak se mi stalo tohle, dostal jsem se po krk do sraиek... Takћe jestli mбљ prachy, jdi rovnou za nнm.</text>
+	</string>
+	<string id="val_sos_dialog_211">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4111">
+		<text>Visнm ti a jб svэ dluhy platнm. Pщjdeme.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41111">
+		<text>Skvмlэ. Teп nakopem prdel nмkomu jinэmu.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4112">
+		<text>Sorry, mбm jinэ plбny.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41121">
+		<text>No tak jo, v tom pшнpadм hodnм љtмstн.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_412">
+		<text>Sbohem.</text>
+	</string>
+</string_table>

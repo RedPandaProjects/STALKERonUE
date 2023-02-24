@@ -1,0 +1,144 @@
+	<string id="bar_arena_actor_afraid">
+		<text>Boj je zrušenı! Vyzyvatel dostal bobky a ani se k boji nedostavil!</text>
+	</string>
+	<string id="bar_arena_fight_10">
+		<text>10 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_20">
+		<text>20 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_30">
+		<text>30 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_40">
+		<text>40 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_50">
+		<text>50 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_60">
+		<text>1 minuta boje!</text>
+	</string>
+	<string id="bar_arena_fight_70">
+		<text>1 minuta a 10 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_80">
+		<text>1 minuta a 20 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_90">
+		<text>1 minuta a 30 sekund uplynulo!</text>
+	</string>
+	<string id="bar_arena_fight_begin">
+		<text>Boj zaèal!</text>
+	</string>
+	<string id="bar_arena_fight_bloodsucker">
+		<text>Pozor! Pozor! V Arénì brzy zaène novej boj! V levım rohu - nejhorší noèní mùra Zóny, poøád hladovı upír! A v pravım rohu... Èlovìk? Ano, je to èlovìk! Prosím potlesk pro Oznaèenıho!</text>
+	</string>
+	<string id="bar_arena_fight_burer">
+		<text>Pozor! Pozor! V Arénì brzy zaène novej boj! V levım rohu - sám kung-fu mistr ohıbající lièky, náš milovanı Obøík! A v pravım rohu - chlap, kterı je poøád na pozoru! Øíkají mu Oznaèenej!</text>
+	</string>
+	<string id="bar_arena_fight_dead">
+		<text>Take vyzıvatel byl zabit! To je ale pøekvapení!</text>
+	</string>
+	<string id="bar_arena_fight_lose">
+		<text>No, vyzıvatel zabil svého protivníka, ale nestaèil to v èasovım limitu. Boj prohrál!</text>
+	</string>
+	<string id="bar_arena_fight_pseudodog">
+		<text>Pozor! Pozor! V Arénì brzy zaène novej boj. V levım rohu - je to bílı, je to chlupatı a je to nasranı jako svinì! Pseudopes! A v pravım rohu - pøišel odnikud a tam taky míøí. Øíkají mu Oznaèenej!</text>
+	</string>
+	<string id="bar_arena_fight_savage">
+		<text>Pozor! Pozor! V Arénì brzy zaène novej boj. V levım rohu - znáte ho, milujete ho a on vás nenávidí! Je to Bestie! A v pravım rohu - ije a kope kolem sebe, aspoò prozatím - Oznaèenej!</text>
+	</string>
+	<string id="bar_arena_fight_snork">
+		<text>Pozor! Pozor! V Arénì brzy zaène novej boj! V levım rohu - guru bojovıch umìní a specialista na zdravou vıivu Snork! A v pravım rohu - mu bez minulosti a budoucnosti. Øíkají mu Oznaèenej!</text>
+	</string>
+	<string id="bar_arena_fight_timeout">
+		<text>Èas vypršel! Vyzıvatel prohrál, ale poøád bojuje o ivot!</text>
+	</string>
+	<string id="bar_arena_fight_victory">
+		<text>Ho! Vyzıvatel zabil protivníka vèas! Vyhrává!</text>
+	</string>
+	<string id="bar_ecolog_attack">
+		<text>Jak chceš.</text>
+	</string>
+	<string id="bar_ecolog_crush_attract_actor">
+		<text>Prosím, neodcházej, pøíteli! Pomoz nám! Anarchisti sestøelili náš vrtulník a teï nás chtìjí dorazit. Máme tady zranìné! Potøebujeme tvou pomoc!</text>
+	</string>
+	<string id="bar_ecolog_crush_heli_down">
+		<text>Ha! Tak co, vládní krysy, kde máte ty svı vrtulníky, co? Skonèili jste!</text>
+	</string>
+	<string id="bar_ecolog_crush_start_heli">
+		<text>Tentokrát jsi to opravdu pøehnal, Vlkodave. Vojenskı vrtulník je na cestì. Namele tì na masokostní mouèku!</text>
+	</string>
+	<string id="bar_ecolog_escape">
+		<text>Kruglov utekl! Najdi ho! Nemohl se dostat daleko.</text>
+	</string>
+	<string id="bar_ecolog_hit">
+		<text>Pomoz mi, Oznaèenej! Oni mì zabijou!!!</text>
+	</string>
+	<string id="bar_ecolog_spam_1">
+		<text>Jen sni dál, pse! Vra se do školy, jestli chceš dávat ultimáta.</text>
+	</string>
+	<string id="bar_ecolog_spam_2">
+		<text>Neútoète, nebo znièím data! Nic nedostanete!!</text>
+	</string>
+	<string id="bar_ecolog_spam_3">
+		<text>Jestli nechcete, abych vısledky znièil, tak se radši nepøibliujte!</text>
+	</string>
+	<string id="bar_ecolog_spam_4">
+		<text>Vezmi si své psy, Vlkodave, a vypadni odsud, dokud ještì mùeš chodit.</text>
+	</string>
+	<string id="bar_freedom_attack">
+		<text>Dost kecù. Bude se zabíjet!</text>
+	</string>
+	<string id="bar_freedom_attack_attract_actor">
+		<text>Hej, pocem, vole! Mùem ty vládní svinì dorazit spoleènì.</text>
+	</string>
+	<string id="bar_freedom_attack_spy">
+		<text>Ty hajzle! Za to zaplatíš! To ti nezapomenu, Oznaèenej.</text>
+	</string>
+	<string id="bar_freedom_chase">
+		<text>Sledují nás?! Oznaèenı, musíš je zastavit!</text>
+	</string>
+	<string id="bar_freedom_spam_1">
+		<text>Já myslel, e vìdátoøi maj bejt chytrı. Øeknu ti to fakt jednoduše: buï naval dokumenty, nebo vocaï pùjdeš v plastovım pytli.</text>
+	</string>
+	<string id="bar_freedom_spam_2">
+		<text>Moná neumím latinsky, Kruglove, ale nevìøil bys, jak dobøe zvládám násilí. Mám ti to pøedvíst, nebo mi dáš informace, kterı chci?</text>
+	</string>
+	<string id="bar_freedom_spam_3">
+		<text>Seš chytrej chlap, profesore. Dej mi ty informace a mùeš jít!</text>
+	</string>
+	<string id="bar_freedom_spam_4">
+		<text>Ty to prostì nechápeš, Kruglove, co? Sestøelili jsme ten tvùj debilní vrtulník a chceme informace, kterı máš u sebe. Dej nám je a mùeš i se svejma kámošma vypadnout. Máš poslední šanci. Naval ten flashdisk a vypadni!</text>
+	</string>
+	<string id="bar_psih_come">
+		<text>Pocem rychle! Chlapi chytili u Rudıho lesa šílenıho stalkera. Právì se z nìj snaíme vyrazit nìjakı informace!</text>
+	</string>
+	<string id="bar_territory_dolg_1_hit">
+		<text>Oznaèenej, zbláznil ses? Pøestaò hned støílet! To je rozkaz!</text>
+	</string>
+	<string id="bar_territory_dolg_2_hit">
+		<text>Pøestaò støílet, Oznaèenej! Udìlej, co øíkám, jinak seš mrtvej mu!</text>
+	</string>
+	<string id="bar_territory_dolg_3_hit">
+		<text>Za porušení øádu tì vyhazuju ze skupiny, Oznaèenej. Povinnost u nepatøí mezi tvı kamarády.</text>
+	</string>
+	<string id="bar_territory_dolg_kill">
+		<text>Oznaèenej, porušil jsi pøímı rozkaz. Povinnost takovı vìci neodpouští. Seš mrtvá flaksa.</text>
+	</string>
+	<string id="bar_territory_nodolg_1_hit">
+		<text>Pøestaò støílet! ádnı støílení na území Povinnosti! Kdo poruší pravidla, ten to schytá!</text>
+	</string>
+	<string id="bar_territory_nodolg_2_hit">
+		<text>Pozor! Oznaèenej je prohlášenı za zloèince, protoe porušil zákon a vystøelil na území Povinnosti.</text>
+	</string>
+	<string id="bar_territory_nodolg_kill">
+		<text>Pozor! Na území Povinnosti je vrah. Najdìte ho a zabijte!</text>
+	</string>
+	<string id="rostok_kruglov_spam_1">
+		<text>Ty, stalkere, pomoz nám! Zaútoèili na nás oldáci a pùlka našich u to schytala. Pomoz nám a já se postarám, abys toho nelitoval.</text>
+	</string>
+	<string id="rostok_kruglov_spam_2">
+		<text>Pomoz nám dostat se z pasti u továrny. Poslal jsem ti souøadnice. Jenom si dávej bacha, Vlkodav a jeho hrdloøezové jsou u vrtulníku.</text>
+	</string>

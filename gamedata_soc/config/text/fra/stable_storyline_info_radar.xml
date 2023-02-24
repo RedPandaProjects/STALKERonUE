@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>Un nombre me hante comme venu d'une autre vie. Je m'en souviens maintenant, c'est 342089. C'est le code d'une porte, mais je ne sais plus comment m'y rendre.</text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>PDA du Monolithe</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>Le scientifique mort avait une carte indiquant l'emplacement d'une porte. Code 1287975</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Porte codée</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Barman :"Ils sont tous devenus dingues ici quand ils ont fait cette découverte ! Tous ceux qui le pouvaient sont partis pour le centre de la Zone : les solitaires, les membres de la Liberté, les membres du Devoir et même les mercenaires. Le premier qui arrivera sur place décrochera le gros lot ! L'exauceur, la ruée vers les artefacts et que sais-je encore. Dépêche-toi, si l'exauceur est bien dans le sarcophage de la centrale, le premier qui arrivera sur place verra ses voeux exaucés. En ce moment, il y a un détachement de vétérans qui se rassemble devant Pripyat. Si tu dépêches, tu pourras les accompagner".</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>J'ai désactivé le lobotomisateur et au même moment, j'ai perdu connaissance. Ensuite, j'ai fait un rêve : j'ai vu l'immense centrale de Tchernobyl et le sarcophage. Et puis, un flash. Le Monolithe brille à l'intérieur du sarcophage. Je comprends que c'est la machine à exaucer les voeux. Un Stalker, épuisé et en guenilles, s'en approche péniblement... Et encore un flash, suivi d'un fragment du premier rêve... Un homme, dos à moi, n'arrête pas de tirer. Quelqu'un crie "Strelok !". L'homme tressaille, s'immobilise un moment et se retourne lentement... Mais les images reviennent en arrière, comme un film à l'envers, et je le vois utiliser son arme pour forcer les rats à retourner dans la centrale... J'ai vécu cette scène, j'en suis sûr. Je dois aller au Monolithe.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>Le lobotomisateur est fini</text>
+	</string>

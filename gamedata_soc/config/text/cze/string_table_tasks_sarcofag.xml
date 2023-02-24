@@ -1,0 +1,48 @@
+	<string id="sar_monolith">
+		<text>Plniè pøání</text>
+	</string>
+	<string id="sar_monolith_0">
+		<text>Dostaò se k monolitu</text>
+	</string>
+	<string id="sar_monolith_1">
+		<text>Proplaz se do sarkofágu</text>
+	</string>
+	<string id="sar_monolith_2">
+		<text>Najdi plniè pøání</text>
+	</string>
+	<string id="sar_monolith_destroy">
+		<text>Tajemství monolitu</text>
+	</string>
+	<string id="sar_monolith_destroy_0">
+		<text>Infiltruj tajnou laboratoø</text>
+	</string>
+	<string id="sar_monolith_destroy_1">
+		<text>Vyøeš tajemství monolitu</text>
+	</string>
+	<string id="sar_monolith_destroy_2">
+		<text>Zniè generátory energie Monolitu</text>
+	</string>
+	<string id="sar_perception">
+		<text>Tajemství Zóny</text>
+	</string>
+	<string id="sar_perception_1">
+		<text>Setkej se s tìmi, kdo stojí za Monolitem</text>
+	</string>
+	<string id="sar_perception_2">
+		<text>Najdi tajnou laboratoø a setkej se s "loutkaøi"</text>
+	</string>
+	<string id="sar_secret_lab">
+		<text>Tajná laboratoø</text>
+	</string>
+	<string id="sar_secret_lab_0">
+		<text>Vejdi do tajného bunkru</text>
+	</string>
+	<string id="sar_secret_lab_1">
+		<text>Najdi skryté dveøe</text>
+	</string>
+	<string id="sar_secret_lab_2">
+		<text>Otevøi je pomocí dekodéru</text>
+	</string>
+	<string id="sar_secret_lab_3">
+		<text>Zjisti, co je za dveømi</text>
+	</string>

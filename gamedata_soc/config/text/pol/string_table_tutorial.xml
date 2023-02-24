@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="binoc_tutorial">
+		<text>Їeby uїyж lornetki, wybierz j№ ($$ACTION_wpn_5$$) i przytrzymaj "strzaі", їeby przybliїyж obraz.</text>
+	</string>
+	<string id="binocular">
+		<text>Lornetka</text>
+	</string>
+	<string id="crouch">
+		<text>Przykucniкcie</text>
+	</string>
+	<string id="crouch_down_tutorial">
+		<text>Їeby przykucn№ж niїej, wciњnij ($$ACTION_crouch$$) + (Shift)</text>
+	</string>
+	<string id="crouch_tutorial">
+		<text>Їeby przykucn№ж, wciњnij ($$ACTION_crouch$$). Їeby przykucn№ж jeszcze niїej, wciњnij ($$ACTION_crouch$$) + ($$ACTION_accel$$)</text>
+	</string>
+	<string id="hide_weapon">
+		<text>Wybуr broni</text>
+	</string>
+	<string id="hide_weapon_tutorial">
+		<text>Niektуrzy stalkerzy nie bкd№ chcieli z tob№ rozmawiaж, jeњli bкdziesz wymachiwaі im broni№ przed twarz№. Їeby schowaж broс, wystarczy wybraж њrubк. ($$ACTION_wpn_6$$).</text>
+	</string>
+	<string id="jump">
+		<text>Skok</text>
+	</string>
+	<string id="jump_tutorial">
+		<text>Skok pomoїe ci siк wdrapaж na przeszkody њredniej wysokoњci. Їeby skoczyж, wciњnij ($$ACTION_jump$$)</text>
+	</string>
+	<string id="move_tutorial">
+		<text>Poruszanie siк.</text>
+	</string>
+	<string id="overload">
+		<text>Przeci№їenie</text>
+	</string>
+	<string id="overload_tutorial">
+		<text>Nie jesteњ muіem, wiкc nie kaїdy ciкїar uniesiesz. Gdy waga ekwipunku przekroczy twoje moїliwoњci, bardzo szybko zaczniesz traciж energiк. Moїesz sprawdzaж aktualn№ wagк swojego sprzкtu oraz ile maksymalnie moїesz unieњж.</text>
+	</string>
+	<string id="radiation">
+		<text>Promieniowanie</text>
+	</string>
+	<string id="radiation_tutorial">
+		<text>Kiedy dana postaж nosi radioaktywny artefakt przy pasie lub wchodzi na teren o wysokim stкїeniu promieniowania, zaczyna traciж zdrowie i okazywaж sygnaіy choroby popromiennej. Skutki promieniowania moїna zniwelowaж przy pomocy lekуw przeciwpromiennych i wуdki.</text>
+	</string>
+	<string id="relation">
+		<text>Przychylnoњж</text>
+	</string>
+	<string id="relation_tutorial">
+		<text>Pomagaj№c innym, zdobywasz sobie ich przychylnoњж oraz ogуln№ reputacjк. Wiкksza przychylnoњж i lepsza reputacja pomagaj№ ci w relacjach z ludџmi, ktуrych spotykasz. Jeњli cieszysz siк ich dobr№ opini№, chкtniej udziel№ ci dodatkowych informacji lub taniej sprzedadz№ ci swoje towary. Z kolei jeњli do kogoњ strzelasz, tracisz wszelk№ przychylnoњж tej osoby i jej przyjaciуі, ktуrzy zaczn№ ciк atakowaж.</text>
+	</string>
+	<string id="sleep_tutorial">
+		<text>To dobre miejsce, їeby uderzyж w kimono. Moїesz siк tu przespaж, przeczekaж noc lub po prostu zabiж trochк czasu. Їeby pуjњж spaж, otwуrz menu ekwipunku, zaznacz iloњж czasu, jaki siк chcesz zdrzemn№ж i wciњnij przycisk "odpoczynek". Twoja postaж obudzi siк w wyznaczonym czasie. Czasem moїe mieж sny.</text>
+	</string>
+	<string id="sprint">
+		<text>Przyњpieszanie</text>
+	</string>
+	<string id="sprint_tutorial">
+		<text>Czasem bкdzie trzeba biec szybciej niї zwykle. Їeby to zrobiж, wciњnij ($$ACTION_sprint_toggle$$) w trakcie biegu. Biegn№ca sprintem postaж porusza siк szybciej i skacze dalej niї zwykle, lecz szybciej siк mкczy i nie moїe strzelaж.</text>
+	</string>
+	<string id="starvation_tutorial">
+		<text>Jeњli postaж przez jakiњ czas nic nie je, robi siк gіodna. Jeњli nie znajdzie nic do jedzenia, zaczyna traciж zdrowie. Їeby temu zapobiec, postaж musi regularnie spoїywaж posiіki. Bochenek chleba, konserwa czy kawaіek kieіbasy rozwi№ї№ problem - przynajmniej na jakiњ czas.</text>
+	</string>
+	<string id="tutorial">
+		<text>Trening</text>
+	</string>
+	<string id="weakness">
+		<text>Zmкczenie</text>
+	</string>
+	<string id="weakness_tutorial">
+		<text>Bieg przez dіuїszy czas powoduje zmкczenie. Kiedy postaж jest wyczerpana, nie bкdzie w stanie dalej biec - zacznie iњж. Im wiкcej rzeczy dana postaж niesie, tym szybciej siк mкczy. Stanie w bezruchu przez kilka sekund wystarczy, їeby odzyskaж siіy.</text>
+	</string>
+	<string id="weapon">
+		<text>Stan broni</text>
+	</string>
+	<string id="weapon_tutorial">
+		<text>Kaїda broс ma okreњlon№ trwaіoњж. Im niїsza jej wartoњж, tym czкњciej broс siк zacina. Їeby j№ odblokowaж, naleїy j№ przeіadowaж, wciskaj№c $$ACTION_wpn_reload$$. Trwaіoњж zmniejsza siк wraz z uїytkowaniem. Jeњli broс zostanie trafiona kul№, moїe siк staж zupeіnie bezuїyteczna.</text>
+	</string>
+	<string id="wound">
+		<text>Otwarte rany</text>
+	</string>
+	<string id="wound_tutorial">
+		<text>Kiedy postaж zostanie trafiona, moїe zacz№ж krwawiж. Krwawienie sprawia, їe nieustannie traci siк zdrowie. Im powaїniejsze (zielona ikona oznacza sіabe krwawienie, czerwona oznacza powaїny krwotok), tym szybsza utrata zdrowia. Z czasem krwawienie samo ustaje, lecz nawet powaїny krwotok moїna natychmiast zatamowaж przy pomocy bandaїy.</text>
+	</string>
+	<string id="pda_diary_tutorial">
+		<text>W PDA martwego stalkera znalazіeњ jego spostrzeїenia dotycz№ce anomalii w tunelach. Wygl№da na to, їe odkryі w nich pewn№ regularnoњж. Moїesz o tym przeczytaж w swym PDA, w "dzienniku".</text>
+	</string>
+</string_table>

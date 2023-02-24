@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="svoboda_outfit_name_m1">
+		<text>Kombez Libertй M2</text>
+	</string>
+	<string id="team_1_desc">
+		<text>Anarchistes de la Zone. Ils considиrent la Zone comme un havre de libertй et estiment qu'aucune des lois et traditions du monde extйrieur ne s'y applique. Leur devise est "Faites ce qui vous plaоt et laissez les autres en faire autant". Ils essaient d'empкcher le gouvernement de prendre le contrфle de la Zone et combattent les Mercenaires. Les combattants de la libertй utilisent essentiellement des armes soviйtiques et russes.</text>
+	</string>
+	<string id="team_1_name">
+		<text>La faction de la Libertй (Stalkers libres)</text>
+	</string>
+	<string id="team_2_desc">
+		<text>Marginaux et criminels du monde entier. Leur devise est "Pecunia non olet" (l'argent n'a pas d'odeur). La prйsence ici d'artefacts est pour eux synonyme d'argent. Les Mercenaires utilisent principalement des armes occidentales.</text>
+	</string>
+	<string id="team_2_name">
+		<text>La faction des Mercenaires (Chasseurs de tкtes)</text>
+	</string>
+</string_table>

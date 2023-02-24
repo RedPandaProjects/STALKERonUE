@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="binoc_tutorial">
+		<text>Pour utiliser les jumelles, sйlectionnez-les ($$ACTION_wpn_5$$) et appuyez sur "Tirer" pour effectuer un zoom avant.</text>
+	</string>
+	<string id="binocular">
+		<text>Jumelles</text>
+	</string>
+	<string id="crouch">
+		<text>Position accroupie</text>
+	</string>
+	<string id="crouch_down_tutorial">
+		<text>Pour vous accroupir plus bas, appuyez sur ($$ACTION_crouch$$) + (Maj.)</text>
+	</string>
+	<string id="crouch_tutorial">
+		<text>Pour vous accroupir, appuyez sur ($$ACTION_crouch$$). Pour vous accroupir plus bas, appuyez sur ($$ACTION_crouch$$) + ($$ACTION_accel$$)</text>
+	</string>
+	<string id="hide_weapon">
+		<text>Sйlection d'arme</text>
+	</string>
+	<string id="hide_weapon_tutorial">
+		<text>Certains Stalkers refuseront de vous parler s'ils voient votre arme. Pour la ranger, il vous suffit de sйlectionner un boulon. ($$ACTION_wpn_6$$).</text>
+	</string>
+	<string id="jump">
+		<text>Saut</text>
+	</string>
+	<string id="jump_tutorial">
+		<text>Les sauts vous permettent de grimper sur les petites barriиres. Pour sauter, appuyez sur ($$ACTION_jump$$)</text>
+	</string>
+	<string id="move_tutorial">
+		<text>Types de mouvements.</text>
+	</string>
+	<string id="overload">
+		<text>Surcharge</text>
+	</string>
+	<string id="overload_tutorial">
+		<text>Vous n'кtes pas un mulet et ne pouvez donc transporter qu'un certain poids. Lorsque votre attirail devient trop lourd, vous perdez rapidement de l'йnergie. Pour contrфler le poids de votre йquipement et le poids maximum que vous pouvez transporter, utilisez votre inventaire.</text>
+	</string>
+	<string id="radiation">
+		<text>Radiations</text>
+	</string>
+	<string id="radiation_tutorial">
+		<text>Lorsque le personnage porte un artefact radioactif а la ceinture ou entre dans un secteur oщ le niveau de radiations est trиs йlevй, sa santй se dйgrade et il commence а montrer des signes d'irradiation. Les effets des radiations peuvent кtre combattus par l'absorption de mйdicaments antiradiations et de vodka.</text>
+	</string>
+	<string id="relation">
+		<text>Attitude</text>
+	</string>
+	<string id="relation_tutorial">
+		<text>Lorsque vous aidez d'autres personnages, leur attitude envers vous et votre rйputation globale s'amйliorent, ce qui vous aide lors de vos rencontres. Lorsqu'ils vous apprйcient, les personnages sont plus enclins а vous transmettre des informations et vous vendent leurs articles moins cher. En revanche, si vous ouvrez le feu sur quelqu'un, son attitude envers vous deviendra rapidement nйgative, tout comme celle de ses amis, et ils vous attaqueront.</text>
+	</string>
+	<string id="sleep_tutorial">
+		<text>C'est un endroit parfait pour se coucher, passer une bonne nuit de sommeil, attendre le lever du jour ou simplement passer le temps. Pour dormir, ouvrez l'inventaire, dйfinissez votre temps de sommeil et appuyez sur le bouton Repos. Votre personnage se rйveillera а l'heure indiquйe. Parfois mкme, il rкvera.</text>
+	</string>
+	<string id="sprint">
+		<text>Accйlйration</text>
+	</string>
+	<string id="sprint_tutorial">
+		<text>Vous aurez parfois besoin de courir plus vite que la normale. Pour ce faire, appuyez sur ($$ACTION_sprint_toggle$$) pendant que vous courez. Un personnage qui accйlиre court plus vite et saute plus loin, mais se fatigue plus rapidement et ne peut pas tirer.</text>
+	</string>
+	<string id="starvation_tutorial">
+		<text>Votre personnage doit manger rйguliиrement, car s'il a faim, sa santй se dйgrade. Du pain, une boоte de conserve ou une saucisse feront facilement l'affaire, du moins pour un temps.</text>
+	</string>
+	<string id="tutorial">
+		<text>Entraоnement</text>
+	</string>
+	<string id="weakness">
+		<text>Fatigue</text>
+	</string>
+	<string id="weakness_tutorial">
+		<text>Lorsqu'un personnage court trop longtemps, il se fatigue. Et lorsqu'il est йpuisй, il ne peut se dйplacer qu'en marchant. En outre, plus il est chargй, plus il se fatigue vite. Pour rйcupйrer, il lui suffit de s'immobiliser quelques secondes.</text>
+	</string>
+	<string id="weapon">
+		<text>Йtat de l'arme</text>
+	</string>
+	<string id="weapon_tutorial">
+		<text>Toutes les armes disposent d'un paramиtre de rйsistance. Plus cette rйsistance est faible, plus l'arme s'enraye vite. Pour remettre une arme en йtat, rechargez-la en appuyant sur $$ACTION_wpn_reload$$. La rйsistance d'une arme baisse avec l'utilisation. Elle devient totalement inutilisable lorsqu'elle est touchйe par des balles.</text>
+	</string>
+	<string id="wound">
+		<text>Blessures ouvertes</text>
+	</string>
+	<string id="wound_tutorial">
+		<text>Un personnage touchй peut se mettre а saigner. Et lorsqu'il saigne, sa santй se dйgrade progressivement. Plus il saigne (icфne verte pour de faibles saignements et icфne rouge pour les hйmorragies), plus sa santй se dйgrade rapidement. Au bout d'un certain temps, les saignements finissent par s'arrкter. Les hйmorragies, mкme les plus graves, peuvent кtre immйdiatement stoppйes grвce а des bandages.</text>
+	</string>
+	<string id="pda_diary_tutorial">
+		<text>Dans le PDA du Stalker mort, vous avez trouvй ses observations sur les anomalies dans les tunnels. On dirait qu'il a dйcouvert la frйquence de leur activitй. Vous pouvez lire ces informations dans votre PDA dans la section "journal".</text>
+	</string>
+</string_table>

@@ -1,0 +1,48 @@
+	<string id="descr_yan_find_ghost_task">
+		<text>Vasiliev: "... Estas son las coordenadas de la entrada del laboratorio X16. El acceso se encuentra en el sótano del edificio central; el propósito del edificio se desconoce. Creo que se utiliza para el servicio técnico de los emisores subterráneos: según los documentos de N***, el objetivo de este proyecto es el desarrollo a gran escala de armas psicotrónicas de largo alcance...\n\n ... Tenemos en nuestro poder todos los documentos necesarios, y sabemos cómo desactivar el emisor. Procedemos a entrar en el laboratorio con Ghost. Hay zombis por todas partes...\n\n ... Todo está saliendo mal; Ghost se ha vuelto completamente loco y está delirando. Parece que ha sucumbido a la emisión. He abandonado todo y estoy regresando por los túneles...\n\n ... Estoy en los pantanos; ¿dónde está el búnker? ¡¡¡Maldita sea!!! ¡No puedo precisar mi localización! ¡¡¡El cobarde de Sakharov no contesta!!! ¿¿¿Qué está pasando??? ... Hay zombis por todas partes y me estoy quedando sin munición..."</text>
+	</string>
+	<string id="descr_yan_find_lab">
+		<text>Sakharov: "Lo único que tienes que hacer es encontrar el cuerpo de Vasiliev y obtener la información precisa sobre la ubicación del laboratorio. Luego, entra en el laboratorio y encuentra a Ghost. Ghost sabía cómo desactivar la emisión y cómo salir de allí después."</text>
+	</string>
+	<string id="descr_yan_find_scientist">
+		<text>Sakharov: "Si acompañas a nuestro socio y tomas las mediciones necesarias, te daré un prototipo calibrado que te permitirá acceder al laboratorio."</text>
+	</string>
+	<string id="descr_yan_find_scientist_semenov">
+		<text>Sakharov: "Si acompañas a nuestro socio y tomas las mediciones necesarias, te daré un prototipo calibrado que te permitirá acceder al laboratorio."</text>
+	</string>
+	<string id="descr_yan_kill_brain">
+		<text>Sakharov: "Buen trabajo, Marcado; por fin has conseguido llegar al laboratorio. Es muy importante que estudiemos el mecanismo que hay ahí. Trata de desactivarlo para que podamos investigarlo.\n\n ... Escucha, el prototipo no podrá protegerte de las radiaciones más fuertes. Ya había pensado en ello, así que hay un temporizador en el blindaje que se pondrá en marcha cuando estés sometido a una exposición fuerte. Cuando el tiempo se acabe, el prototipo ya no te protegerá. Ten mucho cuidado y no te olvides del temporizador."</text>
+	</string>
+	<string id="descr_yan_kill_brain_2">
+		<text>El dispositivo está desactivado. Sólo tienes que preocuparte de salir de ahí vivo.</text>
+	</string>
+	<string id="descr_yan_provodnik_task">
+		<text>Ghost: "Entrada #257\n >>Guía, uno de mis hombres va hacia allí; tenemos información importante para Doc; ayúdale a salir." \n\n >>Guía: "Perfecto. Pero Ghost, que no se repita lo de la última vez. Serás tú quien haga el viaje; llevo tiempo queriendo hablar contigo. Te esperaré en el sitio habitual, en el campamento junto al puente. No te pierdas y procura que no te cojan las patrullas del ejército."</text>
+	</string>
+	<string id="descr_yan_scientist_return_task">
+		<text>Sakharov: "¿¿¿Qué ha pasado??? ¿¿¿Está muerto??? ¡¡¡Haz las mediciones y vuelve inmediatamente!!!"</text>
+	</string>
+	<string id="journal_after_find_ghost">
+		<text>¡No entiendo nada! Ghost es el de la foto del archivo adjunto a la misión que ordena matar a Strelok. Estoy totalmente confundido. Aquí hay un error. ¿Pero quién lo ha cometido? Aún no hay respuesta. Por los registros de Ghost, me he enterado del nombre del "amigo común", el cuarto hombre del grupo de Strelok: Doc. Lleva mucho tiempo ayudando al grupo haciendo las veces de "cuartel general." Se le puede encontrar a través de un stalker llamado Guía que frecuenta el Cordón. De acuerdo, Guía, no te mueras hasta que... nos conozcamos. En el cadáver de Ghost también encontré documentos relacionados con el mecanismo del "Psico-cerebro". Toda la gente de los alrededores estaba bajo la influencia de esa cosa; convertía en zombi a cualquiera que entrara dentro de su radio de acción. Me he enterado de que hay otro mecanismo en el laboratorio X18, y puede que sea el Cauterizador cerebral. También me he enterado de que estos mecanismos no siempre funcionan al máximo rendimiento. Hay periodos en los que se reduce la potencia para refrigerar el aparato.</text>
+	</string>
+	<string id="journal_after_find_ghost_name">
+		<text>Un rompecabezas más</text>
+	</string>
+	<string id="journal_after_kill_brain">
+		<text>Tras desactivar aquel "cerebro de laboratorio" tan horrible, caí inconsciente. La presión de los últimos días me había pasado factura. Mientras estaba inconsciente, tuve un sueño... Una fotografía. Un hombre con el pelo gris la tiene en la mano y hay un perro enorme a sus pies. El hombre mira al infinito, y a su alrededor se ve un pantano. El paisaje no se parece en nada a lo que hay en la foto. En la niebla puedo ver la silueta de alguien andando. El hombre está hablando solo: "Si es tan importante, ¿por qué no me dijiste qué es este lugar y dónde conseguiste la foto?" Entonces... al lado veo a un joven sonriente, en el umbral de la cabaña, que dice alegremente: "¡Si supieras dónde he estado y lo que he visto!" Extiende el brazo mostrando un portentoso dispositivo que ilumina toda la cabaña. El perro empieza a gruñir y se acurruca en un rincón. El hombre de pelo gris murmura: "Algún día, estos juegos te meterán en un gran lío". ...Un relámpago... Aparece el mismo joven con la cara cubierta de sangre, entra dando tumbos en la cabaña y se cae... Relámpagos, llueve con fuerza... Otro relámpago... Aparece la cama de la cabaña con el joven cubierto de vendas. Está inconsciente. El hombre de pelo gris murmura: "Aguanta, hijo". Hay objetos personales en un rincón y, entre ellos, una foto extraña... Otro relámpago... La foto está en las manos del hombre de pelo gris. El joven, ahora con la cara llena de cicatrices, se dispone a marcharse. El hombre de pelo gris le pregunta: "¿A dónde vas?" Responde apesadumbrado: "Al Norte..." Otro relámpago... Y entonces me desperté.</text>
+	</string>
+	<string id="journal_after_kill_brain_name">
+		<text>El segundo sueño</text>
+	</string>
+	<string id="journal_before_vasilyev_pda">
+		<text>Aquí estoy, a tan solo un paso de uno de los hombres de Strelok. Ghost se fue al laboratorio subterráneo X16 con uno de los científicos. Solo hay un "pero": no creo que lo encuentre con vida. Mataron al científico cuando regresaba solo, muy cerca del campamento. Los científicos me han dado una especie de dispositivo para defenderme de esas emisiones. Espero que funcione. Quieren que me meta dentro y desactive el emisor; así podrán investigarlo in situ. Que Dios me ayude.</text>
+	</string>
+	<string id="journal_before_vasilyev_pda_name">
+		<text>A un paso de Ghost</text>
+	</string>
+	<string id="storyline_ghost_info">
+		<text>Entrada #257\n >>Guía, te mando a alguien para que se reúna contigo. Tenemos información importante para Doc que le será de gran ayuda.\n >>> Bien. Pero, Ghost, que no se repita lo de la última vez. Vente para acá, me gustaría hablar contigo un poco. Te esperaré donde siempre, en el campamento cerca del puente. No te pierdas y que no te pillen las patrullas del ejército."\n\n Entrada #384\n ...En el último momento, Vasiliev se achantó y, en vez de desenchufar la consola inferior, salió corriendo cuando se abrió la puerta. No debí confiar en él. Strelok tenía razón cuando decía que no debía confiar en estos perros embusteros. Mi única esperanza es llegar a la puerta antes que el controlador...</text>
+	</string>
+	<string id="storyline_vasilyev_info">
+		<text>… Estas son las coordenadas de la entrada del laboratorio X16. La entrada está situada en el sótano del edificio central. El propósito del edificio se desconoce. Supongo que se utiliza para prestar servicio técnico a los emisores subterráneos: según la documentación de N***, el objetivo de este proyecto es el desarrollo a gran escala de armas psicotrónicas de largo alcance…\n\n … Tenemos todos los documentos necesarios y sabemos cómo desactivar el emisor. Vamos a entrar en el laboratorio con Ghost. Salen zombis de todos sitios…\n\n … Todo se está yendo al garete. Ghost se ha vuelto completamente loco y está delirando. Parece que ha sucumbido a la emisión. He abandonado todo y he empezado a retroceder por los túneles…\n\n … Estoy en los pantanos, ¿dónde está el búnker? ¡¡Mierda, mierda y mierda!! ¡No puedo identificar mi ubicación! ¡¡¡Ese cobarde de Sakharov no responde!!! ¿¿Qué está pasando?? … Hay zombis por todas partes y me estoy quedando sin munición...</text>
+	</string>

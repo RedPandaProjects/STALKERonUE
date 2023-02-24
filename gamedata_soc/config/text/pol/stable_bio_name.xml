@@ -1,0 +1,921 @@
+	<string id="aes_Monolit_master_bio">
+		<text>Stra¿nik z frakcji Monolit. Lepiej trzymaæ siê z dala. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="aes_Monolit_rpg_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="aes_Monolit_sniper_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="aes_Monolit_sniper_gauss_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="aes_Monolit_specnaz_bio">
+		<text>Bojownik z frakcji Monolit. Dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="aes_Soldier_commander_bio">
+		<text>Dowódca wypadu.</text>
+	</string>
+	<string id="aes_Soldier_military_bio">
+		<text>Wojskowy stalker. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="aes_Soldier_sniper_bio">
+		<text>Brak szczegó³owych danych. </text>
+	</string>
+	<string id="aes_Soldier_specnaz_aes_bio">
+		<text>Specnaz. Dobrze wyposa¿ony. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="aes_Soldier_specnaz_aes_name">
+		<text>Wasyl Nieszczêsny</text>
+	</string>
+	<string id="aes_Soldier_specnaz_bio">
+		<text>Specnaz. Dobrze wyposa¿ony. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="agr_krot_bio">
+		<text>By³y kopacz. Wraz ze swymi kompanami pl¹druje wszystkie opuszczone laboratoria i bunkry, na jakie siê natknie. </text>
+	</string>
+	<string id="agr_krot_name">
+		<text>Kret</text>
+	</string>
+	<string id="bar_arena_stalker">
+		<text>Jeden z uczestników œmiertelnie niebezpiecznych walk na Arenie. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="bar_arny_bio">
+		<text>Doœwiadczony przemytnik. S³awê zyska³ dziêki przeszmuglowaniu w krótkim czasie kilkuset wypchanych mutantów z obszaru zastrze¿onego. </text>
+	</string>
+	<string id="bar_arny_name">
+		<text>Arni</text>
+	</string>
+	<string id="bar_bar_guard_bio">
+		<text>Bramkarz w barze - albo raczej ochroniarz barmana. Nie ma ¿adnych danych ani o jego przesz³oœci, ani o ¿yciu obecnym.</text>
+	</string>
+	<string id="bar_bar_guard_name">
+		<text>Garik</text>
+	</string>
+	<string id="bar_bar_guard2_bio">
+		<text>BliŸniak Garika. Bramkarz w barze. Równie powœci¹gliwy jak brat.</text>
+	</string>
+	<string id="bar_bar_guard2_name">
+		<text>¯orik</text>
+	</string>
+	<string id="bar_barmen_bio">
+		<text>Ani œwiêty, ani œwinia. Barman zna sw¹ wartoœæ i wszyscy stalkerzy go szanuj¹. Mówi siê, ¿e ukrywa siê w Zonie z powodu jakichœ mrocznych wydarzeñ z przesz³oœci. Po bliskim spotkaniu z anomali¹ zacz¹³ lekko utykaæ, wiêc postanowi³ zaj¹æ siê czym innym. Otworzy³ bar niedaleko terytorium "Powinnoœci" i stopniowo lokal ten przekszta³ci³ siê w miejsce spotkañ wszystkich weteranów Zony. Barman ma rozliczne kontakty zarówno w samej Zonie, jak i w œwiecie zewnêtrznym. </text>
+	</string>
+	<string id="bar_barmen_name">
+		<text>Barman</text>
+	</string>
+	<string id="bar_beast_name">
+		<text>Zwierz</text>
+	</string>
+	<string id="bar_drunk_bio">
+		<text>Cz³onek frakcji "Powinnoœæ" - zazwyczaj na bani. Grupa da³a mu ostatni¹ szansê na zmazanie win poprzez wype³nienie misji. Niestety, znów by³ koszmarnie pijany i nie móg³ siê pozbieraæ, ¿eby wykonaæ zadanie.</text>
+	</string>
+	<string id="bar_drunk_name">
+		<text>Brom</text>
+	</string>
+	<string id="bar_hunter_bio">
+		<text>Dobroduszny, pogodny jegomoœæ, którego jedynym problemem jest to, ¿e nie potrafi strzelaæ z niczego poza karabinem myœliwskim. Ostatnimi czasy ³owca przesta³ nawet próbowaæ innej broni. Niedawno wpakowa³ siê w tarapaty w Dziczy i utraci³ swój karabin rodowy. Teraz przesiaduje w barze z nadziej¹, ¿e ktoœ mu zwróci broñ. </text>
+	</string>
+	<string id="bar_hunter_name">
+		<text>£owca</text>
+	</string>
+	<string id="bar_informer_bio">
+		<text>Zagadkowy, wszystkowiedz¹cy stalker. Handluje informacjami w barze. </text>
+	</string>
+	<string id="bar_informer_name">
+		<text>Kabel</text>
+	</string>
+	<string id="bar_ivancov_bio">
+		<text>Dowódca wszelkich wypadów odwetowych oraz ekspedycji przeciwko hordom mutantów. </text>
+	</string>
+	<string id="bar_ivancov_name">
+		<text>Kapitan Iwancow</text>
+	</string>
+	<string id="bar_kicenko_name">
+		<text>Sier¿. Kicenko</text>
+	</string>
+	<string id="bar_lelik_bio">
+		<text>Ochroniarz w³aœciciela Areny. O jego przesz³oœci wiadomo niewiele - a to, co wiadomo, budzi zgrozê. Nienawidzi swych braci. </text>
+	</string>
+	<string id="bar_lelik_name">
+		<text>Lolik</text>
+	</string>
+	<string id="bar_lisiy_name">
+		<text>£ysol</text>
+	</string>
+	<string id="bar_petrenko_bio">
+		<text>Jeden z za³o¿ycieli frakcji "Powinnoœæ" i równoczeœnie ich czo³owy demagog. Odpowiada za œwiêty kodeks frakcji - na dobr¹ sprawê to on zwerbowa³ wszystkich kluczowych cz³onków. </text>
+	</string>
+	<string id="bar_petrenko_name">
+		<text>Pu³kownik Pietrienko</text>
+	</string>
+	<string id="bar_plichko_bio">
+		<text>Szef ochrony terytorium frakcji "Powinnoœæ"</text>
+	</string>
+	<string id="bar_plichko_name">
+		<text>Sier¿. Pliczko</text>
+	</string>
+	<string id="bar_ryaboy_bio">
+		<text>Nieznajomy dotkniêty dzia³aniem Mózgozwêglacza. </text>
+	</string>
+	<string id="bar_ryaboy_name">
+		<text>Krosta</text>
+	</string>
+	<string id="bar_voronin_bio">
+		<text>Jeden z za³o¿ycieli frakcji "Powinnoœæ" i ich czo³owy demagog. Odpowiada za œwiêty kodeks frakcji. Zwerbowa³ prawie wszystkich kluczowych cz³onków. </text>
+	</string>
+	<string id="bar_voronin_name">
+		<text>Genera³ Woronin</text>
+	</string>
+	<string id="cit_bandit_drunk_bio">
+		<text>Seta</text>
+	</string>
+	<string id="cit_bandit_general_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_bandit_veteran_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_bandits_leader_bio">
+		<text>Jeden z przywódców bandytów. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_bandits_leader_name">
+		<text>Borzyj</text>
+	</string>
+	<string id="cit_doctor_bio">
+		<text>Doktor.</text>
+	</string>
+	<string id="cit_doctor_name">
+		<text>Doktor</text>
+	</string>
+	<string id="cit_killer_exo_bio">
+		<text>Nieznany najemnik. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_killer_general_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_killers_leader_bio">
+		<text>Przywódca bandy najemników. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_killers_leader_name">
+		<text>Duszman</text>
+	</string>
+	<string id="cit_vp_bio">
+		<text>Doœwiadczony stalker. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="cit_vp_name">
+		<text>Wasilij Pietrowicz</text>
+	</string>
+	<string id="dar_corpse_bio">
+		<text>Brak informacji. </text>
+	</string>
+	<string id="dar_explorer_bio">
+		<text>Doœwiadczony stalker. Zawsze ma oczy szeroko otwarte. </text>
+	</string>
+	<string id="dar_explorer_name">
+		<text>¯eka Dublet</text>
+	</string>
+	<string id="dar_kalugin_name">
+		<text>P.I. Ka³ugin</text>
+	</string>
+	<string id="ds_sergant_regular_bio">
+		<text>Sier¿ant w armii ukraiñskiej. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="ds_soldier_regular_bio">
+		<text>Szeregowy w armii ukraiñskiej. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_bandit_novice_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_captain_bio">
+		<text>Kapitan armii ukraiñskiej z d³ugim sta¿em. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_fanat_bio">
+		<text>Przej¹³ po Wilku dowództwo w obozie dla kotów. Bardzo stanowczy i agresywny - u ¿ó³todziobów cieszy siê zas³u¿onym autorytetem.</text>
+	</string>
+	<string id="esc_fanat_name">
+		<text>Fanatyk</text>
+	</string>
+	<string id="esc_fox_bio">
+		<text>Stary "Samotnik" zahartowany przez Zonê.</text>
+	</string>
+	<string id="esc_fox_name">
+		<text>Lis</text>
+	</string>
+	<string id="esc_killer_specnaz_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_petruha_bio">
+		<text>Cwany ¿ó³todziób. Wilk najwyraŸniej go lubi i czêsto posy³a na wa¿ne misje.</text>
+	</string>
+	<string id="esc_petruha_name">
+		<text>Pietrucha</text>
+	</string>
+	<string id="esc_provodnik_bio">
+		<text>¯ywa legenda. Ponoæ jest w stanie zabraæ ciê w dowolne miejsce w Zonie. Za jego us³ugi trzeba jednak s³ono zap³aciæ, wiêc nie ka¿dy mo¿e sobie pozwoliæ. Jeœli mu siê nie spodobasz, to ju¿ ¿adne pieni¹dze nie pomog¹. Prawdziwy weteran - przemierzy³ Zonê wzd³u¿ i wszerz. </text>
+	</string>
+	<string id="esc_provodnik_name">
+		<text>Przewodnik</text>
+	</string>
+	<string id="esc_sergant_regular_bio">
+		<text>Sier¿ant w armii ukraiñskiej. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_shustryi_bio">
+		<text>Stalker ten zawdziêcza swój przydomek temu, ¿e jest praktycznie niewidzialny i autentycznie niezbêdny. Handlarz powierza mu delikatne zlecenia, np. wêszenie w jakiejœ sprawie, szpiegowanie, lub pods³uchiwanie. </text>
+	</string>
+	<string id="esc_shustryi_name">
+		<text>¯wawy</text>
+	</string>
+	<string id="esc_soldier_commander_bio">
+		<text>Major dowodz¹cy placówk¹ przy moœcie. Znany jest z tego, ¿e za nale¿yt¹ op³at¹ pozwala stalkerom przejœæ na drug¹ stronê. </text>
+	</string>
+	<string id="esc_soldier_commander_name">
+		<text>Major Kuzniecow</text>
+	</string>
+	<string id="esc_soldier_regular_bio">
+		<text>Szeregowy w armii ukraiñskiej. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_specnaz_bio">
+		<text>Specnaz. Dobrze wyposa¿ony. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="esc_specnaz_killer_bio">
+		<text>Nieznany najemnik. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_stalker_novice_bio">
+		<text>Kot. Nowy w Zonie. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="esc_tolik_bio">
+		<text>Zwyk³y stalker.</text>
+	</string>
+	<string id="esc_tolik_name">
+		<text>Tolik</text>
+	</string>
+	<string id="esc_wolf_bio">
+		<text>Zarz¹dza obozem dla kotów. Stary stalker, który planuje daæ nogê. </text>
+	</string>
+	<string id="esc_wolf_name">
+		<text>Wilk</text>
+	</string>
+	<string id="escape_trader_bio">
+		<text>Od dziecka utrzymuje siê z handlu. W przedszkolu sprzedawa³ kolegom kredki. W liceum przerzuci³ siê na gumê do ¿ucia. W Instytucie Badawczym rozprowadza³ miêkkie narkotyki. Gdy tylko pojawi³a siê Zona, w mig zda³ sobie sprawê z mo¿liwoœci dochodu, jakie oferuje. Znany jest z tego, ¿e buduje trwa³e relacje handlowe z wszelkiej maœci klientel¹. </text>
+	</string>
+	<string id="escape_trader_name">
+		<text>Sidorowicz</text>
+	</string>
+	<string id="gar_bandit_leader_bio">
+		<text>Wœród bandytów w Zonie cieszy siê pewnym autorytetem. Pomagier Dzika.</text>
+	</string>
+	<string id="gar_bandit_leader_name">
+		<text>Wasia Dzik</text>
+	</string>
+	<string id="gar_dolg_blokpost_bio">
+		<text>Stalker z frakcji "Powinnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="gar_dolg_blokpost_leader_bio">
+		<text>Oficer z frakcji "Powinnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="gar_dolg_blokpost_leader_name">
+		<text>Chor¹¿y</text>
+	</string>
+	<string id="gar_dram_novice_bio">
+		<text>Kot. Dopiero stawia pierwsze kroki w Zonie.</text>
+	</string>
+	<string id="gar_dram_novice_name">
+		<text>Jurik</text>
+	</string>
+	<string id="gar_hellcar_bio">
+		<text>W Zonie ukrywa siê przed prawem. Na w³asn¹ rêkê i na w³asnych warunkach stara siê utrzymaæ porz¹dek w Zonie. Walczy z bandytami. Okrutny, lecz sprawiedliwy.</text>
+	</string>
+	<string id="gar_hellcar_name">
+		<text>Bies</text>
+	</string>
+	<string id="gar_newbie_bio">
+		<text>Kot. Nowy w Zonie. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="gar_seryi_bio">
+		<text>Stalker z twarz¹ równie czyst¹ jak sumieniem. </text>
+	</string>
+	<string id="gar_seryi_name">
+		<text>Sieryj</text>
+	</string>
+	<string id="gar_stalker_regular_bio">
+		<text>Doœwiadczony stalker. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="mil_Dolg_specnaz_bio">
+		<text>Bojownik z frakcji "Powinnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Dolg_specnaz_cherep_bio">
+		<text>Dowódca si³ specjalnych frakcji "Powinnoœæ". Zazwyczaj dobrze wyposa¿ony.</text>
+	</string>
+	<string id="mil_Dolg_specnaz_cherep_name">
+		<text>Czacha</text>
+	</string>
+	<string id="mil_Dolg_specnaz_silence_bio">
+		<text>Bojownik z frakcji "Powinnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Killer_informator_bio">
+		<text>Kapuœ znany doskonale w ca³ej Zonie.</text>
+	</string>
+	<string id="mil_Killer_informator_name">
+		<text>Ara</text>
+	</string>
+	<string id="mil_killer_master_bio">
+		<text>Nieznany najemnik. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_killer_sniper_bio">
+		<text>Nieznany najemnik. Wydaje siê byæ nowy w Zonie. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Killer_specnaz_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Monolit_master_bio">
+		<text>Stra¿nik z frakcji Monolit. Lepiej trzymaæ siê z dala. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Monolit_regular_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Stalker_master_bio">
+		<text>Jeden z weteranów. Zna Zonê jak w³asn¹ kieszeñ. Zazwyczaj dobrze wyposa¿ony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Stalker_veteran_bio">
+		<text>Stalker weteran. Prawdopodobnie dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_blockpost_leader_bio">
+		<text>Stalker z frakcji "Wolnoœæ". Dowódca Bariery. Cz³owiek, który zebra³ grupê osób chêtnych poœwiêciæ w³asne ¿ycie w imiê wspólnej sprawy. </text>
+	</string>
+	<string id="mil_Svoboda_blockpost_leader_name">
+		<text>Czapa</text>
+	</string>
+	<string id="mil_Svoboda_bodyguard_bio">
+		<text>Ochroniarz pracuj¹cy dla £ukasza, przywódcy frakcji "Wolnoœæ".</text>
+	</string>
+	<string id="mil_Svoboda_cook_bio">
+		<text>Kucharz frakcji "Wolnoœæ". Moczymorda i zabijaka - ale gotuje wyœmienicie. </text>
+	</string>
+	<string id="mil_Svoboda_cook_name">
+		<text>Kuchmistrz</text>
+	</string>
+	<string id="mil_Svoboda_engineer_bio">
+		<text>Mechanik znany w ca³ej Zonie. Z traktora potrafi zrobiæ czo³g, a przynajmniej tak wieœæ niesie. </text>
+	</string>
+	<string id="mil_Svoboda_engineer_name">
+		<text>Œruba</text>
+	</string>
+	<string id="mil_Svoboda_leader_bio">
+		<text>Przywódca frakcji "Wolnoœæ".</text>
+	</string>
+	<string id="mil_Svoboda_leader_name">
+		<text>£ukasz</text>
+	</string>
+	<string id="mil_Svoboda_master_bio">
+		<text>Dowódca frakcji "Wolnoœæ". Brak szczegó³owych danych.</text>
+	</string>
+	<string id="mil_Svoboda_master_Max_bio">
+		<text>Stra¿nik z frakcji "Wolnoœæ". Fanatyk. Œwietnie wyposa¿ony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_master_Max_name">
+		<text>Maks</text>
+	</string>
+	<string id="mil_Svoboda_master_Ugrumiy_bio">
+		<text>Stra¿nik z frakcji "Wolnoœæ". Œwietnie wyposa¿ony i bardzo groŸny. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="mil_Svoboda_master_Ugrumiy_name">
+		<text>Mruk</text>
+	</string>
+	<string id="mil_Svoboda_regular_bio">
+		<text>Stalker z frakcji "Wolnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_sniper_bio">
+		<text>Snajper z frakcji "Wolnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_specnaz_bio">
+		<text>Bojownik z frakcji "Wolnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_stukach_bio">
+		<text>Stalker z frakcji "Wolnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_stukach_name">
+		<text>Pawlik</text>
+	</string>
+	<string id="mil_Svoboda_trader_bio">
+		<text>Znany jest ze swej chciwoœci, ale mówi siê, ¿e wszystko potrafi skombinowaæ. </text>
+	</string>
+	<string id="mil_Svoboda_trader_name">
+		<text>Kutwa</text>
+	</string>
+	<string id="mil_Svoboda_zombi_stalker_bio">
+		<text>Stalker z frakcji "Wolnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="mil_Svoboda_zombi_stalker_name">
+		<text>Szalony stalker</text>
+	</string>
+	<string id="mil_Svoboda_zoneguard_bio">
+		<text>Bojownik z frakcji "Wolnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_followers_bomber_name">
+		<text>Sasza Bie³y</text>
+	</string>
+	<string id="pri_followers_common_bio">
+		<text>Stalker weteran. Prawdopodobnie dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_monolith_common_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_monolith_exo_bio">
+		<text>Elitarny stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_monolith_leader_bio">
+		<text>Przywódca frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_monolith_leader_name">
+		<text>Charon</text>
+	</string>
+	<string id="pri_monolith_regular_bio">
+		<text>Stalker frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_monolith_specnaz_bio">
+		<text>Stalker z si³ specjalnych frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_zombied_soldier_bio">
+		<text>¯o³nierz zawodowy. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="pri_zombied_soldier_name">
+		<text>Zombi ¿o³nierz</text>
+	</string>
+	<string id="pri_zombied_stalker_bio">
+		<text>Jeden ze stalkerów, od których szczêœcie siê odwróci³o.</text>
+	</string>
+	<string id="pri_zombied_stalker_name">
+		<text>Zombi stalker</text>
+	</string>
+	<string id="rad_dolg_master_bio">
+		<text>Dowódca frakcji "Powinnoœæ". Œwietnie wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_ecolog_bio">
+		<text>Naukowiec. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_ecolog_guard_bio">
+		<text>Ochrona naukowców. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_ecolog_guard_name">
+		<text>Asystent.</text>
+	</string>
+	<string id="rad_ecolog_name">
+		<text>Asystent.</text>
+	</string>
+	<string id="rad_monolith_general_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_monolith_specnaz_bio">
+		<text>Bojownik z frakcji Monolit. Dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_specnaz_bio">
+		<text>Specnaz. Dobrze wyposa¿ony. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="rad_stalker_master_bio">
+		<text>Jeden z weteranów. Zna Zonê jak w³asn¹ kieszeñ. Zazwyczaj dobrze wyposa¿ony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_stalker_veteran_bio">
+		<text>Stalker weteran. Prawdopodobnie dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="rad_svoboda_master_bio">
+		<text>Dowódca frakcji "Wolnoœæ". Brak szczegó³owych danych.</text>
+	</string>
+	<string id="rad_zombied_general_bio">
+		<text>Jeden ze stalkerów, od których szczêœcie siê odwróci³o.</text>
+	</string>
+	<string id="ros_ecolog_guard_bio">
+		<text>Pracownik naukowy z laboratorium polowego. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="ros_freeman_bio">
+		<text>Naukowiec, ekspert w dziedzinie anomalii. W USA pracowa³ przy œciœle tajnych projektach. Zagin¹³ jakiœ czas temu. </text>
+	</string>
+	<string id="ros_freeman_name">
+		<text>Freeman</text>
+	</string>
+	<string id="ros_happy_bio">
+		<text>Szabrownik i morderca. Za jego g³owê wyznaczono nagrodê. Dawniej w dobrych stosunkach z frakcj¹ "Powinnoœæ", której pomóg³ zdobyæ terytorium. Teraz zamieszkuje w Dziczy i wraz ze sw¹ band¹ napada na samotnych stalkerów.</text>
+	</string>
+	<string id="ros_happy_name">
+		<text>Farciarz</text>
+	</string>
+	<string id="ros_kruglov_bio">
+		<text>Doktor biologii. Niegdyœ zajmowa³ siê badaniem patogenetycznych mutacji u zwierz¹t. Przyby³ do Zony, aby zaj¹æ siê badaniami mutacji œlepych psów.</text>
+	</string>
+	<string id="ros_kruglov_name">
+		<text>Profesor Krug³ow</text>
+	</string>
+	<string id="ros_tiran_bio">
+		<text>Jeden z "bohaterów" w bandzie najemników. Weteran z cia³em podziurawionym kulami wszelkich mo¿liwych kalibrów. Rzadki okaz psychopaty i sadysty.</text>
+	</string>
+	<string id="ros_tiran_name">
+		<text>Tyran</text>
+	</string>
+	<string id="ros_volkodav_bio">
+		<text>Jeden z pierwszych dowódców najemników. Przywódca gangu zw¹cego siê "Kundlami". Anarchista, który gardzi ka¿dym prawem oprócz prawa d¿ungli.</text>
+	</string>
+	<string id="ros_volkodav_name">
+		<text>Wilczarz</text>
+	</string>
+	<string id="sar_monolith_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sar_monolith_cristall_bio">
+		<text>Stalker z frakcji Monolit, z grupy specjalnej o nazwie "Kryszta³", odpowiedzialnej za bezpieczeñstwo samego Monolitu. </text>
+	</string>
+	<string id="sar2_arena_manager_name">
+		<text>Arni </text>
+	</string>
+	<string id="sar2_arena_savage_name">
+		<text>Zwierz</text>
+	</string>
+	<string id="sar2_bandit_leader_name">
+		<text>Wasia "Dzik"</text>
+	</string>
+	<string id="sar2_bio">
+		<text>Psychomaterialna forma stworzona przez Monolit.</text>
+	</string>
+	<string id="sar2_borov_name">
+		<text>Dzik</text>
+	</string>
+	<string id="sar2_crazy_svoboda_name">
+		<text>Ob³¹kany stalker.</text>
+	</string>
+	<string id="sar2_dolg_blokpost_leader_name">
+		<text>Chor¹¿y</text>
+	</string>
+	<string id="sar2_dolg_guard_commander_name">
+		<text>Szef ochrony</text>
+	</string>
+	<string id="sar2_dolg_skull_name">
+		<text>"Czacha"</text>
+	</string>
+	<string id="sar2_dolg_zastava_commander_name">
+		<text>Dowódca placówki</text>
+	</string>
+	<string id="sar2_dram_novice_name">
+		<text>Jurik</text>
+	</string>
+	<string id="sar2_explorer_name">
+		<text>¯eka "Dublet"</text>
+	</string>
+	<string id="sar2_fanat_name">
+		<text>"Fanatyk"</text>
+	</string>
+	<string id="sar2_fox_name">
+		<text>"Lis"</text>
+	</string>
+	<string id="sar2_gordon_name">
+		<text>Gordon</text>
+	</string>
+	<string id="sar2_haron_name">
+		<text>Charon</text>
+	</string>
+	<string id="sar2_hellcar_name">
+		<text>Bies</text>
+	</string>
+	<string id="sar2_informator_name">
+		<text>Ara</text>
+	</string>
+	<string id="sar2_ivancov_name">
+		<text>Kapitan Iwancow</text>
+	</string>
+	<string id="sar2_krot_name">
+		<text>Stalker "Kret"</text>
+	</string>
+	<string id="sar2_kruglov_name">
+		<text>Profesor Krug³ow</text>
+	</string>
+	<string id="sar2_kuznetsov_name">
+		<text>Major Kuzniecow</text>
+	</string>
+	<string id="sar2_lucky_name">
+		<text>Farciarz</text>
+	</string>
+	<string id="sar2_petrenko_name">
+		<text>Pu³kownik Pietrienko</text>
+	</string>
+	<string id="sar2_petruha_name">
+		<text>¯orik</text>
+	</string>
+	<string id="sar2_professor_name">
+		<text>Profesor Sacharow</text>
+	</string>
+	<string id="sar2_ryaboy_name">
+		<text>Krosta</text>
+	</string>
+	<string id="sar2_seryi_name">
+		<text>"Sieryj"</text>
+	</string>
+	<string id="sar2_svoboda_blockpost_leader_name">
+		<text>"Czapa"</text>
+	</string>
+	<string id="sar2_svoboda_bodyguard_name">
+		<text>"Kaput"</text>
+	</string>
+	<string id="sar2_svoboda_cook_name">
+		<text>"Kuchmistrz"</text>
+	</string>
+	<string id="sar2_svoboda_engeneer_name">
+		<text>Œruba</text>
+	</string>
+	<string id="sar2_svoboda_leader_name">
+		<text>"£ukasz"</text>
+	</string>
+	<string id="sar2_svoboda_max_name">
+		<text>"Maks"</text>
+	</string>
+	<string id="sar2_svoboda_stukach_name">
+		<text>Pawlik</text>
+	</string>
+	<string id="sar2_svoboda_trader_name">
+		<text>"Kutwa"</text>
+	</string>
+	<string id="sar2_svoboda_ugrumyi_name">
+		<text>"Mruk"</text>
+	</string>
+	<string id="sar2_tiran_name">
+		<text>Tyran</text>
+	</string>
+	<string id="sar2_tolik_name">
+		<text>Tolik</text>
+	</string>
+	<string id="sar2_volkodav_name">
+		<text>Wilczarz</text>
+	</string>
+	<string id="sar2_voronin_name">
+		<text>Genera³ Woronin</text>
+	</string>
+	<string id="sar2_wolf_name">
+		<text>"Wilk"</text>
+	</string>
+	<string id="sim_bandit_general_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_bandit_master_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_bandit_master_fraer_bio">
+		<text>Przyby³ do Zony w poszukiwaniu przygód. Naœladuje bohaterów popularnych komiksów z lat szeœædziesi¹tych. U¿ywa ró¿nych ksywek: Badman, Macho, Czarna Opoñcza, Banderos. Pomimo tego, ¿e w Zonie prze¿y³ ju¿ ca³e dwa lata, nikt nie traktuje go powa¿nie, co nieustannie doprowadza go do sza³u. </text>
+	</string>
+	<string id="sim_bandit_master_kocherga_bio">
+		<text>Dziki, pod³y, chamski, samolubny, brutalny i nieczu³y. Nikt tak naprawdê nie wie, kiedy przyby³ do Zony. Wszyscy siê go obawiaj¹, nie ma wiêc ¿adnych przyjació³. Zwyczajnie ¿yje sobie w Zonie bez przysz³oœci i bez przesz³oœci. Po jednym ze swych licznych wypadów w g³¹b strefy utraci³ pamiêæ niemal kompletnie. Zapomnia³, sk¹d pochodzi i jak siê nazywa. Cierpi na czêste zaniki pamiêci - kiedyœ w ci¹gu godziny zapomnia³ nowo poznan¹ osobê, wzi¹³ j¹ za wroga, a nastêpnie zabi³.</text>
+	</string>
+	<string id="sim_bandit_novice_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_bandit_veteran_bio">
+		<text>Nieznany stalker. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_dolg_master_bio">
+		<text>Stra¿nik z frakcji "Powinnoœæ". Jeœli nie jesteœ ich przyjacielem, lepiej trzymaj siê z dala. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_dolg_regular_bio">
+		<text>Stalker z frakcji "Powinnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_dolg_sniper_bio">
+		<text>Bojownik z frakcji "Powinnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_dolg_veteran_barin_bio">
+		<text>£ajdak, wazeliniarz, hipokryta i na dodatek tchórz. Motto Barina mog³oby równie dobrze brzmieæ: "Po nas choæby potop". Wykorzysta ka¿d¹ nadarzaj¹c¹ siê okazjê. Chorobliwie ambitny i dra¿liwy. Do Zony przyby³ - co nie dziwi - dla pieniêdzy. Ju¿ od dwóch lat gromadzi maj¹tek wszelkimi dostêpnymi sposobami. </text>
+	</string>
+	<string id="sim_dolg_veteran_bio">
+		<text>Bojownik z frakcji "Powinnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_dolg_veteran_prapor_bio">
+		<text>Oficjalny werbownik ukraiñskiej s³u¿by bezpieczeñstwa. Czêsty goœæ w barze. Wszyscy go znaj¹ i wszyscy wiedz¹, ¿e gdy bieda przyciœnie, mo¿na zwróciæ siê w³aœnie do niego. Jednak gdy ju¿ raz siê tê liniê przekroczy, nie ma powrotu w szeregi uczciwych stalkerów.</text>
+	</string>
+	<string id="sim_ecolog_zob_bio">
+		<text>W ¿yciu codziennym to flegmatyk, który nie zdradza siê ze swymi emocjami i zawsze zachowuje spokój. Pod wp³ywem stresu jednak staje siê agresywny i porywczy. Mózgowiec. Materialista, który ¿a³uje, ¿e w ogóle przyby³ do Zony. Po ukoñczeniu akademii medycznej zosta³ wys³any do Zony, poniewa¿ w obozie naukowców potrzebny asystent neurochirurga. Przeprowadza sekcje mózgów mutantów i bada ich w³aœciwoœci psychokinetyczne. Nie mo¿e siê ju¿ doczekaæ emerytury, kiedy to wróci do stolicy - jak najdalej od tego parszywego miejsca. </text>
+	</string>
+	<string id="sim_fresh_Zombied_bio">
+		<text>Jeden ze stalkerów, od których szczêœcie siê odwróci³o.</text>
+	</string>
+	<string id="sim_killer_general_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_killer_master_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_killer_sniper_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_killer_veteran_bio">
+		<text>Nieznany najemnik. Prawdopodobnie dobrze uzbrojony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_monolith_master_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_monolith_regular_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_monolith_sniper_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_monolith_specnaz_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_soldier_commander_bio">
+		<text>Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_Soldier_master_bio">
+		<text>Wojskowy stalker. Dobrze uzbrojony i bardzo groŸny. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="sim_soldier_regular_bio">
+		<text>¯o³nierz zawodowy. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_soldier_sniper_bio">
+		<text>Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_soldier_specnaz_bio">
+		<text>Specnaz. Dobrze wyposa¿ony. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="sim_stalker_general_bio">
+		<text>Doœwiadczony stalker. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="sim_stalker_general_upir_bio">
+		<text>Stalker urodzony pod szczêœliw¹ gwiazd¹. Ju¿ niejeden raz wespó³ z towarzyszami wpada³ w tarapaty, lecz zawsze jako jedyny uchodzi³ z ¿yciem. Wiêkszoœæ stalkerów trzyma siê od niego z daleka, gdy¿ twierdz¹, ¿e przynosi pecha. Ju¿ od d³u¿szego czasu samotnie przemierza Zonê. </text>
+	</string>
+	<string id="sim_stalker_master_bio">
+		<text>Jeden z weteranów. Zna Zonê jak w³asn¹ kieszeñ. Zazwyczaj dobrze wyposa¿ony i bardzo groŸny. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_stalker_master_chuchelo_bio">
+		<text>Doœwiadczony przemytnik. Przez d³ugi czas handlowa³ towarem w Afryce i Ameryce Po³udniowej. Wieœci o katastrofie w Czarnobylu zwabi³y go na Ukrainê. W krótkim okresie zdo³a³ przeszmuglowaæ setki wypchanych mutantów z obszaru zastrze¿onego, dziêki czemu zyska³ przydomek "Wypychacz". Kiedy nie "pracuje" w Zonie, pomna¿a maj¹tek jako handlarz. Uwielbia eleganckie garnitury i szykowne krawaty - woli jednak radzieckie karabiny. </text>
+	</string>
+	<string id="sim_stalker_master_diador_bio">
+		<text>Bra³ udzia³ w wojnie w Afganistanie. Dawniej by³ ateist¹, lecz gdy przetrwa³ zasadzkê mud¿ahedinów, nagle wst¹pi³ na drogê wiary. Po wojnie wyemigrowa³ do Polski, gdzie wst¹pi³ do seminarium duchownego. Gdy je ukoñczy³, przez jakiœ czas g³osi³ S³owo Bo¿e w koœciele katolickim we Lwowie. Po wybuchu w Czarnobylskiej Elektrowni J¹drowej zg³osi³ siê do pomocy ofiarom. Od kilku lat g³osi kazania w Zonie.</text>
+	</string>
+	<string id="sim_stalker_master_master_bio">
+		<text>Niegdyœ mechanik w fabryce "Cho³odMasz". Po tym jak ¿ona go opuœci³a, postanowi³ odebraæ sobie ¿ycie, jednak bêd¹c osob¹ g³êboko wierz¹c¹, wybra³ pobyt w Zonie jako niekonwencjonaln¹ metodê samobójstwa. Wbrew swym oczekiwaniom przetrwa³, zdoby³ bezcenne doœwiadczenie, a tak¿e szacunek innych stalkerów dziêki swej fachowoœci. Majster to prawdopodobnie najlepiej wykwalifikowany mechanik w Zonie. Naprawa sprzêtu i pojazdów, instalacja systemów bezpieczeñstwa w bunkrach - to jego specjalnoœæ. Wszêdzie jest mile widziany. Prosty, powa¿ny cz³owiek, czasem mo¿e nieco szorstki.</text>
+	</string>
+	<string id="sim_stalker_master_polkan_bio">
+		<text>Niegdyœ wojskowy stalker, podpu³kownik w oddzia³ach Ministerstwa Spraw Wewnêtrznych. Jako jedyny ¿o³nierz powróci³ z tragicznej w skutkach operacji w g³êbi Zony, po której okaza³o siê, ¿e od pocz¹tku by³a to misja bezcelowa i wrêcz samobójcza. Wtedy w³aœnie podj¹³ decyzjê, ¿e nie wraca, upozorowa³ w³asn¹ œmieræ i do³¹czy³ do stalkerów. Ma³omówny, cyniczny, stanowczy. </text>
+	</string>
+	<string id="sim_stalker_novice_bio">
+		<text>Kot. Nowy w Zonie. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_stalker_novice_neumeha_bio">
+		<text>Patafian ma dwadzieœcia lat. W Wielkiej Krainie utraci³ wszystko i wszystkich, wiêc postanowi³ przybyæ do Zony. Ledwie wi¹¿e tu koniec z koñcem, ale zwyczajnie nie ma gdzie siê podziaæ. Wielu stalkerom d³u¿ny jest pieni¹dze. Czêsto bywa w Zonie, lecz nigdy samotnie - zawsze stara siê do³¹czyæ do grupy doœwiadczonych stalkerów. Nie jest mile widzianym towarzyszem, gdy¿ zazwyczaj nie ma z niego najmniejszego po¿ytku. Praktycznie nie zarabia. ¯yje z tego, co po¿yczy od innych stalkerów; tonie w d³ugach.</text>
+	</string>
+	<string id="sim_stalker_sniper_bio">
+		<text>Stalker weteran. Prawdopodobnie dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_stalker_veteran_bio">
+		<text>Stalker weteran. Prawdopodobnie dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_stalker_veteran_gusarov_bio">
+		<text>Oleg "Demon" Gusarow. Dawny "czarny beret", s³u¿y³ w Specnazie w brygadzie Bie³ocerkowskoj. By³ na wielu misjach, awansowa³ na starszego sier¿anta sztabowego. Strzelec wyborowy oraz saper. Z natury samotnik, nigdy nie wyrusza do Zony w grupie. Z tej przyczyny zawsze odrzuca³ propozycjê do³¹czenia do któregoœ z ugrupowañ, choæ wiele razy mia³ tak¹ mo¿liwoœæ. </text>
+	</string>
+	<string id="sim_stalker_veteran_umnik_bio">
+		<text>Student wydzia³u fizyki, który rzuci³ studia na ostatnim roku i wyruszy³ do Zony w nadziei, ¿e ³atwo siê dorobi. Lubi popisywaæ siê sw¹ wiedz¹ "naukow¹" i prowadziæ abstrakcyjne, filozoficzne dysputy. To wystarczy, ¿eby nie cieszyæ siê sympati¹ innych stalkerów. Ogólnie rzecz bior¹c - porz¹dny facet. Swego rodzaju idealista.</text>
+	</string>
+	<string id="sim_stalker_veteran_vorobey_bio">
+		<text>Wróbel ma dwadzieœcia siedem lat, jest przebieg³y i zapobiegliwy, lecz przytrafiaj¹ mu siê równie¿ najgorsze wpadki. Bywa zach³anny. W sumie doœæ podejrzany typ. Wychud³y i blady. Do Zony przyby³ z ciekawoœci, obiecuj¹c sobie, ¿e po dwóch miesi¹cach wróci do domu. Nie wróci³. W trakcie swego pierwszego wypadu do Zony Wróbel zdo³a³ przejœæ pole naje¿one anomaliami bez ¿adnego ekwipunku i bez najmniejszego pojêcia o niebezpieczeñstwie, które mu grozi³o. Gdy tylko dowiedzia³ siê o tym, czego dokona³, zemdla³. Od tamtej pory obchodzi w tê pamiêtn¹ datê (9 paŸdziernika) swe drugie urodziny. </text>
+	</string>
+	<string id="sim_Svoboda_master_bio">
+		<text>Dowódca frakcji "Wolnoœæ". Brak szczegó³owych danych.</text>
+	</string>
+	<string id="sim_Svoboda_regular_bio">
+		<text>Stalker z frakcji "Wolnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_Svoboda_sniper_bio">
+		<text>Stalker z frakcji "Wolnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_Svoboda_specnaz_bio">
+		<text>Bojownik z frakcji "Wolnoœæ". Zazwyczaj dobrze wyposa¿ony. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="sim_Svoboda_specnaz_leshii_bio">
+		<text>Leszy, jak wo³a na niego brat, przyby³ do Zony jako m³ody idealista, lecz po kilku latach ¿ycia o w³os od œmierci zmieni³ siê w cynicznego realistê. Uwa¿a Zonê za swój dom, a ci, którzy zawiedli, s¹ dlañ niegodni, ¿eby st¹paæ po powierzchni ziemi.</text>
+	</string>
+	<string id="sim_svoboda_specnaz_prut_bio">
+		<text>Pisze szkice oraz opowiadania o Zonie pod imieniem Arkadij. By³y dziennikarz. Drobiazgowy i surowy, ale sprawiedliwy. Powszechnie szanowany przez stalkerów. </text>
+	</string>
+	<string id="sim_zombied_master_bio">
+		<text>Jeden ze stalkerów, od których szczêœcie siê odwróci³o.</text>
+	</string>
+	<string id="sim_zombied_novice_bio">
+		<text>Jeden ze stalkerów, od których szczêœcie siê odwróci³o.</text>
+	</string>
+	<string id="sim_zombied_veteran_bio">
+		<text>Jeden ze stalkerów, od których szczêœcie siê odwróci³o.</text>
+	</string>
+	<string id="val_bandit_bodyguard_bio">
+		<text>Stra¿nik bandytów. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_bandit_general_bio">
+		<text>Bandyta. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_bandit_novice_bio">
+		<text>Bandyta ¿ó³todziób. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_bandit_veteran_bio">
+		<text>Doœwiadczony bandyta. Podejrzana reputacja. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_borov_bio">
+		<text>Przywódca bandytów</text>
+	</string>
+	<string id="val_borov_name">
+		<text>Dzik</text>
+	</string>
+	<string id="val_dolg_common_bio">
+		<text>Stalker z frakcji "Powinnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_monolith_common_bio">
+		<text>Stalker z frakcji Monolit. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_prisoner_bio">
+		<text>Stalker z frakcji "Powinnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_prisoner_name">
+		<text>Kud³aty Siergiej</text>
+	</string>
+	<string id="val_pulia_bio">
+		<text>Stalker z frakcji "Powinnoœæ". Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_pulia_name">
+		<text>Nabój</text>
+	</string>
+	<string id="val_soldier_regular_bio">
+		<text>¯o³nierz zawodowy. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_soldier_specnaz_bio">
+		<text>Specnaz. Dobrze wyposa¿ony. Brak szczegó³owych danych.</text>
+	</string>
+	<string id="val_stalker_general_bio">
+		<text>Doœwiadczony stalker. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="val_stalker_novice_bio">
+		<text>Kot. Nowy w Zonie. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="yan_ghost_name">
+		<text>Duch</text>
+	</string>
+	<string id="yan_saharov_bio">
+		<text>Weteran wœród badaczy Zony. Uczestniczy³ w pierwszych ekspedycjach w 2007. </text>
+	</string>
+	<string id="yan_saharov_name">
+		<text>Profesor Sacharow</text>
+	</string>
+	<string id="yan_semenov_bio">
+		<text>Asystent naukowo-badawczy w laboratorium polowym. Brak szczegó³owych danych. </text>
+	</string>
+	<string id="yan_semenov_name">
+		<text>Asystent Siemienow</text>
+	</string>
+	<string id="yan_vasilyev_name">
+		<text>Wasiliew</text>
+	</string>
+	<string id="zombie_name">
+		<text>Zombi stalker</text>
+	</string>
+	<string id="actor_name">
+		<text>Naznaczony</text>
+	</string>
+	<string id="sim_bandit_master_fraer_name">
+		<text>Mnich</text>
+	</string>
+	<string id="sim_bandit_master_kocherga_name">
+		<text>Pogrzebacz</text>
+	</string>
+	<string id="sim_dolg_veteran_barin_name">
+		<text>Barin</text>
+	</string>
+	<string id="sim_dolg_veteran_prapor_name">
+		<text>Chor¹¿y</text>
+	</string>
+	<string id="sim_ecolog_zob_name">
+		<text>Plon</text>
+	</string>
+	<string id="sim_stalker_general_upir_name">
+		<text>Wampir</text>
+	</string>
+	<string id="sim_stalker_master_chuchelo_name">
+		<text>Strach</text>
+	</string>
+	<string id="sim_stalker_master_diador_name">
+		<text>Ojciec Diodor</text>
+	</string>
+	<string id="sim_stalker_master_master_name">
+		<text>Majster</text>
+	</string>
+	<string id="sim_stalker_master_polkan_name">
+		<text>Po³kan</text>
+	</string>
+	<string id="sim_stalker_novice_neumeha_name">
+		<text>Fujara</text>
+	</string>
+	<string id="sim_stalker_veteran_gusarov_name">
+		<text>Oleg Gusarow</text>
+	</string>
+	<string id="sim_stalker_veteran_umnik_name">
+		<text>M¹drala</text>
+	</string>
+	<string id="sim_stalker_veteran_vorobey_name">
+		<text>Wróbel</text>
+	</string>
+	<string id="sim_Svoboda_specnaz_leshii_name">
+		<text>Leszy</text>
+	</string>
+	<string id="sim_svoboda_specnaz_prut_name">
+		<text>Ga³¹zka</text>
+	</string>

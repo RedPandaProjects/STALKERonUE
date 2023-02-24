@@ -1,0 +1,24 @@
+	<string id="general_ecolog_tip_1">
+		<text>Co se stalo? Je mrtvı? Okamitì se vra!</text>
+	</string>
+	<string id="general_ecolog_tip_2">
+		<text>Co se stalo? Je mrtvı? Okamitì vezmi vzorky a vra se.</text>
+	</string>
+	<string id="storyline_ghost_tip">
+		<text>Duchùv audio záznam.</text>
+	</string>
+	<string id="storyline_vasilyev_tip">
+		<text>Vasiljevùv audio záznam.</text>
+	</string>
+	<string id="tips_labx16switcher_press">
+		<text>Pro vypnutí stroje stiskni ($$ACTION_USE$$)</text>
+	</string>
+	<string id="yan_saharov_message">
+		<text>Dobrá práce, Oznaèenı, nakonec ses do laboratoøe dostal. Je pro nás velmi dùleité získat monost prozkoumat mechanizmus v laboratoøi. Zkus ho vypojit, a ho mùeme prozkoumat.</text>
+	</string>
+	<string id="yan_saharov_message_2">
+		<text>Poslyš, prototyp tì pøed silnou radiací neochrání. Myslel jsem na to, take je v obleku èasovaè, kterı zaène tikat, jakmile se dostaneš pod silnou dávku. A èas vyprší, nebude tì u prototyp dostateènì chránit. Dávej si pozor a nezapomeò na èas.</text>
+	</string>
+	<string id="yan_saharov_message_3">
+		<text>Skvìlá práce, Oznaèenı. Emise byly vypnuty a ty poøád iješ. Ale musím tì varovat. Pøivolali jsme pár vojenskıch vrtulníkù, aby se postaraly o zombie v okolí. Radìji se tam moc nepoflakuj. A stav se v našem bunkru zase nìkdy, ano?</text>
+	</string>

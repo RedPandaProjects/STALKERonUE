@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_map_desc_mp_agroprom_large">
+		<text>Podivnй mнsto. Tichб budova mб svб tajemstvн, ale stalkery sem pшitahujн иetnй artefakty, kterй se tady dajн najнt, a tak ignorujн mнstnн nebezpeин. Kdyћ se budeљ hэbat dost rychle a stшнlet pшesnм, moћnб se staneљ milбиkem љtмstмny.</text>
+	</string>
+	<string id="ui_map_desc_mp_agroprom_short">
+		<text>Podivnй mнsto. Tichб budova mб svб tajemstvн, ale stalkery sem pшitahujн иetnй artefakty, kterй se tady dajн najнt, a tak ignorujн mнstnн nebezpeин.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_large">
+		<text>Vozovэ park je vstupnн brбna do Zуny. Traktory, autobusy a nбklaпбky tady zщstaly na dobro a uћ se nepohnou. Nikdy se tu neobjevily ћбdnй artefakty, ale je to oblнbenй mнsto zkuљenэch stalkerщ, kteшн tady lovн novбиky a berou jim, co najdou. Kryj se v budovбch a za rщznэm vybavenнm. A dбvej si pozor na nepшбtele na stшeљe.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_short">
+		<text>Vozovэ park je vstupnн brбna do Zуny. Traktory, autobusy a nбklaпбky tady zщstaly na dobro a uћ se nepohnou.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_large">
+		<text>Toto zбhadnй mнsto mб na lidi podivnэ vliv. Kdo postavil experimentбlnн zaшнzenн a proи... to zщstane navћdy tajemstvнm. Nenajdeљ tady ћбdnй artefakty. Jenom pozщstatky podivnэch strojщ a zaшнzenн, kterб sem lбkajн stalkery. Hlнdej stшechy a nezapomeт, ћe je tady silnб radiace.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_short">
+		<text>Toto zбhadnй mнsto mб na lidi podivnэ vliv. Kdo postavil experimentбlnн zaшнzenн a proи... to zщstane navћdy tajemstvнm.</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_large">
+		<text>Pochmurnб opuљtмnб tovбrna. Nedб se шнct, kolik stalkerщ uvnitш uћ nalezlo smrt. Jsou zde vљechny moћnй anomбlie a stбle k sobм pшitahujн stalkery jako magnet, jelikoћ se v nich dajн najнt cennй artefakty. Ale pozor na ъroveт radiace!</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_short">
+		<text>Pochmurnб opuљtмnб tovбrna. Nedб se шнct, kolik stalkerщ uvnitш uћ nalezlo smrt.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_large">
+		<text>Toto je ибst obrovskй sklбdky, kam se po neљtмstн v roce 1986 vyvezly hromady radioaktivnнho odpadu a trosek... rozpadajнcн se jeшбby, vybavenн a tak dбle. Najdeљ tady pozщstatky starэch budov a obrovskэ hangбr. To vљe pomмrnм blнzko vstupu do Zуny, a je tady dost artefaktщ. Proto sem mншн stalkeшi v nadмji na snadnэ vэdмlek.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_short">
+		<text>Toto je ибst obrovskй sklбdky, kam se po neљtмstн v roce 1986 vyvezly hromady radioaktivnнho odpadu a trosek... rozpadajнcн se jeшбby, vybavenн a tak dбle.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_large">
+		<text>Opuљtмnб prokletб vesnice hluboko v Zуnм. Malй mмlkй jezнrko zbarvenй do rezava je plnй vrakщ aut a pohled na nмj nahбnн prщzkumnнkщm Zуny hrщzu. Pozor na snajpry, ale nezapomeт, ћe Zуna pшeje odvбћnэm.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_short">
+		<text>Opuљtмnб prokletб vesnice hluboko v Zуnм. Malй mмlkй jezнrko zbarvenй do rezava je plnй vrakщ aut a pohled na nмj nahбnн prщzkumnнkщm Zуny hrщzu.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_large">
+		<text>Opuљtмnб vojenskб zбkladna plnб rozbitэch nбklaпбkщ a transportйrщ, navнc rozbitй velitelskй stшedisko a kasбrna. Ale nenн vљe, jak vypadб. V zбkladnм je spousta artefaktщ a nepшнtel mщћe инhat za kaћdэm rohem. Prokaћ svй schopnosti a zнskej odmмnu!</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_short">
+		<text>Opuљtмnб vojenskб zбkladna plnб rozbitэch nбklaпбkщ a transportйrщ, navнc rozbitй velitelskй stшedisko a kasбrna.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_large">
+		<text>Ze starй vesnice se stalo hrozivй mнsto, smrtнcн past na odvбћlivce. Pokud jsi vљak navzdory riziku pшiљel, pшiprav se na rychlou a nбhlou smrt. Jelikoћ zde nenн ћбdnй bezpeиnй mнsto, aќ tм tvщj tlumiи a puљkohled udrћн naћivu.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_short">
+		<text>Ze starй vesnice se stalo hrozivй mнsto, smrtнcн past na odvбћlivce. Pokud jsi vљak navzdory riziku pшiљel, pшiprav se na rychlou a nбhlou smrt.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_large">
+		<text>V mмsteиku Pripjaќ dшнve bydleli pracovnнci atomovй elekrбrny. Rozpadajнcн se kostry betonovэch panelбkщ jsou plnй nebezpeин. Chvilka nepozornosti tм mщћe stбt ћivot.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_short">
+		<text>Mмsteиko Pripjaќ se nachбzн kousek od atomovй elekrбrny.</text>
+	</string>
+	<string id="ui_map_desc_mp_railraod_short">
+		<text>Malб ћelezniиnн stanice u tovбrny Rostok.</text>
+	</string>
+	<string id="ui_map_desc_mp_railroad_large">
+		<text>Malб ћelezniиnн stanice u tovбrny Rostok. Vљude postбvajн zrezavмlй vagony a dieselovй lokomotivy. Hojnost artefaktщ sem lбkб zoufalй stalkery z celй Zуny.</text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_large">
+		<text>Pod hromadami ћeleza a za betonovэmi zdmi tovбrny je zvlбљtnн ticho. V minulйm stoletн se tady mнchaly zvuky vydбvanй pracujнcнmi dмlnнky se slogany vyшvбvanэmi z reproduktorщ... ale tovбrna uћ si svй odpracovala.</text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_short">
+		<text>Mezi betonovэmi zdmi opuљtмnй tovбrny panuje mrtvй ticho.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_large">
+		<text>Okolн tovбrny Rostok neћ dorazila Povinnost. Divokб a nebezpeиnб oblast je vљak bohatб na artefakty. V prбzdnэch hangбrech a skladiљtнch инhб na kaћdйm kroku nмjakй nebezpeин. Buп extrйmnм opatrnэ a peиlivм sleduj bнlou vмћ.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_short">
+		<text>Okolн tovбrny Rostok, neћ dorazila Povinnost. Divokб a nebezpeиnб oblast je vљak bohatб na artefakty.</text>
+	</string>
+</string_table>

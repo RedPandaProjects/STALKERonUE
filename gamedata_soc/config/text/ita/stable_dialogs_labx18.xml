@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dar_explorer_dialog_1">
+		<text>Sono in missione.</text>
+	</string>
+	<string id="dar_explorer_dialog_11">
+		<text>Uhm. Che tipo di missione? Stai cercando qualcosa? O l'hai giа trovata? Ho sentito che ci sono un sacco di cose interessanti qui...</text>
+	</string>
+	<string id="dar_explorer_dialog_111">
+		<text>Mi spiace, non posso dirtelo e comunque non ho tempo.</text>
+	</string>
+	<string id="dar_explorer_dialog_1111">
+		<text>Aspetta, non andartene cosм. Avrai altre occasioni... Che cosa hai trovato? Quanto a me, non me ne sto qui per niente, sai?</text>
+	</string>
+	<string id="dar_explorer_dialog_11111">
+		<text>Quello che ho trovato io sono affari miei.</text>
+	</string>
+	<string id="dar_explorer_dialog_11112">
+		<text>Ho trovato dei documenti dell' X18. Il Barista ha promesso di pagarmeli bene.</text>
+	</string>
+	<string id="dar_explorer_dialog_112">
+		<text>No, non ho trovato niente.</text>
+	</string>
+	<string id="dar_explorer_dialog_2">
+		<text>Non so neanche perchй sono finito qui. E non vedo l'ora di andarmene.</text>
+	</string>
+	<string id="dar_explorer_dialog_21">
+		<text>Non hai trovato niente di utile qui, vero? Dicono che ci siano delle informazioni su alcuni esperimenti scientifici. Valgono un sacco di soldi...</text>
+	</string>
+	<string id="dar_explorer_dialog_211">
+		<text>No.</text>
+	</string>
+	<string id="dar_explorer_dialog_2111">
+		<text>Davvero?.. E se ci pensi bene bene bene? Non и che mi stai nascondendo qualcosa?</text>
+	</string>
+	<string id="dar_explorer_dialog_21111">
+		<text>No.</text>
+	</string>
+	<string id="dar_explorer_dialog_21112">
+		<text>Che razza di domanda и?</text>
+	</string>
+	<string id="dar_explorer_dialog_21113">
+		<text>Mi stai minacciando?</text>
+	</string>
+	<string id="dar_explorer_dialog_212">
+		<text>Al diavolo le informazioni. И giа tanto che sono vivo, quaggiщ.</text>
+	</string>
+	<string id="dar_explorer_dialog_2121">
+		<text>Molto bene, allora vai. Se trovi qualcosa, sai dove trovarmi...</text>
+	</string>
+	<string id="dar_explorer_dialog_25">
+		<text>Senti, amico: ho scampato il fuoco, le anomalie e i mostri in questa Zona fetente e come puoi vedere, sono ancora vivo. Quindi non dirmi quello che posso o non posso dire. Sono venuto qui per i documenti e non me ne andrт a mani vuote. Se li hai tu, ti avverto: o me li dai o riposerai in pace in questo buco! Chiaro?</text>
+	</string>
+	<string id="dar_explorer_dialog_251">
+		<text>Chiaro.</text>
+	</string>
+	<string id="dar_explorer_dialog_2511">
+		<text>Se mi stai mentendo, sei nella merda fino al collo. Se stai pensando di fregarmi, sei nella merda fino al collo, e se cerchi di rifilarmi delle schifezze, sei nella merda fino al collo. Anzi, sei talmente nella merda che dovrai nuotare da campione per tenerti a galla! Allora, lo ripeto ancora una volta per gli idioti dell'assistenza: avete trovato i documenti?</text>
+	</string>
+	<string id="dar_explorer_dialog_2521">
+		<text>Va bene, e la prossima volta, attento a come parli. Ora puoi andare. Ma se trovi qualcosa, sono qui...</text>
+	</string>
+	<string id="dar_explorer_dialog_253">
+		<text>La conversazione и finita. Levati di torno.</text>
+	</string>
+	<string id="dar_explorer_dialog_26">
+		<text>Non ho nessun documento.</text>
+	</string>
+	<string id="dar_explorer_dialog_271">
+		<text>Cosм va meglio, vecchio mio. Ora dammi tutte le informazioni che hai, ogni minima cosa, anche il piщ minuscolo pezzo di carta. E non cercare di fare il furbo, perchй potrebbe essere l'ultima volta che ci provi...</text>
+	</string>
+	<string id="dar_explorer_dialog_51">
+		<text>Ti ho detto di smetterla! Non ho intenzione di vagare in questo buco per niente. Smetti di tergiversare e dimmi che cosa hai trovato. Potremmo anche dividere...</text>
+	</string>
+	<string id="dar_explorer_dialog_511">
+		<text>Io non divido niente con nessuno.</text>
+	</string>
+	<string id="dar_explorer_dialog_5111">
+		<text>Uh-huh, e adesso fuori dalle palle... te lo dico per l'ultima volta:fai attenzione stalker, ne avrai bisogno!</text>
+	</string>
+	<string id="dar_explorer_dialog_512">
+		<text>Mi stai minacciando?</text>
+	</string>
+	<string id="dar_explorer_dialog_5121">
+		<text>OK, OK, calma... Come faccio il curioso hai giа l'arma in mano! Basta domande. Fai attenzione, и tutto.</text>
+	</string>
+	<string id="dar_explorer_dialog_61">
+		<text>Documenti, eh? Vedi, sono venuto esattamente per questo. Ora li consegnerai a me e te ne andrai per la tua strada. Capito?</text>
+	</string>
+	<string id="dar_explorer_dialog_6111">
+		<text>Ho qualcosa da offrire.</text>
+	</string>
+	<string id="dar_explorer_dialog_6121">
+		<text>Senti, amico, smetti di incasinarmi il cervello. Facciamo un patto. Ti darт un bel po' di soldi... non te ne pentirai.</text>
+	</string>
+	<string id="dar_explorer_dialog_6131">
+		<text>Ascolta, la mia vita dipende da quei documenti. Vediamo che cos'hai...Penso che potremmo raggiungere un accordo...</text>
+	</string>
+	<string id="dar_explorer_dialog_8011">
+		<text>И cosм buio qui, non vedo niente. Tumulatori dappertutto... Perchй diavolo ho accettato?! E tu? Com'и che sei finito qui?</text>
+	</string>
+	<string id="dar_explorer_dialog_8021">
+		<text>Continua a camminare, stalker.</text>
+	</string>
+	<string id="dar_explorer_dialog_8031">
+		<text>Non sopporto di essere interrotto quando parlo. Comunque sia, sono venuto qui per alcuni documenti importanti. Se hai trovato qualcosa sputa o finirai nei guai. Se non hai trovato niente, sparisci e non farmi perdere altro tempo.</text>
+	</string>
+	<string id="dar_explorer_dialog_8041">
+		<text>Non sopporto di essere interrotto quando parlo. Dammi quei documenti, se non vuoi dire addio alla vita.</text>
+	</string>
+	<string id="dar_explorer_dialog_9">
+		<text>Me lo ricorderт.</text>
+	</string>
+</string_table>

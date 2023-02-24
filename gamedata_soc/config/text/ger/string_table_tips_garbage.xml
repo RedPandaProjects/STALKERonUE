@@ -1,0 +1,27 @@
+	<string id="gar_actor_looser">
+		<text>Du bist Dreck, Gezeichneter. Total wertlos! Erwarte keine Dankbarkeit - es gibt dir nichts zu danken!</text>
+	</string>
+	<string id="gar_actor_normal">
+		<text>Nicht schlecht, Stalker! Du hast ein paar Mutanten abgeknallt, aber so richtig flink am Abzug bist du nicht, was? Wenn du vorbei willst, dann spuck Kohle aus.</text>
+	</string>
+	<string id="gar_actor_winner">
+		<text>Hervorragend, Gezeichneter, das war eine echte Hilfe. Das reicht als Bezahlung, du darfst vorbei. Geh weiter zur Bar.</text>
+	</string>
+	<string id="gar_direction_fire">
+		<text>Lass sie näher heran, dann entkommt keiner. Ich schieße zuerst, dann du.</text>
+	</string>
+	<string id="gar_dolg_blokpost_warning">
+		<text>Du bist auf Wächter-Gebiet, Stalker. Kämpfe werden hier nicht geduldet.</text>
+	</string>
+	<string id="gar_dolg_monster_rush">
+		<text>Achtung!! Hier ist der Wächterposten. Eine Horde Mutanten bewegt sich vom Dunklen Tal in Richtung Bar. Wer uns hilft, die Monster aufzuhalten, wird es nicht bereuen.</text>
+	</string>
+	<string id="gar_dolg_warning">
+		<text>Du bist auf Wächter-Gebiet, Stalker. Wenn du Scheiße baust, lutschst du für den Rest deines Lebens am Strohhalm.</text>
+	</string>
+	<string id="gar_hellcar_victory">
+		<text>Gut gemacht, meine Herren, alle erwischt. Jungs, macht mal Pause. Und du, Stalker, komm mal her. Reden wir.</text>
+	</string>
+	<string id="tips_gar_hellcar_alarm">
+		<text>Leute, hier spricht der Kommandant einer neutralen Fraktion. Wir haben die Banditen aus dem verlassenen Fuhrpark vertrieben, aber sie werden zurückschlagen wollen. Wir sind wenige, wenn ihr also helfen wollt, ist bei uns genug Platz.</text>
+	</string>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bandit_outfit_description">
+		<text>Tradiиnн vybavenн bandity  - koћenб bunda posнlenб kevlarem. Ибsteиnм chrбnн pшed kulkami a stшepinami. Nechrбnн pшed anomбliemi.</text>
+	</string>
+	<string id="bandit_outfit_description_m">
+		<text>Bмћnэ oblek banditщ s vљitэmi kovovэmi plбty. Takovou ъpravu si mщћe udмlat skoro kdokoli, ale ne kaћdэ na to mб trpмlivost.</text>
+	</string>
+	<string id="bandit_outfit_name">
+		<text>Bunda banditщ</text>
+	</string>
+	<string id="bandit_outfit_name_m">
+		<text>Zesнlenб bunda</text>
+	</string>
+	<string id="dolg_outfit_description">
+		<text>Oblek vyrбbмnэ kyjevskэm vэzkumnэm institutem pro frakci Povinnost. Je stejnм jednoduchэ a spolehlivэ jako standardnн model PSZ-9, ale dнky novэm materiбlщm poskytuje dobrou ochranu pшed kulkami a stшepinami. Nemб ћбdnэ internн dэchacн systйm, takћe pшed radiacн moc dobшe nechrбnн.</text>
+	</string>
+	<string id="dolg_outfit_description_m1">
+		<text>Brnмnн povinnosti s vylepљenou ochranou pшed seknutнmi a kousnutнmi.</text>
+	</string>
+	<string id="dolg_outfit_name">
+		<text>Brnмnн Povinnosti PSZ-9d</text>
+	</string>
+	<string id="dolg_outfit_name_m1">
+		<text>Hunter PSZ-9d</text>
+	</string>
+	<string id="dolg_scientific_outfit_description">
+		<text>Vynikajнcн ochrannэ oblek pro Zуnu. Kombinuje v sobм ochranu pшed kulkami i anomбliemi. Je zaloћen na obleku PSZ-9d, uzavшenйm dэchacнm systйmu a integrovanэm systйmem potlaиovбnн anomбliн. Mб vэbornй ochrannй schopnosti vщиi kulkбm a stшepinбm.</text>
+	</string>
+	<string id="dolg_scientific_outfit_name">
+		<text>PSZ-9Md univerzбlnн ochrana</text>
+	</string>
+	<string id="ecolog_outfit_description">
+		<text>Univerzбlnн chemickэ ochrannэ oblek SSP-99 je speciбlnм navrћenэ pro podmнnky v Zуnм. Pouћнvajн ho vмdeckй expedice a ekostalkeшi, kteшн s nimi spolupracujн. Mб zabudovanй systйmy na filtrovбnн vzduchu a internн dэchacн systйm. Je odolnэ vщиi elektшinм a ћбru, dobшe chrбnн pшed radiacн a biologickэmi anomбliemi. Nenн ale urиen pro boj, takћe neposkytuje ochranu ani pшed kulkami, ani stшepinami.</text>
+	</string>
+	<string id="ecolog_outfit_name">
+		<text>SSP-99 Ekolog</text>
+	</string>
+	<string id="exo_outfit_description">
+		<text>Prototyp vojenskйho exoskeletonu. Do sйriovй produkce se kvщli obrovskй cenм a nмkolika chybбm v designu nikdy nedostal. Pшesto se ale v malйm mnoћstvн vyrбbн v ilegбlnнch tovбrnбch mimo Ukrajinu. Toto je exoskeleton tшetн generace. Chyby, kterй sniћovaly mobilitu pшedchozн verze, byly napraveny a pancйшovбnн zesнleno. Poskytuje excelentnн ochranu pшed kulkami a stшepinami. Schopnost chrбnit pшed anomбliemi je nнzkб.</text>
+	</string>
+	<string id="exo_outfit_description_m1">
+		<text>Zбkladnн zaшнzenн pro noиnн vidмnн je nahrazeno modernмjљн verzн, kterб pouћнvб digitбlnн filtrovбnн zнskanйho signбlu.</text>
+	</string>
+	<string id="exo_outfit_name">
+		<text>Exoskeleton</text>
+	</string>
+	<string id="killer_outfit_description">
+		<text>Stalkerskэ oblek frakce Ћoldбkщ. Jeho nбvrh je zaloћenэ na obleku pouћнvanйm speciбlnнmi jednotkami zбpadnнch armбd. Dнky speciбlnн ъpravм lбtky je brnмnн stabilnмjљн pшi pohybu jednotlivэch plбtщ. Jeho ochrannй schopnosti jsou ponмkud lepљн neћ u vojenskэch neprщstшelnэch oblekщ PSZ-7.</text>
+	</string>
+	<string id="killer_outfit_description_m1">
+		<text>Do bundy je vљitб krouћkovб vrstva, dнky kterй bunda lйpe chrбnн pшed stшelami a kousnutн. K obleku je pшibalenб PNV.</text>
+	</string>
+	<string id="killer_outfit_name">
+		<text>Ћoldбckэ oblek</text>
+	</string>
+	<string id="killer_outfit_name_m1">
+		<text>Posнlenэ oblek</text>
+	</string>
+	<string id="military_outfit_description">
+		<text>Tento vojenskэ oblek Skat-9M je urиen pro ъtoиnй operace v oblastech se zvэљenou anomбlnн aktivitou. Je sloћen z tмћkй vojenskй neprщstшelnй vesty PSZ-12p, integrovanйho kompenzaиnнho obleku a helmy Sphere-12M. Poskytuje vynikajнcн ochranu pшed kulkami a stшepinami a nesniћuje vojбkovu mobilitu. Obsahuje vyvбћenэ systйm ochrany pшed anomбliemi.</text>
+	</string>
+	<string id="military_outfit_name">
+		<text>Vojenskэ obrnмnэ oblek </text>
+	</string>
+	<string id="monolit_outfit_description">
+		<text>Stalkerskэ oblek z frakce Monolit. Vэrobce nenн znбm. Ochrannй vlastnosti jsou mнrnм horљн neћ u vojenskй neprщstшelnй vesty PSZ-9a. Vnitшnн struktura je podobnб populбrnнmu obleku neutrбlnнch stalkerщ, kterэ kombinuje neprщstшelnou vestu a protiradiaиnн oblek. Poskytuje dobrou ochranu pшed stшelbou. Ъroveт ochrany pшed anomбliemi je nнzkб dнky absenci systйmu filtrovбnн vzduchu.</text>
+	</string>
+	<string id="monolit_outfit_name">
+		<text>Oblek Monolitu</text>
+	</string>
+	<string id="novice_outfit_description_m">
+		<text>Tuhle bundu nмkdo sundal z tмla stalkera, kterэ zemшel v anomбlii Иarodмjnй ћelй. Kabбt po dlouhй dobм v anomбlii zнskal schopnost zrychlovat metabolismus.</text>
+	</string>
+	<string id="novice_outfit_name_m">
+		<text>Anomбlnн koћenб bunda</text>
+	</string>
+	<string id="outfit_soldier_description">
+		<text>Obyиejnб koћenб bunda, jedna z mnoha. Poskytuje mнrnou ochranu pшed kulkami a stшepinami. Nechrбnн pшed anomбliemi.</text>
+	</string>
+	<string id="outfit_soldier_name">
+		<text>Koћenб bunda</text>
+	</string>
+	<string id="protection_outfit_description">
+		<text>Modifikovanэ oblek SSP-99. Poskytuje zvэљenou ochranu pшed kulkami a stшepinami. Je urиen pro strбћe chrбnнcн vмdeckй expedice. Je odolnэ vщиi ћбru a elektшinм, poskytuje dobrou ochranu pшed radiacн a biologickэmi anomбliemi. Je odolnэ vщиi chemicky agresivnнmu prostшedн.</text>
+	</string>
+	<string id="protection_outfit_name">
+		<text>Oblek SSP-99M</text>
+	</string>
+	<string id="scientific_outfit_description">
+		<text>Tento oblek vyrбbн jeden z kyjevskэch obrannэch institutщ a pшedstavuje vynikajнcн alternativu k ruиnм vyrбbмnэm stalkerskэm oblekщm. Jde o vэbornou kombinaci neprщstшelnй vesty, uzavшenйho dэchacнho systйmu a integrovanйho systйmu potlaиovбnн anomбliн. Dнky vэbornм zvolenэm materiбlщm jde o nejlepљн oblek tйto tшнdy. Jedinou jeho nevэhodou je vysokб cena.</text>
+	</string>
+	<string id="scientific_outfit_name">
+		<text>SEVA oblek</text>
+	</string>
+	<string id="specnaz_outfit_description_m1">
+		<text>Lбtka tohoto obleku je napuљtмnб dezinfekиnн mastн, инmћ zrychluje lйиenн zranмnн.</text>
+	</string>
+	<string id="specnaz_outfit_name_m1">
+		<text>Lйиivэ Beril</text>
+	</string>
+	<string id="specops_outfit_description">
+		<text>Oblek speciбlnнch jednotek Berill-5M modifikovanэ pro pouћitн v Zуnм. Obsahuje vojenskou neprщstшelnou vestu PSZ-9a s berylliovэm zesнlenнm a helmu Sphere-08. Je urиen pro ъtoиnй operace v oblastech s vysokou radiacн. Pшed anomбliemi chrбnн jenom mбlo.</text>
+	</string>
+	<string id="specops_outfit_name">
+		<text>Obrnмnэ oblek Berill-5M </text>
+	</string>
+	<string id="stalker_outfit_description">
+		<text>Stalkerskэ oblek vyrobenэ nмkэm z mнstnнch. Efektivnн kombinace lehkй vojenskй neprщstшelnй vesty a pogumovanйho lбtkovйho obleku. Je posнlenэ kevlarovэmi plбty a dobшe chrбnн pшed stшelbou. Na velkй nбjezdy hluboko do Zуny nenн dostateиnэ.</text>
+	</string>
+	<string id="stalker_outfit_description_m1">
+		<text>Stalker Duch prэ nikdy nepouћнval lйkбrniиky a rбny se mu velmi rychle hojily. Mмl nezvyklэ oblek, kterэ naљel v anomбlii. Aspoт to tvrdн legenda...</text>
+	</string>
+	<string id="stalker_outfit_description_m2">
+		<text>Dшнvejљн majitel obleku byl zarytэ turista a иasto vyrбћel na dlouhй tщry na hranicнch lidskй vэdrћe. Vмdмl, jak sprбvnм rozdмlit nesenou zбtмћ a иemu dбvat pшednost. Kapsy kabбtu a dobrэ vэbмr batohu umoћтujн majiteli nosit velkou zбtмћ.</text>
+	</string>
+	<string id="stalker_outfit_name">
+		<text>Stalkerskэ oblek</text>
+	</string>
+	<string id="stalker_outfit_name_m1">
+		<text>Duchщv oblek</text>
+	</string>
+	<string id="stalker_outfit_name_m2">
+		<text>Turistщv oblek</text>
+	</string>
+	<string id="svoboda_heavy_outfit_description">
+		<text>Posнlenэ stalkerskэ oblek vyrбbмnэ zbrojншi frakce Svoboda. Je udмlanэ ze stшednн vojenskй neprщstшelnй vesty s plбty posнlenэmi zirkoniem, dobшe chrбnн pшed kulkami z puљek a stшepinami na stшednн i velkou vzdбlenost. Materiбl obleku se sklбdб ze dvou vrstev, speciбlnм vyиinмnй kщћe a lбtky s azbestovэmi vlбkny. Oblek dobшe chrбnн pшed radiacн a slabэmi anomбliemi.</text>
+	</string>
+	<string id="svoboda_heavy_outfit_name">
+		<text>Oblek Strбћce Svobody</text>
+	</string>
+	<string id="svoboda_light_outfit_description">
+		<text>Lehkэ stalkerskэ oblek vyrбbмnэ zbrojншi frakce Svoboda. Sklбdб se z lehkй vojenskй neprщstшelnй vesty posнlenй kevlarem. Dokбћe ochrбnit pшed slabэmi zbranмmi. Lбtka obleku je napuљtмnб speciбlnн smмsн, kterб zvyљuje ochranu pшed anomбliemi.</text>
+	</string>
+	<string id="svoboda_light_outfit_name">
+		<text>Oblek Vнtr Svobody</text>
+	</string>
+	<string id="mp_exo_outfit_description">
+		<text>Exoskeleton vэbornм chrбnн pшed stшepinami a kulkami, ale sniћuje pohyblivost. A prщraznй stшelivo se o nмj dokбћe postarat.</text>
+	</string>
+	<string id="mp_exo_outfit_name">
+		<text>Exoskeleton PNB-4UZ</text>
+	</string>
+	<string id="mp_military_outfit_description">
+		<text>Armбdnн neprщstшelnэ oblek urиenэ pro pшepadovй akce. Poskytuje vynikajнcн ochranu pшed kulkami a stшepinami, aniћ by sniћoval vojбkovu pohyblivost. Prщraznй stшelivo ho vљak dokбћe poљkodit.</text>
+	</string>
+	<string id="mp_military_outfit_name">
+		<text>Armбdnн neprщstшelnэ oblek</text>
+	</string>
+	<string id="mp_scientific_outfit_description">
+		<text>Tento oblek je urиenэ pro provбdмnн vэzkumu v Zуnм. Mб dэchacн systйm s uzavшenэm cyklem a takй zabudovanэ systйm pro ochranu pшed anomбlnнmi poli. Velmi snadno poљkoditelnэ, tйmмш vщbec nechrбnн pшed fyzickэm poљkozenнm. Zabudovanэ systйm pro pшepravu artefaktщ.</text>
+	</string>
+	<string id="mp_scientific_outfit_name">
+		<text>Vмdeckэ oblek</text>
+	</string>
+</string_table>

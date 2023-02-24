@@ -1,0 +1,48 @@
+	<string id="sar_monolith">
+		<text>Genio</text>
+	</string>
+	<string id="sar_monolith_0">
+		<text>Ve al Monolito.</text>
+	</string>
+	<string id="sar_monolith_1">
+		<text>Acércate sigilosamente al sarcófago.</text>
+	</string>
+	<string id="sar_monolith_2">
+		<text>Encuentra el Genio.</text>
+	</string>
+	<string id="sar_monolith_destroy">
+		<text>El secreto del Monolito.</text>
+	</string>
+	<string id="sar_monolith_destroy_0">
+		<text>Infíltrate en el laboratorio secreto.</text>
+	</string>
+	<string id="sar_monolith_destroy_1">
+		<text>Averigua el secreto del Monolito.</text>
+	</string>
+	<string id="sar_monolith_destroy_2">
+		<text>Destruye los generadores de energía del Monolito.</text>
+	</string>
+	<string id="sar_perception">
+		<text>El secreto de la Zona.</text>
+	</string>
+	<string id="sar_perception_1">
+		<text>Encuentra a los que están manejando los hilos en el asunto del Monolito.</text>
+	</string>
+	<string id="sar_perception_2">
+		<text>Encuentra el laboratorio secreto y a los que están manejando los hilos.</text>
+	</string>
+	<string id="sar_secret_lab">
+		<text>Laboratorio secreto.</text>
+	</string>
+	<string id="sar_secret_lab_0">
+		<text>Entra en el búnker secreto.</text>
+	</string>
+	<string id="sar_secret_lab_1">
+		<text>Encuentra la puerta oculta.</text>
+	</string>
+	<string id="sar_secret_lab_2">
+		<text>Ábrela utilizando el decodificador.</text>
+	</string>
+	<string id="sar_secret_lab_3">
+		<text>Averigua qué hay detrás de la puerta.</text>
+	</string>

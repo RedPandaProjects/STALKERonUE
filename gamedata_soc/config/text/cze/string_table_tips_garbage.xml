@@ -1,0 +1,27 @@
+	<string id="gar_actor_looser">
+		<text>Seš k nièemu, Oznaèenej. Naprosto k nièemu! Ode mì vdìènost neèekej, nièím sis ji nezaslouil!</text>
+	</string>
+	<string id="gar_actor_normal">
+		<text>To není špatnı, stalkere! Rozhodnì sis postøílel pár mutantù, ale moc rychlej nejseš, co? Jestli chceš projít, budeš muset vytáhnout prachy.</text>
+	</string>
+	<string id="gar_actor_winner">
+		<text>Skvìlı, Oznaèenej, fakt jsi mi pomohl. Podle mì to na propustku staèí. Jdi do baru.</text>
+	</string>
+	<string id="gar_direction_fire">
+		<text>Nech je pøijít blí, a nikdo neuteèe. Já budu støílet první, ty se pøidej.</text>
+	</string>
+	<string id="gar_dolg_blokpost_warning">
+		<text>Seš na území Povinnosti, stalkere. Boje tady nejsou tolerovanı.</text>
+	</string>
+	<string id="gar_dolg_monster_rush">
+		<text>Pozor!! Tady kontrolní bod Povinnosti. Z Temného údolí se smìrem na bar ene tlupa mutantù. Kadı, kdo je pomùe zastavit, toho nebude litovat.</text>
+	</string>
+	<string id="gar_dolg_warning">
+		<text>Jsi na území Povinnosti, stalkere. Zkus si nìco a do pìti minut budeš rát hlínu.</text>
+	</string>
+	<string id="gar_hellcar_victory">
+		<text>Dobrá práce, chlapi, dostali jsme je všechny. Dejte si padla. A ty stalkere, pojï sem. Pokecáme.</text>
+	</string>
+	<string id="tips_gar_hellcar_alarm">
+		<text>Lidi, tady velitel party neutrálù. Vyhnali jsme bandity z vrakovištì, ale nejspíš ho zkusí získat zpátky. Je nás málo, take jestli mùete pomoct, máme tady pro vás volnı místo.</text>
+	</string>

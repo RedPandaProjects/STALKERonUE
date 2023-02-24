@@ -1,0 +1,27 @@
+	<string id="gar_actor_looser">
+		<text>Tu es nul, le Tatoué. Tu ne sers à rien ! N'attends aucune gratitude, on ne te doit rien !</text>
+	</string>
+	<string id="gar_actor_normal">
+		<text>Dommage, Stalker ! Tu as descendu quelques mutants, mais tu es loin d'être un as de la gâchette, hein ? Si tu veux passer, il va falloir casquer.</text>
+	</string>
+	<string id="gar_actor_winner">
+		<text>Excellent, le Tatoué, tu nous as rendu un sacré service. On va te laisser passer. Va au bar.</text>
+	</string>
+	<string id="gar_direction_fire">
+		<text>Laisse-les approcher pour que personne ne s'échappe.  Je tire le premier et toi, tu me suis.</text>
+	</string>
+	<string id="gar_dolg_blokpost_warning">
+		<text>Tu es sur le territoire du Devoir, Stalker. Ici, il est interdit de tirer.</text>
+	</string>
+	<string id="gar_dolg_monster_rush">
+		<text>Votre attention !! Ici le poste de contrôle du Devoir. Une horde de mutants en provenance de la Vallée obscure se dirige actuellement vers le bar. Tous ceux qui nous aideront à arrêter ces monstres seront récompensés.</text>
+	</string>
+	<string id="gar_dolg_warning">
+		<text>Tu es sur le territoire du Devoir, Stalker. Pas d'embrouilles ou tu le regretteras toute ta vie.</text>
+	</string>
+	<string id="gar_hellcar_victory">
+		<text>Bien joué, messieurs, on les a eus. Reposez-vous un peu. Quant à toi, Stalker, viens par ici. On va discuter.</text>
+	</string>
+	<string id="tips_gar_hellcar_alarm">
+		<text>Messieurs, ici le commandant du groupe neutre. On a délogé les bandits du parking abandonné, mais ils vont sûrement revenir à la charge. On est en sous-effectifs, alors si vous voulez nous donner un coup de main, vous êtes les bienvenus.</text>
+	</string>

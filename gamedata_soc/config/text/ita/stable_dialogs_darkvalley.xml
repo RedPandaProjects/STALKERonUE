@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="val_escort_captive_dialog_11">
+		<text>Banditi... quei figli di puttana mi stavano portando alla vecchia fabbrica. Non so cos'assero intenzione di farmi, ma prima avevano portato dentro un altro tipo e non l'ho piщ rivisto. Hanno catturato anche uno dei nostri, Serega. И prigioniero nel sotterraneo... in quel grosso edificio lа... quello incompiuto. Aiutalo, ti prego. Altrimenti... puoi immaginare...</text>
+	</string>
+	<string id="val_escort_captive_dialog_2">
+		<text>Sai cosa nascondono alla fabbrica?</text>
+	</string>
+	<string id="val_escort_captive_dialog_21">
+		<text>Ne so poco. So solo che Borov, il loro capo, ha una parte del codice di accesso  alle caverne. Laggiщ c'era un laboratorio o qualcosa del genere... Li ho sentiti parlare fra loro, dicevano tipo che Borov non vedeva l'ora di entrarci ma non и riuscito a trovare la seconda metа del codice. Ehi... se hai intenzione di entrare lа, pensaci bene. И pieno di gentaglia.</text>
+	</string>
+	<string id="val_escort_captive_dialog_211">
+		<text>Capito. Grazie, me lo ricorderт.</text>
+	</string>
+	<string id="val_escort_captive_dialog_3">
+		<text>Cercherт di aiutare il tuo uomo.</text>
+	</string>
+	<string id="val_escort_captive_dialog_41">
+		<text>Peccato per il mio compagno... Era un bravo ragazzo. Ma ti sono debitore.</text>
+	</string>
+	<string id="val_escort_captive_dialog_411">
+		<text>Cose che capitano.</text>
+	</string>
+	<string id="val_escort_captive_dialog_51">
+		<text>Grazie dell'aiuto!</text>
+	</string>
+	<string id="val_escort_captive_dialog_511">
+		<text>Salute.</text>
+	</string>
+	<string id="val_escort_captive_dialog_61">
+		<text>A te non te ne frega nulla della gente. Cos'abbiamo da discutere noi due?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21">
+		<text>Grazie, fratello! Finalmente il mio compagno и libero! Tieni, con tutta la mia gratitudine.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2111">
+		<text>Va bene.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212">
+		<text>Devi conoscere bene questa zona. Cosa c'и d'interessante?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121">
+		<text>A nord c'и un accampamento di banditi. A est, una vecchia fabbrica. A sud-ovest, un allevamento di maiali abbandonato, poi una specie di cancello... Non so dove porta, mai andato cosм lontano.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21211">
+		<text>Mi dici qualcosa sull'accampamento di banditi?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212111">
+		<text>Mmm, vediamo... Si sono insediati in un edificio incompiuto, dritto a nord. Il loro capo и quel bastardo di Borov, un vero animale. И per questo che ci hanno mandati qui: per eliminarlo.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212">
+		<text>Cos'ha di particolare la fabbrica?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212121">
+		<text>Abbiamo scoperto che contiene una specie di camera blindata, ma и protetta come Fort Knox.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121211">
+		<text>Che tipo di camera blindata? Cosa contiene?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212111">
+		<text>Come faccio a saperlo? Non ci azzardiamo neanche a entrare. So solo che Borov ha metа del codice di accesso.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21213">
+		<text>Un vero allevamento di maiali? Con maiali veri e tutto quanto?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212131">
+		<text>Stai giа pregustando una bistecca di maiale, eh? Guarda che la Zona и piena di cinghiali. Se ne mangi uno non avrai piщ bisogno di torce, perchй brillerai come un faro al buio! No, va bene, stavo scherzando. Comunque l'allevamento и abbandonato da tempo. Ora ci vivono degli stalker, ma non mi hanno fatto una bella impressione. E io mi fido del mio istinto.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21214">
+		<text>Cos'и il cancello di cui parlavi prima?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212141">
+		<text>Non ne ho idea. И solo un vecchio cancello, ma и chiuso a chiave e ben protetto. Non ci abbiamo mai messo piede.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21215">
+		<text>Capisco. Grazie.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212151">
+		<text>Di nulla. Torna quando vuoi.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_213">
+		<text>Voi due siete andati in ricognizione da soli?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2131">
+		<text>No, c'era anche Serega con noi. Ma и sparito e non ho piщ saputo nulla di lui... Forse i banditi l'hanno eliminato.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_214">
+		<text>Stammi bene.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_31">
+		<text>Oh,cavolo... E adesso cosa mi succederа? Ma grazie, fratello... Almeno tu hai cercato di aiutarmi, e io sono un uomo di parola.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41">
+		<text>Grazie dell'aiuto! Ti interessa sapere qualcos'altro?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_61">
+		<text>Quanto te l'ho chiesto hai rifiutato di aiutarmi. Sparisci, non abbiamo niente da dirci.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_611">
+		<text>Addio.</text>
+	</string>
+	<string id="val_prisoner_hello_11">
+		<text>Ehi, amico! Aiutami! Sono un esploratore dei Duty. Aiutami a uscire!</text>
+	</string>
+	<string id="val_prisoner_hello_111">
+		<text>Ci provo.</text>
+	</string>
+	<string id="val_prisoner_hello_112">
+		<text>Non posso fare niente per te.</text>
+	</string>
+	<string id="val_prisoner_hello_21">
+		<text>Grazie, fratello! Ti sono debitore. Ascolta, ho scoperto una cosa... forse ti puт servire. Borov, quello che comanda, ha accumulato un bel po' di roba. Ha un pezzo del codice di accesso al livello inferiore della vecchia fabbrica. Ho sentito le guardie dire che laggiщ c'и un qualche tipo di laboratorio. Il problema и che non и facile avvicinarsi a Borov.</text>
+	</string>
+	<string id="val_prisoner_hello_211">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="val_prisoner_hello_2111">
+		<text>И ora di tornare dai nostri. Qualcosa mi dice che saremo fortunati a uscire vivi...</text>
+	</string>
+	<string id="val_prisoner_hello_21111">
+		<text>Buona fortuna.</text>
+	</string>
+	<string id="val_prisoner_hello_31">
+		<text>Dobbiamo uscire prima che quei bastardi decidano di controllare dappertutto! Ti serve qualcosa? Prendilo subito!</text>
+	</string>
+	<string id="val_prisoner_hello_311">
+		<text>No, niente.</text>
+	</string>
+	<string id="val_prisoner_hello_41">
+		<text>Ehi, amico! C'и un comando lа sul muro. И quello che apre la cella.</text>
+	</string>
+	<string id="val_prisoner_hello_411">
+		<text>Guardo subito.</text>
+	</string>
+	<string id="val_rob_dialog_11">
+		<text>Ehi, vuoi un'arma fantastica? Vicino a Yantar ho scoperto una specie di nascondiglio. Fra le varie cose c'era anche un fucile Gauss. Che dire... и uno sballo. Chiunque arriva a meno di cento metri и spacciato... Posso fartelo avere a poco prezzo: 800!</text>
+	</string>
+	<string id="val_rob_dialog_111">
+		<text>Ecco i soldi.</text>
+	</string>
+	<string id="val_rob_dialog_112">
+		<text>Grazie, non m'interessa.</text>
+	</string>
+	<string id="val_rob_dialog_113">
+		<text>No, tientelo. И difficile trovare soldi.</text>
+	</string>
+	<string id="val_rob_dialog_21">
+		<text>Hai i soldi? Allora sbrigati, ho avuto un mucchio di clienti... Torneranno presto.</text>
+	</string>
+	<string id="val_rob_dialog_3">
+		<text>Benone. Aspetta, vado a prenderlo.</text>
+	</string>
+	<string id="val_rob_dialog_31">
+		<text>Aspetto.</text>
+	</string>
+	<string id="val_sos_dialog_11">
+		<text>Ehi, dammi un kit medico!</text>
+	</string>
+	<string id="val_sos_dialog_111">
+		<text>Eccolo.</text>
+	</string>
+	<string id="val_sos_dialog_112">
+		<text>Mi spiace, non ho kit medici.</text>
+	</string>
+	<string id="val_sos_dialog_21">
+		<text>Grazie amico, mi hai tolto da un bell'impiccio. Se vivrт abbastanza da rivederti, cercherт di ripagarti. Ora posso darti solo una buona informazione. A sud c'и una fattoria dove si sono accampati alcuni stalker. Uno di loro vende un fucile Gauss a ottimo prezzo, 800. Stavo per prenderlo ma poi sono finito nella merda fino al collo. Se hai la grana, compralo tu.</text>
+	</string>
+	<string id="val_sos_dialog_211">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4111">
+		<text>Ti sono debitore, e pago sempre i miei debiti. Andiamo.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41111">
+		<text>Ottimo! Ora faremo tutti a pezzi.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4112">
+		<text>Mi spiace, ho altri piani.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41121">
+		<text>Buona fortuna, allora.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_412">
+		<text>Saluti.</text>
+	</string>
+</string_table>

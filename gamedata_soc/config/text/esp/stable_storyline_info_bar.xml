@@ -1,0 +1,51 @@
+	<string id="descr_bar_crazy_veterans_quest">
+		<text>Tabernero: "Deber tiene que mantener su reputación. Por eso quieren hacer esto con sigilo. Lo único que hay que hacer es acabar con Afortunado, su líder, y traer su PDA como prueba."</text>
+	</string>
+	<string id="descr_bar_dolg_community_quest">
+		<text>Para unirte a Deber, necesitarás la aprobación de uno de los miembros más respetados del grupo, y también demostrar al líder que mereces un lugar en sus filas.</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_ambush_quest">
+		<text>Tabernero: "Tu misión consiste en matar a Tirano, el líder de los mercenarios. Su equipo ha conseguido llegar al Territorio salvaje y ha instalado una base en las obras. Ten cuidado, sus hombres han tendido emboscadas en el camino. Tráeme la PDA de Tirano y la recompensa será tuya."</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_leader_kill_quest">
+		<text>General Voronin: "La guerra con Libertad está llegando a su fin, Marcado. Has tomado parte en la lucha por la causa, y ahora quiero que acabe esta guerra. El líder de Libertad debe morir."</text>
+	</string>
+	<string id="descr_bar_dolg_test_quest">
+		<text>Capitán Ivantsov: "... Antes de nada, debes superar una prueba sencilla. Tienes que coger una carpeta en el edificio abandonado que hay enfrente. No es difícil: entra en el edificio, coge la carpeta y tráemela. Chupado, ¿no? Cuando tenga la carpeta, decidiremos si estás listo para unirte a las filas de Deber o no."</text>
+	</string>
+	<string id="descr_bar_hunter_rifle">
+		<text>Cazador: "Tráeme el rifle. Lo perdí por la zona donde habitan los chupasangres. Te cargaré las coordenadas. Ten cuidado, esos mamones no bromean."</text>
+	</string>
+	<string id="descr_bar_kill_professor">
+		<text>Wolfhound: "Hemos montado una pequeña cacería. Tenemos inmovilizados a los científicos allí, detrás del helicóptero. Mis hombres tienen órdenes de dispararles de vez en cuando para evitar que escapen. Únete a nosotros; nos dirigimos allí para eliminarlos. Si nos ayudas te daremos el traje de los científicos... Lo encontramos en el helicóptero que derribamos. Tu objetivo es el profesor Kruglov. Mátalo o se escapará durante el tiroteo; lo conozco bien. Si lo matas el traje es tuyo; si no, te quedas sin él."</text>
+	</string>
+	<string id="descr_bar_radar_deactivate">
+		<text>Tabernero: "Puedes protegerte del Cauterizador cerebral con el prototipo protector; conozco las coordenadas de un búnker. Recuerda que el prototipo no puede protegerte de la emisión continuamente; debes llegar al búnker que hay debajo de las antenas y desconectar el Cauterizador. Lo único que hay que hacer es llegar donde las antenas y desconectarlas."</text>
+	</string>
+	<string id="descr_bar_resque_information">
+		<text>Kruglov: "¡Stalker, socorro! Los mercenarios nos atacaron y ha muerto la mitad del equipo. Si nos ayudas, no lo lamentarás."\n \n "...Ten cuidado, creemos que son quince, pero no estamos seguros."</text>
+	</string>
+	<string id="descr_bar_resque_information_2">
+		<text>Kruglov: "Volvíamos de Yantar cuando los mercenarios nos atacaron. Dicen que necesitan información, pero sé que nos matarán a todos. Llévame a Yantar y te diré lo que sé del Cauterizador cerebral; el tabernero te pagará bien. Soy un mal guerrero, pero conozco el camino; te guiaré y nos cubrirás durante el trayecto."</text>
+	</string>
+	<string id="descr_bar_x16_documents">
+		<text>Tabernero: "Debes contactar con los científicos y averiguar dónde está el laboratorio X16 para buscar los documentos que faltan."</text>
+	</string>
+	<string id="journal_after_agroprom_documents">
+		<text>Eché un vistazo a los documentos que había en el Instituto. Según parece, el Instituto se utilizaba como tapadera de un laboratorio no oficial llamado X18 en los años anteriores al accidente. En este laboratorio tenían lugar experimentos fuera de lo común. En los documentos no se aclara dónde está exactamente, y parece que los militares tampoco saben nada. Bueno, bueno, la trama se complica... Pero quizás este sea el punto de partida que necesitan los comerciantes. Ahora tengo que ir al Norte a ver a un comerciante conocido como el Tabernero. </text>
+	</string>
+	<string id="journal_bar_darklab_documents">
+		<text>Dios... El laboratorio X18 no es nada divertido... ni sus actuales residentes. No sabía que existieran cosas así. Encontré unos documentos. No entendía mucho de lo que estaba escrito; solo sé que contenían especificaciones técnicas de algunos componentes de los emisores Kaimanov. Lo que resulta interesante es que las piezas estaban destinadas a otro laboratorio con el nombre de X16, probablemente otro laboratorio secreto.</text>
+	</string>
+	<string id="journal_bar_x16_documents">
+		<text>Umm... Los comerciantes han recabado mucha información sobre estos laboratorios. Al tabernero no le sorprendió la información sobre los emisores y el X16. Ahora está convencido de que el Cauterizador cerebral es una creación humana. Cree que el laboratorio X16 está cerca del campamento científico del lago Yantar. Resulta interesante que estén estudiando emisiones parecidas a los efectos del Cauterizador. Así que tengo que hacer una visita a la comunidad científica de la Zona.</text>
+	</string>
+	<string id="journal_before_darklab_documents">
+		<text>Estuve charlando con el tabernero. Después de echar un vistazo a los documentos del Instituto, cree que el laboratorio X18 está en el Valle Oscuro y me pidió que fuera allí a buscar información y documentos. Dice que envió a unos exploradores de Deber a las criptas subterráneas, pero que han desaparecido. El tabernero cree que fueron capturados por bandidos, que tienen una base en las proximidades. Si es cierto, todo lo que hayan encontrado los hombres de Deber estará en manos de Borov, el líder de los bandidos. El tabernero me dijo que tuviera cuidado y... seguro que no me ha contado todo lo que sabe sobre esas criptas subterráneas. Bueno, es hora de ir a trabajar: primero tengo que ir a hacerle una visita a Borov y, si la "conversación" va bien, exploraré los subterráneos.</text>
+	</string>
+	<string id="journal_before_radar_task">
+		<text>Bien, ya estoy listo para ir al Cauterizador. El Loco me especificó los periodos en que disminuyen los niveles de emisión. También me habló de un lugar seguro donde puedo esperar a que llegue el momento. Mi dispositivo de psicoprotección no funcionará fuera de esos periodos. Tendré que encontrar un camino para llegar al búnker subterráneo del laboratorio X19. Una vez dentro, buscaré los controles de las antenas del Cauterizador cerebral.</text>
+	</string>
+	<string id="st_gordon_diary">
+		<text>PDA de Gordon</text>
+	</string>

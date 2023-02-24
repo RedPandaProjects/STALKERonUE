@@ -1,0 +1,921 @@
+	<string id="aes_Monolit_master_bio">
+		<text>Centinela de Monolith. Es mejor mantenerse alejado de él. No hay detalles disponibles. </text>
+	</string>
+	<string id="aes_Monolit_rpg_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="aes_Monolit_sniper_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="aes_Monolit_sniper_gauss_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="aes_Monolit_specnaz_bio">
+		<text>Militante de Monolith. Bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="aes_Soldier_commander_bio">
+		<text>Comandante de la incursión militar. </text>
+	</string>
+	<string id="aes_Soldier_military_bio">
+		<text>Stalker militar. Bien armado y muy peligroso. No hay detalles disponibles.</text>
+	</string>
+	<string id="aes_Soldier_sniper_bio">
+		<text>No hay detalles disponibles. </text>
+	</string>
+	<string id="aes_Soldier_specnaz_aes_bio">
+		<text>Spetsnaz del ejército. Bien equipado. No hay detalles disponibles.</text>
+	</string>
+	<string id="aes_Soldier_specnaz_aes_name">
+		<text>Vasil el Gafe</text>
+	</string>
+	<string id="aes_Soldier_specnaz_bio">
+		<text>Spetsnaz del ejército. Bien equipado. No hay detalles disponibles.</text>
+	</string>
+	<string id="agr_krot_bio">
+		<text>Antiguo excavador que efectúa incursiones junto a sus cómplices en todos los laboratorios desolados y búnkeres que encuentra. </text>
+	</string>
+	<string id="agr_krot_name">
+		<text>Mole</text>
+	</string>
+	<string id="bar_arena_stalker">
+		<text>Uno de los participantes en los combates mortales del campo de batalla. No hay detalles disponibles.</text>
+	</string>
+	<string id="bar_arny_bio">
+		<text>Contrabandista experimentado. Se hizo famoso por sacar a varios cientos de mutantes de la zona restringida en muy poco tiempo. </text>
+	</string>
+	<string id="bar_arny_name">
+		<text>Arnie </text>
+	</string>
+	<string id="bar_bar_guard_bio">
+		<text>Gorila del bar. O el guardaespaldas del tabernero, si prefieres llamarlo así. Se desconocen tanto su presente como su pasado.</text>
+	</string>
+	<string id="bar_bar_guard_name">
+		<text>Garik</text>
+	</string>
+	<string id="bar_bar_guard2_bio">
+		<text>Garik es su hermano gemelo. Gorila del bar. Un hombre de pocas palabras, igual que su hermano.</text>
+	</string>
+	<string id="bar_bar_guard2_name">
+		<text>Zhorik</text>
+	</string>
+	<string id="bar_barmen_bio">
+		<text>No es un santo, pero tampoco un sinvergüenza. El tabernero conoce su valía y es respetado por todos los stalkers. Se dice que se esconde en la Zona para huir de algunos sucesos oscuros de su pasado. Tras un encuentro con una anomalía, empezó a cojear un poco y decidió cambiar de trabajo. Abrió un bar cerca de los de Deber y el local poco a poco se fue convirtiendo en el lugar de encuentro de todos los veteranos de la Zona. El tabernero tiene muchos contactos, tanto en la Zona como en el exterior. </text>
+	</string>
+	<string id="bar_barmen_name">
+		<text>Tabernero</text>
+	</string>
+	<string id="bar_beast_name">
+		<text>Bestia</text>
+	</string>
+	<string id="bar_drunk_bio">
+		<text>Miembro de la facción Deber, y aficionado a la botella. Deber le dio la última oportunidad de redimirse llevando a cabo una misión, pero siempre está demasiado borracho y es incapaz de calmarse para poder realizarla.</text>
+	</string>
+	<string id="bar_drunk_name">
+		<text>Brome</text>
+	</string>
+	<string id="bar_hunter_bio">
+		<text>De temperamento afable y optimista, su único problema es que no puede disparar con otra cosa que no sea un rifle de caza. Ni siquiera ha intentado disparar con otras armas. Hace poco se metió en un aprieto en el Territorio salvaje y perdió el rifle de su familia. Ahora, se lamenta en el bar esperando que alguien se lo devuelva. </text>
+	</string>
+	<string id="bar_hunter_name">
+		<text>Cazador</text>
+	</string>
+	<string id="bar_informer_bio">
+		<text>Un stalker misterioso y sabelotodo. Intercambia información en el bar. </text>
+	</string>
+	<string id="bar_informer_name">
+		<text>Ratero</text>
+	</string>
+	<string id="bar_ivancov_bio">
+		<text>Es el comandante de todas las incursiones y expediciones punitivas efectuadas contra las hordas de mutantes. </text>
+	</string>
+	<string id="bar_ivancov_name">
+		<text>Capitán Ivantsov</text>
+	</string>
+	<string id="bar_kicenko_name">
+		<text>Sargento Kitsenko</text>
+	</string>
+	<string id="bar_lelik_bio">
+		<text>El guardaespaldas del propietario del campo de batalla. No se sabe mucho de su pasado, pero lo que se conoce es todo malo. Odia a sus hermanos. </text>
+	</string>
+	<string id="bar_lelik_name">
+		<text>Liolik</text>
+	</string>
+	<string id="bar_lisiy_name">
+		<text>Baldy</text>
+	</string>
+	<string id="bar_petrenko_bio">
+		<text>Uno de los fundadores de Deber y, al mismo tiempo, uno de sus principales ideólogos. Responsable del código sagrado de la facción; reclutó a todos los miembros más importantes de Deber. </text>
+	</string>
+	<string id="bar_petrenko_name">
+		<text>Coronel Petrenko</text>
+	</string>
+	<string id="bar_plichko_bio">
+		<text>Jefe de seguridad del territorio de Deber</text>
+	</string>
+	<string id="bar_plichko_name">
+		<text>Sargento Plichko</text>
+	</string>
+	<string id="bar_ryaboy_bio">
+		<text>Extraño afectado por el Cauterizador cerebral. </text>
+	</string>
+	<string id="bar_ryaboy_name">
+		<text>Granos</text>
+	</string>
+	<string id="bar_voronin_bio">
+		<text>Fundador de la facción de Deber. Ha liderado el grupo durante cinco años. </text>
+	</string>
+	<string id="bar_voronin_name">
+		<text>General Voronin</text>
+	</string>
+	<string id="cit_bandit_drunk_bio">
+		<text>Alkie.</text>
+	</string>
+	<string id="cit_bandit_general_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_bandit_veteran_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_bandits_leader_bio">
+		<text>Uno de los líderes de los bandidos. Bien armado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_bandits_leader_name">
+		<text>Borziy</text>
+	</string>
+	<string id="cit_doctor_bio">
+		<text>Doc.</text>
+	</string>
+	<string id="cit_doctor_name">
+		<text>Doc</text>
+	</string>
+	<string id="cit_killer_exo_bio">
+		<text>Mercenario desconocido. Bien armado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_killer_general_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_killers_leader_bio">
+		<text>Líder de la banda de mercenarios. Bien armado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_killers_leader_name">
+		<text>Dushman</text>
+	</string>
+	<string id="cit_vp_bio">
+		<text>Stalker experimentado. No hay detalles disponibles. </text>
+	</string>
+	<string id="cit_vp_name">
+		<text>Vasily Petrovich</text>
+	</string>
+	<string id="dar_corpse_bio">
+		<text>No hay detalles disponibles.</text>
+	</string>
+	<string id="dar_explorer_bio">
+		<text>Stalker experimentado. Siempre atento a todo. </text>
+	</string>
+	<string id="dar_explorer_name">
+		<text>Zheka Casaca</text>
+	</string>
+	<string id="dar_kalugin_name">
+		<text>Kalugin P.I.</text>
+	</string>
+	<string id="ds_sergant_regular_bio">
+		<text>Sargento del ejército ucraniano. No hay detalles disponibles. </text>
+	</string>
+	<string id="ds_soldier_regular_bio">
+		<text>Soldado del ejército ucraniano. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_bandit_novice_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_captain_bio">
+		<text>Capitán del ejército ucraniano con muchos años de servicio. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_fanat_bio">
+		<text>Sucedió a Wolf como jefe del campamento de novatos. Firme y agresivo, ha sabido imponer su autoridad sobre los recién llegados.</text>
+	</string>
+	<string id="esc_fanat_name">
+		<text>Fanático</text>
+	</string>
+	<string id="esc_fox_bio">
+		<text>Viejo solitario endurecido por la Zona.</text>
+	</string>
+	<string id="esc_fox_name">
+		<text>Fox</text>
+	</string>
+	<string id="esc_killer_specnaz_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_petruha_bio">
+		<text>Novato avispado. A Wolf parece gustarle y suele enviarlo en misiones importantes.</text>
+	</string>
+	<string id="esc_petruha_name">
+		<text>Petruha</text>
+	</string>
+	<string id="esc_provodnik_bio">
+		<text>Se puede decir que es una leyenda viva. Dicen que puede llevarte a cualquier lugar de la Zona. Sus servicios son caros y no están disponibles para cualquiera. Si no le gustas, no te llevará ni por todo el dinero del mundo. Un veterano que se ha recorrido la Zona de cabo a rabo. </text>
+	</string>
+	<string id="esc_provodnik_name">
+		<text>Guía</text>
+	</string>
+	<string id="esc_sergant_regular_bio">
+		<text>Sargento del ejército ucraniano. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_shustryi_bio">
+		<text>Stalker con fama de ser casi invisible a la par que indispensable. El comerciante lo envía en misiones delicadas, como espiar a alguien, fisgonear o escuchar a hurtadillas. </text>
+	</string>
+	<string id="esc_shustryi_name">
+		<text>Nimble </text>
+	</string>
+	<string id="esc_soldier_commander_bio">
+		<text>Mayor al mando de la avanzadilla junto al puente. Conocido por aceptar sobornos de los stalkers a cambio de dejarles cruzar el puente. </text>
+	</string>
+	<string id="esc_soldier_commander_name">
+		<text>Mayor Kuznetsov</text>
+	</string>
+	<string id="esc_soldier_regular_bio">
+		<text>Soldado del ejército ucraniano. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_specnaz_bio">
+		<text>Spetsnaz. Bien equipado. No hay detalles disponibles.</text>
+	</string>
+	<string id="esc_specnaz_killer_bio">
+		<text>Mercenario desconocido. Bien armado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_stalker_novice_bio">
+		<text>Novato. Nuevo en la Zona. No hay detalles disponibles. </text>
+	</string>
+	<string id="esc_tolik_bio">
+		<text>Stalker normal.</text>
+	</string>
+	<string id="esc_tolik_name">
+		<text>Tolik</text>
+	</string>
+	<string id="esc_wolf_bio">
+		<text>Jefe del campamento de novatos. Un viejo stalker que planea echar un cable. </text>
+	</string>
+	<string id="esc_wolf_name">
+		<text>Wolf</text>
+	</string>
+	<string id="escape_trader_bio">
+		<text>Desde que era niño se ha dedicado a comerciar para ganarse la vida. En preescolar solía vender lápices de colores. En el colegio ya vendía chicles. Y en el instituto, vendía drogas blandas. Tan pronto como surgió la Zona, se dio cuenta del potencial económico que tenía. Famoso por establecer relaciones comerciales con clientes de todo tipo. </text>
+	</string>
+	<string id="escape_trader_name">
+		<text>Sidorovich</text>
+	</string>
+	<string id="gar_bandit_leader_bio">
+		<text>Tiene cierta autoridad sobre los bandidos de la Zona. Compinche de Borov</text>
+	</string>
+	<string id="gar_bandit_leader_name">
+		<text>Jabalí Vasya</text>
+	</string>
+	<string id="gar_dolg_blokpost_bio">
+		<text>Un stalker de Deber. No hay detalles disponibles. </text>
+	</string>
+	<string id="gar_dolg_blokpost_leader_bio">
+		<text>Oficial de Deber. No hay detalles disponibles. </text>
+	</string>
+	<string id="gar_dolg_blokpost_leader_name">
+		<text>Brigada</text>
+	</string>
+	<string id="gar_dram_novice_bio">
+		<text>Novato. Acaba de empezar en la Zona.</text>
+	</string>
+	<string id="gar_dram_novice_name">
+		<text>Yurik</text>
+	</string>
+	<string id="gar_hellcar_bio">
+		<text>Se esconde en la Zona para huir de la ley. Intenta mantener el orden en la Zona solo y a su manera. Lucha contra los bandidos. Cruel pero justo.</text>
+	</string>
+	<string id="gar_hellcar_name">
+		<text>Bes</text>
+	</string>
+	<string id="gar_newbie_bio">
+		<text>Novato. Nuevo en la Zona. No hay detalles disponibles. </text>
+	</string>
+	<string id="gar_seryi_bio">
+		<text>Stalker con un rostro tan sucio como su conciencia. </text>
+	</string>
+	<string id="gar_seryi_name">
+		<text>Seriy</text>
+	</string>
+	<string id="gar_stalker_regular_bio">
+		<text>Un stalker experimentado. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Dolg_specnaz_bio">
+		<text>Militante de Deber. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Dolg_specnaz_cherep_bio">
+		<text>Comandante de las fuerzas especiales de Deber. Normalmente bien equipado.</text>
+	</string>
+	<string id="mil_Dolg_specnaz_cherep_name">
+		<text>Calavera</text>
+	</string>
+	<string id="mil_Dolg_specnaz_silence_bio">
+		<text>Combatiente de Deber. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Killer_informator_bio">
+		<text>Un chivato famoso en toda la Zona.</text>
+	</string>
+	<string id="mil_Killer_informator_name">
+		<text>Ara</text>
+	</string>
+	<string id="mil_killer_master_bio">
+		<text>Mercenario desconocido. Bien armado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_killer_sniper_bio">
+		<text>Mercenario desconocido. Aparentemente nuevo en la Zona. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Killer_specnaz_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Monolit_master_bio">
+		<text>Centinela de Monolith. Es mejor mantenerse alejado de él. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Monolit_regular_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Stalker_master_bio">
+		<text>Uno de los veteranos. Conoce la Zona como la palma de su mano. Normalmente bien equipado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Stalker_veteran_bio">
+		<text>Stalker veterano. Posiblemente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_blockpost_leader_bio">
+		<text>Stalker de Libertad. Comandante de la Barrera. Logró reunir un grupo de gente dispuesta a sacrificar sus vidas por una causa común. </text>
+	</string>
+	<string id="mil_Svoboda_blockpost_leader_name">
+		<text>Capi</text>
+	</string>
+	<string id="mil_Svoboda_bodyguard_bio">
+		<text>Guardaespaldas que trabaja para Lukash, el líder de Libertad.</text>
+	</string>
+	<string id="mil_Svoboda_cook_bio">
+		<text>Cocinero de la facción de Libertad. Un borracho bravucón, pero que cocina de maravilla. </text>
+	</string>
+	<string id="mil_Svoboda_cook_name">
+		<text>Cocinero</text>
+	</string>
+	<string id="mil_Svoboda_engineer_bio">
+		<text>Un mecánico famoso en toda la Zona. Puede convertir un tractor en un tanque, o al menos eso se dice. </text>
+	</string>
+	<string id="mil_Svoboda_engineer_name">
+		<text>Tornillo</text>
+	</string>
+	<string id="mil_Svoboda_leader_bio">
+		<text>Líder de Libertad.</text>
+	</string>
+	<string id="mil_Svoboda_leader_name">
+		<text>Lukash</text>
+	</string>
+	<string id="mil_Svoboda_master_bio">
+		<text>Comandante de Libertad. No hay detalles disponibles.</text>
+	</string>
+	<string id="mil_Svoboda_master_Max_bio">
+		<text>Guardia de Libertad. Un fanático. Muy bien equipado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_master_Max_name">
+		<text>Max</text>
+	</string>
+	<string id="mil_Svoboda_master_Ugrumiy_bio">
+		<text>Guardia de Libertad. Muy bien equipado y muy peligroso. No hay detalles disponibles.</text>
+	</string>
+	<string id="mil_Svoboda_master_Ugrumiy_name">
+		<text>Sombrío</text>
+	</string>
+	<string id="mil_Svoboda_regular_bio">
+		<text>Stalker de Libertad. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_sniper_bio">
+		<text>Francotirador de Libertad. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_specnaz_bio">
+		<text>Militante de Libertad. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_stukach_bio">
+		<text>Stalker de Libertad. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_stukach_name">
+		<text>Pavlik</text>
+	</string>
+	<string id="mil_Svoboda_trader_bio">
+		<text>Conocido por su avaricia y mal genio, aunque también por ser capaz de conseguirte cualquier cosa. </text>
+	</string>
+	<string id="mil_Svoboda_trader_name">
+		<text>Roñoso</text>
+	</string>
+	<string id="mil_Svoboda_zombi_stalker_bio">
+		<text>Stalker de Libertad. No hay detalles disponibles. </text>
+	</string>
+	<string id="mil_Svoboda_zombi_stalker_name">
+		<text>Stalker loco de Libertad</text>
+	</string>
+	<string id="mil_Svoboda_zoneguard_bio">
+		<text>Militante de Libertad. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_followers_bomber_name">
+		<text>Sasha Bely</text>
+	</string>
+	<string id="pri_followers_common_bio">
+		<text>Stalker veterano. Posiblemente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_monolith_common_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_monolith_exo_bio">
+		<text>Stalker de élite de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_monolith_leader_bio">
+		<text>Líder de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_monolith_leader_name">
+		<text>Charon</text>
+	</string>
+	<string id="pri_monolith_regular_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_monolith_specnaz_bio">
+		<text>Stalker de las fuerzas especiales de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_zombied_soldier_bio">
+		<text>Soldado raso. No hay detalles disponibles. </text>
+	</string>
+	<string id="pri_zombied_soldier_name">
+		<text>Soldado zombi</text>
+	</string>
+	<string id="pri_zombied_stalker_bio">
+		<text>Un stalker que tuvo mala suerte.</text>
+	</string>
+	<string id="pri_zombied_stalker_name">
+		<text>Stalker zombi</text>
+	</string>
+	<string id="rad_dolg_master_bio">
+		<text>Comandante de Deber. Muy bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_ecolog_bio">
+		<text>Científico. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_ecolog_guard_bio">
+		<text>Guardia de seguridad de los científicos. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_ecolog_guard_name">
+		<text>Ayudante de invest.</text>
+	</string>
+	<string id="rad_ecolog_name">
+		<text>Ayudante de invest.</text>
+	</string>
+	<string id="rad_monolith_general_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_monolith_specnaz_bio">
+		<text>Militante de Monolith. Bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_specnaz_bio">
+		<text>Spetsnaz. Bien equipado. No hay detalles disponibles.</text>
+	</string>
+	<string id="rad_stalker_master_bio">
+		<text>Uno de los veteranos. Conoce la Zona como la palma de su mano. Normalmente bien equipado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_stalker_veteran_bio">
+		<text>Stalker veterano. Posiblemente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="rad_svoboda_master_bio">
+		<text>Comandante de Libertad. No hay detalles disponibles.</text>
+	</string>
+	<string id="rad_zombied_general_bio">
+		<text>Un stalker que tuvo mala suerte.</text>
+	</string>
+	<string id="ros_ecolog_guard_bio">
+		<text>Investigador del laboratorio móvil. No hay detalles disponibles. </text>
+	</string>
+	<string id="ros_freeman_bio">
+		<text>Científico experto en fenómenos anómalos. Trabajó en Norteamérica en proyectos confidenciales. Dado por desaparecido. </text>
+	</string>
+	<string id="ros_freeman_name">
+		<text>Freeman</text>
+	</string>
+	<string id="ros_happy_bio">
+		<text>Saqueador y asesino. Hay una recompensa por su cabeza. Al principio tenía buenas relaciones con Deber y les ayudó a ganar terreno. Ahora vive en el Territorio salvaje, donde se dedica a asaltar con su banda a los stalkers solitarios.</text>
+	</string>
+	<string id="ros_happy_name">
+		<text>Afortunado</text>
+	</string>
+	<string id="ros_kruglov_bio">
+		<text>Doctor en Biología. Fuera de la Zona estudiaba mutaciones patógenas en animales. Vino a la Zona para estudiar mutaciones en perros ciegos.</text>
+	</string>
+	<string id="ros_kruglov_name">
+		<text>Profesor Kruglov</text>
+	</string>
+	<string id="ros_tiran_bio">
+		<text>Uno de los "héroes" de los mercenarios. Un veterano con cicatrices de balas de todos los calibres en su cuerpo. Un extraño y sádico psicópata.</text>
+	</string>
+	<string id="ros_tiran_name">
+		<text>Tirano</text>
+	</string>
+	<string id="ros_volkodav_bio">
+		<text>Uno de los primeros comandantes de campo de los mercenarios. El líder de la banda autodenominada "Perros callejeros". Un anarquista que no respeta ley alguna, excepto la de la selva.</text>
+	</string>
+	<string id="ros_volkodav_name">
+		<text>Wolfhound</text>
+	</string>
+	<string id="sar_monolith_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="sar_monolith_cristall_bio">
+		<text>Stalker del grupo especial "Cristal" de Monolith, responsable de la seguridad del propio monolito. </text>
+	</string>
+	<string id="sar2_arena_manager_name">
+		<text>Arni</text>
+	</string>
+	<string id="sar2_arena_savage_name">
+		<text>Bestia</text>
+	</string>
+	<string id="sar2_bandit_leader_name">
+		<text>Jabalí Vasya</text>
+	</string>
+	<string id="sar2_bio">
+		<text>Una forma psicomaterial creada por el monolito.</text>
+	</string>
+	<string id="sar2_borov_name">
+		<text>Borov</text>
+	</string>
+	<string id="sar2_crazy_svoboda_name">
+		<text>Stalker loco.</text>
+	</string>
+	<string id="sar2_dolg_blokpost_leader_name">
+		<text>Brigada</text>
+	</string>
+	<string id="sar2_dolg_guard_commander_name">
+		<text>Jefe de seguridad</text>
+	</string>
+	<string id="sar2_dolg_skull_name">
+		<text>"Calavera"</text>
+	</string>
+	<string id="sar2_dolg_zastava_commander_name">
+		<text>Cdt. Avanzadilla</text>
+	</string>
+	<string id="sar2_dram_novice_name">
+		<text>Yurik</text>
+	</string>
+	<string id="sar2_explorer_name">
+		<text>Zheka "Casaca"</text>
+	</string>
+	<string id="sar2_fanat_name">
+		<text>"Fanático"</text>
+	</string>
+	<string id="sar2_fox_name">
+		<text>"Fox"</text>
+	</string>
+	<string id="sar2_gordon_name">
+		<text>Gordon</text>
+	</string>
+	<string id="sar2_haron_name">
+		<text>Charon</text>
+	</string>
+	<string id="sar2_hellcar_name">
+		<text>Bes</text>
+	</string>
+	<string id="sar2_informator_name">
+		<text>Ara</text>
+	</string>
+	<string id="sar2_ivancov_name">
+		<text>Capitán Ivantsov</text>
+	</string>
+	<string id="sar2_krot_name">
+		<text>Stalker Mole</text>
+	</string>
+	<string id="sar2_kruglov_name">
+		<text>Profesor Kruglov</text>
+	</string>
+	<string id="sar2_kuznetsov_name">
+		<text>Mayor Kuznetsov</text>
+	</string>
+	<string id="sar2_lucky_name">
+		<text>Afortunado</text>
+	</string>
+	<string id="sar2_petrenko_name">
+		<text>Coronel Petrenko</text>
+	</string>
+	<string id="sar2_petruha_name">
+		<text>Zhorik</text>
+	</string>
+	<string id="sar2_professor_name">
+		<text>Profesor Sakharov</text>
+	</string>
+	<string id="sar2_ryaboy_name">
+		<text>Granos</text>
+	</string>
+	<string id="sar2_seryi_name">
+		<text>"Seriy"</text>
+	</string>
+	<string id="sar2_svoboda_blockpost_leader_name">
+		<text>"Capi"</text>
+	</string>
+	<string id="sar2_svoboda_bodyguard_name">
+		<text>"Kaput"</text>
+	</string>
+	<string id="sar2_svoboda_cook_name">
+		<text>"Cocinero"</text>
+	</string>
+	<string id="sar2_svoboda_engeneer_name">
+		<text>Tornillo</text>
+	</string>
+	<string id="sar2_svoboda_leader_name">
+		<text>"Lukash"</text>
+	</string>
+	<string id="sar2_svoboda_max_name">
+		<text>"Max"</text>
+	</string>
+	<string id="sar2_svoboda_stukach_name">
+		<text>Pavlik</text>
+	</string>
+	<string id="sar2_svoboda_trader_name">
+		<text>"Roñoso"</text>
+	</string>
+	<string id="sar2_svoboda_ugrumyi_name">
+		<text>"Sombrío"</text>
+	</string>
+	<string id="sar2_tiran_name">
+		<text>Tirano</text>
+	</string>
+	<string id="sar2_tolik_name">
+		<text>Tolik</text>
+	</string>
+	<string id="sar2_volkodav_name">
+		<text>Wolfhound</text>
+	</string>
+	<string id="sar2_voronin_name">
+		<text>General Voronin</text>
+	</string>
+	<string id="sar2_wolf_name">
+		<text>"Wolf"</text>
+	</string>
+	<string id="sim_bandit_general_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_bandit_master_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_bandit_master_fraer_bio">
+		<text>Vino a la Zona en busca de aventuras. Imita a personajes de tebeos de los 60. Usa diversos nombres: Batman, Macho, Capa Negra, Banderas. Aunque ha sobrevivido en la Zona durante dos años, nadie le toma en serio, lo cual le enfurece. </text>
+	</string>
+	<string id="sim_bandit_master_kocherga_bio">
+		<text>Agresivo, irracional, grosero, engreído, cruel, insensible y frío. Nadie sabe cuándo o cómo llegó a la Zona. Todos le temen y no tiene amigos. Se limita a vivir en la Zona, sin futuro ni pasado. Tras una de sus múltiples incursiones en la Zona, perdió la memoria y lo olvidó casi todo. No recuerda de dónde vino ni su auténtico nombre y sufre de frecuentes lapsos de amnesia. Puede olvidar alguien a quien acaba de conocer, tomarlo por un enemigo y matarlo.</text>
+	</string>
+	<string id="sim_bandit_novice_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_bandit_veteran_bio">
+		<text>Stalker desconocido. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_dolg_master_bio">
+		<text>Guardia de Deber. Si no eres amigo suyo, aléjate de él. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_dolg_regular_bio">
+		<text>Stalker de Deber. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_dolg_sniper_bio">
+		<text>Militante de Deber. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_dolg_veteran_barin_bio">
+		<text>Un canalla pelota, hipócrita y cobarde. El lema de Barin bien podría ser "después de mí, el diluvio". Se aprovecha de cualquier situación. Ambicioso y susceptible en extremo. Vino a la Zona por dinero, obviamente. Lleva dos años acumulando bienes por todos los medios posibles. </text>
+	</string>
+	<string id="sim_dolg_veteran_bio">
+		<text>Militante de Deber. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_dolg_veteran_prapor_bio">
+		<text>Oficial de reclutamiento del Servicio de Seguridad Ucraniano. Un cliente habitual del bar. Todo el mundo sabe quién es, y que es la persona que necesitas cuando te encuentras en apuros. Aunque una vez que cruzas esa línea, no hay vuelta atrás al camino de los stalkers honrados.</text>
+	</string>
+	<string id="sim_ecolog_zob_bio">
+		<text>Normalmente se trata de un individuo frío y flemático que controla sus emociones. Pero bajo presión se vuelve agresivo e irascible. Muy astuto. Un materialista que lamenta haber acabado en la Zona. Tras graduarse en la facultad de medicina, fue enviado a la Zona, donde los científicos necesitaban un neurocirujano adjunto. Disecciona cerebros mutantes para estudiar sus habilidades psicocinéticas. Está deseando retirarse para poder volver a la capital, lo más lejos posible de este maldito lugar. </text>
+	</string>
+	<string id="sim_fresh_Zombied_bio">
+		<text>Un stalker que tuvo mala suerte.</text>
+	</string>
+	<string id="sim_killer_general_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_killer_master_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_killer_sniper_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_killer_veteran_bio">
+		<text>Mercenario desconocido. Posiblemente, bien armado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_monolith_master_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_monolith_regular_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_monolith_sniper_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_monolith_specnaz_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_soldier_commander_bio">
+		<text>No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_Soldier_master_bio">
+		<text>Stalker militar. Bien armado y muy peligroso. No hay detalles disponibles.</text>
+	</string>
+	<string id="sim_soldier_regular_bio">
+		<text>Soldado raso. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_soldier_sniper_bio">
+		<text>No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_soldier_specnaz_bio">
+		<text>Spetsnaz. Bien equipado. No hay detalles disponibles.</text>
+	</string>
+	<string id="sim_stalker_general_bio">
+		<text>Stalker experimentado. No hay detalles disponibles.</text>
+	</string>
+	<string id="sim_stalker_general_upir_bio">
+		<text>Un Stalker al que la suerte le sonríe. Cada vez que el equipo al con el que iba se veía en apuros, él era el único superviviente. Muchos stalkers se mantienen alejados de él porque parece traer mala suerte. Lleva ya un tiempo rondando por la Zona a su aire. </text>
+	</string>
+	<string id="sim_stalker_master_bio">
+		<text>Uno de los veteranos. Conoce la Zona como la palma de su mano. Normalmente bien equipado y muy peligroso. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_stalker_master_chuchelo_bio">
+		<text>Contrabandista experimentado. Durante mucho tiempo estuvo realizando negocios en África y América del Sur. Las noticias del desastre de Chernóbil le trajeron a Ucrania. En poco tiempo, se las apañó para sacar cientos de mutantes disecados fuera del área restringida y ganarse el apodo de "Taxidermista". Cuando no está "trabajando" en la Zona, es un gran comerciante. Le encantan los trajes elegantes y las corbatas, pero prefiere las armas soviéticas.</text>
+	</string>
+	<string id="sim_stalker_master_diador_bio">
+		<text>Participó en la guerra de Afganistán. Aunque era ateo, se volvió un hombre religioso tras sobrevivir a una emboscada de los muyahidines. Tras la guerra de Afganistán emigró a Polonia, donde ingresó en el seminario. Tras el seminario, fue sacerdote en la iglesia católica de Lvov. Tras la explosión de la central nuclear de Chernóbil, se fue allí como voluntario para ayudar a las víctimas. En los últimos años ha estado predicando en la Zona.</text>
+	</string>
+	<string id="sim_stalker_master_master_bio">
+		<text>Antiguo mecánico de la planta "KholodMach". Después de que su esposa le abandonara decidió quitarse la vida. Pero debido a su conciencia religiosa, eligió mudarse a la Zona como forma poco convencional de suicidio. Al contrario de lo que suponía, sobrevivió, y ganó mucha experiencia y el respeto de los stalkers gracias a sus habilidad. Posiblemente sea el mejor mecánico de la Zona. Lo que mejor se le da es la reparación de vehículos o equipo y la instalación de sistemas de seguridad en los búnkeres de las bandas. Donde quiera que va, es bienvenido. Un hombre duro y sencillo, a veces algo rudo.</text>
+	</string>
+	<string id="sim_stalker_master_polkan_bio">
+		<text>Antiguo stalker militar y Teniente Coronel de las tropas del Ministerio del Interior. El único soldado que regresó de una desastrosa operación en la Zona, que a la larga resultaría ser inútil. Entonces decidió no regresar, fingió su propia muerte y se unió a los stalkers. Tranquilo, cínico y con una gran fuerza de voluntad. </text>
+	</string>
+	<string id="sim_stalker_novice_bio">
+		<text>Novato. Nuevo en la Zona. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_stalker_novice_neumeha_bio">
+		<text>Klutz tiene 20 años. Perdió todo y a todos en el exterior antes de decidirse a venir aquí. Sobrevive a duras penas en la Zona, pero no tiene otro lugar al que ir. Debe dinero a muchos stalkers. Frecuenta la Zona pero nunca va solo, siempre intenta unirse a algún grupo de stalkers veteranos. No es un compañero muy popular, pues la mayoría de las veces no es de ninguna utilidad. Apenas consigue algo de dinero. Vive de préstamos de los otros stalkers y está muy endeudado.</text>
+	</string>
+	<string id="sim_stalker_sniper_bio">
+		<text>Stalker veterano. Posiblemente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_stalker_veteran_bio">
+		<text>Stalker veterano. Posiblemente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_stalker_veteran_gusarov_bio">
+		<text>Oleg "Demonio" Gusarov. Antiguo "boina negra", sirvió en la brigada Belotserkovskaya de los Spetsnaz. Tras varios reenganches se convirtió en Sargento Mayor. Francotirador y experto en explosivos. De naturaleza solitaria, no se aventura en grupo en el corazón de la Zona, prefiere actuar en solitario. Por este motivo ha rehusado muchas veces unirse a alguno de los bandos. </text>
+	</string>
+	<string id="sim_stalker_veteran_umnik_bio">
+		<text>Estudiante de Física que abandonó en el último año y vino a la Zona en busca de dinero fácil. Le gusta alardear de su talento "científico" y discutir sobre asuntos abstractos de filosofía. Razón suficiente para que no guste a los otros stalkers. En general, un tipo bastante decente. Una especie de idealista.</text>
+	</string>
+	<string id="sim_stalker_veteran_vorobey_bio">
+		<text>Gorrión tiene 27 años y es muy agudo y perspicaz, aunque también es capaz de las mayores meteduras de pata. También puede ser mala persona. Alguien poco fiable en general. Del tipo flaco y pálido. Vino a la Zona por curiosidad, prometiéndose a sí mismo que regresaría a casa en dos meses. Nunca lo hizo. En su primera incursión en la Zona, Gorrión se metió en un campo repleto de anomalías, sin una sola arma y sin saber el peligro que corría. Tan pronto descubrió lo que había hecho, se desmayó. Desde entonces celebra esa fecha (el 9 de octubre) como su segundo cumpleaños. </text>
+	</string>
+	<string id="sim_Svoboda_master_bio">
+		<text>Jefe de Libertad. No hay detalles disponibles.</text>
+	</string>
+	<string id="sim_Svoboda_regular_bio">
+		<text>Stalker de Libertad. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_Svoboda_sniper_bio">
+		<text>Stalker de Libertad. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_Svoboda_specnaz_bio">
+		<text>Militante de Libertad. Normalmente bien equipado. No hay detalles disponibles. </text>
+	</string>
+	<string id="sim_Svoboda_specnaz_leshii_bio">
+		<text>Leshiy, como le llama su hermano, era un joven idealista cuando llegó a la Zona, pero tras años de vivir a un paso de la muerte se ha convertido en un cínico realista. Considera la Zona como su hogar, y que aquellos que fracasan no merecen vivir.</text>
+	</string>
+	<string id="sim_svoboda_specnaz_prut_bio">
+		<text>Escribe historias y artículos sobre la Zona bajo el pseudónimo de Arkady. Antiguo periodista. Meticuloso y duro, pero justo. Muy respetado por los stalkers. </text>
+	</string>
+	<string id="sim_zombied_master_bio">
+		<text>Un stalker que tuvo mala suerte.</text>
+	</string>
+	<string id="sim_zombied_novice_bio">
+		<text>Un stalker que tuvo mala suerte.</text>
+	</string>
+	<string id="sim_zombied_veteran_bio">
+		<text>Un stalker que tuvo mala suerte.</text>
+	</string>
+	<string id="val_bandit_bodyguard_bio">
+		<text>Guardia de los bandidos. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_bandit_general_bio">
+		<text>Bandido normal. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_bandit_novice_bio">
+		<text>Bandido novato. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_bandit_veteran_bio">
+		<text>Bandido veterano. Mala reputación. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_borov_bio">
+		<text>Líder de los bandidos. </text>
+	</string>
+	<string id="val_borov_name">
+		<text>Borov</text>
+	</string>
+	<string id="val_dolg_common_bio">
+		<text>Stalker de Deber. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_monolith_common_bio">
+		<text>Stalker de Monolith. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_prisoner_bio">
+		<text>Stalker de Deber. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_prisoner_name">
+		<text>Sergei el Andrajoso</text>
+	</string>
+	<string id="val_pulia_bio">
+		<text>Stalker de Deber. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_pulia_name">
+		<text>Bala</text>
+	</string>
+	<string id="val_soldier_regular_bio">
+		<text>Soldado raso. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_soldier_specnaz_bio">
+		<text>Spetsnaz. Bien equipado. No hay detalles disponibles.</text>
+	</string>
+	<string id="val_stalker_general_bio">
+		<text>Stalker experimentado. No hay detalles disponibles. </text>
+	</string>
+	<string id="val_stalker_novice_bio">
+		<text>Novato. Nuevo en la Zona. No hay detalles disponibles. </text>
+	</string>
+	<string id="yan_ghost_name">
+		<text>Ghost</text>
+	</string>
+	<string id="yan_saharov_bio">
+		<text>Investigador veterano de la Zona. Participó en las primeras expediciones de 2007.</text>
+	</string>
+	<string id="yan_saharov_name">
+		<text>Profesor Sakharov</text>
+	</string>
+	<string id="yan_semenov_bio">
+		<text>Ayudante de investigación en el laboratorio móvil. No hay detalles disponibles. </text>
+	</string>
+	<string id="yan_semenov_name">
+		<text>Ayudante Semenov</text>
+	</string>
+	<string id="yan_vasilyev_name">
+		<text>Vasiliev</text>
+	</string>
+	<string id="zombie_name">
+		<text>Stalker zombi</text>
+	</string>
+	<string id="actor_name">
+		<text>Marcado</text>
+	</string>
+	<string id="sim_bandit_master_fraer_name">
+		<text>Fraile</text>
+	</string>
+	<string id="sim_bandit_master_kocherga_name">
+		<text>Poker</text>
+	</string>
+	<string id="sim_dolg_veteran_barin_name">
+		<text>Barin</text>
+	</string>
+	<string id="sim_dolg_veteran_prapor_name">
+		<text>Brigada</text>
+	</string>
+	<string id="sim_ecolog_zob_name">
+		<text>Crop</text>
+	</string>
+	<string id="sim_stalker_general_upir_name">
+		<text>Vampiro</text>
+	</string>
+	<string id="sim_stalker_master_chuchelo_name">
+		<text>Espantapájaros</text>
+	</string>
+	<string id="sim_stalker_master_diador_name">
+		<text>Padre Diodor</text>
+	</string>
+	<string id="sim_stalker_master_master_name">
+		<text>Maestro</text>
+	</string>
+	<string id="sim_stalker_master_polkan_name">
+		<text>Polkan</text>
+	</string>
+	<string id="sim_stalker_novice_neumeha_name">
+		<text>Torpe</text>
+	</string>
+	<string id="sim_stalker_veteran_gusarov_name">
+		<text>Oleg "El Demonio" </text>
+	</string>
+	<string id="sim_stalker_veteran_umnik_name">
+		<text>Listillo</text>
+	</string>
+	<string id="sim_stalker_veteran_vorobey_name">
+		<text>Gorrión</text>
+	</string>
+	<string id="sim_Svoboda_specnaz_leshii_name">
+		<text>Leshiy</text>
+	</string>
+	<string id="sim_svoboda_specnaz_prut_name">
+		<text>Ramita</text>
+	</string>

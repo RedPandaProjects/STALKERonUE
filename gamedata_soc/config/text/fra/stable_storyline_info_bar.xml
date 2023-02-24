@@ -1,0 +1,51 @@
+	<string id="descr_bar_crazy_veterans_quest">
+		<text>Barman : "Le Devoir a la réputation de faire observer la loi et c'est pour ça qu'ils veulent que ça se passe dans le calme. Tu dois juste neutraliser le chef, le Chanceux, et rapporter son PDA en guise de preuve."</text>
+	</string>
+	<string id="descr_bar_dolg_community_quest">
+		<text>Pour rejoindre le Devoir, il te faudra l'approbation d'un des combattants les plus respectés du groupe et prouver à leur chef que tu en es digne.</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_ambush_quest">
+		<text>Barman : "Ta mission est de tuer Tyran, le chef des Mercenaires. Ses hommes sont entrés dans les Terres abandonnées et y ont installé une base sur le chantier. Fais gaffe, ses hommes sont en embuscade sur le chemin du site. Rapporte-moi le PDA de Tyran et la récompense est à toi."</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_leader_kill_quest">
+		<text>Général Voronin : "La guerre contre la Liberté touche à sa fin, le Tatoué. Tu as joué ton rôle dans ce combat et maintenant, je veux en finir avec cette guerre. Je veux que tu tues le leader de la Liberté."</text>
+	</string>
+	<string id="descr_bar_dolg_test_quest">
+		<text>Capitaine Ivantsov : "... avant de conclure, tu vas devoir te soumettre à une épreuve simple. Procure-toi un dossier dans le bâtiment abandonné voisin. Ce n'est pas difficile, rentre, prends le dossier et apporte-le-moi. Un jeu d'enfant, pas vrai ? Lorsque ce sera chose faite, on choisira ou non de d'intégrer au Devoir."</text>
+	</string>
+	<string id="descr_bar_hunter_rifle">
+		<text>Chasseur : "Rapporte le fusil. Je l'ai perdu non loin de là où vivent ces sangsues. Je vais te transmettre les coordonnées. Mais fais gaffe, ces ordures sont redoutables."</text>
+	</string>
+	<string id="descr_bar_kill_professor">
+		<text>Doberman: "On a quelque chose à faire ici. On a coincé des scientifiques là, derrière l'hélico. Mes gars tirent quelques salves pour veiller à ce qu'ils ne s'enfuient pas. Viens nous rejoindre, on est sur le point d'entrer pour les liquider. Si tu nous aides, je te donnerai la combi des scientifiques... qu'on a trouvée dans l'hélico. Ta cible est le professeur Kruglov. Tue-le sinon pour ne pas qu'il tente de s'échapper, je connais ce type. Tue-le et la combinaison est à toi."</text>
+	</string>
+	<string id="descr_bar_radar_deactivate">
+		<text>Barman : "Tu disposes du prototype de protection pour échapper au lobotomisateur, je connais les coordonnées d'un bunker. N'oublie pas que ce prototype ne protège pas des émissions indéfiniment, rejoins le bunker sous les antennes et élimine le lobotomisateur. Allez, fonce jusqu'au antennes et neutralise-les."</text>
+	</string>
+	<string id="descr_bar_resque_information">
+		<text>Kruglov : "Vous, Stalker, aidez-nous ! Les Mercenaires nous ont attaqués, ils ont tué la moitié de notre équipe. Aidez-nous, vous ne le regretterez pas"\n \n "... attention, ils sont une quinzaine... On n'est pas très sûrs"</text>
+	</string>
+	<string id="descr_bar_resque_information_2">
+		<text>Kruglov : "On revient de Yantar où on s'est fait attaquer par les Mercenaires. Visiblement, ils auraient besoin d'informations, mais je sais qu'ils vont tenter de tous nous abattre. Conduisez-moi à Yantar ; je vous dirai tout ce que je sais sur votre lobotomisateur et le Barman vous récompensera comme il se doit. Je ne suis pas un très bon combattant, mais je connais le chemin. Je vous guiderai et vous me protégerez."</text>
+	</string>
+	<string id="descr_bar_x16_documents">
+		<text>Barman : "Rejoins les scientifiques et trouve le Labo X16 pour récupérer les documents manquants."</text>
+	</string>
+	<string id="journal_after_agroprom_documents">
+		<text>J'ai consulté les documents trouvés à l'Institut. Visiblement, cet institut a servi de façade à un labo officieux appelé X18 pendant les dix années qui ont précédé l'accident. Des expériences des plus inhabituelles y ont été menées. Son emplacement n'est pas clair et les militaires n'ont pas l'air d'en savoir grand-chose. Eh bien... Le complot se précise... Mais c'est peut-être le point de départ dont les marchands ont besoin. Bon, maintenant, il faut que j'aille vers le nord pour rencontrer le Barman.</text>
+	</string>
+	<string id="journal_bar_darklab_documents">
+		<text>Pff... Pas drôle ce Labo X18... Ni ses occupants actuels... Je savais pas que ça existait de tels trucs. J'ai trouvé des documents... J'ai pas bien compris ce qui était écrit mais ils contenaient les spécifications techniques de certains composants des émetteurs de Kaimanov. Ce qui est intéressant, c'est que ces pièces étaient destinées à un autre labo portant le nom de code X16, un labo secret sûrement.</text>
+	</string>
+	<string id="journal_bar_x16_documents">
+		<text>Hmm... Les marchands ont trouvé des tas d'informations sur ces laboratoires. Le Barman n'était pas surpris d'apprendre pour les émetteurs et le X16. Maintenant, il est convaincu que le lobotomisateur est une création humaine. Il pense que le labo X16 se trouve près du camp des scientifiques, au lac de Yantar. C'est intéressant qu'ils étudient des émissions qui ressemblent aux effets du lobotomisateur. Il faut que je rende une petite visite aux scientifiques de la Zone.</text>
+	</string>
+	<string id="journal_before_darklab_documents">
+		<text>J'ai rencontré le Barman. D'après les documents de l'Institut, il pense que ce X18 se trouve dans la Vallée obscure et m'a demandé d'aller y chercher des informations et des documents. Il a dit qu'il avait envoyé des éclaireurs du Devoir dans les souterrains, mais qu'ils avaient disparu. Le Barman pense qu'ils ont été enlevés par les bandits d'une base voisine. Si c'est vrai, tout ce que ces types du Devoir ont trouvé est tombé entre les mains de Borov, le chef des bandits. Le Barman m'a demandé de faire gaffe et... ne m'a certainement pas tout dit sur les souterrains. Eh bien, au travail : d'abord, il faut que j'aille voir Borov et si la "conversation" se passe bien, j'explorerai les souterrains.</text>
+	</string>
+	<string id="journal_before_radar_task">
+		<text>Eh bien, je suis prêt à aller jusqu'au lobotomisateur. Le fou m'a indiqué les moments pendant lesquels les niveaux des émissions diminuaient. Il m'a aussi parlé d'un endroit sûr où je pouvais attendre. Ma protection psi ne fonctionnera pas pendant ces moments là, de toute façon. Il faut que je trouve un moyen d'accéder au laboratoire souterrain X19. Là, je devrais pouvoir mettre la main sur les commandes des antennes du lobotomisateur.</text>
+	</string>
+	<string id="st_gordon_diary">
+		<text>PDA de Gordon</text>
+	</string>

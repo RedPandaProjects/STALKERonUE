@@ -1,0 +1,39 @@
+	<string id="agr_captains_chamber_hint">
+		<text>Armurerie du capitaine</text>
+	</string>
+	<string id="agr_collector_entrance_hint">
+		<text>Entrée des catacombes</text>
+	</string>
+	<string id="agr_factory_hint">
+		<text>Usine</text>
+	</string>
+	<string id="agr_find_gunslinger_cache_hint">
+		<text>Trouvez la planque secrète de Strelok dans les catacombes.</text>
+	</string>
+	<string id="agr_give_case_to_barman_hint">
+		<text>Donnez les documents au barman.</text>
+	</string>
+	<string id="agr_help_krot_hint">
+		<text>Sauvez la Taupe.</text>
+	</string>
+	<string id="agr_help_stalkers_hint">
+		<text>Sauvez les Stalkers.</text>
+	</string>
+	<string id="agr_meet_krot_hint">
+		<text>Aller voir la Taupe.</text>
+	</string>
+	<string id="agr_nii_hint">
+		<text>Institut de Recherche Agroprom. Base militaire.</text>
+	</string>
+	<string id="agr_swamp_hint">
+		<text>Lieu sûr</text>
+	</string>
+	<string id="agr_take_case_hint">
+		<text>Volez les documents.</text>
+	</string>
+	<string id="agr_take_krots_info_hint">
+		<text>Renseignez-vous sur la planque auprès de la Taupe.</text>
+	</string>
+	<string id="agr_zaz_hint">
+		<text>Zaporozhets</text>
+	</string>

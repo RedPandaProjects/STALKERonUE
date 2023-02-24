@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_map_desc_mp_agroprom_large">
+		<text>Drфle d'endroit. Bien des secrets entourent ce bвtiment silencieux, mais malgrй le danger, les Stalkers sont attirйs par les nombreux artefacts qu'il abrite. La chance ne vous sourira qu'а condition d'кtre rapide et prйcis.</text>
+	</string>
+	<string id="ui_map_desc_mp_agroprom_short">
+		<text>Drфle d'endroit. Bien des secrets entourent ce bвtiment silencieux, mais malgrй le danger, les Stalkers sont attirйs par les nombreux artefacts qu'il abrite.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_large">
+		<text>Ce dйpфt est la porte d'entrйe de la Zone. Les vйhicules y sont immobilisйs pour toujours. Aucun artefact n'y a jamais йtй signalй, mais l'endroit est trиs apprйciй des Stalkers chevronnйs qui y recrutent des nouveaux et rйcupиrent ce qu'ils peuvent. Mettez-vous а couvert dans les bвtiments et derriиre les diffйrents йquipements, et prenez garde aux ennemis positionnйs sur les toits.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_short">
+		<text>Ce dйpфt est la porte d'entrйe de la Zone. Les vйhicules y sont immobilisйs pour toujours.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_large">
+		<text>Ce mystйrieux endroit exerce une йtrange fascination sur les gens. Qui a construit ce bassin expйrimental et dans quel but ? Cela restera а jamais un secret. On ne trouve ici aucun artefact. Seuls les vestiges de machines et appareils insolites y attirent les Stalkers. Surveillez les toits et souvenez-vous que le niveau de radiations est extrкmement йlevй dans ce secteur.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_short">
+		<text>Ce mystйrieux endroit exerce une йtrange fascination sur les gens. Qui a construit ce bassin expйrimental et dans quel but ? Cela restera а jamais un secret.</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_large">
+		<text>Lugubre usine dйsaffectйe. On ignore combien de Stalkers ont trouvй la mort dans ces murs hantйs par toutes sortes d'anomalies. L'endroit attire nйanmoins les Stalkers comme des aimants, car il abrite de prйcieux artefacts. Mais attention aux niveaux de radiations !</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_short">
+		<text>Lugubre usine dйsaffectйe. On ignore combien de Stalkers ont trouvй la mort dans ces murs.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_large">
+		<text>Il s'agit d'une partie de l'immense dйcharge oщ des montagnes de dйchets radioactifs ont йtй dйposйes aprиs la catastrophe de 1986... des grues dйlabrйes, du matйriel, etc. On y trouve les vestiges d'anciennes installations ainsi qu'un immense hangar. Le tout а proximitй de l'entrйe de la Zone, avec de nombreux artefacts. C'est ce qui attire les Stalkers en quкte de trouvailles faciles.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_short">
+		<text>Il s'agit d'une partie de l'immense dйcharge oщ des montagnes de dйchets radioactifs ont йtй dйposйes aprиs la catastrophe de 1986... des grues dйlabrйes, du matйriel, etc.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_large">
+		<text>Village dйsertй situй au coeur de la Zone. Le petit lac peu profond couleur rouille, dont les fonds sont jonchйs d'йpaves de voitures, engendre une peur inconsciente chez les explorateurs de la Zone. Mйfiez-vous des snipers et souvenez-vous que la Zone rйcompense les braves.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_short">
+		<text>Village dйsertй situй au coeur de la Zone. Le petit lac peu profond couleur rouille, dont les fonds sont jonchйs d'йpaves de voitures, engendre une peur inconsciente chez les explorateurs de la Zone.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_large">
+		<text>Base militaire dйsaffectйe abritant des camions et vйhicules blindйs dйlabrйs et rouillйs ainsi qu'un centre de commandement et une caserne en ruine. Mais ne vous fiez pas aux apparences. La base est riche en artefacts et l'ennemi peut кtre cachй derriиre chaque recoin. Faites preuve de courage et vous dйcrocherez le gros lot !</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_short">
+		<text>Base militaire dйsaffectйe abritant des camions et vйhicules blindйs dйlabrйs et rouillйs ainsi qu'un centre de commandement et une caserne en ruine.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_large">
+		<text>Cet ancien hameau est un lieu sinistre et dangereux. Mais si vous avez parcouru tout ce chemin malgrй les risques, attendez-vous а mourir d'une mort subite, car nulle part ici vous ne serez en sйcuritй. Que votre lunette et votre silencieux vous gardent en vie !</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_short">
+		<text>Cet ancien hameau est un lieu sinistre et dangereux. Mais si vous avez parcouru tout ce chemin malgrй les risques, attendez-vous а mourir d'une mort subite.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_large">
+		<text>Vestiges de la ville de Pripyat, qui hйbergeait jadis les ouvriers d'AES. Les ruines de ce squelette industriel sont extrкmement dangereuses. Ici, vous devez кtre particuliиrement vigilant pour rester en vie.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_short">
+		<text>La ville de Pripyat est tout proche d'AES - l'hйritage de la catastrophe de Tchernobyl.</text>
+	</string>
+	<string id="ui_map_desc_mp_railraod_short">
+		<text>Petite gare ferroviaire de l'usine de Rostok.</text>
+	</string>
+	<string id="ui_map_desc_mp_railroad_large">
+		<text>Petite gare ferroviaire de l'usine de Rostok. Les wagons et locomotives rouillйs sont dйsormais а jamais immobilisйs sur les rails. Les nombreux artefacts disponibles ici attirent les Stalkers dйsespйrйs de toute la Zone.</text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_large">
+		<text>Sous les tas de ferraille et derriиre les murs de bйton, cette usine baigne dans un silence trиs particulier. Au siиcle dernier, elle bouillonnait d'activitй et les ouvriers s'y affairaient sous les slogans crachйs par les haut-parleurs... Mais а prйsent, l'usine semble endormie.</text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_short">
+		<text>Sous les tas de ferraille et derriиre les murs de bйton, l'usine dйsaffectйe baigne dans un profond silence.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_large">
+		<text>Abords de l'usine de Rostok avant l'arrivйe du Devoir. Ce secteur dйlabrй est nйanmoins trиs riche en artefacts. Dans les hangars et entrepфts vides, le danger est partout. Soyez extrкmement prudent et surveillez bien la tour blanche.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_short">
+		<text>Abords de l'usine de Rostok avant l'arrivйe du Devoir. Ce secteur dйlabrй est nйanmoins trиs riche en artefacts.</text>
+	</string>
+</string_table>

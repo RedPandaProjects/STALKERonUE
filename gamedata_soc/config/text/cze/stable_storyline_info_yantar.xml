@@ -1,0 +1,48 @@
+	<string id="descr_yan_find_ghost_task">
+		<text>Vasiljev: "...tohle jsou souøadnice vstupu do laboratoøe X16. Vstup je umístìnı ve sklepì centrální budovy, její úèel je neznámı. Podle mì se pouívala pro údrbu podzemních emitor: podle dokumentù od N*** byl zamıšlenı úèel projektu vıvoj psychotronické zbranì s velkım plošnım úèinkem...\n\n ...máme všechny potøebné dokumenty a víme, jak emitor vypnout. Vyrazíme do laboratoøe s Duchem. Všude kolem jsou zombie...\n\n ...všechno jde k èertu, Duch zešílel a je v deliriu. Nejspíš ho emise zasáhly. Všechno jsem zahodil a zamíøil tunely zpátky...\n\n ...Jsem v bainách, kde je bunkr? Sakra, sakra, sakra!!! Nedokáu urèit svou lokaci! Ten zbabìlec Sacharov neodpovídá! Co se to dìje??? Zombie jsou všude a mnì dochází støelivo..."</text>
+	</string>
+	<string id="descr_yan_find_lab">
+		<text>Sacharov: "Musíš najít Vasiljevovu mrtvolu a získat informace o umístìní laboratoøe. Pak jdi do laboratoøe a najdi Ducha. Duch vìdìl, jak emise vypnout a jak se pak dostat pryè."</text>
+	</string>
+	<string id="descr_yan_find_scientist">
+		<text>Sacharov: "Pokud s jedním z našich pracovníkù provedeš potøebná mìøení, pøipravím ti funkèní prototyp obleku a dám ti ho. S jeho pomocí budeš mít šanci dostat se do laboratoøe."</text>
+	</string>
+	<string id="descr_yan_find_scientist_semenov">
+		<text>Sacharov: "Pokud s jedním z našich pracovníkù provedeš potøebná mìøení, pøipravím ti funkèní prototyp obleku a dám ti ho. S jeho pomocí budeš mít šanci dostat se do laboratoøe."</text>
+	</string>
+	<string id="descr_yan_kill_brain">
+		<text>Sacharov: "Dobrá práce, Oznaèenı, nakonec ses do laboratoøe dostal. Je pro nás velmi dùleité získat monost prozkoumat mechanizmus v laboratoøi. Zkus ho vypojit, a ho mùeme prozkoumat.\n\n ...poslyš, prototyp tì pøed silnou radiací neochrání. Myslel jsem na to, take je v obleku èasovaè, kterı zaène tikat, jakmile se dostaneš pod silnou dávku. A èas vyprší, nebude tì u prototyp dostateènì chránit. Dávej si pozor a nezapomeò na to."</text>
+	</string>
+	<string id="descr_yan_kill_brain_2">
+		<text>Zaøízení je vypnuté. Teï se musíš dostat ven ivı.</text>
+	</string>
+	<string id="descr_yan_provodnik_task">
+		<text>Duch: "Záznam #257\n >>Stopaøi, posílám za tebou chlapa, má pro Doktora dùleité informace, pomoz mu. \n >>Stopaø: Dobøe, Duchu, ale a se nestane to co poslednì. Pøijï sám, stejnì si s tebou u nìjakou dobu chci pokecat. Budu èekat na obvyklım místì, v táboøe u mostu. Neztra se a dej si bacha na vojenskı patroly."</text>
+	</string>
+	<string id="descr_yan_scientist_return_task">
+		<text>Sacharov: "Co se stalo? Je mrtvı? Okamitì vezmi vısledky mìøení a vra se!!!"</text>
+	</string>
+	<string id="journal_after_find_ghost">
+		<text>Jsem v šoku! Duch je ten èlovìk na fotografii, kterou mám v souboru s úkolem zabít Støelce. Jsem opravdu zmatenı. Musí to bıt nìjakı omyl. Ale kdo ho udìlal? Zatím nemám odpovìï. Z Duchovıch záznamù jsem se dozvìdìl jméno jejich "spoleèného známého" - ètvrtého mue Støelcovy skupiny - Doktora. Pomáhal skupinì dlouho, fungoval jako jejich "velitelství". Mùu ho najít pøes stalkera jménem Stopaø, kterı se vìtšinou pohybuje kolem kordónu. No, Stopaøi, hlavnì teï náhle neumøi, aspoò dokud se nesetkáme... U Duchova tìla jsem taky našel dokumenty tıkající se "Psi-mozku". Celé okolí bylo pod vlivem toho krámu, zombifikovalo to kadého, kdo se pøiblíil. Další podobnı mechanizmus je v laboratoøi X19 a to bude pravdìpodobnì  vypalovaè mozku. Taky jsem zjistit, e tyhle mechanizmy nefungují vdy naplno. Obèas se síla záøení sniuje, aby se mohl pøístroj ochladit.</text>
+	</string>
+	<string id="journal_after_find_ghost_name">
+		<text>Další hádanka</text>
+	</string>
+	<string id="journal_after_kill_brain">
+		<text>Po vypnutí toho pøíšerného "mozku v akvárku" jsem upadl do bezvìdomí. Asi mì poslední události zaèínají zmáhat. Mìl jsem sen... zdálo se mi o fotografii. Šedovlası mu ji drí v rukou, u nohou mu sedí velkı pes. Mu se dívá do dálky, kolem nìj je baina, krajina vùbec nepøipomíná tu na fotografii. V mlze je vidìt silueta nìkoho, kdo odchází pryè. Mu mluví sám k sobì: "Pokud je to tak dùleité, proè jsi mi neøekl, kde to místo je, a kde jsi vzal tu fotku... pak... bokem vidím smìjícího se mladíka stojícího u chatrèe, kterı vesele øíká: "Kdybys jenom vidìl, kde jsem byl a co jsem tam vidìl!" Natahuje ruku a má v ní úasné zaøízení, které osvìtluje celou chatu. Pes zaèíná vrèet a couvá do kouta, šedovlası mu mumlá: "Jednoho dne tì ty tvoje hry dostanou do problémù." ... záblesk... ten samı mladík, s oblièejem pokrytım krví, se potácí do chatrèe a padá... na obloze se blıská, silnì prší... záblesk... postel v chatrèi, na ní leí mladík zamotanı do obvazù. Je v bezvìdomí. Šedovlası mu tiše øíká: "Dr se, synu." V rohu jsou na hromadì nìjaké osobní vìci a mezi nimi ta podivná fotka... záblesk... fotka v rukách šedovlasého mue. Mladík se zjizvenım oblièejem se chystá odejít. "Kam teï pùjdeš?" ptá se šedovlası. "Na sever," zazní pochmurná odpovìï... záblesk.. a v tom jsem se probudil.</text>
+	</string>
+	<string id="journal_after_kill_brain_name">
+		<text>Druhı sen</text>
+	</string>
+	<string id="journal_before_vasilyev_pda">
+		<text>U jsem jenom krok od Støelcovıch muù. Duch vyrazil do podzemní laboratoøe X16 s jedním z vìdcù. Je to tady ale jedno - nejspíš u nebude naivu. Vìdec se odtamtud vrátil sám a zemøel pøi cestì k táboru. Vìdci mi dali nìjaké zaøízení, které by mì mìlo chránit pøed vyzaøováním. Doufám, e funguje. Chtìjí ode mì, abych tam vlezl a vypojil záøiè, pak ho budou moct prozkoumat. No, bùh mi pomoz.</text>
+	</string>
+	<string id="journal_before_vasilyev_pda_name">
+		<text>Jeden krok od Ducha</text>
+	</string>
+	<string id="storyline_ghost_info">
+		<text>Záznam #257\n >>Stopaøi, posílám za tebou chlapa, má pro Doktora dùleité informace, pomoz mu. \n >> Dobøe, Duchu, ale a se nestane to co poslednì. Pøijï sám, stejnì si s tebou u nìjakou dobu chci pokecat. Budu èekat na obvyklım místì, v táboøe u mostu. Neztra se a dej si bacha na vojenskı patroly.\n\n Záznam #384\n ...Na poslední chvíli to zbabìlec Vasiljev nedal, místo aby odpojil spodní konzole, utekl, jakmile se dveøe otevøely. Nemìl jsem se na nìj spoléhat - Støelec mìl pravdu, kdy tvrdil, e se tìm prolhanım psùm nedá vìøit. Mám jedinou šanci, musím se dostat ke dveøím døív ne kontrolér...</text>
+	</string>
+	<string id="storyline_vasilyev_info">
+		<text>...tohle jsou souøadnice vstupu do laboratoøe X16. Vstup je umístìnı ve sklepì centrální budovy, její úèel je neznámı. Podle mì se pouívala pro údrbu podzemních emitor: podle dokumentù od N*** byl zamıšlenı úèel projektu vıvoj psychotronické zbranì s velkım plošnım úèinkem...\n\n ...máme všechny potøebné dokumenty a víme, jak emitor vypnout. Vyrazíme do laboratoøe s Duchem. Všude kolem jsou zombie...\n\n ...všechno jde k èertu, Duch zešílel a je v deliriu. Nejspíš ho emise zasáhly. Všechno jsem zahodil a zamíøil tunely zpátky...\n\n ...Jsem v bainách, kde je bunkr? Sakra, sakra, sakra!!! Nedokáu urèit svou lokaci! Ten zbabìlec Sacharov neodpovídá! Co se to dìje??? Zombie jsou všude a mnì dochází støelivo...</text>
+	</string>

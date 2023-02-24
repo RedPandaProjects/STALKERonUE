@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cant_walk">
+		<text>Sei troppo stanco per camminare</text>
+	</string>
+	<string id="cant_walk_weight">
+		<text>Sei troppo carico per proseguire</text>
+	</string>
+	<string id="dar_poltergeist_hold_the_door">
+		<text>Qualcuno tiene chiusa la porta.</text>
+	</string>
+	<string id="Global Map">
+		<text>Mappa globale</text>
+	</string>
+	<string id="gun_jammed">
+		<text>L'arma и inceppata. Devi ricaricarla.</text>
+	</string>
+	<string id="inventory_box_use">
+		<text>Fruga nella scatola ($$ACTION_USE$$)</text>
+	</string>
+	<string id="Local Map">
+		<text>Mappa locale</text>
+	</string>
+	<string id="st_game_saved">
+		<text>partita salvata</text>
+	</string>
+	<string id="tip_car_locked">
+		<text>Bloccata</text>
+	</string>
+	<string id="tip_car_use">
+		<text>Apri la porta($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_close">
+		<text>Premi ($$ACTION_USE$$) per chiudere la porta.</text>
+	</string>
+	<string id="tip_door_coded">
+		<text>La porta и bloccata da un codice.</text>
+	</string>
+	<string id="tip_door_decode">
+		<text>Premi ($$ACTION_USE$$) per decriptare il codice.</text>
+	</string>
+	<string id="tip_door_decoding">
+		<text>Decodificazione in corso</text>
+	</string>
+	<string id="tip_door_locked">
+		<text>La porta и bloccata.</text>
+	</string>
+	<string id="tip_door_open">
+		<text>Premi ($$ACTION_USE$$) per aprire la porta.</text>
+	</string>
+	<string id="tip_gate_close">
+		<text>Premi ($$ACTION_USE$$) per chiudere il cancello.</text>
+	</string>
+	<string id="tip_gate_locked">
+		<text>Il cancello и bloccato.</text>
+	</string>
+	<string id="tip_gate_open">
+		<text>Premi ($$ACTION_USE$$) per aprire il cancello</text>
+	</string>
+	<string id="tip_monolith">
+		<text>ESPRIMI UN DESIDERIO SEGRETO ($$ACTION_USE$$)</text>
+	</string>
+</string_table>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Blind">
+		<text>Perro ciego</text>
+	</string>
+	<string id="Bloodsucker">
+		<text>Chupasangre</text>
+	</string>
+	<string id="Boar">
+		<text>Jabalн</text>
+	</string>
+	<string id="Crow">
+		<text>Cuervo</text>
+	</string>
+	<string id="enc_mutant_blind_general">
+		<text>Desde la catбstrofe, han nacido y muerto varias generaciones de perros; cada nueva generaciуn, mбs afectada por la Zona que la anterior. La mutaciуn rбpida provocу una gran mejora de sus habilidades perifйricas, normalmente a expensas de las primarias. El cambio biolуgico mбs notable fue la pйrdida de visiуn, unida a un extraordinario desarrollo del olfato. Resultу que los cachorros ciegos sobrevivieron en la Zona igual que los normales, o incluso mejor. Finalmente, el perro comъn se extinguiу en la Zona dejando sitio a una nueva raza: la de los perros ciegos. Estos animales identifican y evitan de forma instintiva las anomalнas, la radiaciуn y otros peligros invisibles que plagan la Zona. Al igual que sus ancestros, los lobos, los perros ciegos cazan en manadas. Encontrarse con una manada de estos animales puede ser peligroso incluso para un stalker experimentado y bien armado.</text>
+	</string>
+	<string id="enc_mutant_bloodsucker_general">
+		<text>Los stalkers mбs veteranos describen a esta bestia legendaria como un humanoide alto y encorvado, con una maraсa de tentбculos en lugar de boca. Segъn los que han podido ver a la criatura y vivir para contarlo, utiliza los tentбculos para agarrar la garganta de la vнctima, paralizarla y dejarla sin una gota de sangre. Lo ъnico que queda de lo que antes era un ser humano es un esqueleto seco y momificado. Pero la cualidad mбs asombrosa del chupasangre es su habilidad para volverse invisible. Se dice que un nъmero incalculable de stalkers muertos o desaparecidos han perecido bajo el ataque despiadado de un chupasangre. Los pocos que han sobrevivido narran espeluznantes historias sobre ciйnagas y zonas subterrбneas plagadas de estas versiones del conde Drбcula que habitan en la Zona.</text>
+	</string>
+	<string id="enc_mutant_boar_general">
+		<text>Es un animal mutante, de gran tamaсo, que alcanza el metro y medio de ancho. La agresividad del jabalн de la Zona y su capacidad de supervivencia son muy superiores a las de los que habitan fuera del бrea contaminada. La apariencia fнsica de estos animales ha sufrido tambiйn las consecuencias de la radiaciуn y las anomalнas: han perdido el pelaje de algunas partes del cuerpo, y en otras es mбs largo y erizado. Las pezuсas son mбs fuertes y afiladas, han perdido el color de las pupilas, y la cabeza, sin pelo, estб plagada de manchas y profundas arrugas. Los jabalнs de la zona son muy resistentes a la radiaciуn y pueden permanecer en бreas altamente contaminadas durante largos periodos de tiempo. Normalmente cargan contra sus vнctimas intentando derribarlas para luego hacerlas pedazos.</text>
+	</string>
+	<string id="enc_mutant_crow_general">
+		<text>Es la ъnica especie de pбjaros que ha sobrevivido en la Zona resistiendo los elevados niveles de radiaciуn y evitando las anomalнas. Mientras que los pilotos del ejйrcito hacen uso de sofisticados detectores para evitar las alteraciones gravitacionales, los cuervos se valen de sus propios sentidos: un misterio que vuelve locos a biуlogos y ornitуlogos. Algunas teorнas que tratan de explicar este fenуmeno apuntan a un desarrollo altamente especializado del cerebro de estos pбjaros.</text>
+	</string>
+	<string id="enc_mutant_flesh_general">
+		<text>Al igual que la mayorнa de los seres vivos de la Zona, el cerdo comъn tambiйn ha sufrido considerables cambios biolуgicos desde el dнa de la catбstrofe. Parece que en este caso son los genes del metabolismo los mбs afectados. Los cerdos mutantes, conocidos entre los stalkers simplemente como "carne", son uno de los ejemplos mбs claros de la desastrosa perversiуn de la naturaleza de la Zona. Los cerdos mutantes han desarrollado una capa protectora de escamas y placas exoesquelйticas. Su poder de regeneraciуn se ha incrementado notablemente, asн como la complejidad de su sistema nervioso. Al igual que los cerdos normales, los mutantes son omnнvoros y pueden atacar a un stalker cuando estбn hambrientos.</text>
+	</string>
+	<string id="enc_mutant_poltergeist_general">
+		<text>Dicen que son seres sobrenaturales, criaturas invisibles que habitan en lo mбs profundo de la Zona, normalmente en los viejos edificios abandonados. Su procedencia es un misterio; se rumorea que son los espнritus de stalkers que murieron debido a una ola de radiaciуn masiva. Sus misteriosas apariciones y desapariciones son propias de las historias sobre fenуmenos poltergeist; de ahн su nombre. De hecho, los encuentros con los poltergeists son muy variados: algunos hablan de risas maliciosas y espeluznantes alaridos, y otros de bolas de fuego mortales que salen de ninguna parte. Desafortunadamente, toda la informaciуn que existe sobre el fenуmeno poltergeist proviene de historias confusas, contradictorias y de validez cuestionable.</text>
+	</string>
+	<string id="enc_mutant_pseudodog_general">
+		<text>A pesar de su nombre, los pseudoperros evolucionaron directamente de los lobos. Los animales que habitaban los bosques en el momento de la catбstrofe evolucionaron a una de las especies mutantes mбs peligrosas de la zona. Los pseudoperros son tan diferentes de los perros mutantes como los lobos de los caniches. Estas criaturas marcan y protegen su territorio celosamente, y atacan a cualquiera que se adentre en йl. Poseen grandes reflejos, una extraordinaria destreza y dientes afilados como cuchillas, lo que los convierte en temible enemigo para mutantes mбs grandes y stalkers bien armados.</text>
+	</string>
+	<string id="enc_mutant_pseudogiant_general">
+		<text>El pseudogigante tiene el aspecto de un enorme abdomen con dos extremidades desproporcionadamente largas. Las extremidades actъan como brazos y piernas a la vez. La criatura los utiliza para desplazarse y atrapar a sus vнctimas. Un pseudogigante adulto puede pesar hasta dos toneladas y medir hasta 2 metros. Su torpe apariencia resulta engaсosa, porque pueden moverse con gran rapidez si es necesario. Sus mъsculos son muy poderosos y los huesos tan resistentes como el acero. Tienen el cerebro protegido por un crбneo robusto (de hasta 10 cm de grosor) y la mйdula espinal controla muchas de sus funciones mбs complejas. Otra caracterнstica importante de esta bestia es su capacidad de crear ondas de choque que daсan a todos los seres vivos de las proximidades.</text>
+	</string>
+	<string id="enc_mutant_snork_general">
+		<text>Al parecer, estas criaturas fueron humanas alguna vez, aunque es difнcil imaginar bajo quй condiciones podrнa un ser humano convertirse en una bestia tan horrorosa. Los snorks son criaturas dementes cuya vida bestial difiere muy poco de la de otros monstruos carnнvoros de la Zona. Se mueven a cuatro patas dando largos saltos y husmeando constantemente la tierra para captar el olor de la vнctima. Cazan sigilosamente, de forma calculada y normalmente tendiendo emboscadas. Gracias a sus extraordinarios reflejos y a la potencia de sus mъsculos, los snorks pueden acercarse a la vнctima, atraparla con un solo salto preciso, y hacerla pedazos en cuestiуn de segundos. Alguna vez se han encontrado tiras de uniformes militares y otras ropas en su cuerpo. Sobra decir que es todo lo que queda de stalkers militares desaparecidos.</text>
+	</string>
+	<string id="enc_mutant_tushkano">
+		<text>En realidad, estos animales no estбn relacionados con los jerbos, aunque su semejanza es evidente. Se ha intentado averiguar sin йxito la especie de la que evolucionaron, pero sabemos que su antecesor debiу de ser un roedor gregario. Miden hasta 40 cm de ancho y tienen mбs destreza, rabia y agresividad que sus primos del desierto. Los roedores mutantes habitan principalmente en los sуtanos de edificios en ruinas y se alimentan de todo lo que atrapan con sus dientes, desde plantas a stalkers distraнdos. Un grupo de roedores puede llegar a matar animales y mutantes de gran tamaсo, desgarrando sus cuerpos antes de que puedan huir.</text>
+	</string>
+	<string id="enc_mutant_zombie_general">
+		<text>El Cauterizador cerebral despoja a su vнctima de mente y razуn, convirtiйndola en un mero receptбculo vacнo e inane. Los cuerpos descerebrados se vuelven zombis, que siguen sus instintos mбs bбsicos deambulando sin rumbo por la Zona, desprovistos de armas y de ropa. Los zombis son poco mбs que cuerpos que deambulan sin rumbo y solo se preocupan de comer y dormir. Comen y beben todo lo que estб a su alcance, por lo que rezuman radiaciуn y residuos tуxicos por los cuatro costados. Normalmente deambulan por la Zona sin ningъn propуsito aparente, o yacen cual cadбveres en edificios abandonados. Pero en cuanto sienten la presencia de un ser humano, atacan inmediatamente. Los stalkers mбs experimentados saben que lo mejor es evitarlos siempre que sea posible.</text>
+	</string>
+	<string id="Flesh">
+		<text>"Carne"</text>
+	</string>
+	<string id="General">
+		<text>Informaciуn general</text>
+	</string>
+	<string id="mutant_boar_leg">
+		<text>Pezuсa de jabalн</text>
+	</string>
+	<string id="mutant_boar_leg_description">
+		<text>Las pezuсas de jabalн se utilizan para fabricar distintos fбrmacos, como suero antirradiaciуn.</text>
+	</string>
+	<string id="mutant_dog_tail">
+		<text>Rabo de perro</text>
+	</string>
+	<string id="mutant_dog_tail_description">
+		<text>Los cientнficos llevan mucho tiempo investigando la resistencia de la piel de los perros mutantes a la electricidad y a los agentes quнmicos. Debido a que el rabo del animal no tiene prбcticamente tejido graso, es muy adecuado para su examen en el laboratorio.</text>
+	</string>
+	<string id="mutant_flesh_eye">
+		<text>Ojo de cerdo mutante</text>
+	</string>
+	<string id="mutant_flesh_eye_description">
+		<text>El ojo mutado e hinchado de los cerdos mutantes ha adquirido una serie de caracterнsticas extraсas, entre las que se cuenta la capacidad de regenerar el cristalino. Hasta ahora se desconocen los detalles del proceso, aunque su descubrimiento revolucionarб, sin ninguna duda, la medicina moderna. Puedes contribuir al desarrollo de la ciencia vendiendo ojos de cerdo mutante a los cientнficos para sus experimentos.</text>
+	</string>
+	<string id="mutant_krovosos_jaw">
+		<text>Tentбculo</text>
+	</string>
+	<string id="mutant_krovosos_jaw_description">
+		<text>Los tentбculos de los chupasangres contienen una glбndula especial que produce un fermento capaz de disolver la piel e impedir al mismo tiempo la coagulaciуn de la sangre. El descubrimiento de la composiciуn del fermento puede ser la piedra angular de toda una serie de grandes avances mйdicos.</text>
+	</string>
+	<string id="mutant_psevdodog_tail">
+		<text>Rabo de pseudoperro</text>
+	</string>
+	<string id="mutant_psevdodog_tail_description">
+		<text>Los cientнficos llevan mucho tiempo investigando la resistencia de la piel de los perros mutantes a la electricidad y a los agentes quнmicos. Debido a que el rabo del animal no tiene prбcticamente tejido graso, es muy adecuado para su examen en el laboratorio.</text>
+	</string>
+	<string id="mutant_snork_leg">
+		<text>Pezuсa de snork</text>
+	</string>
+	<string id="mutant_snork_leg_description">
+		<text>Las pezuсas de los snorks tienen un gran nъmero de tendones extremadamente elбsticos, lo que explica la capacidad de estas bestias para dar enormes saltos.</text>
+	</string>
+	<string id="Mutants">
+		<text>Animales y mutantes</text>
+	</string>
+	<string id="Poltergeist">
+		<text>Poltergeist</text>
+	</string>
+	<string id="Pseudodog">
+		<text>Pseudoperro</text>
+	</string>
+	<string id="Pseudogiant">
+		<text>Pseudogigante</text>
+	</string>
+	<string id="Snork">
+		<text>Snork</text>
+	</string>
+	<string id="Tushkano">
+		<text>Roedor</text>
+	</string>
+	<string id="Zombie">
+		<text>Zombi</text>
+	</string>
+	<string id="Controller">
+		<text>mando</text>
+	</string>
+	<string id="enc_mutant_controller_general">
+		<text>Extraсo mutante avistado cerca del centro de la Zona. Recuerda levemente a un humanoide con una enorme cabeza desproporcionada. Posee buena percepciуn y la capacidad de controlar el comportamiento de criaturas menos desarrolladas. Los ejemplares de mбs edad pueden controlar la mente humana. Es un feroz enemigo incluso para los stalkers mбs experimentados.</text>
+	</string>
+</string_table>

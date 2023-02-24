@@ -1,0 +1,60 @@
+	<string id="mil_cap_hint">
+		<text>Reden Sie mit dem Kommandanten des Barrierenpostens.</text>
+	</string>
+	<string id="mil_courier_hint1">
+		<text>Folgen Sie dem Wisser.</text>
+	</string>
+	<string id="mil_courier_hint2">
+		<text>Warten Sie, bis der Wisser den Agenten ruft.</text>
+	</string>
+	<string id="mil_courier_hint3">
+		<text>Erledigen Sie den Wisser.</text>
+	</string>
+	<string id="mil_courier_hint4">
+		<text>Erledigen Sie den Informanten.</text>
+	</string>
+	<string id="mil_crazy_hint">
+		<text>Nehmen Sie dem verrückten Stalker das Laufwerk ab.</text>
+	</string>
+	<string id="mil_dolg_khutor">
+		<text>Wächter-Bauernhof</text>
+	</string>
+	<string id="mil_freedom_sniper">
+		<text>Erledigen Sie den Scharfschützen.</text>
+	</string>
+	<string id="mil_hunters_hint1">
+		<text>Reden Sie mit Murk.</text>
+	</string>
+	<string id="mil_hunters_hint2">
+		<text>Zurück zum Geizhals.</text>
+	</string>
+	<string id="mil_kill_dolg_hint">
+		<text>Zerstören Sie den Wächtertrupp.</text>
+	</string>
+	<string id="mil_kill_lukash_hint">
+		<text>Erledigen Sie Lukasch.</text>
+	</string>
+	<string id="mil_miser_hint">
+		<text>Geizhals</text>
+	</string>
+	<string id="mil_report_to_max_hint">
+		<text>Bericht an Max</text>
+	</string>
+	<string id="mil_return_to_lukash_hint">
+		<text>Bericht an Lukasch</text>
+	</string>
+	<string id="mil_return_to_max_hint">
+		<text>Geben Sie Max das Laufwerk.</text>
+	</string>
+	<string id="mil_rg6_hint1">
+		<text>Finden Sie den Koch in der Freiheitsbasis.</text>
+	</string>
+	<string id="mil_rg6_hint2">
+		<text>Reden Sie mit dem Koch.</text>
+	</string>
+	<string id="mil_rg6_hint3">
+		<text>Holen Sie sich den Bulldog 6 aus dem Versteck im Dorf.</text>
+	</string>
+	<string id="mil_watertower_hint">
+		<text>Wasserturm</text>
+	</string>

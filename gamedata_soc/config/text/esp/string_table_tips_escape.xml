@@ -1,0 +1,60 @@
+	<string id="esc_direction_fire">
+		<text>No se dispara a menos que yo lo ordene. Cuidado con el gatillo, ¿entendido?</text>
+	</string>
+	<string id="esc_fanat_victory">
+		<text>¡¡Victoria!! Que todo el mundo venga aquí. Ven, Marcado. Tenemos que hablar.</text>
+	</string>
+	<string id="esc_return_dv">
+		<text>Bien, Marcado. Me alegro de que estés vivo y de que te hayas decidido a hacernos una visita. Acércate, tenemos que hablar. Hay algunas cosas que hacer.</text>
+	</string>
+	<string id="esc_tutorial_end">
+		<text>Excelente, tu tarea ha terminado. Ya se puede decir que has aprendido las habilidades básicas.</text>
+	</string>
+	<string id="esc_wolf_thanks">
+		<text>Marcado, tienes abierto el camino al campamento. Acércate, vamos a hablar.</text>
+	</string>
+	<string id="escape_fox_quest">
+		<text>Solo unas palabras sobre Strelok, Marcado. Un stalker acaba de regresar de una larga incursión. Se llama Fox. Parece que las ha pasado bastante canutas y está pidiendo ayuda. Le vienen siguiendo unas bestias muy extrañas todo el camino, y dice que no aguantará así mucho más tiempo. Creo que el tipo sabrá algo sobre Strelok. Estas son las coordenadas. Quizás te convendría darte prisa.</text>
+	</string>
+	<string id="escape_stalker_death">
+		<text>Menudo panorama, Marcado. Los chicos están muertos, aunque no es exactamente tu culpa. Estas cosas suceden en la Zona. De todas formas, has pasado la prueba, así que vuelve aquí y hablaremos de negocios.</text>
+	</string>
+	<string id="escape_stalker_helped">
+		<text>Buen trabajo, Marcado. Sigue así y conseguirás hacer amigos. Hazme una visita y hablaremos de negocios.</text>
+	</string>
+	<string id="escape_stalker_killed">
+		<text>Eso no ha sido muy inteligente, Marcado. Has superado la prueba, pero vas a tener que ocuparte de Wolf y de sus secuaces tú solo. De todas formas, te estoy esperando. Tenemos más trabajo del que hablar.</text>
+	</string>
+	<string id="info_esc_give_agroprom_task">
+		<text>Marcado, el ejército ha encontrado algo interesante en el Instituto Agroprom. Me gustaría saber de lo que se trata y a ti probablemente también. Consigue la información y llévasela al tabernero, al bar de los stalkers. ¡Andando!</text>
+	</string>
+	<string id="tips_esc_trader_about_anomalies">
+		<text>¡Cuidado! Estás justo al lado de las anomalías. Utiliza los tornillos para calcular su ubicación exacta y su forma.</text>
+	</string>
+	<string id="tips_esc_trader_about_pda">
+		<text>Presionar Contacto ($$ACTION_CONTACTS$$). Las personas que en un radio de 250 metros tengan encendida la PDA aparecerán en Contactos y en el minimapa. También podrás ver sus actitudes hacia ti, de modo que estarás al tanto de enemigos potenciales. Sin embargo, los bandidos y los mutantes no encienden normalmente su PDA, ¡así que ten cuidado!</text>
+	</string>
+	<string id="tips_esc_trader_activate_map">
+		<text>Para activar el mapa, presiona '$$ACTION_MAP$$'.</text>
+	</string>
+	<string id="tips_esc_trader_activate_pda">
+		<text>Para activar la PDA, presiona '$$ACTION_ACTIVE_JOBS$$'.</text>
+	</string>
+	<string id="tips_esc_trader_how_to_talk">
+		<text>Para hablar con alguien, acércate y presiona '$$ACTION_USE$$'.</text>
+	</string>
+	<string id="tips_esc_trader_quest_1">
+		<text>Encuentra el artefacto en el área marcada en el mapa y llévaselo al comerciante.</text>
+	</string>
+	<string id="tutorial_flash_anomaly_alarm">
+		<text>Presta atención, Marcado. ¡La próxima vez podrías ser tú!</text>
+	</string>
+	<string id="tutorial_trader_give_medikit">
+		<text>Dale a este idiota un botiquín.</text>
+	</string>
+	<string id="tutorial_trader_look_vagon">
+		<text>¡Marcado! Olvídate del artefacto, ya lo cogerás más tarde. Llega hasta la caravana por el camino cuanto antes. Mis hombres necesitan ayuda. Los muy idiotas abrieron fuego contra un helicóptero que pasaba por allí. Te he enviado las coordenadas.</text>
+	</string>
+	<string id="tutorial_trader_search_corpses">
+		<text>Busca en los cuerpos, podrías encontrar algo útil.</text>
+	</string>

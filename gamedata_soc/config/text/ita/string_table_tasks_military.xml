@@ -1,0 +1,150 @@
+	<string id="mil_blockpost_job">
+		<text>Supporta l'avamposto dei Freedom alla barriera.</text>
+	</string>
+	<string id="mil_courier">
+		<text>Lo spione.</text>
+	</string>
+	<string id="mil_courier_job">
+		<text>Liquida lo spione.</text>
+	</string>
+	<string id="mil_courier_phase1">
+		<text>Raggiungi la fattoria.</text>
+	</string>
+	<string id="mil_courier_phase2">
+		<text>Aspetta che lo spione faccia uscire il suo agente.</text>
+	</string>
+	<string id="mil_courier_phase3">
+		<text>Sbarazzati dello spione.</text>
+	</string>
+	<string id="mil_courier_phase4">
+		<text>Sbarazzati dell'agente.</text>
+	</string>
+	<string id="mil_courier_phase5">
+		<text>Fai rapporto sulla missione a Lukash.</text>
+	</string>
+	<string id="mil_crazy">
+		<text>Stalker impazzito.</text>
+	</string>
+	<string id="mil_dolg">
+		<text>Fazione dei Duty</text>
+	</string>
+	<string id="mil_dolg_assault_freedom">
+		<text>Aiuta la fazione dei Duty a eliminare Lukash</text>
+	</string>
+	<string id="mil_kill_lukash">
+		<text>Uccidi Lukash</text>
+	</string>
+	<string id="mil_dolg_assault_support">
+		<text>Sbarazzati del cecchino</text>
+	</string>
+	<string id="mil_dolg_return_to_khutor">
+		<text>Torna alla fattoria dei Duty per ricevere il mio compenso</text>
+	</string>
+	<string id="mil_dolg_return_to_skull">
+		<text>Torna dal Teschio</text>
+	</string>
+	<string id="mil_fblockpost_commander">
+		<text>Il Berretto, comandante dell'avamposto</text>
+	</string>
+	<string id="mil_fblockpost_phase2">
+		<text>Aiuta a distruggere la squadra d'assalto dei Monolith</text>
+	</string>
+	<string id="mil_fblockpost_phase3">
+		<text>Parla con il comandante dell'avamposto alla barriera</text>
+	</string>
+	<string id="mil_find_cook">
+		<text>Trova il cuoco nella base dei Freedom</text>
+	</string>
+	<string id="mil_freedom_rg6_task">
+		<text>Ottieni un Bulldog 6 dai Freedom</text>
+	</string>
+	<string id="mil_go_max">
+		<text>Fai rapporto a Max.</text>
+	</string>
+	<string id="mil_go_to_miser_task">
+		<text>Vai dallo Spilorcio alla base dei Freedom per ricevere un premio</text>
+	</string>
+	<string id="mil_go_to_miser_task_main">
+		<text>Ricevi un premio per i succhiasangue uccisi</text>
+	</string>
+	<string id="mil_hunters_phase1">
+		<text>Trova lo Scuro al villaggio</text>
+	</string>
+	<string id="mil_hunters_phase2">
+		<text>Uccidi i succhiasangue</text>
+	</string>
+	<string id="mil_hunters_phase3">
+		<text>Torna dallo Spilorcio per il reperto</text>
+	</string>
+	<string id="mil_hunters_task">
+		<text>Uccidi i succhiasangue al villaggio</text>
+	</string>
+	<string id="mil_kill_controller">
+		<text>Uccidi i succhiasangue</text>
+	</string>
+	<string id="mil_kill_controller_main">
+		<text>Uccidi i succhiasangue</text>
+	</string>
+	<string id="mil_kill_dolg">
+		<text>Distruggi la squadra dei Duty.</text>
+	</string>
+	<string id="mil_lukash">
+		<text>Lukash.</text>
+	</string>
+	<string id="mil_max">
+		<text>Max.</text>
+	</string>
+	<string id="mil_put_flash_to_max">
+		<text>Dai la chiavetta a Max.</text>
+	</string>
+	<string id="mil_kill_sniper">
+		<text>Uccidi il cecchino alla torre</text>
+	</string>
+	<string id="mil_quest_report_dolg">
+		<text>Fai rapporto sulla missione alla squadra dei Duty</text>
+	</string>
+	<string id="mil_return_lukash">
+		<text>Torna da Lukash.</text>
+	</string>
+	<string id="mil_return_to_ugrumy">
+		<text>Fai rapporto sulla missione allo Scuro</text>
+	</string>
+	<string id="mil_return_to_voronin">
+		<text>Porta il Bulldog 6 al generale Voronin</text>
+	</string>
+	<string id="mil_rg6">
+		<text>Trova il Bulldog 6</text>
+	</string>
+	<string id="mil_secret">
+		<text>Nascondiglio dei banditi.</text>
+	</string>
+	<string id="mil_sniper">
+		<text>Cecchino.</text>
+	</string>
+	<string id="mil_mad_job">
+		<text>Procurati una chiavetta dal cecchino impazzito.</text>
+	</string>
+	<string id="mil_talk_cook">
+		<text>Parla con lo Chef</text>
+	</string>
+	<string id="mil_talk_with_cap">
+		<text>Parla con Berretto, il comandante dell'avamposto dei Freedom</text>
+	</string>
+	<string id="mil_test_task_phase1">
+		<text>Supera il delimitatore 1</text>
+	</string>
+	<string id="mil_test_task_phase2">
+		<text>Supera il delimitatore 2</text>
+	</string>
+	<string id="mil_test_task_phase3">
+		<text>Solleva in aria il Bulldog 6 se la missione è riuscita oppure il TRs 301 se è fallita.</text>
+	</string>
+	<string id="mil_test_task_title">
+		<text>Missione di prova</text>
+	</string>
+	<string id="mil_ugrumy">
+		<text>Lo Scuro.</text>
+	</string>
+	<string id="mil_lukash_job">
+		<text>Annienta la pattuglia di Duty</text>
+	</string>

@@ -1,0 +1,63 @@
+	<string id="gar_seryi_info">
+		<text>Der Maulwurf und seine Leute haben Streloks Versteck bei Agroprom, in der Nähe der verlassenen Fabrik, ausgegraben. Warum gehst du nicht mal hin und siehst nach, was da los ist. Immerhin hat er uns eingeladen.</text>
+	</string>
+	<string id="memuars">
+		<text>Persönliche Notiz</text>
+	</string>
+	<string id="sl_beginning">
+		<text>Wer bin ich?</text>
+	</string>
+	<string id="sl_beginning_text">
+		<text>Verdammt, es ist alles so verschwommen ... Ich erinnere mich an ein Auto ... Sie haben mich irgendwo hingefahren, mein ganzer Körper schmerzte ... Es war so dunkel ... Was war davor passiert? Keine Ahnung ... so verwirrt ... Nun nennt mich dieser Fettwanst den Gezeichneten, vielleicht liegt's an dem seltsamen Tattoo auf meinem Arm. Und dann zeigt mein PDA auch noch diesen merkwürdige Auftrag an, dass ich einen Typen namens Strelok umbringen soll ... Ist das überhaupt mein PDA? Bei einem Blick auf Streloks Foto bin ich mir noch nicht einmal sicher, ob ich ihn überhaupt kenne ... Verflucht! Wie ein schlimmer Albtraum, aus dem man nicht mehr aufwacht. Was soll ich machen? Wo soll ich hin? Und wer zum Teufel bin ich überhaupt? Ok, ganz ruhig, locker bleiben. Zuerst sollte ich mal ein paar Aufträge für diesen Sidorowitsch erledigen. Immerhin behauptet er, mein Leben gerettet zu haben ... Sollte nicht so schlimm werden. Erst mal frische Luft schnappen und beruhigen, vielleicht wird dann einiges klarer.</text>
+	</string>
+	<string id="sl_first_deep_raid">
+		<text>Der erste tiefe Raubzug</text>
+	</string>
+	<string id="sl_first_deep_raid_text">
+		<text>Das wird also mein erster Raubzug tief in die Zone. Das Ziel ist das Agroprom-Forschungsinstitut. Ich muss einige Dokumente von einer militärischen Expedition bergen. Abgesehen vom Auftrag gab mir der Händler noch einige Informationen über die Gegend im Norden, Richtung Zentrum der Zone, wo die "Gehirne kochen" ... Wohl mehr Legende als Fakt, aber da mit meinem Kopf definitiv etwas nicht stimmt, sollte ich mich dort mal umsehen und mit ein paar Leuten reden. Man weiß ja nie, vielleicht war ich sogar schon mal dort ... Außerdem erzählte mir der Händler noch, dass Strelok wohl einen Weg gefunden habe, diese Gegend zu passieren. Die Händler wollen wissen wie. Ihre Gründe liegen auf der Hand, sie wollen in bislang unerreichte Gebiete voller Artefakte vordringen. Nun, ich werde ihnen wohl helfen.</text>
+	</string>
+	<string id="sl_first_opinions">
+		<text>Erste Eindrücke</text>
+	</string>
+	<string id="sl_first_opinions_text">
+		<text>Gut ... Ich hatte etwas frische Luft, hab mir die Wildnis angeguckt ... Interessanterweise kam mir einiges vertraut vor, aber es ist noch immer alles verschwommen ... Ich durfte sogar das hiesige "Unterhaltungsprogramm" ausprobieren, auch Anomalien genannt. Da ich noch lebe, bin ich ihnen vermutlich früher schon mal begegnet, aber mein Gehirn weigert sich hartnäckig sich zu erinnern. Sidorowitsch ist ein gerissener Mistkerl - er weiß, dass er meine Dienste fast kostenlos in Anspruch nehmen kann, und das nutzt er auch aus. Egal, vielleicht finde ich durch ihn diesen verdammten Strelok. Er ist die einzige Verbindung zu meiner Vergangenheit.</text>
+	</string>
+	<string id="sl_fox_meet">
+		<text>Das Treffen mit Fuchs</text>
+	</string>
+	<string id="sl_fox_meet_text">
+		<text>Ich habe Fuchs getroffen. Er hatte eine gute und eine schlechte Nachricht für mich. Die schlechte ist, dass er selbst nur sehr wenig über Strelok weiß. Die gute ist, dass sein Bruder Serij mehr weiß. Serij soll sich in einem Hangar aufhalten, ca. 2 Kilometer nördlich von hier, auf einem Schrottplatz voller radioaktivem Müll. Meine Aufgabe ist klar, ich muss dorthin bevor er verschwindet.</text>
+	</string>
+	<string id="sl_monolith_off">
+		<text>Schalte den Monolithen ab</text>
+	</string>
+	<string id="sl_monolith_off_text">
+		<text>Jetzt bin ich ganz nah dran an den Leuten, die dieses verfluchte Netz von Psi-Einheiten in der gesamten Zone aufgebaut haben. Der Monolith ist scheinbar nichts als ein weiterer Zombifizierer, nur hat sich jemand die Mühe gemacht, ein Hologramm in Gestalt eines riesigen Kristalls unter dem Mantel zu erschaffen. Und die Hirne der "Glücklichen", die sich ihm nähern, werden einfach zermatscht. Vielleicht glauben sie sogar, dass ihre Wünsche erfüllt wurden, wer weiß? Ist mir der Scheiß vielleicht auch schon passiert? Bin mir nicht sicher, aber wer auch immer hinter all dem steht wird bald meine Fragen beantworten. Sie haben mich sogar eingeladen ... Nun, ich bin auf dem Weg, ihr Mistkerle!</text>
+	</string>
+	<string id="sl_provodnik">
+		<text>Prowodnik</text>
+	</string>
+	<string id="sl_provodnik_text">
+		<text>Laut Prowodnik glaubt der Doktor, dass er verfolgt wird. Deshalb hält er sich in Streloks altem Versteck auf. Nun, ich sollte ihn mal besuchen.</text>
+	</string>
+	<string id="sl_seryi_meet">
+		<text>Treffen mit Serij</text>
+	</string>
+	<string id="sl_seryi_meet_text">
+		<text>Meine Hoffnungen etwas über Strelok zu erfahren muss ich wohl noch eine Weile verschieben: Serij beauftragte mich, einen Stalker namens Maulwurf zu treffen, der scheinbar den Weg zu Streloks Versteck kennt ... ist zwar nicht viel, aber wenn's stimmt, habe ich zumindest eine Spur. Wer weiß, vielleicht kann ich dort etwas herausfinden.</text>
+	</string>
+	<string id="sl_usefull_info">
+		<text>Die nützlichen Informationen des Händlers</text>
+	</string>
+	<string id="sl_usefull_info_text">
+		<text>Hmm ... der Händler hat mich nicht im Stich gelassen und ich bin ihm dankbar. Er gab mir einen Hinweis für meine Suche nach Strelok. Ein Stalker namens Fuchs ist wohl in der Nähe aufgetaucht und sucht nach Hilfe. Sidorowitsch glaubt, dass Fuchs Strelok kennen könnte.</text>
+	</string>
+	<string id="sl_wishmaster_legend">
+		<text>Die Legende des Wunschgönners</text>
+	</string>
+	<string id="sl_wishmaster_legend_text">
+		<text>Unterwegs habe ich ein Ammenmärchen aufgeschnappt: Der Legende nach gibt es tief in der Zone eine Maschine, die Wünsche erfüllen kann. Ihr Aufenthaltsort ist unbekannt, aber es muss irgendwo im Zentrum der Zone sein. Scheinbar muss man nur zu ihr gelangen und mit einem Schlag wird das ganze Leben viel, viel einfacher. Hmm ... vielleicht sollte ich sie finden und sagen: "Ich möchte mich an meine gesamte Vergangenheit erinnern!" Andererseits möchte ich natürlich keinen Wunsch vergeuden. Und wenn sich herausstellt, dass ich absoluter Mistkerl war? War auch nicht der Brüller! Ich frage mich, wie viele Wünsche sie wohl erfüllt.</text>
+	</string>
+	<string id="storyline_seriy_flash_info">
+		<text>Schläger schreibt an Serij: Maulwurf und seine Kollegen haben Streloks Versteck im Institut durchsucht. Finde heraus, was da vor sich geht. Serij an Schläger: Sie gehen später sowieso in die Bar, also warte ich einfach auf sie bei der Müllhalde. </text>
+	</string>

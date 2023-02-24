@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="speech_attack">
+		<text>Angriff!</text>
+	</string>
+	<string id="speech_covermeartifact">
+		<text>Ich hol das Artefakt! Gebt mir Deckung!</text>
+	</string>
+	<string id="speech_followme">
+		<text>Mir nach!</text>
+	</string>
+	<string id="speech_guardartifact">
+		<text>Bewacht das Artefakt. Wartet mit dem Angriff!</text>
+	</string>
+	<string id="speech_holdingpos">
+		<text>Ich halte die Stellung.</text>
+	</string>
+	<string id="speech_holdpos">
+		<text>Position halten!</text>
+	</string>
+	<string id="speech_icoverartifact">
+		<text>Holt das Artefakt! Ich gebe euch Deckung.</text>
+	</string>
+	<string id="speech_needhelp">
+		<text>Brauche Hilfe.</text>
+	</string>
+	<string id="speech_needmoney">
+		<text>Kein Geld, kauf Ausrьstung.</text>
+	</string>
+	<string id="speech_no">
+		<text>Nein.</text>
+	</string>
+	<string id="speech_noenemy">
+		<text>Niemand da.</text>
+	</string>
+	<string id="speech_report">
+		<text>Lagebericht, sofort!</text>
+	</string>
+	<string id="speech_retreat">
+		<text>Rьckzug!</text>
+	</string>
+	<string id="speech_roger">
+		<text>Roger.</text>
+	</string>
+	<string id="speech_silence">
+		<text>Alle Mann still sein!</text>
+	</string>
+	<string id="speech_sticktogether">
+		<text>Dicht zusammenbleiben.</text>
+	</string>
+	<string id="speech_takeartifact">
+		<text>Holt euch das Artefakt!</text>
+	</string>
+</string_table>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cant_walk">
+		<text>Sie sind zu erschцpft, um zu gehen.</text>
+	</string>
+	<string id="cant_walk_weight">
+		<text>Sie sind zu schwer beladen, um fortzufahren.</text>
+	</string>
+	<string id="dar_poltergeist_hold_the_door">
+		<text>Jemand hдlt die Tьr zu.</text>
+	</string>
+	<string id="Global Map">
+		<text>Globale Karte</text>
+	</string>
+	<string id="gun_jammed">
+		<text>Ihre Waffe klemmt. Sie mьssen nachladen.</text>
+	</string>
+	<string id="inventory_box_use">
+		<text>Kiste durchsuchen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="Local Map">
+		<text>Lokale Karte</text>
+	</string>
+	<string id="st_game_saved">
+		<text>Spiel gespeichert</text>
+	</string>
+	<string id="tip_car_locked">
+		<text>Blockiert</text>
+	</string>
+	<string id="tip_car_use">
+		<text>Tьr цffnen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_close">
+		<text>Tьr schlieЯen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_coded">
+		<text>Die Tьr hat einen SchlieЯcode</text>
+	</string>
+	<string id="tip_door_decode">
+		<text>Tьr hacken ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_decoding">
+		<text>Dekodierung lдuft</text>
+	</string>
+	<string id="tip_door_locked">
+		<text>Die Tьr ist abgeschlossen</text>
+	</string>
+	<string id="tip_door_open">
+		<text>Tьr цffnen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_gate_close">
+		<text>Tor schlieЯen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_gate_locked">
+		<text>Das Tor ist blockiert</text>
+	</string>
+	<string id="tip_gate_open">
+		<text>Tor цffnen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_monolith">
+		<text>GEHEIMER WUNSCH ($$ACTION_USE$$)</text>
+	</string>
+</string_table>

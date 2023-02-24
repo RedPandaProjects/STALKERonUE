@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dm_general_action_info">
+		<text>Co tady dмlбte?</text>
+	</string>
+	<string id="dm_general_cool_info">
+		<text>Mщћeљ mi шнct nмco zajнmavэho?</text>
+	</string>
+	<string id="dm_general_cool_info_no_more">
+		<text>Nic dalљнho nevнm.</text>
+	</string>
+	<string id="dm_general_help_bandage">
+		<text>Na, vem si tenhle obvaz.</text>
+	</string>
+	<string id="dm_general_help_medkit">
+		<text>Na, vem si tuhle lйkбrniиku.</text>
+	</string>
+	<string id="dm_general_trade_info">
+		<text>Shбnнm informace. Za prachy.</text>
+	</string>
+	<string id="dm_general_trade_info_caption">
+		<text>Mщћu ti nabнdnout tohle:</text>
+	</string>
+	<string id="dm_general_trade_info_hasno">
+		<text>Nemбm co nabнdnout.</text>
+	</string>
+	<string id="dm_general_trade_info_nothing">
+		<text>Nмkdy jindy.</text>
+	</string>
+</string_table>

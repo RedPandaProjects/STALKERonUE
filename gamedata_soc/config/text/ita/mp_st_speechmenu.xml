@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="speech_attack">
+		<text>All'attacco!</text>
+	</string>
+	<string id="speech_covermeartifact">
+		<text>Vado a prendere il reperto! Copritemi.</text>
+	</string>
+	<string id="speech_followme">
+		<text>Seguitemi!</text>
+	</string>
+	<string id="speech_guardartifact">
+		<text>Proteggete il reperto. Non attaccate!</text>
+	</string>
+	<string id="speech_holdingpos">
+		<text>Non mi muovo da qui.</text>
+	</string>
+	<string id="speech_holdpos">
+		<text>И necessario mantenere la posizione!</text>
+	</string>
+	<string id="speech_icoverartifact">
+		<text>Prendete il reperto! Vi copro io.</text>
+	</string>
+	<string id="speech_needhelp">
+		<text>Ho bisogno di aiuto.</text>
+	</string>
+	<string id="speech_needmoney">
+		<text>Sono senza soldi, compratemi dell'equipaggiamento.</text>
+	</string>
+	<string id="speech_no">
+		<text>No</text>
+	</string>
+	<string id="speech_noenemy">
+		<text>Nessuno nei paraggi.</text>
+	</string>
+	<string id="speech_report">
+		<text>Rapporto sulla situazione.</text>
+	</string>
+	<string id="speech_retreat">
+		<text>Ripiegare!</text>
+	</string>
+	<string id="speech_roger">
+		<text>Ricevuto.</text>
+	</string>
+	<string id="speech_silence">
+		<text>Fate silenzio!</text>
+	</string>
+	<string id="speech_sticktogether">
+		<text>Rimanete uniti!</text>
+	</string>
+	<string id="speech_takeartifact">
+		<text>Prendete il reperto!</text>
+	</string>
+</string_table>

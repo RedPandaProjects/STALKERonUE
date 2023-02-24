@@ -1,0 +1,48 @@
+	<string id="sar_monolith">
+		<text>Exaucer des voeux</text>
+	</string>
+	<string id="sar_monolith_0">
+		<text>Rejoindre le Monolithe</text>
+	</string>
+	<string id="sar_monolith_1">
+		<text>S'introduire dans le sarcophage</text>
+	</string>
+	<string id="sar_monolith_2">
+		<text>Trouver l'exauceur</text>
+	</string>
+	<string id="sar_monolith_destroy">
+		<text>Le secret du Monolithe.</text>
+	</string>
+	<string id="sar_monolith_destroy_0">
+		<text>Infiltrer le labo secret.</text>
+	</string>
+	<string id="sar_monolith_destroy_1">
+		<text>Élucider le secret du Monolithe.</text>
+	</string>
+	<string id="sar_monolith_destroy_2">
+		<text>Détruire les générateurs électriques du Monolithe.</text>
+	</string>
+	<string id="sar_perception">
+		<text>Le secret de la Zone.</text>
+	</string>
+	<string id="sar_perception_1">
+		<text>Rencontrer ceux qui se cachent derrière le Monolithe.</text>
+	</string>
+	<string id="sar_perception_2">
+		<text>Trouver le labo secret et rencontrer les "marionnettistes".</text>
+	</string>
+	<string id="sar_secret_lab">
+		<text>Laboratoire secret</text>
+	</string>
+	<string id="sar_secret_lab_0">
+		<text>Entrer dans le bunker secret.</text>
+	</string>
+	<string id="sar_secret_lab_1">
+		<text>Trouver la porte cachée.</text>
+	</string>
+	<string id="sar_secret_lab_2">
+		<text>L'ouvrir avec le décodeur.</text>
+	</string>
+	<string id="sar_secret_lab_3">
+		<text>Découvrir ce qu'il y a derrière la porte.</text>
+	</string>

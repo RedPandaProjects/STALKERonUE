@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dm_action_info_0">
+		<text>Wie soll's hier was Neues geben? Stell dir das hier wie'n Kindergarten vor, oder 'ne Vorschule. Zugegeben, wenn du hier nicht abhдngst, bist du in der Zone in spдtestens fьnf Minuten geliefert. Die Schlauen bleiben eine Weile hier, dann gehen sie weg und nur der Teufel weiЯ, wohin. Hier kannst du den Durchbruch mit Munition oder Waffen schaffen, keine Frage. Machen alle so.</text>
+	</string>
+	<string id="dm_action_info_1">
+		<text>Ich muss bloЯ warten, bis die uniformierten Waschlappen essen gehen. Hat keinen Sinn, hier rumzuhдngen. Ich muss ins GroЯe Land, aber die lassen mich nicht, egal, was ist. Ich bin auch nicht der Einzige, der raus will, aber noch kommen wir nicht an denen vorbei.</text>
+	</string>
+	<string id="dm_action_info_10">
+		<text>Die Uniformierten haben nicht weit von hier was gesucht. Normalerweise kommen sie nicht hierher. Hier war alles schon vorher ausgerдumt, bis auf's letzte Kabel. Aber jetzt scheinen sie was gefunden zu haben ... Ich bin nicht mal in die Nдhe des Gebдudes gekommen! Die haben mich sofort bemerkt und geschossen. Hab Glьck, dass ich kein Loch im Rьcken hab.</text>
+	</string>
+	<string id="dm_action_info_100">
+		<text>Nichts weiter. Versuch nur, den Durchbruch zu schaffen, mehr nicht.</text>
+	</string>
+	<string id="dm_action_info_11">
+		<text>Wir stellen ein Team aus den Leuten zusammen, die nicht genug davon kriegen, unter der Erde in der Zone rumzukraxeln. Da ist eine alte Fabrik, und unter ihr jede Menge Stromleitungen. Da soll's viel gutes Zeug geben, immer wieder was Neues. Echt interessant ...</text>
+	</string>
+	<string id="dm_action_info_12">
+		<text>Nicht neu - alt! Es heiЯt, dass hier mal Streloks alte Basis war. Ich wьsste gern, welche Spuren man aus der Zeit finden kцnnte, wenn man genau hinsehen wьrde.</text>
+	</string>
+	<string id="dm_action_info_13">
+		<text>Ist das zu glauben? Vor 'ner Stunde wдr ich fast dran gewesen! Als ich vor 'nem halben Jahr hier war, da war alles still, und jetzt? Unter jedem Busch diese Glatzkцpfe in ihren Kostьmen. Irre, Mann ...</text>
+	</string>
+	<string id="dm_action_info_14">
+		<text>Stalker, du hast echt Glьck, dass die Banditen dich nicht gekriegt haben. Die haben hier ganz in der Nдhe 'ne Basis. Ich hдtte sie schon lдngst platt gemacht, wenn ich kцnnte ... Vorerst beobachten wir nur. Das ist ihre Hilfsbasis, das Hauptquartier liegt nдher am Zentrum der Zone.</text>
+	</string>
+	<string id="dm_action_info_15">
+		<text>Es heiЯt, hier soll mal ein beeindruckendes Labor gewesen sein, getarnt. Oh ... einerseits wдr's toll, den Eingang zu finden - ist sicher viel tolles Zeug drin. Andererseits krieg ich davon 'ne Gдnsehaut ...</text>
+	</string>
+	<string id="dm_action_info_16">
+		<text>Wusstest du, dass es vor der Katastrophe im Dunklen Tal einen unterirdischen Forschungskomplex gab? Ich weiЯ nicht, wozu er gedacht war, aber bestimmt zu nichts Gutem. Man erzдhlt sich viel Verschiedenes darьber, meist Schlechtes. Schreckliche Sache.</text>
+	</string>
+	<string id="dm_action_info_17">
+		<text>Und? Was willst du hцren? Eins sag ich dir: Die "Wдchter" haben eindeutig das Sagen. Die wissen, wie man Ordnung hдlt, so viel steht fest. Aber ich mag sie nicht besonders. Sie sind wie Grundbesitzer - "nimm dies nicht mit", "das darf die Zone nicht verlassen" ... Nicht nur das, sie geben auch vor, was du im GroЯen Land sagen darfst und was du zu verschweigen hast! Sie tratschen und wollen die Zone Stьck fьr Stьck zerstцren. Na, das ьberrascht mich nicht, bei ehemaligen Soldaten ... alles Trдumer. Viel schlimmer ist, dass sie Unterstьtzung von ganz oben haben. Zumindest behaupten sie das!</text>
+	</string>
+	<string id="dm_action_info_18">
+		<text>Das Gebiet wird von den Wдchtern beherrscht, und deren Regeln sind das Gesetz. Wir kontrollieren die Grenzen der Zone und kьhlen Hitzkцpfe ab. Die armen Idioten kommen scharenweise her, alles Amateure und Romantiker. Und schon am ersten Tag gehen sie gleich gruppenweise drauf.</text>
+	</string>
+	<string id="dm_action_info_19">
+		<text>Warst du in unserem Mittellager? Okay, es gehцrt nicht NUR uns. Da kann einem fast jeder ьber den Weg laufen. Wichtig ist, dass es 'ne gute Stelle ist, frei von Mьll, und alle Neuigkeiten ьber die Zone flieЯen da durch. Man hцrt fast immer was Nьtzliches, oder kann zumindest mit den Leuten einfach mal so quatschen. Schade, dass Glatze mit seiner Gruppe vorgestern weg ist. Hab ihn diesmal nicht mal gesehen.</text>
+	</string>
+	<string id="dm_action_info_2">
+		<text>Ziehen wir ins Lager, da hцrt man alle Gerьchte. Alle, die das hier zum ersten Mal machen - Anfдnger wie du - schauen meist rein, um sich Tipps zu holen oder mal zu entspannen. In der Nдhe sind Soldaten. Hab keine Angst vor ihnen, aber steh ihnen nicht im Weg. Die kцnnen schieЯen, ohne weiter drьber nachzudenken ... Hier beim Hдndler - der verkauft die цrtliche Ware - gibt's eine schцne, ruhige Stelle, an der du dein Lager aufschlagen kannst. </text>
+	</string>
+	<string id="dm_action_info_20">
+		<text>Im Moment, ist dieser Ort sicher, Stalker. Und so soll's auch bleiben! Hier sind viele Leute - manche, die hier zu Hause sind und die umliegende Gegend nicht verlassen, andere, die sich auf den nдchsten Ьberfall vorbereiten. Schade, dass Iroke nicht zurьckgekommen ist. Er hat Anfдnger wie dich immer gern in die richtige Bahn gelenkt.</text>
+	</string>
+	<string id="dm_action_info_21">
+		<text>Hast du gehцrt, dass die Wдchter rekrutieren? Hab kurz mit dem Gedanken gespielt, aber dann dachte ich: zur Hцlle damit! Irgendwann ziehen sie mich noch ein. Diese Art Disziplin kann ich nicht brauchen. Hab meine zwei Jahre gedient, das hat mir gereicht ...</text>
+	</string>
+	<string id="dm_action_info_22">
+		<text>Falls du's noch nicht gehцrt hast, sag ich's dir: Wir rekrutieren neue Mitglieder. Wenn du Erfahrung hast, dann komm, wirst es nicht bereuen. Frag in der Basis nach Petrenko.</text>
+	</string>
+	<string id="dm_action_info_23">
+		<text>Bist du auch hier, um dir die Spiele anzugucken? Willst du wetten? Tja, unglaublich! Hier ist irgendwo eine Arena, und du hast nicht die geringste Ahnung! Also pass auf: Wдchter schnappen Mutanten, richtig? Und wenn die Viecher nach der Forschung noch leben, lдsst man sie in der Arena los. Die Babys gibt's in allen GrцЯen und Gestalten. Bei einigen machst du dich nass vor Lachen, bei anderen vor Angst!</text>
+	</string>
+	<string id="dm_action_info_24">
+		<text>Die Arena hat grad neues Futter gekriegt. Fьr die Leute heiЯt das Unterhaltung, fьr uns, dass wir ein bisschen an den Wetten verdienen. Wir beweisen den Stalkern, dass die Wдchter nicht bloЯ so tun als ob, sondern es ernst meinen.</text>
+	</string>
+	<string id="dm_action_info_25">
+		<text>Hey, hцr mal, warst du mal in Rostok? War mal ruhig da, aber allein hinzugehen ist jetzt ziemlich hart. Wilde Gegend, viel zu viele Mutanten. Lass uns zusammen hingehen, okay? ... Andererseits ... Ich kenne dich nicht, und du kennst mich nicht. Was, wenn ... Lass gut sein, Mann, tut mir leid. Trennen wir uns lieber.</text>
+	</string>
+	<string id="dm_action_info_26">
+		<text>Wir sind gerade aus Rostok zurьck. Da musst du dich nicht blicken lassen, besonders nicht allein. Willst du am Leben bleiben? Dann geh besser nicht hin.</text>
+	</string>
+	<string id="dm_action_info_27">
+		<text>Ich hab ьberlegt, nach Jantar zu gehen, aber dann dachte ich, scheiЯ drauf. Die Eierkцpfe haben 'ne ausgereifte wissenschaftliche Basis in der Zone. Die buddeln in Wer-weiЯ-was rum, wдhrend die Zombies um den Komplex rumgeistern. Was 'ne Idylle, Mann.</text>
+	</string>
+	<string id="dm_action_info_28">
+		<text>Neulich haben sie in der Jantar-Zone aufgerдumt ... Ja, richtig sauber gemacht! Da gibt's Forschungslabors, aber zu viele Zombies drum herum. Wir mьssen regelmдЯig rьber und den Wissenschaftlern helfen.</text>
+	</string>
+	<string id="dm_action_info_29">
+		<text>Bei den alten Lagerhдusern, weiЯt du - Freiheitsbasis. Die sind munter drauf, haben echt Seele. Es macht richtig SpaЯ, bei 'ner Flasche Wein mit ihnen zu quatschen. Und im Gegensatz zur Bar hдngen da nicht immer die Wдchter rum.</text>
+	</string>
+	<string id="dm_action_info_3">
+		<text>In der Nдhe ist 'ne alte Fabrik, da vertreiben wir immer wieder die Banditen, und jedes Mal kommen sie zurьck! Ist nicht mal einen Monat her, und schon sind sie wieder da. Da solltest du besser aufpassen ...</text>
+	</string>
+	<string id="dm_action_info_30">
+		<text>Die Freiheit versteckt sich hinter den alten Lagerhдusern ... ReiЯ sie alle ein, die verdammten ...</text>
+	</string>
+	<string id="dm_action_info_31">
+		<text>Verschwinde, bevor's dunkel wird! Am Tag geht es einigermaЯen, aber wenn die Sonne untergeht ...</text>
+	</string>
+	<string id="dm_action_info_32">
+		<text>Hau ab, Stalker! Wir geben die Blockade auf ... Vorlдufig halten wir sie nur tagsьber aufrecht und machen uns Nachts aus dem Staub - da ist's hier zu unheimlich.</text>
+	</string>
+	<string id="dm_action_info_33">
+		<text>Siehst du, nachts musst du dich verstecken, am besten hinter krдftigen Tьren. In den dunklen Stunden des Tages werden wir praktisch belagert.</text>
+	</string>
+	<string id="dm_action_info_34">
+		<text>Na, Kumpel, bist wohl noch nicht auf dem Laufenden. Nachts musst du pennen, irgendwo weit weg von hier. Da hilft dir hier manchmal nicht mal ein Granatwerfer.</text>
+	</string>
+	<string id="dm_action_info_35">
+		<text>WeiЯt du was, sollen doch die Wдchter und die von der Freiheit und die Marodeure ausmachen, wem hier alles gehцrt. Was geht mich das an? Zur Hцlle damit ...</text>
+	</string>
+	<string id="dm_action_info_36">
+		<text>Jetzt arbeiten wir hier, Stalker. Hier brьten nicht nur einige dieser Kreaturen, hier kommen dir auch noch die Arschgeigen von Sцldnern und die Schwachkцpfe von der Freiheitsfraktion in den Weg ...</text>
+	</string>
+	<string id="dm_action_info_37">
+		<text>Ich muss dich warnen, hier ist es nicht mal am Tag sicher. Ab und zu gibt's 'ne SchieЯerei. Soweit ich weiЯ, geht's dabei um langwierige Streitereien zwischen den Banditenfraktionen in der Gegend.</text>
+	</string>
+	<string id="dm_action_info_38">
+		<text>Okay, sag du's mir - das ist unser Gebiet, richtig? Es ist hier leichter fьr uns, die Kreaturen aus dem Zentrum der Zone zu stoppen, oder? Die Eierkцpfe kцnnen ja gern rumpfuschen und forschen, wer sie belдstigt, aber die Wдchter und die Marodeure sollen verdammt noch mal hier raus!</text>
+	</string>
+	<string id="dm_action_info_39">
+		<text>Das weiЯt du nicht? Die haben hier einen neuen Weg angelegt, vorbei an der Wдchter-Patrouille und direkt zur Peripherie mit dem ganzen Zeug. Von Jantar aus kommst du hierher, und dann hintenrum bis zu Agroprom. Schon bist du da!</text>
+	</string>
+	<string id="dm_action_info_4">
+		<text>Nichts. Ich weiЯ gar nichts. Ich schnapp mir hier und da 'nen Happen und versuch, mir mein Brot zu verdienen. In die Zone zu gehen ist mir zu unheimlich. Drauf geschissen! Zu Hause gibt's keine Arbeit, meine Frau sitzt mir im Nacken und von irgendwas muss man ja leben. Hier an der Mьllhalde kriegst du einige Artefakte zusammen, wenn du dich mal einen Tag umsiehst. Ich mach das fьr ein Butterbrot.</text>
+	</string>
+	<string id="dm_action_info_40">
+		<text>Und was machst du hier? Willst du nach Jantar oder nur ein paar Artefakte an 'nem Bruder vorbeischmuggeln?</text>
+	</string>
+	<string id="dm_action_info_41">
+		<text>Ich will dir nicht verheimlichen, dass deine Stalker-Kollegen uns hier ab und zu einige interessante Anomalieformationen anbieten. Man nennt sie Artefakte. Wegen der - sagen wir einfach: ungewissen Kontrolle - bilden diese Orte eine hцchst geschдftige Schmugglerfдhrte.</text>
+	</string>
+	<string id="dm_action_info_42">
+		<text>Was ist los mit dir, Mann? Wir haben einen Weg angelegt, damit wir nicht den Jungs von der Wдchterfraktion in die Arme laufen, wenn wir mal ins GroЯe Land mьssen. Die hдngen hier zwar noch ab und an rum, aber erst mal wissen sie nichts und du kannst an ihnen vorbei.</text>
+	</string>
+	<string id="dm_action_info_43">
+		<text>Ich komm grad zurьck aus Jantar. Hab gedacht, ich tu mal wieder was fьr die Wissenschaft, aber die sind alle in ihren Bunkern verschanzt und kommen selbst tagsьber nicht raus. Es sei denn, sie kriegen Nachschub. Wenn du in diese Richtung willst: Lass es bleiben!</text>
+	</string>
+	<string id="dm_action_info_44">
+		<text>In der Jantar-Zone wird geforscht, aber in letzter Zeit hдngen da 'ne Menge Zombies rum. Also verteidigen wir die Eingдnge.</text>
+	</string>
+	<string id="dm_action_info_45">
+		<text>Was soll ich dir groЯ sagen? Ich wollte in unsere Gegend zurьck. Du weiЯt schon, nach Jantar. Und jetzt sagen sie, dass es zwar vorher einfach nur gefдhrlich war, man jetzt aber unmцglich durchkommt. Vielleicht ьbertreiben sie ja?</text>
+	</string>
+	<string id="dm_action_info_46">
+		<text>Ich war in Jantar, da ist die Wissenschaft abgestorben, die schleichen nur rum und verstecken sich ... Leben von den Vorrдten, die abgeworfen werden. Auf der anderen Seite gibt's da jetzt 'ne Menge Zombies. Wenn du 'ne Woche da wohnst, kriechst du wahrscheinlich selbst nur noch rum. So ist das eben. Ist nicht besonders angenehm da.</text>
+	</string>
+	<string id="dm_action_info_47">
+		<text>Die Hunde sollen ihn holen! Fьr wen hдlt der sich, dass er mit Zombies rumhдngt?! Es sind so viele davon im blцden Komplex - und es werden immer mehr, und mehr, und mehr ...</text>
+	</string>
+	<string id="dm_action_info_48">
+		<text>Wir versuchen, die Migration der Zombies vom Laborkomplex zu stoppen. Ehrlich gesagt hдtte ich nichts dagegen, wenn du mitmachst. Uns fehlen ein paar Leute ...</text>
+	</string>
+	<string id="dm_action_info_49">
+		<text>WeiЯt du, wir sammeln eine Vielzahl verschiedener Daten. Ich zum Beispiel erforsche die Art, wie die Quasilebenden - du wьrdest sie wohl Zombies nennen - sich ausbreiten. Wдrst du bereit zu teilen, was du herausgefunden hast?</text>
+	</string>
+	<string id="dm_action_info_5">
+		<text>Ja, so ungefдhr sieht es aus ... Einige ernдhren sich von der Mьllhalde und sammeln Kleinschrott, andere dringen tiefer in die Zone ein. Natьrlich findet man dort viel bessere Gegenstдnde, aber nicht jeder will dorthin. Es ist kein Ort fьr Anfдnger, und wenn du keine Munition hast, denk nicht mal dran! Das wдr' echt hoffnungslos.</text>
+	</string>
+	<string id="dm_action_info_50">
+		<text>Konntest du auf die Zombies schieЯen, die aus den Laborfenstern gestiegen sind? Pass lieber auf: die fьrchten sich vor gar nichts, und Schmerz spьren sie auch nicht. Das sind Kreaturen ohne Gehirn.</text>
+	</string>
+	<string id="dm_action_info_51">
+		<text>Ich bewerbe mich auf eine Stelle im Labor! Hey, Mann, entspann dich - war nur'n Witz. WeiЯt du, wenn du in die Gegend kommst, bist du so gut wie tot. Bestenfalls endest du als Zombie.</text>
+	</string>
+	<string id="dm_action_info_52">
+		<text>Ich warne dich, geh nicht ins Labor. Also, wenn du unbedingt willst, dann geh, ich halt dich nicht mit Gewalt auf. Aber von da kommt man nicht lebend zurьck.</text>
+	</string>
+	<string id="dm_action_info_53">
+		<text>Ich will dich nur warnen. Du solltest nicht ins Labor gehen. Eigentlich sollte da niemand hingehen. Das hat was mit den Verдnderungen der Psyche und des Metabolismus von Individuen zu tun. Und ich fьrchte, die Auswirkungen sind nicht umkehrbar.</text>
+	</string>
+	<string id="dm_action_info_54">
+		<text>So! Ich werde dir mal etwas Erleuchtung verschaffen; dich aufklдren; das verlorene Schдfchen retten. Also pass auf, Mann: Richte deinen Blick nicht auf den Laborkomplex. Da ist es dьster, sehr dьster. Da verschwinden Leute und kommen manchmal wieder, um nachts rumzuspuken. Nur, dass das keine Vampir-Horrormдrchen sind, sondern lebensechte Zombies. So sieht's aus.</text>
+	</string>
+	<string id="dm_action_info_55">
+		<text>Hast du schon die KlugscheiЯer von den Vereinten-ScheiЯ-Nationen gesehen? Die haben in letzter Zeit echt die Hosen voll. Zitieren das ganze Regiment mitsamt der Luftwaffe zum Schutz ran, nur um mal kurz die Basis zu verlassen.</text>
+	</string>
+	<string id="dm_action_info_56">
+		<text>Was geht dich das an? Nerv sie nicht mit dдmlichen Fragen und sie lassen dich auch in Ruhe.</text>
+	</string>
+	<string id="dm_action_info_57">
+		<text>Wir verlassen den Bunker normalerweise nicht ohne den notwendigen Schutz, das lдsst die umliegende Gegend nicht zu. Ich bin die Ausnahme. Ich mag keine groЯen Expeditionen, das Brimborium, die Soldaten ... Aber ich fьrchte, ich kann dir erst mal nichts Nьtzliches sagen.</text>
+	</string>
+	<string id="dm_action_info_58">
+		<text>Die Wissenschafter sind echt spaЯig! Ich steh voll drauf, Mann. Meist stecken die die Nasen nicht aus dem Bunker, und wenn man sie doch sieht, so wie neulich - oh Mann! Ьberall Truppen, Hubschrauber, Rьstungstechnologie! Die kцnnten genauso gut ein Schlachtschiff rankarren, oder wenigstens 'nen Panzerzug.</text>
+	</string>
+	<string id="dm_action_info_59">
+		<text>Ich hдng schon den dritten Tag hier rum und beobachte. Hier ist ein Labor, stimmt's? Da ist von Anfang an niemand reingegangen. Die Wдchter haben nur mit den Zombies oben aufgerдumt, und jetzt nicht mal mehr das. Aber die Wissenschaftler mьssen rein. Das heiЯt, sie haben einen Weg gefunden, sich zu schьtzen - weiЯ der Teufel, wogegen. Ich denke mir also: 'Warum schnьffelst du nicht mal rum, findest was raus?' Jede Wette, da gibt's so viel gutes Zeug, dass man es mit 'ner Schaufel ausbuddeln muss.</text>
+	</string>
+	<string id="dm_action_info_6">
+		<text>In den letzten Tagen sind ganze Rudel von Tieren aus dem Dunklen Tal gekommen. Keiner weiЯ, was sie raustreibt, aber sie drдngeln richtig, als ob es brennen wьrde. Und im Osten vermehren sich die Mutanten wie die Fliegen. Wir kцnnen nichts tun, auЯer sie immer wieder wegzupusten. So ist das.</text>
+	</string>
+	<string id="dm_action_info_60">
+		<text>Und was suchst du hier? Willst du auch ins Labor? Hast du ein Mдrchen ьber magische Instrumente und haufenweise Artefakte gehцrt? Mann ... Lernt ihr Idioten eigentlich nie dazu?</text>
+	</string>
+	<string id="dm_action_info_61">
+		<text>Ich arbeite hier, junger Mann. Ich arbeite und tue meine Pflicht fьr die Wissenschaft und die Menschheit. Wenn du was ьber das verlassene Labor wissen willst - was, wovon jeder Stalker, dem ich begegne, glaubt, dass ich es weiЯ - dann hцr zu: Ich weiЯ es nicht und will es nicht wissen. Das Thema interessiert mich nicht und hat es auch nie! Kapiert?</text>
+	</string>
+	<string id="dm_action_info_62">
+		<text>Vielleicht haben die Schlaumeier wirklich eine Art Instrument entdeckt. Was mag nur in dem verdammten Labor versteckt sein? Selbst wenn da nichts zu holen ist, interessant ist es auf jeden Fall.</text>
+	</string>
+	<string id="dm_action_info_63">
+		<text>Ich hab mich gefragt, ob ich vielleicht zur Freiheit gehen soll. Da ist ihre Basis, in den alten Lagerhдusern der Armee. Warum nicht? Die Typen machen einen schlauen Eindruck, und was macht's schon, wenn sie etwas desorganisiert sind? So ist es doch besser. Ich brauch keine Disziplin, weiЯ, was ich zu tun hab. Ist ja nicht so, als wдr ich neu hier.</text>
+	</string>
+	<string id="dm_action_info_64">
+		<text>Du verstehst dich nicht so gut mit der Freiheit, oder? Okay, okay, reg dich nicht auf. Ich glaub, bald vertreiben wir sie aus den Lagerhдusern. Die sind weder organisiert noch diszipliniert, einfach nur 'ne groЯes Rudel. Und die wagen es, sich gegen uns aufzuwiegeln, diese NATO-Kьken.</text>
+	</string>
+	<string id="dm_action_info_65">
+		<text>Wenn Waffenstillstand ist, treff ich mich mit einem Wдchter. Wir tauschen uns aus. Der Kerl ist eigentlich ganz clever, aber engstirnig wie ein Panzer. WeiЯt du, unsere Denkweise ist ganz anders als ihre: Du kannst die Zone bдndigen, mit Glьck anpassen, aber nicht zerstцren. Dazu brauchen wir Zugriff auf ALLE Informationen. Irgendwann wird irgendwer eine Lцsung finden. Aber bei denen heiЯt's immer "zumachen", "abschlieЯen" und "nur nicht drьber reden" ... Idioten, totale Idioten. Andererseits macht das Sinn: Wenn du den ganzen politischen Apparat hinter dir hast, hast du nicht eigenstдndig zu denken.</text>
+	</string>
+	<string id="dm_action_info_66">
+		<text>Hier ist ein kleines Hдuschen, da war's mal still, aber jetzt brьten da welche drin. Da sollte man lieber einen Bogen drum machen, sie wie ich. Alter, ich hab dich gewarnt.</text>
+	</string>
+	<string id="dm_action_info_67">
+		<text>Ich will dich gleich warnen, Stalker: Die Blutsauger haben lдngst ein Nest im Dorf, vielleicht noch Schlimmeres, also pass auf!</text>
+	</string>
+	<string id="dm_action_info_68">
+		<text>Es gibt nichts Neues. Hier sind keine Artefakte mehr und in den Hдuschen haben mal Blutsauger gelebt, aber um die haben wir uns so gut wie mцglich gekьmmert. Ich bin gegangen und geh nicht mehr zurьck. Ist vielleicht nur ein Bauchgefьhl, aber so ist das nun mal. Keine Chance! Da lauert der Tod.</text>
+	</string>
+	<string id="dm_action_info_69">
+		<text>Ich verschwinde hier! Hab vier Wochen an der Grenze rumgegammelt, das war's! Mir reicht's! Vom Schmelzer her kommen stдndig irgendwelche Freaks hierher, und jeden Tag werden es mehr ...</text>
+	</string>
+	<string id="dm_action_info_7">
+		<text>Es sind jetzt immer mehr "Mьllmдnner" geworden. Vorher haben sie die Haufen nicht mal angesehen. Die Strahlung ist so hoch, dass sie dir in einer halben Stunde die Eier hart kocht. Jetzt, wo's schwer ist, gute Sachen zu kriegen, wickeln sie sich in Schutzzeug ein, schlucken Chemikalien und klettern rein. Da kommt alles Mцgliche an Zeug raus, aber das meiste ist nichts wert.</text>
+	</string>
+	<string id="dm_action_info_70">
+		<text>Wenn du hierher zu unserer Blockade kommst, respektiere ich dich. Wenn nicht - geh mir aus den Augen! Wir brauchen echte Mдnner, keine Waschlappen. Von der Sorte haben wir schon genug!</text>
+	</string>
+	<string id="dm_action_info_71">
+		<text>Bist du wegen der Blockade hier, Mann? Umso besser, wenigstens ein Normaler mehr. Wir haben das Ganze organisiert und ziemlich gut durchgehalten ... Aber dann kamen die ganzen Bestien zu uns! Jetzt ist es hart und jede Ladung zдhlt!</text>
+	</string>
+	<string id="dm_action_info_72">
+		<text>Noch nicht auf dem Laufenden? Der Weg ins Zentrum der Zone ist offen! Entweder, er ist von allein aufgegangen, oder jemand hat sich richtig Mьhe gegeben. Wenn dem so ist, dann herzlichen Dank. Jetzt musst du dir nur noch das beste Zeug beschaffen!</text>
+	</string>
+	<string id="dm_action_info_73">
+		<text>Du hдttest warten kцnnen, Stalker. Renn nicht allem hinterher. Sag mal: WeiЯt du, was da drьben ist? Genau, du hast keine Ahnung, ob da was ist oder nicht. Auch nicht, was fьr Fallen da auf dich lauern. Warum zum Teufel versuchst du dann durchzubrechen wie 'ne Herde Bьffel?</text>
+	</string>
+	<string id="dm_action_info_74">
+		<text>Der Weg ins Zentrum ist frei, alles klar? Es gibt einen direkten Weg ins Zentrum! Da wird jetzt jeder hin wollen. Wichtig ist jetzt, dass man einer der Ersten ist und richtig absahnt!</text>
+	</string>
+	<string id="dm_action_info_75">
+		<text>Geh immer weiter, dann siehst du's ja selber! Willst du etwa nicht sehen, was vorn los ist? Dann bist du voll ... gesegnet. Da muss es so viel gutes Zeug geben! Du hast doch zum Beispiel bestimmt schon mal vom Wunschgцnner gehцrt, oder?</text>
+	</string>
+	<string id="dm_action_info_76">
+		<text>Wie die Kinder, um Himmels willen! "Wunschgцnner", "Goldgrube voller Artefakte" ... Ich glaub das einfach nicht!</text>
+	</string>
+	<string id="dm_action_info_77">
+		<text>Ich will selbst sehen, was hinter dem Horizont liegt, Mann! Was, wenn wir auf einen Schlag rausfinden, warum die Zone so ist, wie sie ist?</text>
+	</string>
+	<string id="dm_action_info_78">
+		<text>Siehst du die Wolkenkratzer? Das ist schon Prypjat. Das Kraftwerk liegt direkt dahinter. Ich wьrde so gerne da rein ... Aber man weiЯ heutzutage nicht, was drinnen so rumkreucht.</text>
+	</string>
+	<string id="dm_action_info_79">
+		<text>Lass mich das erklдren. Da ist Prypjat. Dahinter ist das Tschernobyl-AKW. Wir wissen nicht, was da los ist und wer da wohnt. Das ist unser Gebiet. Wir werden etwas finden, wie immer.</text>
+	</string>
+	<string id="dm_action_info_8">
+		<text>Nicht auf dem Laufenden! Ich bin grad auf dem Weg in die Bar zum Reden. Was, du warst noch nie da? Wahnsinn! Okay, also: Von da, wo du stehst, gehst du einfach nach Norden. Die Bar ist um die Ecke. Es ist nьtzlich, mal reinzuschauen. Fьr Neue wie dich ist das wie vom Doktor vorgeschrieben. Da sind erfahrene Mдnner und wer weiЯ, vielleicht helfen sie dir, sagen dir was, wie und was ... Eins noch: Du wirst unseren Kumpeln, den Wдchtern, ьber den Weg laufen ... da kommt's drauf an. Hast du Glьck, dann mцgen sie dich. Wenn nicht, na dann nicht.</text>
+	</string>
+	<string id="dm_action_info_80">
+		<text>Prypjat! Zwick mich, verdammt! Endlich! Von hier ist's nicht mehr weit zum Bahnhof. Schwer zu raten, wem man hier begegnet - was fьr ein Viech grad seine Zдhne schleift und auf einen wartet.</text>
+	</string>
+	<string id="dm_action_info_81">
+		<text>Hцr zu, mein Freund ... Hцrst du auch eine Stimme in deinem Kopf, oder hab ich Halluzinationen? Sie murmelt etwas, immer wieder ...</text>
+	</string>
+	<string id="dm_action_info_82">
+		<text>Verdammt, schon wieder ... Also pass auf, ich versuch zum x-ten Mal zu erklдren, was das fьr ein telepathischer Effekt ist, den die Leute hier merken. Stimmen, die man auЯen nicht hцrt, rufen einen ins Zentrum der Zone und versprechen einem alle Wьnsche zu erfьllen, wenn man es schafft, den ... Wie heiЯt es noch gleich? ... Ach ja, den Monolithen zu berьhren.</text>
+	</string>
+	<string id="dm_action_info_83">
+		<text>Hцrst du eine Stimme? Cool, wie ein MP3-Player im Kopf! Schade, dass es nur eine Nummer gibt: Komm zu mir und dir wird groЯes Glьck zuteil. Zwei Stunden lang immer dasselbe.</text>
+	</string>
+	<string id="dm_action_info_84">
+		<text>Und du kannst nicht raten, was das ist? Du willst auch zum Kraftwerk durchbrechen! Das wollen wir auch! Erzдhl doch mal was Neues! Wir mьssen nur die Idioten von der StraЯe schaffen ...</text>
+	</string>
+	<string id="dm_action_info_85">
+		<text>Das Gebiet um das Kraftwerk ist ganz nah! Wir kцnnen vorerst noch nicht um den Widerstand der Monolither kьmmern!</text>
+	</string>
+	<string id="dm_action_info_86">
+		<text>Da vorne, das Tschernobyl-AKW ist schon in Reichweite. Nur noch ein Stьck nach links, aber diese Penner sind so dickkцpfig, die lassen uns nicht durch. Macht nichts, die sind wir gleich los!</text>
+	</string>
+	<string id="dm_action_info_9">
+		<text>Hцr zu, Kamerad, weiЯt du nichts ьber Agroprom? Ich wollte dorthin, aber alle haben mich ausgelacht: Es gдbe dort nichts Wertvolles mehr, weil sie dort vor einer Weile aufgerдumt hдtten und nur noch Anomalien ьbriggelassen hдtten. WeiЯt du, ob das stimmt, oder ob sie nur einen SpaЯ machen? Ich bin ziemlich neu hier und hцre auf das, was die Ortskundigen sagen. Aber vielleicht wissen ja alle etwas und suchen nur nach einem Grund, sich zu ьber mich kaputtzulachen, diese Penner. </text>
+	</string>
+	<string id="dm_action_info_94">
+		<text>Warte! Beeil dich, aber renn nicht so. Hier sind ьberall Monolither. Sie kennen die Stadt in- und auswendig und haben ьberall Fallen aufgestellt. Sei bloЯ vorsichtig.</text>
+	</string>
+	<string id="dm_action_info_95">
+		<text>Ich warne dich: Ein groЯer Teil der Stadt wird von der Monolith-Fraktion kontrolliert. Viele Fallen. Die kennen die Stadt wie ihre Westentasche. Sei extrem vorsichtig und ьberprьfe deine Waffen.</text>
+	</string>
+	<string id="dm_action_info_96">
+		<text>Oh, ich wьrde die Stadt so gerne mit einem Bombenteppich ьberziehen. Schweine ... Die einzigen Verstecke, die sie noch nicht verwenden sind Sandkдsten und Blumenbeete. Wie viele sind schon durch diese Verrьckten gestorben!</text>
+	</string>
+	<string id="dm_action_info_97">
+		<text>Hцr zu, wer hat diesen Gцnner denn schon wirklich gesehen ... Vielleicht ist das Ding ja gar nicht unendlich und es ist nicht genug fьr alle da. Und was soll man da machen? Niederknien? Alter, eins verspreche dir: Wenn wir dort sind, gehst du hinter mir ...</text>
+	</string>
+	<string id="dm_action_info_98">
+		<text>Die Wдchter mьssen als erstes zum Zentrum durchbrechen! Stell dir nur vor, Stalker, dass irgendein Verrьckter - und hier ist eigentlich jeder entweder verrьckt, paranoid oder zurьckgeblieben - als erster zu dem Ding kommt, das einem Wьnsche erfьllen kann! Was dann?</text>
+	</string>
+	<string id="dm_action_info_99">
+		<text>Die Neuigkeit des Jahrhunderts: Jeder, der laufen kann und eine Waffe hat, ist hier! Hier ist alles mцglich! Krieg' das mal in deinen Kopf: Alles, was du dir wьnschst! Und dann kommt jemand und sagt: "Ich wьnsche mir, dass die Zone sofort und bis in alle Ewigkeiten verschwindet." Verstehst du, was das fьr eine Katastrophe wдre? Wir wьrden alle mitten im Nirgendwo herumhдngen!</text>
+	</string>
+	<string id="dm_cool_info_0">
+		<text>Was Neues? Zum Teufel mit dem Neuen. Hier ist soviel alter ScheiЯ, dass du fast dran erstickst. Die Banditen sind durchgedreht, diese Schweine! Wir schleichen zwischen den Anomalien her, um ein paar Artefakte zu bekommen, und die klauen einem einfach die Sachen! Diese Ratten! Geh bloЯ nicht zur Mьllhalde, da lungern die rum.</text>
+	</string>
+	<string id="dm_cool_info_1">
+		<text>Ganz genau, ich stecke hier fest. Ich mцchte nach Hause, aber sie lassen mich nicht. Das ist alles. Die Jungs, die sich tief in die Zone hineinwagen, die sich auskennen, erzдhlen so manches. Manchmal bringen sie auch ein paar Sachen mit. Da wird man fast neidisch. Man erzдhlt sich von Bergen von Schдtzen. Man kann sie einfach so mitnehmen. Na ja, es schaffen nicht viele bis dorthin, und zurьck kommen noch weniger.</text>
+	</string>
+	<string id="dm_cool_info_10">
+		<text>Vor einer Woche ist Otter vom Schmelzer erwischt worden. Und er war kein unerfahrener Grьnschnabel, sondern ein langjдhriger Stalker. Er gehцrte angeblich sogar zu Streloks Team. Und dann plцtzlich ...</text>
+	</string>
+	<string id="dm_cool_info_100">
+		<text>Tja, ich bin nicht wirklich auf dem Laufenden.</text>
+	</string>
+	<string id="dm_cool_info_11">
+		<text>Sag mir, Stalker: Warum werden die, die alleine herumstreifen, manchmal verrьckt? Fehlt es euch an Selbstdisziplin? Letztens wollte einer am Schmelzer vorbei. Angeblich war der auch sehr erfahren. Sein Hirn kann man auch einfacher loswerden: Waffe in den Mund und abdrьcken.</text>
+	</string>
+	<string id="dm_cool_info_12">
+		<text>Diese verdammten Sцldner. Unser Blut saufen sie ja schon lange, und jetzt sind auch die Wissenschaftler dran. Warum machen die nur mit? Lцsegeld? Oder wollten die einfach ihre Nobel-Preise teilen?</text>
+	</string>
+	<string id="dm_cool_info_13">
+		<text>Die Sцldner sind in letzter Zeit viel aktiver geworden. Wir nennen sie auch Marodeure. Aber es gibt hier auch noch andere Schweine. Sie benehmen sich wie Banditen, sind aber erfahrene Kдmpfer. Komischerweise haben sie frьher vor allem Stalker angegriffen, aber jetzt interessieren sie sich mehr fьr Wissenschaftler. Pass auf jeden Fall auf. Die haben sicher auch nichts dagegen, dir den Kopf runter zu schieЯen.</text>
+	</string>
+	<string id="dm_cool_info_14">
+		<text>Ich habe gehцrt, dass die Eierkopfe irgendwas Wundervolles ausgegraben haben. Plцtzlich sind alle durchgedreht: Die Truppen, die Sцldner, selbst die Wдchter sind nicht viel besser.</text>
+	</string>
+	<string id="dm_cool_info_15">
+		<text>Wenn du dich fьr die selbe Sache interessiert, auf die mich in den letzten zwei Tagen jeder angesprochen hat, sage ich nur: Nimm ein Bad! Wenn ich etwas wьsste, hдtte ich es erzдhlt, denn es hat mir niemand verboten. Aber ich weiЯ nichts, gar nichts! Was haben die Wissenschaftler gefunden? Wo sind unsere Anfьhrer hin? Was hab ich mit dem ganzen ScheiЯ zu tun?! Wenn's nach mir geht sind die im Urlaub und mьssen keine blцden Fragen beantworten!</text>
+	</string>
+	<string id="dm_cool_info_16">
+		<text>Ha! Hier werden doch alle verrьckt! Der Konfцderierte ist mit seiner Gruppe von einem Ьberfall zurьck gekommen und hat ein paar Artefakte mitgebracht - Mamma Mia! Natьrlich verrдt der Konfцderierte nichts. Aber alle seine Jungs spinnen herum, als hдtten sie eine Goldader gefunden. Dieser Bastard!</text>
+	</string>
+	<string id="dm_cool_info_17">
+		<text>In den letzten paar Tagen sind diese ganzen Bestien vom Schmelzer gekommen. Die Leute haben bei den alten Lagerhдusern eine Barrikade errichtet. Das scheint momentan zu helfen. Wenn sie nicht schlapp machen ... Sie mьssen auf jeden Fall Verstдrkung holen ...</text>
+	</string>
+	<string id="dm_cool_info_18">
+		<text>Hast du diese Gerьchte gehцrt, dass sich die Zone angeblich ausdehnt? Ich glaube, dass es stimmt. Ich habe direkt an der Grenze ein derart widerliches Monster gesehen, wie man es sonst nur im Zentrum der Zone sieht. Sieht nicht gut aus, was?</text>
+	</string>
+	<string id="dm_cool_info_19">
+		<text>Schon mцglich, dass das mit den Blutsaugern an der Zonengrenze stimmt. Aber was hat das mit der Ausdehnung der Zone zu tun? Dann ist halt ein Rudel zur Grenze gezogen, na und? Manchmal mьssen wir tagelang patrouillieren! Und wir machen unsere Arbeit gut. Hinter der Grenze hab ich noch niemanden gehцrt: "Hilfe, wir sind von Mutanten umzingelt!"</text>
+	</string>
+	<string id="dm_cool_info_2">
+		<text>Ja, irgendwie ist es schon traurig. Letztens ist Otter gestorben, einfach so. Ich kann es kaum glauben. Hast du etwa noch nie von Otter gehцrt? Er war quasi ein Professor. Er war von Anfang an hier und kannte die Zone wie seine Westentasche. Und dann so was! Es gibt hier ein paar wirklich erfahrene Stalker, die trotzdem in der Zone umkommen. Andere gehen zurьck ins groЯe Land.</text>
+	</string>
+	<string id="dm_cool_info_20">
+		<text>Was glaubst du, kennt der Wirt Einzelheiten ьber das, was die Wissenschaftler da ausgegraben haben? Vielleicht kennt er sich ja sogar damit aus? In letzter Zeit sucht er viele erfahrene Stalker und gibt ihnen seltsame Auftrдge. Er erklдrt nichts, sondern schickt sie einfach zu gefдhrlichen Orten, an denen es nicht einmal Artefakte gibt. Und wonach sucht er bitte?</text>
+	</string>
+	<string id="dm_cool_info_21">
+		<text>Etwas Seltsames geht hier vor. Die Zombies, die sich eigentlich vor Licht gefьrchtet haben, laufen nun ьberall herum. Was zum Teufel ist hier los?</text>
+	</string>
+	<string id="dm_cool_info_22">
+		<text>Die Zombies sind aus irgendeinem Grund aggressiver und aktiver geworden. Vorher haben wir sie direkt im Innern des Gebiets bekдmpft, nun kцnnen wir nur noch die Zugдnge halten. Aber das hast du nicht von mir, klar?</text>
+	</string>
+	<string id="dm_cool_info_23">
+		<text>Nimm dich vor diesen lebenden Leichen in Acht, die ьberall herumstreunen. Sehr dumm und sehr aggressiv. Wir schlagen uns Tag und Nacht mit ihnen herum. Junge, hier ist es echt gefдhrlich.</text>
+	</string>
+	<string id="dm_cool_info_24">
+		<text>Oh, ich wette die Eierkцpfe haben da in ihrem Labor was falsch gemacht. Vorher traf man ja schon hin und wieder einen Zombie, aber jetzt strцmen sie nur so aus dem Komplex. Und sie laufen herum, als hдtten sie irgendetwas verloren, das sie nun suchen.</text>
+	</string>
+	<string id="dm_cool_info_25">
+		<text>Angeblich haben die Wissenschaftler einen von uns dafьr bezahlt, zu dem Labor zu gehen. Sie haben ihm etwas gegeben, so eine Art Schutzgьrtel. Mehr weiЯ ich auch nicht.</text>
+	</string>
+	<string id="dm_cool_info_26">
+		<text>Die erzдhlen alles Mцgliche. Sie behaupten sogar, dass ein Durchgeknallter sich von einem Wissenschaftler beschwatzen lieЯ und dann zum Labor gegangen ist. Was fьr ein Unsinn!</text>
+	</string>
+	<string id="dm_cool_info_27">
+		<text>Hier ist der Witz der Woche: Die Eierkopfe haben einem von unseren Jungs eine Belohnung dafьr geboten, dass er mit einem Gerдt in das Labor klettert. Und noch ein Opfer, verdammte ScheiЯe!</text>
+	</string>
+	<string id="dm_cool_info_28">
+		<text>Ich glaube, es brodelt schon wieder. Die Eierkцpfe haben etwas ausgegraben, fьr das sich plцtzlich alle interessieren. Mit anderen Worten: Du und ich, wir werden keine Ruhe mehr haben.</text>
+	</string>
+	<string id="dm_cool_info_29">
+		<text>WeiЯ der Teufel. Wir rennen nur doppelt so viel herum. Entweder eine Blockade oder eine Sдuberungsaktion, irgendwas ist immer. Die Truppenstдrke in der Zone wurde ebenfalls erhцht.</text>
+	</string>
+	<string id="dm_cool_info_3">
+		<text>Ich weiЯ nur, dass das alles ziemlich traurig ist. Es gab an der Grenze schon immer viele Leute, aber von denen hat sich kaum jemand weit in die Zone getraut. Und es gibt nicht genug Artefakte fьr alle. Sogar aus den Laboren und Fabriken haben sie alles Brauchbare herausgerissen. Bald kann man hier hцchstens noch ein Restaurant erцffnen ... mit toller Aussicht und exotischer Kьche.</text>
+	</string>
+	<string id="dm_cool_info_30">
+		<text>Ich weiЯ nicht, was ich dir erzдhlen soll ... Hier passiert stдndig etwas, aber alles in vernьnftigem Rahmen. Im GroЯen Land sehen sie das zwar anders, aber du und ich, wir sind hier quasi in einer Anomalie-Zone.</text>
+	</string>
+	<string id="dm_cool_info_31">
+		<text>Die Eierkцpfe hecken irgendwas aus. WeiЯ der Teufel, was fьr ein Geheimnis sie da schon wieder ausgegraben haben, aber die Truppen tanzen alle nach ihrer Pfeife. Sie durchsuchen Agroprom und das Dunkle Tal. Sie suchen und suchen und wollen irgendwas finden.</text>
+	</string>
+	<string id="dm_cool_info_32">
+		<text>Jeden Tag kommt hier mehr Dreck aus dem Schmelzer, und die Wдchter und die Freiheitsfraktion zicken auch wieder rum. Sie erledigen sich also gegenseitig, und dann? Wie lange kцnnen wir die Grenze wohl alleine halten?</text>
+	</string>
+	<string id="dm_cool_info_33">
+		<text>Die Mutanten versuchen immer entschlossener die Barrikade zu durchbrechen. Es wird langsam wirklich schwierig. Wenn sich gewisse Leute vernьnftig benehmen wьrden, hдtten wir mehr Erfolg!</text>
+	</string>
+	<string id="dm_cool_info_34">
+		<text>Die Wдchter geben ьberall mit ihren ach-so-heldenhaften Taten an der Barrikade an. Als ob ihnen jemand glauben wьrde ... Wir haben diese Sache angefangen und wir werden sie auch weiterfьhren. Viele sind sogar freiwillig zurьck geblieben, so wie du. Aber diese Wдchter, diese Arschgeigen ... Zum Teufel mit ihnen!</text>
+	</string>
+	<string id="dm_cool_info_35">
+		<text>Ich habe gehцrt, dass die Wдchter sich verkauft haben. Sie quatschen stдndig irgendwas von "Wir sind Freiwillige, die in der Zone fьr Sicherheit und Ordnung sorgen wollen". Klar, Freiwillige! Diese sogenannten Freiwilligen haben sich von irgendeinem Geldgeber mit so viel Munition und Waffen ausstatten lassen, dass man direkt neidisch wird.</text>
+	</string>
+	<string id="dm_cool_info_36">
+		<text>Was gibt es fьr Gerьchte? Ich sage dir, bald herrscht hier Recht und Ordnung und das ist kein Gerьcht! Wir werden die Zone von allen mцglichen Bestien und gewissen Elementen befreien ...</text>
+	</string>
+	<string id="dm_cool_info_37">
+		<text>Hast du gehцrt, was die Wдchter uns angedroht haben? Sie wollen uns "zu Staub zermalmen"! Ich mache mir Sorgen um diese Sache ... Vor allem, weil sie sich angeblich mit den neusten Waffen ausgestattet haben.</text>
+	</string>
+	<string id="dm_cool_info_38">
+		<text>Neuigkeiten? Wir sitzen hier herum, die Tiere kommen, wir schieЯen sie ab und dann kommen sie wieder. Ja, es stimmt, ein paar Mal kamen Militдrhubschrauber vorbei. Anscheinend fliegen die sogar ьber den Schmelzer.</text>
+	</string>
+	<string id="dm_cool_info_39">
+		<text>Was fьr Neuigkeiten soll es schon geben? Alles beim Alten: Mutanten und Freiheitsfraktion. Allerdings sind letztens ein paar Soldaten mit Hubschraubern herumgeflogen. Sie hдtten ja wenigstens auf ein paar Bestien schieЯen kцnnen, aber nein ...</text>
+	</string>
+	<string id="dm_cool_info_4">
+		<text>Neuigkeiten? Wen interessiert's? Man darf nicht glauben, was die Leute erzдhlen. Angeblich hat ein erfahrener Stalker etwas aus den inneren Gebieten mitgebracht, das vorher noch jemand gesehen hat. Waren alle mдchtig beeindruckt ... Alter, solche Geschichten kann ich mir auch ausdenken!</text>
+	</string>
+	<string id="dm_cool_info_40">
+		<text>Ich habe ein paar Militдrhubschrauber gesehen. Stell dir das vor: Sie sind auf dem Kopf in Richtung Schmelzer geflogen! Ich dachte natьrlich, dass sie gleich abstьrzen, aber nein - sie sind einfach weiter geflogen. Sie kreisten eine Weile und flogen zurьck. Typisch, oder?</text>
+	</string>
+	<string id="dm_cool_info_41">
+		<text>Jetzt, da es einen Weg in das Zentrum gibt ... Dort mьssen einem die Schдtze doch zu FьЯen liegen!</text>
+	</string>
+	<string id="dm_cool_info_42">
+		<text>Nun, da man auf relativ sicheren Wegen in das Zentrum kommen kann, werden die Stalker davon angezogen, wie Motten vom Licht. Habgier ist nicht gerade die beste menschliche Eigenschaft.</text>
+	</string>
+	<string id="dm_cool_info_43">
+		<text>Das nenne ich Leben! Wдhrend alle von der Bar und der Grenze noch auf dem Weg hierher sind, kцnnen wir uns selbst bedienen! Wir sammeln und das Beste zusammen und lassen denen nur die Reste.</text>
+	</string>
+	<string id="dm_cool_info_44">
+		<text>Tja, angeblich existiert er ja wirklich, der Wunschgцnner. Jemand ist schon bis zu ihm vorgedrungen und hat sich eine Menge Sachen gewьnscht.</text>
+	</string>
+	<string id="dm_cool_info_45">
+		<text>Hцr zu, Kumpel, ich weiЯ, dass in der Zone alles Mцgliche passieren kann. Ich habe schon vieles gesehen. Aber diese Geschichten, dass einem sofort jeder Wunsch nach einem Privathotel in der Karibik erfьllt wьrde, sind doch nichts als PferdescheiЯe.</text>
+	</string>
+	<string id="dm_cool_info_46">
+		<text>WeiЯt du das nicht? Zwei von euren Jungs, sie waren unter den ersten, die jemals das Zentrum der Zone erreicht haben, sind bis zum Wunschgцnner gekommen und haben sich etwas gewьnscht! Sie hatten immer von einer tropischen Insel getrдumt, also liegen sie jetzt sicher irgendwo am Strand.</text>
+	</string>
+	<string id="dm_cool_info_47">
+		<text>Wir haben einen Helden gefunden: den Kopf der Freiheitsfraktion. Jeder dachte, er wдre in das GroЯe Land zurьck gegangen, aber in Wirklichkeit hat er sich mit einem kleinen Team bis zum Schmelzer durchgeschlagen. Was fьr ein Kerl!</text>
+	</string>
+	<string id="dm_cool_info_48">
+		<text>In der vorher unpassierbaren Zone wurde eine Freiheitstruppe gefunden. Wie konnten sie unverletzt bis dorthin vordringen und dann auch noch einige Wochen ьberleben? Unvorstellbar! Anscheinend haben wir diese Jungs unterschдtzt.</text>
+	</string>
+	<string id="dm_cool_info_49">
+		<text>Stell dir mal vor, sie haben unseren Mikljucha gefunden! Und seine Jungs leben auch noch. Sie sind am Hirnschmelzer vorbeigeschlichen und mussten sich dann einen Monat die Zeit vertreiben, weil sie nicht mehr heraus kamen.</text>
+	</string>
+	<string id="dm_cool_info_5">
+		<text>Da braut sich etwas Unangenehmes zusammen. Angeblich hat der Anfьhrer der Wдchter nicht nur einfach die Zone aus geschдftlichen Grьnden verlassen, sondern auch mit der Freiheitsfraktion einen Handel abgeschlossen. Den Deal hдtten sie auch цffentlich aushandeln kцnnen, wenn an der Sache nicht was faul wдre. Es sieht nicht gut aus. Andererseits sagen die erfahrenen Jungs, dass sie plцtzlich zurьckgeschlagen haben. Ich hoffe nur, dass die Paragrafenreiter aus dem GroЯen Land uns nicht alle vor die Hunde gehen lassen.</text>
+	</string>
+	<string id="dm_cool_info_50">
+		<text>Hast du gehцrt? Die Truppen machen sich sofort bereit! Sie sind bald hier! Sie haben erfahren, dass der Schmelzer kaputt ist und wollen alle wertvollen Sachen mitnehmen!</text>
+	</string>
+	<string id="dm_cool_info_51">
+		<text>Es gibt Neuigkeiten: Am Kraftwerk wird es eine gewaltige Truppenlandung geben. Ich gebe dir einen Rat: Wenn du irgendwas von dem wertvollen Kram haben willst, beeil dich.</text>
+	</string>
+	<string id="dm_cool_info_52">
+		<text>Das ist ein totales Chaos! Siehst du, der Korridor wurde geцffnet und das Kraftwerk von allem Getier befreit. Und wer nutzt das zu seinem Vorteil? Das Militдr! Die haben auch kein Gewissen.</text>
+	</string>
+	<string id="dm_cool_info_53">
+		<text>Eines verstehe ich nicht: Wie konnten die Jungs von der Freiheitsfraktion hier einen Monat lang durchhalten? Haben die Tarnkappen, oder so? Unglaublich!</text>
+	</string>
+	<string id="dm_cool_info_54">
+		<text>Verstehst du, was hier drin abgeht? Tja, dieser Mikljucha ist in meinem Ansehen ordentlich gestiegen! Der hat vier Wochen in diesem Drecksloch ьberlebt und dabei keinen einzigen seiner Jungs verloren!</text>
+	</string>
+	<string id="dm_cool_info_55">
+		<text>Hier sind einige verrьckt geworden. Wenn man bedenkt, dass das alles mal echt harte Typen waren, und jetzt sabbern sie herum wie Zurьckgebliebene. Erschreckend.</text>
+	</string>
+	<string id="dm_cool_info_56">
+		<text>Je nдher du dem Kraftwerk kommst, desto grцЯer wird die unbekannte telepathische Kraft. Einige sind verrьckt geworden, andere stehen unter Schock oder sehen seltsame Sachen. Das ist vielleicht ein guter Zeitpunkt, sich etwas zurьckzuziehen ...</text>
+	</string>
+	<string id="dm_cool_info_57">
+		<text>Hцr mal, die Leute verlieren hier wirklich den Verstand. Jemand sieht einen Stein und behauptet, es wдre sein Artefakt, er hдtte es zuerst gesehen und dass alle nach Sьden gehen sollen. Ein anderer sieht Jah in den Wolken mit seinen verschollenen Kameraden ... Hier passieren echt kranke Dinge.</text>
+	</string>
+	<string id="dm_cool_info_6">
+		<text>Die Truppen rennen hier ьberall herum - suchen und graben. Vorher sind die Hubschrauber nur bis Jantar geflogen, um die Wissenschaftler zu beschьtzen und mit Nachschub zu versorgen. Mittlerweile ist es eine echte Invasion. Sie planen Expeditionen, fahren in Transportpanzern herum ... Sogar bei Agroprom und im Dunklen Tal wurden sie gesehen. Ich verstehe es nicht.</text>
+	</string>
+	<string id="dm_cool_info_7">
+		<text>Angeblich hat schon wieder jemand versucht, am Schmelzer vorbei zu kommen. Tja, er ist offensichtlich niemals zurьckgekehrt. Du hast noch nie vom Hirnschmelzer gehцrt? Was bist du denn fьr einer? Das ist das gefдhrlichste Ding in der ganzen Gegend! Fast alles, was man sich ьber ihn erzдhlt, ist wahr!</text>
+	</string>
+	<string id="dm_cool_info_8">
+		<text>Hier streifen jetzt auЯer den Banditen auch noch die Truppen herum. Frьher hast du alle hundert Jahre mal einen Hubschrauber gesehen, aber nun fliegen sie in der ganzen Zone herum. Haben die etwas verloren, oder was?</text>
+	</string>
+	<string id="dm_cool_info_9">
+		<text>Ich warne dich, Stalker. Die Soldaten scheinen in letzter Zeit verrьckt geworden zu sein. Frьher haben sie einfach nur die Wissenschaftler beschьtzt, aber nun rennen sie herum, wie von der Tarantel gestochen. Die sind nicht gerade in der friedlichsten Laune und haben schon mehr als einmal auf deinen Bruder geschossen. Sogar unter unseren Leuten gibt es zwei Verletzte.</text>
+	</string>
+	<string id="dm_help_thanks_1">
+		<text>Vielen Dank.</text>
+	</string>
+	<string id="dm_intro_0">
+		<text>Was tust du da? Lдufst du ohne Schutz herum? Bist du lebensmьde? Hier lauert hinter jeder Ecke eine Anomalie. Zack, und weg bist du! Selbst zum Pissen trдgt hier jeder seinen Schutzanzug, sonst fдngt man sich gleich die Strahlung ein.</text>
+	</string>
+	<string id="dm_intro_1">
+		<text>Anscheinend kennst du dich noch nicht gut aus, also gebe ich dir einen guten Rat: Halte dich vom Militдr fern! Wenn du einen Soldaten entdeckst, mach, dass du weg kommst. Die Jungs haben kein bisschen Hirn. Immer nach der Devise: Erst schieЯen, dann fragen.</text>
+	</string>
+	<string id="dm_intro_10">
+		<text>Hier haben die Wдchter das Sagen. Unsere geliebten Ordnungshьter, irgendwie so was ... Merk dir das, dann vermeidest du Дrger.</text>
+	</string>
+	<string id="dm_intro_100">
+		<text>Auf Wiedersehen.</text>
+	</string>
+	<string id="dm_intro_101">
+		<text>Auf Wiedersehen.</text>
+	</string>
+	<string id="dm_intro_102">
+		<text>Alles Gute.</text>
+	</string>
+	<string id="dm_intro_103">
+		<text>Hey Kumpel!</text>
+	</string>
+	<string id="dm_intro_104">
+		<text>Hey.</text>
+	</string>
+	<string id="dm_intro_105">
+		<text>Oh, hi!</text>
+	</string>
+	<string id="dm_intro_106">
+		<text>Hallo.</text>
+	</string>
+	<string id="dm_intro_107">
+		<text>Guten Tag!</text>
+	</string>
+	<string id="dm_intro_108">
+		<text>Hallo Stalker.</text>
+	</string>
+	<string id="dm_intro_109">
+		<text>Guten Tag Stalker.</text>
+	</string>
+	<string id="dm_intro_11">
+		<text>Du befindest dich in einem Gebiet, in dem die Wдchter Ordnung halten. Mach alles, was die Patrouille verlangt, ohne Fragen zu stellen. Zur Not wird dir spдter alles erklдrt. Die Verhaltensregeln sind hier aber ganz einfach: Begegne jedem mit der gebotenen Hцflichkeit, dann ist alles in Ordnung.</text>
+	</string>
+	<string id="dm_intro_110">
+		<text>Hey du, Stalker!</text>
+	</string>
+	<string id="dm_intro_111">
+		<text>Hallo.</text>
+	</string>
+	<string id="dm_intro_112">
+		<text>Tja, wen haben wir denn hier?</text>
+	</string>
+	<string id="dm_intro_113">
+		<text>Und wen haben wir hier?</text>
+	</string>
+	<string id="dm_intro_114">
+		<text>Hallo Kamerad.</text>
+	</string>
+	<string id="dm_intro_12">
+		<text>Nerv mich nicht mit deinen Fragen, geh damit in die Bar! Da haben sie Antworten und Fragen fьr dich. Ich hab keine Zeit fьr den Mist.</text>
+	</string>
+	<string id="dm_intro_13">
+		<text>Bist du das erste Mal hier? Ich schlage vor, du gehst in die Bar. Da erfдhrst du immer alle Neuigkeiten.</text>
+	</string>
+	<string id="dm_intro_14">
+		<text>Komm den Zombies und dem Labor am besten nicht zu nah, verstanden?</text>
+	</string>
+	<string id="dm_intro_15">
+		<text>Ich empfehle dir, dich vom Labor fernzuhalten. Da gibt es zu viele Zombies.</text>
+	</string>
+	<string id="dm_intro_16">
+		<text>Hey, hцr zu. Bleib bloЯ vom Laborkomplex weg.</text>
+	</string>
+	<string id="dm_intro_17">
+		<text>Achte auf Zombies. Sie sind dumm und haben vor nichts Angst. Und geh besser nicht in die Nдhe des Labors, da muss ihr Laichplatz sein oder ihre Brutstдtte oder so ...</text>
+	</string>
+	<string id="dm_intro_18">
+		<text>Denk dran, dass der Hirnschmelzer ganz in der Nдhe ist. Denk nicht einmal daran, nach Norden zu gehen.</text>
+	</string>
+	<string id="dm_intro_19">
+		<text>Pass auf: Wenn dir dein Hirn wichtig ist, dann geh nicht weiter nach Norden!</text>
+	</string>
+	<string id="dm_intro_2">
+		<text>Sei vorsichtig, wenn du ьber die Brьcke gehst, verstanden? Dort sind zu viele streunende Hunde. Wenn du nicht aufpasst, zerreiЯen sie dich auf der Stelle.</text>
+	</string>
+	<string id="dm_intro_20">
+		<text>Pass auf dich auf! Du weiЯt, dass der Schmelzer ganz in der Nдhe ist. Wenn du weiter nach Norden gehst, bist du bald ein toter Narr.</text>
+	</string>
+	<string id="dm_intro_21">
+		<text>Es ist, als ob man durch ein Minenfeld geht - nur schlimmer. WeiЯ der Teufel, was hier vor sich geht. Man kann sich keine Sekunde entspannen.</text>
+	</string>
+	<string id="dm_intro_22">
+		<text>Ich rate dir: Sei immer auf der Hut. Du darfst keine Sekunde unaufmerksam sein, sonst bist du sofort erledigt. Der Tod hat dich auf der Stelle.</text>
+	</string>
+	<string id="dm_intro_23">
+		<text>Hier musst du immer die Augen offen halten! Selbst im Schlaf! Hier kann dir stдndig irgendwas passieren.</text>
+	</string>
+	<string id="dm_intro_24">
+		<text>Achte auf die Penner! Es gibt hier so viele davon, fast wie Kakerlaken!</text>
+	</string>
+	<string id="dm_intro_25">
+		<text>Erledige diese so genannten Monolither so schnell wie mцglich! Das sind echt gefдhrliche Fanatiker!</text>
+	</string>
+	<string id="dm_intro_26">
+		<text>Es gibt hier ein paar Verrьckte, die sich die Monolith-Fraktion nennen ... Vielleicht werden sie auch nur von allen anderen so genannt, egal. Sie haben keine Angst vor Schmerzen. Wenn ihnen die Munition ausgeht, fallen sie dich mit bloЯen Zдhnen an. Wenn dir also einer ьber den Weg lдuft: nicht nachdenken, schieЯen!</text>
+	</string>
+	<string id="dm_intro_3">
+		<text>Hцr zu, wenn du einen Tunnel findest, geh nicht hinein. Ich sag's dir lieber vorher. Manche sind dumm genug, in Schwierigkeiten zu kommen. Wenn du da hinein gehst, kцnnen sie dich spдter von den Wдnden kratzen. Das gehцrt schon zur Zone, verstanden?</text>
+	</string>
+	<string id="dm_intro_4">
+		<text>Warum hast du nichts mehr? Bist du auch diesen Verrьckten unter der Brьcke in die Arme gelaufen? Diese Dreckskerle! Die hдtten mich fast erledigt. Ich musste ihnen fast alles geben, was ich hatte! Und sie sitzen herum und patrouillieren. Diese Truppen an den Posten sind doch genau so schlimm wie die Banditen.</text>
+	</string>
+	<string id="dm_intro_5">
+		<text>Warum lдufst du ganz alleine herum? Hier rennen genug Glatzkцpfe herum, die dich jederzeit erledigen kцnnen! Vor kurzem sind sie total durchgedreht, sie greifen sogar die Sicherheitsposten an!</text>
+	</string>
+	<string id="dm_intro_6">
+		<text>Nur fьr den Fall, dass du nicht auf dem Laufenden bist: In letzter Zeit treiben sich hier Banditen rum. Das war schon die zweite SchieЯerei in dieser Woche. Sei vorsichtig und wachsam. Sechs Solitдrstalker haben sie schon um die Ecke gebracht.</text>
+	</string>
+	<string id="dm_intro_7">
+		<text>Du hast nicht zufдllig gehцrt, was die Truppen im Forschungsinstitut gesucht haben?</text>
+	</string>
+	<string id="dm_intro_8">
+		<text>Du musst hier vorsichtiger sein. Die Aasgeier haben sich im Hauptgebдude verschanzt. Die sind wie rдudige Hunde, ohne Gewissen oder Gnade. Sie wьrden jeden tцten!</text>
+	</string>
+	<string id="dm_intro_9">
+		<text>Du solltest nicht alleine in das Dunkle Tal gehen. In einem der Gebдude hier ist ein kuscheliges Banditenversteck, aber ich kann sie noch nicht ausrдuchern. Pass auf, dass du ihnen nicht ьber den Weg lдufst.</text>
+	</string>
+	<string id="dm_intro_help_1">
+		<text>Hilfe, Junge!</text>
+	</string>
+	<string id="dm_intro_help_10">
+		<text>Kann mir jemand helfen?</text>
+	</string>
+	<string id="dm_intro_help_11">
+		<text>Wachen! Ich bin verletzt! Hierher!</text>
+	</string>
+	<string id="dm_intro_help_12">
+		<text>Hilfe! Ich sterbe!</text>
+	</string>
+	<string id="dm_intro_help_2">
+		<text>Jungs, bringt das Medkit!</text>
+	</string>
+	<string id="dm_intro_help_3">
+		<text>Holt das Medkit!</text>
+	</string>
+	<string id="dm_intro_help_4">
+		<text>SchockmaЯnahmen, Jungs! Schnell!</text>
+	</string>
+	<string id="dm_intro_help_5">
+		<text>Das Medkit, schnell!</text>
+	</string>
+	<string id="dm_intro_help_6">
+		<text>Gib mir mal jemand das Medkit!</text>
+	</string>
+	<string id="dm_intro_help_7">
+		<text>Kamerad, das Medkit ... da drьben!</text>
+	</string>
+	<string id="dm_intro_help_8">
+		<text>Hilfe, Kamerad!</text>
+	</string>
+	<string id="dm_intro_help_9">
+		<text>Hey, Kamerad, hast du ein Medkit ьber?</text>
+	</string>
+</string_table>

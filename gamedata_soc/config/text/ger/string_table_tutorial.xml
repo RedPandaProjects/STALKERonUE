@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="binoc_tutorial">
+		<text>Um das Fernglas zu benutzen, wдhlen Sie es aus ($$ACTION_wpn_5$$) und drьcken Sie "Feuer", um reinzuzoomen.</text>
+	</string>
+	<string id="binocular">
+		<text>Fernglas</text>
+	</string>
+	<string id="crouch">
+		<text>Ducken</text>
+	</string>
+	<string id="crouch_down_tutorial">
+		<text>Um sich tiefer zu ducken, drьcken Sie ($$ACTION_crouch$$) + (Umschalten)</text>
+	</string>
+	<string id="crouch_tutorial">
+		<text>Drьcken Sie zum Ducken ($$ACTION_crouch$$). Um sich noch tiefer zu ducken, drьcken Sie ($$ACTION_crouch$$) + ($$ACTION_accel$$)</text>
+	</string>
+	<string id="hide_weapon">
+		<text>Waffenauswahl</text>
+	</string>
+	<string id="hide_weapon_tutorial">
+		<text>Manche Stalker reden nicht, wenn Sie ihnen Ihre Waffe vor die Nase halten. Um Ihre Waffe wegzustecken, mьssen Sie nur einen Blitz auswдhlen. ($$ACTION_wpn_6$$).</text>
+	</string>
+	<string id="jump">
+		<text>Springen</text>
+	</string>
+	<string id="jump_tutorial">
+		<text>Mit Sprьngen kцnnen Sie auf kleinere Barrieren klettern. Um zu springen, drьcken Sie ($$ACTION_jump$$).</text>
+	</string>
+	<string id="move_tutorial">
+		<text>Bewegungsarten</text>
+	</string>
+	<string id="overload">
+		<text>Ьberlastung</text>
+	</string>
+	<string id="overload_tutorial">
+		<text>Sie sind kein Packtier und kцnnen nicht unbegrenzt Lasten tragen. Wenn das Gewicht Ihrer Ausrьstung zu groЯ wird, verlieren Sie rasch an Energie. Sie kцnnen das aktuelle Gewicht Ihrer Ausrьstung und das maximale Gewicht, das Sie tragen kцnnen, im Inventar sehen.</text>
+	</string>
+	<string id="radiation">
+		<text>Strahlung</text>
+	</string>
+	<string id="radiation_tutorial">
+		<text>Trдgt ein Charakter ein radioaktives Artefakt am Gьrtel oder betritt ein Gebiet mit einer hohen Hintergrundstrahlung, dann beginnt er, Gesundheit zu verlieren und an der Strahlenkrankheit zu leiden. Gegen die Strahlung helfen Strahlenschutzmittel und Wodka.</text>
+	</string>
+	<string id="relation">
+		<text>Gesinnung</text>
+	</string>
+	<string id="relation_tutorial">
+		<text>Helfen Sie anderen Charakteren, machen Sie sich beliebt und Ihr Ruf verbessert sich. Eine positive Gesinnung und ein guter Ruf helfen Ihnen, wenn Sie mit Leuten interagieren. Sie erhalten leichter zusдtzliche Informationen und bekommen bessere Preise. Auf der anderen Seite machen Sie sich rasch unbeliebt, wenn Sie auf Leute schieЯen - auch bei deren Freunden - und Sie werden angegriffen.</text>
+	</string>
+	<string id="sleep_tutorial">
+		<text>Hier ist ein guter Platz zum Pennen. Hier kцnnen Sie eine Mьtze Schlaf nehmen, auf die Nacht warten oder Zeit totschlagen. Um zu schlafen, цffnen Sie das Inventar, stellen Sie die Zeit ein, die Sie verschnarchen wollen, und drьcken Sie den Ausruhen-Button. Ihr Charakter wacht zum eingestellten Zeitpunkt auf. Manchmal trдumt er.</text>
+	</string>
+	<string id="sprint">
+		<text>Sprinten</text>
+	</string>
+	<string id="sprint_tutorial">
+		<text>Manchmal mьssen Sie schneller als sonst rennen. Dazu drьcken Sie beim Laufen ($$ACTION_sprint_toggle$$). Ein sprintender Charakter rennt schneller und springt hцher, wird aber schneller mьde und kann nicht schieЯen.</text>
+	</string>
+	<string id="starvation_tutorial">
+		<text>Wenn ein Charakter eine Zeit lang nichts isst, bekommt er Hunger. Wenn er nichts zu essen findet, verliert er an Gesundheit. Daher braucht er regelmдЯig Nahrung. Ein Laib Brot, eine Dose oder ein Stьck Wurst lцsen das Problem auf einfache Weise, jedenfalls vorьbergehend.</text>
+	</string>
+	<string id="tutorial">
+		<text>Training</text>
+	</string>
+	<string id="weakness">
+		<text>Erschцpfung</text>
+	</string>
+	<string id="weakness_tutorial">
+		<text>Lдngere Zeit zu rennen verursacht Erschцpfung. Ein erschцpfter Charakter kann nicht mehr rennen und bewegt sich gehend fort. Je mehr ein Charakter trдgt, desto schneller wird er mьde. Ein paar Sekunden stehen zu bleiben reicht zur Erholung.</text>
+	</string>
+	<string id="weapon">
+		<text>Waffenstatus</text>
+	</string>
+	<string id="weapon_tutorial">
+		<text>Jede Waffe hat einen Haltbarkeitswert. Je niedriger dieser ist, desto цfter klemmt die Waffe. In diesem Fall laden Sie die Waffe neu, indem Sie ($$ACTION_wpn_reload$$) drьcken. Durch Gebrauch nimmt die Haltbarkeit der Waffe ab. Wird sie von Kugeln getroffen, kann eine Waffe nutzlos werden.</text>
+	</string>
+	<string id="wound">
+		<text>Offene Wunden</text>
+	</string>
+	<string id="wound_tutorial">
+		<text>Wird ein Charakter getroffen, blutet er womцglich. Durch Bluten verliert der Charakter bestдndig an Gesundheit. Je stдrker die Blutung (ein grьnes Symbol bedeutet eine leichte, ein rotes eine schwere Blutung), desto schneller geschieht das. Blutungen hцren mit der Zeit auf, doch selbst schwere Blutverluste lassen sich sofort durch den Gebrauch von Verbдnden stillen.</text>
+	</string>
+	<string id="pda_diary_tutorial">
+		<text>Im PDA des verstorbenen Stalkers waren Aufzeichnungen ьber Anomalien in Tunneln. Er hat offensichtlich die RegelmдЯigkeit dieser Anomalien entdeckt. Die Informationen sind im PDA unter "Tagebuch" verfьgbar.</text>
+	</string>
+</string_table>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="game type">
+		<text>DRUH HRY</text>
+	</string>
+	<string id="icon">
+		<text>IKONY</text>
+	</string>
+	<string id="map">
+		<text>MAPA</text>
+	</string>
+	<string id="mm_mp_allowvoting">
+		<text>Povolit hlasovбnн</text>
+	</string>
+	<string id="mm_mp_anomalytime">
+		<text>Иas anomбliн (min)</text>
+	</string>
+	<string id="mm_mp_artefactcapture">
+		<text>Zajetн artefaktu</text>
+	</string>
+	<string id="mm_mp_artefdelay">
+		<text>Zpomalenн artefaktu (s)</text>
+	</string>
+	<string id="mm_mp_artefnum">
+		<text>Poиet artefaktщ</text>
+	</string>
+	<string id="mm_mp_artefstay">
+		<text>Ћivotnost artefaktu (min)</text>
+	</string>
+	<string id="mm_mp_autoteambalance">
+		<text>Automatickй vyrovnбvбnн tэmщ</text>
+	</string>
+	<string id="mm_mp_autoteamswap">
+		<text>Automatickй pшehazovбnн tэmщ</text>
+	</string>
+	<string id="mm_mp_avail_maps">
+		<text>DOSTUPNЙ MAPY</text>
+	</string>
+	<string id="mm_mp_cancel">
+		<text>Zruљit</text>
+	</string>
+	<string id="mm_mp_cd_key">
+		<text>CD klни</text>
+	</string>
+	<string id="mm_mp_client">
+		<text>Klient</text>
+	</string>
+	<string id="mm_mp_create">
+		<text>Vytvoшit</text>
+	</string>
+	<string id="mm_mp_damageblock">
+		<text>Nesmrtelnost</text>
+	</string>
+	<string id="mm_mp_damageblockindicator">
+		<text>Indikбtor nesmrtelnosti</text>
+	</string>
+	<string id="mm_mp_deaths">
+		<text>Ъmrtн</text>
+	</string>
+	<string id="mm_mp_dedicated">
+		<text>Dedikovanэ</text>
+	</string>
+	<string id="mm_mp_empty">
+		<text>Prбzdnй</text>
+	</string>
+	<string id="mm_mp_filters">
+		<text>Filtry</text>
+	</string>
+	<string id="mm_mp_forcerespawn">
+		<text>Vynutit respawn (s)</text>
+	</string>
+	<string id="mm_mp_fraglimit">
+		<text>Limit fragщ</text>
+	</string>
+	<string id="mm_mp_frags">
+		<text>Fragy</text>
+	</string>
+	<string id="mm_mp_freezetime">
+		<text>Doba zastavenн</text>
+	</string>
+	<string id="mm_mp_friendlyfire">
+		<text>Pшбtelskб stшelba</text>
+	</string>
+	<string id="mm_mp_friendlyindicators">
+		<text>Indikбtory pшбtel</text>
+	</string>
+	<string id="mm_mp_friendlynames">
+		<text>Jmйna pшбtel</text>
+	</string>
+	<string id="mm_mp_full">
+		<text>Plnй</text>
+	</string>
+	<string id="mm_mp_gamemode">
+		<text>Mуd</text>
+	</string>
+	<string id="mm_mp_host_port">
+		<text>IP/server:port</text>
+	</string>
+	<string id="mm_mp_internet">
+		<text>Internet</text>
+	</string>
+	<string id="mm_mp_join">
+		<text>Pшidat se</text>
+	</string>
+	<string id="mm_mp_lan">
+		<text>LAN</text>
+	</string>
+	<string id="mm_mp_listenservers">
+		<text>Poslouchat</text>
+	</string>
+	<string id="mm_mp_mapratation">
+		<text>Seznam map</text>
+	</string>
+	<string id="mm_mp_maxplayers">
+		<text>Max. hrбищ</text>
+	</string>
+	<string id="mm_mp_network_connection">
+		<text>Sнќovй pшipojenн</text>
+	</string>
+	<string id="mm_mp_noanomalies">
+		<text>Ћбdnй anomбlie</text>
+	</string>
+	<string id="mm_mp_options">
+		<text>Nastavenн</text>
+	</string>
+	<string id="mm_mp_password">
+		<text>Heslo</text>
+	</string>
+	<string id="mm_mp_player_name">
+		<text>Jmйno hrбиe:</text>
+	</string>
+	<string id="mm_mp_players">
+		<text>Hrбиi</text>
+	</string>
+	<string id="mm_mp_publicserver">
+		<text>Veшejnэ server</text>
+	</string>
+	<string id="mm_mp_quickrefresh">
+		<text>Rychlй obnovenн</text>
+	</string>
+	<string id="mm_mp_rateofchange">
+		<text>Rychlost zmмny</text>
+	</string>
+	<string id="mm_mp_refresh">
+		<text>Aktualizovat vљe</text>
+	</string>
+	<string id="mm_mp_reinforcement">
+		<text>Posily (s)</text>
+	</string>
+	<string id="mm_mp_respawnoptions">
+		<text>Nastavenн oћivenн</text>
+	</string>
+	<string id="mm_mp_sel_maps">
+		<text>VYBRANЙ MAPY</text>
+	</string>
+	<string id="mm_mp_server">
+		<text>Server</text>
+	</string>
+	<string id="mm_mp_server_list">
+		<text>Seznam serverщ</text>
+	</string>
+	<string id="mm_mp_server_prop">
+		<text>Vlastnosti serveru</text>
+	</string>
+	<string id="mm_mp_serverinfo">
+		<text>Info o serveru</text>
+	</string>
+	<string id="mm_mp_serverlist">
+		<text>Server</text>
+	</string>
+	<string id="mm_mp_servername">
+		<text>Jmйno serveru</text>
+	</string>
+	<string id="mm_mp_serversettings">
+		<text>Nastavenн serveru</text>
+	</string>
+	<string id="mm_mp_spectator">
+		<text>Pozorovatel</text>
+	</string>
+	<string id="mm_mp_spectator_firsteye">
+		<text>Prvnн osoba</text>
+	</string>
+	<string id="mm_mp_spectator_freefly">
+		<text>Volnб kamera</text>
+	</string>
+	<string id="mm_mp_spectator_freelook">
+		<text>Volnб/uzamиenб</text>
+	</string>
+	<string id="mm_mp_spectator_lookat">
+		<text>Tшetн osoba</text>
+	</string>
+	<string id="mm_mp_spectator_options">
+		<text>Nastavenн pozorovatele</text>
+	</string>
+	<string id="mm_mp_spectator_teamonly">
+		<text>Jenom tэm</text>
+	</string>
+	<string id="mm_mp_startweather">
+		<text>Poибteиnн poиasн</text>
+	</string>
+	<string id="mm_mp_timelimit">
+		<text>Иasovэ limit (min)</text>
+	</string>
+	<string id="mm_mp_warmuptime">
+		<text>Zahшнvacн doba (s)</text>
+	</string>
+	<string id="mm_mp_weatheroptions">
+		<text>Nastavenн poиasн</text>
+	</string>
+	<string id="mm_mp_withoutfriendlyfire">
+		<text>Bez pшбtelskй stшelby</text>
+	</string>
+	<string id="mm_mp_withoutpassword">
+		<text>Bez hesla</text>
+	</string>
+	<string id="mm_mp_withoutpunkbuster">
+		<text>Bez Punk Buster</text>
+	</string>
+	<string id="mm_mp_withpassword">
+		<text>S heslem</text>
+	</string>
+	<string id="mp_vote_hint">
+		<text>Hlasovat PRO-[$$ACTION_VOTE_YES$$]\nHlasovat PROTI-[$$ACTION_VOTE_NO$$]\nResults-[$$ACTION_VOTE$$]</text>
+	</string>
+	<string id="ping">
+		<text>PING</text>
+	</string>
+	<string id="players">
+		<text>HRБИI</text>
+	</string>
+	<string id="server name">
+		<text>JMЙNO SERVERU</text>
+	</string>
+	<string id="version">
+		<text>Verze</text>
+	</string>
+	<string id="st_mp_gsfilter">
+		<text>Filtr:</text>
+	</string>
+</string_table>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="item test1">
+		<text>Esta es una secuencia de prueba de un OBJETO</text>
+	</string>
+	<string id="item test2">
+		<text>Esta es otra secuencia de prueba de un OBJETO</text>
+	</string>
+	<string id="item_case_esc_desc">
+		<text>Maletнn ignнfugo con documentos. </text>
+	</string>
+	<string id="item_decoder_desc">
+		<text>Ganzъa electrуnica. Bastante rara, no parece la herramienta multiuso de un ladrуn. Mбs bien parece haber sido construida para abrir una cerradura electrуnica en concreto y no puede usarse para abrir nada mбs. </text>
+	</string>
+	<string id="item_decoder_name">
+		<text>Descodificador</text>
+	</string>
+	<string id="item_detector_yantar_desc">
+		<text>Detector de emisiones psнquicas</text>
+	</string>
+	<string id="item_detector_yantar_name">
+		<text>Sensor PP-4a</text>
+	</string>
+	<string id="item_doc_x16_desc">
+		<text>Documento de plбstico. Necesitarнas una licenciatura en Biologнa para entender lo que dice.</text>
+	</string>
+	<string id="item_doc_x16_name">
+		<text>Papeles del Lab. X16</text>
+	</string>
+	<string id="item_doc_x18_desc">
+		<text>Una pila enorme de documentos cientнficos. Tйrminos, fуrmulas y una serie de diagramas.</text>
+	</string>
+	<string id="item_doc_x18p1_name">
+		<text>Papeles del Lab. X18, parte 1</text>
+	</string>
+	<string id="item_doc_x18p2_name">
+		<text>Papeles del Lab. X18, parte 2</text>
+	</string>
+	<string id="item_doc_x18p3_name">
+		<text>Papeles del Lab. X18, parte 3</text>
+	</string>
+	<string id="item_doc_x18p4_name">
+		<text>Papeles del Lab. X18, parte 4</text>
+	</string>
+	<string id="item_doc_x18p5_name">
+		<text>Papeles del Lab. X18, parte 5</text>
+	</string>
+	<string id="item_docs_hiden_pri_desc">
+		<text>Manuscrito gastado encuadernado en piel. Escrito por el propio Strelok. A juzgar solo por el tнtulo, puede que explique algunos de los secretos de la Zona.</text>
+	</string>
+	<string id="item_docs_hiden_pri_name">
+		<text>Papeles del compartimento de Pripyat </text>
+	</string>
+	<string id="item_dynamite_esc_desc">
+		<text>Una caja pesada de madera con la palabra "Explosivos" escrita en varios idiomas </text>
+	</string>
+	<string id="item_dynamite_esc_name">
+		<text>Caja de explosivos</text>
+	</string>
+	<string id="item_flash_crazy_mil_desc">
+		<text>Unidad de informaciуn: ъtil para almacenar y transferir informaciуn.</text>
+	</string>
+	<string id="item_flash_crazy_mil_name">
+		<text>Unidad del stalker loco</text>
+	</string>
+	<string id="item_flash_eco_rost_desc">
+		<text>Unidad de informaciуn: ъtil para almacenar y transferir informaciуn.</text>
+	</string>
+	<string id="item_flash_eco_rost_name">
+		<text>Unidad del profesor Kruglov</text>
+	</string>
+	<string id="item_flash_esc_desc">
+		<text>Unidad de informaciуn: ъtil para almacenar y transferir informaciуn.</text>
+	</string>
+	<string id="item_flash_esc_name">
+		<text>Unidad del stalker prisionero</text>
+	</string>
+	<string id="item_flash_gslinger_agro_desc">
+		<text>Unidad de informaciуn: ъtil para almacenar y transferir informaciуn.</text>
+	</string>
+	<string id="item_flash_gslinger_agro_name">
+		<text>Unidad de Strelok</text>
+	</string>
+	<string id="item_key_x18_desc">
+		<text>Llave electrуnica del laboratorio subterrбneo X18.</text>
+	</string>
+	<string id="item_key_x18_name">
+		<text>Llave de Borov</text>
+	</string>
+	<string id="item_krot_flash">
+		<text>Unidad de Mole</text>
+	</string>
+	<string id="item_PDA_lucky_desc">
+		<text>Dispositivo digital. Indispensable en la Zona.</text>
+	</string>
+	<string id="item_PDA_lucky_name">
+		<text>PDA de Afortunado</text>
+	</string>
+	<string id="item_PDA_tiran_desc">
+		<text>Dispositivo digital. Indispensable en la Zona.</text>
+	</string>
+	<string id="item_PDA_tiran_name">
+		<text>PDA de Tirano</text>
+	</string>
+	<string id="item_quest_case_02_desc">
+		<text>Maletнn ignнfugo con documentos. </text>
+	</string>
+	<string id="item_quest_case_02_name">
+		<text>Documentos</text>
+	</string>
+	<string id="item_case_esc_name">
+		<text>Papeles de la avanzadilla</text>
+	</string>
+	<string id="yan_bad_psy_helmet_desc">
+		<text>Prototipo desarrollado por los cientнficos para proteger a la gente de emisiones psнquicas. No calibrado.</text>
+	</string>
+	<string id="yan_bad_psy_helmet_name">
+		<text>Psicocasco no calibrado.</text>
+	</string>
+	<string id="yan_good_psy_helmet_desc">
+		<text>Prototipo funcional desarrollado por los cientнficos para proteger a la gente de emisiones psнquicas.</text>
+	</string>
+	<string id="yan_good_psy_helmet_name">
+		<text>Psicocasco funcional</text>
+	</string>
+</string_table>

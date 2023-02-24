@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bar_rostok">
+		<text>Divokб oblast - Rostok</text>
+	</string>
+	<string id="car_character_use">
+		<text>Otevшнt dveшe ($$ACTION_USE$$)</text>
+	</string>
+	<string id="character_use">
+		<text>Mluvit ($$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use_or_drag">
+		<text>Prohledat tмlo ($$ACTION_USE$$) \n Odtбhnout tмlo (SHIFT+$$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use">
+		<text>Prohledat tмlo ($$ACTION_USE$$)</text>
+	</string>
+	<string id="general_complete_task">
+		<text>Ъkol dokonиen:</text>
+	</string>
+	<string id="general_fail_task">
+		<text>Ъkol selhal:</text>
+	</string>
+	<string id="general_help">
+		<text>Rychle, potшebuju lйkбrniиku! Umнrбm!</text>
+	</string>
+	<string id="general_in_item">
+		<text>Zнskбn pшedmмt:</text>
+	</string>
+	<string id="general_in_money">
+		<text>Zнskбny penнze:</text>
+	</string>
+	<string id="general_new_diary">
+		<text>Novэ zбznam v denнku.</text>
+	</string>
+	<string id="general_new_encyclopedy">
+		<text>Novэ иlбnek v encyklopedii.</text>
+	</string>
+	<string id="general_new_task">
+		<text>Novэ ъkol:</text>
+	</string>
+	<string id="general_out_item">
+		<text>Ztracen pшedmмt:</text>
+	</string>
+	<string id="general_out_money">
+		<text>Ztraceny penнze:</text>
+	</string>
+	<string id="general_update_task">
+		<text>Ъkol aktualizovбn:</text>
+	</string>
+	<string id="physic_shell_use">
+		<text>Pшesunout objekt ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_codelock">
+		<text>Kombinaиnн zбmek ($$ACTION_USE$$)</text>
+	</string>
+	<string id="to_aes">
+		<text>K иernobylskй elektrбrnм</text>
+	</string>
+	<string id="to_agroprom">
+		<text>Do Agropromu</text>
+	</string>
+	<string id="to_agroprom_underground">
+		<text>Do katakomb</text>
+	</string>
+	<string id="to_bar">
+		<text>Do Rostoku</text>
+	</string>
+	<string id="to_darkvalley">
+		<text>Do Temnйho ъdolн</text>
+	</string>
+	<string id="to_escape">
+		<text>Ke kordуnu</text>
+	</string>
+	<string id="to_garbage">
+		<text>Na smetiљtм</text>
+	</string>
+	<string id="to_military">
+		<text>Do skladiљtм</text>
+	</string>
+	<string id="to_pripyat">
+		<text>Do Pripjatм</text>
+	</string>
+	<string id="to_radar">
+		<text>K vypalovaиi mozku</text>
+	</string>
+	<string id="to_rostok">
+		<text>Na divokй ъzemн</text>
+	</string>
+	<string id="to_yantar">
+		<text>k Jantaru</text>
+	</string>
+	<string id="st_helmet_countdown">
+		<text>Odpoиet ochrany</text>
+	</string>
+	<string id="st_psy_danger">
+		<text>Kritickб ъroveт psi-zбшenн. Okamћitм opusќ nebezpeиnou zуnu.</text>
+	</string>
+	<string id="st_radiation_danger">
+		<text>Nebezpeиnб ъroveт radiace. Pro prщchod je nutnб ochrana.</text>
+	</string>
+	<string id="st_found_new_pda">
+		<text>Nalezena informace:</text>
+	</string>
+</string_table>

@@ -1,0 +1,48 @@
+	<string id="gar_car_graveyard_quest">
+		<text>Zareaguj na wo³anie o pomoc</text>
+	</string>
+	<string id="gar_defend_garbage">
+		<text>Odeprzyj atak bandytów</text>
+	</string>
+	<string id="gar_dialog_hellcar">
+		<text>Zaproponuj pomoc przywódcy oddzia³u neutralnych.</text>
+	</string>
+	<string id="gar_dialog_hellcar_1">
+		<text>Zaoferuj pomoc Biesowi</text>
+	</string>
+	<string id="gar_hellcar_alive">
+		<text>Porozmawiaj z Biesem</text>
+	</string>
+	<string id="gar_help_dymon">
+		<text>Odeprzyj atak bandytów</text>
+	</string>
+	<string id="gar_help_tunnel_newbie">
+		<text>Pomó¿ kotu z Wysypiska</text>
+	</string>
+	<string id="gar_kill_bandits">
+		<text>Powstrzymaj atak bandytów</text>
+	</string>
+	<string id="gar_kill_boars">
+		<text>Udziel wsparcia posterunkowi "Powinnoœci"</text>
+	</string>
+	<string id="gar_kill_boars_1">
+		<text>Zabij dziki.</text>
+	</string>
+	<string id="gar_kill_boars_2">
+		<text>Porozmawiaj z dowódc¹ "Powinnoœci"</text>
+	</string>
+	<string id="gar_kill_boars_descr">
+		<text>Powinnoœæ: "Witam, tu frakcja "Powinnoœæ" z Wysypiska. Od strony Doliny Mroku w kierunku baru nadci¹ga fala mutantów. Bêdziemy wdziêczni wszystkim, którzy pomog¹ nam te bestie wybiæ. S³owo "Powinnoœci"".</text>
+	</string>
+	<string id="gar_kill_boars_main">
+		<text>Nale¿y siê przedrzeæ do baru.</text>
+	</string>
+	<string id="garbage_meet_stalker_1">
+		<text>Dowiedz siê od Sieryja czegoœ o Strieloku</text>
+	</string>
+	<string id="graveyard_raid_text">
+		<text>Bies: "Te szumowiny próbuj¹ przej¹æ kontrolê nad Wysypiskiem. Pó³ godziny temu mia³a tu miejsce jatka. Zabiliœmy trzech bandziorów, reszta siê wycofa³a, ale mam przeczucie, ¿e lada chwila wróc¹ tu z posi³kami. Nie jest nas wielu, wiêc dodatkowa spluwa nie zaszkodzi. Jeœli pomo¿esz nam ich pokonaæ, odwdziêczê ci siê".</text>
+	</string>
+	<string id="help_for_neitrals_text">
+		<text>Na opuszczonym z³omowisku pojazdów dosz³o do strzelaniny pomiêdzy neutralnymi a bandytami. Neutralnym uda³o siê odeprzeæ bandytów, ale wzywaj¹ pomocy.</text>
+	</string>

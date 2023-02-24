@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Blind">
+		<text>Slepэ pes</text>
+	</string>
+	<string id="Bloodsucker">
+		<text>Upнr</text>
+	</string>
+	<string id="Boar">
+		<text>Kanec</text>
+	</string>
+	<string id="Crow">
+		<text>Vrбna</text>
+	</string>
+	<string id="enc_mutant_blind_general">
+		<text>Od katastrofy uћ ћilo nмkolik generacн psщ. Kaћdou dalљн generaci Zуna zasбhla vнce a vнce. Rychlб mutace vedla k velkйmu rozvoji jejich sekundбrnнch smyslщ, avљak na ъkor primбrnнch. Nejvмtљн viditelnou biologickou zmмnou je ztrбta zraku kombinovanб s neuvмшitelnэm rozvojem иichu. Slepб љtмтata pшeћнvala v Zуnм stejnм dobшe jako normбlnн, jestli ne lйpe. Vэsledkem je, ћe bмћnэ pes v Zуnм zбhy vyhynul a byl nahrazen novэm druhem - slepэm psem. Zvншata instinktivnм odhalujн anomбlie a vyhэbajн se jim, stejnм tak dokбћн rozeznat radiaci a dalљн neviditelnб nebezpeин Zуny. Podobnм jako jejich divocн pшedkovй vlci lovн slepн psi ve smeиkбch. Setkбnн s vмtљнm poиtem psщ mщћe znamenat smrt i pro zkuљenйho a dobшe ozbrojenйho stalkera.</text>
+	</string>
+	<string id="enc_mutant_bloodsucker_general">
+		<text>Zkuљenн stalkeшi popisujн tuto pololegendбrnн stvщru jako vysokйho shrbenйho humanoida se spoustou chapadel na mнstм ъst. Podle tмch, kdo to vidмli a pшeћili, pouћнvб stvoшenн chapadla k uchopenн hrdla obмti, jejнmu paralyzovбnн a poslйze vysбnн veљkerй krve. Po lidskй bytosti zщstane jen vysuљenб mumifikovanб skoшбpka. Nejъћasnмjљн vlastnostн upнra je ale jeho schopnost stбt se neviditelnэm. Bezpoиet mrtvэch nebo zmizelэch stalkerщ mб na svмdomн prбvм nemilosrdnй sevшenн upнra. Љќastlivci, kteшн setkбnн s upнrem pшeћijн, vyprбvн hrozivй historky o baћinбch иi sklepenнch, ve kterэch straљн hrabм Drбkula Zуny.</text>
+	</string>
+	<string id="enc_mutant_boar_general">
+		<text>Obrovskй mutovanй zvншe, kterй mб v kohoutku aћ jeden a pщl metru. Agresivita kancщ Zуny a jejich schopnost pшeћнt znaиnм pшesahuje vlastnosti jejich pшнbuznэch ћijнcнch mimo kontaminovanou oblast. Radiace a anomбlie vzhled zvншete znaиnм poznamenaly: srst na nмkterэch mнstech tйmмш zmizela, na jinэch je dlouhб a љtмtinatб. Kopyta se vyvinula v ostrй pevnй drбpy, oиi ztratily barvu a holб hlava kance je posetб nepravidelnэmi pigmentovэmi skvrnami a vrбskami. Kanci Zуny jsou znaиnм odolnн vщиi efektщm radiace a zщstбvajн zdravн i v tмћce kontaminovanэch oblastech. Na svй obмti vмtљinou ъtoин pшнmo, snaћн se je srazit k zemi a rozervat na kusy.</text>
+	</string>
+	<string id="enc_mutant_crow_general">
+		<text>Jedinэ ptaин druh, kterэ v Zуnм pшeћil, zнskal znaиnou odolnost vщиi radiaci a ъspмљnм se dokбћe vyhэbat anomбliнm. Zatнmco vojenљtн piloti pouћнvajн na odhalovбnн gravitaиnнch anomбliн sloћitй detektory, vrбna si vystaин s vlastnнmi smysly - coћ je zбhada dohбnмjнcн ornitology a biology k љнlenstvн. Existuje mnoћstvн teoriн snaћнcнch se tento fenomйn vysvмtlit, a vљechny se tэkajн znaиnм specializovanйho vэvoje ptaинho mozku.</text>
+	</string>
+	<string id="enc_mutant_flesh_general">
+		<text>Stejnм jako vмtљinu ostatnнch ћivэch stvoшenн v Zуnм i domбcн prase proљlo od katastrofy sйriн vбћnэch zmмn. V tomto pшнpadм byly zшejmм nejvнce ovlivnмny geny tэkajнcн se funkce metabolizmu. Mutovanб prasata, znбmб mezi stalkery jako flaksa, patшн mezi nejviditelnмjљн ukбzky toho, jak Zуna dokбћe perverznм pozmмnit pшнrodnн poшбdek. Mutovanб prasata si vyvinula ochrannou vrstvu љupin a ибstн exoskeletu. Jejich regenerace se zvэљila nмkolikanбsobnм, stejnм jako sloћitost jejich nervovйho systйmu. Podobnм jako normбlnн prase je i flaksa vљeћravec a pokud je hladovб, mщћe napadnout i stalkera.</text>
+	</string>
+	<string id="enc_mutant_poltergeist_general">
+		<text>Jde o neviditelnб, podle nбzoru nмkterэch nadpшirozenб, stvoшenн ћijнcн v hlubљнch ибstech zуny, vмtљinou ve starэch opuљtмnэch budovбch. O jejich pщvodu nenн nic znбmo, aиkoli se povнdб, ћe jde o duchy stalkerщ zasaћenэch silnou radiacн. Jejich zбhadnэ vzhled a schopnost zmizet odpovнdб legendм o poltergeistech, po kterэch byli takй pojmenovбni. Znбmб setkбnн s poltergeisty jsou velmi rozdнlnб, od љнlenйho smнchu a nervy drбsajнcнho шevu po smrtнcн koule ohnм objevujнcн se z niиeho nic. Bohuћel vљechny informace tэkajнcн se poltergeistщ pochбzн z nejasnэch a иasto protiшeинcнch si zprбv pochybnй pшesnosti.</text>
+	</string>
+	<string id="enc_mutant_pseudodog_general">
+		<text>Navzdory svйmu jmйnu se pseudopsi vyvinuli pшнmo z vlkщ. Zvншata ћijнcн v lesнch v dobм katastrofy znamenala poибtek jednoho z nejnebezpeиnмjљнch mutovanэch druhщ Zуny. Pseudopsi se od slepэch psщ liљн asi jako divocн vlci od pudlщ. Oznaиujн si svй ъzemн a peиlivм si ho hlнdajн, ъtoин na kaћdйho, kdo na jejich teritorium neopatrnм a neuvбћenм vstoupн. Bleskovй reflexy, nepшirozenб pohyblivost a tesбky ostrй jako bшitvy pseudopsovi postaин i pшi lovu na velkй mutanty a ozbrojenй stalkery.</text>
+	</string>
+	<string id="enc_mutant_pseudogiant_general">
+		<text>Pseudoobr pшipomнnб masivnн bшicho tvaru kapky, ze kterйho vyиnнvajн nepшirozenм velkй konиetiny, slouћнcн zбroveт jako ruce i nohy. Stvoшenн se po nich dokбћe pohybovat i chytat svй obмti. Dospмlэ pseudoobr mщћe vбћit aћ dvм tuny a dosahovat vэљky dvou metrщ. Jejich neohrabanй vzezшenн klame, jelikoћ se v pшнpadм potшeby dokбћн pohybovat velmi rychle. Majн vэjimeиnм silnй svaly a kosti tvrdй jako ocel. Mozek stvoшenн je chrбnмnэ masivnн lebkou (se stмnou tlustou aћ deset centimetrщ) a mnoћstvн komplexnнch иinnostн шнdн nervovб uzlina v pбteшi. Dalљн ъћasnou vlastnostн tohoto stvoшenн je schopnost vytvбшet lokбlnм omezenй љokovй vlny, kterй dokбћн zranit vљe ћivй v okolн.</text>
+	</string>
+	<string id="enc_mutant_snork_general">
+		<text>Vypadб to, ћe kdysi byla tato stvoшenн lidmi, aиkoli jsou podmнnky schopnй zmмnit иlovмka na tak nechutnou bestii jen tмћko pшedstavitelnй. Snorkovй jsou љнlenб stvoшenн ћijнcн jako zvншata a jen mбlo se liљнcн od ostatnнch masoћravэch stvщr Zуny. Pohybujн se po vљech иtyшech dlouhэmi skoky, neustбle oиichбvajн zemi ve snaze nalйzt pachovou stopu koшisti. Lovн opatrnм a vypoинtavм, иasto na koшist инhajн. Dнky svэm neuvмшitelnэm reflexщm a mocnэm svalщm se snork dokбћe pшiblнћit ke svй obмti, dosбhnout ji jedinэm dlouhэm skokem, srazit k zemi a bмhem nмkolika sekund rozervat na kusy. Na jejich tмlech jsou obиas nalйzбny ъtrћky vojenskэch uniforem a dalљнho obleиenн. Dб se pшedpoklбdat, ћe jde o stvoшenн, na kterй se zmмnili zmizelн vojenљtн stalkeшi.</text>
+	</string>
+	<string id="enc_mutant_tushkano">
+		<text>Ve skuteиnosti tato zvншata nejsou s tarbнky nijak pшнbuznб, ale jsou si vzhledem znaиnм podobnн. Pokusy o zjiљtмnн pшesnйho druhu, ze kterйho se tarbнci vyvinuli, prozatнm nebyly ъspмљnй, ale jejich pшedci museli patшit mezi hlodavce. Zvншata jsou v kohoutku vysokб aћ иtyшicet centimetrщ a jsou mnohem pohyblivмjљн, agresivnмjљн a masoћravмjљн neћ jejich pouљtnн obdoba. Mutovanн tarbнci ћijн hlavnм ve sklepech zniиenэch budov a krmн se vљнm, do иeho se jim podaшн zaboшit zuby, od rostlin aћ po neopatrnй stalkery. Obиas smeиka tarbнkщ zaъtoин i na velkб zvншata a mutanty, kterй roztrhб na kusy a seћere dшнv, neћ staин uniknout.</text>
+	</string>
+	<string id="enc_mutant_zombie_general">
+		<text>Vypalovaи mozku zbavн svou obмќ rozumu a uvaћovбnн, zanechб prбzdnou nemyslнcн skoшбpku. Tмla bez mozku se stбvajн zombie, шнdн se jenom zбkladnнmi instinkty a bezmyљlenkovitм bloumajн po Zуnм beze zbranн a obleиenн. Zombie jsou sotva vнc neћ pomalu se plouћнcн mrtvoly, starajнcн se jenom o jнdlo a spбnek. Jedн a pijн prakticky vљe, k иemu se dostanou, takћe jsou doslova nasбklн radioaktivnнm a chemickэm odpadem. Vмtљinou prochбzejн Zуnou zdбnlivм bezcнlnм, nebo leћн v opuљtмnэch budovбch jako mrtvн. Jakmile vљak vycнtн pшнtomnost lidskй bytosti, okamћitм zaъtoин. Zkuљenэ stalkeшi se jim nauиili vyhэbat.</text>
+	</string>
+	<string id="Flesh">
+		<text>Flaksa</text>
+	</string>
+	<string id="General">
+		<text>Obecnй informace</text>
+	</string>
+	<string id="mutant_boar_leg">
+		<text>Kanин kopyta</text>
+	</string>
+	<string id="mutant_boar_leg_description">
+		<text>Kanин kopyta je moћnй pouћнt k pшнpravм mnoha rщznэch chemikбliн, vиetnм antiradiaиnнho sйra.</text>
+	</string>
+	<string id="mutant_dog_tail">
+		<text>Psн ocas</text>
+	</string>
+	<string id="mutant_dog_tail_description">
+		<text>Odolnost kщћe mutovanйho psa vщиi elektrickэm vэbojщm a chemikбliнm uћ je dlouho vмdecky zkoumanб. Jelikoћ je ocas psa tйmмш prost tukovй tkбnм, je pro laboratornн vэzkumy nejvhodnмjљн.</text>
+	</string>
+	<string id="mutant_flesh_eye">
+		<text>Oko flaksy</text>
+	</string>
+	<string id="mutant_flesh_eye_description">
+		<text>Mutovanй napuchlй oko flaksy zнskalo nмkolik podivnэch vlastnostн, z nichћ nejuћiteиnмjљн je schopnost regenerovat poљkozenou иoиku. Jak tento proces pшesnм funguje zatнm nenн znбmo, ale jeho vэzkum by mohl znamenat revoluci v modernн medicнnм. Mщћeљ se zъиastnit vмdeckйho rozvoje a prodat oko flaksy vмdcщm na experimenty.</text>
+	</string>
+	<string id="mutant_krovosos_jaw">
+		<text>Upншн chapadla</text>
+	</string>
+	<string id="mutant_krovosos_jaw_description">
+		<text>Upншн chapadla obsahujн zvlбљtnн ћlбzy, produkujнcн lбtku schopnou rozpustit kщћi a zбroveт zabrбnit krvi ve srбћenн. Odhalenн sloћenн lбtky by mohlo bэt vэchodiskem pro velkй lйkaшskй objevy.</text>
+	</string>
+	<string id="mutant_psevdodog_tail">
+		<text>Ocas pseudopsa</text>
+	</string>
+	<string id="mutant_psevdodog_tail_description">
+		<text>Odolnost kщћe mutovanйho psa vщиi elektrickэm vэbojщm a chemikбliнm uћ je dlouho vмdecky zkoumanб. Jelikoћ je ocas psa tйmмш prost tukovй tkбnм, je pro laboratornн vэzkumy nejvhodnмjљн.</text>
+	</string>
+	<string id="mutant_snork_leg">
+		<text>Noha snorka</text>
+	</string>
+	<string id="mutant_snork_leg_description">
+		<text>Noha snorka obsahuje velkэ poиet znaиnм elastickэch љlach. Tнm se vysvмtluje neuvмшitelnб schopnost tйto bestie - skбkat.</text>
+	</string>
+	<string id="Mutants">
+		<text>Zvншata a mutanti</text>
+	</string>
+	<string id="Poltergeist">
+		<text>Poltergeist</text>
+	</string>
+	<string id="Pseudodog">
+		<text>Pseudopes</text>
+	</string>
+	<string id="Pseudogiant">
+		<text>Pseudoobr</text>
+	</string>
+	<string id="Snork">
+		<text>Snork</text>
+	</string>
+	<string id="Tushkano">
+		<text>Tarbнk</text>
+	</string>
+	<string id="Zombie">
+		<text>Zombie</text>
+	</string>
+	<string id="Controller">
+		<text>Ovladaи</text>
+	</string>
+	<string id="enc_mutant_controller_general">
+		<text>Vzбcnэ mutant, vнdanэ u stшedu Zуny. Pшipomнnб humanoida s nezvykle velkou hlavou. Je velmi vnнmavэ a dokбћe ovlбdat mйnм vyvinutб stvoшenн. Dospмlэ exemplбш dokбћe ovlбdnout i иlovмka. Je to velmi nebezpeиnэ nepшнtel, kterйho se bojн i zkuљenн stalkeшi.</text>
+	</string>
+</string_table>

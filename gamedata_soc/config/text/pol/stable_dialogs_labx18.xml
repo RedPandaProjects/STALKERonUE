@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dar_explorer_dialog_1">
+		<text>Wypeіniam zadanie.</text>
+	</string>
+	<string id="dar_explorer_dialog_11">
+		<text>Hm. Jakie zadanie? Szukasz czegoњ? A moїe juї znalazіeњ? Sіyszaіem, їe jest tu sporo fantуw...</text>
+	</string>
+	<string id="dar_explorer_dialog_111">
+		<text>Przykro mi, nie mogк powiedzieж, a zreszt№ i tak nie mam czasu.</text>
+	</string>
+	<string id="dar_explorer_dialog_1111">
+		<text>Czekaj, nie pкdџ tak. Jeszcze nie raz bкdziesz mieж okazjк... Co znalazіeњ? Bo widzisz, ja tu nie chodzк ot tak sobie.</text>
+	</string>
+	<string id="dar_explorer_dialog_11111">
+		<text>Moja sprawa, co znalazіem.</text>
+	</string>
+	<string id="dar_explorer_dialog_11112">
+		<text>Znalazіem trochк dokumentуw z X18. Barman obiecaі, їe mi nieџle za nie zapіaci.</text>
+	</string>
+	<string id="dar_explorer_dialog_112">
+		<text>Nic nie znalazіem.</text>
+	</string>
+	<string id="dar_explorer_dialog_2">
+		<text>Nawet nie wiem, jak siк tu znalazіem. Chciaіbym siк zmyж moїliwie najszybciej.</text>
+	</string>
+	<string id="dar_explorer_dialog_21">
+		<text>Nie znalazіeњ nic ciekawego, tak? Podobno s№ tu jakieњ informacje o eksperymentach naukowych... Warte grub№ kasк...</text>
+	</string>
+	<string id="dar_explorer_dialog_211">
+		<text>Nie, nie znalazіem.</text>
+	</string>
+	<string id="dar_explorer_dialog_2111">
+		<text>Tak...? A gdybyњ siк tak naprawdк dobrze zastanowiі? Moїe coњ przede mn№ ukrywasz?</text>
+	</string>
+	<string id="dar_explorer_dialog_21111">
+		<text>Nie.</text>
+	</string>
+	<string id="dar_explorer_dialog_21112">
+		<text>A co to za pytanie?</text>
+	</string>
+	<string id="dar_explorer_dialog_21113">
+		<text>Grozisz mi?</text>
+	</string>
+	<string id="dar_explorer_dialog_212">
+		<text>Pieprzyж te informacje. Ja tu siк ledwie przy їyciu trzymam.</text>
+	</string>
+	<string id="dar_explorer_dialog_2121">
+		<text>Dobra, to nie zatrzymujк. Jeњli coњ znajdziesz - bкdк w pobliїu...</text>
+	</string>
+	<string id="dar_explorer_dialog_25">
+		<text>Sіuchaj, koleњ: przeїyіem w tej cuchn№cej Zonie poїary, anomalie i potwory, a - jak widaж - wci№ї jeszcze їyjк! Wiкc nie bкdziesz mi dyktowaі, co mi wolno mуwiж, a czego nie. Przyszedіem tu po dokumenty i nie odejdк bez nich. Jak masz je przy sobie, to lepiej mi je oddaj albo czeka ciк wieczny spoczynek w tej dziurze! Kapujesz?</text>
+	</string>
+	<string id="dar_explorer_dialog_251">
+		<text>Kapujк.</text>
+	</string>
+	<string id="dar_explorer_dialog_2511">
+		<text>Jeњli kіamiesz, to siedzisz po uszy w gуwnie. Jeњli zamierzasz mnie wyrolowaж, siedzisz po uszy w gуwnie, jeњli bкdziesz chciaі mi wcisn№ж jakieњ њmieci, siedzisz po uszy w gуwnie. Generalnie siedzisz po uszy w gуwnie, wiкc musisz ostro pіyn№ж, їeby siк wynurzyж! A teraz sprуbujк jeszcze raz dla kretynуw, ktуrzy nie zrozumieli: znalazіeњ dokumenty?</text>
+	</string>
+	<string id="dar_explorer_dialog_2521">
+		<text>W porz№dku, a nastкpnym razem licz siк ze sіowami. Moїesz iњж. Jak coњ znajdziesz, to jestem w pobliїu...</text>
+	</string>
+	<string id="dar_explorer_dialog_253">
+		<text>Koniec rozmowy. Zejdџ mi z drogi.</text>
+	</string>
+	<string id="dar_explorer_dialog_26">
+		<text>Nie mam їadnych dokumentуw.</text>
+	</string>
+	<string id="dar_explorer_dialog_271">
+		<text>O to chodzi, kolego. A teraz dawaj wszystkie informacje, jakie masz, kaїdy skrawek papieru. I nawet nie myњl o їadnych numerach, bo to byіby twуj ostatni їart w їyciu...</text>
+	</string>
+	<string id="dar_explorer_dialog_51">
+		<text>Skoсcz z tym wreszcie! Nie іaїк po tej dziurze dla zabawy. Nie wydurniaj siк, tylko powiedz mi, co znalazіeњ. Moglibyњmy siк podzieliж...</text>
+	</string>
+	<string id="dar_explorer_dialog_511">
+		<text>Niczym siк nie podzielк.</text>
+	</string>
+	<string id="dar_explorer_dialog_5111">
+		<text>Aha, no to spieprzaj... I ostatnia rada: patrz, gdzie idziesz, stalkerze, bo potem moїesz їaіowaж!</text>
+	</string>
+	<string id="dar_explorer_dialog_512">
+		<text>Grozisz mi?</text>
+	</string>
+	<string id="dar_explorer_dialog_5121">
+		<text>Dobra, dobra, wyluzuj... Trochк siк czіowiek zaciekawi, a ty juї іapiesz za spluwк! Koniec pytaс. Po prostu uwaїaj i tyle.</text>
+	</string>
+	<string id="dar_explorer_dialog_61">
+		<text>Dokumenty, hm... Dla twojej informacji - wіaњnie po nie tu przyszedіem. A ty mi je teraz przekaїesz i ruszysz w swoj№ drogк. Jasne?</text>
+	</string>
+	<string id="dar_explorer_dialog_6111">
+		<text>Mam dla ciebie ofertк.</text>
+	</string>
+	<string id="dar_explorer_dialog_6121">
+		<text>Stary, przestaс mi robiж wodк z mуzgu. Zawrzyjmy ukіad. Dam ci niezі№ kasк - nie poїaіujesz.</text>
+	</string>
+	<string id="dar_explorer_dialog_6131">
+		<text>Sіuchaj, moje їycie zaleїy od tych dokumentуw. Pokaї, co tam masz - myњlк, їe moїemy siк dogadaж...</text>
+	</string>
+	<string id="dar_explorer_dialog_8011">
+		<text>Ciemno tu, do cholery, nic nie widzк. Wszкdzie wokуі burerzy... Po co ja siк w ogуle na to zgodziіem?! A ty co? Jak siк tu znalazіeњ?</text>
+	</string>
+	<string id="dar_explorer_dialog_8021">
+		<text>Nie zatrzymuj siк, stalkerze.</text>
+	</string>
+	<string id="dar_explorer_dialog_8031">
+		<text>Nienawidzк, kiedy ktoњ mi przerywa. Tak czy siak, przyszedіem tu po waїne dokumenty. Jeњli coњ znalazіeњ, to gadaj albo bкd№ problemy. Jak nic nie masz, to zjeїdїaj i nie marnuj mojego czasu.</text>
+	</string>
+	<string id="dar_explorer_dialog_8041">
+		<text>Nienawidzк, kiedy ktoњ mi przerywa. Dawaj te dokumenty, jeњli nie њpieszysz siк na tamten њwiat.</text>
+	</string>
+	<string id="dar_explorer_dialog_9">
+		<text>Zapamiкtam to.</text>
+	</string>
+</string_table>

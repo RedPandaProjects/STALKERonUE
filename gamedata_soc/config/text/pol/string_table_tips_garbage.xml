@@ -1,0 +1,27 @@
+	<string id="gar_actor_looser">
+		<text>Naznaczony, jesteœ bezu¿yteczny. Zupe³nie do niczego! Nie oczekuj wdziêcznoœci - nie mam ci za co dziêkowaæ!</text>
+	</string>
+	<string id="gar_actor_normal">
+		<text>NieŸle, stalkerze! Ustrzeli³eœ sobie kilku mutantów, ale trochê wolno kapujesz, nie? Jeœli chcesz przejœæ, wyskakuj z kasy.</text>
+	</string>
+	<string id="gar_actor_winner">
+		<text>Œwietnie, Naznaczony, naprawdê nam tam pomog³eœ. To wystarczaj¹ca zap³ata - mo¿esz przejœæ. IdŸ do baru.</text>
+	</string>
+	<string id="gar_direction_fire">
+		<text>Daj im podejœæ bli¿ej, ¿eby ¿aden nie uciek³. Ja strzelam pierwszy, ty zaraz po mnie. </text>
+	</string>
+	<string id="gar_dolg_blokpost_warning">
+		<text>Stalkerze, znajdujesz siê na terytorium "Powinnoœci". Nie tolerujemy tu walki.</text>
+	</string>
+	<string id="gar_dolg_monster_rush">
+		<text>Uwaga!!! Tu posterunek "Powinnoœci". Stado mutantów przemieszcza siê z Doliny Mroku w kierunku baru. Jeœli ktoœ pomo¿e nam powstrzymaæ te stwory, nie po¿a³uje.</text>
+	</string>
+	<string id="gar_dolg_warning">
+		<text>Stalkerze, znajdujesz siê na terytorium "Powinnoœci". Zacznij sprawiaæ k³opoty, a przez resztê ¿ycia bêd¹ ciê karmiæ przez rurkê. </text>
+	</string>
+	<string id="gar_hellcar_victory">
+		<text>Dobra robota, panowie, mamy ich wszystkich. Zróbcie sobie krótk¹ przerwê. Ty, stalkerze, podejdŸ no tu. Porozmawiajmy.</text>
+	</string>
+	<string id="tips_gar_hellcar_alarm">
+		<text>Uwaga, ludzie, tu dowódca oddzia³u neutralnego. Wyparliœmy bandytów z opuszczonego parkingu, ale prawdopodobnie bêd¹ siê starali go odbiæ. Nie ma nas wielu, wiêc jeœli chcecie pomóc, macie zaklepane miejsce.</text>
+	</string>

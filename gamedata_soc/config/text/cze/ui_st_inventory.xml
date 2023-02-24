@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_activate_artefact">
+		<text>aktivovat artefakt</text>
+	</string>
+	<string id="st_attach_gl_to_rifle">
+		<text>pшipojit granбtomet k puљce</text>
+	</string>
+	<string id="st_attach_scope_to_pistol">
+		<text>pшipojit puљkohled k pistoli</text>
+	</string>
+	<string id="st_attach_scope_to_rifle">
+		<text>pшipojit puљkohled k puљce</text>
+	</string>
+	<string id="st_attach_silencer_to_pistol">
+		<text>pшipojit tlumiи k pistoli</text>
+	</string>
+	<string id="st_attach_silencer_to_rifle">
+		<text>pшipojit tlumiи k puљce</text>
+	</string>
+	<string id="st_base_cost">
+		<text>cena</text>
+	</string>
+	<string id="st_condition">
+		<text>stav</text>
+	</string>
+	<string id="st_detach_gl">
+		<text>sundat granбtomet</text>
+	</string>
+	<string id="st_detach_scope">
+		<text>sundat puљkohled</text>
+	</string>
+	<string id="st_detach_silencer">
+		<text>sundat tlumiи</text>
+	</string>
+	<string id="st_dress_outfit">
+		<text>nasadit oblek</text>
+	</string>
+	<string id="st_drop">
+		<text>zahodit</text>
+	</string>
+	<string id="st_drop_all">
+		<text>zahodit vљe</text>
+	</string>
+	<string id="st_eat">
+		<text>jнst</text>
+	</string>
+	<string id="st_move_on_belt">
+		<text>pшipevnit na opasek</text>
+	</string>
+	<string id="st_move_to_bag">
+		<text>pшesunout do batohu</text>
+	</string>
+	<string id="st_move_to_slot">
+		<text>pшesunout na pozici</text>
+	</string>
+	<string id="st_sell_item">
+		<text>prodat pшedmмt</text>
+	</string>
+	<string id="st_undress_outfit">
+		<text>sundat oblek</text>
+	</string>
+	<string id="st_unload_magazine">
+		<text>vybнt</text>
+	</string>
+	<string id="st_use">
+		<text>pouћнt</text>
+	</string>
+	<string id="st_weight">
+		<text>vбha</text>
+	</string>
+	<string id="ui_inv_accuracy">
+		<text>Pшesnost</text>
+	</string>
+	<string id="ui_inv_bag">
+		<text>Batoh</text>
+	</string>
+	<string id="ui_inv_belt">
+		<text>Opasek</text>
+	</string>
+	<string id="ui_inv_cancel">
+		<text>Zruљit</text>
+	</string>
+	<string id="ui_inv_clear">
+		<text>Vyиistit</text>
+	</string>
+	<string id="ui_inv_damage">
+		<text>Poљkozenн</text>
+	</string>
+	<string id="ui_inv_description">
+		<text>Popis</text>
+	</string>
+	<string id="ui_inv_drop">
+		<text>Sundat</text>
+	</string>
+	<string id="ui_inv_equipment">
+		<text>Vybavenн</text>
+	</string>
+	<string id="ui_inv_exit">
+		<text>Odejнt</text>
+	</string>
+	<string id="ui_inv_granades_rifle">
+		<text>Koupit granбty do granбtometu (E)</text>
+	</string>
+	<string id="ui_inv_handling">
+		<text>Ovlбdбnн</text>
+	</string>
+	<string id="ui_inv_heavy_weapons">
+		<text>Tмћkй</text>
+	</string>
+	<string id="ui_inv_items_list">
+		<text>Seznam pшedmмtщ</text>
+	</string>
+	<string id="ui_inv_money">
+		<text>Penнze</text>
+	</string>
+	<string id="ui_inv_ok">
+		<text>Ok</text>
+	</string>
+	<string id="ui_inv_outfit_burn_protection">
+		<text>Popбleniny</text>
+	</string>
+	<string id="ui_inv_outfit_chemical_burn_protection">
+		<text>Chemickй popбleniny</text>
+	</string>
+	<string id="ui_inv_outfit_explosion_protection">
+		<text>Exploze</text>
+	</string>
+	<string id="ui_inv_outfit_fire_wound_protection">
+		<text>Neprщstшelnost</text>
+	</string>
+	<string id="ui_inv_outfit_params">
+		<text>Parametry</text>
+	</string>
+	<string id="ui_inv_outfit_radiation_protection">
+		<text>Radiace</text>
+	</string>
+	<string id="ui_inv_outfit_shock_protection">
+		<text>Elektrickэ љok</text>
+	</string>
+	<string id="ui_inv_outfit_strike_protection">
+		<text>Nбraz</text>
+	</string>
+	<string id="ui_inv_outfit_telepatic_protection">
+		<text>Telepatie</text>
+	</string>
+	<string id="ui_inv_outfit_wound_protection">
+		<text>Trћnй rбny</text>
+	</string>
+	<string id="ui_inv_outfits">
+		<text>Obleky</text>
+	</string>
+	<string id="ui_inv_personal">
+		<text>Oblek</text>
+	</string>
+	<string id="ui_inv_pistols">
+		<text>Pistole</text>
+	</string>
+	<string id="ui_inv_primary_weapons">
+		<text>Primбrnн</text>
+	</string>
+	<string id="ui_inv_rate_of_fire">
+		<text>Rychlost stшelby</text>
+	</string>
+	<string id="ui_inv_rest">
+		<text>Odpoиinek</text>
+	</string>
+	<string id="ui_inv_rifles">
+		<text>Ъtoиnй puљky</text>
+	</string>
+	<string id="ui_inv_shop">
+		<text>Obchod</text>
+	</string>
+	<string id="ui_inv_shotguns">
+		<text>Brokovnice</text>
+	</string>
+	<string id="ui_inv_sniper_rifles">
+		<text>Snajpr</text>
+	</string>
+	<string id="ui_inv_time">
+		<text>Иas</text>
+	</string>
+	<string id="ui_inv_total_money">
+		<text>Celkem penмz</text>
+	</string>
+	<string id="ui_inv_weight">
+		<text>Vбha</text>
+	</string>
+	<string id="ui_inv_ammo_pistol">
+		<text>Koupit zбkladnн munici pro pistoli (Q)</text>
+	</string>
+	<string id="ui_inv_ammo_rifle">
+		<text>Koupit munici pro puљku (W)</text>
+	</string>
+	<string id="ui_inv_granadelauncher_rifle">
+		<text>Koupit granбtomet pro puљku (D)</text>
+	</string>
+	<string id="ui_inv_granades">
+		<text>Granбty</text>
+	</string>
+	<string id="ui_inv_scope_rifle">
+		<text>Koupit optiku pro puљku (S)</text>
+	</string>
+	<string id="ui_inv_silencer_pistol">
+		<text>Koupit tlumiи pro pistoli (A)</text>
+	</string>
+	<string id="ui_inv_silencer_rifle">
+		<text>Koupit tlumiи pro puљku (F)</text>
+	</string>
+	<string id="ui_inv_last_buy">
+		<text>Koupit pшedchozн sadu</text>
+	</string>
+	<string id="ui_inv_sell_items(X)">
+		<text>Prodat vљechny vмci z batohu (X)</text>
+	</string>
+	<string id="ui_st_preset_stored_to">
+		<text>Koupenб sada uloћena jako</text>
+	</string>
+	<string id="ui_inv_preset1(F1)">
+		<text>Nastavenн 1 (F1)</text>
+	</string>
+	<string id="ui_inv_preset2(F2)">
+		<text>Nastavenн 2 (F2)</text>
+	</string>
+	<string id="ui_inv_preset3(F3)">
+		<text>Nastavenн 3 (F3)</text>
+	</string>
+	<string id="ui_inv_last_buy(F4)">
+		<text>Poslednн nastavenн (F4)</text>
+	</string>
+	<string id="ui_inv_default(F5)">
+		<text>Vэchozн nastavenн (F5)</text>
+	</string>
+	<string id="ui_st_preset_def">
+		<text>Vэchozн</text>
+	</string>
+	<string id="ui_inv_reset_items(C)">
+		<text>Resetovat pшedmмty (C) </text>
+	</string>
+	<string id="ui_inv_cant_buy_item">
+		<text>Nenн moћnй koupit</text>
+	</string>
+	<string id="ui_inv_rank_restr">
+		<text>Omezenн hodonosti</text>
+	</string>
+	<string id="ui_inv_not_enought_money">
+		<text>Nedostatek penмz</text>
+	</string>
+	<string id="ui_inv_count_restr">
+		<text>Omezenн poиtu</text>
+	</string>
+	<string id="ui_inv_has">
+		<text>Aktuбlnм </text>
+	</string>
+	<string id="ui_inv_need">
+		<text>zapotшebн </text>
+	</string>
+	<string id="ui_inv_you_already_have">
+		<text>Uћ mбљ</text>
+	</string>
+	<string id="ui_st_err_gs_not_available">
+		<text>Online sluћby STALKER nejsou dostupnй.</text>
+	</string>
+	<string id="ui_st_err_sb_master_server_conn_fail">
+		<text>Nepodaшilo se pшipojit k hlavnнmu serveru</text>
+	</string>
+</string_table>

@@ -1,0 +1,150 @@
+	<string id="esc_bandits_on_factory">
+		<text>Tuer les bandits de l'usine</text>
+	</string>
+	<string id="esc_bandits_on_factory_0">
+		<text>Tuer les bandits planqués dans l'usine.</text>
+	</string>
+	<string id="esc_bandits_on_factory_1">
+		<text>Tuer tous les bandits de l'usine</text>
+	</string>
+	<string id="esc_bandits_on_factory_2">
+		<text>Parler au marchand</text>
+	</string>
+	<string id="esc_bandits_on_factory_3">
+		<text>Parler au loup</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader">
+		<text>Voler la boîte à l'avant-poste militaire</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_0">
+		<text>Voler la boîte contenant d'important documents à l'avant-poste militaire.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_1">
+		<text>Voler la boîte à l'avant-poste militaire</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_2">
+		<text>Apporter la boîte au marchand</text>
+	</string>
+	<string id="esc_defend_lager">
+		<text>Protéger le camp des nouveaux des Mercenaires</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_0">
+		<text>Protéger le camp des nouveaux des Mercenaires.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_1">
+		<text>Éliminer les Mercenaires.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_2">
+		<text>Parler au commandant des nouveaux</text>
+	</string>
+	<string id="esc_dinamit_to_volk">
+		<text>Tuer les bandits au parking.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_0">
+		<text>Tuer les bandits au parking et faire un rapport au Loup.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_1">
+		<text>Rencontrer les hommes du Loup</text>
+	</string>
+	<string id="esc_dinamit_to_volk_2">
+		<text>Tuer tous les bandits</text>
+	</string>
+	<string id="esc_dinamit_to_volk_3">
+		<text>Parler au Loup</text>
+	</string>
+	<string id="esc_help_wounded_from_raid">
+		<text>Se renseigner auprès de Fox sur Strelok</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_0">
+		<text>Aider le Stalker blessé</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_1">
+		<text>Aider Fox</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_2">
+		<text>Se renseigner sur Strelok</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift">
+		<text>Livrer le paquet au marchand.</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift_0">
+		<text>Livrer le paquet au marchand. Il sera en mesure de t'aider.</text>
+	</string>
+	<string id="garbage_meet_stalker">
+		<text>Rencontrer Seriy.</text>
+	</string>
+	<string id="garbage_meet_stalker_0">
+		<text>Rencontrer le Grison à la Décharge.</text>
+	</string>
+	<string id="meet_with_doctor">
+		<text>Rencontrer le Doc.</text>
+	</string>
+	<string id="meet_with_doctor_1">
+		<text>Rencontrer le Doc.</text>
+	</string>
+	<string id="meet_with_doctor_2">
+		<text>Rencontrer le Doc à la planque de Strelok</text>
+	</string>
+	<string id="storyline_escape_eliminate_gunslinger">
+		<text>Tuer Strelok</text>
+	</string>
+	<string id="storyline_escape_find_gunslinger">
+		<text>Trouver Strelok</text>
+	</string>
+	<string id="tutorial_find_artefact">
+		<text>Trouver un artefact</text>
+	</string>
+	<string id="tutorial_find_artefact_0">
+		<text>Trouve ton premier artefact.</text>
+	</string>
+	<string id="tutorial_find_artefact_1">
+		<text>Trouver un artefact</text>
+	</string>
+	<string id="tutorial_find_artefact_2">
+		<text>Prendre l'artefact au marchand.</text>
+	</string>
+	<string id="tutorial_help_wounded">
+		<text>Se renseigner auprès de l'éclaireur</text>
+	</string>
+	<string id="tutorial_help_wounded_0">
+		<text>Se renseigner auprès du marchand</text>
+	</string>
+	<string id="tutorial_help_wounded_1">
+		<text>Parler au Loup</text>
+	</string>
+	<string id="tutorial_help_wounded_2">
+		<text>Récupérer la clé USB auprès d'Allegro</text>
+	</string>
+	<string id="tutorial_help_wounded_3">
+		<text>Ramener la clé USB au marchand</text>
+	</string>
+	<string id="esc_trader_job">
+		<text>Travaillez pour le marchand</text>
+	</string>
+	<string id="esc_trader_job_text">
+		<text>Obtenir la mission spéciale du marchand</text>
+	</string>
+	<string id="bar_barman_job">
+		<text>Travaillez pour le Barman</text>
+	</string>
+	<string id="bar_barman_job_text">
+		<text>Demandez du boulot au Barman</text>
+	</string>
+	<string id="yan_scientist_job">
+		<text>Aidez les scientifiques</text>
+	</string>
+	<string id="yan_scientist_job_text">
+		<text>Offrez votre aide aux scientifiques</text>
+	</string>
+	<string id="find_railroad_passage">
+		<text>Allez vers le remblai</text>
+	</string>
+	<string id="find_railroad_passage_1">
+		<text>Rencontrer le guide</text>
+	</string>
+	<string id="find_railroad_passage_2">
+		<text>Traverser le remblai</text>
+	</string>
+	<string id="find_railroad_passage_text">
+		<text>Avant de pénétrer dans la Zone, il est nécessaire de traverser le vieux remblai. Le seul passage sûr est gardé par les militaires. Mais il y a un petit tunnel sur la gauche, les nouveaux passent par là en général. Là-bas, un de mes hommes t'attendra.</text>
+	</string>

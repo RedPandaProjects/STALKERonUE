@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="esc_bridge_soldiers_start_11">
+		<text>Stalker, questa и zona proibita.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_12">
+		<text>Ma io devo passare.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_13">
+		<text>Non puoi. Ma se PROPRIO devi andare, il "biglietto" ti costerа 500 bigliettoni.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_14">
+		<text>Eccoli.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_15">
+		<text>Ora ascoltami bene. Per qualche tempo faremo finta che di qui non sia passato nessuno. Ciт che succederа piщ avanti saranno solo affaracci tuoi.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_21">
+		<text>Avanti, fila via! Muovi il culo prima che cambiamo idea.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_24">
+		<text>Non ho tutti quei soldi.</text>
+	</string>
+	<string id="esc_bridge_soldiers_start_25">
+		<text>Allora torna da dove sei venuto e procurateli. E non cercare di passare di nascosto, chiaro? Non vale la pena di morire per farlo.</text>
+	</string>
+	<string id="esc_lager_no_talk_11">
+		<text>Vattene, Marchiato. Puoi farlo camminando o strisciando, la scelta и tua.</text>
+	</string>
+	<string id="esc_lager_no_talk_111">
+		<text>Che ti ha preso?</text>
+	</string>
+	<string id="esc_lager_no_talk_21">
+		<text>Ehilа. Serve qualcosa?</text>
+	</string>
+	<string id="esc_lager_no_talk_31">
+		<text>Il capo ti voleva vedere, ma non significa che sei il benvenuto. Continua a camminare.</text>
+	</string>
+	<string id="esc_provodnik_start_11">
+		<text>Salve, fratello.</text>
+	</string>
+	<string id="esc_provodnik_start_12">
+		<text>Guida, devo vedere il Dottore.</text>
+	</string>
+	<string id="esc_provodnik_start_13">
+		<text>Senti senti... Come fai a sapere del dottore?</text>
+	</string>
+	<string id="esc_provodnik_start_14">
+		<text>Mi ha mandato il Fantasma. Aiutami a contattare il dottore. И urgente.</text>
+	</string>
+	<string id="esc_provodnik_start_15">
+		<text>Beh, perchй non l'hai detto subito? Si trova nel rifugio di Strelok. Se sei davvero chi dici di essere, saprai giа dov'и.</text>
+	</string>
+	<string id="esc_provodnik_start_16">
+		<text>Grazie.</text>
+	</string>
+	<string id="esc_provodnik_start_21">
+		<text>Salve, fratello.</text>
+	</string>
+	<string id="esc_stalker_talk_level_0">
+		<text>Puoi dirmi qualcosa di piщ su questo posto?</text>
+	</string>
+	<string id="esc_stalker_talk_level_1">
+		<text>Questa и la strada che porta alla Zona. Se fossi in te, non mi avvicinerei all'avamposto dell'esercito e non mi farei vedere dai soldati: hanno l'ordine di sparare a vista. Piщ a nord c'и un ponte in disuso, ma i militari hanno stabilito un avamposto anche lм. Le regioni aperte sono piene di cani selvatici, quindi poco sicure per i novellini. Ogni tanto ci si trova anche un gruppo di mutanti.</text>
+	</string>
+	<string id="esc_stalker_talk_level_10">
+		<text>E che mi dici dei soldati al ponte? Devo riuscire a superarli.</text>
+	</string>
+	<string id="esc_stalker_talk_level_11">
+		<text>Beh, hai due possibilitа. Se и in servizio Kuznetsov, ricordati che i soldi gli fanno gola. Se gli allunghi una mazzetta dovresti riuscire a passare. Se invece sei al verde o и di turno qualcun altro, dovrai agire diversamente. Raggiungi il lato sinistro del ponte, lungo la ferrovia. Non farti vedere, perт! Arriverai a una piccola galleria che attraversa il terrapieno. Ricordati che laggiщ rischierai di incontrare qualche zombie.</text>
+	</string>
+	<string id="esc_stalker_talk_level_2">
+		<text>Cosa c'и piщ a nord, oltre l'avamposto dell'esercito?</text>
+	</string>
+	<string id="esc_stalker_talk_level_21">
+		<text>La Discarica, ecco cosa c'и. Un posto molto deprimente. In certi punti и cosм piena di roba contaminata che puoi  nuotarci dentro.</text>
+	</string>
+	<string id="escape_factory_assault_start_31">
+		<text>Salve, amico. Il Lupo ci ha giа parlato di te. Hai altre domande?</text>
+	</string>
+	<string id="escape_factory_assault_start_311">
+		<text>Sм. Quanti banditi ci sono all'accampamento?</text>
+	</string>
+	<string id="escape_factory_assault_start_3111">
+		<text>Sette od otto. Due al cancello, due nell'edificio a destra, vicino al fuoco, piщ altri due in quello a sinistra, dove tengono prigioniero lo Svelto. Poi di solito c'и qualcun altro in cortile. Questo и tutto, piщ o meno. Vogliamo dire le preghiere e andare?</text>
+	</string>
+	<string id="escape_factory_assault_start_31111">
+		<text>Andiamo. Sveglia i tuoi uomini.</text>
+	</string>
+	<string id="escape_factory_assault_start_31112">
+		<text>No, faremmo troppo rumore. Andrт da solo.</text>
+	</string>
+	<string id="escape_factory_assault_start_311121">
+		<text>Beh, come preferisci, aspirante Rambo! Se succede qualcosa, grida. Ora vai.</text>
+	</string>
+	<string id="escape_factory_assault_start_41">
+		<text>Siamo usciti a caccia e abbiamo cacciato. Il Lupo sarа contento.</text>
+	</string>
+	<string id="escape_factory_assault_start_51">
+		<text>Ce ne sono altri! Trovate i bastardi e fateli fuori!</text>
+	</string>
+	<string id="escape_factory_assault_start_61">
+		<text>Accidenti, che roba! Li hai spazzati via senza lasciarci nulla da fare. Se non l'avessi visto coi miei occhi, non ci avrei creduto! Mi hai lasciato a bocca aperta...</text>
+	</string>
+	<string id="escape_factory_assault_start_71">
+		<text>Beh, e dove sarebbero i nemici che hai ucciso? Sei tutto fumo e niente arrosto. Sparisci!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_2">
+		<text>Scusa, bello, non potresti levarti dalle palle? Devo incontrare una persona...</text>
+	</string>
+	<string id="escape_fox_hello_dialog_21">
+		<text>Ho un paio di domande.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_211">
+		<text>OK, spara.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_2111">
+		<text>Cosa sai dirmi sulla Zona?</text>
+	</string>
+	<string id="escape_fox_hello_dialog_21111">
+		<text>И solo questo che vuoi sapere? Prenditi una settimana libera e poi torna. Non ho tempo da perdere con te. Ti spiegherт solo le cose importanti, poi dovrai arrangiarti. \nCirca tre chilometri a nord troverai la Discarica, dove venivano portati tutti i rifiuti radioattivi. Radiazioni alle stelle, anomalie a ogni passo e reperti in quantitа... ma non sono molto preziosi. Dovrai stare attento alle bande e non avvicinarti alle pattuglie dei Duty. A ovest della Discarica c'и il vecchio istituto di ricerca Agroprom. Come reperti non troverai un granchй, puoi lasciarlo perdere. Invece, a est c'и la Valle Oscura. Che dire... и un posto molto strano. Sembra tranquillo, a parte un gruppo di criminali che gira, ma secondo me c'и qualcosa da scoprire. Ah, c'и anche la fabbrica di Rostok, subito dietro la Discarica. И territorio degli stalker. Ci troverai molta gente che sa parecchie cose e potrа spiegarti il resto.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_2113">
+		<text>Ho cambiato idea, grazie.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_3">
+		<text>Grazie. Bene, sono tutt'orecchie.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_31">
+		<text>Un trafficante mi ha detto che forse sai qualcosa su Strelok.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_311">
+		<text>Ma perchй ultimamente tutti si interessano a lui? Non и che lo conosca di persona, ma qualche "contatto" l'abbiamo avuto: una volta i miei ragazzi gli hanno sparato qualche colpo. Nessuno si и fatto male; il suo gruppo stava aspettando qualcun altro e ci siamo allontanati in santa pace. Abbiamo solo scambiato qualche insulto dai lati opposti di un burrone. Mio fratello Seriy и piщ informato di me su Strelok. Ora и nell'hangar della Discarica. Ti invio le sue coordinate, cosм potrete fare due chiacchiere. Stai attento all'uscita: da quelle parti si и insediata una piccola banda. A proposito, prima c'erano dei mostri che mi inseguivano, e non credo che si siano arresi. Ti spiace aiutarmi? Sarа una passeggiata, te l'assicuro.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_3111">
+		<text>Ti ringrazio molto per le informazioni.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_5">
+		<text>Un kit medico! Dammi un kit medico!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_55">
+		<text>Eccolo.</text>
+	</string>
+	<string id="escape_fox_hello_dialog_56">
+		<text>Non ce l'ho, mi spiace!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_61">
+		<text>Ehi amico, mi hai salvato due volte. Non lo dimenticherт. Tieni, и tutto ciт che ho!</text>
+	</string>
+	<string id="escape_fox_hello_dialog_611">
+		<text>Grazie.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_121">
+		<text>Il capo ti voleva vedere, ma non significa che sei il benvenuto. Continua a camminare.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_2">
+		<text>Aspetta, Marchiato! Ora all'accampamento nessuno vorrа parlare con te.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_21">
+		<text>Perchй?</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_212">
+		<text>Perchй nessuno и cosм idiota da parlare con un ex passeggero dei "camion della morte". Dovrai dimostrare che sei a posto.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_2121">
+		<text>Quali "camion della morte"? Di cosa stai parlando?</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_21211">
+		<text>Che io sia dannato se lo so! Ma qualunque cosa sono, non c'и niente di peggio! Bah, и inutile star qui a discutere. Io sarт superstizioso, ma tu, Marchiato, farai bene a levare le tende prima che ti succeda qualcosa.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_2122">
+		<text>Cosa posso fare per essere creduto dalla gente?</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_21221">
+		<text>Superare la prova del trafficante mentre guardiamo. Se sei a posto, se non hai il grilletto facile e sai tenere la testa sulle spalle, vedrai che troveremo un punto d'incontro.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_22">
+		<text>Va bene, ci sto.</text>
+	</string>
+	<string id="escape_lager_guard_start_dialog_3">
+		<text>Salve, Marchiato. Cosa vuoi?</text>
+	</string>
+	<string id="escape_lager_leader_hello_11">
+		<text>Ehilа, Marchiato, come te la passi? Avremmo bisogno di una mano.</text>
+	</string>
+	<string id="escape_lager_leader_hello_111">
+		<text>Continua.</text>
+	</string>
+	<string id="escape_lager_leader_hello_1111">
+		<text>Sono il Fanatico; sono io che comando da quando il Lupo se n'и andato. Ieri sono arrivati dei mercenari... dei grandissimi bastardi. Sono venuti qui e hanno iniziato ad avanzare pretese assurde, tipo che abbiamo un giorno per sgomberare l'accampamento, perchй diventerа la loro nuova base. Torneranno stasera e non credo proprio che avranno voglia di discutere.</text>
+	</string>
+	<string id="escape_lager_leader_hello_11111">
+		<text>E voi che intenzioni avete?</text>
+	</string>
+	<string id="escape_lager_leader_hello_111111">
+		<text>Organizzeremo un'imboscata, perchй in un attacco diretto non avremmo speranze. Loro hanno un ottimo equipaggiamento e sono addestrati in tattiche che non immagini neanche, noi invece abbiamo solo dei ragazzini. Cosм, abbiamo deciso di nasconderci in quelle case e far finta di essercene andati. Al momento giusto li attaccheremo. Un guerriero come te ci farebbe molto comodo. Puoi star certo che ti ringrazieremo adeguatamente quando tutto sarа finito. Che ne dici, ci aiuterai?</text>
+	</string>
+	<string id="escape_lager_leader_hello_1111111">
+		<text>Sм.</text>
+	</string>
+	<string id="escape_lager_leader_hello_11111111">
+		<text>Useremo il tempo che resta per prepararci. Il piano и questo: io manderт i novellini piщ inesperti nelle case e nei sotterranei e gli dirт di non muovere un muscolo, altrimenti i nostri uomini verranno massacrati. Tu, io e altri due bravi tiratori occuperemo le posizioni migliori per dominare la zona del fuoco. Non appena i mercenari si avvicineranno, faremo fischiare i proiettili! Arriveranno dal ponte... e non credo che si faranno aspettare. Trovati un nascondiglio con una buona visuale e aspetta il mio ordine. Dai pure un'occhiata in giro, ma ricordati che stando all'aperto rischierai di piщ. La scelta и tua.</text>
+	</string>
+	<string id="escape_lager_leader_hello_111111111">
+		<text>OK.</text>
+	</string>
+	<string id="escape_lager_leader_hello_1111112">
+		<text>No, ora non posso farlo.</text>
+	</string>
+	<string id="escape_lager_leader_hello_11111121">
+		<text>И un vero peccato. Un guerriero come te ci avrebbe fatto comodo. Vedremo di arrangiarci...</text>
+	</string>
+	<string id="escape_lager_leader_hello_21">
+		<text>Aspetteremo quei bastardi. Ho la sensazione che siano dietro l'angolo.</text>
+	</string>
+	<string id="escape_lager_leader_hello_31">
+		<text>Marchiato, sei un vero killer! Non mi piacerebbe averti contro, mai!</text>
+	</string>
+	<string id="escape_lager_leader_hello_311">
+		<text>Giа, immagino.</text>
+	</string>
+	<string id="escape_lager_leader_hello_3111">
+		<text>Tieni, Marchiato, e spero che non ci dimenticherai. A proposito... grazie infinite per l'aiuto. Abbiamo salvato i nostri giovani!</text>
+	</string>
+	<string id="escape_lager_leader_hello_41">
+		<text>Ehi Marchiato, и un piacere vederti!</text>
+	</string>
+	<string id="escape_lager_leader_hello_411">
+		<text>Ehilа, ciao.</text>
+	</string>
+	<string id="escape_lager_leader_hello_412">
+		<text>A proposito, dov'и andato il Lupo?</text>
+	</string>
+	<string id="escape_lager_leader_hello_4121">
+		<text>Mah, ha ricevuto un messaggio di uno stalker, ha fatto fagotto, ha preso una scatola di dinamite e si и addentrato nella Zona. Io mi stavo riprendendo dalle ferite subite al Cordon, cosм mi ha chiesto di badare ai ragazzi.</text>
+	</string>
+	<string id="escape_lager_volk_info_0">
+		<text>Ho qualche domanda.</text>
+	</string>
+	<string id="escape_lager_volk_info_1">
+		<text>Va bene, cercherт di risponderti.</text>
+	</string>
+	<string id="escape_lager_volk_info_10">
+		<text>Grazie.</text>
+	</string>
+	<string id="escape_lager_volk_info_2">
+		<text>Cosa sai della Zona?</text>
+	</string>
+	<string id="escape_lager_volk_info_21">
+		<text>Molte cose. Sii piщ specifico.</text>
+	</string>
+	<string id="escape_lager_volk_info_211">
+		<text>Cosa c'и al centro della Zona?</text>
+	</string>
+	<string id="escape_lager_volk_info_2111">
+		<text>Eh, bella domanda... Sono due anni che cerco la risposta! Purtroppo non ho ancora scoperto come arrivare al centro riportando a casa la pelle. Un paio di volte ho cercato di arrivarci insieme ai miei amici; io sono tornato indietro per miracolo, ma loro... alcuni non ce l'hanno fatta. Forse vorrai sapere perchй siamo andati. Stavamo inseguendo i nostri sogni, cercavamo di realizzarli.</text>
+	</string>
+	<string id="escape_lager_volk_info_21111">
+		<text>I sogni si possono realizzare?</text>
+	</string>
+	<string id="escape_lager_volk_info_211111">
+		<text>Circola una bella storia su una macchina che esaudisce i desideri. Dice che al centro della Zona c'и un punto dove si possono avverare tutti i desideri, anche quelli piщ strani. Ma sai una cosa? Di sicuro, al centro della Zona ci sono tanti modi per restarci secchi, e poi non credo piщ all'Esauditore di desideri. Se fossi in te, non rischierei.</text>
+	</string>
+	<string id="escape_lager_volk_info_212">
+		<text>Com'и stata creata la zona?</text>
+	</string>
+	<string id="escape_lager_volk_info_2121">
+		<text>Nel 2006 и avvenuta un'altra esplosione. Ecco come ha avuto origine. Beh, non и una gran risposta, ma sono pochissimi quelli che sanno la veritа, per non dire nessuno.</text>
+	</string>
+	<string id="escape_lager_volk_info_213">
+		<text>Cosa ti ha portato nella Zona?</text>
+	</string>
+	<string id="escape_lager_volk_info_2131">
+		<text>Una volta lavoravo in una miniera. Quando и stata chiusa mi sono trovato senza soldi nй speranze per il futuro. Poi ho sentito le voci sulle favolose ricchezze nascoste nella Zona. Siccome non ero un pivello ho pensato che tanto valeva provarci. Non sono diventato ricco, ma qualche soldo l'ho portato a casa. И una storia abbastanza comune. Molti di noi sono qui per le stesse ragioni.</text>
+	</string>
+	<string id="escape_lager_volk_info_214">
+		<text>Qual и la cosa piщ pericolosa nella Zona?</text>
+	</string>
+	<string id="escape_lager_volk_info_2141">
+		<text>Difficile dirlo. Ci sono cosм tanti pericoli e imprevisti che и difficile incontrarli tutti. Di certo sono fin troppi per un uomo solo. Un mostro carnivoro mi ha strappato un alluce a morsi, le radiazioni mi stanno facendo perdere i capelli e un'anomalia incendiaria mi ha fritto mezza gamba. Son brutte cose, amico. Un'altra volta mi sono trovato davanti un succhiasangue e preferirei dimenticare cos'и successo. И inutile parlarne, finchй non provi sulla tua pelle avrai solo una vaga idea. L'unico consiglio che posso darti и di stare attento, sempre e dovunque.</text>
+	</string>
+	<string id="escape_lager_volk_info_3">
+		<text>Hai mai sentito parlare di un certo Strelok?</text>
+	</string>
+	<string id="escape_lager_volk_info_31">
+		<text>Mi pare di ricordare che era un vero duro, ma non l'ho mai incontrato. Non mi avvicino al centro da un pezzo e qui arrivano solo novellini. Dovresti cercare qualcuno che si spinge nel cuore della Zona e parlare con lui.</text>
+	</string>
+	<string id="escape_lager_volk_info_4">
+		<text>Cosa sai dei "camion della morte"?</text>
+	</string>
+	<string id="escape_lager_volk_info_41">
+		<text>Nulla, e preferisco cosм, grazie! No, scusa... conosco la tua situazione, ma in giro c'и troppo misticume. Basta passare un mese da queste parti per diventare superstiziosi a vita, и inevitabile. Dicono che a bordo e al volante ci sono dei morti... Chi sono, da dove vengono, cosa vogliono? Spero solo che non siano veramente tornati dall'aldilа.</text>
+	</string>
+	<string id="escape_lager_volk_talk_11">
+		<text>Ciao. Perchй sei qui?</text>
+	</string>
+	<string id="escape_lager_volk_talk_111">
+		<text>Ciao. Devo vedere lo Svelto. Sai dove posso trovarlo?</text>
+	</string>
+	<string id="escape_lager_volk_talk_1111">
+		<text>Lo Svelto и finito nei guai. Il suo gruppo и stato attaccato dai banditi, non lontano da qui. И riuscito solo a lanciarmi un SOS. Pare che i suoi compagni siano morti. Ora i banditi sono nel vecchio parcheggio, dall'altra parte della strada.</text>
+	</string>
+	<string id="escape_lager_volk_talk_11111">
+		<text>E non andate a salvare i vostri compagni? Sono cosм poco importanti per voi? O siete troppo deboli per farlo?</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111">
+		<text>Ti tirerei un pugno... se servisse a qualcosa. Non и cosм semplice. Ho troppi pochi uomini, quasi tutti novellini. Non posso correre il rischio. Se perdiamo questo accampamento, tutti gli altri stalker si troveranno in difficoltа. E tu, invece? Se te la senti, non sono cosм orgoglioso da rifiutare un'offerta di aiuto. Vuoi aiutarmi a liquidare quei bastardi?</text>
+	</string>
+	<string id="escape_lager_volk_talk_1111111">
+		<text>Dici che posso farcela da solo?</text>
+	</string>
+	<string id="escape_lager_volk_talk_11111111">
+		<text>No, da solo non hai speranze. Ma i miei esploratori sono soldati in gamba e ora stanno dando la caccia a quegli schifosi. Tutti insieme potete farcela. Che ne dici? Hai le palle?</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111111">
+		<text>Ci proverт.</text>
+	</string>
+	<string id="escape_lager_volk_talk_1111111111">
+		<text>Benone! Ti ho inviato le coordinate dei ragazzi. Li aggiornerт su di te.</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111112">
+		<text>Ho le palle ma non voglio provare.</text>
+	</string>
+	<string id="escape_lager_volk_talk_111111121">
+		<text>Col cazzo che le hai. Va bene, puoi levarti di torno!</text>
+	</string>
+	<string id="escape_lager_volk_talk_21">
+		<text>Allora, com'и andata?</text>
+	</string>
+	<string id="escape_lager_volk_talk_211">
+		<text>Io e i tuoi ragazzi abbiamo fatto faville nel parcheggio.</text>
+	</string>
+	<string id="escape_lager_volk_talk_2111">
+		<text>Ma и fantastico! Tieni, amico: и la mia ricompensa personale per te.</text>
+	</string>
+	<string id="escape_lager_volk_talk_212">
+		<text>Abbiamo letteralmente rastrellato il parcheggio. Ora и sgombro.</text>
+	</string>
+	<string id="escape_lager_volk_talk_2121">
+		<text>Wow! Mi hanno detto che gli hai dato una bella lezione! Prendi questi soldi. Sono solo un ricordino, a parte la nostra enorme gratitudine. E ho un'altra cosetta per te...</text>
+	</string>
+	<string id="escape_lager_volk_talk_21211">
+		<text>Ehi.</text>
+	</string>
+	<string id="escape_lager_volk_talk_213">
+		<text>Ci sto lavorando.</text>
+	</string>
+	<string id="escape_lager_volk_talk_2131">
+		<text>Tienimi aggiornato, OK?</text>
+	</string>
+	<string id="escape_lager_volk_talk_31">
+		<text>Non ho tempo da perdere in chiacchiere. Smamma.</text>
+	</string>
+	<string id="escape_lager_volk_talk_311">
+		<text>Capito, non sono stupido.</text>
+	</string>
+	<string id="escape_lager_volk_talk_41">
+		<text>Ciao, Marchiato. Qual buon vento?</text>
+	</string>
+	<string id="escape_lager_volk_talk_51">
+		<text>Raccontami qualcosa di nuovo, stalker.</text>
+	</string>
+	<string id="escape_lager_volk_talk_511">
+		<text>Cosa vuoi che ti dica... C'erano dei banditi nel parcheggio e abbiamo fatto pulizia. И tutto.</text>
+	</string>
+	<string id="escape_lager_volk_talk_5111">
+		<text>Non sei uno che si vanta, eh? Ma siccome hai liquidato quei bastardi, non posso lasciarti andare via cosм...</text>
+	</string>
+	<string id="escape_shustryi_start_11">
+		<text>Grazie, fratello! Ci hai reso un grande servizio! Non so neppure come ringraziarti...</text>
+	</string>
+	<string id="escape_shustryi_start_111">
+		<text>Ascolta, mi serve la chiavetta che stavi portando al trafficante. Ce l'hai?</text>
+	</string>
+	<string id="escape_shustryi_start_1111">
+		<text>Sм, ce l'ho. Quegli idioti non sanno neppure perquisire. Tieni, puoi prenderla. Che diavolo, mi hai salvato la vita! Era ben nascosta e quei dilettanti non l'hanno trovata.</text>
+	</string>
+	<string id="escape_shustryi_start_11111">
+		<text>Grazie. Ma dove l'avevi nascosta? Potrebbe tornarmi utile saperlo.</text>
+	</string>
+	<string id="escape_shustryi_start_111111">
+		<text>Oh, tranquillo, non me la sono infilata in QUEL POSTO. Ho lavorato a lungo per il trafficante e so come nascondere le informazioni. A proposito, ho raccontato ai banditi una storiella su un nascondiglio pieno di reperti, cosм hanno ordinato a un uomo di raggiungerlo. Esiste davvero, ma contiene un solo reperto. Se vuoi ti do le coordinate.</text>
+	</string>
+	<string id="escape_shustryi_start_21">
+		<text>Buon viaggio, stalker!</text>
+	</string>
+	<string id="escape_shustryi_start_311">
+		<text>Certo, grazie!</text>
+	</string>
+	<string id="escape_shustryi_start_3111">
+		<text>Ehi, ricordati che laggiщ troverai molti animali selvatici. E l'uomo che hanno inviato non и armato solo di vanga e piccone. Stai attento... e grazie.</text>
+	</string>
+	<string id="escape_shustryi_start_31111">
+		<text>Altrettanto.</text>
+	</string>
+	<string id="escape_shustryi_start_311111">
+		<text>Non c'и di che. Buona fortuna!</text>
+	</string>
+	<string id="escape_trader_done_blockpost_box_0">
+		<text>Fatto. Ecco la scatola dell'avamposto dell'esercito.</text>
+	</string>
+	<string id="escape_trader_done_blockpost_box_2">
+		<text>Bravissimo! Sei stato di grande aiuto. Certo, con un grazie non si riempie lo stomaco. Tieni, tre... anzi no, duemila pezzi da otto. Ora siamo pari. A proposito: i soldati si accorgeranno sicuramente che manca qualcosa. Fra poco farа caldo. Ti conviene andartene, e in fretta.</text>
+	</string>
+	<string id="escape_trader_jobs_0">
+		<text>Ci sono missioni speciali per me?</text>
+	</string>
+	<string id="escape_trader_jobs_1">
+		<text>No, niente.</text>
+	</string>
+	<string id="escape_trader_jobs_12">
+		<text>Ma quali missioni speciali?! Non hai neppure finito l'ultima!</text>
+	</string>
+	<string id="escape_trader_jobs_5">
+		<text>Beh, ecco la storia... Nell'avamposto dell'esercito и stata portata una scatola che contiene i rapporti di una spedizione che si и addentrata molto a nord nella Zona. Di giorno l'avamposto и protetto come se contenesse plutonio, ma di notte ci sono solo due guardie.</text>
+	</string>
+	<string id="escape_trader_jobs_51">
+		<text>Continua.</text>
+	</string>
+	<string id="escape_trader_jobs_511">
+		<text>Infiltrati nell'avamposto e "recupera" la scatola. Fallo и ti darт qualsiasi cosa... entro limiti ragionevoli. Ci stai?</text>
+	</string>
+	<string id="escape_trader_jobs_5111">
+		<text>Proverт.</text>
+	</string>
+	<string id="escape_trader_jobs_51111">
+		<text>Intanto preparo i soldi. Finora non mi hai mai deluso, vero, Marchiato? Solo una cosa... resta nell'ombra, va bene? Se i militari si incazzano, siamo tutti nei guai fino al collo.</text>
+	</string>
+	<string id="escape_trader_jobs_52">
+		<text>No, ora non posso accettare.</text>
+	</string>
+	<string id="escape_trader_jobs_521">
+		<text>Dai, non и difficile come sembra. Ci sono solo delle reclute alle prime armi e un sottufficiale. Ma fai come vuoi, Marchiato. E dire che contavo su di te...</text>
+	</string>
+	<string id="escape_trader_jobs_6">
+		<text>Ascolta, Marchiato... Ci ho pensato bene e questa и la mia offerta... In generale, quello che ti interessa davvero и trovare Strelok, giusto?</text>
+	</string>
+	<string id="escape_trader_jobs_61">
+		<text>Diciamo che lo farт.</text>
+	</string>
+	<string id="escape_trader_jobs_611">
+		<text>Comunque, devi sapere una cosa su questo Strelok. C'и uno stalker che si chiama cosм. Dicono che abbia trovato un sentiero che conduce ai territori a  nord della Zona. И territorio vergine, una vera miniera di reperti... Sм... posso aiutarti a trovarlo, ma come sai per tutto c'и un prezzo. Dovrai lavorare... Ma alla fine entrambi guadagneremo qualcosa: tu potrai eliminare Strelok e scoprire che cosa ti и successo... E io troverт... no, volevo dire... io ricaverт la mia brava parte di profitti, eh eh... Allora, che ne dici? Affare fatto?</text>
+	</string>
+	<string id="escape_trader_jobs_6111">
+		<text>Continua.</text>
+	</string>
+	<string id="escape_trader_jobs_61111">
+		<text>Va bene, ascolta... Vedo che sei uno che fa sul serio... Voglio dire, noi abbiamo bisogno di gente come te. Stiamo facendo una specie di indagine con altri trafficanti. Vogliamo aprire il sentiero a nord per arrivare al centro della Zona. E vicino al centro c'и qualcuno o qualcosa che sta cercando di ostacolarci... Non so proprio come diavolo abbia fatto questo Strelok a intrufolarsi... Vedi, c'и una certa regione dove il cervello ti inizia a bollire. Un luogo sinistro... Comunque, per farla breve, un paio di uomini hanno spiato per conto mio i soldati, non lontano da qui. Sembra che quelli dell'istituto di ricerca Agroprom abbiano dissotterrato qualcosa di molto importante. Sono certo che ha a che fare con il centro della Zona. Beh, qualunque cosa sia, и stata portata al secondo piano dell'istituto, e noi dobbiamo metterci le mani sopra. Capisci cosa intendo?</text>
+	</string>
+	<string id="escape_trader_jobs_611111">
+		<text>Penso di sм.</text>
+	</string>
+	<string id="escape_trader_jobs_6111111">
+		<text>Quando avrai la valigetta, non portarla qui. Dalla direttamente al Barista. Lo troverai al bar degli stalker, il "100 rad". Invierт al tuo palmare le coordinate e tutti i dati che ti servono. Chiaro?</text>
+	</string>
+	<string id="escape_trader_jobs_61111111">
+		<text>Capito.</text>
+	</string>
+	<string id="escape_trader_jobs_611111111">
+		<text>Dovrai andare a nord attraversando la Discarica e poi piegare verso ovest. Dopo qualche chilometro arriverai all'istituto di ricerca Agroprom. Stai attento che nella Discarica il livello di radiazioni и altissimo. Ti conviene procurarti del materiale antiradiazioni o della vodka. Beh, buona fortuna.</text>
+	</string>
+	<string id="escape_trader_start_dialog_111">
+		<text>Ho un lavoro per te, Marchiato... Voglio che trovi uno stalker noto come lo Svelto. Aveva con sй informazioni molto importanti ed и sparito nei pressi del ponte. Trovalo, non importa se vivo o morto. Io voglio solo la chiavetta con le informazioni. Chiedi a Lupo all'accampamento locale, lui sa sicuramente dove puт essere quel tizio.</text>
+	</string>
+	<string id="escape_trader_start_dialog_1111">
+		<text>И tutto?</text>
+	</string>
+	<string id="escape_trader_start_dialog_171">
+		<text>Ehi Marchiato, come va?</text>
+	</string>
+	<string id="escape_trader_start_dialog_181">
+		<text>Cosa stai facendo qui, Marchiato? Ti avevo detto di cercare lo Svelto.</text>
+	</string>
+	<string id="escape_trader_start_dialog_191">
+		<text>E cosм hai fatto una visita all'X18? E hai preso i documenti?</text>
+	</string>
+	<string id="escape_trader_start_dialog_1911">
+		<text>Sм. Eccoli.</text>
+	</string>
+	<string id="escape_trader_start_dialog_19111">
+		<text>Bene, bene... Dunque... Interessante, molto interessante! Se lo raccontassi, nessuno mi crederebbe! Mmm... sм... oh! Guarda un po' che roba! Non me l'aspettavo... Proprio una brutta faccenda... Beh, riprendili e dalli al Barista. Ah, sono in debito con te per tutto quanto.</text>
+	</string>
+	<string id="escape_trader_start_dialog_199">
+		<text>Aspetta. Tieni questa pistola e le munizioni. Senza un'arma non resisterai due secondi nella Zona! A proposito, quando sei stato portato qui avevi un coltello. Te l'ho preso nel caso che tu non fossi sano di mente. Siccome sembri a posto, puoi riaverlo.</text>
+	</string>
+	<string id="escape_trader_start_dialog_1999">
+		<text>Grazie.</text>
+	</string>
+	<string id="escape_trader_start_dialog_200">
+		<text>Allora, Marchiato, hai fatto progressi nel nostro affare?</text>
+	</string>
+	<string id="escape_trader_start_dialog_3">
+		<text>A te la scelta. O ti faccio il lavaggio del cervello come a tutte le reclute, oppure ti tratto come un vero stalker e ti do subito una missione.</text>
+	</string>
+	<string id="escape_trader_start_dialog_300">
+		<text>Ehi, Marchiato, arrivi al momento giusto. Ho un lavoretto per te.</text>
+	</string>
+	<string id="escape_trader_start_dialog_31">
+		<text>Ricomincia da zero. Non mi ricordo un cazzo.</text>
+	</string>
+	<string id="escape_trader_start_dialog_32">
+		<text>Voglio solo una missione.</text>
+	</string>
+	<string id="escape_trader_start_dialog_321">
+		<text>Ho un lavoro per te, Marchiato... Voglio che trovi uno stalker noto come lo Svelto. Aveva con sй informazioni molto importanti ed и sparito nei pressi del ponte. Trovalo, non importa se vivo o morto. Io voglio solo la chiavetta con le informazioni. Chiedi a Lupo all'accampamento locale, lui sa sicuramente dove puт essere quel tizio.</text>
+	</string>
+	<string id="escape_trader_start_dialog_3211">
+		<text>Vai avanti.</text>
+	</string>
+	<string id="escape_trader_start_dialog_32111">
+		<text>Per ora и tutto. Portami la chiavetta e mi avrai parzialmente ripagato per averti salvato.</text>
+	</string>
+	<string id="escape_trader_start_dialog_321111">
+		<text>OK, ci proverт</text>
+	</string>
+	<string id="escape_trader_start_dialog_4">
+		<text>Ehi, Marchiato, и bello rivederti vivo.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5">
+		<text>Ehilа, Marchiato! Ce l'hai fatta?</text>
+	</string>
+	<string id="escape_trader_start_dialog_51">
+		<text>Fatto. Ecco il reperto.</text>
+	</string>
+	<string id="escape_trader_start_dialog_511">
+		<text>Ottimo, Marchiato. Ancora un piccolo favore e siamo pari.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5111">
+		<text>Quale favore?</text>
+	</string>
+	<string id="escape_trader_start_dialog_52">
+		<text>La situazione и diventata chiara.</text>
+	</string>
+	<string id="escape_trader_start_dialog_52111">
+		<text>Dov'и la chiavetta con le informazioni?</text>
+	</string>
+	<string id="escape_trader_start_dialog_521111">
+		<text>Eccola.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5211111">
+		<text>Bene.</text>
+	</string>
+	<string id="escape_trader_start_dialog_521112">
+		<text>Non ce l'ho.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5211121">
+		<text>И un peccato, Marchiato, un vero peccato. Finchй non me la porterai, non potremo parlare d'affari...</text>
+	</string>
+	<string id="escape_trader_start_dialog_521211">
+		<text>Tieni, prendila.</text>
+	</string>
+	<string id="escape_trader_start_dialog_5212111">
+		<text>Bene. Diciamo che superato la prova. Ti consiglio di non avvicinarti all'accampamento dei novellini.</text>
+	</string>
+	<string id="escape_trader_start_dialog_56">
+		<text>Ancora niente.</text>
+	</string>
+	<string id="escape_trader_start_dialog_571">
+		<text>Allora, hai preso il reperto?</text>
+	</string>
+	<string id="escape_trader_start_dialog_5711">
+		<text>Ancora no.</text>
+	</string>
+	<string id="escape_trader_start_dialog_57111">
+		<text>Beh, finchй non me lo porterai, non discuteremo di nulla. Chiaro?</text>
+	</string>
+	<string id="escape_trader_start_dialog_6">
+		<text>Marchiato, ti ho giа detto tutto! Sparisci!</text>
+	</string>
+	<string id="escape_trader_start_dialog_661">
+		<text>Allora Marchiato, ci sono novitа?</text>
+	</string>
+	<string id="escape_trader_talk_info_0">
+		<text>Ho bisogno di alcune risposte.</text>
+	</string>
+	<string id="escape_trader_talk_info_1">
+		<text>Chiedi pure, ma non so tutto. Sto qui tutto il giorno, mentre и nella Zona che succedono le cose importanti. Posso parlarti della Zona in generale e dirti qualcosa dei dintorni dove sono stato.</text>
+	</string>
+	<string id="escape_trader_talk_info_100">
+		<text>Parlami della Zona in generale.</text>
+	</string>
+	<string id="escape_trader_talk_info_101">
+		<text>Chiedi pure.</text>
+	</string>
+	<string id="escape_trader_talk_info_2">
+		<text>Cosa ci fa l'esercito nella Zona?</text>
+	</string>
+	<string id="escape_trader_talk_info_21">
+		<text>Vigila e protegge, cos'altro? Ma nessuno sa se sta vigilando sulla Zona o proteggendo il mondo da essa. A volte arrivano qui intere spedizioni a cercare qualcosa... Ma ti dico una cosa: l'esercito non rispetta la Zona, e neanche la Zona gradisce la sua presenza, infatti i soldati tornano spesso a casa in sacchi di plastica. Cos'altro c'и? Beh, i soldati guardano tutti dall'alto in basso e si atteggiano a divinitа. Non rispettano le regole degli stalker e non ti aiutano neppure se stai schiattando sotto i loro occhi. Anzi, sono felici di spararti addosso, che tanto nessuno li punirа... Ho dei contatti fra loro... Sai, la gente ha sempre bisogno di vodka e... uhm, riviste. Ma tu non dargli fastidio, altrimenti al minimo pretesto ti saranno addosso.</text>
+	</string>
+	<string id="escape_trader_talk_info_3">
+		<text>Parlami della Zona.</text>
+	</string>
+	<string id="escape_trader_talk_info_31">
+		<text>La Zona... vedi, non и solo un cerchio di pochi chilometri di diametro attorno a una centrale nucleare. И qualcosa di strano, molto strano. Secondo me nessuno saprа darti una risposta precisa. Ho l'impressione che la Zona non faccia neppure parte di questo mondo. И un universo a parte, anomalo e pericoloso... ma maledettamente affascinante. E sai perchй? Perchй con un po' di fortuna chiunque si puт arricchire in fretta. Piщ si va vicino al centro, piщ sono alti i guadagni.</text>
+	</string>
+	<string id="escape_trader_talk_info_311">
+		<text>Cos'ha di tanto pericoloso questo "altro universo"?</text>
+	</string>
+	<string id="escape_trader_talk_info_3111">
+		<text>Bah... alla fine non molto, a parte che puoi tirare le cuoia in qualsiasi momento senza sapere perchй. Anche se ci sono molti militari, un proiettile di qualche idiota in divisa и l'ultimo dei tuoi problemi. Farsi sparare addosso и la fine piщ indolore nella Zona. Le anomalie invece sono un'altra storia... morire dentro un'anomalia и qualcosa di tremendo. Perfino i mutanti cercano di evitarle. A proposito, i mutanti, i "figli della Zona", sono un'altra minaccia, quindi non andare da nessuna parte senz'armi. E se vuoi saperne di piщ sui pericoli, chiedi agli altri stalker.</text>
+	</string>
+	<string id="escape_trader_talk_info_312">
+		<text>Come si fa ad arricchirsi da queste parti?</text>
+	</string>
+	<string id="escape_trader_talk_info_3121">
+		<text>Ma sentilo... Secondo te? Te lo sei giа dimenticato? Con i reperti, accidenti! Sono quelli la cosa piщ importante. Tutti gli strani giocattoli provenienti dalla Zona valgono una fortuna. Sono piщ preziosi dell'oro, dei diamanti, perfino del plutonio. E sai perchй? Perchй non esiste gioiello al mondo che ti possa dare i poteri sovrannaturali dei reperti. Immagina: puoi attaccarti alla cintura un piccolo gadget che devia tutti i proiettili e gli impedisce di colpirti. C'и altro? Beh, potrai trovare qualcosina anche qui, ma i pezzi piщ pregiati stanno vicino al centro.</text>
+	</string>
+	<string id="escape_trader_talk_info_313">
+		<text>Qualcuno sa cosa sta succedendo al centro della Zona?</text>
+	</string>
+	<string id="escape_trader_talk_info_3131">
+		<text>Ogni volta si dice qualcosa di diverso. Per me sono tutte favole... ma non credo alle sciocchezze sull'oltretomba. Perт sono convinto che il centro della Zona contenga molti reperti preziosi. Solo che non conosco nessuno che ci sia andato e sia riuscito a tornare vivo.</text>
+	</string>
+	<string id="escape_trader_talk_info_4">
+		<text>Sai cosa mi и successo?</text>
+	</string>
+	<string id="escape_trader_talk_info_41">
+		<text>Che razza di domanda... И una gran brutta storia! Ti hanno trovato su un "camion della morte"... una specie di trasporto cadaveri. Quei camion arrivano ogni tanto dal centro della Zona. Sono carichi di corpi e nessuno sa dove vanno. Perт, uno di essi si и schiantato da qualche parte e tu sei stato trovato nei paraggi. И questa la cosa piщ sorprendente. Avevamo giа trovato dei trasporti cadaveri guasti, ma non ne era mai uscito un uomo vivo. Mi spiace, fratello, и tutto ciт che posso dirti. Il resto dovrai scoprirlo da solo.</text>
+	</string>
+	<string id="escape_trader_talk_info_5">
+		<text>Chi и Strelok?</text>
+	</string>
+	<string id="escape_trader_talk_info_51">
+		<text>Beh, ho sentito parlare di uno stalker chiamato cosм. Pare che sia uno dei pochi che и riuscito a raggiungere il centro della Zona e a tornare indietro. Perт, qui girano cosм tante storie di stalker leggendari che non si puт essere sicuri di nulla. In ogni caso, non ho mai trattato con lui in persona - sembra che abbia i suoi canali personali. Prova a chiedere agli altri e scoprirai sicuramente qualcosa di piщ.</text>
+	</string>
+	<string id="escape_trader_talk_info_6">
+		<text>Chi и lo stalker detto il Fantasma?</text>
+	</string>
+	<string id="escape_trader_talk_info_61">
+		<text>Eh, un'altra leggenda locale. Non abbiamo sue notizie da molto tempo. Immagino che sia morto nel cuore della Zona.</text>
+	</string>
+	<string id="escape_trader_talk_info_99">
+		<text>Cosa sta succedendo da queste parti?</text>
+	</string>
+	<string id="escape_trader_talk_info_999">
+		<text>Uh! Questa и l'entrata della Zona, una specie di anticamera. C'и anche un cordone dell'esercito. И un posto abbastanza tranquillo, a parte un paio di militari che vogliono divertirsi e ogni tanto organizzano qualche scorribanda. Gli stalker esperti non vengono spesso qui, troverai soprattutto novellini. E qualcuno resta qui per sempre... A poca distanza c'и un allevamento dove si sono accampati alcuni novellini. Stai attento, perchй non esitano a sparare in caso di necessitа. Cos'altro? Beh, di certo qui non farai mai grandi profitti qui. Oltre la strada c'и una fabbrica deserta. A nord, oltre il terrapieno della ferrovia, ci sono le rovine di una fattoria. A sud c'и un avamposto dell'esercito. E stai attento: i militari hanno minato il terreno. Infine, al centro c'era un ponte, ma и crollato per qualche motivo. Questo и quanto.</text>
+	</string>
+	<string id="escape_trader_talk_info_9991">
+		<text>Dimmi qualcosa di piщ sull'avamposto dell'esercito.</text>
+	</string>
+	<string id="escape_trader_talk_info_99911">
+		<text>I pochi soldati che ci sono hanno l'ordine di sparare a vista. Ti conviene girare al largo e cercare di non farti vedere. Se gli fai girare le palle, potrebbero chiamare gli Spetsnaz dall'altro cordone. Quelli sono capaci di fare un casino tale che non vedrei piщ clienti per un mese... Il comandante lo conosco un po': gli piace attaccarsi alla bottiglia, come a tanti altri. И solo grazie a lui che rimango qui.</text>
+	</string>
+	<string id="escape_trader_talk_info_9992">
+		<text>Voglio sapere qualcosa di piщ sul ponte crollato.</text>
+	</string>
+	<string id="escape_trader_talk_info_99922">
+		<text>Vai a nord per un paio di minuti e lo vedrai. Una volta sormontava la strada, ma и crollato durante una delle tempeste. L'esercito vi ha costruito un checkpoint e non lascia passare nessuno... ma basta ungere le ruote giuste per passare senza problemi. In generale non ti conviene farti vedere da quelle parti, a meno che non sei gravemente ferito o sbronzo da far schifo.</text>
+	</string>
+	<string id="escape_trader_talk_info_9993">
+		<text>Hai qualche altra informazione sulla fabbrica?</text>
+	</string>
+	<string id="escape_trader_talk_info_99933">
+		<text>Attraversa la strada e vedrai un edificio di mattoni. И quella. Tutto ciт che valeva la pena di essere rubato и giа stato preso. Restano solo le pareti. И il ritrovo preferito dei banditi. Non so se ora sono lм, ma in ogni caso stai attento. И vero che non hai niente di prezioso addosso, ma vuoi veramente cacciarti in un guaio?</text>
+	</string>
+	<string id="escape_trader_talk_info_9994">
+		<text>Parlami della fattoria.</text>
+	</string>
+	<string id="escape_trader_talk_info_99944">
+		<text>Lo sai che stai diventando noioso? И solo una fattoria come tante altre. Prima che arrivasse la democrazia era molto produttiva.</text>
+	</string>
+	<string id="escape_trader_talk_info_9995">
+		<text>Grazie, и tutto.</text>
+	</string>
+	<string id="escape_trader_talk_info_9996">
+		<text>Vorrei saperne di piщ.</text>
+	</string>
+	<string id="escape_trader_talk_level_0">
+		<text>Parlami di questo posto.</text>
+	</string>
+	<string id="escape_trader_talk_level_1">
+		<text>Uh! Questa и l'entrata della Zona, una specie di anticamera. C'и anche un cordone dell'esercito. И un posto abbastanza tranquillo, a parte un paio di militari che vogliono divertirsi e ogni tanto organizzano qualche scorribanda. Gli stalker esperti non vengono spesso qui, troverai soprattutto novellini. E qualcuno resta qui per sempre... A poca distanza c'и un allevamento dove si sono accampati alcuni novellini. Stai attento, perchй non esitano a sparare in caso di necessitа. Cos'altro? Beh, di certo qui non farai mai grandi profitti. Oltre la strada c'и una fabbrica deserta. A nord, oltre il terrapieno della ferrovia, ci sono le rovine di una fattoria. A sud c'и un avamposto dell'esercito. E stai attento: i militari hanno minato il terreno. Infine, al centro c'era un ponte, ma и crollato per qualche motivo. Questo и quanto.</text>
+	</string>
+	<string id="escape_trader_talk_level_10">
+		<text>OK, grazie.</text>
+	</string>
+	<string id="escape_trader_talk_level_2">
+		<text>Dimmi qualcosa di piщ sull'avamposto dell'esercito.</text>
+	</string>
+	<string id="escape_trader_talk_level_21">
+		<text>I pochi soldati che troverai qui hanno l'ordine di sparare a vista. Ti conviene girare al largo e cercare di non farti vedere. Se gli romperai le scatole potrebbero chiamare le Spetsnaz dall'altro cordone. Quelle sono capaci di fare un casino tale che non vedrei piщ clienti per un mese... Il comandante lo conosco un po': gli piace attaccarsi alla bottiglia, come a tanti altri. И solo grazie a lui che rimango qui.</text>
+	</string>
+	<string id="escape_trader_talk_level_3">
+		<text>Voglio sapere qualcosa di piщ sul ponte crollato.</text>
+	</string>
+	<string id="escape_trader_talk_level_31">
+		<text>Vai a nord per un paio di minuti e lo vedrai. Una volta sormontava la strada, ma и crollato durante una delle tempeste. L'esercito vi ha costruito un checkpoint e non lascia passare nessuno... ma basta ungere le ruote giuste per passare senza problemi. In generale non ti conviene farti vedere da quelle parti, se non sei gravemente ferito o non sei ben carico.</text>
+	</string>
+	<string id="escape_trader_talk_level_4">
+		<text>Hai qualche altra informazione sulla fabbrica?</text>
+	</string>
+	<string id="escape_trader_talk_level_41">
+		<text>Attraversa la strada e vedrai un edificio di mattoni. И quella. Tutto ciт che valeva la pena di essere rubato и giа stato preso. Resta solo una scatola. И il ritrovo preferito dei banditi. Non so se ora sono lм, ma in ogni caso stai attento. Anche se non hai niente di prezioso, vuoi veramente cacciarti in un guaio?</text>
+	</string>
+	<string id="escape_trader_talk_level_5">
+		<text>Parlami della fattoria.</text>
+	</string>
+	<string id="escape_trader_talk_level_51">
+		<text>Lo sai che stai diventando noioso? И solo una fattoria come tante altre. Prima che arrivasse la democrazia era molto produttiva.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_1">
+		<text>Sto bene... ma sto perdendo molto sangue. Mi dai un kit medico?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_121">
+		<text>Grazie, fratello!</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_2">
+		<text>Ecco, prendi.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_21">
+		<text>Grazie, amico. Stavo per finire male... Sono in debito.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_211">
+		<text>Cosa diavolo и successo?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_2111">
+		<text>Tornavamo da un'esplorazione... Ci siamo imbattuti in una banda di criminali. Uno dei nostri и stato ucciso sul colpo. Hanno portato via lo Svelto, perchй si и inventato una storiella su un nascondiglio di reperti. Io, invece, mi sono finto morto per salvarmi.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_21111">
+		<text>Devo vedere lo Svelto... Lo sto cercando. Vuoi farmi compagnia?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_211111">
+		<text>Accidenti... Conciato cosм sono un combattente di mezza tacca. Devo rimettermi in forze e tornare all'accampamento. Dirт a tutti che mi hai aiutato moltissimo! Grazie ancora.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_2111111">
+		<text>OK, fa' pure. Stammi bene.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_3">
+		<text>Mi spiace, non ho kit medici.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_31">
+		<text>Fruga i cadaveri... I nostri ragazzi dovevano averne qualcuno... Ci deve essere.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_5111">
+		<text>Sono ridotto male ma ce la farт. Che idiota a non comprare un giubbotto antiproiettile! Bisogna essere stupidi a entrare nella Zona senza protezione.</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_6">
+		<text>Argh, il dolore и troppo forte... Sto morendo...</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_61">
+		<text>Sei vivo?</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_7">
+		<text>Ugh...</text>
+	</string>
+	<string id="tutorial_wounded_give_medkit_8">
+		<text>Stai bene?</text>
+	</string>
+</string_table>

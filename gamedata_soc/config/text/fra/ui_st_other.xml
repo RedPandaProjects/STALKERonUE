@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="id_mp_money">
+		<text>Argent</text>
+	</string>
+	<string id="mm_mp_pda_hunt">
+		<text>Bonus PDA</text>
+	</string>
+	<string id="st_drink">
+		<text>boire</text>
+	</string>
+	<string id="st_mp_direct_ip">
+		<text>Adresse IP directe</text>
+	</string>
+	<string id="ui_mm_default">
+		<text>Dйfaut</text>
+	</string>
+	<string id="ui_mm_detail_density">
+		<text>Densitй de l'herbe</text>
+	</string>
+	<string id="ui_mm_r2_sun">
+		<text>Ombrage</text>
+	</string>
+	<string id="ui_mm_r2_sun_details">
+		<text>Ombre de l'herbe</text>
+	</string>
+	<string id="ui_mm_render_2">
+		<text>Rendu 2</text>
+	</string>
+	<string id="ui_pda_details">
+		<text>Nbre / dйtails</text>
+	</string>
+	<string id="ui_st_btn_cancel">
+		<text>Annuler</text>
+	</string>
+	<string id="ui_st_btn_no">
+		<text>Non</text>
+	</string>
+	<string id="ui_st_btn_ok">
+		<text>OK</text>
+	</string>
+	<string id="ui_st_btn_yes">
+		<text>Oui</text>
+	</string>
+	<string id="ui_st_cant_run_r2">
+		<text>Vous ne pouvez pas exйcuter Rendu 2 sur votre PC</text>
+	</string>
+	<string id="ui_st_conn_invalid_host">
+		<text>Erreur de connexion : hфte non valide</text>
+	</string>
+	<string id="ui_st_conn_invalid_pass">
+		<text>Erreur de connexion : mot de passe non valide</text>
+	</string>
+	<string id="ui_st_conn_rejected_server">
+		<text>Erreur de connexion : connexion rejetйe par le serveur</text>
+	</string>
+	<string id="ui_st_conn_sess_full">
+		<text>Erreur de connexion : la session est complиte</text>
+	</string>
+	<string id="ui_st_days">
+		<text>Jour(s)</text>
+	</string>
+	<string id="ui_st_error">
+		<text>Erreur</text>
+	</string>
+	<string id="ui_st_file_exist_owerwrite_q">
+		<text>Il existe dйjа un fichier du mкme nom. Voulez-vous l'йcraser ?</text>
+	</string>
+	<string id="ui_st_file_name_is_empty">
+		<text>Le nom de fichier est vide</text>
+	</string>
+	<string id="ui_st_hours">
+		<text>hrs</text>
+	</string>
+	<string id="ui_st_leave">
+		<text>Quitter</text>
+	</string>
+	<string id="ui_st_mins">
+		<text>mins</text>
+	</string>
+	<string id="ui_st_months">
+		<text>mois</text>
+	</string>
+	<string id="ui_st_params">
+		<text>Paramиtres</text>
+	</string>
+	<string id="ui_st_secs">
+		<text>secs</text>
+	</string>
+	<string id="ui_st_select_one_map">
+		<text>Sйlectionnez au moins une carte</text>
+	</string>
+	<string id="ui_st_take_all">
+		<text>Tout prendre</text>
+	</string>
+	<string id="ui_st_time_remains">
+		<text>Temps restant</text>
+	</string>
+	<string id="ui_st_trade">
+		<text>Marchander</text>
+	</string>
+	<string id="ui_st_voting_disabled">
+		<text>Le vote est dйsactivй</text>
+	</string>
+	<string id="ui_st_want_to_leave_game_q">
+		<text>Voulez-vous vraiment quitter le jeu ?</text>
+	</string>
+	<string id="ui_st_your_items">
+		<text>Vos objets</text>
+	</string>
+	<string id="st_game_over_press_jump">
+		<text>Appuyez sur ($$ACTION_JUMP$$) pour revenir au menu principal</text>
+	</string>
+	<string id="st_level">
+		<text>Niveau</text>
+	</string>
+	<string id="st_opening_stream">
+		<text>Ouverture du stream</text>
+	</string>
+	<string id="st_loading_cform">
+		<text>Chargement de CFORM</text>
+	</string>
+	<string id="st_prefetching_objects">
+		<text>Prйlecture des objets</text>
+	</string>
+	<string id="st_creating_new_game">
+		<text>Crйation d'une nouvelle partie</text>
+	</string>
+	<string id="st_loading_alife_simulator">
+		<text>SERVEUR : chargement du simulateur A-life</text>
+	</string>
+	<string id="st_server_connecting">
+		<text>SERVEUR : connexion en cours</text>
+	</string>
+	<string id="st_loading_saved_game">
+		<text>Chargement de la partie sauvegardйe</text>
+	</string>
+	<string id="st_validating_cdkey">
+		<text>Validation du numйro de sйrie</text>
+	</string>
+	<string id="st_loading_ai_objects">
+		<text>Chargement des objets IA</text>
+	</string>
+	<string id="st_client_connecting_to">
+		<text>CLIENT : connexion а</text>
+	</string>
+	<string id="st_client_spawning">
+		<text>CLIENT : rйgйnйration</text>
+	</string>
+	<string id="st_loading_textures">
+		<text>Chargement des textures</text>
+	</string>
+	<string id="st_client_synchronising">
+		<text>CLIENT : synchronisation</text>
+	</string>
+	<string id="st_server_starting">
+		<text>SERVEUR : dйmarrage en cours</text>
+	</string>
+	<string id="st_loading_shaders">
+		<text>Chargement des shaders</text>
+	</string>
+	<string id="st_loading_geometry">
+		<text>Chargement de la gйomйtrie</text>
+	</string>
+	<string id="st_loading_spatial_db">
+		<text>Chargement de spatial-DB</text>
+	</string>
+	<string id="st_loading_details">
+		<text>Chargement des dйtails</text>
+	</string>
+	<string id="st_loading_sectors_portals">
+		<text>Chargement des secteurs et portails</text>
+	</string>
+	<string id="ui_st_conn_version_differs">
+		<text>Erreur de connexion : Version diffйrente.</text>
+	</string>
+	<string id="ui_st_conn_cdkey_invalid">
+		<text>Erreur de connexion : Clй CD invalide.</text>
+	</string>
+	<string id="ui_st_conn_cdkey_in_use">
+		<text>Erreur de connexion : Clй CD utilisйe.</text>
+	</string>
+	<string id="ui_st_conn_cdkey_disabled">
+		<text>Erreur de connexion : Votre clй CD est dйsactivйe. Contactez le service client.</text>
+	</string>
+	<string id="ui_st_conn_new_patch">
+		<text>Nouveau patch disponible.\n Version : %s\n Emplacement :%s\nLe tйlйcharger maintenant ?</text>
+	</string>
+	<string id="ui_st_conn_no_new_patch">
+		<text>Aucun nouveau patch disponible</text>
+	</string>
+	<string id="ui_mm_delete_existing_file_q">
+		<text>Кtes-vous sыr de vouloir effacer le fichier ?</text>
+	</string>
+	<string id="st_game_paused">
+		<text>Pause</text>
+	</string>
+	<string id="st_bolt">
+		<text>Boulon</text>
+	</string>
+	<string id="st_items">
+		<text>Inventaire</text>
+	</string>
+	<string id="st_video">
+		<text>Vidйo</text>
+	</string>
+	<string id="st_audio">
+		<text>Son</text>
+	</string>
+	<string id="st_game">
+		<text>Jeu</text>
+	</string>
+	<string id="st_controll">
+		<text>Commandes</text>
+	</string>
+	<string id="ui_st_connecting_to_masterserver">
+		<text>Connexion au serveur maоtre en cours</text>
+	</string>
+	<string id="mp_only_one_voting">
+		<text>Un seul vote actif autorisй.</text>
+	</string>
+	<string id="ui_st_patch_download_success">
+		<text>Tйlйchargement du patch rйussi. Voulez-vous l'installer ?</text>
+	</string>
+	<string id="ui_st_patch_download_error">
+		<text>Tйlйchargement du patch impossible.</text>
+	</string>
+	<string id="ui_st_load_game_confirm">
+		<text>Le chargement entraоnera la perte des donnйes non sauvegardйes. Continuer ?</text>
+	</string>
+        	<string id="ui_st_invalid_saved_game">
+		<text>Saved game version mismatch or saved game is corrupted</text>
+	</string>
+</string_table>

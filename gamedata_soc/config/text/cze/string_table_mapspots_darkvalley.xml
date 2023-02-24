@@ -1,0 +1,54 @@
+	<string id="bar_darklab_documents_1_hint">
+		<text>Borov</text>
+	</string>
+	<string id="bar_darklab_documents_2_hint">
+		<text>Tunel</text>
+	</string>
+	<string id="bar_darklab_documents_3_hint">
+		<text>Vstup do laboratoøe</text>
+	</string>
+	<string id="bar_darklab_documents_4_hint">
+		<text>Trubka</text>
+	</string>
+	<string id="bar_darklab_documents2_1_hint">
+		<text>Dokumenty z laboratoøe</text>
+	</string>
+	<string id="bar_darklab_documents2_2_hint">
+		<text>Barman</text>
+	</string>
+	<string id="val_captive_help_1_hint">
+		<text>Kulka</text>
+	</string>
+	<string id="val_captive_help_2_hint">
+		<text>Vìzeò</text>
+	</string>
+	<string id="val_come_to_trader_1_hint">
+		<text>Jižní brána</text>
+	</string>
+	<string id="val_come_to_trader_2_hint">
+		<text>Pøekupník</text>
+	</string>
+	<string id="val_prisoner_help_main_hint">
+		<text>Zajatý Èlen Povinnosti</text>
+	</string>
+	<string id="val_sos_help_main_hint">
+		<text>Zranìný stalker</text>
+	</string>
+	<string id="val_zone_bandits_hint">
+		<text>Tábor banditù</text>
+	</string>
+	<string id="val_zone_farm_hint">
+		<text>Farma.\nKoupit Gauss pušku.</text>
+	</string>
+	<string id="val_zone_monolith_hint">
+		<text>Stará továrna</text>
+	</string>
+	<string id="val_zone_pipe_hint">
+		<text>Kanál</text>
+	</string>
+	<string id="val_zone_robbers_hint">
+		<text>Opuštìný praseèák</text>
+	</string>
+	<string id="val_zone_south_gate_hint">
+		<text>Brány</text>
+	</string>

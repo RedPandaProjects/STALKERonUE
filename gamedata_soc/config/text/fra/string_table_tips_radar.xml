@@ -1,0 +1,12 @@
+	<string id="rad_barman_spam">
+		<text>Le Tatoué !? Tu es vivant !? Super ! Alors, tu as réussi à neutraliser le lobotomisateur, hein ? Tout le monde essaie d'accéder au centre de la Zone par Pripyat. Personne ne sait ce qu'il y a là-bas... Peut-être un trésor d'artefacts ou bien un truc qui exauce tous les voeux.\n Un groupe de vétérans se prépare à aller sur place. Si tu te dépêches, tu les rejoindras peut-être à temps. Je les préviens que tu arrives pour qu'ils t'attendent.</text>
+	</string>
+	<string id="tips_bun_komand">
+		<text>Équipe un et deux, vérifiez le rez-de-chaussée, équipe trois, le couloir principal, équipe quatre et cinq, le premier étage.</text>
+	</string>
+	<string id="tips_rad_sos_suicide">
+		<text>... Au secours, je vais mourir...</text>
+	</string>
+	<string id="tips_rad_switcher_press">
+		<text>Pour éteindre la machine, appuyez sur ($$ACTION_USE$$)</text>
+	</string>

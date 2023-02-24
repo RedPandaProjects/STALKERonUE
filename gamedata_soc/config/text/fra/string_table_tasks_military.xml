@@ -1,0 +1,150 @@
+	<string id="mil_blockpost_job">
+		<text>Aider à l'avant-poste de la Barrière de la Liberté.</text>
+	</string>
+	<string id="mil_courier">
+		<text>La Balance.</text>
+	</string>
+	<string id="mil_courier_job">
+		<text>S'occuper de la Balance.</text>
+	</string>
+	<string id="mil_courier_phase1">
+		<text>Rejoindre la ferme.</text>
+	</string>
+	<string id="mil_courier_phase2">
+		<text>Attendre que la Balance rencontre son agent.</text>
+	</string>
+	<string id="mil_courier_phase3">
+		<text>Se débarrasser de la Balance.</text>
+	</string>
+	<string id="mil_courier_phase4">
+		<text>Se débarrasser de l'agent.</text>
+	</string>
+	<string id="mil_courier_phase5">
+		<text>Faire un rapport à Lukash sur la mission.</text>
+	</string>
+	<string id="mil_crazy">
+		<text>Stalker fou.</text>
+	</string>
+	<string id="mil_dolg">
+		<text>Faction du Devoir</text>
+	</string>
+	<string id="mil_dolg_assault_freedom">
+		<text>Aider la faction du Devoir à éliminer Lukash</text>
+	</string>
+	<string id="mil_kill_lukash">
+		<text>Tuer Lukash</text>
+	</string>
+	<string id="mil_dolg_assault_support">
+		<text>Éliminer le sniper</text>
+	</string>
+	<string id="mil_dolg_return_to_khutor">
+		<text>Retourner à la ferme du Devoir et recevoir ma récompense</text>
+	</string>
+	<string id="mil_dolg_return_to_skull">
+		<text>Rejoindre Kran</text>
+	</string>
+	<string id="mil_fblockpost_commander">
+		<text>Cap du commandant de l'avant-poste</text>
+	</string>
+	<string id="mil_fblockpost_phase2">
+		<text>Participer à l'élimination de l'équipe d'attaque Monolithe</text>
+	</string>
+	<string id="mil_fblockpost_phase3">
+		<text>Parler au commandant de l'avant-poste de la Barrière</text>
+	</string>
+	<string id="mil_find_cook">
+		<text>Trouver le cuisinier de la base Liberté</text>
+	</string>
+	<string id="mil_freedom_rg6_task">
+		<text>Se procurer un Bulldog 6 de la Liberté</text>
+	</string>
+	<string id="mil_go_max">
+		<text>Faire un rapport à Max.</text>
+	</string>
+	<string id="mil_go_to_miser_task">
+		<text>Rejoindre la base de Liberté pour voir le Radin et obtenir une récompense</text>
+	</string>
+	<string id="mil_go_to_miser_task_main">
+		<text>Recevoir une récompense pour les sangsues éliminées</text>
+	</string>
+	<string id="mil_hunters_phase1">
+		<text>Trouver le Magouilleur au village</text>
+	</string>
+	<string id="mil_hunters_phase2">
+		<text>Tuer les sangsues</text>
+	</string>
+	<string id="mil_hunters_phase3">
+		<text>Retourner voir le Radin pour l'artefact</text>
+	</string>
+	<string id="mil_hunters_task">
+		<text>Tuer les sangsues du village</text>
+	</string>
+	<string id="mil_kill_controller">
+		<text>Tuer les sangsues</text>
+	</string>
+	<string id="mil_kill_controller_main">
+		<text>Tuer les sangsues</text>
+	</string>
+	<string id="mil_kill_dolg">
+		<text>Éliminer l'équipe du Devoir.</text>
+	</string>
+	<string id="mil_lukash">
+		<text>Lukash.</text>
+	</string>
+	<string id="mil_max">
+		<text>Max.</text>
+	</string>
+	<string id="mil_put_flash_to_max">
+		<text>Donnez à Max la clé USB.</text>
+	</string>
+	<string id="mil_kill_sniper">
+		<text>Tuer le sniper de la tour</text>
+	</string>
+	<string id="mil_quest_report_dolg">
+		<text>Faire un rapport sur la mission à l'équipe du Devoir</text>
+	</string>
+	<string id="mil_return_lukash">
+		<text>Retourner à Lukash.</text>
+	</string>
+	<string id="mil_return_to_ugrumy">
+		<text>Faire un rapport au Magouilleur sur la mission</text>
+	</string>
+	<string id="mil_return_to_voronin">
+		<text>Apporter le Bulldog 6 au général Voronin</text>
+	</string>
+	<string id="mil_rg6">
+		<text>Trouver un Bulldog 6</text>
+	</string>
+	<string id="mil_secret">
+		<text>Cachette de bandits.</text>
+	</string>
+	<string id="mil_sniper">
+		<text>Sniper.</text>
+	</string>
+	<string id="mil_mad_job">
+		<text>Obtenir une clé USB du sniper fou.</text>
+	</string>
+	<string id="mil_talk_cook">
+		<text>Parler au chef</text>
+	</string>
+	<string id="mil_talk_with_cap">
+		<text>Parler au cap, le commandant de l'avant-poste Liberté</text>
+	</string>
+	<string id="mil_test_task_phase1">
+		<text>Entrer restricteur 1</text>
+	</string>
+	<string id="mil_test_task_phase2">
+		<text>Entrer restricteur 2</text>
+	</string>
+	<string id="mil_test_task_phase3">
+		<text>Larguer le Bulldog 6 si la mission est terminée et le TRs 301 en cas d'échec</text>
+	</string>
+	<string id="mil_test_task_title">
+		<text>Mission test</text>
+	</string>
+	<string id="mil_ugrumy">
+		<text>Le Magouilleur</text>
+	</string>
+	<string id="mil_lukash_job">
+		<text>Détruisez l'unité du Devoir</text>
+	</string>

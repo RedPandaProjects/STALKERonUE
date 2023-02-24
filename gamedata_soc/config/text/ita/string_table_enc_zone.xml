@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="af-ameba-mica">
+		<text>Mica</text>
+	</string>
+	<string id="af-ameba-slime">
+		<text>Melma</text>
+	</string>
+	<string id="af-ameba-slug">
+		<text>Viscidume</text>
+	</string>
+	<string id="af-blood">
+		<text>Sangue di Pietra</text>
+	</string>
+	<string id="af-cristall">
+		<text>Cristallo</text>
+	</string>
+	<string id="af-cristall-flower">
+		<text>Fiore di Pietra</text>
+	</string>
+	<string id="af-drops">
+		<text>Goccioline</text>
+	</string>
+	<string id="af-dummy-battery">
+		<text>Batteria</text>
+	</string>
+	<string id="af-dummy-dummy">
+		<text>Conchiglia</text>
+	</string>
+	<string id="af-dummy-glassbeads">
+		<text>Spirale di perle</text>
+	</string>
+	<string id="af-dummy-pellicle">
+		<text>Pellicola</text>
+	</string>
+	<string id="af-dummy-spring">
+		<text>Molla</text>
+	</string>
+	<string id="af-electra-flash">
+		<text>Lampo</text>
+	</string>
+	<string id="af-electra-moonlight">
+		<text>Chiaro di luna</text>
+	</string>
+	<string id="af-electra-sparkler">
+		<text>Scintilla</text>
+	</string>
+	<string id="af-fireball">
+		<text>Ardente</text>
+	</string>
+	<string id="af-fuzz-kolobok">
+		<text>Kolobok</text>
+	</string>
+	<string id="af-gold-fish">
+		<text>Pesce rosso</text>
+	</string>
+	<string id="af-gravi">
+		<text>Gravi</text>
+	</string>
+	<string id="af-medusa">
+		<text>Medusa</text>
+	</string>
+	<string id="af-mincer-meat">
+		<text>Pezzo di Carne</text>
+	</string>
+	<string id="af-night-star">
+		<text>Stella della Notte</text>
+	</string>
+	<string id="af-rusty-kristall">
+		<text>Spina di Cristallo</text>
+	</string>
+	<string id="af-rusty-sea-urchin">
+		<text>Riccio di mare</text>
+	</string>
+	<string id="af-rusty-thorn">
+		<text>Spina</text>
+	</string>
+	<string id="af-soul">
+		<text>Anima</text>
+	</string>
+	<string id="af-vyvert">
+		<text>Contorto</text>
+	</string>
+	<string id="Agroprom">
+		<text>Agroprom</text>
+	</string>
+	<string id="Ameba">
+		<text>Frullato</text>
+	</string>
+	<string id="Anomalies">
+		<text>Anomalie</text>
+	</string>
+	<string id="Artifacts">
+		<text>Reperti </text>
+	</string>
+	<string id="Bald">
+		<text>Trampolino</text>
+	</string>
+	<string id="Bar">
+		<text>Bar</text>
+	</string>
+	<string id="Darkdolina">
+		<text>Valle Oscura</text>
+	</string>
+	<string id="Deadcity">
+		<text>Cancellato</text>
+	</string>
+	<string id="Electra">
+		<text>Electro</text>
+	</string>
+	<string id="enc_weapons1_wpn-winchester_m1">
+		<text>Variante del Chaser. Nella canna и stato inserito un piccolo frammento del reperto "Gravi", in posizione tale da aumentare la velocitа del proiettile. </text>
+	</string>
+	<string id="enc_zone_anomalies_ameba">
+		<text>Anomalia di natura sconosciuta. Al contatto infligge danni simili agli effetti prodotti da un potente acido. Forma tre tipi di reperti: Melma, Viscidume e Mica.</text>
+	</string>
+	<string id="enc_zone_anomalies_bald">
+		<text>Una delle prime anomalie mai riscontrate: un campo gravitazionale instabile che infligge danni da impatto a chiunque entri nel suo raggio d'azione. Rimane attiva in media per una settimana. L'entitа dei danni prodotti cambia nel corso del suo ciclo vitale, dalle escoriazioni leggere a ferite molto gravi alla morte istantanea. Facile da individuare alla luce del sole per la fluttuazione nell'aria e i mulinelli di foglie sopra all'anomalia e le caratteristiche macchie di colore cremisi sul terreno. Il Trampolino viene individuato da quasi tutti i tipi di rilevatori o dal semplice gesto di gettarvi dentro un oggetto. Forma tre tipi di reperti: Medusa, Fiore di Pietra e Stella della Notte.</text>
+	</string>
+	<string id="enc_zone_anomalies_electra">
+		<text>Formazione anomala, del diametro di una decina di metri, che accumula grandi quantitа di elettricitа statica. Quando viene attivata, l'anomalia emette decine di minuscoli fulmini, provocando nelle vittime uno shock elettrico quasi sempre letale. Riconoscibile dalla nebbiolina bluastra che aleggia su di essa alla luce del giorno. Di notte, la Electro puт essere individuata con qualsiasi tipo di rilevatore o gettandovi contro un oggetto metallico. Forma tre tipi di reperti: Scintilla, Lampo e Chiaro di luna.</text>
+	</string>
+	<string id="enc_zone_anomalies_fuzz">
+		<text>Uno degli esempi di mutazione nella vegetazione della Zona. Reagisce agli esseri viventi che le si avvicinano rapidamente, emettendo una nube di proiettili in grado di ferire gravemente la pelle esposta o poco protetta. Non reagisce ai bersagli che si muovono lentamente. Forma tre tipi di reperti (probabilmente i suoi semi): Spina, Spina di Cristallo e Riccio di Mare.</text>
+	</string>
+	<string id="enc_zone_anomalies_gravi">
+		<text>Un'anomalia di probabile natura gravitazionale. Quando viene attivata, la terrificante potenza del Gorgo attira ogni cosa si trovi nel raggio di 10-15 metri dal suo centro. Le vittime trascinate al suo interno non hanno alcuna possibilitа di sopravvivere: i loro corpi vengono ridotti in breve tempo a un ammasso informe, per poi essere espulsi poco dopo con una scarica potente di energia. L'anomalia rimane in posizione stazionaria per l'intera durata del suo ciclo vitale (in media una settimana). Facilmente riconoscibile alla luce del giorno per la fluttuazione nell'aria al di sopra di essa, per i mulinelli di foglie, i brandelli di corpi smembrati sparsi nelle vicinanze e una caratteristica macchia scura al centro. Estremamente pericolosa la notte perchй puт essere individuata solo mediante un rilevatore o lanciandovi contro un oggetto di metallo. Forma tre tipi di reperti: Contorto, Gravi e Pesce rosso. </text>
+	</string>
+	<string id="enc_zone_anomalies_lift">
+		<text>Anomalia innocua, che contrasta temporaneamente i normali effetti della gravitа. Si manifesta sotto forma di area (in genere del diametro di parecchi metri) nella quale la gravitа terrestre и notevolmente ridotta. Forma il reperto Pellicola.</text>
+	</string>
+	<string id="enc_zone_anomalies_meat">
+		<text>Anomalia che lancia le sue vittime in aria e le fa girare a velocitа impressionante. La natura precisa del Mulinello и tuttora ignota. Questa anomalia puт essere individuata dal mulinello luminoso di polvere sopra di essa e dai resti umani sparsi nelle vicinanze. Se la vittima si trova nella zona piщ esterna dell'anomalia (abbastanza lontano dalla zona di massimo effetto che si trova al centro) puт limitare i danni a qualche graffio. Forma tre tipi di reperti: Sangue di Pietra, Pezzo di Carne e Anima.</text>
+	</string>
+	<string id="enc_zone_anomalies_radioactive">
+		<text>Area che presenta un aumento delle radiazioni, oltre 50 mR/h. Sostare nella zona irradiata per periodi prolungati и fortemente sconsigliato.</text>
+	</string>
+	<string id="enc_zone_anomalies_time">
+		<text>Un'anomalia davvero incredibile: un'area del diametro di parecchi metri nella quale il tempo scorre molto piщ lentamente che altrove. Sembra non avere effetti negativi sulla salute degli esseri umani. Tuttavia, uscire dalla Macchina del Tempo puт rivelarsi molto difficile. Nota interessante: la rimozione della Spirale di perle, un reperto che si trova di solito al centro dell'anomalia, provoca la scomparsa della Macchina del Tempo.</text>
+	</string>
+	<string id="enc_zone_anomalies_zharka">
+		<text>Quando и inattiva, l'anomalia si manifesta con una nuvola quasi invisibile di aria calda. Quando viene attivata da un oggetto o da un essere umano, si riscalda istantaneamente fino a raggiungere temperature letali, che sfiorano i 1500 K. La notte, puт essere individuata da rilevatori potenti o gettando nella zona di attivazione degli oggetti di metallo. Forma tre tipi di reperti: Goccioline, Ardente e Cristallo.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-mica">
+		<text>L'anomalia "Frullato" и in grado di creare un simile reperto nelle condizioni fisiche piщ rare ed estreme. Il risultato и un oggetto duro e semi-trasparente. Un reperto raro e costoso.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slime">
+		<text>Questo reperto и sicuramente opera dell'anomalia chiamata Frullato. Quando viene portato al meglio, le ferite sanguinano di meno, anche se il corpo di chi lo possiede diventa piщ vulnerabile a varie ustioni.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slug">
+		<text>Formato dall'anomalia Frullato. Le qualitа negative di questo reperto sono compensate dalla sua capacitа di migliorare la coagulazione del sangue. Non и insolito incappare in uno di questi reperti, che vengono pagati bene.</text>
+	</string>
+	<string id="enc_zone_artifact_af-blood">
+		<text>Puoi trovare questo reperto vicino all'anomalia "Mulinello". И un oggetto rosso piuttosto brutto, ottenuto dalla compressione di resti stranamente ricurvi e polimerizzati di piante, terra e ossa. Molto diffuso e non molto efficace.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall">
+		<text>Si crea quando i metalli pesanti cadono nell'anomalia Bruciacervella. Questo reperto fa miracoli contro le radiazioni. И molto apprezzato dagli stalker e difficile da trovare.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall-flower">
+		<text>Si forma nell'anomalia Trampolino. Questo reperto si trova solo in pochi angoli della Zona. Le particelle di composti metallici creano bellissimi giochi di luce. Studiare questo reperto, la sera accanto al fuoco, puт essere un'attivitа molto rilassante. </text>
+	</string>
+	<string id="enc_zone_artifact_af-drops">
+		<text>Si forma nell'anomalia "Bruciacervella" ad alte temperature. Dall'esterno sembra un'ombra a forma di lacrima con una superficie lucida, coperta di crepe.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-battery">
+		<text>L'origine di questo oggetto и avvolta nel mistero. И chiaramente prodotta in parte da elementi di-elettrici, ma la scienza non conosce le condizioni fisiche nelle quali si forma.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-dummy">
+		<text>Quando si indossa questo reperto, lo snaturamento delle proteine rallenta. In altre parole, la carne riesce a sopportare temperature piщ elevate e brucia di meno. И un oggetto molto raro e costoso.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-glassbeads">
+		<text>Reperto meraviglioso. Conservalo con cura: и ottimo perchй ha solo qualitа positive. Gli scienziati non sanno come riprodurlo in condizioni di laboratorio.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-pellicle">
+		<text>Questo reperto и cosм raro che molti ricercatori non riescono neppure a immaginare che una sostanza simile esista in natura. Emette sostanze chimiche di tipo acido.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-spring">
+		<text>A detta di alcuni ricercatori e teorici, questo reperto и un ibrido tra Batteria e Conchiglia.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-flash">
+		<text>Talvolta "Electro" produce questo reperto. Gli stalker sono sempre pronti a usarlo per le sue buone qualitа. И apprezzato perchй non costa troppo e ha un aspetto gradevole.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-moonlight">
+		<text>Degenerazione dell'attivitа dell'anomalia Electro. Sembra che questa meravigliosa forma tonda si crei quando l'anomalia и soggetta al calore. Reperto costoso.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-sparkler">
+		<text>Si trova nei pressi dell'anomalia di tipo Electro. Reperto molto diffuso e poco costoso. Tuttavia и apprezzato dai ricercatori della Zona per le sue qualitа.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fireball">
+		<text>Si cristallizza nell'anomalia "Bruciacervella". Combatte bene la radioattivitа anche se l'aumento nel tasso di scambio dell'energia consuma i muscoli del sistema motorio. Non permette di correre a lungo. Il reperto emette calore.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fuzz-kolobok">
+		<text>Quando hai in mano questo mistero della Zona, senti che la pelle diventa piщ spessa e meno sensibile. Non resisterа a una pallottola, ma resiste molto di piщ alle ferite da taglio.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gold-fish">
+		<text>Reperto formato nell'anomalia Gorgo. Viene attivata dal calore del corpo. Puoi scegliere tra due mali, le radiazioni o le ferite da taglio, e scegliere il minore. In ogni caso puoi guadagnare qualcosa vendendolo.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gravi">
+		<text>Si puт trovare vicino ad anomalie come il "Gorgo" o da un altro stalker. Quando lo indossi, una certa quantitа di radiazioni viene trattenuta dal corpo mentre il resto viene respinto tutto attorno. Un buon affare.</text>
+	</string>
+	<string id="enc_zone_artifact_af-medusa">
+		<text>Si forma nell'anomalia Trampolino. Forma un debole campo protettivo con una leggera radiazione come effetto collaterale. Il reperto и diffuso e non molto prezioso.</text>
+	</string>
+	<string id="enc_zone_artifact_af-mincer-meat">
+		<text>Prodotto dall'anomalia Mulinello. Provoca un aumento nella crescita cellulare, ma le cellule che si sono appena formate sono molto piщ ricettive agli effetti dell'uranio fisico. Questo reperto non si trova facilmente, ma non lo si puт definire raro.</text>
+	</string>
+	<string id="enc_zone_artifact_af-night-star">
+		<text>Questo meraviglioso reperto si forma nell'anomalia Trampolino. Per utilizzarlo devono essere neutralizzate le radiazioni mortali. Raro e costoso, questo reperto и estremamente interessante per le spedizioni scientifiche e per altre attivitа di ricerca nella Zona.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-kristall">
+		<text>Si cristallizza nell'anomalia Bruciatura peli. Elimina naturalmente le radiazioni dall'organismo. Per la precisione, attraverso le orecchie, insieme a una congrua quantitа di sangue. La perdita di sangue puт avvenire anche attraverso altri orifizi. И diffuso e piuttosto efficace, quindi ha un prezzo stabile sul mercato dei reperti.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-sea-urchin">
+		<text>Un reperto prodotto raramente dall'anomalia Bruciatura peli. Provoca un aumento della pressione sanguigna e la perdita di una grande quantitа di globuli rossi. Ma con essi, il corpo si libera anche delle radiazioni accumulate. Nella sua opera fondamentale dal titolo "Ionizzazione e polarizzazione dei componenti dei reperti rari", Sakharov ha sottolineato che il contenuto di questa formazione presenta una stabilitа relativa e che non и realistico pensare di creare in laboratorio un reperto simile nei prossimi dieci anni.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-thorn">
+		<text>Il risultato dell'interazione tra l'anomalia Bruciatura peli e il corpo di uno stalker distratto. Il reperto Spina perfora il corpo di chi lo possiede, non si scappa. D'altra parte contribuisce a ripulire il corpo dai radionucleotidi. Piuttosto diffuso e poco costoso.</text>
+	</string>
+	<string id="enc_zone_artifact_af-soul">
+		<text>Reperto molto raro, si puт trovare nei pressi dell'anomalia Mulinello. Solo pochissime persone riescono a trovare questo reperto e pochi lo hanno visto. Ha una forma gradevole e un prezzo niente male.</text>
+	</string>
+	<string id="enc_zone_artifact_af-vyvert">
+		<text>Si trova vicino all'anomalia chiamata "Gorgo". Quando tocca il corpo, distribuisce le radiazioni, proteggendo il corpo da escoriazioni o ferite di arma da fuoco. Questo reperto non и difficile da trovare, quindi non vale molto.</text>
+	</string>
+	<string id="enc_zone_locations_agroprom">
+		<text>Un'area strana, gravemente contaminata. Chi vi si inoltra troverа un lago poco profondo, ingombro da una sponda all'altra di attrezzature abbandonate e altri rifiuti. Puoi anche dare un'occhiata all'istituto abbandonato e alla fabbrica, anche se ultimamente i soldati hanno bazzicato spesso da quelle parti.</text>
+	</string>
+	<string id="enc_zone_locations_bar">
+		<text>La fazione dei Duty si и accampata ai confini della pianura; sono sempre pronti ad accogliere gli stalker che hanno bisogno di un po' di riposo. И una specie di oasi nel deserto, un luogo completamente privo di anomalie e mutanti. Non dimenticare di fare un salto al Bar 100 Rad, il bar nei sotterranei: и il luogo di incontro degli stalker di tutta la Zona. Il bar и gestito dal trafficante locale, quindi se sei interessato a vendere o comprare qualsiasi cosa che non siano pettegolezzi, и il posto giusto. A nord del bar si trova la base militare, con la Discarica a sud.</text>
+	</string>
+	<string id="enc_zone_locations_darkdolina">
+		<text>Un luogo perennemente avvolto nella nebbia o nella foschia, dove piove sempre. Gli stalker che si avventurano nella Valle Oscura molto probabilmente troveranno reperti preziosi, o la morte, o entrambi. И un luogo frequentato dagli anziani piщ esperti, ma potrebbe anche capitarti di incontrare qualche normale bandito. Ci dovrebbe essere un laboratorio sotterraneo, da qualche parte, quindi potrebbe valere la pena cercare un ingresso nascosto lungo la strada. Ma nessuno ci и mai tornato vivo, e nessuno puт dire con certezza quali brutte sorprese ti aspettano.</text>
+	</string>
+	<string id="enc_zone_locations_escape">
+		<text>Considerala un'anticamera della Zona, il luogo ideale per permettere ai pivelli di capirci qualcosa. Troverai un trafficante nei sotterranei, verso i confini del villaggio, vicino all'avamposto dell'esercito. Non dimenticare di parlargli. Tuttavia, suggeriranno di tenerti alla larga dall'avamposto. Non vorrai certo essere notato dai soldati: la maggior parte di loro prima spara e poi semmai si spreca a fare domande. Tuttavia, come sempre, c'и la possibilitа di corrompere qualcuno, se gli alti papaveri non sono nei paraggi. Non и consigliabile attaccare i soldati, a meno che non costituiscano una minaccia diretta.</text>
+	</string>
+	<string id="enc_zone_locations_garbage">
+		<text>Una specie di enorme cimitero di macchinari. Subito dopo il primo incidente, qui vennero scaricate montagne di rifiuti tossici. Molti dei vecchi edifici in rovina sono infestati dai mutanti. Come i dintorni della Zona, la Discarica pullula di stalker inesperti, oltre a qualche bandito che si aggira alla ricerca di qualcosa da rubacchiare. Qui puoi trovare vari reperti, anche se non dei piщ preziosi. Se vai a nord, entrerai nelle Lande desolate, a ovest invece si apre la Valle Oscura, e a est c'и la strada che porta all'istituto di ricerca Agroprom.</text>
+	</string>
+	<string id="enc_zone_locations_military-loc">
+		<text>Base militare abbandonata, vicino alle rovine di un paesino e a una piccola palude. Il villaggio и un luogo sinistro, letteralmente invaso dai mutanti - solo dei succhiasangue ne conti a decine. Gli stalker fanno il possibile per tenersi alla larga, anche se significa allungare il percorso di chilometri. Nella base militare si sono sistemati gli anarchici della fazione dei Freedom. La strada che collega la base alla Zona и sorvegliata dal Bruciacervella, che blocca la via che porta a Pripjat e alla centrale nucleare di Chernobyl. </text>
+	</string>
+	<string id="enc_zone_locations_pripiat">
+		<text>Costruita per gli ingegneri impiegati nella centrale nucleare di Chernobyl, ora и ridotta a una cittа fantasma, abitata solo da mutanti e zombie. Sembra che non vi sia alcuna via di accesso perchй la strada и bloccata dal Bruciacervella. </text>
+	</string>
+	<string id="enc_zone_locations_radar">
+		<text>Un posto orribile, dove anche per i piщ fortunati и facile sparire senza lasciare tracce. Chiunque si avvicini al Bruciacervella impazzisce all'istante, si trasforma in uno zombie e comincia ad aggirarsi senza meta nella Zona. Non ne rimane altro che un guscio vuoto. Nessuno и mai tornato da lм sano di mente. </text>
+	</string>
+	<string id="enc_zone_locations_rostok">
+		<text>Nelle Lande desolate un tempo si trovava un impianto di produzione piuttosto esteso, ora ridotto in rovine. Molti stalker hanno perso la vita laggiщ: quel luogo pullula di mostri di tutti i tipi. И letteralmente invaso da bestie proveniente da tutta la Zona. Si dice che questo luogo nasconda qualcosa di molto importante, quindi ci sono sempre dei temerari pronti a tentare la fortuna. </text>
+	</string>
+	<string id="enc_zone_locations_stancia">
+		<text>Qui si trova la centrale nucleare piщ famosa del mondo, il cuore della Zona. Se credi alle leggende, qui si trova anche il Monolite, un oggetto misterioso in grado di esaudire ogni desiderio. </text>
+	</string>
+	<string id="enc_zone_locations_yantar">
+		<text>Il leggendario lago nel settore che porta lo stesso nome, prosciugatosi molto tempo fa e ridotto a una palude poco profonda. И un luogo da brividi, che trasuda morte. Chi и tanto pazzo da avvicinarsi va incontro a gravi pericoli e chi osa avventurarsi oltre, impazzisce. Quei parassiti degli zombie vagano in tutto il settore, aspettando nuove vittime. Se cammini sulle sponde del lago evitando gli zombie, raggiungi il campo degli scienziati, un gruppo di sapientoni arrivati fin laggiщ in elicottero per compiere delle ricerche. Puoi fare due chiacchiere con loro, possono essere interessati ad acquistare reperti e avere qualche compito da affidarti.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2006">
+		<text>La zona contaminata brillava di luce intensissima, quasi insopportabile. Potevi quasi vedere le nuvole in cielo trasformarsi in vapore. Dopo un momento di silenzio mortale si udм un rombo di tuono e la terra tremт. Tutti caddero a terra, serrando gli occhi e coprendoseli con le mani. Chi era riuscito a non cadere si mise a correre per cercare di salvarsi. Sembrava che tutto il combustibile nucleare sepolto sotto il Sarcofago fosse esploso. Il giorno dopo, l'esercito isolт la nuova Zona. I satelliti permisero di stabilire che l'epicentro dell'esplosione non si trovava nelle vicinanze dei reattori della centrale, ma a circa mezzo chilometro di distanza. Si ritiene che il personale della stazione sia morto sul colpo, anche se molte persone sono rimaste all'interno dell'area isolata. Le operazioni di salvataggio si dimostrarono presto un'impresa inutile, perchй tutte le persone e i macchinari inviati verso il centro della zona morivano o smettevano di funzionare all'istante. Poco dopo il disastro, il perimetro della Zona si allargт improvvisamente di qualche altro chilometro. La maggior parte delle truppe governative a guardia della linea di confine e le squadre di ricercatori di stanza nella zona rimasero uccisi. Presi dal panico, tutti fuggirono precipitosamente. Gli abitanti delle cittа e dei villaggi vicini furono evacuati in tutta fretta. Un terribile pericolo minaccia la Terra e possiamo solo immaginare quale impatto potrebbe avere.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2008">
+		<text>Sono passati due anni dal disastro avvenuto nella zona contaminata attorno alla centrale nucleare di Chernobyl. Il numero dei decessi salito alle stelle, un numero imprecisato di dispersi, bestiame morto, edifici in rovina, foreste devastate... A tutt'oggi gli scienziati non hanno ancora saputo spiegare che cosa sia successo esattamente a Chernobyl. Nel frattempo, nell'area sono state scoperte alcune misteriose anomalie e la Zona continua ad allargarsi. Inoltre, le rare spedizioni si sono imbattute in specie mutanti di animali dotati di abilitа incredibili.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2010">
+		<text>Seguendo le tracce di questi temerari che si definiscono stalker, alcune spedizioni di ricerca si stanno di nuovo impegnando in uno studio approfondito della Zona. Tuttavia, l'area circoscritta e sorvegliata dall'esercito ha altri pericolosi abitanti, ora: dai comuni cacciatori di frodo ai peggiori delinquenti. La maggior parte degli stalker si aggira nella Zona in cerca di anomalie e dei cosiddetti reperti, dai quali и possibile ricavare ottimi profitti.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-raid">
+		<text>L'esercito, comprese le forze speciali guidate da distaccamenti di stalker paramilitari, hanno lanciato un raid nel cuore della Zona. Il loro obiettivo era di penetrare nella centrale nucleare di Chernobyl e spazzare via la causa dei campi anomali o almeno ottenere informazioni di prima mano sulla situazione. Questa impresa, che ha coinvolto oltre un migliaio di persone e macchinari pesanti, и stata un completo fallimento. Gruppi isolati di sopravvissuti sono stati obbligati a insediarsi all'interno della Zona, con scarse speranze di salvezza.</text>
+	</string>
+	<string id="Escape">
+		<text>Avamposto</text>
+	</string>
+	<string id="Fuzz">
+		<text>Bruciat. peli</text>
+	</string>
+	<string id="Garbage">
+		<text>Discarica</text>
+	</string>
+	<string id="Gravi">
+		<text>Gorgo</text>
+	</string>
+	<string id="Lift">
+		<text>Ascensore</text>
+	</string>
+	<string id="Locations">
+		<text>Posizioni</text>
+	</string>
+	<string id="Meat">
+		<text>Mulinello</text>
+	</string>
+	<string id="Military-loc">
+		<text>Base dell'esercito</text>
+	</string>
+	<string id="Pripiat">
+		<text>Pripjat</text>
+	</string>
+	<string id="Radar">
+		<text>Bruciacervella</text>
+	</string>
+	<string id="Radioactive">
+		<text>Fonte radioattiva</text>
+	</string>
+	<string id="Rostok">
+		<text>Lande desolate</text>
+	</string>
+	<string id="Stancia">
+		<text>Centrale di Chernobyl</text>
+	</string>
+	<string id="Story-2006">
+		<text>12 aprile 2008, ore 14:33</text>
+	</string>
+	<string id="Story-2008">
+		<text>Anno 2010</text>
+	</string>
+	<string id="Story-2010">
+		<text>Anno 2011</text>
+	</string>
+	<string id="Story-raid">
+		<text>Raid dell'esercito nella Zona. 2011</text>
+	</string>
+	<string id="Time_machine">
+		<text>Macchina del Tempo</text>
+	</string>
+	<string id="Yantar">
+		<text>Yantar</text>
+	</string>
+	<string id="Zharka">
+		<text>Anomalia incendiaria</text>
+	</string>
+	<string id="Zone">
+		<text>La Zona</text>
+	</string>
+	<string id="Zone-story">
+		<text>Storia della Zona</text>
+	</string>
+</string_table>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="svoboda_outfit_name_m1">
+		<text>Kombinezon "Wolnoњж" M2</text>
+	</string>
+	<string id="team_1_desc">
+		<text>Anarchiњci Zony. Wierz№, їe Zona to oaza "Wolnoњci" i їe prawa, zasady i zwyczaje њwiata zewnкtrznego tu nie obowi№zuj№. Ich motto brzmi: "Rуb, co chcesz i pozwуl innym robiж to samo". Prуbuj№ powstrzymaж rz№d przed przejкciem kontroli nad Zon№ i walcz№ z najemnikami. Bojownicy "Wolnoњci" zazwyczaj uїywaj№ radzieckiej lub rosyjskiej broni.</text>
+	</string>
+	<string id="team_1_name">
+		<text>Frakcja "Wolnoњж" (wolni stalkerzy)</text>
+	</string>
+	<string id="team_2_desc">
+		<text>Wіуczкgi i zbiry z caіego њwiata - nic nie jest poniїej ich godnoњci. Ich motto brzmi: "Pecunia non olet - Pieni№dze nie њmierdz№". S№ tu artefakty, s№ teї wiкc pieni№dze. Najemnicy uїywaj№ gіуwnie zachodniej broni.</text>
+	</string>
+	<string id="team_2_name">
+		<text>"Najemnicy" (іowcy gіуw)</text>
+	</string>
+</string_table>

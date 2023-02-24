@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Clear">
+		<text>sіonecznie</text>
+	</string>
+	<string id="Cloudy">
+		<text>pochmurno</text>
+	</string>
+	<string id="Default">
+		<text>њrednie</text>
+	</string>
+	<string id="Extreme">
+		<text>maksymalne</text>
+	</string>
+	<string id="gd_master">
+		<text>mistrz</text>
+	</string>
+	<string id="gd_novice">
+		<text>pocz№tkuj№cy</text>
+	</string>
+	<string id="gd_stalker">
+		<text>stalker</text>
+	</string>
+	<string id="gd_veteran">
+		<text>weteran</text>
+	</string>
+	<string id="High">
+		<text>wysokie</text>
+	</string>
+	<string id="Low">
+		<text>niskie</text>
+	</string>
+	<string id="Minimum">
+		<text>minimalne</text>
+	</string>
+	<string id="mm_mp_check_cdkey">
+		<text>sprawdџ CD-Key</text>
+	</string>
+	<string id="Nigth">
+		<text>noc</text>
+	</string>
+	<string id="Rain">
+		<text>deszcz</text>
+	</string>
+	<string id="renderer_r1">
+		<text>Oњwietlenie statyczne</text>
+	</string>
+	<string id="renderer_r2">
+		<text>Peіne oњwietlenie dynamiczne</text>
+	</string>
+	<string id="renderer_r2a">
+		<text>Dynamiczne oњwietlenie obiektуw</text>
+	</string>
+	<string id="st_artefacthunt">
+		<text>Bitwa o artefakt</text>
+	</string>
+	<string id="st_deathmatch">
+		<text>Kaїdy na kaїdego</text>
+	</string>
+	<string id="st_rank_experienced">
+		<text>doњwiadczony</text>
+	</string>
+	<string id="st_rank_legend">
+		<text>osіawiony stalker</text>
+	</string>
+	<string id="st_rank_novice">
+		<text>pocz№tkuj№cy</text>
+	</string>
+	<string id="st_rank_professional">
+		<text>zawodowiec</text>
+	</string>
+	<string id="st_rank_veteran">
+		<text>Weteran</text>
+	</string>
+	<string id="st_team_deathmatch">
+		<text>Gra druїynowa</text>
+	</string>
+	<string id="testers_mp_agroprom">
+		<text>Zakіad "Agroprom"</text>
+	</string>
+	<string id="testers_mp_atp">
+		<text>Zajezdnia</text>
+	</string>
+	<string id="testers_mp_darkvalley">
+		<text>Dolina Mroku</text>
+	</string>
+	<string id="testers_mp_factory">
+		<text>Fabryka "Jantar"</text>
+	</string>
+	<string id="testers_mp_lost_village">
+		<text>Opuszczona wioska</text>
+	</string>
+	<string id="testers_mp_military_1">
+		<text>Magazyny wojskowe</text>
+	</string>
+	<string id="testers_mp_pool">
+		<text>Basen</text>
+	</string>
+	<string id="testers_mp_railroad">
+		<text>Dworzec kolejowy</text>
+	</string>
+	<string id="testers_mp_rostok">
+		<text>Fabryka "Rostok"</text>
+	</string>
+	<string id="testers_mp_workshop">
+		<text>Opuszczona fabryka</text>
+	</string>
+	<string id="ui_mm_60_hz">
+		<text>Czкstotliwoњж 60Hz</text>
+	</string>
+	<string id="ui_mm_action">
+		<text>Czynnoњж</text>
+	</string>
+	<string id="ui_mm_advanced">
+		<text>Zaawansowane</text>
+	</string>
+	<string id="ui_mm_anisotropic">
+		<text>Filtrowanie anizotropowe</text>
+	</string>
+	<string id="ui_mm_apply">
+		<text>Uїyj</text>
+	</string>
+	<string id="ui_mm_back">
+		<text>Wstecz</text>
+	</string>
+	<string id="ui_mm_blood">
+		<text>Krew</text>
+	</string>
+	<string id="ui_mm_brightness">
+		<text>Jasnoњж</text>
+	</string>
+	<string id="ui_mm_cancel">
+		<text>Anuluj</text>
+	</string>
+	<string id="ui_mm_contrast">
+		<text>Kontrast</text>
+	</string>
+	<string id="ui_mm_controls">
+		<text>Sterowanie</text>
+	</string>
+	<string id="ui_mm_credits">
+		<text>Twуrcy gry</text>
+	</string>
+	<string id="ui_mm_crosshair_distance">
+		<text>Pokaї odlegіoњж do celu</text>
+	</string>
+	<string id="ui_mm_delete">
+		<text>Usuс</text>
+	</string>
+	<string id="ui_mm_difficulty">
+		<text>Stopieс trudnoњci</text>
+	</string>
+	<string id="ui_mm_disconnect">
+		<text>Rozі№cz</text>
+	</string>
+	<string id="ui_mm_disconnect_message">
+		<text>Czy na pewno chcesz siк rozі№czyж?</text>
+	</string>
+	<string id="ui_mm_dyn_crosshair">
+		<text>Dynamiczny celownik</text>
+	</string>
+	<string id="ui_mm_eax">
+		<text>EAX</text>
+	</string>
+	<string id="ui_mm_fullscreen">
+		<text>Peіny ekran</text>
+	</string>
+	<string id="ui_mm_gameplay">
+		<text>Rozgrywka</text>
+	</string>
+	<string id="ui_mm_gamma">
+		<text>Gamma</text>
+	</string>
+	<string id="ui_mm_geometry_lod">
+		<text>Szczegуіowoњж obiektуw</text>
+	</string>
+	<string id="ui_mm_invert_mouse">
+		<text>Odwrуж mysz</text>
+	</string>
+	<string id="ui_mm_key">
+		<text>Przycisk</text>
+	</string>
+	<string id="ui_mm_keyboard_setup">
+		<text>Ustawienia klawiatury</text>
+	</string>
+	<string id="ui_mm_last_save">
+		<text>Ostatni zapis</text>
+	</string>
+	<string id="ui_mm_light_distance">
+		<text>Odlegіoњж oњwietlenia</text>
+	</string>
+	<string id="ui_mm_load">
+		<text>Wczytaj</text>
+	</string>
+	<string id="ui_mm_load_game">
+		<text>Wczytaj grк</text>
+	</string>
+	<string id="ui_mm_master">
+		<text>Mistrz</text>
+	</string>
+	<string id="ui_mm_master_volume">
+		<text>Gіoњnoњж efektуw</text>
+	</string>
+	<string id="ui_mm_mouse_sense">
+		<text>Czuіoњж myszy</text>
+	</string>
+	<string id="ui_mm_multiplayer">
+		<text>GRA SIECIOWA</text>
+	</string>
+	<string id="ui_mm_multiplayer_n">
+		<text>Gra sieciowa</text>
+	</string>
+	<string id="ui_mm_music_volume">
+		<text>Gіoњnoњж muzyki</text>
+	</string>
+	<string id="ui_mm_need_restart">
+		<text>Zmiany zostan№ wprowadzone po\nponownym uruchomieniu gry</text>
+	</string>
+	<string id="ui_mm_newgame">
+		<text>Nowa gra</text>
+	</string>
+	<string id="ui_mm_novice">
+		<text>Pocz№tkuj№cy</text>
+	</string>
+	<string id="ui_mm_npc_torch">
+		<text>Latarki BN-уw</text>
+	</string>
+	<string id="ui_mm_options">
+		<text>OPCJE</text>
+	</string>
+	<string id="ui_mm_options_n">
+		<text>Opcje</text>
+	</string>
+	<string id="ui_mm_particles_distance">
+		<text>Odlegіoњж cz№steczek</text>
+	</string>
+	<string id="ui_mm_quality_presets">
+		<text>Ustawienia jakoњci</text>
+	</string>
+	<string id="ui_mm_quit_game">
+		<text>Zakoсcz grк</text>
+	</string>
+	<string id="ui_mm_quit_game_message">
+		<text>Czy na pewno zakoсczyж grк?</text>
+	</string>
+	<string id="ui_mm_quit_windows_message">
+		<text>Czy na pewno chcesz wyjњж z gry?</text>
+	</string>
+	<string id="ui_mm_quit2windows">
+		<text>Wyjњcie z Gry</text>
+	</string>
+	<string id="ui_mm_renderer">
+		<text>Render</text>
+	</string>
+	<string id="ui_mm_resolution">
+		<text>Rozdzielczoњж</text>
+	</string>
+	<string id="ui_mm_return_game">
+		<text>Powrуt do gry</text>
+	</string>
+	<string id="ui_mm_save">
+		<text>Zapisz</text>
+	</string>
+	<string id="ui_mm_save_game">
+		<text>Zapisz grк</text>
+	</string>
+	<string id="ui_mm_show_crosshair">
+		<text>Pokaї celownik</text>
+	</string>
+	<string id="ui_mm_show_weapon">
+		<text>Pokaї broс</text>
+	</string>
+	<string id="ui_mm_simply">
+		<text>Podstawowe</text>
+	</string>
+	<string id="ui_mm_sound">
+		<text>Dџwiкk</text>
+	</string>
+	<string id="ui_mm_sound_quality">
+		<text>Jakoњж dџwiкku</text>
+	</string>
+	<string id="ui_mm_stalker">
+		<text>Stalker</text>
+	</string>
+	<string id="ui_mm_sun_quality">
+		<text>Jakoњж cieni</text>
+	</string>
+	<string id="ui_mm_supersample">
+		<text>Antyaliasing</text>
+	</string>
+	<string id="ui_mm_switch_torch">
+		<text>SI uїywa latarek</text>
+	</string>
+	<string id="ui_mm_texture_quality">
+		<text>Szczegуіowoњж tekstur</text>
+	</string>
+	<string id="ui_mm_tips">
+		<text>Identyfikacja BN-уw</text>
+	</string>
+	<string id="ui_mm_veteran">
+		<text>Weteran</text>
+	</string>
+	<string id="ui_mm_video">
+		<text>Grafika</text>
+	</string>
+	<string id="ui_mm_vis_distance">
+		<text>Widziany obszar</text>
+	</string>
+	<string id="ui_mm_vsync">
+		<text>Synchronizacja pionowa</text>
+	</string>
+	<string id="ui_st_last_set">
+		<text>Ostatnie ust.</text>
+	</string>
+	<string id="ui_st_preset1">
+		<text>Ustawienie 1</text>
+	</string>
+	<string id="ui_st_preset2">
+		<text>Ustawienie 2</text>
+	</string>
+	<string id="ui_st_preset3">
+		<text>Ustawienie 3</text>
+	</string>
+	<string id="ui_st_reset">
+		<text>Reset</text>
+	</string>
+	<string id="ui_st_sell_all">
+		<text>Sprzedaj</text>
+	</string>
+</string_table>

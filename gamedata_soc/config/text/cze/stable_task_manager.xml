@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="artefact">
+		<text>Zнskej artefakt</text>
+	</string>
+	<string id="barmen_defend_camp_1">
+		<text>Chraт tбbor stalkerщ na smetiљti pшed ъtokem banditщ.</text>
+	</string>
+	<string id="barmen_defend_camp_1_descr">
+		<text>Chraт tбbor stalkerщ na smetiљti pшed ъtokem banditщ.</text>
+	</string>
+	<string id="barmen_defend_camp_1_text">
+		<text>Chystб se mм navљtнvit skupina stalkerщ a na jejich bezpeиnйm pшнchodu mбm osobnн zбjem. Nebudou chodit daleko od baru. Jeden kriminбlnнk nбm skoro dobrovolnм pшiznal, ћe je brzy napadnou. Takћe zamiш k nim a chraт jejich tбbor pшed ъtokem.</text>
+	</string>
+	<string id="barmen_defend_camp_2">
+		<text>Pomoћ stalkerщm v Agropromu odrazit bandity</text>
+	</string>
+	<string id="barmen_defend_camp_2_descr">
+		<text>Pomoћ stalkerщm v Agropromu odrazit bandity</text>
+	</string>
+	<string id="barmen_defend_camp_2_text">
+		<text>Jde o tohle. Nedбvno parta stalkerщ vyrazila do Agropromu. Kdyћ jsme s nima mluvili naposled, prej objevili v podzemн nмco cennэho, ale tvrdм na nм tlaин banditi. Drћej se, ale sami to nezvlбdnou. Pomщћeљ jim?</text>
+	</string>
+	<string id="barmen_eliminate_camp_1">
+		<text>Zniи bandity na smetiљti.</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_descr">
+		<text>Zlikviduj gang banditщ usazenэch na smetiљti. Musн to bэt rychlб a efektivnн akce.</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_text">
+		<text>Prбci, jo? No tak to bychom tady mмli... aha! Tohle: dokбћeљ zlikvidovat skupinu banditщ na smetiљti? Povinnost se k tomu kvщli vљem svэm proslovщm o zбkonм a poшбdku nмjak nemщћe dostat. Jsou to obyиejnн mizerovй, ti banditi, dlouho nevydrћн. Ale kdo je sundб prvnн, zaboduje... a pitн je samozшejmм na mм.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2">
+		<text>Zlikviduj ћoldбky a bandity v Rostoku.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_descr">
+		<text>Zniи skupinu ћoldбkщ a banditщ, kteшн blokujн prщchod pшes Rostok.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_text">
+		<text>Kousek odsud je banda ћoldбkщ, tady v Rostoku. Dali se dohromady s mнstnнma banditama a teп plбnujou zablokovat prщchod pшes tovбrnu. Nemusнm ti vysvмtlovat, jak otravnэ to je, takћe je to tшeba rychle vyшeљit. Povinnost a pбr staшнkщ uћ jim vyrazili dбt lekci, ale nмjakou dobu jsme o nich neslyљeli... takћe, co kdybys to tam љel... zkontrolovat, ћe jo. Platнm dobшe.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3">
+		<text>Zniи bandity na farmм</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_descr">
+		<text>Je to jednoduchй: zlikviduj bandity na farmм.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_text">
+		<text>U starэch skladiљќ je takovб malб farma. Dшнv to bэvalo dobrэ mнsto na setkбnн, vэmмnu zboћн a tak, znбљ to. Ale teп to obsadili banditi a podle vљeho se nechystaj vypadnout nмjak brzo. A to mnм nevyhovuje. Potшebuju mнt tu farmu zas иistou. Je mi fuk, co se s tмma mizerama stane.</text>
+	</string>
+	<string id="barmen_eliminate_camp_4">
+		<text>Zlikviduj tбbor banditщ v divokй oblasti.</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_descr">
+		<text>Zlikviduj tбbor banditщ v divokй oblasti.</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_text">
+		<text>V divokй oblasti je plno banditщ. Nemщћeme ty mizery nechat dмlat bordel takovэ kousek od baru. Je tшeba zniиit jejich tбbor.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5">
+		<text>Zniи hnнzdo  mutovanэch psщ v divokй oblasti.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_descr">
+		<text>Zniи hnнzdo mutovanэch psщ v divokй oblasti.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_text">
+		<text>Pбr naљich chlapщ vyrazilo na expedici, vrбtil se jenom jeden. Zkrvavenej, potrhanej. Asi narazil na psy. Je jich tam celб smeиka. Takћe najdi jejich doupм a vљechny je pozabнjej.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6">
+		<text>Zniи skupinu banditщ v Agropromu.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_descr">
+		<text>Zniи skupinu banditщ v Agropromu.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_text">
+		<text>Pamatuju si, jak za mnou v devмtaиtyшicбtэm pшiљli vydмraиi. Naval prachy, povнdaj. Bylo to tenkrбt peklo, mмl jsem hospodu a pбr dalљнch kљeftщ. Tenkrбt se s nima nedalo nic dмlat! No a teп jsem zjistil, ћe pбr tмch chlapщ makб v Agropromu, vydмlбvaj na artefaktech, kterэ tam hledaj. Ale tentokrбt s nima mщћu nмco udмlat. Dokonce vнm, kde se pшesnм schovбvaj. Udмlej mi laskavost, zprбskej je jak psy.</text>
+	</string>
+	<string id="barmen_eliminate_camp_7">
+		<text>Zniи hnнzdo snorkщ v Temnйm ъdolн</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_descr">
+		<text>Zniи hnнzdo snorkщ v Temnйm ъdolн</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_text">
+		<text>Jo… vypadб to, ћe se Zуna fakt zvмtљuje. V Temnэm ъdolн se objevilo pбr snorkщ, nikdy dшнv tam nebyli. A lidi zaинnaj panikaшit. Povinnost slнbila, ћe snorky postшнlн, ale nмjak se k tomu nemщћou dokopat. Nechceљ se o to postarat?</text>
+	</string>
+	<string id="barmen_find_artefact_1">
+		<text>Najdi artefakt masovб kuliиka</text>
+	</string>
+	<string id="barmen_find_artefact_1_descr">
+		<text>Najdi artefakt masovб kuliиka, kterэ lйин zranмnн.</text>
+	</string>
+	<string id="barmen_find_artefact_1_text">
+		<text>Stavilo se tu pбr farбшщ a objednali si masovэ koule. No vнљ to, jim se tenhle artefakt hodн, zatracenн podfukбшi se svejma zбzrakama! No ale udмlбљ to? Zadarmo to nebude.</text>
+	</string>
+	<string id="barmen_find_artefact_2">
+		<text>Najdi artefakt krystalickэ drбp</text>
+	</string>
+	<string id="barmen_find_artefact_2_descr">
+		<text>Najdi artefakt krystalickэ drбp, kterэ chrбnн pшed psionickэmi ъtoky.</text>
+	</string>
+	<string id="barmen_find_artefact_2_text">
+		<text>Drбpбk?.. Ne, to ne. "Krystalickej pбsбk"?.. Houby, taky ne! "Krystalickej drбp", tak se tomu шнkб! Mбm na tendle artefakt objednбvku. Znбљ ho? Prej kdyћ jeden mбљ, nemщћou ti potvory lнzt do hlavy. Tak co, seћeneљ mi ho?</text>
+	</string>
+	<string id="barmen_find_artefact_3">
+		<text>Najdi artefakt noиnн hvмzda</text>
+	</string>
+	<string id="barmen_find_artefact_3_descr">
+		<text>Najdi artefakt noиnн hvмzda, pomщћeљ vojenskйmu vэzkumu.</text>
+	</string>
+	<string id="barmen_find_artefact_3_text">
+		<text>Potшebuju artefakt noиnн hvмzda. Bohuћel neplnн ћбdnэ pшбnн, ћe jo, ale nмjakэ prachy za nмj jsou, vмdбtoшi po nмm docela jedou. Prej z nмj dмlajн nмjakэ vojenskэ krбmy. Tak co, doneseљ mi ho?</text>
+	</string>
+	<string id="barmen_find_artefact_4">
+		<text>Najdi artefakt bleskovka</text>
+	</string>
+	<string id="barmen_find_artefact_4_descr">
+		<text>Najdi artefakt bleskovka</text>
+	</string>
+	<string id="barmen_find_artefact_4_text">
+		<text>Je to jednoduchэ a dobшe placenэ. Musнљ mi najнt artefakt bleskovka. Nestarej se o to, kdo si ho objednal a proи. Udмlбљ to pro mм?</text>
+	</string>
+	<string id="barmen_find_artefact_5">
+		<text>Najdi artefakt zlatб rybka</text>
+	</string>
+	<string id="barmen_find_artefact_5_descr">
+		<text>Najdi artefakt zlatб rybka</text>
+	</string>
+	<string id="barmen_find_artefact_5_text">
+		<text>Znбљ tu pohбdku o zlatэ rybce, Oznaиenej? Jo, pшesnм tu. Taky je o nн spousta dobrejch vtipщ. Ale dost kecщ, potшebuju unikбtnн artefakt, kterej se tak jmenuje, klient je zvenku, vбћenej pбn, dobшe zaplatн. Udмlбљ to?</text>
+	</string>
+	<string id="barmen_find_item_1">
+		<text>Najdi psi-oblek</text>
+	</string>
+	<string id="barmen_find_item_1_descr">
+		<text>Najdi oblek, kterэ chrбnн pшed psionickэm zбшenнm. Vhodnй mнsto na hledбnн budou opuљtмnй laboratoшe v Temnйm ъdolн.</text>
+	</string>
+	<string id="barmen_find_item_1_text">
+		<text>V jednэ z tмch labin v Temnэm ъdolн se snaћili vмdбtoшi zjistit, jak chrбnit lidskэ mozky pшed psionickэma emisema. No, trvalo jim to pмknм dlouho, ale jeden z pokusщ se povedl, takћe by tam teп nмkde mмl bэt oblek, se kterэm si mщћeљ dбt rande s kontrolйrem a dokonce mu dбt i pusu. Jo, tak dobrej prej je. Takћe kdyћ mi tenhle krбm seћeneљ, budeљ to mнt u mм.</text>
+	</string>
+	<string id="barmen_find_item_2">
+		<text>Najdi cizincovu zbraт.</text>
+	</string>
+	<string id="barmen_find_item_2_descr">
+		<text>Zajнmavэ ъkol. To jmйno je mi povмdomй... ale odkud bych ho mohl znбt?</text>
+	</string>
+	<string id="barmen_find_item_2_text">
+		<text>Jednou se nбm tady poflakoval jeden cizбk... Gordon se, myslнm, jmenoval? Na prvnн pohled vypadal jako zkuљenej stalker, ale tvrdil, ћe v Zуnм nikdy nebyl. No to je fuk. Stejnм nakonec nмkde zmizel v Zуnм. Ale mмl u sebe zajнmavou hraиku, pistoli Black Kite. Kdyby se mi tak jenom dostal do ruky...</text>
+	</string>
+	<string id="barmen_find_item_3">
+		<text>Najdi modifikovanэ Vintorez</text>
+	</string>
+	<string id="barmen_find_item_3_descr">
+		<text>Najdi modifikovanэ Vintorez. Vhodnй mнsto na hledбnн je poblнћ Rudйho lesa. </text>
+	</string>
+	<string id="barmen_find_item_3_text">
+		<text>No, je to takovej zvlбљtnн pшнbмh. Objevil se tady tэpek, kapsy plnэ prachщ, a zaиal si najнmat gang, ale ne staшнky, spнљ drzэ novбиky. Nakoupil kupu vybavenн... mмl jsem tenkrбt fungl novej Vintorez, ъћasnб bouchaиka, a byl jsem blbej a prodal mu ho. No nebudu ti lhбt, vydмlal jsem na nмm kupu penмz... akorбt ћe celб ta jeho banda to schytala nмkde u Rudэho lesa. Co шнct, chcнpli pro nic za nic... no, je to dobrб lekce, co: v Zуnм ti jenom prachy nepomщћou. No ale furt musнm myslet na ten Vintorez, tak skvмlб bouchaиka teп nмkde rezavн. Najdeљ mi ji? Dobшe ti zaplatнm!</text>
+	</string>
+	<string id="barmen_kill_stalker_1">
+		<text>Zabij vojбka</text>
+	</string>
+	<string id="barmen_kill_stalker_1_descr">
+		<text>Jeden vojбk musн zemшнt. Je to pohodovб prбce, akorбt je divnй, ћe je cнl v uniformм a zбkaznнk byl pмknм vzteklэ.</text>
+	</string>
+	<string id="barmen_kill_stalker_1_text">
+		<text>Potшebuju, abys sundal toho vojбka... neptej se mм proи, je mi to fuk! Prostм to udмlej. Tak co? Mщћu ti to svмшit?</text>
+	</string>
+	<string id="barmen_kill_stalker_2">
+		<text>Zabij stalkera</text>
+	</string>
+	<string id="barmen_kill_stalker_2_descr">
+		<text>Zabij stalkera. Smrt podvodnнkovi, pшekupnнk se chce pomstнt.</text>
+	</string>
+	<string id="barmen_kill_stalker_2_text">
+		<text>Vнљ, je to takovej typ, o kterэm bys nikdy neшek kшivэho slova... vмшнљ mu jako sбm sobм, jasnэ? Zaloћнљ ho... a najednou zjistнљ, ћe je to pмknм hnusnej zasran. No potшebuju tuhle zбleћitost vyшeљit. Udмlej to a jб se postarбm o zbytek.</text>
+	</string>
+	<string id="barmen_kill_stalker_3">
+		<text>Zabij stalkera z frakce Monolit</text>
+	</string>
+	<string id="barmen_kill_stalker_3_descr">
+		<text>Najdi bэvalйho pшнtele pшekupnнka a pomoz mu zemшнt.</text>
+	</string>
+	<string id="barmen_kill_stalker_3_text">
+		<text>Mнval jsem kamarбda... tмћko tomu vмшit, co? No! Pшiљli jsme do Zуny spolu, kdyћ tady jeљtм nic takovэho nebylo... Co jsme se spolu navyvбdмli, mнsta kam jsme se dostali... no jo, byli jsme mladэ a na vљechno jsme kaљlali. Ale on nemмl nikdy dost. Vyrazil do centra Zуny a snaћil se mм na to taky ukecat, ale jб ho poslal nмkam a udмlal jsem dobшe. Pohбdali jsme se a on vyrazil sбm. No a teп jsem slyљel, ћe ho nмkdo vidмl, patшн teп k Monolitu. No takћe, Oznaиenej... najdi ho a... no, aќ netrpн, jo? Uћ tak to musн mнt љpatnэ, byl pro mм jak brбcha, chбpeљ? Tak bмћ...</text>
+	</string>
+	<string id="barmen_kill_stalker_4">
+		<text>Zabij stalkera jmйnem Vampэr</text>
+	</string>
+	<string id="barmen_kill_stalker_4_descr">
+		<text>Najdi a zabij stalkera jmйnem Vampэr.</text>
+	</string>
+	<string id="barmen_kill_stalker_4_text">
+		<text>Tak, uћ mбm toho љmejda aћ po krk! Myslнm toho blba Vampэra, znбљ ho, ne? Ta svinм! Vysбvб z lidн љtмstн mнsto krve. Kdo jde s nнm, ten zemшe, vљichni do jednoho, ale on se vћdycky v pohodм vrбtн! Uћ to udмlal pмtkrбt! Pмknэ svinstvo, co? No rбd bych mu dal na hrob nмjakэ hnusnэ kytky, takћe... postarбљ se o to?</text>
+	</string>
+	<string id="barmen_kill_stalker_5">
+		<text>Zabij stalkera jmйnem Vrabec</text>
+	</string>
+	<string id="barmen_kill_stalker_5_descr">
+		<text>Najdi Vrabce a pomsti smrt jinйho stalkera.</text>
+	</string>
+	<string id="barmen_kill_stalker_5_text">
+		<text>Zasranэ muљketэшi! Hrajou si na dartaтany, debilovй! Jako by bмhбnн kolem anomбliн a kliиkovбnн mezi kulkama nebylo dost, ti kretйni zaиali dмlat souboje! No chбpej, pohбdali se, nikdo si ani nepamatuje, kdo to zaиal. No a ti dva kretйni se rozhodli, ћe musн stшнkat krev. No a samozшejmм jeden zdechnul... a byl to pшitom dobrej stalker! No ten druhej, Vrabec, nмkam zalezl, protoћe vн, ћe bych mu stшelil kulku do palice na potkбnн. Najdi ho. Urиitм je jeљtм poшбd v Zуnм. Udмlбљ to?</text>
+	</string>
+	<string id="barmen_monster_part_1">
+		<text>Pшines oko flaksy</text>
+	</string>
+	<string id="barmen_monster_part_1_descr">
+		<text>Pшines oko flaksy</text>
+	</string>
+	<string id="barmen_monster_part_1_text">
+		<text>Budeme mнt party, velkou veиeшi, a mнstnн gurmбni jsou na to uћ natмљenн a urиitм budou chtнt vyzkouљt mщj recept - oko flaksy ve vepшovэ љќбvм. Ve vlastnн љќбvм s majonйzou. No v podstatм potшebuju akorбt oko flaksy, a rychle.</text>
+	</string>
+	<string id="barmen_monster_part_2">
+		<text>Pшines kopyto kance</text>
+	</string>
+	<string id="barmen_monster_part_2_descr">
+		<text>Pшines kopyto kance</text>
+	</string>
+	<string id="barmen_monster_part_2_text">
+		<text>Vнљ, ћe tady vykupujem  rohy a kopyta? Velkб rarita. Z mutovanejch kopyt se dмlб vэbornб biћuterka, znбm jednoho klenotnнka, co mб zбjem. Takћe mi pшines kopyto kance a dostaneљ nмjakэ drobnэ na ъtratu.</text>
+	</string>
+	<string id="dolg_defend_lager_1">
+		<text>Chraт bezpeиnostnн post Povinnosti</text>
+	</string>
+	<string id="dolg_defend_lager_1_descr">
+		<text>Chraт bezpeиnostnн post Povinnosti na smetiљti.</text>
+	</string>
+	<string id="dolg_defend_lager_1_text">
+		<text>Asi uћ jsi narazil na naљe chlapy na smetiљti. Fungujou tam jako takovэ pшedsunutэ stanoviљtм, chrбnн bar pшed muќбkama, kteшн lezou z Temnэho ъdolн. Prej se na nм hrne poшбdnэ stбdo prasat. Pomoz jim ty muќбky odrazit a budeљ to mнt u mм.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1">
+		<text>Zniи zombie</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_descr">
+		<text>Zniи zombie potulujнcн se kolem Jantaru.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_text">
+		<text>Nedбvno jsme poslali do Jantaru partu, ale nikdo z nich se nevrбtil. Prej pбr z nich vidмli u mobilnн labiny u Jantaru, uћ jsou z nich zombice. Nemщћeme dovolit, aby zщstali v takovэm stavu. Najdi je a zabij.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10">
+		<text>Zbav se smeиky psщ.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_descr">
+		<text>Zbav se smeиky psщ na Smetiљti.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_text">
+		<text>Cizнm stalkerщm pochopitelnм ъkoly nedбvбme. Ale na druhou stranu, tohle je brnkaиka a nemб cenu na to hnбt naљe chlapy. Takћe poslouchej. Je tшeba vyиistit hnнzdo potvor na smetiљti. Jedna z naљich skupin uћ tam makб, takћe kdybys mмl problйmy, pшidej se k nim. Ale mмla by to bэt pohoda, nenн jich tam moc, sotva deset. Nejspнљ иokli, povнdб se, ћe jich prej do oblasti zalezla velkб smeиka. Tak, mщћeљ vyrazit.</text>
+	</string>
+	<string id="dolg_eliminate_lager_11">
+		<text>Zniи tбbor stalkerщ</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_descr">
+		<text>Zniи tбbor stalkerщ v Agropromu</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_text">
+		<text>Mбme tady jednu takovou citlivou zбleћitost, do kterэ by se naљi chlapi rozhodnм nemмli zaplнst. Neutrбlovй v tovбrnм u Agropromu se naљim spojencщm nelнbн. Zbav Agroprom stalkerщ, aќ uћ je to kdokoli. Jasnэ?</text>
+	</string>
+	<string id="dolg_eliminate_lager_12">
+		<text>Zniи oddнl Ћoldбkщ</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_descr">
+		<text>Zniи oddнl Ћoldбkщ v Rostoku</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_text">
+		<text>Fajn, takћe je tшeba zniиit oddнl snajprщ od Ћoldбkщ. Obsadili poslednн patro obytnэho komplexu. Jsou nejmйnм dva, ale vнc neћ pмt jich nebude, nejspнљ tam budou Dragunovi. Radнm ti, nepleќ se tam kolem za dne.</text>
+	</string>
+	<string id="dolg_eliminate_lager_13">
+		<text>Zniи zбkladnu banditщ</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_descr">
+		<text>Zniи zбkladnu banditщ v Temnйm ъdolн.</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_text">
+		<text>Je tшeba napadnout hlavnн zбkladnu banditщ a co nejvнce jich postшнlet. Zбkladnu majн v Temnйm ъdolн, poblнћ nedokonиenйho vмdeckйho centra. Nepшбtel je tak tшicet, vyzbrojenн jsou lehkэmi automaty, kulomety a brokovnicemi. Vљechno jasnй?</text>
+	</string>
+	<string id="dolg_eliminate_lager_14">
+		<text>Zlikviduj snorky.</text>
+	</string>
+	<string id="dolg_eliminate_lager_14_descr">
+		<text>Zlikviduj snorky v tunelech pod sektorem Jantar.</text>
+	</string>
+	<string id="dolg_eliminate_lager_14_text">
+		<text>Tentokrбt je tшeba udмlat menљн иistku. Tunely pod Jantarem jsou plnй snorkщ, je jich tam nejmнт deset. Jo, uћ se tam dole pшed bouшн neschovбљ... pokud ti zбleћн na ћivotм.</text>
+	</string>
+	<string id="dolg_eliminate_lager_2">
+		<text>Zniи stбdo flaks</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_descr">
+		<text>Zniи stбdo flaks v Divokй oblasti.</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_text">
+		<text>Vystopovali jsme migraci velkйho stбda prasat... tмch nechutnэch mutovanэch svinн, kterэm vљichni шнkajн flaksa. Teп se zdrћujou v oblasti smetiљtм. Vљichni naљi chlapi majн zrovna nмco na prбci, ale ty svinм je tшeba postшнlet. Bude to docela fuљka, takћe ti za to zaplatнme.</text>
+	</string>
+	<string id="dolg_eliminate_lager_3">
+		<text>Zniи pseudopsy</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_descr">
+		<text>Zniи doupм pseudopsщ u vojenskйho skladiљtм.</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_text">
+		<text>Naљi spojenci nбs upozornili, ћe u vojenskйho skladiљtм objevili hnнzdo mutantщ. Nejspнљ je tam smeиka pseudopsщ. V tй oblasti se radљi moc nechceme ukazovat, takћe je to vhodnэ kљeft pro neutrбla. Jdeљ do toho?</text>
+	</string>
+	<string id="dolg_eliminate_lager_4">
+		<text>Zniи bezpeиnostnн postavenн Ћoldбkщ</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_descr">
+		<text>Zniи bezpeиnostnн postavenн Ћoldбkщ kousek od vojenskйho skladiљtм.</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_text">
+		<text>V poslednн dobм jsou Ћoldбci инm dбl aktivnмjљн, obиas ъtoин na vэzkumnнky v oblasti. To nemщћeme dovolit. Je tшeba provйst malou trestnou vэpravu na bezpeиnostnн postavenн Ћoldбkщ u vojenskйho skladiљtм, kus za opuљtмnou vesnicн.</text>
+	</string>
+	<string id="dolg_eliminate_lager_5">
+		<text>Zniи Ћoldбky v Divokй oblasti</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_descr">
+		<text>Zniи Ћoldбky v Divokй oblasti</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_text">
+		<text>Skupina vмdcщ se chystб studovat Divokou oblast. Ale v poslednн dobм tam nenн bezpeиno, Ћoldбci jsou tam docela aktivnн. Postarej se, aby v Divokй oblasti nмjakou dobu nestraљili.</text>
+	</string>
+	<string id="dolg_eliminate_lager_6">
+		<text>Zabij bandity</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_descr">
+		<text>Zabij bandity, kteшн se dostali do Divokй oblasti.</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_text">
+		<text>Pщjdu rovnou k vмci. Banditi se dostali pшes naљe pozice u baru a teп se prohбnн v Divokй oblasti. Musнљ je zlikvidovat.</text>
+	</string>
+	<string id="dolg_eliminate_lager_7">
+		<text>Zniи kontrolйra</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_descr">
+		<text>Zniи kontrolйra v Jantaru.</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_text">
+		<text>Tahle prбce ti zшejmм dб docela zabrat. Vмdci nбm ohlбsili, ћe u Jantaru zpozorovali kontrolйra, u vstupu do podzemnн laboratoшe v centrбlnн budovм. Kontrolйшi jsou docela nebezpeиnн, ale ty si s tнm poradнљ.</text>
+	</string>
+	<string id="dolg_eliminate_lager_8">
+		<text>Eliminuj jednotky Svobody</text>
+	</string>
+	<string id="dolg_eliminate_lager_8_descr">
+		<text>Eliminuj иleny Svobody pшebэvajнcн v opuљtмnй vesnici kousek od vojenskйho skladiљtм.</text>
+	</string>
+	<string id="dolg_eliminate_lager_8_text">
+		<text>V opuљtмnй vesnici kousek od vojenskйho skladiљtм se иasto potulujн hlнdky Svobody. Vyиisti tu vesnici, иekб tм za to zvlбљtnн odmмna.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9">
+		<text>Zniи bandity</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_descr">
+		<text>Zniи bandity na smetiљti.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_text">
+		<text>Situace se pшiostшuje. Banditi se soustшedн v oblasti kolem smetiљtм a Temnэho ъdolн. Nejlepљн bude provйst dva ъdery najednou! Naљi chlapi zaъtoин na ъdolн, ty se postarej o smetiљtм.</text>
+	</string>
+	<string id="dolg_find_item_1">
+		<text>Najdi vylepљenou puљku</text>
+	</string>
+	<string id="dolg_find_item_1_descr">
+		<text>Najdi vylepљenou TRs 301 poblнћ vojenskйho skladiљtм.</text>
+	</string>
+	<string id="dolg_find_item_1_text">
+		<text>Ћoldбkщm nмkdo pomбhб, nedбvno dostali vylepљenй puљky, upravenй pro odstшelovaиe. Chбpeљ, jak nebezpeиnб hraиka to je? No a jб mбm zkrбtka o takovou bouchaиku zбjem. A rozhodnм ti za ni budu vdмиnej.</text>
+	</string>
+	<string id="dolg_kill_stalker_1">
+		<text>Neutralizuj banditu</text>
+	</string>
+	<string id="dolg_kill_stalker_1_descr">
+		<text>Nautralizuj banditu Pokera.</text>
+	</string>
+	<string id="dolg_kill_stalker_1_text">
+		<text>Pшezdнvka cнle je Poker. Patшн mezi nejdivoиejљн nбиelnнky banditщ, pмknэ љmejd a despota... nejspнљ to nemб v hlavм v poшбdku, povнdб se, ћe v Zуnм chytnul nмjakou divnou nemoc. Teп obиas odpadne a kdyћ se probere, tak si nepamatuje, kdo je a kde je. Ale poшбd je ozbrojenэ aћ po zuby a poшбdnм agresivnн. Nejspнљ ho najdeљ v Temnйm ъdolн. Pшipraven na misi, stalkere?</text>
+	</string>
+	<string id="drunk_dolg_find_item">
+		<text>Najdi zbraт иlena Povinnosti.</text>
+	</string>
+	<string id="drunk_dolg_find_item_descr">
+		<text>Jeden z иlenщ Povinnosti chce, abys naљel jeho zbraт, ztratil ji bмhem prщzkumu nмkde v Temnйm ъdolн.</text>
+	</string>
+	<string id="drunk_dolg_find_item_text">
+		<text>Nemмl jsem se tak vydмsit. Zуna ti holt leze na mozek. Myslel jsem si, ћe mбm dobrэ nervy, ћe se niиeho nebojнm, a najednou tohle. Byli jsme na vэzvмdnэ vэpravм v Temnэm ъdolн, zapadli jsme do zбkopu a Kшivбk nбs mмl krejt... najednou jsem zaslechl љнlenэ vytн, ъplnм jsem ztuhnul hrщzou. Sakra, ani nevнm, jak jsem se dostal na kуtu. Kdyћ jsem se vrбtil na zбkladnu, Voronin mм mбlem na mнstм odstшelil. Dal mi vylepљenej kanon, za dobrou sluћbu. No a jб zpanikaшil a utekl tak rychle, ћe jsem ho tam nechal. Zkus mi ho pшinэst, druhou takovou bouchaиku uћ neseћenu.</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1">
+		<text>Zniи hnнzdo snorkщ</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_descr">
+		<text>Zniи hnнzdo snorkщ v Jantaru.</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_text">
+		<text>Dбm ti rozumnм velkou odmмnu, kdyћ se postarбљ, aby snorkovй ћijнcн v baћinбch pшestali mм a mй kolegy obtмћovat. Nмkdy, kdyћ tam provбdнme experimenty, se kvщli nim nemщћeme ani soustшedit.</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2">
+		<text>Zniи hnнzdo divokэch psщ</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_descr">
+		<text>Zniи hnнzdo divokэch psщ v Divokй oblasti</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_text">
+		<text>V Divokй oblasti mб doupм smeиka mutovanэch psщ. Chci, abys tam vyrazil a postaral se o nм. Tihle mutanti pшedstavujн pro naљe expedice pшнliљ velkй nebezpeин. Vнm, ћe se to zoologщm nebude lнbit, ale tohle nenн nмjakй zoo. Takovй potvory rozљiшujн vzteklinu, psinku a иert vн co jeљtм.</text>
+	</string>
+	<string id="ecolog_find_artefact_1">
+		<text>Najdi artefakt ohnivбk</text>
+	</string>
+	<string id="ecolog_find_artefact_1_descr">
+		<text>Pшines vмdcщm na vэzkumy artefakt ohnivбk.</text>
+	</string>
+	<string id="ecolog_find_artefact_1_text">
+		<text>Podaшilo se nбm zнskat artefakt v laboratornнch podmнnkбch! To je velkэ objev! Celэ svмt se o tom dozvн! A Nobelova cena se blнћн! Tohle je unikбtnн artefakt zvanэ pavuиina, kterэ dokбћe dobшe chrбnit pшed chemickэmi popбleninami. Jmйnem vмdy jsem ti ochotnэ tento artefakt pшedat, mб to vљak jednu podmнnku - vэmмnou bych potшeboval artefakt ohnivбk, znбљ ho? Unikбtnн tepelnй vlastnosti jeho povrchu si ћбdajн dalљнho vэzkumu.</text>
+	</string>
+	<string id="ecolog_find_artefact_2">
+		<text>Najdi artefakt gravi</text>
+	</string>
+	<string id="ecolog_find_artefact_2_descr">
+		<text>Pшines vмdcщm artefakt gravi.</text>
+	</string>
+	<string id="ecolog_find_artefact_2_text">
+		<text>Blнћнme se k plnйmu pochopenн povahy gravitace, uћ brzy budeme moci stavмt motory postavenй na bбzi antigravitace, a otevшeme si tak cestu ke hvмzdбm. Pro dalљн vэzkum ale rychle potшebujeme artefakt gravi.</text>
+	</string>
+	<string id="ecolog_find_artefact_3">
+		<text>Najdi artefakt medщza</text>
+	</string>
+	<string id="ecolog_find_artefact_3_descr">
+		<text>Vмdci potшebujн na vэzkumy иasoprostoru artefakt medщza.</text>
+	</string>
+	<string id="ecolog_find_artefact_3_text">
+		<text>Nбљ vэzkumnэ tэm se blнћн k prщlomovйmu objevu v oblasti иasoprostoru. Teleportace uћ nadбle nepatшн do oblasti иirй fantazie! Anomбlie Vortex ve skuteиnosti stlaиuje иasoprostor, nepщsobн na pшedmмty jenom gravitacн, jak si myslн nмkteшн mн oponenti, drћнcн se svэch zastaralэch teoriн, zatнmco si sedн ve svэch pohodlnэch vэzkumnэch ъstavech a nudou ohryzujн kшнdu. Aћ zjistн, co dokбћe vмdec pracujнcн v terйnu, orosн se jim z toho brэle! Ale na dalљн vэzkum potшebuju artefakt zvanэ medщza.</text>
+	</string>
+	<string id="ecolog_find_artefact_4">
+		<text>Najdi artefakt mмsниnн svit</text>
+	</string>
+	<string id="ecolog_find_artefact_4_descr">
+		<text>Dones artefakt mмsниnн svit vмdcщm u Jantaru. Je to fajn artefakt…</text>
+	</string>
+	<string id="ecolog_find_artefact_4_text">
+		<text>Zoufale potшebujeme materiбly, abychom mohli pracovat ve vэzkumech v oblasti energie. Zjistili jsme, jak za pomocн artefaktщ vyrбbмt energii! Pravda, zнskanэ vэkon zatнm nenн pшнliљ vysokэ, ale pracujeme na tom. Nejlepљнch vэsledkщ jsme dosбhli s artefaktem mмsниnн svмtlo. Pшines nбm, prosнm, vzorek tohoto artefaktu, aќ mщћeme ve vэzkumu pokraиovat.</text>
+	</string>
+	<string id="ecolog_find_artefact_5">
+		<text>Najdi artefakt moшskэ jeћek</text>
+	</string>
+	<string id="ecolog_find_artefact_5_descr">
+		<text>Vмdci potшebujн artefakt moшskэ jeћek, aby mohli zlepљit svй obleky.</text>
+	</string>
+	<string id="ecolog_find_artefact_5_text">
+		<text>Nejspнљ vнљ, ћe naљe obleky poskytujн nejlepљн moћnou ochranu pшed radiacн. Tajemstvн spoинvб v tom, ћe je natнrбme mastн vytvoшenou ze vzбcnйho artefaktu. Pro vэrobu dalљн sйrie oblekщ tedy potшebujeme novэ artefakt. Vy stalkeшi mu шнkбte "Moшskэ jeћek".</text>
+	</string>
+	<string id="ecolog_find_item_1">
+		<text>Pшines unikбtnн oblek</text>
+	</string>
+	<string id="ecolog_find_item_1_descr">
+		<text>Pшines z podzemnн laboratoшe X16 nezvyklэ oblek.</text>
+	</string>
+	<string id="ecolog_find_item_1_text">
+		<text>Mбme pro tebe prбci. Nedбvno jsme si najali jednoho stalkera a poslali ho do laboratoшe. Uћ tehdy jsem si vљiml, ћe mб nezvyklэ oblek, vyzaшoval nezvykle velkй mnoћstvн ћбru. Stalker tvrdil, ћe jeho oblek dokбћe lйиit zranмnн. No a jde o to, ћe se ten stalker z podzemн uћ nevrбtil. Ne, aќ tм to ani nenapadne! My s tнm nemбme nic spoleиnйho! Ale jeho oblek tam nejspнљ jeљtм bude. Velmi rбd bych ho prozkoumal.</text>
+	</string>
+	<string id="ecolog_monster_part_1">
+		<text>Pшines ибst tмla snorka</text>
+	</string>
+	<string id="ecolog_monster_part_1_descr">
+		<text>V tйhle oblasti bude sehnбnн kousku snorka hraиka.</text>
+	</string>
+	<string id="ecolog_monster_part_1_text">
+		<text>Se Semenovem jsme se seznбmili na univerzitм, kde jsem pшednбљel genetiku, byl to mщj student. A tak jsem se stal jeho vмdeckэm vedoucнm. Tenkrбt jsme sotva zaиali odhalovat tajemstvн genovй modifikace. Ale kde jsem to byl? Ah, ano. Pro genetickй experimenty potшebujeme иerstvй vzorky svalovэch tkбnн snorka. V baћinбch bys mмl takovэ genetickэ materiбl snadno najнt. Mбme hypotйzu, ћe jsou snorkovй dalљн ъrovnн lidskй evoluce. Abychom si mohli bэt jistн, musнme provйst DNA test!</text>
+	</string>
+	<string id="ecolog_monster_part_2">
+		<text>Pшines oko flaksy</text>
+	</string>
+	<string id="ecolog_monster_part_2_descr">
+		<text>Od tмch vмdбtorщ bych se radљi mмl drћet dбl! No, dobшe, pшitбhnu jim oko flaksy, a aќ si s nнm a s tмmi svэmi dobrovolnнky dмlajн co chtмjн.</text>
+	</string>
+	<string id="ecolog_monster_part_2_text">
+		<text>Dobrй zprбvy, mladэ muћi: mбme pro tebe velmi zajнmavou prбci! Myslнm, ћe jako intelektuбl s rozsбhlэmi zkuљenostmi teorie mэch kolegщ ocenнљ. Nбљ vэzkum odhalil, ћe oko stvoшenн nazэvanйho bмћnм jako flaksa je vybaveno... sledujeљ mм? Tedy to oko je vybaveno иichovэmi receptory! Takћe svэma oиima nejenom vidн, ale takй cнtн! Pшipravujeme se k transplantaci tohoto ъћasnйho oka jednomu... dobrovolnнkovi z шad naљich asistentщ. Vмшнm, ћe tak vznikne novб mуda! Mimochodem, nechtмl bys takй vyzkouљet, jakй by to bylo, иichat oиima?</text>
+	</string>
+	<string id="ecolog_monster_part_3">
+		<text>Pшines ocas slepйho psa</text>
+	</string>
+	<string id="ecolog_monster_part_3_descr">
+		<text>No ti vмdбtoшi! Snaћнte se najнt u lidн druhэ mozek? Chudбk pes, aћ ho chytnu, bude se muset obejнt bez ocasu.</text>
+	</string>
+	<string id="ecolog_monster_part_3_text">
+		<text>Dobrэ den, drahэ chlapиe! Poslyљ, nechceљ nбm jeљtм jednou pomoct? Doufбm, ћe vнљ, ћe psi patшн mezi obratlovce... иili jejich pбteш zaинnб u hlavy a konин ocasem. Ale je tady hбиek! Jeden z mэch mladљнch kolegщ teoreticky prokбzal, ћe pбteш slepйho psa, jak jim шнkбte, zaинnб od ocasu, ne od hlavy! No pшemэљlej o tom, naprosto to pшevracн naљe znalosti v tйto oblasti. Uћ teп vznikajн odvбћnй teorie o kostrиi lidн... no, hodnм se o tom diskutuje. Zkrбtka a dobшe, potшebujeme hlavu psa, slepйho psa, kterб se kvщli neznalosti bмћnм povaћuje za ocas.</text>
+	</string>
+	<string id="ecolog_monster_part_4">
+		<text>Pшines kanин kэtu</text>
+	</string>
+	<string id="ecolog_monster_part_4_descr">
+		<text>Gurmбni zatracenн... dobrб, pшinesu jim nмjakou љunku.</text>
+	</string>
+	<string id="ecolog_monster_part_4_text">
+		<text>Vнtej, eh... cestovateli! Jsem rбd, ћe ses stavil: potшebujeme muћe, kterэ by se zъиastnil velmi dщleћitйho experimentu. Mщj kolega Brenter se chce pokusit o pшнpravu jнdla z mнstnн fauny, abychom mohli prakticky sledovat ъиinek mutovanэch proteinщ na lidskйm tмle. Pro zaибtek jsme se rozhodli zkusit kance. Potшebujeme љunku. Kanин kэtu, rozumнљ? A pokud se do toho pustнљ, zkus prosнm vybrat nмjakэ zdravэ exemplбш.</text>
+	</string>
+	<string id="ecolog_monster_part_5">
+		<text>Pшines иelist upнra</text>
+	</string>
+	<string id="ecolog_monster_part_5_descr">
+		<text>Radљi nechci vмdмt, na co jim bude upнrova иelist. Hlavnм, kdyћ mi zaplatн.</text>
+	</string>
+	<string id="ecolog_monster_part_5_text">
+		<text>Oh, stalkere, rбd tм vidнm! Poslyљ... uћ ses setkal s upнry, ћe? No pokud ne, tak chceme, abys nмjakйho naљel. Pшines nбm spodnн иelist zбstupce tohoto druhu, i s jeho, jak bych tak шekl, jнdelnнmi pomщckami. Bohuћel ti nemohu o experimentu шнct nic detailnнho, negativnм by to naruљilo tvou psychiku. Budeme иekat, neћ nбm tu иelist pшineseљ.</text>
+	</string>
+	<string id="eliminate_lager">
+		<text>Likvidace tбbora</text>
+	</string>
+	<string id="find_item">
+		<text>Najdi pшedmмt</text>
+	</string>
+	<string id="freedom_defend_lager_1">
+		<text>Chraт stalkery u Agropromu</text>
+	</string>
+	<string id="freedom_defend_lager_1_descr">
+		<text>Odraћ ъtok banditщ na tбbor stalkerщ u Agropromu.</text>
+	</string>
+	<string id="freedom_defend_lager_1_text">
+		<text>U Agropromu tбboшн skupinka stalkerщ, normбlnн chlapi, kteшн chбpou, ћe Zуna je svobodnэ mнsto, kde zбkony neplatн a ћe prostм musнљ ћнt podle toho, co povaћujeљ za sprбvnй. Teп pшemэљlej, ћe by se pшidali k nбm. No, pomщћeљ jim odrazit bandity, co je teп otravujou? Dбme ti za to nмjakэ vybavenн.</text>
+	</string>
+	<string id="freedom_defend_lager_2">
+		<text>Chraт hranice</text>
+	</string>
+	<string id="freedom_defend_lager_2_descr">
+		<text>Chraт pшed monstry hranici poblнћ vojenskйho skladiљtм.</text>
+	</string>
+	<string id="freedom_defend_lager_2_text">
+		<text>Od vypalovaиe sem zase mншн stбdo muќбkщ. Pomoz chlapщm na hranici zahnat je zpбtky, nмco mбlo ti za to dбm.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1">
+		<text>Zniи vojenskэ tбbor </text>
+	</string>
+	<string id="freedom_eliminate_camp_1_descr">
+		<text>Zniи vojenskэ tбbor u vэzkumnйho institutu Agroprom.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1_text">
+		<text>Armбda se chystб pomalu ovlбdnout Zуnu. Musнme je zpomalit, jinak se Zуna zmмnн na vэzkumnй zoo. Jeden z vojenskэch tбborщ je hned u Agropromu. I kdyћ ho nezlikvidujeљ ъplnм, aspoт to armбdu trochu zpomalн.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2">
+		<text>Zniи tбbor ћoldбkщ</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_descr">
+		<text>Zniи tбbor ћoldбkщ u skladiљќ.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_text">
+		<text>Hele, jde o tohle: je tшeba zniиit tбbor ћoldбkщ. Mohli bychom je nechat bэt, ale oni si fakt koledujou a lezou nбm na naљe ъzemн, snaћн se podplбcet mэ chlapy. Je na иase dбt jim lekci. Zvlбdneљ to? </text>
+	</string>
+	<string id="freedom_eliminate_camp_3">
+		<text>Zniи oddнl Povinnosti</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_descr">
+		<text>Zniи иistнcн oddнl Povinnosti v Rostoku.</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_text">
+		<text>Co takhle malej lov? Иistнcн oddнl Povinnosti se objevil v Rostoku. Je to pшнleћitost pшekvapit je. Povinnost posнlб tyhle party lovit monstra, ale po cestм klidnм odstшelej kaћdэho, kdo se jim nezamlouvб. Je tшeba ten oddнl zruљit, neћ se Povinnost dostane do Rostoku. Nemмlo by tam bэt moc lidн, tшi nebo иtyшi veterбni a pбr novбиkщ.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4">
+		<text>Zniи postavenн Povinnosti</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_descr">
+		<text>Zniи co nejrychleji postavenн Povinnosti na smetiљti.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_text">
+		<text>Mбm pro tebe hodnм urgentnн kљeft. Je tшeba vyиistit prщchod ze smetiљtм k baru od Povinnosti. Zalezli tam a obнrajн kolemjdoucн. Иekбme hodnм dщleћitej balниek, ale nenн vylouиenэ, ћe Povinnost o naљem kurэrovi vн a zkusн ho pшepadnout. Je tшeba to tam vyиistit, aspoт na chvilku. Ok?</text>
+	</string>
+	<string id="freedom_eliminate_camp_5">
+		<text>Vyиisti vesnici.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_descr">
+		<text>Zbav vesnici upнrщ a pokud to bude moћnй, zniи i kontrolйra.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_text">
+		<text>No koukej ty vole na ty krveћнznivэ bestie v dмdinм! Nikdo se k nim nepшiblнћн na sto metrщ, jenom naprostн debilovй. A prej tam nмkteшн poblнћ dostбvali vidiny, kontrolйra tady fakt potшebujem! No je na иase to tam vyиistit. Nebudu tм nutit, abych шekl pravdu, sбm bych tam nevlezl. Ale jestli se nebojнљ, tak se ti solidnм odvdминm.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6">
+		<text>Zniи stбdo kancщ a flaks</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_descr">
+		<text>Zniи stбdo kancщ a flaks u vojenskйho skladiљtм.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_text">
+		<text>Nбљ snajpr si sedн ve vмћi u vstupu do zбkladny, noc, nuda... a najednou vэbuch, divokэ шev, zбblesk! No a pak se ukбzalo, ћe si prasata zvykly chodit po minovэm poli. Иert vн, co tam chtмjн, ale nejmнт jednou tэdnм nмjakэ љlбpne na minu. Takћe je tшeba, aby se o nм nмkdo postaral a postшнlel je. Udмlбљ to?</text>
+	</string>
+	<string id="freedom_eliminate_camp_7">
+		<text>Zniи hejno tarbнkщ</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_descr">
+		<text>Zniи hejno tarbнkщ v Divokй oblasti.</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_text">
+		<text>Dшнv jsme u zбkladny ћбdnэ tarbнky nemмli, ale ti hajzlнci se dostanou vљude, nedбvno nбs ъplnм zaplavili, to bys nevмшil. Dva mмsнce se s nima otravujem, ale teп jsme zjistili, ћe k nбm lezou z Divokэ oblasti. Bylo by dobrэ se o nм postarat, ty mrchy se mnoћej jak krбlнci. Potшebujem nмkoho, kdo najde jejich stбdo a postшнlн je. Jdeљ do toho?</text>
+	</string>
+	<string id="freedom_find_item_1">
+		<text>Ukradni odstшelovaиskou puљku</text>
+	</string>
+	<string id="freedom_find_item_1_descr">
+		<text>Ukradni ze skladiљtм Povinnosti modifikovanou SVDm 2.</text>
+	</string>
+	<string id="freedom_find_item_1_text">
+		<text>Tohle je zvlбљtnн ъkol. A taky docela tмћkej... je tшeba zнskat ze skladiљtм Povinnosti vylepљenej model Dragunova. Dokonce mб ten kousek vlastnн jmйno, ale to je fuk. Hlavnм mб ъћasnej puљkohled a minimбlnн zpмtnej rбz, na 400 metrщ s nнm trefнљ veverku do oka. Vмшнm, ћe ty to dokбћeљ!</text>
+	</string>
+	<string id="freedom_find_item_2">
+		<text>Zнskej modifikovanэ Chaser 13</text>
+	</string>
+	<string id="freedom_find_item_2_descr">
+		<text>Zнskej od vмdcщ modifikovanэ Chaser 13.</text>
+	</string>
+	<string id="freedom_find_item_2_text">
+		<text>Vмdбtorщm se prej podaшilo vylepљit brokбrnu Chaser jednнm artefaktem. Mб teп sнlu jako houfnice. Tak co se za nima tak stavit a zkusit se dohodnout, co? Vэdaje platнm!</text>
+	</string>
+	<string id="freedom_find_item_3">
+		<text>Najdi neprщstшelnou vestu</text>
+	</string>
+	<string id="freedom_find_item_3_descr">
+		<text>Najdi jednu novou neprщstшelnou vestu.</text>
+	</string>
+	<string id="freedom_find_item_3_text">
+		<text>Nмkteшн vojбci teп nosн novej druh neprщstшelnэ vesty. Vnitшnн podљнvka je nasбklб nмjakэm lйиivэm sajrajtem... no malэ rбny se dнky tomu sakra rychle lйиej. A pшedstav si, jakэ mбme љtмstн. Banda takhle vybavenejch vojclщ vyrazila k Jantaru, ale vrбtilio se jich jenom љest a tшi nesli sebou. Chбpeљ? Jeden z nich tam zщstal. Pokud nбm seћeneљ jeho vestu, mohli bychom ji rozebrat a udмlat si pбr vlastnнch.</text>
+	</string>
+	<string id="freedom_kill_stalker_1">
+		<text>Zabij љйfa bezpeиnosti Povinnosti</text>
+	</string>
+	<string id="freedom_kill_stalker_1_descr">
+		<text>Zabij љйfa bezpeиnosti Povinnosti, zkus to provйst co nejtiљeji. </text>
+	</string>
+	<string id="freedom_kill_stalker_1_text">
+		<text>Bylo by fajn, kdyby љйf bezpeиnosti Povinnosti tiљe zmizel. A aћ tam zaиnou mнt zmatek, budu jim tam moct nasadit pбr svэch chlapщ. A pak иert vн, tшeba se nбm zadaшн... no jo, uћ drћнm hubu. Nejlнp by bylo, kdybys ho sundal na dбlku, a nevyvolal moc velkej poplach.</text>
+	</string>
+	<string id="freedom_kill_stalker_2">
+		<text>Zabij kapitбna Ivancova</text>
+	</string>
+	<string id="freedom_kill_stalker_2_descr">
+		<text>Zabij kapitбna Ivancova, nejbliћљнho poradce velitele Povinnosti.</text>
+	</string>
+	<string id="freedom_kill_stalker_2_text">
+		<text>Je to tмћkб fuљka, to ti шнkбm rovnou, ale vyplatн se to. Ivancov, poradce љйfa Povinnosti, si o to fakt koleduje. Dмlб ty nejљpinavмjљн prбce, trestnэ vэpravy, nбjezdy... nemбљ tuљenн, kolik naљich uћ osobnм zabil! Je na иase se o toho slizбka postarat. Jestli si na to troufneљ, radљi se dobшe pшiprav.</text>
+	</string>
+	<string id="freedom_kill_stalker_3">
+		<text>Zabij plukovnнka Petrenka</text>
+	</string>
+	<string id="freedom_kill_stalker_3_descr">
+		<text>Zabij plukovnнka Petrenka, jednoho ze zakladatelщ frakce Povinnost.</text>
+	</string>
+	<string id="freedom_kill_stalker_3_text">
+		<text>Plukovnнk Petrenko... Nevнm, jesli ho znбљ aspoт z doslechu, ale bylo by dobrй, kdybyste se vy dva setkali. Je to jeden ze zakladatelщ Povinnosti a taky jeden z naљich nejhorљнch nepшбtel. Zkus tu konverzaci ukonиit co nejrychleji, rozumнљ? Zvlбdneљ to?</text>
+	</string>
+	<string id="freedom_kill_stalker_4">
+		<text>Zniи neutrбlnнho stalkera</text>
+	</string>
+	<string id="freedom_kill_stalker_4_descr">
+		<text>Najdi a zniи neutrбlnнho stalkera</text>
+	</string>
+	<string id="freedom_kill_stalker_4_text">
+		<text>Kousek odsud se poflakuje jeden chбpek. Jednou stшelil jednoho z naљich. A na to se nezapomнnб. Postarбљ se o nмj? Zaplatнme ti, nemusнљ se bбt.</text>
+	</string>
+	<string id="freedom_kill_stalker_5">
+		<text>Zabij nмkterйho z љйfщ Povinnosti.</text>
+	</string>
+	<string id="freedom_kill_stalker_5_descr">
+		<text>Zabij nмkterйho z љйfщ Povinnosti.</text>
+	</string>
+	<string id="freedom_kill_stalker_5_text">
+		<text>Zaplatнm ti za hlavu kterэhokoli hlavouna Povinnosti! Sundej nмkterэho z nich a mщћeљ si pшijнt pro odmмnu.</text>
+	</string>
+	<string id="freedom_kill_stalker_6">
+		<text>Zabij stalkera jmйnem Straљбk.</text>
+	</string>
+	<string id="freedom_kill_stalker_6_descr">
+		<text>Zlikviduj stalkera Straљбka</text>
+	</string>
+	<string id="freedom_kill_stalker_6_text">
+		<text>My tady taky obиas pшнљery zabнjнme, ale u nбs je to kvщli pшeћitн, ne zisku. Populace mutantщ nenн moc velkб, kromм toho jsou to taky ћivэ bytosti, takћe nemщћeme dovolit jejich zniиenн. Ale nмkteшн lidi to prostм nechcou pochopit. Typickej pшнklad je stalker Straљбk. Prodбvб vycpanй mutanty. Uћ jsme ho varovali dшнv, ale kaљle na nбs. Tak co, udмlбљ dobrэ skutek pro matku Zemi?</text>
+	</string>
+	<string id="freedom_kill_stalker_7">
+		<text>Zabij stalkera jmйnem Barin. </text>
+	</string>
+	<string id="freedom_kill_stalker_7_descr">
+		<text>Zabij stalkera jmйnem Barin, hlavnнho zбsobovatele frakce Povinnost.</text>
+	</string>
+	<string id="freedom_kill_stalker_7_text">
+		<text>Sprosќбk, pokrytec, patolнzal a zbabмlec. To je stalker Barin. Jak vidнљ, chlбpek s ъћasnэm charakterem, dнky tomu se dostal aћ na vrchol Povinnosti. Teп dodбvб jнdlo a zбsoby, aиkoli obиas se ъиastnн nбjezdщ. Potшebujeme se ho zbavit, jelikoћ se Barin starб prakticky o veљkerou logistiku Povinnosti.</text>
+	</string>
+	<string id="freedom_monster_part_1">
+		<text>Pшines kanин kэtu</text>
+	</string>
+	<string id="freedom_monster_part_1_descr">
+		<text>Pшines kanин kэtu</text>
+	</string>
+	<string id="freedom_monster_part_1_text">
+		<text>Plбnujeme oslavnou veиeшi u pшнleћitosti narozenin Boba Marleyho. Tak co kdybys nбm pшinesl nмjakou dobrou љunku? Инm vнc, tнm lнp! Jeћнљ na tebe nikdy nezapomene!</text>
+	</string>
+	<string id="hunter_eliminate_lager">
+		<text>Zniи upншн hnнzdo.</text>
+	</string>
+	<string id="hunter_eliminate_lager_descr">
+		<text>Lovec tм ћбdб o zniиenн hnнzda upнrщ ve vesnici poblнћ vojenskйho skladiљtм, za odmмnu ti slibuje cennэ artefakt.</text>
+	</string>
+	<string id="hunter_eliminate_lager_text">
+		<text>Uћ jsi nмkdy narazil na upнra? Љнlenб potvora, ћe jo? No, ale k vмci, vиera jsem љel do vesnice u vojenskэho skladiљtм, шнkal jsem si, ћe se podнvбm po nмjakэch artefaktech. A najednou vidнm upнra, иernэho, celэho zjizvenэho. Sedмl u nмjakejch mrtvol a nevљiml si mм. Dostal jsem strach, a tak jsem radљi zaиal zdrhat. To jsem ale nemмl dмlat, protoћe mм zaslechnul a љel po mм, zaslechl jsem hroznэ шvanн a pochopil, ћe nenн sбm. Nejspнљ tam maj hnнzdo. Jestli je odtamtud vyћeneљ, dбm ti vzбcnej artefakt, kterej jsem nedбvno naљel.</text>
+	</string>
+	<string id="kill_stalker">
+		<text>Zabij stalkera</text>
+	</string>
+	<string id="lisiy_kill_stalker">
+		<text>Zabij zrбdce.</text>
+	</string>
+	<string id="lisiy_kill_stalker_descr">
+		<text>Pleљoun chce, abys zabil stalkera, kterэ utekl s velmi vzбcnэm artefaktem.</text>
+	</string>
+	<string id="lisiy_kill_stalker_text">
+		<text>Pшed иasem jsem љel jeљtм s jednнm stalkerem hledat artefakty kousek od vypalovaиe. Naљli jsme toho dost, dokonce pбr kouskщ, kterэ jsem nikdy pшedtнm nevidмl, ani na obrбzku. V noci se ten mizera nмkam odplнћil a nejcennмjљн kousky nмkde schoval. Pak se mi snaћil namluvit, ћe zmizely samy od sebe. O pбr dnн pozdмjc jsem jeden ten vzбcnej kousek vidмl u Barmana. Byl jsem pмknм nasranej... No prostм pokud ho dokбћeљ najнt, poљli mu ode mм pбr olovмnejch. Moћnб se ti i podaшн najнt jeho skrэљ a sebrat druhej artefakt. Vyplatн se ti to, vмш mi.</text>
+	</string>
+	<string id="mercenary_kill_stalker">
+		<text>Zabij mistra stalkera</text>
+	</string>
+	<string id="mercenary_kill_stalker_descr">
+		<text>Ћoldбci zaplatн za zabitн kaћdйho z mistrщ stalkerщ. Инm mйnм mistrщ bude, tнm snazљн to Ћoldбci budou mнt.</text>
+	</string>
+	<string id="mercenary_kill_stalker_text">
+		<text>Nemбme zбjem, aby se nбm po Zуnм potulovali nezniиitelnн parchanti v exoskeletonech ozbrojenн jako menљн armбda. Uћ tak je tady prбce docela tмћkб a nebezpeиnб. Zabij nмkterйho z nich a dostaneљ odmмnu.</text>
+	</string>
+	<string id="monster_part">
+		<text>Pшines ибst tмla pшнљery</text>
+	</string>
+	<string id="petrenko_kill_stalker">
+		<text>Zniи stalkera ze Svobody.</text>
+	</string>
+	<string id="petrenko_kill_stalker_descr">
+		<text>Jeden stalker, dшнvмjљн иlen Povinnosti, kterэ znб spoustu dщleћitэch informacн o Pripjati, se nedбvno pшidal ke Svobodм. Je ho tшeba zabнt dшнv, neћ vљechno prozradн.</text>
+	</string>
+	<string id="petrenko_kill_stalker_text">
+		<text>Hele, mбme mapu Pripjati, sice ne aktuбlnн, starou, ze zaибtku devadesбtэch let. Nejdщleћitмjљн ale je, ћe jsou tam oznaиenэ vљechny vojensky dщleћitэ objekty: podzemnн skladiљtм, kryty a tak. Teп to samozшejmм na moc nenн, ale pokud by se nбm podaшilo dostat se do Pripjati, budou to sakra cennэ informace. Ale mбme problйm. Jeden z dщstojnнkщ pшeљel na stranu Svobody a vљechno tohle vмdмl. Je ho tшeba neutralizovat, neћ vљechno prozradн.</text>
+	</string>
+	<string id="return_for_reward">
+		<text>Vraќ se pro odmмnu</text>
+	</string>
+	<string id="return_for_reward_bring">
+		<text>Dones zбkaznнkovi, cos mu slнbil</text>
+	</string>
+	<string id="shustriy_find_item">
+		<text>Najdi zdokonalenэ oblek</text>
+	</string>
+	<string id="shustriy_find_item_descr">
+		<text>Љikula mi шekl o skrэљi, kam si banditi schovali lup. Chce, aќ mu pшineseљ ukradenэ oblek, samozшejmм ti za to dб odmмnu.</text>
+	</string>
+	<string id="shustriy_find_item_text">
+		<text>Kdyћ mм zajali, slyљel jsem, jak se bavн o svэ skrэљi, kde si schovбvaj lup. Prej tam schovali vэbornej oblek, ale pak se tam dostala nмjakб potvora a rozhodla se tam zщstat, takћe mмli banditi strach tam jнt. Kdyћ mi ten oblek pшineseљ, tak ti za nмj dobшe zaplatнm.</text>
+	</string>
+	<string id="tm_barman_has_no_job">
+		<text>Zrovna teп ti nemщћu nic nabнdnout.</text>
+	</string>
+	<string id="tm_barman_job_ask">
+		<text>A o иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_barman_job_complete">
+		<text>Skvмlб prбce, odmмny sis zaslouћil!</text>
+	</string>
+	<string id="tm_barman_job_what">
+		<text>Nмjakэ novinky?</text>
+	</string>
+	<string id="tm_barman_list_job">
+		<text>No teп mбme tohle:</text>
+	</string>
+	<string id="tm_defend_camp_1">
+		<text>Kryj jednotku Povinnosti pшed ъtokem banditщ z Temnйho ъdolн</text>
+	</string>
+	<string id="tm_defend_camp_1_descr">
+		<text>Kryj jednotku Povinnosti pшed ъtokem banditщ z Temnйho ъdolн</text>
+	</string>
+	<string id="tm_defend_camp_1_text">
+		<text>Koneиnм se mi podaшilo namlбtit do Povinnosti, ћe je tшeba zbavit smetiљtм banditщ. Povinnost zнskб vмtљн ъzemн a moji zбkaznнci budou mнt od tмch mizerщ pokoj. Takћe jde o tohle: vedenн Povinnosti se rozhodlo, ћe nejdшнv odшнznou banditщm pшнstup z Temnэho ъdolн. Takћe tam poslali jednotku, aќ to zablokuje a co иert nechtмl, banditщm se to nelнbн, koho by to napadlo? No a mм by zajнmalo, jestli s tнm nechceљ pнchnout? Moje podмkovбnн bude љtмdrэ, s tнm mщћeљ poинtat.</text>
+	</string>
+	<string id="tm_dolg_has_no_job">
+		<text>Zrovna teп ћбdnб prбce nenн.</text>
+	</string>
+	<string id="tm_dolg_job_ask">
+		<text>O иem chceљ mluvit?</text>
+	</string>
+	<string id="tm_dolg_job_complete">
+		<text>Hodnej kluk! Dobrб prбce.</text>
+	</string>
+	<string id="tm_dolg_job_what">
+		<text>Poslouchбm.</text>
+	</string>
+	<string id="tm_dolg_list_job">
+		<text>Takћe o prбci:</text>
+	</string>
+	<string id="tm_drunk_dolg_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_drunk_dolg_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_drunk_dolg_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_drunk_dolg_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_drunk_dolg_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_ecolog_has_no_job">
+		<text>Je mi lнto, ale zrovna teп ћбdnou prбci nemбm.</text>
+	</string>
+	<string id="tm_ecolog_job_ask">
+		<text>O kterй prбci sis to chtмl promluvit? </text>
+	</string>
+	<string id="tm_ecolog_job_complete">
+		<text>Vэbornм, tady mбљ odmмnu .</text>
+	</string>
+	<string id="tm_ecolog_job_what">
+		<text>Poslouchбm.</text>
+	</string>
+	<string id="tm_ecolog_list_job">
+		<text>Mщћu ti nabнdnout tohle:</text>
+	</string>
+	<string id="tm_eliminate_camp_1">
+		<text>Zniи tбbor banditщ na smetiљti.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_descr">
+		<text>Zniи bandity na smetiљti, kteшн okrбdajн stalkery na cestм ze Zуny. Pшekupnнk bude mнt radost.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_text">
+		<text>Banditй se zase dali dohromady a lezou do cesty poctivэmu obchodu. Takћe vyraћ na smeќбk, prej se tam ti љmejdi usadili poblнћ vrakoviљtм. Postarej se o to a vљichni ti budou vdмиnэ, jб ti dokonce dбm nмjakou cinkavou vdмиnost, co ty na to, souhlas?</text>
+	</string>
+	<string id="tm_eliminate_camp_2">
+		<text>Zniи tбbor banditщ v autoparku.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_descr">
+		<text>Zlikviduj bandity v autoparku. Nejspнљ jsou v Zуnм novн, takћe by to mмla bэt pohodiиka.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_text">
+		<text>Banditi se zase poflakujou kolem autoparku. Takћe uћ ti doљlo, o co mi jde? Tak љup љup! Pozdravuj je ode mм a pak se stav, podмkuju ti nмjak hmatatelnм. Dohodnuto?</text>
+	</string>
+	<string id="tm_eliminate_camp_3">
+		<text>Zlikviduj bandity u vэzkumnйho institutu Agroprom.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_descr">
+		<text>Zlikviduj bandity u vэzkumnйho institutu Agroprom. Je lepљн bэt s pшekupnнkem zadobшe.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_text">
+		<text>U vэzkumnэho institutu se objevila parta banditщ. Otravujou tam moje kopбиe, kteшн hledajн v bordelu zajнmavэ vмci. Je to problйm, ty ho vyшeљнљ, jб ti zaplatнm.</text>
+	</string>
+	<string id="tm_eliminate_camp_4">
+		<text>Zbav oblast mutantщ</text>
+	</string>
+	<string id="tm_eliminate_camp_4_descr">
+		<text>Zbav oblast mutantщ</text>
+	</string>
+	<string id="tm_eliminate_camp_4_text">
+		<text>Mбm tady jednu pohodovku. Chystб se sem nмjakej cizн turista, zaplatil mэm kбmoљщm spoustu penмz, aby si mohl Zуnu okouknout. A oblast, kde ho provedem, je tшeba vyиisist od mutantщ. Udмlбљ to?</text>
+	</string>
+	<string id="tm_eliminate_camp_5">
+		<text>Zlikviduj dva bandity na smetiљti</text>
+	</string>
+	<string id="tm_eliminate_camp_5_descr">
+		<text>Postarej se, aby byla cesta na jedno z nejlepљнch mнst v Zуnм pшнstupnб vљem</text>
+	</string>
+	<string id="tm_eliminate_camp_5_text">
+		<text>Nedбvno se na jedno z nejlepљнch mнst v Zуnм nedб dostat. Na smetiљtм... jo, na smetiљtм, lepљн mнsto nenajdeљ, tam tм opustн smutek, tam zapomeneљ na љpнnu, prachy, krev. Ale teп tam sedн dva debilovй, kteшн vyhroћujou, ћe zabijou kaћdэho, kdo jim nezaplatн za vstup. Zbav se jich, lepљн mнsto pro turisty nemбm.</text>
+	</string>
+	<string id="tm_eliminate_camp_6">
+		<text>Zabij upнra v Temnйm ъdolн</text>
+	</string>
+	<string id="tm_eliminate_camp_6_descr">
+		<text>Zabij upнra v Temnйm ъdolн</text>
+	</string>
+	<string id="tm_eliminate_camp_6_text">
+		<text>Vojбci prej vypadli z Temnэho ъdolн. A ze vљech dмr zaиaly vylнzat potvory. Stalkeшi uћ tam dokonce zahlнdli upнra, dokonce nмjakэho zvlбљtnнho, protoћe se nebojн otevшenejch prostorщ. Jakmile se o tom dozvмdмj vмdбtoшi, budou ho chtнt prostudovat. A jб chci bejt ten, kdo jim prodб jeho tмlo. Zabij toho cucбka a jб se postarбm o zbytek.</text>
+	</string>
+	<string id="tm_find_artefact_1">
+		<text>Najdi artefakt medъza</text>
+	</string>
+	<string id="tm_find_artefact_1_descr">
+		<text>Najdi artefakt medъza vznikajнcн v anomбlii Trampolнna</text>
+	</string>
+	<string id="tm_find_artefact_1_text">
+		<text>Nмjakэ chlбpek z venku chce medъzu. Nenн to moc penмz, ale na druhou stranu je to brnkaиka. Takћe do toho.</text>
+	</string>
+	<string id="tm_find_artefact_2">
+		<text>Najdi artefakt kamennэ kvмt</text>
+	</string>
+	<string id="tm_find_artefact_2_descr">
+		<text>Najdi artefakt kamennэ kvмt artefakt vznikajнcн v anomбlii Trampolнna. Mбm za nмj dostat spoustu penмz.</text>
+	</string>
+	<string id="tm_find_artefact_2_text">
+		<text>Mбm tady ћбdost o kamennэ kvмt. Objednal si ho nмjakej klenotnнk, tak udмlбme nмjakэ feљnэ babм radost, co ty na to? Jestli ho seћeneљ, dostaneљ solidnн prachy a flaљku, aќ mщћem tэ љќastnэ sleиnм pшipнt na zdravн...</text>
+	</string>
+	<string id="tm_find_artefact_3">
+		<text>Najdi artefakt noиnн hvмzda</text>
+	</string>
+	<string id="tm_find_artefact_3_descr">
+		<text>Najdi noиnн hvмzdu, vzбcnэ a drahэ artefakt.</text>
+	</string>
+	<string id="tm_find_artefact_3_text">
+		<text>Mбm tady takovou malou fuљku... docela nepшнjemnou. Vypadб to, ћe za tнm stojн armбda, chtмjн dбt dohromady nмjakej ochrannej systйm. No prostм mбm tady objednбvku na noиnн hvмzdu. Je to docela vzбcnej artefakt, ale docela dobшe chrбnн kulky pшed lopatkama, teda lopatky a zbytek tмla pшed kulkama. Tak co, udмlбљ to? Dostaneљ za to solidnн prachy! </text>
+	</string>
+	<string id="tm_find_artefact_4">
+		<text>Najdi artefakt masovб kuliиka</text>
+	</string>
+	<string id="tm_find_artefact_4_descr">
+		<text>Najdi artefakt masovб kuliиka, kterэ lйин zranмnн.</text>
+	</string>
+	<string id="tm_find_artefact_4_text">
+		<text>Mбm tady objednбvku na artefakt, takovej ten co lйин zranмnн a шнkб se mu masovб kuliиka. Klient mб nмjakou kliniku nebo co a tohle by se mu asi hodilo. Takћe kdyћ mi ho pшineseљ, dostaneљ prachy a navнc budeљ mнt dobrej pocit, ћes pomohl lidem.</text>
+	</string>
+	<string id="tm_find_item_1">
+		<text>Najdi zdokonalenou pistoli</text>
+	</string>
+	<string id="tm_find_item_1_descr">
+		<text>Zнskej pistoli Fort, kterб mб podle vљeho vмtљн zбsobnнk. Naposledy ji mмl velitel vojenskй hlнdky pod rozbitэm mostem.</text>
+	</string>
+	<string id="tm_find_item_1_text">
+		<text>V poslednн dobм vљichni blбznмj z vytunмnejch bouchaиek a z normбlnнch krбmщ uћ nechce nikdo stшнlet, ani novбиci! Mбm tady objednбvku na vylepљenou bouchaиku Fort se zvмtљenэm zбsobnнkem. Mб ho velitel vojбkщ, co vybнrajн prachy za prщchod pod mostem. Doneseљ mi ho?</text>
+	</string>
+	<string id="tm_freedom_has_no_job">
+		<text>Zrovna teп ћбdnб prбce nenн, vбћnм...</text>
+	</string>
+	<string id="tm_freedom_job_ask">
+		<text>Takћe co by sis rбd prodiskutoval?</text>
+	</string>
+	<string id="tm_freedom_job_complete">
+		<text>Vэbornм, mladэ muћi! Skvмlб prбce, tady mбљ svй penнze.</text>
+	</string>
+	<string id="tm_freedom_job_what">
+		<text>Co novйho?</text>
+	</string>
+	<string id="tm_freedom_list_job">
+		<text>Mбm tohle:</text>
+	</string>
+	<string id="tm_hunter_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_hunter_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_hunter_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_hunter_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_hunter_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_job_nothing">
+		<text>Vlastnм nic. Zatнm se mмj.</text>
+	</string>
+	<string id="tm_job_refuse">
+		<text>Tuhle prбci odmнtбm udмlat.</text>
+	</string>
+	<string id="tm_kill_stalker_1">
+		<text>Zabij vщdce banditщ</text>
+	</string>
+	<string id="tm_kill_stalker_1_descr">
+		<text>Zabij vщdce banditщ, kteшн dмlajн problйmy pшekupnнkovi. Nejspнљ nebude sбm... tмћkб prбce, ale dobrэ prachy. Najdeљ ho v Temnэm ъdolн.</text>
+	</string>
+	<string id="tm_kill_stalker_1_text">
+		<text>Potшebuju, abys oddмlal jednoho grбzla, je to jeden z velitelщ banditщ. Vиera na rozkaz tohohle hajzla chytili banditi mэho kurэra a jб nemбm rбd, kdyћ mi nмkdo љahб na mэ lidi. No kdyћ to udмlбљ, tak se ti za to odvdминm, znбљ to. Jdeљ do toho? </text>
+	</string>
+	<string id="tm_kill_stalker_2">
+		<text>Zabij stalkera pшekupnнka</text>
+	</string>
+	<string id="tm_kill_stalker_2_descr">
+		<text>Zabij stalkera... no nenн to zrovna nejlepљн prбce, jнt proti kolegovi. Ale zбkaznнk platн dobшe a na tom zбleћн nejvнc.</text>
+	</string>
+	<string id="tm_kill_stalker_2_text">
+		<text>Mбm tady problйm s jednнm pшekupnнkem. No, nechce spolupracovat, do pekla s nнm! A nedovolнm, aby o mnм nмkdo roznбљel pomluvy. Prostм je tшeba ho zruљit, aby se ostatnнm ukбzalo, zaи je toho loket. Aќ vмdн, kdo je tady љйf... </text>
+	</string>
+	<string id="tm_kill_stalker_3">
+		<text>Zabij stalkera novбиka</text>
+	</string>
+	<string id="tm_kill_stalker_3_descr">
+		<text>Zabij stalkera novбиka, kterэ moћnб ani novбиek nenн... ale kdo to teda je? No, je to fuk, dokud se fuљka povede a zaplatн mi.</text>
+	</string>
+	<string id="tm_kill_stalker_3_text">
+		<text>Pobнhб tady jeden chlбpek a pшedstнrб, ћe je novбиek, ale je fakt docela divnej... no pokud nбhodou nмkde zmizн, udмlб mi to velkou radost, jestli mi rozumнљ? </text>
+	</string>
+	<string id="tm_kill_stalker_4">
+		<text>Zabij stalkera jmйnem Пбbel</text>
+	</string>
+	<string id="tm_kill_stalker_4_descr">
+		<text>Zlikviduj rivala pшekupnнka Sidoroviиe, stalkera jmйnem Пбbel. </text>
+	</string>
+	<string id="tm_kill_stalker_4_text">
+		<text>Пбbel, jinak taky Oleg Gusarov... kdysi slouћil ve Specnasu. Dokud se staral o svэ, nic jsem proti nмmu nemмl, prostм dalљн samotбш. Ale prej teп dбvб dohromady partu, se kterou chce prorazit kordуn a pшevzнt paљovбnн ze Zуny. To je velkej problйm a jeho tшeba vyшeљit rychle. Udмlбљ to? </text>
+	</string>
+	<string id="tm_kill_stalker_5">
+		<text>Zabij otce Diodora</text>
+	</string>
+	<string id="tm_kill_stalker_5_descr">
+		<text>Zabнt muћe, kterэ v Zуnм kбћe proti sbнrбnн a prodeji artefaktщ? Pшesnм tak. </text>
+	</string>
+	<string id="tm_kill_stalker_5_text">
+		<text>Dycinky jsem шнkal, ћe byznys a nбboћenstvн spolu nevychбzej, nikdy se nesmмj setkat a hlavnм si nemaj lнzt navzбjem do zelн! Je tady jeden frбter, boћe odpusќ mi, co se jmenuje Diodor... no... on to prostм nechбpe. Furt шve o artefaktech, ћe dohбnмj k hшнchu nejen lidi v Zуnм, ale i venku, a tak dбl a tak dбl. Chбpej, on kбћe, ћe je tшeba artefakty zniиit! Vidнљ, o co mu jde? Nejhorљн na tom je, ћe uћ pбr lidн zblbnul. Snaћil jsem se tomu Diodorovi domluvit, ale on prostм mele a mele. Takћe, kdyћ ho poљleљ tam nahoru, kde si mщћe kбzat, co chce, tak... chбpeљ, ћe jo? Tak ti dбm fakt dobrej artefakt. Dohodnuto? </text>
+	</string>
+	<string id="tm_kill_stalker_6">
+		<text>Zabij "obchodnнho zбstupce"</text>
+	</string>
+	<string id="tm_kill_stalker_6_descr">
+		<text>Zabij "obchodnнho zбstupce". Pшekupnнk se starб o svou povмst.</text>
+	</string>
+	<string id="tm_kill_stalker_6_text">
+		<text>No pшedstav si to: pobнhб tady jeden magor, kterэ se prohlaљuje za mэho obchodnнho zбstupce, pouћнvб moji povмst a prodбvб mizernэ љmejdy! Zarezlэ hlavnм, polorozpadlэ neprщstшelnэ vesty, ћrбdlo s proљlou zбruиnн lhщtou, co se nedб jнst. Uћ jsem se musel postarat o pбr nespojenejch zбkaznнkщ. Potшebuju nмkoho, kdo si s tнmhle "obchodnнm zбstupcem" hezky "pokecб"...</text>
+	</string>
+	<string id="tm_lisiy_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_lisiy_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_lisiy_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_lisiy_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_lisiy_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_mercenary_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_mercenary_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_mercenary_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_mercenary_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_mercenary_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_monster_part_1">
+		<text>Pшines иelist upнra.</text>
+	</string>
+	<string id="tm_monster_part_1_descr">
+		<text>Takћe zub upнra pшinбљн љtмstн? Uvidнme, jestli pшinese љtмstн i upнrovi.</text>
+	</string>
+	<string id="tm_monster_part_1_text">
+		<text>Doslechl jsem se, ћe zub upнra pшinбљн љtмstн. Ten, kdo ho nosн kolem krku, se dokбћe vyhejbat anomбliнm a artefakty mu samy skбиou do kapes. Jsou to samozшejmм kecy, ale pбr debilщ tomu vмшн a jsou ochotni za ten nesmysl zaplatit. Kdyћ mi doneseљ иelist upнra, dostaneљ ode mм sluљnэ prachy.</text>
+	</string>
+	<string id="tm_monster_part_2">
+		<text>Pшines ocas pseudopsa</text>
+	</string>
+	<string id="tm_monster_part_2_descr">
+		<text>Pшines ocas pseudopsa</text>
+	</string>
+	<string id="tm_monster_part_2_text">
+		<text>Brzo bude zima. A co nosej ћenskэ venku, kdyћ je zima? Koћichy. Teп venku шбdн novб mуda, dмlaj se rщznэ nesmysly z ocasщ pseudopsщ, prej to mб bэt nмjakб zvlбљtnн koћeљina. Mбm na ocas objednбvky, takћe doneseљ mi nмjakej?</text>
+	</string>
+	<string id="tm_petrenko_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_petrenko_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_petrenko_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_petrenko_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_petrenko_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_reward_job">
+		<text>Jdu kvщli prбci.</text>
+	</string>
+	<string id="tm_seek_job_abandon">
+		<text>O takovou prбci zбjem nemбm.</text>
+	</string>
+	<string id="tm_seek_job_no">
+		<text>Nмkdy jindy.</text>
+	</string>
+	<string id="tm_seek_job_yes">
+		<text>Jdu do toho.</text>
+	</string>
+	<string id="tm_seek_new_job">
+		<text>Potшebuju prбci. Nemбљ pro mм nмco?</text>
+	</string>
+	<string id="tm_shustriy_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_shustriy_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_shustriy_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_shustriy_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_shustriy_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_trader_has_no_job">
+		<text>Zrovna teп ћбdnб prбce nenн. </text>
+	</string>
+	<string id="tm_trader_job_ask">
+		<text>O jakй prбci si chceљ promluvit?</text>
+	</string>
+	<string id="tm_trader_job_complete">
+		<text>Prбce hotova... a tady je odmмna!</text>
+	</string>
+	<string id="tm_trader_job_what">
+		<text>Co ta prбce?</text>
+	</string>
+	<string id="tm_trader_list_job">
+		<text>Tohle je tшeba udмlat:</text>
+	</string>
+	<string id="tm_wolf_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_wolf_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_wolf_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_wolf_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_wolf_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="tm_zastava_commander_has_no_job">
+		<text>Prozatнm nic.</text>
+	</string>
+	<string id="tm_zastava_commander_job_ask">
+		<text>O иem si chceљ promluvit?</text>
+	</string>
+	<string id="tm_zastava_commander_job_complete">
+		<text>Ъkol splnмnej a tady je odmмna!</text>
+	</string>
+	<string id="tm_zastava_commander_job_what">
+		<text>A co s tнm ъkolem?</text>
+	</string>
+	<string id="tm_zastava_commander_list_job">
+		<text>Nмco by bylo:</text>
+	</string>
+	<string id="wolf_eliminate_lager_1">
+		<text>Zniи doupм kancщ</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_descr">
+		<text>Kousek od mнsta, kde si udмlal Wolf se svэm kamarбdem skrэљ, se usadili kanci. Wolf chce, abys jejich doupм zlikvidoval, a slнbil ti za to odmмnu.</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_text">
+		<text>Udмlali jsme si s kбmoљem schovбvaиku kousek od autoparku, tam jak je les trochu hustмjљн. Mбme tam spoustu vмcн. Ale nedбvno se tam usadili kanci a my se tam teп nemщћem dostat. Kdyћ je postшнlнљ, tak ti podмkuju, i za svэho kбmoљe.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2">
+		<text>Zniи mutanty na farmм</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_descr">
+		<text>Wolf chce, abys zbavil farmu mutantщ, protoћe tam plбnuje udмlat tбbor.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_text">
+		<text>Tohle je okraj Zуny, novбиci to tady maj tмћkэ. Banditi jsou jenom jeden problйm, a ti aspoт rozumмj rusky. Ale muќбci, to je horљн. Udмlali si hnнzdo v opuљtмnэ farmм, zablokovali tak jedinej dobrej plac na tбbor. Jestli se ti podaшн to tam vyиistit, budeљ to mнt u mм.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager">
+		<text>Zlikviduj psн doupм</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_descr">
+		<text>Jiћnм od kontrolnнho bodu u baru se prohбnн smeиka psщ. Љйf kontrolnнho bodu chce, abys zniиil jejich doupм. Slibuje odmмnu.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_text">
+		<text>I kdyћ se snaћнme, sem tam se nмjakй potvoшe podaшн dostat se ze smetiљtм sem. Nejspнљ sis vљimnul tэ smeиky psщ jiћnм od nбs. Jestli je postшнlнљ, dostaneљ odmмnu.</text>
+	</string>
+	<string id="defend_lager">
+		<text>Obrana tбbora</text>
+	</string>
+</string_table>

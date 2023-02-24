@@ -1,0 +1,72 @@
+	<string id="bar_darklab_documents">
+		<text>Najdi dokumenty v laboratoøi</text>
+	</string>
+	<string id="bar_darklab_documents_1">
+		<text>Vezmi Borovovi klíè</text>
+	</string>
+	<string id="bar_darklab_documents_2">
+		<text>Dostaò se ze základny </text>
+	</string>
+	<string id="bar_darklab_documents_3">
+		<text>Najdi vstup do laboratoøe</text>
+	</string>
+	<string id="bar_darklab_documents_4">
+		<text>Propli se do základny</text>
+	</string>
+	<string id="bar_darklab_documents2">
+		<text>Najdi v X18 dokumenty</text>
+	</string>
+	<string id="bar_darklab_documents2_1">
+		<text>Najdi dokumenty</text>
+	</string>
+	<string id="bar_darklab_documents2_2">
+		<text>Pøines dokumenty Barmanovi</text>
+	</string>
+	<string id="dar_codedoor_1">
+		<text>Najdi dveøe zamèené na kód</text>
+	</string>
+	<string id="dar_codedoor_1_1">
+		<text>Zjisti kód ke dveøím</text>
+	</string>
+	<string id="dar_codedoor_1_2">
+		<text>Otevøi dveøe pomocí kódu</text>
+	</string>
+	<string id="dar_codedoor_2">
+		<text>Otevøí dveøe do centra</text>
+	</string>
+	<string id="dar_codedoor_2_1">
+		<text>Zjisti kód ke dveøím</text>
+	</string>
+	<string id="dar_codedoor_2_2">
+		<text>Otevøi dveøe pomocí kódu</text>
+	</string>
+	<string id="val_captive_help">
+		<text>Osvoboï èlena Povinnosti</text>
+	</string>
+	<string id="val_captive_help_1">
+		<text>Sleduj Kulku k místu pøepadu</text>
+	</string>
+	<string id="val_captive_help_2">
+		<text>Zabij bandity a zachraò èlena Povinnosti.</text>
+	</string>
+	<string id="val_come_to_trader">
+		<text>Vra se k pøekupníkovi</text>
+	</string>
+	<string id="val_come_to_trader_0">
+		<text>Vra se k pøekupníkovi</text>
+	</string>
+	<string id="val_come_to_trader_1">
+		<text>Dostaò se z Temného údolí</text>
+	</string>
+	<string id="val_come_to_trader_2">
+		<text>Uka dokumenty pøekupníkovi</text>
+	</string>
+	<string id="val_prisoner_help">
+		<text>Osvoboï èlena Povinnosti z vìzení</text>
+	</string>
+	<string id="val_prisoner_help_0">
+		<text>Osvoboï èlena Povinnosti z vìzení banditù.</text>
+	</string>
+	<string id="val_prisoner_help_main">
+		<text>Osvoboï èlena Povinnosti z vìzení banditù</text>
+	</string>

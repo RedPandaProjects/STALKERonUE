@@ -1,0 +1,12 @@
+	<string id="rad_barman_spam">
+		<text>Gezeichneter!? Du lebst!? Toll! Also hast du den Schmelzer abgeschaltet, was? Alle wollen durch Prypjat ins Zentrum der Zone. Keiner weiß, was sich da befindet ... ein Schatz voller Artefakte oder vielleicht etwas, das Wünsche erfüllt.\nEine Gruppe Veteranen macht sich gerade bereit. Wenn du dich beeilst, schaffst du es vielleicht gerade noch, dich ihnen anzuschließen. Ich sage ihnen, dass du kommst, damit sie auf dich warten.</text>
+	</string>
+	<string id="tips_bun_komand">
+		<text>Team Eins und Zwei - Erdgeschoss überprüfen, Team Drei - Haupthalle, Vier und Fünf - erster Stock.</text>
+	</string>
+	<string id="tips_rad_sos_suicide">
+		<text>... Hilfe, ich sterbe ...</text>
+	</string>
+	<string id="tips_rad_switcher_press">
+		<text>Drücken Sie ($$ACTION_USE$$), um die Maschine abzustellen.</text>
+	</string>

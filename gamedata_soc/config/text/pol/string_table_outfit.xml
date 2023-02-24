@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bandit_outfit_description">
+		<text>Typowy strуj bandyty - skуrzana kurtka z elementami kevlarowymi. Zapewnia absolutnie niewystarczaj№c№ ochronк w surowych warunkach Zony.</text>
+	</string>
+	<string id="bandit_outfit_description_m">
+		<text>Zwykіa, sіaba kamizelka kuloodporna bandytуw, z wszytymi pod spуd pіytami kolczymi. Prawie wszyscy mog№ j№ zrobiж, ale na pewno nie wszystkim starczy na to cierpliwoњci. </text>
+	</string>
+	<string id="bandit_outfit_name">
+		<text>Kurtka bandytуw</text>
+	</string>
+	<string id="bandit_outfit_name_m">
+		<text>Kurtka kolcza</text>
+	</string>
+	<string id="dolg_outfit_description">
+		<text>Wyprodukowana przez jeden z instytutуw badawczych w Kijowie i oddana do uїytku dla "Powinnoњci". Jest tak samo prosta i niezawodna jak standardowy model PSZ-9, lecz dziкki wykorzystaniu nowych materiaіуw, zapewnia skuteczn№ ochronк przez rуїnymi obraїeniami, і№cznie z obraїeniami od ognia. Kamizelkк trzeba jeszcze ulepszyж, gdyї nie ma osіony tlenowej.</text>
+	</string>
+	<string id="dolg_outfit_description_m1">
+		<text>Pancerz "Powinnoњci" o zwiкkszonych parametrach ochrony przed ugryzieniami i ranami ciкtymi.</text>
+	</string>
+	<string id="dolg_outfit_name">
+		<text>Pancerz PSZ-9d </text>
+	</string>
+	<string id="dolg_outfit_name_m1">
+		<text>PSZ-9d Јowcy</text>
+	</string>
+	<string id="dolg_scientific_outfit_description">
+		<text>Wspaniaіy kombinezon ochronny jak na warunki panuj№ce w Zonie. Stalkerzy go doceniaj№, gdyї chroni przed anomaliami oraz kulami. W jego skіad wchodzi kombinezon PSZ-9d, aparat tlenowy o obiegu zamkniкtym oraz zintegrowany system tіumienia pуl anomalii. Zapewnia bardzo dobr№ ochronк przed kulami i odіamkami. </text>
+	</string>
+	<string id="dolg_scientific_outfit_name">
+		<text> Kombinezon PSZ-9Md</text>
+	</string>
+	<string id="ecolog_outfit_description">
+		<text>Kombinezon SSP-99 do ochrony chemicznej stworzony specjalnie do warunkуw panuj№cych w Zonie. Uїywaj№ go ekspedycje naukowe i wspуіpracuj№cy z nimi ekostalkerzy. Ma zintegrowany system filtrowania powietrza i klimatyzacji. Jest odporny na wysok№ temperaturк i elektrycznoњж, zapewnia dobr№ ochronк przed promieniowaniem oraz anomaliami biologicznymi. Odporny na agresywne chemicznie otoczenie. Nie zostaі stworzony do walki, wiкc nie zapewnia ochrony przed kulami ani przed odіamkami. </text>
+	</string>
+	<string id="ecolog_outfit_name">
+		<text>SSP-99 Ekolog</text>
+	</string>
+	<string id="exo_outfit_description">
+		<text>Prototyp wojskowego egzoszkieletu. Nie rozpoczкto masowej produkcji ze wzglкdu na wysoki koszt i bікdy projektowe. Produkuje siк go jednak w niewielkiej liczbie w maіych, nielegalnych fabrykach poza Ukrain№. To trzecia generacja egzoszkieletu. Wyeliminowano bікdy projektowe, ktуre ograniczaіy swobodк ruchu, a ponadto kombinezon zostaі wzmocniony. Zapewnia њwietn№ ochronк przed kulami i odіamkami oraz sіab№ ochronк przed anomaliami. </text>
+	</string>
+	<string id="exo_outfit_description_m1">
+		<text>Podstawowe urz№dzenie noktowizyjne zast№piono nowoczeњniejszym modelem z cyfrow№ obrуbk№ odebranego sygnaіu.</text>
+	</string>
+	<string id="exo_outfit_name">
+		<text>Egzoszkielet</text>
+	</string>
+	<string id="killer_outfit_description">
+		<text>Kombinezon stalkerуw-najemnikуw. Zaprojektowany w oparciu o kombinezony uїywane w armiach zachodnich przez siіy specjalne. Dziкki specjalnemu przygotowaniu materiaіu kombinezon ten ma zwiкkszon№ trwaіoњж w trakcie ruchu poszczegуlnych pіyt. Wіaњciwoњci ochronne s№ nieznacznie lepsze od tych, ktуre posiadaj№ wojskowe kombinezony kuloodporne PSZ-7.</text>
+	</string>
+	<string id="killer_outfit_description_m1">
+		<text>W podszewkк tej kurtki wszyta jest kolczuga, co zwiкksza ochronк przed atakami broni№ paln№ oraz ugryzieniami. W skіad zestawu wchodzi noktowizor.</text>
+	</string>
+	<string id="killer_outfit_name">
+		<text>Kombinezon najemnikуw</text>
+	</string>
+	<string id="killer_outfit_name_m1">
+		<text>Wzmocniony kombinezon</text>
+	</string>
+	<string id="military_outfit_description">
+		<text>Kuloodporny wojskowy kombinezon Skat-9M zostaі stworzony do operacji szturmowych na terenach, gdzie wykryto anomalie. W jego skіad wchodzi ciкїki wojskowy kombinezon kuloodporny PSZ-12p, zintegrowany kombinezon kompensacyjny oraz heіm Sfera-12M. Zapewnia idealn№ ochronк przed kulami i odіamkami oraz nie ogranicza ruchуw їoіnierza. Posiada zbalansowany system ochrony przed anomaliami.</text>
+	</string>
+	<string id="military_outfit_name">
+		<text>Wojskowy kombinezon pancerny</text>
+	</string>
+	<string id="monolit_outfit_description">
+		<text>Kombinezon stalkerуw z Monolitu. Nie wiadomo, kto go wyprodukowaі. Ochrona, jak№ daje, jest odrobinк sіabsza niї wojskowej kamizelki kuloodpornej PSZ-9a. Z zewn№trz przypomina popularny wњrуd neutralnych stalkerуw kombinezon skіadaj№cy siк z kamizelki kuloodpornej i kombinezonu przeciwpromiennego. Zapewnia dobr№ ochronк przed ostrzaіem. Ma niski poziom ochrony przed anomaliami, gdyї brak w nim systemu filtrowania powietrza.</text>
+	</string>
+	<string id="monolit_outfit_name">
+		<text>Kombinezon Monolitu</text>
+	</string>
+	<string id="novice_outfit_description_m">
+		<text>Tк kurtkк zdjкto z ciaіa jednego ze stalkerуw, ktуrzy zginкli w anomalii zwanej "Galaret№". Leї№c tam przez dіuїszy czas, kurtka ta otrzymaіa umiejкtnoњж przyњpieszania metabolizmu. </text>
+	</string>
+	<string id="novice_outfit_name_m">
+		<text>Anomalia Garbarz</text>
+	</string>
+	<string id="outfit_soldier_description">
+		<text>Zwykіa, gruba kurtka jakich wiele. Daje niewielk№ ochronк przed kulami i odіamkami. Nie chroni przed anomaliami i innymi efektami.</text>
+	</string>
+	<string id="outfit_soldier_name">
+		<text>Kurtka skуrzana</text>
+	</string>
+	<string id="protection_outfit_description">
+		<text>Wysokiej jakoњci ulepszony kombinezon SSP-99. Zapewnia zwiкkszon№ ochronк ciaіa przed kulami i odіamkami. Stworzono go dla straїnikуw ekspedycji badawczych. Zapewnia dobr№ ochronк przed promieniowaniem i anomaliami biologicznymi. Odporny na agresywne chemicznie otoczenie i inne efekty zagraїaj№ce organizmowi.</text>
+	</string>
+	<string id="protection_outfit_name">
+		<text>Kombinezon SSP-99M</text>
+	</string>
+	<string id="scientific_outfit_description">
+		<text>Kombinezon ten wyprodukowano w jednym z instytutуw badawczych w Kijowie i stanowi on њwietn№ alternatywк dla rкcznie robionych kombinezonуw stalkerуw. To њwietne poі№czenie kamizelki kuloodpornej, aparatu tlenowego o obiegu zamkniкtym oraz zintegrowanego systemu tіumienia pуl anomalii. Dziкki њwietnemu doborowi materiaіуw to idealny wybуr - jedyn№ jego wad№ jest cena.</text>
+	</string>
+	<string id="scientific_outfit_name">
+		<text>Kombinezon SEVA</text>
+	</string>
+	<string id="specnaz_outfit_description_m1">
+		<text>Materiaі, z ktуrego wykonany jest kombinezon, zostaі nas№czony pіynem streptozoidalnym, ktуry przyњpiesza gojenie siк ran.</text>
+	</string>
+	<string id="specnaz_outfit_name_m1">
+		<text>Lecz№cy beryl</text>
+	</string>
+	<string id="specops_outfit_description">
+		<text>Kombinezon siі specjalnych Beryl-5M ulepszony na potrzeby Zony. W jego skіad wchodz№ wojskowa kamizelka kuloodporna PSZ-9a pokryta berylem oraz heіm Sfera-08. przeznaczony do operacji szturmowych na terenach o wysokim stкїeniu promieniowania. Niski poziom ochrony przed anomaliami.</text>
+	</string>
+	<string id="specops_outfit_name">
+		<text>Kombinezon Beryl-5M</text>
+	</string>
+	<string id="stalker_outfit_description">
+		<text>Kombinezon stalkerуw stworzony przez "znajomych rzemieњlnikуw". Skuteczne poі№czenie lekkiej wojskowej kamizelki kuloodpornej oraz kombinezonu z gumowanego materiaіu. Wzmocniono go pіytami kevlarowymi, wiкc zapewnia dobr№ ochronк przed sіabym ostrzaіem. Podsumowuj№c - wysoce nieskuteczny do wypadуw i powaїnych operacji przeprowadzanych w gікbi Zony.</text>
+	</string>
+	<string id="stalker_outfit_description_m1">
+		<text>Podobno stalker, zwany Duchem, nigdy nie nosi ze sob№ apteczki. Wszystkie rany goj№ siк u niego w mgnieniu oka. Ludzie mуwi№, їe ma niezwykіy kombinezon, ktуry zdobyі w anomalii.</text>
+	</string>
+	<string id="stalker_outfit_description_m2">
+		<text>Poprzednim wіaњcicielem byі prawdziwy turysta, ktуry - na to wygl№da - czкsto wybieraі siк na piesze wycieczki na granicy ludzkiej wytrzymaіoњci. Doskonale wiedziaі, jak rozdzieliж ciкїar rzeczy, ktуre niуsі oraz co jest najwaїniejsze. Kieszenie kurtki oraz staranny wybуr plecaka pozwalaj№ jego wіaњcicielowi nieњж spory ciкїar.</text>
+	</string>
+	<string id="stalker_outfit_name">
+		<text>Kombinezon stalkera</text>
+	</string>
+	<string id="stalker_outfit_name_m1">
+		<text>Kombinezon Ducha</text>
+	</string>
+	<string id="stalker_outfit_name_m2">
+		<text>Kombinezon turysty</text>
+	</string>
+	<string id="svoboda_heavy_outfit_description">
+		<text>Wzmocniony kombinezon stalkera stworzony przez rusznikarzy z "Wolnoњci". Skіada siк ze њredniociкїkiej wojskowej kamizelki kuloodpornej wzmocnionej elementami cyrkonowymi, ktуre zapewniaj№ dobr№ ochronк przed kulami karabinowymi oraz odіamkami z broni њredniego i dalekiego zasiкgu. Materiaі, z ktуrego wykonany jest kombinezon, ma dwie warstwy: specjaln№ skуrк oraz tkaninк z przкdz№ azbestow№. Kombinezon zapewnia dobr№ ochronк przed promieniowaniem i sіabymi anomaliami.</text>
+	</string>
+	<string id="svoboda_heavy_outfit_name">
+		<text>Straїnik Wolnoњci </text>
+	</string>
+	<string id="svoboda_light_outfit_description">
+		<text>Lekki kombinezon stalkera stworzony przez rusznikarzy z "Wolnoњci". Skіada siк z lekkiej wojskowej kamizelki kuloodpornej wzmocnionej kevlarem. Chroni przed sіab№ broni№. Materiaі, z ktуrego zostaі wykonany, potraktowano specjaln№ mieszank№ zwiкkszaj№c№ odpornoњж na aktywnoњж anomalii.</text>
+	</string>
+	<string id="svoboda_light_outfit_name">
+		<text>Powiew Wolnoњci</text>
+	</string>
+	<string id="mp_exo_outfit_description">
+		<text>Egzoszkielet њwietnie chroni przed kulami i odіamkami, jednak ogranicza swobodк ruchуw. Nie chroni przed nabojami przeciwpancernymi.</text>
+	</string>
+	<string id="mp_exo_outfit_name">
+		<text>Egzoszkielet PNB-4UZ</text>
+	</string>
+	<string id="mp_military_outfit_description">
+		<text>Wojskowy kombinezon kuloodporny stworzony do operacji szturmowych. Wspaniale chroni przed kulami i odіamkami, nie ograniczaj№c swobody ruchуw їoіnierza. Nie chroni przed nabojami przeciwpancernymi.</text>
+	</string>
+	<string id="mp_military_outfit_name">
+		<text>Wojskowy kombinezon kuloodporny</text>
+	</string>
+	<string id="mp_scientific_outfit_description">
+		<text>Ten konkretny kombinezon zostaі stworzony do przeprowadzania badaс w Zonie. Ma aparat tlenowy o obiegu zamkniкtym oraz wbudowany system niwecz№cy dziaіanie pуl anomalii, dziкki czemu idealnie nadaje siк do ochrony przed nimi. Bardzo delikatny i podatny na uszkodzenia. Posiada wbudowany pojemnik do przenoszenia artefaktуw.</text>
+	</string>
+	<string id="mp_scientific_outfit_name">
+		<text>Kombinezon naukowca</text>
+	</string>
+</string_table>

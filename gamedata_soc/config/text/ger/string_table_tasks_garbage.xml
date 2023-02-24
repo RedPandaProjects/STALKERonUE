@@ -1,0 +1,48 @@
+	<string id="gar_car_graveyard_quest">
+		<text>Auf den Hilferuf reagieren.</text>
+	</string>
+	<string id="gar_defend_garbage">
+		<text>Den Banditenüberfall abwehren.</text>
+	</string>
+	<string id="gar_dialog_hellcar">
+		<text>Dem Anführer der neutralen Truppe Hilfe anbieten.</text>
+	</string>
+	<string id="gar_dialog_hellcar_1">
+		<text>Bes Hilfe anbieten.</text>
+	</string>
+	<string id="gar_hellcar_alive">
+		<text>Mit Bes reden.</text>
+	</string>
+	<string id="gar_help_dymon">
+		<text>Den Banditenüberfall abwehren.</text>
+	</string>
+	<string id="gar_help_tunnel_newbie">
+		<text>Den Anfängern bei der Müllhalde helfen.</text>
+	</string>
+	<string id="gar_kill_bandits">
+		<text>Den Banditenüberfall niederschlagen.</text>
+	</string>
+	<string id="gar_kill_boars">
+		<text>Den Wächter-Kontrollpunkt unterstützen.</text>
+	</string>
+	<string id="gar_kill_boars_1">
+		<text>Die Wildschweine töten.</text>
+	</string>
+	<string id="gar_kill_boars_2">
+		<text>Mit dem Wächterkommandant reden.</text>
+	</string>
+	<string id="gar_kill_boars_descr">
+		<text>Wächter: "Hier spricht die Wächterfraktion aus der Müllhalde. Eine Horde von Mutanten bewegt sich aus dem Dunklen Tal zur Bar. Wir versichern jedem, der diesen Abschaum erledigt, dass wir uns erkenntlich zeigen werden. Bei der Ehre der Wächter!"</text>
+	</string>
+	<string id="gar_kill_boars_main">
+		<text>Die Aufgabe besteht darin, zur Bar zu gelangen.</text>
+	</string>
+	<string id="garbage_meet_stalker_1">
+		<text>Von Serij Informationen über Strelok beschaffen.</text>
+	</string>
+	<string id="graveyard_raid_text">
+		<text>Bes: "Der Banditenabschaum versucht die Kontrolle über die Müllhalde zu gewinnen. Vor einer halben Stunde gab es eine Schlägerei, in der wir drei der Verrückten erledigt haben. Der Rest der Bande hat sich zurückgezogen, aber ich habe das Gefühl, dass sie jederzeit mit Verstärkungen anrücken. Wir sind nicht besonders viele und eine zusätzliche Waffe wäre nicht schlecht. Wenn du uns mit deren Verstärkungen hilfst, werden wir uns erkenntlich zeigen."</text>
+	</string>
+	<string id="help_for_neitrals_text">
+		<text>Am verlassenen Schrottplatz gab es eine Schießerei zwischen neutralen Truppen und Banditen. Die Neutralen konnten die Banditen abwehren, haben aber um Hilfe gerufen.</text>
+	</string>

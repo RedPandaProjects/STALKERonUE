@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_factory_krot_start_0">
+		<text>Dнky za pomoc, stalkere! Kdyby ses neukбzal, bylo by po mnм.</text>
+	</string>
+	<string id="agr_factory_krot_start_10001">
+		<text>Shбnнm informace o Stшelci, moћnб o nмиem vнљ?</text>
+	</string>
+	<string id="agr_factory_krot_start_10002">
+		<text>Jak se dostanu do sklepa?</text>
+	</string>
+	<string id="agr_factory_krot_start_15001">
+		<text>Stшelcova tajnб zбsobбrna?</text>
+	</string>
+	<string id="agr_factory_krot_start_15002">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="agr_factory_krot_start_1501">
+		<text>Jo, slyљel jsem o tom. Dokonce se шнkб, ћe v tйhle oblasti "pracoval". Stшelcova zбsobбrna by mмla bэt nмkde v mнstnнm sklepenн. A taky se povнdб, ћe tam mб zбkladnu jeho skupina.</text>
+	</string>
+	<string id="agr_factory_krot_start_1502">
+		<text>Tohle je jeden z mnoha vэchodщ, kterй tм zavedou do propojenэch sklepenн. Jakmile se tam dostaneљ, je to na tobм - mapu nemбm a sнќ sklepenн je obrovskб a pмknм zamotanб.</text>
+	</string>
+	<string id="agr_factory_krot_start_2">
+		<text>Shбnнm informace o Stшelci, Љedivбk mi шekl, ћe o nмm nмco vнљ.</text>
+	</string>
+	<string id="agr_factory_krot_start_30001">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="agr_factory_krot_start_3001">
+		<text>Jo, taky jsme to hledali, ale nenaљli. Poљlu ti nмjakэ data. Vљechno, co o zбsobбrnм mбme.</text>
+	</string>
+	<string id="agr_factory_stalker_about_0">
+		<text>Co se to tady dмje?</text>
+	</string>
+	<string id="agr_factory_stalker_about_1">
+		<text>Bojujeme, nebo spнљ tady sedнme jako terиe na stшelnici. Jestli chceљ vмdмt vнc, zeptej se Krtka, ten je tady љйf.</text>
+	</string>
+	<string id="agr_factory_stalker_start_0">
+		<text>Ty vole, to byl ale boj - nмco takovэho bych nepшбl ani svэmu nejhorљнmu nepшнteli. Ti mizerovй z armбdy zaинnajн bejt pмknм drzн!</text>
+	</string>
+	<string id="agr_krot_about_agroprom_0">
+		<text>Kde je vэzkumnэ institut Agropromu?</text>
+	</string>
+	<string id="agr_krot_about_agroprom_10">
+		<text>Kousek odsud. Jdi po cestм na zбpad a dostaneљ se k branбm institutu.</text>
+	</string>
+	<string id="agr_krot_about_agroprom_100">
+		<text>Prэ tady mб nмkde zбkladnu armбda?</text>
+	</string>
+	<string id="agr_krot_about_agroprom_120">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="agr_krot_about_agroprom_20">
+		<text>Jo, to majн. Nevнm, kolik jich tam je, ale nejmнт jedna иeta. Jsou dobшe vyzbrojenэ a nemбљ љanci se pшes nм dostat. Sundaj tм dшнv, neћ шekneљ иau. Nejlнp se tam dostaneљ v noci, pшes den je to moc hlнdanэ, vљude majн stanoviљtм. Jo a slyљel jsem, ћe ze zбkladny zdrhl jeden vojбk a schovбvб se v baћinбch. Jestli ho dokбћeљ najнt, tak z nмj urиitм nмco zajнmavэho dostaneљ.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_0">
+		<text>Co se dмje?</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_100">
+		<text>Naљli jsme s klukama plac se spoustou artefaktщ, ale ti mrzбci z armбdy na nбs иert vн proи zaъtoиili. Fakt sakra netuљнm, co po nбs chtмjн...</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_200">
+		<text>Jo, slyљel jsem o nмm. Myslнm, ћe v tэhle oblasti "pracoval" - je to docela dobrej flek. Odeљel uћ dбvno, nevнm kdy pшesnм a uћ vщbec netuљнm, kam љel pak. Vнc ti neшeknu.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_2000">
+		<text>Neиekali jste tady jen tak, co? Proи by se tady jinak objevil Specnas??</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_250">
+		<text>Ok, nмco o Stшelci vнm.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_2500">
+		<text>Vбћnм? Musнљ mi vљechno шнct!</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_3500">
+		<text>Jestli jsi mi lhal, najdu si tм a dodмlбm za vojбky rozdмlanou prбci!</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_400">
+		<text>Nelћu. Tady nikdo nikomu nevмшн, takћe stejnм nemбљ moc na vэbмr.</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_100">
+		<text>Љedivбk? Fajn, tak poslouchej. Stшelec to tady prej dшнv prochбzel. Navнc by tu nмkde pod zemн mмla bejt jeho zбsobбrna. Dokonce tady mб moћnб zбkladnu i jeho grupa. Snaћili jsme se tu zбsobбrnu najнt, ale hovno jsme naљli. Dбm ti nмjakэ info o zбsobбrnм, tшeba budeљ mнt vнc љtмstн. Tohle je vљechno, co o tэ skrэљi vнme.</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_2000">
+		<text>Co jeљtм vнљ?</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_250">
+		<text>Nic dalљнho nevнm, uћ jsem ti шekl vљechno a teп musнm makat. Hodnм љtмstн, kбmo.</text>
+	</string>
+	<string id="agr_krot_help_0">
+		<text>Pomoz mi, stalkere!!!</text>
+	</string>
+	<string id="agr_krot_help_10">
+		<text>Ok.</text>
+	</string>
+	<string id="agr_ratcatcher_start_0">
+		<text>Nestшнlej, chlape!</text>
+	</string>
+	<string id="agr_stalker_esc_0">
+		<text>Co to dмlбљ?</text>
+	</string>
+	<string id="agr_stalker_esc_20">
+		<text>Vracнm se z tovбrny, co je kousek dбl po cestм. Nevнm jak, ale armбda se o naљн bandм dozvмdмla. Neиekal jsem, aћ se objevн, a radљi jsem bleskem prбsknul do bot. Doufбm, ћe se z toho chlapi dostali, jinak dlouho nepшeћijou - vљak jsi ty vrtulnнky vidмl.</text>
+	</string>
+	<string id="agr_stalker_esc_300">
+		<text>Aha, dнky.</text>
+	</string>
+	<string id="agr_stalker_esc_400">
+		<text>Aha, dнky.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_0">
+		<text>Mбm pбr otбzek.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_10">
+		<text>Co chceљ vмdмt?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_1000">
+		<text>Je tady v okolн nмco zajнmavйho?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_120">
+		<text>Kolik potшebujeљ?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_130">
+		<text>Na, vezmi si ty prachy. A teп mi шekni, kde ho najdu.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_131">
+		<text>Jdi do prdele!</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_140">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_20">
+		<text>Jo, je tady pбr mнsteиek, ale budeљ se muset podмlit o svэ bohatstvн, kбmo.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_21">
+		<text>Bejvalo to tady docela klidnэ, ale armбda se najednou rozjela a zaиala vљechny kydlit. Nedбvno odsaп vykouшili bandity, prej se nмkolika podaшilo zdrhnout do katakomb.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_30">
+		<text>Tшicet, dohodnuto?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_40">
+		<text>Vэchod z ћelezniиnнho tunelu je kousek odsud. Ve slepэm konci je to tam docela bezpeиnэ. Aspoт tam nikoho pшi spanн nic neseћralo... zatнm. \n Severozбpadnм od tovбrny je baћina, ve kterэ je vagon. Akorбt to kolem zasranм silnм svнtн, takћe tam jdi radљi ze zбpadu. Jo a jeљtм nмco, prej tam nмkdo zahlнdl vojбka. Nejspнљ je z tэ vojenskэ zбkladny v institutu. Asi zmagoшil - je tam uћ pбr dnн. Pochybuju, ћe tam sбm pшeћije.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_9999">
+		<text>Иau!</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_0">
+		<text>Stalo se tady v poslednн dobм nмco zajнmavйho?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1">
+		<text>Vнљ o Krysolapovi? Informace tм budou stбt 30.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_11">
+		<text>Dohodnuto.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_111">
+		<text>Mбme tady mнstnнho hrdinu, co se mu шнkб Krysolap. Ћije v baћinбch. V kolektorech vypмstoval tolik krys, ћe ty svinм armбdnн brzy seћerou.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1111">
+		<text>Skvмlй. Dнky.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1112">
+		<text>Шekni mi nмco vнc o kolektorech.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_11121">
+		<text>Kolektory jsou smradlavэ kanбly plnэ hoven, kterэ odvбdмj odpad z institutu do nejbliћљн vodnн nбdrћe. \n</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_111211">
+		<text>Skvмlй. Mмj se a dej na sebe bacha.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_12">
+		<text>To uћ vнm. Dнky.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_121">
+		<text>Uћ ti nemбm co шнct.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_13">
+		<text>Nemбm dost penмz.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_14">
+		<text>Nemбm zбjem.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_3">
+		<text>Stalo se tady v poslednн dobм nмco zajнmavйho?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_31">
+		<text>Nic. Absolutnм nic.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_311">
+		<text>Aha. Mмj se!</text>
+	</string>
+	<string id="agr_stalker_talk_level_0">
+		<text>Шekni mi nмco o tomhle mнstм.</text>
+	</string>
+	<string id="agr_stalker_talk_level_1">
+		<text>Tohle je oblast kolem vэzkumnэho institutu Agropromu. Institut je jihozбpadnм. Fabrika, kterou Institut pouћнval na vэrobu, je severnм. Budovy uћ jsou dlouho opuљtмnэ a nic tam nenajdeљ, ale nedбvno to tam prolнzala armбda.</text>
+	</string>
+	<string id="agr_stalker_talk_level_2">
+		<text>Шekni mi nмco vнc o institutu.</text>
+	</string>
+	<string id="agr_stalker_talk_level_21">
+		<text>O institutu se vyprбvн spousta historek. Pшed havбrkou v osmdesбtэm љestэm tam byl akorбt institut vэbмru plodin a genetiky. Tam, co teп stojн fabrika, bejvaly experimentбlnн pole. Po havбrce Institut zavшeli a pole spбlili. Pak si na nмj vzpomnмli, nastшнkali barбk vбpnem, natбhli kolem nмj plot a udмlali tam kasбrna. Nevнm, co tam dмlajн, ale majн spousty prachщ.</text>
+	</string>
+	<string id="agr_stalker_talk_level_3">
+		<text>Шekni mi nмco vнc o tovбrnм. </text>
+	</string>
+	<string id="agr_stalker_talk_level_31">
+		<text>Tovбrnu postavili na konci osmdesбtejch let. Prej se mмla pouћнvat na stavмnн a testovбnн strojщ, kterэ by dokбzaly vyиistit zamoшenou pщdu. Co jб vнm, nikdy nikdo nevidмl, ћe by z tэ fabriky nмjakб maљina vyjela. Teп je to ъplnм prбzdnэ, takћe to tam maj stalkeшi rбdi. Prej je to bezpeиnэ, pokud nelezeљ do temnejch koutщ.</text>
+	</string>
+	<string id="agr_stalker_talk_level_4">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_0">
+		<text>Co to dмlбљ?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_10">
+		<text>Schovбvбm se tady. Nestojнm o problйmy.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_100">
+		<text>Pшed kэm se schovбvбљ?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_120">
+		<text>Katakomby?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_130">
+		<text>Nevнљ nбhodou, kde majн v institutu schovanй dokumenty?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_140">
+		<text>Co budeљ dмlat teп?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_141">
+		<text>Co budeљ dмlat teп?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_20">
+		<text>Jsem z prщzkumnэ jednotky. Poslali nбs do katakomb, podнvat se, co je pod zбkladnou. Vole, tam dole je to fakt peklo. Dostal jsem se odtamtud akorбt jб... vљichni ostatnн uћ jsou mrtvн. Nechci se vrбtit na zбkladnu - ti sviтбci nбs vћdycky pouћнvajн na zacpбvбnн nejhorљнch dмr v Zуnм.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_30">
+		<text>Podzemnн tunely. Vedou z institutu do okolн - ukбћu ti vstupy. Ale mapu katakomb nemбm.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_40">
+		<text>Na velitelstvн. Tшetн patro institutu. Tam majн ty svoje zatracenэ papнry. Ale dostat se tam bude fuљka.\nPшes den je to tam samб patrola, ale v noci se to trochu zklidnн. Tohle ti шeknu zadarmo: jestli se tam chceљ dostat, musнљ pшes katakomby, u brбny nemбљ љanci.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_50">
+		<text>Hmm. Nevнm. Podle vojenskэch zбkonщ jsem dezertйr a potшebuju se nмjak dostat ze Zуny. \n Kdyћ jsme sem dorazili, byl v garбћi Zбporoћec, kterэ skoro fungoval. Dal jsem ho dohromady za pщl hodiny, ale zatracenэ kapitбn si ho vzal pro sebe, prэ pшesnм podle vojenskэho шбdu. Jezdil s nнm tady kolem a vrazil s nнm do vlaku u brбny. Kdybych se k tэ kбшe jen tak dostal - zdrhalo by se mi mnohem snбz!</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0">
+		<text>Nazdar.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01">
+		<text>Co novйho?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_011">
+		<text>Шekni mi nмco o kolektoru. Jak se dostanu dovnitш? Kde jsou vэchody?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0111">
+		<text>V kolektoru je to nebezpeиnэ. Vede do nмj љest vstupщ, dva z nich jsou u institutu, kde mб armбda zбkladnu. Hlнdkujн tam a jejich kapitбn mб poшбd pшipravenou ъdernou иetu.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01111">
+		<text>Jak to vљechno vнљ?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_011111">
+		<text>Шekly mi to krysy.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0111111">
+		<text>Aha. Mмj se! Hodnм љtмstн.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_012">
+		<text>Nic. Mмj se.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_013">
+		<text>Kdo jsi?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0134">
+		<text>Ћiju tady, pokud se tomu dб шнkat ћivot. Chovбm v kolektoru krysy a seru s tнm vojбky v institutu.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0135">
+		<text>Jsem Krysolap.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01351">
+		<text>Co tady v baћinм dмlбљ?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_123">
+		<text>Oh... chбpu... no, jб jsem z jinэho pшнbмhu. Ha-ha-ha...</text>
+	</string>
+</string_table>

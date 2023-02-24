@@ -1,0 +1,72 @@
+	<string id="bar_darklab_documents">
+		<text>Die Dokumente im unterirdischen Labor finden.</text>
+	</string>
+	<string id="bar_darklab_documents_1">
+		<text>Borow den Schlüssel zum Labor abnehmen.</text>
+	</string>
+	<string id="bar_darklab_documents_2">
+		<text>Aus dem Banditenlager verschwinden.</text>
+	</string>
+	<string id="bar_darklab_documents_3">
+		<text>Den Eingang ins Labor finden.</text>
+	</string>
+	<string id="bar_darklab_documents_4">
+		<text>In das Lager einschleichen.</text>
+	</string>
+	<string id="bar_darklab_documents2">
+		<text>Die Dokumente in X18 finden.</text>
+	</string>
+	<string id="bar_darklab_documents2_1">
+		<text>Die Dokumente finden.</text>
+	</string>
+	<string id="bar_darklab_documents2_2">
+		<text>Die Dokumente zum Wirt bringen.</text>
+	</string>
+	<string id="dar_codedoor_1">
+		<text>Die Tür finden, die mit einem Code gesichert ist.</text>
+	</string>
+	<string id="dar_codedoor_1_1">
+		<text>Den Code finden, der die Tür öffnet.</text>
+	</string>
+	<string id="dar_codedoor_1_2">
+		<text>Die Tür mit dem Code öffnen.</text>
+	</string>
+	<string id="dar_codedoor_2">
+		<text>Die Tür zum Kontrollzentrum öffnen.</text>
+	</string>
+	<string id="dar_codedoor_2_1">
+		<text>Den Code finden, der die Tür öffnet.</text>
+	</string>
+	<string id="dar_codedoor_2_2">
+		<text>Die Tür mit dem Code öffnen.</text>
+	</string>
+	<string id="val_captive_help">
+		<text>Den Wächter befreien.</text>
+	</string>
+	<string id="val_captive_help_1">
+		<text>Bullet zum Ort des Hinterhalts folgen.</text>
+	</string>
+	<string id="val_captive_help_2">
+		<text>Die Banditen töten und den Wächter befreien.</text>
+	</string>
+	<string id="val_come_to_trader">
+		<text>Zum Händler zurückkehren.</text>
+	</string>
+	<string id="val_come_to_trader_0">
+		<text>Zum Händler zurückkehren.</text>
+	</string>
+	<string id="val_come_to_trader_1">
+		<text>Das dunkle Tal verlassen.</text>
+	</string>
+	<string id="val_come_to_trader_2">
+		<text>Dem Händler die Dokumente zeigen.</text>
+	</string>
+	<string id="val_prisoner_help">
+		<text>Den Wächter aus dem Gefängnis befreien.</text>
+	</string>
+	<string id="val_prisoner_help_0">
+		<text>Den Wächter aus dem Gefängnis der Banditen befreien.</text>
+	</string>
+	<string id="val_prisoner_help_main">
+		<text>Den Wächter aus dem Gefängnis der Banditen befreien.</text>
+	</string>

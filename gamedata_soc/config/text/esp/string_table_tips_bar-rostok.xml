@@ -1,0 +1,144 @@
+	<string id="bar_arena_actor_afraid">
+		<text>¡Se suspende el combate! ¡El adversario se ha rajado y no ha aparecido!</text>
+	</string>
+	<string id="bar_arena_fight_10">
+		<text>¡Han pasado 10 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_20">
+		<text>¡Han pasado 20 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_30">
+		<text>¡Han pasado 30 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_40">
+		<text>¡Han pasado 40 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_50">
+		<text>¡Han pasado 50 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_60">
+		<text>¡1 minuto de combate!</text>
+	</string>
+	<string id="bar_arena_fight_70">
+		<text>¡Ha pasado 1 minuto y 10 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_80">
+		<text>¡Ha pasado 1 minuto y 20 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_90">
+		<text>¡Ha pasado 1 minuto y 30 segundos!</text>
+	</string>
+	<string id="bar_arena_fight_begin">
+		<text>¡Comienza el combate!</text>
+	</string>
+	<string id="bar_arena_fight_bloodsucker">
+		<text>¡Atención! ¡Atención! ¡Se va a librar un nuevo combate en el campo de batalla! ¡En el rincón izquierdo, la más terrible pesadilla de la Zona: el insaciable Chupasangre! Y en el rincón derecho... ¿Un hombre? ¡Sí, es un hombre! ¡Un aplauso para Marcado!</text>
+	</string>
+	<string id="bar_arena_fight_burer">
+		<text>¡Atención! ¡Atención! ¡Se va a librar un nuevo combate en el campo de batalla! ¡En el rincón izquierdo, el maestro de kung-fu y doblador de cucharas, Burer! ¡Y en el rincón derecho, el hombre que siempre está en el punto de mira! ¡Marcado!</text>
+	</string>
+	<string id="bar_arena_fight_dead">
+		<text>¡Vaya, el competidor ha muerto! ¡Esto sí que es una sorpresa!</text>
+	</string>
+	<string id="bar_arena_fight_lose">
+		<text>Bueno, el competidor mató a su adversario, pero no lo hizo a tiempo. ¡Pierde la pelea!</text>
+	</string>
+	<string id="bar_arena_fight_pseudodog">
+		<text>¡Atención! ¡Atención! Se va a librar un nuevo combate en el campo de batalla. En el rincón izquierdo, blanco, peludo y muy cabreado: ¡el Pseudoperro! Y en el rincón derecho: vino desde ninguna parte y allí es precisamente donde se dirige. ¡Le llaman el Marcado!</text>
+	</string>
+	<string id="bar_arena_fight_savage">
+		<text>¡Atención! ¡Atención! Se va a librar un nuevo combate en el campo de batalla. En el rincón izquierdo: la conocéis, la amáis y ella también os odia. ¡La Bestia! En el rincón derecho: vivito y coleando, al menos por ahora, ¡el Marcado!</text>
+	</string>
+	<string id="bar_arena_fight_snork">
+		<text>¡Atención! ¡Atención! ¡Se va a librar un nuevo combate en el campo de batalla! En el rincón izquierdo: el gurú de las artes marciales y especialista en salud, ¡Snork! En el rincón derecho: el hombre sin pasado ni futuro. ¡Le llaman el Marcado!</text>
+	</string>
+	<string id="bar_arena_fight_timeout">
+		<text>¡Se acabó el tiempo! El competidor ha perdido, pero aún está luchando por salvar su vida.</text>
+	</string>
+	<string id="bar_arena_fight_victory">
+		<text>¡Eh! ¡El competidor ha matado a su adversario a tiempo! ¡Él gana!</text>
+	</string>
+	<string id="bar_ecolog_attack">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="bar_ecolog_crush_attract_actor">
+		<text>No te vayas, amigo. ¡Ayúdanos! Los anarquistas han derribado nuestro helicóptero y ahora vienen para acabar con nosotros. ¡Tenemos heridos! ¡Necesitamos ayuda!</text>
+	</string>
+	<string id="bar_ecolog_crush_heli_down">
+		<text>¡Ja! ¿Dónde está vuestro helicóptero ahora, ratas del Gobierno? ¡Se os ha acabado el tiempo!</text>
+	</string>
+	<string id="bar_ecolog_crush_start_heli">
+		<text>Esta vez lo has conseguido, Wolfhound. Viene de camino un helicóptero militar. ¡Te van a hacer picadillo!</text>
+	</string>
+	<string id="bar_ecolog_escape">
+		<text>¡Kruglov ha escapado! ¡Hay que encontrarlo! ¡No puede andar lejos!</text>
+	</string>
+	<string id="bar_ecolog_hit">
+		<text>¡Ayúdame, Marcado! ¡¡Me están matando!!</text>
+	</string>
+	<string id="bar_ecolog_spam_1">
+		<text>¡Sigue soñando, perro! Vuelve al cole antes de ponerte a dar ultimátums.</text>
+	</string>
+	<string id="bar_ecolog_spam_2">
+		<text>No ataquéis o destruiré los datos. ¡No conseguiréis nada!</text>
+	</string>
+	<string id="bar_ecolog_spam_3">
+		<text>¡Destruiré los materiales de la investigación si alguien se acerca!</text>
+	</string>
+	<string id="bar_ecolog_spam_4">
+		<text>Coge a tus perros, Wolfhound, y lárgate de aquí ahora que todavía puedes andar.</text>
+	</string>
+	<string id="bar_freedom_attack">
+		<text>Basta de cháchara. ¡Que empiece la masacre!</text>
+	</string>
+	<string id="bar_freedom_attack_attract_actor">
+		<text>¡Eh, tío, ven aquí! Podemos acabar con esas ratas del Gobierno juntos.</text>
+	</string>
+	<string id="bar_freedom_attack_spy">
+		<text>¡Desgraciado! Pagarás por esto. Que no se te olvide, Marcado.</text>
+	</string>
+	<string id="bar_freedom_chase">
+		<text>¡¿Nos siguen?! ¡Marcado, tienes que detenerlos!</text>
+	</string>
+	<string id="bar_freedom_spam_1">
+		<text>Creía que vosotros, los científicos, erais inteligentes. Te lo voy a poner muy fácil: o me entregas los documentos o sales de aquí en una bolsa de plástico.</text>
+	</string>
+	<string id="bar_freedom_spam_2">
+		<text>No sé hablar latín, Kruglov, pero hablo muy bien el idioma de la violencia. ¿Quieres que lo hable o vas a darme la información que necesito?</text>
+	</string>
+	<string id="bar_freedom_spam_3">
+		<text>Eres un hombre inteligente, profesor. ¡Dame la información y podrás largarte!</text>
+	</string>
+	<string id="bar_freedom_spam_4">
+		<text>No lo entiendes, ¿verdad, Kruglov? Derribamos tu estúpido helicóptero y necesitamos la información que tienes. Dánosla y puedes coger a tus amigos y largaros de aquí. Es tu última oportunidad. ¡Entrégame la unidad de información, y largo!</text>
+	</string>
+	<string id="bar_psih_come">
+		<text>¡Aquí, rápido! Mis hombres han cogido a un stalker loco cerca del Bosque Rojo. ¡Ahora mismo estamos intentando sonsacarle información!</text>
+	</string>
+	<string id="bar_territory_dolg_1_hit">
+		<text>¿Estás loco, Marcado? ¡Deja de disparar AHORA MISMO! ¡Es una orden!</text>
+	</string>
+	<string id="bar_territory_dolg_2_hit">
+		<text>¡Deja de disparar AHORA MISMO, Marcado! ¡Haz lo que te digo o eres hombre muerto!</text>
+	</string>
+	<string id="bar_territory_dolg_3_hit">
+		<text>Estás expulsado del grupo por violar el código, Marcado. Ya no tienes amigos en Deber.</text>
+	</string>
+	<string id="bar_territory_dolg_kill">
+		<text>Marcado, has desobedecido una orden directa. Deber no perdona este tipo de cosas. ¡Eres hombre muerto!</text>
+	</string>
+	<string id="bar_territory_nodolg_1_hit">
+		<text>¡Deja de disparar! ¡No se dispara en territorio de Deber! ¡Los que violan las reglas deben ser castigados!</text>
+	</string>
+	<string id="bar_territory_nodolg_2_hit">
+		<text>¡Atención! El Marcado es un criminal: ha violado la ley y ha disparado dentro del territorio de Deber.</text>
+	</string>
+	<string id="bar_territory_nodolg_kill">
+		<text>¡Atención! Hay un asesino en el territorio de Deber. ¡Hay que encontrarlo y matarlo!</text>
+	</string>
+	<string id="rostok_kruglov_spam_1">
+		<text>¡Stalker, socorro! Los mercenarios nos han atacado y la mitad del equipo ha muerto. Ayúdanos y no te arrepentirás.</text>
+	</string>
+	<string id="rostok_kruglov_spam_2">
+		<text>Ayúdanos a rechazar la emboscada cerca de la fábrica. Te he enviado las coordenadas. Ten cuidado, Wolfhound y sus matones están cerca del helicóptero.</text>
+	</string>

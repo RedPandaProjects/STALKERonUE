@@ -1,0 +1,48 @@
+	<string id="agr_find_ghost_descr">
+		<text>Habe herausgefunden, dass einer von Streloks Leuten Ghost genannt wird. Wenigstens ein kleiner Hinweis. Wenn ich Ghost finden kann, finde ich auch Strelok.</text>
+	</string>
+	<string id="agr_journal_cache">
+		<text>Es scheint, als hätte mir das Versteck eine neue Richtung gewiesen. Ich habe ein Laufwerk gefunden, auf dem etwas gespeichert ist, das wie ein Tagebuch aussieht, das von Streloks Gruppe genutzt wurde. Es gab nur wenige Einträge, doch ich habe herausgefunden, dass die Gruppe noch zwei Mitglieder hat: Ghost und Fang. Im Tagebuch wurde auch ein "gemeinsamer Freund" erwähnt, aber ich weiß nicht, ob er zur Gruppe gehörte. Er hat ihnen auf jeden Fall geholfen, so viel ist sicher. Im Eintrag von Ghost steht, dass Fang starb, als sie in einen Hinterhalt gerieten. Endlich habe ich den Namen von jemandem, der Strelok kennt: Ghost. Strelok selbst könnte sich im Norden der Zone aufhalten.</text>
+	</string>
+	<string id="agr_journal_krot">
+		<text>Das Treffen mit dem Maulwurf hat sich bezahlt gemacht. Die Gruppe scheint es tatsächlich zu geben, ihr Versteck soll sich in den Katakomben unter dem Institut befinden. Ich muss dorthin. Ich weiß nicht, was ich dort finden werde, aber ich hoffe, dass mir das Versteck dabei hilft, mein Geheimnis zu lüften ...</text>
+	</string>
+	<string id="agr_krot_secret_info">
+		<text>... Folge der Wendeltreppe nach unten in den Raum mit den Säulen. Geh durch den Raum auf den Ausgang zu und betritt den großen Raum mit den Rohren an der Decke. Geh zum zweiten Ausgang, betritt den Tunnel und halt dich links. Am Ende ist eine Biegung nach rechts. Begib dich direkt zum Ausgang des kleinen Raums und bieg rechts ab. Sieh nach einem Loch in der linken Wand, direkt neben den Worten: 'Nicht betreten - Lebensgefahr". Das ist der Eingang zu Streloks Versteck.</text>
+	</string>
+	<string id="agr_krot_secret_info_name">
+		<text>Streloks Versteck</text>
+	</string>
+	<string id="agr_military_case">
+		<text>\nUntersuchungsbericht.\n Nur für den offiziellen Gebrauch.\n An SBU Oberst W.M. Krutschelnikow, Leiter des Projekts "WAHR".\n Von Hauptmann D.F. Maksimjenko, \nKommandant der "Suche-2".\n\n Memorandum.\n In dem Zeitraum vom 12.05.2012 - 25.05.2012 untersuchte unsere Gruppe Agroprom, das ehemalige Forschungsinstitut für Landwirtschaft auf strahlenbelastetem Boden. Doch das Wenige, das wir zu bergen in der Lage waren, bringt uns zu folgender Schlussfolgerung: In den Jahren 2005 bis 2008 betrieb das Institut keinerlei Forschung in seinem offiziellen Betätigungsfeld. Alle Berichte über geleistete Arbeit an das Landwirtschaftsministerium waren gefälscht. Gleichzeitig empfing die Leitung des Instituts, besonders P.D Strisch, weiterhin öffentliche Gelder, die an ein Labor mit der Kennzeichnung X18 weitergeleitet wurden unter Verwendung gefälschter Papiere, in denen als Tarnung für die Operation angegeben wurde, dass eben jene Materialien für Experimente in einer Hilfseinrichtung bestimmt seien. Bei X18 scheint es sich um einen Codenamen zu handeln, da in unserer Datenbank kein Eintrag über dieses Labor existiert. Der Analyse der Dokumente zufolge liegt das Labor etwa eine Autostunde vom Institut entfernt. Da es sich offensichtlich um eine geheime Einrichtung handelt, ist die Beteiligung der analytischen Abteilung erforderlich. Das Forschungsfeld des Labors ist derzeit noch unbekannt und auch die verfügbaren Dokumente geben darüber keinen Aufschluss, nehmen jedoch Bezug auf den berüchtigten Professor Tschubko und erwähnen obendrein eine "Gruppe". Es ist meine Überzeugung, dass von unserer Seite aus nichts mehr getan werden kann und die Arbeit nun der analytischen Abteilung überlassen werden muss.\n\n Als Anlagen finden Sie eine Archivakte mit den Frachtpapieren für diverse Konsumgüter und Ausrüstungsgegenstände, die zu einer Hilfseinrichtung transferiert wurden, sowie einen Auszug aus der Korrespondenz zwischen Strisch und Tschubko.\n Hauptmann D.F. Maksimjenko, 26.05.2012\n An Professor W.M. Tschubko. Von P.D. Strisch, Leiter des Agroprom, Lieber Wadim Michailowitsch, wie vereinbart übersende ich die nächste Ladung Güter an unsere experimentelle Einrichtung für deine Forschung, die für die Landwirtschaft unersetzlich ist. Ich habe die Finanzierung für die Experimente gesichert, indem ich sie als Pilotprojekt für die Feldstudien des Instituts ausgegeben habe. Mit dem Ministerium werden wir also keine Schwierigkeiten haben. Ich bin noch immer zutiefst beeindruckt von dem, was du mir bei unserem letzten Treffen gezeigt hast. Dr. P.D. Strisch An P.D. Strisch Bitte sei dir meiner aufrichtigen Dankbarkeit gewiss, wir haben alles erhalten. Mein Team ist extrem beeindruckt von deinem Spektroskop. Ohne deine Hilfe würde ich Jahre brauchen, um dieses Modell über meine eigenen Kanäle zu beziehen. Natürlich wird das Landwirtschaftsministerium sehr zufrieden sein, wenn man dort UNSERE Ergebnisse bekommt! Die Experimente schreiten gut voran, und die Sachen, die du beim letzten Mal gesehen hast, sind nichts im Vergleich zu unseren aktuellen Errungenschaften. Du solltest uns öfter besuchen. Ich freue mich immer, dich zu sehen, und schließlich ist es nur eine Stunde Fahrtzeit zu unserer, "experimentellen Einrichtung". Ich habe Neuigkeiten für dich. Nächsten Montag werde ich deine Kandidatur mir der Gruppe besprechen. Ich denke, dass ich Unterstützung erhalten werde. Aufrichtige Grüße, Professor W.M. Tschubko.      An Professor W.M. Tschubko. Von P.D. Strisch,  Dr. der Agrarwissenschaften, ich danke dir für dein Vertrauen. Ich bin gerührt und werde mich bemühen, dich nicht zu enttäuschen. Es ist der Traum eines jeden Wissenschaftlers, an einem solchen Experiment teilzunehmen, und ich wäre entzückt, in der Gruppe aufgenommen zu werden. Aufrichtige Grüße, P.D. Strisch P.S.: Ich war in der Lage, zwei der Oszilloskope vom Ministerium zu bekommen und werde sie dir bei der nächstmöglichen Gelegenheit schicken.</text>
+	</string>
+	<string id="agr_military_case_name">
+		<text>Untersuchungsbericht</text>
+	</string>
+	<string id="agr_nii_security_plan">
+		<text>In dieser Übersicht befinden sich alle Patrouillen, Wachposten und Wachtürme. Das Hauptquartier ist im zweiten Stock des Instituts. Dort werden die Dokumente aufbewahrt. Tagsüber wimmelt das Gebiet von Patrouillen. Nachts ist weniger los und um 23:00 Uhr haben die Wachen Feierabend. Zu dieser Zeit sind nur wenige Leute im Gebäude. Wenn du in die Basis eindringen willst, solltest du durch die Katakomben gehen, das Tor ist keine Option.</text>
+	</string>
+	<string id="agr_nii_security_plan_name">
+		<text>Wachaufstellung des Agroprom-Forschungsinstituts</text>
+	</string>
+	<string id="agr_rats_n_soldiers_text">
+		<text>Die Soldaten sind angewidert von den Ratten, die aus den Sammlern klettern. Zur Strafe werden Soldaten in die Sammler geschickt.</text>
+	</string>
+	<string id="agr_task_case">
+		<text>Händler: "Bring die Aktentasche aus dem Institut direkt zum Wirt, sobald du sie hast. Er betreibt das "100 Rad", die Stalker-Bar. Du findest sie auf dem Gelände der ehemaligen Fabrik in Rostok."</text>
+	</string>
+	<string id="article_agr_krot_sos">
+		<text>SOS, die Armee tötet einen Stalker! Leute, wenn ihr mich hören könnt, ich brauch Hilfe!</text>
+	</string>
+	<string id="article_agr_krot_sos_name">
+		<text>Treffen mit dem Maulwurf</text>
+	</string>
+	<string id="article_agr_krot_sos1">
+		<text>Maulwurf: "Hilfe, ich werde abgeschlachtet!"</text>
+	</string>
+	<string id="st_operation_agroprom">
+		<text>Der Agroprom-Einsatz</text>
+	</string>
+	<string id="storyline_gunslinger_flash_info">
+		<text>Nachricht von Ghost: \n \n Strelok, ich habe ziemlich schlechte Neuigkeiten: Fang ist tot. Sie haben im Dorf bei den Lagerhäusern auf uns gelauert. Sie warteten dort wohl schon eine ganze Weile. Drei Stück von ihnen. Wirkten wie gewöhnliche Neutrale. Aber Fang hat es irgendwie geahnt. Du kennst seinen guten Spürsinn ja. Zwei von ihnen haben wir erledigt - eindeutig Banditen - aber der dritte war gerissener als seine Kumpels. Er wartete in 100 Metern Entfernung mit seinem "Vintar". Fang hat es nicht geschafft. Beim nächsten Mal gehen wir also gemeinsam zum Zentrum, nur wir beide. Und noch etwas: die Typen hatten eine Beschreibung von uns. Ich kann aber nicht sagen, wer uns tot sehen will, obwohl es da einige Leute gibt, denen wir ein Dorn im Auge sind. Der Dritte ist mir entwischt, müsste ein Söldner gewesen sein. Er hatte eine große Narbe im Gesicht und braune Augen. Ich versuche, ihn zu finden. \n Das war's so weit. Halte die Augen offen und viel Glück. \n Ghost \n \n Nachricht an Ghost: \n\n"Hey Kumpel. \n Ich hinterlasse dir ein paar Infos und vermeide jegliche Verbindung, irgendjemand verfolgt mich. \n Mann, ich bin nach Norden gegangen ... wo wir schon mal waren ... Versuche mich alleine durchzuschlagen ... Tut mir Leid, aber ich konnte nicht mehr auf dich warten ... Ich erklär's dir später. \n Der Typ, der Fang umgebracht hat, wird es bereuen, je geboren worden zu sein ... Ich zerlege ihn in seine Einzelteile ... Bin bald zurück! Finde du heraus, wer der Typ ist, dann kümmern wir uns um ihn. \n Wir treffen uns dann bei unserem gemeinsamen Freund. Du weißt schon, wer gemeint ist :) \n Viel Glück. \n Strelok" \n \n Nachricht an Strelok: \n \n "Hey. Ich war dort, aber du nicht. Du hättest nicht alleine zum Zentrum gehen sollen. Ist aber kein großes Problem. Ich weiß, wo und bei wem ich dich finden werde :) \n Ghost"</text>
+	</string>

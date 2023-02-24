@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_break_dialog_0">
+		<text>Mмj se!</text>
+	</string>
+	<string id="actor_help_wounded_0">
+		<text>Seљ v poшбdku?</text>
+	</string>
+	<string id="actor_help_wounded_1">
+		<text>Dostal jsem to, sakra, copak nevidнљ? Potшebuju lйkбrniиku, nebo aspoт obvaz.</text>
+	</string>
+	<string id="actor_help_wounded_11">
+		<text>Na, vem si tuhle lйkбrniиku.</text>
+	</string>
+	<string id="actor_help_wounded_111">
+		<text>Dнky brбcho, to ti nezapomenu.</text>
+	</string>
+	<string id="actor_help_wounded_12">
+		<text>Na, vem si tenhle obvaz.</text>
+	</string>
+	<string id="actor_help_wounded_13">
+		<text>Sorry, nic u sebe nemбm.</text>
+	</string>
+	<string id="actor_help_wounded_131">
+		<text>Jak to potom v Zуnм zvlбdбљ? Co dмlбљ, kdyћ se nмkde zranнљ? Dyќ se ani nemщћeљ vylйиit! </text>
+	</string>
+	<string id="actor_help_wounded_14">
+		<text>Heh, smщla, vole. Sorry, ale kdybych ti dal svэ vybavenн, nezщstane nic pro mм. </text>
+	</string>
+	<string id="actor_help_wounded_141">
+		<text>To je tvoje vмc, kбmo, ale na dobrэ povмsti ti to moc nepшidб.</text>
+	</string>
+	<string id="hello_dialog_2">
+		<text>Hej!</text>
+	</string>
+	<string id="hello_dialog_3">
+		<text>Pomщћeљ mi, kбmo, co ty na to?</text>
+	</string>
+</string_table>

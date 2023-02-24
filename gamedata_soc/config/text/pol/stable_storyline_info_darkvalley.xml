@@ -1,0 +1,75 @@
+	<string id="bar_darklab_documents_txt">
+		<text>Barman: "Z dokumentów, które przynios³eœ z Agropromu wynika, ¿e sytuacja zaczyna siê polepszaæ, ale ci¹gle brakuje niektórych danych. Mamy dowody na obecnoœæ jakiegoœ Mózgozwêglacza, który blokuje drogê na pó³noc - jednak nikt nie wie dok³adnie, co to jest. Jest tam równie¿ wzmianka o laboratorium X18, którego opis pasuje do opisu opuszczonych podziemnych konstrukcji w Dolinie Mroku. Nie wiemy, co tam siê teraz dzieje, a poza tym bandyci rozbili obóz w Dolinie Mroku.\n Ca³kiem niedawno wybra³o siê tam kilku zwiadowców "Powinnoœci", ale jak dot¹d nie dali znaku ¿ycia. \n ¯eby dostaæ siê do laboratorium, potrzeba dwóch kluczy elektronicznych - jeden dostaniesz ode mnie, ale drugi bêdziesz musia³ zdobyæ od Dzika, przywódcy bandytów. \n\n Czyli tak: musisz zabraæ Dzikowi drugi klucz do laboratorium, potem wkraœæ siê do œrodka i zdobyæ dokumenty".</text>
+	</string>
+	<string id="bar_darklab_documents2_txt">
+		<text>Koniecznie trzeba znaleŸæ dokumenty dotycz¹ce badañ przeprowadzanych w laboratorium X18. Rozjaœni¹ trochê sprawê Mózgozwêglacza.</text>
+	</string>
+	<string id="dar_codedoor_1_txt">
+		<text>Drogi w g³¹b laboratorium strze¿e zamek szyfrowy. Musisz znaleŸæ kogoœ, kto zna szyfr. </text>
+	</string>
+	<string id="dar_codedoor_2_txt">
+		<text>S¹ jeszcze inne drzwi, za którymi na pewno kryje siê coœ wa¿nego. Musisz odkryæ kod, dziêki któremu je otworzysz. </text>
+	</string>
+	<string id="dar_document1">
+		<text>Pocz¹tek eksperymentu</text>
+	</string>
+	<string id="dar_document2">
+		<text>Drugi etap eksperymentu</text>
+	</string>
+	<string id="dar_document3">
+		<text>Raport ochrony</text>
+	</string>
+	<string id="dar_document4">
+		<text>Atak na personel</text>
+	</string>
+	<string id="dar_document5">
+		<text>Ostatni etap eksperymentu</text>
+	</string>
+	<string id="documents_1">
+		<text>Tydzieñ temu zdecydowano siê zwiêkszyæ nasilenie promieniowania, któremu poddawani s¹ badani. Przez pierwsze kilka dni nie dostrze¿ono ¿adnych zmian. Natomiast póŸniej zaczê³y siê pojawiaæ dziwne zmiany: utrata w³osów, zwiêkszona agresja. Kilku badanych zosta³o dos³ownie zadeptanych przez pozosta³ych.</text>
+	</string>
+	<string id="documents_2">
+		<text>Stan badanych uleg³ stabilizacji. Iloœæ w³osów stanowi teraz 10% iloœci pocz¹tkowej. Znacznie uros³y im pazury i zêby. W okresach aktywnoœci mo¿na zaobserwowaæ pozornie przypadkowe dzia³ania, które nie s¹ wymierzone w innych badanych. Starszy laborant A.N. Burnow przypuszcza, ¿e mo¿e to wskazywaæ na rozwój intelektualny badanych. Postanowiono przetestowaæ na nich nowy rodzaj emisji psionicznych.</text>
+	</string>
+	<string id="documents_3">
+		<text>Szef Ochrony: Wczoraj stra¿nik G.P. Glebow dla zabawy rzuci³ badanym kawa³ek miêsa. Rozerwali go na czêœci i po¿arli w kilka sekund. Nastêpnie kilku z nich usi³owa³o siê wydostaæ z cel, przez co laboranci nie byli w stanie uzyskaæ niezbêdnych próbek. Choæ dzia³anie G.P. Glebow by³o nierozwa¿ne, proponujê, ¿eby pracownicy utrzymuj¹cy tu porz¹dek zostali wyposa¿eni w broñ pneumatyczn¹, dziêki której bêd¹ mogli siê broniæ w razie nag³ego wypadku.</text>
+	</string>
+	<string id="documents_4">
+		<text>Szef Ochrony: Wczorajszy eksperyment niemal wymkn¹³ siê spod kontroli. Ponad dwudziestu badanych wydosta³o siê z cel i zdewastowa³o dwa pomieszczenia laboratoryjne. Na szczêœcie pracownikom prowadz¹cym badania uda³o siê zamkn¹æ na górze. Nakazano nam oczyœciæ g³ówne pomieszczenie laboratoryjne. W trakcie dzia³añ pogryzieni zostali trzej stra¿nicy. Mam nadziejê, ¿e nic im nie bêdzie. Chcia³bym, ¿eby eksperyment wkrótce dobieg³ koñca.</text>
+	</string>
+	<string id="documents_5">
+		<text>Wczoraj badani zostali poddani dzia³aniu nowego rodzaju emisji psionicznej. Wygl¹da³o to tak, jakby ich mózgi siê usma¿y³y. Ciê¿ko mi sobie wyobraziæ, jakie skutki mia³aby ta emisja na ludziach. Przetestowaliœmy ju¿ wszystkie rodzaje emisji i wyniki badañ pokrywaj¹ siê z tymi, które uzyskano w innych laboratoriach. Eksperyment mo¿na uznaæ za zakoñczony. Prawdopodobnie za tydzieñ bêdziemy w stanie przeprowadziæ eksperyment na wiêkszych stworzeniach.</text>
+	</string>
+	<string id="LabX18 first key">
+		<text>Kod dostêpu na drugi poziom</text>
+	</string>
+	<string id="LabX18 second key">
+		<text>Kod dostêpu na pierwszy poziom</text>
+	</string>
+	<string id="LabX18_information">
+		<text>Informacje z X18</text>
+	</string>
+	<string id="pass_to_1st_door">
+		<text>Wspaniale, szanowny kolego. Cieszê siê, ¿e uzyska³eœ dostêp do poziomu drugiego. Wreszcie dowiesz siê, co robimy w naszym laboratorium. Twój kod dostêpu to 1243. Dyrektor laboratorium X18, Piotr Iljicz Ka³ugin.</text>
+	</string>
+	<string id="pass_to_2nd_door">
+		<text>Szanowny kolego, chcia³bym ci przypomnieæ, ¿e od jutra bêdziesz siê zajmowaæ pojemnikami w g³ównym pomieszczeniu laboratoryjnym. Pojemniki nale¿y sprawdzaæ co dwie godziny. Raporty sk³adaj bezpoœrednio u mnie. Kod do g³ównego pomieszczenia laboratoryjnego to 9524. Dyrektor laboratorium X18, Piotr Iljicz Ka³ugin.</text>
+	</string>
+	<string id="sl_x18_dream_name">
+		<text>Dziwny sen</text>
+	</string>
+	<string id="sl_x18_dream_text">
+		<text>Mia³em dziwny sen. Z pó³mroku wy³ania siê olbrzymia elektrownia w Czarnobylu. Wszystko wydaje siê spokojne. Pojawia siê samotnie id¹cy cz³owiek. Widzê jego plecy, a w tle elektrowniê. Zrywa siê wiatr. Nagle z elektrowni zaczynaj¹ uciekaæ chmary szczurów - biegn¹ we wszystkich kierunkach. Mê¿czyzna, który ci¹gle stoi do mnie ty³em, strzela do nich. Nagle s³yszê krzyk: "Strielok". Mê¿czyzna wzdryga siê, na moment zastyga w bezruchu, a potem powoli zaczyna siê obracaæ w moj¹ stronê, ale... na sekundê przed tym jak mam zobaczyæ jego twarz, budzê siê. Co znaczy ten sen? Nie wiem, ale s¹dzê, ¿e kiedyœ ju¿ widzia³em to coœ.</text>
+	</string>
+	<string id="val_captive_help_txt">
+		<text>Cz³onek "Powinnoœci", Nabój, chce, ¿ebym uratowa³ jego partnera schwytanego przez bandytów. Maj¹ go wkrótce odstawiæ do opuszczonej fabryki.</text>
+	</string>
+	<string id="val_prisoner_help_art_txt">
+		<text>Cz³onek "Powinnoœci": "Maj¹ kolejnego z naszych, Sieriogê. Trzymaj¹ go w piwnicy. Jest tam du¿y budynek... niewykoñczony... Pomóg³byœ mu, dobrze? Albo jego te¿ zabij¹...".</text>
+	</string>
+	<string id="val_x18_conclusion">
+		<text>Laboratorium X18</text>
+	</string>
+	<string id="val_x18_conclusion_txt">
+		<text>Psiakrew... W laboratorium X18 nie by³o zbyt przyjemnie... a jego obecni mieszkañcy... nie s¹dzi³em, ¿e takie coœ mo¿e istnieæ. Znalaz³em jakieœ dokumenty... Nie rozumiem za bardzo, o co w nich chodzi - na pewno zawieraj¹ jakieœ szczegó³y techniczne dotycz¹ce czêœci do emiterów Kajmanowa. Co ciekawe, komponenty te mia³y dotrzeæ do innego laboratorium o kryptonimie X16, które prawdopodobnie równie¿ jest tajne. </text>
+	</string>

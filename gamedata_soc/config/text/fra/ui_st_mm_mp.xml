@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="game type">
+		<text>TYPE PARTIE</text>
+	</string>
+	<string id="icon">
+		<text>ICФNES</text>
+	</string>
+	<string id="map">
+		<text>CARTE</text>
+	</string>
+	<string id="mm_mp_allowvoting">
+		<text>Droit de vote</text>
+	</string>
+	<string id="mm_mp_anomalytime">
+		<text>Durйe anomalies (min)</text>
+	</string>
+	<string id="mm_mp_artefactcapture">
+		<text>Capture de l'artefact</text>
+	</string>
+	<string id="mm_mp_artefdelay">
+		<text>Absence d'artefact (sec)</text>
+	</string>
+	<string id="mm_mp_artefnum">
+		<text>Nombre d'artefacts</text>
+	</string>
+	<string id="mm_mp_artefstay">
+		<text>Durйe des artefacts (min)</text>
+	</string>
+	<string id="mm_mp_autoteambalance">
+		<text>Йquilibrage auto. de l'йquipe</text>
+	</string>
+	<string id="mm_mp_autoteamswap">
+		<text>Changement auto. d'йquipe</text>
+	</string>
+	<string id="mm_mp_avail_maps">
+		<text>CARTES DISPONIBLES</text>
+	</string>
+	<string id="mm_mp_cancel">
+		<text>Annuler</text>
+	</string>
+	<string id="mm_mp_cd_key">
+		<text>Clй CD</text>
+	</string>
+	<string id="mm_mp_client">
+		<text>Client</text>
+	</string>
+	<string id="mm_mp_create">
+		<text>Crйer</text>
+	</string>
+	<string id="mm_mp_damageblock">
+		<text>Invulnйrabilitй</text>
+	</string>
+	<string id="mm_mp_damageblockindicator">
+		<text>Indicateur d'invulnйrabilitй</text>
+	</string>
+	<string id="mm_mp_deaths">
+		<text>Morts</text>
+	</string>
+	<string id="mm_mp_dedicated">
+		<text>Dйdiй</text>
+	</string>
+	<string id="mm_mp_empty">
+		<text>Vide</text>
+	</string>
+	<string id="mm_mp_filters">
+		<text>Filtres</text>
+	</string>
+	<string id="mm_mp_forcerespawn">
+		<text>Renaiss. forcйe (sec)</text>
+	</string>
+	<string id="mm_mp_fraglimit">
+		<text>Limite de frags</text>
+	</string>
+	<string id="mm_mp_frags">
+		<text>Frags</text>
+	</string>
+	<string id="mm_mp_freezetime">
+		<text>Durйe d'immobilisation</text>
+	</string>
+	<string id="mm_mp_friendlyfire">
+		<text>Tir amical</text>
+	</string>
+	<string id="mm_mp_friendlyindicators">
+		<text>Indicateur des alliйs</text>
+	</string>
+	<string id="mm_mp_friendlynames">
+		<text>Noms des amis</text>
+	</string>
+	<string id="mm_mp_full">
+		<text>Plein</text>
+	</string>
+	<string id="mm_mp_gamemode">
+		<text>Mode</text>
+	</string>
+	<string id="mm_mp_host_port">
+		<text>IP/hфte:port</text>
+	</string>
+	<string id="mm_mp_internet">
+		<text>Internet</text>
+	</string>
+	<string id="mm_mp_join">
+		<text>Rejoindre</text>
+	</string>
+	<string id="mm_mp_lan">
+		<text>Rйseau local</text>
+	</string>
+	<string id="mm_mp_listenservers">
+		<text>Йcouter</text>
+	</string>
+	<string id="mm_mp_mapratation">
+		<text>Liste de cartes</text>
+	</string>
+	<string id="mm_mp_maxplayers">
+		<text>Maximum de joueurs</text>
+	</string>
+	<string id="mm_mp_network_connection">
+		<text>Connexion au rйseau</text>
+	</string>
+	<string id="mm_mp_noanomalies">
+		<text>Sans anomalie</text>
+	</string>
+	<string id="mm_mp_options">
+		<text>Options</text>
+	</string>
+	<string id="mm_mp_password">
+		<text>Mot de passe</text>
+	</string>
+	<string id="mm_mp_player_name">
+		<text>Nom du joueur :</text>
+	</string>
+	<string id="mm_mp_players">
+		<text>Joueurs</text>
+	</string>
+	<string id="mm_mp_publicserver">
+		<text>Serveur public</text>
+	</string>
+	<string id="mm_mp_quickrefresh">
+		<text>Rafraоch. rapide</text>
+	</string>
+	<string id="mm_mp_rateofchange">
+		<text>Coefficient de changemt</text>
+	</string>
+	<string id="mm_mp_refresh">
+		<text>Rafraоchir tout</text>
+	</string>
+	<string id="mm_mp_reinforcement">
+		<text>Renforcement (sec)</text>
+	</string>
+	<string id="mm_mp_respawnoptions">
+		<text>Options rйgйnйration</text>
+	</string>
+	<string id="mm_mp_sel_maps">
+		<text>CARTES SЙLECTIONNЙES</text>
+	</string>
+	<string id="mm_mp_server">
+		<text>Serveur</text>
+	</string>
+	<string id="mm_mp_server_list">
+		<text>Liste des serveurs</text>
+	</string>
+	<string id="mm_mp_server_prop">
+		<text>Propriйtйs du serveur</text>
+	</string>
+	<string id="mm_mp_serverinfo">
+		<text>Infos du serveur</text>
+	</string>
+	<string id="mm_mp_serverlist">
+		<text>Serveur</text>
+	</string>
+	<string id="mm_mp_servername">
+		<text>Nom de serveur</text>
+	</string>
+	<string id="mm_mp_serversettings">
+		<text>Paramиtres du serveur</text>
+	</string>
+	<string id="mm_mp_spectator">
+		<text>Spectateur</text>
+	</string>
+	<string id="mm_mp_spectator_firsteye">
+		<text>Premiиre personne</text>
+	</string>
+	<string id="mm_mp_spectator_freefly">
+		<text>Camйra libre</text>
+	</string>
+	<string id="mm_mp_spectator_freelook">
+		<text>Troisiиme personne libre</text>
+	</string>
+	<string id="mm_mp_spectator_lookat">
+		<text>Troisiиme personne</text>
+	</string>
+	<string id="mm_mp_spectator_options">
+		<text>Paramиtres spectateur</text>
+	</string>
+	<string id="mm_mp_spectator_teamonly">
+		<text>Йquipe seulement</text>
+	</string>
+	<string id="mm_mp_startweather">
+		<text>Mйtйo initiale</text>
+	</string>
+	<string id="mm_mp_timelimit">
+		<text>Chrono (min)</text>
+	</string>
+	<string id="mm_mp_warmuptime">
+		<text>Йchauffement (sec)</text>
+	</string>
+	<string id="mm_mp_weatheroptions">
+		<text>Options mйtйo</text>
+	</string>
+	<string id="mm_mp_withoutfriendlyfire">
+		<text>Aucun tir amical</text>
+	</string>
+	<string id="mm_mp_withoutpassword">
+		<text>Aucun mot de passe</text>
+	</string>
+	<string id="mm_mp_withoutpunkbuster">
+		<text>Sans PunkBuster</text>
+	</string>
+	<string id="mm_mp_withpassword">
+		<text>Utiliser un m.d.p.</text>
+	</string>
+	<string id="mp_vote_hint">
+		<text>Voix POUR : [$$ACTION_VOTE_YES$$]\nVoix CONTRE : [$$ACTION_VOTE_NO$$]\nRйsultats : [$$ACTION_VOTE$$]</text>
+	</string>
+	<string id="ping">
+		<text>PING</text>
+	</string>
+	<string id="players">
+		<text>JOUEURS</text>
+	</string>
+	<string id="server name">
+		<text>NOM DE SERVEUR</text>
+	</string>
+	<string id="version">
+		<text>Version</text>
+	</string>
+	<string id="st_mp_gsfilter">
+		<text>Filtre :</text>
+	</string>
+</string_table>

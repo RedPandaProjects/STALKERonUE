@@ -1,0 +1,51 @@
+	<string id="descr_bar_crazy_veterans_quest">
+		<text>Barista: "I Duty hanno una reputazione da difendere. Per questo vogliono che la cosa venga fatta senza chiasso. Non devi fare altro che eliminare il capo chiamato Lucky e prendergli il palmare come prova."</text>
+	</string>
+	<string id="descr_bar_dolg_community_quest">
+		<text>Per unirti ai Duty ti serve l'approvazione di uno dei combattenti più rispettati del gruppo e devi dimostrare al loro capo che sei degno di entrare nei loro ranghi.</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_ambush_quest">
+		<text>Barista: "La tua missione è uccidere Tyran, il capo dei mercenari. La sua ciurma ha raggiunto le Lande desolate e ha allestito una base al cantiere. Stai attento, alcuni combattenti hanno preparato delle imboscate lungo la strada. Portami il palmare di Tyran e la ricompensa sarà tua."</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_leader_kill_quest">
+		<text>Generale Voronin: "La guerra con i Freedom volge al termine, Marchiato. Hai fatto la tua parte combattendo per la causa! Ora voglio mettere fine a questa guerra. Il capo dei Freedom deve essere tolto di mezzo."</text>
+	</string>
+	<string id="descr_bar_dolg_test_quest">
+		<text>Capitano Ivantsov: "...prima di arrivare alle conclusioni, supera una semplice prova. Devi recuperare un dossier dall'edificio abbandonato di fronte. Non è difficile: devi solo entrare, prendere il dossier e portarmelo. Facile, no? Quando avrò in mano il dossier, deciderò se sei adatto ai Duty oppure no."</text>
+	</string>
+	<string id="descr_bar_hunter_rifle">
+		<text>Cacciatore: "Riportami il fucile. L'ho perso vicino a dove vivono i succhiasangue. Ti invierò le coordinate. E stai attento, quei bastardi non scherzano."</text>
+	</string>
+	<string id="descr_bar_kill_professor">
+		<text>Segugio: "Qui da noi è in corso una specie di caccia. Abbiamo bloccato gli scienziati là dentro, dietro all'elicottero. I miei ragazzi gli sparano qualche colpo ogni tanto, per evitare che scappino. Vieni anche tu, stiamo per andare a dargli il colpo di grazia. Se ci aiuterai, ti darò la tuta da scienziato... l'abbiamo trovata nell'elicottero che abbiamo abbattuto. Il tuo obiettivo è il professor Kruglov. Uccidilo o se la darà a gambe durante la sparatoria, conosco il tipo. Se lo uccidi, la tuta è tua; altrimenti non avrai un bel niente."</text>
+	</string>
+	<string id="descr_bar_radar_deactivate">
+		<text>Barista: "Hai il prototipo protettivo contro il Bruciacervella, io conosco le coordinate di un bunker. Non dimenticare che il prototipo non ti proteggerà dalle emissioni per sempre, quindi devi raggiungere il bunker sotto le antenne e spegnere il Bruciacervella. Non devi fare altro che raggiungere le antenne e disattivarle."</text>
+	</string>
+	<string id="descr_bar_resque_information">
+		<text>Kruglov: "Stalker, aiutami! Siamo stati attaccati dai mercenari e metà della nostra squadra è morta. Aiutaci e non te ne pentirai."\n\n "...fai attenzione, dovrebbero essere una quindicina, ma non ne siamo certi."</text>
+	</string>
+	<string id="descr_bar_resque_information_2">
+		<text>Kruglov: "Mentre stavamo tornando da Yantar, i mercenari ci hanno abbattuti. Dicono che hanno bisogno di informazioni, ma io la penso diversamente: vogliono ucciderci tutti. Portami ad Amber: ti dirò quello che so del tuo Bruciacervella e il Barista ti pagherà bene. Sono un pessimo combattente, ma conosco la strada, quindi io ti guiderò e ti mi coprirai le spalle."</text>
+	</string>
+	<string id="descr_bar_x16_documents">
+		<text>Barista: "Devi raggiungere gli scienziati e scoprire dove si trova il laboratorio X16 per individuare i documenti mancanti."</text>
+	</string>
+	<string id="journal_after_agroprom_documents">
+		<text>Ho esaminato i documenti trovati all'istituto. A quanto pare, prima dell'incidente l'Agroprom era stato usato come copertura per un laboratorio non ufficiale chiamato X18, in cui venivano eseguiti molti esperimenti piuttosto strani. I documenti non spiegano con precisione dove si trova, e neanche i militari sembrano essere al corrente. Beh, direi che il mistero si infittisce... ma forse questo è l'indizio che i trafficanti cercavano. Devo continuare verso nord per raggiungere un trafficante chiamato il Barista.</text>
+	</string>
+	<string id="journal_bar_darklab_documents">
+		<text>Cazzo... il laboratorio X18 non era un bel posto... e i suoi occupanti... non pensavo che esistessero cose del genere. Ho trovato dei documenti... non ci ho capito quasi niente, a parte che contenevano le specifiche tecniche di certi componenti degli emettitori Kaimanov. La cosa interessante è che i componenti erano destinati a un altro laboratorio, chiamato in codice X16. Forse è segreto anche quello.</text>
+	</string>
+	<string id="journal_bar_x16_documents">
+		<text>Mmm... i trafficanti hanno raccolto parecchie informazioni sui laboratori. Il Barista non è rimasto sorpreso quando ha saputo degli emettitori e dell'X16. Ora è convinto che il Bruciacervella sia artificiale. Secondo lui, il laboratorio X16 è vicino all'accampamento degli scienziati presso il lago Yantar. È interessante notare che laggiù studiano emissioni con effetti simili a quelli dell'anomalia incendiaria. Devo proprio fare una visita alla comunità scientifica della Zona.</text>
+	</string>
+	<string id="journal_before_darklab_documents">
+		<text>Ho incontrato il Barista. Dopo aver esaminato i documenti dell'istituto, pensa che l'X18 sia nella cosiddetta Valle Oscura. Mi ha chiesto di andare lì a cercare informazioni e documenti. Dice che ha incaricato alcuni esploratori dei Duty di raggiungere i sotterranei della zona, ma sono scomparsi. Secondo lui sono stati catturati dai banditi, che hanno una base da quelle parti. Se è vero, tutto ciò che gli esploratori hanno trovato dev'essere finito nelle mani di Borov, il capo dei banditi. Il Barista mi ha detto di stare attento... e chiaramente non mi ha detto tutto ciò che sa sui sotterranei. Beh, è ora di mettersi al lavoro. Come prima cosa farò una visita a Borov. Se la nostra "conversazione" andrà bene, esplorerò i sotterranei.</text>
+	</string>
+	<string id="journal_before_radar_task">
+		<text>Beh, sono pronto a raggiungere l'anomalia incendiaria. Ho saputo dal Pazzo quando il livello delle emissioni si riduce. Mi ha anche parlato di un posto sicuro dove posso aspettare il momento buono. Tanto, negli altri periodi la mia difesa psionica sarebbe inutile. Dovrò trovare un modo di entrare nel bunker sotterraneo del laboratorio X19. Là dentro dovrebbero esserci i comandi delle antenne del Bruciacervella.</text>
+	</string>
+	<string id="st_gordon_diary">
+		<text>Palmare di Gordon</text>
+	</string>

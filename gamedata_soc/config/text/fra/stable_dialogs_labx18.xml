@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dar_explorer_dialog_1">
+		<text>Je suis en mission.</text>
+	</string>
+	<string id="dar_explorer_dialog_11">
+		<text>Hum. Quel genre de mission ? Tu cherches quelque chose ? Tu l'as peut-кtre dйjа trouvй ? Il paraоt qu'on trouve plein de trucs par ici...</text>
+	</string>
+	<string id="dar_explorer_dialog_111">
+		<text>Dйsolй, je sais pas, et j'ai pas le temps de toute faзon.</text>
+	</string>
+	<string id="dar_explorer_dialog_1111">
+		<text>Attends, t'enfuis pas. T'auras bien assez d'occasions pour зa... Qu'est-ce que tu as trouvй ? Tu sais je traоne pas non plus dans le coin par hasard.</text>
+	</string>
+	<string id="dar_explorer_dialog_11111">
+		<text>Зa te regarde pas.</text>
+	</string>
+	<string id="dar_explorer_dialog_11112">
+		<text>J'ai trouvй des documents du labo X18. Le Barman a promis de m'en donner un bon prix.</text>
+	</string>
+	<string id="dar_explorer_dialog_112">
+		<text>J'ai rien trouvй.</text>
+	</string>
+	<string id="dar_explorer_dialog_2">
+		<text>Je sais mкme pas comment j'ai atterri lа. J'ai aucune envie de m'attarder.</text>
+	</string>
+	<string id="dar_explorer_dialog_21">
+		<text>T'as rien trouvй d'intйressant, hein ? Il paraоt qu'il y a des informations sur des expйriences scientifiques. Зa vaut un paquet...</text>
+	</string>
+	<string id="dar_explorer_dialog_211">
+		<text>Non, rien.</text>
+	</string>
+	<string id="dar_explorer_dialog_2111">
+		<text>Ah ouais ? Cherche encore... Tu me cacherais pas quelque chose ?</text>
+	</string>
+	<string id="dar_explorer_dialog_21111">
+		<text>Non.</text>
+	</string>
+	<string id="dar_explorer_dialog_21112">
+		<text>Pourquoi tu me demandes зa ?</text>
+	</string>
+	<string id="dar_explorer_dialog_21113">
+		<text>Tu me menaces ?</text>
+	</string>
+	<string id="dar_explorer_dialog_212">
+		<text>Je m'en fous de tes informations. J'ai dйjа du mal а rester en vie...</text>
+	</string>
+	<string id="dar_explorer_dialog_2121">
+		<text>OK, vas-y. Si tu trouves quelque chose, je serai dans le coin...</text>
+	</string>
+	<string id="dar_explorer_dialog_25">
+		<text>Йcoute vieux, j'ai survйcu au feu, aux anomalies et aux monstres, et je suis toujours vivant comme tu le vois ! Alors c'est pas toi qui vas m'empкcher de parler. Je suis lа pour les documents et je partirai pas sans. Si tu les as, je te conseille de me les filer, sinon ce trou sera ta tombe ! Pigй ?</text>
+	</string>
+	<string id="dar_explorer_dialog_251">
+		<text>Pigй.</text>
+	</string>
+	<string id="dar_explorer_dialog_2511">
+		<text>T'es dans la merde si tu me mens. Si t'essaies de me baiser, t'es dans la merde aussi. Et si tu me racontes des conneries, t'es encore plus dans la merde. En fait, t'es tellement dans la merde que tu vas pas tarder а t'йtouffer ! Alors on va la refaire une derniиre fois pour les crйtins qu'auraient pas compris : est-ce que t'as trouvй les documents ?</text>
+	</string>
+	<string id="dar_explorer_dialog_2521">
+		<text>OK, et la prochaine fois fais gaffe а ce que tu dis. Tu peux y aller. Si jamais tu trouves quelque chose, je serai par lа...</text>
+	</string>
+	<string id="dar_explorer_dialog_253">
+		<text>Cette discussion est finie, dйgage.</text>
+	</string>
+	<string id="dar_explorer_dialog_26">
+		<text>J'ai aucun document.</text>
+	</string>
+	<string id="dar_explorer_dialog_271">
+		<text>C'est mieux, vieux. Maintenant donne-moi toutes les infos que t'as, jusqu'au dernier morceau de papier. Et t'avise surtout pas de faire de blague, parce que зa serait ta derniиre...</text>
+	</string>
+	<string id="dar_explorer_dialog_51">
+		<text>T'as pas compris, зa suffit ! Je traоne pas dans ce trou а rat par hasard ! </text>
+	</string>
+	<string id="dar_explorer_dialog_511">
+		<text>Je partage rien.</text>
+	</string>
+	<string id="dar_explorer_dialog_5111">
+		<text>Oh oh, dйgage maintenant... Et un dernier conseil : sois prudent, Stalker, t'en auras besoin !</text>
+	</string>
+	<string id="dar_explorer_dialog_512">
+		<text>Tu me menaces ?</text>
+	</string>
+	<string id="dar_explorer_dialog_5121">
+		<text>OK, OK, du calme... Je suis juste curieux, sors pas ton flingue ! J'arrкte avec les questions. Sois juste prudent.</text>
+	</string>
+	<string id="dar_explorer_dialog_61">
+		<text>Des documents, hum... Зa tombe bien, je suis lа pour la mкme chose. Alors tu vas me les donner et reprendre ta route. Compris ?</text>
+	</string>
+	<string id="dar_explorer_dialog_6111">
+		<text>Je peux te payer.</text>
+	</string>
+	<string id="dar_explorer_dialog_6121">
+		<text>Bon allez, arrкte de dйconner. Faisons un marchй. Je peux te donner un joli pactole, tu le regretteras pas.</text>
+	</string>
+	<string id="dar_explorer_dialog_6131">
+		<text>Йcoute, ma vie dйpend de ces documents. Montre un peu ce que tu as... On peut sыrement trouver un arrangement...</text>
+	</string>
+	<string id="dar_explorer_dialog_8011">
+		<text>Il fait trop sombre, j'y vois rien. Et зa grouille de trucs bizarres... pourquoi j'ai acceptй de faire зa ?! Et toi, comment t'as atterri ici ?</text>
+	</string>
+	<string id="dar_explorer_dialog_8021">
+		<text>Avance, Stalker.</text>
+	</string>
+	<string id="dar_explorer_dialog_8031">
+		<text>J'ai horreur qu'on me coupe quand je parle. Bref, je suis venu chercher des documents importants. Si t'as trouvй quelque chose, crache le morceau ou t'auras des ennuis. Si t'as rien, barre-toi et me fais pas perdre mon temps.</text>
+	</string>
+	<string id="dar_explorer_dialog_8041">
+		<text>J'ai horreur qu'on me coupe quand je parle. Donne-moi ces documents si tu veux pas dire adieu а la vie.</text>
+	</string>
+	<string id="dar_explorer_dialog_9">
+		<text>Je m'en souviendrai.</text>
+	</string>
+</string_table>

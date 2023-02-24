@@ -1,0 +1,60 @@
+	<string id="esc_direction_fire">
+		<text>Es wird nicht geschossen, es sei denn, ich gebe den Befehl. Kein Fingerjucken. Kapiert?</text>
+	</string>
+	<string id="esc_fanat_victory">
+		<text>Sieg!!! Alle Mann hierher. Komm mit, Gezeichneter. Wir müssen reden.</text>
+	</string>
+	<string id="esc_return_dv">
+		<text>Gut, Gezeichneter. Ich bin froh, dass du noch lebst und uns besuchst. Komm her und lass uns reden. Es braut sich etwas zusammen.</text>
+	</string>
+	<string id="esc_tutorial_end">
+		<text>Hervorragend, dein Auftrag ist vollendet. Du hast die Grundlagen gut gelernt.</text>
+	</string>
+	<string id="esc_wolf_thanks">
+		<text>Gezeichneter, der Weg ins Lager ist jetzt frei. Komm her und lass uns reden.</text>
+	</string>
+	<string id="escape_fox_quest">
+		<text>Noch ein Wort zu Strelok, Gezeichneter. Ein Stalker ist gerade von einer langen Tour zurück. Er heißt Fuchs. Anscheinend ist es übel gelaufen und er braucht Hilfe. Ein paar komische Viecher haben ihn die ganze Zeit verfolgt, er sagt, er hält nicht mehr lange durch. Der Typ weiß wohl über Strelok Bescheid. Hier sind die Koordinaten. Du beeilst dich besser.</text>
+	</string>
+	<string id="escape_stalker_death">
+		<text>Schwach, Gezeichneter. Die Jungs sind tot, obwohl das nicht an dir liegt. Das passiert in der Zone. Jedenfalls hast du den Test bestanden, also mach dich auf den Rückweg und dann reden wir übers Geschäft.</text>
+	</string>
+	<string id="escape_stalker_helped">
+		<text>Gut gemacht, Gezeichneter. Weiter so, und du hast bald Freunde. Komm mich besuchen und dann reden wir übers Geschäft.</text>
+	</string>
+	<string id="escape_stalker_killed">
+		<text>Das war nicht gerade clever, Gezeichneter. Du hast den Test bestanden, aber mit Wolf und seinen Schlägern musst du jetzt alleine fertig werden. Ich warte aber auf dich. Wir haben weitere Arbeit zu besprechen.</text>
+	</string>
+	<string id="info_esc_give_agroprom_task">
+		<text>Gezeichneter, das Militär hat beim Agroprom-Forschungsinstitut ein paar interessante Sachen ausgegraben. Die möchte ich haben und du wahrscheinlich auch. Hol die Info und geh damit zum Wirt in der Stalkerbar. Und beeil dich!</text>
+	</string>
+	<string id="tips_esc_trader_about_anomalies">
+		<text>Vorsicht! Du bist genau neben den Anomalien. Benutze deine Blitze, um ihre genaue Form und Position zu bestimmen.</text>
+	</string>
+	<string id="tips_esc_trader_about_pda">
+		<text>Kontakt drücken ($$ACTION_CONTACTS$$). Leute im Umkreis von 250 Metern mit aktivem PDA werden unter Kontakte und auf der Minikarte Ihres Visors sichtbar. Sie sehen auch deren Gesinnung Ihnen gegenüber, können also auf potentielle Feinde achten. Banditen und Mutanten haben aber in der Regel keinen aktiven PDA (hehe), also Vorsicht!</text>
+	</string>
+	<string id="tips_esc_trader_activate_map">
+		<text>Um die Karte zu aktivieren, drücken Sie '$$ACTION_MAP$$'.</text>
+	</string>
+	<string id="tips_esc_trader_activate_pda">
+		<text>Um den PDA zu aktivieren, drücken Sie '$$ACTION_ACTIVE_JOBS$$'.</text>
+	</string>
+	<string id="tips_esc_trader_how_to_talk">
+		<text>Um mit jemandem zu reden, zielen Sie auf ihn und drücken '$$ACTION_USE$$'.</text>
+	</string>
+	<string id="tips_esc_trader_quest_1">
+		<text>Finden Sie das Artefakt im markierten Gebiet auf der Karte und bringen Sie es zum Händler.</text>
+	</string>
+	<string id="tutorial_flash_anomaly_alarm">
+		<text>Vorsicht, Gezeichneter. Du könntest der Nächste sein.</text>
+	</string>
+	<string id="tutorial_trader_give_medikit">
+		<text>Gib diesem Trottel ein Medkit.</text>
+	</string>
+	<string id="tutorial_trader_look_vagon">
+		<text>Gezeichneter! Vergiss das Artefakt, das gibst du später ab. Geh sofort zum Trailer an der Straße. Meine Jungs brauchen Hilfe. Die Trottel haben einen Hubschrauber beschossen. Du hast die Koordinaten.</text>
+	</string>
+	<string id="tutorial_trader_search_corpses">
+		<text>Durchsuch die Leichen - vielleicht findest du etwas Wertvolles.</text>
+	</string>

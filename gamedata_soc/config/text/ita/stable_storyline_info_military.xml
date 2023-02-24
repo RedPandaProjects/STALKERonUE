@@ -1,0 +1,51 @@
+	<string id="mil_actor_main_quest_descr">
+		<text>Secondo il generale Voronin, solo i Freedom hanno una di quelle armi. Il prelievo è affar mio. Secondo me, una possibilità sarebbe farmi amico lo stalker dei Freedom detto Chef. Il generale dice che beve più di quanto dovrebbe. Farò una scorta di vodka nel caso che mi serva.</text>
+	</string>
+	<string id="mil_blockpost_job_descr">
+		<text>È essenziale proteggere la barriera dagli attacchi provenienti dalla direzione del Bruciacervella.</text>
+	</string>
+	<string id="mil_blockpost_job2_descr">
+		<text>Lukash: "Se te la senti, puoi andare al checkpoint di sicurezza presso l'uscita verso la Foresta Rossa. A quanto pare, gli occupanti si aspettano un altro tentativo di irruzione da parte dei mutanti o dei Monolith."</text>
+	</string>
+	<string id="mil_courier_doc_descr">
+		<text>I Freedom hanno acquisito due lanciagranate Bulldog 6. Uno è nell'arsenale, l'altro da qualche parte nel villaggio.\n\n</text>
+	</string>
+	<string id="mil_courier_job_descr">
+		<text>Lukash: "Purtroppo, fra noi c'è uno spione. Il suo nome è Pavlik. Sta facendo trapelare delle informazioni e dobbiamo fermarlo. Il tuo compito è seguirlo fino alla fattoria e scoprire a chi passa le informazioni. È andato via qualche tempo fa, così dovrai raggiungerlo. Ricorda: lo puoi eliminare, anzi devi farlo, ma non prima che abbia rivelato a chi fornisce le informazioni. E dovrai eliminare anche l'altro uomo."</text>
+	</string>
+	<string id="mil_crazy_flash_info">
+		<text>... oggi siamo tornati al villaggio per cacciare. Tutto come al solito.\n\n : Da dove era venuta la bestia? Deve aver attraversato di soppiatto la Foresta Rossa. Tutti gli uomini sono stati uccisi, sono rimasto solo io... Cercherò di andarmene di notte...\n\n : Non ricordo come ho fatto a fuggire. È stato terribile... Ho la testa che scoppia... è piena di immagini e suoni che non so da dove vengano. Maledette radiazioni. E poi il dannato rilevatore è kaput. Devo riposarmi per rimettermi in sesto.</text>
+	</string>
+	<string id="mil_dolg_kill_lukash_descr">
+		<text>Entra nella base con i Duty.\nElimina tre cecchini.\nUccidi Lukash.</text>
+	</string>
+	<string id="mil_dolg_kill_sniper_descr">
+		<text>Uccidi il cecchino alla torre. Stai attento a non farti sparare in mezzo agli occhi.</text>
+	</string>
+	<string id="mil_flash_bandit_descr">
+		<text>Quegli stronzi dei Duty ci hanno buttato fuori da un posto troppo bello. Si sono trincerati vicino alla nostra fattoria. Non siamo neanche riusciti a prendere le nostre cose dalla soffitta. Per fortuna la base dei Freedom è vicina. Non resteranno lì a lungo.</text>
+	</string>
+	<string id="mil_flash_max_descr">
+		<text>Oggi abbiamo attaccato dei soldati diretti alla Foresta Rossa e ne abbiamo ricavato due Bulldog 6. Sono fantastici! Lukash ne ha preso uno, e lo Scuro ha nascosto l'altro nel villaggio, in uno scantinato.</text>
+	</string>
+	<string id="mil_flash_ugrumy_descr">
+		<text>1. Ma chi me l'ha fatto fare di andare alla Foresta Rossa... Sono arrivato appena in tempo: un minuto dopo il mio cervello sarebbe finito in poltiglia.\n\n 2. Sono stato circondato da quattro scagnozzi. È anche colpa mia, non avevo visto la trappola. Mi sono salvato solo grazie alle chiacchiere e alla loro avidità. Invece di imbottirmi di piombo, sono balzati allo scoperto e hanno iniziato a spogliarmi... gli piaceva la mia tuta. Beh, è stato il loro ultimo errore, anche se uno di loro mi ha piantato un proiettile in corpo. Sto invecchiando...\n\n 3. Quando sono arrivato, il messaggero di Strelok non respirava già più. Tre succhiasangue sarebbero un brutto affare per chiunque, ma lui ne aveva fatti fuori quattro, e c'erano altre tracce di sangue rivolte in varie direzioni. L'unica informazione che aveva con sé era il codice di una porta (19840519), ma sarà un problema scoprire che porta è.\n\n 4. Abbiamo intercettato alcuni militari diretti alla Foresta Rossa. Non avevano né ordini né documenti, ma erano equipaggiati come si deve. Credo che lascerò il Bulldog 6 nello scantinato finché non mi servirà.</text>
+	</string>
+	<string id="mil_freedom_rg6_task_descr">
+		<text>Voronin: "I Freedom hanno alcuni lanciagranate Bulldog 6, ottime armi. Se tu riuscissi a entrare di nascosto nel loro territorio e a rubarne almeno uno, ti ricompenserò generosamente. Non essendo della nostra fazione potrai facilmente fare amicizia con qualcuno dei Freedom e, con un po' di fortuna, rubare un Bulldog 6. Ti farò avere i dati sulla loro posizione. Dovrai cercare un membro dei Freedom, un certo Chef, che sa esattamente dove si trovano i Bulldog 6. Siccome ha un debole per l'alcol, cerca di farlo bere. Ti converrà portarti dietro parecchia vodka."</text>
+	</string>
+	<string id="mil_go_to_miser_descr">
+		<text>Bah! Riceverò la mia ricompensa alla base dei Freedom dallo Spilorcio... Bel soprannome! Spero di ricevere una lattina di carne scaduta da meno di un anno.</text>
+	</string>
+	<string id="mil_hunters_task_descr">
+		<text>Eliminare i succhiasangue al villaggio. Devo stare attento o berranno tutto il mio sangue e mi lasceranno a terra morto.</text>
+	</string>
+	<string id="mil_hunters_task_descr2">
+		<text>Eliminare i succhiasangue al villaggio. Devo stare attento o berranno tutto il mio sangue e mi lasceranno a terra morto.</text>
+	</string>
+	<string id="mil_lukash_job_descr">
+		<text>Lukash ha deciso di contrattaccare il distaccamento dei Duty al villino. Max, uno dei veterani dei Freedom, dirigerà l'operazione. Il mio compito è aiutarli.</text>
+	</string>
+	<string id="mil_mad_flash_job_descr">
+		<text>Mi domando cosa sa il pazzoide alla palude. Beh, lo scoprirò. La cosa importante è evitare tutte le vecchie mine. Ma saranno abbastanza arrugginite da esplodere se gli tiro addosso un bullone.</text>
+	</string>

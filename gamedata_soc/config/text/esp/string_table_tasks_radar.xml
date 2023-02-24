@@ -1,0 +1,21 @@
+	<string id="pripyat_task_objective_1">
+		<text>Sigue al grupo de stalkers.</text>
+	</string>
+	<string id="pripyat_task_objective_2">
+		<text>Encuentra el camino a la central nuclear de Chernóbil.</text>
+	</string>
+	<string id="pripyat_task_title">
+		<text>Ve al encuentro del grupo de stalkers.</text>
+	</string>
+	<string id="rad_antenna">
+		<text>Antenas</text>
+	</string>
+	<string id="rad_get_to_aes">
+		<text>Dirígete a la central nuclear.</text>
+	</string>
+	<string id="rad_get_to_aes_0">
+		<text>Entra en la central nuclear.</text>
+	</string>
+	<string id="rad_get_to_aes_1">
+		<text>Busca la entrada del sarcófago.</text>
+	</string>

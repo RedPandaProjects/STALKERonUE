@@ -1,0 +1,48 @@
+	<string id="descr_yan_find_ghost_task">
+		<text>Vasiliev : "... voici les coordonnées de l'entrée du Labo X16. L'entrée se trouve au sous-sol du bâtiment central ; on ignore ce qu'il y a dans ce bâtiment. Je suppose qu'il sert à l'entretien technique des émetteurs souterrains : d'après la documentation de N***, ce projet est consacré au développement à grande échelle d'armes psychotroniques aux effets importants sur...\n\n ... on a tous les documents nécessaires et on sait comment désactiver l'émetteur. Je vais descendre dans le labo avec Spectre. Les zombies arrivent de partout...\n\n ... Spectre est devenu complètement fou, il délire. Il a dû succomber à l'émission. J'ai tout laissé tomber et commencé à rebrousser chemin par les tunnels...\n\n ... Je suis dans les marécages, où est le  bunker ? Merde, merde, merde !!! Je n'arrive pas à me repérer ! Ce lâche de Sakharov ne répond pas !!! Que se passe-t-il ??? ... Il y a des zombies partout et je suis à court de munitions... "</text>
+	</string>
+	<string id="descr_yan_find_lab">
+		<text>Sakharov : "Trouvez le cadavre de Vasiliev et des informations précises sur l'emplacement du laboratoire. Puis entrez-y et trouvez le Spectre. Il sait comment désactiver les émissions et quitter les lieux."</text>
+	</string>
+	<string id="descr_yan_find_scientist">
+		<text>Sakharov : "Si votre associé et vous réussissez à prendre les mesures, je vous donnerai un prototype en état de marche pour vous permettre d'accéder au laboratoire."</text>
+	</string>
+	<string id="descr_yan_find_scientist_semenov">
+		<text>Sakharov : "Si votre associé et vous réussissez à prendre les mesures, je vous donnerai un prototype en état de marche pour vous permettre d'accéder au laboratoire."</text>
+	</string>
+	<string id="descr_yan_kill_brain">
+		<text>Sakharov : "Bien joué, le Tatoué, vous avez réussi à rejoindre le laboratoire. Il faut à tout prix qu'on étudie le mécanisme qui s'y trouve. Essayez de le désactiver pour nous permettre de l'examiner.\n\n ... Écoutez, le prototype ne vous protégera pas des pires radiations. J'y ai déjà réfléchi et j'ai intégré un chronomètre à notre armure qui se déclenchera en cas de forte exposition. Une fois le temps écoulé, le prototype ne vous protégera plus. Faites bien attention et n'oubliez pas ce chronomètre."</text>
+	</string>
+	<string id="descr_yan_kill_brain_2">
+		<text>Le dispositif est désactivé. Vous allez quitter les lieux sans qu'il vous arrive quoi que ce soit.</text>
+	</string>
+	<string id="descr_yan_provodnik_task">
+		<text>Spectre : "Entrée n°257\n >>Le Pionnier, je t'envoie quelqu'un. On a des infos importantes pour le Doc, aide-le." \n\n >>Le Pionnier : "OK, Spectre. Mais, ne refaisons pas la même erreur que la dernière fois. Viens seul, je voudrais discuter un moment avec toi. J'attendrai à l'endroit habituel, au camp, près du pont. Ne te perds pas et essaie de ne pas te faire prendre par les patrouilles armées."</text>
+	</string>
+	<string id="descr_yan_scientist_return_task">
+		<text>Sakharov : "Que s'est-il passé ??? Il est mort ??? Prenez les mesures et revenez immédiatement !!!"</text>
+	</string>
+	<string id="journal_after_find_ghost">
+		<text>Je suis sous le choc ! Le spectre est la même personne que celle en photo sur le dossier de la mission visant à tuer Strelok. Je n'y comprends plus rien. Il doit y avoir une erreur. Mais qui a fait cette erreur ? Pas de réponse. Dans les archives du Spectre, j'ai vu le nom de leur "relation mutuelle", le quatrième homme du groupe de Strelok, le Doc. Voilà longtemps qu'il aide le groupe en leur fournissant un "QG". En tant que Stalker, il est connu sous le nom du Pionnier et fréquente le Cordon. Très bien, le Pionnier, ne meurs pas avant qu'on se rencontre. Sur le cadavre du Spectre, j'ai aussi trouvé des documents concernant le mécanisme du "cerveau psi". Tout le voisinage était sous l'influence de ce truc... Il a zombifié tout ce qui était à sa portée. J'ai appris qu'il y a un autre mécanisme dans le Labo X19 et qu'il doit s'agir du lobotomisateur. J'ai appris que ces mécanismes ne fonctionnent pas toujours à plein régime, notamment lors de leur refroidissement.</text>
+	</string>
+	<string id="journal_after_find_ghost_name">
+		<text>Encore une énigme</text>
+	</string>
+	<string id="journal_after_kill_brain">
+		<text>Après avoir désactivé cet horrible "cerveau en tube", j'ai perdu connaissance. Sûrement la pression des derniers jours. Et j'ai fait un rêve... J'ai vu une photo. Un homme aux cheveux gris la tenait dans ses mains, avec à ses pieds un énorme chien. L'homme regardait au loin, mais autour de lui, il y avait un marécage ; le paysage ne ressemblait pas à celui de la photo. Dans le brouillard, j'ai vu une silhouette qui s'en allait. L'homme se parlait à lui-même : "Si c'est tellement important, pourquoi est-ce que tu ne me dis pas quel est cet endroit et où tu as eu cette photo"... Puis, sur le côté, j'ai vu un homme souriant qui se tenait sur le seuil d'une cabane et qui a dit chaleureusement : "Si seulement tu savais où j'étais et ce que j'ai vu !" Il a tendu le bras et tenait un appareil extraordinaire qui a éclairé toute la cabane. Le chien a commencé à grogner et à se blottir dans un coin, l'homme aux cheveux gris a marmonné : "Un jour, ces jeux se retourneront contre toi." Puis le même jeune homme, le visage couvert de sang, a titubé avant de tomber... Des éclairs ont illuminé le ciel, la pluie s'est mise à tomber… Le jeune homme était allongé dans la cabane, recouvert de bandages. Il était inconscient ; l'homme aux cheveux gris a marmonné : "Tiens bon, fiston". Des effets personnels étaient empilés dans un coin et parmi eux, cette étrange photo… Le jeune homme, le visage présent couvert de cicatrices, était sur le point de partir. L'homme aux cheveux gris lui a demandé : "Où est-ce que tu vas, maintenant ?". Ce à quoi, le jeune homme lui a répondu : "Au nord"... Et là, je me suis réveillé.</text>
+	</string>
+	<string id="journal_after_kill_brain_name">
+		<text>Le deuxième rêve</text>
+	</string>
+	<string id="journal_before_vasilyev_pda">
+		<text>Alors, comme ça, je suis tout près d'un des hommes de Strelok. Le Spectre est allé au Labo X16 souterrain avec un scientifique mais j'ai peu de chance de le retrouver en vie. Le scientifique rentrait au camp quand il a été tué. Ses collègues m'ont donné un dispositif pour me protéger de ces obscures émissions. J'espère que ça marchera. Ils veulent que j'aille à l'intérieur et que je débranche l'émetteur, après quoi ils l'étudieront sur place. Ça promet !</text>
+	</string>
+	<string id="journal_before_vasilyev_pda_name">
+		<text>Tout près de Spectre</text>
+	</string>
+	<string id="storyline_ghost_info">
+		<text>Entrée n°257\n >> Le Pionnier, je t'envoie quelqu'un. On a des infos importantes pour le Doc, aide-le.\n >>> OK, Spectre. Mais, ne refaisons pas la même erreur que la dernière fois. Viens seul, je voudrais discuter un moment avec toi. J'attendrai à l'endroit habituel, au camp, près du pont. Ne te perds pas et essaie de ne pas te faire prendre par les patrouilles armées."\n\n Entrée n°384\n ... Au dernier moment, Vasiliev a flanché et au lieu de débrancher la console inférieure, quand la porte s'est ouverte, il s'est enfui. Je n'aurais pas dû lui faire confiance - Strelok avait raison, on ne peut pas se fier à ces menteurs. Ma seule chance est d'atteindre la porte avant le manipulateur...</text>
+	</string>
+	<string id="storyline_vasilyev_info">
+		<text>... voici les coordonnées de l'entrée du labo X16. L'entrée se trouve au sous-sol du bâtiment\ncentral ; on ignore ce qu'il y a dans ce bâtiment. Je suppose qu'il sert à l'entretien technique des émetteurs souterrains : d'après la documentation de N***, ce projet est consacré au développement à grande échelle d'armes psychotroniques aux effets importants sur...\n\n ... on a tous les documents nécessaires et on sait comment désactiver l'émetteur. Je vais descendre dans la labo avec Spectre. Les zombies arrivent de partout...\n\n ... Spectre est devenu complètement fou, il délire. Il a dû succomber à l'émission. J'ai tout laissé tomber et commencé à rebrousser chemin par les tunnels...\n\n ... Je suis dans les marécages, où est le  bunker ? Merde, merde, merde !!! Je n'arrive pas à me repérer ! Ce lâche de Sakharov ne répond pas !!! Que se passe-t-il ??? ... Il y a des zombies partout et je suis à court de munitions...</text>
+	</string>

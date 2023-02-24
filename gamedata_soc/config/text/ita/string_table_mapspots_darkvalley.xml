@@ -1,0 +1,54 @@
+	<string id="bar_darklab_documents_1_hint">
+		<text>Borov</text>
+	</string>
+	<string id="bar_darklab_documents_2_hint">
+		<text>Galleria</text>
+	</string>
+	<string id="bar_darklab_documents_3_hint">
+		<text>Ingresso del laboratorio</text>
+	</string>
+	<string id="bar_darklab_documents_4_hint">
+		<text>Tubo</text>
+	</string>
+	<string id="bar_darklab_documents2_1_hint">
+		<text>Documenti del laboratorio</text>
+	</string>
+	<string id="bar_darklab_documents2_2_hint">
+		<text>Barista</text>
+	</string>
+	<string id="val_captive_help_1_hint">
+		<text>Pallottola</text>
+	</string>
+	<string id="val_captive_help_2_hint">
+		<text>Prigioniero</text>
+	</string>
+	<string id="val_come_to_trader_1_hint">
+		<text>Cancello sud</text>
+	</string>
+	<string id="val_come_to_trader_2_hint">
+		<text>Trafficante</text>
+	</string>
+	<string id="val_prisoner_help_main_hint">
+		<text>Membro dei Duty prigioniero</text>
+	</string>
+	<string id="val_sos_help_main_hint">
+		<text>Stalker ferito</text>
+	</string>
+	<string id="val_zone_bandits_hint">
+		<text>Accampamento dei banditi</text>
+	</string>
+	<string id="val_zone_farm_hint">
+		<text>Fattoria.\nCompra un Gauss.</text>
+	</string>
+	<string id="val_zone_monolith_hint">
+		<text>Vecchia fabbrica</text>
+	</string>
+	<string id="val_zone_pipe_hint">
+		<text>Tubatura fognaria</text>
+	</string>
+	<string id="val_zone_robbers_hint">
+		<text>Allevamento di maiali abbandonato</text>
+	</string>
+	<string id="val_zone_south_gate_hint">
+		<text>Cancelli</text>
+	</string>

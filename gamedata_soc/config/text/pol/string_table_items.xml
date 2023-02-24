@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="item test1">
+		<text>This is an ITEM test string</text>
+	</string>
+	<string id="item test2">
+		<text>This is a another ITEM test string</text>
+	</string>
+	<string id="item_case_esc_desc">
+		<text>Ogniotrwaіa walizka z dokumentami.</text>
+	</string>
+	<string id="item_decoder_desc">
+		<text>Zaawansowany technicznie elektroniczny wytrych. Co dziwne, wygl№da na to, їe nie jest narzкdziem zіodziejskim - zostaі raczej stworzony z myњl№ o konkretnym zamku elektronicznym i nie da siк nim otworzyж їadnych innych drzwi.</text>
+	</string>
+	<string id="item_decoder_name">
+		<text>Dekoder</text>
+	</string>
+	<string id="item_detector_yantar_desc">
+		<text>Detektor emisji psionicznych</text>
+	</string>
+	<string id="item_detector_yantar_name">
+		<text>Czujnik PP-4a</text>
+	</string>
+	<string id="item_doc_x16_desc">
+		<text>Plastikowa teczka na dokumenty. Їeby zrozumieж, co tu jest napisane, trzeba byж magistrem biologii. </text>
+	</string>
+	<string id="item_doc_x16_name">
+		<text>Dokumenty z laboratorium X16</text>
+	</string>
+	<string id="item_doc_x18_desc">
+		<text>Gruby plik dokumentуw naukowych. Terminy, formuіy i trochк wykresуw.</text>
+	</string>
+	<string id="item_doc_x18p1_name">
+		<text>Laboratorium X18, czкњж pierwsza</text>
+	</string>
+	<string id="item_doc_x18p2_name">
+		<text>Laboratorium X18, czкњж druga</text>
+	</string>
+	<string id="item_doc_x18p3_name">
+		<text>Laboratorium X18, czкњж trzecia</text>
+	</string>
+	<string id="item_doc_x18p4_name">
+		<text>Laboratorium X18, czкњж czwarta</text>
+	</string>
+	<string id="item_doc_x18p5_name">
+		<text>Laboratorium X18, czкњж pi№ta</text>
+	</string>
+	<string id="item_docs_hiden_pri_desc">
+		<text>Zniszczony rкkopis w skуrzanej oprawie. Autorem jest sam Strielok. Jeњli spojrzeж na same nagіуwki, moїna siк z niego pewnie dowiedzieж czegoњ o sekretach Zony.</text>
+	</string>
+	<string id="item_docs_hiden_pri_name">
+		<text>Dokumenty ze schowka w Prypeci</text>
+	</string>
+	<string id="item_dynamite_esc_desc">
+		<text>Ciкїka, drewniana skrzynia, na ktуrej w kilku jкzykach napisane jest "materiaіy wybuchowe"</text>
+	</string>
+	<string id="item_dynamite_esc_name">
+		<text>Skrzynia z materiaіami wybuchowymi</text>
+	</string>
+	<string id="item_flash_crazy_mil_desc">
+		<text>Pendrive - wygodny sposуb na przechowywanie i przenoszenie danych.</text>
+	</string>
+	<string id="item_flash_crazy_mil_name">
+		<text>Pendrive szaleсca</text>
+	</string>
+	<string id="item_flash_eco_rost_desc">
+		<text>Pendrive - wygodny sposуb na przechowywanie i przenoszenie danych.</text>
+	</string>
+	<string id="item_flash_eco_rost_name">
+		<text>Pendrive Krugіowa</text>
+	</string>
+	<string id="item_flash_esc_desc">
+		<text>Pendrive - wygodny sposуb na przechowywanie i przenoszenie danych.</text>
+	</string>
+	<string id="item_flash_esc_name">
+		<text>Pendrive Їwawego</text>
+	</string>
+	<string id="item_flash_gslinger_agro_desc">
+		<text>Pendrive - wygodny sposуb na przechowywanie i przenoszenie danych.</text>
+	</string>
+	<string id="item_flash_gslinger_agro_name">
+		<text>Pendrive Strieloka</text>
+	</string>
+	<string id="item_key_x18_desc">
+		<text>Klucz elektroniczny do podziemnego laboratorium X18.</text>
+	</string>
+	<string id="item_key_x18_name">
+		<text>Klucz Dzika</text>
+	</string>
+	<string id="item_krot_flash">
+		<text>Pendrive Kreta</text>
+	</string>
+	<string id="item_PDA_lucky_desc">
+		<text>PDA. Niezbкdny w Zonie.</text>
+	</string>
+	<string id="item_PDA_lucky_name">
+		<text>PDA Farciarza</text>
+	</string>
+	<string id="item_PDA_tiran_desc">
+		<text>PDA. Niezbкdny w Zonie.</text>
+	</string>
+	<string id="item_PDA_tiran_name">
+		<text>PDA Tyrana</text>
+	</string>
+	<string id="item_quest_case_02_desc">
+		<text>Ogniotrwaіa walizka z dokumentami.</text>
+	</string>
+	<string id="item_quest_case_02_name">
+		<text>Dokumenty wojskowe z Instytutu "Agroprom"</text>
+	</string>
+	<string id="item_case_esc_name">
+		<text>Dokumenty z placуwki</text>
+	</string>
+	<string id="yan_bad_psy_helmet_desc">
+		<text>Prototyp stworzony przez naukowcуw w celu ochrony ludzi przed emisjami psionicznymi. Nieskalibrowany.</text>
+	</string>
+	<string id="yan_bad_psy_helmet_name">
+		<text>Nieskalibrowany heіm psioniczny.</text>
+	</string>
+	<string id="yan_good_psy_helmet_desc">
+		<text>Skalibrowany prototyp stworzony przez naukowcуw w celu ochrony ludzi przed emisjami psionicznymi</text>
+	</string>
+	<string id="yan_good_psy_helmet_name">
+		<text>Skalibrowany heіm psioniczny</text>
+	</string>
+</string_table>

@@ -1,0 +1,54 @@
+	<string id="bar_darklab_documents_1_hint">
+		<text>Borov</text>
+	</string>
+	<string id="bar_darklab_documents_2_hint">
+		<text>Túnel</text>
+	</string>
+	<string id="bar_darklab_documents_3_hint">
+		<text>Entrada del laboratorio</text>
+	</string>
+	<string id="bar_darklab_documents_4_hint">
+		<text>Tubería</text>
+	</string>
+	<string id="bar_darklab_documents2_1_hint">
+		<text>Documentos del laboratorio</text>
+	</string>
+	<string id="bar_darklab_documents2_2_hint">
+		<text>Tabernero</text>
+	</string>
+	<string id="val_captive_help_1_hint">
+		<text>Bullet</text>
+	</string>
+	<string id="val_captive_help_2_hint">
+		<text>Prisionero</text>
+	</string>
+	<string id="val_come_to_trader_1_hint">
+		<text>Puerta sur</text>
+	</string>
+	<string id="val_come_to_trader_2_hint">
+		<text>Comerciante</text>
+	</string>
+	<string id="val_prisoner_help_main_hint">
+		<text>Miembro de Deber prisionero</text>
+	</string>
+	<string id="val_sos_help_main_hint">
+		<text>Stalker herido</text>
+	</string>
+	<string id="val_zone_bandits_hint">
+		<text>Campamento bandido</text>
+	</string>
+	<string id="val_zone_farm_hint">
+		<text>Granja.\nComprar Gauss.</text>
+	</string>
+	<string id="val_zone_monolith_hint">
+		<text>Vieja fábrica</text>
+	</string>
+	<string id="val_zone_pipe_hint">
+		<text>Tubería de la alcantarilla</text>
+	</string>
+	<string id="val_zone_robbers_hint">
+		<text>Granja de cerdos abandonada</text>
+	</string>
+	<string id="val_zone_south_gate_hint">
+		<text>Puertas</text>
+	</string>

@@ -1,0 +1,60 @@
+	<string id="mil_cap_hint">
+		<text>Parla con il comandante della Barriera</text>
+	</string>
+	<string id="mil_courier_hint1">
+		<text>Segui lo spione</text>
+	</string>
+	<string id="mil_courier_hint2">
+		<text>Aspetta che lo spione chiami l'agente</text>
+	</string>
+	<string id="mil_courier_hint3">
+		<text>Uccidi lo spione</text>
+	</string>
+	<string id="mil_courier_hint4">
+		<text>Uccidi l'informatore</text>
+	</string>
+	<string id="mil_crazy_hint">
+		<text>Prendi la chiavetta dallo stalker pazzo</text>
+	</string>
+	<string id="mil_dolg_khutor">
+		<text>Fattoria dei Duty</text>
+	</string>
+	<string id="mil_freedom_sniper">
+		<text>Uccidi il cecchino</text>
+	</string>
+	<string id="mil_hunters_hint1">
+		<text>Parla con lo Scuro</text>
+	</string>
+	<string id="mil_hunters_hint2">
+		<text>Torna dallo Spilorcio</text>
+	</string>
+	<string id="mil_kill_dolg_hint">
+		<text>Distruggi la squadra dei Duty</text>
+	</string>
+	<string id="mil_kill_lukash_hint">
+		<text>Uccidi Lukash</text>
+	</string>
+	<string id="mil_miser_hint">
+		<text>Spilorcio</text>
+	</string>
+	<string id="mil_report_to_max_hint">
+		<text>Fai rapporto a Max</text>
+	</string>
+	<string id="mil_return_to_lukash_hint">
+		<text>Fai rapporto a Lukash</text>
+	</string>
+	<string id="mil_return_to_max_hint">
+		<text>Dai la chiavetta a Max</text>
+	</string>
+	<string id="mil_rg6_hint1">
+		<text>Trova il cuoco nella base dei Freedom</text>
+	</string>
+	<string id="mil_rg6_hint2">
+		<text>Parla con lo Chef</text>
+	</string>
+	<string id="mil_rg6_hint3">
+		<text>Prendi il Bulldog 6 dal nascondiglio nel villaggio</text>
+	</string>
+	<string id="mil_watertower_hint">
+		<text>Torre dell'acqua</text>
+	</string>

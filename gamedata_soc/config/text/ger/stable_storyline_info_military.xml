@@ -1,0 +1,51 @@
+	<string id="mil_actor_main_quest_descr">
+		<text>Laut General Woronin hat nur die Freiheit eine dieser Waffen. Wie ich daran komme ist meine Sache. Eine Möglichkeit ist angeblich, mit dem Freiheits-Stalker rumzuhängen, der Koch genannt wird. Der General meint, er trinkt gerne mal einen über den Durst. Ich sollte mich mit Wodka eindecken - für alle Fälle.</text>
+	</string>
+	<string id="mil_blockpost_job_descr">
+		<text>Die Barriere muss unbedingt vor Angriffen aus der Richtung des Hirnschmelzers geschützt werden.</text>
+	</string>
+	<string id="mil_blockpost_job2_descr">
+		<text>Lukasch: "Wenn du es dir zutraust, kannst du zum Sicherheits-Kontrollpunkt am Ausgang zum Roten Wald gehen. Sie hatten Hinweise, dass es einen weiteren Einbruchsversuch von Mutanten oder Monolith."</text>
+	</string>
+	<string id="mil_courier_doc_descr">
+		<text>Freiheit hat Bulldog 6 Granatwerfer beschafft. Zwei sogar. Einer ist im Arsenal, der andere ist irgendwo im Dorf.\n\n</text>
+	</string>
+	<string id="mil_courier_job_descr">
+		<text>Lukasch: "Traurig, aber wahr - wir haben einen Informanten unter uns ... Er heißt Pawlik. Er liefert der anderen Seite Informationen und das müssen wir unterbinden. Folge ihm zum Bauernhof und finde heraus, wem er die Informationen überbringt. Er ist vor kurzem gegangen, also beeil dich. Denk daran: Du solltest ihn erledigen, aber erst nachdem er gezeigt hat, wem er die Informationen übergibt. Denjenigen musst du dann auch eliminieren."</text>
+	</string>
+	<string id="mil_crazy_flash_info">
+		<text>... Heute sind wir wieder zum Jagen ins Dorf gegangen. Alles wie immer. \n\n Wo kam das Biest her? Es muss sich wohl durch den Roten Wald angeschlichen haben. Alle Jungs sind tot, ich bin der einzige Überlebende ... Ich versuche mich nachts herauszuschleichen ... \n\n Ich kann mich nicht daran erinnern, wie ich herausgekommen bin. Es war die Hölle ... Mein Schädel zerbricht gleich - Bilder, Geräusche - ich weiß nicht, woher sie kommen. Verdammte Strahlung. Und zusätzlich ist auch noch der Detektor kaputt. Ich muss mich dringend ausruhen.</text>
+	</string>
+	<string id="mil_dolg_kill_lukash_descr">
+		<text>Zusammen mit Wächtern die Basis betreten. \nDrei Scharfschützen eliminiere. \nLukasch erledigen.</text>
+	</string>
+	<string id="mil_dolg_kill_sniper_descr">
+		<text>Den Scharfschützen am Turm ausschalten. Achtung, sonst gibt es eine Bleivergiftung.</text>
+	</string>
+	<string id="mil_flash_bandit_descr">
+		<text>Verdammt, diese Dreckswächter haben es uns so richtig gezeigt. Sie hatten sich in der Nähe unseres Bauernhofs eingegraben. Wir konnten noch nicht einmal unsere Sachen vom Dachboden holen. Aber das ist nicht weiter schlimm - die Freiheits-Basis ist in der Nähe, also werden sie sich nicht besonders lange da herumtreiben.</text>
+	</string>
+	<string id="mil_flash_max_descr">
+		<text>Heute haben wir ein paar Soldaten abgeschossen, die zum Roten Wald unterwegs waren. Haben ein paar Bulldog 6 organisiert. Die sind großartig. Lukasch hat eine genommen und Murk hat die andere in irgendeinem Keller im Dorf versteckt.</text>
+	</string>
+	<string id="mil_flash_ugrumy_descr">
+		<text>1. Der Teufel hat mich in den Roten Wald getrieben. Ich hätte es fast nicht geschafft - etwas langsamer und von mir wäre nur noch weiches Hirn übrig geblieben. \n\n 2. Vier Räuber haben mich wie einen Dreijährigen eingekreist. Ich habe ihre Falle nicht gesehen. Allein ihre Geschwätzigkeit und Habgier hat mich gerettet. Anstatt mir ein paar Gramm Blei in die Rippen zu jagen haben sie mich ausgeplündert - den Anzug fanden sie toll. Das war dann ihr letzter Fehler, aber einer von ihnen konnte mir doch noch eine Kugel verpassen ... Ha, ich werde wohl alt ... \n\n 3. Als ich ankam hat Streloks Bote nicht mehr geatmet. Mit drei Blutsaugern können es nur wenige aufnehmen, aber dieser Typ hat sogar vier von ihnen erledigt und einige blutige Spuren führen noch von hier weg. Die einzige Information die er bei sich trägt ist ein Türcode (19840519), aber es wird fast unmöglich sein, die passende Tür dazu zu finden. \n\n 4. Wir haben ein paar Leute von der Armee abgefangen, die auf dem Weg zum Roten Wald waren. Sie hatten keinerlei Dokumente oder Befehle bei sich, waren aber hervorragend ausgerüstet. Ich glaube, ich lasse diesen Bulldog 6 im Keller, bis ich ihn brauche.</text>
+	</string>
+	<string id="mil_freedom_rg6_task_descr">
+		<text>Woronin: "Die Freiheitsfraktion hat ein paar großartige Bulldog 6. Wenn du es schaffst, dich in ihr Gebiet zu schleichen und wenigstens einen dieser Granatenwerfer zu stehlen, würde ich dich großzügig belohnen. Da du nicht zu unserer Fraktion gehörst sollte es leicht sein, sich bei der Freiheit einzuschleichen und mit ein bisschen Glück den Bulldog 6 zu stehlen. Ich gebe dir die Informationen über die Position der Freiheitsfraktion. Du musst einen gewissen Koch finden, ein Fraktionsmitglied. Er weiß genau, wo die Bulldog 6 gelagert werden. Er hat eine Schwäche für Alkohol, also nimm lieber genug Wodka mit."</text>
+	</string>
+	<string id="mil_go_to_miser_descr">
+		<text>Hm. In der Freiheits-Basis bekomme ich meine Belohnung von Geizhals ... Netter Name. Wahrscheinlich bekomme ich eine Dose Fleisch vom letzten Jahr.</text>
+	</string>
+	<string id="mil_hunters_task_descr">
+		<text>Muss das Dorf von den Blutsaugern befreien. Muss dabei vorsichtig sein, sonst trinken sie mein Blut und lassen mich tot liegen.</text>
+	</string>
+	<string id="mil_hunters_task_descr2">
+		<text>Muss das Dorf von den Blutsaugern befreien. Muss dabei vorsichtig sein, sonst trinken sie mein Blut und lassen mich tot liegen.</text>
+	</string>
+	<string id="mil_lukash_job_descr">
+		<text>Lukasch entschied, einen Gegenangriff auf die Wächtertruppe bei der Hütte zu führen. Max, einer der Freiheits-Veteranen, wird die Operation leiten. Ich soll ihnen helfen.</text>
+	</string>
+	<string id="mil_mad_flash_job_descr">
+		<text>Ich frage mich, was der verrückte Typ am Sumpf überhaupt wissen soll, aber ich werde es herausfinden. Ich muss nur auf diese alten Minen aufpassen, die sind so verrostet, dass bestimmt schon das Gewicht einer Schraube ausreicht, um sie auszulösen.</text>
+	</string>

@@ -1,0 +1,48 @@
+	<string id="descr_yan_find_ghost_task">
+		<text>Wasiliew: "Das sind die Koordinaten des Eingangs zu Labor X16. Der Eingang liegt im Keller des Hauptgebäudes; der Zweck des Gebäudes ist unbekannt. Ich vermute, dass von dort aus die unterirdischen Emitter gewartet werden. Gemäß der Dokumentation von N*** liegt der Zweck des Projekts in der vollständigen Entwicklung psychotronischer Waffen mit weitreichender Auswirkung auf ...\n\n ... alle notwendigen Dokumente sind in unserem Besitz und wir wissen, wie man den Emitter abstellt. Wir gehen mit Ghost ins Labor. Überall dringen Zombies hervor ...\n\n ... es geht alles vor die Hunde, Ghost ist komplett durchgedreht und ins Delirium verfallen. Er scheint der Emission erlegen zu sein. Ich habe alles aufgegeben und begonnen, durch die Tunnel zurückzugehen. ...\n\n ... Ich bin im Sumpf, wo ist der Bunker? Verdammt, verdammt, verdammt! Ich kann den Ort nicht ausfindig machen! Sacharow, der Feigling, meldet sich nicht! Was ist los? ... Da sind überall Zombies und mir geht die Munition aus ..."</text>
+	</string>
+	<string id="descr_yan_find_lab">
+		<text>Sacharow: "Du musst nur Wasiliews Leiche finden, um genaue Informationen zum Standort des Labors zu erhalten. Geh dann hinein und finde Ghost. Ghost wusste, wie man die Emission abstellt und anschließend rauskommt."</text>
+	</string>
+	<string id="descr_yan_find_scientist">
+		<text>Sacharow: "Wenn du mit unserem Verbündeten alle Messungen durchführst, gebe ich dir einen kalibrierten Prototypen, mit dem du ins Labor hineinkommst."</text>
+	</string>
+	<string id="descr_yan_find_scientist_semenov">
+		<text>Sacharow: "Wenn du mit unserem Verbündeten alle Messungen durchführst, gebe ich dir einen kalibrierten Prototypen, mit dem du ins Labor hineinkommst."</text>
+	</string>
+	<string id="descr_yan_kill_brain">
+		<text>Sacharow: "Gut gemacht, Gezeichneter, du hast es ins Labor geschafft. Es ist für uns sehr wichtig, den Mechanismus im Labor zu studieren. Versuche ihn zu deaktivieren, damit wir ihn untersuchen können.\n\n ... Hör zu, der Prototyp kann dich nicht gegen starke Strahlung schützen. Daran habe ich gedacht, also befindet sich in der Rüstung ein Timer, der zu ticken beginnt, wenn du starker Strahlung ausgesetzt wirst. Wenn die Zeit abläuft, schützt dich der Prototyp nicht mehr. Sei sehr vorsichtig und vergiss nicht den Timer."</text>
+	</string>
+	<string id="descr_yan_kill_brain_2">
+		<text>Das Gerät ist aus. Jetzt noch irgendwie lebend rauskommen.</text>
+	</string>
+	<string id="descr_yan_provodnik_task">
+		<text>Ghost: "Eintrag Nr.257\n >> Prowodnik, ich schicke dir jemanden. Wir haben wichtige Informationen für den Doktor, bitte hilf ihm." \n\n >>Prowodnik: "Gut. Aber Ghost, wiederholen wir nicht das letzte Mal. Mach die Reise selbst, ich wollte schon länger mal mit dir reden. Ich warte dann am üblichen Ort, im Lager bei der Brücke. Verlauf dich nicht und lass dich nicht von den Armeepatrouillen erwischen."</text>
+	</string>
+	<string id="descr_yan_scientist_return_task">
+		<text>Sacharow: "Was ist passiert? Er ist tot? Nimm die Messungen und kehr sofort zurück!"</text>
+	</string>
+	<string id="journal_after_find_ghost">
+		<text>Ich bin schockiert! Ghost ist dieselbe Person, wie der Mann auf dem Foto in der Akte über die Eliminierung Streloks. Ich bin verwirrt. Das muss ein Fehler sein. Aber wer hat diesen Fehler gemacht? Noch gibt es darauf keine Antwort. Aus Ghosts Aufzeichnungen kenne ich den Namen ihres "gemeinsamen Bekannten", der vierte Mann aus Streloks Gruppe: Doktor. Er hat schon lange als Hauptquartier für die Gruppe fungiert. Man findet ihn über einen bestimmten Stalker, ein Führer namens Prowodnik, der häufig im Kordon ist. In Ordnung Prowodnik, jetzt stirb nur bitte nicht einfach vor unserem Treffen. Bei Ghosts Leiche habe ich auch Dokumente über den "PSI-Hirn"-Mechanismus gefunden. Die gesamte Nachbarschaft stand unter dem Einfluss dieses Drecksdings - jeder in Reichweite wurde quasi zum Zombie. Es gibt angeblich noch einen solchen Mechanismus im Labor X19, das ist wahrscheinlich dieser Hirnschmelzer. Diese Mechanismen arbeiten nicht ständig mit voller Leistung, sondern sie werden manchmal heruntergefahren, um den Apparat abkühlen zu lassen.</text>
+	</string>
+	<string id="journal_after_find_ghost_name">
+		<text>Ein weiteres Puzzle</text>
+	</string>
+	<string id="journal_after_kill_brain">
+		<text>Nachdem ich dieses furchtbare "Röhren-Hirn" abgeschaltet hatte, wurde ich bewusstlos. Der Druck der letzten paar Tage forderten ihren Tribut. Während ich bewusstlos war, hatte ich einen Traum ... Ein Foto. Ein grauhaariger alter Mann hält es in seinen Händen und ein riesiger Hund liegt ihm zu Füßen. Der Mann sieht in die Ferne, doch um ihn herum ist nur Sumpf. Die Landschaft sieht der auf dem Foto absolut nicht ähnlich. Im Nebel sehe ich wie jemand weg geht. Der Mann führt Selbstgespräche: "Wenn es so wichtig ist, warum hast du mir dann nicht gesagt, wo dieser Ort ist und wo du dieses Foto gemacht hast." Dann erkenne ich an der Seite einen lächelnden jungen Mann, der auf der Türschwelle steht und freudig sagt: "Wenn du nur wüsstest, wo ich war und was ich gesehen habe!" Er streckt seine Hand aus, in der er ein wundervolles Gerät hält, das den gesamten Raum erhellt. Der Hund beginnt zu knurren und drückt sich in eine Ecke des Raumes und der grauhaarige Mann murmelt: "Eines Tages wirst du dadurch in große Schwierigkeiten geraten." ... Ein Lichtblitz ... Der selbe junge Mann stolpert mit blutbespritztem Gesicht in den Raum und fällt hin ... Ein Blitz durchzuckt den Himmel und Regen peitscht den Boden ... Ein Lichtblitz ... Ein Bett, in dem der junge Mann, in Verbände gehüllt, liegt. Er ist bewusstlos. Der grauhaarige Mann murmelt: "Halt durch, mein Junge." Ein paar persönliche Dinge sind in einer Ecke aufgehäuft, darunter auch das seltsame Foto ... Ein Lichtblitz ... Das Foto wird von dem grauhaarigen Mann in den Händen gehalten. Der junge Mann, dessen Gesicht nun von Narben überzogen ist, ist aufbruchbereit. Der grauhaarige Mann fragt: "Wohin gehst du nun?" Düster antwortet der junge Mann: "Nach Norden." ... Ein Lichtblitz ... Dann wachte ich auf.</text>
+	</string>
+	<string id="journal_after_kill_brain_name">
+		<text>Der zweite Traum</text>
+	</string>
+	<string id="journal_before_vasilyev_pda">
+		<text>Da bin ich jetzt also nur einen Schritt von einem von Streloks Männern weg. Ghost ist mit einem Wissenschaftler in das unterirdische Labor X16 gegangen. Es gibt allerdings ein großes "Aber" - Er ist wahrscheinlich nicht mehr am Leben. Der Wissenschaftler kam alleine zurück und wurde getötet, als er sich dem Lager näherte. Die Wissenschaftler haben mich mit einem Gerät ausgestattet, das mich gegen diese seltsamen Emissionen schützen soll. Ich hoffe es hilft. Ich soll hineingehen und den Emitter ausschalten, dann können sie ihn sich vor Ort ansehen. Gott steh mir bei.</text>
+	</string>
+	<string id="journal_before_vasilyev_pda_name">
+		<text>Dicht dran an Ghost</text>
+	</string>
+	<string id="storyline_ghost_info">
+		<text>Eintrag #257\n >> Prowodnik, ich schicke dir jemanden. Wir haben wichtige Informationen für den Doktor, bitte hilf ihm.\n >>> Gut. Aber Ghost, wiederholen wir nicht das letzte Mal. Mach die Reise selbst, ich wollte schon länger mal mit dir reden. Ich warte dann am üblichen Ort, im Lager bei der Brücke. Verlauf dich nicht und lass dich nicht von den Armeepatrouillen erwischen.\n\n Eintrag #384\n ... Im letzten Augenblick bekam Wasiliew plötzlich kalte Füße. Statt die untere Konsole zu trennen, ist er einfach davon gerannt, als die Tür sich öffnete. Ich hätte mich nicht auf ihn verlassen sollen. Strelok hatte Recht, man kann diesen verlogenen Hunden nicht trauen. Meine einzige Chance besteht darin, die Tür vor dem Telepathen zu erreichen ...</text>
+	</string>
+	<string id="storyline_vasilyev_info">
+		<text>... dies sind die Koordinaten des Eingangs zu Labor X16. Der Eingang befindet sich im Keller des mittleren Gebäudes. Der Zweck dieses Gebäudes ist unbekannt. Wahrscheinlich dient es der technischen Wartung der unterirdischen Emitter: laut der Dokumentation von N***, ist der beabsichtige Zweck dieses Projektes die umfassende Entwicklung psychologischer Waffen, mit großflächiger Wirkung auf ... \n\n ... wir besitzen alle erforderlichen Beschreibungen und wir wissen, wie man den Emitter ausschaltet. Wir gehen mit Ghost runter in das Labor. Die Zombies kommen einfach von überall ... \n\n ... alles geht vor die Hunde, Ghost hat den Verstand verloren und dreht völlig durch. Scheinbar erliegt er den Emissionen. Ich habe alles liegen gelassen und begebe mich zurück durch die Tunnel ... \n\n ... Ich bin in den Sümpfen, wo ist der Bunker? Verdammt, verdammt, verdammt!!! Ich kann meinen Standort nicht genau bestimmen! Sacharow, dieser Feigling, antwortet nicht!!! Was geht hier nur vor??? ... Überall sind Zombies und mir geht die Munition aus ...</text>
+	</string>

@@ -1,0 +1,174 @@
+	<string id="bandit_experienced">
+		<text>Erfahrener Bandit</text>
+	</string>
+	<string id="bandit_master">
+		<text>Profibandit</text>
+	</string>
+	<string id="bandit_novice">
+		<text>Anfängerbandit</text>
+	</string>
+	<string id="bandit_veteran">
+		<text>Meisterbandit</text>
+	</string>
+	<string id="bloodsucker_normal">
+		<text>Über-Blutsauger</text>
+	</string>
+	<string id="bloodsucker_strong">
+		<text>Dunkelblutsauger</text>
+	</string>
+	<string id="bloodsucker_weak">
+		<text>Blutsauger</text>
+	</string>
+	<string id="boar_normal">
+		<text>Jungtier</text>
+	</string>
+	<string id="boar_strong">
+		<text>Keiler</text>
+	</string>
+	<string id="boar_weak">
+		<text>Frischling</text>
+	</string>
+	<string id="burer_weak">
+		<text>Burer</text>
+	</string>
+	<string id="controller_weak">
+		<text>Telepath</text>
+	</string>
+	<string id="dog_normal">
+		<text>Rattenhund</text>
+	</string>
+	<string id="dog_strong">
+		<text>Albinohund</text>
+	</string>
+	<string id="dog_weak">
+		<text>Wildhund</text>
+	</string>
+	<string id="dolg_experienced">
+		<text>Erfahrener Wächter</text>
+	</string>
+	<string id="dolg_master">
+		<text>Wächterexperte</text>
+	</string>
+	<string id="dolg_veteran">
+		<text>Wächterveteran</text>
+	</string>
+	<string id="ecolog_experienced">
+		<text>Erfahrener Wissenschaftler</text>
+	</string>
+	<string id="ecolog_novice">
+		<text>Wissenschaftlicher Assistent</text>
+	</string>
+	<string id="flesh_normal">
+		<text>Waldfleisch</text>
+	</string>
+	<string id="flesh_strong">
+		<text>Sumpffleisch</text>
+	</string>
+	<string id="flesh_weak">
+		<text>Steppenfleisch</text>
+	</string>
+	<string id="freedom_experienced">
+		<text>Zweifelhafter Freiheitler</text>
+	</string>
+	<string id="freedom_master">
+		<text>Freiheitler-Ass</text>
+	</string>
+	<string id="freedom_veteran">
+		<text>Freiheitler-Kriegshund</text>
+	</string>
+	<string id="killer_experienced">
+		<text>Ausgebildeter Söldner</text>
+	</string>
+	<string id="killer_master">
+		<text>Zäher Söldner</text>
+	</string>
+	<string id="killer_veteran">
+		<text>Söldnerveteran</text>
+	</string>
+	<string id="military_experienced">
+		<text>Feldwebel</text>
+	</string>
+	<string id="military_master">
+		<text>Hauptmann</text>
+	</string>
+	<string id="military_novice">
+		<text>Soldat</text>
+	</string>
+	<string id="military_veteran">
+		<text>Leutnant</text>
+	</string>
+	<string id="monolith_experienced">
+		<text>Erfahrener Monolither</text>
+	</string>
+	<string id="monolith_master">
+		<text>Monolitherexperte</text>
+	</string>
+	<string id="monolith_novice">
+		<text>Anfängermonolither</text>
+	</string>
+	<string id="monolith_veteran">
+		<text>Monolitherveteran</text>
+	</string>
+	<string id="neutral_experienced">
+		<text>Ausgebildeter Stalker</text>
+	</string>
+	<string id="neutral_master">
+		<text>Erfahrener Stalker</text>
+	</string>
+	<string id="neutral_novice">
+		<text>Stalkerniete</text>
+	</string>
+	<string id="neutral_veteran">
+		<text>Stalkerlegende</text>
+	</string>
+	<string id="poltergeist_weak">
+		<text>Poltergeist</text>
+	</string>
+	<string id="pseudo_gigant_weak">
+		<text>Pseudoriese</text>
+	</string>
+	<string id="pseudodog_normal">
+		<text>Reifer Pseudohund</text>
+	</string>
+	<string id="pseudodog_strong">
+		<text>Grauer Pseudohund</text>
+	</string>
+	<string id="pseudodog_weak">
+		<text>Pseudohund</text>
+	</string>
+	<string id="psy_dog">
+		<text>Düsterer Pseudohund</text>
+	</string>
+	<string id="snork_normal">
+		<text>Schnork-Sammler</text>
+	</string>
+	<string id="snork_strong">
+		<text>Schnork-Menschenfresser</text>
+	</string>
+	<string id="snork_weak">
+		<text>Schnork</text>
+	</string>
+	<string id="tushkano_weak">
+		<text>Nager</text>
+	</string>
+	<string id="zombie_normal">
+		<text>Zombie</text>
+	</string>
+	<string id="zombie_strong">
+		<text>Zombie</text>
+	</string>
+	<string id="zombie_weak">
+		<text>Zombie</text>
+	</string>
+	<string id="zombied_experienced">
+		<text>Erfahrener Zombiestalker</text>
+	</string>
+	<string id="zombied_master">
+		<text>Zombiestalkerexperte</text>
+	</string>
+	<string id="zombied_novice">
+		<text>Anfänger-Zombiestalker</text>
+	</string>
+	<string id="zombied_veteran">
+		<text>Zombiestalkerveteran</text>
+	</string>

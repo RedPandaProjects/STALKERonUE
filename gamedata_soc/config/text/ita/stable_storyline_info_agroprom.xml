@@ -1,0 +1,48 @@
+	<string id="agr_find_ghost_descr">
+		<text>...scoperto che uno degli uomini di Strelok è chiamato il Fantasma. Meglio di niente. Se riesco a trovare il Fantasma, troverò anche Strelok.</text>
+	</string>
+	<string id="agr_journal_cache">
+		<text>Be', a quanto pare il nascondiglio mi ha indicato una nuova direzione. Ho trovato una chiavetta contenente quello che sembra il diario del gruppo di Strelok. Non c'è scritto molto, ma ho capito che del gruppo facevano parte altre due persone: Zanna e il Fantasma. Il diario parlava anche di un "comune amico", ma non ho capito se faceva parte del gruppo oppure no. Comunque li ha aiutati, questo è certo. Stando a quanto ha scritto il Fantasma, Zanna è morto durante l'imboscata. Finalmente ho in mano qualcosa di concreto: il nome di qualcuno che di sicuro conosce Strelok, ossia il Fantasma. Quanto a Strelok, potrebbe trovarsi nella parte nord della Zona.</text>
+	</string>
+	<string id="agr_journal_krot">
+		<text>Bene, l'incontro con la Talpa è stato utile: pare che il nascondiglio del gruppo esista davvero e che si trovi nelle catacombe sotto l'istituto... Dovrò andare a controllare. Non so cosa troverò... ma spero che questo nascondiglio mi aiuti a risolvere il mistero che mi riguarda...</text>
+	</string>
+	<string id="agr_krot_secret_info">
+		<text>... Scendi con la scala a chiocciola fino alla stanza con le colonne. Attraversa la stanza ed entra in un'altra grande stanza: vedrai dei tubi che corrono sul soffitto. Raggiungi la seconda uscita, entra nella galleria e gira a sinistra. Alla fine troverai una curva a destra. Esci subito dalla stanza piccola e gira a destra. Cerca un foro nella parete di sinistra, vicino alle parole "Non entrare o morirai". Quella è l'entrata del nascondiglio di Strelok.</text>
+	</string>
+	<string id="agr_krot_secret_info_name">
+		<text>Il nascondiglio di Strelok</text>
+	</string>
+	<string id="agr_military_case">
+		<text>\nRapporto investigativo.\n Solo per uso interno.\n All'attenzione del colonnello SBU V.M. Kruchelnikov, responsabile del progetto "VERITÀ".\n Dal capitano D.F. Maksimenko, \ncomandante del gruppo "Ricerca-2".\n\n Promemoria.\ ha eseguito una perquisizione della sede dell'istituto Agroprom, ex istituto di ricerca per la coltivazione del territorio colpito dalle radiazioni, tra il 12.05.2012 e il 25.05.2012. Tuttavia quanto è stato in effetti rinvenuto ci ha permesso di raggiungere la seguente conclusione: nel periodo compreso tra il 2005 e il 2008, l'istituto non ha condotto alcuna ricerca nel suo campo di studio ufficiale. Tutti i risultati del "lavoro" svolto inviati al Ministero dell'Agricoltura sono stati falsificati. Contemporaneamente, i dirigenti dell'istituto, e in particolare Petr Danilovich Strizh, hanno continuato a ricevere dallo Stato finanziamenti, attrezzature e beni di consumo e li hanno trasferiti in un laboratorio denominato X18 falsificando le bolle di accompagnamento per fornire una copertura all'operazione, e dichiarando che i materiali venivano trasferiti a un centro ausiliario per compiere degli esperimenti. Dal momento che nel nostro database questo laboratorio non è menzionato. L'analisi dei documenti rinvenuti ci ha consentito di stabilire che tale laboratorio si trova a un'ora di strada dall'istituto. Probabilmente si tratta di un centro clandestino, di conseguenza richiedo il coinvolgimento della nostra divisione analisi. Non è chiaro quale tipo di ricerche venissero svolte dal laboratorio e i documenti a nostra disposizione non contengono informazioni utili a riguardo, tuttavia menzionano il famigerato professor Chubko e un non meglio identificato "Gruppo". Sono fermamente convinto che il nostro compito sia concluso e che la divisione analisi abbia parecchio lavoro da svolgere ora.\n\n Si allega un file contenente le bolle di accompagnamento relative ai materiali di consumo e alle attrezzature trasferite al cosiddetto centro ausiliario e un estratto della corrispondenza tra Strizh e Chubko.\n\n Capitano D.F. Maksimenko 26.05.2012\n All'attenzione del professor V.M. Chubko. Da P.D. Strizh, responsabile dell'istituto di ricerca Agroprom. Come d'accordo, invio la nuova partita di beni di consumo e di attrezzature al centro sperimentale per contribuire alle tue ricerche, essenziali per l'agricoltura. Ho disposto il finanziamento degli esperimenti, descrivendoli come esperimenti pilota nei campi studiati dall'istituto, quindi non dovrebbero esserci problemi con il Ministero. Sono ancora impressionato da ciò che mi hai mostrato l'ultima volta. Dottor P.D. Strizh A P.D. Strizh Ti sono infinitamente grato, Petr Danilovich: abbiamo ricevuto tutto. La mia squadra è decisamente colpita dallo spettrometro laser: se non fosse stato per te, avrei impiegato un'eternità per procurarmi questo modello tramite i miei canali. Naturalmente, il Ministero dell'Agricoltura sarà felice di ricevere i NOSTRI risultati... con quella trovata mi hai fatto davvero ridere! Gli esperimenti procedono normalmente e ciò che hai visto l'ultima volta non è nulla di fronte ai nostri ultimi risultati. Dovresti venirci a trovare più spesso: sono sempre felice di vederti e sei solo a un'ora di strada dal nostro "centro sperimentale" Lunedì prossimo discuteremo della possibilità che tu entri a far parte del Gruppo. Penso che saranno d'accordo con me. Cordiali saluti, professor V.M. Chubko All'attenzione del professor V.M. Chubko Da P.D. Strizh, responsabile dell'istituto di ricerca Agroprom, ti ringrazio per la fiducia. Sono commosso e farò del mio meglio per darti ragione. Penso che ogni scienziato sogni di partecipare a un esperimento simile e sarò lietissimo di essere accettato come membro del Gruppo. P.D. Strizh PS: sono riuscito a procurarmi presso il Ministero due dei più recenti oscilloscopi giapponesi a banda larga e te li invierò alla prima occasione.</text>
+	</string>
+	<string id="agr_military_case_name">
+		<text>Rapporto investigativo</text>
+	</string>
+	<string id="agr_nii_security_plan">
+		<text>Questa mappa indica in dettaglio la posizione di pattuglie, sentinelle e torri di guardia. Il quartier generale si trova al secondo piano dell'istituto. È lì che vengono conservati i documenti. Di giorno, la zona è pattugliata costantemente. Di notte ci sono meno pattuglie e alle 23 c'è il cambio della guardia. A quell'ora l'edificio principale è quasi deserto. Se vuoi entrare nella base, devi passare per le catacombe: il cancello non è praticabile.</text>
+	</string>
+	<string id="agr_nii_security_plan_name">
+		<text>Mappa delle guardie dell'istituto di ricerca Agroprom</text>
+	</string>
+	<string id="agr_rats_n_soldiers_text">
+		<text>L'esercito è infastidito dai topi che si arrampicano fuori dai collettori. Puniscono i soldati mandandoli nei collettori.</text>
+	</string>
+	<string id="agr_task_case">
+		<text>Trafficante: "Non appena avrai rubato la valigetta nell'istituto, portala al Barista. Lo troverai al bar degli stalker, il Bar 100 Rad, dove c'era la fabbrica di Rostock."</text>
+	</string>
+	<string id="article_agr_krot_sos">
+		<text>SOS, l'esercito sta uccidendo un fratello stalker! Se riuscite a sentirmi, aiutatemi, ragazzi! </text>
+	</string>
+	<string id="article_agr_krot_sos_name">
+		<text>Incontro con la Talpa</text>
+	</string>
+	<string id="article_agr_krot_sos1">
+		<text>Talpa: "Aiutami, mi uccideranno!"</text>
+	</string>
+	<string id="st_operation_agroprom">
+		<text>L'operazione Agroprom</text>
+	</string>
+	<string id="storyline_gunslinger_flash_info">
+		<text>Ricevuto dal Fantasma: \n \n Brutte notizie, Strelok. Zanna è morto. Ci stavano aspettando nel villaggio, vicino al magazzino, e penso che fossero lì da un pezzo. Erano in tre, sembravano dei neutrali come tanti. Zanna ha avvertito la loro presenza; lo sai che ha sempre avuto un sesto senso, lui. Due siamo riusciti a eliminarli; erano chiaramente dei banditi, ma il terzo si è rivelato più sveglio dei compagni. Era seduto a un centinaio di metri di distanza, con un Vintar BC in mano. E così, Zanna non c'è più, e la prossima volta al centro ci andremo da soli, io e te. E c'è un'altra cosa: quei due avevano la nostra descrizione. Non riesco a capire chi possa volerci morti, anche se di gente che ce l'ha con noi ce n'è a bizzeffe. Mi sono lasciato scappare il terzo, penso fosse un mercenario. Aveva una lunga cicatrice sul volto, gli occhi nocciola. Cercherò di trovarlo. \n Questo è quanto. Sta' in campana e buona fortuna. \n Fantasma \n \n Al Fantasma \n\n "Ehi, amico. \n Ti lascio delle informazioni. Non cercherò di contattarti, ho notato che c'è qualcuno che mi segue. \n Sono andato a Nord... dov'eravamo stati... Stavolta cercherò di farcela da solo; mi dispiace, ma non potevo aspettarti... Ti spiegherò dopo. \n E quel bastardo che ha ucciso Zanna rimpiangerà di essere nato... Lo farò a pezzi! Tu pensa a scoprire chi è, io sarò presto di ritorno e sistemeremo la faccenda. \n Ci vediamo a casa del nostro comune amico - tu sai di chi si tratta e dov'è :) \n Buona fortuna. \n Strelok” \n \n A Strelok \n \n “Ehi, sono venuto ma tu non c'eri. Non saresti dovuto andare al centro da solo ma non importa, tanto so dove trovarti... e con chi :) \n Fantasma”</text>
+	</string>

@@ -1,0 +1,48 @@
+	<string id="gar_angar">
+		<text>Verlassener Hangar.</text>
+	</string>
+	<string id="gar_bandit_agr">
+		<text>Banditenlager beim Ausgang von Agroprom.</text>
+	</string>
+	<string id="gar_bandit_post">
+		<text>Banditenbasis auf der Straße nach Agroprom.</text>
+	</string>
+	<string id="gar_bandits_leader">
+		<text>Vom Boss angeführter Banditenangriff.</text>
+	</string>
+	<string id="gar_boars_nest">
+		<text>Eine Horde Wildschweine.</text>
+	</string>
+	<string id="gar_car_graveyard">
+		<text>Fahrzeug-Schrottplatz.</text>
+	</string>
+	<string id="gar_dogs_in_forest">
+		<text>Wald voller Hunde</text>
+	</string>
+	<string id="gar_dolg_blokpost">
+		<text>Wächterposten auf der Straße zur Bar.</text>
+	</string>
+	<string id="gar_hellcar">
+		<text>Eine Gruppe neutraler Stalker, die um Hilfe ruft.</text>
+	</string>
+	<string id="gar_newbie">
+		<text>Ein verängstigter und übermüdeter Anfänger.</text>
+	</string>
+	<string id="gar_secret1">
+		<text>Das Geheimversteck des Anfängers.</text>
+	</string>
+	<string id="gar_seriy">
+		<text>Serijs Gruppe.</text>
+	</string>
+	<string id="gar_swamp">
+		<text>Das Modermoor.</text>
+	</string>
+	<string id="gar_trash1">
+		<text>Abfallhaufen mit Anomalien und Artefakten.</text>
+	</string>
+	<string id="gar_tunnel">
+		<text>Eisenbahntunnel.</text>
+	</string>
+	<string id="gar_wounded_help">
+		<text>SOS-Signal. Wahrscheinlich ein verwundeter Stalker.</text>
+	</string>

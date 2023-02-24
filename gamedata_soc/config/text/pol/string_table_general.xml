@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor">
+		<text>Samotnik</text>
+	</string>
+	<string id="actor_dolg">
+		<text>Powinnoњж</text>
+	</string>
+	<string id="actor_freedom">
+		<text>Wolnoњж</text>
+	</string>
+	<string id="arena_enemy">
+		<text>Najemnik</text>
+	</string>
+	<string id="bad">
+		<text>zіy</text>
+	</string>
+	<string id="bandit">
+		<text>Bandyta</text>
+	</string>
+	<string id="dolg">
+		<text>Powinnoњж</text>
+	</string>
+	<string id="ecolog">
+		<text>Ekolog</text>
+	</string>
+	<string id="enemy">
+		<text>wrуg</text>
+	</string>
+	<string id="excellent">
+		<text>Њwietna</text>
+	</string>
+	<string id="exo_outfit_name_m1">
+		<text>Egzoszkielet PNB-4UZ</text>
+	</string>
+	<string id="experienced">
+		<text>doњwiadczony</text>
+	</string>
+	<string id="Found_PDA">
+		<text>Odnalezione PDA</text>
+	</string>
+	<string id="freedom">
+		<text>Wolnoњж</text>
+	</string>
+	<string id="friendly">
+		<text>przyjaciel</text>
+	</string>
+	<string id="good">
+		<text>dobry</text>
+	</string>
+	<string id="indifferent">
+		<text>neutralny</text>
+	</string>
+	<string id="killer">
+		<text>Najemnik</text>
+	</string>
+	<string id="l01_escape">
+		<text>Kordon</text>
+	</string>
+	<string id="l02_garbage">
+		<text>Wysypisko</text>
+	</string>
+	<string id="l03_agroprom">
+		<text>Instytut Agroprom</text>
+	</string>
+	<string id="l04_darkvalley">
+		<text>Dolina Mroku</text>
+	</string>
+	<string id="l05_bar">
+		<text>Bar</text>
+	</string>
+	<string id="l06_rostok">
+		<text>Dzicz </text>
+	</string>
+	<string id="l07_military">
+		<text>Magazyny wojskowe</text>
+	</string>
+	<string id="l08_yantar">
+		<text>Jantar</text>
+	</string>
+	<string id="l10_radar">
+		<text>Czerwony Las</text>
+	</string>
+	<string id="l11_pripyat">
+		<text>Prypeж</text>
+	</string>
+	<string id="l12_stancia">
+		<text>Elektrownia J№drowa</text>
+	</string>
+	<string id="l12_stancia_2">
+		<text>Elektrownia J№drowa</text>
+	</string>
+	<string id="master">
+		<text>ekspert</text>
+	</string>
+	<string id="military">
+		<text>Wojskowy</text>
+	</string>
+	<string id="monolith">
+		<text>Monolit</text>
+	</string>
+	<string id="neutral">
+		<text>neutralny</text>
+	</string>
+	<string id="novice">
+		<text>kot</text>
+	</string>
+	<string id="st_no_active_task">
+		<text>Brak bieї№cego zadania</text>
+	</string>
+	<string id="st_time_till_surge">
+		<text>Czas do zwarcia</text>
+	</string>
+	<string id="stalker">
+		<text>Samotnik</text>
+	</string>
+	<string id="terrible">
+		<text>straszny</text>
+	</string>
+	<string id="trader">
+		<text>Handlarz</text>
+	</string>
+	<string id="ui_st_community">
+		<text>frakcja</text>
+	</string>
+	<string id="ui_st_price">
+		<text>Cena</text>
+	</string>
+	<string id="ui_st_rank">
+		<text>ranga</text>
+	</string>
+	<string id="ui_st_relation">
+		<text>przychylnoњж</text>
+	</string>
+	<string id="ui_st_reputation">
+		<text>reputacja</text>
+	</string>
+	<string id="very_bad">
+		<text>bardzo zіy</text>
+	</string>
+	<string id="very_good">
+		<text>bardzo dobry</text>
+	</string>
+	<string id="veteran">
+		<text>weteran</text>
+	</string>
+	<string id="zombied">
+		<text>Zombi</text>
+	</string>
+	<string id="Btn_Cancel">
+		<text>Anuluj</text>
+	</string>
+	<string id="Btn_No">
+		<text>Nie</text>
+	</string>
+	<string id="Btn_OK">
+		<text>OK</text>
+	</string>
+	<string id="Btn_Yes">
+		<text>Tak</text>
+	</string>
+	<string id="global_map">
+		<text>Mapa Zony</text>
+	</string>
+	<string id="st_autosave">
+		<text>Autozapis</text>
+	</string>
+	<string id="st_game_over">
+		<text>Koniec gry.</text>
+	</string>
+	<string id="st_item_used">
+		<text>Uїywane</text>
+	</string>
+	<string id="st_not_enough_money">
+		<text>Brak pieniкdzy</text>
+	</string>
+	<string id="st_not_enough_money_npc">
+		<text>BN nie ma wystarczaj№co duїo pieniкdzy</text>
+	</string>
+	<string id="ui_st_opponent_items">
+		<text>Plecak</text>
+	</string>
+	<string id="st_search_treasure">
+		<text>Przeszukaj schowek ($$ACTION_USE$$)</text>
+	</string>
+	<string id="inventory_item_use">
+		<text>Weџ przedmiot ($$ACTION_USE$$)</text>
+	</string>
+	<string id="ui_mm_check_updates">
+		<text>Aktualizacja gry</text>
+	</string>
+	<string id="ui_mm_alternative">
+		<text>Alternatywne</text>
+	</string>
+	<string id="ui_inv_health">
+		<text>Zdrowie</text>
+	</string>
+	<string id="ui_inv_radiation">
+		<text>Promieniowanie</text>
+	</string>
+	<string id="ui_inv_satiety">
+		<text>Gіуd</text>
+	</string>
+	<string id="ui_inv_power">
+		<text>Wytrzymaіoњж</text>
+	</string>
+	<string id="ui_inv_bleeding">
+		<text>Krwawienie</text>
+	</string>
+	<string id="st_mp_say_to_all">
+		<text>Ogуlny</text>
+	</string>
+	<string id="st_mp_say_to_team">
+		<text>Druїyna</text>
+	</string>
+	<string id="st_knife">
+		<text>Nуї</text>
+	</string>
+	<string id="st_mp_disabled_voting">
+		<text>Na tym serwerze nie moїna gіosowaж</text>
+	</string>
+	<string id="st_mp_no_current_voting">
+		<text>Brak aktywnych gіosowaс.</text>
+	</string>
+	<string id="st_mp_ready">
+		<text>gotowy</text>
+	</string>
+	<string id="st_mp_voting_succeed">
+		<text>Gіosowanie udane!</text>
+	</string>
+	<string id="st_mp_voting_failed">
+		<text>Gіosowanie nieudane!</text>
+	</string>
+	<string id="l03u_agr_underground">
+		<text>Podziemia Agropromu</text>
+	</string>
+	<string id="l04u_labx18">
+		<text>Laboratorium X18</text>
+	</string>
+	<string id="l08u_brainlab">
+		<text>Laboratorium X16</text>
+	</string>
+	<string id="l10u_bunker">
+		<text>Laboratorium X19</text>
+	</string>
+	<string id="l12u_sarcofag">
+		<text>Sarkofag</text>
+	</string>
+	<string id="l12u_control_monolith">
+		<text>Sterownia Monolitu</text>
+	</string>
+</string_table>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor">
+		<text>samotбш</text>
+	</string>
+	<string id="actor_dolg">
+		<text>Povinnost</text>
+	</string>
+	<string id="actor_freedom">
+		<text>Svoboda</text>
+	</string>
+	<string id="arena_enemy">
+		<text>Ћoldбk</text>
+	</string>
+	<string id="bad">
+		<text>љpatnй</text>
+	</string>
+	<string id="bandit">
+		<text>Bandita</text>
+	</string>
+	<string id="dolg">
+		<text>Povinnost</text>
+	</string>
+	<string id="ecolog">
+		<text>ekolog</text>
+	</string>
+	<string id="enemy">
+		<text>nepшнtel</text>
+	</string>
+	<string id="excellent">
+		<text>skvмlй</text>
+	</string>
+	<string id="exo_outfit_name_m1">
+		<text>Exoskeleton PNB-4UZ</text>
+	</string>
+	<string id="experienced">
+		<text>zkuљenэ</text>
+	</string>
+	<string id="Found_PDA">
+		<text>Nalezenб PDA</text>
+	</string>
+	<string id="freedom">
+		<text>Svoboda</text>
+	</string>
+	<string id="friendly">
+		<text>pшнtel</text>
+	</string>
+	<string id="good">
+		<text>dobrй</text>
+	</string>
+	<string id="indifferent">
+		<text>neutrбlnн</text>
+	</string>
+	<string id="killer">
+		<text>Ћoldбk</text>
+	</string>
+	<string id="l01_escape">
+		<text>Kordуn</text>
+	</string>
+	<string id="l02_garbage">
+		<text>Smetiљtм</text>
+	</string>
+	<string id="l03_agroprom">
+		<text>Vэzkumnэ institut Agroprom</text>
+	</string>
+	<string id="l04_darkvalley">
+		<text>Temnй ъdolн</text>
+	</string>
+	<string id="l05_bar">
+		<text>Bar</text>
+	</string>
+	<string id="l06_rostok">
+		<text>Divokб oblast</text>
+	</string>
+	<string id="l07_military">
+		<text>Armбdnн sklady</text>
+	</string>
+	<string id="l08_yantar">
+		<text>Jantar</text>
+	</string>
+	<string id="l10_radar">
+		<text>Rudэ les</text>
+	</string>
+	<string id="l11_pripyat">
+		<text>Pripjaќ</text>
+	</string>
+	<string id="l12_stancia">
+		<text>Elektrбrna Иernobyl</text>
+	</string>
+	<string id="l12_stancia_2">
+		<text>Elektrбrna Иernobyl</text>
+	</string>
+	<string id="master">
+		<text>expert</text>
+	</string>
+	<string id="military">
+		<text>Armбda</text>
+	</string>
+	<string id="monolith">
+		<text>Monolit</text>
+	</string>
+	<string id="neutral">
+		<text>neutrбl</text>
+	</string>
+	<string id="novice">
+		<text>novбиek</text>
+	</string>
+	<string id="st_no_active_task">
+		<text>Ћбdnэ aktivnн ъkol</text>
+	</string>
+	<string id="st_time_till_surge">
+		<text>Иas do expanze</text>
+	</string>
+	<string id="stalker">
+		<text>samotбш</text>
+	</string>
+	<string id="terrible">
+		<text>hrozivэ</text>
+	</string>
+	<string id="trader">
+		<text>pшekupnнk</text>
+	</string>
+	<string id="ui_st_community">
+		<text>frakce</text>
+	</string>
+	<string id="ui_st_price">
+		<text>Cena</text>
+	</string>
+	<string id="ui_st_rank">
+		<text>ъroveт</text>
+	</string>
+	<string id="ui_st_relation">
+		<text>pшнstup</text>
+	</string>
+	<string id="ui_st_reputation">
+		<text>reputace</text>
+	</string>
+	<string id="very_bad">
+		<text>velmi љpatnб</text>
+	</string>
+	<string id="very_good">
+		<text>velmi dobrб</text>
+	</string>
+	<string id="veteran">
+		<text>veterбn</text>
+	</string>
+	<string id="zombied">
+		<text>Zombifikovanэ</text>
+	</string>
+	<string id="Btn_Cancel">
+		<text>Zruљit</text>
+	</string>
+	<string id="Btn_No">
+		<text>Ne</text>
+	</string>
+	<string id="Btn_OK">
+		<text>Ok</text>
+	</string>
+	<string id="Btn_Yes">
+		<text>Ano</text>
+	</string>
+	<string id="global_map">
+		<text>Mapa Zуny</text>
+	</string>
+	<string id="st_autosave">
+		<text>Automatickй uloћenн</text>
+	</string>
+	<string id="st_game_over">
+		<text>Konec hry.</text>
+	</string>
+	<string id="st_item_used">
+		<text>Pouћito</text>
+	</string>
+	<string id="st_not_enough_money">
+		<text>Nedostatek penмz</text>
+	</string>
+	<string id="st_not_enough_money_npc">
+		<text>NPC nemб dostatek penмz</text>
+	</string>
+	<string id="ui_st_opponent_items">
+		<text>Batoh</text>
+	</string>
+	<string id="st_search_treasure">
+		<text>Prohledej skrэљ ($$ACTION_USE$$)</text>
+	</string>
+	<string id="inventory_item_use">
+		<text>Zvednout pшedmмt ($$ACTION_USE$$)</text>
+	</string>
+	<string id="ui_mm_check_updates">
+		<text>Aktualizace</text>
+	</string>
+	<string id="ui_mm_alternative">
+		<text>Alternativa</text>
+	</string>
+	<string id="ui_inv_health">
+		<text>Zdravн</text>
+	</string>
+	<string id="ui_inv_radiation">
+		<text>Radiace</text>
+	</string>
+	<string id="ui_inv_satiety">
+		<text>Hlad</text>
+	</string>
+	<string id="ui_inv_power">
+		<text>Vэdrћ</text>
+	</string>
+	<string id="ui_inv_bleeding">
+		<text>Krvбcenн</text>
+	</string>
+	<string id="st_mp_say_to_all">
+		<text>Vљem</text>
+	</string>
+	<string id="st_mp_say_to_team">
+		<text>Tэmu</text>
+	</string>
+	<string id="st_knife">
+		<text>Nщћ</text>
+	</string>
+	<string id="st_mp_disabled_voting">
+		<text>Na tomto serveru nenн povolenй hlasovбnн.</text>
+	</string>
+	<string id="st_mp_no_current_voting">
+		<text>Ћбdnй aktivnн hlasovбnн.</text>
+	</string>
+	<string id="st_mp_ready">
+		<text>pшipraven</text>
+	</string>
+	<string id="st_mp_voting_succeed">
+		<text>Hlasovбnн uspмlo!</text>
+	</string>
+	<string id="st_mp_voting_failed">
+		<text>Hlasovбnн selhalo!</text>
+	</string>
+	<string id="l03u_agr_underground">
+		<text>Podzemн Agropromu</text>
+	</string>
+	<string id="l04u_labx18">
+		<text>Laboratoш X-18</text>
+	</string>
+	<string id="l08u_brainlab">
+		<text>Laboratoш X-16</text>
+	</string>
+	<string id="l10u_bunker">
+		<text>Laboratoш X-10</text>
+	</string>
+	<string id="l12u_sarcofag">
+		<text>Sarkofбg</text>
+	</string>
+	<string id="l12u_control_monolith">
+		<text>Ovlбdбnн Monolitu</text>
+	</string>
+</string_table>

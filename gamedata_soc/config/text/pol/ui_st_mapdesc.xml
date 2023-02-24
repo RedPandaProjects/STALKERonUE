@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_map_desc_mp_agroprom_large">
+		<text>Dziwne miejsce. Ten cichy budynek ma wiele sekretуw, ale mimo niebezpieczeсstw, stalkerуw przyci№gaj№ liczne artefakty, ktуre moїna tu znaleџж. Szybkie ruchy i dokіadne strzaіy sprawi№, їe szczкњcie siк do ciebie uњmiechnie...</text>
+	</string>
+	<string id="ui_map_desc_mp_agroprom_short">
+		<text>Dziwne miejsce. Ten cichy budynek ma wiele sekretуw, ale mimo niebezpieczeсstw, stalkerуw przyci№gaj№ liczne artefakty, ktуre moїna tu znaleџж. </text>
+	</string>
+	<string id="ui_map_desc_mp_atp_large">
+		<text>Zajezdnia to przedsionek Zony. Traktory, autobusy i ciкїarуwki zatrzymaіy siк tu na zawsze. Nie znaleziono tu їadnych artefaktуw, ale to miejsce jest popularne wњrуd doњwiadczonych stalkerуw, ktуrzy poluj№ na kotуw i bior№, co mog№. Kryj siк za budynkami oraz za sprzкtem i uwaїaj na wrogуw na dachach.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_short">
+		<text>Zajezdnia to przedsionek Zony. Traktory, autobusy i ciкїarуwki zatrzymaіy siк tu na zawsze.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_large">
+		<text>To tajemnicze miejsce w dziwny sposуb przyci№ga ludzi. Na zawsze pozostanie tajemnic№, kto i dlaczego wybudowaі ten eksperymentalny basen. Nie ma tu artefaktуw. Stalkerzy ci№gn№ tu do pozostaіoњci dziwnych maszyn i urz№dzeс. Obserwuj dachy i pamiкtaj, їe w tej okolicy panuje wyj№tkowo silne promieniowanie.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_short">
+		<text>To tajemnicze miejsce w dziwny sposуb przyci№ga ludzi. Na zawsze pozostanie tajemnic№, kto i dlaczego wybudowaі ten eksperymentalny basen. </text>
+	</string>
+	<string id="ui_map_desc_mp_factory_large">
+		<text>Ponura, opuszczona fabryka. Nie wiadomo, ilu stalkerуw tu zginкіo. Peіno tu rуїnych anomalii, a mimo to stalkerzy przyci№gani s№ magnesem w postaci wartoњciowych artefaktуw. Uwaga na promieniowanie!</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_short">
+		<text>Ponura, opuszczona fabryka. Nie wiadomo, ilu stalkerуw tu zginкіo.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_large">
+		<text>Czкњж ogromnego wysypiska, na ktуre po katastrofie w 1986 przywieziono gуry radioaktywnych њmieci, takich jak rozlatuj№ce siк dџwigi czy sprzкt komputerowy. Moїna tu znaleџж resztki starych budynkуw uїytkowych i ogromny hangar. Niedaleko znajduje siк wejњcie do Zony i moїna znaleџж wiele artefaktуw. To wіaњnie dlatego stalkerzy zjawiaj№ siк tu w poszukiwaniu іatwej zdobyczy.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_short">
+		<text>Czкњж ogromnego wysypiska, na ktуre po katastrofie w 1986 przywieziono gуry radioaktywnych њmieci, takich jak rozlatuj№ce siк dџwigi czy sprzкt komputerowy.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_large">
+		<text>Opuszczona, zapomniana przez Boga i ludzi wioska w gікbi Zony. Maіe, pіytkie, rdzawe jezioro peіne wrakуw samochodуw, wywoіuje w sercach ludzi przebywaj№cych w Zonie podњwiadomy strach. Uwaїaj na snajperуw, lecz pamiкtaj, їe Zona woli odwaїnych.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_short">
+		<text>Opuszczona, zapomniana przez Boga i ludzi wioska w gікbi Zony. Maіe, pіytkie, rdzawe jezioro peіne wrakуw samochodуw, wywoіuje w sercach ludzi przebywaj№cych w Zonie podњwiadomy strach.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_large">
+		<text>Baza wojskowa, w ktуrej pozostaіy zepsute ciкїarуwki, transportery opancerzone, koszary i zniszczone centrum dowodzenia. Jednak prawda o tym miejscu jest inna, niї siк wydaje. Baza jest bogata w artefakty, a za kaїdym rogiem czai siк wrуg. Pokaї, na co ciк staж i odbierz nagrodк!</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_short">
+		<text>Baza wojskowa, w ktуrej pozostaіy zepsute ciкїarуwki, transportery opancerzone, koszary i zniszczone centrum dowodzenia.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_large">
+		<text>Ta stara wioska to zіowieszcze miejsce i њmiertelna puіapka. Ale jeњli zaszedіeњ tak daleko mimo ryzyka, jesteњ gotуw umrzeж nagі№ њmierci№. Їadne miejsce nie jest tu bezpieczne, musisz wiкc liczyж na swуj celownik i tіumik, jeњli chcesz zostaж w jednym kawaіku.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_short">
+		<text>Ta stara wioska to zіowieszcze miejsce i њmiertelna puіapka. Ale jeњli zaszedіeњ tak daleko mimo ryzyka, jesteњ gotуw umrzeж nagі№ њmierci№.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_large">
+		<text>Prypeж to byіe miejsce zamieszkania pracownikуw elektrowni j№drowej - a raczej to, co z niego zostaіo. Te przemysіowe ruiny s№ wyj№tkowo niebezpieczne. Tutaj naprawdк trzeba mieж siк stale na bacznoњci.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_short">
+		<text>Prypeж leїy niedaleko Czarnobylskiej Elektrowni J№drowej - pami№tki po katastrofie.</text>
+	</string>
+	<string id="ui_map_desc_mp_railraod_short">
+		<text>Niewielka stacja kolejowa na terenie fabryki "Rostok". </text>
+	</string>
+	<string id="ui_map_desc_mp_railroad_large">
+		<text>Niewielka stacja kolejowa w fabryce Rostok. Zardzewiaіe wagony i lokomotywy diesla stoj№ teraz na wiecznym rozwidleniu drуg. Liczne znajdowane tu artefakty przyci№gaj№ zdesperowanych stalkerуw z caіej Zony. </text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_large">
+		<text>Pod stertami metalu i za betonowymi murami w fabryce panuje przedziwna cisza. W poprzednim stuleciu miejsce to tкtniіo їyciem, robotnicy њpieszyli na swoj№ zmianк, a z gіoњnikуw rozbrzmiewaіy slogany... Teraz w fabryce nikt juї nie pracuje.</text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_short">
+		<text>W opuszczonej fabryce, pod stertami metalu i za betonowymi murami panuje gікboka cisza.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_large">
+		<text>Zanim zjawiіa siк tu "Powinnoњж", byіy to obrzeїa fabryki "Rostok". Na tym zniszczonym terenie znaleџж moїna mnуstwo artefaktуw. Puste hangary i magazyny na kaїdym kroku roj№ siк od niebezpieczeсstw. B№dџ bardzo ostroїny i bacznie obserwuj biaі№ wieїк.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_short">
+		<text>Zanim zjawiіa siк tu "Powinnoњж", byіy to obrzeїa fabryki "Rostok". Na tym zniszczonym terenie znaleџж moїna mnуstwo artefaktуw.</text>
+	</string>
+</string_table>

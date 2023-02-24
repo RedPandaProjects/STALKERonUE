@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="val_escort_captive_dialog_11">
+		<text>Banditen ... diese Hurensцhne wollten mich zur alten Fabrik bringen. Ich weiЯ nicht, was sie dort mit mir anstellen wollten, aber vorher haben sie schon einen anderen Typen da hineingebracht, und ich habe ihn nicht wiedergesehen. Sie haben noch einen von uns: Serega. Sie halten ihn im Keller fest ... in diesem groЯen Gebдude dort ... ein riesiges noch nicht fertiges Gebдude. Kannst du ihm helfen? Ansonsten werden sie ... du weiЯt schon ...</text>
+	</string>
+	<string id="val_escort_captive_dialog_2">
+		<text>WeiЯt du, was sie dort in der Fabrik haben?</text>
+	</string>
+	<string id="val_escort_captive_dialog_21">
+		<text>Ich habe nicht viel gehцrt. Alles, was ich weiЯ, ist, dass Borow, ihr Boss, einen Teil des Schlьssels zu den Hцhlen dort hat. Da war wohl mal ein Labor oder so was ... Ich habe gehцrt, wie sie darьber redeten, dass Borow ganz wild darauf sei, dort hineinzugelangen. Ihm fehlt aber noch die zweite Hдlfte des Schlьssels. Дhm ... wenn du darьber nachdenkst, da hineinzukommen, dann solltest du es dir noch einmal ьberlegen. Da ist alles voller Banditen.</text>
+	</string>
+	<string id="val_escort_captive_dialog_211">
+		<text>Verstanden. Danke, ich werde es im Hinterkopf behalten.</text>
+	</string>
+	<string id="val_escort_captive_dialog_3">
+		<text>Ich werde versuchen, dem Mann zu helfen.</text>
+	</string>
+	<string id="val_escort_captive_dialog_41">
+		<text>Das ist eine Schande mit meinem Kumpel ... er war ein klasse Typ. Trotzdem bin ich dir was schuldig.</text>
+	</string>
+	<string id="val_escort_captive_dialog_411">
+		<text>So was passiert eben.</text>
+	</string>
+	<string id="val_escort_captive_dialog_51">
+		<text>Danke fьr die Hilfe!</text>
+	</string>
+	<string id="val_escort_captive_dialog_511">
+		<text>Bis dann.</text>
+	</string>
+	<string id="val_escort_captive_dialog_61">
+		<text>Du scherst dich wohl einen Dreck um andere Leute. Wir haben nichts zu besprechen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21">
+		<text>Danke, Bruder. Hast meinen Kumpel hier rausgeholt! Hier, nimm das - es kommt vom Grunde meines Herzens.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2111">
+		<text>Abgemacht.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212">
+		<text>Ich schдtze, du kennst diese Gegend hier gut. Was gibt es hier denn Interessantes?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121">
+		<text>Im Norden ist ein Banditenlager, im Osten eine alte Fabrik, im Sьdwesten eine verlassene Schweinezucht. Und dahinter ist eine Art Tor ... was sich da genau befindet, kann ich nicht sagen. Bin nie so weit gewesen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21211">
+		<text>Kannst du mir mehr ьber das Banditenlager erzдhlen?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212111">
+		<text>Hmm, was gibt's da zu sagen ... Die haben sich genau nцrdlich von hier in einem Gebдude niedergelassen, das noch nicht fertiggestellt worden ist. Ihr Anfьhrer ist Borow - ein echtes Tier, dieser Bastard. Deshalb haben sie uns hierher geschickt: um ihn zu erledigen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212">
+		<text>Was ist das fьr eine Geschichte mit der Fabrik?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212121">
+		<text>Wir haben herausfinden kцnnen, dass eine Art Schatzkammer darin ist. Und die wird bewacht wie Fort Knox.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121211">
+		<text>Was fьr eine Art Schatzkammer? Was ist darin?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212111">
+		<text>Ich weiЯ nicht, was. Ich weiЯ es nicht. Wir trauen uns nicht rein. Das einzige, was ich weiЯ, ist, dass Borow die Hдlfte vom Schlьssel zum Eingang besitzt.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21213">
+		<text>Eine echte Schweinezucht? Da sind Schweine und all so Zeug?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212131">
+		<text>Trдumst schon von 'nem Schnitzel, was? Verdammt, die Zone steckt voller Wildschweine! Iss etwas von denen, und du brauchst kein Blitzlicht mehr - weil du im Dunkeln von alleine leuchtest! Schon gut, schon gut, war nur ein Scherz ... Der Zuchtbetrieb wurde schon vor langem verlassen und ist jetzt das Zuhause von einigen Stalkern. Die haben allerdings keinen guten Eindruck auf mich hinterlassen, und fьr gewцhnlich kann ich mich auf meine Eindrьcke verlassen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21214">
+		<text>Was ist das fьr ein Tor, von dem du gesprochen hast?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212141">
+		<text>Ich weiЯ es einfach nicht. Irgendein altes Tor ... nur, dass es versperrt und gut bewacht ist. Wir sind noch nicht dahinter gewesen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21215">
+		<text>Ich verstehe. Danke fьr die Informationen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212151">
+		<text>Gern geschehen! Du kannst jederzeit wiederkommen.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_213">
+		<text>Ihr zwei seid alleine losgezogen?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2131">
+		<text>Da war noch ein anderer Typ: Serega. Ich weiЯ nicht, er ist verschwunden und ich habe nichts mehr von ihm gehцrt ... Die Bande wird ihn wohl erledigt haben.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_214">
+		<text>Pass auf dich auf.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_31">
+		<text>Oh, Mann ... Was wird mit mir passieren, Kumpel? ... Danke Bruder - wenigstens hast du versucht, mir zu helfen. Und ich halte mein Wort.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41">
+		<text>Danke fьr deine Hilfe! Was willst du sonst noch wissen?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_61">
+		<text>Du hast mir nicht geholfen, als ich dich darum gebeten habe. Wir haben uns nichts mehr zu sagen, also verpiss dich.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_611">
+		<text>Tschьs.</text>
+	</string>
+	<string id="val_prisoner_hello_11">
+		<text>He, Kumpel! Hilf mir! Ich bin ein Spдher der Wдchter. Hilf mir hier raus!</text>
+	</string>
+	<string id="val_prisoner_hello_111">
+		<text>Ich werde es versuchen.</text>
+	</string>
+	<string id="val_prisoner_hello_112">
+		<text>Ich kann leider nichts fьr dich tun.</text>
+	</string>
+	<string id="val_prisoner_hello_21">
+		<text>Danke, Bruder! Ich schulde dir was. Ich habe etwas herausgefunden - vielleicht kannst du die Information gebrauchen, wer weiЯ? ... Borow - dieser Durchgeknallte - hat ziemlich viele hьbsche Sachen zusammengetragen. Er hat den Teil eines Schlьssels zur unteren Etage der Fabrik. Ich habe die Wachen plappern hцren. Sie sagten, dass da mal eine Art Labor war. Das Problem ist, dass es nicht so einfach ist, an Borow heranzukommen.</text>
+	</string>
+	<string id="val_prisoner_hello_211">
+		<text>Danke fьr die Informationen.</text>
+	</string>
+	<string id="val_prisoner_hello_2111">
+		<text>Wird Zeit, zu unseren Jungs zurьckzugehen. Irgendwas sagt mir, dass wir von Glьck reden kцnnen, wenn wir hier lebend rauskommen ...</text>
+	</string>
+	<string id="val_prisoner_hello_21111">
+		<text>Viel Glьck.</text>
+	</string>
+	<string id="val_prisoner_hello_31">
+		<text>Wir mьssen von hier verschwinden, bevor diese Bastarde beschlieЯen, diesen Ort hochzunehmen! Brauchst du was? Dann hol es dir schnell!</text>
+	</string>
+	<string id="val_prisoner_hello_311">
+		<text>Nц, nichts.</text>
+	</string>
+	<string id="val_prisoner_hello_41">
+		<text>He, Kumpel! Da hinten an der Wand ist ein Schalter - er цffnet die Zellentьr.</text>
+	</string>
+	<string id="val_prisoner_hello_411">
+		<text>In Ordnung, ich werde mal schauen.</text>
+	</string>
+	<string id="val_rob_dialog_11">
+		<text>Hi, brauchst du eine beeindruckende Waffe? Ich habe da in der Nдhe von Jantar etwas gefunden ... eine Art Lager. Unter anderem war da dieses Gauss-Gewehr. Ich sag dir, dieses Ding ist klasse - jeder im Umkreis von 100 Metern ist so gut wie tot ... Fьr schlappe 800 wird es in einem Augenblick hier sein!</text>
+	</string>
+	<string id="val_rob_dialog_111">
+		<text>Hier ist das Geld.</text>
+	</string>
+	<string id="val_rob_dialog_112">
+		<text>Nein, danke.</text>
+	</string>
+	<string id="val_rob_dialog_113">
+		<text>Nein, behalte es. An Geld ist kaum ranzukommen.</text>
+	</string>
+	<string id="val_rob_dialog_21">
+		<text>Hast du das Geld? Beeil dich, ich habe viele Kunden ... sonst kauft es ein anderer.</text>
+	</string>
+	<string id="val_rob_dialog_3">
+		<text>Ausgezeichnet. Warte hier, ich hole es eben.</text>
+	</string>
+	<string id="val_rob_dialog_31">
+		<text>Warten.</text>
+	</string>
+	<string id="val_sos_dialog_11">
+		<text>He, gib mir ein Medkit!</text>
+	</string>
+	<string id="val_sos_dialog_111">
+		<text>Hier, bitte sehr.</text>
+	</string>
+	<string id="val_sos_dialog_112">
+		<text>Tut mir Leid, ich habe kein Medkit.</text>
+	</string>
+	<string id="val_sos_dialog_21">
+		<text>Vielen Dank, Kumpel. Du hast mir echt geholfen. Wenn ich lange genug lebe, um dich noch einmal zu treffen, werde ich dich dafьr belohnen. Alles, was ich im Moment entbehren kann, ist nur ein saftiger Tipp fьr dich. In Ordnung, sьdlich von hier gibt es einen Zuchtbetrieb, in dem einige Stalker ihr Lager aufgeschlagen haben. Einer von ihnen hat ein Gauss-Gewehr zu verkaufen, echt billig, nur 800. Ich wollte es gerade kaufen, doch dann dies hier ... Wenn du also die Kohle hast, dann geh schnell hin.</text>
+	</string>
+	<string id="val_sos_dialog_211">
+		<text>Danke fьr die Information.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4111">
+		<text>Ich schulde dir was, und ich begleiche meine Schulden immer. Gehen wir.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41111">
+		<text>Klasse. Und jetzt reiЯen wir alle in Stьcke.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4112">
+		<text>Tut mir leid, hab was anderes vor.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41121">
+		<text>Dann viel Glьck dabei.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_412">
+		<text>Mach's gut.</text>
+	</string>
+</string_table>

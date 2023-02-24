@@ -1,0 +1,132 @@
+	<string id="bar_bring_hunter_rifle">
+		<text>Oddaj £owcy karabin rodowy</text>
+	</string>
+	<string id="bar_bring_PDA_lucky">
+		<text>Przynieœ Barmanowi PDA przywódcy</text>
+	</string>
+	<string id="bar_crazy_veterans_quest">
+		<text>Zabij szalonych weteranów</text>
+	</string>
+	<string id="bar_dolg_base_rules">
+		<text>Zg³oœ siê do dowódcy stra¿y "Powinnoœci"</text>
+	</string>
+	<string id="bar_dolg_base_rules_fin">
+		<text>Wróæ do Barmana</text>
+	</string>
+	<string id="bar_dolg_base_rules_talk">
+		<text>ZnajdŸ dowódcê stra¿y "Powinnoœci" i zamelduj siê</text>
+	</string>
+	<string id="bar_dolg_bring_rg6">
+		<text>Zdob¹dŸ Bulldoga 6 dla Woronina</text>
+	</string>
+	<string id="bar_dolg_community_quest">
+		<text>Przy³¹cz siê do "Powinnoœci"</text>
+	</string>
+	<string id="bar_dolg_community_quest_prisyaga">
+		<text>Z³ó¿ przysiêgê</text>
+	</string>
+	<string id="bar_dolg_community_quest_recomendation">
+		<text>Zdob¹dŸ referencje od kapitana Iwancowa</text>
+	</string>
+	<string id="bar_dolg_community_quest_vernost">
+		<text>Udowodnij sw¹ lojalnoœæ wobec "Powinnoœci"</text>
+	</string>
+	<string id="bar_dolg_find_cook">
+		<text>Zdob¹dŸ zaufanie kucharza "Wolnoœci" i dowiedz siê, gdzie trzymaj¹ Bulldogi 6</text>
+	</string>
+	<string id="bar_dolg_find_rg6">
+		<text>Zbadaj bazê "Wolnoœci", znajdŸ i ukradnij Bulldoga 6</text>
+	</string>
+	<string id="bar_dolg_info_gain">
+		<text>ZnajdŸ przechwycone informacje o laboratorium X18</text>
+	</string>
+	<string id="bar_dolg_kill_tiran">
+		<text>Zabij Tyrana, dowódcê oddzia³u</text>
+	</string>
+	<string id="bar_dolg_return_info">
+		<text>Zwróæ informacje o laboratorium X18 genera³owi Woroninowi</text>
+	</string>
+	<string id="bar_dolg_return_rg6">
+		<text>Przynieœ Bulldoga 6 genera³owi Woroninowi</text>
+	</string>
+	<string id="bar_dolg_rg6_quest">
+		<text>Misja wymagana, by wst¹piæ do "Powinnoœci"</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_quest">
+		<text>Zlikwiduj najemników</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_return">
+		<text>Daj paski genera³owi Woroninowi</text>
+	</string>
+	<string id="bar_dolg_tiran_PDA">
+		<text>Zabierz PDA Tyrana</text>
+	</string>
+	<string id="bar_hunter_find_rifle">
+		<text>ZnajdŸ karabin rodowy</text>
+	</string>
+	<string id="bar_hunter_return_rifle">
+		<text>Zwróæ karabin £owcy w barze</text>
+	</string>
+	<string id="bar_hunter_rifle">
+		<text>ZnajdŸ karabin rodowy</text>
+	</string>
+	<string id="bar_kill_crazy_veterans">
+		<text>Zabij przywódcê weteranów</text>
+	</string>
+	<string id="bar_kill_crazy_veterans_PDA">
+		<text>Zabierz PDA przywódcy</text>
+	</string>
+	<string id="bar_kill_veterans">
+		<text>Zniszcz obóz szalonych weteranów</text>
+	</string>
+	<string id="bar_radar_deactivate">
+		<text>Wy³¹cz Mózgozwêglacz</text>
+	</string>
+	<string id="bar_resque_information">
+		<text>Spotkaj siê z Krug³owem</text>
+	</string>
+	<string id="bar_resque_information_2">
+		<text>ZaprowadŸ Krug³owa nad Jantar</text>
+	</string>
+	<string id="bar_resque_scientific_follow">
+		<text>ZaprowadŸ Krug³owa do wyjœcia nad Jantar</text>
+	</string>
+	<string id="bar_resque_scientific_information">
+		<text>...</text>
+	</string>
+	<string id="bar_resque_scientific_information_bring">
+		<text>Porozmawiaj z Krug³owem</text>
+	</string>
+	<string id="bar_resque_scientific_information_get">
+		<text>Dostañ siê do Krug³owa</text>
+	</string>
+	<string id="bar_resque_scientific_information_get_2">
+		<text>Porozmawiaj z profesorem Krug³owem</text>
+	</string>
+	<string id="bar_x16_documents">
+		<text>ZnajdŸ dokumenty z LabX16 </text>
+	</string>
+	<string id="bring_x16_documents">
+		<text>Przynieœ dokumenty Barmanowi</text>
+	</string>
+	<string id="deactivate_radar_now">
+		<text>Wy³¹cz maszynê</text>
+	</string>
+	<string id="find_and_deactivate_radar">
+		<text>ZnajdŸ wejœcie do bunkra sterowniczego</text>
+	</string>
+	<string id="get_to_antennas">
+		<text>Dotrzyj do anten</text>
+	</string>
+	<string id="Kruglov_research">
+		<text>Badania Krug³owa</text>
+	</string>
+	<string id="look_for_x16_lab">
+		<text>ZnajdŸ dokumenty z LabX16 </text>
+	</string>
+	<string id="wpn-winchester_m1">
+		<text>Bojowy Chaser</text>
+	</string>
+	<string id="x16_yantar">
+		<text>Porozmawiaj z naukowcami</text>
+	</string>

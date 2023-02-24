@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="rad_chief_start_dialog_0">
+		<text>ЎEh!</text>
+	</string>
+	<string id="rad_chief_start_dialog_100">
+		<text>ЎEh!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_0">
+		<text>їY el dinero de la misiуn?</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_100">
+		<text>ЎEncuentra a mi ayudante y tendrбs tu dinero!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_1000">
+		<text>Estб bien, Ўpero no me mientas otra vez!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_0">
+		<text>їQuiйn eres?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_10">
+		<text>Me llaman Leha el Dientes. Y estos tipos son mi equipo.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_100">
+		<text>їQuй estбis haciendo aquн?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_20">
+		<text>Mis chicos y yo estamos descansando. Cuando estemos listos nos dirigiremos a Pripyat.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_0">
+		<text>їQuй sabes sobre Pripyat?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_10">
+		<text>Es una vieja ciudad abandonada de la йpoca comunista. ЎHistуrica! ЎSeguro que ahora estб llena de monstruos y hordas de guerreros de Monolith! ЎNadie ha regresado jamбs de allн!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_100">
+		<text>їCrees que es peligroso?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_20">
+		<text>Sin lugar a dudas; nadie ha regresado jamбs de allн.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_0">
+		<text>їHas visto soldados por aquн?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_10">
+		<text>No, no he visto soldados en mucho tiempo.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_100">
+		<text>їQuй hay de los stalkers militares?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_20">
+		<text>Se dice que se les ha visto junto al Bosque Rojo, por la zona de antenas. Cuando se desactivaron, mucha gente fue al Bosque Rojo, Ўe incluso llegaron a Pripyat! Llevamos aquн un dнa y no hemos visto a nadie. Probablemente alguien cortara la carretera.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_200">
+		<text>їCrees que los militares cortaron la carretera del Bosque Rojo?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_30">
+		<text>No creo que fueran los militares, no he visto a ninguno de ellos en mucho tiempo, pero sн es posible que lo hicieran los stalkers militares. Esos no pierden el tiempo. Se trata de autйnticos cabezas cuadradas, trabajan rбpida y eficazmente, en equipos o en solitario... Es raro que no cortaran antes la carretera.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_300">
+		<text>їPor quй no fueron a Pripyat o cortaron la carretera allн?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_40">
+		<text>No lo sй. Quizб tengan miedo, o se estйn preparando para algo. Pero son solo suposiciones.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_0">
+		<text>Quizб tengas alguna misiуn para mн...</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_10">
+		<text>Bueno, tengo una, pero no es fбcil... їCrees que podrбs hacerla?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_100">
+		<text>No me asusta que no sea fбcil.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_101">
+		<text>No, mejor paso. No tengo tiempo.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_11">
+		<text>Ya comprendo. Hasta yo tengo miedo... Preferirнa gastarme algъn dinero antes que enviar a mis hombres o ir yo mismo.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_20">
+		<text>ЎPerfecto! El trabajo consiste en encontrar a mis exploradores, Palanca y Leсo. Fueron a Pripyat; decidн no precipitarme y enviй a mis mejores hombres. Encuйntralos vivos y trбelos aquн. ЎSi estбn muertos trбeme sus armas! ЎHazlo y te darй 2.000!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_200">
+		<text>ЎEstб bien, trato hecho!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_201">
+		<text>No es suficiente dinero. їQuй tal si son unos 4.000?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_21">
+		<text>Eso es todo lo que puedo ofrecerte por este trabajo.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_30">
+		<text>De acuerdo, te esperarй aquн.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_0">
+		<text>ЎMisiуn cumplida!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_100">
+		<text>Genial, dame su PDA.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1000">
+		<text>Aquн tienes. ЎAhora el dinero!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1100">
+		<text>Estбs intentando jugбrmela. ЎЙl no tenнa nada!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1200">
+		<text>ЎVoy a deshacerme de ti ahora mismo!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1300">
+		<text>ЎSi te vuelvo a ver eres hombre muerto!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1400">
+		<text>Vale, ya comprendo. ЎBuena suerte!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_200">
+		<text>No puedo darte nada, no tengo dinero. Puedes quedarte con sus cosas si quieres.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_300">
+		<text>ЎNo tengo dinero! ЎLargo de aquн!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_0">
+		<text>ЎNo pude encontrarlo!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_10">
+		<text>ЎEncuйntralo rбpido si quieres tu dinero!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_0">
+		<text>Encontrй a tus hombres. Murieron, pero aquн tienes sus armas.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_100">
+		<text>Entonces estбn muertos... No creo que tenga sentido ir a Pripyat ahora. Sin embargo, hay un problema: no tengo tu dinero. Mi ayudante desapareciу, y йl era quien tenнa todo el dinero.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_1001">
+		<text>De acuerdo, Ўle encontrarй! Dime dуnde buscarlo. ЎЎЎY ni se te ocurra intentar engaсarme esta vez!!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_200">
+		<text>No creo que llegara muy lejos. Probablemente estй aquн o aquн; te lo marcarй en el mapa. Cuando lo encuentres, trбelo a йl o su PDA.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_2000">
+		<text>Estб bien, espйrame aquн.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_0">
+		<text>No pude encontrarlos.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_10">
+		<text>ЎEncuйntralos rбpido! ЎЎЎNo puedo esperar eternamente!!! ЎBuena suerte!</text>
+	</string>
+</string_table>

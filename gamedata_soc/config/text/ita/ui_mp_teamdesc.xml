@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="svoboda_outfit_name_m1">
+		<text>Kombez Freedom M2</text>
+	</string>
+	<string id="team_1_desc">
+		<text>Sono gli anarchici della Zona. Credono che la Zona sia un'oasi di libertа, in cui le leggi, le regole e le tradizioni del mondo esterno non hanno valore. Il loro motto и: "Vivi e lascia vivere". Cercano di impedire che il governo assuma il controllo della Zona e combattono i Mercenari. I combattenti Freedom usano principalmente armi russe e sovietiche.</text>
+	</string>
+	<string id="team_1_name">
+		<text>Fazione dei Freedom (stalker liberi)</text>
+	</string>
+	<string id="team_2_desc">
+		<text>Vagabondi e tagliagole della peggior specie, provenienti da tutto il mondo. Il loro motto и: "Pecunia non olet - i soldi non puzzano." Dove ci sono i reperti, devono esserci anche i soldi. I Mercenari usano principalmente armi occidentali.</text>
+	</string>
+	<string id="team_2_name">
+		<text>Fazione dei Mercenari (cacciatori di teste)</text>
+	</string>
+</string_table>

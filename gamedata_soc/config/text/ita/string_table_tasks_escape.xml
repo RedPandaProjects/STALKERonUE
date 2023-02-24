@@ -1,0 +1,150 @@
+	<string id="esc_bandits_on_factory">
+		<text>Uccidi i banditi alla fabbrica</text>
+	</string>
+	<string id="esc_bandits_on_factory_0">
+		<text>Uccidi i banditi che si sono rintanati nella fabbrica.</text>
+	</string>
+	<string id="esc_bandits_on_factory_1">
+		<text>Uccidi tutti i banditi alla fabbrica</text>
+	</string>
+	<string id="esc_bandits_on_factory_2">
+		<text>Parla con il trafficante</text>
+	</string>
+	<string id="esc_bandits_on_factory_3">
+		<text>Parla con Lupo</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader">
+		<text>Ruba la scatola dall'avamposto dell'esercito</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_0">
+		<text>Ruba la scatola contenente documenti importanti dall'avamposto dell'esercito.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_1">
+		<text>Ruba la scatola dall'avamposto dell'esercito</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_2">
+		<text>Porta la scatola al trafficante</text>
+	</string>
+	<string id="esc_defend_lager">
+		<text>Proteggi il campo dei novellini dai mercenari</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_0">
+		<text>Proteggi il campo dei novellini dai mercenari.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_1">
+		<text>Annienta i mercenari.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_2">
+		<text>Parla con il comandante dei novellini</text>
+	</string>
+	<string id="esc_dinamit_to_volk">
+		<text>Uccidi i banditi nel parcheggio</text>
+	</string>
+	<string id="esc_dinamit_to_volk_0">
+		<text>Uccidi i banditi nel parcheggio e fai rapporto al Lupo.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_1">
+		<text>Incontra gli uomini del Lupo</text>
+	</string>
+	<string id="esc_dinamit_to_volk_2">
+		<text>Uccidi tutti i banditi</text>
+	</string>
+	<string id="esc_dinamit_to_volk_3">
+		<text>Parla con Lupo</text>
+	</string>
+	<string id="esc_help_wounded_from_raid">
+		<text>Scopri qualcosa su Strelok dalla Volpe</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_0">
+		<text>Aiuta lo stalker ferito</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_1">
+		<text>Aiuta la Volpe</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_2">
+		<text>Recupera informazioni su Strelok</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift">
+		<text>Consegna il pacchetto al trafficante.</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift_0">
+		<text>Consegna il pacchetto al trafficante. Lui potrà aiutarti.</text>
+	</string>
+	<string id="garbage_meet_stalker">
+		<text>Incontra il Grigio.</text>
+	</string>
+	<string id="garbage_meet_stalker_0">
+		<text>Incontra il Grigio alla Discarica.</text>
+	</string>
+	<string id="meet_with_doctor">
+		<text>Incontra il Dottore.</text>
+	</string>
+	<string id="meet_with_doctor_1">
+		<text>Incontra il Dottore.</text>
+	</string>
+	<string id="meet_with_doctor_2">
+		<text>Incontra il Dottore nel nascondiglio di Strelok</text>
+	</string>
+	<string id="storyline_escape_eliminate_gunslinger">
+		<text>Uccidi Strelok</text>
+	</string>
+	<string id="storyline_escape_find_gunslinger">
+		<text>Trova Strelok</text>
+	</string>
+	<string id="tutorial_find_artefact">
+		<text>Trova un reperto</text>
+	</string>
+	<string id="tutorial_find_artefact_0">
+		<text>Trova il tuo primo reperto.</text>
+	</string>
+	<string id="tutorial_find_artefact_1">
+		<text>Trova un reperto</text>
+	</string>
+	<string id="tutorial_find_artefact_2">
+		<text>Porta il reperto al trafficante.</text>
+	</string>
+	<string id="tutorial_help_wounded">
+		<text>Procurati informazioni dall'esploratore</text>
+	</string>
+	<string id="tutorial_help_wounded_0">
+		<text>Porta le informazioni al trafficante</text>
+	</string>
+	<string id="tutorial_help_wounded_1">
+		<text>Parla con il Lupo</text>
+	</string>
+	<string id="tutorial_help_wounded_2">
+		<text>Prendi la chiavetta dallo Svelto</text>
+	</string>
+	<string id="tutorial_help_wounded_3">
+		<text>Porta la chiavetta al trafficante</text>
+	</string>
+	<string id="esc_trader_job">
+		<text>Lavora per il trafficante</text>
+	</string>
+	<string id="esc_trader_job_text">
+		<text>Fatti assegnare l'incarico speciale dal trafficante</text>
+	</string>
+	<string id="bar_barman_job">
+		<text>Lavora per il Barista</text>
+	</string>
+	<string id="bar_barman_job_text">
+		<text>Chiedi un lavoro al Barista</text>
+	</string>
+	<string id="yan_scientist_job">
+		<text>Aiuta gli scienziati</text>
+	</string>
+	<string id="yan_scientist_job_text">
+		<text>Offri aiuto agli scienziati</text>
+	</string>
+	<string id="find_railroad_passage">
+		<text>Raggiungi il terrapieno della ferrovia</text>
+	</string>
+	<string id="find_railroad_passage_1">
+		<text>Incontrati con il viaggiatore</text>
+	</string>
+	<string id="find_railroad_passage_2">
+		<text>Attraversa il terrapieno della ferrovia</text>
+	</string>
+	<string id="find_railroad_passage_text">
+		<text>Prima di addentrarti nella Zona, devi attraversare il terrapieno della vecchia ferrovia. L'unico passaggio sicuro è sorvegliato dai militari, ma c'è una piccola galleria a sinistra, e di solito i novellini passano da lì. Dall'altra parte troverai ad aspettarti una persona che è in debito con me.</text>
+	</string>

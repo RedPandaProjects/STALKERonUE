@@ -1,0 +1,150 @@
+	<string id="mil_blockpost_job">
+		<text>Pomó¿ na posterunku "Wolnoœci" przy Barierze</text>
+	</string>
+	<string id="mil_courier">
+		<text>Kabel.</text>
+	</string>
+	<string id="mil_courier_job">
+		<text>Zajmij siê "kablem"</text>
+	</string>
+	<string id="mil_courier_phase1">
+		<text>Udaj siê na gospodarstwo</text>
+	</string>
+	<string id="mil_courier_phase2">
+		<text>Poczekaj, a¿ kabel ujawni swojego agenta</text>
+	</string>
+	<string id="mil_courier_phase3">
+		<text>Pozb¹dŸ siê kabla</text>
+	</string>
+	<string id="mil_courier_phase4">
+		<text>Pozb¹dŸ siê agenta</text>
+	</string>
+	<string id="mil_courier_phase5">
+		<text>Zdaj £ukaszowi raport z misji</text>
+	</string>
+	<string id="mil_crazy">
+		<text>Szalony stalker.</text>
+	</string>
+	<string id="mil_dolg">
+		<text>Frakcja "Powinnoœæ"</text>
+	</string>
+	<string id="mil_dolg_assault_freedom">
+		<text>Pomó¿ "Powinnoœci" zlikwidowaæ £ukasza</text>
+	</string>
+	<string id="mil_kill_lukash">
+		<text>Zabij £ukasza</text>
+	</string>
+	<string id="mil_dolg_assault_support">
+		<text>Pozb¹dŸ siê snajpera</text>
+	</string>
+	<string id="mil_dolg_return_to_khutor">
+		<text>Wróæ na gospodarstwo i odbierz zap³atê</text>
+	</string>
+	<string id="mil_dolg_return_to_skull">
+		<text>Wróæ do Czachy</text>
+	</string>
+	<string id="mil_fblockpost_commander">
+		<text>Dowódca posterunku, Czapa</text>
+	</string>
+	<string id="mil_fblockpost_phase2">
+		<text>Pomó¿ zniszczyæ oddzia³ uderzeniowy Monolitu</text>
+	</string>
+	<string id="mil_fblockpost_phase3">
+		<text>Porozmawiaj z dowódc¹ posterunku przy Barierze</text>
+	</string>
+	<string id="mil_find_cook">
+		<text>ZnajdŸ kucharza w bazie "Wolnoœci"</text>
+	</string>
+	<string id="mil_freedom_rg6_task">
+		<text>Zdob¹dŸ Bulldoga 6</text>
+	</string>
+	<string id="mil_go_max">
+		<text>Zg³oœ siê do Maksa</text>
+	</string>
+	<string id="mil_go_to_miser_task">
+		<text>Udaj siê do bazy "Wolnoœci", ¿eby spotkaæ siê z Kutw¹ i odebraæ nagrodê</text>
+	</string>
+	<string id="mil_go_to_miser_task_main">
+		<text>Odbierz nagrodê za zabicie pijawek</text>
+	</string>
+	<string id="mil_hunters_phase1">
+		<text>ZnajdŸ Mruka w wiosce</text>
+	</string>
+	<string id="mil_hunters_phase2">
+		<text>Zabij pijawki</text>
+	</string>
+	<string id="mil_hunters_phase3">
+		<text>Wróæ do Kutwy po artefakt</text>
+	</string>
+	<string id="mil_hunters_task">
+		<text>Zabij pijawki w wiosce</text>
+	</string>
+	<string id="mil_kill_controller">
+		<text>Zabij pijawki</text>
+	</string>
+	<string id="mil_kill_controller_main">
+		<text>Zabij pijawki</text>
+	</string>
+	<string id="mil_kill_dolg">
+		<text>Zniszcz oddzia³ "Powinnoœci"</text>
+	</string>
+	<string id="mil_lukash">
+		<text>£ukasz.</text>
+	</string>
+	<string id="mil_max">
+		<text>Maks.</text>
+	</string>
+	<string id="mil_put_flash_to_max">
+		<text>Daj Maksowi pendrive'a</text>
+	</string>
+	<string id="mil_kill_sniper">
+		<text>Zabij snajpera w wie¿y</text>
+	</string>
+	<string id="mil_quest_report_dolg">
+		<text>Zdaj raport z misji oddzia³owi "Powinnoœci"</text>
+	</string>
+	<string id="mil_return_lukash">
+		<text>Wróæ do £ukasza</text>
+	</string>
+	<string id="mil_return_to_ugrumy">
+		<text>Zdaj raport z misji Mrukowi</text>
+	</string>
+	<string id="mil_return_to_voronin">
+		<text>Przynieœ Bulldoga 6 genera³owi Woroninowi</text>
+	</string>
+	<string id="mil_rg6">
+		<text>ZnajdŸ Bulldoga 6</text>
+	</string>
+	<string id="mil_secret">
+		<text>Tajny sk³ad bandytów.</text>
+	</string>
+	<string id="mil_sniper">
+		<text>Snajper.</text>
+	</string>
+	<string id="mil_mad_job">
+		<text>Zdob¹dŸ pendrive'a szalonego snajpera</text>
+	</string>
+	<string id="mil_talk_cook">
+		<text>Porozmawiaj z Kuchmistrzem</text>
+	</string>
+	<string id="mil_talk_with_cap">
+		<text>Porozmawiaj z Czap¹, dowódc¹ posterunku "Wolnoœci"</text>
+	</string>
+	<string id="mil_test_task_phase1">
+		<text>WejdŸ do ogranicznika 1</text>
+	</string>
+	<string id="mil_test_task_phase2">
+		<text>WejdŸ do ogranicznika 2</text>
+	</string>
+	<string id="mil_test_task_phase3">
+		<text>Unieœ w górê Bulldoga 6, jeœli misja siê powiod³a, a TRs 301- jeœli zakoñczy³a siê niepowodzeniem</text>
+	</string>
+	<string id="mil_test_task_title">
+		<text>Misja próbna</text>
+	</string>
+	<string id="mil_ugrumy">
+		<text>Mruk.</text>
+	</string>
+	<string id="mil_lukash_job">
+		<text>Zniszcz jednostkê "Powinnoœci"</text>
+	</string>

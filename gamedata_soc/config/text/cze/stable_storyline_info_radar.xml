@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>Honí se mi hlavou èíslo, jako by bylo z pøedchozího života. Už si ho dobøe pamatuju, je to 342089. Kód ke dveøím, ale cestu k nim si nepamatuju.</text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>PDA vojáka Monolitu</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>Mrtvý vìdec mìl mapu, na které byly oznaèené dveøe. Kód 1287975</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Zakódované dveøe</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Barman: "Když se to rozneslo, všichni se zbláznili! Každej, kdo mùže chodit, vyrazil k centru Zóny: samotáøi, Svoboda, Povinnost, dokonce i žoldáci. Ten, kdo se tam dostane první, vyhrává první cenu! Plniè pøání, hromada artefaktù a èert ví co ještì. Mákni si. Pokud je plniè pøání fakt v sarkofágu elektrárny, tak ten, kdo se tam dostane jako první, si splní všechny svý pøání. Pøed Pripjatí se právì dává dohromady jednotka veteránù. Pokud sebou pohneš, budeš tam moct vyrazit s nima."</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>Vypnul jsem vypalovaè. Z nìjakého dùvodu jsem pøi tom ztratil vìdomí. Zdál se mi sen: zase jsem vidìl èernobylskou elektrárnu a sarkofág. Pak záblesk. Záøící monolit uvnitø sarkofágu. Myslím, že to je ten stroj na plnìní pøání. Stalker, vyèerpaný a otrhaný, se k nìmu pomalu natahuje... záblesk a vidím èást prvního snu. Muž je otoèený zády ke mnì a støílí. Náhle nìkdo zaøve: "Støelèe!" Muž se otøese, na chvíli ztuhne a pak se pomalu otáèí... ale obrázky pøeskakují tam a zpátky jako film pøehrávaný pozpátku, vidím, jak svou zbraní støílí na krysy a žene je zpátky do elektrárny. Byl jsem tam. Musím se dostat k monolitu.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>Vypnutí vypalovaèe</text>
+	</string>

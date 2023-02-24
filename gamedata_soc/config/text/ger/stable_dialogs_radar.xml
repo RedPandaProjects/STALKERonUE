@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="rad_chief_start_dialog_0">
+		<text>He!</text>
+	</string>
+	<string id="rad_chief_start_dialog_100">
+		<text>He!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_0">
+		<text>Wo ist das Geld fьr den Auftrag?</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_100">
+		<text>Finde meinen Stellvertreter, dann bekommst du dein Geld!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_1000">
+		<text>In Ordnung, aber wehe, du lьgst mich schon wieder an!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_0">
+		<text>Wer bist du?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_10">
+		<text>Leha der BeiЯer ist mein Name! Diese Banditen hier sind meine Mannschaft!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_100">
+		<text>Was macht ihr hier?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_20">
+		<text>Meine Jungs und ich ruhen uns hier aus! Wenn wir damit fertig sind, gehen wir nach Prypjat!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_0">
+		<text>Was weiЯt du ьber Prypjat?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_10">
+		<text>Das ist eine alte, verlassene Stadt aus der kommunistischen Дra. Sie ist Geschichte! Ich nehme an, dass sie jetzt voller Monster und Monolith-Kдmpfern steckt. Niemand, der zuvor dorthin gegangen ist, kam jemals zurьck.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_100">
+		<text>Meinst du, es ist gefдhrlich dort?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_20">
+		<text>Zweifellos. Niemand ist jemals von dort zurьckgekommen.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_0">
+		<text>Hast du hier in der Gegend Soldaten gesehen?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_10">
+		<text>Nein, ich habe hier schon lange keine Soldaten mehr gesehen.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_100">
+		<text>Was ist mit Armeestalkern?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_20">
+		<text>Den Gerьchten zufolge sind sie direkt beim Roten Wald, bei der Antenne aufgetaucht. Als man sie abgewehrt hatte, sind viele Leute zum Roten Wald und weiter nach Prypjat gegangen. Wir sind seit einem Tag hier und haben noch niemanden gesehen. Vermutlich hat irgendwer die StraЯe hierher abgesperrt.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_200">
+		<text>Glaubst du, dass das Militдr die StraЯe zum Roten Wald abgesperrt hat?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_30">
+		<text>Nein, ich glaube nicht, dass es das Militдr war. Ich habe hier schon lange keine Soldaten mehr gesehen, aber Armeestalker kцnnten es gewesen sein. Die vergeuden keine Zeit. Die gehen ernst zur Sache, arbeiten schnell und effizient - sowohl als Team als auch einzeln. Ist schon seltsam, dass sie die StraЯe hierher nicht schon frьher abgesperrt haben.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_300">
+		<text>Warum sind sie nicht nach Prypjat gegangen oder haben die StraЯe dort blockiert?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_40">
+		<text>Ich weiЯ nicht. Vielleicht haben sie Angst oder bereiten sich auf irgendwas vor. Da kann ich nur raten.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_0">
+		<text>Hast du vielleicht einen Auftrag fьr mich?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_10">
+		<text>Na ja, ich habe einen, aber der ist nicht einfach ... mцchtest du ihn ьbernehmen?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_100">
+		<text>Ich habe keine Angst, nur weil du sagst, es sei nicht einfach.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_101">
+		<text>Nee, bloЯ nicht. Ich habe keine Zeit!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_11">
+		<text>Ich verstehe. Ich habe selbst Angst ... wьrde lieber ein wenig Geld dafьr ausgeben anstatt meine Jungs zu schicken oder selbst zu gehen.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_20">
+		<text>Gut! Der Auftrag lautet: Finde meine Spдher, Brechstange und Klotz. Als ich mich entschlossen hatte, nicht dorthin zu gehen, sondern meine besten Jungs zu schicken, sind sie nach Prypjat gegangen. Sind sie lebendig, dann bringe sie hierher. Wenn sie tot sind, brauche ich nur ihre Waffen. Wenn du das fьr mich tust, bekommst du 2000!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_200">
+		<text>In Ordnung, abgemacht!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_201">
+		<text>Nicht genug. Wie wдre es mit 4000? Dann steht der Deal.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_21">
+		<text>Mehr kann ich dir fьr diesen Auftrag nicht anbieten.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_30">
+		<text>In Ordnung, ich werde hier auf dich warten.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_0">
+		<text>Auftrag ausgefьhrt.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_100">
+		<text>Sehr gut, gib mir sein PDA.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1000">
+		<text>Hier. Jetzt das Geld.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1100">
+		<text>Du willst mich wohl verscheiЯern. Er hatte gar nichts dabei!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1200">
+		<text>Ich werde dich jetzt kalt machen!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1300">
+		<text>Wenn ich dich noch einmal sehe, bist du ein toter Mann!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1400">
+		<text>Okay, ich habe verstanden. Viel Glьck.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_200">
+		<text>Ich kann dir nichts geben, ich gabe gar kein Geld. Du kannst seine Sachen behalten, wenn du mцchtest.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_300">
+		<text>Ich habe gar kein Geld! Verschwinde!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_0">
+		<text>Ich konnte ihn nicht finden.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_10">
+		<text>Wenn du dein Geld haben willst, solltest du ihn schnell finden.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_0">
+		<text>Ich habe deine Jungs gefunden. Sie sind tot. Aber ich konnte ihre Waffen bergen.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_100">
+		<text>Danke. Dann sind sie also tot. Ich glaube nicht, dass es jetzt noch einen Grund gibt, nach Prypjat zu gehen. Es gibt jedoch noch ein Problem: Ich habe dein Geld nicht. Mein Stellvertreter ist verschwunden, und er hatte das ganze Geld.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_1001">
+		<text>Gut, ich werde ihn suchen. Sag mir, wo ich nach ihm suchen soll. Und versuch erst gar nicht, mich dieses Mal um mein Geld zu betrьgen!!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_200">
+		<text>Ich glaube nicht, dass er sehr weit gekommen ist. Vermutlich ist er hier oder hier. Ich werde die Stellen auf deiner Karte markieren. Bring mir seinen PDA, wenn du ihn findest.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_2000">
+		<text>In Ordnung. Warte hier.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_0">
+		<text>Ich konnte sie nicht finden.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_10">
+		<text>Finde sie schnell! Ich kann nicht ewig warten! Viel Glьck.</text>
+	</string>
+</string_table>

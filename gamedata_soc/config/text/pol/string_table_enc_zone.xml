@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="af-ameba-mica">
+		<text>Mika</text>
+	</string>
+	<string id="af-ameba-slime">
+		<text>Њluz</text>
+	</string>
+	<string id="af-ameba-slug">
+		<text>Њlimak</text>
+	</string>
+	<string id="af-blood">
+		<text>Kamienna krew</text>
+	</string>
+	<string id="af-cristall">
+		<text>Krysztaі</text>
+	</string>
+	<string id="af-cristall-flower">
+		<text>Kamienny kwiat</text>
+	</string>
+	<string id="af-drops">
+		<text>Kropelki</text>
+	</string>
+	<string id="af-dummy-battery">
+		<text>Bateria</text>
+	</string>
+	<string id="af-dummy-dummy">
+		<text>Muszla</text>
+	</string>
+	<string id="af-dummy-glassbeads">
+		<text>Korale mamy</text>
+	</string>
+	<string id="af-dummy-pellicle">
+		<text>Bіona</text>
+	</string>
+	<string id="af-dummy-spring">
+		<text>Sprкїyna</text>
+	</string>
+	<string id="af-electra-flash">
+		<text>Bіysk</text>
+	</string>
+	<string id="af-electra-moonlight">
+		<text>Blask ksiкїyca</text>
+	</string>
+	<string id="af-electra-sparkler">
+		<text>Њwiecideіko</text>
+	</string>
+	<string id="af-fireball">
+		<text>Kula ognista</text>
+	</string>
+	<string id="af-fuzz-kolobok">
+		<text>Kulebiak</text>
+	</string>
+	<string id="af-gold-fish">
+		<text>Zіota rybka</text>
+	</string>
+	<string id="af-gravi">
+		<text>Grawi</text>
+	</string>
+	<string id="af-medusa">
+		<text>Meduza</text>
+	</string>
+	<string id="af-mincer-meat">
+		<text>Kotlet</text>
+	</string>
+	<string id="af-night-star">
+		<text>Gwiazda wieczorna</text>
+	</string>
+	<string id="af-rusty-kristall">
+		<text>Krysztaіowy kolec</text>
+	</string>
+	<string id="af-rusty-sea-urchin">
+		<text>Jeїowiec </text>
+	</string>
+	<string id="af-rusty-thorn">
+		<text>Kolec</text>
+	</string>
+	<string id="af-soul">
+		<text>Dusza</text>
+	</string>
+	<string id="af-vyvert">
+		<text>Skrкtak</text>
+	</string>
+	<string id="Agroprom">
+		<text>Agroprom</text>
+	</string>
+	<string id="Ameba">
+		<text>Galareta</text>
+	</string>
+	<string id="Anomalies">
+		<text>Anomalie</text>
+	</string>
+	<string id="Artifacts">
+		<text>Artefakty</text>
+	</string>
+	<string id="Bald">
+		<text>Trampolina</text>
+	</string>
+	<string id="Bar">
+		<text>Bar</text>
+	</string>
+	<string id="Darkdolina">
+		<text>Dolina Mroku</text>
+	</string>
+	<string id="Deadcity">
+		<text>Usuniкte</text>
+	</string>
+	<string id="Electra">
+		<text>Elektro</text>
+	</string>
+	<string id="enc_weapons1_wpn-winchester_m1">
+		<text>Odmiana Chasera. W lufк wbudowano niewielki odіamek artefaktu "grawi". Zostaі on umieszczony w taki sposуb, їe zwiкksza prкdkoњж wylotow№ naboju.</text>
+	</string>
+	<string id="enc_zone_anomalies_ameba">
+		<text>Anomalia nieznanego pochodzenia. Przy kontakcie zadaje obraїenia zbliїone do tych, jakie wywoіuje silny kwas. Tworzy trzy rodzaje artefaktуw: "њluz", "њlimak" oraz "mika".</text>
+	</string>
+	<string id="enc_zone_anomalies_bald">
+		<text>Jedna z pierwszych zarejestrowanych anomalii - niestabilne pole grawitacyjne zadaj№ce obraїenia wszystkim przebywaj№cym w jego zasiкgu. Aktywna њrednio przez tydzieс. Zmienna iloњж obraїeс - od niewielkich siniakуw przez powaїne rany, aї po natychmiastow№ њmierж. Јatwo j№ zauwaїyж w њwietle dziennym. Nad anomali№ widaж ruch powietrza, towarzysz№ jej rуwnieї unosz№ce siк liњcie oraz charakterystyczne szkarіatne plamy na ziemi. Trampolinк wykrywaj№ wszystkie detektory, moїna j№ rуwnieї zidentyfikowaж, rzucaj№c w ni№ rуїne przedmioty. Tworzy trzy rodzaje artefaktуw: "meduza", "kamienny kwiat" oraz "gwiazda wieczorna".</text>
+	</string>
+	<string id="enc_zone_anomalies_electra">
+		<text>Anomalia o њrednicy okoіo 10 metrуw, ktуra gromadzi duїe iloњci elektrycznoњci statycznej. Przy kontakcie wystrzeliwuj№ z niej dziesi№tki miniaturowych bіyskawic, raї№c pr№dem, co prawie zawsze koсczy siк њmierci№. W њwietle dziennym moїna j№ rozpoznaж po unosz№cej siк ponad ni№ niebieskawej mgle. W nocy Elektro moїna wykryж za pomoc№ dowolnego detektora lub rzucaj№c w jej kierunku metalowe przedmioty. Tworzy trzy rodzaje artefaktуw: "њwiecideіko", "bіysk" oraz "blask ksiкїyca".</text>
+	</string>
+	<string id="enc_zone_anomalies_fuzz">
+		<text>Jeden z przykіadуw zmutowanej roњlinnoњci Zony. Reaguje na szybko zbliїaj№ce siк istoty їywe, wystrzeliwuj№c w ich kierunku chmarк pociskуw, ktуre powaїnie rani№ nieosіoniкt№ lub sіabo chronion№ skуrк. Nie reaguje na istoty, ktуre poruszaj№ siк powoli. Tworzy trzy rodzaje artefaktуw (prawdopodobnie swoje nasiona): "kolec", "krysztaіowy kolec" oraz "jeїowiec".</text>
+	</string>
+	<string id="enc_zone_anomalies_gravi">
+		<text>Anomalia prawdopodobnie pochodzenia grawitacyjnego. Po kontakcie z ni№ ogromna moc "Wiru" przyci№ga do њrodka anomalii wszystko, co znajduje siк w promieniu 10-15 metrуw. Ofiary wci№gniкte do jej j№dra nie maj№ szans na przeїycie: ich ciaіa s№ bіyskawicznie zgniatane, a po chwili rozsadzane w potкїnym wybuchu energii. Przez caіy czas swojego istnienia (zazwyczaj okoіo tygodnia) anomalia ta pozostaje nieruchoma. W dzieс іatwo j№ rozpoznaж po ruchu powietrza nad ni№, unosz№cych siк liњciach, leї№cych wokуі szcz№tkach ciaі oraz po charakterystycznej ciemnej plamie poњrodku. Jest niezwykle niebezpieczna w nocy, gdyї moїna j№ rozpoznaж tylko za pomoc№ detektora lub rzucaj№c w jej kierunku metalowe przedmioty. Tworzy trzy rodzaje artefaktуw: "skrкtak", "grawi" oraz "zіota rybka". </text>
+	</string>
+	<string id="enc_zone_anomalies_lift">
+		<text>Nieszkodliwa anomalia chwilowo zakіуcaj№ca grawitacjк. Pojawia siк na obszarze (zazwyczaj o њrednicy kilku metrуw), na ktуrym siіa przyci№gania ziemskiego jest znacznie obniїona. Tworzy "bіonк".</text>
+	</string>
+	<string id="enc_zone_anomalies_meat">
+		<text>Anomalia ta porywa swe ofiary w powietrze i obraca nimi z zawrotn№ szybkoњci№. Dokіadne pochodzenie Karuzeli jest nieznane. Anomaliк tк moїna rozpoznaж po widocznej ponad ni№ niewielkiej tr№bie powietrznej oraz po porozrzucanych w okolicy szcz№tkach ciaі. Ofiary pochwycone na jej obrzeїach - wystarczaj№co daleko od najsilniej oddziaіuj№cego њrodka anomalii - mog№ uciec Karuzeli ze stosunkowo niewielkimi obraїeniami. Tworzy trzy rodzaje artefaktуw: "Kamienna krew", "Kotlet" oraz "Dusza".</text>
+	</string>
+	<string id="enc_zone_anomalies_radioactive">
+		<text>Teren zwiкkszonego promieniowania - ponad 50 mR/h. Przebywanie w strefie promieniowania przez dіuїszy czas nie jest wskazane.</text>
+	</string>
+	<string id="enc_zone_anomalies_time">
+		<text>Prawdziwy cud wњrуd anomalii: teren o њrednicy kilku metrуw, gdzie upіyw czasu jest znacznie wolniejszy niї zazwyczaj. Wydaje siк nie mieж negatywnego wpіywu na zdrowie czіowieka. Jednakїe czasem trudno jest siк z niego wydostaж. Co ciekawe, Wehikuі Czasu znika, gdy zabierze siк ze њrodka tej anomalii "korale mamy".</text>
+	</string>
+	<string id="enc_zone_anomalies_zharka">
+		<text>Gdy anomalia ta jest nieaktywna, objawia siк jako ledwo widoczny obіok gor№cego powietrza. Po kontakcie z ni№ przedmiot lub istota їywa natychmiast nagrzewa siк do zabуjczej temperatury dochodz№cej do 1500 stopni w skali Kelwina. W nocy anomaliк moїna rozpoznaж dziкki zaawansowanym detektorom lub rzucaj№c w ni№ metalowymi przedmiotami. Tworzy trzy rodzaje artefaktуw: "kropelki", "kula ognista" oraz "krysztaі".</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-mica">
+		<text>"Galareta" jest w stanie wytworzyж taki artefakt przy zaistnieniu kilku najrzadziej spotykanych, ekstremalnych warunkуw fizycznych. Powstaje wtedy na wpуі przezroczysty, twardy przedmiot. To rzadki i drogi artefakt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slime">
+		<text>To pewne, їe artefakt ten jest tworzony przez anomaliк zwan№ "Galaret№". Kiedy siк go nosi przy sobie, rany mniej krwawi№, choж ciaіo jego posiadacza staje siк bardziej wraїliwe na rуїnego rodzaju oparzenia.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slug">
+		<text>Artefakt stworzony w "Galarecie". Jego wady rekompensuje fakt, їe poprawia krzepliwoњж krwi. Rzadko siк go spotyka, wiкc moїna za niego sporo zarobiж.</text>
+	</string>
+	<string id="enc_zone_artifact_af-blood">
+		<text>Artefakt stworzony w "Karuzeli". Dosyж brzydki, czerwonawy przedmiot powstaіy ze zgniecionych, dziwnie poskrкcanych, spolimeryzowanych czкњci roњlin, ziemi i koњci. Dosyж powszechny i niezbyt skuteczny. </text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall">
+		<text>Powstaje, gdy do "Spalacza" wpadaj№ metale ciкїkie. Idealnie usuwa promieniowanie. Bardzo ceniony przez stalkerуw i ciкїki do znalezienia. </text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall-flower">
+		<text>Artefakt stworzony w "Trampolinie". Moїna go znaleџж jedynie na kilku obszarach w Zonie. Dziкki fragmentom metali moїna na nim zaobserwowaж piкkn№ grк њwiateі. Przygl№danie siк temu artefaktowi w nocy, przy ognisku, bardzo uspokaja.</text>
+	</string>
+	<string id="enc_zone_artifact_af-drops">
+		<text>Artefakt stworzony w "Spalaczu" przy bardzo wysokiej temperaturze. Z zewn№trz wygl№da jak іza, ma bіyszcz№c№, popкkan№ powierzchniк. </text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-battery">
+		<text>Pochodzenie tego artefaktu owiane jest naukow№ tajemnic№. Rzecz jasna czкњciowo zostaі stworzony przez elementy dielektryczne, lecz nauka nie zna warunkуw, w jakich powstaі.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-dummy">
+		<text>Gdy ma siк przy sobie ten artefakt, biaіko wolniej ulega uszkodzeniu. Innymi sіowy, ciaіo ludzkie jest w stanie wytrzymaж wyїsze temperatury i doznaje mniejszych oparzeс. Artefakt jest bardzo drogi i rzadko spotykany.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-glassbeads">
+		<text>Wspaniaіy artefakt. Chroс go - jest tak wartoњciowy dlatego, їe nie ma їadnych skutkуw ubocznych. Naukowcy nie mog№ wymyњliж, jak go stworzyж w warunkach laboratoryjnych.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-pellicle">
+		<text>Ten artefakt jest wyj№tkowo rzadko spotykany i wielu naukowcуw nie jest w stanie poj№ж, їe coњ takiego moїe istnieж w њrodowisku naturalnym. Wydziela kwasowe skіadniki chemiczne.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-spring">
+		<text>Wedіug niektуrych badaczy-teoretykуw ten artefakt to hybryda "baterii" i "muszli".</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-flash">
+		<text>"Elektro" czasem tworzy ten artefakt. Stalkerzy chкtnie go uїywaj№ ze wzglкdu na jego zalety. Niezіa cena i іadny wygl№d sprawiaj№, їe jest on gratk№ dla kolekcjonerуw.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-moonlight">
+		<text>Przykіad zwyrodnienia anomalii "Elektro". Wydaje siк, їe ten piкkny, okr№gіy przedmiot powstaje, gdy anomalia ulega wpіywom termicznym. Drogi artefakt.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-sparkler">
+		<text>Znajdowany niedaleko anomalii typu "Elektro". Dosyж powszechny i niedrogi. Mimo to badacze z Zony ceni№ go za jego wіaњciwoњci.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fireball">
+		<text>Krystalizuje siк w "Spalaczu". Dobrze zwalcza radioaktywnoњж, choж zwiкkszone zapotrzebowanie na energiк mкczy miкњnie i narz№dy ruchu. Dіugotrwaіy bieg nie wchodzi w grк. Artefakt emituje ciepіo.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fuzz-kolobok">
+		<text>Gdy trzymasz w dіoniach tк tajemnicк Zony, czujesz, jak twoja skуra staje siк twardsza i mniej wraїliwa. Ci№gle moїna j№ przestrzeliж, ale o wiele trudniej j№ przeci№ж.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gold-fish">
+		<text>Artefakt stworzony w "Wirze". Uaktywnia go ciepіo ludzkiego ciaіa. Zdecyduj, co jest gorsze - promieniowanie czy rany zadane noїem i wybierz mniejsze zіo. Oczywiњcie moїesz rуwnieї sprzedaж artefakt i sporo zarobiж.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gravi">
+		<text>Moїna go znaleџж niedaleko anomalii takich jak "Wir" lub w rкkach innego stalkera. Gdy masz go przy sobie, czeњж promieniowania zbiera siк w ciele, natomiast reszta rozchodzi siк promieniњcie z daleka od ciaіa. Wartoњciowy.</text>
+	</string>
+	<string id="enc_zone_artifact_af-medusa">
+		<text>Artefakt powstaіy w "Trampolinie". Tworzy wokуі posiadacza sіabe pole ochronne, ktуrego efektem ubocznym jest niewielkie promieniowanie. Dosyж powszechny i niewiele wart. </text>
+	</string>
+	<string id="enc_zone_artifact_af-mincer-meat">
+		<text>Tworzony przez "Karuzelк". Powoduje przyњpieszony wzrost komуrek, lecz nowo powstaіe komуrki s№ o wiele wraїliwsze na skutki oddziaіywania uranu. Artefaktu tego nie znajduje siк zbyt czкsto, ale teї trudno go nazwaж rzadkim.</text>
+	</string>
+	<string id="enc_zone_artifact_af-night-star">
+		<text>Ten wspaniaіy artefakt powstaje w "Trampolinie". Їeby go uїywaж, trzeba zneutralizowaж њmierteln№ dawkк promieniowania. Drogi i rzadki - szczegуlnie interesuj№cy dla ekspedycji naukowych i innych rodzajуw dziaіalnoњci badawczej w Zonie.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-kristall">
+		<text>Krystalizuje siк w "Spalonym Puchu". W naturalny sposуb wysysa z organizmu promieniowanie - robi to przez uszy, zabieraj№c rуwnieї trochк krwi. Moїliwe jest rуwnieї krwawienie z innych otworуw w ciele. Popularny i dosyж skuteczny, co jest przyczyn№ stabilnej ceny na rynku artefaktуw. </text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-sea-urchin">
+		<text>Anomalia "Spalony Puch" bardzo rzadko tworzy ten artefakt. Dziкki niemu roњnie ciњnienie krwi, a organizm pozbywa siк duїej iloњci czerwonych krwinek. Razem z nimi opuszcza ciaіo zgromadzone w nim promieniowanie. W swym gіуwnym dziele, "Jonizacja i polaryzacja skіadnikуw rzadkich artefaktуw", Sacharow stwierdza, їe skіad tego artefaktu ma pewn№ graniczn№ statecznoњж i їe w ci№gu najbliїszych dziesiкciu lat nie bкdzie moїliwe stworzenie go w warunkach laboratoryjnych.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-thorn">
+		<text>Efekt interakcji pomiкdzy anomali№ "Spalony Puch" i ciaіem nieostroїnego stalkera. "Kolec" bez wzglкdu na okolicznoњci kіuje ciaіo osoby, ktуra go posiada. Jednak pomaga oczyњciж jej organizm z radionuklidуw. Dosyж powszechny i tani.</text>
+	</string>
+	<string id="enc_zone_artifact_af-soul">
+		<text>Bardzo rzadko spotykany artefakt znajdowany w okolicy "Karuzeli". Niewielu udaje siк go odnaleџж, niewielu rуwnieї miaіo okazjк go zobaczyж. Ma piкkny ksztaіt i rуwnie piкkn№ cenк.</text>
+	</string>
+	<string id="enc_zone_artifact_af-vyvert">
+		<text>Znajdowany w anomalii zwanej "Wirem". Gdy dotyka ciaіa, rozprzestrzenia radiacjк, ktуra chroni ciaіo przed zadrapaniami lub ranami od broni. Nietrudno znaleџж ten artefakt, dlatego nie jest wiele wart.</text>
+	</string>
+	<string id="enc_zone_locations_agroprom">
+		<text>Dziwny, silnie skaїony obszar. Jeњli zapuњcisz siк w jego gі№b, zobaczysz pіytkie jezioro, od jednego brzegu do drugiego zagracone porzuconym sprzкtem i innymi szcz№tkami. Moїesz rуwnieї obejrzeж opuszczony Instytut i fabrykк, choж ostatnio czкsto siк tam krкci wojsko.</text>
+	</string>
+	<string id="enc_zone_locations_bar">
+		<text>Czіonkowie "Powinnoњci" rozbili obуz na kraсcach rуwniny i zawsze z chкci№ przyjmuj№ stalkerуw, ktуrzy potrzebuj№ odpoczynku. To swoista pustynna oaza - miejsce, w ktуrym nie ma ani anomalii, ani mutantуw. Pamiкtaj, їeby wybraж siк do baru "100 Radуw" w podziemiach - to miejsce spotkaс stalkerуw z caіej Zony. Bar prowadzi miejscowy handlarz, wiкc jeњli poza plotkami interesuje ciк rуwnieї sprzedaї lub kupno towarуw, to wіaњnie idealne miejsce. Na pуіnoc od baru znajduje siк baza wojskowa, a na poіudnie - Wysypisko.</text>
+	</string>
+	<string id="enc_zone_locations_darkdolina">
+		<text>Zawsze ponura, zawsze zamglona, zawsze deszczowa. Stalkerzy, ktуrzy zapuszcz№ siк do Doliny Mroku, maj№ duїe szanse na znalezienie wartoњciowych artefaktуw, natychmiastowej њmierci lub i tego, i tego. Bywaj№ tu najstarsi weterani, choж moїna siк teї natkn№ж na zwykіych bandytуw. Podobno gdzieњ tu jest podziemne laboratorium, wiкc po drodze warto szukaж ukrytego wejњcia. Jednak nikt nie wrуciі st№d їywy, wiкc nie wiadomo, jakie niebezpieczeсstwa tam czyhaj№.</text>
+	</string>
+	<string id="enc_zone_locations_escape">
+		<text>Moїna to miejsce nazwaж przedsionkiem Zony, miejscem, gdzie koty mog№ nabraж wprawy. W podziemiach na tyіach wioski, niedaleko placуwki wojskowej, znajdziesz handlarza. Pamiкtaj, їeby z nim porozmawiaж, jednak omijaj placуwkк. Lepiej, їeby їoіnierze ciк nie zauwaїyli - wiкkszoњж z nich najpierw strzela, a pуџniej zadaje pytania. Chociaї - tak jak wszкdzie - s№ i tacy, co dadz№ siк przekupiж pod warunkiem, їe wyїsi oficerowie nie patrz№. Nie naleїy atakowaж їoіnierzy, o ile nie stanowi№ bezpoњredniego zagroїenia. </text>
+	</string>
+	<string id="enc_zone_locations_garbage">
+		<text>Wielkie cmentarzysko maszyn. Zaraz po pierwszym wypadku wyrzucono tu caіe stosy odpadуw radioaktywnych - gіуwnie pozostaіoњci po starych budynkach peіnych mutantуw. Tak jak na peryferiach Zony, w tym miejscu rуwnieї roi siк od stalkerуw-їуіtodziobуw, czasem moїna teї spotkaж bandytк szukaj№cego towarуw za friko. Moїna tu znaleџж niektуre artefakty, lecz wiкkszoњж z nich niewarta jest zachodu. Lepiej siк udaж gdzie indziej. Kieruj№c siк na pуіnoc, dotrzesz do Dziczy, na zachodzie leїy wejњcie do Doliny Mroku, a na wschodzie droga do Instytutu Badawczego Agroprom.</text>
+	</string>
+	<string id="enc_zone_locations_military-loc">
+		<text>Opuszczona baza wojskowa obok rozpadaj№cej siк osady i niewielkich moczarуw. Wioska to upiorne miejsce, w ktуrym dosіownie roi siк od mutantуw - samych pijawek tu mnуstwo. Stalkerzy staraj№ siк unikaж tego miejsca, nawet jeњli przez to musz№ nadrobiж parк kilometrуw. Anarchiњci z "Wolnoњci" zadomowili siк w bazie wojskowej. Drogi і№cz№cej bazк z Zon№ broni Mуzgozwкglacz, zagradzaj№c drogк do Prypeci i Czarnobylskiej Elektrowni J№drowej.</text>
+	</string>
+	<string id="enc_zone_locations_pripiat">
+		<text>To byіo niegdyњ miasto stworzone dla inїynierуw pracuj№cych w elektrowni j№drowej w Czarnobylu. Kiedyњ zaludnione - teraz miasto duchуw, ktуrego jedynymi mieszkaсcami s№ mutanty i zombi. Wydaje siк, їe nie ma jak siк tu dostaж - drogк blokuje Mуzgozwкglacz. </text>
+	</string>
+	<string id="enc_zone_locations_radar">
+		<text>Przeraїaj№ce miejsce. Јatwo tu znikn№ж bez њladu - nieistotne, jakie szczкњcie siк miaіo do tej pory. Ktokolwiek zbliїy siк do Mуzgozwкglacza, natychmiast dostaje pomieszania zmysіуw, zmienia siк w zombi i zaczyna niespokojnie bі№dziж po Zonie. Po czіowieku pozostaje tylko skorupa. Nikt jeszcze stamt№d nie wrуciі zdrowy psychicznie.</text>
+	</string>
+	<string id="enc_zone_locations_rostok">
+		<text>W Dziczy byі kiedyњ dosyж duїy zakіad wytwуrczy, z ktуrego teraz zostaіy tylko ruiny. Wielu stalkerуw spotkaіa њmierж: roi siк tu od wszelakich stworуw, ktуre ci№gn№ z caіej Zony. Podobno na tym terenie ukryto coњ bardzo wartoњciowego, dlatego teї zawsze wielu њmiaіkуw szuka tu szczкњcia. </text>
+	</string>
+	<string id="enc_zone_locations_stancia">
+		<text>Teren znanej na caіym њwiecie elektrowni j№drowej. Serce Zony. Jeњli wierzyж legendom, tu teї znajduje siк Monolit - tajemniczy obiekt bкd№cy w stanie speіniж kaїde їyczenie.</text>
+	</string>
+	<string id="enc_zone_locations_yantar">
+		<text>Legendarne jezioro na terenie o tej samej nazwie wyschіo dawno temu, pozostawiaj№c po sobie pіytkie bagno. To miejsce mroczne i przesi№kniкte њmierci№. Na awanturnikуw, ktуrzy s№ na tyle gіupi, їeby siк tu zbliїyж, czekaj№ ogromne niebezpieczeсstwa. Kaїdy, kto zajdzie za daleko, traci rozum. Zombi іaї№ po caіym Jantarze w poszukiwaniu nowych ofiar. Jeњli obejdziesz jezioro i ominiesz zombi, dotrzesz do obozu naukowcуw, gdzie przetransportowani tam њmigіowcami jajogіowi prowadz№ badania. Moїesz z nimi porozmawiaж - kupuj№ artefakty, a poza tym mog№ ci zleciж jakieњ zadanie. </text>
+	</string>
+	<string id="enc_zone_zone-story_story-2006">
+		<text>Skaїona strefa bіyszczaіa њwiatіem najjaњniejszym z moїliwych, њwiatіem prawie nie do zniesienia dla ludzkiego wzroku. Moїna byіo dosіownie zobaczyж, jak chmury zmieniaj№ siк w parк. Po chwili martwej ciszy daіo siк sіyszeж іoskot pioruna, a potem zatrzкsіa siк ziemia. Ludzie padli na ziemiк, wywracaj№c oczami i zakrywaj№c uszy. Ci, ktуrzy mogli ustaж na nogach, uciekli co siі. Wygl№daіo to, jakby ukryte pod sarkofagiem paliwo nuklearne nagle wybuchіo. Nastкpnego dnia wojsko otoczyіo kordonem now№ Zonк. Dziкki satelitom udaіo siк ustaliж, їe epicentrum eksplozji tak naprawdк nie znajdowaіo siк w pobliїu reaktorуw elektrowni j№drowej, lecz okoіo pуі kilometra dalej. Uwaїa siк, їe personel elektrowni zgin№і od razu, choж na terenie objкtym kordonem ci№gle pozostali ludzie. Akcja ratunkowa wkrуtce okazaіa siк bezcelowa, gdyї ludzie wysyіani w gі№b obszaru natychmiast umierali, a maszyny siк psuіy. Jakiњ czas po katastrofie њrednica Zony powiкkszyіa siк o kilka kilometrуw. Wiкkszoњж oddziaіуw rz№dowych strzeg№cych granicy oraz stacjonuj№ce tam ekipy badawcze od razu zginкіy. Ogarniкci panik№ ludzie zaczкli uciekaж. W poњpiechu ewakuowano mieszkaсcуw pobliskich miast i wsi. Њwiatu zagraїa ogromne niebezpieczeсstwo i moїemy jedynie zgadywaж, jaki moїe byж jego peіny wymiar.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2008">
+		<text>Od czasu katastrofy w skaїonej strefie wokуі elektrowni j№drowej w Czarnobylu minкіy dwa lata. Rosn№ca w zawrotnym tempie liczba ofiar њmiertelnych, ogromna liczba zaginionych, martwe bydіo, wal№ce siк budynki, okaleczone lasy... Aї do dziњ naukowcy nie znaleџli odpowiedzi na pytanie, co tak naprawdк staіo siк w Czarnobylu. W miкdzyczasie w okolicy odkryto niewyobraїalne anomalie, a Zona ci№gle siк rozrasta. Nieliczne ekspedycje natrafiaj№ na zmutowane gatunki zwierz№t wykazuj№ce niewiarygodne zdolnoњci.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2010">
+		<text>Ekipy badawcze chc№ce dokіadnie zbadaж Zonк znуw pod№їaj№ њladem lekkomyњlnych samotnikуw - stalkerуw. Jednakїe obszar strzeїony przez wojsko ma teraz innych, niebezpiecznych mieszkaсcуw - od zwykіych kіusownikуw po najgorszych bandytуw. Wiкkszoњж stalkerуw wкdruje po Zonie w poszukiwaniu anomalii i tak zwanych artefaktуw, za sprzedaї ktуrych mog№ caіkiem dobrze zarobiж.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-raid">
+		<text>Wojsko, і№cznie z siіami specjalnymi dowodzonymi przez paramilitarne oddziaіy stalkerуw, rozpoczкіo zmasowany wypad w gі№b Zony. Ich celem byіo przedarcie siк do elektrowni j№drowej w Czarnobylu i zniszczenie przyczyny powstawania pуl anomalii albo przynajmniej zdobycie informacji z pierwszej rкki dotycz№cych obecnego stanu rzeczy. Akcja, w ktуrej uczestniczyіo ponad tysi№c osуb i w ktуrej wykorzystano ciкїk№ maszyneriк, okazaіa siк zupeіn№ poraїk№. Rozproszone grupy tych, ktуrzy przeїyli, zostaіy zmuszone do pozostania w Zonie z niewielkimi nadziejami na ratunek.</text>
+	</string>
+	<string id="Escape">
+		<text>Kordon</text>
+	</string>
+	<string id="Fuzz">
+		<text>Spalony Puch</text>
+	</string>
+	<string id="Garbage">
+		<text>Wysypisko</text>
+	</string>
+	<string id="Gravi">
+		<text>Wir</text>
+	</string>
+	<string id="Lift">
+		<text>Winda</text>
+	</string>
+	<string id="Locations">
+		<text>Lokalizacje</text>
+	</string>
+	<string id="Meat">
+		<text>Karuzela</text>
+	</string>
+	<string id="Military-loc">
+		<text>Baza wojskowa</text>
+	</string>
+	<string id="Pripiat">
+		<text>Prypeж</text>
+	</string>
+	<string id="Radar">
+		<text>Zwкglacz</text>
+	</string>
+	<string id="Radioactive">
+		<text>Џrуdіo promieniowania</text>
+	</string>
+	<string id="Rostok">
+		<text>Dzicz </text>
+	</string>
+	<string id="Stancia">
+		<text>Elektrownia J№drowa</text>
+	</string>
+	<string id="Story-2006">
+		<text>12 kwietnia, 2008, 14:33</text>
+	</string>
+	<string id="Story-2008">
+		<text>Rok 2010</text>
+	</string>
+	<string id="Story-2010">
+		<text>Rok 2011</text>
+	</string>
+	<string id="Story-raid">
+		<text>Wypad wojska do Zony w roku 2011.</text>
+	</string>
+	<string id="Time_machine">
+		<text>Wehikuі czasu</text>
+	</string>
+	<string id="Yantar">
+		<text>Jantar</text>
+	</string>
+	<string id="Zharka">
+		<text>Spalacz</text>
+	</string>
+	<string id="Zone">
+		<text>Zona</text>
+	</string>
+	<string id="Zone-story">
+		<text>Historia Zony</text>
+	</string>
+</string_table>

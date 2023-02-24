@@ -1,0 +1,150 @@
+	<string id="esc_bandits_on_factory">
+		<text>Die Banditen bei der Fabrik eliminieren.</text>
+	</string>
+	<string id="esc_bandits_on_factory_0">
+		<text>Die Banditen, die sich in der Fabrik verstecken, müssen eliminiert werden.</text>
+	</string>
+	<string id="esc_bandits_on_factory_1">
+		<text>Alle Banditen in der Fabrik eliminieren.</text>
+	</string>
+	<string id="esc_bandits_on_factory_2">
+		<text>Mit dem Händler reden.</text>
+	</string>
+	<string id="esc_bandits_on_factory_3">
+		<text>Mit Wolf reden.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader">
+		<text>Die Schachtel vom Armeeposten stehlen.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_0">
+		<text>Die Schachtel mit wichtigen Dokumenten vom Armeeposten stehlen.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_1">
+		<text>Die Schachtel vom Armeeposten stehlen.</text>
+	</string>
+	<string id="esc_blockpost_case_to_trader_2">
+		<text>Die Schachtel zum Händler bringen.</text>
+	</string>
+	<string id="esc_defend_lager">
+		<text>Das Anfängerlager vor den Söldnern beschützen.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_0">
+		<text>Das Anfängerlager vor den Söldnern beschützen.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_1">
+		<text>Die Söldner ausschalten.</text>
+	</string>
+	<string id="esc_defend_lager_from_killers_2">
+		<text>Mit dem Kommandanten der Anfänger reden.</text>
+	</string>
+	<string id="esc_dinamit_to_volk">
+		<text>Die Banditen am Parkplatz ausschalten.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_0">
+		<text>Die Banditen am Parkplatz ausschalten und Wolf Bericht erstatten.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_1">
+		<text>Wolfs Leute treffen.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_2">
+		<text>Alle Banditen eliminieren.</text>
+	</string>
+	<string id="esc_dinamit_to_volk_3">
+		<text>Mit Wolf reden.</text>
+	</string>
+	<string id="esc_help_wounded_from_raid">
+		<text>Von Fuchs Informationen über Strelok in Erfahrung bringen.</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_0">
+		<text>Dem verwundeten Stalker helfen.</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_1">
+		<text>Fuchs helfen.</text>
+	</string>
+	<string id="esc_help_wounded_from_raid_2">
+		<text>Informationen über Strelok erlangen.</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift">
+		<text>Dem Händler das Päckchen liefern.</text>
+	</string>
+	<string id="esc_wounded_to_trader_gift_0">
+		<text>Das Päckchen beim Händler abliefern. Vielleicht kann er weiterhelfen.</text>
+	</string>
+	<string id="garbage_meet_stalker">
+		<text>Treffen mit Serij.</text>
+	</string>
+	<string id="garbage_meet_stalker_0">
+		<text>Mit Serij an der Müllhalde treffen.</text>
+	</string>
+	<string id="meet_with_doctor">
+		<text>Treffen mit dem Doktor.</text>
+	</string>
+	<string id="meet_with_doctor_1">
+		<text>Treffen mit dem Doktor.</text>
+	</string>
+	<string id="meet_with_doctor_2">
+		<text>Mit dem Doktor in Streloks Versteck treffen.</text>
+	</string>
+	<string id="storyline_escape_eliminate_gunslinger">
+		<text>Strelok töten.</text>
+	</string>
+	<string id="storyline_escape_find_gunslinger">
+		<text>Strelok finden.</text>
+	</string>
+	<string id="tutorial_find_artefact">
+		<text>Ein Artefakt finden.</text>
+	</string>
+	<string id="tutorial_find_artefact_0">
+		<text>Das erste Artefakt finden.</text>
+	</string>
+	<string id="tutorial_find_artefact_1">
+		<text>Ein Artefakt finden.</text>
+	</string>
+	<string id="tutorial_find_artefact_2">
+		<text>Das Artefakt zum Händler bringen.</text>
+	</string>
+	<string id="tutorial_help_wounded">
+		<text>Informationen vom Späher beschaffen.</text>
+	</string>
+	<string id="tutorial_help_wounded_0">
+		<text>Die Informationen dem Händler bringen.</text>
+	</string>
+	<string id="tutorial_help_wounded_1">
+		<text>Mit Wolf reden.</text>
+	</string>
+	<string id="tutorial_help_wounded_2">
+		<text>Das Laufwerk von Nimble beschaffen.</text>
+	</string>
+	<string id="tutorial_help_wounded_3">
+		<text>Das Laufwerk zum Händler bringen.</text>
+	</string>
+	<string id="esc_trader_job">
+		<text>Für den Händler arbeiten.</text>
+	</string>
+	<string id="esc_trader_job_text">
+		<text>Den Sonderauftrag vom Händler bekommen.</text>
+	</string>
+	<string id="bar_barman_job">
+		<text>Für den Wirt arbeiten.</text>
+	</string>
+	<string id="bar_barman_job_text">
+		<text>Den Wirt nach einem Job fragen.</text>
+	</string>
+	<string id="yan_scientist_job">
+		<text>Den Wissenschaftlern helfen.</text>
+	</string>
+	<string id="yan_scientist_job_text">
+		<text>Den anderen Wissenschaftlern Hilfe anbieten.</text>
+	</string>
+	<string id="find_railroad_passage">
+		<text>Zum Bahndamm gehen.</text>
+	</string>
+	<string id="find_railroad_passage_1">
+		<text>Mit dem Reisenden treffen.</text>
+	</string>
+	<string id="find_railroad_passage_2">
+		<text>Den Bahndamm überqueren.</text>
+	</string>
+	<string id="find_railroad_passage_text">
+		<text>Bevor du tiefer in die Zone vordringst, musst du einen alten Bahndamm überqueren. Die einzige sichere Stelle wird vom Militär bewacht. Es gibt aber auf der linken Seite einen kleinen Tunnel, durch den die Anfänger meistens gehen. Dort wirst du von einem meiner Leute erwartet.</text>
+	</string>

@@ -1,0 +1,75 @@
+	<string id="bar_darklab_documents_txt">
+		<text>Wirt: "Die Dokumente, die du von Agroprom mitgebracht hast, klären schon einiges auf, aber einige Daten fehlen. Es gibt Hinweise, die nahe legen, dass ein Hirnschmelzer die Straße nach Norden blockiert, aber niemand weiß Genaues. Es wird außerdem ein Labor X18 erwähnt. Der Beschreibung nach müssten das die verlassenen unterirdischen Gebäude im Dunklen Tal sein. Niemand weiß, was da zur Zeit los ist. Außerdem haben Banditen im Dunklen Tal ihr Lager aufgeschlagen.\n Einige Späher der Wächter sind kürzlich da hin, aber bisher haben wir nichts von ihnen gehört.\n Um in das Labor einzudringen, brauchst du zwei elektronische Schlüssel. Einen bekommst du von mir, aber den anderen musst du Borow abnehmen, dem Anführer der Banditen.\n\n Wenn du den zweiten Schlüssel von Borow hast, musst du dich in das Labor schleichen und die Dokumente holen.</text>
+	</string>
+	<string id="bar_darklab_documents2_txt">
+		<text>Es ist unerlässlich, die Dokumente über die Forschung aus Labor X18 zu finden. Sie können vielleicht einiges über den Hirnschmelzer erklären.</text>
+	</string>
+	<string id="dar_codedoor_1_txt">
+		<text>Ein Kombinationsschloss versperrt den Weg ins Labor. Es muss jemanden her, der die Kombination kennt.</text>
+	</string>
+	<string id="dar_codedoor_2_txt">
+		<text>Da ist noch eine Tür, hinter der bestimmt etwas ist. Es muss der Code her, der die Tür öffnet.</text>
+	</string>
+	<string id="dar_document1">
+		<text>Der Anfang des Experiments</text>
+	</string>
+	<string id="dar_document2">
+		<text>Die zweite Stufe des Experiments</text>
+	</string>
+	<string id="dar_document3">
+		<text>Sicherheitsbericht</text>
+	</string>
+	<string id="dar_document4">
+		<text>Angriff auf das Personal</text>
+	</string>
+	<string id="dar_document5">
+		<text>Die letzte Stufe des Experiments</text>
+	</string>
+	<string id="documents_1">
+		<text>Vor einer Woche wurde beschlossen, die Intensität der Strahlung bei den Testsubjekten zu erhöhen. In den ersten paar Tagen wurde keine Veränderung festgestellt. Nach mehreren Tagen kam es zu seltsamen Metamorphosen: Haarausfall, erhöhte Aggressivität ... Mehrere Subjekte wurden buchstäblich von anderen überrannt.</text>
+	</string>
+	<string id="documents_2">
+		<text>Der Zustand der Subjekte hat sich stabilisiert. Der Haarbestand beträgt 10% des Ausgangswertes. Krallen und Zähne sind deutlich gewachsen. In aktiven Phasen sind sie unvorhersehbar, ihr Verhalten richtet sich aber nicht gegen die anderen. Der leitende Labortechniker A.N. Burnow spekulierte, dass dies an einer Erhöhung des Intellekts der Subjekte liegen könnte. Es wurde entschieden, die neue Modulation der PSI-Emissionen bei den Subjekten zu testen.</text>
+	</string>
+	<string id="documents_3">
+		<text>Sicherheitschef: Gestern warf Sicherheitsmann G.P. Glebow den Subjekten zum Spaß ein Stück Fleisch zu. Sie rissen es in Sekunden in Stücke und verzehrten es. Dann versuchten einige, aus den Zellen auszubrechen. Die Labortechniker konnten daher nicht die benötigten Proben nehmen. G.P. Glebows Tat war zwar undurchdacht, doch ich schlage vor, dass das Wartungspersonal mit Luftgewehren oder Schutz ausgestattet wird, um sich im Notfall zu wehren.</text>
+	</string>
+	<string id="documents_4">
+		<text>Sicherheitschef: Gestern wäre das Experiment fast außer Kontrolle geraten. Zwei Dutzend Testsubjekte brachen aus und haben zwei Laborräume verwüstet. Zum Glück konnte sich das Forschungspersonal oben einschließen. Wir sollten den Hauptraum des Labors räumen. Bei der Operation wurden drei Wachleute gebissen. Sie werden sich hoffentlich erholen. Ich hoffe, das Experiment ist bald vorbei.</text>
+	</string>
+	<string id="documents_5">
+		<text>Gestern haben wir die Testsubjekte einer neuen Modulation von PSI-Emissionen ausgesetzt. Es war, als hätte man ihre Hirne geröstet. Ich kann mir kaum vorstellen, wie sich diese Emission auf Menschen auswirken würde. Wir haben jede Art von Emission getestet und das Ergebnis stimmt mit denen aus anderen Labors überein. Das Experiment ist abgeschlossen. In einer Woche sind wir wohl so weit, es an größeren Wesen zu testen.</text>
+	</string>
+	<string id="LabX18 first key">
+		<text>Zugangsberechtigungscode der Stufe 2</text>
+	</string>
+	<string id="LabX18 second key">
+		<text>Zugangsberechtigungscode der Stufe 1</text>
+	</string>
+	<string id="LabX18_information">
+		<text>Information aus X18</text>
+	</string>
+	<string id="pass_to_1st_door">
+		<text>Werter Kollege, ich bin froh, dass Sie die Zugangsberechtigung der Stufe 2 erhalten haben. Nun werden Sie endlich herausfinden, was in unserem Labor vor sich geht. Ihr Zugangscode lautet 1243. Piotr Ilyitsch Kalugin, Leiter des Labors X18.</text>
+	</string>
+	<string id="pass_to_2nd_door">
+		<text>Lieber Kollege, ich möchte Sie daran erinnern, dass Sie ab morgen für die Container im Zentrallabor zuständig sind. Die Container müssen alle zwei Stunden überprüft werden. Sämtliche Berichte gehen direkt an mich. Der Zugangscode zum Zentrallabor lautet 9524. Piotr Ilyitsch Kalugin, Leiter des Labors X18.</text>
+	</string>
+	<string id="sl_x18_dream_name">
+		<text>Ein merkwürdiger Traum</text>
+	</string>
+	<string id="sl_x18_dream_text">
+		<text>Ich hatte einen eigenartigen Traum. Der gewaltige Reaktor von Tschernobyl schält sich aus der Dunkelheit, alles sieht friedlich aus. Ein Mann ist zu erkennen, ich sehe ihn von hinten, im Hintergrund steht das Kraftwerk. Wind kommt auf. Plötzlich rennen Scharen von Ratten von dem Kraftwerk in alle Richtungen davon. Der Mann schießt auf die Ratten, immer noch den zu mir gedreht. Plötzlich ein Schrei: "Strelok!" Der Mann erschaudert, bleibt für einen Moment regungslos stehen und dreht sich dann langsam zu mir, aber dann ... Kurz bevor ich einen Blick auf sein Gesicht werfen kann, wache ich auf. Was hat dieser Traum zu bedeuten? Ich weiß es nicht, aber ich glaube, dass ich es schon erlebt habe.</text>
+	</string>
+	<string id="val_captive_help_txt">
+		<text>Der Wächter Bullet möchte, dass ich seinen Partner befreie, der von Banditen gefangen wurde. Er wird schon bald in die verlassene Fabrik eskortiert.</text>
+	</string>
+	<string id="val_prisoner_help_art_txt">
+		<text>Wächter: "Sie haben noch einen von uns, Serega. Sie halten ihn im Keller fest ... in dem großen, unfertigen Gebäude ... Hol ihn da raus, okay? Sonst werden sie ihn auch noch töten ..."</text>
+	</string>
+	<string id="val_x18_conclusion">
+		<text>Labor X18</text>
+	</string>
+	<string id="val_x18_conclusion_txt">
+		<text>Verdammt ... Labor X18 war kein Vergnügen. Und seine derzeitigen Bewohner ... Ich hätte nicht gedacht, dass solche Dinger überhaupt existieren. Ich habe ein paar Dokumente gefunden, habe aber nicht viel davon verstanden. Sie enthielten jedoch technische Spezifikationen für ein paar Komponenten eines Kaymanow-Emitters. Interessanterweise waren die Teile für eine anderes Labor mit dem Codenamen X16 gedacht, womöglich auch ein geheimes Labor.</text>
+	</string>

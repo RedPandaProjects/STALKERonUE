@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Clear">
+		<text>jasno</text>
+	</string>
+	<string id="Cloudy">
+		<text>zamraиeno</text>
+	</string>
+	<string id="Default">
+		<text>stшednн</text>
+	</string>
+	<string id="Extreme">
+		<text>nejvyљљн</text>
+	</string>
+	<string id="gd_master">
+		<text>mistr</text>
+	</string>
+	<string id="gd_novice">
+		<text>novбиek</text>
+	</string>
+	<string id="gd_stalker">
+		<text>stalker</text>
+	</string>
+	<string id="gd_veteran">
+		<text>veterбn</text>
+	</string>
+	<string id="High">
+		<text>vysokб</text>
+	</string>
+	<string id="Low">
+		<text>nнzkб</text>
+	</string>
+	<string id="Minimum">
+		<text>nejniћљн</text>
+	</string>
+	<string id="mm_mp_check_cdkey">
+		<text>kontrola CD klниe</text>
+	</string>
+	<string id="Nigth">
+		<text>noc</text>
+	</string>
+	<string id="Rain">
+		<text>deљtivo</text>
+	</string>
+	<string id="renderer_r1">
+		<text>Statickй osvмtlenн</text>
+	</string>
+	<string id="renderer_r2">
+		<text>Plnм dynamickй osvмtlenн</text>
+	</string>
+	<string id="renderer_r2a">
+		<text>Dynamickй osvмtlenн objektщ</text>
+	</string>
+	<string id="st_artefacthunt">
+		<text>Lov na artefakty</text>
+	</string>
+	<string id="st_deathmatch">
+		<text>Deathmatch</text>
+	</string>
+	<string id="st_rank_experienced">
+		<text>zkuљenэ</text>
+	</string>
+	<string id="st_rank_legend">
+		<text>legendбrnн stalker</text>
+	</string>
+	<string id="st_rank_novice">
+		<text>novбиek</text>
+	</string>
+	<string id="st_rank_professional">
+		<text>profesionбl</text>
+	</string>
+	<string id="st_rank_veteran">
+		<text>veterбn</text>
+	</string>
+	<string id="st_team_deathmatch">
+		<text>Tэmovэ deathmatch</text>
+	</string>
+	<string id="testers_mp_agroprom">
+		<text>Tovбrna Agroprom</text>
+	</string>
+	<string id="testers_mp_atp">
+		<text>Vozovэ park</text>
+	</string>
+	<string id="testers_mp_darkvalley">
+		<text>Temnй ъdolн</text>
+	</string>
+	<string id="testers_mp_factory">
+		<text>Tovбrna Jantar</text>
+	</string>
+	<string id="testers_mp_lost_village">
+		<text>Opuљtмnб vesnice</text>
+	</string>
+	<string id="testers_mp_military_1">
+		<text>Vojenskй skladiљtм</text>
+	</string>
+	<string id="testers_mp_pool">
+		<text>Bazйn</text>
+	</string>
+	<string id="testers_mp_railroad">
+		<text>Ћelezniиnн stanice</text>
+	</string>
+	<string id="testers_mp_rostok">
+		<text>Tovбrna Rostok</text>
+	</string>
+	<string id="testers_mp_workshop">
+		<text>Opuљtмnб tovбrna</text>
+	</string>
+	<string id="ui_mm_60_hz">
+		<text>Frekvence 60 Hz</text>
+	</string>
+	<string id="ui_mm_action">
+		<text>Akce</text>
+	</string>
+	<string id="ui_mm_advanced">
+		<text>Rozљншenй</text>
+	</string>
+	<string id="ui_mm_anisotropic">
+		<text>Anisotropickй filtrovбnн</text>
+	</string>
+	<string id="ui_mm_apply">
+		<text>Pouћнt</text>
+	</string>
+	<string id="ui_mm_back">
+		<text>Zpмt</text>
+	</string>
+	<string id="ui_mm_blood">
+		<text>Krev</text>
+	</string>
+	<string id="ui_mm_brightness">
+		<text>Jas</text>
+	</string>
+	<string id="ui_mm_cancel">
+		<text>Zruљit</text>
+	</string>
+	<string id="ui_mm_contrast">
+		<text>Kontrast</text>
+	</string>
+	<string id="ui_mm_controls">
+		<text>Ovlбdбnн</text>
+	</string>
+	<string id="ui_mm_credits">
+		<text>Autoшi</text>
+	</string>
+	<string id="ui_mm_crosshair_distance">
+		<text>Zobrazovбnн vzdбlenosti cнle</text>
+	</string>
+	<string id="ui_mm_delete">
+		<text>Smazat</text>
+	</string>
+	<string id="ui_mm_difficulty">
+		<text>Obtнћnost</text>
+	</string>
+	<string id="ui_mm_disconnect">
+		<text>Odpojit</text>
+	</string>
+	<string id="ui_mm_disconnect_message">
+		<text>Opravdu se chceљ odpojit?</text>
+	</string>
+	<string id="ui_mm_dyn_crosshair">
+		<text>Dynamickэ zamмшovacн kшнћ</text>
+	</string>
+	<string id="ui_mm_eax">
+		<text>EAX</text>
+	</string>
+	<string id="ui_mm_fullscreen">
+		<text>Celб obrazovka</text>
+	</string>
+	<string id="ui_mm_gameplay">
+		<text>Hra</text>
+	</string>
+	<string id="ui_mm_gamma">
+		<text>Gamma</text>
+	</string>
+	<string id="ui_mm_geometry_lod">
+		<text>Detaily objektщ</text>
+	</string>
+	<string id="ui_mm_invert_mouse">
+		<text>Invertovat myљ</text>
+	</string>
+	<string id="ui_mm_key">
+		<text>Tlaинtko</text>
+	</string>
+	<string id="ui_mm_keyboard_setup">
+		<text>Nastavenн klбvesnice</text>
+	</string>
+	<string id="ui_mm_last_save">
+		<text>Poslednн uloћenб pozice</text>
+	</string>
+	<string id="ui_mm_light_distance">
+		<text>Vzdбlenost nasvмtlovбnн</text>
+	</string>
+	<string id="ui_mm_load">
+		<text>Naинst</text>
+	</string>
+	<string id="ui_mm_load_game">
+		<text>Naинst hru</text>
+	</string>
+	<string id="ui_mm_master">
+		<text>Mistr</text>
+	</string>
+	<string id="ui_mm_master_volume">
+		<text>Hlasitost efektщ</text>
+	</string>
+	<string id="ui_mm_mouse_sense">
+		<text>Citlivost myљi</text>
+	</string>
+	<string id="ui_mm_multiplayer">
+		<text>SНЌOVБ HRA</text>
+	</string>
+	<string id="ui_mm_multiplayer_n">
+		<text>Sнќovб hra</text>
+	</string>
+	<string id="ui_mm_music_volume">
+		<text>Hlasitost hudby</text>
+	</string>
+	<string id="ui_mm_need_restart">
+		<text>Zmмny budou provedeny aћ po restartu hry.</text>
+	</string>
+	<string id="ui_mm_newgame">
+		<text>Novб hra</text>
+	</string>
+	<string id="ui_mm_novice">
+		<text>Novбиek</text>
+	</string>
+	<string id="ui_mm_npc_torch">
+		<text>Baterky NPC</text>
+	</string>
+	<string id="ui_mm_options">
+		<text>NASTAVENН</text>
+	</string>
+	<string id="ui_mm_options_n">
+		<text>Nastavenн</text>
+	</string>
+	<string id="ui_mm_particles_distance">
+		<text>Vzdбlenost efektщ</text>
+	</string>
+	<string id="ui_mm_quality_presets">
+		<text>Nastavenн kvality</text>
+	</string>
+	<string id="ui_mm_quit_game">
+		<text>Ukonиit hru</text>
+	</string>
+	<string id="ui_mm_quit_game_message">
+		<text>Opravdu chceљ ukonиit hru?</text>
+	</string>
+	<string id="ui_mm_quit_windows_message">
+		<text>Opravdu se chceљ vrбtit do Windows?</text>
+	</string>
+	<string id="ui_mm_quit2windows">
+		<text>Zpмt do Windows</text>
+	</string>
+	<string id="ui_mm_renderer">
+		<text>Typ zobrazenн</text>
+	</string>
+	<string id="ui_mm_resolution">
+		<text>Rozliљenн</text>
+	</string>
+	<string id="ui_mm_return_game">
+		<text>Zpмt do hry</text>
+	</string>
+	<string id="ui_mm_save">
+		<text>Uloћit</text>
+	</string>
+	<string id="ui_mm_save_game">
+		<text>Uloћit hru</text>
+	</string>
+	<string id="ui_mm_show_crosshair">
+		<text>Zobrazovat zamмшovaи</text>
+	</string>
+	<string id="ui_mm_show_weapon">
+		<text>Zobrazovat zbraт</text>
+	</string>
+	<string id="ui_mm_simply">
+		<text>Zбkladnн</text>
+	</string>
+	<string id="ui_mm_sound">
+		<text>Zvuk</text>
+	</string>
+	<string id="ui_mm_sound_quality">
+		<text>Kvalita zvuku</text>
+	</string>
+	<string id="ui_mm_stalker">
+		<text>Stalker</text>
+	</string>
+	<string id="ui_mm_sun_quality">
+		<text>Kvalita stнnщ</text>
+	</string>
+	<string id="ui_mm_supersample">
+		<text>Vyhlazovбnн hran</text>
+	</string>
+	<string id="ui_mm_switch_torch">
+		<text>AI pouћнvб baterky</text>
+	</string>
+	<string id="ui_mm_texture_quality">
+		<text>Detaily textur</text>
+	</string>
+	<string id="ui_mm_tips">
+		<text>Identifikace NPC</text>
+	</string>
+	<string id="ui_mm_veteran">
+		<text>Veterбn</text>
+	</string>
+	<string id="ui_mm_video">
+		<text>Obraz</text>
+	</string>
+	<string id="ui_mm_vis_distance">
+		<text>Vzdбlenost dohledu</text>
+	</string>
+	<string id="ui_mm_vsync">
+		<text>Vertikбlnн synchronizace</text>
+	</string>
+	<string id="ui_st_last_set">
+		<text>Poslednн</text>
+	</string>
+	<string id="ui_st_preset1">
+		<text>Nastavenн 1</text>
+	</string>
+	<string id="ui_st_preset2">
+		<text>Nastavenн 2</text>
+	</string>
+	<string id="ui_st_preset3">
+		<text>Nastavenн 3</text>
+	</string>
+	<string id="ui_st_reset">
+		<text>Reset</text>
+	</string>
+	<string id="ui_st_sell_all">
+		<text>Prodat vљe</text>
+	</string>
+</string_table>

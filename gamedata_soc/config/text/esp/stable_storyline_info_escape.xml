@@ -1,0 +1,81 @@
+	<string id="about_enciclopedia">
+		<text>Esta es la enciclopedia. A medida que avances en el juego, se añadirá información ordenada por temas sobre el mundo que te rodea.</text>
+	</string>
+	<string id="about_pda">
+		<text>Acerca de la enciclopedia</text>
+	</string>
+	<string id="Bandit's flash">
+		<text>PDA fábrica bandidos</text>
+	</string>
+	<string id="blokpost_case_text">
+		<text>Comerciante: Cuélate en la avanzadilla militar y roba la caja que contiene el informe de la expedición al norte de la Zona.</text>
+	</string>
+	<string id="Dead novice's flash">
+		<text>PDA de novato muerto</text>
+	</string>
+	<string id="defend_lager_text">
+		<text>Fanático: Ayúdanos a defendernos de los mercenarios que ordenaron a los novatos despejar el campamento. El plan es el siguiente. Todo el mundo se esconde para que el campamento parezca desierto; dejamos que los mercenarios se adentren y atacamos a las órdenes del capitán.</text>
+	</string>
+	<string id="doctor_meet">
+		<text>PDA de Guía</text>
+	</string>
+	<string id="doctor_meet_2">
+		<text>Encuentro con Doc</text>
+	</string>
+	<string id="doctor_meet_quest_text">
+		<text>Doc: Estaré esperando a un hombre que Strelok haya enviado a su escondite secreto. Si es nuestro hombre, conocerá el lugar.</text>
+	</string>
+	<string id="doctor_meet_text">
+		<text>Vale, me reuniré con el hombre de Ghost. Lo estaré esperando en el escondite secreto de Strelok. Si es uno de los nuestros, sabrá dónde buscarme.</text>
+	</string>
+	<string id="esc_flash_task_descr">
+		<text>Comerciante: "... Mis hombres desaparecieron cuando volvían de una misión. Uno de ellos, llamado Nimble, me traía información... Fue muy cerca, porque habían pasado el control del puente. No sé qué pensar. En fin: encuentra a Nimble vivo o muerto, y consigue la unidad de información. Tráemela aquí. Nimble era uno de los hombres de Wolf, y Wolf está aquí, en el campamento. Pregúntale, probablemente sabe algo. Te ayudará con las armas y el material."</text>
+	</string>
+	<string id="esc_fox_info">
+		<text>Seriy a Fox: un amigo quiere que eche una mano a un grupo de stalkers que descubrieron el escondite de Strelok. Me dirijo al hangar del vertedero con mis hombres. Me encontrarás allí.</text>
+	</string>
+	<string id="esc_kolyan_lost">
+		<text>Ayer un compañero fue a explorar la fábrica desierta y desde entonces no sabemos nada de él. Hay que ir allí y averiguar qué le ha pasado.</text>
+	</string>
+	<string id="factory_dynamit_text">
+		<text>Wolf: Tráeme la dinamita que robaron de la fábrica los bandidos. Hay unos exploradores por donde el puente que pueden ayudarte; acércate a ellos y di "Saludos desde el infierno": esa es la contraseña. Dirígelos en el combate.</text>
+	</string>
+	<string id="factory_trader_text">
+		<text>Wolf: Elimina a los bandidos de la fábrica con ayuda de mis exploradores, que están por donde el puente; luego, vuelve e infórmame.</text>
+	</string>
+	<string id="Flash dead stalker">
+		<text>PDA stalker muerto</text>
+	</string>
+	<string id="gunslinger_clan_cache">
+		<text>... Llegué a la casa de un tipo, pero no puedo recordar nada. Solo tengo una PDA con una foto de otro tipo. En la PDA solo hay un mensaje: "Matar a Strelok".</text>
+	</string>
+	<string id="help_to_fox">
+		<text>Comerciante: Fox ha regresado de la incursión y está pidiendo ayuda. Quizá sepa algo sobre Strelok.</text>
+	</string>
+	<string id="meet_seryi_text">
+		<text>Fox: Gris está en el hangar del vertedero; tiene más información sobre Strelok.</text>
+	</string>
+	<string id="military_case_text">
+		<text>Comerciante: Roba el informe de la expedición a los militares del Instituto Agroprom, llévalo al bar Los 100 Rads y dáselo al tabernero.</text>
+	</string>
+	<string id="Seryi flash">
+		<text>PDA de Fox</text>
+	</string>
+	<string id="storyline_fox_flash_info">
+		<text>Diario de Tolik. El comerciante nos ha enviado a espiar a los militares del Instituto Agroprom. Llegamos allí y disparamos contra todo lo que había, bandidos y militares por igual. Encontramos cosas interesantes. Codifico lo siguiente *texto caótico que parece una cifra*.</text>
+	</string>
+	<string id="storyline_seryi_info">
+		<text>Gris a Fox: Un tipo al que conozco ha solicitado una reunión con un grupo de stalkers que han husmeado en el escondite de Strelok. Estaré en el vertedero, ven si quieres.</text>
+	</string>
+	<string id="Tolik flash">
+		<text>PDA de Tolik</text>
+	</string>
+	<string id="tutorial_artefact_find">
+		<text>Comerciante: Hay una anomalía Remolino cerca. Tiene un artefacto en el centro. Cógelo.</text>
+	</string>
+	<string id="tutorial_moving_anomaly_text">
+		<text>Hay una anomalía muy extraña aquí. Parece como si se moviera. Intentaré averiguar su patrón de movimiento, porque no tengo dinero para pagar el peaje a los soldados.</text>
+	</string>
+	<string id="tutorial_secret_place">
+		<text>Dejé un pequeño alijo en la granja desierta. Algo de comida y munición. Estoy demasiado débil para llevármelo ahora. No sé si podré llegar al campamento.</text>
+	</string>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="gar_dolg_blokpost_11">
+		<text>Altolа, stalker. Non puoi proseguire!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111">
+		<text>Perchй?</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111">
+		<text>И il nostro territorio, il territorio dei Duty. E noi scegliamo con cura chi entra nella nostra base. Se non hai nulla di importante da dire ai nostri capi, non puoi avanzare di un passo.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11111">
+		<text>Capisco.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111111">
+		<text>Sono le regole.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112">
+		<text>Devo passare, sto trattando un affare con il Barista.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121">
+		<text>Sм, il Barista ci ha parlato di te. Puoi passare.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111211">
+		<text>Preferisco pagare. Ecco i soldi.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112111">
+		<text>Bene! Puoi andare, ma ti conviene avere davvero qualcosa di importante da discutere con il Barista, chiaro? E stai attento: troverai un bel po' di anomalie.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212">
+		<text>Che favore?</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112121">
+		<text>Roba da poco. Da queste parti c'и un branco di cinghiali che devono essere uccisi. Falli fuori e avrai pagato l'entrata.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121211">
+		<text>Ci sto.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212111">
+		<text>Buona fortuna, stalker.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121212">
+		<text>Non ho i soldi.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212121">
+		<text>Beh, ti conviene iniziare a cercarli.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111122">
+		<text>Non ho i soldi.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111123">
+		<text>Allora non puoi raggiungere il bar.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1231">
+		<text>Grazie per averci aiutato a sconfiggere i cinghiali, ti sei meritato una ricompesa!</text>
+	</string>
+	<string id="gar_dolg_blokpost_12311">
+		<text>Grazie!</text>
+	</string>
+	<string id="gar_dolg_blokpost_22">
+		<text>Allora, hai ucciso i cinghiali?</text>
+	</string>
+	<string id="gar_dolg_blokpost_221">
+		<text>Non ancora.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2211">
+		<text>Peccato. Quando li avrai fatti a fette portamene uno, d'accordo?</text>
+	</string>
+	<string id="gar_dolg_blokpost_222">
+		<text>Sм, li ho uccisi tutti.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2221">
+		<text>OK, passa pure. E saluta il Barista da parte mia, ti spiace?</text>
+	</string>
+	<string id="gar_dolg_blokpost_33">
+		<text>Salutami il Barista quando lo vedi. Ah, non dimenticare che lungo la strada ci sono molte anomalie. Stai attento.</text>
+	</string>
+	<string id="gar_dramm_novice_start_0">
+		<text>Grazie amico, mi hai aiutato moltissimo. Non lo dimenticherт.</text>
+	</string>
+	<string id="gar_dramm_novice_start_1">
+		<text>Cosa sta succedendo qui?</text>
+	</string>
+	<string id="gar_dramm_novice_start_11">
+		<text>OK.</text>
+	</string>
+	<string id="gar_dramm_novice_start_2">
+		<text>Stiamo cercando di eliminare i banditi dalla Discarica. I miei amici tenderanno loro un agguato piщ avanti. Se non li fermiamo, assumeranno il controllo della Discarica e nessuno potrа piщ entrare nella Zona. Parla col comandante. Lui e i suoi uomini sono vicini, al deposito rottami meccanici. Anzi, sto per andare lм. Possiamo farci compagnia, se ti va.</text>
+	</string>
+	<string id="gar_dramm_novice_start_21">
+		<text>Andiamo.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3">
+		<text>Sai dirmi qualcosa sulla Discarica?</text>
+	</string>
+	<string id="gar_dramm_novice_start_31">
+		<text>Non c'и molto da dire, amico. La Discarica и... una discarica. I guerrieri di Duty vigilano sulla strada nord, che porta al bar. Ti conviene evitarli, molti Duty sono tipi poco raccomandabili. A destra ci sono i sentieri che portano alla Valle Oscura, ma il livello delle radiazioni и altissimo. Un po' piщ vicino troverai la palude di Grimpen, una zona terribile, piena di anomalie. Dicono che и facile trovare buoni reperti, ma и molto piщ facile finire nei guai. Beh, almeno non ci troverai il mastino dei Baskerville!</text>
+	</string>
+	<string id="gar_dramm_novice_start_311">
+		<text>Continua.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3111">
+		<text>A destra, presso la palude, c'и un nascondiglio segreto. Vedrai una costruzione metallica sopra uno stagno. Il mio nascondiglio и proprio lм sotto... L'ho creato parecchio tempo fa, ma tu mi hai salvato la vita e probabilmente ne avrai piщ bisogno di me. Usalo pure.</text>
+	</string>
+	<string id="gar_dramm_novice_start_31111">
+		<text>Grazie amico, sono informazioni molto utili.</text>
+	</string>
+	<string id="gar_dramm_novice_start_312">
+		<text>Interessante. Grazie!</text>
+	</string>
+	<string id="gar_hellcar_start_11">
+		<text>Ehi stalker, arrivi giusto in tempo! Abbiamo un gran bisogno di aiuto. Quei maledetti banditi stanno cercando di assumere il controllo della Discarica. Mezz'ora fa c'и stata una sparatoria e siamo riusciti a farne fuori tre. Gli altri si sono ritirati, ma stai sicuro che torneranno da un momento all'altro con i rinforzi. Siamo rimasti in pochi e un uomo in piщ ci sarа utile.</text>
+	</string>
+	<string id="gar_hellcar_start_111">
+		<text>Continua.</text>
+	</string>
+	<string id="gar_hellcar_start_1111">
+		<text>Qui abbiamo preparato un agguato per loro. Arriveranno da ovest, dall'istituto di ricerca Agroprom. Aiutaci a distruggere i loro rinforzi e non te ne pentirai!</text>
+	</string>
+	<string id="gar_hellcar_start_11111">
+		<text>OK, vi aiuterт.</text>
+	</string>
+	<string id="gar_hellcar_start_111111">
+		<text>Ottimo!</text>
+	</string>
+	<string id="gar_hellcar_start_11112">
+		<text>Non sono affari miei e non voglio essere coinvolto.</text>
+	</string>
+	<string id="gar_hellcar_start_111121">
+		<text>Come preferisci. Ogni volta che incrocerai quei bastardi per entrare nella Zona ti pentirai della tua stupiditа.</text>
+	</string>
+	<string id="gar_hellcar_start_11113">
+		<text>Li ho uccisi tutti.</text>
+	</string>
+	<string id="gar_hellcar_start_111131">
+		<text>Sei grande! Ma, in ogni caso, voglio andare sul sicuro.</text>
+	</string>
+	<string id="gar_hellcar_start_21">
+		<text>Non abbiamo niente da dirci.</text>
+	</string>
+	<string id="gar_hellcar_start_3111">
+		<text>Grazie amico, ci hai aiutato moltissimo. Posso darti un po' di soldi? И solo un piccolo pegno di gratitudine.</text>
+	</string>
+	<string id="gar_hellcar_start_31111">
+		<text>Certo.</text>
+	</string>
+	<string id="gar_hellcar_start_311111">
+		<text>Tieni, dovrebbero bastare per coprire i trattamenti medici.</text>
+	</string>
+	<string id="gar_hellcar_start_3111111">
+		<text>Grazie.</text>
+	</string>
+	<string id="gar_hellcar_start_31113">
+		<text>Parlami di te.</text>
+	</string>
+	<string id="gar_hellcar_start_311131">
+		<text>Mi chiamo Bes. Sono arrivato tre anni fa. Come molti altri nella Zona sono un fuggiasco, ricercato per due omicidi e lesioni personali gravi. Qualche anno fa, un mio amico и stato conciato male da alcuni bastardi e all'ospedale hanno dovuto lavorare parecchio per rattopparlo. Cosм, ho fatto una "visitina" ai responsabili. Quando sono arrivati gli sbirri, ho dovuto ammazzarne uno e lanciarmi da una finestra al secondo piano. Da allora vivo qui. Me la sono passata bene, ma l'elenco dei miei crimini si и allungato ancora. Cerco di combattere i criminali proprio come facevo prima. Addestro i novellini e insegno loro a sopravvivere nella Zona.</text>
+	</string>
+	<string id="gar_hellcar_start_3111311">
+		<text>E perchй non ti unisci ai Duty, se la pensi cosм?</text>
+	</string>
+	<string id="gar_hellcar_start_31113111">
+		<text>I Duty combattono contro la Zona, io combatto per il popolo. E poi sono fin troppo vicini al governo e all'esercito. Non ho alcuna voglia di svegliarmi un giorno in una fredda cella.</text>
+	</string>
+	<string id="gar_hellcar_start_311131111">
+		<text>Buona fortuna a te.</text>
+	</string>
+	<string id="gar_hellcar_start_31114">
+		<text>Che posto и questo?</text>
+	</string>
+	<string id="gar_hellcar_start_311141">
+		<text>La Discarica. Qui siamo a casa. Vedi quei mucchi di schifezze? Meglio non finirci in mezzo, dammi retta. Il livello delle scorie radioattive и tale da far saltare i contatori Geiger. Questa и l'unica via d'accesso decente alla Zona e qui ultimamente i banditi si stanno dando sempre piщ da fare. Hanno troppa paura per addentrarsi maggiormente nella Zona, nel territorio dei Duty, come gli stalker esperti. Ma per quelle iene derubare i novellini и un vero spasso. Cosм, visto che non ci pensa nessun altro, dobbiamo mantenere la posizione e combattere.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411">
+		<text>Continua.</text>
+	</string>
+	<string id="gar_hellcar_start_31114111">
+		<text>Ovunque, e soprattutto qui, tutti quanti devono comportarsi come esseri umani, non come belve fameliche. Questa и la mia filosofia di vita.</text>
+	</string>
+	<string id="gar_hellcar_start_311141112">
+		<text>Ci sono edifici di grandi dimensioni nella Discarica?</text>
+	</string>
+	<string id="gar_hellcar_start_31114111211">
+		<text>Grazie.</text>
+	</string>
+	<string id="gar_hellcar_start_31115">
+		<text>Grazie, non mi serve niente da te.</text>
+	</string>
+	<string id="gar_hellcar_start_3112">
+		<text>So parecchie cose, potrei darti qualche informazione.</text>
+	</string>
+	<string id="gar_hellcar_start_41">
+		<text>Il lavoro non и ancora finito. Prima finiamo e poi parliamo.</text>
+	</string>
+	<string id="gar_hellcar_start_51">
+		<text>Ehi, Marchiato.</text>
+	</string>
+	<string id="gar_seriy_start_11">
+		<text>Maledizione, non и il momento di perdersi in chiacchiere! Tra poco le uniche a parlare saranno le armi. Aiutami a respingerli e poi potremo parlare.</text>
+	</string>
+	<string id="gar_seriy_start_22">
+		<text>Grazie per l'aiuto, ero davvero messo male. Ma tu che ci fai qui?</text>
+	</string>
+	<string id="gar_seriy_start_221">
+		<text>Cerco informazioni su Strelok. Volpe mi ha parlato di te, quindi sono qui per fare due chiacchiere.</text>
+	</string>
+	<string id="gar_seriy_start_2211">
+		<text>OK, tu mi hai aiutato gratis, quindi te lo dirт. Uno dei ragazzi, un ex "scavatore" chiamato Talpa, mi sta aspettando. Ha "scavato" il nascondiglio di Strelok, ma non so se ci ha trovato qualcosa. Ecco le coordinate del nostro punto di incontro. Digli che ti ho mandato io. A quest'ora mi staranno cercando, quindi и meglio che io scompaia per un po'. Ed ecco un po' di soldi per il tuo aiuto.</text>
+	</string>
+	<string id="gar_seriy_start_2212">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="gar_seriy_start_222">
+		<text>Cerco informazioni su Strelok. Forse tu sai qualcosa?</text>
+	</string>
+	<string id="gar_seriy_start_2221">
+		<text>OK, tu mi hai aiutato gratis, quindi te lo dirт. Uno dei ragazzi, un ex "scavatore" chiamato Talpa, mi sta aspettando. Ha "scavato" il nascondiglio di Strelok e ha trovato dei documenti che spiegano alcune cose. Aveva dei banditi alle calcagna quindi ha dovuto lasciare i documenti, ma si ricordava il posto. A quest'ora mi staranno cercando, quindi sarа meglio che sparisca per un po'. Ecco le coordinate del punto di incontro con la Talpa. Digli che ti ho mandato io. Invierт alcune informazioni al tuo palmare. Ed ecco un po' di soldi per il tuo aiuto.</text>
+	</string>
+	<string id="gar_seriy_start_2222">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="gar_seriy_start_33">
+		<text>Ehi, amico! Devo ammettere che le cose si erano messe davvero male qui, poco fa. Ma tu che ci fai?</text>
+	</string>
+	<string id="gar_seriy_start_44">
+		<text>Una via sicura, stalker. Una via sicura per superare le anomalie e arrivare dritti dritti ai reperti.</text>
+	</string>
+	<string id="gar_seriy_start_441">
+		<text>Cosa si puт trovare nella Discarica?</text>
+	</string>
+	<string id="gar_seriy_start_4411">
+		<text>Una cosa и certa: puoi trovare un sacco di guai. Ma dal momento che sei un esploratore cosм in gamba, ti dirт quello che so. A est c'и una piccola foresta. Non c'и niente di interessante ed и piena di cani, quindi fai attenzione. Questi binari ti porteranno dritto dritto a una galleria. Lм ci sono un sacco di anomalie, e forse anche qualcos'altro, ma non so: non ho mai cercato attentamente. Forse sai giа del checkpoint dei Duty a nord. И tutto quello che so su questo posto.</text>
+	</string>
+	<string id="gar_seriy_start_44112">
+		<text>Grazie per le informazioni.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_0">
+		<text>Senti amico, che cosa posso trovare in questa Discarica?</text>
+	</string>
+	<string id="gar_seryi_about_garbage_1">
+		<text>Una cosa и certa: puoi trovare un sacco di guai. Ma dal momento che sei un esploratore cosм in gamba, ti dirт quello che so. A est c'и una piccola foresta. Non c'и niente di interessante ed и piena di cani, quindi fai attenzione. Questi binari ti porteranno dritto dritto a una galleria. Lм ci sono un sacco di anomalie, e forse anche qualcos'altro, ma non so: non ho mai cercato attentamente. Forse sai giа del checkpoint dei Duty a nord. И tutto quello che so su questo posto.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_11">
+		<text>Grazie per l'informazione. Lo terrт presente.</text>
+	</string>
+	<string id="gar_stalker_about_level_0">
+		<text>Sai dirmi nient'altro su questo posto?</text>
+	</string>
+	<string id="gar_stalker_about_level_1">
+		<text>Beh, senti. Non vedrai altro che un'enorme discarica puzzolente. Dopo l'incidente del 1986, hanno portato qui scorie radioattive, gru e macchinari distrutti. Praticamente и piena di schifezze inutili oltre a qualche anomalia qua e lа. Puoi persino trovare qualche reperto, ma niente di spettacolare: per questo qui troverai soprattutto dei novellini. Tanti novellini vuol dire anche tanti banditi, quindi la cosa migliore da fare и andarsene al piщ presto. Piщ a est c'и una quantitа di sacche di radioattivitа: non ci puoi andare senza una protezione. Se vai a sud, arriverai al confine della Zona. Se vai a nord raggiungerai la fabbrica di Rostok e il bar degli stalker. A est c'и la Valle Oscura, un luogo nebbioso e spettrale. A ovest c'и l'istituto di ricerca Agroprom. Indicherт sulla tua mappa le vie piщ sicure.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411121">
+		<text>Al centro c'и un grosso hangar. Di solito и un posto tranquillo: se sei messo male puoi passarci la notte. Andando a ovest, in direzione dell'Agroprom, troverai un accampamento di banditi. И da lм che venivano gli invasati che abbiamo ucciso qualche tempo fa. Ma ho la sensazione che ce ne siano altri.</text>
+	</string>
+</string_table>

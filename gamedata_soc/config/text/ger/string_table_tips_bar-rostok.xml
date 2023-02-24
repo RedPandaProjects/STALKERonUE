@@ -1,0 +1,144 @@
+	<string id="bar_arena_actor_afraid">
+		<text>Der Kampf fällt aus! Der Herausforderer hat Muffensausen und traut sich nicht her!</text>
+	</string>
+	<string id="bar_arena_fight_10">
+		<text>10 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_20">
+		<text>20 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_30">
+		<text>30 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_40">
+		<text>40 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_50">
+		<text>50 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_60">
+		<text>Kampf dauert 1 Minute!</text>
+	</string>
+	<string id="bar_arena_fight_70">
+		<text>1 Minute und 10 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_80">
+		<text>1 Minute und 20 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_90">
+		<text>1 Minute und 30 Sekunden vorbei!</text>
+	</string>
+	<string id="bar_arena_fight_begin">
+		<text>Der Kampf hat begonnen!</text>
+	</string>
+	<string id="bar_arena_fight_bloodsucker">
+		<text>Ich bitte um Aufmerksamkeit! In der Arena gibt es einen neuen Kampf. In der linken Ecke - der schlimmste Albtraum der Zone, der nimmersatte Blutsauger! Und rechts ... ein Mensch? Ja, ein Mann! Ich bitte um Applaus für den Gezeichneten!</text>
+	</string>
+	<string id="bar_arena_fight_burer">
+		<text>Ich bitte um Aufmerksamkeit! In der Arena gibt es einen neuen Kampf! In der linken Ecke - der löffelverbiegende Kung-Fu-Meister selbst - der Burer! Und rechts - der Mann, der immer aufpasst! Er ist bekannt als der Gezeichnete!</text>
+	</string>
+	<string id="bar_arena_fight_dead">
+		<text>Der Herausforderer ist also tot! Was für eine Überraschung!</text>
+	</string>
+	<string id="bar_arena_fight_lose">
+		<text>Tja, der Herausforderer hat seinen Gegner erledigt, aber zu langsam. Verloren!</text>
+	</string>
+	<string id="bar_arena_fight_pseudodog">
+		<text>Ich bitte um Aufmerksamkeit! In der Arena gibt es einen neuen Kampf. In der linken Ecke - weiß, flauschig und teuflisch angepisst ... der Pseudohund! Und rechts - er kam aus dem Nichts und genau da geht er auch wieder hin. Er ist bekannt als der Gezeichnete!</text>
+	</string>
+	<string id="bar_arena_fight_savage">
+		<text>Ich bitte um Aufmerksamkeit! In der Arena gibt es einen neuen Kampf. In der linken Ecke - bekannt, beliebt, und er hasst euch auch! Die Bestie! Und in der rechten Ecke - gesund und munter, jedenfalls jetzt noch - der Gezeichnete!</text>
+	</string>
+	<string id="bar_arena_fight_snork">
+		<text>Ich bitte um Aufmerksamkeit! In der Arena gibt es einen neuen Kampf! In der linken Ecke - der Kampfkunstguru und Wellness-Freak - der Schnork! Und in der rechten Ecke - der Mann ohne Vergangenheit und Zukunft. Man nennt ihn den Gezeichneten!</text>
+	</string>
+	<string id="bar_arena_fight_timeout">
+		<text>Die Zeit ist um! Der Herausforderer hat verloren, aber er kämpft um sein Leben!</text>
+	</string>
+	<string id="bar_arena_fight_victory">
+		<text>Ho! Der Herausforderer hat seinen Gegner rechtzeitig erledigt! Gewonnen!</text>
+	</string>
+	<string id="bar_ecolog_attack">
+		<text>Wie du willst.</text>
+	</string>
+	<string id="bar_ecolog_crush_attract_actor">
+		<text>Bitte, geh nicht, mein Freund! Hilf uns! Die Anarchisten haben unseren Hubschrauber abgeschossen und wollen uns fertig machen. Wir haben Verwundete! Hilf uns!</text>
+	</string>
+	<string id="bar_ecolog_crush_heli_down">
+		<text>Ha! Wo bleibt denn euer Hubschrauber, Regierungsratten? Eure Zeit ist um!</text>
+	</string>
+	<string id="bar_ecolog_crush_start_heli">
+		<text>Jetzt hast du es wirklich geschafft, Wolfshund. Ein Militärhubschrauber ist unterwegs und macht Hackfleisch aus dir!</text>
+	</string>
+	<string id="bar_ecolog_escape">
+		<text>Kruglow ist entwischt! Findet ihn! Weit kann er nicht sein.</text>
+	</string>
+	<string id="bar_ecolog_hit">
+		<text>Hilf mir, Gezeichneter! Ich sterbe!!!</text>
+	</string>
+	<string id="bar_ecolog_spam_1">
+		<text>Träum weiter, Abschaum! Lern was, ehe du hier ein Ultimatum stellen willst.</text>
+	</string>
+	<string id="bar_ecolog_spam_2">
+		<text>Nicht angreifen, sonst zerstöre ich die Daten und ihr bekommt nichts!</text>
+	</string>
+	<string id="bar_ecolog_spam_3">
+		<text>Wenn ich die Forschungsdaten nicht vernichten soll, dann bleibt besser weg!</text>
+	</string>
+	<string id="bar_ecolog_spam_4">
+		<text>Nimm deine Hunde, Wolfshund, und hau ab, solange du noch laufen kannst.</text>
+	</string>
+	<string id="bar_freedom_attack">
+		<text>Genug Geschwafel. Legen wir was um!</text>
+	</string>
+	<string id="bar_freedom_attack_attract_actor">
+		<text>He, komm her, Mann! Zusammen machen wir die Regierungsratten fertig!</text>
+	</string>
+	<string id="bar_freedom_attack_spy">
+		<text>Du Schwein! Für diesen Verrat zahlst du. Vergiss das bloß nicht, Gezeichneter.</text>
+	</string>
+	<string id="bar_freedom_chase">
+		<text>Folgen sie uns?! Gezeichneter, du musst sie aufhalten!</text>
+	</string>
+	<string id="bar_freedom_spam_1">
+		<text>Ich dachte, ihr Wissenschaftler seid so klug. Ich erkläre es mal ganz einfach: Entweder ihr gebt mir die Dokumente oder ihr werdet in Plastiksäcken hier rausgeschleppt.</text>
+	</string>
+	<string id="bar_freedom_spam_2">
+		<text>Ich kann vielleicht kein Latein, Kruglow, aber prügeln kann ich absolut fließend. Sollen wir uns also weiter unterhalten oder rückst du die Infos raus, die ich brauche?</text>
+	</string>
+	<string id="bar_freedom_spam_3">
+		<text>Du bist ein kluger Mann, Professor. Gib mir die Infos, und du kannst abziehen!</text>
+	</string>
+	<string id="bar_freedom_spam_4">
+		<text>Du kapierst es einfach nicht, was, Kruglow? Wir haben deinen blöden Hubschrauber abgeknallt und wir wollen deine Infos. Rück damit raus und du kannst mit deinen Freunden hier abhauen. Das ist deine letzte Chance. Laufwerk her und dann zieh Leine!</text>
+	</string>
+	<string id="bar_psih_come">
+		<text>Schnell hier rüber! Meine Jungs haben einen irren Stalker im Roten Wald erwischt. Wir grillen ihn gerade wegen Infos!</text>
+	</string>
+	<string id="bar_territory_dolg_1_hit">
+		<text>Gezeichneter, spinnst du? Hör SOFORT auf zu schießen! Das ist ein Befehl!</text>
+	</string>
+	<string id="bar_territory_dolg_2_hit">
+		<text>SOFORT Feuer einstellen, Gezeichneter! Tu, was ich sage, oder du bist tot!</text>
+	</string>
+	<string id="bar_territory_dolg_3_hit">
+		<text>Du wirst aus der Gruppe verbannt, weil du den Kodex gebrochen hast, Gezeichneter. Du hast keine Freunde bei den Wächtern.</text>
+	</string>
+	<string id="bar_territory_dolg_kill">
+		<text>Gezeichneter, du hast einen direkten Befehl verweigert. Die Wächter kennen dafür kein Pardon. Du bist tot.</text>
+	</string>
+	<string id="bar_territory_nodolg_1_hit">
+		<text>Feuer einstellen! Keine Schießerei auf Wächter-Gebiet! Wer die Regeln bricht, wird bestraft!</text>
+	</string>
+	<string id="bar_territory_nodolg_2_hit">
+		<text>Achtung! Der Gezeichnete ist ein Verbrecher. Er hat das Gesetz gebrochen und auf Wächter-Gebiet geschossen.</text>
+	</string>
+	<string id="bar_territory_nodolg_kill">
+		<text>Achtung! Im Wächter-Gebiet gibt es einen Mörder! Findet und tötet ihn!</text>
+	</string>
+	<string id="rostok_kruglov_spam_1">
+		<text>Du, Stalker, hilf uns! Söldner haben uns angegriffen und unser halbes Team ist tot. Hilf uns, und du wirst es nicht bereuen.</text>
+	</string>
+	<string id="rostok_kruglov_spam_2">
+		<text>Hilf uns dabei, uns durch den Hinterhalt bei der Fabrik zu kämpfen. Du hast die Koordinaten. Pass auf, Wolfshund und seine Meute sind beim Hubschrauber.</text>
+	</string>

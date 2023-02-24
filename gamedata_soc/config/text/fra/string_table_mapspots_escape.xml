@@ -1,0 +1,48 @@
+	<string id="blokpost_case">
+		<text>Mallette avec docs</text>
+	</string>
+	<string id="esc_fox">
+		<text>Fox blessé.</text>
+	</string>
+	<string id="esc_mill">
+		<text>Moulin abandonné. Le frère blessé a été vu pour la dernière fois dans les parages.</text>
+	</string>
+	<string id="escape_trader">
+		<text>Marchand.</text>
+	</string>
+	<string id="factory_bandits">
+		<text>Bandits à l'usine.</text>
+	</string>
+	<string id="killers_team">
+		<text>Groupe de Mercenaires inconnus.</text>
+	</string>
+	<string id="novice_leader">
+		<text>Chef du camp des nouveaux.</text>
+	</string>
+	<string id="soldiers_bridge">
+		<text>Poste de contrôle militaire du pont détruit. Les soldats sont réputés corrompus. Ils laissent passer les gens en échange de pots de vin.</text>
+	</string>
+	<string id="tutorial_artefact">
+		<text>Artefact.</text>
+	</string>
+	<string id="tutorial_bandits">
+		<text>Bandits ayant arrêté notre éclaireur.</text>
+	</string>
+	<string id="tutorial_secret">
+		<text>Planque d'un Stalker mort.</text>
+	</string>
+	<string id="tutorial_secret_place1">
+		<text>Planque d'un Stalker mort.</text>
+	</string>
+	<string id="tutorial_secret_shustryi">
+		<text>Planque d'Allegro.</text>
+	</string>
+	<string id="tutorial_wounded">
+		<text>Allegro, un prisonnier.</text>
+	</string>
+	<string id="volk">
+		<text>Le Loup, le chef du camp des nouveaux.</text>
+	</string>
+	<string id="wolfs_rangers">
+		<text>Éclaireurs du Loup.</text>
+	</string>

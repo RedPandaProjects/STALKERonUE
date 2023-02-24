@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_secret_0000_descr">
+		<text>Prozatнm mбme skrэљ v tunelu. Je to dobrэ mнsto - vн o nмm jenom mбlokdo a navнc vstup dovnitш blokujou anomбlie.</text>
+	</string>
+	<string id="agr_secret_0000_name">
+		<text>Љedivбkova skrэљ</text>
+	</string>
+	<string id="agr_secret_0001_descr">
+		<text>Schoval jsem to v paшezu u tunelu. Je v nмm љikovnб dнra.</text>
+	</string>
+	<string id="agr_secret_0001_name">
+		<text>Dмravэ paшez</text>
+	</string>
+	<string id="agr_secret_0002_descr">
+		<text>Schoval jsem pбr vмcн pod kшнћem, u kшovн.</text>
+	</string>
+	<string id="agr_secret_0002_name">
+		<text>Vмci jsou pod kшнћem</text>
+	</string>
+	<string id="agr_secret_0003_descr">
+		<text>Schoval jsem bбgl pod padlэ strom.</text>
+	</string>
+	<string id="agr_secret_0003_name">
+		<text>Batoh pod stromem</text>
+	</string>
+	<string id="agr_secret_0004_descr">
+		<text>Strиil jsem bбgl do roury u tovбrny. Nikdo ho nenajde.</text>
+	</string>
+	<string id="agr_secret_0004_name">
+		<text>Kominнkщv batoh</text>
+	</string>
+	<string id="agr_secret_0005_descr">
+		<text>Schoval jsem vмci na stшeљe tovбrny - tak to nikdo nenajde. Akorбt mбm strach, aby to v deљti nezrezlo.</text>
+	</string>
+	<string id="agr_secret_0005_name">
+		<text>Bedna na stшeљe</text>
+	</string>
+	<string id="agr_secret_0006_descr">
+		<text>Stшнleli po mnм. Musel jsem strиit bбgl do vagonu pod sedadlo. Ale podaшilo se mi utэct. Vrбtнm se tam a seberu si ho.</text>
+	</string>
+	<string id="agr_secret_0006_name">
+		<text>Oћralcщv batoh</text>
+	</string>
+	<string id="agr_secret_0007_descr">
+		<text>Schoval jsem to pod kшнћem, za cisternama. Je tшeba trochu kopat.</text>
+	</string>
+	<string id="agr_secret_0007_name">
+		<text>U tшн cisteren</text>
+	</string>
+	<string id="agr_secret_0008_descr">
+		<text>Schoval jsem bбgl nahoшe v tovбrnм, aby ho nikdo nevidмl. Problйm je, ћe uћ si nepamatuju, co jsem tam mмl.</text>
+	</string>
+	<string id="agr_secret_0008_name">
+		<text>Batoh je ve svмtlнku</text>
+	</string>
+	<string id="agr_secret_0009_descr">
+		<text>Schoval jsem svэ vмci v bednм uvnitш tovбrny</text>
+	</string>
+	<string id="agr_secret_0009_name">
+		<text>Radioaktivnн bedna</text>
+	</string>
+	<string id="agr_secret_0010_descr">
+		<text>V bednм pod schody je skrэљ.</text>
+	</string>
+	<string id="agr_secret_0010_name">
+		<text>Bedna na schodiљti</text>
+	</string>
+	<string id="agr_secret_0011_descr">
+		<text>Schoval jsem to v bednм, stejnм se do nн nikdo nepodнvб.</text>
+	</string>
+	<string id="agr_secret_0011_name">
+		<text>Bedna v tovбrnм</text>
+	</string>
+	<string id="agr_secret_0012_descr">
+		<text>Vyhodil jsem bбgl z okna, seberu si ho pak.</text>
+	</string>
+	<string id="agr_secret_0012_name">
+		<text>Pytel je na nosnнku</text>
+	</string>
+	<string id="agr_secret_0013_descr">
+		<text>Byli jsme s Koljou na prochбzce v Agropromu. Naљli jsme spoustu vмcн a nмco z toho jsme schovali do popelnice.</text>
+	</string>
+	<string id="agr_secret_0013_name">
+		<text>Popelnice</text>
+	</string>
+	<string id="agr_secret_0014_descr">
+		<text>Pod spadlэm stromem jsem naљel skrэљ. Budu si tam schovбvat vмci.</text>
+	</string>
+	<string id="agr_secret_0014_name">
+		<text>Skrэљ pod stromem</text>
+	</string>
+	<string id="agr_secret_0015_descr">
+		<text>Hodil jsem vмci do roury, vyberu je pak. Musel jsem, jinak bych to vљechno neutбhl. Jen musнm doufat, ћe to nenavlhne.</text>
+	</string>
+	<string id="agr_secret_0015_name">
+		<text>Vмci v trubce</text>
+	</string>
+	<string id="agr_secret_0016_descr">
+		<text>Vмci jsou ve starэ trubce, musнm to шнct chlapщm. Sбm tam nepolezu.</text>
+	</string>
+	<string id="agr_secret_0016_name">
+		<text>Radioaktivnн roura</text>
+	</string>
+	<string id="agr_secret_0017_descr">
+		<text>Utekl jsem od zбkladny, sakra! Vyhnul jsem se stalkerskэmu ostшelovбnн a schoval si vмci do roury. Poиkбm, aћ vypadnou, pak to poberu.</text>
+	</string>
+	<string id="agr_secret_0017_name">
+		<text>Hromada vмcн</text>
+	</string>
+	<string id="agr_secret_0018_descr">
+		<text>Pod kшovнm je v zemi skrэљ, tam si vљechno schovбvбm.</text>
+	</string>
+	<string id="agr_secret_0018_name">
+		<text>Skrэљ pod keшem</text>
+	</string>
+	<string id="agr_secret_0019_descr">
+		<text>Objevili bednu pod nosnнkem. Nмkdo ji odtбhnul aћ z vмdeckэho institutu. Poиkбm, aћ bude vzduch иistej, a pak ji vyberu.</text>
+	</string>
+	<string id="agr_secret_0019_name">
+		<text>Archivnн bedna</text>
+	</string>
+	<string id="agr_secret_0020_descr">
+		<text>Schoval jsem si vмci v ћeleznэ bednм.</text>
+	</string>
+	<string id="agr_secret_0020_name">
+		<text>Pod padacнma dveшma</text>
+	</string>
+	<string id="agr_secret_0021_descr">
+		<text>Pod kшovнm je v zemi skrэљ, tam si vљechno schovбvбm.</text>
+	</string>
+	<string id="agr_secret_0021_name">
+		<text>Pod kшovнm u zdi</text>
+	</string>
+	<string id="agr_secret_0022_descr">
+		<text>Dobrб bedna na pшebyteиnэ vмci</text>
+	</string>
+	<string id="agr_secret_0022_name">
+		<text>Bedna z institutu</text>
+	</string>
+	<string id="agr_secret_0023_descr">
+		<text>Schoval jsem to v sejfu, ale pak pшiљli vojбci a jб se k vмcem teп nemщћu dostat.</text>
+	</string>
+	<string id="agr_secret_0023_name">
+		<text>Agrosejf</text>
+	</string>
+	<string id="agr_secret_0024_descr">
+		<text>Schoval jsem si vмci do roury - vyzvednu si je pozdмjc.</text>
+	</string>
+	<string id="agr_secret_0024_name">
+		<text>Nбklaпбk</text>
+	</string>
+	<string id="agr_secret_0025_descr">
+		<text>Nezapomeт si vzнt vмci ze shnilйho paшezu</text>
+	</string>
+	<string id="agr_secret_0025_name">
+		<text>Shnilэ paшez</text>
+	</string>
+	<string id="agr_secret_0026_descr">
+		<text>Dobrб bedna na pшebyteиnэ vмci. Kdysi se tam schovбvalo vybavenн institutu.</text>
+	</string>
+	<string id="agr_secret_0026_name">
+		<text>Hospodбшskб bedna</text>
+	</string>
+	<string id="agr_secret_0027_descr">
+		<text>Dobrб bedna na malй vмci. V takovэ bednм si doma nechбvбm zбmeиnickэ vybavenн.</text>
+	</string>
+	<string id="agr_secret_0027_name">
+		<text>Zбmeиnickй vмci</text>
+	</string>
+	<string id="agr_u_secret_0000_descr">
+		<text>Banditi si nмco schovali do roury, musнm se tam podнvat. Podle toho, co kecali, si tam nejspнљ schovбvaj zбsoby.</text>
+	</string>
+	<string id="agr_u_secret_0000_name">
+		<text>Spoleиnб skrэљ banditщ</text>
+	</string>
+	<string id="agr_u_secret_0001_descr">
+		<text>Schoval jsem bбgl za betonovejma panelama a vyrazil jsem nalehko. Sice budu mнt asi hlad, ale snad pшeћiju.</text>
+	</string>
+	<string id="agr_u_secret_0001_name">
+		<text>Batoh je v boиnн uliиce</text>
+	</string>
+	<string id="agr_u_secret_0002_descr">
+		<text>Vмci jsou v zarezlйm barelu v podzemн, je tam vљechno. Nemбm se tam jak dostat, je zбzrak, ћe se mi upнrovi vщbec podaшilo utэct, ani nevнm jak.</text>
+	</string>
+	<string id="agr_u_secret_0002_name">
+		<text>Upнrщv sklad</text>
+	</string>
+	<string id="agr_u_secret_0003_descr">
+		<text>Za zdн je pбr љikovnэch vмcн. Za zboћн v kљeftм odpovнdбm!</text>
+	</string>
+	<string id="agr_u_secret_0003_name">
+		<text>Stalkerovy vмci</text>
+	</string>
+	<string id="agr_u_secret_0004_descr">
+		<text>Tady jsem si schoval pбr vмcн. Chytrэ mнsto na skrэљ. V ћlutэm barelu nikdo hledat nebude.</text>
+	</string>
+	<string id="agr_u_secret_0004_name">
+		<text>Krtин dнra</text>
+	</string>
+	<string id="bar_secret_0000_description">
+		<text>Schoval jsem batoh u zбkladny Povinnosti. Seberu ho pak.</text>
+	</string>
+	<string id="bar_secret_0000_name">
+		<text>Skrytэ batoh</text>
+	</string>
+	<string id="bar_secret_0001_description">
+		<text>Љla po mnм smeиka psщ. Kdybych neodhodil bбgl, k brбnм bych se nedostal.</text>
+	</string>
+	<string id="bar_secret_0001_name">
+		<text>Odhozenэ batoh</text>
+	</string>
+	<string id="bar_secret_0002_description">
+		<text>Co zbylo zakopali pod kшнћem</text>
+	</string>
+	<string id="bar_secret_0002_name">
+		<text>Tajnб skrэљ pod kшнћem</text>
+	</string>
+	<string id="bar_secret_0003_description">
+		<text>Tady jsem odhodil bбgl, bude to tak lehин</text>
+	</string>
+	<string id="bar_secret_0003_name">
+		<text>Batoh</text>
+	</string>
+	<string id="bar_secret_0004_description">
+		<text>Munice Povinnosti je schovanб v bunkru, ale nikdo to nehlнdб</text>
+	</string>
+	<string id="bar_secret_0004_name">
+		<text>Zбsoby v bunkru</text>
+	</string>
+	<string id="bar_secret_0005_description">
+		<text>Vidмl jsem, jak si Povinnosќбk nмco schovбvб v rouшe u brбny</text>
+	</string>
+	<string id="bar_secret_0005_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0006_description">
+		<text>To vљechno bylo jeho, takћe to tady zatнm mщћe zщstat.</text>
+	</string>
+	<string id="bar_secret_0006_name">
+		<text>Tajnб skrэљ pod kшнћem</text>
+	</string>
+	<string id="bar_secret_0007_description">
+		<text>Pщjdu do baru, bбgl jsem nechal v hangбru</text>
+	</string>
+	<string id="bar_secret_0007_name">
+		<text>Batoh</text>
+	</string>
+	<string id="bar_secret_0008_description">
+		<text>Prej je nмco schovanэho za rozvodnou na ъzemн Povinnosti.</text>
+	</string>
+	<string id="bar_secret_0008_name">
+		<text>Rozvodna s tajnou skrэљн</text>
+	</string>
+	<string id="bar_secret_0009_description">
+		<text>Schoval jsem si vмci nahoшe na vмћi kousek pшed Povinnostн, nikdo si toho nevљimne.</text>
+	</string>
+	<string id="bar_secret_0009_name">
+		<text>Tajnб skrэљ na vмћi</text>
+	</string>
+	<string id="bar_secret_0010_description">
+		<text>Schoval jsem to v trubce pod schodama</text>
+	</string>
+	<string id="bar_secret_0010_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0011_description">
+		<text>Schoval jsem si vмci kousek od baru, za anomбliema, tam nikdo nechodн. A stejnм by nevмdмli, jak to otevшнt, pшitom je to jednoduchэ, staин trochu zatбhnout za dveшe a je to.</text>
+	</string>
+	<string id="bar_secret_0011_name">
+		<text>Arnyho tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0012_description">
+		<text>Schoval jsem vмci kousek od baru</text>
+	</string>
+	<string id="bar_secret_0012_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0013_description">
+		<text>U baru, v bednм</text>
+	</string>
+	<string id="bar_secret_0013_name">
+		<text>Bedna</text>
+	</string>
+	<string id="bar_secret_0014_description">
+		<text>Schoval jsem bednu ve vedlejљн ulici, kus od baru</text>
+	</string>
+	<string id="bar_secret_0014_name">
+		<text>Malб bedna</text>
+	</string>
+	<string id="bar_secret_0015_description">
+		<text>Schoval jsem to pod kшнћem za borovicema</text>
+	</string>
+	<string id="bar_secret_0015_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0016_description">
+		<text>Pod kшнћem, kousek od cesty do Temnйho ъzemн</text>
+	</string>
+	<string id="bar_secret_0016_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0017_description">
+		<text>Schoval jsem balнk s antiradama v trubce u Arйny</text>
+	</string>
+	<string id="bar_secret_0017_name">
+		<text>Malб bedna</text>
+	</string>
+	<string id="bar_secret_0018_description">
+		<text>Schoval jsem si vмci v trubce pod vмћн</text>
+	</string>
+	<string id="bar_secret_0018_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="bar_secret_0019_description">
+		<text>Pod kшнћem je skrэљ</text>
+	</string>
+	<string id="bar_secret_0019_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="esc_secret_0000_descr">
+		<text>Schoval jsem armбdnн zбsoby ve vagonu. Nesmнm na nм zapomenout.</text>
+	</string>
+	<string id="esc_secret_0000_name">
+		<text>Vagon nad mostem</text>
+	</string>
+	<string id="esc_secret_0001_descr">
+		<text>Vidмl jsem, jak jednoho stalkera sundala anomбlie v ћelezniиnнm tunelu v lese. Vypadalo to, ћe mб u sebe docela dobrэ vмci.</text>
+	</string>
+	<string id="esc_secret_0001_name">
+		<text>Vмci patшнcн stalkerovi, kterэ zahynul v anomбlii</text>
+	</string>
+	<string id="esc_secret_0002_descr">
+		<text>Schoval jsem vмci u tбbora banditщ pod kшнћem</text>
+	</string>
+	<string id="esc_secret_0002_name">
+		<text>Kшнћ u tбbora banditщ</text>
+	</string>
+	<string id="esc_secret_0003_descr">
+		<text>Bedna ukradenб bandity, nalezena ve sklepм centrбlnн budovy. Je tшeba poslat pro ni jednotku.</text>
+	</string>
+	<string id="esc_secret_0003_name">
+		<text>Skladiљtм banditщ</text>
+	</string>
+	<string id="esc_secret_0004_descr">
+		<text>Kdyћ jsme bojovali s vojenskэmi psy, schoval jsem si pбr vмcн pod most. Prozatнm to tam nechбm.</text>
+	</string>
+	<string id="esc_secret_0004_name">
+		<text>Pod kшнћem</text>
+	</string>
+	<string id="esc_secret_0005_descr">
+		<text>Schoval jsem bбgl ve sklepм. Vrбtнm se pro nмj pozdмji, teп nemщћu.</text>
+	</string>
+	<string id="esc_secret_0005_name">
+		<text>Kryt ve sklepм</text>
+	</string>
+	<string id="esc_secret_0006_descr">
+		<text>Na farmм jsem naљel zahrabanэ sejf. Zatнm ho tam nechбm.</text>
+	</string>
+	<string id="esc_secret_0006_name">
+		<text>Sejf na farmм</text>
+	</string>
+	<string id="esc_secret_0007_descr">
+		<text>Dozvмdмl jsem se, ћe si nмkdo schoval vмci ve vagonм na mostм. Budu se tam muset nмkdy podнvat. Zajнmalo by mм, ин to vlastnм je...</text>
+	</string>
+	<string id="esc_secret_0007_name">
+		<text>Kontejner ve vagonu</text>
+	</string>
+	<string id="esc_secret_0008_descr">
+		<text>Schoval jsem vмci pшнmo pod stшechu malйho domu u mostu.</text>
+	</string>
+	<string id="esc_secret_0008_name">
+		<text>Pбr vмcн</text>
+	</string>
+	<string id="esc_secret_0009_descr">
+		<text>Schoval jsem si svэ krбmy v jednй z beden kousek od mostu. Tak, kaљlu na to a mizнm ze Zуny, sbohem brбchovй! Na vlast nikdy nezapomenu.</text>
+	</string>
+	<string id="esc_secret_0009_name">
+		<text>Vмci u mostu</text>
+	</string>
+	<string id="esc_secret_0010_descr">
+		<text>Nмjakэ stalker zakalil u tбbora novбиkщ. Mмl bych se podнvat, co mмl u sebe.</text>
+	</string>
+	<string id="esc_secret_0010_name">
+		<text>Batoh je u vesnice</text>
+	</string>
+	<string id="esc_secret_0011_descr">
+		<text>Lihoj mi шekl, ћe ve sklepм je skrэљ. Nakecal toho spoustu, tak jsme mu zavшeli hubu nadobro.</text>
+	</string>
+	<string id="esc_secret_0011_name">
+		<text>Sklep ve vesnici</text>
+	</string>
+	<string id="esc_secret_0012_descr">
+		<text>Naљel jsem skvмlou schovбvaиku ve sklepм. Poиkбm, jestli si tam nмkdo nмco neschovб.</text>
+	</string>
+	<string id="esc_secret_0012_name">
+		<text>Dobrэ mнsto</text>
+	</string>
+	<string id="esc_secret_0013_descr">
+		<text>Vorpбl mi шekl, ћe je ve sklepм skrэљ. Naљi budou dмlat v oblasti prщzkum, takћe by bylo dobrэ se tam podнvat.</text>
+	</string>
+	<string id="esc_secret_0013_name">
+		<text>Vorpбlova skrэљ</text>
+	</string>
+	<string id="esc_secret_0014_descr">
+		<text>Velitel mб prej v kanclu pмknou bednu plnou dobrэch vмcн.</text>
+	</string>
+	<string id="esc_secret_0014_name">
+		<text>Velitelovy cennosti</text>
+	</string>
+	<string id="esc_secret_0015_descr">
+		<text>Nмjakэ stalker zakalil u tбbora novбиkщ. Mмli bychom se podнvat, co mмl u sebe. Kdo sem vщbec takovэ lamy pouљtн?</text>
+	</string>
+	<string id="esc_secret_0015_name">
+		<text>U silnice</text>
+	</string>
+	<string id="esc_secret_0016_descr">
+		<text>Vмci jsou schovanэ ve sklepм banditщ. Pшedtнm tam nebyly, takћe je tшeba poинhat si na vhodnэ okamћit. </text>
+	</string>
+	<string id="esc_secret_0016_name">
+		<text>Zlodмjщv sklep</text>
+	</string>
+	<string id="esc_secret_0017_descr">
+		<text>V rouшe jsem objevil pбr vмcн, kousek od farmy. Aћ mi skonин hlнdka, stavнm se tam.</text>
+	</string>
+	<string id="esc_secret_0017_name">
+		<text>Roura od plynovodu</text>
+	</string>
+	<string id="esc_secret_0018_descr">
+		<text>Odhodil jsem svщj bбgl kousek od stanoviљtм, jakmile to pщjde, mмl bych se pro nмj stavit, velitel nбs kaћdou chvнli pшevelн nмkam jinam.</text>
+	</string>
+	<string id="esc_secret_0018_name">
+		<text>Schovanй vмci</text>
+	</string>
+	<string id="esc_secret_0019_descr">
+		<text>Prozatнm jsem nechal vмci u vмћe. Aћ to pщjde, vyzvednu si je.</text>
+	</string>
+	<string id="esc_secret_0019_name">
+		<text>Vмћ u kontrolnнho bodu</text>
+	</string>
+	<string id="gar_secret_0000_descr">
+		<text>Vidмl jsem, jak si bandita schovбvб vмci do bedny v hangбru. Jak bych se k nim jenom dostal?</text>
+	</string>
+	<string id="gar_secret_0000_name">
+		<text>Sklad banditщ</text>
+	</string>
+	<string id="gar_secret_0001_descr">
+		<text>Љli jsme to s Vasjou okouknout, ale najednou na nбs nмkdo zaиal stшнlet a Vasja to schytal. Jб s tнm fakt nemбm nic spoleиnэho. Vмci jsem schoval do roury.</text>
+	</string>
+	<string id="gar_secret_0001_name">
+		<text>Starэ jeшбb</text>
+	</string>
+	<string id="gar_secret_0002_descr">
+		<text>Grizzly to schytal na smetiљti, mмl u sebe vљechny svэ vмci. Bylo to v ћelezniиnнm tunelu. Љkoda Grizzlyho.</text>
+	</string>
+	<string id="gar_secret_0002_name">
+		<text>Grizzlyho vмci</text>
+	</string>
+	<string id="gar_secret_0003_descr">
+		<text>Schoval jsem si vмci v rouшe na smetiљti.</text>
+	</string>
+	<string id="gar_secret_0003_name">
+		<text>Zбsoba na severnн hromadм</text>
+	</string>
+	<string id="gar_secret_0004_descr">
+		<text>Zboћн je na smetiљti, v jednэ rouшe. Pokud nevнљ kde pшesnм, nenajdeљ je.</text>
+	</string>
+	<string id="gar_secret_0004_name">
+		<text>Prachy ve starэm ћeleze</text>
+	</string>
+	<string id="gar_secret_0005_descr">
+		<text>Schoval jsem si pбr vмcн v ћeleznэ rouшe u dvou cisteren. Mмl bych si to vyzvednout, ale furt nemбm иas.</text>
+	</string>
+	<string id="gar_secret_0005_name">
+		<text>Ћelenб pec u cisterny.</text>
+	</string>
+	<string id="gar_secret_0006_descr">
+		<text>Mezi radioaktivnнm odpadem je schovanэch pбr dobrэch vмcн, mбlokdo tam chodн.</text>
+	</string>
+	<string id="gar_secret_0006_name">
+		<text>Roura na vэchodnн hromadм</text>
+	</string>
+	<string id="gar_secret_0007_descr">
+		<text>V ъdolн leћн nмин batoh, vљude kolem anomбlie. Jak se k nмmu jenom dostat?</text>
+	</string>
+	<string id="gar_secret_0007_name">
+		<text>Nмин batoh</text>
+	</string>
+	<string id="gar_secret_0008_descr">
+		<text>Zlikvidovali jsme zrбdce v baћinм... rovnou jsme ho tam pohшbili, jeho vмci zщstaly pod kшнћem. Mмli jsme na starosti dщleћitмjљн vмci, neћ nмjakэ krбmy.</text>
+	</string>
+	<string id="gar_secret_0008_name">
+		<text>Majetek zavraћdмnйho</text>
+	</string>
+	<string id="gar_secret_0009_descr">
+		<text>Ve stнnech je pшipravenб skrэљ, docela dobrб schovбvaиka.</text>
+	</string>
+	<string id="gar_secret_0009_name">
+		<text>Shnilэ paшez</text>
+	</string>
+	<string id="gar_secret_0010_descr">
+		<text>V lese je paшez, do kterйho se dajн schovбvat vмci. V dншe je tam narvanб pмknб kupa vмcн, je na иase si pro nм zajнt.</text>
+	</string>
+	<string id="gar_secret_0010_name">
+		<text>Paшez v lese</text>
+	</string>
+	<string id="gar_secret_0011_descr">
+		<text>Petrenko chce, aќ dбm vљem vмdмt, ћe mбme informace o skrэљi Stшelcovy jednotky na smetiљti. Je tam kanбlovэ poklop, vysvмtlil mi, jak se tam dб dostat. Jakmile se to tam trochu uklidnн, mмli bychom jнt tu skrэљ vybrat.</text>
+	</string>
+	<string id="gar_secret_0011_name">
+		<text>Skrэљ Stшelcovy skupiny</text>
+	</string>
+	<string id="gar_secret_0012_descr">
+		<text>Schoval jsem to v autм, Dlouhбn шнkal, ћe je to dobrэ mнsto.</text>
+	</string>
+	<string id="gar_secret_0012_name">
+		<text>Tajnб skrэљ v autм</text>
+	</string>
+	<string id="gar_secret_0013_descr">
+		<text>Schoval jsem bбgl v autobuse - nikdo si ho nevљimne</text>
+	</string>
+	<string id="gar_secret_0013_name">
+		<text>Stalkerщv batoh v autobuse</text>
+	</string>
+	<string id="gar_secret_0014_descr">
+		<text>Dal jsem zбsoby do bedny a tu jsem strиil do starэho barбku za rohem. Poшбd nevнm, k иemu ten barбk je.</text>
+	</string>
+	<string id="gar_secret_0014_name">
+		<text>Rщznй zбsoby</text>
+	</string>
+	<string id="gar_secret_0015_descr">
+		<text>V hromadм smetн je ибstenм zasypanej sejf. Vљechno je tam v bezpeин, hlavnм nesmнm zapomenout, co tam je.</text>
+	</string>
+	<string id="gar_secret_0015_name">
+		<text>Sejf v jiћnн hromadм.</text>
+	</string>
+	<string id="gar_secret_0016_descr">
+		<text>Schoval jsem pбr vмcн do hromady odpadkщ v rouшe</text>
+	</string>
+	<string id="gar_secret_0016_name">
+		<text>Sklad na vrakoviљti.</text>
+	</string>
+	<string id="gar_secret_0017_descr">
+		<text>Љйf radistщ nбm pшedal pшнkaz stбhnout se. Naљel jsem bednu, nahбzel jsem tam, co jsem mмl u sebe, a vrбtil jsem se s prбzdnou.</text>
+	</string>
+	<string id="gar_secret_0017_name">
+		<text>Zбsoby v bednм</text>
+	</string>
+	<string id="gar_secret_0018_descr">
+		<text>Strиil jsem pбr vмcн do roury na smetiљti. Dlouho tam nezщstanou.</text>
+	</string>
+	<string id="gar_secret_0018_name">
+		<text>Roura u autobusu</text>
+	</string>
+	<string id="gar_secret_0019_descr">
+		<text>V ruinбch se dб snadno schovat spousta vмcн. Doufбm, ћe aћ nebudou pшekбћet banditi, budu si moct svщj bбgl zase vzнt.</text>
+	</string>
+	<string id="gar_secret_0019_name">
+		<text>Batoh v ruinбch</text>
+	</string>
+	<string id="gar_secret_0020_descr">
+		<text>Zatнmco Povinnost stшнlela, schoval jsem vмci ve vagonм. Musнm se tam nмjak vrбtit a vyzvednout si je. A podмkovat Povinnosti.</text>
+	</string>
+	<string id="gar_secret_0020_name">
+		<text>Bedna v silnм stшeћenйm vojenskйm postavenн</text>
+	</string>
+	<string id="gar_secret_0021_descr">
+		<text>Slaboch prэ zakalil na smetiљti - musнm se tam stavit a kouknout se, co mмl u sebe, neћ mм nмkdo pшedbмhne.</text>
+	</string>
+	<string id="gar_secret_0021_name">
+		<text>Slabochщv batoh</text>
+	</string>
+	<string id="gar_secret_0022_descr">
+		<text>Prozatнm si vмci schovбm do vэmolu, snad je nikdo nenajde.</text>
+	</string>
+	<string id="gar_secret_0022_name">
+		<text>Taљka ve vэmolu</text>
+	</string>
+	<string id="gar_secret_0023_descr">
+		<text>U eskalбtoru nмkoho sundala anomбlie. Zщstal po nмm batoh, ale nedб se k nмmu snadno dostat.</text>
+	</string>
+	<string id="gar_secret_0023_name">
+		<text>Pod rypadlem</text>
+	</string>
+	<string id="gar_secret_0024_descr">
+		<text>Mбlem jsem to nezvlбdnul, ale bбgl je dobшe schovanej, tam nikdo љplhat nebude.</text>
+	</string>
+	<string id="gar_secret_0024_name">
+		<text>Za betonovejma panelama jsou nмjakэ vмci</text>
+	</string>
+	<string id="mil_secret_0000_description">
+		<text>Schoval jsem vмci v paшezu - tam je nikdo nenajde.</text>
+	</string>
+	<string id="mil_secret_0000_name">
+		<text>Tajnб skrэљ v paшezu</text>
+	</string>
+	<string id="mil_secret_0001_description">
+		<text>Schoval jsem vмci v peci.</text>
+	</string>
+	<string id="mil_secret_0001_name">
+		<text>Tajnб skrэљ v peci</text>
+	</string>
+	<string id="mil_secret_0002_description">
+		<text>Schoval jsem v kancelбшi KAMAZu nмjakэ krбmy</text>
+	</string>
+	<string id="mil_secret_0002_name">
+		<text>Tajnб skrэљ v KAMAZu</text>
+	</string>
+	<string id="mil_secret_0003_description">
+		<text>Zahrabal jsem pбr vмcн pod kшнћem u vesnice.</text>
+	</string>
+	<string id="mil_secret_0003_name">
+		<text>Poklad pod kшнћem</text>
+	</string>
+	<string id="mil_secret_0004_description">
+		<text>Hodil jsem svэ vмci do roury, vyzvednu si je pak.</text>
+	</string>
+	<string id="mil_secret_0004_name">
+		<text>Tajnб skrэљ v trubce</text>
+	</string>
+	<string id="mil_secret_0005_description">
+		<text>Tajnб skrэљ v bednм uvnitш vodnн vмћe</text>
+	</string>
+	<string id="mil_secret_0005_name">
+		<text>Poklad ve vмћi</text>
+	</string>
+	<string id="mil_secret_0006_description">
+		<text>Strиil jsem bбgl do pece, pozdмji se mщћe hodit.</text>
+	</string>
+	<string id="mil_secret_0006_name">
+		<text>Skrэљ v peci</text>
+	</string>
+	<string id="mil_secret_0007_description">
+		<text>Schoval jsem si vмci v autм v opuљtмnэ vesnici.</text>
+	</string>
+	<string id="mil_secret_0007_name">
+		<text>Skrэљ v autм</text>
+	</string>
+	<string id="mil_secret_0008_description">
+		<text>Nechal jsem bбgl v ozбшenэch ruinбch. Bojнm se tam ukazovat.</text>
+	</string>
+	<string id="mil_secret_0008_name">
+		<text>Nebezpeиnй tajemstvн</text>
+	</string>
+	<string id="mil_secret_0009_description">
+		<text>Zahrabal jsem vмci pod kшнћem, na љikovnэm skrytэm mнstм.</text>
+	</string>
+	<string id="mil_secret_0009_name">
+		<text>Stalkerova skrэљ</text>
+	</string>
+	<string id="mil_secret_0010_description">
+		<text>Schoval jsem batoh s vybavenнm na љikovnэm mнstм.</text>
+	</string>
+	<string id="mil_secret_0010_name">
+		<text>Batoh s vybavenнm</text>
+	</string>
+	<string id="mil_secret_0011_description">
+		<text>Schoval jsem si svэ krбmy v autм na kopci</text>
+	</string>
+	<string id="mil_secret_0011_name">
+		<text>Tajnб skrэљ na kopci</text>
+	</string>
+	<string id="mil_secret_0012_description">
+		<text>Kousek od opuљtмnэ vojenskэ zбkladny spadl vrtulnнk. Pшнmo pod vrakem je bedna s vмcma. Akorбt vљude kolem jsou anomбlie a zбшenн.</text>
+	</string>
+	<string id="mil_secret_0012_name">
+		<text>Bedna z vrtulnнku</text>
+	</string>
+	<string id="mil_secret_0013_description">
+		<text>Zahrabal jsem vмci na kopci, pod kшнћem</text>
+	</string>
+	<string id="mil_secret_0013_name">
+		<text>Tajemstvн nбhrobku</text>
+	</string>
+	<string id="mil_secret_0014_description">
+		<text>V paшezu je dobrб skrэљ</text>
+	</string>
+	<string id="mil_secret_0014_name">
+		<text>Tajnэ paшez</text>
+	</string>
+	<string id="mil_secret_0015_description">
+		<text>Nechal jsem bбgl v kabinм jeшбbu. Seberu ho pak.</text>
+	</string>
+	<string id="mil_secret_0015_name">
+		<text>Tajnб skrэљ jeшбbnнka</text>
+	</string>
+	<string id="mil_secret_0016_description">
+		<text>Vљechno je v bednм, ve vagуnм kousek od zбkladny. Pшesnм podle plбnu, teп musнme jenom poиkat.</text>
+	</string>
+	<string id="mil_secret_0016_name">
+		<text>Dohodnutб skrэљ</text>
+	</string>
+	<string id="mil_secret_0017_description">
+		<text>Narval jsem vмci do paшezu. Myslнm, ћe to tam nikdo nenajde.</text>
+	</string>
+	<string id="mil_secret_0017_name">
+		<text>Poklad v paшezu</text>
+	</string>
+	<string id="mil_secret_0018_description">
+		<text>Schoval jsem vмci do roury na bшehu jezera</text>
+	</string>
+	<string id="mil_secret_0018_name">
+		<text>Roura se zboћнm</text>
+	</string>
+	<string id="mil_secret_0019_description">
+		<text>Schoval jsem si vмci v ћeleznй schrбnce</text>
+	</string>
+	<string id="mil_secret_0019_name">
+		<text>Tajnб stalkerova skrэљ</text>
+	</string>
+	<string id="mil_secret_0020_description">
+		<text>Narval jsem vмci do paшezu, nemyslнm, ћe to nмkdo najde</text>
+	</string>
+	<string id="mil_secret_0020_name">
+		<text>Vмci v paшezu</text>
+	</string>
+	<string id="mil_secret_0021_description">
+		<text>Dobrб bedna na pшebyteиnэ krбmy</text>
+	</string>
+	<string id="mil_secret_0021_name">
+		<text>Dobrб zбsobovacн bedna</text>
+	</string>
+	<string id="mil_secret_0022_description">
+		<text>Schoval jsem batoh se zboћнm v tunelu</text>
+	</string>
+	<string id="mil_secret_0022_name">
+		<text>Batoh v tunelu</text>
+	</string>
+	<string id="mil_secret_0023_description">
+		<text>Dobrб bedna na pшebyteиnэ krбmy</text>
+	</string>
+	<string id="mil_secret_0023_name">
+		<text>Bedna se zboћнm</text>
+	</string>
+	<string id="mil_secret_0024_description">
+		<text>Narval jsem vмci do paшezu, nemyslнm, ћe to nмkdo najde</text>
+	</string>
+	<string id="mil_secret_0024_name">
+		<text>Tajnб skrэљ v paшezu</text>
+	</string>
+	<string id="mil_secret_0025_description">
+		<text>Hodil jsem vмci do bedny - vyzvednu si je pak</text>
+	</string>
+	<string id="mil_secret_0025_name">
+		<text>Doиasnб skrэљ</text>
+	</string>
+	<string id="mil_secret_0026_description">
+		<text>Schoval jsem vмci v kanбle. Jednou se mщћou hodit.</text>
+	</string>
+	<string id="mil_secret_0026_name">
+		<text>Ocelovб skrэљ</text>
+	</string>
+	<string id="mil_secret_0027_description">
+		<text>Hodil jsem vмci do bedny - vyzvednu si je pak</text>
+	</string>
+	<string id="mil_secret_0027_name">
+		<text>Bedna se zboћнm</text>
+	</string>
+	<string id="mil_secret_0028_description">
+		<text>Schoval jsem si vмci v autм, Svobodм pшнmo pod nosem, nemмl jsem иas hledat lepљн mнsto</text>
+	</string>
+	<string id="mil_secret_0028_name">
+		<text>Tajnб skrэљ v autм</text>
+	</string>
+	<string id="pri_secret_0000_description">
+		<text>Tady prэ chcнpnul nмjakэ slavnэ stalker a jeho vмci si jeљtм nikdo nevzal.</text>
+	</string>
+	<string id="pri_secret_0000_name">
+		<text>Vмci mrtvйho stalkera</text>
+	</string>
+	<string id="pri_secret_0001_description">
+		<text>V garбћi je prэ bedna se spoustou dobrejch vмcн.</text>
+	</string>
+	<string id="pri_secret_0001_name">
+		<text>Poklad v garбћi</text>
+	</string>
+	<string id="pri_secret_0002_description">
+		<text>V mateшskй љkolce je prэ bedna se spoustou dobrejch vмcн.</text>
+	</string>
+	<string id="pri_secret_0002_name">
+		<text>Starб tajnб skrэљ</text>
+	</string>
+	<string id="pri_secret_0003_description">
+		<text>Tesбka pohшbili v Pripjati pod monumentem. Nechali u nмj vљechny jeho vмci, nenн sprбvnэ okrбdat mrtvэ.</text>
+	</string>
+	<string id="pri_secret_0003_name">
+		<text>Tesбkovy vмci</text>
+	</string>
+	<string id="pri_secret_0004_description">
+		<text>Vмdмli o nмm, ћe jako jedinэ pшeћil vypalovaи. Vљechny svй zбsoby nechal ve starэm obchoпбku a pak odeљel. Vљechno neљlo podle plбnu, ale pшesto to byl nejlepљн vщdce Svobody.</text>
+	</string>
+	<string id="pri_secret_0004_name">
+		<text>Zбsoby vщdce Svobody</text>
+	</string>
+	<string id="rad_secret_0000_description">
+		<text>Kшнћ na cestм k vypalovaиi, dбl jsem neљel, vљechno jsem schoval pod nмj.</text>
+	</string>
+	<string id="rad_secret_0000_name">
+		<text>Mraиounщv poklad</text>
+	</string>
+	<string id="rad_secret_0001_description">
+		<text>Tady zemшel nмjakэ stalker a jeho vмci jsou poшбd tam, nikdo se k nim nemщћe dostat.</text>
+	</string>
+	<string id="rad_secret_0001_name">
+		<text>Vybavenн mrtvйho stalkera</text>
+	</string>
+	<string id="rad_secret_0002_description">
+		<text>V lese je prэ napщl zahrabanэ sejf plnэ uћiteиnэch vмcн</text>
+	</string>
+	<string id="rad_secret_0002_name">
+		<text>Vэbava v sejfu</text>
+	</string>
+	<string id="rad_secret_0003_description">
+		<text>Шнkali jim, ћe nemajн lнtat nad Vypalovaиem, takћe dobшe jim tak, mмli poslouchat. Pшistбli uprostшed lesa a nejspнљ to nikdo nepшeћil. Moћnб bychom mohli jнt podнvat, co mмli u sebe.</text>
+	</string>
+	<string id="rad_secret_0003_name">
+		<text>Balниek pro Povinnost</text>
+	</string>
+	<string id="rad_secret_0004_description">
+		<text>Zбsoby skupiny, kterб se pokusila vyrazit do stшedu Zуny, jsou prэ poшбd na jednom a tom samйm mнstм. Ze skupiny se nikdo nevrбtil a zбsoby иekajн, aћ si je nмkdo vyzvedne, ale pшнstup blokuje zбшenн Vypalovaиe.</text>
+	</string>
+	<string id="rad_secret_0004_name">
+		<text>Zбsoby neopatrnй skupiny</text>
+	</string>
+	<string id="rad_secret_0005_description">
+		<text>Prэ tady zemшel vщdce nмjakй starй frakce a u jeho mrtvoly jsou jeљtм poшбd nмjakй cennй vмci.</text>
+	</string>
+	<string id="rad_secret_0005_name">
+		<text>Zбsoby vщdce starй frakce</text>
+	</string>
+	<string id="ros_secret_0000_description">
+		<text>Schoval jsem bбgl za ћeleznэm plбtem</text>
+	</string>
+	<string id="ros_secret_0000_name">
+		<text>Skrytэ batoh</text>
+	</string>
+	<string id="ros_secret_0001_description">
+		<text>Schoval jsem vмci pod kшнћem</text>
+	</string>
+	<string id="ros_secret_0001_name">
+		<text>Tajnб skrэљ pod kшнћem</text>
+	</string>
+	<string id="ros_secret_0002_description">
+		<text>Schoval jsem si pбr vмcн v bednм pod malэm domem, nemмl bych na to zapomenout.</text>
+	</string>
+	<string id="ros_secret_0002_name">
+		<text>Bedna pod malэm domem</text>
+	</string>
+	<string id="ros_secret_0003_description">
+		<text>Prбvм jsem chtмl vytбhnout batoh zpod schodщ, kdyћ se ti debilovй objevili. Sakra, jak se k nмmu teпka dostanu?</text>
+	</string>
+	<string id="ros_secret_0003_name">
+		<text>Stalkerщv batoh</text>
+	</string>
+	<string id="ros_secret_0004_description">
+		<text>V rohu za stromem je napщl zakopanэ sejf. Tam si zatнm schovбm vљechny vмci.</text>
+	</string>
+	<string id="ros_secret_0004_name">
+		<text>Tajnб skrэљ za stromem</text>
+	</string>
+	<string id="ros_secret_0005_description">
+		<text>Vљechno schovali v bednм v garбћi, ve kterй se schovali za deљtм.</text>
+	</string>
+	<string id="ros_secret_0005_name">
+		<text>Tajnб skrэљ v garбћi</text>
+	</string>
+	<string id="ros_secret_0006_description">
+		<text>Schoval jsem pбr vмcн v bednм za budkou</text>
+	</string>
+	<string id="ros_secret_0006_name">
+		<text>Skrytб bedna</text>
+	</string>
+	<string id="ros_secret_0007_description">
+		<text>Strиil jsem bбgl do dнry. Shora si ho nikdo nevљimne.</text>
+	</string>
+	<string id="ros_secret_0007_name">
+		<text>Batoh ve skrэљi</text>
+	</string>
+	<string id="ros_secret_0008_description">
+		<text>Schoval jsem krabici na bezpeиnэm mнstм</text>
+	</string>
+	<string id="ros_secret_0008_name">
+		<text>Vмci na bezpeиnэm mнstм</text>
+	</string>
+	<string id="ros_secret_0009_description">
+		<text>Bбgl mбm hned pod stшechou. Nмkdy se mщћe hodit.</text>
+	</string>
+	<string id="ros_secret_0009_name">
+		<text>Tajnб stalkerova skrэљ</text>
+	</string>
+	<string id="ros_secret_0010_description">
+		<text>V malэm domku je prэ dobrб schovбvaиka a v nн pбr uћiteиnэch vмcн.</text>
+	</string>
+	<string id="ros_secret_0010_name">
+		<text>Skrэљ v domм</text>
+	</string>
+	<string id="ros_secret_0011_description">
+		<text>Schoval jsem to v barбku do roury. Bacha, je to tam na spadnutн.</text>
+	</string>
+	<string id="ros_secret_0011_name">
+		<text>Tajnб skrэљ v rouшe</text>
+	</string>
+	<string id="ros_secret_0012_description">
+		<text>Vem si z bedny to, na иem jsme se domluvili. Vмtљinou se tam nikdo nedнvб, tak to tam snad jeљtм bude.</text>
+	</string>
+	<string id="ros_secret_0012_name">
+		<text>Skrytб bedna</text>
+	</string>
+	<string id="ros_secret_0013_description">
+		<text>Schoval jsem to pod kшнћem ve vedlejљн ulici</text>
+	</string>
+	<string id="ros_secret_0013_name">
+		<text>Tajnб skrэљ pod kшнћem</text>
+	</string>
+	<string id="ros_secret_0014_description">
+		<text>Zбsoby schovali pod betonovй panely na staveniљti</text>
+	</string>
+	<string id="ros_secret_0014_name">
+		<text>Tajnб skrэљ pod betonem</text>
+	</string>
+	<string id="ros_secret_0015_description">
+		<text>Kdybychom museli rychle vypadnout, schoval jsem si pбr vмcн do bedny na staveniљti.</text>
+	</string>
+	<string id="ros_secret_0015_name">
+		<text>Љќastlivcova skrэљ</text>
+	</string>
+	<string id="ros_secret_0016_description">
+		<text>Schoval jsem to v rohu na staveniљti</text>
+	</string>
+	<string id="ros_secret_0016_name">
+		<text>Nyиka</text>
+	</string>
+	<string id="ros_secret_0017_description">
+		<text>Vљechno jsem to schoval do jednэ roury, seberu si to pak</text>
+	</string>
+	<string id="ros_secret_0017_name">
+		<text>Tajnб skrэљ v rouшe</text>
+	</string>
+	<string id="ros_secret_0018_description">
+		<text>Schoval jsem zboћн v bednм kousek od staveniљtм</text>
+	</string>
+	<string id="ros_secret_0018_name">
+		<text>Bedna se zboћнm</text>
+	</string>
+	<string id="ros_secret_0019_description">
+		<text>Vytбhl jsem bednu do kabiny jeшбbu</text>
+	</string>
+	<string id="ros_secret_0019_name">
+		<text>Bedna v jeшбbu</text>
+	</string>
+	<string id="ros_secret_0020_description">
+		<text>Schoval jsem zboћн v kanбle, v rohu.</text>
+	</string>
+	<string id="ros_secret_0020_name">
+		<text>Tajnб skrэљ v kanбle</text>
+	</string>
+	<string id="ros_secret_0021_description">
+		<text>Љel jsem po artefaktu a dostal se do anomбlie. Sotva jsem mohl chodit, tak jsem odhodil bбgl do rohu.</text>
+	</string>
+	<string id="ros_secret_0021_name">
+		<text>Odhozenэ bбgl</text>
+	</string>
+	<string id="ros_secret_0022_description">
+		<text>Strиil jsem bednu pшнmo pod stшechu vмћe, tam si jн nikdo nevљimne.</text>
+	</string>
+	<string id="ros_secret_0022_name">
+		<text>Bedniиka pod stшechou</text>
+	</string>
+	<string id="ros_secret_0023_description">
+		<text>Co jsme naљli, jsme schovali v rouшe kousek od staveniљtм.</text>
+	</string>
+	<string id="ros_secret_0023_name">
+		<text>Tajnб skrэљ v trubce</text>
+	</string>
+	<string id="ros_secret_0024_description">
+		<text>Schoval jsem vљechno do paшezu. Myslнm, ћe to nenajdou.</text>
+	</string>
+	<string id="ros_secret_0024_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="ros_secret_0025_description">
+		<text>Odhodil jsem bбgl u jeшбbu</text>
+	</string>
+	<string id="ros_secret_0025_name">
+		<text>Batoh</text>
+	</string>
+	<string id="val_secret_0000_description">
+		<text>Schoval jsem pбr vмcн pod kшнћem u kopce</text>
+	</string>
+	<string id="val_secret_0000_name">
+		<text>Tajnб skrэљ pod kшнћem</text>
+	</string>
+	<string id="val_secret_0001_description">
+		<text>Narval jsem vмci do paшezu. Myslнm, ћe to nenajdou.</text>
+	</string>
+	<string id="val_secret_0001_name">
+		<text>Tajnб skrэљ v paшezu</text>
+	</string>
+	<string id="val_secret_0002_description">
+		<text>Strиil jsem bбgl pod most. Zatнm ho tam nechбm.</text>
+	</string>
+	<string id="val_secret_0002_name">
+		<text>Batoh pod mostem</text>
+	</string>
+	<string id="val_secret_0003_description">
+		<text>Dal jsem krabici do auta u baћiny</text>
+	</string>
+	<string id="val_secret_0003_name">
+		<text>Auto se skrэљн</text>
+	</string>
+	<string id="val_secret_0004_description">
+		<text>V paшezu je skrэљ, docela љikovnй mнsto</text>
+	</string>
+	<string id="val_secret_0004_name">
+		<text>Tajnб skrэљ v paшezu</text>
+	</string>
+	<string id="val_secret_0005_description">
+		<text>Na farmм jsem naљel vэbornou bednu, budu si tam schovбvat zбsoby.</text>
+	</string>
+	<string id="val_secret_0005_name">
+		<text>Bedna se zбsobami</text>
+	</string>
+	<string id="val_secret_0006_description">
+		<text>Nahбzel jsem vмci do roury. Vyzvednu si je pak.</text>
+	</string>
+	<string id="val_secret_0006_name">
+		<text>Tajnб skrэљ v rouшe</text>
+	</string>
+	<string id="val_secret_0007_description">
+		<text>Schoval jsem bбgl pod borovici</text>
+	</string>
+	<string id="val_secret_0007_name">
+		<text>Tajnб skrэљ pod borovicн</text>
+	</string>
+	<string id="val_secret_0008_description">
+		<text>Novбиkovi se podaшilo ukrбst banditщm bednu. Dal ji do pшevrбcenй Nivy. Шнkal, ћe to vypadalo na vlбdnн zбsoby. Dбme dohromady partu a stavнme se pro ni.</text>
+	</string>
+	<string id="val_secret_0008_name">
+		<text>Vlбdnн bedna</text>
+	</string>
+	<string id="val_secret_0009_description">
+		<text>Vљude samэ zlodмj... dokonce si kradou i mezi sebou... ale moji bednu nenajdou.</text>
+	</string>
+	<string id="val_secret_0009_name">
+		<text>Bedna</text>
+	</string>
+	<string id="val_secret_0010_description">
+		<text>Schoval jsem si nмjakэ vмci v kanбle. Moћnб se budou nмkdy hodit.</text>
+	</string>
+	<string id="val_secret_0010_name">
+		<text>Tajnб skrэљ v kanбle</text>
+	</string>
+	<string id="val_secret_0011_description">
+		<text>Hodil jsem batoh pod strom. S nнm by se mi pшed banditama nepodaшilo utэct.</text>
+	</string>
+	<string id="val_secret_0011_name">
+		<text>Stalkerщv batoh</text>
+	</string>
+	<string id="val_secret_0012_description">
+		<text>Schoval jsem si krбmy do roury, seberu je pak</text>
+	</string>
+	<string id="val_secret_0012_name">
+		<text>Tajnб skrэљ</text>
+	</string>
+	<string id="val_secret_0013_description">
+		<text>Vљechno, co jsem sebral Borovi, jsem schoval do skrэљe pod borovici. Teп budu muset poиkat, aћ pшestanou vyvбdмt.</text>
+	</string>
+	<string id="val_secret_0013_name">
+		<text>Skrэљ</text>
+	</string>
+	<string id="val_secret_0014_description">
+		<text>Doиasnй velitelstvн je ve vagonu, zщstaly tam v bednм zбsoby</text>
+	</string>
+	<string id="val_secret_0014_name">
+		<text>Sklad ve vagonu</text>
+	</string>
+	<string id="val_secret_0015_description">
+		<text>Sotva jsem se dostal k rouшe pod cestou. Musнm najнt mнsto, kam budu moct schovat batoh</text>
+	</string>
+	<string id="val_secret_0015_name">
+		<text>Tajnй mнsto v rouшe</text>
+	</string>
+	<string id="val_secret_0016_description">
+		<text>Hodil jsem vмci do bedny - vyzvednu si je pak</text>
+	</string>
+	<string id="val_secret_0016_name">
+		<text>Bedna se zboћнm</text>
+	</string>
+	<string id="val_secret_0017_description">
+		<text>Schovбm vмci za rouru, dб se tam jenom tмћko dostat, ale aspoт mi je nikdo nesebere.</text>
+	</string>
+	<string id="val_secret_0017_name">
+		<text>Tajnб skrэљ za rourou</text>
+	</string>
+	<string id="val_secret_0018_description">
+		<text>V elektrorozvodnм jsem naљel pбr nбbojщ</text>
+	</string>
+	<string id="val_secret_0018_name">
+		<text>Skrэљ v elektrorozvodnм</text>
+	</string>
+	<string id="val_secret_0019_description">
+		<text>Vљechno, co jsme naљli, jsme schovali do bedny, vyzvedneme si to pozdмji, aћ se budem vracet.</text>
+	</string>
+	<string id="val_secret_0019_name">
+		<text>Tajnб skrэљ v bednм</text>
+	</string>
+	<string id="val_secret_0020_description">
+		<text>Schoval jsem novбиkovi bбgl a ten blb ho uћ nenaљel</text>
+	</string>
+	<string id="val_secret_0020_name">
+		<text>Skrytэ batoh</text>
+	</string>
+	<string id="val_secret_0021_description">
+		<text>Krabice zщstala v dodбvce, musнm ji vyzvednout</text>
+	</string>
+	<string id="val_secret_0021_name">
+		<text>Zapomenutб krabice</text>
+	</string>
+	<string id="val_secret_0022_description">
+		<text>U benzнnky jsem naљel skrэљ a schoval jsem tam zboћн. Vypadalo to, ћe tam nikdo nechodн.</text>
+	</string>
+	<string id="val_secret_0022_name">
+		<text>Skrэљ u benzнnky</text>
+	</string>
+	<string id="val_secret_0023_description">
+		<text>Vytбhl jsem bednu na cisternu</text>
+	</string>
+	<string id="val_secret_0023_name">
+		<text>Bedna</text>
+	</string>
+	<string id="val_secret_0024_description">
+		<text>Schoval jsem zбsoby v bednм u benzнnky.</text>
+	</string>
+	<string id="val_secret_0024_name">
+		<text>Bedna u benzнnky</text>
+	</string>
+	<string id="val_secret_0025_description">
+		<text>V autм u tбbora banditщ je nмjakб bedna. Mмl bych se tam stavit a podнvat se, instinkt mi шнkб, ћe tam bude nмco cennэho</text>
+	</string>
+	<string id="val_secret_0025_name">
+		<text>Vмci v autм</text>
+	</string>
+	<string id="val_secret_0026_description">
+		<text>Schoval jsem vмci do skrэљe, je to spolehlivэ mнsto</text>
+	</string>
+	<string id="val_secret_0026_name">
+		<text>Vмci ve skrэљi</text>
+	</string>
+	<string id="val_secret_0027_description">
+		<text>Nechal jsem bбgl v opuљtмnэ budovм. Nikdo tam nenн.</text>
+	</string>
+	<string id="val_secret_0027_name">
+		<text>Odhozenэ bбgl</text>
+	</string>
+	<string id="val_secret_0028_description">
+		<text>Vмci si schovбm v sejfu. Pokud vojбci dneska nepшнjdou, dorazн urиitм zнtra. Dlouho tady hledat nebudou, takћe mi nejcennмjљн vмci zщstanou.</text>
+	</string>
+	<string id="val_secret_0028_name">
+		<text>Borova tajnб skrэљ</text>
+	</string>
+	<string id="val_secret_0029_description">
+		<text>Schoval jsem si batoh u barбku</text>
+	</string>
+	<string id="val_secret_0029_name">
+		<text>Batoh na tajnйm mнstм</text>
+	</string>
+	<string id="val_secret_0030_description">
+		<text>Schoval jsem vмci v bednм. Vyzvednu si je pak.</text>
+	</string>
+	<string id="val_secret_0030_name">
+		<text>Bedna</text>
+	</string>
+	<string id="val_secret_0031_description">
+		<text>Schoval jsem bбgl pod auto, tam nikdo иumмt nebude</text>
+	</string>
+	<string id="val_secret_0031_name">
+		<text>Skrytэ batoh</text>
+	</string>
+	<string id="val_secret_0032_description">
+		<text>Schoval jsem si vмci v autм, pшнmo banditщm pod nosem, nemмl jsem иas hledat lepљн mнsto.</text>
+	</string>
+	<string id="val_secret_0032_name">
+		<text>Tajnб skrэљ v autм</text>
+	</string>
+	<string id="x16_secret_0000_description">
+		<text>Prэ se do tэhle laboratoшe dostal stalker a schoval pбr vмcн do elektrorozvodu u vэtahovй љachty. Uћ si je nikdy nevzal.</text>
+	</string>
+	<string id="x16_secret_0000_name">
+		<text>Zboћн v rozvodnм</text>
+	</string>
+	<string id="x16_secret_0001_description">
+		<text>Prэ se do tэhle laboratoшe dostal stalker, ale v ибsti, kde se dмlaly experimenty, ho nмco sundalo. Zщstal tam i se svэma vмcma.</text>
+	</string>
+	<string id="x16_secret_0001_name">
+		<text>Prщzkumnнkщv batoh</text>
+	</string>
+	<string id="x18_secret_0000_description">
+		<text>Uzenби vљechno schoval v podzemnн laboratoшi. Dobrэ mнsto, nikdo od nн nemб klниe. Akorбt vљude kolem teп lнtajн kameny sem a tam, asi anomбlie. Prэ uћ nмkoho zabila.</text>
+	</string>
+	<string id="x18_secret_0000_name">
+		<text>Tajnб skrэљ Uzenбиe</text>
+	</string>
+	<string id="x18_secret_0001_description">
+		<text>Musel jsem odhodit bбgl, jinak bych se pryи nedostal.</text>
+	</string>
+	<string id="x18_secret_0001_name">
+		<text>Odhozenэ bбgl</text>
+	</string>
+	<string id="yan_secret_0000_description">
+		<text>Kшнћ na kopci, pod nнm je batoh.</text>
+	</string>
+	<string id="yan_secret_0000_name">
+		<text>Tajnб skrэљ pod kшнћem</text>
+	</string>
+	<string id="yan_secret_0001_description">
+		<text>Na malэm ostrщvku v baћinм je prej starб zakopanб skrэљ. Je tшeba se tam kouknout.</text>
+	</string>
+	<string id="yan_secret_0001_name">
+		<text>Starб skrэљ</text>
+	</string>
+	<string id="yan_secret_0002_description">
+		<text>Narval jsem vмci do roury u tбbora</text>
+	</string>
+	<string id="yan_secret_0002_name">
+		<text>Roura se zboћнm</text>
+	</string>
+	<string id="yan_secret_0003_description">
+		<text>Schoval jsem za garбћн pбr vмcн.</text>
+	</string>
+	<string id="yan_secret_0003_name">
+		<text>Batoh za garбћн</text>
+	</string>
+	<string id="yan_secret_0004_description">
+		<text>Schoval jsem batoh pod nмjakэ ћeleznэ љrot.</text>
+	</string>
+	<string id="yan_secret_0004_name">
+		<text>Batoh s lupem</text>
+	</string>
+	<string id="yan_secret_0005_description">
+		<text>Schoval jsem krabici do autobusu, tam si jн nikdo nevљimne.</text>
+	</string>
+	<string id="yan_secret_0005_name">
+		<text>Tajnб skrэљ v autobuse</text>
+	</string>
+	<string id="yan_secret_0006_description">
+		<text>Vмci jsou schovanэ v autм. Radiace nenн moc vysokб.</text>
+	</string>
+	<string id="yan_secret_0006_name">
+		<text>Koшist je v autм</text>
+	</string>
+	<string id="yan_secret_0007_description">
+		<text>Prej jsou tam nмин vмci, ale kvщli radiaci se tam nedб dostat.</text>
+	</string>
+	<string id="yan_secret_0007_name">
+		<text>Starэ batoh</text>
+	</string>
+	<string id="yan_secret_0008_description">
+		<text>Prej tam je skrэљ nмjakй skupiny. Zajнmalo by mм, jak se tam pшes tu radiaci dostali?</text>
+	</string>
+	<string id="yan_secret_0008_name">
+		<text>Tajnб skrэљ skupiny</text>
+	</string>
+	<string id="yan_secret_0009_description">
+		<text>Dalљн stalker dobrovolnнk chcнpnul, protoћe ho prototyp nedokбzal ochrбnit pшed radiacн. Dostal se jenom na pщl cesty a uћ tam zщstal. Saharov chce pшesnмjљн mмшenн, ale jб tam nepщjdu, jinak tam skonинm taky.</text>
+	</string>
+	<string id="yan_secret_0009_name">
+		<text>Testerщv batoh</text>
+	</string>
+	<string id="yan_secret_0010_description">
+		<text>Prej jsou tam nмин vмci, ale kvщli radiaci se tam nedб dostat.</text>
+	</string>
+	<string id="yan_secret_0010_name">
+		<text>Starб tajnб skrэљ</text>
+	</string>
+	<string id="yan_secret_0011_description">
+		<text>Musнm vypadnout. Saharov a Kruglov jsou ъplnн magoшi, chtмjн, abych љel s nмjakэm stalkerem pшнmo do centra zбшenн. Seru na nм, jakmile si vyberu zбsoby schovanй v kanбle, prбsknu do bot.</text>
+	</string>
+	<string id="yan_secret_0011_name">
+		<text>Vмdcova tajnб skrэљ</text>
+	</string>
+	<string id="yan_secret_0012_description">
+		<text>Schoval jsem vмci do paшezu, myslнm, ћe to nikdo nenajde.</text>
+	</string>
+	<string id="yan_secret_0012_name">
+		<text>Poklad v paшezu</text>
+	</string>
+	<string id="yan_secret_0013_description">
+		<text>Prэ tady mб nмkdo skrэљ, ale kvщli radiaci se tam nedб dostat.</text>
+	</string>
+	<string id="yan_secret_0013_name">
+		<text>Bedna se zboћнm</text>
+	</string>
+	<string id="st_found_new_treasure">
+		<text>Informace o skrэљi</text>
+	</string>
+</string_table>

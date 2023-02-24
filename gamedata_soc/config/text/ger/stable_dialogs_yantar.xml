@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="yantar_general_ucheniy_talk_start_101">
+		<text>Danke, дh ... Gezeichneter, richtig? Du hast geholfen, unseren Verbьndeten Kruglow zu retten. Und um dir meine Dankbarkeit auszudrьcken, mцchte ich dir einen unserer Arbeitsanzьge geben. Der ist sehr nьtzlich, wenn ... Du weiЯt schon was. Kann ich dir sonst noch irgendwie helfen?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1011">
+		<text>Ich suche Labor X16. Der Wirt hat mir gesagt, dass du Informationen ьber die Lage haben mьsstest.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1012">
+		<text>Wir waren schon immer an Labor X16 interessiert ... oder viel mehr an dem Mechanismus, der darin die Emissionen erzeugt, die direkt auf das Bewusstsein der Leute wirken. Aber ich fьrchte, da muss ich dich enttдuschen. Ohne eine spezielle PSI-Rьstung kommst du niemals dahin. Wir wissen, was sonst passiert: Selbst, wenn du den Horden von Zombies ausweichen kannst, die den Eingang des Labors besetzen, lдufst du Gefahr, einer von ihnen zu werden. Das ist alles sehr ernst. Wir haben ein Abschirmgerдt entworfen, das die Emissionen abhдlt. Wir mьssen jedoch weitere Messungen machen, um die Feinabstimmung vorzunehmen. Wenn du uns dabei hilfst, kцnnten wir dich vermutlich mit einem voll kalibrierten Prototypen fьr die Feldforschung  ausrьsten.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1013">
+		<text>Messungen?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1014">
+		<text>Wenn du zusammen mit unserem Verbьndeten alle notwendigen Messungen durchfьhren wьrdest, kцnnte ich dir einen voll funktionsfдhigen Prototypen der Rьstung ьberlassen. Damit wirst du ziemlich wahrscheinlich ins Labor hineinkommen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10141">
+		<text>In Ordnung, so machen wir das.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101411">
+		<text>Ausgezeichnet! Sprich mit Kruglow und lege los. Er hat bereits die nцtige Ausrьstung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101412">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10142">
+		<text>In Ordnung, so machen wir das.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101421">
+		<text>Ausgezeichnet! Sprich mit Semenow und lege los. Er hat alles, was du brauchen wirst.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101422">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10143">
+		<text>Nein. Im Moment mцchte ich mich nicht damit befassen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101431">
+		<text>Zu Schade, eine echte Schande ... Ich weiЯ nicht, wie oder wann wir diese Messexpedition alleine hinbekommen sollen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_11">
+		<text>Ja? Wonach suchst du denn?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_111">
+		<text>Ich suche nach Labor X16. Der Wirt hat mir gesagt, dass du vielleicht Informationen ьber die Lage besitzt.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12">
+		<text>Ich danke dir fьr Kruglows Rettung, Gezeichneter. Nimm diesen Druckanzug als Belohnung fьr deine Mьhen. Aber ich nehme an, dass du nicht nur wegen einer einfachen Belohnung hergekommen bist, hab ich Recht?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121">
+		<text>Ich suche nach Labor X16. Der Wirt hat mir gesagt, dass du vielleicht Informationen ьber die Lage besitzt.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1211">
+		<text>Wir untersuchen die Emission in Labor X16 seit einiger Zeit, aber du wirst nicht ohne eine spezielle Ausrьstung dort hineinkommen. Wir haben ein Gerдt entwickelt, dass Schutz vor PSI-Einwirkungen bietet. Es kцnnte dich vor der Emission schьtzen, aber es muss noch feinjustiert werden. Wenn du uns dabei hilfst, kцnnte ich dir einen funktionsfдhigen Prototypen geben, mit dem du in das Labor gelangen kцnntest.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12111">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121111">
+		<text>Ausgezeichnet! Sprich mit Kruglow und lege los. Er hat alles, was du brauchen wirst.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12112">
+		<text>Nein, noch bin ich dafьr nicht bereit.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121122">
+		<text>Das ist wirklich schade. Bis jetzt waren wir noch nicht in der Lage, selbst  eine Messexpedition loszuschicken.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21">
+		<text>Ja? Wonach suchst du denn?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211">
+		<text>Wir waren schon immer an Labor X16 interessiert ... oder viel mehr an dem Mechanismus, der darin die Emissionen erzeugt, die direkt auf das Bewusstsein der Leute wirken. Aber ich fьrchte, da muss ich dich enttдuschen. Ohne eine spezielle PSI-Rьstung kommst du niemals dahin. Wir wissen, was sonst passiert: Selbst, wenn du den Horden von Zombies ausweichen kannst, die den Eingang des Labors besetzen, lдufst du Gefahr, einer von ihnen zu werden. Das ist alles sehr ernst. Wir haben ein Abschirmgerдt entworfen, das die Emissionen abhдlt. Wir mьssen jedoch weitere Messungen machen, um die Feinabstimmung vorzunehmen. Wenn du uns dabei hilfst, kцnnten wir dich vermutlich mit einem voll kalibrierten Prototypen fьr die Feldforschung  ausrьsten.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111">
+		<text>Erzдhle weiter.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21111">
+		<text>Wir untersuchen die Emission in Labor X16 seit einiger Zeit, aber du wirst nicht ohne eine spezielle Ausrьstung dort hineinkommen. Wir haben ein Gerдt entwickelt, dass Schutz vor PSI-Einwirkungen bietet. Es kцnnte dich vor der Emission schьtzen, aber es muss noch feinjustiert werden. Wenn du uns dabei hilfst, kцnnte ich dir einen funktionsfдhigen Prototypen geben, mit dem du in das Labor gelangen kцnntest.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21112">
+		<text>In Ordnung. Ich bin dabei.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211121">
+		<text>Ausgezeichnet! Sprich mit Kruglow und lege los. Er hat bereits die nцtige Ausrьstung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111211">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21113">
+		<text>In Ordnung. Ich bin dabei.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211131">
+		<text>Ausgezeichnet! Sprich mit Semenow und lege los. Er hat alles, was du brauchen wirst.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211132">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211141">
+		<text>Du verstehst nicht. Dort ist ein Emitter. Niemand war bislang in der Lage, sich ihm auf weniger als einen halben Kilometer zu nдhern - er macht aus jedem einen Zombie. Ohne Anzug dorthinzugehen ist regelrechter Selbstmord.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111411">
+		<text>Hm. Das дndert natьrlich alles.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211142">
+		<text>Ach, was soll's. Sag mir einfach alles, was du weiЯt.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211143">
+		<text>In Ordnung, aber sage hinterher nicht, ich hдtte dich nicht gewarnt. Wasiliew hat an dem Laborproblem gearbeitet. Vor etwa einer Woche versuchten er und ein Stalker namens Ghost, ins Labor einzudringen. Nach mehreren Stunden spьrten wir ein Beben und die Emissionen hцrten auf. Nach einer weiteren Stunde bekamen wir ein Signal von Wasiliew - es kam aus dem Sumpf, verschwand dann aber. So, wie es aussieht, ist Wasiliew von uns gegangen. Versuche, seinen Leichnam zu finden. Er hatte sehr genaue Informationen ьber das Labor - wo es liegt und wie man hineinkommt. Er wusste vielleicht auch, wie man die Emissionen abstellt. Der Eingang des Labors ist sehr wahrscheinlich in einem der Gebдude um den Reaktor versteckt.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211144">
+		<text>Na dann mal los. Klasse.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21115">
+		<text>Nein ... Im Moment mцchte ich mich nicht damit beschдftigen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211151">
+		<text>Zu Schade, eine echte Schande ... Ich weiЯ nicht, wie oder wann wir diese Messexpedition alleine hinbekommen sollen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_221">
+		<text>Danke, дh ... Gezeichneter, richtig? Du hast geholfen, unseren Verbьndeten Kruglow zu retten. Und um dir meine Dankbarkeit auszudrьcken, mцchte ich dir einen unserer Arbeitsanzьge geben. Der ist sehr nьtzlich, wenn ... Du weiЯt schon was.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_231">
+		<text>Du hast hervorragende Arbeit geleistet, Gezeichneter! Jetzt, da die Emissionen abgeschaltet sind, werden wir in der Lage sein, neue Expeditionen durchzufьhren und zuvor unbegehbare Bereiche zu erkunden. Und auЯerdem ... werden wir dir von jetzt an ganz besondere Preise machen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2311">
+		<text>Vielen Dank.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_241">
+		<text>Ja, Gezeichneter? Wonach suchst du?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_31">
+		<text>Du hast hervorragende Arbeit geleistet. Wenn die Messungen korrekt sind, sollte dir der Prototyp maximalen Schutz vor der Emission gewдhren.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311">
+		<text>Freut mich, das zu hцren.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_3111">
+		<text>Jetzt sollte der Weg zum Labor klar sein. Nur dass du vielleicht nicht genug Zeit hast zurьckzugelangen, wenn die Quelle der Emissionen nicht rechtzeitig zerstцrt wird und sie ihre Kraft verliert. Also, dies ist unsere Abmachung: Unsere Berechnungen haben eine geschдtzte Position der Quelle und die Tatsache hervorgebracht, dass diese Quelle unterirdisch ist. Dein Einverstдndnis vorausgesetzt, habe ich die Stelle auf Deiner Karte bereits markiert.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_31111">
+		<text>Wie genau kommt man denn nun ins Labor X16 hinein? Wo ist der Eingang?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311111">
+		<text>Wasiliew hat an der Sache mit dem Labor gearbeitet. Vor einer Woche haben er und ein Stalker namens Ghost versucht, dort einzudringen. Ein paar Stunden spдter haben wir ein starkes Beben gespьrt, und eine weitere Stunde spдter haben wir ein Signal von Wasiliew empfangen. Es kam aus den Sьmpfen, doch das Signal brach ab. Anscheinend ist Wasiliew gestorben. Versuch, seine Leiche zu finden. Er hatte die genauen Informationen ьber das Labor bei sich und wie man dort hinein gelangt. Vielleicht hat er sogar Informationen darьber, wie man die Quelle der Emission deaktiviert. Ich habe dir alle Daten hochgeladen, die wir darьber haben.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311112">
+		<text>Дhm ... Es wдre sehr interessant, einen Blick auf diese Dokumente zu werden. Du meinst also, dass Wasiliew sie hat?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311113">
+		<text>Vielleicht. Auf jeden Fall musst du zunдchst Wasiliews Leiche finden. Das ist die einzige Chance, genaue Informationen ьber die Position des Labors zu bekommen. Der Leichnam deines Kollegen, Ghost, mьsste sich ebenfalls irgendwo dort befinden. WeiЯt du, es scheint mir, dass er viel mehr ьber X16 wusste, als er zugeben wollte. Wenn er irgendwie ьberlebt haben sollte ... Na ja, das fьhrt natьrlich zu nichts, an dieser Hoffnung festzuhalten.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311114">
+		<text>In Ordnung, ich werde es versuchen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41">
+		<text>Warum ist er gestorben? Du solltest ihn doch beschьtzen!</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_411">
+		<text>Kruglow ist von den Zombies umgebracht worden ... Ich konnte nichts dagegen unternehmen. Es waren einfach zu viele.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_4111">
+		<text>Oh Mann, wie konnte das passieren? Wie konnte das nur passieren? Verdammt, es lдuft mal wieder alles falsch. Jetzt brauchen wir mehr Mдnner. Dabei haben wir schon genug Probleme ... Verdammt ...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41111">
+		<text>Hцr mal ... Kruglow ist erledigt, aber ich lebe noch. Gib mir den Prototyp. Ich werde mich ins X16 durchkдmpfen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_411111">
+		<text>Hier ist ein Prototyp. Sei vorsichtig, er ist nicht richtig justiert, aber das ist deine Schuld, schlieЯlich konntest du unseren Kollegen nicht beschьtzen. Das Gerдt bietet dir nicht den maximalen Schutz, aber es wird die Emission abschwдchen. Du musst dich also mit der Suche nach der Quelle beeilen, Stalker.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_4111111">
+		<text>Wie kommt man ins Labor X16 hinein? Wo genau befindet sich der Eingang?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41111111">
+		<text>Wasiliew hat an der Sache mit dem Labor gearbeitet. Vor einer Woche haben er und ein Stalker namens Ghost versucht, dort einzudringen. Ein paar Stunden spдter haben wir ein starkes Beben gespьrt, und eine weitere Stunde spдter haben wir ein Signal von Wasiliew empfangen. Es kam aus den Sьmpfen, doch das Signal brach ab. Anscheinend ist Wasiliew gestorben. Versuch, seine Leiche zu finden. Er hatte die genauen Informationen ьber das Labor bei sich und wie man dort hinein gelangt. Vielleicht hat er sogar Informationen darьber, wie man die Quelle der Emission deaktiviert. Ich habe dir alle Daten hochgeladen, die wir darьber haben.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41112">
+		<text>Sonst noch irgendwas?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41113">
+		<text>Du musst zunдchst Wasiliews Leiche finden. Das ist die einzige Chance, genaue Informationen ьber die Position des Labors zu bekommen. Der Leichnam deines Kollegen, Ghost, mьsste sich ebenfalls irgendwo dort befinden. WeiЯt du, es scheint mir, dass er viel mehr ьber X16 wusste, als er zugeben wollte. Wenn er irgendwie ьberlebt haben sollte ... Na ja, das fьhrt natьrlich zu nichts, an dieser Hoffnung festzuhalten.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41114">
+		<text>In Ordnung, ich werde es versuchen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51">
+		<text>Warum ist er gestorben? Du solltest ihn doch beschьtzen!</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511">
+		<text>Semenow ist von den Zombies erschossen worden ... Ich konnte nichts dagegen unternehmen. Es waren einfach zu viele.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_5111">
+		<text>Oh Mann, wie konnte das passieren? Wie konnte das nur passieren? Verdammt, es lдuft mal wieder alles falsch. Jetzt brauchen wir mehr Mдnner. Dabei haben wir schon genug Probleme ... Verdammt ...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51111">
+		<text>Hцr mal ... Semenow ist erledigt, aber ich lebe noch. Gib mir den Prototyp. Ich werde mich ins X16 durchkдmpfen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511111">
+		<text>Hier ist ein Prototyp. Sei vorsichtig, er ist nicht richtig justiert, aber das ist deine Schuld, schlieЯlich konntest du unseren Kollegen nicht beschьtzen. Das Gerдt bietet dir nicht den maximalen Schutz, aber es wird die Emission abschwдchen. Du musst dich also mit der Suche nach der Quelle beeilen, Stalker.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_5111111">
+		<text>Wie kommt man ins Labor X16 hinein? Wo genau befindet sich der Eingang?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511111111">
+		<text>Wasiliew hat an der Sache mit dem Labor gearbeitet. Vor einer Woche haben er und ein Stalker namens Ghost versucht, dort einzudringen. Ein paar Stunden spдter haben wir ein starkes Beben gespьrt, und eine weitere Stunde spдter haben wir ein Signal von Wasiliew empfangen. Es kam aus den Sьmpfen, doch das Signal brach ab. Anscheinend ist Wasiliew gestorben. Versuch, seine Leiche zu finden. Er hatte die genauen Informationen ьber das Labor bei sich und wie man dort hinein gelangt. Vielleicht hat er sogar Informationen darьber, wie man die Quelle der Emission deaktiviert. Ich habe dir alle Daten hochgeladen, die wir darьber haben.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51112">
+		<text>Дhm ... Es wдre sehr interessant, einen Blick auf diese Dokumente zu werden. Du meinst also, dass Wasiliew sie hat?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51113">
+		<text>Vielleicht. Auf jeden Fall musst du zunдchst Wasiliews Leiche finden. Das ist die einzige Chance, genaue Informationen ьber die Position des Labors zu bekommen. Der Leichnam deines Kollegen, Ghost, mьsste sich ebenfalls irgendwo dort befinden. WeiЯt du, es scheint mir, dass er viel mehr ьber X16 wusste, als er zugeben wollte. Wenn er irgendwie ьberlebt haben sollte ... Na ja, das fьhrt natьrlich zu nichts, an dieser Hoffnung festzuhalten.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51114">
+		<text>In Ordnung, ich werde es versuchen.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_61">
+		<text>Ja, Gezeichneter?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_71">
+		<text>Ja, Gezeichneter?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_81">
+		<text>Zu schade, dass Kruglow tot ist ... Leider kann ihn nichts zurьckbringen. Es ist дuЯerst wichtig, dass du uns die Messdaten bringst. Hast du sie?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_811">
+		<text>Ja. Hier.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_8111">
+		<text>In Ordnung, ich werde eben den Prototyp justieren. Warte hier.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_81111">
+		<text>Verstanden.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_812">
+		<text>Nein.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_8121">
+		<text>Dann hole sie, und zwar schnell! Ich kann den Prototypen ohne die Daten nicht richtig kalibireren.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_91">
+		<text>Du hast hervorragende Arbeit geleistet. Wenn die Messungen korrekt sind, sollte dir der Prototyp maximalen Schutz vor der Emission gewдhren.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_911">
+		<text>Kannst du dich etwas klarer ausdrьcken?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9111">
+		<text>Stalker, jetzt wirst du in der Lage sein, in das Labor einzudringen, aber wenn du den Emitter nicht ausschaltest, wirst du nicht lange durchhalten, auch nicht mit dem Schutz vor der PSI-Einwirkung. Wir haben den ungefдhren Ort des Emitters ermittelt, irgendwo in der unterirdischen Einrichtung. Ich habe eine Markierung auf deiner Karte gesetzt.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9112">
+		<text>Wie kommt man ins Labor X16 hinein? Wo genau befindet sich der Eingang?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9113">
+		<text>Wasiliew hat an der Sache mit dem Labor gearbeitet. Vor einer Woche haben er und ein Stalker namens Ghost versucht, dort einzudringen. Ein paar Stunden spдter haben wir ein starkes Beben gespьrt, und eine weitere Stunde spдter haben wir ein Signal von Wasiliew empfangen. Es kam aus den Sьmpfen, doch das Signal brach ab. Anscheinend ist Wasiliew gestorben. Versuch, seine Leiche zu finden. Er hatte die genauen Informationen ьber das Labor bei sich und wie man dort hinein gelangt. Vielleicht hat er sogar Informationen darьber, wie man die Quelle der Emission deaktiviert. Ich habe dir alle Daten hochgeladen, die wir darьber haben.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9114">
+		<text>Дhm ... Es wдre sehr interessant, einen Blick auf diese Dokumente zu werden. Du meinst also, dass Wasiliew sie hat?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9115">
+		<text>Vielleicht. Auf jeden Fall musst du zunдchst Wasiliews Leiche finden. Das ist die einzige Chance, genaue Informationen ьber die Position des Labors zu bekommen. Der Leichnam deines Kollegen, Ghost, mьsste sich ebenfalls irgendwo dort befinden. WeiЯt du, es scheint mir, dass er viel mehr ьber X16 wusste, als er zugeben wollte. Wenn er irgendwie ьberlebt haben sollte ... Na ja, das fьhrt natьrlich zu nichts, an dieser Hoffnung festzuhalten.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9116">
+		<text>In Ordnung, ich werde es versuchen.</text>
+	</string>
+	<string id="yantar_help_scientist_101">
+		<text>Wir haben keine Zeit mehr ...</text>
+	</string>
+	<string id="yantar_help_scientist_11">
+		<text>Ja, Gezeichneter?</text>
+	</string>
+	<string id="yantar_help_scientist_111">
+		<text>Der Professor hat mich gebeten, einen kleinen Ausflug zum Messpunkt zu machen.</text>
+	</string>
+	<string id="yantar_help_scientist_1111">
+		<text>Jetzt kommen wir zur Sache! Wir sollten sofort aufbrechen. Es wдre nutzlos, alleine dorthin zu gehen, aber mit dir ist das etwas anderes ... Ich denke, wir werden das schnell erledigen kцnnen - Achte nur darauf, den Leichen nicht zu nahe zu kommen. Bist du bereit?</text>
+	</string>
+	<string id="yantar_help_scientist_11111">
+		<text>Ja.</text>
+	</string>
+	<string id="yantar_help_scientist_111111">
+		<text>Ich sag dir was: Warum gehst du nicht vor? Im Gegensatz zu mir hast du jede Menge Erfahrung. Und diese Kadaver fangen schon wieder an sich zu bewegen.</text>
+	</string>
+	<string id="yantar_help_scientist_1111111">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_help_scientist_21">
+		<text>Mann, der Gezeichnete hцchstpersцnlich! Endlich schaffst du's mal in unsere Gegend. Rede doch mal mit dem Professor. Er wollte dir noch fьr meine Rettung danken.</text>
+	</string>
+	<string id="yantar_help_scientist_31">
+		<text>Spдter, spдter!</text>
+	</string>
+	<string id="yantar_help_scientist_41">
+		<text>He, Gezeichneter! Wie lдuft es?</text>
+	</string>
+	<string id="yantar_help_scientist_51">
+		<text>Ja, Gezeichneter?</text>
+	</string>
+	<string id="yantar_help_scientist_511">
+		<text>Der Professor hat mich gebeten, einen kleinen Ausflug zum Messpunkt zu machen.</text>
+	</string>
+	<string id="yantar_help_scientist_512">
+		<text>Jetzt kommen wir zur Sache! Wir sollten sofort aufbrechen. Es wдre nutzlos, alleine dorthin zu gehen, aber mit dir ist das etwas anderes ... Ich denke, wir werden das schnell erledigen kцnnen - Achte nur darauf, den Leichen nicht zu nahe zu kommen. Bist du bereit?</text>
+	</string>
+	<string id="yantar_help_scientist_513">
+		<text>Ja.</text>
+	</string>
+	<string id="yantar_help_scientist_514">
+		<text>WeiЯt du was? Warum gehst du nicht vor? Du hast viel Erfahrung, ich nicht. Und diese Leichen scheinen sich wieder zu bewegen.</text>
+	</string>
+	<string id="yantar_help_scientist_515">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="yantar_help_scientist_61">
+		<text>Tut mir Leid, im Moment habe ich dafьr keine Zeit.</text>
+	</string>
+	<string id="yantar_help_scientist_71">
+		<text>He, Gezeichneter! Wie lдuft es denn so?</text>
+	</string>
+	<string id="yantar_help_scientist_81">
+		<text>Warte einen Moment ... Wir mьssen uns erst noch zu Ende unterhalten.</text>
+	</string>
+	<string id="yantar_help_scientist_91">
+		<text>Moment! Ich bin mit den Messungen noch nicht fertig!</text>
+	</string>
+	<string id="yantar_wounded_scientist_11">
+		<text>Uah! Autsch ... Aaah!</text>
+	</string>
+	<string id="yantar_wounded_scientist_111">
+		<text>Du lebst? Komm, steh auf ... Steh langsam auf. Es ist vorbei. Wir haben das jetzt hinter uns.</text>
+	</string>
+	<string id="yantar_wounded_scientist_21">
+		<text>He, Gezeichneter. Wie geht es dir?</text>
+	</string>
+	<string id="yantar_wounded_scientist_211">
+		<text>Fertig! Pack die Kamera ein, es wird Zeit, dass wir gehen!</text>
+	</string>
+	<string id="yantar_wounded_scientist_31">
+		<text>He, Gezeichneter! Wie lдuft es denn so?</text>
+	</string>
+</string_table>

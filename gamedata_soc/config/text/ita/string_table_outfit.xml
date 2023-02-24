@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bandit_outfit_description">
+		<text>Tenuta tradizionale da bandito: una giacca di pelle con inserti in kevlar. Fornisce una protezione decisamente carente in un ambiente pericoloso come la Zona.</text>
+	</string>
+	<string id="bandit_outfit_description_m">
+		<text>Corazza comune da bandito, poco resistente, con placche di maglia cucite sul rovescio. Puт realizzarla praticamente chiunque, ma ben pochi hanno abbastanza pazienza per farlo davvero.</text>
+	</string>
+	<string id="bandit_outfit_name">
+		<text>Giacca da bandito</text>
+	</string>
+	<string id="bandit_outfit_name_m">
+		<text>Giacca di maglia</text>
+	</string>
+	<string id="dolg_outfit_description">
+		<text>Prodotto da uno degli istituti di ricerca nella difesa di Kiev e commissionato dalla fazione dei Duty. И semplice e affidabile come il modello PSZ-9 standard, ma grazie ai nuovi materiali assicura una buona protezione da vari impatti dannosi, compresi i colpi di arma da fuoco. Il giubbotto richiede ancora qualche intervento, come l'aggiunta di un sistema di protezione del sistema respiratorio.</text>
+	</string>
+	<string id="dolg_outfit_description_m1">
+		<text>Tenuta corazzata dei Duty, con parametri potenziati nella protezione da morsi e tagli.</text>
+	</string>
+	<string id="dolg_outfit_name">
+		<text>Corazza Duty PSZ-9d</text>
+	</string>
+	<string id="dolg_outfit_name_m1">
+		<text>PSZ-9d da cacciatore</text>
+	</string>
+	<string id="dolg_scientific_outfit_description">
+		<text>Una splendida tuta protettiva per la Zona. Apprezzata dagli stalker perchй combina eccellenti qualitа anti-anomalia e anti-proiettile. Comprende la tuta PSZ-9d, un sistema di respirazione a circuito chiuso e un sistema integrato di soppressione dei campi anomali. Fornisce protezione di qualitа contro schegge e proiettili. </text>
+	</string>
+	<string id="dolg_scientific_outfit_name">
+		<text>PSZ-9Md Universal Protection</text>
+	</string>
+	<string id="ecolog_outfit_description">
+		<text>Una tuta a protezione chimica SSP-99 progettata specificamente per affrontare la Zona. Viene usata durante spedizioni a carattere scientifico e dagli eco-stalker che collaborano con le spedizioni. Comprende un sistema integrato di filtraggio e di condizionamento dell'aria. Resiste al calore e all'elettricitа, fornisce una discreta protezione dalle radiazioni e dalle anomalie biologiche. Resiste in presenza di agenti chimici aggressivi nell'ambiente. Non и progettata per il combattimento, quindi non protegge da proiettili o schegge.</text>
+	</string>
+	<string id="ecolog_outfit_name">
+		<text>SSP-99 ambientale</text>
+	</string>
+	<string id="exo_outfit_description">
+		<text>Un prototipo di esoscheletro militare. Non и mai entrato realmente in produzione, a causa dell'elevatissimo costo e di alcuni difetti di produzione. Tuttavia и stato prodotto in piccoli lotti, in alcune fabbrichette abusive, fuori dell'Ucraina. Questo и un esoscheletro di terza generazione. I difetti del progetto che ne limitavano la mobilitа sono stati eliminati e l'armatura и stata rinforzata. Fornisce un'ottima protezione contro schegge e proiettili. Tuttavia la protezione contro le anomalie и limitata.</text>
+	</string>
+	<string id="exo_outfit_description_m1">
+		<text>Dispositivo base per la visione notturna, sostituito da un modello piщ moderno, con filtro digitale del segnale inviato.</text>
+	</string>
+	<string id="exo_outfit_name">
+		<text>Esoscheletro</text>
+	</string>
+	<string id="killer_outfit_description">
+		<text>Una tuta da stalker della fazione dei mercenari. La sua struttura si ispira a quella usata dalle forze speciali dei paesi avanzati. Grazie allo speciale trattamento del tessuto, la corazza и piщ stabile durante il movimento delle piastre di cui и composta. Offre una protezione leggermente superiore alle tute antiproiettile militari PSZ-7.</text>
+	</string>
+	<string id="killer_outfit_description_m1">
+		<text>Nel rivestimento della giacca и inserita una maglia metallica che offre maggiore protezione contro i colpi delle armi da fuoco e i morsi dei mostri. Comprende anche un visore notturno portatile.</text>
+	</string>
+	<string id="killer_outfit_name">
+		<text>Tuta da mercenario</text>
+	</string>
+	<string id="killer_outfit_name_m1">
+		<text>Tuta rinforzata</text>
+	</string>
+	<string id="military_outfit_description">
+		<text>La tuta antiproiettile militare Skat-9M и stata progettata per le operazioni di assalto nelle zone di attivitа anomala. Comprende una tuta antiproiettile pesante militare PSZ-12p, una tuta integrata di compensazione e un elmetto Sphere-12M. Offre protezione totale da proiettili e schegge senza ostacolare i movimenti del soldato. Dispone anche di un equilibrato sistema di protezione dalle anomalie.</text>
+	</string>
+	<string id="military_outfit_name">
+		<text>Tuta dell'esercito</text>
+	</string>
+	<string id="monolit_outfit_description">
+		<text>Tuta da stalker della fazione dei Monolith. Il produttore и sconosciuto. Le sue proprietа difensive sono leggermente inferiori a quelle del giubbotto antiproiettile militare PSZ-9a. La sua struttura ricorda quella della tuta piщ diffusa fra gli stalker neutrali, che comprende un giubbotto antiproiettile e una tuta antiradiazioni. Offre una buona protezione dalle armi da fuoco. Non essendo presente un sistema di filtraggio dell'aria, il livello di protezione dalle anomalie и basso.</text>
+	</string>
+	<string id="monolit_outfit_name">
+		<text>Tuta dei Monolith</text>
+	</string>
+	<string id="novice_outfit_description_m">
+		<text>Hanno preso questa giacca dal corpo di uno stalker ucciso dall'anomalia Frullato. Essendo rimasta molto tempo al suo interno, la giacca ha acquisito la capacitа di accelerare il metabolismo.</text>
+	</string>
+	<string id="novice_outfit_name_m">
+		<text>Anomalia scorticante</text>
+	</string>
+	<string id="outfit_soldier_description">
+		<text>Una giacca spessa come tante. Aumenta leggermente la protezione da proiettili e schegge. Non difende dalle anomalie e da altri effetti.</text>
+	</string>
+	<string id="outfit_soldier_name">
+		<text>Giacca di pelle</text>
+	</string>
+	<string id="protection_outfit_description">
+		<text>Una tuta di alta qualitа SSP-99 modificata. Fornisce una protezione avanzata dai proiettili e dalle schegge. И stata progettata per le guardie delle spedizioni scientifiche. Protegge bene anche dalle radiazioni e dalle anomalie biologiche. И resistente agli ambienti chimicamente aggressivi e ad altri effetti pericolosi per il corpo umano.</text>
+	</string>
+	<string id="protection_outfit_name">
+		<text>Tuta SSP-99M</text>
+	</string>
+	<string id="scientific_outfit_description">
+		<text>La tuta и stata progettata da uno degli istituti di ricerca della difesa a Kiev, e rappresenta un'ottima alternativa a quelle fatte a mano dagli stalker. И un'eccellente combinazione di giubbotto antiproiettile, respiratore a ciclo chiuso e soppressore integrato di campi anomali. И realizzata con i migliori materiali a disposizione ed и un'ottima scelta. L'unico svantaggio и il prezzo.</text>
+	</string>
+	<string id="scientific_outfit_name">
+		<text>Tuta SEVA</text>
+	</string>
+	<string id="specnaz_outfit_description_m1">
+		<text>Il tessuto della tuta и imbevuto di una lozione streptozoidale che accelera la rimarginazione delle ferite.</text>
+	</string>
+	<string id="specnaz_outfit_name_m1">
+		<text>Berill curativa</text>
+	</string>
+	<string id="specops_outfit_description">
+		<text>Una tuta Berill-5M delle forze speciali, modificata per l'ambiente della Zona. Comprende un giubbotto antiproiettile PSZ-9a con rivestimento di berillio e un elmetto Sphere-08. И progettata per operazioni di assalto in zone con elevato livello di radiazioni. Il grado di protezione dalle anomalie и basso.</text>
+	</string>
+	<string id="specops_outfit_name">
+		<text>Tuta cor. Berill-5M</text>
+	</string>
+	<string id="stalker_outfit_description">
+		<text>Tuta da stalker prodotta da "artigiani popolari". Comprende un giubbotto antiproiettile leggero militare e una tuta di tessuto gommato. И rinforzata con placche di kevlar e offre una buona protezione dalle armi da fuoco di piccolo calibro. Nel complesso и assai inadeguata alle incursioni in profonditа e alle operazioni impegnative nella Zona.</text>
+	</string>
+	<string id="stalker_outfit_description_m1">
+		<text>Corre voce che lo stalker detto Fantasma non porti mai kit medici con sй. Le sue ferite guariscono da sole come quelle dei cani. Dicono che abbia una tuta particolare, prelevata da un'anomalia.</text>
+	</string>
+	<string id="stalker_outfit_description_m2">
+		<text>Il proprietario precedente era un turista che affrontava spesso escursioni al limite della resistenza umana. Sapeva distribuire correttamente il peso trasportato e quali erano gli oggetti piщ importanti. Le tasche della giacca e lo zaino scelto con cura permettono di trasportare un carico notevole.</text>
+	</string>
+	<string id="stalker_outfit_name">
+		<text>Tuta da stalker</text>
+	</string>
+	<string id="stalker_outfit_name_m1">
+		<text>Tuta del Fantasma</text>
+	</string>
+	<string id="stalker_outfit_name_m2">
+		<text>Tuta del turista</text>
+	</string>
+	<string id="svoboda_heavy_outfit_description">
+		<text>Tuta da stalker rinforzata prodotta dai fabbricanti d'armi della fazione dei Freedom. Consiste in un giubbotto militare antiproiettile medio con elementi di rinforzo in zirconio che offrono una buona protezione contro pallottole di fucile e schegge dalla media e lunga distanza. Il materiale и composto da due strati, uno in pelle trattata e uno in tessuto con trama d'amianto. La tuta assicura un buon livello di protezione contro radiazioni e varie anomalie deboli.</text>
+	</string>
+	<string id="svoboda_heavy_outfit_name">
+		<text>Tuta Custode della Lib.</text>
+	</string>
+	<string id="svoboda_light_outfit_description">
+		<text>Tuta da stalker leggera prodotta dai fabbricanti d'armi della fazione dei Freedom. Consiste in un giubbotto militare antiproiettile leggero con rinforzi in kevlar. Protegge dalle armi di piccolo calibro. Il tessuto и trattato con un composto speciale che aumenta la resistenza agli effetti delle anomalie.</text>
+	</string>
+	<string id="svoboda_light_outfit_name">
+		<text>Tuta Vento di Lib.</text>
+	</string>
+	<string id="mp_exo_outfit_description">
+		<text>L'esoscheletro protegge perfettamente dalle pallottole e dalle schegge, perт diminuisce la capacitа di movimento. И vulnerabile ai proiettili perforanti.</text>
+	</string>
+	<string id="mp_exo_outfit_name">
+		<text>Esoscheletro PNB-4UZ</text>
+	</string>
+	<string id="mp_military_outfit_description">
+		<text>Tuta antiproiettile dell'esercito, progettata per operazioni d'assalto. Fornisce un'ottima protezione contro le pallottole e le schegge, senza pregiudicare la capacitа di movimento. Vulnerabile ai proiettili perforanti.</text>
+	</string>
+	<string id="mp_military_outfit_name">
+		<text>Tuta antiproiettile dell'esercito.</text>
+	</string>
+	<string id="mp_scientific_outfit_description">
+		<text>Questa tuta speciale и progettata per condurre ricerche nella Zona. И dotata di un sistema di respirazione a ciclo chiuso e un sistema integrato di annullamento dei campi di emissione anomala, grazie al quale fornisce un'ottima protezione contro le anomalie. Molto vulnerabile a causa della scarsa capacitа protettiva. И equipaggiata con un contenitore per il trasporto dei reperti.</text>
+	</string>
+	<string id="mp_scientific_outfit_name">
+		<text>Tuta scientifica</text>
+	</string>
+</string_table>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="speech_attack">
+		<text>Atak!</text>
+	</string>
+	<string id="speech_covermeartifact">
+		<text>Idк po artefakt! Osіaniaj mnie.</text>
+	</string>
+	<string id="speech_followme">
+		<text>Za mn№!</text>
+	</string>
+	<string id="speech_guardartifact">
+		<text>Pilnuj artefaktu. Jeszcze nie atakuj!</text>
+	</string>
+	<string id="speech_holdingpos">
+		<text>Trzymam pozycjк</text>
+	</string>
+	<string id="speech_holdpos">
+		<text>Utrzymaj pozycjк!</text>
+	</string>
+	<string id="speech_icoverartifact">
+		<text>Idџ po artefakt! Bкdк ciк osіaniaж.</text>
+	</string>
+	<string id="speech_needhelp">
+		<text>Potrzebna pomoc</text>
+	</string>
+	<string id="speech_needmoney">
+		<text>Nie ma forsy, kup sprzкt</text>
+	</string>
+	<string id="speech_no">
+		<text>Nie</text>
+	</string>
+	<string id="speech_noenemy">
+		<text>Pusto</text>
+	</string>
+	<string id="speech_report">
+		<text>Informuj o sytuacji!</text>
+	</string>
+	<string id="speech_retreat">
+		<text>Wycofujemy siк!</text>
+	</string>
+	<string id="speech_roger">
+		<text>Przyj№іem</text>
+	</string>
+	<string id="speech_silence">
+		<text>Uciszyж siк!</text>
+	</string>
+	<string id="speech_sticktogether">
+		<text>Trzymaж siк blisko</text>
+	</string>
+	<string id="speech_takeartifact">
+		<text>Idџ po artefakt!</text>
+	</string>
+</string_table>

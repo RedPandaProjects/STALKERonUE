@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="mil_bodyguard_dialog_0">
+		<text>їQuй quieres?</text>
+	</string>
+	<string id="mil_bodyguard_dialog_1">
+		<text>Estoy buscando al lнder de Libertad. Tengo informaciуn muy importante para йl.</text>
+	</string>
+	<string id="mil_bodyguard_dialog_2">
+		<text>їAh sн? їY quй informaciуn tan importante es esa?</text>
+	</string>
+	<string id="mil_bodyguard_dialog_5">
+		<text>Me he cruzado con un grupo de miembros de Deber cerca de vuestra base.</text>
+	</string>
+	<string id="mil_bodyguard_dialog_6">
+		<text>Ah... Parece que Deber intenta equilibrar las fuerzas de nuevo... Vale, puedes entrar, pero mбs vale que guardes eso. No se te ocurra montar un escбndalo aquн o saldrбs con los pies por delante.</text>
+	</string>
+	<string id="mil_bodyguard_dialog_7">
+		<text>Vale.</text>
+	</string>
+	<string id="mil_cook_common1_0">
+		<text>Buenas...</text>
+	</string>
+	<string id="mil_cook_common1_101">
+		<text>ЎAjб!</text>
+	</string>
+	<string id="mil_cook_common1_102">
+		<text>їQuй quieres decir?</text>
+	</string>
+	<string id="mil_cook_common1_103">
+		<text>Seguro.</text>
+	</string>
+	<string id="mil_cook_common1_104">
+		<text>їQuй tiene tanta gracia?</text>
+	</string>
+	<string id="mil_cook_common1_105">
+		<text>ЎEh, colega! ЎMe alegro de verte!</text>
+	</string>
+	<string id="mil_cook_common1_106">
+		<text>Hola.</text>
+	</string>
+	<string id="mil_cook_common1_107">
+		<text>ЎCuбnto tiempo sin verte!</text>
+	</string>
+	<string id="mil_cook_common1_108">
+		<text>їNos conocemos?</text>
+	</string>
+	<string id="mil_cook_common1_109">
+		<text>Errrr.... ЎSн! Je, je...</text>
+	</string>
+	<string id="mil_cook_common1_110">
+		<text>Si te soy sincero, no me acuerdo de ti.</text>
+	</string>
+	<string id="mil_cook_common1_111">
+		<text>Humm... Bueno, vale, no pasa nada.</text>
+	</string>
+	<string id="mil_cook_common2_0">
+		<text>їDуnde estamos, por cierto?</text>
+	</string>
+	<string id="mil_cook_common2_201">
+		<text>Este sitio... No estб mal... Un sitio normal, ya sabes... Gente normal ganбndose la vida, je, je...</text>
+	</string>
+	<string id="mil_cook_common2_202">
+		<text>їY quй?</text>
+	</string>
+	<string id="mil_cook_common2_203">
+		<text>Pufff... ЎPreguntas cosas muy raras, Sr. Forastero!</text>
+	</string>
+	<string id="mil_cook_common2_204">
+		<text>їY por quй no vas al grano?</text>
+	</string>
+	<string id="mil_cook_common2_205">
+		<text>ЎEh, tranquilo! Espera... Bueno... ЎNo es mбs que un lugar normal! Muy tranquilo. Todo correcto, siempre. Eso... Relбjate, їde acuerdo? No te pongas nervioso...</text>
+	</string>
+	<string id="mil_cook_common3_0">
+		<text>їY tъ quiйn eres?</text>
+	</string>
+	<string id="mil_cook_common3_301">
+		<text>їYo?</text>
+	</string>
+	<string id="mil_cook_common3_302">
+		<text>Eso es. Tъ. No yo.</text>
+	</string>
+	<string id="mil_cook_common3_303">
+		<text>ЎJa, ja, esa sн que es buena! Yo... їQuй pasa conmigo? Yo, bueno... Bien, yo... yo hago comida... Eso es. ЎSoy cocinero! ЎEl maestro de las chuletas y las especias! Ya sabes, perejil, eneldo, hierbas, ese tipo de cosas... Tambiйn pan... їVale?</text>
+	</string>
+	<string id="mil_cook_common3_304">
+		<text>Entendido.</text>
+	</string>
+	<string id="mil_cook_common3_305">
+		<text>Tambiйn conservas, leche condensada con azъcar... jamуn enlatado... asado de ternera con salsa de tomate... Sн...</text>
+	</string>
+	<string id="mil_cook_common3_306">
+		<text>Ya lo pillo.</text>
+	</string>
+	<string id="mil_cook_common3_307">
+		<text>Barras de pan... ketchup... huevos... pan negro... queso. їQuй mбs? ЎSalchichas, tambiйn! ЎY embutido! Aves de corral... muertas, no vivas.</text>
+	</string>
+	<string id="mil_cook_common3_308">
+		<text>ЎVale, ya me he enterado! Al menos dime cуmo te llamas.</text>
+	</string>
+	<string id="mil_cook_common3_309">
+		<text>їEh?... ЎOh! Me llamo Slavik... es sуlo una etiqueta... ЎNo! ЎEs un delantal! Tengo este delantal blanco... Oye, mira... Siйntate, no te pongas a tiro... Porque ese francotirador, sabes... Ўte tiene en el punto de mira! .. Son, ya sabes... Son como...</text>
+	</string>
+	<string id="mil_cook_common4_0">
+		<text>їHay un pueblo cerca?</text>
+	</string>
+	<string id="mil_cook_common4_401">
+		<text>Bueno...</text>
+	</string>
+	<string id="mil_cook_common4_402">
+		<text>Bueno, їquй?</text>
+	</string>
+	<string id="mil_cook_common4_403">
+		<text>їEh?</text>
+	</string>
+	<string id="mil_cook_common4_404">
+		<text>Un pueblo.</text>
+	</string>
+	<string id="mil_cook_common4_405">
+		<text>Ahh... Ahн hay algo. Comida... leche condensada para uno...</text>
+	</string>
+	<string id="mil_cook_common4_406">
+		<text>їCуmo puedo llegar hasta allн?</text>
+	</string>
+	<string id="mil_cook_common4_407">
+		<text>їEh? Espera. Deja que piense... No, escucha, їde verdad necesitas todo eso? Relбjate... Siйntate... Sentйmonos y fumemos un cigarrillo, їte parece?</text>
+	</string>
+	<string id="mil_cook_common4_408">
+		<text>Tengo que llegar al pueblo.</text>
+	</string>
+	<string id="mil_cook_common4_409">
+		<text>De acuerdo... pero siйntate y echemos un pitillo. Iremos despuйs... Yo te llevarй. No hay problema.</text>
+	</string>
+	<string id="mil_cook_common4_410">
+		<text>No hace falta que te molestes. Simplemente dime cуmo llegar hasta allн.</text>
+	</string>
+	<string id="mil_cook_common4_411">
+		<text>Claro... ЎEh, me estбs presionando de lo lindo! Iremos juntos, en un segundo. Primero nos sentaremos, їvale? Y...</text>
+	</string>
+	<string id="mil_cook_common5_0">
+		<text>Escucha, їsabrнas dуnde puedo conseguir material?</text>
+	</string>
+	<string id="mil_cook_common5_501">
+		<text>їMaterial? ЎEs como si me hablaras en clave, colega!</text>
+	</string>
+	<string id="mil_cook_common5_502">
+		<text>Material. Armas. Artefactos.</text>
+	</string>
+	<string id="mil_cook_common5_503">
+		<text>Armas... no... Mi cuchillo... їQuieres mi cuchillo? їNo? Ah, vale... Artefactos. їPara quй narices los quieres? Tranquilo. Vamos, siйntate. Enciende uno conmigo. Hablemos un poco... sobre artefactos...</text>
+	</string>
+	<string id="mil_cook_common5_504">
+		<text>їDуnde puedo encontrar artefactos en esta zona?</text>
+	</string>
+	<string id="mil_cook_common5_505">
+		<text>ЎEso es fбcil! Artefactos... ЎEstamos de artefactos hasta arriba! їConoces el pantano radioactivo? їNo? No importa. Es allн. Los artefactos, quiero decir. Estбn allн. Deja de ir de un lado a otro. Tranquilo. їEh? Artefactos... je, je, je... artefactos, artefactitos...</text>
+	</string>
+	<string id="mil_cook_common6_0">
+		<text>Vale. Cuнdate.</text>
+	</string>
+	<string id="mil_cook_common6_601">
+		<text>Claro... Pero siйntate, ya que estбs aquн.</text>
+	</string>
+	<string id="mil_cook_common6_602">
+		<text>Me marcho.</text>
+	</string>
+	<string id="mil_cook_common6_603">
+		<text>їEh? Claro... Relбjate, їquieres? Cerrarй la puerta, me marcho... ta-da-da-da...</text>
+	</string>
+	<string id="mil_cook_dialog_0">
+		<text>ЎVenga, siйntate! Pasaremos un buen rato...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_0">
+		<text>Tomemos un trago, їte parece?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_1">
+		<text>ЎClaro, colega! ЎSнrvelo!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_2">
+		<text>Bien, bien... ЎSalud!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_3">
+		<text>ЎSн, eso sн que ha estado bien! Coge la botella... Queda un poco mбs.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_4">
+		<text>їTe apetece otro mбs?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_5">
+		<text>ЎAhhhh... increнble! Una pena que ya se haya acabado la botella. їTienes mбs?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_6">
+		<text>Dйjame ver.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_0">
+		<text>ЎSн, aquн! Sujeta bien el vaso.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_1">
+		<text>Je, je... ЎEso ha estado bien! Una nueva salida de la nada. їTienes un almacйn lleno de botellas o quй?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_2">
+		<text>Tъ, humm... Adelante, bebe. He perdido prбctica ъltimamente.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_3">
+		<text>ЎPor nuestra victoria! Esooo... ЎAhhh, los buenos tiempos, los buenos tiempos!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_4">
+		<text>Sн... Ўpor nuestra victoria!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_5">
+		<text>Venga, venga, tomemos otro... їTienes... o-o-otra, eh?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_6">
+		<text>Dйjame ver...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_0">
+		<text>Vale... Esta serб la ъltima, їeh? Por esta noche ya tengo bastante...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_1">
+		<text>ЎTrae p'aaacaaб...!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_2">
+		<text>Guau... mнrate... їTe has soplado todo eso tъ solo...?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_3">
+		<text>ЎHip! ЎEe-s-oo, colega, es el ccc... ulo! Mmmm... Hhhhhm...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_0">
+		<text>He oнdo rumores de que Libertad tiene un Bulldog 6. Estarнa bien echarle un vistazo a esa preciosidad.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_1">
+		<text>їAdуnde quieres llegar, colega? Quieres que yo... te cuente... їte revele los secretos?... їMe tomas por tonto?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_2">
+		<text>Cбlmate. No sabнa que fuera algo tan serio.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_3">
+		<text>No puedes ir por ahн husmeando nuestras armas, їlo pillas? De todas formas, їquiйn demonios eres? ЎNo te habнa visto antes!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_4">
+		<text>ЎEh, venga! Solo era una pregunta...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_5">
+		<text>ЎSsshhh! Ten cuidado, їvale?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_6">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_0">
+		<text>Yo, humm... ejem... He oнdo que tenйis un Bulldog 6... Lo ъnico que quiero es echarle un vistazo... Simplemente un vistazo... їQuй me dices? Un vistazo muy rбpido...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_1">
+		<text>їQueeeeй?... Tъ, hummm... vete a... Ўvaya! їQuй era? ЎSe me ha olvidado! їQuй me estabas preguntando?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_2">
+		<text>ЎMmm...maldita sea! Lan-za gra-na-das... me gustarнa... Ўverlo!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_3">
+		<text>No... eso no... Todo lo que quieras colega, menos eso... ЎNo puedo hacerlo!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_4">
+		<text>Humm, vale... Yo, humm... ЎNo querнa! Simplemente preguntaba...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_0">
+		<text>ЎHip! Bulldog 6, їeh?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_1">
+		<text>їQ-quй? ЎOh! Bien, es... Ўestб en el pueblo! En realidad tenнamos... dos... ЎPero esos... r-retrasados! Lo perdieron... ЎLo echaron a perder!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_2">
+		<text>їEn serio? Vaya, quй... i-idiotas...</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_100">
+		<text>Hola, colega. Soy miembro de Deber y estamos en una misiуn. їTe gustarнa unirte a nosotros?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1001">
+		<text>No me interesa mucho.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1002">
+		<text>Entonces apбrtate de nuestro camino, colgado.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_101">
+		<text>Me interesa.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_102">
+		<text>Excelente. Detrбs de esa colina se encuentra el caldo de cultivo de esos desgraciados, los "Libres", y mis muchachos y yo vamos a calentarlo de lo lindo. Solo hay un pequeсo problema. La base tiene una ъnica entrada, fuertemente protegida. Habнamos pensado en hacer un agujero en la verja, pero el francotirador de la torre nos lo impedirб. No me gustarнa enviar a mis muchachos para ser pasto de sus balas... Pero a ti seguramente te dejarнa acercarte y no te dispararнa. Si acabas con йl, estaremos en deuda contigo. Ademбs, si todo sale de acuerdo a lo previsto, podrбs coger cualquier objeto de la base, lo que quieras.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_103">
+		<text>Adelante.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_104">
+		<text>Ya te lo he dicho: solo tienes que acabar con el francotirador apostado en la torre, sobre la verja. їQuй me dices?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1041">
+		<text>No, todavнa no estoy listo.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1042">
+		<text>Entonces aparta de nuestro camino.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_105">
+		<text>Lo intentarй.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1051">
+		<text>ЎMagnнfico! En cuanto acabes con йl, empezarбn los fuegos artificiales.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_106">
+		<text>Hay un pequeсo problema. Como la base solo tiene una entrada, fuertemente protegida, pensamos en forzar otra, pero...</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_107">
+		<text>їPero quй?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_108">
+		<text>Enviй a uno de mis chicos por la noche para hacer un agujero en la verja. Pues bien, o su francotirador es muy bueno o no era nuestro dнa, porque mi muchacho cayу. Ahora la dinamita estб junto a la verja, pero no podemos hacerla explotar.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_109">
+		<text>їPor quй?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_110">
+		<text>No quiero enviar a mis muchachos bajo las balas de ese mamуn, pero tъ tendrнas muchas probabilidades de acabar con йl. Seguro que no te dispararб si te descubre. їQuй dices?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_111">
+		<text>їCuбnto puedo ganar?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_112">
+		<text>Ahora empezamos a hablar de negocios. 2.000 de nuestra parte por acabar con el francotirador, mбs una gran cantidad de material en la base. Hay un montуn de cuerpos dentro, te lo aseguro. Asн que puedes ayudarnos y aprovecharte. їQuй te parece?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_120">
+		<text>Hecho.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_121">
+		<text>Buena suerte.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_130">
+		<text>Antes tengo que pensarlo, luego os darй la respuesta.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_131">
+		<text>Te esperaremos. Pero no demasiado.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_200">
+		<text>Gracias por tu ayuda, Marcado. Aquн tienes tu recompensa.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_201">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_300">
+		<text>Tenнamos un trato, їverdad?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_400">
+		<text>Asн que has acabado con el francotirador. Aquн tienes tu merecida recompensa.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_401">
+		<text>Vale.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_402">
+		<text>Йchate a un lado, їquieres? Tenemos que ponernos en marcha...</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_403">
+		<text>Vale.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_411">
+		<text>En otra ocasiуn. </text>
+	</string>
+	<string id="mil_dolg_skull_dialog_412">
+		<text>Como quieras.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_413">
+		<text>Nos vemos.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_420">
+		<text>їPodemos continuar?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_421">
+		<text>їDe quй se trata exactamente?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_450">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_451">
+		<text>Vamos a volar la verja y hacer que comience la fiesta. Veo que eres un buen tirador, quizбs podrнas encargarte de los francotiradores de las torres. Sin esos francotiradores, nos resultarнa mбs fбcil llegar hasta Lukash.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_501">
+		<text>їHas acabado con el francotirador?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_502">
+		<text>Sн.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_503">
+		<text>ЎBuen trabajo! Nos has despejado el camino... Toma esto por las molestias causadas.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_504">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_506">
+		<text>їQuй tengo que hacer?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_507">
+		<text>Charla con los otros francotiradores mientras nos encargamos de esos desgraciados. Veo que estбs preparado para este tipo de trabajo.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_5070">
+		<text>En otra ocasiуn. </text>
+	</string>
+	<string id="mil_dolg_skull_dialog_5071">
+		<text>Claro, como tъ quieras. No te obligarй.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_508">
+		<text>Hecho.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_5080">
+		<text>Asн se hace, magnнfico.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_601">
+		<text>No te interpongas, Marcado.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_602">
+		<text>Vale.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_701">
+		<text>Sigue tu camino.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_702">
+		<text>Vale.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_801">
+		<text>їY ahora quй?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_802">
+		<text>Nada.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_0">
+		<text>Tres desgraciados menos, Ўasн de fбcil! Has llegado justo a tiempo: no nos descubriste y hemos conseguido salir sanos y salvos. Por cierto, nadie tiene que enterarse de esto, їvale?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_1">
+		<text>Me hago cargo.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_2">
+		<text>Perfecto. їEstбs buscando formas de ganar algo de pasta, stalker?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_20">
+		<text>Es difнcil de decir.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_21">
+		<text>їQuй pasa, ya no tienes ganas de vivir?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_22">
+		<text>No.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_3">
+		<text>Algo parecido.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_30">
+		<text>Quizбs.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_4">
+		<text>Entonces sнguenos, habla con nuestro comandante.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_5">
+		<text>їComandante?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_6">
+		<text>Claro. Calavera te lo contarб todo en persona.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_7">
+		<text>Vale.</text>
+	</string>
+	<string id="mil_freedom_commander_1001">
+		<text>ЎQuй pasa, stalker! Has llegado justo a tiempo. ЎNos estamos defendiendo de esos desgraciados de Monolith y la prуxima oleada estб a punto de llegar! ЎLo creas o no, han acabado con nuestro ъltimo francotirador! їNos puedes ayudar? Te pagaremos despuйs del combate, Ўno te arrepentirбs!</text>
+	</string>
+	<string id="mil_freedom_commander_10011">
+		<text>No, no puedo ayudaros.</text>
+	</string>
+	<string id="mil_freedom_commander_10012">
+		<text>Una pena. Vuelve si cambias de idea.</text>
+	</string>
+	<string id="mil_freedom_commander_1002">
+		<text>Lo harй.</text>
+	</string>
+	<string id="mil_freedom_commander_1003">
+		<text>ЎBien! Ve a la torre, encontrarбs un Dragunov y mucha municiуn. Acaba con ellos desde arriba y no bajes, corres el riesgo de que nuestros muchachos te alcancen. їEstб clara la misiуn?</text>
+	</string>
+	<string id="mil_freedom_commander_1004">
+		<text>Clara como el agua.</text>
+	</string>
+	<string id="mil_freedom_commander_1005">
+		<text>Como deberнa ser. Espero poder hablar contigo por la maсana. Ah, y no te alejes demasiado... Podrнa pensar que has decidido huir. Y eso significarнa lo que tъ ya sabes, Ўasн que no lo olvides! Ahora, Ўa tu puesto!</text>
+	</string>
+	<string id="mil_freedom_commander_1007">
+		<text>Eso es. De acuerdo, manos a la obra. Un grupo de Monolith intenta pasar por aquн. Eso significa que las cosas se van a poner feas.</text>
+	</string>
+	<string id="mil_freedom_commander_1008">
+		<text>Entendido.</text>
+	</string>
+	<string id="mil_freedom_commander_1009">
+		<text>Tienes razуn. Espero que no sean demasiados...</text>
+	</string>
+	<string id="mil_freedom_commander_1010">
+		<text>їDуnde estб mi puesto?</text>
+	</string>
+	<string id="mil_freedom_commander_1011">
+		<text>Ve a la torre, encontrarбs un Dragunov y algo de municiуn. Podrбs acabar con ellos desde arriba, pero no bajes, ten cuidado con nuestros tiradores. їEstб clara la misiуn?</text>
+	</string>
+	<string id="mil_freedom_commander_1012">
+		<text>Sн.</text>
+	</string>
+	<string id="mil_freedom_commander_2001">
+		<text>ЎEscoge tu posiciуn, despuйs serб demasiado tarde!</text>
+	</string>
+	<string id="mil_freedom_commander_3001">
+		<text>Parece que hemos acabado con todos ellos. Creo que por hoy es suficiente. ЎGracias por tu ayuda! Toma, aquн tienes, un poco de dinero para alegrarte el dнa.</text>
+	</string>
+	<string id="mil_freedom_commander_3002">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_freedom_commander_3003">
+		<text>ЎBuena suerte, Marcado!</text>
+	</string>
+	<string id="mil_freedom_commander_4001">
+		<text>ЎEh, Marcado! їTe ha enviado Lukash?</text>
+	</string>
+	<string id="mil_freedom_commander_4002">
+		<text>Sн. Me pidiу que os ayudara.</text>
+	</string>
+	<string id="mil_freedom_commander_4003">
+		<text>Has llegado justo a tiempo. ЎEstamos rechazando a esos desgraciados de Monolith, y la prуxima oleada estб ya casi aquн! ЎLo creas o no, han acabado con nuestro ъltimo francotirador! їNos puedes ayudar? Te pagaremos despuйs del combate, Ўno te arrepentirбs!</text>
+	</string>
+	<string id="mil_freedom_commander_5001">
+		<text>Parece que hemos acabado con todos ellos. Creo que por hoy es suficiente. ЎGracias por tu ayuda! Toma, aquн tienes, un poco de dinero para alegrarte el dнa.</text>
+	</string>
+	<string id="mil_freedom_commander_5002">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_freedom_commander_5003">
+		<text>Buena suerte, Marcado.</text>
+	</string>
+	<string id="mil_freedom_commander_common2_0">
+		<text>їQuй lugar es este?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_1">
+		<text>Lo llamamos la Barrera... y eso es exactamente lo que es. Es mбs o menos la ъltima avanzadilla normal a este lado del centro de la Zona. Es una especie de zona de contenciуn, ya sabes, entre la gente y el Territorio salvaje.</text>
+	</string>
+	<string id="mil_freedom_commander_common2_2">
+		<text>їQuй hay mбs allб?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_3">
+		<text>Solo muerte... o servir a Monolith. "ЎOh, Monolith nuestro! En tu nombre, nosotros..." Chorradas... En pocas palabras, nadie necesita ir allн. Esa es la razуn por la que tenemos nuestra base aquн; intentamos evitar que la porquerнa inunde la Zona. Como una especie de caballeros Jedi, je, je. Tambiйn detenemos a los tontos de remate, o al menos intentamos impedirles que se arrastren hasta el centro.</text>
+	</string>
+	<string id="mil_freedom_commander_common2_4">
+		<text>їPor quй hacйis eso?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_5">
+		<text>їQuiйn mбs podrнa hacerlo? їDeber? Son unos fenуmenos a la hora de erradicar monstruos y eliminar stalkers no deseados, Ўpero hay que ver lo que les cuesta hacer algo ъtil de verdad! їLos ves por aquн? їNo? A eso me refiero. Nosotros, en cambio, no pretendemos destruir a las criaturas que viven aquн. Una barrera, una simple barrera, eso deberнa bastar. Siempre que nadie cruce la lнnea...</text>
+	</string>
+	<string id="mil_freedom_commander_common2_6">
+		<text>їY si alguien lo hace?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_7">
+		<text>Puede ocurrir cualquier cosa. Cualquier cosa. No quiero...</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_1000">
+		<text>ЎAlto! El acceso al arsenal estб restringido a los miembros de Libertad.</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2000">
+		<text>Ahora puedes entrar en el arsenal. Tan solo hay un pequeсo problema.</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2001">
+		<text>їQuй problema?</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2002">
+		<text>Tranquilo, no se trata de algo terrible. La cerradura estб bloqueada, eso es todo. Si tienes prisa, pйgale un tiro; ya la cambiarй mбs tarde.</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2003">
+		<text>Ya veo.</text>
+	</string>
+	<string id="mil_hunter_dialog_1">
+		<text>Roсoso me enviу aquн a despejar esto de chupasangres.</text>
+	</string>
+	<string id="mil_hunter_dialog_101">
+		<text>Bueno, stalker, їquй te ha traнdo a este siniestro lugar? Te aconsejo que corras para salvar tu pellejo antes de que sea demasiado tarde.</text>
+	</string>
+	<string id="mil_hunter_dialog_2">
+		<text>Ah, esa es otra historia... ЎSolo el demonio sabe lo que pasa aquн! Dos de nuestros hombres se adentraron en el pueblo y nunca regresaron. ЎY vaya, no estamos dispuestos a morir todavнa! Estamos aquн sentados, discutiendo quй hacer.</text>
+	</string>
+	<string id="mil_hunter_dialog_201">
+		<text>ЎEh, tнo, quй alucine anoche!</text>
+	</string>
+	<string id="mil_hunter_dialog_202">
+		<text>їCуmo?</text>
+	</string>
+	<string id="mil_hunter_dialog_203">
+		<text>Estбbamos aquн sentados sin hacer nada, solo mirando, cuando de repente irrumpes tъ, Ўcompletamente borracho! Y te ibas hacia el pueblo, Ўdirecto a esos chupasangres! Menos mal que estбbamos nosotros ahн para echarte el freno y conseguir que durmieras la mona.</text>
+	</string>
+	<string id="mil_hunter_dialog_204">
+		<text>їY quй hacйis aquн?</text>
+	</string>
+	<string id="mil_hunter_dialog_205">
+		<text>ЎSolo el demonio sabe lo que pasa aquн! Dos de nuestros hombres se adentraron en el pueblo y nunca regresaron. ЎY vaya, no estamos dispuestos a morir todavнa! Estamos aquн sentados, discutiendo quй hacer.</text>
+	</string>
+	<string id="mil_hunter_dialog_3">
+		<text>їViste a los chupasangres?</text>
+	</string>
+	<string id="mil_hunter_dialog_301">
+		<text>їY? їCуmo fue?</text>
+	</string>
+	<string id="mil_hunter_dialog_302">
+		<text>Los erradiquй.</text>
+	</string>
+	<string id="mil_hunter_dialog_303">
+		<text>ЎGuau! ЎTнo, eres la leche! ЎSaliste vivo, asн que la siguiente ronda va por ti!</text>
+	</string>
+	<string id="mil_hunter_dialog_304">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_hunter_dialog_4">
+		<text>No. Nuestros chicos debнan ir al viejo depуsito de agua; probablemente fuera allн donde les interceptaron. Bueno, si hiciste un trato con Roсoso, ve allн a ver quй pasa... Deja una direcciуn, їvale? Escribiremos a tu familia si la cosa sale mal.</text>
+	</string>
+	<string id="mil_hunter_dialog_401">
+		<text>їPor quй andas vagando por ahн como un alma en pena?</text>
+	</string>
+	<string id="mil_hunter_dialog_402">
+		<text>Solo miraba.</text>
+	</string>
+	<string id="mil_hunter_dialog_5">
+		<text>Me parece que eres demasiado amable... Estб bien, irй.</text>
+	</string>
+	<string id="mil_hunter_dialog_501">
+		<text>їQuй te trae por aquн?</text>
+	</string>
+	<string id="mil_hunter_dialog_502">
+		<text>Solo miraba.</text>
+	</string>
+	<string id="mil_hunter_dialog_503">
+		<text>їEs este el mejor lugar que has podido encontrar? Probablemente sea el peor sitio de toda la Zona...</text>
+	</string>
+	<string id="mil_hunter_dialog_504">
+		<text>їQuй tiene de malo este lugar?</text>
+	</string>
+	<string id="mil_hunter_dialog_505">
+		<text>ЎSolo el demonio sabe lo que pasa aquн! Parece como si el pueblo fuera ahora el hogar de un montуn de chupasangres. Dos de nuestros hombres se adentraron en el pueblo y nunca regresaron. ЎY vaya, no estamos dispuestos a morir todavнa! Estamos aquн sentados, discutiendo quй hacer.</text>
+	</string>
+	<string id="mil_hunter_dialog_506">
+		<text>Entonces, їno estбs seguro?</text>
+	</string>
+	<string id="mil_hunter_dialog_507">
+		<text>ЎMuy bien! Si no tienes nada mejor que hacer y no estбs bien de la azotea, te proponemos un paseo por el pueblo. Si despejas la zona de esas criaturas, seguro que Roсoso te soltarб algo de dinero. Deja una direcciуn, їvale? Escribiremos a tu familia si la cosa sale mal.</text>
+	</string>
+	<string id="mil_hunter_dialog_508">
+		<text>Estб bien, irй a ver quй pasa.</text>
+	</string>
+	<string id="mil_hunter_dialog_601">
+		<text>No comprobaste el pueblo, їverdad?</text>
+	</string>
+	<string id="mil_hunter_dialog_602">
+		<text>Sн.</text>
+	</string>
+	<string id="mil_hunter_dialog_603">
+		<text>Dos de nuestros hombres fueron allн y no regresaron. їNo los verнas, por casualidad?</text>
+	</string>
+	<string id="mil_hunter_dialog_604">
+		<text>No, no los vi. Solo vi unos pocos cadбveres por el suelo.</text>
+	</string>
+	<string id="mil_hunter_dialog_605">
+		<text>їViste chupasangres?</text>
+	</string>
+	<string id="mil_hunter_dialog_606">
+		<text>Sн. Puedes ir a verlos tъ mismo, ahora es seguro: los aniquilй a todos.</text>
+	</string>
+	<string id="mil_hunter_dialog_607">
+		<text>ЎGuau! ЎEso estб bien! їSabes quй? Ve a ver a Roсoso, en nuestra base. Paga por los trabajos bien hechos.</text>
+	</string>
+	<string id="mil_hunter_dialog_7">
+		<text>Estб bien, irй a ver quй pasa.</text>
+	</string>
+	<string id="mil_hunter_dialog_701">
+		<text>їY? їCуmo fue?</text>
+	</string>
+	<string id="mil_hunter_dialog_702">
+		<text>Masacrй a esas bestias.</text>
+	</string>
+	<string id="mil_hunter_dialog_703">
+		<text>ЎGuau! ЎLes diste su merecido! їSabes quй? Ve a ver a Roсoso, en nuestra base. Paga por los trabajos bien hechos.</text>
+	</string>
+	<string id="mil_hunter_dialog_704">
+		<text>Lo harй.</text>
+	</string>
+	<string id="mil_hunter_dialog_80">
+		<text>Estб bien...</text>
+	</string>
+	<string id="mil_hunter_dialog_801">
+		<text>їQuй te trae por aquн?</text>
+	</string>
+	<string id="mil_hunter_dialog_802">
+		<text>Solo miraba...</text>
+	</string>
+	<string id="mil_hunter_dialog_803">
+		<text>їEs este el mejor lugar que has podido encontrar? Probablemente sea el peor sitio de toda la Zona...</text>
+	</string>
+	<string id="mil_hunter_dialog_804">
+		<text>їQuй tiene de malo este lugar?</text>
+	</string>
+	<string id="mil_hunter_dialog_805">
+		<text>Ah, solo el demonio lo sabe. Parece ser que un grupo de chupasangres se ha instalado en el pueblo. Dos de nuestros hombres se adentraron en el pueblo y nunca regresaron. ЎY vaya, no estamos dispuestos a morir todavнa!</text>
+	</string>
+	<string id="mil_hunter_dialog_806">
+		<text>Entonces, їno estбs seguro?</text>
+	</string>
+	<string id="mil_hunter_dialog_807">
+		<text>ЎMuy bien! Si no tienes nada mejor que hacer y no estбs bien de la azotea, te proponemos un paseo por el pueblo. Si despejas la zona de esas criaturas, seguro que Roсoso te soltarб algo de dinero. Deja una direcciуn, їvale? Escribiremos a tu familia si la cosa sale mal.</text>
+	</string>
+	<string id="mil_hunter_dialog_808">
+		<text>Estб bien, irй a ver quй pasa.</text>
+	</string>
+	<string id="mil_hunter_dialog_901">
+		<text>їY? їCуmo fue?</text>
+	</string>
+	<string id="mil_hunter_dialog_902">
+		<text>Masacrй a esas bestias.</text>
+	</string>
+	<string id="mil_hunter_dialog_903">
+		<text>ЎGuau! ЎAlucinante! ЎEnhorabuena! Y lo mejor de todo es que sigues con vida...</text>
+	</string>
+	<string id="mil_hunter_dialog_904">
+		<text>Gracias.</text>
+	</string>
+	<string id="mil_leader_start_dialog_10001">
+		<text>Como ayudaste a nuestros chicos en la Barrera, puedes descansar un poco en nuestro territorio, y cuenta tambiйn con nuestra ayuda. Ah, y. como agradecimiento personal, te darй una pequeсa compensaciуn. A partir de este momento, te incluirй en nuestro grupo.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1001">
+		<text>ЎEh, stalker! їQuй necesitas?</text>
+	</string>
+	<string id="mil_leader_start_dialog_10011">
+		<text>No mucho, la verdad.</text>
+	</string>
+	<string id="mil_leader_start_dialog_10012">
+		<text>Entonces, larguйmonos de aquн, їde acuerdo? El tiempo es oro.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1100">
+		<text>Vi un grupo de miembros de Deber en una granja cercana a vuestra base. Unos ocho hombres, bien equipados.</text>
+	</string>
+	<string id="mil_leader_start_dialog_11001">
+		<text>їPor quй demonios te alejaste de la Barrera? ЎLбrgate, y que no te vuelva a ver cerca de mi base nunca mбs!</text>
+	</string>
+	<string id="mil_leader_start_dialog_1101">
+		<text>ЎMaldita sea, estos capullos no se calman! Bien, tendremos que darles una lecciуn. Eh, stalker, їquieres ayudarnos a cambio de una recompensa? Habla con Max, nuestro jefe. Reclutarбs un equipo y acabarйis con esos mamones.</text>
+	</string>
+	<string id="mil_leader_start_dialog_11011">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="mil_leader_start_dialog_11012">
+		<text>Buena suerte, stalker.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1200">
+		<text>Ya me he ocupado de ellos.</text>
+	</string>
+	<string id="mil_leader_start_dialog_12001">
+		<text>їAsн que no pudiste ocuparte de ese asunto del chivatazo y ademбs fracasaste en la Barrera? ЎLбrgate de mi base y no vuelvas a aparecer por aquн!</text>
+	</string>
+	<string id="mil_leader_start_dialog_1210">
+		<text>їEn serio? їCuбntos de ellos dices que habнa?</text>
+	</string>
+	<string id="mil_leader_start_dialog_1221">
+		<text>Ocho hombres.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1222">
+		<text>Eres rбpido, stalker... Estб bien, entonces, їnos ayudas con otro asunto? Me avergьenza admitir que hay un topo entre nosotros. Su nombre es Pavlik. Estб filtrando informaciуn muy valiosa y eso debe acabar.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1223">
+		<text>їEn quй sentido?</text>
+	</string>
+	<string id="mil_leader_start_dialog_1300">
+		<text>Deberбs seguirle hasta la granja y descubrir para quй rata trabaja. No te conoce, y tampoco sabe de nuestra conversaciуn, asн que...</text>
+	</string>
+	<string id="mil_leader_start_dialog_13001">
+		<text>їCrees que tengo trabajo para ti?</text>
+	</string>
+	<string id="mil_leader_start_dialog_13002">
+		<text>Quizб.</text>
+	</string>
+	<string id="mil_leader_start_dialog_13003">
+		<text>Sabemos que hay un topo entre nosotros, un hombre llamado Pavlik. Estб filtrando informaciуn muy valiosa. Tenemos constancia de ello, pero carecemos de pruebas. Tu tarea serб espiarle y descubrir para quiйn trabaja. Creo que tiene un encuentro esta noche. Le seguirбs sigilosamente. Deberбs tener cuidado de que no te vea, ya que es extremadamente precavido. Cuando descubras para quiйn trabaja, cбrgatelos a los dos, como medida de precauciуn.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1301">
+		<text>Lo harй.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1302">
+		<text>Sabemos que hay un topo entre nosotros, un hombre llamado Pavlik. Estб filtrando informaciуn muy valiosa. Tenemos constancia de ello, pero carecemos de pruebas. Tu tarea serб espiarle y descubrir para quiйn trabaja. Creo que tiene un encuentro esta noche. Le seguirбs sigilosamente. Deberбs tener cuidado de que no te vea, ya que es extremadamente precavido. Cuando descubras para quiйn trabaja, cбrgatelos a los dos, como medida de precauciуn.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1391">
+		<text>No, ahora no.</text>
+	</string>
+	<string id="mil_leader_start_dialog_14001">
+		<text>Hay algo que querнa preguntarte.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1500">
+		<text>Acaba de irse, asн que tendrбs que alcanzarle. Y no lo olvides: puedes y debes cargбrtelo, pero solo despuйs de descubrir a quiйn le estб pasando la informaciуn. Tambiйn tendrбs que eliminar al otro tipo.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1501">
+		<text>Entendido.</text>
+	</string>
+	<string id="mil_leader_start_dialog_2001">
+		<text>Te dije que hablaras con Max.</text>
+	</string>
+	<string id="mil_leader_start_dialog_3001">
+		<text>Asн que has completado la misiуn... Bien, bien. Tengo otra para ti.</text>
+	</string>
+	<string id="mil_leader_start_dialog_3002">
+		<text>Hummm... їDe quй se trata?</text>
+	</string>
+	<string id="mil_leader_start_dialog_30021">
+		<text>Por desgracia, tenemos un topo en nuestras filas. Se llama Pavlik. Estб filtrando informaciуn muy valiosa y eso se debe acabar.</text>
+	</string>
+	<string id="mil_leader_start_dialog_3003">
+		<text>Exacto. Creo que saldrб para reunirse con su contacto en algъn momento entre las 10 y las 11 de la noche. Estarб lo suficientemente oscuro como para que nadie le vea, pero los mutantes nocturnos aъn no habrбn salido. Ahora ve, stalker. Cuando hayas terminado, te convertirбs en miembro de nuestro grupo. Y no lo olvides: Ўdeberбs coger al topo con las manos en la masa! Tendrбs que abatirlo durante el encuentro; si no, no habrбs cumplido con la misiуn.</text>
+	</string>
+	<string id="mil_leader_start_dialog_4001">
+		<text>їAъn estбs aquн?</text>
+	</string>
+	<string id="mil_leader_start_dialog_5001">
+		<text>Buen trabajo, Marcado. Toma esto... el pago por haberte ocupado del topo. Podrбs descansar en nuestro territorio siempre que quieras y tambiйn podrбs contar con nuestra ayuda. Pero hay otro favor que me podrнas hacer, si no estбs demasiado cansado. </text>
+	</string>
+	<string id="mil_leader_start_dialog_5002">
+		<text>їDe quй se trata?</text>
+	</string>
+	<string id="mil_leader_start_dialog_5003">
+		<text>Podrнas ir a la avanzadilla cercana a la salida del Bosque Rojo. Nos han llegado informes de que, o bien los mutantes o los de Monolith, planean un nuevo intento de penetrar en nuestras defensas. Nuestros chicos necesitan ayuda.</text>
+	</string>
+	<string id="mil_leader_start_dialog_5004">
+		<text>Bueno, ayudaste a los chicos en la Barrera, asн que descansa.</text>
+	</string>
+	<string id="mil_leader_start_dialog_6001">
+		<text>Descansa. No hay mбs trabajo por ahora.</text>
+	</string>
+	<string id="mil_leader_start_dialog_7001">
+		<text>Sн, echaste a perder esa misiуn... Ўmenudo patбn! ЎPero siempre hay otra oportunidad!</text>
+	</string>
+	<string id="mil_leader_start_dialog_7002">
+		<text>їQuй oportunidad?</text>
+	</string>
+	<string id="mil_leader_start_dialog_7003">
+		<text>Ciertas seсales hacen suponer que muy pronto, Monolith intentarб penetrar en nuestras defensas por la parte del Bosque Rojo. Tendrбs que ir a ver a Capi, el comandante de la Barrera, y comprobar si necesita ayuda. Aunque es evidente que la necesita...</text>
+	</string>
+	<string id="mil_leader_start_dialog_7004">
+		<text>Estб bien, lo harй.</text>
+	</string>
+	<string id="mil_leader_start_dialog_7006">
+		<text>No, no voy a hacerlo todavнa.</text>
+	</string>
+	<string id="mil_leader_start_dialog_7007">
+		<text>Piensa en nuestros hombres, Ўacabarбn masacrados! Verбs, no hay nadie mбs que tъ a quien pueda enviar... Ўnadie!</text>
+	</string>
+	<string id="mil_leader_start_dialog_8001">
+		<text>Has fallado en tu misiуn, asн que ya podemos despedirnos de esos documentos. Los perdedores como tъ no nos sirven de nada.</text>
+	</string>
+	<string id="mil_leader_start_dialog_8004">
+		<text>Bueno, echaste a perder esa misiуn... Ўmenudo patбn! Sin embargo, ayudaste a los chicos en la Barrera; Ўquй demonios! Puedes descansar en nuestro territorio. Si ocurre algo, te ayudaremos.</text>
+	</string>
+	<string id="mil_leader_start_dialog_8005">
+		<text>їTienes algъn trabajo para mн?</text>
+	</string>
+	<string id="mil_leader_start_dialog_8006">
+		<text>Ahora mismo no.</text>
+	</string>
+	<string id="mil_leader_start_dialog_9001">
+		<text>Te dije que fueras a la Barrera.</text>
+	</string>
+	<string id="mil_max_dialog_10001">
+		<text>Hablaremos despuйs de haber acabado con esos desgraciados de Deber.</text>
+	</string>
+	<string id="mil_max_dialog_10002">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="mil_max_dialog_1001">
+		<text>Lukash dijo que lo harнas. їViste a esos... en la granja?</text>
+	</string>
+	<string id="mil_max_dialog_1100">
+		<text>No.</text>
+	</string>
+	<string id="mil_max_dialog_1101">
+		<text>ЎDemonios! ЎDeber estб tramando algo otra vez! En fin. Ven con nosotros, їquieres?</text>
+	</string>
+	<string id="mil_max_dialog_1102">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="mil_max_dialog_1200">
+		<text>Sн.</text>
+	</string>
+	<string id="mil_max_dialog_1201">
+		<text>їSon muchos?</text>
+	</string>
+	<string id="mil_max_dialog_1210">
+		<text>No estoy seguro. No creo que sean muchos.</text>
+	</string>
+	<string id="mil_max_dialog_1220">
+		<text>Entre seis y ocho. No van mal equipados.</text>
+	</string>
+	<string id="mil_max_dialog_2001">
+		<text>Ve a ver a Lukash.</text>
+	</string>
+	<string id="mil_max_dialog_3001">
+		<text>їAlguna pregunta?</text>
+	</string>
+	<string id="mil_max_dialog_3002">
+		<text>Sн. Lukash me dijo que interceptara al mensajero de Deber entre el Bosque Rojo y la Ciudad Muerta. їCuбl crees que es el mejor lugar para hacerlo?</text>
+	</string>
+	<string id="mil_max_dialog_3003">
+		<text>Mmm... Lo mejor serнa cogerle antes de que llegue a la granja que hay cerca del pasaje que conduce a la Ciudad Muerta. Pero seguro que habrб refuerzos esperбndole allн, y tendrнas problemas para enfrentarte a todos ellos. Ademбs, por ese camino tienes que atravesar el pueblo, tarea nada fбcil. Mejor ve hacia el este del pueblo, y rбpido.</text>
+	</string>
+	<string id="mil_max_dialog_3004">
+		<text>їQuй hay en el pueblo?</text>
+	</string>
+	<string id="mil_max_dialog_3005">
+		<text>Nada bueno, crйeme. Un montуn de monstruos vagando por ahн, y anomalнas tambiйn. Ya te hablarй de eso mбs adelante.</text>
+	</string>
+	<string id="mil_max_dialog_4001">
+		<text>їYa puedo felicitarte?</text>
+	</string>
+	<string id="mil_max_dialog_4002">
+		<text>Sн.</text>
+	</string>
+	<string id="mil_max_dialog_4003">
+		<text>Ya veo que eres de los buenos. їTe importarнa hacer otro trabajito para mн? Hazlo y te darй mi Milano negro. Una buena arma, Ўde las potentes!</text>
+	</string>
+	<string id="mil_max_dialog_4004">
+		<text>Pero, їquй se supone que debo hacer?</text>
+	</string>
+	<string id="mil_max_dialog_4005">
+		<text>Estб ese tipo que excavу en el pantano. Mis chicos lo vieron salir corriendo desde el pueblo atravesando setos y zanjas. Debiу de ver algo que le hizo perder unos pocos tornillos. Ahora se dedica a dispararle a todo lo que se pone a tiro. Deberбs averiguar quй fue lo que vio, porque nuestra gente tiene demasiado miedo de adentrarse en el pueblo.</text>
+	</string>
+	<string id="mil_max_dialog_40051">
+		<text>No, no en este momento.</text>
+	</string>
+	<string id="mil_max_dialog_400511">
+		<text>En fin....</text>
+	</string>
+	<string id="mil_max_dialog_40052">
+		<text>Aquн estб la unidad de informaciуn que le saquй al loco ese.</text>
+	</string>
+	<string id="mil_max_dialog_400521">
+		<text>ЎEh, gracias, stalker! Toma esta pistola, te la has ganado.</text>
+	</string>
+	<string id="mil_max_dialog_400522">
+		<text>їTienes algo de municiуn?</text>
+	</string>
+	<string id="mil_max_dialog_400523">
+		<text>Solo lo que hay en el cargador. Lo siento, es todo lo que tengo. Ve a ver a Roсoso, puede que йl tenga algo.</text>
+	</string>
+	<string id="mil_max_dialog_4006">
+		<text>Lo intentarй.</text>
+	</string>
+	<string id="mil_max_dialog_4007">
+		<text>Buena suerte, entonces. No lo olvides, hay un viejo campo de minas, pero con unos pocos tornillos podrбs sortear cualquier mina.</text>
+	</string>
+	<string id="mil_max_dialog_5001">
+		<text>їQuй conseguiste? їQuй le ocurriу a ese tarado?</text>
+	</string>
+	<string id="mil_max_dialog_5002">
+		<text>Aquн estб la unidad de informaciуn que le saquй al loco ese.</text>
+	</string>
+	<string id="mil_max_dialog_6001">
+		<text>їCуmo, ya?</text>
+	</string>
+	<string id="mil_max_dialog_7001">
+		<text>їQuй quieres saber?</text>
+	</string>
+	<string id="mil_max_dialog_8001">
+		<text>їQuй pasa, stalker? їQuй tienes?</text>
+	</string>
+	<string id="mil_max_dialog_8002">
+		<text>Vengo a hablar de negocios. їPuedes decirme cуmo llegar a tu jefe?</text>
+	</string>
+	<string id="mil_max_dialog_8003">
+		<text>Quieres ver a Lukash; йl es nuestro lнder. Ve al edificio principal.</text>
+	</string>
+	<string id="mil_max_dialog_9001">
+		<text>Veo que te las apaсaste bien. Dale los documentos a Lukash.</text>
+	</string>
+	<string id="mil_max_dialog_9100">
+		<text>Ve a ver a Lukash y haz tu informe; despuйs hablamos, їde acuerdo?</text>
+	</string>
+	<string id="mil_max_dialog_9101">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="mil_patrol_dialog1_0">
+		<text>Colega, Ўestбs en la base de Libertad! Descansa, ponte cуmodo.</text>
+	</string>
+	<string id="mil_patrol_dialog1_1">
+		<text>Ya veo.</text>
+	</string>
+	<string id="mil_patrol_dialog1_2">
+		<text>Compуrtate, їeh? їEntendido? Prueba a hacer alguna tonterнa y lo lamentarбs. Una vez tuvimos aquн un tipo muy cortito; fastidiу a todo el mundo de tal manera que le mandamos a dar un paseo por el campo de minas... Ўy desnudo! ЎTendrнas que haber oнdo a Roсoso cuando el brazo de aquel tipo cayу de lleno sobre su cabeza! Fue algo grande... Ўvaya si lo fue! їHas captado la idea?</text>
+	</string>
+	<string id="mil_patrol_dialog1_3">
+		<text>Lo he pillado.</text>
+	</string>
+	<string id="mil_patrol_dialog1_4">
+		<text>ЎAsн me gusta! Puedes irte.</text>
+	</string>
+	<string id="mil_patrol_dialog2_0">
+		<text>Ah, un novato...Ven un segundo.</text>
+	</string>
+	<string id="mil_patrol_dialog2_1">
+		<text>No lo pillo.</text>
+	</string>
+	<string id="mil_patrol_dialog2_10">
+		<text>їDуnde vas? ЎQuйdate! Se estб bien aquн... y habrб cena esta noche.</text>
+	</string>
+	<string id="mil_patrol_dialog2_11">
+		<text>No, no tengo demasiado apetito.</text>
+	</string>
+	<string id="mil_patrol_dialog2_12">
+		<text>ЎїQuй?! ЎMierda! їPor quй no lo dijiste antes? Hemos estado perdiendo el tiempo. Piйrdete, capullo. Y esta vez hablo completamente en serio...</text>
+	</string>
+	<string id="mil_patrol_dialog2_2">
+		<text>їQuй es lo que no has pillado? Ah, no has oнdo la historia sobre los cortitos, їverdad?</text>
+	</string>
+	<string id="mil_patrol_dialog2_3">
+		<text>No, no la he oнdo.</text>
+	</string>
+	<string id="mil_patrol_dialog2_4">
+		<text>Estб bien, mira. Piensa en ello: corren tiempos difнciles...</text>
+	</string>
+	<string id="mil_patrol_dialog2_5">
+		<text>їQuй quieres decir?</text>
+	</string>
+	<string id="mil_patrol_dialog2_6">
+		<text>Bueno, Ўes sencillo! Un soldado hambriento es un mal soldado. Y somos tantos...</text>
+	</string>
+	<string id="mil_patrol_dialog2_7">
+		<text>їY?</text>
+	</string>
+	<string id="mil_patrol_dialog2_8">
+		<text>їDe dуnde podrнamos sacar toda esa carne? Y mira, Ўaquн tienes!</text>
+	</string>
+	<string id="mil_patrol_dialog2_9">
+		<text>Entendido.</text>
+	</string>
+	<string id="mil_screw_dialog_1000">
+		<text>їTienes algo roto, colega?</text>
+	</string>
+	<string id="mil_screw_dialog_1001">
+		<text>їRoto?</text>
+	</string>
+	<string id="mil_screw_dialog_1002">
+		<text>Ahhh, їno estбs aquн para pedirme ayuda? ЎUf! Estoy harto de eso. En cuanto se rompe algo, vienen corriendo y lloriqueando.</text>
+	</string>
+	<string id="mil_screw_dialog_1003">
+		<text>їY quiйn eres tъ?</text>
+	</string>
+	<string id="mil_screw_dialog_1004">
+		<text>Soy mecбnico. Un manitas... Reparo pistolas y cualquier cosa que me traigan. Ahora mismo trabajo en esos coches.</text>
+	</string>
+	<string id="mil_screw_dialog_1005">
+		<text>їCуmo te va?</text>
+	</string>
+	<string id="mil_screw_dialog_1006">
+		<text>ЎPfff! Una autйntica porquerнa. Estoy reventado. Escucha, їllevas algo de vodka encima? Yo, umm... tъ... їquieres una buena mira? ЎNo encontrarбs ninguna mejor! </text>
+	</string>
+	<string id="mil_screw_dialog_1100">
+		<text>No.</text>
+	</string>
+	<string id="mil_screw_dialog_1101">
+		<text>Tъ te lo pierdes. Si tienes algo, ven, no te cortes.</text>
+	</string>
+	<string id="mil_screw_dialog_1102">
+		<text>De acuerdo.</text>
+	</string>
+	<string id="mil_screw_dialog_1200">
+		<text>Aquн tienes.</text>
+	</string>
+	<string id="mil_screw_dialog_1201">
+		<text>ЎVale, gracias! Muy amable de tu parte. Ahora ya tengo algo con lo que relajarme mбs tarde.</text>
+	</string>
+	<string id="mil_screw_dialog_1202">
+		<text>Buena suerte.</text>
+	</string>
+	<string id="mil_screw_dialog_2000">
+		<text>No me distraigas, estoy pensando...</text>
+	</string>
+	<string id="mil_screw_dialog_4">
+		<text>No puede ser, їde veras has traнdo vodka?</text>
+	</string>
+	<string id="mil_trader_dialog_1001">
+		<text>їQuй es?</text>
+	</string>
+	<string id="mil_trader_dialog_1002">
+		<text>Ahora una pregunta difнcil: їdуnde puedo conseguir cosas como artefactos y armas?</text>
+	</string>
+	<string id="mil_trader_dialog_1003">
+		<text>Vienes a mн, con dinero. O vas al pueblo y las consigues gratis, aunque el riesgo es mucho mayor.</text>
+	</string>
+	<string id="mil_trader_dialog_1004">
+		<text>їEl pueblo?</text>
+	</string>
+	<string id="mil_trader_dialog_1005">
+		<text>El pueblo. Estб repleto de anomalнas; los novatos se topan con ellas continuamente. Nuestros chicos acaban de salir para allб; puedes unirte a ellos si quieres.</text>
+	</string>
+	<string id="mil_trader_dialog_1006">
+		<text>Entendido.</text>
+	</string>
+	<string id="mil_trader_dialog_2001">
+		<text>їQuй cosas buenas me traes?</text>
+	</string>
+	<string id="mil_trader_dialog_3001">
+		<text>їQuй vas a necesitar?</text>
+	</string>
+	<string id="mil_trader_dialog_3002">
+		<text>Nada... solo miraba.</text>
+	</string>
+	<string id="mil_trader_dialog_3003">
+		<text>Deberнas hacer algo ъtil. Especialmente si yo tengo algo que te puede interesar... їQuieres ganбrtelo, eh?</text>
+	</string>
+	<string id="mil_trader_dialog_3004">
+		<text>Interesante...</text>
+	</string>
+	<string id="mil_trader_dialog_3005">
+		<text>Te puedo dar un Cristal si me haces un favor particular. La cosa pinta fea... Ъltimamente, nadie trae artefactos del pueblo; la gente tiene demasiado miedo. Dicen que se han instalado allн unos chupasangres. No puedo enviar a nadie; de hecho, me estoy planteando pedirle ayuda a Deber.</text>
+	</string>
+	<string id="mil_trader_dialog_3006">
+		<text>Continъa.</text>
+	</string>
+	<string id="mil_trader_dialog_3007">
+		<text>Un par de tipos fueron al pueblo y no volvieron, y los otros tres estбn parados en las afueras, sin hacer nada. Si acabas con los chupasangres, te darй un Cristal. їQuй te parece?</text>
+	</string>
+	<string id="mil_trader_dialog_30071">
+		<text>Ahora mismo no.</text>
+	</string>
+	<string id="mil_trader_dialog_30072">
+		<text>Eh, es tu decisiуn... Antes o despuйs, alguien acabarб con ellos. Mientras tanto, el Cristal resulta escaso y bastante caro, ademбs.</text>
+	</string>
+	<string id="mil_trader_dialog_3008">
+		<text>Lo harй.</text>
+	</string>
+	<string id="mil_trader_dialog_3009">
+		<text>Asн me gusta. Si encuentras mбs cosas como йsta, trбelas; pagarй un buen precio por ellas.</text>
+	</string>
+	<string id="mil_trader_dialog_3101">
+		<text>їY?</text>
+	</string>
+	<string id="mil_trader_dialog_3110">
+		<text>Estбn ahн sentados, mirando...</text>
+	</string>
+	<string id="mil_trader_dialog_3111">
+		<text>Si les ayudas en su tarea, te darй un artefacto llamado Cristal. їQuй me dices?</text>
+	</string>
+	<string id="mil_trader_dialog_3200">
+		<text>Estuvimos hablando, y luego recorrimos el pueblo para intentar capturar algъn mutante...</text>
+	</string>
+	<string id="mil_trader_dialog_3201">
+		<text>їY? ЎVe al grano ya!</text>
+	</string>
+	<string id="mil_trader_dialog_3300">
+		<text>Abatimos a una especie de bestia, pero los chicos tambiйn cayeron. Justo cuando llegбbamos al depуsito de agua, se agarraron la cabeza; yo tambiйn tenнa los ojos como inyectados en sangre... Ese montуn de mierda afecta al cerebro. Matй a esa cosa, pero era demasiado tarde para ayudar a los chicos.</text>
+	</string>
+	<string id="mil_trader_dialog_3301">
+		<text>Vaya faena. Sombrнo era un hбbil stalker. Una autйntica pena. Bueno, toma este artefacto por haber ayudado a los chicos.</text>
+	</string>
+	<string id="mil_trader_dialog_3310">
+		<text>Bien, los chicos salieron a cazar y yo volvн aquн...</text>
+	</string>
+	<string id="mil_trader_dialog_3311">
+		<text>Ya veo.</text>
+	</string>
+	<string id="mil_trader_dialog_3400">
+		<text>їPuedo conseguir algo de material por aquн?</text>
+	</string>
+	<string id="mil_trader_dialog_3401">
+		<text>Por un mуdico precio, cualquier cosa es posible.</text>
+	</string>
+	<string id="mil_trader_dialog_3500">
+		<text>Ya me he ocupado de ellos.</text>
+	</string>
+	<string id="mil_trader_dialog_3501">
+		<text>ЎVaya, stalker! ЎEres tan fulminante como la diarrea! Estб bien, un trato es un trato; aquн tienes tu Cristal.</text>
+	</string>
+	<string id="mil_trader_dialog_4001">
+		<text>їCуmo fue la caza?</text>
+	</string>
+	<string id="mil_trader_dialog_4002">
+		<text>Matй a los monstruos.</text>
+	</string>
+	<string id="mil_trader_dialog_4003">
+		<text>їResultу complicado?</text>
+	</string>
+	<string id="mil_trader_dialog_4004">
+		<text>Lo normal.</text>
+	</string>
+	<string id="mil_trader_dialog_4005">
+		<text>Um, interesante... Todo tipo de porquerнa se extiende desde el centro de la Zona, pero... їde dуnde procede? Estб bien, aquн tienes, por las molestias.</text>
+	</string>
+	<string id="mil_trader_dialog_5001">
+		<text>ЎPero te pedн que acabaras con esos chupasangres del pueblo!</text>
+	</string>
+	<string id="mil_trader_dialog_5002">
+		<text>Cambiй de idea.</text>
+	</string>
+	<string id="mil_trader_dialog_5003">
+		<text>No hay problema. Por supuesto, en ese caso no habrб recompensa.</text>
+	</string>
+	<string id="mil_trader_dialog_5004">
+		<text>Me parece bien.</text>
+	</string>
+	<string id="mil_trader_dialog_5010">
+		<text>Lo intentarй.</text>
+	</string>
+	<string id="mil_trader_dialog_6001">
+		<text>Ajб, asн que no solucionaste ese pequeсo problema... Me quedarй con el artefacto entonces.</text>
+	</string>
+	<string id="mil_trader_dialog_6002">
+		<text>No tengo nada que objetar.</text>
+	</string>
+	<string id="mil_trader_dialog_7001">
+		<text>La gente dice que te ocupaste de esos chupasangres del pueblo. їEs cierto?</text>
+	</string>
+	<string id="mil_trader_dialog_7002">
+		<text>Asн es.</text>
+	</string>
+	<string id="mil_trader_dialog_7003">
+		<text>їFue complicado?</text>
+	</string>
+	<string id="mil_trader_dialog_7004">
+		<text>Lo normal.</text>
+	</string>
+	<string id="mil_trader_dialog_7005">
+		<text>Um, interesante... Todo tipo de porquerнa se extiende desde el centro de la Zona, pero... їde dуnde procede? Estб bien, aquн tienes, por las molestias.</text>
+	</string>
+	<string id="mil_trader_dialog_8001">
+		<text>Veamos lo que has traнdo.</text>
+	</string>
+	<string id="mil_zoneguard_common1_0">
+		<text>їHay algъn cocinero por aquн?</text>
+	</string>
+	<string id="mil_zoneguard_common1_1">
+		<text>Claro que sн, Ўno podrнamos sobrevivir sin uno! їSe puede saber para quй demonios lo necesitas?</text>
+	</string>
+	<string id="mil_zoneguard_common1_2">
+		<text>Bueno, necesito algo de comida.</text>
+	</string>
+	<string id="mil_zoneguard_common1_3">
+		<text>Estб en su cocina. Normalmente estб allн sentado y refunfuсando.</text>
+	</string>
+	<string id="mil_zoneguard_common1_4">
+		<text>їRefunfuсando?</text>
+	</string>
+	<string id="mil_zoneguard_common1_5">
+		<text>їQuй esperabas? Un borracho es un borracho. Si no supiera cocinar, hace tiempo que nos habrнamos desecho de йl. Estб en la cocina. Te dirй cуmo llegar hasta allн.</text>
+	</string>
+	<string id="mil_zoneguard_common1_6">
+		<text>Gracias por la informaciуn.</text>
+	</string>
+	<string id="mil_zoneguard_common1_7">
+		<text>No hay de quй.</text>
+	</string>
+	<string id="mil_zoneguard_common2_0">
+		<text>їQuiйn es el jefe aquн?</text>
+	</string>
+	<string id="mil_zoneguard_common2_1">
+		<text>їY tъ quй quieres?</text>
+	</string>
+	<string id="mil_zoneguard_common2_2">
+		<text>Tengo informaciуn para йl.</text>
+	</string>
+	<string id="mil_zoneguard_common2_3">
+		<text>Lukash es nuestro jefe. Ve al edificio principal.</text>
+	</string>
+	<string id="mil_zoneguard_common2_4">
+		<text>Entendido. Gracias.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_10">
+		<text>Lo mismo te digo. їQuй te trae por aquн? </text>
+	</string>
+	<string id="mil_zoneguard_dialog_100">
+		<text>їQuiйn es el jefe por aquн? Vengo a hablar de negocios con йl.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_1000">
+		<text>Lukash es nuestro jefe; estб en el edificio principal. Pero cuando entres, asegъrate de dejar tu arma, si no quieres que te acribillen por nada. </text>
+	</string>
+	<string id="mil_zoneguard_dialog_10000">
+		<text>їPor quй?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_100000">
+		<text>Tuvimos una mala experiencia; un asesino se acercу a Lukash lo suficiente como para matarle. Desde entonces no nos arriesgamos.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_1000000">
+		<text>Entendido.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_10000000">
+		<text>Estб bien, puedes marcharte.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_20">
+		<text>Asн, asн. No entres, no me molestes.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_3">
+		<text>Saludos.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_30">
+		<text>ЎAlto! ЎїQuiйn va?!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_31">
+		<text>Golondrina sudafricana.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_32">
+		<text>ЎJa, ja! ЎEstб bien! Puedes pasar.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_4">
+		<text>їQuй es ese pantano cercano?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_41">
+		<text>Un verdadero estanque radioactivo. Mejor no tocarlo, o recibirбs radiaciуn suficiente como para que te reviente el ombligo. Hay un tipo en medio de йl que no deja a nadie acercarse. Me compadezco de йl: їquiйn querrнa juntarse con unos idiotas? Porque una personal normal no pondrнa pie allн en la vida.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_42">
+		<text>Pero, їquiйn es ese tipo?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_43">
+		<text>Quiйn sabe. Dicen que es uno de nuestros chicos que estuvo en el pueblo.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_44">
+		<text>їQuй pueblo?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_45">
+		<text>Bueno, hay una pequeсa aldea aquн cerca, llena de mutantes y anomalнas. Yo no he estado allн todavнa, lleguй a esta base hace poco. Pregъntale a Max: йl lleva aquн siglos.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_5">
+		<text>Oye, їdуnde puedo conseguir algo de municiуn? Rostok estб a una buena caminata desde aquн; no me apetece ir allб.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_51">
+		<text>Ve al edificio principal y lo encontrarбs en la planta baja.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6">
+		<text>їQuй pasa, viajero? Buscas quedarte por aquн, їno?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_601">
+		<text>Algo asн.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_602">
+		<text>їQuй tal si te unes a nosotros, eh?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_603">
+		<text>їQuй tal si no? Estoy aquн por negocios.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_604">
+		<text>Venga, ъnete a nosotros. Es muy divertido.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_605">
+		<text>Lo pensarй.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_607">
+		<text>їCaballo parlante?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_608">
+		<text>Fallaste.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_609">
+		<text>їA-9?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_610">
+		<text>Agua. ЎJoder, deja de jugar conmigo! їTienes algo mбs?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_611">
+		<text>ЎVa!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_612">
+		<text>Veintiuno. ЎJoder, has vuelto a hacerlo! Tienes mucha labia. Asн que no sabes la contraseсa, їverdad?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_613">
+		<text>їMe la vas a decir?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_614">
+		<text>Sн, claro.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_615">
+		<text>Venga, dйjame entrar. No puedo pasar la noche fuera, їno?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_616">
+		<text>їPor quй no? Hace tan bueno como en verano. Vale, estб bien; si superas la prueba, puedes pasar, si no, piйrdete.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_617">
+		<text>їLa prueba?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_618">
+		<text>Claro. Tres cosas que debe saber todo hombre de verdad.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_619">
+		<text>No me asustas. Adelante.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_620">
+		<text>Estб bien, primero la mбs fбcil. їListo? Muy bien, їcuбl es la talla de sujetador de Pamela Anderson?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6200">
+		<text>Una 90.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6201">
+		<text>Eres patйtico. ЎVete a paseo!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6202">
+		<text>Joder.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6203">
+		<text>Una 100.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6204">
+		<text>Eres patйtico. ЎVete a paseo!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6205">
+		<text>Una 100.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6206">
+		<text>ЎBuen trabajo! ЎYa veo que eres de los buenos!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6207">
+		<text>ЎPues claro!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6208">
+		<text>ЎAhora un poco mбs difнcil! Bien... їCuбl es la capacidad aproximada del cartucho del subfusil ruso Bizon?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6300">
+		<text>Veinticinco.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6301">
+		<text>Sesenta y ocho.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6302">
+		<text>Cincuenta y cuatro.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6400">
+		<text>ЎAlucinante! No me malinterpretes, pero cada vez me gustas mбs...</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6401">
+		<text>Claro.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6402">
+		<text>ЎAhora la tercera! їCuбl es la velocidad de vuelo de la golondrina sudafricana?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6403">
+		<text>ЎїUna golondrina quй?!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6404">
+		<text>ЎSudafricana!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6405">
+		<text>ЎїCуmo voy a saber eso!? їLo sabes tъ acaso?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6406">
+		<text>Claro que no. Precisamente por eso, no logro averiguarlo. En fin, puedes pasar.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6407">
+		<text>ЎGuau, tнo!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_81">
+		<text>їQuieres intentarlo de nuevo? Muy bien. Pregunta: їcuбl es la talla de sujetador de Dotty Strangelove?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_91">
+		<text>ЎVaya tнo! Repito: їcuбl es la capacidad del cargador del subfusil ruso Bizon?</text>
+	</string>
+</string_table>

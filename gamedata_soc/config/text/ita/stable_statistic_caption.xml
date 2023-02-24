@@ -1,0 +1,174 @@
+	<string id="bandit_experienced">
+		<text>bandito, esperto</text>
+	</string>
+	<string id="bandit_master">
+		<text>bandito, professionista</text>
+	</string>
+	<string id="bandit_novice">
+		<text>bandito, principiante</text>
+	</string>
+	<string id="bandit_veteran">
+		<text>bandito, maestro</text>
+	</string>
+	<string id="bloodsucker_normal">
+		<text>succhiasangue sub</text>
+	</string>
+	<string id="bloodsucker_strong">
+		<text>succhiasang. nero</text>
+	</string>
+	<string id="bloodsucker_weak">
+		<text>succhiasangue</text>
+	</string>
+	<string id="boar_normal">
+		<text>cinghiale adulto</text>
+	</string>
+	<string id="boar_strong">
+		<text>cinghiale anziano</text>
+	</string>
+	<string id="boar_weak">
+		<text>cinghiale giovane</text>
+	</string>
+	<string id="burer_weak">
+		<text>Orrido</text>
+	</string>
+	<string id="controller_weak">
+		<text>Controllore</text>
+	</string>
+	<string id="dog_normal">
+		<text>segugioratto</text>
+	</string>
+	<string id="dog_strong">
+		<text>cane albino</text>
+	</string>
+	<string id="dog_weak">
+		<text>cane selvatico</text>
+	</string>
+	<string id="dolg_experienced">
+		<text>Duty, esperto</text>
+	</string>
+	<string id="dolg_master">
+		<text>Duty, specialista</text>
+	</string>
+	<string id="dolg_veteran">
+		<text>Duty, veterano</text>
+	</string>
+	<string id="ecolog_experienced">
+		<text>scienziato, luminare</text>
+	</string>
+	<string id="ecolog_novice">
+		<text>scienziato, assistente</text>
+	</string>
+	<string id="flesh_normal">
+		<text>mostro foresta</text>
+	</string>
+	<string id="flesh_strong">
+		<text>mostro palude</text>
+	</string>
+	<string id="flesh_weak">
+		<text>mostro prateria</text>
+	</string>
+	<string id="freedom_experienced">
+		<text>Freedom, esperto</text>
+	</string>
+	<string id="freedom_master">
+		<text>Freedom, maestro</text>
+	</string>
+	<string id="freedom_veteran">
+		<text>Freedom, veterano</text>
+	</string>
+	<string id="killer_experienced">
+		<text>Mercenario, qualificato</text>
+	</string>
+	<string id="killer_master">
+		<text>Mercenario, duro</text>
+	</string>
+	<string id="killer_veteran">
+		<text>Mercenario, senior</text>
+	</string>
+	<string id="military_experienced">
+		<text>soldato, sergente</text>
+	</string>
+	<string id="military_master">
+		<text>soldato, capitano</text>
+	</string>
+	<string id="military_novice">
+		<text>soldato, fante</text>
+	</string>
+	<string id="military_veteran">
+		<text>soldato, tenente</text>
+	</string>
+	<string id="monolith_experienced">
+		<text>Monolitiano, esperto</text>
+	</string>
+	<string id="monolith_master">
+		<text>Monolitiano, specialista</text>
+	</string>
+	<string id="monolith_novice">
+		<text>Monolitiano, novellino</text>
+	</string>
+	<string id="monolith_veteran">
+		<text>Monolitiano, veterano</text>
+	</string>
+	<string id="neutral_experienced">
+		<text>stalker, qualificato</text>
+	</string>
+	<string id="neutral_master">
+		<text>stalker, esperto</text>
+	</string>
+	<string id="neutral_novice">
+		<text>stalker, impacciato</text>
+	</string>
+	<string id="neutral_veteran">
+		<text>stalker, specialista</text>
+	</string>
+	<string id="poltergeist_weak">
+		<text>poltergeist</text>
+	</string>
+	<string id="pseudo_gigant_weak">
+		<text>pseudogigante</text>
+	</string>
+	<string id="pseudodog_normal">
+		<text>pseudogigante adulto</text>
+	</string>
+	<string id="pseudodog_strong">
+		<text>pseudogigante grigio</text>
+	</string>
+	<string id="pseudodog_weak">
+		<text>pseudocane</text>
+	</string>
+	<string id="psy_dog">
+		<text>pseudocane oscuro</text>
+	</string>
+	<string id="snork_normal">
+		<text>snork saprofago</text>
+	</string>
+	<string id="snork_strong">
+		<text>snork cannibale</text>
+	</string>
+	<string id="snork_weak">
+		<text>snork </text>
+	</string>
+	<string id="tushkano_weak">
+		<text>roditore</text>
+	</string>
+	<string id="zombie_normal">
+		<text>zombie</text>
+	</string>
+	<string id="zombie_strong">
+		<text>zombie</text>
+	</string>
+	<string id="zombie_weak">
+		<text>zombie</text>
+	</string>
+	<string id="zombied_experienced">
+		<text>stalker zombie, esperto</text>
+	</string>
+	<string id="zombied_master">
+		<text>stalker zombie, specialista</text>
+	</string>
+	<string id="zombied_novice">
+		<text>zombified stalker, novellino</text>
+	</string>
+	<string id="zombied_veteran">
+		<text>zombified stalker, veterano</text>
+	</string>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bar_rostok">
+		<text>Wildgebiet - Rostok</text>
+	</string>
+	<string id="car_character_use">
+		<text>Tьr цffnen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="character_use">
+		<text>Reden ($$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use_or_drag">
+		<text>Kцrper durchsuchen ($$ACTION_USE$$) \n Kцrper schleifen (UMSCHALTEN+$$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use">
+		<text>Kцrper durchsuchen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="general_complete_task">
+		<text>Auftrag erfьllt:</text>
+	</string>
+	<string id="general_fail_task">
+		<text>Auftrag fehlgeschlagen:</text>
+	</string>
+	<string id="general_help">
+		<text>Schnell, ich brauche ein Medkit! Ich sterbe hier!</text>
+	</string>
+	<string id="general_in_item">
+		<text>Gegenstand erhalten:</text>
+	</string>
+	<string id="general_in_money">
+		<text>Geld erhalten:</text>
+	</string>
+	<string id="general_new_diary">
+		<text>Neuer Tagebucheintrag:</text>
+	</string>
+	<string id="general_new_encyclopedy">
+		<text>Neuer Enzyklopдdie-Eintrag:</text>
+	</string>
+	<string id="general_new_task">
+		<text>Neuer Auftrag:</text>
+	</string>
+	<string id="general_out_item">
+		<text>Gegenstand verloren:</text>
+	</string>
+	<string id="general_out_money">
+		<text>Geld verloren:</text>
+	</string>
+	<string id="general_update_task">
+		<text>Auftrag aktualisiert:</text>
+	</string>
+	<string id="physic_shell_use">
+		<text>Objekt bewegen ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_codelock">
+		<text>Kombinationsschloss ($$ACTION_USE$$)</text>
+	</string>
+	<string id="to_aes">
+		<text>Zum Tschernobyl-AKW</text>
+	</string>
+	<string id="to_agroprom">
+		<text>Zu Agroprom</text>
+	</string>
+	<string id="to_agroprom_underground">
+		<text>Zu den Katakomben</text>
+	</string>
+	<string id="to_bar">
+		<text>Nach Rostok</text>
+	</string>
+	<string id="to_darkvalley">
+		<text>Zum Dunklen Tal</text>
+	</string>
+	<string id="to_escape">
+		<text>Zum Kordon</text>
+	</string>
+	<string id="to_garbage">
+		<text>Zur Mьllhalde</text>
+	</string>
+	<string id="to_military">
+		<text>Zu den Lagern</text>
+	</string>
+	<string id="to_pripyat">
+		<text>Nach Prypjat</text>
+	</string>
+	<string id="to_radar">
+		<text>Zum Hirnschmelzer</text>
+	</string>
+	<string id="to_rostok">
+		<text>Zum Wildgebiet</text>
+	</string>
+	<string id="to_yantar">
+		<text>Nach Jantar</text>
+	</string>
+	<string id="st_helmet_countdown">
+		<text>Notabschaltung</text>
+	</string>
+	<string id="st_psy_danger">
+		<text>PSI-Emissionsniveau kritisch. Gefahrenzone sofort verlassen.</text>
+	</string>
+	<string id="st_radiation_danger">
+		<text>Gefдhrliches Strahlenniveau. Zutritt nur mit Schutzkleidung.</text>
+	</string>
+	<string id="st_found_new_pda">
+		<text>Gefundene Informationen:</text>
+	</string>
+</string_table>

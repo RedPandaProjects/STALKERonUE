@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="af-ameba-mica">
+		<text>Mica</text>
+	</string>
+	<string id="af-ameba-slime">
+		<text>Cieno</text>
+	</string>
+	<string id="af-ameba-slug">
+		<text>Babosa</text>
+	</string>
+	<string id="af-blood">
+		<text>Sangre petrificada</text>
+	</string>
+	<string id="af-cristall">
+		<text>Cristal</text>
+	</string>
+	<string id="af-cristall-flower">
+		<text>Flor de piedra</text>
+	</string>
+	<string id="af-drops">
+		<text>Gotas</text>
+	</string>
+	<string id="af-dummy-battery">
+		<text>Baterнa</text>
+	</string>
+	<string id="af-dummy-dummy">
+		<text>Concha</text>
+	</string>
+	<string id="af-dummy-glassbeads">
+		<text>Abalorios de madre</text>
+	</string>
+	<string id="af-dummy-pellicle">
+		<text>Pelнcula</text>
+	</string>
+	<string id="af-dummy-spring">
+		<text>Muelle</text>
+	</string>
+	<string id="af-electra-flash">
+		<text>Destello</text>
+	</string>
+	<string id="af-electra-moonlight">
+		<text>Claro de luna</text>
+	</string>
+	<string id="af-electra-sparkler">
+		<text>Bengala</text>
+	</string>
+	<string id="af-fireball">
+		<text>Bola de fuego</text>
+	</string>
+	<string id="af-fuzz-kolobok">
+		<text>Soldado</text>
+	</string>
+	<string id="af-gold-fish">
+		<text>Pez de colores</text>
+	</string>
+	<string id="af-gravi">
+		<text>Gravi</text>
+	</string>
+	<string id="af-medusa">
+		<text>Medusa</text>
+	</string>
+	<string id="af-mincer-meat">
+		<text>Bola de carne</text>
+	</string>
+	<string id="af-night-star">
+		<text>Estrella nocturna</text>
+	</string>
+	<string id="af-rusty-kristall">
+		<text>Espina de cristal</text>
+	</string>
+	<string id="af-rusty-sea-urchin">
+		<text>Palomilla</text>
+	</string>
+	<string id="af-rusty-thorn">
+		<text>Espina</text>
+	</string>
+	<string id="af-soul">
+		<text>Alma</text>
+	</string>
+	<string id="af-vyvert">
+		<text>Torcedor</text>
+	</string>
+	<string id="Agroprom">
+		<text>Agroprom</text>
+	</string>
+	<string id="Ameba">
+		<text>Ponche de frutas</text>
+	</string>
+	<string id="Anomalies">
+		<text>Anomalнas</text>
+	</string>
+	<string id="Artifacts">
+		<text>Artefactos</text>
+	</string>
+	<string id="Bald">
+		<text>Trampolнn</text>
+	</string>
+	<string id="Bar">
+		<text>Bar</text>
+	</string>
+	<string id="Darkdolina">
+		<text>Valle Oscuro</text>
+	</string>
+	<string id="Deadcity">
+		<text>Borrado</text>
+	</string>
+	<string id="Electra">
+		<text>Electro</text>
+	</string>
+	<string id="enc_weapons1_wpn-winchester_m1">
+		<text>Variaciуn del Chaser. Se incluyу en el caсуn un pequeсo fragmento del artefacto Gravi, posicionado de tal forma que permite aumentar la velocidad de la trayectoria de la bala. </text>
+	</string>
+	<string id="enc_zone_anomalies_ameba">
+		<text>Una anomalнa de naturaleza desconocida. Al contacto, produce lesiones similares a los efectos de los бcidos mбs potentes. Forma tres tipos de artefactos: Cieno, Babosa y Mica.</text>
+	</string>
+	<string id="enc_zone_anomalies_bald">
+		<text>Una de las primeras anomalнas registradas: un campo de gravitaciуn inestable que efectъa descargas sobre cualquiera que se encuentre dentro de su radio de acciуn. Permanece activa durante una semana de media. La cantidad de daсo sufrido varнa a lo largo de su periodo de actividad, produciendo desde heridas superficiales y graves hasta la muerte instantбnea. Es fбcil de localizar de dнa. Ademбs de una fluctuaciуn del aire por encima de la anomalнa, hay hojas que bailan y manchas carmesн en el suelo. Ademбs de que lo localizan todos los tipos de detectores, el Trampolнn aparece ante la vista si se lanzan objetos contra йl. Forma tres tipos de artefactos: Medusa, Flor de piedra y Estrella nocturna.</text>
+	</string>
+	<string id="enc_zone_anomalies_electra">
+		<text>Formaciуn anуmala, de unos 10 metros de diбmetro, que acumula grandes cantidades de electricidad estбtica. Cuando se activa esta anomalнa, estalla en decenas de rayos en miniatura que causan una descarga elйctrica casi siempre letal para cualquier ser vivo. Se reconoce por la niebla azulada que flota sobre ella durante el dнa. Por la noche, la anomalнa Electro puede localizarse con cualquier detector o lanzando objetos metбlicos contra ella. Forma tres tipos de artefactos: Bengala, Destello y Claro de luna.</text>
+	</string>
+	<string id="enc_zone_anomalies_fuzz">
+		<text>Es uno de los ejemplos de vegetaciуn mutada de la Zona. Reacciona al acercamiento rбpido de seres vivos descargando una lluvia de proyectiles que causa heridas en la piel sin protecciуn o con protecciуn ligera. No reacciona contra objetivos lentos. tipos de artefacto (posiblemente sus semillas): Espina, Espina de cristal y Palomilla.</text>
+	</string>
+	<string id="enc_zone_anomalies_gravi">
+		<text>En teorнa es una anomalнa de naturaleza gravitatoria. Cuando se activa, la gran potencia del Vуrtice arrastra hacia el centro todo lo que hay en un radio de 10 a 15 metros.  Las vнctimas arrastradas hacia el nъcleo no tienen posibilidades de sobrevivir: sus cuerpos se reducen rбpidamente a una masa dura, y estallan poco despuйs tras recibir una descarga de energнa muy potente. La anomalнa permanece estбtica a lo largo de su periodo de actividad (una semana de media). Se reconoce fбcilmente por el dнa porque el aire fluctъa sobre ella, hay hojas que bailan, fragmentos de cadбveres desmembrados, y una caracterнstica mancha oscura en el centro. Es muy peligrosa por la noche, ya que solo se puede localizar con un detector o lanzando objetos metбlicos contra ella. Forma tres tipos de artefactos: Torcedor, Gravi y Pez de colores. </text>
+	</string>
+	<string id="enc_zone_anomalies_lift">
+		<text>Anomalнa inocua que anula temporalmente la gravedad normal. Se manifiesta como un бrea, normalmente de varios metros de diбmetro, donde la fuerza de gravitaciуn terrestre se reduce considerablemente. Forma el artefacto Pelнcula.</text>
+	</string>
+	<string id="enc_zone_anomalies_meat">
+		<text>Esta anomalнa agarra a sus vнctimas y les da vueltas por los aires a una velocidad de vйrtigo. La naturaleza exacta del Remolino se desconoce aъn. Esta anomalнa se puede reconocer por un ligero torbellino de polvo en la parte superior y por los fragmentos de cuerpos diseminados de los alrededores. Las vнctimas atrapadas en su zona mбs externa pueden escapar del Remolino sufriendo solo heridas superficiales si estбn suficientemente lejos del centro. Forma tres tipos de artefactos: Sangre petrificada, Bola de carne y Alma.</text>
+	</string>
+	<string id="enc_zone_anomalies_radioactive">
+		<text>Бrea de gran radiaciуn: mбs de 50 mR/h. No se recomienda permanecer en una zona con radiaciуn durante largos periodos de tiempo.</text>
+	</string>
+	<string id="enc_zone_anomalies_time">
+		<text>Un verdadero milagro de anomalнa: se trata de un бrea de varios metros de diбmetro donde el tiempo pasa mucho mбs despacio de lo normal. Parece no tener efectos negativos en la salud humana. Sin embargo, puede resultar muy difнcil salir de la Mбquina del tiempo. Curiosamente, extraer los Abalorios de madre (artefacto que normalmente se encuentra en el centro de la anomalнa) hace que la Mбquina del tiempo desaparezca.</text>
+	</string>
+	<string id="enc_zone_anomalies_zharka">
+		<text>Mientras permanece inactiva, la anomalнa se manifiesta como una nube de aire caliente apenas visible. Cuando se activa mediante un objeto o un ser vivo, comienza a calentarse al instante hasta alcanzar temperaturas cercanas a los 1500 K. Por la noche se puede localizar con detectores potentes y lanzando objetos metбlicos a su zona de activaciуn. Forma tres tipos de artefactos: Gotas, Bola de fuego y Cristal.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-mica">
+		<text>La anomalнa Ponche de frutas es capaz de crear artefactos en las condiciones fнsicas mбs raras y extremas. El resultado es un objeto duro y semitransparente. Un artefacto caro y poco comъn.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slime">
+		<text>Sin duda este artefacto lo ha creado la anomalнa llamada Ponche de frutas. Cuando se utiliza correctamente, las heridas sangran menos, aunque el cuerpo del portador es mбs vulnerable a distintas quemaduras.</text>
+	</string>
+	<string id="enc_zone_artifact_af-ameba-slug">
+		<text>Formado por la anomalнa Ponche de frutas. Las cualidades negativas de este artefacto se compensan con el hecho de que aumenta la calidad de coagulaciуn de la sangre. Uno no se encuentra tan a menudo con este tipo de artefactos que se pagan tan bien.</text>
+	</string>
+	<string id="enc_zone_artifact_af-blood">
+		<text>Puedes encontrar este artefacto cerca de la anomalнa Remolino. Se trata de un objeto rojizo bastante desagradable compuesto de restos polimerizados de plantas, tierra y huesos prensados. Es bastante comъn y no muy efectivo.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall">
+		<text>Se crea cuando caen metales pesados dentro de la anomalнa Cauterizador. Este artefacto elimina totalmente la radiaciуn. Los stalkers lo valoran mucho y es difнcil de encontrar.</text>
+	</string>
+	<string id="enc_zone_artifact_af-cristall-flower">
+		<text>Creado en la anomalнa Trampolнn. Este artefacto se encuentra en muy pocas бreas de la Zona. Los componentes metбlicos crean un bonito juego de luces. Es muy relajante estudiar este artefacto por la noche, cerca del fuego. </text>
+	</string>
+	<string id="enc_zone_artifact_af-drops">
+		<text>Formado en la anomalнa Cauterizador a altas temperaturas. Desde el exterior parece una sombra con forma de lбgrima y una superficie brillante llena de grietas.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-battery">
+		<text>El origen de este objeto es un misterio para la ciencia. No hay duda de que estб formado en parte por elementos dielйctricos, pero se desconocen las condiciones fнsicas en que se formу.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-dummy">
+		<text>Al portar este artefacto, la desnaturalizaciуn de las proteнnas es mбs lenta. Es decir, el cuerpo es capaz de soportar temperaturas mбs altas y de quemarse menos. Es un objeto caro y poco comъn.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-glassbeads">
+		<text>Un artefacto magnнfico. Consйrvalo bien. Es muy bueno porque solo cuenta con cualidades positivas. Los cientнficos no saben cуmo crear un artefacto como este en los laboratorios.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-pellicle">
+		<text>Este artefacto es tan poco comъn que muchos investigadores no imaginan siquiera que una sustancia asн pueda existir en un entorno natural. Emite componentes quнmicos бcidos.</text>
+	</string>
+	<string id="enc_zone_artifact_af-dummy-spring">
+		<text>Segъn la opiniуn de algunos teуricos e investigadores, este artefacto es un hнbrido entre las Baterнas y las Cбscaras.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-flash">
+		<text>Este artefacto se forma a veces en la anomalнa Electro. Los stalkers lo utilizan de buena gana por sus buenas cualidades. Es un artefacto codiciado por los coleccionistas debido a su atractivo aspecto y a su precio asequible.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-moonlight">
+		<text>Producto degenerado de la actividad de la anomalнa Electro. Parece que su forma, asombrosamente redonda, se produce cuando la anomalнa estб sometida a influencias tйrmicas. Es un artefacto caro.</text>
+	</string>
+	<string id="enc_zone_artifact_af-electra-sparkler">
+		<text>Puede encontrarse en las proximidades de la anomalнa Electro. Es un artefacto muy comъn y barato. Sin embargo, sus cualidades son muy apreciadas por los investigadores de la Zona.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fireball">
+		<text>Cristaliza en la anomalнa Cauterizador. Es eficaz contra la radiactividad, aunque la elevada tasa de intercambio de energнa desgasta los mъsculos del aparato motor. No podrбs correr durante mucho tiempo. El artefacto emite calor.</text>
+	</string>
+	<string id="enc_zone_artifact_af-fuzz-kolobok">
+		<text>Cuando sostienes en tus manos este misterio de la Zona, tu piel se vuelve mбs dura y menos sensible. Continъas siendo vulnerable a los disparos, pero son menos perforantes.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gold-fish">
+		<text>Es un artefacto que se forma en la anomalнa Vуrtice. Se activa con el calor del cuerpo. Decide quй es peor: la radiaciуn o las heridas de cuchillo, y elige el menor de los males. En cualquier caso, puedes vender el artefacto y sacar buenos beneficios.</text>
+	</string>
+	<string id="enc_zone_artifact_af-gravi">
+		<text>Puede encontrarse cerca de anomalнas como Vуrtice o en manos de otros stalker. Mientras lo llevas, se almacena cierta cantidad de radiaciуn en el cuerpo y el resto se dispersa hacia el exterior. Tiene un precio razonable.</text>
+	</string>
+	<string id="enc_zone_artifact_af-medusa">
+		<text>Se forma en la anomalнa Trampolнn. Genera un dйbil campo protector y, como efecto secundario, una pequeсa radiaciуn. Este artefacto es muy abundante y tiene poco valor.</text>
+	</string>
+	<string id="enc_zone_artifact_af-mincer-meat">
+		<text>Se crea en la anomalнa Remolino. Acelera la regeneraciуn celular. Sin embargo, las nuevas cйlulas son mucho mбs vulnerables a los efectos del uranio fнsico. Este artefacto no se encuentra fбcilmente, pero tampoco es excepcional.</text>
+	</string>
+	<string id="enc_zone_artifact_af-night-star">
+		<text>Este asombroso artefacto se forma en la anomalнa Trampolнn. Para su uso hay que neutralizar las radiaciones letales. Es caro y poco comъn, y de gran interйs para las expediciones cientнficas y otras actividades de investigaciуn en la Zona.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-kristall">
+		<text>Cristaliza en la anomalнa Pelusa quemada. Elimina la radiaciуn del organismo de forma natural. Es decir, a travйs de los oнdos y acompaсбndose de cierta pйrdida de sangre. Tambiйn pueden sangrar otros orificios. Es bastante comъn y muy efectivo, por lo que su precio es estable en el mercado de los artefactos.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-sea-urchin">
+		<text>Es muy poco frecuente que la anomalнa Pelusa quemada origine este artefacto. Aumenta la presiуn sanguнnea, y el cuerpo se deshace de grandes cantidades de cйlulas rojas. Pero, junto con ellas, tambiйn se elimina del cuerpo la radiaciуn almacenada. Sakharov, en su imprescindible obra "Ionizaciуn y polarizaciуn de los componentes de artefactos poco comunes", explica que el contenido de esta formaciуn tiene una estabilidad crнtica, y que harбn falta 10 aсos para que este tipo de artefacto pueda crearse en un laboratorio.</text>
+	</string>
+	<string id="enc_zone_artifact_af-rusty-thorn">
+		<text>Es el resultado de la interacciуn entre la anomalнa Pelusa quemada y el cuerpo de algъn stalker incauto. El artefacto Espina agujerea el cuerpo de su propietario indiscriminadamente. Pero tambiйn ayuda a limpiarlo de radionucleidos. Es muy comъn y barato.</text>
+	</string>
+	<string id="enc_zone_artifact_af-soul">
+		<text>Es un artefacto muy poco frecuente que se encuentra en las proximidades de la anomalнa Remolino. Solo unos pocos han logrado encontrar este artefacto, y muy poca gente ha llegado a verlo. Tiene una forma agradable y un precio razonable.</text>
+	</string>
+	<string id="enc_zone_artifact_af-vyvert">
+		<text>Se encuentra en la anomalнa llamada Vуrtice. Al tocar el cuerpo disemina la radiaciуn directa protegiйndolo de las heridas o rasguсos infligidos por las armas. No es difнcil dar con este artefacto, por lo que no se suele pagar demasiado por йl.</text>
+	</string>
+	<string id="enc_zone_locations_agroprom">
+		<text>Es un бrea extraсa y altamente contaminada. Si alguna vez te adentras en ella, verбs un lago poco profundo repleto de equipamiento abandonado y otros restos. Tambiйn puedes inspeccionar el Instituto abandonado y la fбbrica, aunque el ejйrcito ha estado merodeando por ahн recientemente.</text>
+	</string>
+	<string id="enc_zone_locations_bar">
+		<text>La facciуn Deber ha establecido un campamento en el margen de la llanura, y siempre acogen a los stalkers que van buscando un sitio para descansar. Una especie de oasis en el desierto: un lugar completamente limpio de mutantes y anomalнas. No te olvides de pasarte por el bar subterrбneo Los 100 rads: es un punto de encuentro de los stalkers de toda la zona. El bar estб regentado por el comerciante del sector, asн que, si ademбs de la charla, estбs interesado en comprar o vender mercancнas, este es tu sitio. Al norte del bar se encuentra la base militar; y el vertedero, al sur.</text>
+	</string>
+	<string id="enc_zone_locations_darkdolina">
+		<text>Es un lugar tenebroso y lъgubre, y siempre estб lloviendo. Los stalkers que se adentran en el Valle Oscuro tienen muchas posibilidades de encontrar artefactos de gran valor o una muerte fulminante, o ambas cosas. Este lugar lo frecuentan algunos de los veteranos mбs experimentados, aunque tambiйn es posible que te encuentres con bandidos comunes. En teorнa debe de haber un laboratorio subterrбneo en algъn lugar del valle, asн que no serнa mala idea ir buscando una entrada secreta por el camino. Nadie ha vuelto de allн con vida, y nadie sabe con certeza quй sorpresas desagradables te aguardan.</text>
+	</string>
+	<string id="enc_zone_locations_escape">
+		<text>Es una especie de antecбmara de la Zona: un buen lugar para que los novatos tomen contacto con los misterios del lugar. Encontrarбs a un comerciante en los subterrбneos que hay detrбs del pueblo, junto a la avanzadilla militar. No pierdas la oportunidad de hablar con йl. Sin embargo, trata de esquivar a los militares. Es mejor que no te vean; la mayorнa de ellos disparan primero y preguntan despuйs. Aun asн, como siempre, algunos aceptan sobornos cuando nadie los estб mirando. Lo mejor es no atacar a los soldados, a no ser que supongan una amenaza directa.</text>
+	</string>
+	<string id="enc_zone_locations_garbage">
+		<text>Es un enorme cementerio de maquinaria. Despuйs del primer accidente, se trajeron aquн grandes cantidades de desechos radiactivos. Estб lleno de ruinas de viejos edificios infestados de mutantes. Al igual que las afueras de la Zona, este lugar estб a rebosar de stalkers novatos; tambiйn encontrarбs bandidos merodeando, siempre en busca de gangas. Hay algunos artefactos, pero la mayorнa de ellos no merecen la pena. Lo mejor es que busques en otra parte. Si te diriges al norte, llegarбs al Territorio salvaje, hacia el oeste encontrarбs la entrada al Valle Oscuro, y al este la carretera que va al Instituto Agroprom.</text>
+	</string>
+	<string id="enc_zone_locations_military-loc">
+		<text>Es una base militar desierta prуxima a una aldea ruinosa y a un pequeсo pantano. El pueblo es un lugar espeluznante, plagado de mutantes: los chupasangres son uno de los grupos mбs numerosos. Los stalkers intentan por todos los medios no pasar por aquн, aunque para ello tengan que dar un rodeo de varios kilуmetros. Los anarquistas de la facciуn Libertad se han establecido en la base militar. La carretera que conecta la base con la Zona estб protegida por el Cauterizador cerebral, que bloquea el acceso a Pripyat y a la planta nuclear de Chernуbil. </text>
+	</string>
+	<string id="enc_zone_locations_pripiat">
+		<text>Antes era una ciudad donde vivнan los ingenieros que trabajaban en la planta nuclear de Chernуbil. Lo que fue un lugar prуspero, es ahora un zona fantasma, habitada ъnicamente por mutantes y zombis. Parece imposible hallar una forma de entrar: el Cauterizador cerebral bloquea el paso. </text>
+	</string>
+	<string id="enc_zone_locations_radar">
+		<text>Es un lugar espantoso. Cualquier intruso se desvanece sin dejar rastro, hasta los que siempre tienen suerte. Todo el que se acerca al Cauterizador cerebral se vuelve loco inmediatamente, pasa a ser un zombi y comienza a deambular sin rumbo fijo por la Zona. No es ya mбs que un pedazo de carne. Nadie ha vuelto a recuperarse del trance de ser un zombi. </text>
+	</string>
+	<string id="enc_zone_locations_rostok">
+		<text>En el Territorio salvaje habнa una gran planta industrial que actualmente estб en ruinas. Muchos stalkers han hallado aquн la muerte: el lugar estб plagado de todo tipo de monstruos. Hasta йl siguen llegando bestias procedentes de toda la Zona. Dicen que hay algo muy importante escondido en este sitio, asн que siempre hay algъn temerario intentando probar suerte. </text>
+	</string>
+	<string id="enc_zone_locations_stancia">
+		<text>Lugar donde se encuentra la mundialmente famosa planta nuclear. Es el corazуn de la Zona. Si crees en las leyendas, tambiйn es el lugar donde estб ubicado el Monolito, un misterioso objeto capaz de conceder deseos. </text>
+	</string>
+	<string id="enc_zone_locations_yantar">
+		<text>El legendario lago que habнa en el sector del mismo nombre se secу hace mucho tiempo, y lo que queda en su lugar es un pantano poco profundo. Es un entorno mуrbido, apestado de muerte. Allн aguardan grandes peligros a las almas aventureras y temerarias que osen acercarse. Todo el que llega demasiado lejos se vuelve loco. Se escuchan por todo el sector los sonidos monуtonos de los zombis aguardando nuevas vнctimas. Si rodeas el lago y logras atravesar el бrea de los zombis, llegarбs al campamento de los cientнficos; los cerebritos, transportados hasta allн en helicуptero, estarбn realizando alguna investigaciуn. Puedes charlar con ellos; te comprarбn artefactos e incluso puede que te envнen a alguna misiуn.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2006">
+		<text>La zona contaminada brillaba con la luz mбs resplandeciente; era casi insoportable para el ojo humano. Prбcticamente se podнa ver cуmo se transformaban en vapor las nubes del cielo. Tras un momento de silencio mortal, llegу el sonido atronador, y despuйs la tierra temblу. La gente cayу al suelo cerrando y tapбndose los ojos. Los que quedaron en pie corrieron para tratar de salvar sus vidas. Parecнa como si hubiese explotado de repente todo el combustible nuclear enterrado bajo el Sarcуfago. Al dнa siguiente, el ejйrcito acordonу la nueva Zona. Los satйlites ayudaron a determinar que el epicentro de la explosiуn no estaba en las proximidades de los reactores de la central nuclear, sino aproximadamente a medio kilуmetro de allн. Se cree que muriу todo el personal de la central, aunque mucha gente sobreviviу dentro del бrea acordonada. La operaciуn de rescate pronto se revelу como una tentativa inъtil, ya que morнan las personas y se estropeaban todas las mбquinas que se enviaban dentro del бrea. Poco despuйs del desastre, el diбmetro de la Zona se ampliу varios kilуmetros. Perecieron en el acto la mayorнa de las tropas estatales que vigilaban el lнmite y los equipos de investigaciуn instalados allн. Presa del pбnico, la gente huyу del lugar. Los habitantes de las ciudades y pueblos vecinos fueron evacuados rбpidamente. Un gran peligro amenaza al mundo y no podemos ni imaginarnos su magnitud real.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2008">
+		<text>Han pasado dos aсos desde el desastre de la planta nuclear de Chernуbil. Un cifra astronуmica de vнctimas, cuantiosos desaparecidos, reses muertas, edificios en ruinas, bosques mutilados... A dнa de hoy, los cientнficos no tienen ninguna explicaciуn sobre lo que ocurriу en Chernуbil. Mientras tanto, se han encontrado anomalнas inconcebibles en el бrea y la Zona continъa expandiйndose. En las escasas expediciones realizadas se han encontrado especies de animales mutadas que muestran habilidades increнbles.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-2010">
+		<text>Siguiendo los pasos de esos individualistas temerarios que se autodenominan stalkers, se estбn realizando de nuevo expediciones de investigaciуn para estudiar en profundidad la Zona. Sin embargo, el perнmetro protegido por el ejйrcito tiene otros habitantes peligrosos, desde cazadores furtivos a bandidos de la peor clase. La mayorнa de los stalkers recorren la Zona en busca de anomalнas y de los llamados artefactos, por los que obtienen considerables beneficios.</text>
+	</string>
+	<string id="enc_zone_zone-story_story-raid">
+		<text>El ejйrcito y fuerzas especiales dirigidas por destacamentos de stalkers paramilitares se lanzaron a una incursiуn masiva en la Zona. Su objetivo era llegar a la planta de Chernуbil y eliminar la causa de las anomalнas o, al menos, obtener informaciуn de primera mano sobre el estado actual de la situaciуn. Esta tentativa, apoyada por miles de efectivos y maquinaria pesada, fue un completo fracaso. Los grupos aislados de supervivientes se vieron forzados a establecerse dentro de la Zona con escasas esperanzas de ser rescatados.</text>
+	</string>
+	<string id="Escape">
+		<text>Avanzadilla</text>
+	</string>
+	<string id="Fuzz">
+		<text>Pelusa quemada</text>
+	</string>
+	<string id="Garbage">
+		<text>Vertedero</text>
+	</string>
+	<string id="Gravi">
+		<text>Vуrtice</text>
+	</string>
+	<string id="Lift">
+		<text>Ascensor</text>
+	</string>
+	<string id="Locations">
+		<text>Ubicaciones</text>
+	</string>
+	<string id="Meat">
+		<text>Remolino</text>
+	</string>
+	<string id="Military-loc">
+		<text>Base del ejйrcito</text>
+	</string>
+	<string id="Pripiat">
+		<text>Pripyat</text>
+	</string>
+	<string id="Radar">
+		<text>Cauterizador</text>
+	</string>
+	<string id="Radioactive">
+		<text>Fuente de radiactividad</text>
+	</string>
+	<string id="Rostok">
+		<text>Territorio salvaje</text>
+	</string>
+	<string id="Stancia">
+		<text>Central nuclear de Chernуbil</text>
+	</string>
+	<string id="Story-2006">
+		<text>12 de abril de 2008, 14:33</text>
+	</string>
+	<string id="Story-2008">
+		<text>Aсo 2010</text>
+	</string>
+	<string id="Story-2010">
+		<text>Aсo 2011</text>
+	</string>
+	<string id="Story-raid">
+		<text>Incursiуn del ejйrcito en la Zona. 2011</text>
+	</string>
+	<string id="Time_machine">
+		<text>Mбquina del tiempo</text>
+	</string>
+	<string id="Yantar">
+		<text>Yantar</text>
+	</string>
+	<string id="Zharka">
+		<text>Quemador</text>
+	</string>
+	<string id="Zone">
+		<text>La Zona</text>
+	</string>
+	<string id="Zone-story">
+		<text>Historia de la Zona</text>
+	</string>
+</string_table>

@@ -1,0 +1,54 @@
+	<string id="bar_darklab_documents_1_hint">
+		<text>Borow</text>
+	</string>
+	<string id="bar_darklab_documents_2_hint">
+		<text>Tunnel</text>
+	</string>
+	<string id="bar_darklab_documents_3_hint">
+		<text>Laboreingang</text>
+	</string>
+	<string id="bar_darklab_documents_4_hint">
+		<text>Rohr</text>
+	</string>
+	<string id="bar_darklab_documents2_1_hint">
+		<text>Dokumente aus dem Labor</text>
+	</string>
+	<string id="bar_darklab_documents2_2_hint">
+		<text>Wirt</text>
+	</string>
+	<string id="val_captive_help_1_hint">
+		<text>Bullet</text>
+	</string>
+	<string id="val_captive_help_2_hint">
+		<text>Gefangener</text>
+	</string>
+	<string id="val_come_to_trader_1_hint">
+		<text>Südtor</text>
+	</string>
+	<string id="val_come_to_trader_2_hint">
+		<text>Händler</text>
+	</string>
+	<string id="val_prisoner_help_main_hint">
+		<text>Gefangener Wächter</text>
+	</string>
+	<string id="val_sos_help_main_hint">
+		<text>Verwundeter Stalker</text>
+	</string>
+	<string id="val_zone_bandits_hint">
+		<text>Banditenlager</text>
+	</string>
+	<string id="val_zone_farm_hint">
+		<text>Bauernhof.\nGauss kaufen.</text>
+	</string>
+	<string id="val_zone_monolith_hint">
+		<text>Alte Fabrik</text>
+	</string>
+	<string id="val_zone_pipe_hint">
+		<text>Kanalrohr</text>
+	</string>
+	<string id="val_zone_robbers_hint">
+		<text>Verlassene Schweinezucht</text>
+	</string>
+	<string id="val_zone_south_gate_hint">
+		<text>Tore</text>
+	</string>

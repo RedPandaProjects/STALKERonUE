@@ -1,0 +1,78 @@
+	<string id="agr_find_ghost">
+		<text>Odszukaj Ducha</text>
+	</string>
+	<string id="agr_gunslinger_cache">
+		<text>Schowek Strieloka</text>
+	</string>
+	<string id="agr_help_krot">
+		<text>Uratuj Kreta</text>
+	</string>
+	<string id="agr_help_krot_0">
+		<text>Pomó¿ Kretowi odeprzeæ ¿o³nierzy</text>
+	</string>
+	<string id="agr_help_krot_1">
+		<text>Zabij ¿o³nierzy</text>
+	</string>
+	<string id="agr_help_krot_2">
+		<text>Uratuj Kreta</text>
+	</string>
+	<string id="agr_help_stalkers">
+		<text>Pomó¿ stalkerom</text>
+	</string>
+	<string id="agr_help_stalkers_0">
+		<text>Pomó¿ stalkerom odeprzeæ ¿o³nierzy</text>
+	</string>
+	<string id="agr_help_stalkers_1">
+		<text>Zabij ¿o³nierzy</text>
+	</string>
+	<string id="agr_help_stalkers_2">
+		<text>Pomó¿ stalkerom odeprzeæ ¿o³nierzy</text>
+	</string>
+	<string id="agr_krot">
+		<text>Spotkaj siê ze stalkerami</text>
+	</string>
+	<string id="agr_meet_krot_band">
+		<text>Zdob¹dŸ informacje o Strieloku</text>
+	</string>
+	<string id="agr_meet_krot_band_0">
+		<text>Zdob¹dŸ informacje od Kreta</text>
+	</string>
+	<string id="agr_meet_krot_band_1">
+		<text>Spotkaj siê z grup¹ Kreta</text>
+	</string>
+	<string id="agr_meet_krot_band_2">
+		<text>Zdob¹dŸ informacje od Kreta</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache">
+		<text>ZnajdŸ schowek grupy Strieloka</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_0">
+		<text>ZnajdŸ schowek grupy Strieloka</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_1">
+		<text>ZnajdŸ schowek</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_2">
+		<text>ZnajdŸ w schowku informacje o Strieloku</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_3">
+		<text>ZnajdŸ wyjœcie z podziemi</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom">
+		<text>ZnajdŸ Ducha</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom_0">
+		<text>Duch wie, gdzie jest Strielok.</text>
+	</string>
+	<string id="agroprom_get_military_documents">
+		<text>ZnajdŸ dokumenty wojskowe</text>
+	</string>
+	<string id="agroprom_get_military_documents_0">
+		<text>Instytut Agroprom</text>
+	</string>
+	<string id="agroprom_get_military_documents_1">
+		<text>Ukradnij dokumenty wojskowe</text>
+	</string>
+	<string id="agroprom_get_military_documents_2">
+		<text>Zabierz dokumenty do Barmana</text>
+	</string>

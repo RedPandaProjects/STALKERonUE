@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="id_mp_money">
+		<text>Penнze</text>
+	</string>
+	<string id="mm_mp_pda_hunt">
+		<text>PDA bonus</text>
+	</string>
+	<string id="st_drink">
+		<text>vypнt</text>
+	</string>
+	<string id="st_mp_direct_ip">
+		<text>Pшнmй IP</text>
+	</string>
+	<string id="ui_mm_default">
+		<text>Vэchozн</text>
+	</string>
+	<string id="ui_mm_detail_density">
+		<text>Hustota trбvy</text>
+	</string>
+	<string id="ui_mm_r2_sun">
+		<text>Stнn slunce</text>
+	</string>
+	<string id="ui_mm_r2_sun_details">
+		<text>Stнn trбvy</text>
+	</string>
+	<string id="ui_mm_render_2">
+		<text>Typ zobrazenн 2</text>
+	</string>
+	<string id="ui_pda_details">
+		<text># /detailщ</text>
+	</string>
+	<string id="ui_st_btn_cancel">
+		<text>Zruљit</text>
+	</string>
+	<string id="ui_st_btn_no">
+		<text>Ne</text>
+	</string>
+	<string id="ui_st_btn_ok">
+		<text>Ok</text>
+	</string>
+	<string id="ui_st_btn_yes">
+		<text>Ano</text>
+	</string>
+	<string id="ui_st_cant_run_r2">
+		<text>Na svйm PC nemщћeљ pouћнvat typ zobrazenн 2</text>
+	</string>
+	<string id="ui_st_conn_invalid_host">
+		<text>Chyba spojenн: Neplatnэ server</text>
+	</string>
+	<string id="ui_st_conn_invalid_pass">
+		<text>Chyba spojenн: Neplatnй heslo</text>
+	</string>
+	<string id="ui_st_conn_rejected_server">
+		<text>Chyba spojenн: Server odmнtnul spojenн</text>
+	</string>
+	<string id="ui_st_conn_sess_full">
+		<text>Chyba spojenн: Hra je plnб</text>
+	</string>
+	<string id="ui_st_days">
+		<text>Dnщ</text>
+	</string>
+	<string id="ui_st_error">
+		<text>Chyba</text>
+	</string>
+	<string id="ui_st_file_exist_owerwrite_q">
+		<text>Soubor uћ existuje. Pшepsat?</text>
+	</string>
+	<string id="ui_st_file_name_is_empty">
+		<text>Jmйno souboru je prбzdnй</text>
+	</string>
+	<string id="ui_st_hours">
+		<text>hodin</text>
+	</string>
+	<string id="ui_st_leave">
+		<text>Odejнt</text>
+	</string>
+	<string id="ui_st_mins">
+		<text>minut</text>
+	</string>
+	<string id="ui_st_months">
+		<text>mмsнcщ</text>
+	</string>
+	<string id="ui_st_params">
+		<text>Parametry</text>
+	</string>
+	<string id="ui_st_secs">
+		<text>sek.</text>
+	</string>
+	<string id="ui_st_select_one_map">
+		<text>Vyber si alespoт jednu mapu</text>
+	</string>
+	<string id="ui_st_take_all">
+		<text>Vzнt vљe</text>
+	</string>
+	<string id="ui_st_time_remains">
+		<text>Zbэvб</text>
+	</string>
+	<string id="ui_st_trade">
+		<text>Obchod</text>
+	</string>
+	<string id="ui_st_voting_disabled">
+		<text>Hlasovбnн je zakбzбno</text>
+	</string>
+	<string id="ui_st_want_to_leave_game_q">
+		<text>Opravdu chceљ skonиit hru?</text>
+	</string>
+	<string id="ui_st_your_items">
+		<text>Tvй vмci</text>
+	</string>
+	<string id="st_game_over_press_jump">
+		<text>Stiskem ($$ACTION_JUMP$$) odejdeљ do hlavnн nabнdky</text>
+	</string>
+	<string id="st_level">
+		<text>Ъroveт</text>
+	</string>
+	<string id="st_opening_stream">
+		<text>Otvнrб se stream</text>
+	</string>
+	<string id="st_loading_cform">
+		<text>Naинtб se CFORM</text>
+	</string>
+	<string id="st_prefetching_objects">
+		<text>Pшipravujн se objekty</text>
+	</string>
+	<string id="st_creating_new_game">
+		<text>Vytvбшн se novб hra</text>
+	</string>
+	<string id="st_loading_alife_simulator">
+		<text>SERVER: Naинtб se simulace ALife</text>
+	</string>
+	<string id="st_server_connecting">
+		<text>SERVER: Pшipojuje se</text>
+	</string>
+	<string id="st_loading_saved_game">
+		<text>Naинtб se hra</text>
+	</string>
+	<string id="st_validating_cdkey">
+		<text>Ovмшuje se CD klни</text>
+	</string>
+	<string id="st_loading_ai_objects">
+		<text>Naинtajн se AI objekty</text>
+	</string>
+	<string id="st_client_connecting_to">
+		<text>KLIENT: Pшipojuje se</text>
+	</string>
+	<string id="st_client_spawning">
+		<text>KLIENT: Umisќovбnн</text>
+	</string>
+	<string id="st_loading_textures">
+		<text>Naинtajн se textury</text>
+	</string>
+	<string id="st_client_synchronising">
+		<text>KLIENT: Synchronizuje se</text>
+	</string>
+	<string id="st_server_starting">
+		<text>SERVER: Spouљtн se</text>
+	</string>
+	<string id="st_loading_shaders">
+		<text>Naинtajн se shadery</text>
+	</string>
+	<string id="st_loading_geometry">
+		<text>Naинtб se geometrie</text>
+	</string>
+	<string id="st_loading_spatial_db">
+		<text>Naинtб se prostorovб databбze</text>
+	</string>
+	<string id="st_loading_details">
+		<text>Naинtajн se detaily</text>
+	</string>
+	<string id="st_loading_sectors_portals">
+		<text>Naинtajн se sektory a portбly</text>
+	</string>
+	<string id="ui_st_conn_version_differs">
+		<text>Chyba pшipojenн: Rozdнlnй verze</text>
+	</string>
+	<string id="ui_st_conn_cdkey_invalid">
+		<text>Chyba pшipojenн: Neplatnэ CD klни</text>
+	</string>
+	<string id="ui_st_conn_cdkey_in_use">
+		<text>Chyba pшipojenн: CD klни uћ se pouћнvб.</text>
+	</string>
+	<string id="ui_st_conn_cdkey_disabled">
+		<text>Chyba pшipojenн: Tvщj CD klни byl zablokovбn. Kontaktuj zбkaznickou podporu.</text>
+	</string>
+	<string id="ui_st_conn_new_patch">
+		<text>Novб aktualizace dostupnб.\n Verze: %s\n Lokace: %s\nChceљ ji stбhnout?</text>
+	</string>
+	<string id="ui_st_conn_no_new_patch">
+		<text>Nejsou dostupnй ћбdnй novй aktualizace</text>
+	</string>
+	<string id="ui_mm_delete_existing_file_q">
+		<text>Opravdu chceљ soubor smazat?</text>
+	</string>
+	<string id="st_game_paused">
+		<text>Pauza</text>
+	</string>
+	<string id="st_bolt">
+		<text>Љroub</text>
+	</string>
+	<string id="st_items">
+		<text>Pшedmмty</text>
+	</string>
+	<string id="st_video">
+		<text>Obraz</text>
+	</string>
+	<string id="st_audio">
+		<text>Zvuk</text>
+	</string>
+	<string id="st_game">
+		<text>Hra</text>
+	</string>
+	<string id="st_controll">
+		<text>Ovlбdбnн</text>
+	</string>
+	<string id="ui_st_connecting_to_masterserver">
+		<text>Snaћнm se pшipojit k hlavnнmu serveru</text>
+	</string>
+	<string id="mp_only_one_voting">
+		<text>Je povoleno pouze jedno aktivnн hlasovбnн.</text>
+	</string>
+	<string id="ui_st_patch_download_success">
+		<text>Aktualizace byla staћena. Chceљ ji nainstalovat?</text>
+	</string>
+	<string id="ui_st_patch_download_error">
+		<text>Nepodaшilo se stбhnout aktualizaci.</text>
+	</string>
+	<string id="ui_st_load_game_confirm">
+		<text>naиtenн hry bude znamenat ztrбtu neuloћenэch dat. Pokraиovat?</text>
+	</string>
+</string_table>

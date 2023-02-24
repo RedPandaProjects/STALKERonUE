@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="svoboda_outfit_name_m1">
+		<text>Kombez Freedom M2</text>
+	</string>
+	<string id="team_1_desc">
+		<text>Los anarquistas de la Zona. Creen que la Zona es un refugio de libertad y que todas las leyes, reglas y tradiciones del mundo exterior no tienen validez aquн. Su lema es "Haz lo que quieras y deja que los demбs tambiйn lo hagan". Intentan impedir que el Gobierno asuma el control de la Zona y luchan contra los mercenarios. Los luchadores de Libertad utilizan principalmente armas soviйticas y rusas.</text>
+	</string>
+	<string id="team_1_name">
+		<text>Facciуn Libertad (Stalkers libres)</text>
+	</string>
+	<string id="team_2_desc">
+		<text>Matones y aventureros de todo el mundo, no hay nada peor que ellos. Su lema es "Pecunia non olet - El dinero no huele". Aquн hay artefactos, luego es lуgico que haya dinero. Los mercenarios utilizan principalmente armas occidentales.</text>
+	</string>
+	<string id="team_2_name">
+		<text>Facciуn de mercenarios (Cazadores de cabezas)</text>
+	</string>
+</string_table>

@@ -1,0 +1,9 @@
+	<string id="aes_military_task">
+		<text>Opération Monolithe</text>
+	</string>
+	<string id="aes_military_task_head">
+		<text>Situation</text>
+	</string>
+	<string id="aes_soldier_info">
+		<text>Plan d'action militaire\n\n Personnel :\n Commandant de l'opération : indicatif Quartet\n Sept unités d'assaut aérien : Sapsan, Korshun, Yastreb, Pustelga, Sokol, Grif, Lun. \n Équipe de snipers : Sova\n Appui :\n Air : 018, 030, 031, 48, 49, 52\n 51, 64, 65, 098, 097\n Sol : Armadillo 1, Armadillo 2, Armadillo 3\n Situation : Grande résistance possible aux abords du pont (23,45), de la porte (26,78) et de la route menant au bâtiment principal de la centrale (12,23-53,76). Il est probable que l'ennemi y déploie des armes lourdes. \n Personnel ennemi attendu : 70-100. Véhicules blindés : aucun.\n Grosse couverture de snipers possible de la part de l'ennemi.\n Conditions météo : Visibilité - 700 m, possibilités de nouvelles anomalies.</text>
+	</string>

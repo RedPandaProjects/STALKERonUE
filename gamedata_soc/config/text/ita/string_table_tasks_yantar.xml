@@ -1,0 +1,72 @@
+	<string id="yan_find_ghost">
+		<text>Prendi i documenti dal Fantasma</text>
+	</string>
+	<string id="yan_find_ghost_task">
+		<text>Prendi i documenti</text>
+	</string>
+	<string id="yan_find_vasilyev_task">
+		<text>Entra nel laboratorio</text>
+	</string>
+	<string id="yan_find_labX16">
+		<text>Entra nel laboratorio X16</text>
+	</string>
+	<string id="yan_find_scientist">
+		<text>Misura il livello delle radiazioni</text>
+	</string>
+	<string id="yan_find_vasilyev">
+		<text>Perquisisci il cadavere di Vasiljev</text>
+	</string>
+	<string id="yan_kill_brain">
+		<text>Disattiva le emissioni psioniche</text>
+	</string>
+	<string id="yan_kill_brain_task">
+		<text>Scollega il meccanismo</text>
+	</string>
+	<string id="yan_kill_brain_task_2">
+		<text>Esci dal laboratorio</text>
+	</string>
+	<string id="yan_provodnik_about_doctor">
+		<text>Parla con la Guida</text>
+	</string>
+	<string id="yan_provodnik_task">
+		<text>Incontra la Guida</text>
+	</string>
+	<string id="yan_psi_zone_find">
+		<text>Scorta Kruglov fino all'area dei rilievi</text>
+	</string>
+	<string id="yan_psi_zone_find_semenov">
+		<text>Scorta Semenov fino all'area dei rilievi</text>
+	</string>
+	<string id="yan_return_to_bunker">
+		<text>Porta i risultati a Sakharov</text>
+	</string>
+	<string id="yan_scientist_return">
+		<text>Parla con Sakharov</text>
+	</string>
+	<string id="yan_scientist_return_task">
+		<text>Parla con Sakharov</text>
+	</string>
+	<string id="yan_secret_tonnel">
+		<text>Esci passando dalla galleria segreta</text>
+	</string>
+	<string id="yan_switcher_off_1">
+		<text>Disattiva il 1° modulo di controllo</text>
+	</string>
+	<string id="yan_switcher_off_2">
+		<text>Disattiva il 2° modulo di controllo</text>
+	</string>
+	<string id="yan_switcher_off_3">
+		<text>Disattiva il 3° modulo di controllo</text>
+	</string>
+	<string id="yan_talk_to_kruglov">
+		<text>Parla con Kruglov</text>
+	</string>
+	<string id="yan_talk_to_semenov">
+		<text>Parla con Semenov</text>
+	</string>
+	<string id="yan_vasilyev_pda">
+		<text>Palmare di Vasiljev</text>
+	</string>
+	<string id="yan_zombie_zone">
+		<text>Posizione presunta del laboratorio X16</text>
+	</string>

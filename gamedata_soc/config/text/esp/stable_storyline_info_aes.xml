@@ -1,0 +1,9 @@
+	<string id="aes_military_task">
+		<text>Operación Monolito</text>
+	</string>
+	<string id="aes_military_task_head">
+		<text>Situación</text>
+	</string>
+	<string id="aes_soldier_info">
+		<text>Plan de acción militar\n\n Personal:\n Comandante de la operación: indicativo Quartet\nSiete unidades aéreas de asalto: Sapsan, Korshun, Yastreb, Pustelga, Sokol, Grif, Lun. \n Equipo de francotiradores: Sova\n Refuerzos:\n Aire: 018, 030, 031, 48, 49, 52\n 51, 64, 65, 098, 097\n Tierra: Armadillo 1, Armadillo 2, Armadillo 3\n Situación: posibilidad de fuerte resistencia en las inmediaciones del puente (23, 45), de la puerta (26, 78) y de la carretera del edificio principal de la estación (12, 23-53, 76). Es probable que el enemigo despliegue armamento pesado. \n Cantidad prevista de personal enemigo: 70-100. Vehículos blindados: ninguno.\n Posibilidad de fuerte cobertura de francotiradores del enemigo. Condiciones meteorológicas: visibilidad : 700, posibles anomalías desconocidas.</text>
+	</string>

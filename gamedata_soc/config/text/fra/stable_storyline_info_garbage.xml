@@ -1,0 +1,63 @@
+	<string id="gar_seryi_info">
+		<text>La Taupe et compagnie a déniché la planque de Strelok à Agroprom, non loin de l'usine pourrie. Tu pourrais aller voir ce qui s'y passe. Après tout, il nous a invités à participer aux recherches. </text>
+	</string>
+	<string id="memuars">
+		<text>Note personnelle</text>
+	</string>
+	<string id="sl_beginning">
+		<text>Qui suis-je ?</text>
+	</string>
+	<string id="sl_beginning_text">
+		<text>C'est pas vrai, tout est embrouillé... Je me souviens d'une voiture... Ils m'ont emmené quelque part, le trajet a duré un bon moment et j'avais mal partout... Il faisait nuit... Mais qu'est-ce qui s'est passé avant ça ? Je n'en ai pas la moindre idée... C'est si confus... Et maintenant, il y a ce gros qui me surnomme le Tatoué, sans doute à cause du tatouage que j'ai sur le bras. Et puis il y a cet étrange message sur mon PDA qui me dit de tuer un dénommé Strelok... D'ailleurs, est-ce qu'il est à moi ce PDA ? En regardant la photo de ce Strelok, je me demande si je le connais... Bon sang ! J'ai l'impression de faire un cauchemar dont je n'arrive pas à me réveiller ! Que faire ? Où aller ? Et pire encore : qui suis-je ? OK, OK, calme-toi, contrôle-toi. La première chose à faire, c'est d'accepter des petits boulots pour ce Sidorovich. Après tout, il dit qu'il m'a sauvé la vie... Ça ne devrait pas être si terrible. Je vais aller marcher un peu pour me calmer, ça m'aidera peut-être à y voir un peu plus clair.</text>
+	</string>
+	<string id="sl_first_deep_raid">
+		<text>La première mission importante</text>
+	</string>
+	<string id="sl_first_deep_raid_text">
+		<text>Cette fois, je pars pour ma première mission importante dans la Zone. La cible est l'Institut de Recherche Agroprom. Je dois y récupérer des documents militaires. Le marchand m'a aussi donné des infos sur un secteur, dans le nord, sur la route qui mène au centre de la Zone, là où le "cerveau est en ébullition"... Ce n'est sans doute qu'une légende, mais comme ma tête ne tourne pas très rond, je devrais peut-être en profiter pour aller interroger quelques personnes. On ne sait jamais, je suis peut-être déjà allé là-bas... Le marchand m'a également dit que Strelok avait trouvé un moyen d'entrer dans le secteur et les marchands aimeraient en savoir plus. Leurs motivations sont évidentes : ils veulent accéder à des champs d'artefacts intacts. Eh bien, je vais essayer de les aider.</text>
+	</string>
+	<string id="sl_first_opinions">
+		<text>Premières impressions</text>
+	</string>
+	<string id="sl_first_opinions_text">
+		<text>Bien, bien... J'ai pris l'air, j'ai observé la faune locale... Je suis content, je commence à retrouver la mémoire, par bribes... J'ai eu l'occasion de tester "l'attraction" locale, les anomalies... Puisque j'y ai survécu, c'est que j'ai déjà dû en rencontrer par le passé, mais mon cerveau refuse obstinément de s'en souvenir... Sidorovich est un petit malin, il sait qu'il peut m'utiliser quasiment à l'oeil et c'est exactement ce qu'il compte faire. Ceci dit, il m'aidera peut-être à trouver ce satané Strelok... Il est mon seul lien avec mon passé.</text>
+	</string>
+	<string id="sl_fox_meet">
+		<text>Rencontre avec Fox</text>
+	</string>
+	<string id="sl_fox_meet_text">
+		<text>J'ai rencontré Fox. Il y a une bonne et une mauvaise nouvelle. La mauvaise, c'est qu'il ne sait pratiquement rien sur Strelok. La bonne, c'est que son frère, un certain Seriy, a l'air d'en savoir un peu plus. Apparemment, Seriy serait dans un hangar à environ 2 kilomètres au nord d'ici, dans une décharge remplie de déchets radioactifs. Mon objectif est clair : le rejoindre avant qu'il ne s'en aille.</text>
+	</string>
+	<string id="sl_monolith_off">
+		<text>Désactiver le Monolithe</text>
+	</string>
+	<string id="sl_monolith_off_text">
+		<text>Je ne suis sur le point de trouver les gens qui ont créé ce fichu réseau d'unités psi quadrillant toute la Zone. Apparemment, le Monolithe n'est qu'un zombifieur, sauf que quelqu'un a pris soin d'installer un hologramme en forme d'immense cristal dans le sarcophage. Les "chanceux" qui s'en approchent se font ratatiner la cervelle. Ça peut même leur faire croire que leurs voeux sont exaucés, qui sait ? Est-ce que j'ai été victime de cette merde ? J'en sais rien, mais ceux qui sont derrière tout ça ne vont pas tarder à répondre à mes questions. Ils m'ont même invité... Eh bien, me voilà, bande d'enfoirés !</text>
+	</string>
+	<string id="sl_provodnik">
+		<text>Le Pionnier</text>
+	</string>
+	<string id="sl_provodnik_text">
+		<text>Le Pionnier a dit que le Doc croit être suivi et qu'il va rester dans l'ancienne planque de Strelok. Eh bien, je crois que je vais aller lui rendre une petite visite.</text>
+	</string>
+	<string id="sl_seryi_meet">
+		<text>Rencontre avec Seriy</text>
+	</string>
+	<string id="sl_seryi_meet_text">
+		<text>Je vais encore devoir attendre pour en savoir plus sur Strelok : Seriy m'a envoyé voir un Stalker surnommé la Taupe qui connaîtrait l'emplacement de la planque secrète de Strelok... Si c'est le cas, je n'aurai pas perdu mon temps... Qui sait, j'y apprendrai peut-être quelque chose d'utile.</text>
+	</string>
+	<string id="sl_usefull_info">
+		<text>Les informations utiles du marchand</text>
+	</string>
+	<string id="sl_usefull_info_text">
+		<text>Hmm... Le marchand ne m'a pas laissé tomber, je lui en suis reconnaissant. Il m'a aidé dans mes recherches sur Strelok. Apparemment, un Stalker dénommé Fox s'est pointé dans le coin pour demander de l'aide. Sidorovich pense qu'il connaît Strelok.</text>
+	</string>
+	<string id="sl_wishmaster_legend">
+		<text>La légende de la machine à exaucer les voeux</text>
+	</string>
+	<string id="sl_wishmaster_legend_text">
+		<text>J'ai fait connaissance avec une partie du folklore local : selon la légende, il y aurait une machine à exaucer les voeux au coeur de la Zone... Personne ne connaît son emplacement exact, mais elle serait quelque part dans le centre. Apparemment, il suffit juste de s'en approcher et... tout à coup, la vie devient beaucoup, beaucoup plus facile. Hmm... Et si j'essayais de la trouver ? Je pourrais lui dire : "Je veux me souvenir de mon passé !" Mais ce serait dommage de gâcher un voeu... Et si, en retrouvant la mémoire, je découvrais que j'étais un enfoiré de première ? Ce serait nul. Je me demande combien de voeux elle accorde.</text>
+	</string>
+	<string id="storyline_seriy_flash_info">
+		<text>Le Cogneur écrit à Seriy : La Taupe et compagnie ont trouvé la planque de Strelok à l'Institut. Essaie de savoir ce qui se passe. Seriy au Cogneur : De toute façon, en rentrant, ils iront au bar, alors je les attendrai à la Décharge.</text>
+	</string>

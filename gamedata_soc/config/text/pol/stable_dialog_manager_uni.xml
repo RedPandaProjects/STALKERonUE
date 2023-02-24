@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dm_general_action_info">
+		<text>Co wy tu robicie?</text>
+	</string>
+	<string id="dm_general_cool_info">
+		<text>Masz moїe jakieњ ciekawe informacje?</text>
+	</string>
+	<string id="dm_general_cool_info_no_more">
+		<text>Nie wiem nic wiкcej.</text>
+	</string>
+	<string id="dm_general_help_bandage">
+		<text>Weџ bandaї.</text>
+	</string>
+	<string id="dm_general_help_medkit">
+		<text>Weџ apteczkк.</text>
+	</string>
+	<string id="dm_general_trade_info">
+		<text>Szukam informacji. Za kasк.</text>
+	</string>
+	<string id="dm_general_trade_info_caption">
+		<text>Oferta jest nastкpuj№ca:</text>
+	</string>
+	<string id="dm_general_trade_info_hasno">
+		<text>Nic nie mogк zaoferowaж.</text>
+	</string>
+	<string id="dm_general_trade_info_nothing">
+		<text>Innym razem.</text>
+	</string>
+</string_table>

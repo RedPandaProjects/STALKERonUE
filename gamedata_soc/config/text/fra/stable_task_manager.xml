@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="artefact">
+		<text>Rйcupйrer l'artefact.</text>
+	</string>
+	<string id="barmen_defend_camp_1">
+		<text>Protйger le camp des Stalkers а la Dйcharge de l'assaut des bandits</text>
+	</string>
+	<string id="barmen_defend_camp_1_descr">
+		<text>Protиge le camp des Stalkers а la Dйcharge de l'assaut des bandits</text>
+	</string>
+	<string id="barmen_defend_camp_1_text">
+		<text>Des Stalkers viennent me rendre visite et je veille personnellement а ce qu'ils arrivent sains et saufs. Ils resteront non loin du bar. un criminel nous a informйs qu'ils vont bientфt nous attaquer. Alors, va dans cette direction et protиge leur camp de cet assaut.</text>
+	</string>
+	<string id="barmen_defend_camp_2">
+		<text>Aider les Stalkers а repousser les bandits а Agroprom</text>
+	</string>
+	<string id="barmen_defend_camp_2_descr">
+		<text>Aide les Stalkers а repousser les bandits а Agroprom</text>
+	</string>
+	<string id="barmen_defend_camp_2_text">
+		<text>Voilа la situation. Rйcemment, des Stalkers sont allйs а Agroprom. La derniиre fois qu'ils nous ont contactйs, ils ont dit que le sous-sol renfermait quelque chose de prйcieux, mais ils йtaient harcelйs par les bandits. Ils tiennent bon, mais ils sont clouйs sur place. Tu veux bien leur prкter main-forte ?</text>
+	</string>
+	<string id="barmen_eliminate_camp_1">
+		<text>Йliminer les bandits de la Dйcharge.</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_descr">
+		<text>Йlimine les bandits qui ont pris position а la Dйcharge. Cette opйration doit кtre rapide et efficace.</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_text">
+		<text>Une mission, hein ? Voyons voir зa... Aha ! Et voilа, tu peux йliminer ces bandits а la Dйcharge ? Le Devoir, malgrй ses beaux discours sur la loi et l'ordre, n'y arrive pas. Ces types sont des ordures et ils ne vont pas faire long feu. Mais celui qui leur mettra la main dessus marquera... Et c'est moi qui rйgale, bien sыr.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2">
+		<text>Йliminer les Mercenaires et les bandits de Rostok.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_descr">
+		<text>Йlimine le groupe de Mercenaires et de bandits qui bloquent l'accиs а Rostok.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_text">
+		<text>Il y a des Mercenaires aux environs de Rostok. Ils ont ralliй les bandits et voilа qu'ils bloquent l'accиs а l'usine. Je te dis pas le bordel que зa fiche et зa peut pas durer. Les types du Devoir et quelques anciens sont allйs sur place, mais зa fait un bail que je n'ai pas eu de leurs nouvelles... Alors pourquoi est-ce que tu...euh... n'irais pas y jeter un coup d'oeil. Il y a un paquet de fric а la clй.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3">
+		<text>Йliminer les bandits de la ferme.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_descr">
+		<text>C'est simple : йlimine les bandits de la ferme.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_text">
+		<text>А cфtй des vieux entrepфts, il y a une ferme. C'йtait un super coin йchanger des trucs... tu sais, ces trucs. Mais voilа que les bandits ont pris possession des lieux et visiblement, ils ne sont pas prкts de partir. Je n'aime pas зa. J'ai besoin de cette ferme au plus vite. Qu'importe ce qui arrive а ses locataires.</text>
+	</string>
+	<string id="barmen_eliminate_camp_4">
+		<text>Purger le camp des bandits dans les Terres abandonnйes</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_descr">
+		<text>Purge le camp des bandits dans les Terres abandonnйes</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_text">
+		<text>Il y a des bandits dans les Terres abandonnйes. On peut pas laisser ces ordures envahir les abords du bar sans rien faire. Il faut а tout prix dйtruire leur camp.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5">
+		<text>Dйtruire le repaire des chiens sauvages mutants dans les Terres abandonnйes</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_descr">
+		<text>Dйtruis le repaire des chiens sauvages dans les Terres abandonnйes</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_text">
+		<text>Plusieurs de nos hommes sont rentrйs d'une expйdition dans un bien triste йtat. Ils йtaient couverts de sang, ils avaient les yeux vitreux. Visiblement, ils sont tombйs sur des chiens. Il y en a des tas, lа-bas. Alors, trouve leur repaire et tue-les jusqu'au dernier.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6">
+		<text>Йliminer le groupe de bandits d'Agroprom.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_descr">
+		<text>Йlimine le groupe de bandits d'Agroprom.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_text">
+		<text>Je me souviens comment en 94, ces criminels me sont tombйs dessus... Comment ils m'ont fait casquer... А l'йpoque, on ne pouvait rien contre eux ! Et voilа que j'apprends que ces mкmes bandits opиrent а Agroprom et se font du fric avec les artefacts qu'ils y trouvent. Mais cette fois, зa ne va pas se passer comme зa. Je sais oщ ils se cachent. Rends-moi un service, va leur faire leur fкte. </text>
+	</string>
+	<string id="barmen_eliminate_camp_7">
+		<text>Dйtruire le repaire des Snorks dans la Vallйe obscure</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_descr">
+		<text>Dйtruis le repaire des Snorks dans la Vallйe obscure</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_text">
+		<text>Oui...Visiblement, ceux qui disent que la zone s'agrandit ont raison. Ils ont repйrй quelques Snorks dans la Vallйe obscure et c'est bien la premiиre fois. Certains ont paniquй. Les Dolgovzi ont promis d'йliminer les Snorks, mais зa a l'air mal parti. Tu veux bien t'en charger ?</text>
+	</string>
+	<string id="barmen_find_artefact_1">
+		<text>Trouver l'artefact "morceau de viande"</text>
+	</string>
+	<string id="barmen_find_artefact_1_descr">
+		<text>Trouve l'artefact "morceau de viande" qui soigne les maladies et les blessures.</text>
+	</string>
+	<string id="barmen_find_artefact_1_text">
+		<text>Des prкtres sont venus ; ils cherchaient un morceau de viande. Ils s'intйressent de prиs а cet artefact... Ces maudits faiseurs de miracles ! Bref... Tu veux bien t'en occuper ? C'est а toi de voir.</text>
+	</string>
+	<string id="barmen_find_artefact_2">
+		<text>Trouver l'artefact "йpine cristalline"</text>
+	</string>
+	<string id="barmen_find_artefact_2_descr">
+		<text>Trouve l'artefact "йpine cristalline" qui protиge contre les attaques psi.</text>
+	</string>
+	<string id="barmen_find_artefact_2_text">
+		<text>Une "йchine cristalline"?.. Non, c'est pas зa... J'ai trouvй ! Une "йpine cristalline", c'est bien зa ! Voilа, on m'a demandй cet artefact, cette "йpine cristalline". Зa te dit quelque chose ? Il paraоt que si on en a une, aucune crйature ne nous prend la tкte. Qu'est-ce que tu en dis ?</text>
+	</string>
+	<string id="barmen_find_artefact_3">
+		<text>Trouver l'artefact "йtoile phosphorescente"</text>
+	</string>
+	<string id="barmen_find_artefact_3_descr">
+		<text>Trouve l'artefact "йtoile phosphorescente" pour participer а l'effort de recherche militaire national.</text>
+	</string>
+	<string id="barmen_find_artefact_3_text">
+		<text>Il me faut l'йtoile phosphorescente. Elle ne fait pas de miracles, mais elle contribue а ta bonne santй. Les scientifiques mettent le prix. Ils s'en servernt pour des trucs militaires... Alors, qu'est-ce que tu en dis ?</text>
+	</string>
+	<string id="barmen_find_artefact_4">
+		<text>Trouver l'artefact "flash"</text>
+	</string>
+	<string id="barmen_find_artefact_4_descr">
+		<text>Trouve l'artefact "flash"</text>
+	</string>
+	<string id="barmen_find_artefact_4_text">
+		<text>La mission est simple et bien payйe. Trouve le flash. Et ne demande pas pour qui ou pour quoi. Alors, зa te tente ?</text>
+	</string>
+	<string id="barmen_find_artefact_5">
+		<text>Trouver l'artefact "garde du corps"</text>
+	</string>
+	<string id="barmen_find_artefact_5_descr">
+		<text>Trouve l'artefact "garde du corps"</text>
+	</string>
+	<string id="barmen_find_artefact_5_text">
+		<text>Le Tatouй, tu connais cette histoire а propos du garde du corps ? Oui, oui, celle-lа. On raconte des tas de blagues sur le sujet. Bref, je connais un vieil homme qui veut а tout prix se le procurer. Rйsultat : il me faut cet artefact appelй garde du corps. Tu veux bien t'en occuper ?</text>
+	</string>
+	<string id="barmen_find_item_1">
+		<text>Trouver la combinaison psi</text>
+	</string>
+	<string id="barmen_find_item_1_descr">
+		<text>Trouve la combinaison qui protиge contre les йmissions psi. Pour зa, fouille les labos abandonnйs de la Vallйe obscure.</text>
+	</string>
+	<string id="barmen_find_item_1_text">
+		<text>Dans ces labos de la Vallйe obscure, des scientifiques menaient des recherches pour trouver un moyen de protйger les cerveaux humains des йmissions psi. Ils prenaient leur temps, зa c'est sыr... Bref, une de leur tentative a bien failli aboutir et cette combinaison doit se trouver quelque part. C'est gйnial ! Si tu me dйgotes cette combi, j'oublierai jamais.</text>
+	</string>
+	<string id="barmen_find_item_2">
+		<text>Trouver l'arme de l'йtranger.</text>
+	</string>
+	<string id="barmen_find_item_2_descr">
+		<text>Une mission intйressante. Ce nom me dit quelque chose... D'oщ est-ce que je le connais ?</text>
+	</string>
+	<string id="barmen_find_item_2_text">
+		<text>Je me souviens de cet йtranger rencontrй dans les bois... Je crois qu'il s'appelait Gordon. Il ressemblait а un Stalker, mais disait n'кtre jamais allй dans la Zone. Enfin, peu importe. Il a fini par se volatiliser dans la Zone. Mais il avait sur lui un truc bizarre, un Black Eagle. Ah, si au moins je pouvais y jeter un coup d'oeil...</text>
+	</string>
+	<string id="barmen_find_item_3">
+		<text>Trouver le Vintar modifiй</text>
+	</string>
+	<string id="barmen_find_item_3_descr">
+		<text>Trouve le Vintar modifiй. Apparemment, il faut que tu fouilles les abords de la Forкt rouge. </text>
+	</string>
+	<string id="barmen_find_item_3_text">
+		<text>Ah, cette histoire bizarre. Ce type a dйbarquй, les poches pleines de pognon, et a engagй des hommes, pas des vieux, mais des petits nerveux. Il a apportй des tonnes de matйriel... J'avais ce Vintar flambant neuf, un super fusil ! Et j'ai йtй assez bкte pour le lui vendre. Je ne vais pas te mentir, je me suis fait un paquet de fric... Sauf que ces hommes se sont fait avoir prиs de la Forкt rouge. Et ils sont morts pour rien... Une leзon а retenir par tous : le fric ne suffit pas а rejoindre la zone. Bref... J'arrкte pas de penser а ce Vintar, je parie qu'il est en train de rouiller quelque part ! Tu veux pas essayer de le trouver ? Je suis prкt а te donner pas mal de fric pour зa !</text>
+	</string>
+	<string id="barmen_kill_stalker_1">
+		<text>Tuer le soldat</text>
+	</string>
+	<string id="barmen_kill_stalker_1_descr">
+		<text>Un soldat doit mordre la poussiиre. Cette mission est un jeu d'enfant, sauf que... c'est bizarre que la cible soit un homme en uniforme et que le commanditaire soit si en colиre.</text>
+	</string>
+	<string id="barmen_kill_stalker_1_text">
+		<text>Il faut que tu tues ce soldat... Ne me demande pas qui c'est, je m'en fiche. Alors ? Je peux te faire confiance ?</text>
+	</string>
+	<string id="barmen_kill_stalker_2">
+		<text>Tuer le Stalker</text>
+	</string>
+	<string id="barmen_kill_stalker_2_descr">
+		<text>Йlimine un des Stalkers. Mort au tricheur, c'est la revanche du marchand.</text>
+	</string>
+	<string id="barmen_kill_stalker_2_text">
+		<text>Tu sais, ce type dont tu es incapable de dire du mal... Tu lui fais confiance comme tu me fais confiance, hein ? Tu comptes sur lui... Mais tout а coup, tu te rends compte que c'est un sacrйe ordure... Alors voilа, il va falloir que tu fasses quelque chose. Tu t'en occupes et je me charges du reste.</text>
+	</string>
+	<string id="barmen_kill_stalker_3">
+		<text>Tuer le Stalker du groupement Monolithe</text>
+	</string>
+	<string id="barmen_kill_stalker_3_descr">
+		<text>Trouve l'ex-ami du marchand et aide-le а mourir.</text>
+	</string>
+	<string id="barmen_kill_stalker_3_text">
+		<text>J'avais un ami autrefois... C'est dur а croire, hein ? Ah ! Ensemble, on avait rejoint la Zone, mais c'йtait avant tous ces trucs... On йtait jeunes et on s'en fichait de tout... Il en voulait toujours plus. Il voulait aller au coeur de la Zone, mais j'ai refusй, et j'ai bien fait... On s'est pris la tкte... Et voilа que j'apprends que quelqu'un l'y a vu... Il est avec le Monolithe maintenant. Alors voilа, le Tatouй... On est amis, alors fais-le pour moi, trouve-le et... Et ne le fais pas souffrir, зa doit кtre dйjа assez dur pour lui... C'йtait comme un frиre pour moi, tu sais ? </text>
+	</string>
+	<string id="barmen_kill_stalker_4">
+		<text>Trouver le Stalker appelй le Vampire</text>
+	</string>
+	<string id="barmen_kill_stalker_4_descr">
+		<text>Trouve et tue le Stalker appelй le Vampire.</text>
+	</string>
+	<string id="barmen_kill_stalker_4_text">
+		<text>Voilа, j'en ai assez de cette ordure ! Je veux parler du Vampire, tu le connais ? Quel enfoirй ! Profiter comme зa des gens. Tous ceux qui le frйquentent y passent, tous, et lui, il s'en sort toujours ! Et зa fait un bail que зa dure ! C'est dingue, tu trouves pas ? J'aimerais tellement pouvoir dйposer des fleurs sur la tombe de ce Vampire... Alors, cette mission, tu l'acceptes ?</text>
+	</string>
+	<string id="barmen_kill_stalker_5">
+		<text>Tuer le Stalker appelй le Moineau</text>
+	</string>
+	<string id="barmen_kill_stalker_5_descr">
+		<text>Trouve le Moineau et venge la mort d'un autre Stalker.</text>
+	</string>
+	<string id="barmen_kill_stalker_5_text">
+		<text>Fichus mousquetaires ! Jouer а D'Artagnan, pfff ! Comme si les anomalies et les balles ne suffisaient pas, voilа que ces ordures passent а l'attaque ! Il y a eu cette bagarre... Personne ne sait vraiment qui l'a commencйe. Mais ces deux enfoirйs ont dйcidй que le sang devait couler. Et voilа... Un mort... Et un brave Stalker en plus ! Et l'autre, le Moineau, a mis les bouts car il savait que le sort que je lui rйservais. Trouve-le. Je parie qu'il est toujours dans la Zone. Tu veux bien t'en charger ?</text>
+	</string>
+	<string id="barmen_monster_part_1">
+		<text>Rйcupйrer l'oeil du croque-mort</text>
+	</string>
+	<string id="barmen_monster_part_1_descr">
+		<text>Rйcupиre l'oeil du croque-mort</text>
+	</string>
+	<string id="barmen_monster_part_1_text">
+		<text>On va bientфt faire une petite fкte... Il y aura un dоner et quelques gourmets locaux, pleins d'entrain seront certainement intйressйs par ma recette spйciale d'yeux de "croque-mort" а la sauce au porc. А savoir dans son propre jus et avec de la mayonnaise. Pour faire court, j'ai besoin de ces yeux, et vite. </text>
+	</string>
+	<string id="barmen_monster_part_2">
+		<text>Apporter le sabot d'un sanglier</text>
+	</string>
+	<string id="barmen_monster_part_2_descr">
+		<text>Apporte le sabot d'un sanglier</text>
+	</string>
+	<string id="barmen_monster_part_2_text">
+		<text>Tu savais qu'on utilisait des cornes et des sabots ? C'est trиs rare. Les sabots locaux sont trиs apprйciйs pour la joaillerie... Je connais un joaillier qui en raffole. Alors, trouve un sabot de sanglier, et tu gagneras un beau pactole.</text>
+	</string>
+	<string id="dolg_defend_lager_1">
+		<text>Protйger le poste de sйcuritй du Devoir</text>
+	</string>
+	<string id="dolg_defend_lager_1_descr">
+		<text>Protиge le poste de sйcuritй du Devoir.</text>
+	</string>
+	<string id="dolg_defend_lager_1_text">
+		<text>Bon, tu es probablement tombй sur un de nos gars а la Dйcharge. Ils sont lа pour protйger le bar des mutants arrivant de la Vallйe obscure. Visiblement, une horde de sangliers ferait route vers eux. Aide-les а repousser les mutants et tu auras toute ma reconnaissance.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1">
+		<text>Йliminer le zombie</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_descr">
+		<text>Йlimine les zombies de Yantar.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_text">
+		<text>On a rйcemment envoyй un groupe а Yantar. Hйlas, aucun de ses membres n'en est revenu. J'ai йtй informй qu'ils avaient vu des Stalker zombies non loin du laboratoire mobile des scientifiques de Yantar. On ne peut pas les laisser dans cet йtat. Ta mission consiste donc а les йliminer.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10">
+		<text>Se dйbarrasser de la meute de chiens.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_descr">
+		<text>Dйbarrasse-toi de la meute de chiens.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_text">
+		<text>Bien entendu, on ne confie pas de missions aux Stalkers йtrangers. Ceci dit, il s'agit lа d'une mission des plus simples. Alors йcoute bien. Tu vas devoir dйtruire un petit repaire de bкtes situй dans la Dйcharge. Un de nos groupes y travaille dйjа et donc, en cas de problиme, tu auras un endroit oщ te retrancher. Mais tout devrait bien se passer car les bкtes n'y sont pas trиs nombreuses, pas plus d'une dizaine. Il s'agit vraisemblablement de chiens car on nous a rйcemment rapportйs la prйsente d'une grosse meute dans la rйgion. Tu peux entamer cette mission. </text>
+	</string>
+	<string id="dolg_eliminate_lager_11">
+		<text>Dйtruire le camp de Stalkers</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_descr">
+		<text>Dйtruis le camp de Stalkers d'Agroprom</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_text">
+		<text>Il faut que je te parle d'une situation dйlicate dans laquelle nos hommes ne doivent pas кtre impliquйs. La prйsence de neutres dans l'usine d'Agroprom n'est pas idйale pour nos alliйs. Voilа la mission : dйbarrasse les environs des Stalkers, peu importe le groupe auquel ils appartiennent. Pigй ?</text>
+	</string>
+	<string id="dolg_eliminate_lager_12">
+		<text>Йliminer le dйtachement de mercenaires</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_descr">
+		<text>Йlimine le dйtachement de mercenaires de Rostok</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_text">
+		<text>Mission : йlimine le dйtachement de snipers du groupe de Mercenaires. Situation : ces snipers occupent le dernier йtage du chantier. Nombre prйsumй : entre deux et cinq. Ils sont vraisemblablement armйs de fusils. Suggestion : ne t'y pointe pas pendant la journйe. </text>
+	</string>
+	<string id="dolg_eliminate_lager_13">
+		<text>Protйger la base des bandits</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_descr">
+		<text>Protиge la base principale des bandits situйe dans la Vallйe obscure.</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_text">
+		<text>Il est impйratif d'attaquer la base principale des bandits et d'en йliminer le plus grand nombre possible. Elle se trouve dans la Vallйe obscure, prиs du centre scientifique inachevй. Les combattants ennemis, une trentaine, sont armйs d'armes automatiques. Tout est clair ?</text>
+	</string>
+	<string id="dolg_eliminate_lager_14">
+		<text>Dйtruire les snorks.</text>
+	</string>
+	<string id="dolg_eliminate_lager_14_descr">
+		<text>Protиge les tunnels des Snorks dans le secteur de Yantar. </text>
+	</string>
+	<string id="dolg_eliminate_lager_14_text">
+		<text>Cette fois, tu vas devoir faire du nettoyage. Les tunnels de Yantar sont la proie des Snorks ; il doit y avoir une dizaine. Alors, vas-y, mets le paquet...</text>
+	</string>
+	<string id="dolg_eliminate_lager_2">
+		<text>Dйtruire la horde de croque-morts</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_descr">
+		<text>Dйtruis la horde de croque-morts dans les Terres abandonnйes.</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_text">
+		<text>On a repйrй une importante horde de bкtes... D'horribles mutants. Ils se trouvent а prйsent aux environs de la Dйcharge. Nos hommes sont occupйs, mais ces croque-morts doivent кtre йliminйs. Cette mission est spйciale et on est prкt а y mettre le prix. </text>
+	</string>
+	<string id="dolg_eliminate_lager_3">
+		<text>Dйtruire les pseudo-chiens</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_descr">
+		<text>Dйbarrasser le repaire des pseudo-chiens prиs des entrepфts militaires</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_text">
+		<text>Nos alliйs nous ont informйs de la prйsence d'un repaire de monstres prиs des entrepфts militaires. On pense qu'il s'agit d'une meute de pseudo-chiens. On ne peut pas intervenir dans la rйgion pour le moment et on va donc confier cette mission а un neutre. Зa vous intйresse ?</text>
+	</string>
+	<string id="dolg_eliminate_lager_4">
+		<text>Dйtruire le poste de sйcuritй des Mercenaires</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_descr">
+		<text>Dйtruis le poste de sйcuritй des Mercenaires prиs des entrepфts militaires.</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_text">
+		<text>Rйcemment, les activitйs des groupes de Mercenaires se sont   intensifiйes ; ils ont attaquй des scientifiques et des chercheurs qui travaillaient dans les environs. On doit rйagir et mener une petite opйration punitive. L'objectif : le poste de sйcuritй des Mercenaires prиs des entrepфts militaires, derriиre le village abandonnй.</text>
+	</string>
+	<string id="dolg_eliminate_lager_5">
+		<text>Йliminer les Mercenaires dans les Terres abandonnйes</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_descr">
+		<text>Йlimine les Mercenaires dans les Terres abandonnйes</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_text">
+		<text>Des scientifiques envisagent d'йtudier les Terres abandonnйes. Mais cette rйgion n'est pas trиs sыre et les Mercenaires y opиrent. Veille а dйbarrasser ces Terres abandonnйes de toute prйsence mercenaire. </text>
+	</string>
+	<string id="dolg_eliminate_lager_6">
+		<text>Tuer les bandits</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_descr">
+		<text>Tue les bandits prйsents dans les Terres abandonnйes.</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_text">
+		<text>Je vais faire court. Les bandits menacent nos postes de sйcuritй prиs du bar et se trouvent actuellement dans les Terres abandonnйes. Il faut les йliminer. </text>
+	</string>
+	<string id="dolg_eliminate_lager_7">
+		<text>Йliminer le manipulateur</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_descr">
+		<text>Йliminer le manipulateur а Yantar.</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_text">
+		<text>Pour mener а bien cette mission, tu dois кtre dotй de compйtences spйciales. Les scientifiques nous ont rapportй la prйsence d'un manipulateur а Yantar, prиs de l'entrйe du laboratoire souterrain (au coeur du bвtiment). Les manipulateurs sont trиs dangereux et j'ai confiance en vous. </text>
+	</string>
+	<string id="dolg_eliminate_lager_8">
+		<text>Йliminer les hommes de la Libertй</text>
+	</string>
+	<string id="dolg_eliminate_lager_8_descr">
+		<text>Dйbarrasse le village abandonnй situй non loin des entrepфts militaires des hommes de la Libertй. </text>
+	</string>
+	<string id="dolg_eliminate_lager_8_text">
+		<text>Les patrouilles de la Libertй aux environs du village abandonnй, prиs des entrepфts militaires, se sont intensifiйes. Dйbarrasse le village des combattants. Aprиs avoir menй а bien cette mission, tu recevras une rйcompense spйciale.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9">
+		<text>Йliminer les bandits</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_descr">
+		<text>Йlimine les bandits de la Dйcharge.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_text">
+		<text>La situation actuelle n'est pas bonne ; les bandits se regroupent aux environs de la Dйcharge et de la Vallйe obscure. Il convient donc d'y mener deux attaques prйventives simultanйes ! Nos combattants se chargeront de la vallйe et toi, de la Dйcharge.</text>
+	</string>
+	<string id="dolg_find_item_1">
+		<text>Trouver le fusil amйliorй</text>
+	</string>
+	<string id="dolg_find_item_1_descr">
+		<text>Trouve le fusil TRs 301 amйliorй prиs des entrepфts militaires.</text>
+	</string>
+	<string id="dolg_find_item_1_text">
+		<text>Quelqu'un aide les Mercenaires. Rйcemment, ils se sont йquipйs de mitrailleuses et de fusils amйliorйs. Ce sont lа des armes redoutables. Eh bien, un tel fusil m'intйresse et si tu m'en rapportes un, tu auras toute ma reconnaissance, sois-en sыr.</text>
+	</string>
+	<string id="dolg_kill_stalker_1">
+		<text>Neutraliser le bandit</text>
+	</string>
+	<string id="dolg_kill_stalker_1_descr">
+		<text>Neutraliser le bandit Poker.</text>
+	</string>
+	<string id="dolg_kill_stalker_1_text">
+		<text>Surnom du sujet - Poker. Un des chefs des bandits les plus cruels... Йvidemment, sa tкte ne va pas bien ; il aurait attrapй une maladie rare dans la Zone. Maintenant, il souffre de trous de mйmoire chroniques et lorsqu'il reprend conscience, il ne sait plus qui il est ni oщ il est. Quoi qu'il en soit, il est toujours armй et trиs agressif. Emplacement prйsumй : la Vallйe obscure. Tu acceptes cette mission ?</text>
+	</string>
+	<string id="drunk_dolg_find_item">
+		<text>Trouver l'arme du membre du Devoir.</text>
+	</string>
+	<string id="drunk_dolg_find_item_descr">
+		<text>Le membre du Devoir te demande de trouver l'arme qu'il a perdue quelque part dans la Vallйe obscure au cours d'une mission de reconnaissance.</text>
+	</string>
+	<string id="drunk_dolg_find_item_text">
+		<text>J'aurais pas dы paniquer comme зa. La Zone me prend la tкte. Je croyais que j'йtais solide, que je n'avais peur de rien et voilа. Ce hurlement dans les oreilles. Tout se passait comme d'habitude. On menait une mission de reconnaissance dans la Vallйe obscure. Krivoi et moi, on йtait а couvert pour protйger le groupe, et c'est alors que j'ai entendu ce hurlement et que j'ai paniquй. Bon sang, je ne sais mкme plus ce que j'ai fait. Une fois а la base, Voronin йtait fou de rage ; il venait de me donner un canon amйliorй... Et dans la panique, je l'ai laissй sur place. Tu voudrais bien essayer de me le rapporter... Sinon qu'est-ce que je vais devenir sans une arme digne de ce nom.  </text>
+	</string>
+	<string id="ecolog_eliminate_lager_1">
+		<text>Dйbarrasser le repaire des Snorks</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_descr">
+		<text>Dйtruis le repaire des Snorks а Yantar</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_text">
+		<text>Je t'offre un peu de fric pour faire en sorte que les Snorks qui vivent dans les marйcages arrкtent de nous embкter, mes collиgues et moi. Des fois, lors de nos expйriences, on n'arrive mкme pas а se concentrer. </text>
+	</string>
+	<string id="ecolog_eliminate_lager_2">
+		<text>Dйtruire le repaire des chiens sauvages</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_descr">
+		<text>Dйbarrasse le repaire des chiens sauvages dans les Terres abandonnйes</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_text">
+		<text>Les Terres abandonnйes abritent un repaire de chiens mutants. Va sur place et abats-les. Ces mutants sont particuliиrement dangereux pour nos expйditions. Je sais que les zoologues ne vont pas apprйcier, mais force est de constater qu'il n'y a pas de zoo dans le coin. Ces crйatures sont porteuses de toutes sortes de maladies comme la rage, la peste... Et j'en passe.</text>
+	</string>
+	<string id="ecolog_find_artefact_1">
+		<text>Apporter l'artefact "bolide"</text>
+	</string>
+	<string id="ecolog_find_artefact_1_descr">
+		<text>Apporte l'artefact "bolide" aux scientifiques pour qu'ils l'йtudient</text>
+	</string>
+	<string id="ecolog_find_artefact_1_text">
+		<text>On a rйussi а rйcupйrer l'artefact ! Quelle dйcouverte ! Le monde entier va entendre parler de cette dйcouverte. Et on va sыrement dйcrocher le prix Nobel ! Cet artefact est unique. La qualitй principale de cette "pellicule" offre une protection contre les brыlures chimiques. Je veux bien vous la donner au nom de la science. Mais en йchange, il me faut l'artefact "bolide",\nd'accord ? Les qualitйs thermiques uniques de sa surface ont doivent кtre examinйes. </text>
+	</string>
+	<string id="ecolog_find_artefact_2">
+		<text>Trouver l'artefact "gravi"</text>
+	</string>
+	<string id="ecolog_find_artefact_2_descr">
+		<text>Apporte l'artefact "gravi" aux scientifiques.</text>
+	</string>
+	<string id="ecolog_find_artefact_2_text">
+		<text>On commence а comprendre la vйritable nature de la gravitation. Bientфt, on pourra mettre au point de nouveaux moteurs antigravitationnels et la voie lactйe s'ouvrira а nous. Mais pour зa, il nous faut le gravi, et vite.</text>
+	</string>
+	<string id="ecolog_find_artefact_3">
+		<text>Trouver l'artefact "mйduse"</text>
+	</string>
+	<string id="ecolog_find_artefact_3_descr">
+		<text>Les scientifiques ont besoin de l'artefact "mйduse" pour mener а bien des recherches dans le domaine espace-temps.</text>
+	</string>
+	<string id="ecolog_find_artefact_3_text">
+		<text>Nos chercheurs sont sur le point de percer le mystиre de l'espace-temps. La tйlйportation n'est plus une utopie ! Le vortex est une anomalie qui rйduit l'espace plutфt qu'il n'affecte en termes gravitationnels les objets comme le pensaient certains scientifiques confortablement installйs dans leurs laboratoires а mвcher de la craie. Ils ne vont pas en revenir quand ils vont apprendre cette dйcouverte ! Allez, apportez-moi l'artefact "mйduse".</text>
+	</string>
+	<string id="ecolog_find_artefact_4">
+		<text>Trouver l'artefact "clair de lune"</text>
+	</string>
+	<string id="ecolog_find_artefact_4_descr">
+		<text>Fournis aux scientifiques de Yantar l'artefact "clair de lune"...</text>
+	</string>
+	<string id="ecolog_find_artefact_4_text">
+		<text>On a dйsespйrйment besoin de matйriaux pour mener а bien nos recherches йnergйtiques. On apprend а gйnйrer de l'йnergie moyennant des artefacts. D'accord, зa ne marche qu'а condition que le facteur d'efficacitй soit suffisant. On a rйussi а obtenir d'excellents rйsultats avec l'artefact "clair de lune". Apportez-nous-en un йchantillon а des fins d'expйrimentation.</text>
+	</string>
+	<string id="ecolog_find_artefact_5">
+		<text>Trouver l'artefact "oursin"</text>
+	</string>
+	<string id="ecolog_find_artefact_5_descr">
+		<text>Les scientifiques ont besoin de l'artefact "oursin" pour amйliorer leurs combinaisons</text>
+	</string>
+	<string id="ecolog_find_artefact_5_text">
+		<text>Vous n'кtes pas sans savoir que nos combinaisons sont antiradiations. Pour parvenir а une telle qualitй, on les sature d'une lotion fabriquйe а partir d'un rare artefact. La fabrication de ces combinaisons implique qu'on dispose de l'artefact "oursin".</text>
+	</string>
+	<string id="ecolog_find_item_1">
+		<text>Apporter la combinaison unique</text>
+	</string>
+	<string id="ecolog_find_item_1_descr">
+		<text>Ramenez la combinaison unique du laboratoire souterrain X16.</text>
+	</string>
+	<string id="ecolog_find_item_1_text">
+		<text>On a une mission pour vous. Rйcemment, on a embauchй un Stalker pour se rendre au laboratoire. J'avais bien remarquй son йtonnante combinaison et le Stalker m'a dit qu'elle pouvait soigner les blessures. Rйsultats : ce Stalker n'est pas revenu du laboratoire. Oh non, n'y pensez mкme pas ! On n'a rien а voir dans tout зa ! Et sa combinaison doit s'y trouver. Pourriez-vous aller la chercher pour qu'on l'йtudie. </text>
+	</string>
+	<string id="ecolog_monster_part_1">
+		<text>Rapporter un morceau de Snork</text>
+	</string>
+	<string id="ecolog_monster_part_1_descr">
+		<text>Rapportez un morceau de Snork dans les environs... Un jeu d'enfant.</text>
+	</string>
+	<string id="ecolog_monster_part_1_text">
+		<text>Nous avons fait connaissance avec Semenov а l'Universitй oщ j'enseignais. Il йtait mon йlиve et est devenu mon assistant de recherche. А l'йpoque, nous йtions seulement aux prйmices des йtudes sur le mystиre de la modification du gйnфme. Bon, qu'est-ce que je disais ? Ah oui. Pour nos expйriences gйnйtiques, nous auront besoin d'йchantillons de cellules fraоches du tissu musculaire d'un Snork. Vous devrez rйcupйrer du matйriel gйnique sur ces crйatures. Il y a une hypothиse selon laquelle les Snorks seraient la prochaine йtape dans l'йvolution de l'кtre humain. Pour en кtre sыr, nous avons besoin d'ADN !</text>
+	</string>
+	<string id="ecolog_monster_part_2">
+		<text>Apporter l'oeil d'un croque-mort</text>
+	</string>
+	<string id="ecolog_monster_part_2_descr">
+		<text>Il vaut mieux que je me tienne а l'йcart de ces cerveaux, au cas oщ ! Bon, je leur fournirai un oeil de croque-mort et ils feront ce qu'ils voudront de leurs volontaires.</text>
+	</string>
+	<string id="ecolog_monster_part_2_text">
+		<text>Bonne nouvelle, jeune homme : on a une mission des plus intйressantes pour vous ! Je pense que l'intellectuel que vous кtes apprйciera les thйories de mes collиgues. Voilа, nos recherches portent sur les yeux des crйatures appelйes croque-morts et qui sont dotйs de... vous me\nsuivez ? De rйcepteurs olfactifs ! Aussi, en plus de leur permettre de voir, leurs yeux leur permettent de sentir ! On se prйpare pour une opйration de transplantation de ces yeux miraculeux... sur un de nos assistants volontaires. Зa va кtre quelque chose ! А propos, accepteriez-vous de vous porter volontaire pour recevoir cet incroyable organe ?</text>
+	</string>
+	<string id="ecolog_monster_part_3">
+		<text>Rapporter la queue d'un chien aveugle</text>
+	</string>
+	<string id="ecolog_monster_part_3_descr">
+		<text>Ah, la science ! Voilа qu'on essaie de trouver un deuxiиme cerveau chez les humains ? Pauvres chiens, l'un d'entre eux va кtre privй de sa queue.</text>
+	</string>
+	<string id="ecolog_monster_part_3_text">
+		<text>Bienvenue... Jeune homme ! Quel plaisir de vous voir ! On a besoin de quelqu'un pour participer а une expйrience des plus importantes. Brenter, mon collиgue, aimerait prйparer un repas а partir de la faune locale dans le cadre d'une expйrience visant а йtudier l'influence des protйines mutantes sur le corps humain. Pour commencer, nous avons dйcidй de nous pencher sur les sangliers. On a besoin de jambon. D'une patte de sanglier, vous comprenez ? Et si vous acceptez, choisissez le spйcimen qui vous semble le plus sain.</text>
+	</string>
+	<string id="ecolog_monster_part_4">
+		<text>Rapporter la patte d'un sanglier</text>
+	</string>
+	<string id="ecolog_monster_part_4_descr">
+		<text>Les gourmets... D'accord, je vais leur rapporter du jambon.</text>
+	</string>
+	<string id="ecolog_monster_part_4_text">
+		<text>Bonjour! J'espиre que vous savez que ces chiens appartiennent au sous-type des vertйbrйs... ce qui signifie que leur colonne vertйbrale va de leur tкte а leur queue. Mais voilа le hic ! Un de mes jeunes collиgues a prouvй que la colonne vertйbrale des chiens aveugles, c'est ainsi que vous appelez ces animaux, commence а la queue et non а la tкte ! Et croyez-moi, зa bouleverse totalement les connaissances qu'on avait en la matiиre. Selon certaines thйories, les humains auraient au niveau du sacrum un... euh, c'est lа un autre dйbat. Bref, on a besoin d'une tкte de chien, de chien aveugle, d'une tкte que, par ignorance, nous avons considйrй comme йtant sa queue.</text>
+	</string>
+	<string id="ecolog_monster_part_5">
+		<text>Rapporter la mвchoire d'une sangsue</text>
+	</string>
+	<string id="ecolog_monster_part_5_descr">
+		<text>Ce qu'ils feront avec la mвchoire de sangsue, je m'en fiche. Ce qui m'importe c'est combien ils sont prкts а m'en donner.</text>
+	</string>
+	<string id="ecolog_monster_part_5_text">
+		<text>Ah, Stalker, heureux de vous revoir ! Ecoutez… Vous avez dйjа rencontrй des sangsues au cours de vos aventures, oui ? Sinon, il va falloir le faire. Ramenez-nous la mвchoire infйrieure d'un membre de cette espиce, avec toutes ses dents. Malheureusement, je ne peux rйvйler aucun dйtail supplйmentaire de cette expйrience, cela aurait un effet nйgatif sur votre psychй. Nous attendrons votre retour.</text>
+	</string>
+	<string id="eliminate_lager">
+		<text>Йlimination du camp.</text>
+	</string>
+	<string id="find_item">
+		<text>Trouver l'objet.</text>
+	</string>
+	<string id="freedom_defend_lager_1">
+		<text>Protйger les Stalkers d'Agroprom</text>
+	</string>
+	<string id="freedom_defend_lager_1_descr">
+		<text>Repousse l'attaque des bandits contre le camp de Stalker d'Agroprom.</text>
+	</string>
+	<string id="freedom_defend_lager_1_text">
+		<text>Un groupe de Stalkers vit а Agroprom. Des types moyens, ils comprennent que la Zone est un secteur de libertй, que les lois ne s'y appliquent pas et qu'on doit y vivre selon sa propre morale. Les voilа qui envisagent de nous rejoindre. Oui, aide-les а combattre les bandits ? Et on t'enverra quelques munitions.</text>
+	</string>
+	<string id="freedom_defend_lager_2">
+		<text>Protйger la frontiиre</text>
+	</string>
+	<string id="freedom_defend_lager_2_descr">
+		<text>Protиge la frontiиre situйe prиs des entrepфts militaires des monstres. </text>
+	</string>
+	<string id="freedom_defend_lager_2_text">
+		<text>Et revoilа les monstres du cфtй du lobotomisateur. Aide les types de la frontiиre а les repousser. Je te promets une rйcompense.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1">
+		<text>Dйtruire le camp militaire </text>
+	</string>
+	<string id="freedom_eliminate_camp_1_descr">
+		<text>Dйtruis le camp militaire situй prиs de l'Institut de Recherche d'Agroprom.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1_text">
+		<text>Les militaires monte une prise graduelle de la Zone. Il faut qu'on les ralentisse, а dйfaut de quoi, la Zone se transformera en zoo. Il y a des camps militaires prиs de l'Agroprom. Nettoie le secteur pour ralentir l'intervention de l'armйe dans la Zone.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2">
+		<text>Dйtruire le camp de Mercenaires</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_descr">
+		<text>Dйtruis le camp de Mercenaires prиs des entrepфts.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_text">
+		<text>Voilа la situation. Le camp de Mercenaires doit кtre dйtruit. On pourrait ne rien faire... Mais ils en font trop ; ils viennent sur notre territoire et essaient de soudoyer les nфtres. Il est temps de leur donner une leзon. Tu peux t'en charger ? </text>
+	</string>
+	<string id="freedom_eliminate_camp_3">
+		<text>Dйtruire le dйtachement du Devoir</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_descr">
+		<text>Dйtruis la faction la faction de Devoir а Rostok.</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_text">
+		<text>Que dirais-tu d'une bonne chasse ? Un dйtachement du Devoir s'est pointй а Rostok. On devrait pouvoir l'attaquer par surprise. Le Devoir n'arrкte pas d'envoyer des hommes pour chasser les monstres, et ceux-ci n'hйsitent pas а tirer sur tout ce qui bouge. Ce dйtachement doit кtre neutralisй avant que le Devoir n'arrive а Rostok. Ses membres ne doivent pas кtre trop nombreux : trois ou quatre vйtйrans et quelques nouveaux.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4">
+		<text>Dйtruire l'avant-poste du Devoir</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_descr">
+		<text>Dйtruis au plus vite l'avant-poste du Devoir а la Dйcharge.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_text">
+		<text>J'ai une mission urgente pour toi. Le passage qui mиne de la Dйcharge au Bar doit кtre dйbarrassй des hommes du Devoir... Ils y sont cachйs et dйvalisent les passants. On attend une importante livraison, mais je parie que le Devoir le sait dйjа et va tenter de l'intercepter. Il faut а tout prix qu'on neutralise ce barrage, mкme provisoirement. D'accord ?</text>
+	</string>
+	<string id="freedom_eliminate_camp_5">
+		<text>Nettoyer le village.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_descr">
+		<text>Dйbarrasse le village des sangsues et, si possible, йlimine le manipulateur.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_text">
+		<text>Hй, tu veux bien t'occuper de tous ces monstres sanguinaires qui grouillent au village ! On ne peut pas faire cent mиtres sans se faire attaquer. Et certains ont vu des choses... Il nous faut immйdiatement un manipulateur ! Il faut que зa cesse. Je te force pas la main et pour tout te dire, je m'y risquerais pas. Mais si t'en as le courage, tu auras toute ma reconnaissance.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6">
+		<text>Dйtruire la horde de sangliers et de croque-morts</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_descr">
+		<text>Dйtruis la horde de sangliers et de croque-morts situйe prиs des entrepфts militaires.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_text">
+		<text>Notre sniper se trouve а l'entrйe de la base. Il monte tranquillement la garde en pleine nuit... tout est calme... quand, tout а coup, il y a une explosion, des hurlements, et un flash ! Bon sang !... Visiblement, des sangliers et des croque-morts errent autour du champ de mines. Dieu sait pourquoi ils vont lа, mais quoi qu'il en soit, au moins une fois par semaine, une de ces bкtes s'y fait sauter par une mine. Ta mission est simple : tuer tous ces abrutis. Tu veux bien ?</text>
+	</string>
+	<string id="freedom_eliminate_camp_7">
+		<text>Dйtruire la horde de rongeurs.</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_descr">
+		<text>Dйtruis la horde de rongeurs dans les Terres abandonnйes.</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_text">
+		<text>Il n'y a pas de rongeurs prиs de notre base, ces crйatures peuvent aller partout. Et voilа que rйcemment, elles sont arrivйes а grands renforts... Non mais, tu le crois ! Voilа deux mois qu'on s'en occupe... Hi hi hi. Alors on s'est demandйs d'oщ venaient ces rongeurs. Des Terres abandonnйes, tu me suis ? Mais on a peur qu'ils se reproduisent et qu'ils reviennent. On a besoin de quelqu'un pour pas que зa arrive. Qu'est-ce que tu en dis ?</text>
+	</string>
+	<string id="freedom_find_item_1">
+		<text>Dйrober le fusil de sniper</text>
+	</string>
+	<string id="freedom_find_item_1_descr">
+		<text>Dйrobe le SVDm 2 modifiй а l'entrepфt du Devoir.</text>
+	</string>
+	<string id="freedom_find_item_1_text">
+		<text>J'ai une mission spйciale pour toi... Une mission plutфt sympa... Tu vas devoir rйcupйrer un Dragunov amйliorй а l'entrepфt du Devoir. Ce truc a mкme un nom, mais bon, qu'importe. Avec ce redoutable engin, on peut йliminer un йcureuil а 400 mиtres. Bon, je compte sur toi !</text>
+	</string>
+	<string id="freedom_find_item_2">
+		<text>Rйcupйrer le Chaser 13 modifiй</text>
+	</string>
+	<string id="freedom_find_item_2_descr">
+		<text>Rйcupиre le Chaser 13 auprиs des scientifiques.</text>
+	</string>
+	<string id="freedom_find_item_2_text">
+		<text>J'ai entendu dire que les cerveaux avaient rйussi а amйliorer le fusil а pompe Chaser en utilisant un artefact. Cet engin fait autant de dйgвts qu'un obusier. Alors que dirais-tu d'aller leur rendre une petite visite pour essayer de te le procurer. Je prends tous les frais а ma charge !</text>
+	</string>
+	<string id="freedom_find_item_3">
+		<text>Rapporter le gilet pare-balles</text>
+	</string>
+	<string id="freedom_find_item_3_descr">
+		<text>Rapporte le nouveau modиle de gilet pare-balles.</text>
+	</string>
+	<string id="freedom_find_item_3_text">
+		<text>Les troufions portent de nouveaux gilets pare-balles. Leur doublure intйrieure a des pouvoirs de guйrison ou quelque chose du genre... Bref, les petits bobos se soignent rapidement. Et coup de bol, l'autre jour, dix de ces types sont allйs а Yantar, seuls six en sont revenus, avec trois sur leurs йpaules. Tu me suis ? Ils en ont laissй un derriиre eux. Essaie de rйcupйrer ce gilet, comme зa, on pourra l'йtudier et s'en fait pour nous.</text>
+	</string>
+	<string id="freedom_kill_stalker_1">
+		<text>Tuer le chef de la sйcuritй du Devoir</text>
+	</string>
+	<string id="freedom_kill_stalker_1_descr">
+		<text>Tue le chef de la sйcuritй du Devoir le plus discrиtement possible. </text>
+	</string>
+	<string id="freedom_kill_stalker_1_text">
+		<text>Ce serait bien que le chef de la sйcuritй disparaisse. Comme зa, je pourrais introduire plusieurs de mes gars dans leur bande. Et alors... Bon, il vaudrait mieux que je la boucle. Je te conseille de l'abattre de loin, sans faire de bruit.</text>
+	</string>
+	<string id="freedom_kill_stalker_2">
+		<text>Tuer le capitaine Ivantsov</text>
+	</string>
+	<string id="freedom_kill_stalker_2_descr">
+		<text>Tue le capitaine Ivantsov, le bras droit du chef du Devoir.</text>
+	</string>
+	<string id="freedom_kill_stalker_2_text">
+		<text>Je te prйviens, c'est pas une mission facile, mais le jeu en vaut la chandelle. Ivantsov, l'assistant du chef du Devoir, l'a demandй. C'est lui qui fait tout le sale boulot : les opйrations punitives, les raids... Si tu savais combien de nos hommes il a tuйs ! Il est grand temps qu'on se dйbarrasse de cette ordure. Et si tu dйcides de t'en occuper, je te conseille d'кtre bien armй.</text>
+	</string>
+	<string id="freedom_kill_stalker_3">
+		<text>Tuer le colonel Petrenko</text>
+	</string>
+	<string id="freedom_kill_stalker_3_descr">
+		<text>Tue le colonel Petrenko, l'un des fondateurs de la faction du Devoir.</text>
+	</string>
+	<string id="freedom_kill_stalker_3_text">
+		<text>Le colonel Petrenko... Je ne sais pas si tu le connais, mais ce serait bien que vous vous rencontriez. Ce type est un des fondateurs du Devoir et un de nos pires ennemis. Veillez а ce que votre conversation se termine prйcipitamment... Pour lui. Tu veux bien ?</text>
+	</string>
+	<string id="freedom_kill_stalker_4">
+		<text>Йliminer le Stalker neutre</text>
+	</string>
+	<string id="freedom_kill_stalker_4_descr">
+		<text>Trouve et йlimine le Stalker neutre</text>
+	</string>
+	<string id="freedom_kill_stalker_4_text">
+		<text>Il y a un type qui rфde dans le coin. Il a butй un de nos hommes. Et зa, c'est impardonnable. Tu veux bien t'en occuper ? On te paiera, ne te fais pas de bile.</text>
+	</string>
+	<string id="freedom_kill_stalker_5">
+		<text>Tuer l'un des commandants du Devoir</text>
+	</string>
+	<string id="freedom_kill_stalker_5_descr">
+		<text>Tue l'un des commandants du Devoir</text>
+	</string>
+	<string id="freedom_kill_stalker_5_text">
+		<text>Je paierai pour la tкte d'un chef du Devoir ! Tue une de ces ordures et viens chercher ta rйcompense.</text>
+	</string>
+	<string id="freedom_kill_stalker_6">
+		<text>Tuer le Stalker appelй la Terreur.</text>
+	</string>
+	<string id="freedom_kill_stalker_6_descr">
+		<text>Йlimine le Stalker appelй la Terreur</text>
+	</string>
+	<string id="freedom_kill_stalker_6_text">
+		<text>On йlimine des monstres, sauf que pour nous, c'est une question de survie, pas de fric. Les populations de mutants ne sont pas si nombreuses. En plus, ce sont des кtres vivants et on ne peut pas tous les tuer comme зa. Y'a des gens qui refusent de comprendre. Comme ce "Terreur", par exemple. Ce n'est pas pour rien qu'il porte un tel surnom... Il vend des mutants empaillйs. On l'a dйjа prйvenu, mais tu parles ! Alors, tu veux bien faire quelque chose pour Mиre Nature ?</text>
+	</string>
+	<string id="freedom_kill_stalker_7">
+		<text>Tuer le Stalker appelй Barin. </text>
+	</string>
+	<string id="freedom_kill_stalker_7_descr">
+		<text>Tue le Stalker appelй Barin, l'intendant en chef de la faction du Devoir.</text>
+	</string>
+	<string id="freedom_kill_stalker_7_text">
+		<text>Un goujat, un lиche-bottes, un hypocrite, un lвche... Voilа ce qu'est Barin. Comme tu peux le constater, un homme au caractиre merveilleux qui s'est hissй au plus haut du Devoir. Il fournit а la faction des provisions et de la nourriture et participe, de temps en temps, aux raids. Il faut qu'on s'en dйbarrasse, surtout depuis que tous les indices sur la logistique du Devoir mиnent а Barin.</text>
+	</string>
+	<string id="freedom_monster_part_1">
+		<text>Rapporter une patte de sanglier</text>
+	</string>
+	<string id="freedom_monster_part_1_descr">
+		<text>Rapport une patte de sanglier</text>
+	</string>
+	<string id="freedom_monster_part_1_text">
+		<text>On prйpare un bon repas pour fкter l'anniversaire de Bob Marley. Tu peux nous procurer un bon jambon ? Plus il sera gros, mieux ce sera ! Je te revaudrai зa !</text>
+	</string>
+	<string id="hunter_eliminate_lager">
+		<text>Dйtruire le repaire de la sangsue.</text>
+	</string>
+	<string id="hunter_eliminate_lager_descr">
+		<text>Le chasseur demande de dйtruire le repaire de la sangsue au village, prиs des entrepфts militaires, et en retour, il promet un artefact rare.</text>
+	</string>
+	<string id="hunter_eliminate_lager_text">
+		<text>Tu es dйjа tombй sur une sangsue ? C'est horrible, pas vrai ? Eh bien, l'autre jour, je suis allй prиs des entrepфts militaires pour y trouver quelques artefacts. Et йcoute зa, j'ai vu une sangsue, toute noire et couverte de balafres. Elle йtait assise sur le cadavre, elle ne m'a pas vu. Pris de panique, je me suis mis а courir. Mais grossiиre erreur, elle m'a entendu et m'a suivi. Il y avait des cris tout autour de moi et j'ai compris qu'elle n'йtait pas seule. Je pense qu'elles doivent avoir un repaire dans le coin. Si tu les chasses, je te promets de te donner un artefact rare que j'ai trouvй il y a quelques jours.</text>
+	</string>
+	<string id="kill_stalker">
+		<text>Tuer le Stalker.</text>
+	</string>
+	<string id="lisiy_kill_stalker">
+		<text>Tuer le traоtre.</text>
+	</string>
+	<string id="lisiy_kill_stalker_descr">
+		<text>Crвne d'oeuf veut que tu tues le Stalker qui a pris la fuite avec un artefact rare.</text>
+	</string>
+	<string id="lisiy_kill_stalker_text">
+		<text>Il y a quelques temps, avec un autre Stalker, on est allйs chercher un artefact prиs du lobotomisateur. On a trouvй des tas de trucs, et mкme deux qu'on avait jamais vus, pas mкme en photos. La nuit suivante, il a filй en emportant les artefacts les plus prйcieux. Il a ensuite essayй de me faire croire qu'ils avaient disparu. Il y a quelques jours, j'ai vu un de ces artefacts chez le Barman... Pfff... Enfin, si tu tombes sur ce Stalker, salue-le pour moi. Et tant que tu y es, essaie de trouver oщ se trouve sa planque et rйcupиre le deuxiиme artefact. Le jeu en vaut la chandelle, crois-moi.</text>
+	</string>
+	<string id="mercenary_kill_stalker">
+		<text>Tuer le maоtre Stalker.</text>
+	</string>
+	<string id="mercenary_kill_stalker_descr">
+		<text>Le Mercenaire est prкt а raquer pour la mort de chacun des maоtres. Moins il y aura de maоtres, plus ce sera facile pour les Mercenaires.</text>
+	</string>
+	<string id="mercenary_kill_stalker_text">
+		<text>On n'a pas intйrкt а ce que les chars des Stalkers йquipйs d'exosquelettes armйs jusqu'aux dents, envahissent la Zone. А cause d'eux, c'est de plus en plus difficile et de plus en plus dangereux de travailler. Moins il y en a, mieux c'est. Йlimine-les et tu auras une rйcompense.</text>
+	</string>
+	<string id="monster_part">
+		<text>Se procurer un corps de monstre.</text>
+	</string>
+	<string id="petrenko_kill_stalker">
+		<text>Йliminer le Stalker de la Libertй.</text>
+	</string>
+	<string id="petrenko_kill_stalker_descr">
+		<text>Un Stalker, ancien membre du Devoir, qui avait connaissance d'informations importantes sur des objets de Pripyat, a rйcemment rejoint le camp de la Libertй. Il doit кtre tuй avant d'en avoir trop dit.</text>
+	</string>
+	<string id="petrenko_kill_stalker_text">
+		<text>Йcoute attentivement. On a des cartes de Pripyat, mais pas trиs а jour, puisqu'elles datent du dйbut des annйes 90. Le plus important, c'est que tous les sites militaires y sont repйrйs : entrepфts souterrains, abris antiaйriens, etc. Aujourd'hui, elles n'ont plus grand intйrкt, йvidemment, mais si on trouve une route qui mиne а Pripyat, ces infos se rйvйleront trиs prйcieuses. Le problиme, c'est qu'un officier est passй dans le camp de la Libertй et il avait connaissance de ces informations. Conclusion, il doit кtre йliminй avant d'en avoir trop dit.</text>
+	</string>
+	<string id="return_for_reward">
+		<text>Revenir pour toucher la rйcompense</text>
+	</string>
+	<string id="return_for_reward_bring">
+		<text>Apporter ce qui a йtй promis au client</text>
+	</string>
+	<string id="shustriy_find_item">
+		<text>Trouver la combinaison perfectionnйe.</text>
+	</string>
+	<string id="shustriy_find_item_descr">
+		<text>Allegro m'a parlй de la planque oщ les bandits ont cachй le butin. Il veut que je lui rapporte la combinaison volйe, en йchange d'une rйcompense, bien sыr. </text>
+	</string>
+	<string id="shustriy_find_item_text">
+		<text>Quand j'йtais en captivitй, j'ai entendu les bandits parler de la planque secrиte oщ ils cachent le butin. Apparemment, ils y ont cachй une super combinaison, mais un monstre est allй fourrer son nez dans la planque. Depuis, ils n'osent plus s'en approcher. Rends-moi service, rapporte-moi la combinaison et je te paierai gйnйreusement.</text>
+	</string>
+	<string id="tm_barman_has_no_job">
+		<text>Je n'ai rien а offrir pour le moment.</text>
+	</string>
+	<string id="tm_barman_job_ask">
+		<text>Et de quoi tu veux parler ?</text>
+	</string>
+	<string id="tm_barman_job_complete">
+		<text>Bon boulot, voilа une rйcompense bien mйritйe !</text>
+	</string>
+	<string id="tm_barman_job_what">
+		<text>Comment зa va ?</text>
+	</string>
+	<string id="tm_barman_list_job">
+		<text>Regarde ce qu'on a :</text>
+	</string>
+	<string id="tm_defend_camp_1">
+		<text>Couvrir le dйtachement du Devoir pendant l'attaque des bandits dans la Vallйe obscure</text>
+	</string>
+	<string id="tm_defend_camp_1_descr">
+		<text>Couvre le dйtachement du Devoir pendant l'attaque des bandits dans la Vallйe obscure.</text>
+	</string>
+	<string id="tm_defend_camp_1_text">
+		<text>J'ai enfin rйussi а convaincre le Devoir qu'il est grand temps de dйbarrasser la Dйcharge des bandits. Le Devoir va йlargir son territoire et ils embкteront moins mes clients rйguliers. Bon, voilа le marchй : dans un premier temps, le commandement du Devoir a dйcidй de barrer la route aux bandits en provenance de la Vallйe obscure. Un dйtachement a йtй envoyй pour imposer un blocus, ce qui n'a pas l'air d'кtre au goыt des bandits. Qui l'eut cru ! Alors je me demandais si tu accepterais de les aider а sйcuriser l'entrйe de la vallйe. Tu seras gйnйreusement rйcompensй. </text>
+	</string>
+	<string id="tm_dolg_has_no_job">
+		<text>Il n'y a pas de boulot pour le moment.</text>
+	</string>
+	<string id="tm_dolg_job_ask">
+		<text>De quoi tu veux parler ?</text>
+	</string>
+	<string id="tm_dolg_job_complete">
+		<text>Bien jouй ! C'est du bon boulot.</text>
+	</string>
+	<string id="tm_dolg_job_what">
+		<text>J'йcoute.</text>
+	</string>
+	<string id="tm_dolg_list_job">
+		<text>Voici la mise а jour de la mission :</text>
+	</string>
+	<string id="tm_drunk_dolg_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_drunk_dolg_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_drunk_dolg_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_drunk_dolg_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_drunk_dolg_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_ecolog_has_no_job">
+		<text>Dйsolй, mais on n'a pas de boulot pour le moment.</text>
+	</string>
+	<string id="tm_ecolog_job_ask">
+		<text>De quel boulot tu veux parler ? </text>
+	</string>
+	<string id="tm_ecolog_job_complete">
+		<text>Tu as fait du bon boulot ! Permets-moi de te remettre ta rйcompense. </text>
+	</string>
+	<string id="tm_ecolog_job_what">
+		<text>J'йcoute.</text>
+	</string>
+	<string id="tm_ecolog_list_job">
+		<text>Voilа ce que je te propose : </text>
+	</string>
+	<string id="tm_eliminate_camp_1">
+		<text>Dйtruire le camp des bandits а la Dйcharge.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_descr">
+		<text>Va а la Dйcharge et йlimine les bandits qui ont volй les Stalkers а leur retour de la Zone. Зa fera plaisir au marchand.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_text">
+		<text>Les bandits se sont ralliйs pour mettre des bвtons dans les roues des honnкtes gens... Va directement а la Dйcharge, il paraоt que ces vermines se sont installйes prиs de la casse. Si tu t'en occupes, tout le monde te sera reconnaissant et tu seras gйnйreusement rйcompensй. D'accord ?</text>
+	</string>
+	<string id="tm_eliminate_camp_2">
+		<text>Dйtruire le camp des bandits au parking.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_descr">
+		<text>Йlimine les bandits au parking. Apparemment, ils sont nouveaux dans la Zone, alors зa devrait кtre facile.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_text">
+		<text>Les bandits rфdent encore autour du parking. Tu devines en quoi consiste ce boulot ? Alors... vas-y ! Transmets-leur nos amitiйs et reviens me voir, je te rйcompenserai. D'accord ?</text>
+	</string>
+	<string id="tm_eliminate_camp_3">
+		<text>Йliminer les bandits prиs de l'Institut de Recherche Agroprom.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_descr">
+		<text>Йlimine les bandits prиs de l'Institut de Recherche Agroprom. Il vaut mieux rester en bons termes avec le marchand.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_text">
+		<text>Des bandits sont arrivйs prиs de l'Institut de Recherche Agroprom. Ils gкnent le travail de tri de mes foreurs. Rиgle le problиme et je te revaudrai зa.</text>
+	</string>
+	<string id="tm_eliminate_camp_4">
+		<text>Dйbarrasser le secteur des ennemis.</text>
+	</string>
+	<string id="tm_eliminate_camp_4_descr">
+		<text>Dйbarrasse le secteur des mutants.</text>
+	</string>
+	<string id="tm_eliminate_camp_4_text">
+		<text>J'ai un boulot facile. Ils veulent faire venir un touriste йtranger. Il a payй mes potes pour aller visiter la Zone. Et le secteur qu'ils veulent lui montrer doit кtre dйbarrassй des mutants. Зa t'intйresse ?</text>
+	</string>
+	<string id="tm_eliminate_camp_5">
+		<text>Йliminer deux bandits а la Dйcharge.</text>
+	</string>
+	<string id="tm_eliminate_camp_5_descr">
+		<text>Sйcurise la route menant а l'un des lieux phares de la Zone pour le rendre accessible а tous.</text>
+	</string>
+	<string id="tm_eliminate_camp_5_text">
+		<text>Rйcemment, un des lieux phares de la Zone est devenu inaccessible aux amateurs de merveilles. La Dйcharge... Ouais, la Dйcharge, c'est un endroit unique, oщ tu oublies tout : tristesse, saletй, argent, sang. Mais il y a deux tarйs qui menacent de tuer tous ceux qui refusent de les payer pour y accйder. Dйbarrasse-toi d'eux. C'est le seul endroit oщ je peux emmener les touristes.</text>
+	</string>
+	<string id="tm_eliminate_camp_6">
+		<text>Tuer la sangsue dans la Vallйe obscure</text>
+	</string>
+	<string id="tm_eliminate_camp_6_descr">
+		<text>Tue la sangsue dans la Vallйe obscure.</text>
+	</string>
+	<string id="tm_eliminate_camp_6_text">
+		<text>Il paraоt que les troupes ont quittй la Vallйe obscure. Du coup, des monstres sont sortis de tous les recoins. Les Stalkers y ont dйjа repйrй une sangsue, et pas n'importe laquelle puisqu'elle n'a pas peur des grands espaces. En tout cas, dиs les scientifiques l'apprendront, ils voudront йtudier ce spйcimen. Et je veux кtre celui qui leur remettra son cadavre. Ta mission consiste а tuer cette sangsue. Moi, je m'occupe du reste.</text>
+	</string>
+	<string id="tm_find_artefact_1">
+		<text>Trouver l'artefact "mйduse"</text>
+	</string>
+	<string id="tm_find_artefact_1_descr">
+		<text>Trouve l'artefact "mйduse" formй dans l'anomalie "tremplin".</text>
+	</string>
+	<string id="tm_find_artefact_1_text">
+		<text>Un gars de l'extйrieur rйclame une "mйduse". Зa ne rapporte pas trиs gros, mais c'est facile. Rйcupиre-la !</text>
+	</string>
+	<string id="tm_find_artefact_2">
+		<text>Trouver l'artefact "fleur protectrice"</text>
+	</string>
+	<string id="tm_find_artefact_2_descr">
+		<text>Trouve l'artefact "fleur protectrice" formй dans l'anomalie "tremplin". Зa devrait rapporter gros.</text>
+	</string>
+	<string id="tm_find_artefact_2_text">
+		<text>On m'a rйclamй la "fleur protectrice". La commande йmane des joailliers, alors essayons de faire plaisir aux jolies femmes,\nhein ? Si tu la trouves, tu auras l'argent et une bouteille pour trinquer а leur santй...</text>
+	</string>
+	<string id="tm_find_artefact_3">
+		<text>Trouver l'artefact "йtoile phosphorescente"</text>
+	</string>
+	<string id="tm_find_artefact_3_descr">
+		<text>Trouve "l'йtoile phosphorescente", un artefact rare et trиs cher.</text>
+	</string>
+	<string id="tm_find_artefact_3_text">
+		<text>J'ai un petit boulot... mais pas trиs agrйable. Apparemment, зa йmane des militaires qui travaillent sur une nouvelle protection. Bref, ils rйclament "l'йtoile phosphorescente". C'est un artefact rare qui protиge efficacement des balles... Alors, qu'est-ce que tu en dis ? Je te paierai bien ! </text>
+	</string>
+	<string id="tm_find_artefact_4">
+		<text>Trouver l'artefact appelй "morceau de viande"</text>
+	</string>
+	<string id="tm_find_artefact_4_descr">
+		<text>Trouve l'artefact "morceau de viande" qui guйrit les blessures</text>
+	</string>
+	<string id="tm_find_artefact_4_text">
+		<text>On m'a commandй un artefact qui guйrit les blessures. Il s'appelle "le morceau de viande". C'est pour une sorte de clinique. Rapporte-le-moi. Tu seras payй et en plus, tu feras une bonne action.</text>
+	</string>
+	<string id="tm_find_item_1">
+		<text>Trouver le pistolet perfectionnй</text>
+	</string>
+	<string id="tm_find_item_1_descr">
+		<text>Procure-toi le pistolet Fort dont le chargeur contiendrait plus de cartouches que les autres. Son dernier propriйtaire connu йtait le commandant du poste de contrфle militaire situй sous le pont endommagй.</text>
+	</string>
+	<string id="tm_find_item_1_text">
+		<text>En ce moment, plus personne ne veut utiliser d'armes normales, pas mкme les nouveaux ! Enfin, on m'a commandй une mitrailleuse amйliorйe. Il paraоtrait que le commandant des soldats, celui qui fait payer un droit de passage sous le pont, aurait un "Fort" dont le chargeur contiendrait plus de cartouches que les autres. Зa t'intйresse ?</text>
+	</string>
+	<string id="tm_freedom_has_no_job">
+		<text>Il n'y a pas de boulot en ce moment...</text>
+	</string>
+	<string id="tm_freedom_job_ask">
+		<text>Alors, de quoi tu veux parler ?</text>
+	</string>
+	<string id="tm_freedom_job_complete">
+		<text>Bien jouй, jeune homme ! C'est du trиs bon boulot, voilа ton argent.</text>
+	</string>
+	<string id="tm_freedom_job_what">
+		<text>Comment зa va ?</text>
+	</string>
+	<string id="tm_freedom_list_job">
+		<text>Voilа ce que j'ai :</text>
+	</string>
+	<string id="tm_hunter_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_hunter_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_hunter_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_hunter_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_hunter_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_job_nothing">
+		<text>Non, rien.</text>
+	</string>
+	<string id="tm_job_refuse">
+		<text>Je refuse de faire ce boulot.</text>
+	</string>
+	<string id="tm_kill_stalker_1">
+		<text>Tuer le chef des bandits</text>
+	</string>
+	<string id="tm_kill_stalker_1_descr">
+		<text>Tue le chef des bandits qui a provoquй le marchand. Il ne sera sans doute pas seul... Ce n'est une mission facile, mais c'est bien payй. Tu le trouveras dans la Dйcharge.</text>
+	</string>
+	<string id="tm_kill_stalker_1_text">
+		<text>Tu dois exйcuter ce type, un des chefs des bandits. L'autre jour, sur son ordre, les bandits ont interceptй et bousculй mon messager. Je ne tolиre pas qu'on s'en prenne а mon personnel... Si tu t'en occupes, je te revaudrai зa. Alors, qu'est-ce que tu en dis ? </text>
+	</string>
+	<string id="tm_kill_stalker_2">
+		<text>Tuer le Stalker marchand</text>
+	</string>
+	<string id="tm_kill_stalker_2_descr">
+		<text>Tue un Stalker... C'est jamais йvident de s'en prendre а un collиgue. Mais, au moins, tu seras bien payй.</text>
+	</string>
+	<string id="tm_kill_stalker_2_text">
+		<text>J'ai un problиme avec ce marchand. S'il refuse de coopйrer, qu'il aille au diable ! Mais je ne laisserai personne rйpandre des rumeurs immondes. Bref, il doit кtre йliminй pour que les autres comprennent. Que tout le monde sache que je suis le boss ici... </text>
+	</string>
+	<string id="tm_kill_stalker_3">
+		<text>Tuer le nouveau Stalker</text>
+	</string>
+	<string id="tm_kill_stalker_3_descr">
+		<text>Dйbarrasse-toi du nouveau Stalker, qui n'est peut-кtre pas si nouveau que зa... Qui est-ce d'ailleurs ? Oh, peu importe ! Du moment que le boulot soit fait.</text>
+	</string>
+	<string id="tm_kill_stalker_3_text">
+		<text>Ce type se fait passer pour un nouveau, mais il est bizarre... Alors, s'il venait а disparaоtre, зa me rendrait bien service, si tu vois ce que je veux dire... </text>
+	</string>
+	<string id="tm_kill_stalker_4">
+		<text>Tuer le Stalker surnommй le Monstre</text>
+	</string>
+	<string id="tm_kill_stalker_4_descr">
+		<text>Йlimine un des rivaux du marchand Sidorovich, un Stalker surnommй le Monstre.</text>
+	</string>
+	<string id="tm_kill_stalker_4_text">
+		<text>Le Monstre, alias Oleg Gusarov... servait dans les Spetsnaz. Tant qu'il s'occupait de ses affaires, je n'avais rien contre lui, un solitaire est un solitaire. Mais j'ai appris qu'il formait un gang pour йliminer le cordon et prendre le contrфle des opйrations de contrebande de la Zone. Зa, c'est un gros problиme qui doit кtre rйglй au plus vite. Alors, tu t'en charges ? </text>
+	</string>
+	<string id="tm_kill_stalker_5">
+		<text>Tuer le pиre Diodor</text>
+	</string>
+	<string id="tm_kill_stalker_5_descr">
+		<text>Tuer un homme prкchant dans la Zone contre la rйcupйration et la vente d'artefacts ? Exactement. </text>
+	</string>
+	<string id="tm_kill_stalker_5_text">
+		<text>J'ai toujours dit qu'affaires et religion ne faisaient pas bon mйnage. Un religieux n'a pas а se mкler des affaires des autres ! Ce pиre Diodor... oh pardonnez-moi mon Dieu... eh bien... il ne veut rien entendre. Il n'arrкte pas de dйnoncer la chasse aux artefacts comme une source de pйchйs aussi bien dans la Zone que dans le reste du monde. Il prфne mкme la destruction de tous les artefacts !! Il ne faut pas exagйrer ! Et le pire, c'est qu'il commence а rallier des gens а sa cause ! J'ai essayй de discuter avec lui, mais il refuse d'entendre raison. Voilа le marchй : tu expйdie ce Diodor au ciel. Lа-haut, il pourra prкcher autant qu'il voudra... Pigй ? Et en йchange, je te donnerai un super artefact. Alors, c'est d'accord ? </text>
+	</string>
+	<string id="tm_kill_stalker_6">
+		<text>Tuer le "reprйsentant de commerce"</text>
+	</string>
+	<string id="tm_kill_stalker_6_descr">
+		<text>Tue le "reprйsentant de commerce". Le marchand tient а sa rйputation.</text>
+	</string>
+	<string id="tm_kill_stalker_6_text">
+		<text>Imagine un peu зa : il y a un zozo qui se fait passer pour un reprйsentant de commerce et qui se sert de ma rйputation pour refourguer des merdes ! Des barriques cassйes, des armures inutilisables, des conserves avariйes. J'ai dйjа eu affaire а des clients mйcontents. Conclusion, j'ai besoin de quelqu'un pour m'en dйbarrasser.</text>
+	</string>
+	<string id="tm_lisiy_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_lisiy_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_lisiy_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_lisiy_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_lisiy_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_mercenary_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_mercenary_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_mercenary_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_mercenary_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_mercenary_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_monster_part_1">
+		<text>Rapporter la mвchoire de la sangsue</text>
+	</string>
+	<string id="tm_monster_part_1_descr">
+		<text>Alors comme зa, la dent de sangsue est un porte-bonheur ? Voyons si зa porte bonheur а la sangsue.</text>
+	</string>
+	<string id="tm_monster_part_1_text">
+		<text>Selon la superstition, les dents de sangsue porteraient bonheur. Comme s'il suffisait de traverser les anomalies avec une dent autour du cou pour que les artefacts te tombent dans les mains ! C'est n'importe quoi, mais tant qu'il y a des gogos pour y croire, зa peut rapporter gros. Rapporte-moi une mвchoire de sangsue et je te paierai bien.</text>
+	</string>
+	<string id="tm_monster_part_2">
+		<text>Rapporter la queue du pseudo-chien</text>
+	</string>
+	<string id="tm_monster_part_2_descr">
+		<text>Rapporte la queue du pseudo-chien.</text>
+	</string>
+	<string id="tm_monster_part_2_text">
+		<text>L'hiver approche. Et qu'est-ce que les femmes aiment porter quand il fait froid ? Ouais, des fourrures. En ce moment, la mode est aux accessoires en queue de pseudo-chien. Spйcial comme fourrure ! Conclusion, on m'a commandй une de ces queues. Tu t'en occupes ?</text>
+	</string>
+	<string id="tm_petrenko_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_petrenko_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_petrenko_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_petrenko_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_petrenko_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_reward_job">
+		<text>Je viens pour le boulot.</text>
+	</string>
+	<string id="tm_seek_job_abandon">
+		<text>Ce genre de boulot ne m'intйresse pas.</text>
+	</string>
+	<string id="tm_seek_job_no">
+		<text>Une autre fois. </text>
+	</string>
+	<string id="tm_seek_job_yes">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="tm_seek_new_job">
+		<text>J'ai besoin de travailler. T'as quelque chose pour moi ?</text>
+	</string>
+	<string id="tm_shustriy_has_no_job">
+		<text>Il n'y a pas de boulot pour le moment. </text>
+	</string>
+	<string id="tm_shustriy_job_ask">
+		<text>De quel boulot tu veux parler ?</text>
+	</string>
+	<string id="tm_shustriy_job_complete">
+		<text>Mission accomplie... Et voilа la rйcompense !</text>
+	</string>
+	<string id="tm_shustriy_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_shustriy_list_job">
+		<text>Voilа quelque chose :</text>
+	</string>
+	<string id="tm_trader_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_trader_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_trader_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_trader_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_trader_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_wolf_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_wolf_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_wolf_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_wolf_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_wolf_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="tm_zastava_commander_has_no_job">
+		<text>Pour le moment, il n'y a rien.</text>
+	</string>
+	<string id="tm_zastava_commander_job_ask">
+		<text>De quelle mission tu veux parler ?</text>
+	</string>
+	<string id="tm_zastava_commander_job_complete">
+		<text>La mission est terminйe. Voici la rйcompense !</text>
+	</string>
+	<string id="tm_zastava_commander_job_what">
+		<text>Et la mission ?</text>
+	</string>
+	<string id="tm_zastava_commander_list_job">
+		<text>Il y a quelque chose :</text>
+	</string>
+	<string id="wolf_eliminate_lager_1">
+		<text>Dйtruire le repaire des sangliers</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_descr">
+		<text>Les sangliers ont йlu domicile prиs de l'endroit oщ le Loup et son ami ont stockй leur matos. Le Loup demande а ce que le repaire soit dйtruit. Il te promet une belle rйcompense en йchange.</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_text">
+		<text>Avec mon pote, on a stockй du matos prиs du parking, lа oщ la forкt devient plus dense. Il y a de tout sur place. Mais les sangliers viennent d'y йlire domicile et on n'y a plus accиs. Il faut que tu nous aides. Tue les sangliers. Mon pote et moi, on t'en sera trиs reconnaissants.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2">
+		<text>Tuer les mutants а la ferme</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_descr">
+		<text>Le Loup demande а ce que la ferme soit dйbarrassйe des mutants. Il veut y йtablir un avant-poste.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_text">
+		<text>On est а la limite de la Zone et pourtant, les nouveaux ont du fil а retordre, mкme ici. Les bandits nous posent problиme, mais au moins, ils comprennent le russe. Quant aux mutants, ils sont vraiment coriaces. Ils ont йlu domicile а la ferme abandonnйe et pris le contrфle du seul site oщ on aurait pu йtablir un avant-poste. Dйbarrasse la ferme des mutants et je te rйcompenserai.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager">
+		<text>Dйtruire le repaire des chiens</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_descr">
+		<text>Une meute de chiens rфde aux alentours du poste de contrфle sud, au Bar. Le chef de poste demande а ce qu'on dйtruise leur repaire. Il promet une rйcompense.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_text">
+		<text>Malgrй nos efforts, des monstres parviennent encore а sortir de la Dйcharge. Tu as sans doute vu une meute de chiens au sud de notre position. Tue-les et tu recevras une rйcompense.</text>
+	</string>
+	<string id="defend_lager">
+		<text>Dйfense du camp.</text>
+	</string>
+</string_table>

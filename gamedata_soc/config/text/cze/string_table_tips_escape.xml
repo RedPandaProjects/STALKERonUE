@@ -1,0 +1,60 @@
+	<string id="esc_direction_fire">
+		<text>Nikdo nebude støílet, pokud nedám rozkaz. Bacha na prsty na spoušti, jasný?</text>
+	</string>
+	<string id="esc_fanat_victory">
+		<text>Vítìzství!!! Pojïte všichni sem. Pojï, Oznaèenej. Musíme si promluvit.</text>
+	</string>
+	<string id="esc_return_dv">
+		<text>Dobrý, Oznaèený. Jsem rád, že žiješ a navštívil jsi nás. Pojï sem, promluvíme si. Objevilo se nìco zajímavého.</text>
+	</string>
+	<string id="esc_tutorial_end">
+		<text>Výbornì, úkol dokonèen. Myslím, že základní vìci ses nauèil.</text>
+	</string>
+	<string id="esc_wolf_thanks">
+		<text>Oznaèený, cesta do tábora je ti teï otevøená. Pøijï a pokecáme.</text>
+	</string>
+	<string id="escape_fox_quest">
+		<text>Nìco málo o Støelcovi, Oznaèenej. Jeden stalker se právì vrátil z dlouhý výpravy. Jmenuje se Lišák. Nejspíš to mìl docela tìžký a prosí o pomoc. Nìjaký divný bestie ho sledovaly celou cestu, prej už se dlouho nevydrží. Øekl bych, že ten by o Støelcovi mohl nìco vìdìt. Tady jsou souøadnice. Asi bys mìl pohnout kostrou.</text>
+	</string>
+	<string id="escape_stalker_death">
+		<text>Nic moc, Oznaèenej. Chlapi jsou mrtvý, i když to není zrovna tvoje vina. Takový vìci se v Zónì stávají. No nic, testem jsi prošel, takže pocem a pokecáme o byznysu.</text>
+	</string>
+	<string id="escape_stalker_helped">
+		<text>Dobrá práce, Oznaèenej. Jen tak dál a udìláš si tady pár kamarádù. Stav se za mnou a probereme byznys.</text>
+	</string>
+	<string id="escape_stalker_killed">
+		<text>To nebylo moc chytrý, Oznaèenej. Prošel jsi testem, ale teï se budeš muset postarat o Wolfa a jeho chlapy sám. No nic, èekám na tebe. Mám další práci, o který se musíme pobavit.</text>
+	</string>
+	<string id="info_esc_give_agroprom_task">
+		<text>Oznaèený, armáda vyhrabala ve výzkumným institutu Agroprom nìco zajímavýho. Rád bych se k tomu dostal a ty nejspíš taky. Sežeò info a dones ho Barmanovi do stalkerskýho baru. A teï pohyb!</text>
+	</string>
+	<string id="tips_esc_trader_about_anomalies">
+		<text>Pozor! Jsi kousek od anomálie. Pomocí šroubkù zjisti pøesnou pozici a tvar.</text>
+	</string>
+	<string id="tips_esc_trader_about_pda">
+		<text>Stiskni Kontakty ($$ACTION_CONTACTS$$). Lidé do vzdálenosti 250 m od tebe, kteøí mají zapnutá PDA, se objeví v kontaktech a na minimapì. Také uvidíš, jaký k tobì mají vztah, takže mùžeš poznat potenciální nepøátele vèas. Banditi ale své PDA vìtšinou nezapínají a mutanti je nemají, nebo je sežerou, takže si radši dávej bacha!</text>
+	</string>
+	<string id="tips_esc_trader_activate_map">
+		<text>Pro aktivaci mapy stiskni '$$ACTION_MAP$$'.</text>
+	</string>
+	<string id="tips_esc_trader_activate_pda">
+		<text>Pro aktivaci PDA stiskni '$$ACTION_ACTIVE_JOBS$$'.</text>
+	</string>
+	<string id="tips_esc_trader_how_to_talk">
+		<text>Pokud si chceš s nìkým promluvit, namiø na nìj a stiskni '$$ACTION_USE$$'.</text>
+	</string>
+	<string id="tips_esc_trader_quest_1">
+		<text>Najdi artefakt v oblasti oznaèené na mapì a pøines ho pøekupníkovi.</text>
+	</string>
+	<string id="tutorial_flash_anomaly_alarm">
+		<text>Dávej pozor, Oznaèenej. Pøíštì bys to mohl být ty.</text>
+	</string>
+	<string id="tutorial_trader_give_medikit">
+		<text>Dej tomu debilovi lékárnièku.</text>
+	</string>
+	<string id="tutorial_trader_look_vagon">
+		<text>Oznaèenej! Zapomeò na artefakt, ten vyøešíš pozdìji. Padej k pøívìsu u cesty, chlapi potøebujou pomoc. Debilové zaèali støílet na vrtulník. Poslal jsem ti souøadnice.</text>
+	</string>
+	<string id="tutorial_trader_search_corpses">
+		<text>Prohledej tìla, mùžeš najít nìco zajímavého.</text>
+	</string>

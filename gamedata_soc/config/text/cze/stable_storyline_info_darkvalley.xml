@@ -1,0 +1,75 @@
+	<string id="bar_darklab_documents_txt">
+		<text>Barman: "Ty dokumenty z institutu pár vìcí objasòujou, ale poøád nemáme dost. Podle všeho existuje vypalovaè mozku, který blokuje cestu na sever, ale nikdo neví, co to pøesnì je. V souborech se taky mluví o nìjaký labinì X18 a podle popisu to asi bude ta podzemní budova v Temným údolí. Nikdo neví, co se tam teï dìje, navíc mají v Temným údolí základnu banditi.\n Nìkolik prùzkumníkù Povinnosti tam nedávno bylo, ale zatím od nich nejsou žádný zprávy.\n Labina je zamèená a ke vstupu jsou tøeba dva elektronický klíèe. Jeden mám, ale ten druhej budeš muset sebrat Borovi v Temným údolí. \n\n Staèí ti sehnat druhej klíè k X18 od Borova, vlízt tam a sebrat další dokumenty."</text>
+	</string>
+	<string id="bar_darklab_documents2_txt">
+		<text>Je dùležité najít dokumenty o výzkumu provádìném v X-18. Mohlo by to prozradit nìco o Vypalovaèi mozku.</text>
+	</string>
+	<string id="dar_codedoor_1_txt">
+		<text>Nitro laboratoøe blokují dveøe s kombinaèním zámkem. Musíš najít nìkoho, kdo kombinaci zná.</text>
+	</string>
+	<string id="dar_codedoor_2_txt">
+		<text>Další dveøe a za nimi rozhodnì nìco je. Musíš najít kód, kterým dveøe otevøeš.</text>
+	</string>
+	<string id="dar_document1">
+		<text>Zaèátek experimentu</text>
+	</string>
+	<string id="dar_document2">
+		<text>Druhá fáze experimentu</text>
+	</string>
+	<string id="dar_document3">
+		<text>Bezpeènostní zpráva</text>
+	</string>
+	<string id="dar_document4">
+		<text>Útok na personál</text>
+	</string>
+	<string id="dar_document5">
+		<text>Poslední fáze experimentu</text>
+	</string>
+	<string id="documents_1">
+		<text>Pøed týdnem bylo rozhodnuto zvýšit dávku radiace na testovacích subjektech. Bìhem prvních nìkolika dnù nebyly odhaleny zmìny. Až po nìkolika dnech zaèala podivná metamorfóza: ztráta ochlupení, zvýšená agresivita. Nìkolik subjektù bylo ostatními doslova ušlapáno.</text>
+	</string>
+	<string id="documents_2">
+		<text>Stav subjektù se stabilizoval. Úroveò tìlesného ochlupení je na 10 % pùvodních hodnot. Jejich nehty a zuby znaènì narostly. Obèasné záchvaty aktivity vypadají na pohled náhodnì a nejsou míøeny na ostatní subjekty. Starší technik A. N. Burnov vyslovil hypotézu, že to mùže naznaèovat zvýšení intelektu subjektù. Bylo rozhodnuto vyzkoušet na subjektech novou modulaci psi-emisí.</text>
+	</string>
+	<string id="documents_3">
+		<text>Šéf bezpeènosti: Vèera strážný G .P. Glebov hodil pro zábavu subjektùm kus masa. Bìhem nìkolika sekund ho roztrhali a pozøeli. Po té se nìkolik subjektù pokusilo uniknout ze svých cel. Kvùli tomu nemohli laboratorní technici získat potøebné zkušební vzorky. Aèkoli byl èin G. P. Glebova neuvážený, navrhuji, aby èlenové údržby nafasovali vzduchové pušky pro pøípad krajní nouze.</text>
+	</string>
+	<string id="documents_4">
+		<text>Šéf bezpeènosti: Vèera se experiment témìø vymknul zpod kontroly. Dvìma tuctùm testovacích subjektù se podaøilo uniknout a znièit dvì laboratorní místnosti. Naštìstí se výzkumnému personálu podaøilo uzamknout se v horním patøe. Dostali jsme rozkaz vyèistit hlavní místnost laboratoøe. Bìhem akce utrpìli tøi strážní zranìní pokousáním. Snad budou v poøádku. Pøál bych si, aby ten experiment brzy skonèil.</text>
+	</string>
+	<string id="documents_5">
+		<text>Vèera jsme na testovacích subjektech vyzkoušeli novou modulaci psi-emisí. Vypadalo to, jako by jim mozky prostì shoøely. Nedovedu si pøedstavit, jak by taková emise pùsobila na lidi. Zkoušeli jsme všechny typy emisí a výsledky odpovídají hodnotám z ostatních laboratoøí. Experiment mùže být nyní požadován za dokonèený. Pøedpokládá se, že bìhem týdne budeme pøipraveni provádìt experimenty na vìtších stvoøeních.</text>
+	</string>
+	<string id="LabX18 first key">
+		<text>Pøístupový kód druhé úrovnì</text>
+	</string>
+	<string id="LabX18 second key">
+		<text>Pøístupový kód první úrovnì</text>
+	</string>
+	<string id="LabX18_information">
+		<text>Informace z X18</text>
+	</string>
+	<string id="pass_to_1st_door">
+		<text>Skvìlé, kolego. Jsem rád, že jste obdržel pøístup k druhé úrovni. Alespoò zjistíte, co se v naší laboratoøi dìje. Váš pøístupový kód je 1243. Šéf laboratoøe X18, Pjotr Iljiè Kalugin.</text>
+	</string>
+	<string id="pass_to_2nd_door">
+		<text>Drahý kolego, musím vám pøipomenout, že od zítøka se budete úèastnit kontroly kontejnerù v centrální laboratoøi. Kontejnery je tøeba kontrolovat každé dvì hodiny. Výsledky hlaste pøímo mnì. Kód do centrální laboratoøe je 9524. Šéf laboratoøe X18, Pjotr Iljiè Kalugin.</text>
+	</string>
+	<string id="sl_x18_dream_name">
+		<text>Podivný sen</text>
+	</string>
+	<string id="sl_x18_dream_text">
+		<text>Mìl jsem podivný sen. V pøítmí se objevuje obrovská èernobylská elektrárna. Všechno vypadá mírumilovnì. Objevuje se jeden muž. Vidím ho zezadu, na pozadí elektrárny. Vítr zaèíná foukat. Najednou z elektrárny prchají na všechny strany hejna krys. Muž je stále otoèený zády ke mnì a støílí na krysy. Náhle nìkdo zaøve: "Støelèe!". Muž se otøese, na chvíli ztuhne a pak pomalu kráèí ke mnì, ale.. než mám možnost prohlédnout si jeho tváø, probouzím se. Co mìl ten sen znamenat? Nejsem si jistý, ale mám pocit, že je to nìco, co jsem kdysi vidìl na vlastní oèi.</text>
+	</string>
+	<string id="val_captive_help_txt">
+		<text>Èlen Povinnosti Kulka chce, abych zachránil jeho partnera zajatého bandity. Brzy ho odvedou do opuštìné továrny.</text>
+	</string>
+	<string id="val_prisoner_help_art_txt">
+		<text>Èlen Povinnosti: "Dostali dalšího z našich, Seregu. Maj ho ve sklepì... v tý velký nedostavìný budovì. Píchneš mu? Jinak ho taky odstøelej..."</text>
+	</string>
+	<string id="val_x18_conclusion">
+		<text>Laboratoø X18</text>
+	</string>
+	<string id="val_x18_conclusion_txt">
+		<text>No sakra. V laboratoøi X18 to rozhodnì nebyla sranda a její souèasní obyvatelé... ani jsem nevìdìl, že takové vìci existují. Našel jsem nìjaké dokumenty. Moc jim nerozumím, ale obsahovaly technické specifikace pro Kaimanovovy emitory. Co je zajímavé, ty souèásti mìly zamíøit do jiné laboratoøe s oznaèením X16 a ta je nejspíš taky tajná.</text>
+	</string>

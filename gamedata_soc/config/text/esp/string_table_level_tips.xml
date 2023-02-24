@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bar_rostok">
+		<text>Territorio salvaje - Rostok</text>
+	</string>
+	<string id="car_character_use">
+		<text>Abrir la puerta ($$ACTION_USE$$)</text>
+	</string>
+	<string id="character_use">
+		<text>Hablar ($$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use_or_drag">
+		<text>Registrar cuerpo ($$ACTION_USE$$) \n Arrastrar cuerpo (MAYЪS+$$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use">
+		<text>Registrar cuerpo ($$ACTION_USE$$)</text>
+	</string>
+	<string id="general_complete_task">
+		<text>Misiуn cumplida:</text>
+	</string>
+	<string id="general_fail_task">
+		<text>Misiуn fallida:</text>
+	</string>
+	<string id="general_help">
+		<text>ЎRбpido, necesito un botiquнn! ЎMe muero!</text>
+	</string>
+	<string id="general_in_item">
+		<text>Objeto recibido:</text>
+	</string>
+	<string id="general_in_money">
+		<text>Dinero recibido:</text>
+	</string>
+	<string id="general_new_diary">
+		<text>Nueva entrada en el diario.</text>
+	</string>
+	<string id="general_new_encyclopedy">
+		<text>Nueva entrada de la enciclopedia.</text>
+	</string>
+	<string id="general_new_task">
+		<text>Nueva misiуn:</text>
+	</string>
+	<string id="general_out_item">
+		<text>Objeto perdido:</text>
+	</string>
+	<string id="general_out_money">
+		<text>Dinero perdido:</text>
+	</string>
+	<string id="general_update_task">
+		<text>Misiуn actualizada:</text>
+	</string>
+	<string id="physic_shell_use">
+		<text>Mover objeto ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_codelock">
+		<text>Combinaciуn ($$ACTION_USE$$)</text>
+	</string>
+	<string id="to_aes">
+		<text>A la central nuclear de Chernуbil</text>
+	</string>
+	<string id="to_agroprom">
+		<text>A Agroprom</text>
+	</string>
+	<string id="to_agroprom_underground">
+		<text>A las catacumbas</text>
+	</string>
+	<string id="to_bar">
+		<text>A Rostok</text>
+	</string>
+	<string id="to_darkvalley">
+		<text>Al Valle Oscuro</text>
+	</string>
+	<string id="to_escape">
+		<text>Al Cordуn</text>
+	</string>
+	<string id="to_garbage">
+		<text>Al vertedero</text>
+	</string>
+	<string id="to_military">
+		<text>A los almacenes</text>
+	</string>
+	<string id="to_pripyat">
+		<text>A Pripyat</text>
+	</string>
+	<string id="to_radar">
+		<text>Al Cauterizador cerebral</text>
+	</string>
+	<string id="to_rostok">
+		<text>Al Territorio salvaje</text>
+	</string>
+	<string id="to_yantar">
+		<text>A Yantar</text>
+	</string>
+	<string id="st_helmet_countdown">
+		<text>Desactivaciуn de protecciуn</text>
+	</string>
+	<string id="st_psy_danger">
+		<text>Nivel crнtico de emisiones psнquicas. Abandonar la zona peligrosa inmediatamente.</text>
+	</string>
+	<string id="st_radiation_danger">
+		<text>Nivel de radiaciуn peligroso Se necesita protecciуn para pasar.</text>
+	</string>
+	<string id="st_found_new_pda">
+		<text>Informaciуn hallada:</text>
+	</string>
+</string_table>

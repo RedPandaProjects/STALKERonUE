@@ -1,0 +1,24 @@
+	<string id="general_ecolog_tip_1">
+		<text>Cosa è succcesso? È morto? Torna subito indietro!</text>
+	</string>
+	<string id="general_ecolog_tip_2">
+		<text>Cosa è succcesso? È morto? Prendi i campioni e torna subito indietro!</text>
+	</string>
+	<string id="storyline_ghost_tip">
+		<text>Registrazione audio del Fantasma</text>
+	</string>
+	<string id="storyline_vasilyev_tip">
+		<text>Registrazione audio di Vasiliev</text>
+	</string>
+	<string id="tips_labx16switcher_press">
+		<text>Per disattivare l'esauditore di desideri, premi ($$ACTION_USE$$)</text>
+	</string>
+	<string id="yan_saharov_message">
+		<text>Complimenti, Marchiato, alla fine ce l'hai fatta. È estremamente importante riuscire a  esaminare la macchina del laboratorio. Cerca di disattivvarla in modo che possiamo darle un'occhiata.</text>
+	</string>
+	<string id="yan_saharov_message_2">
+		<text>Ascolta, questo prototipo non ti proteggerà a lungo dalle emissioni potenti. Mi aspettavo che accadesse, per questo ogni volta che viene rilevata un emissione, viene attivato un timer. Allo scadere del tempo, il prototipo non funzionerà più, quindi stai attento e tieni d'occhio il tempo.</text>
+	</string>
+	<string id="yan_saharov_message_3">
+		<text>Ottimo lavoro, Marchiato. Le emissioni sono state disattivate e tu sei ancora vivo. Però devo avvertirti di una cosa: abbiamo richiesto l'intervento di un paio di elicotteri militari per ripulire la zona dagli zombie. Ti consiglio di non andare in giro, se non strettamente necessario. Ah, a proposito, fai un salto al nostro bunker qualche volta, d'accordo?</text>
+	</string>

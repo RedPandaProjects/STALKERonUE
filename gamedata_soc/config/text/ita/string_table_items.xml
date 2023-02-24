@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="item test1">
+		<text>This is an ITEM test string</text>
+	</string>
+	<string id="item test2">
+		<text>This is a another ITEM test string</text>
+	</string>
+	<string id="item_case_esc_desc">
+		<text>Valigetta a prova di fuoco contenente documenti.</text>
+	</string>
+	<string id="item_decoder_desc">
+		<text>Un potente grimaldello elettronico. Stranamente, non и uno strumento generico per i ladri. Sembra che sia stato creato per aprire una specifica serratura elettronica ed и inservibile con qualsiasi altra.</text>
+	</string>
+	<string id="item_decoder_name">
+		<text>Decodificatore</text>
+	</string>
+	<string id="item_detector_yantar_desc">
+		<text>Rilevatore psionico</text>
+	</string>
+	<string id="item_detector_yantar_name">
+		<text>Sensore PP-4a</text>
+	</string>
+	<string id="item_doc_x16_desc">
+		<text>Una cartella portadocumenti di plastica. Per capire il suo contenuto occorre una laurea in biologia.</text>
+	</string>
+	<string id="item_doc_x16_name">
+		<text>Documenti lab. X16</text>
+	</string>
+	<string id="item_doc_x18_desc">
+		<text>Una sfliza di documenti scientifici, pieni di termini complessi, formule e diagrammi.</text>
+	</string>
+	<string id="item_doc_x18p1_name">
+		<text>Documenti lab. X18, parte 1</text>
+	</string>
+	<string id="item_doc_x18p2_name">
+		<text>Documenti lab. X18, parte 2</text>
+	</string>
+	<string id="item_doc_x18p3_name">
+		<text>Documenti lab. X18, parte 3</text>
+	</string>
+	<string id="item_doc_x18p4_name">
+		<text>Documenti lab. X18, parte 4</text>
+	</string>
+	<string id="item_doc_x18p5_name">
+		<text>Documenti lab. X18, parte 5</text>
+	</string>
+	<string id="item_docs_hiden_pri_desc">
+		<text>Un logoro manoscritto rilegato in pelle. L'autore и Strelok in persona. A giudicare dai titoli, potrebbe spiegare alcuni segreti della Zona.</text>
+	</string>
+	<string id="item_docs_hiden_pri_name">
+		<text>Documenti del nascondiglio di Pripjat</text>
+	</string>
+	<string id="item_dynamite_esc_desc">
+		<text>Una pesante cassa di legno con la scritta "Esplosivi" in varie lingue.</text>
+	</string>
+	<string id="item_dynamite_esc_name">
+		<text>Cassa di esplosivi</text>
+	</string>
+	<string id="item_flash_crazy_mil_desc">
+		<text>Chiavetta di memoria. Un pratico strumento per memorizzare e trasferire informazioni.</text>
+	</string>
+	<string id="item_flash_crazy_mil_name">
+		<text>Chiavetta dello stalker pazzo</text>
+	</string>
+	<string id="item_flash_eco_rost_desc">
+		<text>Chiavetta di memoria. Un pratico strumento per memorizzare e trasferire informazioni.</text>
+	</string>
+	<string id="item_flash_eco_rost_name">
+		<text>Chiavetta del prof. Kruglov</text>
+	</string>
+	<string id="item_flash_esc_desc">
+		<text>Chiavetta di memoria. Un pratico strumento per memorizzare e trasferire informazioni.</text>
+	</string>
+	<string id="item_flash_esc_name">
+		<text>Chiav. stalker prigioniero</text>
+	</string>
+	<string id="item_flash_gslinger_agro_desc">
+		<text>Chiavetta di memoria. Un pratico strumento per memorizzare e trasferire informazioni.</text>
+	</string>
+	<string id="item_flash_gslinger_agro_name">
+		<text>Chiavetta di Strelok</text>
+	</string>
+	<string id="item_key_x18_desc">
+		<text>Chiave elettronica del laboratorio sotterraneo X18.</text>
+	</string>
+	<string id="item_key_x18_name">
+		<text>Chiave di Borov</text>
+	</string>
+	<string id="item_krot_flash">
+		<text>Chiavetta del Talpa</text>
+	</string>
+	<string id="item_PDA_lucky_desc">
+		<text>Palmare. Un oggetto indispensabile nella Zona.</text>
+	</string>
+	<string id="item_PDA_lucky_name">
+		<text>Palmare di Lucky</text>
+	</string>
+	<string id="item_PDA_tiran_desc">
+		<text>Palmare. Un oggetto indispensabile nella Zona.</text>
+	</string>
+	<string id="item_PDA_tiran_name">
+		<text>Palmare di Tyran</text>
+	</string>
+	<string id="item_quest_case_02_desc">
+		<text>Valigetta a prova di fuoco contenente documenti.</text>
+	</string>
+	<string id="item_quest_case_02_name">
+		<text>Documenti militari</text>
+	</string>
+	<string id="item_case_esc_name">
+		<text>Documenti avamposto</text>
+	</string>
+	<string id="yan_bad_psy_helmet_desc">
+		<text>Congegno di difesa psionica. Prototipo sviluppato dagli scienziati per proteggere la gente dalle emissioni psioniche. Non tarato.</text>
+	</string>
+	<string id="yan_bad_psy_helmet_name">
+		<text>Elmo psionico non tarato</text>
+	</string>
+	<string id="yan_good_psy_helmet_desc">
+		<text>Congegno di difesa psionica. Prototipo funzionante, sviluppato dagli scienziati per proteggere la gente dalle emissioni psioniche.</text>
+	</string>
+	<string id="yan_good_psy_helmet_name">
+		<text>Elmo psionico tarato</text>
+	</string>
+</string_table>

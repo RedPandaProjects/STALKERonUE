@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cant_walk">
+		<text>Estбs demasiado cansado para andar</text>
+	</string>
+	<string id="cant_walk_weight">
+		<text>Estбs demasiado cargado como para continuar</text>
+	</string>
+	<string id="dar_poltergeist_hold_the_door">
+		<text>Hay alguien en la puerta.</text>
+	</string>
+	<string id="Global Map">
+		<text>Mapa global</text>
+	</string>
+	<string id="gun_jammed">
+		<text>El arma se ha atascado. Tienes que recargarla.</text>
+	</string>
+	<string id="inventory_box_use">
+		<text>Registrar caja ($$ACTION_USE$$)</text>
+	</string>
+	<string id="Local Map">
+		<text>Mapa del sector</text>
+	</string>
+	<string id="st_game_saved">
+		<text>partida guardada</text>
+	</string>
+	<string id="tip_car_locked">
+		<text>Bloqueado</text>
+	</string>
+	<string id="tip_car_use">
+		<text>Abrir la puerta ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_close">
+		<text>Presiona ($$ACTION_USE$$) para cerrar la puerta.</text>
+	</string>
+	<string id="tip_door_coded">
+		<text>La puerta estб cerrada con un cуdigo</text>
+	</string>
+	<string id="tip_door_decode">
+		<text>Presiona ($$ACTION_USE$$) para decodificar la puerta.</text>
+	</string>
+	<string id="tip_door_decoding">
+		<text>Decodificaciуn en progreso</text>
+	</string>
+	<string id="tip_door_locked">
+		<text>La puerta estб cerrada</text>
+	</string>
+	<string id="tip_door_open">
+		<text>Presiona ($$ACTION_USE$$) para abrir la puerta.</text>
+	</string>
+	<string id="tip_gate_close">
+		<text>Presiona ($$ACTION_USE$$) para cerrar la puerta.</text>
+	</string>
+	<string id="tip_gate_locked">
+		<text>La puerta estб bloqueada</text>
+	</string>
+	<string id="tip_gate_open">
+		<text>Presiona ($$ACTION_USE$$) para abrir la puerta.</text>
+	</string>
+	<string id="tip_monolith">
+		<text>PEDIR UN DESEO ($$ACTION_USE$$)</text>
+	</string>
+</string_table>

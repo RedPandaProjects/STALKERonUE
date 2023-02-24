@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_secret_0000_descr">
+		<text>Na razie nasz schowek jest w tunelu. To dobre miejsce - niewielu o nim wie, a innych powstrzymaj№ anomalie.</text>
+	</string>
+	<string id="agr_secret_0000_name">
+		<text>Schowek Sieryja</text>
+	</string>
+	<string id="agr_secret_0001_descr">
+		<text>Schowaіem go w pniaku przy tunelu. Jest tam spora dziura.</text>
+	</string>
+	<string id="agr_secret_0001_name">
+		<text>Pniak z dziur№</text>
+	</string>
+	<string id="agr_secret_0002_descr">
+		<text>Zakopaіem skarby pod krzyїem przy krzaku.</text>
+	</string>
+	<string id="agr_secret_0002_name">
+		<text>Znak jest pod krzyїem</text>
+	</string>
+	<string id="agr_secret_0003_descr">
+		<text>Rzuciіem plecak obok zwalonego drzewa.</text>
+	</string>
+	<string id="agr_secret_0003_name">
+		<text>Plecak pod drzewem</text>
+	</string>
+	<string id="agr_secret_0004_descr">
+		<text>Wsadziіem plecak w rurк obok fabryki. Nikt go nie znajdzie.</text>
+	</string>
+	<string id="agr_secret_0004_name">
+		<text>Plecak kominiarza</text>
+	</string>
+	<string id="agr_secret_0005_descr">
+		<text>Schowaіem skrzyniк na dachu fabryki - nikt jej tam nie znajdzie. Jedyny problem jest taki, їe zardzewieje od deszczu. </text>
+	</string>
+	<string id="agr_secret_0005_name">
+		<text>Skrzynia na dachu</text>
+	</string>
+	<string id="agr_secret_0006_descr">
+		<text>Strzelali. Musiaіem wrzuciж plecak pod wagon, za koіa. Przynajmniej udaіo mi siк uciec. Wrуcк tam i go zabiorк. </text>
+	</string>
+	<string id="agr_secret_0006_name">
+		<text>Plecak pijaka</text>
+	</string>
+	<string id="agr_secret_0007_descr">
+		<text>Schowaіem go pod krzyїem, za cysternami. Pokop trochк, tylko nie za gікboko.</text>
+	</string>
+	<string id="agr_secret_0007_name">
+		<text>Przy trzech cysternach</text>
+	</string>
+	<string id="agr_secret_0008_descr">
+		<text>Zostawiіem plecak gdzieњ na gуrze fabryki - nikt go nie zauwaїy. Problem polega na tym, їe nie pamiкtam dokіadnie, co w nim jest.</text>
+	</string>
+	<string id="agr_secret_0008_name">
+		<text>Plecak jest w okienku</text>
+	</string>
+	<string id="agr_secret_0009_descr">
+		<text>Schowaіem swoje rzeczy w skrzyni wewn№trz fabryki.</text>
+	</string>
+	<string id="agr_secret_0009_name">
+		<text>Radioaktywna skrzynia</text>
+	</string>
+	<string id="agr_secret_0010_descr">
+		<text>Schowek jest w skrzyni pod schodami</text>
+	</string>
+	<string id="agr_secret_0010_name">
+		<text>Skrzynia na klatce schodowej</text>
+	</string>
+	<string id="agr_secret_0011_descr">
+		<text>Schowaіem to w skrzyni - i tak nikt tego nie sprawdzi.</text>
+	</string>
+	<string id="agr_secret_0011_name">
+		<text>Skrzynia z fabryki</text>
+	</string>
+	<string id="agr_secret_0012_descr">
+		<text>Wyrzuciіem torbк za okno. Pуџniej po ni№ pуjdк.</text>
+	</string>
+	<string id="agr_secret_0012_name">
+		<text>Torba jest przy belce</text>
+	</string>
+	<string id="agr_secret_0013_descr">
+		<text>Zrobiliњmy sobie z Koіjanem spacer po Agropromie. Znaleџliњmy same њmieci, ale udaіo nam siк schowaж trochк rzeczy. Ukryliњmy skrzyniк w koszu na њmieci.</text>
+	</string>
+	<string id="agr_secret_0013_name">
+		<text>Kosz na њmieci</text>
+	</string>
+	<string id="agr_secret_0014_descr">
+		<text>Pod zwalonym drzewem znalazіem sejf. Schowam tam wszystko na jakiњ czas.</text>
+	</string>
+	<string id="agr_secret_0014_name">
+		<text>Sejf pod drzewem</text>
+	</string>
+	<string id="agr_secret_0015_descr">
+		<text>Wrzuciіem wszystkie rzeczy do rury, pуџniej po nie wrуcк. Musiaіem to zrobiж. Inaczej zabraіbym je ze sob№. Mam nadziejк, їe nie zamokn№. </text>
+	</string>
+	<string id="agr_secret_0015_name">
+		<text>Rzeczy w rurze</text>
+	</string>
+	<string id="agr_secret_0016_descr">
+		<text>Towar jest w starej rurze. Musimy o tym powiedzieж chіopakom. Ja tam siк nie bкdк wspinaі.</text>
+	</string>
+	<string id="agr_secret_0016_name">
+		<text>Radioaktywna rura</text>
+	</string>
+	<string id="agr_secret_0017_descr">
+		<text>Uciekіem z bazy - niech ich szlag! Unikn№іem ostrzaіu stalkerуw. Uіoїyіem towar na stosie w rurze. Zostanк tutaj, dopуki nie znikn№, a potem tam wrуcк.</text>
+	</string>
+	<string id="agr_secret_0017_name">
+		<text>Stos</text>
+	</string>
+	<string id="agr_secret_0018_descr">
+		<text>Pod krzakiem jest na wpуі zakopany sejf - to tam wszystko ukryіem. </text>
+	</string>
+	<string id="agr_secret_0018_name">
+		<text>Sejf pod krzakiem</text>
+	</string>
+	<string id="agr_secret_0019_descr">
+		<text>Odkryli skrzyniк pod belk№. Ktoњ j№ ci№gn№і aї od Instytutu Badawczego. Poczekajmy na helikopter, wtedy j№ zabierzemy.</text>
+	</string>
+	<string id="agr_secret_0019_name">
+		<text>Pudіo z archiwami</text>
+	</string>
+	<string id="agr_secret_0020_descr">
+		<text>Schowaіem swoje rzeczy w їelaznej kapsule</text>
+	</string>
+	<string id="agr_secret_0020_name">
+		<text>Pod zapadni№</text>
+	</string>
+	<string id="agr_secret_0021_descr">
+		<text>Pod krzakiem jest na wpуі zakopany sejf. Tam wszystko chowam.</text>
+	</string>
+	<string id="agr_secret_0021_name">
+		<text>Pod krzakiem przy murze</text>
+	</string>
+	<string id="agr_secret_0022_descr">
+		<text>Skrzynia do skіadowania rуїnych rzeczy</text>
+	</string>
+	<string id="agr_secret_0022_name">
+		<text>Skrzynia z Instytutu</text>
+	</string>
+	<string id="agr_secret_0023_descr">
+		<text>Schowaіem to w sejfie, ale zjawili siк їoіnierze i teraz nie mogк zabraж towaru.</text>
+	</string>
+	<string id="agr_secret_0023_name">
+		<text>Agrosejf</text>
+	</string>
+	<string id="agr_secret_0024_descr">
+		<text>Wrzuciіem towar do rury - pуџniej go stamt№d zabiorк.</text>
+	</string>
+	<string id="agr_secret_0024_name">
+		<text>Karoseria ciкїarуwki</text>
+	</string>
+	<string id="agr_secret_0025_descr">
+		<text>Zabierz rzeczy ze sprуchniaіej kіody</text>
+	</string>
+	<string id="agr_secret_0025_name">
+		<text>Sprуchniaіa kіoda</text>
+	</string>
+	<string id="agr_secret_0026_descr">
+		<text>Skrzynia do skіadowania rуїnych rzeczy. Kiedyњ chowano w niej sprzкt Instytutu. </text>
+	</string>
+	<string id="agr_secret_0026_name">
+		<text>Skrzynia Zawchoza</text>
+	</string>
+	<string id="agr_secret_0027_descr">
+		<text>Skrzynia do przechowywania niewielkich przedmiotуw. W domu trzymam w takiej narzкdzia.</text>
+	</string>
+	<string id="agr_secret_0027_name">
+		<text>Narzкdzia do obrуbki metalu</text>
+	</string>
+	<string id="agr_u_secret_0000_descr">
+		<text>Bandyci chowaj№ coњ pod rur№, muszк to sprawdziж. Z naszej rozmowy wynika, їe trzymaj№ tam zapasy.</text>
+	</string>
+	<string id="agr_u_secret_0000_name">
+		<text>Wspуlny "fundusz" bandytуw</text>
+	</string>
+	<string id="agr_u_secret_0001_descr">
+		<text>Schowaіem plecak za betonowymi pіytami, їeby ograniczyж ciкїar. Bкdк gіodny, ale przynajmniej їywy.</text>
+	</string>
+	<string id="agr_u_secret_0001_name">
+		<text>Plecak jest w bocznej uliczce</text>
+	</string>
+	<string id="agr_u_secret_0002_descr">
+		<text>Skrzynia jest za zardzewiaі№ "beczk№" pod ziemi№. Wszystko w niej jest. Nie ma mowy, їebym tam wrуciі. To cud, їe uciekіem tej pijawce! Ci№gle nie pamiкtam, jak to siк staіo.</text>
+	</string>
+	<string id="agr_u_secret_0002_name">
+		<text>Skrzynia pijawki</text>
+	</string>
+	<string id="agr_u_secret_0003_descr">
+		<text>Za tymi drzwiami s№ fanty. Zajmк siк nimi.</text>
+	</string>
+	<string id="agr_u_secret_0003_name">
+		<text>Fanty stalkera</text>
+	</string>
+	<string id="agr_u_secret_0004_descr">
+		<text>Schowaіem tu rуїne fanty. Њwietne miejsce na schowek - nigdy byњ ich nie znalazі na їуіtej beczce.</text>
+	</string>
+	<string id="agr_u_secret_0004_name">
+		<text>Dziura kreta</text>
+	</string>
+	<string id="bar_secret_0000_description">
+		<text>Schowaіem plecak niedaleko bazy "Powinnoњci". Pуџniej go zabiorк.</text>
+	</string>
+	<string id="bar_secret_0000_name">
+		<text>Ukryty plecak</text>
+	</string>
+	<string id="bar_secret_0001_description">
+		<text>Zaatakowaіo mnie duїe stado psуw. Gdybym nie porzuciі plecaka, nie dobiegіbym do bramy.</text>
+	</string>
+	<string id="bar_secret_0001_name">
+		<text>Porzucony plecak</text>
+	</string>
+	<string id="bar_secret_0002_description">
+		<text>Wszystko, co pozostaіo, zakopali pod krzyїem</text>
+	</string>
+	<string id="bar_secret_0002_name">
+		<text>Schowek pod krzyїem</text>
+	</string>
+	<string id="bar_secret_0003_description">
+		<text>Rzuciіem tu swуj plecak - tak bкdzie іatwiej</text>
+	</string>
+	<string id="bar_secret_0003_name">
+		<text>Plecak</text>
+	</string>
+	<string id="bar_secret_0004_description">
+		<text>Amunicja posterunku "Powinnoњci" jest skіadowana w bunkrze, ale nikt nie pilnuje skrzyni</text>
+	</string>
+	<string id="bar_secret_0004_name">
+		<text>Zapasy w bunkrze</text>
+	</string>
+	<string id="bar_secret_0005_description">
+		<text>Widziaіem, jak czіonek "Powinnoњci" chowa coњ w rurze przy bramie</text>
+	</string>
+	<string id="bar_secret_0005_name">
+		<text>Schowek</text>
+	</string>
+	<string id="bar_secret_0006_description">
+		<text>To wszystko naleїaіo do niego, na razie moїe tu zostaж</text>
+	</string>
+	<string id="bar_secret_0006_name">
+		<text>Schowek pod krzyїem</text>
+	</string>
+	<string id="bar_secret_0007_description">
+		<text>Idк do baru, zostawiіem plecak w hangarze</text>
+	</string>
+	<string id="bar_secret_0007_name">
+		<text>Plecak</text>
+	</string>
+	<string id="bar_secret_0008_description">
+		<text>Podobno na terytorium "Powinnoњci", w centrali, ukryto coњ wartoњciowego.</text>
+	</string>
+	<string id="bar_secret_0008_name">
+		<text>Centrala ze schowkiem.</text>
+	</string>
+	<string id="bar_secret_0009_description">
+		<text>Schowaіem skrzyniк na wieїy, pod nosem "Powinnoњci". Nikt jej nie zauwaїy.</text>
+	</string>
+	<string id="bar_secret_0009_name">
+		<text>Schowek na wieїy</text>
+	</string>
+	<string id="bar_secret_0010_description">
+		<text>Schowaіem to w rurze pod schodami</text>
+	</string>
+	<string id="bar_secret_0010_name">
+		<text>Schowek</text>
+	</string>
+	<string id="bar_secret_0011_description">
+		<text>Ukryіem towar niedaleko baru, za anomaliami - nikt siк tam nie dostanie. A nawet, gdyby ktoњ siк tam dostaі, nie wiedziaіby, jak to otworzyж. A to bardzo proste - wystarczy lekko podwaїyж drzwi i gotowe.</text>
+	</string>
+	<string id="bar_secret_0011_name">
+		<text>Schowek Arniego</text>
+	</string>
+	<string id="bar_secret_0012_description">
+		<text>Zakopaіem towar niedaleko baru</text>
+	</string>
+	<string id="bar_secret_0012_name">
+		<text>Schowek</text>
+	</string>
+	<string id="bar_secret_0013_description">
+		<text>Niedaleko baru, w skrzyni</text>
+	</string>
+	<string id="bar_secret_0013_name">
+		<text>Skrzynia</text>
+	</string>
+	<string id="bar_secret_0014_description">
+		<text>Ukryіem skrzyniк w bocznej uliczce niedaleko baru</text>
+	</string>
+	<string id="bar_secret_0014_name">
+		<text>Niewielka skrzynia</text>
+	</string>
+	<string id="bar_secret_0015_description">
+		<text>Zakopaіem j№ pod krzyїem za sosnami </text>
+	</string>
+	<string id="bar_secret_0015_name">
+		<text>Schowek</text>
+	</string>
+	<string id="bar_secret_0016_description">
+		<text>Pod krzyїem, niedaleko przejњcia do Doliny Mroku.</text>
+	</string>
+	<string id="bar_secret_0016_name">
+		<text>Schowek</text>
+	</string>
+	<string id="bar_secret_0017_description">
+		<text>Schowaіem skrzyniк z antyradem w rurze, niedaleko Areny.</text>
+	</string>
+	<string id="bar_secret_0017_name">
+		<text>Niewielka skrzynia</text>
+	</string>
+	<string id="bar_secret_0018_description">
+		<text>Schowaіem swoje klamoty w rurze pod wieї№</text>
+	</string>
+	<string id="bar_secret_0018_name">
+		<text>Schowek</text>
+	</string>
+	<string id="bar_secret_0019_description">
+		<text>Pod krzyїem jest schowek</text>
+	</string>
+	<string id="bar_secret_0019_name">
+		<text>Schowek</text>
+	</string>
+	<string id="esc_secret_0000_descr">
+		<text>W czasie przegrupowywania schowaіem zapasy w wagonie. Muszк pamiкtaж!</text>
+	</string>
+	<string id="esc_secret_0000_name">
+		<text>Wagon nad mostem</text>
+	</string>
+	<string id="esc_secret_0001_descr">
+		<text>Widziaіem, jak jakiњ stalker ginie w anomalii niedaleko tunelu kolejowego w lesie. Wygl№daіo na to, їe ma niezіy towar.</text>
+	</string>
+	<string id="esc_secret_0001_name">
+		<text>Rzeczy naleї№ce do czіowieka, ktуry zgin№і w anomalii</text>
+	</string>
+	<string id="esc_secret_0002_descr">
+		<text>Ukryіem іup niedaleko obozu bandytуw, pod krzyїem.</text>
+	</string>
+	<string id="esc_secret_0002_name">
+		<text>Krzyї przy obozie bandytуw</text>
+	</string>
+	<string id="esc_secret_0003_descr">
+		<text>Skrzynia ukradziona przez bandytуw zostaіa odnaleziona w piwnicy gіуwnego budynku. Muszк przygotowaж oddziaі i j№ zdobyж.</text>
+	</string>
+	<string id="esc_secret_0003_name">
+		<text>Magazyn bandytуw</text>
+	</string>
+	<string id="esc_secret_0004_descr">
+		<text>Gdy z towarzyszami walczyliњmy przeciw tym kundlom w mundurach, zakopaіem trochк towaru pod mostem. Niech tam na razie zostanie.</text>
+	</string>
+	<string id="esc_secret_0004_name">
+		<text>Pod krzyїem</text>
+	</string>
+	<string id="esc_secret_0005_descr">
+		<text>Schowaіem plecak w piwnicy. Wrуcк tam pуџniej - teraz nie dam rady.</text>
+	</string>
+	<string id="esc_secret_0005_name">
+		<text>Kryjуwka w piwnicy</text>
+	</string>
+	<string id="esc_secret_0006_descr">
+		<text>W gospodarstwie znalazіem na wpуі zakopany sejf. Na jakiњ czas zostawiк tam towar.</text>
+	</string>
+	<string id="esc_secret_0006_name">
+		<text>Sejf w gospodarstwie</text>
+	</string>
+	<string id="esc_secret_0007_descr">
+		<text>Wrуїka mi powiedziaіa, їe ktoњ coњ ukryі w wagonie na moњcie. Trzeba to sprawdziж w drodze powrotnej. Ciekawe kto...</text>
+	</string>
+	<string id="esc_secret_0007_name">
+		<text>Pojemnik w wagonie</text>
+	</string>
+	<string id="esc_secret_0008_descr">
+		<text>Schowaіem towar tuї pod dachem w domku przy moњcie.</text>
+	</string>
+	<string id="esc_secret_0008_name">
+		<text>Towar Strieloka</text>
+	</string>
+	<string id="esc_secret_0009_descr">
+		<text>Schowaіem klamoty w jednej ze skrzyс nieopodal mostu. To by byіo na tyle. Dziкkujк, opuszczam Zonк. Їegnajcie, bracia! Nigdy nie zapomnк ojczyzny.</text>
+	</string>
+	<string id="esc_secret_0009_name">
+		<text>Rzeczy przy moњcie</text>
+	</string>
+	<string id="esc_secret_0010_descr">
+		<text>Jeden ze stalkerow wykitowaі niedaleko obozu nowych. Przejrzyj jego rzeczy.</text>
+	</string>
+	<string id="esc_secret_0010_name">
+		<text>Plecak jest niedaleko wioski</text>
+	</string>
+	<string id="esc_secret_0011_descr">
+		<text>Dowiedziaіem siк od Lichojem, їe schowek jest w piwnicy. Gadaі za duїo, wiкc przymknкliњmy go na dobre.</text>
+	</string>
+	<string id="esc_secret_0011_name">
+		<text>Piwnica w wiosce</text>
+	</string>
+	<string id="esc_secret_0012_descr">
+		<text>Znalazіem њwietn№ kryjуwkк w piwnicy. Poczekam, aї ktoњ coњ tam wіoїy.</text>
+	</string>
+	<string id="esc_secret_0012_name">
+		<text>Dobre miejsce</text>
+	</string>
+	<string id="esc_secret_0013_descr">
+		<text>Worpaі mi powiedziaі, їe w piwnicy jest schowek. Nasi przeprowadzali w okolicy rozpoznanie. Sprawdџmy to.</text>
+	</string>
+	<string id="esc_secret_0013_name">
+		<text>Schowek Worpaіa</text>
+	</string>
+	<string id="esc_secret_0014_descr">
+		<text>Widzieli, їe dowуdca ma w swoim gabinecie fikuњn№ skrzyniк, w ktуrej s№ tony wartoњciowych rzeczy.</text>
+	</string>
+	<string id="esc_secret_0014_name">
+		<text>Kosztownoњci dowуdcy</text>
+	</string>
+	<string id="esc_secret_0015_descr">
+		<text>Jakiњ stalker wykitowaі niedaleko obozu nowych. Powinniњmy sprawdziж, co miaі. A tak w ogуle, to kto ich wpuszcza?</text>
+	</string>
+	<string id="esc_secret_0015_name">
+		<text>Przy drodze wiejskiej</text>
+	</string>
+	<string id="esc_secret_0016_descr">
+		<text>Fanty s№ ukryte w piwnicy bandytуw. Nie byli tam wczeњniej, wiкc poczekajmy na odpowiedni moment, їeby wszystko stamt№d zabraж.</text>
+	</string>
+	<string id="esc_secret_0016_name">
+		<text>Piwnica bandytуw</text>
+	</string>
+	<string id="esc_secret_0017_descr">
+		<text>Odkryіem towar w rurze, niedaleko gospodarstwa. Jak juї siк st№d wydostaniemy, na pewno tam wrуcк.</text>
+	</string>
+	<string id="esc_secret_0017_name">
+		<text>Rura gazowa</text>
+	</string>
+	<string id="esc_secret_0018_descr">
+		<text>Wyrzuciіem plecak niedaleko posterunku, muszк go jak najszybciej zabraж, zanim dowуdca przeniesie nas w inne miejsce.</text>
+	</string>
+	<string id="esc_secret_0018_name">
+		<text>Ukryte rzeczy</text>
+	</string>
+	<string id="esc_secret_0019_descr">
+		<text>Na razie zostawiіem skrzyniк w wieїy. Zabiorк j№, jak tylko bedк mуgі.</text>
+	</string>
+	<string id="esc_secret_0019_name">
+		<text>Wieїa posterunkowa</text>
+	</string>
+	<string id="gar_secret_0000_descr">
+		<text>Widziaіem, jak jakiњ bandyta chowaі swoje fanty w skrzyni w hangarze. Jak mogк je po cichu ukraњж?</text>
+	</string>
+	<string id="gar_secret_0000_name">
+		<text>Magazyn bandytуw</text>
+	</string>
+	<string id="gar_secret_0001_descr">
+		<text>Szliњmy z Wasiejem coњ sprawdziж, kiedy nagle dostaі kulkк. Nie miaіem z tym nic wspуlnego! To ta cholerna kula! Schowaіem jego rzeczy w rurze.</text>
+	</string>
+	<string id="gar_secret_0001_name">
+		<text>Stary dџwig</text>
+	</string>
+	<string id="gar_secret_0002_descr">
+		<text>Grizzly wykitowaі, a jego rzeczy zostaіy na Wysypisku, w tunelu kolejowym za lokomotyw№. Szkoda Grizzly'ego.</text>
+	</string>
+	<string id="gar_secret_0002_name">
+		<text>Rzeczy Grizzly'ego</text>
+	</string>
+	<string id="gar_secret_0003_descr">
+		<text>Schowaіem towar w rurze na Wysypisku.</text>
+	</string>
+	<string id="gar_secret_0003_name">
+		<text>Rura na pуіnocnym stosie</text>
+	</string>
+	<string id="gar_secret_0004_descr">
+		<text>Rzeczy s№ na Wysypisku w jednej z rur. Jeњli nie wiesz dokіadnie gdzie, nie znajdziesz ich.</text>
+	</string>
+	<string id="gar_secret_0004_name">
+		<text>Dodatkowa kasa w zіomie</text>
+	</string>
+	<string id="gar_secret_0005_descr">
+		<text>Schowaіem towar w metalowej rurze niedaleko dwуch cystern. Powinienem go zabraж, ale nie mam czasu.</text>
+	</string>
+	<string id="gar_secret_0005_name">
+		<text>Їelazny piec niedaleko cysterny.</text>
+	</string>
+	<string id="gar_secret_0006_descr">
+		<text>Wњrуd odpadуw radioaktywnych - tam, gdzie nikt nie іazi - jest trochк bardzo przydatnych rzeczy.</text>
+	</string>
+	<string id="gar_secret_0006_name">
+		<text>Rura na wschodnim stosie</text>
+	</string>
+	<string id="gar_secret_0007_descr">
+		<text>Czyjњ plecak leїy sobie w dolinie wњrуd anomalii. Jak moїna siк do niego dobraж?</text>
+	</string>
+	<string id="gar_secret_0007_name">
+		<text>Plecak bez wіaњciciela</text>
+	</string>
+	<string id="gar_secret_0008_descr">
+		<text>Wykoсczyіem zdrajcк na bagnach... Pochowaliњmy go tam i schowaliњmy jego rzeczy pod krzyїem. Mieliњmy powaїniejsze zmartwienia.</text>
+	</string>
+	<string id="gar_secret_0008_name">
+		<text>Rzeczy zamordowanego </text>
+	</string>
+	<string id="gar_secret_0009_descr">
+		<text>W cieniu jest schowek - dobre miejsce, їeby go ukryж.</text>
+	</string>
+	<string id="gar_secret_0009_name">
+		<text>Sprуchniaіy pniak</text>
+	</string>
+	<string id="gar_secret_0010_descr">
+		<text>W lesie leїy kіoda z dziur№, w ktуrej schowany jest skarb - juї czas go zdobyж.</text>
+	</string>
+	<string id="gar_secret_0010_name">
+		<text>Kіoda w lesie</text>
+	</string>
+	<string id="gar_secret_0011_descr">
+		<text>Pietrienko chciaі, їebyњmy wiedzieli o ukrytym na Wysypisku schowku grupy Strieloka. Powiedziaі mi, jak trzeba otworzyж wіaz, ktуry podobno znajduje siк tutaj, na dnie doliny. Jak tylko wszystko siк uspokoi, musimy to obczaiж.</text>
+	</string>
+	<string id="gar_secret_0011_name">
+		<text>Magazyn grupy Strieloka </text>
+	</string>
+	<string id="gar_secret_0012_descr">
+		<text>Schowaіem to w samochodzie - Dryblas powiedziaі, їe to dobre miejsce.</text>
+	</string>
+	<string id="gar_secret_0012_name">
+		<text>Schowek w samochodzie</text>
+	</string>
+	<string id="gar_secret_0013_descr">
+		<text>Wіoїyіem plecak do autobusu - ciкїko go zauwaїyж</text>
+	</string>
+	<string id="gar_secret_0013_name">
+		<text>Plecak stalkera w autobusie</text>
+	</string>
+	<string id="gar_secret_0014_descr">
+		<text>Schowaіem zapasy w skrzyni, a j№ z kolei w starym domu za rogiem. Ci№gle nie rozumiem, po co go zbudowali.</text>
+	</string>
+	<string id="gar_secret_0014_name">
+		<text>Rуїne zapasy</text>
+	</string>
+	<string id="gar_secret_0015_descr">
+		<text>Na stosie odpadуw jest czкњciowo zakopany sejf. Lepiej, їebym nie zapomniaі, co w nim jest.</text>
+	</string>
+	<string id="gar_secret_0015_name">
+		<text>Sejf na poіudniowym stosie.</text>
+	</string>
+	<string id="gar_secret_0016_descr">
+		<text>Schowaіem fanty na stosie odpadуw, w rurze.</text>
+	</string>
+	<string id="gar_secret_0016_name">
+		<text>Magazyn na zіomowisku.</text>
+	</string>
+	<string id="gar_secret_0017_descr">
+		<text>Szef radiokomunikacji przekazaі nam wiadomoњж: odwrуt. Znalazіem skrzyniк, wrzuciіem do niej wszystko, co miaіem przy sobie i wycofaіem siк z pustymi rкkoma.</text>
+	</string>
+	<string id="gar_secret_0017_name">
+		<text>Zapasy w skrzyni</text>
+	</string>
+	<string id="gar_secret_0018_descr">
+		<text>Wepchn№іem іup do rury na Wysypisku. Nie zostanie tam dіugo.</text>
+	</string>
+	<string id="gar_secret_0018_name">
+		<text>Rura przy autobusie</text>
+	</string>
+	<string id="gar_secret_0019_descr">
+		<text>Јatwo moїna schowaж plecak w ruinach. Mam nadziejк, їe rуwnie іatwo bкdк go mуgі stamt№d zabraж - o ile bandyci nie wejd№ mi w drogк.</text>
+	</string>
+	<string id="gar_secret_0019_name">
+		<text>Plecak w ruinach</text>
+	</string>
+	<string id="gar_secret_0020_descr">
+		<text>Gdy kolesie z "Powinnoњci" strzelali, ja schowaіem іup w wagonie. Muszк tam jakoњ po niego wrуciж. I podziкkowaж "Powinnoњci".</text>
+	</string>
+	<string id="gar_secret_0020_name">
+		<text>Skrzynia na њwietnie zaopatrzonym posterunku wojskowym</text>
+	</string>
+	<string id="gar_secret_0021_descr">
+		<text>Podobno Chuchro wykitowaі na Wysypisku. Muszк tam podskoczyж, sprawdziж, co z towarem. Jak tego nie zrobiк, znajd№ siк inni.</text>
+	</string>
+	<string id="gar_secret_0021_name">
+		<text>Plecak Chuchra</text>
+	</string>
+	<string id="gar_secret_0022_descr">
+		<text>Na razie chowam towar w okienku. Moїe go nie znajd№.</text>
+	</string>
+	<string id="gar_secret_0022_name">
+		<text>Torba na zakupy w okienku</text>
+	</string>
+	<string id="gar_secret_0023_descr">
+		<text>Jakaњ anomalia dopadіa kogoњ niedaleko schodуw ruchomych - widaж plecak, ale ciкїko do niego dotrzeж.</text>
+	</string>
+	<string id="gar_secret_0023_name">
+		<text>Pod czerpakiem</text>
+	</string>
+	<string id="gar_secret_0024_descr">
+		<text>Ledwo mi siк udaіo wejњж pod te belki, ale przynajmniej plecak jest dobrze ukryty - nikt nie sprуbuje siк tu wdrapaж.</text>
+	</string>
+	<string id="gar_secret_0024_name">
+		<text>Dodatkowa kasa jest pod betonowymi pіytami </text>
+	</string>
+	<string id="mil_secret_0000_description">
+		<text>Schowaіem towar w kіodzie - nie s№dzк, їeby ktoњ go znalazі.</text>
+	</string>
+	<string id="mil_secret_0000_name">
+		<text>Schowek w kіodzie</text>
+	</string>
+	<string id="mil_secret_0001_description">
+		<text>Schowaіem fanty w piecu.</text>
+	</string>
+	<string id="mil_secret_0001_name">
+		<text>Schowek w piecu</text>
+	</string>
+	<string id="mil_secret_0002_description">
+		<text>Schowaіem fanty w szoferce Kamaza</text>
+	</string>
+	<string id="mil_secret_0002_name">
+		<text>Schowek w Kamazie</text>
+	</string>
+	<string id="mil_secret_0003_description">
+		<text>Zakopaіem towar pod krzyїem niedaleko wioski.</text>
+	</string>
+	<string id="mil_secret_0003_name">
+		<text>Skarby pod krzyїem</text>
+	</string>
+	<string id="mil_secret_0004_description">
+		<text>Wrzuciіem rzeczy do rury - pуџniej je zabiorк.</text>
+	</string>
+	<string id="mil_secret_0004_name">
+		<text>Schowek w rurze</text>
+	</string>
+	<string id="mil_secret_0005_description">
+		<text>Schowek w skrzyni w wieїy ciњnieс</text>
+	</string>
+	<string id="mil_secret_0005_name">
+		<text>Skarb w wieїy</text>
+	</string>
+	<string id="mil_secret_0006_description">
+		<text>Wetkn№іem plecak do pieca, przyda siк pуџniej.</text>
+	</string>
+	<string id="mil_secret_0006_name">
+		<text>Schowek w piecu</text>
+	</string>
+	<string id="mil_secret_0007_description">
+		<text>Schowaіem skarby w samochodzie w opuszczonej wiosce</text>
+	</string>
+	<string id="mil_secret_0007_name">
+		<text>Schowek w samochodzie</text>
+	</string>
+	<string id="mil_secret_0008_description">
+		<text>Zostawiіem plecak w radioaktywnych ruinach. Baіem siк tam pokazaж.</text>
+	</string>
+	<string id="mil_secret_0008_name">
+		<text>Niebezpieczna tajemnica</text>
+	</string>
+	<string id="mil_secret_0009_description">
+		<text>Zakopaіem towar pod krzyїem, w tajnym miejscu.</text>
+	</string>
+	<string id="mil_secret_0009_name">
+		<text>Schowek stalkera</text>
+	</string>
+	<string id="mil_secret_0010_description">
+		<text>Ukryіem plecak ze sprzкtem w przytulnym miejscu.</text>
+	</string>
+	<string id="mil_secret_0010_name">
+		<text>Plecak ze sprzкtem</text>
+	</string>
+	<string id="mil_secret_0011_description">
+		<text>Schowaіem klamoty w samochodzie na wzgуrzu</text>
+	</string>
+	<string id="mil_secret_0011_name">
+		<text>Schowek na wzgуrzu</text>
+	</string>
+	<string id="mil_secret_0012_description">
+		<text>Helikopter spadі tuї przy opuszczonej bazie wojskowej, a skrzynia jest dokіadnie pod helikopterem. Problemem s№ anomalie, ktуrych tam peіno, oraz promieniowanie.</text>
+	</string>
+	<string id="mil_secret_0012_name">
+		<text>Skrzynia z helikoptera</text>
+	</string>
+	<string id="mil_secret_0013_description">
+		<text>Zakopaіem towar pod krzyїem na wzgуrzu</text>
+	</string>
+	<string id="mil_secret_0013_name">
+		<text>Sekret nagrobka</text>
+	</string>
+	<string id="mil_secret_0014_description">
+		<text>W pniaku jest schowek - to dobre miejsce</text>
+	</string>
+	<string id="mil_secret_0014_name">
+		<text>Schowek w pniaku</text>
+	</string>
+	<string id="mil_secret_0015_description">
+		<text>Zostawiіem plecak w szoferce dџwigu. Zabiorк go pуџniej.</text>
+	</string>
+	<string id="mil_secret_0015_name">
+		<text>Schowek robotnika wysokoњciowego</text>
+	</string>
+	<string id="mil_secret_0016_description">
+		<text>Wszystko jest w skrzyni, w wagonie niedaleko bazy. Tak to zaplanowaliњmy, teraz musimy jedynie poczekaж.</text>
+	</string>
+	<string id="mil_secret_0016_name">
+		<text>Ustalony schowek</text>
+	</string>
+	<string id="mil_secret_0017_description">
+		<text>Wepchn№іem towar do kіody. Nie s№dzк, їeby coњ znaleџli.</text>
+	</string>
+	<string id="mil_secret_0017_name">
+		<text>Skarb w kіodzie</text>
+	</string>
+	<string id="mil_secret_0018_description">
+		<text>Wetkn№іem klamoty do rury na brzegu jeziora.</text>
+	</string>
+	<string id="mil_secret_0018_name">
+		<text>Rura z towarem</text>
+	</string>
+	<string id="mil_secret_0019_description">
+		<text>Schowaіem rzeczy w їelaznej kapsluje</text>
+	</string>
+	<string id="mil_secret_0019_name">
+		<text>Schowek stalkera</text>
+	</string>
+	<string id="mil_secret_0020_description">
+		<text>Schowaіem towar w kіodzie, nie s№dzк, їeby mogli go znaleџж</text>
+	</string>
+	<string id="mil_secret_0020_name">
+		<text>Fanty w kіodzie</text>
+	</string>
+	<string id="mil_secret_0021_description">
+		<text>Skrzynia do przechowywania rуїnych rzeczy</text>
+	</string>
+	<string id="mil_secret_0021_name">
+		<text>Skrzynia na zapasy</text>
+	</string>
+	<string id="mil_secret_0022_description">
+		<text>Schowaіem plecak z towarem w tunelu</text>
+	</string>
+	<string id="mil_secret_0022_name">
+		<text>Plecak w tunelu</text>
+	</string>
+	<string id="mil_secret_0023_description">
+		<text>Skrzynia do przechowywania rуїnych rzeczy</text>
+	</string>
+	<string id="mil_secret_0023_name">
+		<text>Skrzynia z towarem</text>
+	</string>
+	<string id="mil_secret_0024_description">
+		<text>Schowaіem towar w kіodzie, nie s№dzк, їeby mogli go znaleџж</text>
+	</string>
+	<string id="mil_secret_0024_name">
+		<text>Schowek w kіodzie</text>
+	</string>
+	<string id="mil_secret_0025_description">
+		<text>Wrzuciіem towar do skrzyni - pуџniej go zabiorк</text>
+	</string>
+	<string id="mil_secret_0025_name">
+		<text>Tymczasowy schowek</text>
+	</string>
+	<string id="mil_secret_0026_description">
+		<text>Schowaіem towar w studzience. Kiedyњ siк przyda.</text>
+	</string>
+	<string id="mil_secret_0026_name">
+		<text>Stalowy schowek</text>
+	</string>
+	<string id="mil_secret_0027_description">
+		<text>Wrzuciіem towar do skrzyni - pуџniej go zabiorк</text>
+	</string>
+	<string id="mil_secret_0027_name">
+		<text>Skrzynia z towarem</text>
+	</string>
+	<string id="mil_secret_0028_description">
+		<text>Schowaіem towar w samochodzie, tuї pod nosem kolesiуw z "Powinnoњci" - nie miaіem czasu szukaж czegoњ lepszego</text>
+	</string>
+	<string id="mil_secret_0028_name">
+		<text>Schowek w samochodzie</text>
+	</string>
+	<string id="pri_secret_0000_description">
+		<text>Podobno jakiњ znany stalker kopn№і tu w kalendarz i jeszcze nikt nie zabraі jego rzeczy.</text>
+	</string>
+	<string id="pri_secret_0000_name">
+		<text>Rzeczy martwego stalkera</text>
+	</string>
+	<string id="pri_secret_0001_description">
+		<text>Podobno w garaїu jest skrzynia z caіym stosem fantуw</text>
+	</string>
+	<string id="pri_secret_0001_name">
+		<text>Skarb w garaїu</text>
+	</string>
+	<string id="pri_secret_0002_description">
+		<text>Podobno w przedszkolu jest skrzynia z caіym stosem fantуw</text>
+	</string>
+	<string id="pri_secret_0002_name">
+		<text>Stary schowek</text>
+	</string>
+	<string id="pri_secret_0003_description">
+		<text>Pochowali Kіa w Prypeci, pod pomnikiem. Zostawili przy nim wszystkie jego rzeczy - nie moїna okradaж zmarіych.</text>
+	</string>
+	<string id="pri_secret_0003_name">
+		<text>Rzeczy Kіa</text>
+	</string>
+	<string id="pri_secret_0004_description">
+		<text>Nie wiedzieli, їe byі jedyn№ osob№, ktуra przeїyіa spotkanie ze Zwкglaczem. Zostawiі wszystkie rzeczy w jakimњ starym supermarkecie i ruszyі w drogк. Nic nie poszіo zgodnie z planem. "Wolnoњж" nigdy nie miaіa lepszego przywуdcy.</text>
+	</string>
+	<string id="pri_secret_0004_name">
+		<text>Rzeczy przywуdcy "Wolnoњci"</text>
+	</string>
+	<string id="rad_secret_0000_description">
+		<text>Krzyї jest po drodze do Zwкglacza - nie zapuszczaіem siк dalej, schowaіem wszystko pod nim.</text>
+	</string>
+	<string id="rad_secret_0000_name">
+		<text>Skarb Mruka</text>
+	</string>
+	<string id="rad_secret_0001_description">
+		<text>Zgin№і tu jakiњ stalker, a do jego rzeczy nikt nie moїe siк dostaж.</text>
+	</string>
+	<string id="rad_secret_0001_name">
+		<text>Rzeczy martwego stalkera</text>
+	</string>
+	<string id="rad_secret_0002_description">
+		<text>Podobno w lesie jest na wpуі zakopany sejf z towarem w њrodku.</text>
+	</string>
+	<string id="rad_secret_0002_name">
+		<text>Towar w sejfie</text>
+	</string>
+	<string id="rad_secret_0003_description">
+		<text>Mуwili im, їeby nie lecieli nad Zwкglaczem i zobacz, co siк staіo. Wyl№dowali w њrodku lasu i maіo prawdopodobne, їeby ktoњ przeїyі. Mieliњmy dostaж rzeczy, ktуre przewozili.</text>
+	</string>
+	<string id="rad_secret_0003_name">
+		<text>Paczka dla "Powinnoњci"</text>
+	</string>
+	<string id="rad_secret_0004_description">
+		<text>Podobno rzeczy grupy, ktуra staraіa siк przedrzeж do centrum Zony, ci№gle znajduj№ siк w zasiкgu Zwкglacza. Nikt z nich nie wrуciі, a towar czeka tam, aї go ktoњ zabierze.</text>
+	</string>
+	<string id="rad_secret_0004_name">
+		<text>Rzeczy lekkomyњlnej grupy</text>
+	</string>
+	<string id="rad_secret_0005_description">
+		<text>Podobno przywуdca nieistniej№cej juї grupy wykitowaі w tym miejscu, a miaі przy sobie caіkiem wartoњciowy towar.</text>
+	</string>
+	<string id="rad_secret_0005_name">
+		<text>Rzeczy przywуdcy nieistniej№cej grupy</text>
+	</string>
+	<string id="ros_secret_0000_description">
+		<text>Schowaіem plecak za їelazn№ pіyt№</text>
+	</string>
+	<string id="ros_secret_0000_name">
+		<text>Ukryty plecak</text>
+	</string>
+	<string id="ros_secret_0001_description">
+		<text>Ukryіem towar pod krzyїem</text>
+	</string>
+	<string id="ros_secret_0001_name">
+		<text>Schowek pod krzyїem</text>
+	</string>
+	<string id="ros_secret_0002_description">
+		<text>Schowaіem coњ w skrzyni pod domkiem. Muszк o tym pamiкtaж.</text>
+	</string>
+	<string id="ros_secret_0002_name">
+		<text>Skrzynia pod domkiem</text>
+	</string>
+	<string id="ros_secret_0003_description">
+		<text>Juї miaіem schowaж plecak pod schodami, kiedy pojawili siк ci kretyni. Kurczк, jak ja go odzyskam?</text>
+	</string>
+	<string id="ros_secret_0003_name">
+		<text>Plecak stalkera</text>
+	</string>
+	<string id="ros_secret_0004_description">
+		<text>W rogu za drzewem jest na wpуі zakopany sejf. To tam na razie zostawiк rzeczy.</text>
+	</string>
+	<string id="ros_secret_0004_name">
+		<text>Schowek za drzewem</text>
+	</string>
+	<string id="ros_secret_0005_description">
+		<text>Wszystko schowali w skrzyni w garaїu, ktуry zajкli w czasie deszczu.</text>
+	</string>
+	<string id="ros_secret_0005_name">
+		<text>Schowek w garaїu</text>
+	</string>
+	<string id="ros_secret_0006_description">
+		<text>Schowaіem trochк rzeczy w skrzyni za budk№</text>
+	</string>
+	<string id="ros_secret_0006_name">
+		<text>Ukryta skrzynia</text>
+	</string>
+	<string id="ros_secret_0007_description">
+		<text>Wetkn№іem plecak do dziury. Z gуry nic nie widaж.</text>
+	</string>
+	<string id="ros_secret_0007_name">
+		<text>Plecak w schowku</text>
+	</string>
+	<string id="ros_secret_0008_description">
+		<text>Schowaіem skrzynkк w bezpiecznym miejscu</text>
+	</string>
+	<string id="ros_secret_0008_name">
+		<text>Skrzynia w bezpiecznym miejscu</text>
+	</string>
+	<string id="ros_secret_0009_description">
+		<text>Mуj plecak jest tuї pod dachem. Trzymam go tam na czarn№ godzinк.</text>
+	</string>
+	<string id="ros_secret_0009_name">
+		<text>Schowek stalkera</text>
+	</string>
+	<string id="ros_secret_0010_description">
+		<text>Podobno w tamtym domku jest sejf, w ktуrym coњ schowano.</text>
+	</string>
+	<string id="ros_secret_0010_name">
+		<text>Sejf w domu</text>
+	</string>
+	<string id="ros_secret_0011_description">
+		<text>Schowaіem to w rurze w њrodku domu. Ostroїnie, wszystko siк tam rozsypuje.</text>
+	</string>
+	<string id="ros_secret_0011_name">
+		<text>Schowek w rurze</text>
+	</string>
+	<string id="ros_secret_0012_description">
+		<text>Weџ ze skrzyni to, o czym rozmawialiњmy. Zazwyczaj nikt tam nie zagl№da.</text>
+	</string>
+	<string id="ros_secret_0012_name">
+		<text>Ukryta skrzynia</text>
+	</string>
+	<string id="ros_secret_0013_description">
+		<text>Schowaіem to pod krzyїem w bocznej uliczce.</text>
+	</string>
+	<string id="ros_secret_0013_name">
+		<text>Schowek pod krzyїem</text>
+	</string>
+	<string id="ros_secret_0014_description">
+		<text>Dodatkowy towar schowali pod betonem na budowie.</text>
+	</string>
+	<string id="ros_secret_0014_name">
+		<text>Schowek pod betonem</text>
+	</string>
+	<string id="ros_secret_0015_description">
+		<text>Gdybyњmy musieli szybko siк zmyж, wіoїymy іup do skrzyni na budowie.</text>
+	</string>
+	<string id="ros_secret_0015_name">
+		<text>Schowek Farciarza</text>
+	</string>
+	<string id="ros_secret_0016_description">
+		<text>Schowaіem to w jednej z bocznych uliczek na budowie.</text>
+	</string>
+	<string id="ros_secret_0016_name">
+		<text>Nyczka</text>
+	</string>
+	<string id="ros_secret_0017_description">
+		<text>Wetkn№іem wszystko do jakiejњ rury - pуџniej po to wrуcк </text>
+	</string>
+	<string id="ros_secret_0017_name">
+		<text>Schowek w rurze</text>
+	</string>
+	<string id="ros_secret_0018_description">
+		<text>Ukryіem leki w skrzyni, niedaleko budowy</text>
+	</string>
+	<string id="ros_secret_0018_name">
+		<text>Skrzynia z lekami</text>
+	</string>
+	<string id="ros_secret_0019_description">
+		<text>Zaci№gn№іem skrzyniк do szoferki dџwigu.</text>
+	</string>
+	<string id="ros_secret_0019_name">
+		<text>Skrzynia w dџwigu</text>
+	</string>
+	<string id="ros_secret_0020_description">
+		<text>Schowaіem swoje rzeczy w studzience w rogu.</text>
+	</string>
+	<string id="ros_secret_0020_name">
+		<text>Schowek w studzience</text>
+	</string>
+	<string id="ros_secret_0021_description">
+		<text>Szukaj№c artefaktu wpadіem w anomaliк. Ledwo mogіem iњж, wiкc rzuciіem plecak w k№t.</text>
+	</string>
+	<string id="ros_secret_0021_name">
+		<text>Porzucony plecak</text>
+	</string>
+	<string id="ros_secret_0022_description">
+		<text>Wepchn№іem skrzyniк tuї pod dach, niedaleko wieїy, w taki sposуb, їe nikt jej nie zauwaїy.</text>
+	</string>
+	<string id="ros_secret_0022_name">
+		<text>Niewielka skrzynia pod dachem</text>
+	</string>
+	<string id="ros_secret_0023_description">
+		<text>Wszystko, co znaleџliњmy, ukryliњmy w rurze niedaleko budowy.</text>
+	</string>
+	<string id="ros_secret_0023_name">
+		<text>Schowek w rurze</text>
+	</string>
+	<string id="ros_secret_0024_description">
+		<text>Wetkn№іem caіy towar do kіody. Nie s№dzк, їeby mogli go znaleџж. </text>
+	</string>
+	<string id="ros_secret_0024_name">
+		<text>Schowek</text>
+	</string>
+	<string id="ros_secret_0025_description">
+		<text>Zostawiіem plecak przy dџwigu</text>
+	</string>
+	<string id="ros_secret_0025_name">
+		<text>Plecak</text>
+	</string>
+	<string id="val_secret_0000_description">
+		<text>Schowaіem czкњж rzeczy pod krzyїem niedaleko gуry</text>
+	</string>
+	<string id="val_secret_0000_name">
+		<text>Schowek pod krzyїem</text>
+	</string>
+	<string id="val_secret_0001_description">
+		<text>Wetkn№іem towar do kіody. Nie s№dzк, їeby coњ mieli znaleџж.</text>
+	</string>
+	<string id="val_secret_0001_name">
+		<text>Schowek w kіodzie</text>
+	</string>
+	<string id="val_secret_0002_description">
+		<text>Ukryіem plecak pod mostem. Niech tam na razie zostanie.</text>
+	</string>
+	<string id="val_secret_0002_name">
+		<text>Plecak pod mostem</text>
+	</string>
+	<string id="val_secret_0003_description">
+		<text>Umieњciіem skrzyniк w samochodzie niedaleko bagna.</text>
+	</string>
+	<string id="val_secret_0003_name">
+		<text>Schowek w samochodzie</text>
+	</string>
+	<string id="val_secret_0004_description">
+		<text>W pniaku jest schowek - to idealne miejsce</text>
+	</string>
+	<string id="val_secret_0004_name">
+		<text>Schowek w pniaku</text>
+	</string>
+	<string id="val_secret_0005_description">
+		<text>W gospodarstwie znalazіem њwietn№ skrzyniк. Na razie zapasy bкdк tam trzymaі.</text>
+	</string>
+	<string id="val_secret_0005_name">
+		<text>Skrzynia z zapasami</text>
+	</string>
+	<string id="val_secret_0006_description">
+		<text>Wrzuciіem swoje rzeczy do rury. Pуџniej je zabiorк.</text>
+	</string>
+	<string id="val_secret_0006_name">
+		<text>Schowek w rurze</text>
+	</string>
+	<string id="val_secret_0007_description">
+		<text>Ukryіem plecak pod sosn№.</text>
+	</string>
+	<string id="val_secret_0007_name">
+		<text>Schowek pod sosn№</text>
+	</string>
+	<string id="val_secret_0008_description">
+		<text>Kot ukradі skrzyniк bandytom. Wіoїyі j№ do Nivy i odwrуciі. Mуwi, їe wygl№da na skrzyniк rz№dow№. Musimy uzbroiж chіopcуw i j№ zabraж.</text>
+	</string>
+	<string id="val_secret_0008_name">
+		<text>Skrzynia rz№dowa</text>
+	</string>
+	<string id="val_secret_0009_description">
+		<text>Wszкdzie sіychaж o rabunkach. Kradn№ nawet od swoich... ale mojej skrzyni nigdy nie znajd№.</text>
+	</string>
+	<string id="val_secret_0009_name">
+		<text>Skrzynia</text>
+	</string>
+	<string id="val_secret_0010_description">
+		<text>Schowaіem swoje rzeczy w studzience. Moїe kiedyњ siк przydadz№. </text>
+	</string>
+	<string id="val_secret_0010_name">
+		<text>Schowek w studzience</text>
+	</string>
+	<string id="val_secret_0011_description">
+		<text>Rzuciіem plecak pod drzewo. Inaczej nie daіbym rady uciec bandytom.</text>
+	</string>
+	<string id="val_secret_0011_name">
+		<text>Plecak stalkera</text>
+	</string>
+	<string id="val_secret_0012_description">
+		<text>Schowaіem swoje klamoty w rurze, pуџniej je zabiorк.</text>
+	</string>
+	<string id="val_secret_0012_name">
+		<text>Schowek</text>
+	</string>
+	<string id="val_secret_0013_description">
+		<text>Wszystko, co ukradіem Dzikowi, schowaіem w sejfie pod sosn№. Teraz tylko muszк odczekaж, aї sytuacja siк uspokoi.</text>
+	</string>
+	<string id="val_secret_0013_name">
+		<text>Ukryty sejf</text>
+	</string>
+	<string id="val_secret_0014_description">
+		<text>Tymczasowa kwatera gіуwna jest w wagonie, tak jak i skrzynia z zapasami.</text>
+	</string>
+	<string id="val_secret_0014_name">
+		<text>Magazyn w wagonie</text>
+	</string>
+	<string id="val_secret_0015_description">
+		<text>Ledwo mi siк udaіo wejњж do rury pod drog№. Teraz mam miejsce, їeby ukryж plecak.</text>
+	</string>
+	<string id="val_secret_0015_name">
+		<text>Tajne miejsce w rurze</text>
+	</string>
+	<string id="val_secret_0016_description">
+		<text>Wrzuciіem towar do skrzyni - pуџniej go zabiorк.</text>
+	</string>
+	<string id="val_secret_0016_name">
+		<text>Skrzynia z towarem</text>
+	</string>
+	<string id="val_secret_0017_description">
+		<text>Chowam fanty za rur№ - ciкїko siк tam dostaж, ale przynajmniej nikt z nimi nie ucieknie.</text>
+	</string>
+	<string id="val_secret_0017_name">
+		<text>Schowek za rur№</text>
+	</string>
+	<string id="val_secret_0018_description">
+		<text>Znalazіem naboje w pomieszczeniu z instalacj№ energetyczn№</text>
+	</string>
+	<string id="val_secret_0018_name">
+		<text>Schowek w pomieszczeniu z instalacj№ energetyczn№</text>
+	</string>
+	<string id="val_secret_0019_description">
+		<text>Wszystko, co znaleџliњmy, zostawiliњmy w skrzyni. Zabierzemy to w drodze powrotnej.</text>
+	</string>
+	<string id="val_secret_0019_name">
+		<text>Schowek w skrzyni</text>
+	</string>
+	<string id="val_secret_0020_description">
+		<text>Schowaіem plecak nowego - nigdy go nie znalazі</text>
+	</string>
+	<string id="val_secret_0020_name">
+		<text>Schowany plecak</text>
+	</string>
+	<string id="val_secret_0021_description">
+		<text>Skrzynia zostaіa w furgonetce - trzeba j№ zabraж.</text>
+	</string>
+	<string id="val_secret_0021_name">
+		<text>Zapomniana skrzynia</text>
+	</string>
+	<string id="val_secret_0022_description">
+		<text>Na stacji benzynowej znalazіem sejf i schowaіem w nim swуj towar. Wydaje siк, їe nikt tam nie chodzi.</text>
+	</string>
+	<string id="val_secret_0022_name">
+		<text>Sejf na stacji benzynowej</text>
+	</string>
+	<string id="val_secret_0023_description">
+		<text>Wci№gn№іem skrzyniк na cysternк</text>
+	</string>
+	<string id="val_secret_0023_name">
+		<text>Skrzynia</text>
+	</string>
+	<string id="val_secret_0024_description">
+		<text>Schowaіem zapasy w sejfie na stacji benzynowej</text>
+	</string>
+	<string id="val_secret_0024_name">
+		<text>Sejf na stacji benzynowej</text>
+	</string>
+	<string id="val_secret_0025_description">
+		<text>W samochodzie w obozie bandytуw jest jakaњ skrzynia. Musimy siк zakraњж do samochodu i j№ obejrzeж - czujк, їe coњ w niej jest.</text>
+	</string>
+	<string id="val_secret_0025_name">
+		<text>Skrzynia w samochodzie</text>
+	</string>
+	<string id="val_secret_0026_description">
+		<text>Ukryіem skrzyniк w schowku - to bezpieczne miejsce.</text>
+	</string>
+	<string id="val_secret_0026_name">
+		<text>Skrzynia w schowku</text>
+	</string>
+	<string id="val_secret_0027_description">
+		<text>Zostawiіem plecak w opuszczonym budynku. Dobrze, їe nikogo nie ma w pobliїu.</text>
+	</string>
+	<string id="val_secret_0027_name">
+		<text>Pozostawiony plecak</text>
+	</string>
+	<string id="val_secret_0028_description">
+		<text>Schowamy towar w sejfie, w miejscu, ktуre nie rzuca siк w oczy. Jeњli їoіnierze nie przybкd№ dzisiaj, to zrobi№ to jutro. Nie bкd№ siк jakoњ wybitnie dіugo rozgl№daж, wiкc najwartoњciowsze rzeczy zostan№ dla mnie.</text>
+	</string>
+	<string id="val_secret_0028_name">
+		<text>Schowek Dzika</text>
+	</string>
+	<string id="val_secret_0029_description">
+		<text>Schowaіem plecak niedaleko budynku</text>
+	</string>
+	<string id="val_secret_0029_name">
+		<text>Plecak w sekretnym miejscu</text>
+	</string>
+	<string id="val_secret_0030_description">
+		<text>Schowaіem towar w nierzucaj№cej siк w oczy skrzyni. Pуџniej go zabiorк.</text>
+	</string>
+	<string id="val_secret_0030_name">
+		<text>Niepozorna skrzynia</text>
+	</string>
+	<string id="val_secret_0031_description">
+		<text>Ukryіem plecak pod samochodem - nikomu nie przyjdzie do gіowy, їeby tam szukaж.</text>
+	</string>
+	<string id="val_secret_0031_name">
+		<text>Ukryty plecak</text>
+	</string>
+	<string id="val_secret_0032_description">
+		<text>Schowaіem fanty w samochodzie, tuї pod nosem bandytуw - nie miaіem czasu na szukanie lepszego miejsca.</text>
+	</string>
+	<string id="val_secret_0032_name">
+		<text>Schowek w samochodzie</text>
+	</string>
+	<string id="x16_secret_0000_description">
+		<text>Chodz№ sіuchy, їe byі pewien stalker, ktуry dostaі siк do laboratorium i schowaі fanty w gniazdkach w szybie windy. A gdy przyszedі czas, їeby je zabraж, nie byі w stanie.</text>
+	</string>
+	<string id="x16_secret_0000_name">
+		<text>Fanty w gniazdkach elektrycznych</text>
+	</string>
+	<string id="x16_secret_0001_description">
+		<text>Chodz№ sіuchy, їe pewien stalker dostaі siк do tego laboratorium i wykitowaі w miejscu, gdzie przeprowadzali eksperymenty - jego rzeczy podobno ci№gle tam s№.</text>
+	</string>
+	<string id="x16_secret_0001_name">
+		<text>Plecak zwiadowcy</text>
+	</string>
+	<string id="x18_secret_0000_description">
+		<text>Uwкdzony schowaі wszystko w sejfie w podziemnym laboratorium. To caіkiem dobre miejsce - nikt nie ma do niego kluczy. Jedyny problem polega na tym, їe ni st№d, ni zow№d kamienie zaczynaj№ tam њmigaж wokуі. Podobno ktoњ w ten sposуb zgin№і.</text>
+	</string>
+	<string id="x18_secret_0000_name">
+		<text>Schowek Uwкdzonego</text>
+	</string>
+	<string id="x18_secret_0001_description">
+		<text>Musiaіem zostawiж plecak</text>
+	</string>
+	<string id="x18_secret_0001_name">
+		<text>Porzucony plecak</text>
+	</string>
+	<string id="yan_secret_0000_description">
+		<text>Na wzgуrzu jest krzyї, a pod nim plecak</text>
+	</string>
+	<string id="yan_secret_0000_name">
+		<text>Schowek pod krzyїem</text>
+	</string>
+	<string id="yan_secret_0001_description">
+		<text>Podobno na niewielkiej wyspie na bagnie jest na wpуі zakopany sejf. Muszк siк czegoњ o nim dowiedzieж.</text>
+	</string>
+	<string id="yan_secret_0001_name">
+		<text>Stary sejf</text>
+	</string>
+	<string id="yan_secret_0002_description">
+		<text>Schowaіem fanty w rurze, niedaleko obozu.</text>
+	</string>
+	<string id="yan_secret_0002_name">
+		<text>Rura z towarem</text>
+	</string>
+	<string id="yan_secret_0003_description">
+		<text>Schowaіem fanty za garaїami.</text>
+	</string>
+	<string id="yan_secret_0003_name">
+		<text>Plecak za garaїami</text>
+	</string>
+	<string id="yan_secret_0004_description">
+		<text>Schowaіem plecak w budce tuї za zіomowiskiem.</text>
+	</string>
+	<string id="yan_secret_0004_name">
+		<text>Plecak z fantami</text>
+	</string>
+	<string id="yan_secret_0005_description">
+		<text>Wіoїyіem skrzyniк do autobusu - nikt nie ma prawa jej zauwaїyж.</text>
+	</string>
+	<string id="yan_secret_0005_name">
+		<text>Schowek w autobusie</text>
+	</string>
+	<string id="yan_secret_0006_description">
+		<text>Fanty s№ ukryte w samochodzie, niedaleko obszaru. Promieniowanie nie jest zbyt wysokie.</text>
+	</string>
+	<string id="yan_secret_0006_name">
+		<text>Јupy s№ w samochodzie</text>
+	</string>
+	<string id="yan_secret_0007_description">
+		<text>Podobno s№ tu czyjeњ fanty, ale nie moїna siк do nich dobraж przez promieniowanie.</text>
+	</string>
+	<string id="yan_secret_0007_name">
+		<text>Stary plecak</text>
+	</string>
+	<string id="yan_secret_0008_description">
+		<text>Podobno tutaj znajduje siк schowek jakiejњ frakcji. Zastanawiam siк tylko, jak oni siк tutaj dostali mimo promieniowania?</text>
+	</string>
+	<string id="yan_secret_0008_name">
+		<text>Schowek frakcji</text>
+	</string>
+	<string id="yan_secret_0009_description">
+		<text>Kolejny stalker ochotnik wykitowaі, poniewaї prototyp nie ochroniі go przed promieniowaniem. Dotarі tylko do њrodka tego obszaru i juї tam zostaі. Sacharow chce przeprowadziж dokіadniejsze pomiary, ale nie ma mowy, їebym tam poszedі. Jeszcze skoсczк tak jak tamten.</text>
+	</string>
+	<string id="yan_secret_0009_name">
+		<text>Plecak ochotnika</text>
+	</string>
+	<string id="yan_secret_0010_description">
+		<text>Podobno jest tam czyjњ іup, ale nie ma jak siк do niego dostaж z powodu promieniowania.</text>
+	</string>
+	<string id="yan_secret_0010_name">
+		<text>Stary schowek</text>
+	</string>
+	<string id="yan_secret_0011_description">
+		<text>Muszк siк st№d wynieњж. Sacharowowi i Krugіowowi caіkiem odbiіo - chc№, їebym z jakimњ stalkerem wszedі do ogniska promieniowania. Pieprzyж ich, jak tylko zabiorк zapasy ze studzienki, spadam st№d.</text>
+	</string>
+	<string id="yan_secret_0011_name">
+		<text>Schowek naukowca</text>
+	</string>
+	<string id="yan_secret_0012_description">
+		<text>Schowaіem towar w kіodzie, nie s№dzк, їeby mogli go znaleџж.</text>
+	</string>
+	<string id="yan_secret_0012_name">
+		<text>Skarb w kіodzie</text>
+	</string>
+	<string id="yan_secret_0013_description">
+		<text>Mуwi siк, їe jest tu czyjњ sejf, ale przez promieniowanie nie ma siк jak do niego dobraж.</text>
+	</string>
+	<string id="yan_secret_0013_name">
+		<text>Skrzynia z fantami</text>
+	</string>
+	<string id="st_found_new_treasure">
+		<text>Informacje o schowku</text>
+	</string>
+</string_table>

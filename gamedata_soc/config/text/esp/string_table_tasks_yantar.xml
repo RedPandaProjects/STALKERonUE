@@ -1,0 +1,72 @@
+	<string id="yan_find_ghost">
+		<text>Coge los documentos de Ghost</text>
+	</string>
+	<string id="yan_find_ghost_task">
+		<text>Coge los documentos</text>
+	</string>
+	<string id="yan_find_vasilyev_task">
+		<text>Entra en el laboratorio</text>
+	</string>
+	<string id="yan_find_labX16">
+		<text>Entra en el laboratorio X16</text>
+	</string>
+	<string id="yan_find_scientist">
+		<text>Toma mediciones de la radiación</text>
+	</string>
+	<string id="yan_find_vasilyev">
+		<text>Busca el cadáver de Vasiliev</text>
+	</string>
+	<string id="yan_kill_brain">
+		<text>Desactiva las emisiones psíquicas</text>
+	</string>
+	<string id="yan_kill_brain_task">
+		<text>Desconecta el mecanismo</text>
+	</string>
+	<string id="yan_kill_brain_task_2">
+		<text>Sal del laboratorio</text>
+	</string>
+	<string id="yan_provodnik_about_doctor">
+		<text>Habla con Guía</text>
+	</string>
+	<string id="yan_provodnik_task">
+		<text>Reúnete con Guía</text>
+	</string>
+	<string id="yan_psi_zone_find">
+		<text>Acompaña a Kruglov al lugar de la medición</text>
+	</string>
+	<string id="yan_psi_zone_find_semenov">
+		<text>Acompaña a Semenov al lugar de la medición</text>
+	</string>
+	<string id="yan_return_to_bunker">
+		<text>Trae los resultados a Sakharov</text>
+	</string>
+	<string id="yan_scientist_return">
+		<text>Habla con Sakharov</text>
+	</string>
+	<string id="yan_scientist_return_task">
+		<text>Habla con Sakharov</text>
+	</string>
+	<string id="yan_secret_tonnel">
+		<text>Sal por el túnel secreto</text>
+	</string>
+	<string id="yan_switcher_off_1">
+		<text>Desactiva el primer módulo de control</text>
+	</string>
+	<string id="yan_switcher_off_2">
+		<text>Desactiva el segundo módulo de control</text>
+	</string>
+	<string id="yan_switcher_off_3">
+		<text>Desactiva el tercer módulo de control</text>
+	</string>
+	<string id="yan_talk_to_kruglov">
+		<text>Habla con Kruglov</text>
+	</string>
+	<string id="yan_talk_to_semenov">
+		<text>Habla con Semenov</text>
+	</string>
+	<string id="yan_vasilyev_pda">
+		<text>PDA de Vasiliev</text>
+	</string>
+	<string id="yan_zombie_zone">
+		<text>Ubicación aproximada del laboratorio X16</text>
+	</string>

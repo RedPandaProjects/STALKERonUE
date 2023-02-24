@@ -1,0 +1,51 @@
+	<string id="mil_actor_main_quest_descr">
+		<text>Wed³ug genera³a Woronina tylko "Wolnoœæ" ma jedn¹ z tych broni. Jak j¹ zdobêdê, to moja sprawa. Dowiedzia³em siê, ¿e jedn¹ z mo¿liwoœci jest pogawêdka ze stalkerem z "Wolnoœci", Kuchmistrzem. Genera³ mówi, ¿e tamten wyj¹tkowo lubi sobie wypiæ. Chyba powinienem zrobiæ zapas wódki na wszelki wypadek. </text>
+	</string>
+	<string id="mil_blockpost_job_descr">
+		<text>Koniecznie trzeba ochroniæ barierê przed atakami nadchodz¹cymi od strony Mózgozwêglacza.</text>
+	</string>
+	<string id="mil_blockpost_job2_descr">
+		<text>£ukasz: "Jeœli masz ochotê, wybierz siê na posterunek przy wyjœciu do Czerwonego Lasu. Oczekuj¹ kolejnej próby przedarcia siê ze strony mutantów lub Monolitu".</text>
+	</string>
+	<string id="mil_courier_doc_descr">
+		<text>"Wolnoœæ" zdoby³a dwa granatniki Bulldog 6. Jeden znajduje siê w arsenale, a druga gdzieœ w wiosce.\n\n</text>
+	</string>
+	<string id="mil_courier_job_descr">
+		<text>£ukasz: "Smutne, ale prawdziwe - mamy wœród nas kabla... Nazywa siê Pawlik. Przekazuje informacje drugiej stronie i musimy go powstrzymaæ. IdŸ za nim do gospodarstwa i dowiedz siê, z kim siê kontaktuje. Wyruszy³ ju¿ chwilê temu, musisz go wiêc dogoniæ. Pamiêtaj: mo¿esz, wrêcz musisz go wykoñczyæ, ale nie rób tego, zanim nie dowiesz siê, komu przekazuje informacje. Tego drugiego te¿ trzeba bêdzie zlikwidowaæ".</text>
+	</string>
+	<string id="mil_crazy_flash_info">
+		<text>...dzisiaj znowu poszliœmy na polowanie do wioski. To samo, co zawsze. \n\n Sk¹d siê wziê³a ta bestia? Musia³a siê przekraœæ niedaleko Czerwonego Lasu. Wszyscy ch³opcy nie ¿yj¹, zosta³em tylko ja... Postaram siê st¹d wykraœæ w nocy... \n\n Nie pamiêtam, jak siê wydosta³em. To by³o prawdziwe piek³o. G³owa mi pêka - obrazy, dŸwiêki... nie wiem, sk¹d pochodz¹. Cholerne promieniowanie. A na dodatek ten pieprzony detektor jest kaput. Muszê odpocz¹æ, to poczujê siê lepiej.</text>
+	</string>
+	<string id="mil_dolg_kill_lukash_descr">
+		<text>WejdŸ do bazy z cz³onkami "Powinnoœci".\nWyeliminuj trzech snajperów. \nZabij £ukasza.</text>
+	</string>
+	<string id="mil_dolg_kill_sniper_descr">
+		<text>Zabij snajpera na wie¿y. Uwa¿aj, ¿eby nie dostaæ kulki w g³owê. </text>
+	</string>
+	<string id="mil_flash_bandit_descr">
+		<text>Ale syf! Te dupki z "Powinnoœci" wysiuda³y nas ze œwietnego miejsca. Okopali siê niedaleko naszego gospodarstwa. Nie mieliœmy nawet czasu zabraæ rzeczy ze strychu. Ale to nic - niedaleko jest baza "Wolnoœci", wiêc nie zostan¹ tu d³ugo.</text>
+	</string>
+	<string id="mil_flash_max_descr">
+		<text>Dzisiaj przetrzepaliœmy kilku ¿o³nierzy, którzy wybierali siê do Czerwonego Lasu - zgarnêliœmy dwa Bulldogi 6. S¹ wspania³e! £ukasz wzi¹³ jeden z nich, a Mruk ukry³ drugi w wiosce, w jednej z piwnic.</text>
+	</string>
+	<string id="mil_flash_ugrumy_descr">
+		<text>1. Chyba diabe³ mnie podkusi³, ¿ebym siê wybra³ do Czerwonego Lasu. Ledwo mi siê uda³o - odrobinê wolniej, i teraz pewnie by³bym kolejnym eksponatem ze stopionym mózgiem.\n\n 2: Czterech zbirów otoczy³o mnie jak dziecko. Zrobi³em swoje - nie zauwa¿y³em ich pu³apki. Uratowa³a mnie jedynie ich gadatliwoœæ i chciwoœæ. Zamiast wpakowaæ we mnie ca³y magazynek, rzucili siê na mnie i zaczêli mnie rozbieraæ - spodoba³ im siê mój kombinezon. To by³ ich ostatni b³¹d, a mimo to jeden z nich mnie trafi³... ha, starzejê siê...\n\n 3: Kiedy przyby³em, pos³aniec Strieloka ju¿ nie oddycha³. Nikt nie ma szans z trzema pijawkami, a ten goœciu zakatrupi³ cztery, a poza tym w kilku miejscach widzia³em jeszcze klika krwawych tropów. Jedyne informacje, jakie przy nim znalaz³em, to kod do drzwi (19840519), ale nie s¹dzê, by uda³o mi siê dowiedzieæ, które drzwi otwiera.\n\n 4: Przechwyciliœmy kilku wojskowych, którzy zmierzali do Czerwonego Lasu. Nie mieli przy sobie ¿adnych dokumentów ani rozkazów, ale byli odpowiednio wyposa¿eni. S¹dzê, ¿e zostawiê Bulldoga 6 w piwnicy do czasu, a¿ bêdê go potrzebowaæ. </text>
+	</string>
+	<string id="mil_freedom_rg6_task_descr">
+		<text>Woronin: ""Wolnoœæ" ma kilka wspania³ych granatników "Bulldog 6". Gdyby ci siê uda³o przekraœæ na ich teren i wynieœæ stamt¹d przynajmniej jeden, piêknie bym ciê wynagrodzi³. Nie nale¿ysz do naszej frakcji, wiêc ³atwo mo¿esz u³o¿yæ sobie dobre stosunki z "Wolnoœci¹" i przy odrobinie szczêœcia zdobyæ dla nas "Bulldogi 6". Przeœlê ci dane co do dok³adnego po³o¿enia bazy "Wolnoœci". Tam musisz znaleŸæ niejakiego Kuchmistrza, cz³onka "Wolnoœci", który wie, gdzie sk³adowane s¹ te granatniki. Ma s³aboœæ do alkoholu, wiêc postaraj siê go upiæ. WeŸ ze sob¹ du¿o wódki".</text>
+	</string>
+	<string id="mil_go_to_miser_descr">
+		<text>Hm. W bazie "Wolnoœci" otrzymam nagrodê od kogoœ, kto siê zwie Kutwa... Ciekawa ksywka. Powinienem siê chyba przygotowaæ na to, ¿e dostanê puszkê miêsa z terminem wa¿noœci do zesz³ego roku.</text>
+	</string>
+	<string id="mil_hunters_task_descr">
+		<text>Muszê oczyœciæ wioskê z pijawek. Trzeba uwa¿aæ, bo inaczej wypij¹ ze mnie ca³¹ krew i zostawi¹ na pewn¹ œmieræ. </text>
+	</string>
+	<string id="mil_hunters_task_descr2">
+		<text>Muszê oczyœciæ wioskê z pijawek. Trzeba uwa¿aæ, bo inaczej wypij¹ ze mnie ca³¹ krew i zostawi¹ na pewn¹ œmieræ. </text>
+	</string>
+	<string id="mil_lukash_job_descr">
+		<text>£ukasz zdecydowa³ siê przeprowadziæ kontratak na oddzia³ "Powinnoœci" w chacie. Dowodzi³ akcj¹ bêdzie Maks, jeden z weteranów z "Wolnoœci". Moim zadaniem jest im pomóc.</text>
+	</string>
+	<string id="mil_mad_flash_job_descr">
+		<text>Ciekawe, co ten szaleniec z bagna mo¿e w³aœciwie wiedzieæ. Dowiem siê. Wa¿ne, ¿eby unikaæ tych wszystkich starych min. Tyle ¿e pewnie rdza je tak prze¿ar³a, ¿e mog¹ wybuchn¹æ od uderzenia œrub¹.</text>
+	</string>

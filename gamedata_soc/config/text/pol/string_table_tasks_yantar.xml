@@ -1,0 +1,72 @@
+	<string id="yan_find_ghost">
+		<text>WeŸ dokumenty od Ducha</text>
+	</string>
+	<string id="yan_find_ghost_task">
+		<text>WeŸ dokumenty</text>
+	</string>
+	<string id="yan_find_vasilyev_task">
+		<text>WejdŸ do laboratorium</text>
+	</string>
+	<string id="yan_find_labX16">
+		<text>WejdŸ do laboratorium X16</text>
+	</string>
+	<string id="yan_find_scientist">
+		<text>Dokonaj pomiarów radiacji</text>
+	</string>
+	<string id="yan_find_vasilyev">
+		<text>Przeszukaj cia³o Wasiliewa</text>
+	</string>
+	<string id="yan_kill_brain">
+		<text>Wy³¹cz emisjê psioniczn¹</text>
+	</string>
+	<string id="yan_kill_brain_task">
+		<text>Od³¹cz mechanizm</text>
+	</string>
+	<string id="yan_kill_brain_task_2">
+		<text>Wydostañ siê z laboratorium</text>
+	</string>
+	<string id="yan_provodnik_about_doctor">
+		<text>Porozmawiaj z Przewodnikiem</text>
+	</string>
+	<string id="yan_provodnik_task">
+		<text>Spotkaj siê z Przewodnikiem</text>
+	</string>
+	<string id="yan_psi_zone_find">
+		<text>Eskortuj Krug³owa na miejsce pomiarowe</text>
+	</string>
+	<string id="yan_psi_zone_find_semenov">
+		<text>Eskortuj Siemienowa na miejsce pomiarowe</text>
+	</string>
+	<string id="yan_return_to_bunker">
+		<text>Dostarcz wyniki Sacharowowi</text>
+	</string>
+	<string id="yan_scientist_return">
+		<text>Porozmawiaj z Sacharowem</text>
+	</string>
+	<string id="yan_scientist_return_task">
+		<text>Porozmawiaj z Sacharowem</text>
+	</string>
+	<string id="yan_secret_tonnel">
+		<text>Wydostañ siê ukrytym tunelem</text>
+	</string>
+	<string id="yan_switcher_off_1">
+		<text>Wy³¹cz pierwszy modu³ kontrolny</text>
+	</string>
+	<string id="yan_switcher_off_2">
+		<text>Wy³¹cz drugi modu³ kontrolny</text>
+	</string>
+	<string id="yan_switcher_off_3">
+		<text>Wy³¹cz trzeci modu³ kontrolny</text>
+	</string>
+	<string id="yan_talk_to_kruglov">
+		<text>Porozmawiaj z Krug³owem</text>
+	</string>
+	<string id="yan_talk_to_semenov">
+		<text>Porozmawiaj z Siemienowem</text>
+	</string>
+	<string id="yan_vasilyev_pda">
+		<text>PDA Wasiliewa</text>
+	</string>
+	<string id="yan_zombie_zone">
+		<text>Prawdopodobne po³o¿enie laboratorium X16</text>
+	</string>

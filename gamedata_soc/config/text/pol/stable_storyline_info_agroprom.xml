@@ -1,0 +1,48 @@
+	<string id="agr_find_ghost_descr">
+		<text>...dowiedzia³em siê, ¿e jeden z kolesiów Strieloka nosi ksywkê Duch. To przynajmniej jakiœ trop. Jeœli znajdê Ducha, bêdê równie¿ w stanie znaleŸæ Strieloka.</text>
+	</string>
+	<string id="agr_journal_cache">
+		<text>Wydaje siê, ¿e dziêki schowkowi mam nowy cel. Znalaz³em pendrive z czymœ, co wygl¹da na dziennik wykorzystywany przez grupê Strieloka. Mimo niewielu wpisów zdo³a³em wydedukowaæ, ¿e grupa liczy jeszcze dwóch cz³onków: Ducha i K³a. W dzienniku wspomniano równie¿ o "wspólnym znajomym", ale nie wiem, czy nale¿y on do grupy. Na pewno im pomóg³ - co do tego nie ma w¹tpliwoœci. Z wpisu Ducha wynika, ¿e Kie³ zgin¹³, gdy wpadli w zasadzkê. Wiêc przynajmniej jednego jestem pewien - imienia osoby, która na pewno zna Strieloka - Ducha. A jeœli chodzi o Strieloka, mo¿e siê znajdowaæ gdzieœ na pó³nocy Zony.</text>
+	</string>
+	<string id="agr_journal_krot">
+		<text>Spotkanie z Kretem op³aci³o siê - wygl¹da na to, ¿e schowek grupy naprawdê istnieje i ¿e mieœci siê w katakumbach pod Instytutem... Bêdê musia³ siê tam wybraæ. Nie wiem, co znajdê... ale mam nadziejê, ¿e pomo¿e mi to rozwik³aæ moj¹ w³asn¹ tajemnicê...</text>
+	</string>
+	<string id="agr_krot_secret_info">
+		<text>ZejdŸ krêtymi schodami do pomieszczenia z kolumnami. PrzejdŸ do wyjœcia i wejdŸ do du¿ego pomieszczenia z rurami na suficie. WyjdŸ drugim wyjœciem, wejdŸ do tunelu i skrêæ w lewo. Na koñcu znajduje siê skrêt w prawo. Udaj siê bezpoœrednio do wyjœcia z niewielkiego pomieszczenia i skrêæ w prawo. Na œcianie po lewej, obok s³ów "Nie wchodŸ, bo zginiesz" poszukaj dziury. To wejœcie do schowka Strieloka.</text>
+	</string>
+	<string id="agr_krot_secret_info_name">
+		<text>Schowek Strieloka</text>
+	</string>
+	<string id="agr_military_case">
+		<text>\nRaport ze œledztwa.\n Tylko do u¿ytku urzêdowego.\n Do pu³kownika S³u¿by Bezpieczeñstwa Ukrainy W.M. Kruczelnikowa, zwierzchnika projektu "PRAWDA".\n Od kapitana D.F. Maksimienki, \ndowódcy grupy "Poszukiwania 2".\n\n Notatka.\n W dniach od 12.05.2012 do 25.05.2012 nasza grupa, sk³adaj¹ca siê z trzech oficerów œledczych oraz oddzia³u si³ specjalnych S³u¿by Bezpieczeñstwa, zrewidowa³a by³y Instytut Badawczy Agroprom, zajmuj¹cy siê rolnictwem na ziemi ska¿onej promieniowaniem. Na miejscu brakowa³o wiêkszoœci sprzêtu oraz dokumentacji, lecz na podstawie tego, co uda³o nam siê odnaleŸæ, doszliœmy do wniosku, ¿e w okresie od 2005 do 2008 Instytut nie prowadzi³ ¿adnych badañ w dziedzinach, którymi zajmowa³ siê oficjalnie. Wszystkie wyniki "prac" przes³ane do Ministerstwa Rolnictwa zosta³y sfa³szowane. Równoczeœnie kierownictwo Instytutu, zw³aszcza Piotr Dani³owicz Stri¿, nieprzerwanie by³o finansowane przez pañstwo, otrzymywa³o sprzêt oraz artyku³y konsumpcyjne i przekazywa³o je do laboratorium oznaczonego jako X18. Dzia³o siê tak dziêki podrobionym listom przewozowym, które tworzy³y przykrywkê dla ca³ej operacji, podaj¹c, ¿e materia³y przewo¿ono do obiektu pomocniczego w celu przeprowadzenia eksperymentów. X18 wydaje siê byæ kryptonimem wybranym przez grupê osób zamieszanych w tê sprawê, gdy¿ nasza baza danych nie zawiera informacji na temat takiego laboratorium. Na podstawie znalezionych dokumentów szacujemy, ¿e laboratorium znajduje siê najwy¿ej godzinê jazdy od Instytutu. Zapewne jest to obiekt tajny, wiêc proszê o pomoc dzia³u analiz. Nie mamy pewnoœci co do obszaru badañ laboratorium, gdy¿ w odnalezionych dokumentach nie ma informacji na ten temat, znajduj¹ siê w nich jednak wzmianki o nies³awnym profesorze Czubko oraz o pewnej "Grupie". Jestem przekonany, i¿ nic wiêcej nie mo¿emy ju¿ uczyniæ i ¿e dzia³ analiz bêdzie mia³ du¿o pracy.\n\n Za³¹czam zarchiwizowany plik z listami przewozowymi na artyku³y konsumpcyjne, sprzêt przetransportowany do pewnego obiektu pomocniczego oraz fragment korespondencji miêdzy Stri¿em i Czubk¹.\n\n Kapitan D.F. Maksimienko 26.05.2012\n Do profesora W.M. Czubko.\n Od doktora nauk rolniczych P.D. Stri¿a, Dyrektora Instytutu Badawczego Agroprom.\n Drogi Wadimie Michaj³owiczu, tak jak uzgodniliœmy, przesy³am do naszego obiektu eksperymentalnego kolejn¹ partiê artyku³ów konsumpcyjnych oraz sprzêtu. Mam nadziejê, ¿e pomo¿e on panu w badaniach tak niezbêdnych dla dobra rolnictwa. Zdoby³em fundusze, okreœlaj¹c eksperymenty "pilota¿owymi" w dziedzinach, w których Instytut przeprowadza badania, wiêc nie bêdzie ¿adnych problemów z ministerstwem. Jak postêpuj¹ eksperymenty? Ci¹gle jestem pod wra¿eniem tego, co pokaza³ mi pan ostatnim razem.\n Z powa¿aniem, P.D. Stri¿.\n\n Do P.D. Stri¿.\n Piotrze Dani³owiczu, proszê przyj¹æ moje podziêkowania - wszystko dotar³o na miejsce. Moja ekipa podziwia laserowy spektrometr - gdyby nie pañska pomoc, zdobycie tego modelu zajê³oby ca³e wieki. Oczywiœcie, ¿e Ministerstwo Rolnictwa ucieszy siê z wyników NASZYCH badañ... naprawdê ubawi³ pan tym staruszka! Eksperymenty id¹ w dobrym kierunku, a to, co widzia³ pan ostatnio, jest niczym w porównaniu z nowszymi osi¹gniêciami. Powinien pan czêœciej nas odwiedzaæ - to dla mnie zawsze ogromna przyjemnoœæ, a poza tym, podró¿ samochodem do naszego "obiektu eksperymentalnego" zajmuje jedynie godzinê. Niemal bym zapomnia³: w przysz³y poniedzia³ek przedyskutujê z "Grup¹" pañsk¹ kandydaturê. S¹dzê, ¿e mnie popr¹.\n Z powa¿aniem, profesor W.M. Czubko.\n\n Do profesora W.M. Czubko.\n Od P.D. Stri¿, Dyrektora Instytutu Badawczego Agroprom.\n Drogi Wadimie Michaj³owiczu, dziêkujê za zaufanie. Jestem g³êboko poruszony i zrobiê wszystko, ¿eby upewniæ pana co do s³usznoœci tej decyzji. S¹dzê, ¿e udzia³ w takim eksperymencie jest marzeniem ka¿dego naukowca i bêdê zachwycony, jeœli "Grupa" zdecyduje siê przyj¹æ mnie do swego grona.\n Z powa¿aniem, P.D. Stri¿.\n P.S. Uda³o mi siê wydobyæ od ministerstwa dwa najnowsze japoñskie oscyloskopy - przyœlê je przy najbli¿szej okazji.</text>
+	</string>
+	<string id="agr_military_case_name">
+		<text>Raport ze œledztwa </text>
+	</string>
+	<string id="agr_nii_security_plan">
+		<text>Na liœcie widaæ patrole, wartowników i wie¿e stra¿nicze. Kwatera g³ówna znajduje siê na drugim piêtrze Instytutu. To tam trzymane s¹ dokumenty. W dzieñ wszêdzie roi siê od patroli. W nocy jest ich mniej, a stra¿nicy zmieniani s¹ o 23:00. Wtedy w g³ównym budynku jest ma³o ludzi. Jeœli chcesz siê dostaæ do bazy, wybierz katakumby - brama nie wchodzi w grê.</text>
+	</string>
+	<string id="agr_nii_security_plan_name">
+		<text>Lista stra¿ników w Agropromie </text>
+	</string>
+	<string id="agr_rats_n_soldiers_text">
+		<text>Wojsko ma ju¿ doœæ szczurów wychodz¹cych z kolektorów. W ramach kary ¿o³nierze musz¹ do nich wchodziæ.</text>
+	</string>
+	<string id="agr_task_case">
+		<text>Handlarz: "Jak ju¿ ukradniesz teczkê z Instytutu, zabierz j¹ do Barmana. Jest w³aœcicielem "100 Radów" - baru dla stalkerów na terenie by³ej fabryki Rostok".</text>
+	</string>
+	<string id="article_agr_krot_sos">
+		<text>SOS, wojsko zabija braci stalkerów! Ch³opaki, jeœli mnie s³yszycie, pomocy!</text>
+	</string>
+	<string id="article_agr_krot_sos_name">
+		<text>Spotkanie z Kretem</text>
+	</string>
+	<string id="article_agr_krot_sos1">
+		<text>Kret: "Pomocy, zaraz mnie zabij¹!". </text>
+	</string>
+	<string id="st_operation_agroprom">
+		<text>Operacja Agroprom </text>
+	</string>
+	<string id="storyline_gunslinger_flash_info">
+		<text>Od Ducha: \n \n Strielok, mam gówniane wieœci. Kie³ nie ¿yje. Czekali na nas we wsi przy magazynach. Trzech goœci - wydawali siê byæ tam ju¿ jakiœ czas... wygl¹dali na neutralnych. Kie³ ich jakoœ wyczu³ - wiesz jakie miewa³ przeczucia. Zdjêliœmy dwóch, zwyk³ych oprychów, ale trzeci by³ sprytny. Czeka³ oko³o 100 metrów dalej z Wintarem. I to by³ koniec K³a. Nastêpnym razem do centrum bêdziemy siê mogli wybraæ tylko we dwóch. I jeszcze jedno: tych dwóch mia³o nasze rysopisy. Nie mam pojêcia, kto móg³ zleciæ nasze zabójstwo. Choæ w sumie jest sporo ludzi, którym by³oby to na rêkê. Da³em temu trzeciemu uciec. S¹dzê, ¿e to jeden z najemników. Mia³ na twarzy spor¹ bliznê, orzechowe oczy. Postaram siê go znaleŸæ. \n To chyba na tyle. B¹dŸ ostro¿ny i powodzenia. \n Duch \n \n Do Ducha \n \n "Hej! \n Zostawiam ci trochê informacji. Nie mogê teraz siê kontaktowaæ - jestem œledzony. \n Cz³owieku, jestem na pó³nocy... Tam, gdzie byliœmy wczeœniej... Spróbujê poradziæ sobie sam... Przepraszam, ale nie mogê na ciebie czekaæ... PóŸniej wyjaœniê. \n Ten sukinsyn, który zabi³ K³a, po¿a³uje, ¿e siê w ogóle urodzi³... Potnê go na kawa³ki... Dowiedz siê tylko, kim jest, nied³ugo wrócê, to wyrównamy z nim rachunki. \n Spotkajmy siê u naszego wspólnego znajomego. Znasz miejsce i osobê :)  \n Powodzenia. \n Strielok " \n \n Do Strieloka \n \n "Czeœæ. By³em tam, ale ciebie nie by³o. Nie powinieneœ by³ iœæ do centrum samemu. Zreszt¹ niewa¿ne. Taa, wiem, gdzie i u kogo ciê znaleŸæ :) \n Duch"</text>
+	</string>

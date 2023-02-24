@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="binoc_tutorial">
+		<text>Per usare il binocolo, selezionalo ($$ACTION_wpn_5$$) e premi il pulsante di "fuoco" per zoomare in avanti.</text>
+	</string>
+	<string id="binocular">
+		<text>Binocolo</text>
+	</string>
+	<string id="crouch">
+		<text>Posizione accovacciata</text>
+	</string>
+	<string id="crouch_down_tutorial">
+		<text>Per acquattarti, premi ($$ACTION_crouch$$) + (Shift)</text>
+	</string>
+	<string id="crouch_tutorial">
+		<text>Per accovacciarti, premi ($$ACTION_crouch$$). Per acquattarti ulteriormente premi ($$ACTION_crouch$$) + ($$ACTION_accel$$)</text>
+	</string>
+	<string id="hide_weapon">
+		<text>Selezione arma</text>
+	</string>
+	<string id="hide_weapon_tutorial">
+		<text>Alcuni stalker si rifiutano di parlarti se rivolgi l'arma contro di loro. Per nasconderla, basta selezionare un bullone ($$ACTION_wpn_6$$).</text>
+	</string>
+	<string id="jump">
+		<text>Salto</text>
+	</string>
+	<string id="jump_tutorial">
+		<text>I salti ti permettono di arrampicarti in cima a barriere non troppo grandi. Per saltare, premi ($$ACTION_jump$$).</text>
+	</string>
+	<string id="move_tutorial">
+		<text>Tipi di movimento</text>
+	</string>
+	<string id="overload">
+		<text>Sovraccarico</text>
+	</string>
+	<string id="overload_tutorial">
+		<text>Non sei un mulo, quindi non puoi trasportare carichi oltre un certo limite di peso. Quando il peso della tua attrezzatura supera il limite massimo, comincerai a perdere rapidamente energia. Nella finestra dell'inventario puoi tenere sotto controllo il peso corrente del tuo equipaggiamento e il limite massimo di peso sostenibile.</text>
+	</string>
+	<string id="radiation">
+		<text>Radiazioni</text>
+	</string>
+	<string id="radiation_tutorial">
+		<text>Se il personaggio porta un reperto radioattivo nella cintura o entra in un territorio con un alto livello di radiazioni, la sua salute comincia a peggiorare e si manifestano sintomi da contaminazione. Per combattere gli effetti della contamnazione, si possono utilizzare le pillole antiradiazioni e la vodka.</text>
+	</string>
+	<string id="relation">
+		<text>Atteggiamento</text>
+	</string>
+	<string id="relation_tutorial">
+		<text>Prestando aiuto agli altri personaggi, migliorerai il loro atteggiamento nei tuoi confronti e la tua reputazione. Questi due fattori sono importanti, poichй facilitano l'interazione con i personaggi che incontri. Questi, infatti, saranno piщ propensi a fornirti informazioni aggiuntive e venderti i loro oggetti a prezzi inferiori. Al contrario, se farai fuoco contro qualcuno la sua reazione e quella dei suoi amici saranno immediatamente negative, e non esiteranno ad attaccarti.</text>
+	</string>
+	<string id="sleep_tutorial">
+		<text>Questo и un buon posto per farsi un pisolino. Qui puoi farti una bella dormita, aspettare che passi la notte o semplicemente ammazzare il tempo. Per andare a dormire, apri l'inventario, imposta la durata del sonno e premi il pulsante Riposa. Il tuo personaggio si sveglierа all'ora prestabilita. A volte farа dei sogni.</text>
+	</string>
+	<string id="sprint">
+		<text>Scatto</text>
+	</string>
+	<string id="sprint_tutorial">
+		<text>Tavolta и necessario correre piщ rapidamente del solito. Per farlo, premi ($$ACTION_sprint_toggle$$) mentre stai correndo. Il personaggio in scatto и piщ veloce e riesce a saltare piщ in alto, ma si stanca piщ in fretta e non puт sparare.</text>
+	</string>
+	<string id="starvation_tutorial">
+		<text>Se il personaggio non mangia per troppo tempo, comincia ad avere fame. A meno che non trovi qualcosa da mangiare, la sua salute andrа gradualmente peggiorando. Per evitare che ciт accada, и necessario mangiare regolarmente. Una fetta di pane, cibo in scatola o una salsiccia risolvono il problema facilmente, almeno per un po'.</text>
+	</string>
+	<string id="tutorial">
+		<text>Allenamento</text>
+	</string>
+	<string id="weakness">
+		<text>Affaticamento</text>
+	</string>
+	<string id="weakness_tutorial">
+		<text>Correre troppo a lungo и causa di affaticamento. Quando un personaggio и esausto, non и piщ in grado di correre e riesce solo a camminare. Maggiore и il peso trasportato, piщ rapido и l'affaticamento. Basta restare fermi per qualche secondo per recuperare.</text>
+	</string>
+	<string id="weapon">
+		<text>Stato dell'arma</text>
+	</string>
+	<string id="weapon_tutorial">
+		<text>Tutte le armi hanno un parametro di durata. Minore и la durata di un'arma, piщ frequenti sono gli inceppamenti. Per sbloccarla, ricarica premendo $$ACTION_wpn_reload$$. La durata di un'arma diminuisce con l'uso. Un'arma puт diventare del tutto inutilizzabile se colpita dai proiettili.</text>
+	</string>
+	<string id="wound">
+		<text>Ferite aperte</text>
+	</string>
+	<string id="wound_tutorial">
+		<text>Se il personaggio viene colpito, puт cominciare a sanguinare. Le emorragie provocano un peggioramento costante delle condizioni di salute. Quanto piщ grave и l'emorragia (icona verde se lieve, icona rossa se grave), tanto piщ rapido и il peggioramento della salute. Le emorragie si fermano da sole con il passare del tempo, ma anche quelle piщ gravi possono essere fermate immediatamente usando le bende.</text>
+	</string>
+	<string id="pda_diary_tutorial">
+		<text>Nel palmare dello stalker morto hai trovato le sue osservazioni sulle anomalie presenti nelle gallerie: il tuo collega ha scoperto che il loro funzionamento и regolare. Puoi consultare queste informazioni sul tuo palmare, nella sezione "Diario".</text>
+	</string>
+</string_table>

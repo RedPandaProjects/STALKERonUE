@@ -1,0 +1,72 @@
+	<string id="bar_darklab_documents">
+		<text>Trova i documenti nel laboratorio sotterraneo</text>
+	</string>
+	<string id="bar_darklab_documents_1">
+		<text>Prendi la chiave del laboratorio a Borov</text>
+	</string>
+	<string id="bar_darklab_documents_2">
+		<text>Esci dalla base dei banditi</text>
+	</string>
+	<string id="bar_darklab_documents_3">
+		<text>Trova l'entrata del laboratorio</text>
+	</string>
+	<string id="bar_darklab_documents_4">
+		<text>Intrufolati nella base</text>
+	</string>
+	<string id="bar_darklab_documents2">
+		<text>Trova i documenti nell'X18</text>
+	</string>
+	<string id="bar_darklab_documents2_1">
+		<text>Trova i documenti</text>
+	</string>
+	<string id="bar_darklab_documents2_2">
+		<text>Porta i documenti al Barista</text>
+	</string>
+	<string id="dar_codedoor_1">
+		<text>Trova la porta con la chiusura codificata</text>
+	</string>
+	<string id="dar_codedoor_1_1">
+		<text>Scopri il codice per l'apertura della porta</text>
+	</string>
+	<string id="dar_codedoor_1_2">
+		<text>Apri la porta con il codice</text>
+	</string>
+	<string id="dar_codedoor_2">
+		<text>Apri la porta del centro di controllo</text>
+	</string>
+	<string id="dar_codedoor_2_1">
+		<text>Scopri il codice per l'apertura della porta</text>
+	</string>
+	<string id="dar_codedoor_2_2">
+		<text>Apri la porta con il codice</text>
+	</string>
+	<string id="val_captive_help">
+		<text>Libera il Duty</text>
+	</string>
+	<string id="val_captive_help_1">
+		<text>Segui Pallottola fino al sito dell'imboscata</text>
+	</string>
+	<string id="val_captive_help_2">
+		<text>Uccidi i banditi e salva il Duty</text>
+	</string>
+	<string id="val_come_to_trader">
+		<text>Torna dal trafficante</text>
+	</string>
+	<string id="val_come_to_trader_0">
+		<text>Torna dal trafficante</text>
+	</string>
+	<string id="val_come_to_trader_1">
+		<text>Esci dalla Valle Oscura</text>
+	</string>
+	<string id="val_come_to_trader_2">
+		<text>Mostra i documenti al trafficante</text>
+	</string>
+	<string id="val_prisoner_help">
+		<text>Libera il membro dei Duty dalla prigione</text>
+	</string>
+	<string id="val_prisoner_help_0">
+		<text>Tira fuori il Duty dalla prigione dei banditi</text>
+	</string>
+	<string id="val_prisoner_help_main">
+		<text>Libera il Duty dalla prigione dei banditi</text>
+	</string>

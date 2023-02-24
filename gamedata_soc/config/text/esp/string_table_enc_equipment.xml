@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Antirad">
+		<text>Fбrmacos antirrad.</text>
+	</string>
+	<string id="Arm-heavy">
+		<text>Material pesado de stalker</text>
+	</string>
+	<string id="Arm-light">
+		<text>Material ligero de stalker</text>
+	</string>
+	<string id="Arm-medium">
+		<text>Material medio de stalker</text>
+	</string>
+	<string id="bandage">
+		<text>Vendas</text>
+	</string>
+	<string id="Binocul">
+		<text>Binoculares</text>
+	</string>
+	<string id="Bread">
+		<text>Pan</text>
+	</string>
+	<string id="cit_deadcity_maps_desc">
+		<text>Un mapa detallado de la Cuidad Muerta, incluidas las posiciones de los mercenarios.</text>
+	</string>
+	<string id="cit_deadcity_maps_name">
+		<text>Mapa de la Ciudad Muerta</text>
+	</string>
+	<string id="cit_doctors_key_desc">
+		<text>Cуdigo de Doc que abre un escondite secreto en Pripyat</text>
+	</string>
+	<string id="cit_doctors_key_short_desc">
+		<text>Cуdigo de Doc</text>
+	</string>
+	<string id="Conserva">
+		<text>Delicia de turista</text>
+	</string>
+	<string id="Detect1">
+		<text>Detector de anomalнas</text>
+	</string>
+	<string id="Devic">
+		<text>Instrumentos y dispositivos</text>
+	</string>
+	<string id="device-PDA">
+		<text>PDA</text>
+	</string>
+	<string id="device-torch">
+		<text>Linterna</text>
+	</string>
+	<string id="enc_equipment_armors_arm-heavy">
+		<text>Traje protector. Peso: 18 kg. Detalles: protege el cuerpo de Medusa, Pelusa quemada, la mayorнa de las anomalнas y el daсo fнsico. El torso y la espalda estбn protegidos por placas biometбlicas integradas. El traje estб equipado con un casco de plбstico hermйtico y reforzado, y dos bombonas de oxнgeno. Nota: en largos periodos de utilizaciуn, el traje se va deteriorando gradualmente por el uso.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-light">
+		<text>Traje protector. Peso: 8 kg. Detalles: protege el cuerpo de anomalнas dйbiles y daсo fнsico. Equipado con una mбscara de oxнgeno. Nota: en largos periodos de utilizaciуn, el traje se va deteriorando gradualmente por el uso.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-medium">
+		<text>Traje protector. Peso: 12 kg. Detalles: protege al usuario de Medusa, Pelusa quemada, la mayorнa de las anomalнas y el daсo fнsico. Equipado con un casco hermйtico y una bombona de oxнgeno. Nota: en largos periodos de utilizaciуn, el traje se va deteriorando gradualmente por el uso.</text>
+	</string>
+	<string id="enc_equipment_armors_sci2">
+		<text>Traje rojo S.C.A.P.E. con casco hermйtico. Peso: 11 kg. Descripciуn: protege el cuerpo del fuego, бcido, gas tуxico, distintas anomalнas, Pelusa quemada y daсo fнsico. Equipado con dos bombonas de oxнgeno. Nota: en largos periodos de utilizaciуn, el traje se va deteriorando gradualmente por el uso.</text>
+	</string>
+	<string id="enc_equipment_devic_binocul1">
+		<text>Binoculares militares.</text>
+	</string>
+	<string id="enc_equipment_devic_detect1">
+		<text>Dispositivo para la detecciуn de campos de anomalнas y alteraciones. Notifica su presencia con un sonido. Para su uso correcto es necesario ajustarlos al cinturуn y encenderlos. </text>
+	</string>
+	<string id="enc_equipment_devic_device-PDA1">
+		<text>Asistente digital personal: indispensable en la Zona.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1">
+		<text>Linterna potente. Muy ъtil en бreas de iluminaciуn insuficiente.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1_m1">
+		<text>Linterna potente. El tiempo de recarga se ha reducido gracias a un moderno transformador.</text>
+	</string>
+	<string id="enc_equipment_energydrink">
+		<text>Es una excelente bebida energйtica compuesta de cafeнna, taurina y una mezcla de vitaminas rejuvenecedoras. ЎLa soluciуn perfecta para combatir el cansancio!</text>
+	</string>
+	<string id="enc_equipment_food_bread1">
+		<text>No sй quiйn se las arreglarб para hornear este pan en la Zona, pero al menos no estб contaminado y es comestible. ЎO por lo menos ningъn stalker se ha quejado hasta ahora!</text>
+	</string>
+	<string id="enc_equipment_food_conserva1">
+		<text>Conservas procedentes de un almacйn del ejйrcito que asaltaron los stalkers. Todavнa no han caducado.</text>
+	</string>
+	<string id="enc_equipment_food_kolbasa1">
+		<text>La salchicha "dietйtica" (a base de carne de pollo y soja) es, a falta de algo mejor, el desayuno, la comida y la cena de los stalkers... todo en uno.</text>
+	</string>
+	<string id="enc_equipment_food_vodka1">
+		<text>Vodka fabricado por la empresa GSC. Entra con facilidad y reduce de forma significativa los efectos de la radiaciуn, pero, por razones obvias, hay que beberlo con moderaciуn.</text>
+	</string>
+	<string id="enc_equipment_medi_antirad1">
+		<text>Reduce los efectos de la radiaciуn.</text>
+	</string>
+	<string id="enc_equipment_medi_bandage1">
+		<text>Vendas. Ayudan a detener las hemorragias.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit1">
+		<text>Botiquнn multiusos. Sirve para curar heridas de todo tipo y gravedad: cortes, quemaduras, envenenamiento, etc.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit2">
+		<text>Equipo mйdico especializado para tratar lesiones fнsicas y hemorragias. Contiene un componente que favorece la coagulaciуn, antibiуticos, estimuladores inmunolуgicos y analgйsicos. </text>
+	</string>
+	<string id="enc_equipment_medi_medkit3">
+		<text>Equipo mйdico diseсado especialmente para trabajar en la Zona. Contiene remedios para curar heridas y eliminar radionucleidos del cuerpo. Previene los efectos producidos por las ondas radiactivas y reduce la dosis de radiaciуn acumulada. </text>
+	</string>
+	<string id="energy_drink_name">
+		<text>Bebida energйtica</text>
+	</string>
+	<string id="energy_drink_short_name">
+		<text>Bebida energйtica</text>
+	</string>
+	<string id="Equipment">
+		<text>Material y comida</text>
+	</string>
+	<string id="Food">
+		<text>Comida</text>
+	</string>
+	<string id="Kolbasa">
+		<text>Salchicha dietйtica</text>
+	</string>
+	<string id="Medi">
+		<text>Medicamentos</text>
+	</string>
+	<string id="Medkit">
+		<text>Botiquнn</text>
+	</string>
+	<string id="Medkit_army">
+		<text>Botiquнn militar</text>
+	</string>
+	<string id="Medkit_scientific">
+		<text>Botiquнn cientнfico</text>
+	</string>
+	<string id="Sci2">
+		<text>EXP-4 cientнfico.</text>
+	</string>
+	<string id="Vodka">
+		<text>Vodka cosaco</text>
+	</string>
+	<string id="st_detector">
+		<text>Detector de anomalнas</text>
+	</string>
+	<string id="st_detector_descr">
+		<text>Estб pensado para detectar las zonas anуmalas y los hervideros de contaminaciуn radiactiva.</text>
+	</string>
+	<string id="st_grenade_gd5">
+		<text>Granada de humo</text>
+	</string>
+</string_table>

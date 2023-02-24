@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="artefact">
+		<text>Recupera il reperto.</text>
+	</string>
+	<string id="barmen_defend_camp_1">
+		<text>Proteggi il campo degli stalker alla Discarica dall'assalto dei banditi</text>
+	</string>
+	<string id="barmen_defend_camp_1_descr">
+		<text>Proteggi il campo degli stalker alla Discarica dall'assalto dei banditi</text>
+	</string>
+	<string id="barmen_defend_camp_1_text">
+		<text>Un gruppo di stalker vuole farmi una visita e io sono personalmente interessato a che arrivino sani e salvi. Si fermeranno non lontano dal bar. Un criminale pentito ci ha informato quasi volontariamente che verranno attaccati quanto prima. Quindi, raggiungili e proteggi il loro campo dall'assalto.</text>
+	</string>
+	<string id="barmen_defend_camp_2">
+		<text>Aiuta gli stalker a respingere i banditi all'istituto Agroprom</text>
+	</string>
+	<string id="barmen_defend_camp_2_descr">
+		<text>Aiuta gli stalker a respingere i banditi all'istituto Agroprom</text>
+	</string>
+	<string id="barmen_defend_camp_2_text">
+		<text>Ecco la mia proposta. Di recente, un gruppo di stalker ha raggiunto l'istituto Agroprom. Nell'ultimo contatto avuto con loro, hanno detto che sottoterra c'era qualcosa di prezioso, ma che erano incalzati dai banditi. Stanno tenendo duro, ma non possono andarsene. Li aiuterai?</text>
+	</string>
+	<string id="barmen_eliminate_camp_1">
+		<text>Elimina i banditi della Discarica.</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_descr">
+		<text>Spazza via la banda che si и insediata alla Discarica. Dev'essere un'operazione rapida ed efficace.</text>
+	</string>
+	<string id="barmen_eliminate_camp_1_text">
+		<text>Un lavoro, eh? Vediamo cosa abbiamo qui... Aha! Eccoti accontentato: puoi eliminare quei banditi alla Discarica? I Duty, con tutti i loro discorsi sulla legge e sull'ordine, non l'hanno ancora fatto. Sono degli incapaci assoluti, quindi non dureranno a lungo in ogni caso. Ma il primo che riuscirа a prenderli farа un bel colpo... e naturalmente gli offro da bere.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2">
+		<text>Elimina i mercenari e i banditi a Rostok.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_descr">
+		<text>Annienta il gruppo di mercenari e i banditi che bloccano il passaggio attraverso Rostock.</text>
+	</string>
+	<string id="barmen_eliminate_camp_2_text">
+		<text>C'и una banda di mercenari non lontano da qui, a Rostock. Hanno fatto comunella coi banditi, quindi ora stanno pensando di bloccare il passaggio attraverso l'impianto. Non serve che ti dica che sono una gran seccatura, che deve essere risolta quanto prima. Quelli dei Duty e qualcuno degli anziani sono giа partiti per andare a dargli una lezione, ma non ne abbiamo saputo piщ niente... Quindi perchй tu non... ehm... vai a dare un'occhiata? C'и anche da guadagnare.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3">
+		<text>Elimina i banditi alla fattoria.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_descr">
+		<text>И molto semplice: libera la fattoria dai banditi.</text>
+	</string>
+	<string id="barmen_eliminate_camp_3_text">
+		<text>C'и una fattoria vicino ai vecchi magazzini. Era un posto perfetto per incontrarsi, per scambiare merci, sai com'и... cose di questo genere. Ma ora и occupata dai banditi che, a quanto pare, non hanno alcuna intenzione di andarsene. Questa faccenda non mi piace affatto. La fattoria mi serve, e al piщ presto. Non mi interessa cosa succede agli inquilini.</text>
+	</string>
+	<string id="barmen_eliminate_camp_4">
+		<text>Libera il campo dei banditi nelle Lande desolate</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_descr">
+		<text>Libera il campo dei banditi nelle Lande desolate</text>
+	</string>
+	<string id="barmen_eliminate_camp_4_text">
+		<text>Nelle Lande desolate ci sono dei banditi. Non possiamo permettere che questa feccia contamini i dintorni del bar. И di vitale importanza che il loro campo venga spazzato via.</text>
+	</string>
+	<string id="barmen_eliminate_camp_5">
+		<text>Distruggi la tana dei cani selvatici mutanti nelle Lande desolate</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_descr">
+		<text>Distruggi la tana dei cani selvatici mutanti nelle Lande desolate</text>
+	</string>
+	<string id="barmen_eliminate_camp_5_text">
+		<text>Alcuni dei nostri sono partiti per una spedizione e sono tornati da soli. Laceri, sanguinolenti e con lo sguardo perso. Molto probabilmente sono incappati nei cani. Ce n'и un intero branco laggiщ. Quindi, trova la loro tana e uccidili tutti quanti.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6">
+		<text>Annienta il gruppo di banditi all'istituto Agroprom.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_descr">
+		<text>Annienta il gruppo di banditi all'istituto Agroprom.</text>
+	</string>
+	<string id="barmen_eliminate_camp_6_text">
+		<text>Mi ricordo come nel '94 quei ricattatori si sono appiccicati a me: molla il grano, dicevano. Accidenti, cosa non ho passato allora: avevo un ristorante. A quei tempi nessuno ha mai mosso un dito! E adesso scopro che la stessa banda sta lavorando all'istituto Agroprom, e guadagna sui reperti che trovano laggiщ. Ma adesso io posso fare qualcosa. So anche esattamente dove si nascondono. Fammi un favore: puniscili. </text>
+	</string>
+	<string id="barmen_eliminate_camp_7">
+		<text>Distruggi la tana degli snork nella Valle Oscura</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_descr">
+		<text>Distruggi la tana degli snork nella Valle Oscura</text>
+	</string>
+	<string id="barmen_eliminate_camp_7_text">
+		<text>Giа... A quanto pare ha ragione chi sostiene che la zona si sta espandendo. Hanno notato alcuni snork nella Valle Oscura, dove nessuno li aveva mai visti prima. E qualcuno si и fatto prendere dal panico. I Dolgovzi hanno promesso di eliminare gli snork, ma sembra che non ottengano grandi risultati. Vuoi pensarci tu?</text>
+	</string>
+	<string id="barmen_find_artefact_1">
+		<text>Trova il reperto Pezzo di Carne</text>
+	</string>
+	<string id="barmen_find_artefact_1_descr">
+		<text>Trova il reperto Pezzo di Carne che cura malattie e ferite.</text>
+	</string>
+	<string id="barmen_find_artefact_1_text">
+		<text>Sono passati alcuni cappellani e hanno richiesto un Pezzo di Carne. Come sai, sono piuttosto interessati a questo reperto curativo... quei maledetti operatori di miracoli! Comunque sia... Lo farai? Decidi tu.</text>
+	</string>
+	<string id="barmen_find_artefact_2">
+		<text>Trova il reperto Spina di Cristallo</text>
+	</string>
+	<string id="barmen_find_artefact_2_descr">
+		<text>Trova il reperto Spina di Cristallo che protegge contro gli attacchi psionici.</text>
+	</string>
+	<string id="barmen_find_artefact_2_text">
+		<text>Uno "spillo"?... Ma no, non c'entra niente. "Spina del Castello"?... Guarda che ti sbagli... Che coglione! "Spina di Cristallo", и chiaro adesso? Ecco la mia proposta: ho ricevuto un ordine per questo reperto, la "Spina di Cristallo". Ne hai sentito parlare? Dicono che se ne hai uno, nessuna creatura puт incasinarti il cervello. Allora, che cosa ne dici?</text>
+	</string>
+	<string id="barmen_find_artefact_3">
+		<text>Trova il reperto Stella della Notte</text>
+	</string>
+	<string id="barmen_find_artefact_3_descr">
+		<text>Trova il reperto Stella della Notte per contribuire all'impegno del Paese nella ricerca militare.</text>
+	</string>
+	<string id="barmen_find_artefact_3_text">
+		<text>Mi serve il reperto Stella della Notte. Purtroppo devo dire che non realizza nessun desiderio, certo, и evidente, ma puт farti diventare ricco. Gli scienziati se la contendono a peso d'oro. Dicono che gli serve a scopi militari... Allora, che cosa ne dici?</text>
+	</string>
+	<string id="barmen_find_artefact_4">
+		<text>Trova il reperto Lampo</text>
+	</string>
+	<string id="barmen_find_artefact_4_descr">
+		<text>Trova il reperto Lampo</text>
+	</string>
+	<string id="barmen_find_artefact_4_text">
+		<text>Il compito и semplice e la paga и buona. Devi trovare il reperto Lampo. Non mi chiedere chi lo ha richiesto e perchй. Allora, ci stai?</text>
+	</string>
+	<string id="barmen_find_artefact_5">
+		<text>Trova il reperto Pesce rosso</text>
+	</string>
+	<string id="barmen_find_artefact_5_descr">
+		<text>Trova il reperto Pesce rosso</text>
+	</string>
+	<string id="barmen_find_artefact_5_text">
+		<text>Conosci la favola del Pesciolino rosso, Marchiato? Sм, sм, proprio quella. Ci sono anche un bel po' di barzellette sul tema. Insomma, c'и questo vecchio che vuole acchiapparlo a tutti i costi. In poche parole, mi serve quel reperto unico chiamato Pesce rosso, il cliente viene da fuori, и rispettabile. Mi aiuterai?</text>
+	</string>
+	<string id="barmen_find_item_1">
+		<text>Trova la tuta psionica</text>
+	</string>
+	<string id="barmen_find_item_1_descr">
+		<text>Trova la tuta che fornisce una protezione efficace contro le emissioni psioniche. Puoi trovarla nei laboratori abbandonati della Valle Oscura.</text>
+	</string>
+	<string id="barmen_find_item_1_text">
+		<text>In quei laboratori della Valle Oscura stanno cercando il modo di proteggere il cervello umano dalle emissioni psioniche. Una cosa и certa: se la prendono comoda... Comunque, uno dei loro tentativi и effettivamente riuscito e da qualche parte dovrebbe esserci una tuta, con la quale potresti addirittura baciare il controllore. Proprio cosм, и fantastica. Allora, se mi porti questo gingillo non me lo dimenticherт mai.</text>
+	</string>
+	<string id="barmen_find_item_2">
+		<text>Trova l'arma del forestiero.</text>
+	</string>
+	<string id="barmen_find_item_2_descr">
+		<text>Un compito interessante. Il nome mi ricorda qualcosa... ma dove l'ho conosciuto?</text>
+	</string>
+	<string id="barmen_find_item_2_text">
+		<text>Un tempo c'era questo forestiero dalle nostre parti... forse si chiamava Gordon. Si comportava come uno stalker esperto, ma diceva di non essere mai stato nella Zona. Comunque, non и questo il punto. Alla fine и scomparso dentro la Zona. Ma aveva questa cosa piuttosto curiosa, il Black Kite. Se solo potessi dargli un'occhiata da vicino...</text>
+	</string>
+	<string id="barmen_find_item_3">
+		<text>Trova la Vintar modificata</text>
+	</string>
+	<string id="barmen_find_item_3_descr">
+		<text>Trova la Vintar modificata. A quanto pare, bisogna cercare nella zona della Foresta Rossa. </text>
+	</string>
+	<string id="barmen_find_item_3_text">
+		<text>C'era questa storia strana. Salta fuori questo tizio, le tasche piene di grana, e decide di mettere insieme una banda composta non di anziani ma ti gente piщ sveglia. Compra un sacco di attrezzature... Avevo questa Vintar nuovissima, una pistola stupenda! ... e sono stato cosм stupido da vendergliela. Devo ammettere che ci ho ricavato dei bei soldi... solo che li hanno fatti fuori tutti, vicino alla Foresta Rossa. Che posso dire, sono morti per niente... be' hanno ricevuto una bella lezione, tutti quanti: nella Zona non ti spiani la strada a suon di soldi. Comunque... non riesco a smettere di pensare a quella Vintar, un'ottima pistola lasciata lа ad arrugginire! Non ti va di cercarmela? Pago bene!</text>
+	</string>
+	<string id="barmen_kill_stalker_1">
+		<text>Uccidi il soldato</text>
+	</string>
+	<string id="barmen_kill_stalker_1_descr">
+		<text>Un soldato deve mordere la polvere. И un lavoretto da nulla se non fosse che... и strano che il bersaglio sia un uomo in uniforme mentre il cliente и furibondo.</text>
+	</string>
+	<string id="barmen_kill_stalker_1_text">
+		<text>Voglio che stendi questo soldato... non chiedermi chi и, che vuoi che me ne importi! Fallo e basta. E allora? Posso affidarti questo compito?</text>
+	</string>
+	<string id="barmen_kill_stalker_2">
+		<text>Uccidi lo stalker</text>
+	</string>
+	<string id="barmen_kill_stalker_2_descr">
+		<text>Elimina uno degli stalker. Morte all'imbroglione, и la vendetta del trafficante.</text>
+	</string>
+	<string id="barmen_kill_stalker_2_text">
+		<text>Sai, ci sono degli uomini dei quali non si puт proprio parlar male... ti fidi di loro come di te stesso, vero? Ci fai affidamento... Poi improvvisamente scopri che sono i piщ spregevoli e ignobili figli di puttana... Allora, la proposta и questa: c'и questo caso da risolvere. Fallo e io mi occuperт del resto.</text>
+	</string>
+	<string id="barmen_kill_stalker_3">
+		<text>Uccidi lo stalker della fazione dei Monolith</text>
+	</string>
+	<string id="barmen_kill_stalker_3_descr">
+		<text>Trova l'ex amico del trafficante e aiutalo a morire.</text>
+	</string>
+	<string id="barmen_kill_stalker_3_text">
+		<text>Una volta avevo un amico... difficile da credere, vero? Ah! Siamo venuti nella Zona insieme, quando qui non c'era niente di tutto questo... Le cose che facevamo, i posti dove andavamo... oh be', eravamo giovani, non ci fregava niente di nessuno... Ma lui non si accontentava mai. Voleva raggiungere il centro della Zona e stava cercando di convincermi, ma io mi sono rifiutato e ho fatto la cosa giusta... Abbiamo litigato e lui se n'и andato... E ora ho sentito dire che qualcuno lo ha visto laggiщ... ora stai con i Monolith. Ecco la mia proposta, Marchiato... Tu sei mio amico, quindi fai questo per me: trovalo e... be' non farlo soffrire, deve avere giа sofferto molto... Era come un fratello per me, sai? </text>
+	</string>
+	<string id="barmen_kill_stalker_4">
+		<text>Uccidi lo stalker chiamato Vampiro</text>
+	</string>
+	<string id="barmen_kill_stalker_4_descr">
+		<text>Trova e uccidi lo stalker chiamato Vampiro.</text>
+	</string>
+	<string id="barmen_kill_stalker_4_text">
+		<text>Basta, ne ho avuto abbastanza di questo sacco di merda! Intendo il Vampiro, lo conosci? Che bastardo! Succhia la fortuna alla gente, al posto del sangue. Chiunque si accompagna a lui muore, muoiono tutti, mentre lui ritorna sempre sano e salvo! L'ha giа fatto cinque volte! И malvagio, non credi? Vorrei portare dei fiori sulla tomba di questo Vampiro... Accetti il lavoro?</text>
+	</string>
+	<string id="barmen_kill_stalker_5">
+		<text>Uccidi lo stalker chiamato Passero</text>
+	</string>
+	<string id="barmen_kill_stalker_5_descr">
+		<text>Trova il Passero e vendica la morte di un altro stalker.</text>
+	</string>
+	<string id="barmen_kill_stalker_5_text">
+		<text>Maledetti moschettieri! Giocano a fare D'Artagnan, questi stronzi! Come se non bastasse aggirarsi tra le anomalie e schivare le pallottole, quegli idioti hanno cominciato a sfidarsi a duello! Ascolta: tutto и nato da una rissa... nessuno sa come sia cominciata. E questi due imbecilli hanno deciso di far scorrere un po' di sangue. Un attimo dopo, uno dei due era morto... era anche un bravo stalker! Mentre l'altro, il Passero, se l'и svignata per evitare che gli piantassi una pallottola in testa. Trovalo. Sono sicuro che sia ancora nella Zona. Ci stai?</text>
+	</string>
+	<string id="barmen_monster_part_1">
+		<text>Procurati un occhio del mostro carnivoro</text>
+	</string>
+	<string id="barmen_monster_part_1_descr">
+		<text>Procurati un occhio del mostro carnivoro</text>
+	</string>
+	<string id="barmen_monster_part_1_text">
+		<text>Presto ci sarа una festa, una cena elegante, e alcuni buongustai locali particolarmente allegri (non и necessario fare nomi) vorranno di certo provare il mio piatto speciale, occhi di "ploti" in salsa di maiale. Cioи nel loro stesso sugo coperto di maionese. In poche parole, mi serve l'occhio della bestia, e in fretta. </text>
+	</string>
+	<string id="barmen_monster_part_2">
+		<text>Portami lo zoccolo di un cinghiale</text>
+	</string>
+	<string id="barmen_monster_part_2_descr">
+		<text>Portami lo zoccolo di un cinghiale</text>
+	</string>
+	<string id="barmen_monster_part_2_text">
+		<text>Sai che noi lavoriamo corna e zoccoli? Sono una vera raritа! Si creano bellissimi gioielli dagli zoccoli dei mutanti locali: conosco un gioielliere che sarebbe interessato. Quindi vai, trova lo zoccolo del cinghiale e ti ritroverai qualche soldo in tasca.</text>
+	</string>
+	<string id="dolg_defend_lager_1">
+		<text>Proteggi la postazione di sicurezza dei Duty</text>
+	</string>
+	<string id="dolg_defend_lager_1_descr">
+		<text>Proteggi la postazione di sicurezza dei Duty alla Discarica.</text>
+	</string>
+	<string id="dolg_defend_lager_1_text">
+		<text>E cosм, con tutta probabilitа hai incontrato i nostri alla Discarica. Si trovano in una specie di avamposto esterno, a protezione della barra dai mutanti che scendono dalla Valle Oscura. Abbiamo saputo che il branco di cinghiali malati si sta avvicinando a loro. Aiutali a respingere i mutanti e ti saremo debitori.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1">
+		<text>Annienta lo zombie</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_descr">
+		<text>Annienta gli zombie duri a morire di Yantar.</text>
+	</string>
+	<string id="dolg_eliminate_lager_1_text">
+		<text>Di recente abbiamo inviato un gruppo a Yantar. Purtroppo, nessuno di loro и tornato indietro. Mi hanno detto che sono stati notati alcuni stalker di quel gruppo trasformati in zombie, non lontano dal laboratorio mobile degli scienziati ad Amber. Non possiamo permettere che rimangano in quello stato orribile. Il tuo compito: trovali, qualsiasi cosa siano ora, e annientali.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10">
+		<text>Elimina il branco di cani.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_descr">
+		<text>Elimina il branco di cani della Discarica.</text>
+	</string>
+	<string id="dolg_eliminate_lager_10_text">
+		<text>Naturalmente, non diamo alcun incarico a stalker stranieri. D'altra parte, questo и un compito facile, quindi non c'и ragione di impegnare i nostri. Quindi ascolta. Devi liberare una piccola tana di animali alla Discarica. C'и giа uno dei nostri gruppi al lavoro laggiщ, quindi in caso di guai potrai trovare riparo. Tuttavia non dovrebbero esserci problemi perchй non le bestie non sono molte, non piщ di dieci. Molto probabilmente sono cani: alcuni rapporti recenti parlavano della migrazione di un grosso branco nella zona. Ora vai e porta a termine il tuo incarico. </text>
+	</string>
+	<string id="dolg_eliminate_lager_11">
+		<text>Distruggi il campo degli stalker</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_descr">
+		<text>Distruggi il campo degli stalker all'istituto Agroprom</text>
+	</string>
+	<string id="dolg_eliminate_lager_11_text">
+		<text>C'и una faccenda piuttosto delicata, nella quale i nostri ragazzi non devono assolutamente essere coinvolti. La presenza di alcuni neutrali nella fabbrica dell'istituto Agroprom non и vantaggiosa per i nostri alleati. Ecco cosa devi fare: elimina gli stalker dall'area, chiunque essi siano e a qualunque gruppo appartengano. Capito?</text>
+	</string>
+	<string id="dolg_eliminate_lager_12">
+		<text>Distruggi il distaccamento di mercenari</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_descr">
+		<text>Distruggi il distaccamento di mercenari a Rostok</text>
+	</string>
+	<string id="dolg_eliminate_lager_12_text">
+		<text>E cosм, ecco cosa devi fare: devi distruggere il distaccamento di cecchini del gruppo dei mercenari. La situazione: questi cecchini tengono l'ultimo piano del complesso di edifici. Numero stimato:  non meno di due e non piщ di cinque. A quanto ci risulta, sono armati di fucili da cecchino. Suggerimento: non mostrarti in giro di giorno. </text>
+	</string>
+	<string id="dolg_eliminate_lager_13">
+		<text>Proteggi la base dei banditi</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_descr">
+		<text>Proteggi la base principale dei banditi nella Valle Oscura.</text>
+	</string>
+	<string id="dolg_eliminate_lager_13_text">
+		<text>И di vitale importanza irrompere nella base principale dei banditi ed eliminare il maggior numero di nemici. Si trova nella Valle Oscura, dov'и il centro di ricerche incompiuto. Il nemico conta trenta guerrieri, con armi automatiche leggere, pistole e fucili. Tutto chiaro?</text>
+	</string>
+	<string id="dolg_eliminate_lager_14">
+		<text>Distruggi gli snork.</text>
+	</string>
+	<string id="dolg_eliminate_lager_14_descr">
+		<text>Proteggi le gallerie dagli snork nel settore di Yantar. </text>
+	</string>
+	<string id="dolg_eliminate_lager_14_text">
+		<text>Questa volta dovrai darti alla bonifica. A Yantar, le gallerie stanno letteralmente scoppiando per la presenza di snork: ce ne sono una decina. Giа, non и piщ possibile scaricare la pioggia come prima...</text>
+	</string>
+	<string id="dolg_eliminate_lager_2">
+		<text>Distruggi il branco di mostri carnivori</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_descr">
+		<text>Distruggi il branco di mostri carnivori nelle Lande desolate.</text>
+	</string>
+	<string id="dolg_eliminate_lager_2_text">
+		<text>Abbiamo seguito la migrazione di un grosso branco di animali... Sono mutanti disgustosi, simili ai maiali, dei mostri carnivori. Ora si trovano nell'area della Discarica. I nostri sono tutti occupati, ma queste bestie devono essere distrutte. И un lavoretto un po' speciale: ti pagheremo. </text>
+	</string>
+	<string id="dolg_eliminate_lager_3">
+		<text>Distruggi gli pseudocani</text>
+	</string>
+	<string id="dolg_eliminate_lager_3_descr">
+		<text>Sgombra la tana degli pseudocani vicino ai magazzini militari. </text>
+	</string>
+	<string id="dolg_eliminate_lager_3_text">
+		<text>I nostri alleati ci hanno segnalato la scoperta di una tana di mostri nelle vicinanze dei magazzini militari. Riteniamo che si tratti di un branco di pseudocani. И meglio se stiamo alla larga da quella zona, in questo momento, quindi se ne deve occupare un elemento neutrale. Ci stai?</text>
+	</string>
+	<string id="dolg_eliminate_lager_4">
+		<text>Distruggi la postazione di sicurezza dei mercenari</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_descr">
+		<text>Distruggi la postazione di sicurezza dei mercenari, non lontano dai magazzini militari.</text>
+	</string>
+	<string id="dolg_eliminate_lager_4_text">
+		<text>Ultimamente si и registrato un aumento di attivitа dei gruppi di mercenari, come alcuni attacchi agli scienziati, ricercatori impegnati nella zona. Non possiamo permettere che rimangano impuniti. Dobbiamo portare a termine una piccola spedizione punitiva. L'obiettivo: la postazione di sicurezza dei mercenari vicino ai magazzini militari, dietro il villaggio abbandonato.</text>
+	</string>
+	<string id="dolg_eliminate_lager_5">
+		<text>Elimina i mercenari nelle Lande desolate</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_descr">
+		<text>Elimina i mercenari nelle Lande desolate</text>
+	</string>
+	<string id="dolg_eliminate_lager_5_text">
+		<text>Un gruppo di scienziati sta pensando di studiare le Lande desolate. Ultimamente perт la zona non и sicura perchй i mercenari si stanno dando da fare. Fai in modo che non si trovi piщ un solo mercenario nelle Lande desolate. </text>
+	</string>
+	<string id="dolg_eliminate_lager_6">
+		<text>Uccidi i banditi</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_descr">
+		<text>Uccidi i banditi entrati nelle Lande desolate.</text>
+	</string>
+	<string id="dolg_eliminate_lager_6_text">
+		<text>La faccio breve. I banditi hanno aggirato le nostre postazioni di sicurezza al bar e hanno raggiunto le Lande desolate. Devono essere eliminati. </text>
+	</string>
+	<string id="dolg_eliminate_lager_7">
+		<text>Distruggi il controllore</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_descr">
+		<text>Distruggi il controllore a Yantar.</text>
+	</string>
+	<string id="dolg_eliminate_lager_7_text">
+		<text>Per portare a termine questo incarico devi avere abilitа speciali. Gli scienziati ci hanno riferito di aver notato un controllore a Yantar, vicino all'entrata del laboratorio sotterraneo (nell'edificio centrale). I controllori sono molto pericolosi, ma sono sicuro che te la caverai. </text>
+	</string>
+	<string id="dolg_eliminate_lager_8">
+		<text>Elimina i Freedom</text>
+	</string>
+	<string id="dolg_eliminate_lager_8_descr">
+		<text>Elimina i Freedom che si sono insediati nel villaggio abbandonato, non lontano dai magazzini militari. </text>
+	</string>
+	<string id="dolg_eliminate_lager_8_text">
+		<text>Si и registrato un aumento nell'attivitа della pattuglia di Freedom nel villaggio abbandonato vicino ai magazzini militari. Elimina i guerrieri presenti nel villaggio. Dopo aver eseguito questo compito, ti aspetta un premio speciale.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9">
+		<text>Annienta i banditi</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_descr">
+		<text>Annienta i banditi alla Discarica.</text>
+	</string>
+	<string id="dolg_eliminate_lager_9_text">
+		<text>La situazione attuale non и favorevole: i banditi si stanno radunando nelle aree della Discarica e della Valle Oscura. L'ideale sarebbe mettere a segno due attacchi preventivi contemporanei! I nostri combattenti si occuperanno della valle e tu della Discarica.</text>
+	</string>
+	<string id="dolg_find_item_1">
+		<text>Trova il fucile potenziato</text>
+	</string>
+	<string id="dolg_find_item_1_descr">
+		<text>Trova l'esemplare di TRs 301 vicino ai magazzini militari.</text>
+	</string>
+	<string id="dolg_find_item_1_text">
+		<text>Qualcuno aiuta i mercenari. Recentemente si sono dotati di mitragliatori potenziati per il fuoco di precisione. Lo capisci che и un gingillo pericoloso, vero? Be', a me quell'arma interessa. La mia gratitudine sarа proporzionata, stanne certo.</text>
+	</string>
+	<string id="dolg_kill_stalker_1">
+		<text>Neutralizza il bandito</text>
+	</string>
+	<string id="dolg_kill_stalker_1_descr">
+		<text>Neutralizza il bandito Poker.</text>
+	</string>
+	<string id="dolg_kill_stalker_1_text">
+		<text>Soprannome del soggetto: Poker. Uno dei piщ crudeli tra i capi dei banditi, un maiale stupratore... La testa non gli funziona, и ovvio: dicono che nella Zona abbia preso una malattia rara. Ora soffre di frequenti vuoti di memoria e quando riprende conoscenza non riesce a ricordare chi и e dove si trova. Ciт nonostante, и sempre armato e molto aggressivo. Probabile posizione: Valle Oscura. Pronto per questo incarico?</text>
+	</string>
+	<string id="drunk_dolg_find_item">
+		<text>Trova l'arma del Duty.</text>
+	</string>
+	<string id="drunk_dolg_find_item_descr">
+		<text>Il Duty ti sta chiedendo di trovargli l'arma che ha perso da qualche parte nella Valle Oscura, in un'altra spedizione esplorativa.</text>
+	</string>
+	<string id="drunk_dolg_find_item_text">
+		<text>Non avrebbe dovuto farsi prendere dal panico. Certo che la Zona ti fa di quegli scherzetti al cervello... Pensavo di avere i nervi saldi, di non avere paura di niente e invece... Quell'ululato nelle orecchie. Era tutto come al solito. C'era una spedizione esplorativa nella Valle Oscura, siamo scesi nella trincea con Krivoi per dare copertura al resto del gruppo e quando ho sentito l'ululato ho avuto paura. Cazzo, non mi ricordo neanche come sono arrivato alle coordinate. Quando sono tornato alla base, Voronin mi ha quasi sparato sul posto: mi aveva appena dato un cannone potenziato per farne buon uso, per cosм dire. E io... be', mi sono fatto prendere dal panico talmente in fretta che ho lasciato lа il cannone. Potresti riportarmelo? Altrimenti non ho un'arma decente.  </text>
+	</string>
+	<string id="ecolog_eliminate_lager_1">
+		<text>Sgombra la tana degli snork</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_descr">
+		<text>Distruggi la tana degli snork ad Yantar</text>
+	</string>
+	<string id="ecolog_eliminate_lager_1_text">
+		<text>Ho un po' di soldi per te: li avrai se gli snork che vivono nelle paludi smetteranno di tormentare me e i miei colleghi. Qualche volta, quando siamo impegnati nei nostri esperimenti, non riusciamo neppure a concentrarci. </text>
+	</string>
+	<string id="ecolog_eliminate_lager_2">
+		<text>Distruggi la tana dei cani selvatici</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_descr">
+		<text>Sgombra la tana dei cani selvatici nelle Lande desolate</text>
+	</string>
+	<string id="ecolog_eliminate_lager_2_text">
+		<text>C'и una tana di cani mutanti nelle Lande desolate: voglio che tu la trovi e faccia piazza pulita. Questi mutanti sono particolarmente pericolosi per le nostre spedizioni. So che gli zoologi non saranno tanto contenti, ma questo non и uno zoo, lo devo ammettere. Queste bestie diffondono la rabbia, la peste o chissа cos'altro.</text>
+	</string>
+	<string id="ecolog_find_artefact_1">
+		<text>Porta il reperto Ardente</text>
+	</string>
+	<string id="ecolog_find_artefact_1_descr">
+		<text>Porta il reperto Ardente agli scienziati per le loro ricerche</text>
+	</string>
+	<string id="ecolog_find_artefact_1_text">
+		<text>Siamo riusciti a ottenere il reperto in laboratorio! И un risultato rivoluzionario! Ora tutto il mondo saprа del nostro successo. E il Premio Nobel sarа a portata di mano! Ecco l'esclusivo reperto "Pellicola", la cui principale qualitа и la protezione dalle ustioni di origine chimica. Tu vuoi che te lo consegni in nome della scienza. Ma io ho una richiesta: in cambio, mi serve il reperto "Ardente", sai di che si tratta? Le caratteristiche termiche uniche della sua superficie devono essere indagate a fondo. </text>
+	</string>
+	<string id="ecolog_find_artefact_2">
+		<text>Trova il reperto "Gravi"</text>
+	</string>
+	<string id="ecolog_find_artefact_2_descr">
+		<text>Consegna il reperto "Gravi" nelle mani degli scienziati.</text>
+	</string>
+	<string id="ecolog_find_artefact_2_text">
+		<text>Ci siamo avvicinati moltissimo alla comprensione della natura della gravitazione; in pratica, ben presto riusciremo a creare una nuova generazione di motori basati sul principio dell'antigravitа e questo molto probabilmente ci aprirа la strada per le stelle. Per questo motivo ci serve il reperto "Gravi" e in fretta.</text>
+	</string>
+	<string id="ecolog_find_artefact_3">
+		<text>Trova il reperto "Medusa"</text>
+	</string>
+	<string id="ecolog_find_artefact_3_descr">
+		<text>Gli scienziati hanno bisogno del reperto "Medusa" per condurre delle ricerche nel campo dello spazio-tempo.</text>
+	</string>
+	<string id="ecolog_find_artefact_3_text">
+		<text>La nostra squadra di ricercatori sta per scoprire il mistero dello spazio-tempo. Il teletrasporto non и piщ una fantasia, ma una possibilitа! Il Gorgo и un'anomalia che comprime lo spazio invece di limitarsi a influire sugli oggetti solo secondo la legge di gravitа, come ritengono alcuni dei miei avversari arretrati, seduti comodamente al caldo nei loro istituti di ricerca a masticare gesso. Gli si appanneranno gli occhiali quando scopriranno quali risultati possono essere raggiunti dalla scienza quando si lavora sul campo! Ti prego, portami il reperto "Medusa".</text>
+	</string>
+	<string id="ecolog_find_artefact_4">
+		<text>Trova il reperto "Chiaro di luna"</text>
+	</string>
+	<string id="ecolog_find_artefact_4_descr">
+		<text>Procura il "Chiaro di luna" agli scienziati di Yantar. Un buon reperto...</text>
+	</string>
+	<string id="ecolog_find_artefact_4_text">
+		<text>Ci servono disperatamente dei materiali per continuare nelle nostre ricerche nel campo dell'energia. Vedi, abbiamo imparato a generare energia con l'aiuto dei reperti. Certamente, questo funziona finchй il KPD non и abbastanza alto. Siamo riusciti a ottenere i risultati migliori con il reperto Chiaro di luna. Ti prego, portacene un esemplare per i nostri esperimenti.</text>
+	</string>
+	<string id="ecolog_find_artefact_5">
+		<text>Trova il reperto Riccio di mare</text>
+	</string>
+	<string id="ecolog_find_artefact_5_descr">
+		<text>Gli scienziati hanno bisogno del reperto Riccio di mare per migliorare le loro tute</text>
+	</string>
+	<string id="ecolog_find_artefact_5_text">
+		<text>Probabilmente sai che le nostre tute forniscono la migliore protezione dalle radiazioni. Il segreto sta nel fatto che le saturiamo con una lozione derivante da un reperto molto raro. Per produrre un'altra serie di queste tute, ci serve quel reperto. Voi lo chiamate "Riccio di mare".</text>
+	</string>
+	<string id="ecolog_find_item_1">
+		<text>Porta la tuta intera esclusiva</text>
+	</string>
+	<string id="ecolog_find_item_1_descr">
+		<text>Recupera l'insolita tuta intera dal laboratorio sotterraneo X16.</text>
+	</string>
+	<string id="ecolog_find_item_1_text">
+		<text>Abbiamo qualcosa per te. Di recente, abbiamo affidato a uno stalker il compito di entrare nel laboratorio. Giа allora avevo notato la sua insolita tuta intera: emanava un grande calore. Lo stalker ci ha detto che quella tuta puт guarire le ferite. In poche parole: lo stalker non и mai tornato dal laboratorio. Oh no, non pensarci neanche! Noi non c'entriamo. E molto probabilmente la sua tuta и ancora lа. Sarei molto felice di poterla studiare a fondo. </text>
+	</string>
+	<string id="ecolog_monster_part_1">
+		<text>Porta una parte del corpo dello snork</text>
+	</string>
+	<string id="ecolog_monster_part_1_descr">
+		<text>Ottenere un pezzetto di snork da queste parti и una sciocchezza.</text>
+	</string>
+	<string id="ecolog_monster_part_1_text">
+		<text>Ho conosciuto Semenov negli anni dell'universitа, quando davo lezioni di genetica e lui era un mio studente. И cosм che sono diventato il suo capo-scienziato. Ai tempi, stavamo rivelando i primi misteri della manipolazione genetica. Dunque, cosa dicevo? Ah, ecco, per i nostri esperimenti genetici abbiamo bisogno di alcuni campioni di cellule vive del tessuto muscolare di uno snork. Dovrai cercare nelle paludi per trovare questo materiale.  C'и un'ipotesi che gli snork siano il nuovo stadio dell'evoluzione umana. Per sapere questo dobbiamo fare esperimenti sul DNA!</text>
+	</string>
+	<string id="ecolog_monster_part_2">
+		<text>Porta l'occhio di un mostro carnivoro</text>
+	</string>
+	<string id="ecolog_monster_part_2_descr">
+		<text>И meglio che mi tenga alla larga da questi sapientoni, non si sa mai! Molto bene, gli procurerт l'occhio di un mostro carnivoro: possono fare quello che vogliono coi loro volontari.</text>
+	</string>
+	<string id="ecolog_monster_part_2_text">
+		<text>Buone notizie, giovanotto: abbiamo un lavoretto molto interessante per te! Da essere dotato di intelletto con una certa dose di esperienza quale sei, dovresti apprezzare le teorie dei miei colleghi. In pratica, la nostra ricerca ha evidenziato quanto segue: gli occhi delle creature comunemente chiamate mostri carnivori, sono dotati di... mi segui?... di recettori olfattivi! Di conseguenza, usano gli occhi non solo per vedere, ma anche per odorare! Stiamo preparando il trapianto di uno di questi occhi miracolosi su uno dei... uno dei nostri assistenti volontari. Secondo me lanceremo una moda! Per caso, non vorresti ricevere anche tu uno di questi organi tanto speciali?</text>
+	</string>
+	<string id="ecolog_monster_part_3">
+		<text>Porta la coda di un cane cieco</text>
+	</string>
+	<string id="ecolog_monster_part_3_descr">
+		<text>Mah, e la chiamano scienza! Cercare un secondo cervello negli esseri umani? Poveri cani, uno di loro dovrа fare a meno della coda.</text>
+	</string>
+	<string id="ecolog_monster_part_3_text">
+		<text>Benvenuto, ehm... viandante! Sono cosм contento di vederti: abbiamo bisogno di un uomo che prenda parte a un esperimento della massima importanza. Il mio collega Brenter vuole provare a cucinare un piatto a base di fauna locale: sarа un esperimento pratico volto a studiare l'influenza delle proteine mutate sull'organismo umano. Tanto per cominciare, abbiamo deciso di provare coi cinghiali. Ci serve del prosciutto. Una zampa di cinghiale, hai capito? E se accetti, ti prego di scegliere l'esemplare piщ sano.</text>
+	</string>
+	<string id="ecolog_monster_part_4">
+		<text>Porta la zampa di un cinghiale</text>
+	</string>
+	<string id="ecolog_monster_part_4_descr">
+		<text>Buongustai alla ricerca di forti emozioni... Molto bene, gli daremo del prosciutto.</text>
+	</string>
+	<string id="ecolog_monster_part_4_text">
+		<text>Buon giorno! Spero che tu sappia che i cani appartengono al sottotipo dei vertebrati... vale a dire che la loro colonna vertebrale parte dalla testa e termina nella coda. E qui sta il punto! Uno dei miei giovani colleghi ha dimostrato in linea teorica che la colonna vertebrale dei cani ciechi, и cosм che avete denominato questo tipo di animali, parte dalla coda, non dalla testa! Pensaci: и un totale capovolgimento dei nostri assunti in questo campo. Ci sono giа alcune ardite teorie secondo le quali gli esseri umani nella zona sacrale avrebbero un... be', la faccenda и ancora molto discussa. Per farla breve, ci serve la testa del cane, il cane cieco, che nella nostra ignoranza pensavamo fosse la sua coda.</text>
+	</string>
+	<string id="ecolog_monster_part_5">
+		<text>Porta la mandibola di un succhiasangue.</text>
+	</string>
+	<string id="ecolog_monster_part_5_descr">
+		<text>Quello che vogliono fare con la mandibola di un succhiasangue non mi interessa. M'importa soltanto di quanto mi daranno per questa raritа.</text>
+	</string>
+	<string id="ecolog_monster_part_5_text">
+		<text>Oh, stalker, sono felice di vederti! Senti… Hai giа incontrato i succhiasangue nelle tue avventure, giusto? Se no, vogliamo che ciт succeda. Portaci la mandibola inferiore di un rappresentante di questa specie, con tutti gli annessi e connessi. Sfortunatamente non posso informarti sui particolari dell'esperimento, poichй potrebbero avere un impatto negativo sulla stabilitа della tua psiche. Aspetteremo il tuo ritorno.</text>
+	</string>
+	<string id="eliminate_lager">
+		<text>Eliminazione del campo.</text>
+	</string>
+	<string id="find_item">
+		<text>Trova l'oggetto.</text>
+	</string>
+	<string id="freedom_defend_lager_1">
+		<text>Proteggi gli stalker all'istituto Agroprom</text>
+	</string>
+	<string id="freedom_defend_lager_1_descr">
+		<text>Respingi l'attacco dei banditi contro il campo degli stalker all'istituto Agroprom.</text>
+	</string>
+	<string id="freedom_defend_lager_1_text">
+		<text>C'и un gruppo di stalker che vive all'istituto Agroprom. И gente qualunque, che pensa che la Zona sia un luogo libero, dove la legge non ha giurisdizione e ti basta vivere rispettando la tua morale personale. E ora pensano di unirsi a noi. Proprio cosм, vuoi aiutarli a respingere i banditi? Noi ti manderemo delle munizioni.</text>
+	</string>
+	<string id="freedom_defend_lager_2">
+		<text>Proteggi il confine</text>
+	</string>
+	<string id="freedom_defend_lager_2_descr">
+		<text>Proteggi dai mostri il confine vicino ai magazzini dell'esercito. </text>
+	</string>
+	<string id="freedom_defend_lager_2_text">
+		<text>Stanno tornando i mostri dal lato dell'inceneritore. Aiuta i ragazzi che si trovano vicino al confine a respingerli. Avrai una ricompensa, te lo garantisco.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1">
+		<text>Distruggi il campo militare </text>
+	</string>
+	<string id="freedom_eliminate_camp_1_descr">
+		<text>Distruggi il campo militare vicino all'istituto di ricerca Agroprom.</text>
+	</string>
+	<string id="freedom_eliminate_camp_1_text">
+		<text>I militari stanno progettando di occupare gradualmente la Zona. Dobbiamo rallentare la loro avanzata, altrimenti la Zona diventerа un laboratorio di ricerca. Uno dei campi dei soldati si trova vicino all'istituto Agroprom. Se riesci a fare un po' di pulizia, l'occupazione militare della Zona subirа un rallentamento.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2">
+		<text>Distruggi il campo dei mercenari</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_descr">
+		<text>Distruggi il campo dei mercenari vicino ai magazzini.</text>
+	</string>
+	<string id="freedom_eliminate_camp_2_text">
+		<text>Ascolta, ecco la mia proposta. Il campo dei mercenari deve essere distrutto. Potremmo anche lasciarli stare, non sono poi male... ma se la sono cercata, si sono infiltrati nel nostro territorio e hanno cercato di corrompere la mia gente. И ora di dargli una lezione. Puoi pensarci tu? </text>
+	</string>
+	<string id="freedom_eliminate_camp_3">
+		<text>Annienta il distaccamento dei Duty</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_descr">
+		<text>Annienta la fazione dei Duty impegnati nelle epurazioni a Rostok.</text>
+	</string>
+	<string id="freedom_eliminate_camp_3_text">
+		<text>Cosa ne dici di andare a caccia? A Rostok и comparso il distaccamento dei Duty impegnati nelle epurazioni. И un'ottima occasione per prenderli di sorpresa. I Duty continuano a mandare gente a caccia di mostri, ma che non esita a sparare a chiunque non sia di loro gradimento. Questo distaccamento deve essere annientato prima che i Duty arrivino a Rostok. Non dovrebbero essere in molti: tre o quattro veterani e un paio di novellini.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4">
+		<text>Distruggi l'avamposto dei Duty</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_descr">
+		<text>Distruggi l'avamposto dei Duty nella Discarica il piщ presto possibile.</text>
+	</string>
+	<string id="freedom_eliminate_camp_4_text">
+		<text>C'и da fare un lavoro molto urgente. Bisogna eliminare l'unitа dei Duty che si и nascosta nel passaggio fra la Discarica e il Bar e deruba tutti i passanti. Stiamo aspettando un pacco molto importante e non possiamo escludere che i Duty sappiano del nostro corriere e che cercheranno di tendergli un agguato. Dobbiamo eliminare questa minaccia, anche se solo per poco tempo. OK?</text>
+	</string>
+	<string id="freedom_eliminate_camp_5">
+		<text>Libera il villaggio.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_descr">
+		<text>Libera il villaggio dai succhiasangue e se possibile elimina il controllore.</text>
+	</string>
+	<string id="freedom_eliminate_camp_5_text">
+		<text>Maledizione, il villaggio и infestato da mostri succhiasangue! Nessuno che abbia un minimo di cervello si avvicina a meno di cento metri. E qualcuno dice di aver visto certe cose... avevamo giusto bisogno di un controllore! Comunque и ora di finirla. Io non ti costringo, perchй a dir la veritа lм non ci andrei mai. Se perт non hai paura, sappi che la mia gratitudine non avrа limiti.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6">
+		<text>Distruggi il branco di cinghiali e mostri carnivori</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_descr">
+		<text>Distruggi il branco di cinghiali e mostri carnivori presso i magazzini militari.</text>
+	</string>
+	<string id="freedom_eliminate_camp_6_text">
+		<text>Il nostro cecchino и appostato all'ingresso della base. И seduto nella torre, di notte... Tutto и buio e silenzioso... Improvvisamente c'и un'esplosione, versi disumani, un lampo! Che и successo?! Abbiamo scoperto che i cinghiali e i mostri carnivori vagano spesso intorno al campo minato. Solo il diavolo sa cosa li spinge a farlo, ma almeno una volta alla settimana qualcuno di loro salta in aria. Il tuo incarico и semplice: elimina tutte quelle bestiacce. Lo farai?</text>
+	</string>
+	<string id="freedom_eliminate_camp_7">
+		<text>Distruggi il branco di roditori</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_descr">
+		<text>Distruggi il branco di roditori nelle Lande desolate.</text>
+	</string>
+	<string id="freedom_eliminate_camp_7_text">
+		<text>Non c'и traccia di roditori vicino alla nostra base, ma quei diavoli vanno dappertutto. Di recente qui ce n'erano tantissimi... roba da non crederci. Abbiamo passato due mesi a tenerli a bada... eh eh eh. Cosм abbiamo capito da dove venivano. Dalle Lande desolate, capisci? E abbiamo paura che si moltiplichino e tornino da noi. Ci serve un uomo che si occupi di loro per conto nostro. Vuoi andare tu?</text>
+	</string>
+	<string id="freedom_find_item_1">
+		<text>Ruba il fucile da cecchino</text>
+	</string>
+	<string id="freedom_find_item_1_descr">
+		<text>Ruba l'SVDm 2 modificato dal magazzino dei Duty.</text>
+	</string>
+	<string id="freedom_find_item_1_text">
+		<text>Questo и un incarico speciale e per giunta difficile... Dovrai recuperare un Dragunov potenziato dal magazzino dei Duty. L'arma ha un nome speciale, ma non и importante. Quello che conta и che grazie al suo mirino telescopico e al soppressore di rinculo puoi centrare gli occhi di uno scoiattolo a 400 metri. Secondo me sei la persona giusta!</text>
+	</string>
+	<string id="freedom_find_item_2">
+		<text>Procurati il Chaser 13 modificato</text>
+	</string>
+	<string id="freedom_find_item_2_descr">
+		<text>Procurati il Chaser 13 modificato dagli scienziati.</text>
+	</string>
+	<string id="freedom_find_item_2_text">
+		<text>Ho sentito che i cervelloni sono riusciti a migliorare il Chaser usando un reperto. Ora ha la forza d'impatto di un cannone. Perchй non fai una visita agli scienziati per scoprire se te lo vendono? Ti coprirт tutte le spese!</text>
+	</string>
+	<string id="freedom_find_item_3">
+		<text>Recupera il giubbotto antiproiettile</text>
+	</string>
+	<string id="freedom_find_item_3_descr">
+		<text>Recupera il nuovo modello di giubbotto antiproiettile.</text>
+	</string>
+	<string id="freedom_find_item_3_text">
+		<text>Alcuni soldati indossano un nuovo tipo di giubbotto antiproiettile. Il rivestimento interno и intriso di un unguento cicatrizzante o qualcosa del genere... In sostanza, fa rimarginare molto rapidamente le piccole ferite. E pensa un po' che fortuna: giusto ieri, dieci soldati sono entrati nel settore Yantar e solo sei sono tornati indietro, portando in spalla tre cadaveri. Mi segui? Uno di loro и rimasto lа. Se ci porterai il suo giubbotto antiproiettile, lo analizzeremo e ne costruiremo tanti altri per noi.</text>
+	</string>
+	<string id="freedom_kill_stalker_1">
+		<text>Uccidi il capo della sicurezza dei Duty</text>
+	</string>
+	<string id="freedom_kill_stalker_1_descr">
+		<text>Uccidi il capo della sicurezza dei Duty con la massima discrezione.</text>
+	</string>
+	<string id="freedom_kill_stalker_1_text">
+		<text>Sarebbe una bella cosa se il capo della sicurezza dei Duty sparisse in silenzio. E quando i Duty saranno nel caos, invierт fra loro qualcuno dei miei. Dopodichй, provino pure a organizzare qualcosa... non dico altro! Il mio consiglio и di eliminarlo da lontano, senza provocare agitazione.</text>
+	</string>
+	<string id="freedom_kill_stalker_2">
+		<text>Uccidi il capitano Ivantsov</text>
+	</string>
+	<string id="freedom_kill_stalker_2_descr">
+		<text>Uccidi il capitano Ivantsov, braccio destro del capo dei Duty.</text>
+	</string>
+	<string id="freedom_kill_stalker_2_text">
+		<text>Te lo dico subito: и un incarico difficile. Ma ne vale la pena. Ivantsov, un assistente fidato del capo dei Duty, se l'и proprio cercata. И lui a fare i lavori piщ sporchi: operazioni punitive, incursioni, eccetera. Se sapessi quanti dei nostri ha fatto fuori! Dobbiamo proprio liquidarlo, quel figlio di puttana. Quindi, se decidi di farlo tu, ti consiglio di armarti molto bene.</text>
+	</string>
+	<string id="freedom_kill_stalker_3">
+		<text>Uccidi il colonnello Petrenko</text>
+	</string>
+	<string id="freedom_kill_stalker_3_descr">
+		<text>Uccidi il colonnello Petrenko, uno dei fondatori della fazione dei Duty.</text>
+	</string>
+	<string id="freedom_kill_stalker_3_text">
+		<text>Il colonnello Petrenko... Non so se l'hai giа sentito nominare o incontrato, ma mi piacerebbe che voi due faceste conoscenza. И un fondatore dei Duty e anche uno dei nostri peggiori nemici. Quando lo incontrerai, cerca di avere l'ultima parola... definitiva. Te la senti?</text>
+	</string>
+	<string id="freedom_kill_stalker_4">
+		<text>Elimina lo stalker neutrale</text>
+	</string>
+	<string id="freedom_kill_stalker_4_descr">
+		<text>Trova ed elimina lo stalker neutrale.</text>
+	</string>
+	<string id="freedom_kill_stalker_4_text">
+		<text>Non lontano da qui si aggira uno stalker che ha giа ammazzato uno dei nostri. Non possiamo tollerare una cosa simile. Ti va di occupartene? Tranquillo, sarai pagato.</text>
+	</string>
+	<string id="freedom_kill_stalker_5">
+		<text>Uccidi uno dei comandanti dei Duty</text>
+	</string>
+	<string id="freedom_kill_stalker_5_descr">
+		<text>Uccidi uno dei comandanti dei Duty.</text>
+	</string>
+	<string id="freedom_kill_stalker_5_text">
+		<text>Ti pagherт per la testa di qualsiasi capo dei Duty! Fanne fuori uno e torna da me per la ricompensa.</text>
+	</string>
+	<string id="freedom_kill_stalker_6">
+		<text>Uccidi lo stalker chiamato Spaventapasseri</text>
+	</string>
+	<string id="freedom_kill_stalker_6_descr">
+		<text>Elimina lo stalker chiamato Spaventapasseri.</text>
+	</string>
+	<string id="freedom_kill_stalker_6_text">
+		<text>Noi eliminiamo i mostri per sopravvivere, non per soldi. Ma le popolazioni di mutanti non sono altrettanto numerose e inoltre sono esseri viventi. Non possiamo permettere che vengano annientati. Perт c'и qualcuno che si rifiuta di capirlo, come lo stalker detto Spaventapasseri. Lo chiamano cosм perchй vendeva mutanti imbalsamati. Lo abbiamo giа messo in guardia ma non и servito a niente. Ti va di fare una buona azione ecologica?</text>
+	</string>
+	<string id="freedom_kill_stalker_7">
+		<text>Uccidi lo stalker chiamato Barin. </text>
+	</string>
+	<string id="freedom_kill_stalker_7_descr">
+		<text>Uccidi lo stalker chiamato Barin, capo furiere della fazione dei Duty.</text>
+	</string>
+	<string id="freedom_kill_stalker_7_text">
+		<text>Un mascalzone, leccaculo, ipocrita e vigliacco... ecco chi и lo stalker Barin. Proprio un bell'elemento, infatti ha fatto carriera nei Duty. Di solito fornisce cibo e rifornimenti alla fazione, ma ogni tanto partecipa a qualche incursione. Dobbiamo sbarazzarci di lui, soprattutto perchй ha in mano tutta la logistica dei Duty.</text>
+	</string>
+	<string id="freedom_monster_part_1">
+		<text>Procurati una zampa di cinghiale</text>
+	</string>
+	<string id="freedom_monster_part_1_descr">
+		<text>Procurati una zampa di cinghiale.</text>
+	</string>
+	<string id="freedom_monster_part_1_text">
+		<text>Stiamo organizzando una cena per commemorare il compleanno di Bob Marley. Perchй non ci porti del delizioso prosciutto? Piщ ne trovi, meglio и! Dio ti ricompenserа!</text>
+	</string>
+	<string id="hunter_eliminate_lager">
+		<text>Distruggi la tana del succhiasangue.</text>
+	</string>
+	<string id="hunter_eliminate_lager_descr">
+		<text>Il cacciatore vuole che qualcuno distrugga la tana del succhiasangue nel villaggio vicino ai magazzini militari. In cambio ha promesso un reperto raro.</text>
+	</string>
+	<string id="hunter_eliminate_lager_text">
+		<text>Hai mai incontrato un succhiasangue? И orrendo, vero? Beh, l'altro giorno sono andato a cercare reperti al villaggio vicino ai magazzini militari. All'improvviso ho visto un succhiasangue, tutto nero e coperto di cicatrici. Era seduto su un cadavere e non mi aveva visto, ma mi sono fatto prendere dal panico e mi sono messo a correre. Non avrei dovuto farlo. Lui mi ha sentito e si и lanciato a inseguirmi. Ho iniziato a sentire una gran caciara di versi e ho capito che non era solo. Secondo me in quel punto c'и una tana. Se tu riuscissi ad allontanarli da lм, ti darei in cambio un reperto raro che ho trovato qualche giorno fa.</text>
+	</string>
+	<string id="kill_stalker">
+		<text>Uccidi lo stalker.</text>
+	</string>
+	<string id="lisiy_kill_stalker">
+		<text>Uccidi il traditore.</text>
+	</string>
+	<string id="lisiy_kill_stalker_descr">
+		<text>Il Calvo vuole che tu uccida uno stalker che ha rubato un reperto rarissimo.</text>
+	</string>
+	<string id="lisiy_kill_stalker_text">
+		<text>Qualche tempo fa, io e un altro stalker stavamo cercando un reperto molto vicino al Bruciacervella. Abbiamo trovato moltissima roba, perfino un paio di reperti che non avevo mai visto, nemmeno in foto. Ma quel figlio di puttana mi ha fregato. Durante la notte si и allontanato per nascondere i reperti piщ rari e preziosi, poi ha cercato di farmi credere che erano scomparsi. Invece, un paio di giorni fa ne ho visto uno in mano al Barista. Mi sono incazzato come una iena... Beh, stalker, se trovi quel verme mandagli un violento saluto da parte mia. E giа che ci sei, cerca di scoprire dov'и il suo nascondiglio e prendi il secondo reperto. Ne vale la pena, credimi.</text>
+	</string>
+	<string id="mercenary_kill_stalker">
+		<text>Uccidi il maestro stalker.</text>
+	</string>
+	<string id="mercenary_kill_stalker_descr">
+		<text>I mercenari sono pronti a pagare generosamente la morte di ogni maestro stalker. Meno ce ne sono, meglio и per loro.</text>
+	</string>
+	<string id="mercenary_kill_stalker_text">
+		<text>Non ci fa affatto comodo avere troppi stalker armati fino ai denti e chiusi in esoscheletri corazzati che girano nella Zona. A causa loro, lavorare и sempre piщ difficile e pericoloso. Meno ce ne sono, meglio и per noi. Se ne ucciderai uno riceverai un premio.</text>
+	</string>
+	<string id="monster_part">
+		<text>Procurati una parte del corpo di un mostro.</text>
+	</string>
+	<string id="petrenko_kill_stalker">
+		<text>Elimina lo stalker dei Freedom.</text>
+	</string>
+	<string id="petrenko_kill_stalker_descr">
+		<text>Un ex stalker dei Duty, che conosce molte importanti informazioni sugli obiettivi di Pripjat, и recentemente passato ai Freedom. Deve essere ucciso prima che parli troppo.</text>
+	</string>
+	<string id="petrenko_kill_stalker_text">
+		<text>Ascoltami bene. Abbiamo delle mappe di Pripjat... non sono aggiornate, risalgono ai primi anni '90. Ma la cosa piщ importante и che riportano la posizione di tutti gli obiettivi militari, come i magazzini sotterranei e i rifugi antiatomici. Ora naturalmente sono inutili, ma se riusciamo a trovare una strada per Pripjat, queste informazioni diventeranno preziosissime. Tuttavia, c'и un problema. Uno degli ufficiali che conosceva queste informazioni и passato ai Freedom. In sostanza, deve essere liquidato prima che parli troppo.</text>
+	</string>
+	<string id="return_for_reward">
+		<text>Torna indietro per il premio.</text>
+	</string>
+	<string id="return_for_reward_bring">
+		<text>Porta al cliente ciт che и stato promesso.</text>
+	</string>
+	<string id="shustriy_find_item">
+		<text>Trova la tuta perfezionata.</text>
+	</string>
+	<string id="shustriy_find_item_descr">
+		<text>Svelto ci ha parlato del nascondiglio dei banditi, dove hanno nascosto la tangente. Ci ha chiesto di riportare indietro la tuta rubata. Naturalmente ci sarа una ricompensa.</text>
+	</string>
+	<string id="shustriy_find_item_text">
+		<text>Mentre ero prigioniero ho sentito i banditi parlare del loro nascondiglio segreto, dove tengono la tangente. Ho sentito che ci hanno nascosto anche un bella giacca. Perт, il giorno dopo un mostro ha messo gli occhi sul nascondiglio, tanto che ora i banditi hanno paura di andarci. Fammi un favore: portami la tuta e ti pagherт bene.</text>
+	</string>
+	<string id="tm_barman_has_no_job">
+		<text>Non ho niente da offrirti, per ora.</text>
+	</string>
+	<string id="tm_barman_job_ask">
+		<text>E di cosa vuoi parlare?</text>
+	</string>
+	<string id="tm_barman_job_complete">
+		<text>Ottimo lavoro, ricompensa ben meritata!</text>
+	</string>
+	<string id="tm_barman_job_what">
+		<text>Che mi racconti?</text>
+	</string>
+	<string id="tm_barman_list_job">
+		<text>Questo и quello che abbiamo adesso:</text>
+	</string>
+	<string id="tm_defend_camp_1">
+		<text>Difendi la pattuglia di Duty dall'attacco dei banditi nella Valle Oscura</text>
+	</string>
+	<string id="tm_defend_camp_1_descr">
+		<text>Difendi la pattuglia di Duty dall'attacco dei banditi nella Valle Oscura</text>
+	</string>
+	<string id="tm_defend_camp_1_text">
+		<text>Sono finalmente riuscito a convincere quei testardi di Duty che и arrivato il momento di liberare la Discarica dai banditi; in questo modo potranno espandere il loro territorio senza danni per i miei clienti abituali. I capi dei Duty hanno deciso che, per cominciare, porranno un freno all'afflusso di banditi dalla Valle Oscura, cosм hanno mandato una pattuglia per piazzare un posto di blocco, ma ai banditi la cosa non и piaciuta. Che sorpresa, eh? Perciт mi stavo chiedendo... Non potresti aiutarli tu a difendere l'imboccatura della Valle? Ti ricompenserт generosamente. </text>
+	</string>
+	<string id="tm_dolg_has_no_job">
+		<text>Al momento non ci sono lavori disponibili.</text>
+	</string>
+	<string id="tm_dolg_job_ask">
+		<text>Di cosa vuoi discutere?</text>
+	</string>
+	<string id="tm_dolg_job_complete">
+		<text>Bravo ragazzo! Ottimo lavoro.</text>
+	</string>
+	<string id="tm_dolg_job_what">
+		<text>Sono tutto orecchi.</text>
+	</string>
+	<string id="tm_dolg_list_job">
+		<text>Ecco le novitа riguardo al lavoro:</text>
+	</string>
+	<string id="tm_drunk_dolg_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_drunk_dolg_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_drunk_dolg_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_drunk_dolg_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_drunk_dolg_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_ecolog_has_no_job">
+		<text>Mi spiace, ma per ora non ho lavori da proporti.</text>
+	</string>
+	<string id="tm_ecolog_job_ask">
+		<text>Di quale lavoro vuoi parlare? </text>
+	</string>
+	<string id="tm_ecolog_job_complete">
+		<text>Hai fatto uno splendido lavoro! Permettimi di consegnarti la tua ricompensa. </text>
+	</string>
+	<string id="tm_ecolog_job_what">
+		<text>Sono tutto orecchi.</text>
+	</string>
+	<string id="tm_ecolog_list_job">
+		<text>Ecco cosa ti posso offrire: </text>
+	</string>
+	<string id="tm_eliminate_camp_1">
+		<text>Distruggi l'accampamento dei banditi nella Discarica.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_descr">
+		<text>Elimina i banditi accampati nella Discarica che derubano gli stalker di ritorno dalla Zona. Il trafficante ne sarа felice.</text>
+	</string>
+	<string id="tm_eliminate_camp_1_text">
+		<text>I banditi hanno unito le forze, ultimamente, e mettono i bastoni tra le ruote ai trafficanti onesti... Va' alla Discarica: mi hanno detto che quei bastardi si sono accampati nei pressi del deposito di rottami. Se risolvi questa faccenda, ti guadagnerai la riconoscenza di tutti e io ti ricompenserт generosamente. D'accordo?</text>
+	</string>
+	<string id="tm_eliminate_camp_2">
+		<text>Distruggi l'accampamento dei banditi nel parcheggio.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_descr">
+		<text>Elimina tutti i banditi appostati nel parcheggio. Sono arrivati da poco nella Zona, per cui sarа un lavoretto facile.</text>
+	</string>
+	<string id="tm_eliminate_camp_2_text">
+		<text>I banditi sono tornati a girare dalle parti del parcheggio. Non credo di doverti spiegare cosa devi fare, no? Beh, datti da fare. Porta i nostri piщ calorosi saluti a quei bastardi e torna da me quando avrai finito; io ti ringrazierт come meriti. Affare fatto?</text>
+	</string>
+	<string id="tm_eliminate_camp_3">
+		<text>Elimina i banditi nei dintorni dell'istituto di ricerca Agroprom.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_descr">
+		<text>Elimina i banditi nei dintorni dell'istituto di ricerca Agroprom. Meglio non inimicarsi il trafficante.</text>
+	</string>
+	<string id="tm_eliminate_camp_3_text">
+		<text>I banditi nei dintorni dell'istituto di ricerca Agroprom disturbano i miei scavatori mentre setacciano i rifiuti. Risolvi il problema e io ti sarт debitore.</text>
+	</string>
+	<string id="tm_eliminate_camp_4">
+		<text>Libera l'area dai mutanti.</text>
+	</string>
+	<string id="tm_eliminate_camp_4_descr">
+		<text>Libera l'area dai mutanti.</text>
+	</string>
+	<string id="tm_eliminate_camp_4_text">
+		<text>Ho un lavoretto facile facile. Un turista straniero vuole visitare la Zona e ha pagato una discreta sommetta ai miei uomini perchй l'accompagnino. L'area in cui lo porteranno perт dev'essere liberata dai mutanti. Te ne occupi tu?</text>
+	</string>
+	<string id="tm_eliminate_camp_5">
+		<text>Elimina due banditi alla Discarica.</text>
+	</string>
+	<string id="tm_eliminate_camp_5_descr">
+		<text>Rendi accessibile a tutti la strada che porta in uno dei posti migliori della Zona.</text>
+	</string>
+	<string id="tm_eliminate_camp_5_text">
+		<text>Negli ultimi tempi uno dei posti migliori della Zona и diventato inaccessibile agli amanti della bellezza. Alla Discarica... sм, proprio alla Discarica, c'и un posticino affascinante, dove la tristezza ti abbandona, dove ti dimentichi dello sporco, dei soldi, del sangue. O almeno, era cosм in passato, perchй adesso ci sono due sporchi farabutti che minacciano di uccidere chiunque non li paghi per entrare. Liberati di loro, altrimenti non so proprio dove accompagnare i turisti.</text>
+	</string>
+	<string id="tm_eliminate_camp_6">
+		<text>Uccidi il succhiasangue nella Valle Oscura</text>
+	</string>
+	<string id="tm_eliminate_camp_6_descr">
+		<text>Uccidi il succhiasangue nella Valle Oscura</text>
+	</string>
+	<string id="tm_eliminate_camp_6_text">
+		<text>Si dice che, da quando le truppe hanno lasciato la Valle Oscura, i mostri siano cominciati a uscire da ogni anfratto. Gli stalker hanno giа avvistato un succhiasangue lм, un esemplare straordinario per giunta, che non teme gli spazi aperti. Una volta che la notizia si diffonderа, gli scienziati vorranno di sicuro studiarlo; e voglio essere io a consegnare loro il corpo di quella bestia. Tu pensa a uccidere il succhiasangue, del resto mi occuperт io.</text>
+	</string>
+	<string id="tm_find_artefact_1">
+		<text>Trova il reperto Medusa</text>
+	</string>
+	<string id="tm_find_artefact_1_descr">
+		<text>Trova il reperto Medusa che si и formato nell'anomalia Trampolino</text>
+	</string>
+	<string id="tm_find_artefact_1_text">
+		<text>Un tizio della Grande Terra mi ha chiesto di procurargli una Medusa. Non c'и da guadagnarci tanto, ma и un lavoretto facile facile. Accettalo!</text>
+	</string>
+	<string id="tm_find_artefact_2">
+		<text>Trova il reperto Fiore di Pietra</text>
+	</string>
+	<string id="tm_find_artefact_2_descr">
+		<text>Trova il reperto Fiore di Pietra che si и formato nell'anomalia Trampolino. Pare che si venda a un buon prezzo.</text>
+	</string>
+	<string id="tm_find_artefact_2_text">
+		<text>Un gioielliere mi ha chiesto di procurargli un Fiore di Pietra. Facciamo felici le belle signore, eh? Se lo trovi, ti ricompenserт con una somma di denaro e una bottiglia da bere alla loro salute...</text>
+	</string>
+	<string id="tm_find_artefact_3">
+		<text>Trova il reperto Stella della Notte</text>
+	</string>
+	<string id="tm_find_artefact_3_descr">
+		<text>Trova la Stella della Notte, un reperto raro e costoso.</text>
+	</string>
+	<string id="tm_find_artefact_3_text">
+		<text>Un lavoretto ci sarebbe, anche se и piuttosto sgradevole. Pare che i militari stiano lavorando a una nuova protezione e che la richiesta venga proprio da loro.... Comunque, mi hanno ordinato una Stella della Notte. И un reperto piuttosto raro, ma offre una buona difesa contro le pallottole... Allora, accetti? Ti pagherт bene! </text>
+	</string>
+	<string id="tm_find_artefact_4">
+		<text>Trova il reperto chiamato Pezzo di Carne</text>
+	</string>
+	<string id="tm_find_artefact_4_descr">
+		<text>Trova il reperto che guarisce le ferite chiamato Pezzo di Carne</text>
+	</string>
+	<string id="tm_find_artefact_4_text">
+		<text>Ho ricevuto un ordine per un reperto, del tipo che guarisce le ferite, chiamato Pezzo di Carne! Il cliente ha una clinica. Trova il reperto: guadagnerai dei soldi e farai pure una buona azione!</text>
+	</string>
+	<string id="tm_find_item_1">
+		<text>Trova la pistola perfezionata</text>
+	</string>
+	<string id="tm_find_item_1_descr">
+		<text>Procurati la mitragliatrice Fort; si dice abbia un caricatore piщ capiente della norma. Dovrebbe essere in possesso del comandante di quel checkpoint che i militari hanno piazzato sotto il ponte crollato.</text>
+	</string>
+	<string id="tm_find_item_1_text">
+		<text>Con questa mania per le armi truccate, nessuno si accontenta piщ di un'arma normale, neanche i novellini! Comunque.... Ho ricevuto un ordine per una mitragliatrice potenziata. Gira voce che il comandante dei soldati, quello che raccoglie i pedaggi per passare sotto il ponte, abbia una "Fort" con un caricatore bello grosso. Me la procuri?</text>
+	</string>
+	<string id="tm_freedom_has_no_job">
+		<text>In questo momento non c'и lavoro, a dire il vero...</text>
+	</string>
+	<string id="tm_freedom_job_ask">
+		<text>Allora, cos'и che volevi discutere?</text>
+	</string>
+	<string id="tm_freedom_job_complete">
+		<text>Tu sм che sei un giovanotto come si deve! Splendido lavoro! Ecco i tuoi soldi.</text>
+	</string>
+	<string id="tm_freedom_job_what">
+		<text>Che mi racconti?</text>
+	</string>
+	<string id="tm_freedom_list_job">
+		<text>Ecco quello che ho:</text>
+	</string>
+	<string id="tm_hunter_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_hunter_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_hunter_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_hunter_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_hunter_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_job_nothing">
+		<text>Va bene. Magari un'altra volta.</text>
+	</string>
+	<string id="tm_job_refuse">
+		<text>Mi rifiuto di fare questo lavoro.</text>
+	</string>
+	<string id="tm_kill_stalker_1">
+		<text>Uccidi il capo dei banditi</text>
+	</string>
+	<string id="tm_kill_stalker_1_descr">
+		<text>Uccidi il capo dei banditi che ha contrariato il trafficante. И probabile che non sia solo... И un lavoro difficile, ma ben pagato. Cercalo nella Discarica.</text>
+	</string>
+	<string id="tm_kill_stalker_1_text">
+		<text>Ci sarebbe da eliminare questo dandy, uno dei capi dei banditi. L'altro giorno i suoi uomini, dietro suo ordine, hanno intercettato il mio corriere e l'hanno pestato e io non spreco il fiato con quelli che mettono le mani addosso ai miei... Insomma, se ti occupi di lui, io ti ricambio il favore. Allora, ci stai? </text>
+	</string>
+	<string id="tm_kill_stalker_2">
+		<text>Uccidi lo stalker trafficante</text>
+	</string>
+	<string id="tm_kill_stalker_2_descr">
+		<text>Uccidere uno stalker... Beh, non posso dire che mi piaccia l'idea di alzare le mani contro un collega. Ma la paga и discreta e forse questa и la cosa piщ importante.</text>
+	</string>
+	<string id="tm_kill_stalker_2_text">
+		<text>Ho un problema con questo trafficante. Beh, se non vuole collaborare, che se ne vada al diavolo... ma non posso permettere che girino voci sul mio conto! Per farla breve, voglio che venga eliminato cosм che gli altri non alzino la cresta. Devono capire chi и che comanda, qui! </text>
+	</string>
+	<string id="tm_kill_stalker_3">
+		<text>Uccidi lo stalker novellino</text>
+	</string>
+	<string id="tm_kill_stalker_3_descr">
+		<text>Devi eliminare uno stalker novellino, che forse non и neppure un novellino... Chi и davvero, dici? Ah, chi se ne frega! Basta solo che il lavoro non sia troppo incasinato.</text>
+	</string>
+	<string id="tm_kill_stalker_3_text">
+		<text>C'и questo tizio che gironzola nei paraggi, spacciandosi per un novellino, ma non mi convince per niente... Comunque sia, mi faresti un grosso favore se scomparisse improvvisamente. Capisci cosa intendo? </text>
+	</string>
+	<string id="tm_kill_stalker_4">
+		<text>Uccidi lo stalker chiamato Diavolo</text>
+	</string>
+	<string id="tm_kill_stalker_4_descr">
+		<text>Elimina uno dei rivali del trafficante Sidorovich, uno stalker chiamato Diavolo. </text>
+	</string>
+	<string id="tm_kill_stalker_4_text">
+		<text>Il Diavolo, alias Oleg Gusarov... era un membro della Spetsnaz. Non avevo nulla contro di lui, finchй si faceva gli affari suoi. Un cane sciolto и un cane sciolto. Ma ho saputo che sta mettendo in piedi una banda per abbattere il Cordon e assumere il controllo delle operazioni di contrabbando nella Zona. Questo и un grosso problema e va risolto al piщ presto. Posso contare su di te? </text>
+	</string>
+	<string id="tm_kill_stalker_5">
+		<text>Uccidi Padre Diodor</text>
+	</string>
+	<string id="tm_kill_stalker_5_descr">
+		<text>Uccidere un uomo che predica contro la raccolta e la vendita dei reperti della Zona? Esattamente. </text>
+	</string>
+	<string id="tm_kill_stalker_5_text">
+		<text>Ho sempre sostenuto che affari e religione non vanno d'accordo e che ognuno dovrebbe andare per la sua strada. Ma, che Dio mi perdoni, il problema и che questo padre Diodor... Beh, da quest'orecchio non ci sente. Continua a scagliarsi contro la caccia ai reperti, dice che il loro commercio spinge la gente al peccato, non solo nella Zona ma in tutto il mondo, e via blaterando. Renditi conto, quello dice che tutti i reperti andrebbero distrutti!! Capisci cosa s'и messo in testa? E la cosa peggiore и che c'и della gente che ha abbracciato la sua causa! Ho cercato di farlo ragionare in tutti i modi, ma lui non desiste. Se lo spedisci "dal suo capo", potrа predicare quanto vuole... Capisci cosa intendo? Se lo fai, ti darт un reperto fantastico. Allora, affare fatto? </text>
+	</string>
+	<string id="tm_kill_stalker_6">
+		<text>Uccidi il "rappresentante"</text>
+	</string>
+	<string id="tm_kill_stalker_6_descr">
+		<text>Uccidi il "rappresentante". Il mercante vuole difendere la sua reputazione</text>
+	</string>
+	<string id="tm_kill_stalker_6_text">
+		<text>Senti questa: c'и un tizio che se ne va in giro spacciandosi per mio rappresentante e sfrutta il mio buon nome per rifilare ai clienti robaccia di seconda scelta. Barili rotti, armature che cadono a pezzi, scatolette di cibo scadute... Ho giа dovuto sorbirmi le lamentele di qualche cliente, per colpa sua. Insomma, per farla breve, sto cercando qualcuno che vada a fare quattro chiacchiere con quel "rappresentante", costi quel che costi.</text>
+	</string>
+	<string id="tm_lisiy_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_lisiy_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_lisiy_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_lisiy_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_lisiy_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_mercenary_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_mercenary_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_mercenary_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_mercenary_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_mercenary_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_monster_part_1">
+		<text>Porta la mandibola di un succhiasangue</text>
+	</string>
+	<string id="tm_monster_part_1_descr">
+		<text>Il dente di un succhiasangue porta fortuna, eh? Vediamo se porta fortuna pure al succhiasangue!</text>
+	</string>
+	<string id="tm_monster_part_1_text">
+		<text>C'и gente superstiziosa che и convinta che il dente di un succhiasangue porti fortuna. Pensano che chi porta al collo uno di quei denti riesca ad attraversare indenne le anomalie e che i reperti gli finiscano in tasca senza che debba fare alcuno sforzo. Sono tutte stronzate, ma ci sono dei fessi che ci credono e sono disposti a pagare bene per avere uno di quei denti. Se mi porti la mandibola di un succhiasangue, ti ricompenserт generosamente.</text>
+	</string>
+	<string id="tm_monster_part_2">
+		<text>Riporta la coda di uno pseudocane</text>
+	</string>
+	<string id="tm_monster_part_2_descr">
+		<text>Riporta la coda di uno pseudocane</text>
+	</string>
+	<string id="tm_monster_part_2_text">
+		<text>L'inverno и alle porte. E lo sai cosa amano indossare d'inverno le donne della Grande Terra? Proprio cosм, pellicce! Adesso vanno di gran moda gli accessori realizzati con le code degli pseudocani. Pare che sia una pelliccia speciale! Insomma, per farla breve, ho ricevuto un ordine per una coda. Me la procuri tu?</text>
+	</string>
+	<string id="tm_petrenko_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_petrenko_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_petrenko_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_petrenko_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_petrenko_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_reward_job">
+		<text>Sono qui per il lavoro.</text>
+	</string>
+	<string id="tm_seek_job_abandon">
+		<text>I lavori di quel tipo non mi interessano.</text>
+	</string>
+	<string id="tm_seek_job_no">
+		<text>La prossima volta. </text>
+	</string>
+	<string id="tm_seek_job_yes">
+		<text>Ci sto.</text>
+	</string>
+	<string id="tm_seek_new_job">
+		<text>Mi serve un lavoro. Hai niente per me?</text>
+	</string>
+	<string id="tm_shustriy_has_no_job">
+		<text>In questo momento non c'и lavoro. </text>
+	</string>
+	<string id="tm_shustriy_job_ask">
+		<text>Di quale lavoro vuoi parlare?</text>
+	</string>
+	<string id="tm_shustriy_job_complete">
+		<text>Hai completato il lavoro. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_shustriy_job_what">
+		<text>E del lavoro, che mi dici?</text>
+	</string>
+	<string id="tm_shustriy_list_job">
+		<text>Ecco qualcosa:</text>
+	</string>
+	<string id="tm_trader_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_trader_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_trader_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_trader_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_trader_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_wolf_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_wolf_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_wolf_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_wolf_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_wolf_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="tm_zastava_commander_has_no_job">
+		<text>Per il momento non c'и nulla.</text>
+	</string>
+	<string id="tm_zastava_commander_job_ask">
+		<text>Di quale incarico vuoi parlare?</text>
+	</string>
+	<string id="tm_zastava_commander_job_complete">
+		<text>Hai portato a termine l'incarico. Eccoti la ricompensa!</text>
+	</string>
+	<string id="tm_zastava_commander_job_what">
+		<text>E che mi dici dell'incarico?</text>
+	</string>
+	<string id="tm_zastava_commander_list_job">
+		<text>C'и qualcosa:</text>
+	</string>
+	<string id="wolf_eliminate_lager_1">
+		<text>Distruggi la tana dei cinghiali</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_descr">
+		<text>I cinghiali si sono trovati una tana vicino al posto in cui il Lupo e i suoi amici hanno un magazzino. Il Lupo vuole che elimini i cinghiali e promette di ricompensarti generosamente.</text>
+	</string>
+	<string id="wolf_eliminate_lager_1_text">
+		<text>Io e il mio amico avevamo un magazzino non lontano dal parcheggio, nel punto dove la foresta и piщ fitta. Era l'ideale! Ma di recente i cinghiali si sono fatti una tana lм vicino e ora non possiamo piщ raggiungere le nostre scorte. Aiutaci: uccidi i cinghiali e avrai la mia gratitudine e quella del mio amico.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2">
+		<text>Distruggi i mutanti alla fattoria</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_descr">
+		<text>Il Lupo vuole che liberi la fattoria dai mutanti, cosм da poterla utilizzare come avamposto.</text>
+	</string>
+	<string id="wolf_eliminate_lager_2_text">
+		<text>Anche se qui siamo solo ai margini della Zona, per i novellini la vita non и facile. I banditi sono solo una parte del problema, almeno loro capiscono il russo. Ma i mutanti... con quelli и dura. Si sono rintanati nella fattoria abbandonata, occupando l'unico posto dove avremmo potuto piazzare un avamposto. Se riesci a liberare la fattoria dai mutanti, ti sarт debitore.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager">
+		<text>Sgombera la tana dei cani</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_descr">
+		<text>C'и un branco di cani nei pressi del checkpoint sud, vicino al bar. Il responsabile del checkpoint vuole che la loro tana venga sgomberata. Promette di ricompensarti.</text>
+	</string>
+	<string id="zastava_commander_eliminate_lager_text">
+		<text>Nonostante i nostri sforzi, alcuni mostri riescono ancora a uscire dalla Discarica. Immagino tu abbia visto quel branco di cani a sud. Se li uccidi, avrai una ricompensa.</text>
+	</string>
+	<string id="defend_lager">
+		<text>Difesa dell'accampamento.</text>
+	</string>
+</string_table>

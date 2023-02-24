@@ -1,0 +1,51 @@
+	<string id="descr_bar_crazy_veterans_quest">
+		<text>Wirt: "Die Wächter haben einen Ruf zu wahren, deshalb soll das leise vonstatten gehen. Du musst nur den Anführer Glückspilz schlagen und als Beweis seinen PDA bringen."</text>
+	</string>
+	<string id="descr_bar_dolg_community_quest">
+		<text>Um Wächter zu werden, braucht man die Zustimmung eines der angesehensten Kämpfer der Gruppe. Man muss dem Anführer beweisen, dass man einen Platz in ihren Reihen verdient.</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_ambush_quest">
+		<text>Wirt: "Der Auftrag lautet, Tyran, den Söldneranführer, zu eliminieren. Seine Leute haben's ins Wildgebiet geschafft und bei der Baustelle eine Basis eingerichtet. Vorsicht, einige Kämpfer haben Hinterhalte auf dem Weg dorthin vorbereitet. Bring mir Tyrans PDA und du kriegst die Belohnung."</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_leader_kill_quest">
+		<text>General Woronin: "Der Krieg mit der Freiheit ist fast vorbei, Gezeichneter. Du hast deinen Beitrag geleistet! Jetzt will ich den Krieg beenden. Der Freiheitsanführer muss eliminiert werden."</text>
+	</string>
+	<string id="descr_bar_dolg_test_quest">
+		<text>Hauptmann Iwantsow: "... bevor wir das zu Ende bringen, musst du eine einfache Prüfung bestehen. Hol eine Mappe aus dem verlassenen Gebäude gegenüber. Das ist nicht schwer. Geh rein, nimm die Mappe und bring sie mir. Ein Kinderspiel, oder? Wenn ich die Mappe habe, entscheiden wir, ob du Wächter werden kannst."</text>
+	</string>
+	<string id="descr_bar_hunter_rifle">
+		<text>Jäger: "Hol das Gewehr. Ich hab es dort verloren, an dem die Blutsauger leben. Ich lade dir die Koordinaten hoch. Pass auf, diese Bastarde meinen's ernst."</text>
+	</string>
+	<string id="descr_bar_kill_professor">
+		<text>Wolfshund: "Hier ist 'ne kleine Jagd im Gange. Wir haben die Wissenschaftler da hinter dem Hubschrauber festgenagelt. Meine Jungs feuern ab und zu drauf, damit sie nicht abhauen. Mach mit, wir wollen ihnen grad den Rest geben. Wenn du uns hilfst, kriegst du den Anzug der Wissenschaftler. Den haben wir im Hubschrauber gefunden, den wir runtergeholt haben. Dein Ziel ist Professor Kruglow. Mach ihn kalt, sonst läuft er beim Showdown weg, die Type kenne ich. Wenn du's schaffst, kriegst du den Anzug. Wenn nicht, gehst du leer aus."</text>
+	</string>
+	<string id="descr_bar_radar_deactivate">
+		<text>Wirt: "Du hast den schützenden Prototypen als Schutz gegen den Hirnschmelzer, und ich kenne die Koordinaten eines Bunkers. Vergiss nicht, dass der Prototyp dich nicht ewig gegen die Emission schützt, du musst also in den Bunker unter den Antennen und den Schmelzer abstellen. Du musst nur die Antennen erreichen und abschalten."</text>
+	</string>
+	<string id="descr_bar_resque_information">
+		<text>Kruglow: "Stalker, Hilfe! Die Söldner greifen uns an und das halbe Team ist tot. Hilf uns, du wirst es nicht bereuen!"\n \n "... Vorsicht, da sind ungefähr fünfzehn, aber wir wissen es nicht genau."</text>
+	</string>
+	<string id="descr_bar_resque_information_2">
+		<text>Kruglow: "Wir wurden auf dem Rückweg von Jantar von den Söldnern abgeschossen. Es heißt, sie brauchen Informationen, aber ich weiß es besser. Sie werden uns alle erschießen! Bring mich nach Jantar und ich sag dir, was ich über den Hirnschmelzer weiß. Der Wirt bezahlt dich gut. Ich bin ein schlechter Kämpfer, aber ich kenne den Weg, also führe ich und du sorgst für Deckung."</text>
+	</string>
+	<string id="descr_bar_x16_documents">
+		<text>Wirt: "Du musst zu den Wissenschaftlern durchdringen und erfahren, wo Labor X16 ist, um die fehlenden Dokumente zu finden."</text>
+	</string>
+	<string id="journal_after_agroprom_documents">
+		<text>Ich habe die Dokumente durchgesehen, die beim Institut gefunden wurden. Anscheinend diente es vor dem Unfall als Tarnung für ein inoffizielles Labor, das X18 genannt wurde. Dort wurde eine Anzahl von ungewöhnlichen Experimenten durchgeführt. Die genaue Position ist aus den Unterlagen nicht ersichtlich und das Militär weiß anscheinend auch nichts darüber. Tja, der Fall wird kompliziert ... Aber vielleicht ist das der Startpunkt, den die Händler brauchen. Ich muss weiter nach Norden zu einem Händler reisen, der als Der Wirt bekannt ist.</text>
+	</string>
+	<string id="journal_bar_darklab_documents">
+		<text>Verdammt ... Das Labor X18 war kein Spielplatz ... und die momentanen Bewohner ... Ich hätte nicht gedacht, dass solche Dinge überhaupt existieren würden. Ich habe ein paar Dokumente gefunden ... Viel habe ich nicht davon verstanden, außer dass sie technische Beschreibungen einiger Komponenten des Kaymanow-Emitters enthielten. Interessant daran ist, dass diese Teile anscheinend für ein anderes Labor X16 gedacht sind, das ebenfalls geheim ist.</text>
+	</string>
+	<string id="journal_bar_x16_documents">
+		<text>Hm, ... Die Händler haben eine Menge Informationen über diese Labore ausgegraben. Der Wirt war über die Emitter und X16 nicht überrascht. Jetzt ist er davon überzeugt, dass der Hirnschmelzer von Menschen geschaffen wurde. Er glaubt, dass sich das Labor X16 in der Nähe des wissenschaftlichen Lagers beim Jantarsee befindet. Interessanterweise studieren sie dort Emissionen, deren Wirkung denen des Schmelzers ähneln. Ich muss also mal die Wissenschaftler besuchen gehen.</text>
+	</string>
+	<string id="journal_before_darklab_documents">
+		<text>Ich habe mich mit dem Wirt getroffen. Nachdem er die Dokumente des Instituts durchgesehen hat, glaubt er, dass dieses X18 im sogenannten Dunklen Tal ist und bat mich, dort nach Informationen und Dokumenten zu suchen. Er hat angeblich Späher der Wächter in die unterirdischen Gewölbe geschickt, doch sie sind verschwunden. Der Wirt meint, sie wären von Banditen entführt worden, die in der Nähe eine Basis haben. Wenn das stimmt fällt alles, was diese Wächter gefunden haben, Borow, dem Anführer der Banditen in die Hände. Der Wirt riet mir, vorsichtig zu sein und ... offensichtlich hat er mir nicht alles über diese unterirdischen Gewölbe erzählt. Na ja, Zeit zum Arbeiten. Als Erstes muss ich Borow besuchen und wenn wir uns gut "unterhalten", kümmere ich mich danach um die Gewölbe.</text>
+	</string>
+	<string id="journal_before_radar_task">
+		<text>Tja, ich bin bereit zum Schmelzer zu gehen. Ich habe von dem Verrückten die Zeiten erfahren, in denen das Emissionsniveau absinkt. Er hat mir auch von einem sicheren Platz erzählt, an dem man diese Zeiten abwarten kann. Mein PSI-Schutz würde andernfalls sowieso nicht helfen. Ich muss einen Weg in den unterirdischen Bunker des Labors X19 finden. Im Innern sollte ich die Steuerung der Hirnschmelzer-Antenne finden.</text>
+	</string>
+	<string id="st_gordon_diary">
+		<text>Gordons PDA</text>
+	</string>

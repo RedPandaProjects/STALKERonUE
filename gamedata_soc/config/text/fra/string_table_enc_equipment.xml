@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Antirad">
+		<text>Mйdicaments antirad</text>
+	</string>
+	<string id="Arm-heavy">
+		<text>Йquipement lourd de Stalker</text>
+	</string>
+	<string id="Arm-light">
+		<text>Йquipement lйger de Stalker</text>
+	</string>
+	<string id="Arm-medium">
+		<text>Йquipement intermйdiaire de Stalker</text>
+	</string>
+	<string id="bandage">
+		<text>Bandages</text>
+	</string>
+	<string id="Binocul">
+		<text>Jumelles</text>
+	</string>
+	<string id="Bread">
+		<text>Pain</text>
+	</string>
+	<string id="cit_deadcity_maps_desc">
+		<text>Carte rйpertoriant la ville morte, y compris les positions des Mercenaires</text>
+	</string>
+	<string id="cit_deadcity_maps_name">
+		<text>Carte de la ville morte</text>
+	</string>
+	<string id="cit_doctors_key_desc">
+		<text>La clй d'accиs а une planque secrиte de Pripyat du Doc</text>
+	</string>
+	<string id="cit_doctors_key_short_desc">
+		<text>Clй du Doc</text>
+	</string>
+	<string id="Conserva">
+		<text>Dйlice du touriste</text>
+	</string>
+	<string id="Detect1">
+		<text>Dйtecteur anomalies</text>
+	</string>
+	<string id="Devic">
+		<text>Appareils</text>
+	</string>
+	<string id="device-PDA">
+		<text>PDA</text>
+	</string>
+	<string id="device-torch">
+		<text>Lampe de poche</text>
+	</string>
+	<string id="enc_equipment_armors_arm-heavy">
+		<text>Combinaison de protection. Poids : 18kg. Fiche technique : protиge le corps de la gelйe, de la flore ardente, de la plupart des anomalies et dйgвts physiques. Le torse et le dos sont protйgйs par des plaques bio-mйtalliques intйgrйes. La combinaison est йquipйe d'un casque hermйtique en plastique renforcйe muni de deux bouteilles d'oxygиne. Remarque : cette combinaison se dйchire et se dйgrade en cas d'utilisation prolongйe.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-light">
+		<text>Combinaison de protection. Poids : 8 kg. Fiche technique : protиge le corps contre les petites anomalies et dйgвts physiques. Munie d'un masque а oxygиne. Remarque : cette combinaison se dйchire et se dйgrade en cas d'utilisation prolongйe.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-medium">
+		<text>Combinaison de protection. Poids : 12 kg. Fiche technique : protиge la personne qui la porte de la gelйe, de la flore ardente, de nombreuses anomalies et dйgвts physiques. Munie d'un casque hermйtique et d'une bouteille d'oxygиne. Remarque : cette combinaison se dйchire et se dйgrade en cas d'utilisation prolongйe.</text>
+	</string>
+	<string id="enc_equipment_armors_sci2">
+		<text>Combinaison pressurisйe avec casque hermйtique. Poids : 11 kg. Fiche technique : protиge le corps contre le feu, les attaques acides, le gaz, les diffйrentes anomalies, la flore ardente et les dйgвts mйcaniques. Munie de deux bouteilles d'oxygиne. Remarque : cette combinaison se dйchire et se dйgrade en cas d'utilisation prolongйe.</text>
+	</string>
+	<string id="enc_equipment_devic_binocul1">
+		<text>Jumelles militaires</text>
+	</string>
+	<string id="enc_equipment_devic_detect1">
+		<text>Un dispositif qui dйtecte les champs et les perturbations des anomalies. Une alerte sonore signale leur prйsence. Il doit кtre attachй а la ceinture et activй pour fonctionner.</text>
+	</string>
+	<string id="enc_equipment_devic_device-PDA1">
+		<text>Personal Digital Assistant, littйralement assistant numйrique personnel : accessoire indispensable dans la Zone.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1">
+		<text>Puissante lampe de poche, trиs utile dans les endroits а faible luminositй.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1_m1">
+		<text>Puissante lampe de poche. Temps de rechargement des batteries rйduit grвce а un transformateur modernisй.</text>
+	</string>
+	<string id="enc_equipment_energydrink">
+		<text>Cette excellente boisson йnergйtique contient de la cafйine, de la taurine et un savant mйlange de vitamines de vitamines rajeunissantes. Un excellent remиde en cas de coup de pompe !</text>
+	</string>
+	<string id="enc_equipment_food_bread1">
+		<text>Difficile de dire qui a rйussi а concocter ce pain dans la Zone, mais il n'est pas contaminй et tout а fait comestible. Du moins, aucun des Stalkers ne s'en est plaint.</text>
+	</string>
+	<string id="enc_equipment_food_conserva1">
+		<text>De la nourriture en conserve qui provient d'un entrepфt militaire dйvalisй par des Stalkers. La date de pйremption n'est pas dйpassйe.</text>
+	</string>
+	<string id="enc_equipment_food_kolbasa1">
+		<text>Cette saucisse а base de poulet et de soja est souvent au menu des Stalkers au petit-dйjeuner, au dйjeuner et au dоner... faute de mieux.</text>
+	</string>
+	<string id="enc_equipment_food_vodka1">
+		<text>La Vodka fabriquйe par GSC descend facilement et rйduit considйrablement les effets des radiations. А boire avec modйration, tout de mкme !</text>
+	</string>
+	<string id="enc_equipment_medi_antirad1">
+		<text>Rйduit les effets des radiations.</text>
+	</string>
+	<string id="enc_equipment_medi_bandage1">
+		<text>Bandages. Ils aident а stopper les saignements.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit1">
+		<text>  Ce kit mйdical universel est utile pour tout genre de blessures plus ou moins graves : les plaies, les brыlures, les empoisonnements, etc.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit2">
+		<text>Trousse mйdicale conзue pour lutter contre les dйgвts physiques et les saignements. Elle comprend un anticoagulant, des antibiotiques, des stimulants immunitaires ainsi que des calmants. </text>
+	</string>
+	<string id="enc_equipment_medi_medkit3">
+		<text>Trousse mйdicale conзue pour la Zone. Elle permet de soigner les blessures et d'йliminer les radionuclйides de l'organisme. Elle empкche le dйveloppement de maladies radioactives et diminue la dose de radiations accumulйes. </text>
+	</string>
+	<string id="energy_drink_name">
+		<text>Boisson йnergйtique</text>
+	</string>
+	<string id="energy_drink_short_name">
+		<text>Boisson йnergйtique</text>
+	</string>
+	<string id="Equipment">
+		<text>Matйriel/Nourriture</text>
+	</string>
+	<string id="Food">
+		<text>Nourriture</text>
+	</string>
+	<string id="Kolbasa">
+		<text>Saucisse diйtйtique</text>
+	</string>
+	<string id="Medi">
+		<text>Mйdicaments</text>
+	</string>
+	<string id="Medkit">
+		<text>Kit mйdical</text>
+	</string>
+	<string id="Medkit_army">
+		<text>Kit premiers secours</text>
+	</string>
+	<string id="Medkit_scientific">
+		<text>Kit mйdical scient.</text>
+	</string>
+	<string id="Sci2">
+		<text>Combinaison EXP-4</text>
+	</string>
+	<string id="Vodka">
+		<text>La vodka cosaque</text>
+	</string>
+	<string id="st_detector">
+		<text>Dйtecteur d'anomalies</text>
+	</string>
+	<string id="st_detector_descr">
+		<text>Conзu pour dйtecter les zones anormales et les foyers de pollution radioactive.</text>
+	</string>
+	<string id="st_grenade_gd5">
+		<text>Grenade fumigиne</text>
+	</string>
+</string_table>

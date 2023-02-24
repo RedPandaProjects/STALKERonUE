@@ -1,0 +1,48 @@
+	<string id="gar_car_graveyard_quest">
+		<text>Odpovìz na volání o pomoc</text>
+	</string>
+	<string id="gar_defend_garbage">
+		<text>Odraz nájezd banditù.</text>
+	</string>
+	<string id="gar_dialog_hellcar">
+		<text>Nabídni svou pomoc veliteli neutrální jednotky.</text>
+	</string>
+	<string id="gar_dialog_hellcar_1">
+		<text>Nabídni svou pomoc Bìsovi</text>
+	</string>
+	<string id="gar_hellcar_alive">
+		<text>Promluv si s Bìsem</text>
+	</string>
+	<string id="gar_help_dymon">
+		<text>Odraz nájezd banditù</text>
+	</string>
+	<string id="gar_help_tunnel_newbie">
+		<text>Pomoz nováèkovi ze smetištì</text>
+	</string>
+	<string id="gar_kill_bandits">
+		<text>Odraz nájezd banditù</text>
+	</string>
+	<string id="gar_kill_boars">
+		<text>Pomoz hlídce Povinnosti</text>
+	</string>
+	<string id="gar_kill_boars_1">
+		<text>Zabij kance</text>
+	</string>
+	<string id="gar_kill_boars_2">
+		<text>Promluv si s velitelem Povinnosti</text>
+	</string>
+	<string id="gar_kill_boars_descr">
+		<text>Povinnost: "Tady Povinnost, voláme ze smetištì. Od Temnýho údolí míøí k baru vlna mutantù. Budeme patøiènì vdìèný každýmu, kdo nám ty šmejdy pomùže postøílet. Slovo Povinnosti."</text>
+	</string>
+	<string id="gar_kill_boars_main">
+		<text>Úkol pro pøístupu k baru</text>
+	</string>
+	<string id="garbage_meet_stalker_1">
+		<text>Zjisti od nìco o Støelci</text>
+	</string>
+	<string id="graveyard_raid_text">
+		<text>Bìs: "Ti šmejdi banditi se snažej ovládnout smetištì. Asi pùl hodiny jsme s nima mìli menší pøestøelku. Sundali jsme tøi, zbytek se stáhnul, ale myslím si, že seženou posily a vrátìj se. Je nás jenom pár a každá další bouchaèka se hodí. Pokud nám je pomùžeš odrazit, budeš to mít u mì."</text>
+	</string>
+	<string id="help_for_neitrals_text">
+		<text>Na opuštìném vrakovišti došlo k pøestøelce mezi neutrály a bandity. Neutrálùm se podaøilo bandity odrazit, ale teï volají o pomoc.</text>
+	</string>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Army">
+		<text>Armбda</text>
+	</string>
+	<string id="Bandits">
+		<text>Banditй</text>
+	</string>
+	<string id="Duty">
+		<text>Frakce Povinnost</text>
+	</string>
+	<string id="enc_social_military_army">
+		<text>Vojбci pravidelnй armбdy. Hlнdajн vљechny cesty do Zуny, hlнdkujн kolem perimetru, zabнjejн mutanty a lovн lupiиe. \nSpecnas - elitnн armбdnн jednotky, vмtљinou zasнlanй do Zуny na zбchrannй operace a dalљн speciбlnн mise.</text>
+	</string>
+	<string id="enc_social_military_milstalkers">
+		<text>Vojбci, kteшн proљli po sluћbм v Zуnм speciбlnнm vэcvikem, nebo stalkeшi, kteшн se dobrovolnм upsali armбdм. Vмtљinou jsou kvalitnм vybavenн  a vyzbrojenн. Vмtљinou studujн nбsledky katastrofy a mapujн Zуnu. Pracujн samostatnм nebo v malэch jednotkбch v poиtu aћ pмti muћщ. Vojenљtн stalkeшi nedovolн normбlnнm stalkerщm pшiblнћit se a vмtљinou stшнlн na potkбnн.</text>
+	</string>
+	<string id="enc_social_scientists_mobile-groups">
+		<text>Vymazбno</text>
+	</string>
+	<string id="enc_social_scientists_mobile-labs">
+		<text>Mobilnн laboratoш pшipomнnб malэ obrnмnэ bunkr s ъzkэmi okny z tmavйho skla. Laboratoш vydrћн i silnй zбsahy a dнky spolehlivэm systйmщm podpory ћivota mщћe autonomnм fungovat po mnoho mмsнcщ. Bunkr byl do Zуny pшenesen transportnнm vrtulnнkem. Pracovnнci laboratoшe nikdy nepouљtн nбvљtмvnнky za pшechodovou komoru, takћe uvnitш zatнm ћбdnэ stalker nebyl.</text>
+	</string>
+	<string id="enc_social_stalker-clans_bandits">
+		<text>Иlenovй kriminбlnнho podsvмtн, kteшн do Zуny pшiљli z mnoha rщznэch dщvodщ: vydмlat penнze prodejem artefaktщ, skrэt se pшed zбkonem nebo obchodovat se zbranмmi. Zуna je plnб banditщ, od obyиejnэch lupiищ aћ po dobшe vybavenй kriminбlnнky. Vмtљina z nich je иlenem nмkterйho gangu. Aиkoli mezi sebou gangy Zуny иasto bojujн, stejnм pro normбlnн stalkery pшedstavujн zбvaћnэ problйm.</text>
+	</string>
+	<string id="enc_social_stalker-clans_duty">
+		<text>Paravojenskб skupina znбmб svou disciplнnou. Jejн иlenovй ћijн podle pшнsnйho kodexu. Иlenovй Povinnosti jako jedinн odmнtajн prodбvat unikбtnн pшedmмty ze Zуny do venkovnнho svмta. Povнdб se, ћe vљechny artefakty, kterй skupina najde, pшedбvajн vмdcщm. Иlenovй skupiny povaћujн za svщj hlavnн cнl ochranu vnмjљнho svмta pшed nebezpeинm Zуny. Vмtљinou se zabэvajн niиenнm monster, takћe nбjezdy Povinnosti иasto zachrбnн obyиejnй stalkery pшed vбћnэmi problйmy. Frakce je uћ dlouho ve vбlce se Svobodou.</text>
+	</string>
+	<string id="enc_social_stalker-clans_freedom">
+		<text>Anarchistй a dobrodruzi, kteшн se prohlбsili za bojovnнky za svobodnэ pшнstup do Zуny a jsou v neustбlйm konfliktu s armбdou, vojenskэmi stalkery a frakcн Povinnost. Tito tzv. vбleиnнci za svobodu vмшн ve sdнlenн informacн o Zуnм s okolnнm svмtem a bojujн proti stбtnнmu monopolu na zбzraky a tajemstvн Zуny.</text>
+	</string>
+	<string id="enc_social_stalker-clans_killers">
+		<text>Nejtajemnмjљн skupina v Zуnм, nмkteшн dokonce ani v jejн existenci nevмшн. Sluћby ћoldбkщ obиas pouћнvajн rщznн lidй na obtнћnй ъkoly, jelikoћ jsou ћoldбci profesionбlovй schopnн vyшнdit jakйhokoli stalkera иi malou skupinu nepшбtel. Jejich sluћby ale nejsou lacinй, ћoldбci ћбdajн za svou prбci znaиnй ибstky nebo artefakty. Lokace jejich zбkladny je stбle tajemstvнm, coћ vede k domnмnce, ћe se nachбzн hluboko v Zуnм.</text>
+	</string>
+	<string id="enc_social_stalker-clans_loners">
+		<text>Stalkeшi zkoumajнcн Zуnu na vlastnн pмst. Pracuje takhle vмtљina stalkerщ, protoћe иlenstvн ve skupinм stojн cennэ иas a takй ибst zisku. A nмkteшн prostм dбvajн pшednost samotм a nezбvislosti.</text>
+	</string>
+	<string id="enc_social_stalker-clans_monolith">
+		<text>Tato skupina vykazuje mnohй znaky nбboћenskй sekty. Jejн иlenovй vмшн v existenci cizнho krystalu, monolitu, umнstмnйho nмkde ve stшedu Zуny. Vмtљina stalkerщ adepty Monolitu opovrhuje a povaћuje je za blбzny. Skupina Monolitu se snaћн zablokovat veљkerэ postup hloubмji do Zуny a uchrбnit tak monolit pшed ostatnнmi stalkery. Povнdб se, ћe majн hluboko v Zуnм velkou zбkladnu, ale pшesnй umнstмnн znajн jenom иlenovй.</text>
+	</string>
+	<string id="enc_social_stalker-clans_zomstalkers">
+		<text>Uboћбci, kteшн byli vystaveni pщsobenн zбшenн v Jantaru a dalљнch silnм ozбшenэch sektorech. Neopatrnн stalkeшi zeљнlн a zmмnн se na chodнcн mrtvoly. Prochбzн jich Zуnou mnoho, nмkteшн se dostanou aћ k perimetru. Uћ jim nenн pomoci, protoћe destruktivnн proces je nezvratnэ. Zombifikovanн stalkeшi stбle jeљtм dokбћн pouћнvat svй zbranм, ale jsou pomмrnм hloupн, иasto chodн v kruzнch a mumlajн si nesmyslnй kratiиkй vмty. Иasem ztrбcн vљechny svй schopnosti a stanou se z nich normбlnн zombie. Vмtљinou jsou velmi agresivnн a ve velkйm poиtu mohou pшedstavovat vбћnй nebezpeин.</text>
+	</string>
+	<string id="Freedom">
+		<text>Frakce Svoboda</text>
+	</string>
+	<string id="Killers">
+		<text>Ћoldбci</text>
+	</string>
+	<string id="Loners">
+		<text>Osamмlн stalkeшi</text>
+	</string>
+	<string id="Military">
+		<text>Militarizovanй jednotky</text>
+	</string>
+	<string id="Milstalkers">
+		<text>Vojenљtн stalkeшi</text>
+	</string>
+	<string id="Mobile-groups">
+		<text>Vэzkumnй skupiny</text>
+	</string>
+	<string id="Mobile-labs">
+		<text>Mobilnн vмdeckб laboratoш</text>
+	</string>
+	<string id="Monolith">
+		<text>Frakce Monolit</text>
+	</string>
+	<string id="Scientists">
+		<text>Vмdci</text>
+	</string>
+	<string id="Social">
+		<text>Frakce</text>
+	</string>
+	<string id="Stalker-clans">
+		<text>Klany stalkerщ</text>
+	</string>
+	<string id="Zomstalkers">
+		<text>Zombifikovanн stalkeшi</text>
+	</string>
+</string_table>

@@ -1,0 +1,81 @@
+	<string id="about_enciclopedia">
+		<text>Tohle je encyklopedie. Jak budeš procházet hrou, budou se tady pøidávat novì získané informace o svìtì, tøídìné podle tématu.</text>
+	</string>
+	<string id="about_pda">
+		<text>O encyklopedii</text>
+	</string>
+	<string id="Bandit's flash">
+		<text>PDA bandity z továrny</text>
+	</string>
+	<string id="blokpost_case_text">
+		<text>Pøekupník: dostaò se na vojenské stanovištì a ukradni tam krabici s hlášením o vojenské expedici do severní èásti Zóny.</text>
+	</string>
+	<string id="Dead novice's flash">
+		<text>PDA mrtvého nováèka</text>
+	</string>
+	<string id="defend_lager_text">
+		<text>Fanatik: Pomoz nám ubránit se pøed oldáky, kteøí pøikázali nováèkùm vypadnout z tábora. Plán je takovıhle: všichni se schovají, aby tábor vypadal opuštìnì, necháme oldáky vejít do tábora, pak na kapitánùv pøíkaz zaútoèíme.</text>
+	</string>
+	<string id="doctor_meet">
+		<text>Stopaøovo PDA</text>
+	</string>
+	<string id="doctor_meet_2">
+		<text>Setkání s doktorem</text>
+	</string>
+	<string id="doctor_meet_quest_text">
+		<text>Doktor: Budu èekat na Støelcova chlapa ve skrıši, kterou Støelec se svou skupinou pouívá. Pokud je to opravdu jeden z nás, bude vìdìt kde.</text>
+	</string>
+	<string id="doctor_meet_text">
+		<text>Dobøe, setkám se s tím chlapem od Ducha. Budu na nìj èekat ve skrıši, kterou Støelec se svou skupinou pouívá. Pokud je to opravdu jeden z nás, bude vìdìt kde. Doktor.</text>
+	</string>
+	<string id="esc_flash_task_descr">
+		<text>Pøekupník: "Pár mıch chlapù se vracelo z mise a zmizeli. Jeden z nich, chlápek jménem Šikula - mi nesl nìjakı info... Zmizeli nìkde tady kolem, protoe na most se nedostali. Nevím, jestli se rozhodli prodat informace nìkomu jinımu, nebo jen nìkde chlastaj. V kadım pøípadì, najdi Šikulu. ivıho nebo mrtvıho, to je mi fuk, ale potøebuju jeho flaskdisk. Pøines mi ho. Šikula patøil mezi Wolfovy kluky. Wolfa najdeš tady v táboøe. Zeptej se ho, mohl by nìco vìdìt. Pomùe ti s vybavením a bouchaèkama."</text>
+	</string>
+	<string id="esc_fox_info">
+		<text>Šedivák Lišákovi: pøítel mi chce pomoct s bandou stalkerù, která vyhrabala Støelcovu skrıš. Vyrazím s chlapama do hangáru na smetišti. Tam mì najdeš. </text>
+	</string>
+	<string id="esc_kolyan_lost">
+		<text>Vèera vyrazil jeden bratr prozkoumat opuštìnı mlın a od té doby jsme o nìm neslyšeli. Musíme tam jít a zjistit, co se s ním stalo.</text>
+	</string>
+	<string id="factory_dynamit_text">
+		<text>Wolf: Pøines dynamit, kterı ukradli banditi z továrny. Pod mostem jsou prùzkumníci, kteøí ti pomùou, jdi za nimi a øekni jim "Pozdrav z podsvìtí" - to je heslo. Veï je do boje.</text>
+	</string>
+	<string id="factory_trader_text">
+		<text>Wolf: S pomocí mıch prùzkumníkù pod mostem zlikviduj bandity v továrnì, pak se vra a podej hlášení.</text>
+	</string>
+	<string id="Flash dead stalker">
+		<text>PDA mrtvého stalkera</text>
+	</string>
+	<string id="gunslinger_clan_cache">
+		<text>… dostal jsem se do skrıše òákıho chlapa, nic si nepamatuju. Akorát jsem mìl u sebe PDA s obrázkem nìjakıho dalšího chlapa. A v PDA je jenom jedna zpráva, zabij Støelce.</text>
+	</string>
+	<string id="help_to_fox">
+		<text>Pøekupník: Lišák se vrátil z nájezdu a potøebuje pomoc. Moná ví nìco o Støelci.</text>
+	</string>
+	<string id="meet_seryi_text">
+		<text>Lišák: Šedivák je v hangáru na smetišti, ví o Støelci nìco víc.</text>
+	</string>
+	<string id="military_case_text">
+		<text>Pøekupník: Ukradni armádì z vızkumného institutu Agroprom zprávu o expedici, vem ji do baru U 100 radù a dej ji barmanovi.</text>
+	</string>
+	<string id="Seryi flash">
+		<text>Lišákovo PDA</text>
+	</string>
+	<string id="storyline_fox_flash_info">
+		<text>Tolikùv diáø. Pøekupník nás poslal špehovat armádu ve vızkumnım institutu Agroprom. Dostali jsme se tam a všechny postøíleli, bandity i vojáky. Vyhrabali jsme pár zajímavıch vìcí, zbytek zašifruju. *nesrozumitelnı text, kterı vypadá jako šifra*</text>
+	</string>
+	<string id="storyline_seryi_info">
+		<text>Šedivák Lišákovi: jeden chlápek co ho znám se chce setkat s partou stalkerù, kteøí vyèmuchali Støelcovu skrıš. Budu na smetišti, stav se, jestli chceš.</text>
+	</string>
+	<string id="Tolik flash">
+		<text>Tolikovo PDA</text>
+	</string>
+	<string id="tutorial_artefact_find">
+		<text>Pøekupník: Poblí je anomálie masomlejnek. Ve støedu je artefakt. Seber ho.</text>
+	</string>
+	<string id="tutorial_moving_anomaly_text">
+		<text>Je tady hodnì divná anomálie. Vypadá to, jako by se pohybovala. Zkusím vypoèítat dobu a trasu jejího pohybu, protoe nemám peníze na uplacení vojákù.</text>
+	</string>
+	<string id="tutorial_secret_place">
+		<text>Na opuštìné farmì jsem nechal pár zásob, nìjaké jídlo a munici. Jsem moc slabı, ne abych to teï všechno unesl. Ani nevím, jestli se vùbec dokáu dostat do tábora.</text>
+	</string>

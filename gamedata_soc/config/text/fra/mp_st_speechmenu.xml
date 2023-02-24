@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="speech_attack">
+		<text>А l'attaque !</text>
+	</string>
+	<string id="speech_covermeartifact">
+		<text>Je vais chercher l'artefact ! Couvrez-moi.</text>
+	</string>
+	<string id="speech_followme">
+		<text>Derriиre moi !</text>
+	</string>
+	<string id="speech_guardartifact">
+		<text>Gardez l'artefact. N'attaquez pas pour le moment !</text>
+	</string>
+	<string id="speech_holdingpos">
+		<text>Je reste en position.</text>
+	</string>
+	<string id="speech_holdpos">
+		<text>Faut maintenir nos positions !</text>
+	</string>
+	<string id="speech_icoverartifact">
+		<text>Allez chercher l'artefact ! Je vous couvre.</text>
+	</string>
+	<string id="speech_needhelp">
+		<text>J'ai besoin d'aide.</text>
+	</string>
+	<string id="speech_needmoney">
+		<text>Je n'ai pas d'argent, achetez-moi du matos.</text>
+	</string>
+	<string id="speech_no">
+		<text>Non.</text>
+	</string>
+	<string id="speech_noenemy">
+		<text>Personne en vue.</text>
+	</string>
+	<string id="speech_report">
+		<text>Faites un rapport sur la situation !</text>
+	</string>
+	<string id="speech_retreat">
+		<text>Repli !</text>
+	</string>
+	<string id="speech_roger">
+		<text>Bien reзu.</text>
+	</string>
+	<string id="speech_silence">
+		<text>Silence, tout le monde !</text>
+	</string>
+	<string id="speech_sticktogether">
+		<text>Restez groupйs.</text>
+	</string>
+	<string id="speech_takeartifact">
+		<text>Allez chercher l'artefact !</text>
+	</string>
+</string_table>

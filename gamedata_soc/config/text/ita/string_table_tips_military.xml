@@ -1,0 +1,36 @@
+	<string id="mil_actor_blockpost">
+		<text>Ti stai avvicinando alla Barriera. Non farti venire strane idee, ma sappi che saremo più che felici di accettare il tuo aiuto.</text>
+	</string>
+	<string id="mil_after_sniper_dead">
+		<text>Marchiato, la tua ricompensa e altre istruzioni sono qui che ti aspettano.</text>
+	</string>
+	<string id="mil_fblockpost_warning">
+		<text>Marchiato, torna alla tua posizione.</text>
+	</string>
+	<string id="mil_info_freedom_radio">
+		<text>Se trascorri tutta la notte alla torre del villaggio, qualcosa succede di SICURO...</text>
+	</string>
+	<string id="mil_info_max_mines">
+		<text>Non dimenticare le mine! Basta uno sbaglio e sei fritto...</text>
+	</string>
+	<string id="mil_info_max_village">
+		<text>Stai attento, Marchiato. Sembra che ci sia una nuova anomalia nel villaggio. Quella stronza è veloce è invisibile!</text>
+	</string>
+	<string id="mil_info_to_all">
+		<text>A chiunque abbia intenzione di farsi liquefare il cervello: la strada che conduce alla Foresta Rossa è protetta da un'unità dei Monolith e, come probabilmente sapete, quelli prima sparano e poi fanno le domande. Buona fortuna.</text>
+	</string>
+	<string id="mil_max_attack_signal">
+		<text>All'attacco! Accoppiamo quei bastardi!</text>
+	</string>
+	<string id="mil_mission_complete">
+		<text>Il nostro lavoro qui è finito. Ritiriamoci alla fattoria. Sbrigheremo lì la faccenda del pagamento.</text>
+	</string>
+	<string id="mil_scull_attack_signal">
+		<text>Avanti, ragazzi! Via libera!</text>
+	</string>
+	<string id="mil_scull_info">
+		<text>Marchiato, becca quei cecchini!</text>
+	</string>
+	<string id="mil_sniper_to_player_warning">
+		<text>Attento, Marchiato, o ti beccherai una pallottola...</text>
+	</string>

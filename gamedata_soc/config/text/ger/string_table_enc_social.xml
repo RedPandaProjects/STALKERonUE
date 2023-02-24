@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Army">
+		<text>Armee</text>
+	</string>
+	<string id="Bandits">
+		<text>Banditen</text>
+	</string>
+	<string id="Duty">
+		<text>Wдchterfraktion</text>
+	</string>
+	<string id="enc_social_military_army">
+		<text>Regulдre Soldaten der Armee. Sie bewachen alle StraЯen in die Zone, patrouillieren an der Grenze, tцten Mutanten und jagen Plьnderer.\nSpetsnaz - Elitetruppen, die gewцhnlich in der Zone Rettungseinsдtze und andere Spezialauftrдge ausfьhren.</text>
+	</string>
+	<string id="enc_social_military_milstalkers">
+		<text>Soldaten mit spezieller Ausbildung nach ihrer Dienstzeit in der Zone, oder Stalker die freiwillig zur Armee gegangen sind. Sie sind ьblicherweise gut bewaffnet und verfьgen ьber diverse Unterstьtzungsausrьstung. Sie werden hauptsдchlich eingesetzt, um Ursachen und Auswirkungen der Katastrophe zu studieren und die Zone zu kartografieren. Sie arbeiten allein oder in kleinen Gruppen von bis zu fьnf Personen. Armeestalker dulden keine normalen Stalker und greifen sofort an.</text>
+	</string>
+	<string id="enc_social_scientists_mobile-groups">
+		<text>Gelцscht</text>
+	</string>
+	<string id="enc_social_scientists_mobile-labs">
+		<text>Ein mobiles Labor дhnelt einem kleinen befestigten Bunker mit kleinen bunten Glasfenstern. Das Labor kann einer Menge Schaden widerstehen und dank seiner zuverlдssigen Lebenserhaltung monatelang autonom arbeiten. Bunker werden per Transporthubschrauber in die Zone gebracht. Das Personal lдsst niemanden weiter hinein als durch die erste Luftschleuse, also war noch kein Stalker jemals im Inneren.</text>
+	</string>
+	<string id="enc_social_stalker-clans_bandits">
+		<text>Angehцrige der kriminellen Unterwelt, die aus verschiedenen Grьnden in der Zone sind: um Artefakte zu verkaufen, sich vor dem Gesetz zu verstecken oder mit Waffen zu handeln. Die Zone strotzt vor Banditen, darunter einfache Gangster wie Profikriminelle, die meisten gehцren einer Gang an. Obwohl die Gangs der Zone sich untereinander bekдmpfen, sind Kriminelle fьr Stalker ein Problem.</text>
+	</string>
+	<string id="enc_social_stalker-clans_duty">
+		<text>Eine fьr ihre Disziplin bekannte paramilitдrische Gruppe, deren Angehцrige einem strikten Kodex folgen. Wдchter sind die einzigen, die sich weigern, einzigartige Objekte aus der Zone mit der AuЯenwelt zu handeln. Gerьchten zufolge gibt diese Gruppe alle Artefakte an die Wissenschaft. Die Mitglieder halten es fьr ihr wichtigstes Ziel, die Welt drauЯen vor den Gefahren der Zone zu schьtzen. Die Gruppe vernichtet oft Monster, daher retten Wдchter-Operationen oft normale Stalker aus ernsten Schwierigkeiten. Die Gruppe liegt seit langem im Krieg mit den Freiheitskдmpfern.</text>
+	</string>
+	<string id="enc_social_stalker-clans_freedom">
+		<text>Anarchisten und Draufgдnger, die von sich behaupten, fьr freien Zugang zur Zone zu kдmpfen und die daher dauerhaft im Streit mit der Armee, den Armeestalkern und der Wдchterfraktion liegen. Diese sogenannten Freiheitskrieger glauben, alle Welt mьsse ьber die Zone Bescheid wissen und fordern das staatliche Monopol auf die Zone und ihre Geheimnisse und Wunder heraus.</text>
+	</string>
+	<string id="enc_social_stalker-clans_killers">
+		<text>Die verborgenste und geheimnisvollste Fraktion in der Zone; manche zweifeln an ihrer Existenz. Manche benutzen die Dienste der Sцldner regelmдЯig, da sie echte Profis sind, die schnell mit jedem Stalker und sogar mit kleinen Gruppen fertig werden. Ihre Dienste sind nicht billig - die Sцldner verlangen kцnigliche Entlohnung in Form von Geld oder Artefakten. Der Ort ihrer Basis bleibt geheim, was vermuten lдsst, dass sie tief im Inneren der Zone liegt.</text>
+	</string>
+	<string id="enc_social_stalker-clans_loners">
+		<text>Stalker, die alleine die Zone erkunden. So arbeiten die meisten Stalker, da die Mitgliedschaft in einer Gruppe Zeit und Anteile an der Beute kostet. Aber es gibt auch Leute, die einfach Einsamkeit und Unabhдngigkeit bevorzugen.</text>
+	</string>
+	<string id="enc_social_stalker-clans_monolith">
+		<text>Diese Gruppe hat viel von einer religiцsen Sekte. Ihre Mitglieder glauben an die Existenz eines komplexen Alien-Kristalls, des Monolithen, irgendwo im Zentrum der Zone. Die meisten Stalker haben fьr Adepten des Monoliths nur Verachtung ьbrig und halten sie fьr Spinner. Seit Anbeginn versucht die Gruppe, jedes Vordringen ins Herz der Zone zu blockieren, um den Monolithen vor anderen Stalkern zu schьtzen. Angeblich haben sie eine groЯe Basis tief in der Zone, doch kennen nur Mitglieder den Ort.</text>
+	</string>
+	<string id="enc_social_stalker-clans_zomstalkers">
+		<text>Arme Seelen, die in Jantar und anderen schwer verstrahlten Sektoren langfristiger Einwirkung ausgesetzt waren. Achtlose Stalker, die den Verstand verloren haben und wandelnde Leichen sind. Viele solcher Leichen irren durch die Zone, manche bis zum Perimeter. Es gibt keine Hilfe fьr sie, der Prozess ist unumkehrbar. Zombie-Stalker kцnnen noch ihre Waffen benutzen, sind aber dumm und murmeln sinnlose Wortfetzen vor sich hin. Sie verlieren ihre Fдhigkeiten und werden zu Zombies. Sie sind oft sehr aggressiv und stellen in grцЯerer Zahl eine ernsthafte Bedrohung dar.</text>
+	</string>
+	<string id="Freedom">
+		<text>Freiheitsgruppe</text>
+	</string>
+	<string id="Killers">
+		<text>Sцldner</text>
+	</string>
+	<string id="Loners">
+		<text>Solitдrstalker</text>
+	</string>
+	<string id="Military">
+		<text>Militдreinheiten</text>
+	</string>
+	<string id="Milstalkers">
+		<text>Armeestalker</text>
+	</string>
+	<string id="Mobile-groups">
+		<text>Forschungsgruppen</text>
+	</string>
+	<string id="Mobile-labs">
+		<text>Mobiles Forschungslabor</text>
+	</string>
+	<string id="Monolith">
+		<text>Monolith-Fraktion</text>
+	</string>
+	<string id="Scientists">
+		<text>Wissenschaftler</text>
+	</string>
+	<string id="Social">
+		<text>Fraktionen</text>
+	</string>
+	<string id="Stalker-clans">
+		<text>Stalker-Clans</text>
+	</string>
+	<string id="Zomstalkers">
+		<text>Zombiestalker</text>
+	</string>
+</string_table>

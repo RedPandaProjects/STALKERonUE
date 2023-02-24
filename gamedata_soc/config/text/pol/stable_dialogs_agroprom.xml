@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_factory_krot_start_0">
+		<text>Dziкki za pomoc, stalkerze! Gdyby nie ty, juї byіbym trupem.</text>
+	</string>
+	<string id="agr_factory_krot_start_10001">
+		<text>Potrzebne mi informacje o Strieloku - moїe ty coњ wiesz, hm?</text>
+	</string>
+	<string id="agr_factory_krot_start_10002">
+		<text>Jak siк dostanк do piwnicy?</text>
+	</string>
+	<string id="agr_factory_krot_start_15001">
+		<text>Schowek Strieloka?</text>
+	</string>
+	<string id="agr_factory_krot_start_15002">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="agr_factory_krot_start_1501">
+		<text>Tak, sіyszaіem. Mуwi siк nawet, їe kiedyњ "pracowaі" w tej okolicy i їe schowek Strieloka jest gdzieњ w pobliskich piwnicach. Ponoж takїe jego grupa miaіa tu bazк.</text>
+	</string>
+	<string id="agr_factory_krot_start_1502">
+		<text>To jest jedno z wielu przejњж, ktуre doprowadz№ ciк do systemu poі№czonych piwnic. Jak juї tam trafisz, jesteњ zdany na siebie - nie mam mapy, a sieж piwnic jest olbrzymia i іatwo siк tam zgubiж.</text>
+	</string>
+	<string id="agr_factory_krot_start_2">
+		<text>Szukam informacji o Strieloku - Sieryj twierdzi, їe wiesz coњ na ten temat.</text>
+	</string>
+	<string id="agr_factory_krot_start_30001">
+		<text>Dziкkujк.</text>
+	</string>
+	<string id="agr_factory_krot_start_3001">
+		<text>Taa, teї go szukaliњmy, ale bez skutku. Poњlк ci trochк danych - to wszystko, co mamy na temat tego schowka.</text>
+	</string>
+	<string id="agr_factory_stalker_about_0">
+		<text>Co tu siк dzieje?</text>
+	</string>
+	<string id="agr_factory_stalker_about_1">
+		<text>Walczymy, a dokіadniej: obozujemy tutaj jak zwierzyna na odstrzaі. Pogadaj z Kretem, jeњli chcesz wiedzieж wiкcej - to on tutaj rz№dzi.</text>
+	</string>
+	<string id="agr_factory_stalker_start_0">
+		<text>Stary, co to byіa za jatka - najgorszemu wrogowi byњ czegoњ takiego nie їyczyі. Chіoptasie z woja zaczynaj№ ostro kozakowaж!</text>
+	</string>
+	<string id="agr_krot_about_agroprom_0">
+		<text>Gdzie znajduje siк Instytut Badawczy Agroprom?</text>
+	</string>
+	<string id="agr_krot_about_agroprom_10">
+		<text>Niedaleko st№d. Jak pуjdziesz drog№ na zachуd, to wkrуtce staniesz przed bram№ Instytutu.</text>
+	</string>
+	<string id="agr_krot_about_agroprom_100">
+		<text>Sіyszaіem, їe wojsko zaіoїyіo tu bazк. To prawda?</text>
+	</string>
+	<string id="agr_krot_about_agroprom_120">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="agr_krot_about_agroprom_20">
+		<text>Tak, jest tam baza wojskowa. Nie wiem dokіadnie, ilu ich jest, ale co najmniej pluton. S№ dobrze uzbrojeni i nie masz najmniejszych szans, їeby siк przebiж - rozsmaruj№ ciк, zanim powiesz "serwus, towarzysze". Najlepiej sprуbowaж przekraњж siк noc№, bo w dzieс baza jest њwietnie strzeїona - wszкdzie maj№ posterunki... A zreszt№ sіyszaіem, їe jakiњ dezerter stamt№d teraz siк chowa na bagnach. Jeњli go znajdziesz, to pewnie uda ci siк wyci№gn№ж z niego kilka przydatnych informacji.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_0">
+		<text>Co siк dzieje?</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_100">
+		<text>Razem z chіopakami znaleџliњmy fajne miejsce peіne artefaktуw, ale napadіy nas te wojskowe іajzy - cholera wie czemu. Nie mam pojкcia, o co im mogіo chodziж...</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_200">
+		<text>Taa, sіyszaіem o nim. Kiedyњ chyba "zarabiaі" na tym terenie - to zreszt№ jest caіkiem dobre miejsce. Wyniуsі siк dawno temu, nie pamiкtam dokіadnie kiedy i nie mam zielonego pojкcia, dok№d siк udaі. To wszystko, co wiem.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_2000">
+		<text>Nie czekasz tu ot tak sobie, prawda? Bo niby co tu robi Specnaz?</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_250">
+		<text>Dobra, wiem coњ o Strieloku.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_2500">
+		<text>Serio? Musisz mi powiedzieж!</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_3500">
+		<text>Jeњli mnie okіamaіeњ, to ciк znajdк i skoсczк to, co siк nie udaіo їoіnierzom!</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_400">
+		<text>Nie kіamiк. Wiem, їe tu nikt nikomu nie ufa, wiкc nie masz wielkiego wyboru.</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_100">
+		<text>Sieryj? Dobra, posіuchaj. Mуwi siк, їe Strielok kiedyњ siк tu krкciі. Ponadto gdzieњ pod ziemi№ jest jego schowek. Sіyszaіem, їe tu jest nawet baza jego grupy. My teї szukaliњmy tego schowka, ale gуwno znaleџliњmy. Powiem ci, co o nim wiem, moїe tobie siк poszczкњci. To wszystko, co mamy na ten temat.</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_2000">
+		<text>Co jeszcze wiesz?</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_250">
+		<text>Nic wiкcej nie wiem - wszystko ci juї powiedziaіem i teraz musisz kombinowaж na wіasn№ rкkк. Powodzenia.</text>
+	</string>
+	<string id="agr_krot_help_0">
+		<text>Ej, stalkerze! Pomocy!!!</text>
+	</string>
+	<string id="agr_krot_help_10">
+		<text>Okej.</text>
+	</string>
+	<string id="agr_ratcatcher_start_0">
+		<text>Weџ, nie strzelaj!</text>
+	</string>
+	<string id="agr_stalker_esc_0">
+		<text>Co robisz?</text>
+	</string>
+	<string id="agr_stalker_esc_20">
+		<text>Wracam wіaњnie z fabryki, ktуra leїy kawaіek dalej przy drodze. Nie mam pojкcia, sk№d wojskowi dowiedzieli siк o naszej grupie. Nie czekaіem, aї wkrocz№, tylko spieprzaіem najszybciej, jak mogіem. Mam nadziejк, їe chіopaki siк wydostaіy, bo w przeciwnym razie dіugo juї nie poїyj№ - sam widziaіeњ њmigіowce.</text>
+	</string>
+	<string id="agr_stalker_esc_300">
+		<text>Dobra, dziкki.</text>
+	</string>
+	<string id="agr_stalker_esc_400">
+		<text>Dobra, dziкki.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_0">
+		<text>Mam kilka pytaс.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_10">
+		<text>Co chcesz wiedzieж?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_1000">
+		<text>Dzieje siк coњ ciekawego?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_120">
+		<text>Ile potrzebujesz?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_130">
+		<text>Masz, tu jest forsa. A teraz gadaj, gdzie to znajdк.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_131">
+		<text>Odwal siк!</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_140">
+		<text>Dziкkujк.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_20">
+		<text>No... jest kilka takich miejsc, ale musiaіbyњ siк troszkк podzieliж fortun№, stary.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_21">
+		<text>Dawniej byіo tu doњж spokojnie, ale teraz wojskowym coњ odbiіo i zaczкli zdejmowaж, kogo popadnie. Ostatnio wykurzyli bandytуw - sіyszaіem, їe niektуrym udaіo siк schowaж w katakumbach.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_30">
+		<text>Trzydzieњci, pasi?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_40">
+		<text>Niedaleko jest wylot tunelu kolejowego. Tam w њlepym zauіku jest doњж bezpiecznie - nikogo podczas snu nie zeїarto... przynajmniej na razie. Na pуіnocny zachуd od fabryki znajdziesz bagno z wagonem. Tylko uwaїaj, bo zajebiњcie duїo jest tam promieniowania, wiкc najlepiej podejњж od zachodu. Aha, jeszcze jedno: widziano tam їoіnierza. Najprawdopodobniej jest z bazy wojskowej przy Instytucie. Biedak chyba caіkiem oszalaі - przebywa tam juї kilka dni i w№tpiк, їeby sam dіugo jeszcze poci№gn№і.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_9999">
+		<text>Trzymaj siк!</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_0">
+		<text>Jakieњ ciekawe wieњci?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1">
+		<text>Sіyszaіeњ o Szczuroіapie? Informacja kosztuje trzy dychy.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_11">
+		<text>Zgoda.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_111">
+		<text>Mamy tu w okolicy bohatera zwanego Szczuroіapem. Їyje na bagnach. Facet wyhodowaі w kolektorach tak wiele szczurуw, їe wkrуtce zeїr№ to wojskowe њcierwo.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1111">
+		<text>Ekstra. Dziкki.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1112">
+		<text>Powiedz mi wiкcej o kolektorach.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_11121">
+		<text>Kolektor to w gruncie rzeczy zwykіy, cuchn№cy gуwnem kanaі, ktуry odprowadza odpady z Instytutu do najbliїszego zbiornika wodnego.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_111211">
+		<text>Ekstra. No to na razie. Trzymaj siк.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_12">
+		<text>To juї wiem. Dziкki.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_121">
+		<text>Niczego wiкcej siк juї ode mnie nie dowiesz.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_13">
+		<text>Nie mam tyle kasy.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_14">
+		<text>Nie interesuje mnie to.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_3">
+		<text>Jakieњ ciekawe wieњci?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_31">
+		<text>Nic. Kompletnie nic.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_311">
+		<text>Kumam. Na razie!</text>
+	</string>
+	<string id="agr_stalker_talk_level_0">
+		<text>Opowiedz mi o tym miejscu.</text>
+	</string>
+	<string id="agr_stalker_talk_level_1">
+		<text>To s№ tereny wokуі Instytutu Badawczego Agroprom. Sam Instytut jest na poіudniowy zachуd. Fabryka, ktуra robiіa za zakіad technologii produkcji, leїy na pуіnoc. Budynki juї od dawna stoj№ opuszczone i puste, ale ostatnimi czasy wojsko bardzo energicznie prowadzi jakieњ poszukiwania.</text>
+	</string>
+	<string id="agr_stalker_talk_level_2">
+		<text>Powiedz mi coњ wiкcej o Instytucie.</text>
+	</string>
+	<string id="agr_stalker_talk_level_21">
+		<text>Na temat Instytutu kr№їy wiele legend. Przed katastrof№ w 1986 jedyn№ rzecz№ tutaj byі Instytut Planowania Upraw i Genetyki. Teren, na ktуrym teraz stoi fabryka, wczeњniej byі uїywany jako eksperymentalne pole uprawne. Po wypadku zamknкli Instytut i spalili pola. Potem sobie o nim przypomnieli, pobielili њciany, wokуі postawili ogrodzenie i zbudowali jakieњ koszary. Nie wiem, czym siк zajmowali w tym Instytucie, ale z caі№ pewnoњci№ nie brakowaіo im њrodkуw.</text>
+	</string>
+	<string id="agr_stalker_talk_level_3">
+		<text>Opowiedz mi coњ wiкcej o fabryce. </text>
+	</string>
+	<string id="agr_stalker_talk_level_31">
+		<text>Fabrykк zbudowano pod koniec lat osiemdziesi№tych. Miaіa sіuїyж do budowy i testowania maszyn, za pomoc№ ktуrych moїna by dezynfekowaж glebк skaїon№ promieniowaniem. O ile mi wiadomo, nikt nigdy nie widziaі, їeby wyjechaіa stamt№d choжby jedna maszyna. Teraz budynek jest caіkiem pusty, wiкc stalkerzy lubi№ tam przyіaziж. Ponoж miejsce jest doњж bezpieczne, o ile unikasz ciemnych zakamarkуw.</text>
+	</string>
+	<string id="agr_stalker_talk_level_4">
+		<text>Dziкkujк.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_0">
+		<text>Co robisz?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_10">
+		<text>Ukrywam siк tu, nie szukam kіopotуw.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_100">
+		<text>Przed kim siк ukrywasz?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_120">
+		<text>Katakumby?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_130">
+		<text>Wiesz, gdzie trzymaj№ dokumenty w Instytucie?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_140">
+		<text>Co zamierzasz teraz zrobiж?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_141">
+		<text>Co zamierzasz teraz zrobiж?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_20">
+		<text>Jestem ze zwiadu. Wysіali nas do katakumb, їebyњmy sprawdzili, co siк dzieje pod baz№. Stary... na dole jest piekіo, wierz mi. Tylko ja siк wydostaіem... reszta pewnie juї gryzie piach. Nie zamierzam wracaж do bazy - sukinsyny zawsze uїywaj№ nas do zatykania dziur w tej cholernej Zonie.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_30">
+		<text>Podziemne tunele. Ci№gn№ siк od Instytutu do terenуw wokуі - pokaїк ci, gdzie s№ wejњcia. Nie mam niestety їadnych planуw katakumb.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_40">
+		<text>W kwaterze gіуwnej, na drugim piкtrze Instytutu. Tam trzymaj№ te wszystkie pieprzone szpargaіy. Ale dostaж siк tam to prawdziwa sztuka. Za dnia teren roi siк od patroli, w nocy jest nieco luџniej. Powiem ci to za friko: jak chcesz siк tam dostaж, musisz pуjњж przez katakumby - przy bramie nie masz szans.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_50">
+		<text>Hm, no nie wiem. Zgodnie z kodeksem jestem dezerterem i muszк siк jakoњ wydostaж z Zony. Kiedy pierwszy raz tu przybyliњmy, w garaїu byі Zaporoїec prawie na chodzie. Naprawienie go zajкіo mi jakieњ pуі godziny, ale ten pieprzony kapitan zgarn№і go dla siebie, twierdz№c, їe takie s№ przepisy. Pojeџdziі nim trochк po drodze, a potem zostawiі na deszczu gdzieњ przy bramie. Gdybym tylko dorwaі tк brykк - znacznie іatwiej prysn№ж, jak siк ma cztery kуіka!</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0">
+		<text>Witam.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01">
+		<text>Co jest?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_011">
+		<text>Opowiedz mi o kolektorze. Jak siк dostaж do њrodka? Gdzie s№ wejњcia i wyjњcia?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0111">
+		<text>W kolektorze nie jest zbyt bezpiecznie. W sumie mamy szeњж wejњж, z ktуrych dwa znajdziesz na terenie wokуі Instytutu, gdzie wojskowi zaіoїyli bazк. Obszar jest patrolowany, a kapitan trzyma grafik patroli w skіadzie broni.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01111">
+		<text>Sk№d ty to wszystko wiesz?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_011111">
+		<text>Szczury mi powiedziaіy.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0111111">
+		<text>Kapujк. Na razie! Powodzenia їyczк.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_012">
+		<text>Niewaїne. Do zobaczenia.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_013">
+		<text>Kim jesteњ?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0134">
+		<text>Їyjк sobie tutaj, o ile moїna to nazwaж їyciem. Hodujк szczury w kolektorze, їeby wkurzyж wojskowych z Instytutu.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0135">
+		<text>Jestem Szczuroіap.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01351">
+		<text>Co robisz na bagnach?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_123">
+		<text>Aaa... Јapiк.... cуї, ja jestem z innej bajki. Ha, ha, ha...</text>
+	</string>
+</string_table>

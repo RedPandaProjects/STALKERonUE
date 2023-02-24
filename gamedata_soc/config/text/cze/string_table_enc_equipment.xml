@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Antirad">
+		<text>Protiradiaиnн drogy</text>
+	</string>
+	<string id="Arm-heavy">
+		<text>Tмћkй stalkerskй vybavenн</text>
+	</string>
+	<string id="Arm-light">
+		<text>Lehkй stalkerskй vybavenн</text>
+	</string>
+	<string id="Arm-medium">
+		<text>Stшednн stalkerskй vybavenн</text>
+	</string>
+	<string id="bandage">
+		<text>Obvazy</text>
+	</string>
+	<string id="Binocul">
+		<text>Dalekohled</text>
+	</string>
+	<string id="Bread">
+		<text>Chleba</text>
+	</string>
+	<string id="cit_deadcity_maps_desc">
+		<text>Detailnн mapa Mrtvйho mмsta, obsahujнcн oznaиenй pozice ћoldбkщ</text>
+	</string>
+	<string id="cit_deadcity_maps_name">
+		<text>Mapa Mrtvйho mмsta</text>
+	</string>
+	<string id="cit_doctors_key_desc">
+		<text>Doktorщv klни k tajnй skrэљi v Pripjati</text>
+	</string>
+	<string id="cit_doctors_key_short_desc">
+		<text>Doktorщv klни</text>
+	</string>
+	<string id="Conserva">
+		<text>Turistova radost</text>
+	</string>
+	<string id="Detect1">
+		<text>Detektor anomбliн (DA-2)</text>
+	</string>
+	<string id="Devic">
+		<text>Pшнstroje a zaшнzenн</text>
+	</string>
+	<string id="device-PDA">
+		<text>PDA</text>
+	</string>
+	<string id="device-torch">
+		<text>Baterka</text>
+	</string>
+	<string id="enc_equipment_armors_arm-heavy">
+		<text>Ochrannэ oblek. Vбha: 18kg. Detaily: Chrбnн tмlo pшed ћelй, pбlivэm chmэшнm, vмtљinou anomбliн a fyzickэm poљkozenнm. Torzo a zбda chrбnн zabudovanй plбty z biokovu. Oblek je vybavenэ neprodyљnou posнlenou plastovou helmou a dvмma kyslнkovэmi lahvemi. Poznбmka: Pшi dlouhodobйm pouћнvбnн se oblek zaиne trhat a po иase se stane nepouћitelnэm.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-light">
+		<text>Ochrannэ oblek. Vбha: 8 kg. Detaily: Chrбnн tмlo pшed slabэmi anomбliemi a fyzickэm poљkozenнm. Vybaven kyslнkovou maskou. Poznбmka: Pшi dlouhodobйm pouћнvбnн se oblek zaиne trhat a po иase se stane nepouћitelnэm.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-medium">
+		<text>Ochrannэ oblek. Vбha: 12 kg. Detaily: Chrбnн uћivatele pшed ћelй, pбlivэm chmэшнm, mnoha rщznэmi anomбliemi a fyzickэm poљkozenнm. Vybaven neprodyљnou helmou a kyslнkovou lahvн. Poznбmka: Pшi dlouhodobйm pouћнvбnн se oblek zaиne trhat a po иase se stane nepouћitelnэm.</text>
+	</string>
+	<string id="enc_equipment_armors_sci2">
+		<text>Rudэ oblek S.C.A.P.E s neprodyљnou helmou. Vбha: 11kg. Popis: Chrбnн tмlo pшed ohnмm, kyselinou, toxickэm plynem, rщznэmi anomбliemi, pбlivэm chmэшнm a fyzickэm poљkozenнm. Vybaven dvмma kyslнkovэmi lahvemi. Poznбmka: Pшi dlouhodobйm pouћнvбnн se oblek zaиne trhat a po иase se stane nepouћitelnэm.</text>
+	</string>
+	<string id="enc_equipment_devic_binocul1">
+		<text>Vojenskэ polnн dalekohled</text>
+	</string>
+	<string id="enc_equipment_devic_detect1">
+		<text>Zaшнzenн pro detekci anomбliн a poruch. Upozorтuje na jejich pшнtomnost zvukovэm signбlem. Pro sprбvnou иinnost musн bэt pшipevnмno na opasek a zapnuto.</text>
+	</string>
+	<string id="enc_equipment_devic_device-PDA1">
+		<text>Osobnн elektronickэ diбш - V Zуnм nenahraditelnб ибst vybavenн.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1">
+		<text>Silnб baterka. V oblastech s nedostateиnэm osvмtlenнm velmi uћiteиnб.</text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1_m1">
+		<text>Silnб baterka. Doba dobнjenн baterie je snнћena dнky modernizovanйmu transformбtoru.</text>
+	</string>
+	<string id="enc_equipment_energydrink">
+		<text>Vynikajнcн energydrink obsahujнcн kofein, taurin a rщznй vitaminy. Kdyћ jsi unaven, dej si pбr hltщ!</text>
+	</string>
+	<string id="enc_equipment_food_bread1">
+		<text>Tмћko шнct, komu se daшн v Zуnм pйct chleba, ale nenн kontaminovanэ a dб se jнst. Alespoт si zatнm ћбdnэ ze stalkerщ nestмћoval.</text>
+	</string>
+	<string id="enc_equipment_food_conserva1">
+		<text>Konzervovanй jнdlo z armбdnнho skladiљtм uloupenй stalkery. Doba zбruиnн lhщty jeљtм nevyprљela.</text>
+	</string>
+	<string id="enc_equipment_food_kolbasa1">
+		<text>Dietnн pбrek z kuшecнho a sуji je иasto dнky nedostatku dalљнch moћnostн stalkerova snнdanм, obмd i veиeшe.</text>
+	</string>
+	<string id="enc_equipment_food_vodka1">
+		<text>Vodka vyrбbмnб firmou GSC. Je jemnб a znaиnм sniћuje ъиinek radiace, ale z pochopitelnэch dщvodщ by se takovб prevence nemмla pшehбnмt.</text>
+	</string>
+	<string id="enc_equipment_medi_antirad1">
+		<text>Sniћujн ъиinky radiace.</text>
+	</string>
+	<string id="enc_equipment_medi_bandage1">
+		<text>Obvazy. Pomбhajн zastavit krvбcenн.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit1">
+		<text>Univerzбlnн lйkбrniиka. Pouћнvб se pro oљetшovбnн rщznэch druhщ zranмnн, spбlenin, otrav a podobnм.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit2">
+		<text>Lйkбrniиka specializovanб na lйиenн vбћnэch fyzickэch zranмnн a ztrбty krve. Obsahuje lйиiva pro zvэљenн srбћlivosti krve, antibiotika, stimulбtory a anestetika.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit3">
+		<text>Lйkбrniиka vytvoшenб speciбlnм pro pobyt v Zуnм. Obsahuje lйиiva na oљetшovбnн zranмnн i protiradiaиnн lбtky, zabraтujнcн vzniku nemoci z ozбшenн a sniћuje ъroveт ozбшenн organismu.</text>
+	</string>
+	<string id="energy_drink_name">
+		<text>Energy drink</text>
+	</string>
+	<string id="energy_drink_short_name">
+		<text>Energy drink</text>
+	</string>
+	<string id="Equipment">
+		<text>Vybavenн a jнdlo</text>
+	</string>
+	<string id="Food">
+		<text>Jнdlo</text>
+	</string>
+	<string id="Kolbasa">
+		<text>Dietnн pбrek</text>
+	</string>
+	<string id="Medi">
+		<text>Lйиiva</text>
+	</string>
+	<string id="Medkit">
+		<text>Lйkбrniиka</text>
+	</string>
+	<string id="Medkit_army">
+		<text>Armбdnн lйkбrniиka</text>
+	</string>
+	<string id="Medkit_scientific">
+		<text>Vмdeckб lйkбrniиka</text>
+	</string>
+	<string id="Sci2">
+		<text>Vмdeckэ EXP-4</text>
+	</string>
+	<string id="Vodka">
+		<text>Kozбckб vodka</text>
+	</string>
+	<string id="st_detector">
+		<text>Detektor anomбliн</text>
+	</string>
+	<string id="st_detector_descr">
+		<text>Pшнstroj urиenэ k detekci anomбlnнch oblastн a mнst se silnэm zбшenнm.</text>
+	</string>
+	<string id="st_grenade_gd5">
+		<text>Kouшovэ granбt</text>
+	</string>
+</string_table>

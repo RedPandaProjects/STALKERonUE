@@ -1,0 +1,39 @@
+	<string id="aes_military_task_1">
+		<text>Capturer la porte</text>
+	</string>
+	<string id="aes_military_task_10">
+		<text>Groupe Sokol</text>
+	</string>
+	<string id="aes_military_task_11">
+		<text>Groupe Grif</text>
+	</string>
+	<string id="aes_military_task_12">
+		<text>Groupe Sova</text>
+	</string>
+	<string id="aes_military_task_13">
+		<text>Groupe Lun</text>
+	</string>
+	<string id="aes_military_task_2">
+		<text>Tenir sa position</text>
+	</string>
+	<string id="aes_military_task_3">
+		<text>Accéder au sarcophage</text>
+	</string>
+	<string id="aes_military_task_4">
+		<text>Détruire les fortifications du Monolithe 1</text>
+	</string>
+	<string id="aes_military_task_5">
+		<text>Détruire les fortifications du Monolithe 2</text>
+	</string>
+	<string id="aes_military_task_6">
+		<text>Groupe Sapsan</text>
+	</string>
+	<string id="aes_military_task_7">
+		<text>Groupe Korshun</text>
+	</string>
+	<string id="aes_military_task_8">
+		<text>Groupe Yastreb</text>
+	</string>
+	<string id="aes_military_task_9">
+		<text>Groupe Pustelga</text>
+	</string>

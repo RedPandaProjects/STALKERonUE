@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="game type">
+		<text>SPIELTYP</text>
+	</string>
+	<string id="icon">
+		<text>SYMBOLE</text>
+	</string>
+	<string id="map">
+		<text>KARTE</text>
+	</string>
+	<string id="mm_mp_allowvoting">
+		<text>Abstimmungen erlauben</text>
+	</string>
+	<string id="mm_mp_anomalytime">
+		<text>Anomaliedauer (Min.)</text>
+	</string>
+	<string id="mm_mp_artefactcapture">
+		<text>Artefakteroberung</text>
+	</string>
+	<string id="mm_mp_artefdelay">
+		<text>Artefaktverzцg. (Sek.)</text>
+	</string>
+	<string id="mm_mp_artefnum">
+		<text>Anzahl der Artefakte</text>
+	</string>
+	<string id="mm_mp_artefstay">
+		<text>Artefaktlebensd. (Min.)</text>
+	</string>
+	<string id="mm_mp_autoteambalance">
+		<text>Automatischer Teamausgleich</text>
+	</string>
+	<string id="mm_mp_autoteamswap">
+		<text>Automatischer Teamwechsel</text>
+	</string>
+	<string id="mm_mp_avail_maps">
+		<text>VERFЬGBARE KARTEN</text>
+	</string>
+	<string id="mm_mp_cancel">
+		<text>Abbrechen</text>
+	</string>
+	<string id="mm_mp_cd_key">
+		<text>CD-Key</text>
+	</string>
+	<string id="mm_mp_client">
+		<text>Client</text>
+	</string>
+	<string id="mm_mp_create">
+		<text>Erstellen</text>
+	</string>
+	<string id="mm_mp_damageblock">
+		<text>Unverwundbarkeit</text>
+	</string>
+	<string id="mm_mp_damageblockindicator">
+		<text>Anzeige fьr Unverwundbarkeit</text>
+	</string>
+	<string id="mm_mp_deaths">
+		<text>Gestorben</text>
+	</string>
+	<string id="mm_mp_dedicated">
+		<text>Dediziert</text>
+	</string>
+	<string id="mm_mp_empty">
+		<text>Leer</text>
+	</string>
+	<string id="mm_mp_filters">
+		<text>Filter</text>
+	</string>
+	<string id="mm_mp_forcerespawn">
+		<text>Auto-Neustart (Sek.)</text>
+	</string>
+	<string id="mm_mp_fraglimit">
+		<text>Kill-Limit</text>
+	</string>
+	<string id="mm_mp_frags">
+		<text>Kills</text>
+	</string>
+	<string id="mm_mp_freezetime">
+		<text>Blockadedauer</text>
+	</string>
+	<string id="mm_mp_friendlyfire">
+		<text>Friendly Fire</text>
+	</string>
+	<string id="mm_mp_friendlyindicators">
+		<text>Teamanzeige</text>
+	</string>
+	<string id="mm_mp_friendlynames">
+		<text>Namensanzeige</text>
+	</string>
+	<string id="mm_mp_full">
+		<text>Voll</text>
+	</string>
+	<string id="mm_mp_gamemode">
+		<text>Modus</text>
+	</string>
+	<string id="mm_mp_host_port">
+		<text>IP/Host:Port</text>
+	</string>
+	<string id="mm_mp_internet">
+		<text>Internet</text>
+	</string>
+	<string id="mm_mp_join">
+		<text>Anmelden</text>
+	</string>
+	<string id="mm_mp_lan">
+		<text>LAN</text>
+	</string>
+	<string id="mm_mp_listenservers">
+		<text>Zuhцren</text>
+	</string>
+	<string id="mm_mp_mapratation">
+		<text>Kartenliste</text>
+	</string>
+	<string id="mm_mp_maxplayers">
+		<text>Anzahl Spieler</text>
+	</string>
+	<string id="mm_mp_network_connection">
+		<text>Netzwerkverbindung</text>
+	</string>
+	<string id="mm_mp_noanomalies">
+		<text>Keine Anomalien</text>
+	</string>
+	<string id="mm_mp_options">
+		<text>Optionen</text>
+	</string>
+	<string id="mm_mp_password">
+		<text>Passwort</text>
+	</string>
+	<string id="mm_mp_player_name">
+		<text>Spielername:</text>
+	</string>
+	<string id="mm_mp_players">
+		<text>Spieler</text>
+	</string>
+	<string id="mm_mp_publicserver">
+		<text>Цffentlicher Server</text>
+	</string>
+	<string id="mm_mp_quickrefresh">
+		<text>Schnelle Aktualis.</text>
+	</string>
+	<string id="mm_mp_rateofchange">
+		<text>Wetterwechsel-Koeffizient</text>
+	</string>
+	<string id="mm_mp_refresh">
+		<text>Alle aktualisieren</text>
+	</string>
+	<string id="mm_mp_reinforcement">
+		<text>Verstдrkung (Sek.)</text>
+	</string>
+	<string id="mm_mp_respawnoptions">
+		<text>Neustartoptionen</text>
+	</string>
+	<string id="mm_mp_sel_maps">
+		<text>AUSGEWДHLTE KARTEN</text>
+	</string>
+	<string id="mm_mp_server">
+		<text>Server</text>
+	</string>
+	<string id="mm_mp_server_list">
+		<text>Serverliste</text>
+	</string>
+	<string id="mm_mp_server_prop">
+		<text>Servereigenschaften</text>
+	</string>
+	<string id="mm_mp_serverinfo">
+		<text>Serverinformation</text>
+	</string>
+	<string id="mm_mp_serverlist">
+		<text>Server</text>
+	</string>
+	<string id="mm_mp_servername">
+		<text>Servername</text>
+	</string>
+	<string id="mm_mp_serversettings">
+		<text>Servereinstellungen</text>
+	</string>
+	<string id="mm_mp_spectator">
+		<text>Zuschauer</text>
+	</string>
+	<string id="mm_mp_spectator_firsteye">
+		<text>Erste Person</text>
+	</string>
+	<string id="mm_mp_spectator_freefly">
+		<text>Freie Kamera</text>
+	</string>
+	<string id="mm_mp_spectator_freelook">
+		<text>DP Rotation</text>
+	</string>
+	<string id="mm_mp_spectator_lookat">
+		<text>Dritte Person</text>
+	</string>
+	<string id="mm_mp_spectator_options">
+		<text>Zuschauereinstellungen</text>
+	</string>
+	<string id="mm_mp_spectator_teamonly">
+		<text>Nur Team</text>
+	</string>
+	<string id="mm_mp_startweather">
+		<text>Anfangswetter</text>
+	</string>
+	<string id="mm_mp_timelimit">
+		<text>Zeitlimit (Min.)</text>
+	</string>
+	<string id="mm_mp_warmuptime">
+		<text>Aufwдrmen (Sek.)</text>
+	</string>
+	<string id="mm_mp_weatheroptions">
+		<text>Wetteroptionen</text>
+	</string>
+	<string id="mm_mp_withoutfriendlyfire">
+		<text>Ohne Friendly Fire</text>
+	</string>
+	<string id="mm_mp_withoutpassword">
+		<text>Ohne Passwort</text>
+	</string>
+	<string id="mm_mp_withoutpunkbuster">
+		<text>Ohne PunkBuster</text>
+	</string>
+	<string id="mm_mp_withpassword">
+		<text>Passwort verwenden</text>
+	</string>
+	<string id="mp_vote_hint">
+		<text>Dafьr-[$$ACTION_VOTE_YES$$]\nDagegen-[$$ACTION_VOTE_NO$$]\nErgebnis-[$$ACTION_VOTE$$]</text>
+	</string>
+	<string id="ping">
+		<text>PING</text>
+	</string>
+	<string id="players">
+		<text>SPIELER</text>
+	</string>
+	<string id="server name">
+		<text>SERVERNAME</text>
+	</string>
+	<string id="version">
+		<text>Version</text>
+	</string>
+	<string id="st_mp_gsfilter">
+		<text>Filter:</text>
+	</string>
+</string_table>

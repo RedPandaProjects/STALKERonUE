@@ -1,0 +1,36 @@
+	<string id="mil_actor_blockpost">
+		<text>Blííš se k Bariéøe. A tì ani nenapadne dìlat nìjakı blbosti. Ale pomoc rádi pøijmeme. </text>
+	</string>
+	<string id="mil_after_sniper_dead">
+		<text>Oznaèenej, pojï sem, dostaneš svùj podíl a další instrukce.</text>
+	</string>
+	<string id="mil_fblockpost_warning">
+		<text>Oznaèenej, vra se na pozici.</text>
+	</string>
+	<string id="mil_info_freedom_radio">
+		<text>Pokud strávíš celou noc ve vìi ve vesnici, tak se nìco URÈITÌ stane...</text>
+	</string>
+	<string id="mil_info_max_mines">
+		<text>Nezapomeò na miny! Jedna chybièka a seš na kusy...</text>
+	</string>
+	<string id="mil_info_max_village">
+		<text>Dávej si bacha, Oznaèenej. Ve vesnici je nejspíš nová anomálie. Ten sviòák je rychlej a navíc neviditelnej!</text>
+	</string>
+	<string id="mil_info_to_all">
+		<text>Pozor všem, co si chtìj nechat zkapalnit mozek: cestu k Rudému lesu hlídá jednotka Monolitu a jak víte, tihle nejdøív støílej a pak se stejnì na nic neptaj. Hodnì štìstí.</text>
+	</string>
+	<string id="mil_max_attack_signal">
+		<text>Vpøed! Sundejte ty svinì!</text>
+	</string>
+	<string id="mil_mission_complete">
+		<text>Tady jsme skonèili. Stáhni se na farmu. Peníze vyøešíme tam.</text>
+	</string>
+	<string id="mil_scull_attack_signal">
+		<text>Vpøed, chlapi! Cesta je volná!</text>
+	</string>
+	<string id="mil_scull_info">
+		<text>Oznaèenej, sundej ty snajpry!</text>
+	</string>
+	<string id="mil_sniper_to_player_warning">
+		<text>Dávej si bacha, Oznaèenej, nebo schytáš kulku...</text>
+	</string>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dm_general_action_info">
+		<text>їQuй estб pasando aquн?</text>
+	</string>
+	<string id="dm_general_cool_info">
+		<text>їPuedes contarme algo interesante?</text>
+	</string>
+	<string id="dm_general_cool_info_no_more">
+		<text>No sй nada mбs.</text>
+	</string>
+	<string id="dm_general_help_bandage">
+		<text>Las vendas.</text>
+	</string>
+	<string id="dm_general_help_medkit">
+		<text>El botiquнn.</text>
+	</string>
+	<string id="dm_general_trade_info">
+		<text>Interesado en informaciуn. Por dinero.</text>
+	</string>
+	<string id="dm_general_trade_info_caption">
+		<text>Puedo ofrecer lo siguiente.</text>
+	</string>
+	<string id="dm_general_trade_info_hasno">
+		<text>No tengo nada que ofrecer.</text>
+	</string>
+	<string id="dm_general_trade_info_nothing">
+		<text>En otra ocasiуn.</text>
+	</string>
+</string_table>

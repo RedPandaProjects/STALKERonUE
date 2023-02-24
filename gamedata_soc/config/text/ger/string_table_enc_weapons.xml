@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Ammo">
+		<text>Munition</text>
+	</string>
+	<string id="ammo-11.43x23-fmj">
+		<text>.45 ACP-Geschosse</text>
+	</string>
+	<string id="ammo-11.43x23-fmj_s">
+		<text>.45 ACP</text>
+	</string>
+	<string id="ammo-11.43x23-hydro">
+		<text>.45 ACP Hydroschock-Geschosse</text>
+	</string>
+	<string id="ammo-11.43x23-hydro_s">
+		<text>.45 Hydro</text>
+	</string>
+	<string id="ammo-12x70-buck">
+		<text>12x70 Schrotladung</text>
+	</string>
+	<string id="ammo-12x70-buck_s">
+		<text>12x70 Schrot</text>
+	</string>
+	<string id="ammo-12x76-dart">
+		<text>12x76 Spitzgeschosse</text>
+	</string>
+	<string id="ammo-12x76-dart_s">
+		<text>12x76 Spitz</text>
+	</string>
+	<string id="ammo-12x76-zhekan">
+		<text>12x76 Gewehrladung</text>
+	</string>
+	<string id="ammo-12x76-zhekan_s">
+		<text>12x76 Gewehr</text>
+	</string>
+	<string id="ammo-5.45x39-ap">
+		<text>5.45x39 mm BP-Kugeln</text>
+	</string>
+	<string id="ammo-5.45x39-ap_s">
+		<text>5.45x39 BP</text>
+	</string>
+	<string id="ammo-5.45x39-fmj">
+		<text>5.45x39 mm-Kugeln</text>
+	</string>
+	<string id="ammo-5.45x39-fmj_s">
+		<text>5.45x39</text>
+	</string>
+	<string id="ammo-5.56x45-ap">
+		<text>5.56x45 mm AP-Kugeln</text>
+	</string>
+	<string id="ammo-5.56x45-ap_s">
+		<text>5.56 AP</text>
+	</string>
+	<string id="ammo-5.56x45-ss190">
+		<text>5.56x45 mm SS109-Kugeln</text>
+	</string>
+	<string id="ammo-5.56x45-ss190_s">
+		<text>5.56 SS</text>
+	</string>
+	<string id="ammo-7.62x54-7h1">
+		<text>7.62x54 mm 7N1-Kugeln</text>
+	</string>
+	<string id="ammo-7.62x54-7h1_s">
+		<text>7.62 7N1</text>
+	</string>
+	<string id="ammo-7.62x54-7h14">
+		<text>7.62x54R 7N14-Kugeln</text>
+	</string>
+	<string id="ammo-7.62x54-7h14_s">
+		<text>7.62 7N14</text>
+	</string>
+	<string id="ammo-7.62x54-ap">
+		<text>7.62x54 mm BP-Kugeln</text>
+	</string>
+	<string id="ammo-7.62x54-ap_s">
+		<text>7.62 BP</text>
+	</string>
+	<string id="ammo-9x18-fmj">
+		<text>9x18 mm Geschosse</text>
+	</string>
+	<string id="ammo-9x18-fmj_s">
+		<text>9x18</text>
+	</string>
+	<string id="ammo-9x18-pmm">
+		<text>9x18 mm +P+ Kugeln</text>
+	</string>
+	<string id="ammo-9x18-pmm_s">
+		<text>9x18 +P+</text>
+	</string>
+	<string id="ammo-9x19-fmj">
+		<text>9x19 mm FMJ</text>
+	</string>
+	<string id="ammo-9x19-fmj_s">
+		<text>9x19 FMJ</text>
+	</string>
+	<string id="ammo-9x19-pbp">
+		<text>9x19mm PB1s-Kugeln</text>
+	</string>
+	<string id="ammo-9x19-pbp_s">
+		<text>9x19 PB1s</text>
+	</string>
+	<string id="ammo-9x39-ap">
+		<text>9x39 mm SP-6-Kugeln</text>
+	</string>
+	<string id="ammo-9x39-ap_s">
+		<text>9x39 SP-6</text>
+	</string>
+	<string id="ammo-9x39-pab9">
+		<text>9x39 mm PAB-9-Kugeln</text>
+	</string>
+	<string id="ammo-9x39-pab9_s">
+		<text>9x39 PAB9</text>
+	</string>
+	<string id="ammo-9x39-sp5">
+		<text>9x39 mm SP-5-Kugeln</text>
+	</string>
+	<string id="ammo-9x39-sp5_s">
+		<text>9x39 SP-5</text>
+	</string>
+	<string id="ammo-gauss">
+		<text>Gaussgeschosse</text>
+	</string>
+	<string id="ammo-gauss_s">
+		<text>Gauss</text>
+	</string>
+	<string id="ammo-m209">
+		<text>M209-Granate</text>
+	</string>
+	<string id="ammo-m209_s">
+		<text>M209</text>
+	</string>
+	<string id="ammo-og-7b">
+		<text>OG-7V-Granate</text>
+	</string>
+	<string id="ammo-og-7b_s">
+		<text>OG-7V</text>
+	</string>
+	<string id="ammo-vog-25">
+		<text>VOG-25-Granate</text>
+	</string>
+	<string id="ammo-vog-25_s">
+		<text>VOG-25</text>
+	</string>
+	<string id="ammo-vog-25p">
+		<text>VOG-25R-Granate</text>
+	</string>
+	<string id="ammo-vog-25p_s">
+		<text>VOG-25R</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-11.43x23-fmj">
+		<text>Standardmunition fьr die Kora-919- und SIP-t M200-Pistolen. Das Vollmantelgeschoss verfьgt ьber einen Standardkern.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-11.43x23-hydro">
+		<text>Hydroschock-Munition mit verbesserten Eigenschaften fьr die Kora-919- und SIP-t M200-Pistole. Das Hohlspitzgeschoss hat einen hohen Stoppeffekt. </text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-12x70-buck">
+		<text>Gewцhnliche 12-Kaliber-Munition mit 6 mm und enormer Wirkung auf kurze Distanz. Entwickelt fьr das BM 17, das Chaser 13 und das SPSA 14. Am effektivsten bei Reichweiten unter 30 Metern. </text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-12x76-dart">
+		<text>Stabilisierungsflossen sorgen bei diesen Geschossen fьr eine Erhцhung der Genauigkeit durch eine Stabilisierung der Flugbahn. Entwickelt fьr das TOS 34, das BM 17, das Chaser 13 und das SPSA 14 mit panzerbrechendem Effekt und erhцhter Reichweite bis zu 150 Metern.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-12x76-zhekan">
+		<text>Nicht ummanteltes Geschoss, das fьr gewцhnlich zur GroЯwildjagd eingesetzt wird, aber auch fьr andere Zwecke verwendet werden kann. Das schwere Projektil durchschlдgt auch kugelsichere Westen. Entwickelt fьr das TOS 34, das BM 17, das Chaser 13 und das SPSA 14. Verfьgt ьber eine Reichweite von bis zu 100 Metern. </text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-5.45x39-ap">
+		<text>Munition fьr das Akm 74/2-, das Akm 74/2U- und das ON 94-Sturmgewehr mit verbesserter Panzerbrechung, aber verringertem Stoppeffekt. </text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-5.45x39-fmj">
+		<text>Standardmunition fьr das Akm 74/2-, das Akm 74/2U- und das Obokan-Sturmgewehr mit Standardkern und Vollmantel.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-5.56x45-ap">
+		<text>Panzerbrechendes Geschoss fьr das IL 86-, das TRs 301-, das SGI 5k-, das GP 37- und das FT 200M-Sturmgewehr.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-5.56x45-ss190">
+		<text>Eine Standardmunition der NATO, besser bekannt unter ihrem belgischen SS109-Index. Wird eingesetzt fьr das IL 86-, das TRs 301-, das SGI 5k-, das GP 37- und das FT 200M-Sturmgewehr.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-7.62x54-7h1">
+		<text>Gьnstige Modifikation der Scharfschьtzen-Munition fьr das SVDm 2 und das SVUmk2-Scharfschьtzengewehr.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-7.62x54-7h14">
+		<text>Scharfschьtzen-Munition fьr das SVDm 2 und das SVUmk2-Scharfschьtzengewehr mit verbesserter Genauigkeit und Reichweite.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-7.62x54-ap">
+		<text>Panzerbrechende Munition fьr das SVDm 2- und das SVUmk2-Scharfschьtzengewehr.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x18-fmj">
+		<text>Standardmunition fьr die PMm-, PB1s- und Fort-12Mk2-Pistolen mit Standardkern, vollummantelter Kugel und nur schwacher Panzerbrechung.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x18-pmm">
+		<text>Munition mit verbesserten ballistischen Eigenschaften fьr die PMm-, die PB1s- und die Fort-12Mk2-Pistolen. Durch ihre hohe Ausgangsgeschwindigkeit ist die Kugel wirkungsvoller als Standardmunition. Sie verfьgt auЯerdem ьber bessere Panzerbrechung.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x19-fmj">
+		<text>Standardmunition fьr die Walker P9m-Pistole sowie die Viper 5-Maschinenpistole mit Vollmantel und schwacher Panzerbrechung.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x19-pbp">
+		<text>Verbesserte Munition fьr die Walker P9m-Pistole sowie die Viper 5-Maschinenpistole. Starkes Hohlspitzgeschoss mit panzerbrechendem Kern.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x39-ap">
+		<text>Panzerbrechende Munition fьr das Tunder S14- und das VLA-Scharfschьtzengewehr sowie das Vintar-Spezialscharfschьtzengewehr. Die Unterschallkugel kann durch ihr spezielles Design die meisten kugelsicheren Westen auf eine Distanz von bis zu 400 Metern durchdringen.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x39-pab9">
+		<text>Munition fьr das Tunder S14- und das VLA-Scharfschьtzengewehr sowie das Vintar- Spezialscharfschьtzengewehr. Neuere und gьnstigere Variante der panzerbrechenden Munition. Die Unterschallkugel kann durch ihr spezielles Design die meisten kugelsicheren Westen auf eine Distanz von bis zu 300 Metern durchdringen.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-9x39-sp5">
+		<text>Scharfschьtzen-Munition fьr das Tunder S14- und das VLA-Scharfschьtzengewehr sowie das Vintar- Spezialscharfschьtzengewehr.  Die Unterschallkugel kann durch ihr hohes Gewicht und spezielles Design die meisten kugelsicheren Westen auf eine Distanz von bis zu 400 Metern durchdringen.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-gauss">
+		<text>Energiezellen mit tцdlichen Komponenten in einem Gaussgewehr-Magazin. Als Energiequelle dient ein eingekapseltes Stьck des Artefakts "Blitz".</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-m209">
+		<text>Granate fьr den M203-Granatwerfer (fьr die Gewehre TRs 310, GP 37, SGI 5k und IL 86) und integrierter Granatwerfer des FT 200M.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-og-7b">
+		<text>Hochexplosive Granate fьr das RPG-7u. Es ist gleichermaЯen effektiv einsetzbar gegen Truppenverbдnde und leicht gepanzerte Fahrzeuge.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-vog-25">
+		<text>Eine Granate fьr den integrierten Granatwerfer GP-25 Kostjer des Tunder-Sturmgewehrs und den Granatwerfer Bulldog 6.</text>
+	</string>
+	<string id="enc_weapons1_ammo_ammo-vog-25p">
+		<text>Eine Granate fьr den integrierten Granatwerfer GP-25 Kostjer des Sturmgewehrs Tunder S14 und den Granatwerfer Bulldog 6. Vor der Explosion steigt die Granate etwa einen Meter hoch in die Luft, was sie noch effektiver macht.</text>
+	</string>
+	<string id="enc_weapons1_grenade-f1">
+		<text>Defensive Handgranate mit groЯem Streuradius. Sollte nur bei guter Eigendeckung geworfen werden.</text>
+	</string>
+	<string id="enc_weapons1_grenade-gd05">
+		<text>Diese Rauchgranate erzeugt eine Rauchsдule, die fьr etwa 10 Sekunden Deckung gibt.</text>
+	</string>
+	<string id="enc_weapons1_grenade-rgd5">
+		<text>Offensive Handgranate mit kleinem Radius fьr Streuschaden.</text>
+	</string>
+	<string id="enc_weapons1_wpn-abakan">
+		<text>Die Waffe von Eliteeinheiten der russischen Armee. Sie wurde entwickelt, um das Akm 74/2 abzulцsen. Sowohl der interne Mechanismus als auch Lauf und Laufhьlse des Obokans sind beweglich, um den RьckstoЯ zu vermindern und die Prдzision zu erhцhen.\n Munition:\n standardmдЯig 5.45x39 mm,\n panzerbrechend 5.45x39 mm BP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-abakan_m1">
+		<text>Ein Maschinengewehr mit einer modifizierten Zielvorrichtung, mit der sich Scharfschьtzenaufgaben bewдltigen lassen. Die Auflцsung der Zielvorrichtung ist hцher als die beim Standardmodell.</text>
+	</string>
+	<string id="enc_weapons1_wpn-abakan_m2">
+		<text>Maschinengewehr mit integriertem Granatwerfer unter dem Lauf, der es zu einer noch universeller einsetzbaren Waffe macht.</text>
+	</string>
+	<string id="enc_weapons1_wpn-addon-grenade-launcher">
+		<text>Ein Granatenwerfer fьr das Akm 74/2 und das Akm 74/2U.\n Munition: VOG-25 Granate\n und VOG-25R Granate.</text>
+	</string>
+	<string id="enc_weapons1_wpn-addon-grenade-launcher-m203">
+		<text>Ein Granatwerfer fьr die Sturmgewehre SGI 5k, TRs 301, GP 37 und IL 86.\n Munition: M209-Granaten.</text>
+	</string>
+	<string id="enc_weapons1_wpn-addon-scope">
+		<text>Weit verbreitetes sowjetisches Zielfernrohr, das mit einem Schwalbenschwanz auf der Waffe montiert werden kann. Wird vornehmlich in den Mitgliedsstaaten des Warschauer Pakts verwendet.</text>
+	</string>
+	<string id="enc_weapons1_wpn-addon-scope-susat">
+		<text>In den NATO-Staaten produziertes Zielfernrohr mit 4fach-VergrцЯerung. Es kann mittels der Standardbefestigung der NATO, die auch Picatinny-Schiene genannt wird, aufgesetzt werden.</text>
+	</string>
+	<string id="enc_weapons1_wpn-addon-silencer">
+		<text>Effektiver Schalldдmpfer, der von Waffenschmieden der Zone hergestellt wird. Beinhaltet ein Adapterset fьr Waffen jedes Kalibers.</text>
+	</string>
+	<string id="enc_weapons1_wpn-ak74">
+		<text>Sturmgewehr mit abklappbarem Kolben, Modell von 1974, verwendet 5.45x39 mm-Munition. Es handelt sich um eine einfache und zuverlдssige Waffe, doch die billige Herstellung geht zu Lasten von Ergonomie und Genauigkeit. In der Zone ist es die Hauptwaffe der Armeestalker und vieler Einzelkдmpfer.\n Munition:\n standardmдЯig 5.45x39 mm,\n panzerbrechend 5.45x39 mm BP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-ak74_m1">
+		<text>Das modifizierte SchlieЯsystem erhцht die Schussgeschwindigkeit.</text>
+	</string>
+	<string id="enc_weapons1_wpn-ak74u">
+		<text>GrцЯe und Gewicht des Akm 74/2U sind mit einer Maschinenpistole vergleichbar, doch durch seine Mechanik sowie die zu verwendende Munition ist es bei den Sturmgewehren einzuordnen. Seine Vorteile sind seine geringe GrцЯe, die bei Kдmpfen in Gebдuden oder dichten Wдldern nьtzlich ist, und seine relativ starke Panzerbrechung. Von Nachteil sind hauptsдchlich die begrenzte Genauigkeit und schnelle Ьberhitzung der Waffe, wenn FeuerstцЯe abgefeuert werden.\n Munition:\n standardmдЯig 5.45x39 mm,\n panzerbrechend 5.45x39 mm BP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-ak74u_m1">
+		<text>Verbessertes Maschinengewehr mit festem Schalldдmpfer. </text>
+	</string>
+	<string id="enc_weapons1_wpn-beretta">
+		<text>Nicht nur beim amerikanischen Militдr und Polizeiapparat, auch im Rest der Welt kommt diese Waffe zum Einsatz. Sie ist wegen ihrer starken Geschosse und den hohen Kapazitдten des Magazins ebenso beliebt bei Kriminellen.\n Munition:\n standardmдЯig 9x19 mm FMJ,\n verbessert 9x19 mm PB1s.</text>
+	</string>
+	<string id="enc_weapons1_wpn-bm16">
+		<text>Ein abgesдgtes Gewehr des Typs BM 17. Es ist leichter als das ьbliche doppellдufige Gewehr, doch effektiv ist es nur auf kurze Distanz. Eine der Waffen, zu der Anfдnger meist greifen.\n Munition:\n 12x70 Schrot,\n 12x76 Gewehrkugel,\n 12x76 Spitzgeschoss.</text>
+	</string>
+	<string id="enc_weapons1_wpn-colt_m1">
+		<text>Die Waffe von Auftragsmцrdern. Diese verlдssliche Waffe ist mit einem nicht abnehmbaren Schalldдmpfer versehen.</text>
+	</string>
+	<string id="enc_weapons1_wpn-colt1911">
+		<text>Eine groЯartige Waffe, die sich in jedem Konflikt des 20. Jahrhunderts ehrenvoll prдsentiert und das neue Jahrhundert zuversichtlich begonnen hat. Die eher geringe Kapazitдt des Magazins wird durch die durchschlagskrдftigen Geschosse teilweise wettgemacht.\n Munition:\n standardmдЯig .45 ACP,\n verbessert .45 ACP Hydroschock.</text>
+	</string>
+	<string id="enc_weapons1_wpn-desert-eagle">
+		<text>Die richtige Waffe fьr richtige Helden. Sie ist schwer, groЯ und zerstцrerisch. Preis und GrцЯe machen sie in der Zone eher unbeliebt. Und schlieЯlich jagt man hier auch nicht tдglich Elefanten!\n Munition:\n standardmдЯig .45 ACP,\n verbessert .45 ACP Hydroschock.</text>
+	</string>
+	<string id="enc_weapons1_wpn-eagle_m1">
+		<text>Eine wirklich kraftvolle Waffe, die umgearbeitet wurde, um Gewehrkugeln verwenden zu kцnnen. Im Nahkampf eine echte Tцtungsmaschine.</text>
+	</string>
+	<string id="enc_weapons1_wpn-fn2000">
+		<text>Ein Sturmgewehr, das mit einem Granatwerfer kombiniert wurde. Es ist mit einer elektronischen Feuerkontrollesteuerung versehen und einem 40 mm Granatwerfer.\n Munition:\n standardmдЯig 5.56x45 mm SS109,\n panzerbrechend 5.56x45 mm AP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-fort">
+		<text>Eine Polizeipistole aus ukrainischer Fertigung, die die PMm ablцste. Im Vergleich zu anderen Pistolen wurden Prдzision, Ergonomie und die Kapazitдt des Magazins verbessert. Sie ist jedoch nicht so zuverlдssig.\n Munition:\n standardmдЯig 9x18 mm,\n verbessert 9x18 mm +P+.</text>
+	</string>
+	<string id="enc_weapons1_wpn-fort_m1">
+		<text>Ein experimenteller Prototyp der Fort-Pistole.</text>
+	</string>
+	<string id="enc_weapons1_wpn-g36">
+		<text>Ein deutsches Sturmgewehr, ein Paradebeispiel moderner Bewaffnung: leicht, zuverlдssig und ergonomisch.\n Munition:\n standardmдЯig 5.56x45 mm SS109,\n panzerbrechend 5.56x45 mm AP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-gauss">
+		<text>Eine besonders prдzise Waffe, die von den Wissenschaftlern in der Zone entwickelt wurde. Sie ist beinahe gerдuschlos, da sie anstelle von SchieЯpulver die Energie von Artefakten nutzt. Trotz der enormen Durchschlagskraft ist der RьckstoЯ kaum erwдhnenswert. Prдzision und Treffsicherheit dieser Waffe ьbersteigen die anderer kleiner Waffen bei Weitem.\n Munition: 2-mm Gaussgeschosse.</text>
+	</string>
+	<string id="enc_weapons1_wpn-groza">
+		<text>Eine Mischung aus Sturmgewehr und Granatwerfer. Es ist den Bedingungen der Zone besonders gut angepasst: Es ist kompakt, zuverlдssig, universell einsetzbar und sehr kraftvoll. Das Tunder S14 Sturmgewehr ist eine der bevorzugten Waffen von Armeestalkern.\n Munition:\n standardmдЯig 9x39 mm PAB-9,\n panzerbrechend 9x39 mm SP-6,\n Prдzisionsgeschosse 9x39 mm SP-5,\n VOG-25 und VOG-25R Granaten fьr den Granatwerfer.</text>
+	</string>
+	<string id="enc_weapons1_wpn-groza_m1">
+		<text>Der vorhandene Lauf ist Zeugnis der Kunstfertigkeit eines Stalkers, der das Gewehr so umbauen konnte, dass die weiter verbreiteten 5.45 mm Kugeln verwendet werden kцnnen.</text>
+	</string>
+	<string id="enc_weapons1_wpn-hpsa">
+		<text>Diese Pistole kann getrost als eine der besten Pistolen des 20. Jahrhunderts angesehen werden. Sie ist zuverlдssig und verfьgt ьber groЯe Durchschlagskraft bei geringer Streuung. Das Magazin kann 13 Patronen aufnehmen.\n Munition:\n standardmдЯig 9x19 mm FMJ,\n verbessert 9x19 mm PB1s.</text>
+	</string>
+	<string id="enc_weapons1_wpn-knife">
+		<text>Jagdmesser</text>
+	</string>
+	<string id="enc_weapons1_wpn-l85">
+		<text>Nachdem die britische Armee dieses Gewehr durch das in Deutschland gefertigte GP 37 austauschte, tauchte es in groЯer Stьckzahl zuerst auf dem Schwarzmarkt und dann in der Zone auf. Der grцЯte Vorteil des IL 86 ist das standardmдЯige 4-fach Zielfernrohr und die hohe Prдzision des ersten Schusses. Im FeuerstoЯ-Modus nimmt die Prдzision stark ab und der Hauptmechanismus des Gewehrs ist nicht mehr zuverlдssig genug.\n Munition:\n standardmдЯig 5.56x45 mm SS109,\n panzerbrechend 5.56x45 mm AP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-l85_m1">
+		<text>Mit ein paar wenigen Modifikationen konnte der RьckstoЯeffekt reduziert werden.</text>
+	</string>
+	<string id="enc_weapons1_wpn-l85_m2">
+		<text>Die Waffe ist mit einem integrierten Schalldдmpfer ausgestattet. Viele Bauteile wurden durch leichtere Nachbildungen ersetzt, um das Gesamtgewicht zu reduzieren.</text>
+	</string>
+	<string id="enc_weapons1_wpn-lr300">
+		<text>Ein leichtes Gewehr mit einer effektiven Reichweite von bis zu 300 Metern. Durch den auЯergewцhnlich leichtgдngigen Abzug, die hohe Ergonomie sowie das geringe Gewicht ist die Waffe hцchst prдzise. Sie ist allerdings stark empfindlich bei Schmutz und unter schwierigen Einsatzbedingungen nicht immer geeignet.\n Munition:\n standardmдЯig 5.56x45 mm SS109,\n panzerbrechend 5.56x45 mm AP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-lr300_m1">
+		<text>Ein modifiziertes Sturmgewehr, das fьr einzelne Schьsse bestimmt ist. Man kann annehmen, dass es als billiger Nachbau eines Scharfschьtzengewehrs eingesetzt werden sollte.</text>
+	</string>
+	<string id="enc_weapons1_wpn-mp5">
+		<text>Eine der besten Maschinenpistolen. Wдhrend der letzten Jahrzehnte des 20. Jahrhunderts wurde sie von Armeen und Spezialeinheiten der Polizei vieler Lдnder eingesetzt. Als die Waffe durch neuere Modelle ersetzt wurde, erschien sie auf dem Schwarzmarkt und schlieЯlich in der Zone.\n Munition:\n standardmдЯig 9x19 mm FMJ,\n verbessert 9x19 mm PB1sP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-mp5_m1">
+		<text>Leicht, kompakt und umgearbeitet, um weiter verbreitete Kaliber verwenden zu kцnnen. Diese Waffe ist besonders fьr Anfдnger besonders zu empfehlen.</text>
+	</string>
+	<string id="enc_weapons1_wpn-mp5_m2">
+		<text>Eine Variation des Basismodells mit einem fest montierten Schalldдmpfer.</text>
+	</string>
+	<string id="enc_weapons1_wpn-pb">
+		<text>Eine Pistole mit einem integrierten Schalldдmpfer, die von den sowjetischen Spezialeinheiten benutzt wurde. Und auch wenn sie mittlerweile ьberholt ist, ist sie in begabten Hдnden immer noch sehr effektiv.\n Munition:\n standardmдЯig 9x18 mm,\n verbessert 9x18 mm +P+.</text>
+	</string>
+	<string id="enc_weapons1_wpn-pm">
+		<text>Die am weitesten verbreitete Pistole in der Zone. Sie ist ein Vermдchtnis aus der Zeit der UDSSR. Sie ist recht zuverlдssig und billig, das Magazin hat eine geringe Kapazitдt und die Waffe eine geringe Durchschlagskraft und hohe Streuung. Sie ist die Hauptwaffe fьr Stalker-Frischlinge.\n Munition:\n standardmдЯig 9x18 mm,\n verbessert 9x18 mm +P+.</text>
+	</string>
+	<string id="enc_weapons1_wpn-rg-6">
+		<text>Ein revolverartiger Granatwerfer. Gelegentlich ist er unverzichtbar, vor allem beim Anvisieren groЯer Gruppen von Mutanten, beim Angriff gut bewachter stationдrer Objekte oder im Kampf gegen besonders widerstandsfдhige Kreaturen.\n Munition: VOG-25 Granate\n und VOG-25R Granate.</text>
+	</string>
+	<string id="enc_weapons1_wpn-rg6_m1">
+		<text>Eine Variation des revolverartigen Granatwerfers. Dieses Modell wurde speziell fьr den Einsatz von Granaten westlicher Bauart entwickelt.</text>
+	</string>
+	<string id="enc_weapons1_wpn-rpg7">
+		<text>Ein Granatwerfer, der in den 1960er Jahren entwickelt wurde. Derartige Granatwerfer werden in groЯer Stьckzahl in Armeedepots gelagert, von wo aus sie in die Zone transportiert werden. Diese Waffe ist bei Stalkern eher selten anzutreffen. AusmaЯe und Gewicht machen sie recht unbeliebt, auch wenn sie fьr manche Missionen unentbehrlich ist.\n Munition: OG-7V.</text>
+	</string>
+	<string id="enc_weapons1_wpn-sig_m1">
+		<text>Diese Waffe wurde fьr den Hдuserkampf entwickelt. Um das Gewicht zu verringern, wurden einige Teile ersetzt oder entfernt. Als Folge kann weder eine Zielvorrichtung noch ein Granatwerfer angebracht werden. Doch das Gewicht konnte um die Hдlfte reduziert werden.</text>
+	</string>
+	<string id="enc_weapons1_wpn-sig_m2">
+		<text>Fьr den Einsatz als Scharfschьtzengewehr modifiziert und mit einer fest montierten Zielvorrichtung mit erhцhtem Fokus ausgestattet.</text>
+	</string>
+	<string id="enc_weapons1_wpn-sig220">
+		<text>Ein Modell, das 1975 entwickelt wurde und bis heute ьberall auf der Welt Popularitдt genieЯt. Das Magazin hat nur eine geringe Kapazitдt, doch der Mechanismus ist absolut zuverlдssig. Auch von Vorteil sind die durchschlagskrдftigen Geschosse.\n Munition:\n standardmдЯig .45 ACP,\n verbessert .45 ACP Hydroschock.</text>
+	</string>
+	<string id="enc_weapons1_wpn-sig550">
+		<text>Ein relativ neues Sturmgewehr, das 5.56x45 mm SS109-Geschosse verwendet. Ihre Prдzision, der sanfte RьckstoЯ und die hohe Zuverlдssigkeit machen diese Waffe sehr beliebt.\n Munition:\n standardmдЯig 5.56x45 mm SS109,\n panzerbrechend 5.56x45 mm AP.</text>
+	</string>
+	<string id="enc_weapons1_wpn-spas12">
+		<text>Das Gewehr SPSA 14, dessen Lauf innen keine Windung aufweist, wurde in den spдten 1970ern entwickelt. Diese Waffe ist sehr zuverlдssig und vielseitig einsetzbar. Sie ist jedoch recht groЯ, teuer und der Mechanismus ist zu kompliziert. Und doch handelt es sich um die vermutlich beste Nahkampfwaffe der Zone.\n Munition:\n 12x70 Schrot,\n 12x76 Gewehrkugel,\n 12x76 Spitzgeschoss.</text>
+	</string>
+	<string id="enc_weapons1_wpn-spas12_m1">
+		<text>EINZIGARTIGE WAFFE. Dieses Schrotausfьhrung hat einen gewundenen Lauf, der die Prдzision entscheidend erhцht, wenn Spitzgeschosse oder Gewehrkugeln verschossen werden. Der Einsatz von Schrot ist hingegen ein wenig schwieriger.\n Munition:\n 12x70 Schrot,\n 12x76 Gewehrkugel,\n 12x76 Spitzgeschosse.</text>
+	</string>
+	<string id="enc_weapons1_wpn-svd">
+		<text>Von 1960 an wurde diese Waffe weitgehend fьr alle Operationen der Sowjet-Armeen eingesetzt. Sie erwies sich als auЯergewцhnlich zuverlдssige und praktische Waffe. In der Zone wird sie bevorzugt von erfahrenen Stalkern der Wдchterfraktion auf der Jagd nach Mutanten eingesetzt.\n Munition:\n standardmдЯig 7.62x54 mm 7N1,\n panzerbrechend 7.62x54 mm BP,\n Prдzisionsgeschosse 7.62x54 mm 7N14.</text>
+	</string>
+	<string id="enc_weapons1_wpn-svd_m1">
+		<text>Eine verbesserte Optik, deren hцhere Auflцsung fьr ein besseres Bild sorgt. Die Waffe ist besser ausbalanciert, was den RьckstoЯ vermindert.</text>
+	</string>
+	<string id="enc_weapons1_wpn-svu">
+		<text>Ein Bullpup-Modell, das eine aktuellere Version des Scharfschьtzengewehrs darstellt. Es eignet sich hervorragend fьr lange Touren durch die Zone.\n Munition:\n standardmдЯig 7.62x54 mm 7N1,\n panzerbrechend 7.62x54 mm BP,\n Prдzisionsgeschosse 7.62x54 mm 7N14.</text>
+	</string>
+	<string id="enc_weapons1_wpn-toz34">
+		<text>Dieses Jagdgewehr ist beliebt, es gibt jedoch nichts Nennenswertes darьber zu berichten.\n Munition:\n 12x70 Schrot,\n 12x76 Gewehrkugel,\n 12x76 Spitzgeschoss.</text>
+	</string>
+	<string id="enc_weapons1_wpn-usp">
+		<text>Eine zuverlдssige Waffe. Als qualitativ hochwertige, kompakte Nahkampfwaffe ist sie unter den Veteranen der Zone sehr beliebt.\n Munition:\n standardmдЯig .45 ACP,\n verbessert .45 ACP Hydroschock.</text>
+	</string>
+	<string id="enc_weapons1_wpn-val">
+		<text>Diese Waffe basiert auf dem gerдuschlosen Vintar-Scharfschьtzengewehr, hat jedoch einen abklappbaren Kolben, kann FeuerstцЯe abfeuern und hat ein grцЯeres Magazin. Sie wurde fьr den Einsatz von Spezialeinheiten entwickelt, die lautlos und ohne verrдterisches Mьndungsfeuer agieren mьssen.\n Munition:\n standardmдЯig 9x39 mm PAB-9,\n panzerbrechend 9x39 mm SP-6,\n Prдzisionsgeschosse 9x39 mm SP-5.</text>
+	</string>
+	<string id="enc_weapons1_wpn-val_m1">
+		<text>Unterscheidet sich vom einfachen Modell dadurch, dass die optische Zielvorrichtung PSO-1 verwendet werden kann.</text>
+	</string>
+	<string id="enc_weapons1_wpn-vintorez">
+		<text>Ein spezielles Scharfschьtzengewehr, das durch einen integrierten Schalldдmpfer Schussgerдusche und Mьndungsfeuer unterdrьckt. Jegliche kugelsichere Weste wird auf 400 Meter durchbrochen. Diese Waffe ist bei Stalkern jeden Ranges sehr beliebt.\n Muniton:\n standardmдЯig 9x39 mm PAB-9,\n panzerbrechend 9x39 mm SP-6,\n Prдzisionsgeschosse 9x39 mm SP-5.</text>
+	</string>
+	<string id="enc_weapons1_wpn-walther">
+		<text>Eine ausgezeichnete Pistole. ДuЯerst zuverlдssig und mit hoher Kapazitдt im Magazin sowie einer guten Treffsicherheit, vor allem im Einsatz von 9 mm FMJ-Geschossen.\n Munition:\n standardmдЯig 9x19 mm FMJ,\n verbessert 9x19 mm PB1s.</text>
+	</string>
+	<string id="enc_weapons1_wpn-walther_m1">
+		<text>Eine Modifikation der Waffe, um Munition des Kalibers 9x18mm verwenden zu kцnnen.</text>
+	</string>
+	<string id="enc_weapons1_wpn-wincheaster1300">
+		<text>Eine Pumpgun fьr den Einsatz in extrem widrigen Umgebungen. Sie ist дuЯerst zuverlдssig und Bauteile sind mit einer Rostschutzummantelung versehen.\n Munition:\n 12x70 Schrot,\n 12x76 Gewehrkugel,\n 12x76 Spitzgeschosse.</text>
+	</string>
+	<string id="grenade-f1">
+		<text>F1-Granate</text>
+	</string>
+	<string id="grenade-gd05">
+		<text>GD-05</text>
+	</string>
+	<string id="grenade-rgd5">
+		<text>RGD-5-Granate</text>
+	</string>
+	<string id="Weapons1">
+		<text>Waffe</text>
+	</string>
+	<string id="wp_desert_eagle">
+		<text>Schwarzer Drachen</text>
+	</string>
+	<string id="wpn_hpsa">
+		<text>HPSS-1m</text>
+	</string>
+	<string id="wpn_usp">
+		<text>UDP Kompakt</text>
+	</string>
+	<string id="wpn-abakan">
+		<text>Obokan</text>
+	</string>
+	<string id="wpn-abakan_m1">
+		<text>Scharfsch.-Obokan</text>
+	</string>
+	<string id="wpn-abakan_m2">
+		<text>Sturm-Obokan</text>
+	</string>
+	<string id="wpn-addon-grenade-launcher">
+		<text>GP-25 Kostjer</text>
+	</string>
+	<string id="wpn-addon-grenade-launcher-m203">
+		<text>M203</text>
+	</string>
+	<string id="wpn-addon-scope">
+		<text>PSO-1-Zielfernrohr</text>
+	</string>
+	<string id="wpn-addon-scope-susat">
+		<text>SUSAT-Zielfernrohr</text>
+	</string>
+	<string id="wpn-addon-silencer">
+		<text>Schalldдmpfer</text>
+	</string>
+	<string id="wpn-ak74">
+		<text>Akm 74/2</text>
+	</string>
+	<string id="wpn-ak74_m1">
+		<text>Schnellfeuer-Akm 74/2</text>
+	</string>
+	<string id="wpn-ak74u">
+		<text>Akm 74/2U</text>
+	</string>
+	<string id="wpn-ak74u_m1">
+		<text>Akm 74/2U Spezial</text>
+	</string>
+	<string id="wpn-beretta">
+		<text>Martha</text>
+	</string>
+	<string id="wpn-bm16">
+		<text>Kurze Schrotflinte</text>
+	</string>
+	<string id="wpn-colt_m1">
+		<text>Leise Kora</text>
+	</string>
+	<string id="wpn-colt1911">
+		<text>Kora-919</text>
+	</string>
+	<string id="wpn-eagle_m1">
+		<text>Big Ben</text>
+	</string>
+	<string id="wpn-fn2000">
+		<text>FT 200M</text>
+	</string>
+	<string id="wpn-fort">
+		<text>Fort-12Mk2</text>
+	</string>
+	<string id="wpn-fort_m">
+		<text>Fort-15</text>
+	</string>
+	<string id="wpn-g36">
+		<text>GP 37</text>
+	</string>
+	<string id="wpn-gauss">
+		<text>Gausskanone</text>
+	</string>
+	<string id="wpn-groza">
+		<text>Tunder S14</text>
+	</string>
+	<string id="wpn-groza_m1">
+		<text>5.45 Tunder</text>
+	</string>
+	<string id="wpn-l85">
+		<text>IL 86</text>
+	</string>
+	<string id="wpn-l85_m1">
+		<text>Ausgewogenes IL 86</text>
+	</string>
+	<string id="wpn-l85_m2">
+		<text>Leichtes IL 86</text>
+	</string>
+	<string id="wpn-lr300">
+		<text>TRs 301</text>
+	</string>
+	<string id="wpn-lr300_m1">
+		<text>TRs 301 (Scharfsch.)</text>
+	</string>
+	<string id="wpn-mp5">
+		<text>Viper 5</text>
+	</string>
+	<string id="wpn-mp5_m1">
+		<text>Viper 5 9x18</text>
+	</string>
+	<string id="wpn-mp5_m2">
+		<text>Leise Viper</text>
+	</string>
+	<string id="wpn-pb">
+		<text>Leise Pistole (PB1s)</text>
+	</string>
+	<string id="wpn-pm">
+		<text>PMm</text>
+	</string>
+	<string id="wpn-rg-6">
+		<text>Bulldog 6</text>
+	</string>
+	<string id="wpn-rg6_m1">
+		<text>Bulldog 6 m209</text>
+	</string>
+	<string id="wpn-rpg7">
+		<text>RPG-7u</text>
+	</string>
+	<string id="wpn-sig_m1">
+		<text>Sturm-SIP</text>
+	</string>
+	<string id="wpn-sig_m2">
+		<text>Scharfschьtzen-SGI</text>
+	</string>
+	<string id="wpn-sig220">
+		<text>SIP-t M200</text>
+	</string>
+	<string id="wpn-sig550">
+		<text>SGI 5k</text>
+	</string>
+	<string id="wpn-spas12">
+		<text>SPSA 14</text>
+	</string>
+	<string id="wpn-spas12_m1">
+		<text>SPSA 14 (gew. Lauf)</text>
+	</string>
+	<string id="wpn-svd">
+		<text>Scharfschьtzen-SVDm-2</text>
+	</string>
+	<string id="wpn-svd_m1">
+		<text>SVDm 2 "Weitschuss"</text>
+	</string>
+	<string id="wpn-svu">
+		<text>SVUmk2</text>
+	</string>
+	<string id="wpn-toz34">
+		<text>TOS 34</text>
+	</string>
+	<string id="wpn-val">
+		<text>VLA-Spezial-Sturmgewehr</text>
+	</string>
+	<string id="wpn-val_m1">
+		<text>Scharfschьtzen-VLA</text>
+	</string>
+	<string id="wpn-vintorez">
+		<text>Vintar BC</text>
+	</string>
+	<string id="wpn-walther">
+		<text>Walker P9m</text>
+	</string>
+	<string id="wpn-walther_m1">
+		<text>Walker 9x18</text>
+	</string>
+	<string id="wpn-wincheaster1300">
+		<text>Chaser 13</text>
+	</string>
+</string_table>

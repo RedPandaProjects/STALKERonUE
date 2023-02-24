@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="kb_active_jobs">
+		<text>Missioni attive nel palmare</text>
+	</string>
+	<string id="kb_always_run">
+		<text>Posizione acquattata</text>
+	</string>
+	<string id="kb_artefact">
+		<text>Reperto</text>
+	</string>
+	<string id="kb_backward">
+		<text>Indietro</text>
+	</string>
+	<string id="kb_binoculars">
+		<text>Binocolo</text>
+	</string>
+	<string id="kb_buy_menu">
+		<text>Menu Compravendita</text>
+	</string>
+	<string id="kb_chat">
+		<text>Chat</text>
+	</string>
+	<string id="kb_chat_team">
+		<text>Chat a squadre</text>
+	</string>
+	<string id="kb_console">
+		<text>Console</text>
+	</string>
+	<string id="kb_contacts">
+		<text>Contatti sul palmare</text>
+	</string>
+	<string id="kb_crouch">
+		<text>Posizione accovacciata</text>
+	</string>
+	<string id="kb_crouch_toggle">
+		<text>Sempre accovacciato</text>
+	</string>
+	<string id="kb_down">
+		<text>Giщ</text>
+	</string>
+	<string id="kb_drop">
+		<text>Lascia l'arma utilizzata</text>
+	</string>
+	<string id="kb_fire">
+		<text>Spara</text>
+	</string>
+	<string id="kb_firemode_next">
+		<text>Modalitа di fuoco successiva</text>
+	</string>
+	<string id="kb_firemode_prev">
+		<text>Modalitа di fuoco precedente</text>
+	</string>
+	<string id="kb_forward">
+		<text>Avanti</text>
+	</string>
+	<string id="kb_func">
+		<text>Lanciagranate</text>
+	</string>
+	<string id="kb_grp_common">
+		<text>Generale</text>
+	</string>
+	<string id="kb_grp_direction">
+		<text>Direzione</text>
+	</string>
+	<string id="kb_grp_inventory">
+		<text>Inventario</text>
+	</string>
+	<string id="kb_grp_movement">
+		<text>Movimento</text>
+	</string>
+	<string id="kb_grp_multiplayer">
+		<text>Multigiocatore</text>
+	</string>
+	<string id="kb_grp_weapons">
+		<text>Arma</text>
+	</string>
+	<string id="kb_inventory">
+		<text>Inventario</text>
+	</string>
+	<string id="kb_jump">
+		<text>Salto</text>
+	</string>
+	<string id="kb_left">
+		<text>Sinistra</text>
+	</string>
+	<string id="kb_left_lookout">
+		<text>Sbircia a sinistra</text>
+	</string>
+	<string id="kb_left_strafe">
+		<text>Attacca a sinistra</text>
+	</string>
+	<string id="kb_map">
+		<text>Mappa sul palmare</text>
+	</string>
+	<string id="kb_next_slot">
+		<text>Arma in scomparto successivo</text>
+	</string>
+	<string id="kb_night_vision">
+		<text>Visione notturna</text>
+	</string>
+	<string id="kb_pause">
+		<text>Pausa</text>
+	</string>
+	<string id="kb_pda">
+		<text>Palmare</text>
+	</string>
+	<string id="kb_prev_slot">
+		<text>Arma in scomparto precedente</text>
+	</string>
+	<string id="kb_quit">
+		<text>Esci</text>
+	</string>
+	<string id="kb_reload">
+		<text>Ricarica</text>
+	</string>
+	<string id="kb_repair">
+		<text>Ripara</text>
+	</string>
+	<string id="kb_right">
+		<text>Destra</text>
+	</string>
+	<string id="kb_right_lookout">
+		<text>Sbircia a destra</text>
+	</string>
+	<string id="kb_right_strafe">
+		<text>Attacca a destra</text>
+	</string>
+	<string id="kb_scores">
+		<text>Punti</text>
+	</string>
+	<string id="kb_screenshot">
+		<text>Cattura schermata</text>
+	</string>
+	<string id="kb_skin_menu">
+		<text>Menu Interfaccia</text>
+	</string>
+	<string id="kb_sprint">
+		<text>Scatta</text>
+	</string>
+	<string id="kb_team_menu">
+		<text>Menu Squadra</text>
+	</string>
+	<string id="kb_torch">
+		<text>Torcia</text>
+	</string>
+	<string id="kb_turn_engine">
+		<text>Accendi</text>
+	</string>
+	<string id="kb_up">
+		<text>Su</text>
+	</string>
+	<string id="kb_use">
+		<text>Usa</text>
+	</string>
+	<string id="kb_use_bandage">
+		<text>Benda rapida</text>
+	</string>
+	<string id="kb_use_medkit">
+		<text>Kit medico rapido</text>
+	</string>
+	<string id="kb_vote_begin">
+		<text>Inizia voto</text>
+	</string>
+	<string id="kb_vote_menu">
+		<text>Vota</text>
+	</string>
+	<string id="kb_vote_no">
+		<text>Vota "Sм"</text>
+	</string>
+	<string id="kb_vote_yes">
+		<text>Vota "No"</text>
+	</string>
+	<string id="kb_weapon1">
+		<text>Arma 1</text>
+	</string>
+	<string id="kb_weapon2">
+		<text>Arma 2</text>
+	</string>
+	<string id="kb_weapon3">
+		<text>Arma 3</text>
+	</string>
+	<string id="kb_weapon4">
+		<text>Arma 4</text>
+	</string>
+	<string id="kb_weapon5">
+		<text>Arma 5</text>
+	</string>
+	<string id="kb_weapon6">
+		<text>Arma 6</text>
+	</string>
+	<string id="kb_wpn_next">
+		<text>Cambio tipo munizioni</text>
+	</string>
+	<string id="kb_wpn_prev">
+		<text>Arma prec. di questo tipo</text>
+	</string>
+	<string id="kb_zoom">
+		<text>Zoom</text>
+	</string>
+	<string id="speech_menu_group">
+		<text>Messaggi vocali (1)</text>
+	</string>
+	<string id="speech_menu_personal">
+		<text>Messaggi vocali (2)</text>
+	</string>
+</string_table>

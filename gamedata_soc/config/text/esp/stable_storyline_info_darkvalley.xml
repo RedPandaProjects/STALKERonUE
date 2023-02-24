@@ -1,0 +1,75 @@
+	<string id="bar_darklab_documents_txt">
+		<text>Tabernero: "Según los documentos que trajiste de Agroprom, parece que las cosas empiezan a aclararse, pero faltan algunos datos. Las pruebas indican la presencia de un Cauterizador cerebral bloqueando la carretera del norte, pero nadie sabe exactamente qué es. También se menciona el laboratorio X18, cuya descripción coincide con la de unas estructuras subterráneas abandonadas del Valle Oscuro. Su actividad actual se desconoce, y además, los bandidos han establecido su base en el Valle Oscuro.\n Varios exploradores de Deber fueron allí hace poco, pero hasta el momento no hay noticias de ellos.\n Para entrar en el laboratorio, necesitarás dos códigos electrónicos. Te daré uno, pero el segundo tendrás que obtenerlo de Borov, el líder de los bandidos. \n\n Así que tienes que conseguir de Borov el segundo código del laboratorio, y luego, entrar sigilosamente y hacerte con los documentos.</text>
+	</string>
+	<string id="bar_darklab_documents2_txt">
+		<text>Hay que encontrar los documentos sobre las investigaciones que se han realizado en el laboratorio X18. Pueden aportar pistas sobre el "Cauterizador cerebral".</text>
+	</string>
+	<string id="dar_codedoor_1_txt">
+		<text>El camino a las profundidades del laboratorio está protegido con una combinación. Tienes que encontrar a alguien que conozca la combinación.</text>
+	</string>
+	<string id="dar_codedoor_2_txt">
+		<text>Hay otra puerta y debe de haber algo detrás. Tienes que averiguar el código que abre la puerta.</text>
+	</string>
+	<string id="dar_document1">
+		<text>Fase inicial del experimento</text>
+	</string>
+	<string id="dar_document2">
+		<text>Segunda fase del experimento</text>
+	</string>
+	<string id="dar_document3">
+		<text>Informe de seguridad</text>
+	</string>
+	<string id="dar_document4">
+		<text>Ataque al personal</text>
+	</string>
+	<string id="dar_document5">
+		<text>Última fase del experimento</text>
+	</string>
+	<string id="documents_1">
+		<text>Hace una semana decidimos incrementar la intensidad de la radiación en los sujetos de prueba. Durante los primeros días no se detectaron cambios. En los días siguientes, comenzó una extraña metamorfosis: pérdida de pelo, gran agresividad. Algunos sujetos fueron literalmente pisoteados por sus compañeros.</text>
+	</string>
+	<string id="documents_2">
+		<text>El estado de los sujetos se ha estabilizado. La cantidad de pelo actual es un 10% de la original. Las mandíbulas y los dientes han crecido considerablemente. Los arranques repentinos de actividad parecen aleatorios y no van dirigidos a los compañeros. A. N. Burnov, el técnico superior de laboratorio, indicó que esto podía deberse a un incremento de la capacidad intelectual del sujeto. Se decidió probar la nueva modulación de emisiones psíquicas en los sujetos.</text>
+	</string>
+	<string id="documents_3">
+		<text>Jefe de seguridad: Ayer, el guardia de seguridad G. P. Glebov lanzó un trozo de carne a los sujetos para divertirse. En unos segundos desgarraron la carne y la devoraron. Después, varios individuos trataron de salir de sus celdas. Por este motivo, los técnicos del laboratorio no pudieron obtener las muestras necesarias. Aunque G. P. Glebov actuó indebidamente, propongo que el personal de mantenimiento vaya equipado con pistolas de aire para su protección en caso de emergencia.</text>
+	</string>
+	<string id="documents_4">
+		<text>Jefe de seguridad: Ayer, el experimentó casi se nos fue de las manos. Dos decenas de los sujetos sometidos a prueba se escaparon y sembraron el pánico en dos salas del laboratorio. Por suerte, el personal de investigación pudo encerrarse en la planta de arriba. Nos ordenaron despejar la sala principal del laboratorio. Durante la operación, tres guardias sufrieron mordeduras. Esperemos que pronto estén bien. Ojalá el experimento acabe pronto.</text>
+	</string>
+	<string id="documents_5">
+		<text>Ayer aplicamos a los sujetos sometidos a prueba una modulación nueva de emisiones psíquicas. Parecía como si sus cerebros se hubieran calcinado literalmente. Me resulta difícil imaginar cómo puede afectar a los humanos esta emisión. Hemos probado todas y cada una de las emisiones y los resultados coinciden con los obtenidos en otros laboratorios. El experimento se puede dar por finalizado. En teoría, en una semana estaremos listos para probarlo en criaturas más grandes.</text>
+	</string>
+	<string id="LabX18 first key">
+		<text>Código de acceso al segundo nivel</text>
+	</string>
+	<string id="LabX18 second key">
+		<text>Código de acceso al primer nivel</text>
+	</string>
+	<string id="LabX18_information">
+		<text>Información sobre X18</text>
+	</string>
+	<string id="pass_to_1st_door">
+		<text>Excelente, colega. Me complace saber que has conseguido acceder al nivel 2. Por fin descubrirás lo que pasa en nuestro laboratorio. Tu código de acceso es 1243. El jefe del laboratorio X-18 es Piotr Ilyitch Kalugin.</text>
+	</string>
+	<string id="pass_to_2nd_door">
+		<text>Estimado colega, te recuerdo que mañana temprano debes ir al contenedor de la sala central del laboratorio. Hay que revisar los contenedores cada 2 horas. Mantenme informado de todo. El código de acceso a la sala central del laboratorio es 9524. El jefe del laboratorio X18 es Piotr Ilyitch Kalugin.</text>
+	</string>
+	<string id="sl_x18_dream_name">
+		<text>Un sueño extraño</text>
+	</string>
+	<string id="sl_x18_dream_text">
+		<text>He tenido un sueño muy extraño. La colosal central de Chernóbil al ocaso. Todo está tranquilo. Aparece un hombre solo. Lo veo de espaldas con la central de fondo. El viento empieza a soplar. De repente, cientos de ratas salen de la central corriendo en todas direcciones. El hombre, aún de espaldas a mí, dispara a las ratas. Se oye un grito repentino: "¡Strelok!" El hombre se estremece, se queda quieto un momento y empieza a darse la vuelta, pero... justo un instante antes de verle la cara, me despierto. ¿Qué significa este sueño? No sé, pero creo que es algo que ya he visto antes.</text>
+	</string>
+	<string id="val_captive_help_txt">
+		<text>Bullet, un miembro de Deber, quiere que rescate a su compañero, capturado por los bandidos. Pronto van a escoltarlo a la fábrica desierta.</text>
+	</string>
+	<string id="val_prisoner_help_art_txt">
+		<text>Miembro de Deber: "Tienen a otro de los nuestros: Serega. Lo han metido en el sótano... Hay un edificio grande... a medio construir... Ayúdale a escapar, ¿vale? O también se desharán de él..."</text>
+	</string>
+	<string id="val_x18_conclusion">
+		<text>Laboratorio X18</text>
+	</string>
+	<string id="val_x18_conclusion_txt">
+		<text>Dios... El laboratorio X18 no es un sitio agradable... Y sus residentes actuales... Nunca pensé que existieran seres como esos. Encontré unos documentos... No entiendo ni la mitad de lo que pone; solo sé que contienen especificaciones técnicas de algunos componentes de los emisores Kaimanov. Lo interesante es que esas piezas estaban destinadas a otro laboratorio, llamado X16, que probablemente también sea secreto.</text>
+	</string>

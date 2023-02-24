@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="dar_explorer_dialog_1">
+		<text>Jdu splnit misi.</text>
+	</string>
+	<string id="dar_explorer_dialog_11">
+		<text>Hmm. Jakou misi? Hledбљ nмco? Nebo uћ jsi to naљel? Prej je tady spousta dobrejch vмcн...</text>
+	</string>
+	<string id="dar_explorer_dialog_111">
+		<text>Promiт, ale nemщћu ti to шнct a stejnм nemбm moc иasu.</text>
+	</string>
+	<string id="dar_explorer_dialog_1111">
+		<text>Poиkej, neutнkej jeљtм. Na to budeљ mнt spoustu pшнleћitostн... Co jsi naљel? Jб se tady taky nepoflakuju jen tak.</text>
+	</string>
+	<string id="dar_explorer_dialog_11111">
+		<text>Co jsem naљel, je moje vмc.</text>
+	</string>
+	<string id="dar_explorer_dialog_11112">
+		<text>Mбm nмjakэ dokumenty z X18. Barman mi za nм slнbil dobшe zaplatit.</text>
+	</string>
+	<string id="dar_explorer_dialog_112">
+		<text>Nic jsem nenaљel.</text>
+	</string>
+	<string id="dar_explorer_dialog_2">
+		<text>Ani nevнm, jak jsem se sem dostal. Fakt bych byl nejradљi co nejdшнv pryи.</text>
+	</string>
+	<string id="dar_explorer_dialog_21">
+		<text>Nenaљel jsi tady nмco zajнmavэho, co? Prej tady nмkde majн bejt data o vмdeckejch experimentech. Ty by mмly bejt docela cennэ...</text>
+	</string>
+	<string id="dar_explorer_dialog_211">
+		<text>Ne, nic jsem nenaљel.</text>
+	</string>
+	<string id="dar_explorer_dialog_2111">
+		<text>Jo?.. A co kdyћ si to fakt dobшe promyslнљ? Nмco pшede mnou skrejvбљ, co?</text>
+	</string>
+	<string id="dar_explorer_dialog_21111">
+		<text>Ne.</text>
+	</string>
+	<string id="dar_explorer_dialog_21112">
+		<text>Co je tohle za otбzku?</text>
+	</string>
+	<string id="dar_explorer_dialog_21113">
+		<text>Snaћнљ se mi vyhroћovat</text>
+	</string>
+	<string id="dar_explorer_dialog_212">
+		<text>Kaљlu na informace. Jsem rбd, ћe jsem pшeћil.</text>
+	</string>
+	<string id="dar_explorer_dialog_2121">
+		<text>No, tak bмћ. Ale pokud nмco najdeљ, tak jб tady jeљtм poшбd budu...</text>
+	</string>
+	<string id="dar_explorer_dialog_25">
+		<text>Hele, kбmo, dostal jsem se skrz oheт, anomбlie a pшнљery tэhle mizernэ Zуny a jak vidнљ, poшбd ћiju! Tak mi neшнkej, co mщћu a co ne. Pшiљel jsem si sem pro dokumenty a bez nich neodejdu. Jestli je mбљ u sebe, tak ti je radнm navalit, nebo si tady v tэhle dншe odpoиineљ fakt na hodnм dlouho! Jasnэ?</text>
+	</string>
+	<string id="dar_explorer_dialog_251">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="dar_explorer_dialog_2511">
+		<text>Jestli mi lћeљ, tak seљ po krk ve sraиkбch. Kdybys se mnou chtмl nбhodou vyjebat, tak seљ taky po krk ve sraиkбch, a jestli si na mм nмco zkusнљ, tak se z toho posereљ. Ty seљ ve sraиkбch uћ tak hluboko, ћe se budeљ muset hodnм snaћit, aby ses v nich neutopil! Tak a teп to zkusнme jeљtм jednou, pomalu, aby to i blbeиek pochopil: naљel jsi ty dokumenty?</text>
+	</string>
+	<string id="dar_explorer_dialog_2521">
+		<text>Fajn a pшнљtм si dбvej bacha na hubu. Mщћeљ jнt. A kdybys nмco naљel, budu tady...</text>
+	</string>
+	<string id="dar_explorer_dialog_253">
+		<text>Tenhle rozhovor skonиil. Jdi mi z cesty.</text>
+	</string>
+	<string id="dar_explorer_dialog_26">
+		<text>Nemбm ћбdnэ dokumenty.</text>
+	</string>
+	<string id="dar_explorer_dialog_271">
+		<text>To je mnohem lepљн, frajere. A teп mi naval vљechno co mбљ, i ten poslednн kousниek papнru. A aќ tм ani nenapadne si nмco zkusit srandovnнho, protoћe to by byl tvщj poslednн vtнpek...</text>
+	</string>
+	<string id="dar_explorer_dialog_51">
+		<text>Шнkбm ti stщj! Nepoflakuju se tady v tэhle dншe jen tak pro nic za nic. Pшestaт pobнhat a шekni mi, co jsi naљel. Mohli bychom se o to podмlit...</text>
+	</string>
+	<string id="dar_explorer_dialog_511">
+		<text>O nic se dмlit nebudu.</text>
+	</string>
+	<string id="dar_explorer_dialog_5111">
+		<text>Uhuh, tak vypadni... A mбm pro tebe poslednн radu - dбvej si bacha, kam љlapeљ, stalkere!</text>
+	</string>
+	<string id="dar_explorer_dialog_512">
+		<text>Vyhroћujeљ mi?</text>
+	</string>
+	<string id="dar_explorer_dialog_5121">
+		<text>Jasnм, jasnм, klid. Jakmile zaиnu bejt zvмdavej, ty uћ sahбљ po kvйru! Uћ ћбdnэ otбzky. Jen si prostм dej bacha.</text>
+	</string>
+	<string id="dar_explorer_dialog_61">
+		<text>Dokumenty, hm... vнљ, pшesnм pro ty jsem pшiљel. A ty mi je teп dбљ a zmizneљ. Jasnэ?</text>
+	</string>
+	<string id="dar_explorer_dialog_6111">
+		<text>Chce to nмjakou rozumnou nabнdku..</text>
+	</string>
+	<string id="dar_explorer_dialog_6121">
+		<text>Hele, kбmo, pшestaт se mi srбt na hlavu. Dohodneme se. Dбm ti pмknej balнk, nebudeљ litovat.</text>
+	</string>
+	<string id="dar_explorer_dialog_6131">
+		<text>Hele, na tмch papнrech zбvisн mщj ћivot. Ukaћ, co mбљ, urиitм bychom se mohli nмjak dohodnout...</text>
+	</string>
+	<string id="dar_explorer_dialog_8011">
+		<text>Je tady hroznб tma, nevidнm ani hovno. Vљude kolem obшi... proи jsem s tнm jenom souhlasil?! A co ty, jak jsi tady skonиil ty?</text>
+	</string>
+	<string id="dar_explorer_dialog_8021">
+		<text>Jen jdi dбl, stalkere.</text>
+	</string>
+	<string id="dar_explorer_dialog_8031">
+		<text>Nesnбљнm, kdyћ mм nмkdo v шeиi pшeruљн. No, jб sem pшiљel pro nмjakэ dщleћitэ papнry. Jestli jsi nмco naљel, tak naval, nebo budeљ mнt fakt prщser. Jestli jsi nic nenaљel, tak zmiz a pшestaт mм otravovat.</text>
+	</string>
+	<string id="dar_explorer_dialog_8041">
+		<text>Nesnбљнm, kdyћ mм nмkdo v шeиi pшeruљн. Dej mi ty dokumenty, jestli nechceљ pшijнt o kejhбk.</text>
+	</string>
+	<string id="dar_explorer_dialog_9">
+		<text>Zapamatuju si to.</text>
+	</string>
+</string_table>

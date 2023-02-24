@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_secret_0000_descr">
+		<text>Unser Zeug ist fьrs Erste im Tunnel sicher. Der Platz ist gut - nur wenige kennen ihn und die Anomalien hindern die Leute daran reinzukommen.</text>
+	</string>
+	<string id="agr_secret_0000_name">
+		<text>Serijs Geheimversteck</text>
+	</string>
+	<string id="agr_secret_0001_descr">
+		<text>Ich hab alles im Stumpf beim Tunnel versteckt. Das Loch ist gut.</text>
+	</string>
+	<string id="agr_secret_0001_name">
+		<text>Stumpf mit einem Loch</text>
+	</string>
+	<string id="agr_secret_0002_descr">
+		<text>Ich habe ein paar gute Sachen unter dem Kreuz beim Busch vergraben.</text>
+	</string>
+	<string id="agr_secret_0002_name">
+		<text>Das Zeichen ist unter dem Kreuz.</text>
+	</string>
+	<string id="agr_secret_0003_descr">
+		<text>Der Rucksack liegt unter dem gefдllten Baum.</text>
+	</string>
+	<string id="agr_secret_0003_name">
+		<text>Rucksack unter dem Baum</text>
+	</string>
+	<string id="agr_secret_0004_descr">
+		<text>Der Rucksack ist im Rohr bei der Fabrik. Den findet niemand.</text>
+	</string>
+	<string id="agr_secret_0004_name">
+		<text>Rucksack eines Schornsteinfegers.</text>
+	</string>
+	<string id="agr_secret_0005_descr">
+		<text>Die Truhe ist auf dem Dach der Fabrik - da findet sie niemand. Das Problem ist nur, durch den Regen verrostet sie.</text>
+	</string>
+	<string id="agr_secret_0005_name">
+		<text>Truhe auf dem Dach</text>
+	</string>
+	<string id="agr_secret_0006_descr">
+		<text>Es gab eine SchieЯerei, ich musste den Rucksack unter dem Waggon lassen, hinter dem Sitz. Wenigstens bin ich entkommen. Ich gehe wieder hin und hole ihn mir.</text>
+	</string>
+	<string id="agr_secret_0006_name">
+		<text>Rucksack des Trunkenbolds</text>
+	</string>
+	<string id="agr_secret_0007_descr">
+		<text>Hab ich unter dem Kreuz versteckt, hinter den Zisternen. Du musst nur graben.</text>
+	</string>
+	<string id="agr_secret_0007_name">
+		<text>Bei den drei Zisternen</text>
+	</string>
+	<string id="agr_secret_0008_descr">
+		<text>Ich habe den Rucksack oben in der Fabrik verstaut, da sieht ihn keiner. Das Problem ist nur, ich weiЯ nicht mehr genau, was drin ist.</text>
+	</string>
+	<string id="agr_secret_0008_name">
+		<text>Rucksack ist im Bullauge</text>
+	</string>
+	<string id="agr_secret_0009_descr">
+		<text>Mein Zeug ist in einer Truhe in der Fabrik.</text>
+	</string>
+	<string id="agr_secret_0009_name">
+		<text>Radioaktive Truhe</text>
+	</string>
+	<string id="agr_secret_0010_descr">
+		<text>In der Truhe unter der Treppe ist ein Geheimversteck.</text>
+	</string>
+	<string id="agr_secret_0010_name">
+		<text>Kiste im Treppenhaus</text>
+	</string>
+	<string id="agr_secret_0011_descr">
+		<text>Ich habe alles in der Truhe versteckt, da sieht nie jemand nach.</text>
+	</string>
+	<string id="agr_secret_0011_name">
+		<text>Fabriktruhe</text>
+	</string>
+	<string id="agr_secret_0012_descr">
+		<text>Ich habe den Beutel aus dem Fenster geworfen. Ich hol ihn spдter.</text>
+	</string>
+	<string id="agr_secret_0012_name">
+		<text>Der Beutel hдngt an der Strebe.</text>
+	</string>
+	<string id="agr_secret_0013_descr">
+		<text>Koljan und ich waren bei Agroprom schцn spazieren, haben einen Haufen Schrott gefunden und ein paar Sachen versteckt. Die Truhe ist im Mьll.</text>
+	</string>
+	<string id="agr_secret_0013_name">
+		<text>Mьlltruhe</text>
+	</string>
+	<string id="agr_secret_0014_descr">
+		<text>Ich habe unter einem gefдllten Baum einen Safe gefunden. Da verstecke ich alles.</text>
+	</string>
+	<string id="agr_secret_0014_name">
+		<text>Safe unter dem Baum</text>
+	</string>
+	<string id="agr_secret_0015_descr">
+		<text>Ich habe ein paar Sachen in das Rohr geworfen, die hole ich spдter. Ich hatte keine andere Wahl, sonst hдtte ich das Zeug hier. Ich hoffe, es wird nicht nass.</text>
+	</string>
+	<string id="agr_secret_0015_name">
+		<text>Zeug im Rohr</text>
+	</string>
+	<string id="agr_secret_0016_descr">
+		<text>Das Zeug ist im alten Rohr, das mьssen wir den Jungs sagen. Ich kletter da nicht rein.</text>
+	</string>
+	<string id="agr_secret_0016_name">
+		<text>Radioaktives Rohr</text>
+	</string>
+	<string id="agr_secret_0017_descr">
+		<text>Ich bin von der Basis abgehauen. ScheiЯ drauf, ich kletter nicht, wдhrend die Stalker schieЯen. Mein Zeug ist in einem Haufen im Rohr. Wenn sie weg sind, hole ich es.</text>
+	</string>
+	<string id="agr_secret_0017_name">
+		<text>Der Haufen</text>
+	</string>
+	<string id="agr_secret_0018_descr">
+		<text>Unter dem Busch ist ein halb vergrabener Safe. Da verstecke ich alles.</text>
+	</string>
+	<string id="agr_secret_0018_name">
+		<text>Safe unter dem Busch</text>
+	</string>
+	<string id="agr_secret_0019_descr">
+		<text>Sie haben die Truhe unter der Strebe gefunden. Jemand hat sie den ganzen Weg vom Forschungsinstitut hergeschleift. Warten wir, und schnappen wir uns den Glьckstreffer.</text>
+	</string>
+	<string id="agr_secret_0019_name">
+		<text>Archivkiste</text>
+	</string>
+	<string id="agr_secret_0020_descr">
+		<text>Mein Zeug ist in einer Eisenkapsel versteckt.</text>
+	</string>
+	<string id="agr_secret_0020_name">
+		<text>Unter der Falltьr</text>
+	</string>
+	<string id="agr_secret_0021_descr">
+		<text>Da ist ein halb vergrabener Safe unter dem Busch - da verstecke ich alles.</text>
+	</string>
+	<string id="agr_secret_0021_name">
+		<text>Unter dem Busch bei der Wand</text>
+	</string>
+	<string id="agr_secret_0022_descr">
+		<text>Gute Truhe fьr Extra-Schrott</text>
+	</string>
+	<string id="agr_secret_0022_name">
+		<text>Truhe aus dem Forschungsinstitut</text>
+	</string>
+	<string id="agr_secret_0023_descr">
+		<text>Alles im Safe, aber dann sind die Soldaten gekommen, und ich komm nicht mehr ran.</text>
+	</string>
+	<string id="agr_secret_0023_name">
+		<text>Agrosafe</text>
+	</string>
+	<string id="agr_secret_0024_descr">
+		<text>Mein Zeug ist im Rohr - hol ich spдter.</text>
+	</string>
+	<string id="agr_secret_0024_name">
+		<text>Das Fьhrerhдuschen</text>
+	</string>
+	<string id="agr_secret_0025_descr">
+		<text>Zeug aus dem faulen Baumstamm nehmen.</text>
+	</string>
+	<string id="agr_secret_0025_name">
+		<text>Fauler Baumstamm</text>
+	</string>
+	<string id="agr_secret_0026_descr">
+		<text>Gute Truhe fьr Extra-Schrott. Das war einmal das Ausrьstungsinventar des Instituts.</text>
+	</string>
+	<string id="agr_secret_0026_name">
+		<text>Zavhoz-Truhe</text>
+	</string>
+	<string id="agr_secret_0027_descr">
+		<text>Gute Truhe fьr kleine Dinge. In so einer Truhe hatte ich zu Hause mein Werkzeug fьr Metallarbeiten.</text>
+	</string>
+	<string id="agr_secret_0027_name">
+		<text>Metallarbeiteninventar</text>
+	</string>
+	<string id="agr_u_secret_0000_descr">
+		<text>Die Banditen verstecken etwas unter dem Rohr. Ich will wissen, was. Soweit ich das beim Reden mitbekommen habe, sind da ihre Vorrдte.</text>
+	</string>
+	<string id="agr_u_secret_0000_name">
+		<text>Gemeinsamer "Fond" der Banditen</text>
+	</string>
+	<string id="agr_u_secret_0001_descr">
+		<text>Der Rucksack steckt hinter Betonteilen, hab nur leichtes Gepдck. Lieber hungrig als tot.</text>
+	</string>
+	<string id="agr_u_secret_0001_name">
+		<text>Rucksack ist in einer SeitenstraЯe</text>
+	</string>
+	<string id="agr_u_secret_0002_descr">
+		<text>Die Truhe ist hinter einem rostigen "Fass" im Untergrund, da ist alles drin. Mich kriegt da keiner wieder hin. Es ist ein Wunder, dass ich den Blutsauger erledigt habe. Ich weiЯ immer noch nicht, wie.</text>
+	</string>
+	<string id="agr_u_secret_0002_name">
+		<text>Blutsaugertruhe</text>
+	</string>
+	<string id="agr_u_secret_0003_descr">
+		<text>Hinter der Tьr sind ein paar gute Sachen. Da sollte man nicht nein sagen!</text>
+	</string>
+	<string id="agr_u_secret_0003_name">
+		<text>Stalker-Ware</text>
+	</string>
+	<string id="agr_u_secret_0004_descr">
+		<text>Ich habe hier ein paar Sachen ausgegraben. Ein guter Platz fьr ein Geheimversteck. Auf einem gelben Fass findet man das nie.</text>
+	</string>
+	<string id="agr_u_secret_0004_name">
+		<text>Maulwurfsloch</text>
+	</string>
+	<string id="bar_secret_0000_description">
+		<text>Der Rucksack ist bei der Basis der Wдchter. Ich hol ihn mir spдter.</text>
+	</string>
+	<string id="bar_secret_0000_name">
+		<text>Versteckter Rucksack</text>
+	</string>
+	<string id="bar_secret_0001_description">
+		<text>Hinter mir war ein groЯes Rudel Hunde her. Wenn ich den Rucksack nicht weggeworfen hдtte, hдtte ich es nie zum Tor geschafft.</text>
+	</string>
+	<string id="bar_secret_0001_name">
+		<text>Der weggeworfene Rucksack</text>
+	</string>
+	<string id="bar_secret_0002_description">
+		<text>Alles, was ьbrig war, wurde unter dem Kreuz vergraben.</text>
+	</string>
+	<string id="bar_secret_0002_name">
+		<text>Geheimversteck unter dem Kreuz</text>
+	</string>
+	<string id="bar_secret_0003_description">
+		<text>Mein Rucksack liegt hier - so ist es leichter.</text>
+	</string>
+	<string id="bar_secret_0003_name">
+		<text>Rucksack</text>
+	</string>
+	<string id="bar_secret_0004_description">
+		<text>In einem Bunker lagert Munition der Wдchterfraktion, aber keiner passt auf die Truhe auf.</text>
+	</string>
+	<string id="bar_secret_0004_name">
+		<text>Vorrдte im Bunker</text>
+	</string>
+	<string id="bar_secret_0005_description">
+		<text>Ich habe gesehen, wie ein Wдchter etwas in das Rohr beim Tor gesteckt hat.</text>
+	</string>
+	<string id="bar_secret_0005_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0006_description">
+		<text>Das hat alles ihm gehцrt, das kann auch noch eine Weile hier bleiben.</text>
+	</string>
+	<string id="bar_secret_0006_name">
+		<text>Geheimversteck unter dem Kreuz</text>
+	</string>
+	<string id="bar_secret_0007_description">
+		<text>Ich gehe in die Bar, mein Rucksack liegt im Hangar.</text>
+	</string>
+	<string id="bar_secret_0007_name">
+		<text>Rucksack</text>
+	</string>
+	<string id="bar_secret_0008_description">
+		<text>Es geht das Gerьcht, dass auf dem Gebiet der Wдchter etwas Wertvolles im Schaltkasten versteckt ist.</text>
+	</string>
+	<string id="bar_secret_0008_name">
+		<text>Schaltkasten mit Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0009_description">
+		<text>Die Kiste habe ich oben in den Turm vor die Wдchter gesteckt - das fдllt keinem auf.</text>
+	</string>
+	<string id="bar_secret_0009_name">
+		<text>Geheimversteck auf dem Turm</text>
+	</string>
+	<string id="bar_secret_0010_description">
+		<text>Versteckt im Rohr unter der Treppe.</text>
+	</string>
+	<string id="bar_secret_0010_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0011_description">
+		<text>Das Zeug ist nicht weit von der Bar versteckt, hinter den Anomalien - da geht keiner hin. Und selbst wenn, wьrden sie es nicht auf kriegen. Aber eigentlich ist alles ganz einfach - du ziehst nur ganz leicht an der Tьr, und alles geht auf.</text>
+	</string>
+	<string id="bar_secret_0011_name">
+		<text>Arnys Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0012_description">
+		<text>Das Zeug ist in der Nдhe der Bar vergraben.</text>
+	</string>
+	<string id="bar_secret_0012_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0013_description">
+		<text>Bei der Bar, in einer Truhe</text>
+	</string>
+	<string id="bar_secret_0013_name">
+		<text>Truhe</text>
+	</string>
+	<string id="bar_secret_0014_description">
+		<text>Die Truhe ist in einer SeitenstraЯe bei der Bar versteckt.</text>
+	</string>
+	<string id="bar_secret_0014_name">
+		<text>Kleine Truhe</text>
+	</string>
+	<string id="bar_secret_0015_description">
+		<text>Unter dem Kreuz hinter den Tannen vergraben.</text>
+	</string>
+	<string id="bar_secret_0015_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0016_description">
+		<text>Unter dem Kreuz, nicht weit vom Durchgang ins Dunkle Gebiet.</text>
+	</string>
+	<string id="bar_secret_0016_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0017_description">
+		<text>Die Truhe mit den Strahlenschutzmitteln ist in einem Rohr in der Arena.</text>
+	</string>
+	<string id="bar_secret_0017_name">
+		<text>Kleine Truhe</text>
+	</string>
+	<string id="bar_secret_0018_description">
+		<text>Mein ScheiЯ ist in einem Rohr unter dem Turm.</text>
+	</string>
+	<string id="bar_secret_0018_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="bar_secret_0019_description">
+		<text>Unter dem Kreuz ist ein Geheimversteck.</text>
+	</string>
+	<string id="bar_secret_0019_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="esc_secret_0000_descr">
+		<text>Beim Sammeln habe ich mein Armeezeug in einem Waggon versteckt. Nicht vergessen.</text>
+	</string>
+	<string id="esc_secret_0000_name">
+		<text>Waggon oberhalb der Brьcke</text>
+	</string>
+	<string id="esc_secret_0001_descr">
+		<text>Ich habe gesehen, wie eine Anomalie einen Stalker beim Eisenbahntunnel im Wald platt gemacht hat. Er hatte gutes Zeug, glaube ich.</text>
+	</string>
+	<string id="esc_secret_0001_name">
+		<text>Sachen aus dem Besitz des Anomalie-Opfers</text>
+	</string>
+	<string id="esc_secret_0002_descr">
+		<text>Fьr die Bestechung ist alles unter dem Kreuz versteckt.</text>
+	</string>
+	<string id="esc_secret_0002_name">
+		<text>Das Kreuz im Banditenlager</text>
+	</string>
+	<string id="esc_secret_0003_descr">
+		<text>Die Truhe, die von den Banditen geklaut wurde, ist im Keller des zentralen Gebдudes. Mit einer Ablenkung kommen wir dran.</text>
+	</string>
+	<string id="esc_secret_0003_name">
+		<text>Lagerhaus der Banditen</text>
+	</string>
+	<string id="esc_secret_0004_descr">
+		<text>Meine Kumpel und ich hatten mit diesen Mistviechern in Uniform zu tun, und ich habe Zeug unter der Brьcke vergraben. Da kann es erst mal bleiben.</text>
+	</string>
+	<string id="esc_secret_0004_name">
+		<text>Unter dem Kreuz</text>
+	</string>
+	<string id="esc_secret_0005_descr">
+		<text>Der Rucksack steckt im Keller. Ich komme spдter wieder - geht gerade nicht.</text>
+	</string>
+	<string id="esc_secret_0005_name">
+		<text>Unterstand im Keller</text>
+	</string>
+	<string id="esc_secret_0006_descr">
+		<text>Auf der Farm ist ein halb vergrabener Safe. Da bewahre ich jetzt alles auf.</text>
+	</string>
+	<string id="esc_secret_0006_name">
+		<text>Safe auf der Farm</text>
+	</string>
+	<string id="esc_secret_0007_descr">
+		<text>Ein Vцgelchen flьstert, jemand versteckt etwas im Eisenbahnwaggon auf der Brьcke. Ich muss auf dem Rьckweg da nachsehen. Wer da wohl ...</text>
+	</string>
+	<string id="esc_secret_0007_name">
+		<text>Behдlter im Eisenbahnwaggon</text>
+	</string>
+	<string id="esc_secret_0008_descr">
+		<text>Das Zeug ist gleich unter dem Dach am kleinen Haus an der Brьcke versteckt.</text>
+	</string>
+	<string id="esc_secret_0008_name">
+		<text>Besitz des Schьtzen</text>
+	</string>
+	<string id="esc_secret_0009_descr">
+		<text>Mein ScheiЯ ist in so einer Truhe, nicht weit von der Brьcke. Das war's, mir reicht's, ich hau ab aus der Zone, lebt wohl! Ich werde das Mutterland nie vergessen.</text>
+	</string>
+	<string id="esc_secret_0009_name">
+		<text>Zeug an der Brьcke</text>
+	</string>
+	<string id="esc_secret_0010_descr">
+		<text>Am Lager der Neuen hat es einen Stalker erwischt. Mal sehen, was der dabei hatte.</text>
+	</string>
+	<string id="esc_secret_0010_name">
+		<text>Der Rucksack ist beim Dorf</text>
+	</string>
+	<string id="esc_secret_0011_descr">
+		<text>Lihoi sagt, das geheime Versteck ist im Keller. Er hat zu viel erzдhlt, also haben wir ihn endgьltig zum Schweigen gebracht.</text>
+	</string>
+	<string id="esc_secret_0011_name">
+		<text>Keller im Dorf</text>
+	</string>
+	<string id="esc_secret_0012_descr">
+		<text>Im Keller ist ein tolles Versteck. Ich warte, bis jemand dort etwas hinterlegt.</text>
+	</string>
+	<string id="esc_secret_0012_name">
+		<text>Ein guter Platz</text>
+	</string>
+	<string id="esc_secret_0013_descr">
+		<text>Worpal sagt, im Keller gibt es ein Geheimversteck. Unsere Mдnner waren in der Nдhe auf Erkundung. Gehen wir nachsehen.</text>
+	</string>
+	<string id="esc_secret_0013_name">
+		<text>Worpals Geheimversteck</text>
+	</string>
+	<string id="esc_secret_0014_descr">
+		<text>Sie haben im Bьro vom Befehlshaber eine verzwickte Truhe gesehen, da ist tonnenweise wertvolles Zeug drin.</text>
+	</string>
+	<string id="esc_secret_0014_name">
+		<text>Die Wertsachen des Befehlshabers</text>
+	</string>
+	<string id="esc_secret_0015_descr">
+		<text>Irgendeinen Stalker hat es beim Lager der Neuen erwischt. Wir sollten uns sein Zeug ansehen. Wieso war der ьberhaupt da?</text>
+	</string>
+	<string id="esc_secret_0015_name">
+		<text>Am Rand einer LandstraЯe</text>
+	</string>
+	<string id="esc_secret_0016_descr">
+		<text>Das Zeug ist im Keller der Banditen versteckt. Bis eben waren sie nicht da. Jetzt wдre es an der Zeit, in einem gьnstigen Augenblick alles einzusammeln.</text>
+	</string>
+	<string id="esc_secret_0016_name">
+		<text>Der Rдuberkeller</text>
+	</string>
+	<string id="esc_secret_0017_descr">
+		<text>Hab das Inventar im Rohr gefunden, nicht weit von der Farm. Sobald ich meine Zeit abgesessen habe, komme ich bestimmt wieder.</text>
+	</string>
+	<string id="esc_secret_0017_name">
+		<text>Gasrohr</text>
+	</string>
+	<string id="esc_secret_0018_descr">
+		<text>Meinen Rucksack habe ich beim Posten weggeworfen. Ich sollte ihn schnell holen, ehe wir woandershin abkommandiert werden.</text>
+	</string>
+	<string id="esc_secret_0018_name">
+		<text>Verstecktes Zeug</text>
+	</string>
+	<string id="esc_secret_0019_descr">
+		<text>Ich habe die Truhe erst mal im Turm gelassen. Ich hole sie, wenn ich kann.</text>
+	</string>
+	<string id="esc_secret_0019_name">
+		<text>Turm am Kontrollpunkt</text>
+	</string>
+	<string id="gar_secret_0000_descr">
+		<text>Ich habe gesehen, wie ein Bandit sein Zeug in einer Truhe im Hangar versteckt hat. Wie komme ich da nur leise ran?</text>
+	</string>
+	<string id="gar_secret_0000_name">
+		<text>Lagerraum der Banditen</text>
+	</string>
+	<string id="gar_secret_0001_descr">
+		<text>Wasja und ich wollten alles auskundschaften und plцtzlich trifft ihn eine Kugel. Ich hatte nichts damit zu tun. Das ist die verdammte Kugel. Das Zeug ist im Rohr versteckt.</text>
+	</string>
+	<string id="gar_secret_0001_name">
+		<text>Alter Kran</text>
+	</string>
+	<string id="gar_secret_0002_descr">
+		<text>Grizzly hat es erwischt, sein ganzer Krempel liegt auf der Mьllhalde, im Eisenbahntunnel hinter der Diesellok. Schade um Grizzly.</text>
+	</string>
+	<string id="gar_secret_0002_name">
+		<text>Grizzlys Zeug</text>
+	</string>
+	<string id="gar_secret_0003_descr">
+		<text>Das Zeug ist in einem Rohr bei der Mьllhalde.</text>
+	</string>
+	<string id="gar_secret_0003_name">
+		<text>Rohr im Nordhaufen.</text>
+	</string>
+	<string id="gar_secret_0004_descr">
+		<text>Die Sachen sind auf der Mьllhalde, in einem der Rohre. Wenn du nicht weiЯt, wo genau, findest du nichts.</text>
+	</string>
+	<string id="gar_secret_0004_name">
+		<text>Extra-Geld beim Altmetall</text>
+	</string>
+	<string id="gar_secret_0005_descr">
+		<text>Ich habe das Zeug in einem Metallrohr bei den beiden Zisternen versteckt. Blцderweise habe ich keine Zeit, es zu holen.</text>
+	</string>
+	<string id="gar_secret_0005_name">
+		<text>Eisenschmelze neben der Zisterne</text>
+	</string>
+	<string id="gar_secret_0006_descr">
+		<text>In dem radioaktiven Abfall sind ein paar gute Sachen versteckt, da, wo sich kaum jemand hin traut.</text>
+	</string>
+	<string id="gar_secret_0006_name">
+		<text>Rohr im Osthaufen</text>
+	</string>
+	<string id="gar_secret_0007_descr">
+		<text>Im Tal liegt der Rucksack von irgendwem, und ьberall Anomalien auЯen rum. Wie soll man da ran kommen?</text>
+	</string>
+	<string id="gar_secret_0007_name">
+		<text>Unbekannter Rucksack</text>
+	</string>
+	<string id="gar_secret_0008_descr">
+		<text>Den Verrдter haben wir im Sumpf erledigt, und da auch begraben. Und sein Zeug liegt unter dem Kreuz - wir hatten andere Sorgen.</text>
+	</string>
+	<string id="gar_secret_0008_name">
+		<text>Der Besitz des Ermordeten</text>
+	</string>
+	<string id="gar_secret_0009_descr">
+		<text>In den Schatten ist ein Geheimversteck - ein guter Platz.</text>
+	</string>
+	<string id="gar_secret_0009_name">
+		<text>Fauler Baumstamm</text>
+	</string>
+	<string id="gar_secret_0010_descr">
+		<text>Im Wald gibt es einen Baumstamm mit einem Versteck innen drin. In dem Loch ist ein Schatz - den sollten wir holen.</text>
+	</string>
+	<string id="gar_secret_0010_name">
+		<text>Baumstamm im Wald</text>
+	</string>
+	<string id="gar_secret_0011_descr">
+		<text>Petrenko wollte weitersagen, dass es Infos ьber das geheime Versteck der Strelok-Fraktion auf der Mьllhalde gibt. Hier im Tal gibt es einen Gulli, und mit einem Trick kriegt man den auf. Und sobald sich die Lage beruhigt hat, sehen wir uns das an.</text>
+	</string>
+	<string id="gar_secret_0011_name">
+		<text>Lagerraum der Strelok-Fraktion</text>
+	</string>
+	<string id="gar_secret_0012_descr">
+		<text>Im Wagen versteckt. Der Lange hat gesagt, da ist ein guter Platz.</text>
+	</string>
+	<string id="gar_secret_0012_name">
+		<text>Geheimversteck im Wagen.</text>
+	</string>
+	<string id="gar_secret_0013_descr">
+		<text>Der Rucksack ist im Bus - scheint nicht aufzufallen.</text>
+	</string>
+	<string id="gar_secret_0013_name">
+		<text>Rucksack des Stalkers im Bus</text>
+	</string>
+	<string id="gar_secret_0014_descr">
+		<text>Ich hab die Vorrдte in die Truhe gepackt und die Truhe in das alte Haus um die Ecke. Keine Ahnung, was das Gebдude soll.</text>
+	</string>
+	<string id="gar_secret_0014_name">
+		<text>Verschiedene Vorrдte</text>
+	</string>
+	<string id="gar_secret_0015_descr">
+		<text>Halb vergraben im Mьll ist ein Safe. Da ist alles drin. Vergiss lieber nicht, worum es sich handelt.</text>
+	</string>
+	<string id="gar_secret_0015_name">
+		<text>Safe auf dem Sьdhaufen</text>
+	</string>
+	<string id="gar_secret_0016_descr">
+		<text>Das Zeug auf den Mьllhaufen im Rohr legen.</text>
+	</string>
+	<string id="gar_secret_0016_name">
+		<text>Lager im Altmetall</text>
+	</string>
+	<string id="gar_secret_0017_descr">
+		<text>Der Funkchef hat das hier durchgegeben: Rьckzug. Hab eine Truhe gefunden, das ganze Extrazeug reingepackt, und bin mit leeren Hдnden zurьck.</text>
+	</string>
+	<string id="gar_secret_0017_name">
+		<text>Vorrдte in der Truhe</text>
+	</string>
+	<string id="gar_secret_0018_descr">
+		<text>Das Zeug ist im Rohr bei der Mьllhalde. Da wird es nicht lange bleiben.</text>
+	</string>
+	<string id="gar_secret_0018_name">
+		<text>Rohr beim Bus</text>
+	</string>
+	<string id="gar_secret_0019_descr">
+		<text>Den Rucksack kann man in den Ruinen leicht verstecken. Wenn die Banditen nicht im Weg sind, ist leicht ranzukommen.</text>
+	</string>
+	<string id="gar_secret_0019_name">
+		<text>Rucksack in den Ruinen</text>
+	</string>
+	<string id="gar_secret_0020_descr">
+		<text>Als die Wдchter geschossen haben, habe ich das Zeug im Eisenbahnwaggon versteckt. Ich muss da rein und es holen. Und es den Wдchtern heimzahlen.</text>
+	</string>
+	<string id="gar_secret_0020_name">
+		<text>Truhe beim schwer bewachten militдrischen Posten</text>
+	</string>
+	<string id="gar_secret_0021_descr">
+		<text>Der Schwдchling hat angeblich bei der Mьllhalde ins Gras gebissen - wir mьssen das Zeug finden. Sonst kommen zu viele Leute mit Interesse daran.</text>
+	</string>
+	<string id="gar_secret_0021_name">
+		<text>Rucksack des Schwдchlings</text>
+	</string>
+	<string id="gar_secret_0022_descr">
+		<text>Ich verstecke das Zeug erst mal im Loch hier. Vielleicht finden sie es nicht.</text>
+	</string>
+	<string id="gar_secret_0022_name">
+		<text>Stofftasche im Loch</text>
+	</string>
+	<string id="gar_secret_0023_descr">
+		<text>Eine Anomalie hat bei der Rolltreppe jemanden erwischt - ich kann den Rucksack sehen, aber man kommt schwer ran.</text>
+	</string>
+	<string id="gar_secret_0023_name">
+		<text>Unter der Baggerschaufel</text>
+	</string>
+	<string id="gar_secret_0024_descr">
+		<text>Ich habe es kaum unter die Balken geschafft, aber der Rucksack ist gut versteckt - hier klettert keiner rein.</text>
+	</string>
+	<string id="gar_secret_0024_name">
+		<text>Das Extra-Geld ist unter den Betonteilen.</text>
+	</string>
+	<string id="mil_secret_0000_description">
+		<text>Das Zeug ist im Baumstamm - da findet es niemand.</text>
+	</string>
+	<string id="mil_secret_0000_name">
+		<text>Geheimversteck im Baumstamm</text>
+	</string>
+	<string id="mil_secret_0001_description">
+		<text>Der Krempel ist in der Schmelze.</text>
+	</string>
+	<string id="mil_secret_0001_name">
+		<text>Geheimversteck in der Schmelze</text>
+	</string>
+	<string id="mil_secret_0002_description">
+		<text>Der Krempel ist im KAMAZ-Bьro.</text>
+	</string>
+	<string id="mil_secret_0002_name">
+		<text>Geheimversteck bei KAMAZ</text>
+	</string>
+	<string id="mil_secret_0003_description">
+		<text>Ein paar gute Sachen sind unter dem Kreuz am Dorf vergraben.</text>
+	</string>
+	<string id="mil_secret_0003_name">
+		<text>Schatz unter dem Kreuz</text>
+	</string>
+	<string id="mil_secret_0004_description">
+		<text>Mein Zeug ist im Rohr, ich hole es spдter ab.</text>
+	</string>
+	<string id="mil_secret_0004_name">
+		<text>Geheimversteck im Rohr</text>
+	</string>
+	<string id="mil_secret_0005_description">
+		<text>Geheimversteck in der Truhe im Wasserturm</text>
+	</string>
+	<string id="mil_secret_0005_name">
+		<text>Schatz im Turm</text>
+	</string>
+	<string id="mil_secret_0006_description">
+		<text>Mein Rucksack steckt in der Schmelze, den kann ich spдter brauchen.</text>
+	</string>
+	<string id="mil_secret_0006_name">
+		<text>Geheimversteck in der Schmelze</text>
+	</string>
+	<string id="mil_secret_0007_description">
+		<text>Das Zeug ist im Wagen in der verlassenen Stadt.</text>
+	</string>
+	<string id="mil_secret_0007_name">
+		<text>Wagen-Geheimversteck</text>
+	</string>
+	<string id="mil_secret_0008_description">
+		<text>Der Rucksack ist in den Strahlungsruinen. Da wollte ich lieber nicht hin.</text>
+	</string>
+	<string id="mil_secret_0008_name">
+		<text>Gefдhrliches Geheimnis</text>
+	</string>
+	<string id="mil_secret_0009_description">
+		<text>Das Zeug ist unter dem Kreuz vergraben, an einem geheimen Ort.</text>
+	</string>
+	<string id="mil_secret_0009_name">
+		<text>Stalker-Versteck</text>
+	</string>
+	<string id="mil_secret_0010_description">
+		<text>Hab den Rucksack mit der Ausrьstung an einem lauschigen Plдtzchen versteckt.</text>
+	</string>
+	<string id="mil_secret_0010_name">
+		<text>Rucksack mit Ausrьstung</text>
+	</string>
+	<string id="mil_secret_0011_description">
+		<text>Hab mein Zeug im Wagen auf einem Hьgel versteckt.</text>
+	</string>
+	<string id="mil_secret_0011_name">
+		<text>Geheimversteck auf Hьgel</text>
+	</string>
+	<string id="mil_secret_0012_description">
+		<text>Ein Hubschrauber ist bei der verlassenen Militдrbasis runtergegangen - und die Truhe steckt genau drunter. Es gibt nur ein Problem: Es gibt dort ьberall Anomalien und Strahlung.</text>
+	</string>
+	<string id="mil_secret_0012_name">
+		<text>Truhe vom Hubschrauber</text>
+	</string>
+	<string id="mil_secret_0013_description">
+		<text>Hab das Zeug auf dem Hьgel unter dem Kreuz versteckt.</text>
+	</string>
+	<string id="mil_secret_0013_name">
+		<text>Geheimnis am Grabstein</text>
+	</string>
+	<string id="mil_secret_0014_description">
+		<text>Es gibt ein Geheimversteck im Baumstumpf - ein gutes Versteck!</text>
+	</string>
+	<string id="mil_secret_0014_name">
+		<text>Baumstumpf-Versteck</text>
+	</string>
+	<string id="mil_secret_0015_description">
+		<text>Hab den Rucksack im Kranfьhrerhдuschen gelassen. Ich hol ihn spдter ab.</text>
+	</string>
+	<string id="mil_secret_0015_name">
+		<text>Geheimversteck in groЯer Hцhe</text>
+	</string>
+	<string id="mil_secret_0016_description">
+		<text>Alles ist in der Truhe - in einem Eisenbahnwaggon nicht weit von der Basis. Genau nach Plan, jetzt mьssen wir nur noch warten.</text>
+	</string>
+	<string id="mil_secret_0016_name">
+		<text>Das besprochene Geheimversteck</text>
+	</string>
+	<string id="mil_secret_0017_description">
+		<text>Hab die Sachen im Baumstamm versteckt. Die finden sie sicher nicht.</text>
+	</string>
+	<string id="mil_secret_0017_name">
+		<text>Schatz im Baumstamm</text>
+	</string>
+	<string id="mil_secret_0018_description">
+		<text>Hab die Sachen in einem Rohr am Seeufer versteckt.</text>
+	</string>
+	<string id="mil_secret_0018_name">
+		<text>Rohr mit was drin</text>
+	</string>
+	<string id="mil_secret_0019_description">
+		<text>Hab mein Zeug in einer Eisenkapsel versteckt.</text>
+	</string>
+	<string id="mil_secret_0019_name">
+		<text>Geheimversteck des Stalkers</text>
+	</string>
+	<string id="mil_secret_0020_description">
+		<text>Hab die Sachen in einem Baumstamm versteckt. Die finden sie sicher nicht.</text>
+	</string>
+	<string id="mil_secret_0020_name">
+		<text>Baumstamm mit was drin</text>
+	</string>
+	<string id="mil_secret_0021_description">
+		<text>Gute Truhe, um Zeug drin aufzubewahren</text>
+	</string>
+	<string id="mil_secret_0021_name">
+		<text>Gute Vorratstruhe</text>
+	</string>
+	<string id="mil_secret_0022_description">
+		<text>Hab den Rucksack mit dem Zeug im Tunnel versteckt.</text>
+	</string>
+	<string id="mil_secret_0022_name">
+		<text>Rucksack im Tunnel</text>
+	</string>
+	<string id="mil_secret_0023_description">
+		<text>Gute Truhe, um Zeug drin aufzubewahren</text>
+	</string>
+	<string id="mil_secret_0023_name">
+		<text>Truhe mit Sachen</text>
+	</string>
+	<string id="mil_secret_0024_description">
+		<text>Hab die Sachen in einem Baumstamm versteckt. Die finden sie sicher nicht.</text>
+	</string>
+	<string id="mil_secret_0024_name">
+		<text>Geheimversteck im Baumstamm</text>
+	</string>
+	<string id="mil_secret_0025_description">
+		<text>Hab die Sachen in die Truhe geworfen. Ich hol sie spдter ab.</text>
+	</string>
+	<string id="mil_secret_0025_name">
+		<text>Vorlдufiges Geheimversteck</text>
+	</string>
+	<string id="mil_secret_0026_description">
+		<text>Hab die Sachen im Gulli versteckt. Die kann ich sicher noch mal brauchen.</text>
+	</string>
+	<string id="mil_secret_0026_name">
+		<text>Stдhlernes Geheimversteck</text>
+	</string>
+	<string id="mil_secret_0027_description">
+		<text>Hab die Sachen in die Kiste geworfen. Ich hol sie spдter ab.</text>
+	</string>
+	<string id="mil_secret_0027_name">
+		<text>Truhe mit was drin</text>
+	</string>
+	<string id="mil_secret_0028_description">
+		<text>Hab den Rucksack im Wagen versteckt, direkt vor den Nasen der Freiheitsleute, aber mehr Zeit hatte ich nicht.</text>
+	</string>
+	<string id="mil_secret_0028_name">
+		<text>Geheimversteck im Wagen.</text>
+	</string>
+	<string id="pri_secret_0000_description">
+		<text>Hier soll ein berьhmter Stalker den Lцffel abgegeben haben und bisher hat sich niemand seine Sachen geholt.</text>
+	</string>
+	<string id="pri_secret_0000_name">
+		<text>Sachen des toten Stalkers</text>
+	</string>
+	<string id="pri_secret_0001_description">
+		<text>In der Garage soll eine Truhe voll praktischer Sachen sein.</text>
+	</string>
+	<string id="pri_secret_0001_name">
+		<text>Schatz in der Garage</text>
+	</string>
+	<string id="pri_secret_0002_description">
+		<text>Im Kindergarten soll eine Truhe voll praktischer Sachen sein.</text>
+	</string>
+	<string id="pri_secret_0002_name">
+		<text>Altes Geheimversteck</text>
+	</string>
+	<string id="pri_secret_0003_description">
+		<text>Sie haben Fang in Prypjat unter einem Monument begraben. Sein ganzes Zeug haben sie ihm gelassen. Man soll nichts von den Toten nehmen.</text>
+	</string>
+	<string id="pri_secret_0003_name">
+		<text>Fangs Zeug</text>
+	</string>
+	<string id="pri_secret_0004_description">
+		<text>Sie wussten von ihm nur, dass er der letzte Ьberlebende nach dem Schmelzer war. Er hat all seine Vorrдte in einem alten Supermarkt gelassen und ist dann losgezogen. Doch es lief nicht wie geplant. Er war der beste Freiheitsanfьhrer der Geschichte.</text>
+	</string>
+	<string id="pri_secret_0004_name">
+		<text>Vorrдte des Anfьhrers der Freiheitsfraktion</text>
+	</string>
+	<string id="rad_secret_0000_description">
+		<text>Das Kreuz liegt auf dem Weg zum Schmelzer. Weiter bin ich nicht gekommen, ich hab alles darunter versteckt.</text>
+	</string>
+	<string id="rad_secret_0000_name">
+		<text>Murks Schatz</text>
+	</string>
+	<string id="rad_secret_0001_description">
+		<text>Hier hat ein Stalker das Zeitliche gesegnet und sein Zeug liegt immer noch rum. Niemand ist bisher rangekommen.</text>
+	</string>
+	<string id="rad_secret_0001_name">
+		<text>Zeug des toten Stalkers</text>
+	</string>
+	<string id="rad_secret_0002_description">
+		<text>Es soll einen halb vergrabenen Safe hier im Wald geben, mit lauter guten Sachen drin.</text>
+	</string>
+	<string id="rad_secret_0002_name">
+		<text>Safe mit was drin</text>
+	</string>
+	<string id="rad_secret_0003_description">
+		<text>Sie haben ihnen gesagt, sie sollen nicht ьber den Schmelzer fliegen - aber nein. Sie sind mitten im Wald gelandet und es ist unwahrscheinlich, dass jemand ьberlebt hat. Und mit ihnen ist auch der Krempel verloren, der fьr uns bestimmt war.</text>
+	</string>
+	<string id="rad_secret_0003_name">
+		<text>Wдchter-Pдckchen</text>
+	</string>
+	<string id="rad_secret_0004_description">
+		<text>Die Vorrдte der Fraktion, die ins Zentrum der Zone wollte, sollen noch da sein, direkt unter der Strahlung des Schmelzers. Keiner von ihnen kam zurьck und die Vorrдte warten noch immer drauf, von jemandem eingesammelt zu werden.</text>
+	</string>
+	<string id="rad_secret_0004_name">
+		<text>Vorrдte der Tollkьhnen</text>
+	</string>
+	<string id="rad_secret_0005_description">
+		<text>Hier soll der Anfьhrer einer ehemaligen Fraktion abgekratzt sein - und er soll jede Menge gutes Zeug dabei gehabt haben.</text>
+	</string>
+	<string id="rad_secret_0005_name">
+		<text>Zeug des Anfьhrers von ehemaliger Fraktion</text>
+	</string>
+	<string id="ros_secret_0000_description">
+		<text>Hab den Rucksack hinter der Eisenplatte versteckt.</text>
+	</string>
+	<string id="ros_secret_0000_name">
+		<text>Versteckter Rucksack</text>
+	</string>
+	<string id="ros_secret_0001_description">
+		<text>Hab das Zeug unter dem Kreuz versteckt.</text>
+	</string>
+	<string id="ros_secret_0001_name">
+		<text>Geheimversteck unter dem Kreuz</text>
+	</string>
+	<string id="ros_secret_0002_description">
+		<text>Hab eine Kleinigkeit in der Truhe unter dem kleinen Haus versteckt. Nicht, dass ich das vergesse.</text>
+	</string>
+	<string id="ros_secret_0002_name">
+		<text>Truhe unter dem kleinen Haus</text>
+	</string>
+	<string id="ros_secret_0003_description">
+		<text>Hab den Rucksack unter die Treppe gepackt und dann kamen diese Idioten. Mann, wie krieg ich den jetzt zurьck?</text>
+	</string>
+	<string id="ros_secret_0003_name">
+		<text>Rucksack des Stalkers</text>
+	</string>
+	<string id="ros_secret_0004_description">
+		<text>An der Ecke hinter dem Baum ist ein halb vergrabener Safe. Da pack ich erst mal all mein Zeug rein.</text>
+	</string>
+	<string id="ros_secret_0004_name">
+		<text>Geheimversteck hinter dem Baum</text>
+	</string>
+	<string id="ros_secret_0005_description">
+		<text>Sie haben alles, was sie im Regen an sich genommen haben, in einer Truhe in der Garage versteckt.</text>
+	</string>
+	<string id="ros_secret_0005_name">
+		<text>Geheimversteck in der Garage</text>
+	</string>
+	<string id="ros_secret_0006_description">
+		<text>Hab ein paar Sachen in der Kiste hinter der Kabine versteckt.</text>
+	</string>
+	<string id="ros_secret_0006_name">
+		<text>Versteckte Truhe</text>
+	</string>
+	<string id="ros_secret_0007_description">
+		<text>Hab den Rucksack in ein Loch gesteckt. Man kann ihn von oben, glaube ich, nicht sehen.</text>
+	</string>
+	<string id="ros_secret_0007_name">
+		<text>Rucksack im Geheimversteck</text>
+	</string>
+	<string id="ros_secret_0008_description">
+		<text>Hab die kleine Truhe an einem sicheren Ort versteckt.</text>
+	</string>
+	<string id="ros_secret_0008_name">
+		<text>Truhe an sicherem Ort</text>
+	</string>
+	<string id="ros_secret_0009_description">
+		<text>Mein Rucksack ist oben unter dem Dach. Fьr schlechte Zeiten.</text>
+	</string>
+	<string id="ros_secret_0009_name">
+		<text>Geheimversteck der Strelok</text>
+	</string>
+	<string id="ros_secret_0010_description">
+		<text>In dem kleinen Haus soll es einen Safe geben und irgendwas soll drin versteckt sein.</text>
+	</string>
+	<string id="ros_secret_0010_name">
+		<text>Safe im Haus</text>
+	</string>
+	<string id="ros_secret_0011_description">
+		<text>Ich hab's im Haus in einem Rohr versteckt. Achtung, da fдllt alles auseinander!</text>
+	</string>
+	<string id="ros_secret_0011_name">
+		<text>Geheimversteck im Rohr</text>
+	</string>
+	<string id="ros_secret_0012_description">
+		<text>Nimm dir aus der Truhe, worьber wir gesprochen haben. Da schaut keiner nach.</text>
+	</string>
+	<string id="ros_secret_0012_name">
+		<text>Versteckte Truhe</text>
+	</string>
+	<string id="ros_secret_0013_description">
+		<text>Hab alles unter dem Kreuz in einer SeitenstraЯe versteckt.</text>
+	</string>
+	<string id="ros_secret_0013_name">
+		<text>Geheimversteck unter dem Kreuz</text>
+	</string>
+	<string id="ros_secret_0014_description">
+		<text>Sie haben die Extravorrдte unter dem Beton auf der Baustelle versteckt.</text>
+	</string>
+	<string id="ros_secret_0014_name">
+		<text>Geheimversteck unter dem Beton</text>
+	</string>
+	<string id="ros_secret_0015_description">
+		<text>Wir haben den Kram in die Truhe auf der Baustelle gepackt, falls wir mal schnell weg mьssen.</text>
+	</string>
+	<string id="ros_secret_0015_name">
+		<text>Geheimversteck des Glьcklichen</text>
+	</string>
+	<string id="ros_secret_0016_description">
+		<text>Hab's in einer SeitenstraЯe an der Baustelle versteckt.</text>
+	</string>
+	<string id="ros_secret_0016_name">
+		<text>Nytschka</text>
+	</string>
+	<string id="ros_secret_0017_description">
+		<text>Hab alles in ein Rohr gepackt, ich hol's spдter wieder raus.</text>
+	</string>
+	<string id="ros_secret_0017_name">
+		<text>Geheimversteck im Rohr</text>
+	</string>
+	<string id="ros_secret_0018_description">
+		<text>Hab die Medizin in einer Kiste in der Nдhe der Baustelle versteckt.</text>
+	</string>
+	<string id="ros_secret_0018_name">
+		<text>Truhe mit Medizin</text>
+	</string>
+	<string id="ros_secret_0019_description">
+		<text>Hab die Truhe ins Kranfьhrerhдuschen geschleppt. </text>
+	</string>
+	<string id="ros_secret_0019_name">
+		<text>Kiste auf dem Kran</text>
+	</string>
+	<string id="ros_secret_0020_description">
+		<text>Hab mein Zeug im Gulli in der Ecke versteckt.</text>
+	</string>
+	<string id="ros_secret_0020_name">
+		<text>Geheimversteck im Gulli</text>
+	</string>
+	<string id="ros_secret_0021_description">
+		<text>War hinter dem Artefakt her und bin in eine Anomalie geraten, konnte kaum laufen. Hab den Rucksack in die Ecke geschmissen.</text>
+	</string>
+	<string id="ros_secret_0021_name">
+		<text>Weggeworfener Rucksack</text>
+	</string>
+	<string id="ros_secret_0022_description">
+		<text>Hab die Truhe direkt unter dem Dach beim Turm verstaut. Da findet sie niemand.</text>
+	</string>
+	<string id="ros_secret_0022_name">
+		<text>Kleine Truhe unter dem Dach</text>
+	</string>
+	<string id="ros_secret_0023_description">
+		<text>Wir haben alles, was wir gefunden haben, im Rohr bei der Baustelle versteckt.</text>
+	</string>
+	<string id="ros_secret_0023_name">
+		<text>Geheimversteck im Rohr</text>
+	</string>
+	<string id="ros_secret_0024_description">
+		<text>Hab alles Zeug in den Baumstamm gepackt, da findet es sicher niemand.</text>
+	</string>
+	<string id="ros_secret_0024_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="ros_secret_0025_description">
+		<text>Hab den Rucksack am Kran abgelegt.</text>
+	</string>
+	<string id="ros_secret_0025_name">
+		<text>Rucksack</text>
+	</string>
+	<string id="val_secret_0000_description">
+		<text>Hab die paar Sachen unter dem Kreuz am Berg versteckt.</text>
+	</string>
+	<string id="val_secret_0000_name">
+		<text>Geheimversteck unter dem Kreuz</text>
+	</string>
+	<string id="val_secret_0001_description">
+		<text>Hab alles Zeug in einen Baumstamm gepackt, da findet es sicher niemand.</text>
+	</string>
+	<string id="val_secret_0001_name">
+		<text>Geheimversteck im Baumstamm</text>
+	</string>
+	<string id="val_secret_0002_description">
+		<text>Hab den Rucksack unter die Brьcke gepackt. Da soll er erst mal liegen bleiben.</text>
+	</string>
+	<string id="val_secret_0002_name">
+		<text>Rucksack unter der Brьcke</text>
+	</string>
+	<string id="val_secret_0003_description">
+		<text>Hab den Rucksack in den Wagen beim Sumpf gepackt.</text>
+	</string>
+	<string id="val_secret_0003_name">
+		<text>Wagen mit Geheimversteck</text>
+	</string>
+	<string id="val_secret_0004_description">
+		<text>Es gibt ein Geheimversteck in einem Baumstumpf - ein gutes Versteck!</text>
+	</string>
+	<string id="val_secret_0004_name">
+		<text>Geheimversteck in einem Baumstumpf</text>
+	</string>
+	<string id="val_secret_0005_description">
+		<text>Hab eine groЯe Truhe auf dem Bauernhof gefunden. Da bewahre ich erst mal meine Vorrдte drin auf.</text>
+	</string>
+	<string id="val_secret_0005_name">
+		<text>Truhe mit Vorrдten</text>
+	</string>
+	<string id="val_secret_0006_description">
+		<text>Hab meine Sachen ins Rohr geschmissen. Ich hol sie spдter wieder ab.</text>
+	</string>
+	<string id="val_secret_0006_name">
+		<text>Geheimversteck im Rohr</text>
+	</string>
+	<string id="val_secret_0007_description">
+		<text>Hab den Rucksack unter einer Tanne versteckt.</text>
+	</string>
+	<string id="val_secret_0007_name">
+		<text>Geheimversteck unter der Tanne</text>
+	</string>
+	<string id="val_secret_0008_description">
+		<text>Der Neue hat den Banditen die Truhe abgenommen und sie mit dem Boden nach oben in den Niva gesteckt. Er sagt, sie sieht aus wie eine Regierungstruhe. Wir mьssen unsere Leute bewaffnen und sie uns holen.</text>
+	</string>
+	<string id="val_secret_0008_name">
+		<text>Regierungstruhe</text>
+	</string>
+	<string id="val_secret_0009_description">
+		<text>Ьberall wird geklaut. Jetzt bestehlen sie sich sogar schon gegenseitig. Aber meine Truhe finden sie nie.</text>
+	</string>
+	<string id="val_secret_0009_name">
+		<text>Truhe</text>
+	</string>
+	<string id="val_secret_0010_description">
+		<text>Hab mein Zeug im Gulli versteckt. Vielleicht kann ich's spдter mal brauchen.</text>
+	</string>
+	<string id="val_secret_0010_name">
+		<text>Geheimversteck im Gulli</text>
+	</string>
+	<string id="val_secret_0011_description">
+		<text>Hab den Rucksack unter einen Baum geschmissen. Sonst wдre ich den Banditen nicht entkommen.</text>
+	</string>
+	<string id="val_secret_0011_name">
+		<text>Rucksack des Stalkers</text>
+	</string>
+	<string id="val_secret_0012_description">
+		<text>Hab meinen Kram in ein Rohr gestopft. Ich hol ihn spдter wieder ab.</text>
+	</string>
+	<string id="val_secret_0012_name">
+		<text>Geheimversteck</text>
+	</string>
+	<string id="val_secret_0013_description">
+		<text>Alles, was ich Borow abgenommen hab, hab ich unter der Tanne in Sicherheit gebracht. Jetzt muss ich warten, bis die Jungs sich beruhigt haben.</text>
+	</string>
+	<string id="val_secret_0013_name">
+		<text>Versteckter Safe</text>
+	</string>
+	<string id="val_secret_0014_description">
+		<text>Das temporдre Hauptquartier ist im Eisenbahnwaggon, wie auch die Truhe mit den Vorrдten.</text>
+	</string>
+	<string id="val_secret_0014_name">
+		<text>Lager im Eisenbahnwaggon</text>
+	</string>
+	<string id="val_secret_0015_description">
+		<text>Hab's grad noch zum Rohr unter der StraЯe geschafft. Jetzt hab ich einen Platz, wo ich meinen Rucksack verstecken kann.</text>
+	</string>
+	<string id="val_secret_0015_name">
+		<text>Geheimer Ort im Rohr</text>
+	</string>
+	<string id="val_secret_0016_description">
+		<text>Hab die Sachen in die Kiste geworfen. Ich hol sie spдter ab.</text>
+	</string>
+	<string id="val_secret_0016_name">
+		<text>Truhe mit Sachen</text>
+	</string>
+	<string id="val_secret_0017_description">
+		<text>Ich versteck das Zeug hinter dem Rohr. Da kommt man zwar schlecht dran, aber wenigstens hauen sie dann nicht damit ab.</text>
+	</string>
+	<string id="val_secret_0017_name">
+		<text>Geheimversteck hinter dem Rohr</text>
+	</string>
+	<string id="val_secret_0018_description">
+		<text>Hab ein paar Magazine im Stromraum gefunden.</text>
+	</string>
+	<string id="val_secret_0018_name">
+		<text>Geheimversteck im Stromraum</text>
+	</string>
+	<string id="val_secret_0019_description">
+		<text>Wir haben alles, was wir in der Truhe gefunden haben, da gelassen. Wir holen es ab, wenn wir zurьckkommen.</text>
+	</string>
+	<string id="val_secret_0019_name">
+		<text>Geheimversteck in der Truhe</text>
+	</string>
+	<string id="val_secret_0020_description">
+		<text>Hab den Rucksack vom Neuen versteckt und er hat ihn nie wiedergefunden.</text>
+	</string>
+	<string id="val_secret_0020_name">
+		<text>Versteckter Rucksack</text>
+	</string>
+	<string id="val_secret_0021_description">
+		<text>Die Truhe ist immer noch im Van. Wir mьssen sie da rausholen.</text>
+	</string>
+	<string id="val_secret_0021_name">
+		<text>Vergessene Truhe</text>
+	</string>
+	<string id="val_secret_0022_description">
+		<text>Hab einen Safe an der Tankstelle gefunden und mein Zeug darin versteckt. Sieht aus, als kдme hier nie einer hin.</text>
+	</string>
+	<string id="val_secret_0022_name">
+		<text>Safe an der Tankstelle</text>
+	</string>
+	<string id="val_secret_0023_description">
+		<text>Hab die Truhe auf die Zisterne geschleppt.</text>
+	</string>
+	<string id="val_secret_0023_name">
+		<text>Truhe</text>
+	</string>
+	<string id="val_secret_0024_description">
+		<text>Hab die Vorrдte im Safe an der Tankstelle versteckt.</text>
+	</string>
+	<string id="val_secret_0024_name">
+		<text>Safe an der Tankstelle</text>
+	</string>
+	<string id="val_secret_0025_description">
+		<text>Im Wagen beim Banditenlager ist eine Art Truhe. Wir mьssen uns ranschleichen und einen Blick drauf werden. Ich hab das Gefьhl, da ist was drin.</text>
+	</string>
+	<string id="val_secret_0025_name">
+		<text>Truhe im Auto</text>
+	</string>
+	<string id="val_secret_0026_description">
+		<text>Hab die Truhe ins Geheimversteck gebracht - ein sicherer Platz.</text>
+	</string>
+	<string id="val_secret_0026_name">
+		<text>Truhe im Geheimversteck</text>
+	</string>
+	<string id="val_secret_0027_description">
+		<text>Hab den Rucksack in einem verlassenen Haus geparkt. Gut, keine Menschenseele.</text>
+	</string>
+	<string id="val_secret_0027_name">
+		<text>Geparkter Rucksack</text>
+	</string>
+	<string id="val_secret_0028_description">
+		<text>Wir packen das Zeug in den Safe, an einem unauffдlligen Platz. Die Soldaten kommen - wenn nicht heute, dann morgen. Sie werden alles aufmischen, aber nicht lange suchen. Die wertvollsten Sachen gehцren also mir.</text>
+	</string>
+	<string id="val_secret_0028_name">
+		<text>Borows Geheimversteck</text>
+	</string>
+	<string id="val_secret_0029_description">
+		<text>Hab den Rucksack im Gebдude versteckt.</text>
+	</string>
+	<string id="val_secret_0029_name">
+		<text>Rucksack an geheimem Ort</text>
+	</string>
+	<string id="val_secret_0030_description">
+		<text>Hab die Sachen in eine unauffдllige Truhe getan. Ich hol sie spдter wieder ab.</text>
+	</string>
+	<string id="val_secret_0030_name">
+		<text>Unauffдllige Truhe</text>
+	</string>
+	<string id="val_secret_0031_description">
+		<text>Hab den Rucksack unter dem Wagen versteckt. Da guckt sicher keiner nach.</text>
+	</string>
+	<string id="val_secret_0031_name">
+		<text>Versteckter Rucksack</text>
+	</string>
+	<string id="val_secret_0032_description">
+		<text>Hab den Rucksack im Wagen versteckt, direkt vor den Nasen der Banditen, aber mehr Zeit hatte ich nicht.</text>
+	</string>
+	<string id="val_secret_0032_name">
+		<text>Geheimversteck im Wagen</text>
+	</string>
+	<string id="x16_secret_0000_description">
+		<text>Man sagt, ein Stalker wдr hier ins Labor eingedrungen und hдtte sein Zeug in den Steckdosen im Aufzugschacht versteckt. Und als er es dann zurьckholen wollte, ging's nicht mehr.</text>
+	</string>
+	<string id="x16_secret_0000_name">
+		<text>Steckdosen mit was drin</text>
+	</string>
+	<string id="x16_secret_0001_description">
+		<text>Man sagt, ein Stalker wдr hier ins Labor eingedrungen und hдtte da den Lцffel abgegeben, wo sie die Experimente machen. Er soll all sein Zeug bei sich gehabt haben.</text>
+	</string>
+	<string id="x16_secret_0001_name">
+		<text>Rucksack des Spдhers</text>
+	</string>
+	<string id="x18_secret_0000_description">
+		<text>Der Gerдucherte hat alles in einen Safe im Untergrundlabor gebracht. Kein schlechter Ort - keiner hat den Schlьssel. Das einzige Problem ist, dass die Felsbrocken da ziemlich tief fliegen. So soll mal einer hops gegangen sein.</text>
+	</string>
+	<string id="x18_secret_0000_name">
+		<text>Geheimversteck des Gerдucherten</text>
+	</string>
+	<string id="x18_secret_0001_description">
+		<text>Musste den Rucksack zurьcklassen.</text>
+	</string>
+	<string id="x18_secret_0001_name">
+		<text>Der zurьckgelassene Rucksack</text>
+	</string>
+	<string id="yan_secret_0000_description">
+		<text>Das Kreuz ist auf einem Hьgel und der Rucksack liegt darunter.</text>
+	</string>
+	<string id="yan_secret_0000_name">
+		<text>Geheimversteck unter dem Kreuz</text>
+	</string>
+	<string id="yan_secret_0001_description">
+		<text>Es soll einen halb vergrabenen Safe auf einer kleinen Insel im Sumpf geben. Da muss ich mehr drьber rausfinden.</text>
+	</string>
+	<string id="yan_secret_0001_name">
+		<text>Alter Safe</text>
+	</string>
+	<string id="yan_secret_0002_description">
+		<text>Hab das Zeug in ein Rohr beim Lager gepackt.</text>
+	</string>
+	<string id="yan_secret_0002_name">
+		<text>Rohr mit was drin</text>
+	</string>
+	<string id="yan_secret_0003_description">
+		<text>Hab die Sachen hinter den Garagen versteckt.</text>
+	</string>
+	<string id="yan_secret_0003_name">
+		<text>Rucksack hinter den Garagen</text>
+	</string>
+	<string id="yan_secret_0004_description">
+		<text>Hab den Rucksack in einer Bude gleich hinter dem Eisenschrott versteckt.</text>
+	</string>
+	<string id="yan_secret_0004_name">
+		<text>Rucksack mit der Beute</text>
+	</string>
+	<string id="yan_secret_0005_description">
+		<text>Hab die Truhe in den Bus gebracht - da fдllt sie nicht groЯ auf.</text>
+	</string>
+	<string id="yan_secret_0005_name">
+		<text>Geheimversteck im Bus</text>
+	</string>
+	<string id="yan_secret_0006_description">
+		<text>Die Sachen sind im Wagen nicht weit vom Gebiet versteckt. Die Strahlung ist nicht sehr hoch.</text>
+	</string>
+	<string id="yan_secret_0006_name">
+		<text>Die Beute ist im Wagen</text>
+	</string>
+	<string id="yan_secret_0007_description">
+		<text>Da sollen die Sachen von jemandem sein, aber man kann nicht hin wegen der Strahlung.</text>
+	</string>
+	<string id="yan_secret_0007_name">
+		<text>Alter Rucksack</text>
+	</string>
+	<string id="yan_secret_0008_description">
+		<text>Da soll ein Geheimversteck von irgendeiner Gruppe sein. Ich frag mich nur, wie sie bei all der Strahlung da hingekommen sind?</text>
+	</string>
+	<string id="yan_secret_0008_name">
+		<text>Geheimversteck einer Gruppe</text>
+	</string>
+	<string id="yan_secret_0009_description">
+		<text>Und wieder ist ein freiwilliger Stalker abgekratzt, weil ein Prototyp ihn nicht vor der Strahlung geschьtzt hat. Er ist nur bis zur Mitte des Gebiets gekommen - und da geblieben. Sacharow will noch mal genauere Messungen machen, aber ich geh da nicht hin. Sonst bleib ich da auch noch hдngen, so nah am Gebiet.</text>
+	</string>
+	<string id="yan_secret_0009_name">
+		<text>Rucksack des Testers</text>
+	</string>
+	<string id="yan_secret_0010_description">
+		<text>Hier soll das Zeug von jemandem liegen, aber man kommt nicht ran wegen der Strahlung.</text>
+	</string>
+	<string id="yan_secret_0010_name">
+		<text>Altes Geheimversteck</text>
+	</string>
+	<string id="yan_secret_0011_description">
+		<text>Ich muss los. Sacharow und Kruglow sind absolut irre - ich soll mit ein paar Stalkern ins Zentrum der Strahlung gehen. Die kцnnen mich mal. Sobald ich die Vorrдte aus dem Gulli geholt hab, bin ich weg.</text>
+	</string>
+	<string id="yan_secret_0011_name">
+		<text>Geheimversteck des Wissenschaftlers</text>
+	</string>
+	<string id="yan_secret_0012_description">
+		<text>Hab die Sachen in einen Baumstamm gestopft. Da finden sie sie sicher nicht.</text>
+	</string>
+	<string id="yan_secret_0012_name">
+		<text>Schatz in einem Baumstamm</text>
+	</string>
+	<string id="yan_secret_0013_description">
+		<text>Hier soll der Safe von jemandem sein, aber man kommt nicht ran wegen der Strahlung.</text>
+	</string>
+	<string id="yan_secret_0013_name">
+		<text>Truhe mit Sachen</text>
+	</string>
+	<string id="st_found_new_treasure">
+		<text>Informationen ьber das Versteck</text>
+	</string>
+</string_table>

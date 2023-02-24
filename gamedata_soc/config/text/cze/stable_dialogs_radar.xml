@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="rad_chief_start_dialog_0">
+		<text>Hej!</text>
+	</string>
+	<string id="rad_chief_start_dialog_100">
+		<text>Hej!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_0">
+		<text>Kde jsou prachy za mou prбci?</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_100">
+		<text>Najdi mэho zбstupce a dostaneљ svэ prachy!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_1000">
+		<text>Dobшe, ale doufбm, ћe mi zase nelћeљ!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_0">
+		<text>Kdo jsi?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_10">
+		<text>Иelist Leљa jmйno mй! A tohle je moje banda!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_100">
+		<text>Co tady dмlбte?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_20">
+		<text>Si tady s chlapama dбvбme padla! Aћ nбs to pшestane bavit, vyrazнme do Pripjati!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_0">
+		<text>Vнљ o Pripjati nмco zajнmavйho?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_10">
+		<text>Je to starэ opuљtмnэ mмsto z komunistickэ йry! Z historie! \nШekl bysem, ћe je to tam teп plnэ bubбkщ a poљukщ z Monolitu! Zatнm se odtama nikdo nevrбtil!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_100">
+		<text>Myslнљ, ћe je to tam nebezpeиnй?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_20">
+		<text>Vo tom nenн ћбdnб, bo se od tama eљtм nikdo nevrбtil.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_0">
+		<text>Nevidмls tady v okolн armбdu?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_10">
+		<text>Kdepak, vojбky sem uћ dlouho nevidмl.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_100">
+		<text>A co vojenљtн stalkeшi?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_20">
+		<text>Prej se ukбzali u Rudэho lesa, jak jsou antйny! Kdyћ to vypli, tak spousta lidн љla k Rudэmu lesu u a dбl do Pripjatм! Uћ jsme tu den a nikoho jsme nevidмli. Nejspнљ nмkdo zablokoval cestu.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_200">
+		<text>Takћe myslнљ, ћe armбda zablokovala cestu k Rudэmu lesu?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_30">
+		<text>Nemyslнm, ћe armбda, ty sem tu uћ dlouho nevidмl, ale mohli to bejt vojenskэ stalkeшi! Ti иas jen tak neztrбcej. Berou vљechno vбћnм, makaj rychle a efektivnм, aќ uћ v tэmech, nebo sуlo... je divnэ, ћe cestu sem nezablokovali uћ dшнv.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_300">
+		<text>Proи neљli do Pripjatм, nebo nezablokovali cestu aћ tam?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_40">
+		<text>Nevнm. Moћnб se bojej, nebo se na nмco chystaj. Mщћu akorбt hбdat.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_0">
+		<text>Moћnб pro mм mбљ nмjakэ ъkol?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_10">
+		<text>No jo, ale nenн to lehkэ, troufбљ si na to?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_100">
+		<text>Kdyћ шekneљ, ћe nмco nenн lehkэ, tak mм tнm neodradнљ!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_101">
+		<text>Ne, ani nбhodou. Nemбm иas!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_11">
+		<text>Chбpu. Sбm mбm taky bobky... radљi bych se љel nмkam pobavit, mнsto abych tam љel sбm nebo poslal svэ chlapy.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_20">
+		<text>Dobrэ! Musнљ najнt mэ zvмdбtory, Pбиidla a Loga! Vyrazili do Pripjatм, pби sem se rozhodl, ћe to nemб smysl uspмchat, a poslal sem svэ nejlepљн napшed! \nDyћ je najdeљ ћivэ, pшiveп je sem. Dyћ budou mrtvэ, tak dotбhni aspoт jejich krochny! \nDyћ to udмlбљ, dostaneљ dva litry!!!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_200">
+		<text>Ok, dohodnuto!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_201">
+		<text>To nenн dost. Co tak 4000 a dohodnuto?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_21">
+		<text>Vнc ti za todle dбt nemщћu!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_30">
+		<text>Ok, poиkбm tady na tebe!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_0">
+		<text>Mise splnмna!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_100">
+		<text>Skvмlэ, dej mi jeho PDA!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1000">
+		<text>Tady. Davaj prachy!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1100">
+		<text>Snaћнљ se mм odrbat. Nic nemмl!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1200">
+		<text>Tм rovnou odprбsknu!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1300">
+		<text>Jestli tм uvidнm eљtм jednou, zabiju tм!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1400">
+		<text>Ok, chбpu. Hodnм љtмstн!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_200">
+		<text>Nemщћu ti nic dбt, nemбm prachy. Mщћeљ si nechat jeho vмci.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_300">
+		<text>Nemбm prachy! Zmiz!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_0">
+		<text>Nedokбzal jsem ho najнt!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_10">
+		<text>Najdi ho rychle, jestli chceљ svэ prachy!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_0">
+		<text>Naљel jsem tvэ chlapy. Koupili to, ale tady jsou jejich zbranм!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_100">
+		<text>Dнky, takћe je po nich. No uћ asi nemб smysl lнzt do Pripjatм! Ale mбm tu takovej malinkej problйm. Nemбm prachy. Mщj zбstupce zmizel a mмl u sebe vљechny prachy!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_1001">
+		<text>Ok, najdu ho. Шekni mi, kde by mohl bэt. A nemysli si, ћe mм tentokrбt oљulнљ o mй penнze!!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_200">
+		<text>Myslнm, ћe se daleko nedostal. Bude tady nebo tady, oznaинm ti to na mapм. Jestli ho najdeљ, dotбhni jeho nebo jeho PDA!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_2000">
+		<text>Ok, poиkej na mм!!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_0">
+		<text>Nepodaшilo se mi je najнt.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_10">
+		<text>Najdi je rychle! Vмиnм иekat nemщћu!!! Hodnм љtмstн!</text>
+	</string>
+</string_table>

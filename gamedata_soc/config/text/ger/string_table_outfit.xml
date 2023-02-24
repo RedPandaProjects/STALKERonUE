@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bandit_outfit_description">
+		<text>Die traditionelle Bekleidung eines Banditen: eine Lederjacke mit Elementen aus Kevlar. Bietet nur unzureichenden Schutz vor den tцdlichen Bedingungen der Zone.</text>
+	</string>
+	<string id="bandit_outfit_description_m">
+		<text>Gewцhnliche schwache Banditenrьstung mit eingenдhten Rьstungsplatten im Rьcken. Fast jeder kriegt das hin, aber nicht jeder hat die nцtige Geduld dazu.</text>
+	</string>
+	<string id="bandit_outfit_name">
+		<text>Banditenjacke</text>
+	</string>
+	<string id="bandit_outfit_name_m">
+		<text>Panzerjacke</text>
+	</string>
+	<string id="dolg_outfit_description">
+		<text>Hergestellt von einem militдrischen Forschungsinstitut in Kiew, eingesetzt von den Wдchtern. So schlicht und zuverlдssig wie das Standardmodell PSZ-9, aber dank der neuen Materialien bietet die Weste guten ballistischen Schutz auch vor Feuerwaffen. Die Weste kann noch verbessert werden, da sie ьber keinen Atemschutz verfьgt.</text>
+	</string>
+	<string id="dolg_outfit_description_m1">
+		<text>Panzeranzug der Wдchter mit verbessertem Schutz gegen Bisse und Kratzer.</text>
+	</string>
+	<string id="dolg_outfit_name">
+		<text>Wдchter-PSZ-9d</text>
+	</string>
+	<string id="dolg_outfit_name_m1">
+		<text>Jдger-PSZ-9d</text>
+	</string>
+	<string id="dolg_scientific_outfit_description">
+		<text>Ein wunderbarer Schutzanzug fьr die Zone. Stalker wissen ihn zu schдtzen, da er exzellenten Schutz gegen Anomalien und gegen Kugeln bietet. Enthalten ist der PSZ-9d-Anzug, ein geschlossenes Atmungssystem und ein integriertes Unterdrьckungssystem gegen Anomalien. Kugelsicherheit und Splitterschutz von Qualitдt.</text>
+	</string>
+	<string id="dolg_scientific_outfit_name">
+		<text>PSZ-9Md UniSchutz</text>
+	</string>
+	<string id="ecolog_outfit_description">
+		<text>Ein chemischer SSP-99-Schutzanzug, der speziell fьr die Zone entworfen wurde. Er wird von Forschungsexpeditionen und den mit ihnen zusammenarbeitenden Eco-Stalkern verwendet. Er hat integrierte Luftfilter und ist klimatisiert, widersteht Hitze und Elektrizitдt und bietet guten Schutz gegen Strahlung und biologische Anomalien. Er hдlt chemisch aggressiven Umgebungen stand. Er ist kein Kampfanzug und weder kugelsicher noch splitterfest.</text>
+	</string>
+	<string id="ecolog_outfit_name">
+		<text>Цkologen-SSP-99</text>
+	</string>
+	<string id="exo_outfit_description">
+		<text>Prototyp einer Armeepanzerung, die wegen ihrer hohen Herstellungskosten und einiger Entwicklungsmдngel nie in Serienproduktion gegangen ist. In kleiner Stьckzahl wird sie jedoch in illegalen Fabriken auЯerhalb der Ukraine produziert. Hierbei handelt es sich um eine Panzerung der dritten Generation. Die Entwicklungsmдngel, die zu verringerter Beweglichkeit fьhrten, wurden behoben und die Panzerung wurde verstдrkt. Sie bietet exzellenten Schutz gegen Kugel- und Streuschдden, ist jedoch wenig effizient gegen Anomalien.</text>
+	</string>
+	<string id="exo_outfit_description_m1">
+		<text>Das einfache Modell fьr Nachtsicht wird durch eine modernere Version mit digitaler Filterung des gesendeten Signals ersetzt.</text>
+	</string>
+	<string id="exo_outfit_name">
+		<text>Panzerung</text>
+	</string>
+	<string id="killer_outfit_description">
+		<text>Stalkeranzug der Sцldnerfraktion. Das Design basiert auf den Anzьgen der Sonderkommandos der westlichen Armeen. Die Fasern sind speziell behandelt worden, um auch in Bewegung noch besonders stabil zu sein. Die Schutzwirkung ist etwas besser als die der schussfesten PSZ-7-Anzьge.</text>
+	</string>
+	<string id="killer_outfit_description_m1">
+		<text>Das eingenдhte Kettengewebe im Mantel steigert den Schutz gegen Schusswaffen und Monsterbisse. Zu dem Set gehцrt ebenfalls ein Nachtsichtgerдt.</text>
+	</string>
+	<string id="killer_outfit_name">
+		<text>Sцldneranzug</text>
+	</string>
+	<string id="killer_outfit_name_m1">
+		<text>Verstдrkter Anzug</text>
+	</string>
+	<string id="military_outfit_description">
+		<text>Dieser kugelsichere Skat-9M-Kampfanzug ist fьr Kampfeinsдtze in Gebieten mit anomalen Aktivitдten konzipiert worden. Er besteht aus dem schwer gepanzerten PSZ-12p-Kampfanzug, einem integrierten Schutzanzug und einem Sphere-12M-Helm. Er bietet perfekten Schutz vor Kugeln und Splittern, ohne dabei die Beweglichkeit des Soldaten zu einzuschrдnken. Dazu verfьgt er ьber ein System zum Schutz vor Anomalien.</text>
+	</string>
+	<string id="military_outfit_name">
+		<text>Gepanzerter Kampfanzug</text>
+	</string>
+	<string id="monolit_outfit_description">
+		<text>Stalker-Anzug der Monolith-Fraktion. Der Hersteller ist unbekannt. Seine Schutzeigenschaften sind etwas schlechter als die der kugelsicheren PSZ-9a-Militдrweste. Von der Struktur her ist er dem Anzug дhnlich, der bei neutralen Stalkern beliebt ist und eine kugelsichere Weste mit einem Strahlenschutzanzug verbindet. Er bietet einen guten Schutz unter Beschuss. Da ein Luftfilterungssystem fehlt, bietet er jedoch nur geringen Schutz gegen Anomalien.</text>
+	</string>
+	<string id="monolit_outfit_name">
+		<text>Monolith-Anzug</text>
+	</string>
+	<string id="novice_outfit_description_m">
+		<text>Dieser Mantel gehцrte einem der Stalker, die in der Anomalie "Gallert" ums Leben gekommen sind. Nachdem der Mantel so lange in der Anomalie gelegen hat, erlangte er die Fдhigkeit, den Stoffwechsel zu beschleunigen.</text>
+	</string>
+	<string id="novice_outfit_name_m">
+		<text>Anomale Haut</text>
+	</string>
+	<string id="outfit_soldier_description">
+		<text>Eine gewцhnliche dicke Jacke, eine von vielen. Sie bietet leichten Schutz vor Kugeln und Splittern. Sie bietet keinerlei Schutz vor Anomalien und sonstigen Effekten.</text>
+	</string>
+	<string id="outfit_soldier_name">
+		<text>Lederjacke</text>
+	</string>
+	<string id="protection_outfit_description">
+		<text>Ein hochwertiger, modifizierter SSP-99-Anzug. Bietet verbesserten Schutz vor Kugeln und Splittern. Er wurde fьr die Wachleute entwickelt, die wissenschaftliche Expeditionen begleiten. Er bietet guten Schutz vor Strahlung und biologischen Anomalien. Er schьtzt vor chemischen Angriffen und sonstigen fьr den Kцrper schдdliche Einwirkungen.</text>
+	</string>
+	<string id="protection_outfit_name">
+		<text>SSP-99M-Anzug</text>
+	</string>
+	<string id="scientific_outfit_description">
+		<text>Dieser Anzug wurde von einer Forschungseinrichtung in Kiew entwickelt und ist eine vorzьgliche Alternative zu den von den selbstgemachten Anzьgen der Stalker. Der Anzug ist eine hervorragende Kombination aus einer kugelsicheren Weste, einem geschlossenen Beatmungssystem und einem integrierten System zur Unterdrьckung anomaler Felder. Aufgrund der perfekten Materialzusammenstellung ist dieser Anzug eine erstklassige Wahl. Sein einziger Nachteil ist der Preis.</text>
+	</string>
+	<string id="scientific_outfit_name">
+		<text>SEVA-Anzug</text>
+	</string>
+	<string id="specnaz_outfit_description_m1">
+		<text>Das Gewebe dieses Anzugs ist mit einer streptozoidalen Lotion getrдnkt, die den Heilungsprozess von Wunden beschleunigt.</text>
+	</string>
+	<string id="specnaz_outfit_name_m1">
+		<text>Heilender Beryll</text>
+	</string>
+	<string id="specops_outfit_description">
+		<text>Ein Beryll-5M-Kampfanzug fьr Spezialeinheiten, angepasst an die Umweltbedingungen der Zone. Er enthдlt eine kugelsichere Weste vom Typ PSZ-9a mit einer Beryllium-Beschichtung und einen Sphere-08-Helm. Er ist fьr Kampfeinsдtze in Gebieten mit hoher Strahlenbelastung konzipiert. Er bietet nur geringen Schutz vor Anomalien.</text>
+	</string>
+	<string id="specops_outfit_name">
+		<text>Beryll-5M-Kampfanzug</text>
+	</string>
+	<string id="stalker_outfit_description">
+		<text>Ein Stalker-Anzug, hergestellt von "einheimischen Handwerkern". Eine effektive Kombination aus einer leichten kugelsicheren Weste und einem Anzug aus gummiertem Material. Er ist mit eingearbeiteten Kevlarplatten verstдrkt und bietet guten Schutz vor leichtem Beschuss. Letztlich ist er allerdings vцllig unbrauchbar fьr tiefgehende Raubzьge oder heikle Einsдtze in den Knotenpunkten der Zone.</text>
+	</string>
+	<string id="stalker_outfit_description_m1">
+		<text>Gerьchten zufolge trдgt Ghost nie ein Medkit bei sich. Bei ihm heilt alles von selbst, wie bei einem Hund. Man sagt, dass er einen ungewцhnlichen Anzug trдgt, den er aus einer Anomalie geborgen hat.</text>
+	</string>
+	<string id="stalker_outfit_description_m2">
+		<text>Der Vorbesitzer dieses Dings war ein wahrer Tourist, der sich wohl stдndig auf extrem anstrengende Gewaltmдrsche am Rande der menschlichen Ausdauer begeben hat. Er wusste, wie er das zu tragende Gewicht am besten zu verteilen hatte und welchen Dingen man Vorrang geben sollte. Die Manteltaschen und der mit Bedacht ausgewдhlte Rucksack erlauben ihrem Trдger, schwere Lasten zu transportieren.</text>
+	</string>
+	<string id="stalker_outfit_name">
+		<text>Stalkeranzug</text>
+	</string>
+	<string id="stalker_outfit_name_m1">
+		<text>Ghost-Anzug</text>
+	</string>
+	<string id="stalker_outfit_name_m2">
+		<text>Touristen-Anzug</text>
+	</string>
+	<string id="svoboda_heavy_outfit_description">
+		<text>Verstдrkter Stalker-Anzug, hergestellt von den Waffenmeistern der Freiheitsfraktion. Er besteht aus einer mittelschweren kugelsicheren Weste, die mit Zirkonium-Elementen verstдrkt ist und so auf mittlere bis lange Distanz guten Schutz vor Splittern von Gewehrmunition bietet. Das Material des Anzugs besteht aus zwei Schichten: speziell behandeltes Leder und ein Gewebe aus feuerbestдndigem Garn. Der Anzug bietet guten Schutz vor Strahlung und zahlreichen schwachen Anomalien.</text>
+	</string>
+	<string id="svoboda_heavy_outfit_name">
+		<text>Freiheit-Wachanzug</text>
+	</string>
+	<string id="svoboda_light_outfit_description">
+		<text>Leichter Stalkeranzug, hergestellt von den Waffenmeistern der Freiheitsfraktion. Er besteht aus einer leichten kugelsicheren Weste mit verstдrkenden Kevlarplatten. Er bietet Schutz vor leichten Waffen. Das Material des Anzugs wurde mit einer speziellen Mixtur behandelt, die die Widerstandfдhigkeit gegenьber Anomalie-Aktivitдten verstдrkt.</text>
+	</string>
+	<string id="svoboda_light_outfit_name">
+		<text>Freiheit-Sturmanzug</text>
+	</string>
+	<string id="mp_exo_outfit_description">
+		<text>Die Panzerung schьtzt hervorragend gegen Kugeln und Splittergeschosse, schrдnkt jedoch die Beweglichkeit ein. Sie ist gegen panzerbrechende Geschosse empfindlich.</text>
+	</string>
+	<string id="mp_exo_outfit_name">
+		<text>Panzerung PNB-4UZ</text>
+	</string>
+	<string id="mp_military_outfit_description">
+		<text>Der kugelsichere Kampfanzug wurde fьr Sturmangriffe entworfen. Er bietet hervorragenden Schutz gegen Kugeln und Splittergeschosse, ohne die Beweglichkeit des Soldaten herabzusetzen. Empfindlich gegen panzerbrechende Geschosse.</text>
+	</string>
+	<string id="mp_military_outfit_name">
+		<text>Kugelsicherer Kampfanzug.</text>
+	</string>
+	<string id="mp_scientific_outfit_description">
+		<text>Dieser Anzug wurde fьr Forschungen innerhalb der Zone entwickelt. Er hat ein geschlossenes Atmungssystem und ein integriertes System zur Kompensation von Anomalien, durch die er hervorragenden Schutz bietet. Sehr empfindlich, da schwach geschьtzt. Eingebauter Behдlter zum Transport von Artefakten.</text>
+	</string>
+	<string id="mp_scientific_outfit_name">
+		<text>Forschungsanzug</text>
+	</string>
+</string_table>

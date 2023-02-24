@@ -1,0 +1,12 @@
+	<string id="rad_barman_spam">
+		<text>Machiato! Sei vivo?! Grandioso! Allora sei riuscito a disattivare l'anomalia Bruciacervella, eh? Stanno cercando tutti di raggiungere il centro della Zona, passando da Pripjat. Nessuno sa cosa ci sia laggiù... forse un tesoro di reperti o qualcosa in grado di esaudire i desideri. Un reparto di veterani si sta preparando a partire. Se ti sbrighi, potresti ancora farcela a unirti a loro. Li informerò del tuo arrivo, in modo che ti aspettino.</text>
+	</string>
+	<string id="tips_bun_komand">
+		<text>Squadre uno e due: controllate il pianterreno; squadre tre: all'ingresso principale, quattro e cinque: controllate il primo piano.</text>
+	</string>
+	<string id="tips_rad_sos_suicide">
+		<text>...aiuto, sto morendo...</text>
+	</string>
+	<string id="tips_rad_switcher_press">
+		<text>Per disattivare la macchina, premi ($$ACTION_USE$$)</text>
+	</string>

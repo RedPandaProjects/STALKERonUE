@@ -1,0 +1,24 @@
+	<string id="general_ecolog_tip_1">
+		<text>¿Qué ha pasado? ¿Está muerto? ¡Vuelve inmediatamente!</text>
+	</string>
+	<string id="general_ecolog_tip_2">
+		<text>¿Qué ha pasado? ¿Está muerto? ¡Coge las muestras y vuelve de inmediato!</text>
+	</string>
+	<string id="storyline_ghost_tip">
+		<text>Grabación de sonido de Ghost.</text>
+	</string>
+	<string id="storyline_vasilyev_tip">
+		<text>Grabación de sonido de Vasiliev.</text>
+	</string>
+	<string id="tips_labx16switcher_press">
+		<text>Para desactivar el Genio, presiona ($$ACTION_USE$$)</text>
+	</string>
+	<string id="yan_saharov_message">
+		<text>Muy bien, Marcado, lo has conseguido pese a todo. Es muy importante que estudiemos la máquina del laboratorio. Intenta desactivarla para que le podamos echar un vistazo.</text>
+	</string>
+	<string id="yan_saharov_message_2">
+		<text>Escucha, este prototipo no te protegerá de las emisiones potentes durante mucho tiempo. Lo tenía previsto, así que cada vez que se detecte una emisión, se activará un temporizador. Cuando se agote el tiempo, el prototipo dejará de protegerte, así que ten cuidado y no pierdas de vista el tiempo.</text>
+	</string>
+	<string id="yan_saharov_message_3">
+		<text>Buen trabajo, Marcado. La emisión está desactivada y tú sigues vivo. Sin embargo, debo advertirte de que hemos enviado un par de helicópteros para despejar la zona de zombis. Más te vale no andar rondando por ahí a menos que sea necesario. Ah, y por cierto, pásate por el búnker de vez en cuando, ¿vale?</text>
+	</string>

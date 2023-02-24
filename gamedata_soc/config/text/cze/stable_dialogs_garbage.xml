@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="gar_dolg_blokpost_11">
+		<text>Halt, stalkere. Dбl jнt nemщћeљ!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111">
+		<text>Proи?</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111">
+		<text>Protoћe tohle je naљe teritorium - ъzemн Povinnosti. A my jsme hodnм vybнravн v tom, koho do svэ zбkladny pustнme. Jestli nemбљ nмco dщleћitэho, co bys chtмl probrat s naљima љйfama, tak tм dбl nepustнm.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11111">
+		<text>Aha.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111111">
+		<text>Takovэ jsou pravidla.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112">
+		<text>Potшebuju projнt, musнm nмco probrat s Barmanem.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121">
+		<text>Jo, Barman nбm o tobм шek. Mщћeљ jнt.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111211">
+		<text>Radљi zaplatнm. Na.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112111">
+		<text>Dobrэ! Mщћeљ jнt, ale doufбm, ћe jsi o Barmanovi nekecal, jasnэ? A dбvej si bacha - je tam spousta anomбliн.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212">
+		<text>Co mбm udмlat?</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112121">
+		<text>Nic moc. Poflakuje se tady kolem stбdo kancщ, kterэ je tшeba oddмlat. Sundej je a jб to budu brбt, ћe jsi za vstup zaplatil.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121211">
+		<text>Dohodnuto.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212111">
+		<text>Hodnм љtмstн, stalkere.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121212">
+		<text>Nemбm prachy.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212121">
+		<text>No, tak si radљi nмjakэ seћeт!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111122">
+		<text>Nemбm prachy.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111123">
+		<text>No, tak to do baru nemщћeљ.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1231">
+		<text>Dнky za pomoc s kanci, tady mбљ odmмnu.</text>
+	</string>
+	<string id="gar_dolg_blokpost_12311">
+		<text>Dнky!</text>
+	</string>
+	<string id="gar_dolg_blokpost_22">
+		<text>Uћ jsi zabil ty kance?</text>
+	</string>
+	<string id="gar_dolg_blokpost_221">
+		<text>Jeљtм ne.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2211">
+		<text>Љkoda. Aћ je budeљ porcovat, tak mi kus pшines, jo?</text>
+	</string>
+	<string id="gar_dolg_blokpost_222">
+		<text>Jo, vљechny jsem je zabil.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2221">
+		<text>Ok, pokraиuj. A pozdravuj ode mм Barmana, jo?</text>
+	</string>
+	<string id="gar_dolg_blokpost_33">
+		<text>Pozdravuj ode mм Barmana. Jo a nezapomeт, po cestм je spousta anomбliн, takћe si dej bacha.</text>
+	</string>
+	<string id="gar_dramm_novice_start_0">
+		<text>Dнky, kбmo - fakt jsi mi pomohl. Na to nezapomenu.</text>
+	</string>
+	<string id="gar_dramm_novice_start_1">
+		<text>Co se to tady dмje?</text>
+	</string>
+	<string id="gar_dramm_novice_start_11">
+		<text>Ok.</text>
+	</string>
+	<string id="gar_dramm_novice_start_2">
+		<text>Snaћнme se ze smetiљtм vyhnat bandity. Mн kбmoљi jich pбr chtмjн kousek odsud pшepadnout. Pokud je nezastavнme, ovlбdnou smetiљtм a nikdo nebude moct jнt hloubмjc do Zуny. Promluv si s naљim velitelem. Je i se svejma chlapama kousek vocaп, na vrakoviљti. Jб tam taky jdu, takћe klidnм mщћeљ jнt se mnou.</text>
+	</string>
+	<string id="gar_dramm_novice_start_21">
+		<text>Pщjdeme.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3">
+		<text>Mщћeљ mi шнct nмco o Smetiљti?</text>
+	</string>
+	<string id="gar_dramm_novice_start_31">
+		<text>Nenн moc co шнct, kбmo. Smetiљtм je...smetiљtм, sklбdka. Vojбci Povinnosti hlнdajн severnн cestu k baru. Moћnб se jim radљi vyhni - v Povinnosti je spousta pмknejch debilщ. Napravo je cesta do Temnэho ъdolн, ale radiace je tam fakt silnб. Kousek blнћ je Chmurnej moибl - hroznэ baћiny plnэ anomбliн. Prej se tam dajн najнt hezkэ artefakty, ale spнљ najdeљ poшбdnэ trable. No aspoт ћe tam nenн pes baskervilskej!</text>
+	</string>
+	<string id="gar_dramm_novice_start_311">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3111">
+		<text>Napravo u baћin je tajnб skrэљ. Uvidнљ tam kovovou stavbu nad velkou kaluћн. Pшнmo pod nн mбm skrejљ. Schoval jsem si tam pбr vмcн uћ pшed nмjakou dobou, ale zachrбnils mi ћivot a nejspнљ to budeљ potшebovat vнc neћ jб. Takћe si klidnм vem, co budeљ chtнt.</text>
+	</string>
+	<string id="gar_dramm_novice_start_31111">
+		<text>Dнky, kбmo, to se mщћe hodit.</text>
+	</string>
+	<string id="gar_dramm_novice_start_312">
+		<text>To je zajнmavэ, dнky.</text>
+	</string>
+	<string id="gar_hellcar_start_11">
+		<text>Hej, stalkere, jdeљ prбvм vиas! Fakt by se nбm hodila tvб pomoc. Ti zatracenн banditi se snaћн ovlбdnout smetiљtм. Asi pшed pщl hodinou jsme s nima mмli menљн pшestшelku a podaшilo se nбm tшi z nich sundat. Ostatnн se stбhli, ale jб jsem si sakra jistej, ћe se kaћdou chvнli vrбtмj s posilama. Uћ nбs moc nezbэvб a dalљн chlap by rozhodnм neљkodil.</text>
+	</string>
+	<string id="gar_hellcar_start_111">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="gar_hellcar_start_1111">
+		<text>Pшipravili jsme na nм tady past. Pщjdou ze zбpadu, od vэzkumnэho institutu Agroprom. Pomoћ nбm zniиit jejich posily a nebudeљ toho litovat!</text>
+	</string>
+	<string id="gar_hellcar_start_11111">
+		<text>Ok, pomщћu vбm.</text>
+	</string>
+	<string id="gar_hellcar_start_111111">
+		<text>Skvмlэ.</text>
+	</string>
+	<string id="gar_hellcar_start_11112">
+		<text>Nic mi po tom nenн, nechci se do toho zaplнst.</text>
+	</string>
+	<string id="gar_hellcar_start_111121">
+		<text>Jak chceљ. Ale pokaћdэ, aћ tмm zasrancщm budeљ platit za povolenн vstoupit do Zуny, budeљ svэ zbabмlosti litovat.</text>
+	</string>
+	<string id="gar_hellcar_start_11113">
+		<text>Vљechny jsem je zabil.</text>
+	</string>
+	<string id="gar_hellcar_start_111131">
+		<text>Ty seљ ale drsтбk! Ale pro sichr si dбme pozor.</text>
+	</string>
+	<string id="gar_hellcar_start_21">
+		<text>Nemбme spolu o иem mluvit.</text>
+	</string>
+	<string id="gar_hellcar_start_3111">
+		<text>Dнky, kбmo, fakt jsi nбm pomohl. Vezmeљ si ode mм тбkэ prachy? Takovej malej dщkaz mэ vdмиnosti.</text>
+	</string>
+	<string id="gar_hellcar_start_31111">
+		<text>Jasan.</text>
+	</string>
+	<string id="gar_hellcar_start_311111">
+		<text>Na, to by ti mмlo minimбlnм zaplatit doktora.</text>
+	</string>
+	<string id="gar_hellcar_start_3111111">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="gar_hellcar_start_31113">
+		<text>Шekni mi nмco o sobм.</text>
+	</string>
+	<string id="gar_hellcar_start_311131">
+		<text>Шнkajн mi Bмs. Pшiљel jsem sem pшed tшema rokama. Stejnм jako spousta dalљнch chlapщ v Zуnм jsem psanec, hledaj mм kvщli dvмma vraћdбm a tмћkэmu ublнћenн na zdravн. Pшed pбr rokama dostal mщj kбmoљ pмknм pшes hubu - museli ho v nemocnici doslova seљнt dokupy. Takћe jsem ty hajzlнky navљtнvil. Kdyћ se objevili fнzlovй, musel jsem jednoho odprбsknout a pak vyskoиit z okna v druhэm patшe. Od tэ doby jsem tady. Docela se mi daшн, ale seznam mejch zloиinщ kapku narostl. Zkouљнm lovit hajzly a mizery stejnм jako jsem to dмlal venku. Cviинm novбиky a uинm je, jak v Zуnм pшeћнt.</text>
+	</string>
+	<string id="gar_hellcar_start_3111311">
+		<text>Tak proи se nepшidбљ k Povinnosti, kdyћ to vidнљ takhle?</text>
+	</string>
+	<string id="gar_hellcar_start_31113111">
+		<text>Povinnost bojuje proti Zуnм, jб bojuju pro lidi. Kromм toho, maj tмsnэ spojenн s vlбdou a armбdou. Nechci se jednoho krбsnэho rбna probudit v cele.</text>
+	</string>
+	<string id="gar_hellcar_start_311131111">
+		<text>Hodnм љtмstн.</text>
+	</string>
+	<string id="gar_hellcar_start_31114">
+		<text>Co je tohle za mнsto?</text>
+	</string>
+	<string id="gar_hellcar_start_311141">
+		<text>Smetiљtм. Tady jsme doma. Vidнљ ty hromady sraиek? Tam fakt nechceљ. Je tam tolik radioaktivnнho odpadu, ћe se z toho mщћe Geiger zblбznit. Je to jedinб rozumnб cesta do Zуny a banditi jsou tady v okolн инm dбl drzejљн. Jsou posranэ jнt hloubмjc do Zуny, na teritorium Povinnosti. Ale tмm hyenбm se moc lнbн okrбdat tady novбиky. Jelikoћ na to vљichni ostatnн kaљlou, musнme se drћet a bojovat sami za sebe.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="gar_hellcar_start_31114111">
+		<text>Vљude, a pшedevљнm tady, se musнљ chovat jako иlovмk, ne jako zvншe pohбnмnэ chamtivostн. Tak vidнm ћivot jб.</text>
+	</string>
+	<string id="gar_hellcar_start_311141112">
+		<text>Jsou na smetiљti nмjakэ velkэ barбky?</text>
+	</string>
+	<string id="gar_hellcar_start_31114111211">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="gar_hellcar_start_31115">
+		<text>Dнky, nic vнc od tebe nepotшebuju.</text>
+	</string>
+	<string id="gar_hellcar_start_3112">
+		<text>Vнm toho docela dost, mщћu se s tebou podмlit o nмjakэ info.</text>
+	</string>
+	<string id="gar_hellcar_start_41">
+		<text>Prбce jeљtм neskonиila. Dodмlбme to a pak si mщћem pokecat.</text>
+	</string>
+	<string id="gar_hellcar_start_51">
+		<text>Hej, Oznaиenej.</text>
+	</string>
+	<string id="gar_seriy_start_11">
+		<text>Sakra, chlape, teп nenн na kecy иas! Za chviliиku budou mluvit bouchaиky. Pomoz mi je odrazit a pak pokecбme.</text>
+	</string>
+	<string id="gar_seriy_start_22">
+		<text>Dнky za pomoc, zaинnalo to bejt docela ostrэ. Co tady vщbec chceљ?</text>
+	</string>
+	<string id="gar_seriy_start_221">
+		<text>Shбnнm informace o Stшelci. Liљбk mi шekl o tobм, tak jsem si pшiљel pokecat.</text>
+	</string>
+	<string id="gar_seriy_start_2211">
+		<text>Fajn, pomohls mi zadarmo, takћe ti nмco mбlo шeknu. Иekб na mм jeden z chlбpkщ, dшнvмjљн "kopби" jmйnem Krtek. Vyhrabal Stшelcovu skrэљ, ale nevнm, jestli tam nмco naљel. Tady jsou souшadnice mнsta, kde jsme se mмli setkat. Шekni mu, ћe tм posнlбm. Oni po mм teпka pщjdou, takћe na chvнli zmizнm. A tady mбљ nмjakэ drobnэ, na pбr panбkщ, za pomoc.</text>
+	</string>
+	<string id="gar_seriy_start_2212">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="gar_seriy_start_222">
+		<text>Shбnнm informace o Stшelci, moћnб o nмиem vнљ?</text>
+	</string>
+	<string id="gar_seriy_start_2221">
+		<text>Fajn, pomohls mi zadarmo, takћe ti nмco mбlo шeknu. Jeden z chlбpkщ, dшнvмjљн "kopби" jmйnem Krtek na mм иekб. Vyhrabal Stшelcovu skrэљ a naљel dokumenty, kterэ objasтujou pбr vмcн. Љli po nмm тбcн banditi, takћe musel prбsknout do bot, ale zapamatoval si, kde to mнsto je. Oni po mм teпka pщjdou, takћe na chvнli zmizнm. Tady jsou souшadnice mнsta, kde jsme se mмli s Krtkem setkat. Шekni mu, ћe tм posнlбm. Nahraju ti do PDA nмjakэ informace. A tady mбљ nмjakэ drobnэ, na pбr panбkщ, za pomoc.</text>
+	</string>
+	<string id="gar_seriy_start_2222">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="gar_seriy_start_33">
+		<text>Hej kбmo, jeљtм pшed chvнlн to tady bylo docela ostrэ. Co tady vщbec chceљ?</text>
+	</string>
+	<string id="gar_seriy_start_44">
+		<text>Bezpeиnou cestu, stalkere. Bezpeиnou cestu kolem anomбliн a rovnou k artefaktщm.</text>
+	</string>
+	<string id="gar_seriy_start_441">
+		<text>Co se dб na smetiљti najнt?</text>
+	</string>
+	<string id="gar_seriy_start_4411">
+		<text>No, rozhodnм mщћeљ fakt rychle najнt kupu problйmщ. Ale jelikoћ seљ takovej badatel, шeknu ti, co vнm. Vэchodnм je malej les. Nenн tam nic zajнmavэho a navнc je plnej psщ, takћe bacha. Po kolejнch se mщћeљ dostat k tunelu. Je tam spousta anomбliн, moћnб i nмco dalљнho, ale nevнm, nikdy jsem to tam moc neprohledбval. O stanoviљti Povinnosti na severu asi vнљ. To je tak vљechno, co o okolн vнm.</text>
+	</string>
+	<string id="gar_seriy_start_44112">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_0">
+		<text>Hele, co se na tomhle smetiљti dб najнt?</text>
+	</string>
+	<string id="gar_seryi_about_garbage_1">
+		<text>No, rozhodnм mщћeљ fakt rychle najнt kupu problйmщ. Ale jelikoћ seљ takovej badatel, шeknu ti, co vнm. Vэchodnм je malej les. Nenн tam nic zajнmavэho a navнc je plnej psщ, takћe bacha. Po kolejнch se mщћeљ dostat k tunelu. Je tam spousta anomбliн, moћnб i nмco dalљнho, ale nevнm, nikdy jsem to tam moc neprohledбval. O stanoviљti Povinnosti na severu asi vнљ. To je tak vљechno, co o okolн vнm.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_11">
+		<text>Dнky za informace. Budu na to pamatovat.</text>
+	</string>
+	<string id="gar_stalker_about_level_0">
+		<text>Mщћeљ mi o tomhle mнstм nмco шнct?</text>
+	</string>
+	<string id="gar_stalker_about_level_1">
+		<text>No, jen poslouchej. Vљichni si myslej, ћe je to jen velkej smradlavej smeќбk. Po nehodм v osmdesбtэm љestэm sem navezli radioaktivnн odpad, jeшбby a zniиenэ stroje. V podstatм je to tady samej љrot k niиemu a sem tam pбr anomбliн. Dokonce se tady dajн najнt i nмjakэ artefakty, ale nejsou moc dobrэ, proto tady vмtљinou najdeљ jenom novбиky. Spousta novбиkщ znamenб spoustu banditщ, takћe je lepљн se tady nepoflakovat moc dlouho. Kus dбl na vэchod je spousta radiaиnнch mнst, bez ochrany se tam jнt nedб. Kdyћ pщjdeљ na jih, dorazнљ na okraj Zуny. Severnм bys po иase narazil na fabriku Rostok a stalkerskou hospodu. Vэchodnм je Temnэ ъdolн, mizernэ, zamlћenэ mнsto. Zбpadnм je vэzkumnej institut Agroprom. Oznaинm ti na mapм bezpeиnэ prщchody.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411121">
+		<text>Ve stшedu je velkej opuљtмnej hangбr, kde je docela klid, pokud musнљ, tak tam dokonce mщћeљ pшespat. Dбl na zбpad smмrem k institutu je tбbor banditщ. Odtamtud pochбzej ti mizerovй, co jsme je pшedtнm postшнleli, a шekl bych, ћe jich tam jeљtм pбr bude.</text>
+	</string>
+</string_table>

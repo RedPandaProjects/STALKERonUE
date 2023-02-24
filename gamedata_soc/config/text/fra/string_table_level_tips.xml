@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bar_rostok">
+		<text>Les Terres abandonnйes - Rostok</text>
+	</string>
+	<string id="car_character_use">
+		<text>Ouvrir la porte ($$ACTION_USE$$)</text>
+	</string>
+	<string id="character_use">
+		<text>Parler ($$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use_or_drag">
+		<text>Fouiller un corps ($$ACTION_USE$$) \n Traоner un corps (MAJ. +$$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use">
+		<text>Fouiller un corps ($$ACTION_USE$$)</text>
+	</string>
+	<string id="general_complete_task">
+		<text>Mission accomplie :</text>
+	</string>
+	<string id="general_fail_task">
+		<text>Mission manquйe :</text>
+	</string>
+	<string id="general_help">
+		<text>Vite, j'ai besoin d'un kit mйdical ! Je vais mourir !</text>
+	</string>
+	<string id="general_in_item">
+		<text>Objet reзu :</text>
+	</string>
+	<string id="general_in_money">
+		<text>Argent reзu :</text>
+	</string>
+	<string id="general_new_diary">
+		<text>Nouvelle entrйe dans le journal.</text>
+	</string>
+	<string id="general_new_encyclopedy">
+		<text>Nouvel article dans l'encyclopйdie.</text>
+	</string>
+	<string id="general_new_task">
+		<text>Nouvelle mission :</text>
+	</string>
+	<string id="general_out_item">
+		<text>Objet perdu :</text>
+	</string>
+	<string id="general_out_money">
+		<text>Argent perdu :</text>
+	</string>
+	<string id="general_update_task">
+		<text>Mission mise а jour :</text>
+	</string>
+	<string id="physic_shell_use">
+		<text>Dйplacer un objet ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_codelock">
+		<text>Clavier numйrique ($$ACTION_USE$$)</text>
+	</string>
+	<string id="to_aes">
+		<text>Vers Tchernobyl</text>
+	</string>
+	<string id="to_agroprom">
+		<text>Vers Agroprom</text>
+	</string>
+	<string id="to_agroprom_underground">
+		<text>Vers les catacombes</text>
+	</string>
+	<string id="to_bar">
+		<text>Vers Rostok</text>
+	</string>
+	<string id="to_darkvalley">
+		<text>Vers la Vallйe obscure</text>
+	</string>
+	<string id="to_escape">
+		<text>Vers le Cordon</text>
+	</string>
+	<string id="to_garbage">
+		<text>Vers la Dйcharge</text>
+	</string>
+	<string id="to_military">
+		<text>Vers les entrepфts</text>
+	</string>
+	<string id="to_pripyat">
+		<text>Vers Pripyat</text>
+	</string>
+	<string id="to_radar">
+		<text>Vers le lobotomisateur</text>
+	</string>
+	<string id="to_rostok">
+		<text>Vers les Terres abandonnйes</text>
+	</string>
+	<string id="to_yantar">
+		<text>Vers Yantar</text>
+	</string>
+	<string id="st_helmet_countdown">
+		<text>Temps de Protection</text>
+	</string>
+	<string id="st_psy_danger">
+		<text>Niveau critique d'йmissions psi. Quittez immйdiatement la zone dangereuse.</text>
+	</string>
+	<string id="st_radiation_danger">
+		<text>Niveau de radiations dangereux. Protection requise pour passer.</text>
+	</string>
+	<string id="st_found_new_pda">
+		<text>Informations trouvйes :</text>
+	</string>
+</string_table>

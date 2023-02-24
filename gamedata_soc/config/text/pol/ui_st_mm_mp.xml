@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="game type">
+		<text>TRYB GRY</text>
+	</string>
+	<string id="icon">
+		<text>IKONY</text>
+	</string>
+	<string id="map">
+		<text>MAPA</text>
+	</string>
+	<string id="mm_mp_allowvoting">
+		<text>Pozwуl na gіosowanie</text>
+	</string>
+	<string id="mm_mp_anomalytime">
+		<text>Aktywnoњж anomalii (min.)</text>
+	</string>
+	<string id="mm_mp_artefactcapture">
+		<text>Zdobycie artefaktu</text>
+	</string>
+	<string id="mm_mp_artefdelay">
+		<text>Powstanie artefaktu (sek.)</text>
+	</string>
+	<string id="mm_mp_artefnum">
+		<text>Liczba artefaktуw</text>
+	</string>
+	<string id="mm_mp_artefstay">
+		<text>Trwaіoњж artefaktуw (min.)</text>
+	</string>
+	<string id="mm_mp_autoteambalance">
+		<text>Automatyczny balans druїyn</text>
+	</string>
+	<string id="mm_mp_autoteamswap">
+		<text>Automatyczna zmiana druїyny</text>
+	</string>
+	<string id="mm_mp_avail_maps">
+		<text>DOSTКPNE MAPY</text>
+	</string>
+	<string id="mm_mp_cancel">
+		<text>Anuluj</text>
+	</string>
+	<string id="mm_mp_cd_key">
+		<text>CD-Key:</text>
+	</string>
+	<string id="mm_mp_client">
+		<text>Klient</text>
+	</string>
+	<string id="mm_mp_create">
+		<text>Stwуrz</text>
+	</string>
+	<string id="mm_mp_damageblock">
+		<text>Nieњmiertelnoњж (sek.)</text>
+	</string>
+	<string id="mm_mp_damageblockindicator">
+		<text>Wskaџnik nieњmiertelnoњci</text>
+	</string>
+	<string id="mm_mp_deaths">
+		<text>Zabici</text>
+	</string>
+	<string id="mm_mp_dedicated">
+		<text>Dedykowany</text>
+	</string>
+	<string id="mm_mp_empty">
+		<text>Puste</text>
+	</string>
+	<string id="mm_mp_filters">
+		<text>Filtry</text>
+	</string>
+	<string id="mm_mp_forcerespawn">
+		<text>Odrodџ po (sek.)</text>
+	</string>
+	<string id="mm_mp_fraglimit">
+		<text>Limit fragуw</text>
+	</string>
+	<string id="mm_mp_frags">
+		<text>Fragi</text>
+	</string>
+	<string id="mm_mp_freezetime">
+		<text>Czas unieruchomienia</text>
+	</string>
+	<string id="mm_mp_friendlyfire">
+		<text>Obraїenia od sojusznikуw</text>
+	</string>
+	<string id="mm_mp_friendlyindicators">
+		<text>Wskaџniki sojusznikуw</text>
+	</string>
+	<string id="mm_mp_friendlynames">
+		<text>Nicki sojusznikуw</text>
+	</string>
+	<string id="mm_mp_full">
+		<text>Peіne</text>
+	</string>
+	<string id="mm_mp_gamemode">
+		<text>Tryb</text>
+	</string>
+	<string id="mm_mp_host_port">
+		<text>IP/host:port</text>
+	</string>
+	<string id="mm_mp_internet">
+		<text>Internet</text>
+	</string>
+	<string id="mm_mp_join">
+		<text>Przyі№cz siк</text>
+	</string>
+	<string id="mm_mp_lan">
+		<text>Sieж lokalna</text>
+	</string>
+	<string id="mm_mp_listenservers">
+		<text>Nasіuch</text>
+	</string>
+	<string id="mm_mp_mapratation">
+		<text>Lista map</text>
+	</string>
+	<string id="mm_mp_maxplayers">
+		<text>Maks. liczba graczy</text>
+	</string>
+	<string id="mm_mp_network_connection">
+		<text>Poі№czenie sieciowe</text>
+	</string>
+	<string id="mm_mp_noanomalies">
+		<text>Bez anomalii</text>
+	</string>
+	<string id="mm_mp_options">
+		<text>Opcje</text>
+	</string>
+	<string id="mm_mp_password">
+		<text>Hasіo</text>
+	</string>
+	<string id="mm_mp_player_name">
+		<text>Gracz:</text>
+	</string>
+	<string id="mm_mp_players">
+		<text>Gracze</text>
+	</string>
+	<string id="mm_mp_publicserver">
+		<text>Serwer publiczny</text>
+	</string>
+	<string id="mm_mp_quickrefresh">
+		<text>Odњwieї szybko</text>
+	</string>
+	<string id="mm_mp_rateofchange">
+		<text>Zmiana wspуіczynnika</text>
+	</string>
+	<string id="mm_mp_refresh">
+		<text>Odњwieї wszystko</text>
+	</string>
+	<string id="mm_mp_reinforcement">
+		<text>Posiіki (sek.)</text>
+	</string>
+	<string id="mm_mp_respawnoptions">
+		<text>Opcje odrodzenia</text>
+	</string>
+	<string id="mm_mp_sel_maps">
+		<text>WYBRANE MAPY</text>
+	</string>
+	<string id="mm_mp_server">
+		<text>Serwer</text>
+	</string>
+	<string id="mm_mp_server_list">
+		<text>Lista serwerуw</text>
+	</string>
+	<string id="mm_mp_server_prop">
+		<text>Wіaњciwoњci serwera</text>
+	</string>
+	<string id="mm_mp_serverinfo">
+		<text>Inf. o serwerze</text>
+	</string>
+	<string id="mm_mp_serverlist">
+		<text>Serwer</text>
+	</string>
+	<string id="mm_mp_servername">
+		<text>Nazwa serwera</text>
+	</string>
+	<string id="mm_mp_serversettings">
+		<text>Ustawienia serwera</text>
+	</string>
+	<string id="mm_mp_spectator">
+		<text>Widz</text>
+	</string>
+	<string id="mm_mp_spectator_firsteye">
+		<text>Pierwsza osoba</text>
+	</string>
+	<string id="mm_mp_spectator_freefly">
+		<text>Swobodna kamera</text>
+	</string>
+	<string id="mm_mp_spectator_freelook">
+		<text>Wolny widok</text>
+	</string>
+	<string id="mm_mp_spectator_lookat">
+		<text>Trzecia osoba</text>
+	</string>
+	<string id="mm_mp_spectator_options">
+		<text>Ustawienia widza</text>
+	</string>
+	<string id="mm_mp_spectator_teamonly">
+		<text>Tylko druїyna</text>
+	</string>
+	<string id="mm_mp_startweather">
+		<text>Pocz№tkowa pogoda</text>
+	</string>
+	<string id="mm_mp_timelimit">
+		<text>Limit czasowy (min.)</text>
+	</string>
+	<string id="mm_mp_warmuptime">
+		<text>Rozgrzewka (sek.)</text>
+	</string>
+	<string id="mm_mp_weatheroptions">
+		<text>Opcje pogody</text>
+	</string>
+	<string id="mm_mp_withoutfriendlyfire">
+		<text>Bez ognia sojuszniczego </text>
+	</string>
+	<string id="mm_mp_withoutpassword">
+		<text>Bez hasіa</text>
+	</string>
+	<string id="mm_mp_withoutpunkbuster">
+		<text>Bez PunkBuster</text>
+	</string>
+	<string id="mm_mp_withpassword">
+		<text>Z hasіem</text>
+	</string>
+	<string id="mp_vote_hint">
+		<text>Gіosy ZA-[$$ACTION_VOTE_YES$$]\nGіosy PRZECIW-[$$ACTION_VOTE_NO$$]\nWyniki-[$$ACTION_VOTE$$]</text>
+	</string>
+	<string id="ping">
+		<text>PING</text>
+	</string>
+	<string id="players">
+		<text>GRACZE</text>
+	</string>
+	<string id="server name">
+		<text>NAZWA SERWERA</text>
+	</string>
+	<string id="version">
+		<text>Wersja</text>
+	</string>
+	<string id="st_mp_gsfilter">
+		<text>Filtr:</text>
+	</string>
+</string_table>

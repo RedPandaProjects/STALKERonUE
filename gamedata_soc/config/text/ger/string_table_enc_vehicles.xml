@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="btr-70">
+		<text>BTR-70</text>
+	</string>
+	<string id="enc_vehicles_btr-70">
+		<text>Ein gepanzerter Truppentransporter</text>
+	</string>
+	<string id="enc_vehicles_kamaz">
+		<text>Ein ьblicher Sowjet-Truck</text>
+	</string>
+	<string id="enc_vehicles_mi-24">
+		<text>Ein Militдrhubschrauber</text>
+	</string>
+	<string id="enc_vehicles_niva">
+		<text>Ein Gelдndewagen</text>
+	</string>
+	<string id="enc_vehicles_uaz">
+		<text>Sowjet-Militдrgelдndewagen</text>
+	</string>
+	<string id="enc_vehicles_zaporozh">
+		<text>Ein kleines Sowjet-Auto</text>
+	</string>
+	<string id="Kamaz">
+		<text>KAMAZ-LKW</text>
+	</string>
+	<string id="mi-24">
+		<text>Mi-24-Hubschrauber</text>
+	</string>
+	<string id="Niva">
+		<text>Niva</text>
+	</string>
+	<string id="Uaz">
+		<text>UAS</text>
+	</string>
+	<string id="Vehicles">
+		<text>Transport</text>
+	</string>
+	<string id="Zaporozh">
+		<text>Saporoschez</text>
+	</string>
+</string_table>

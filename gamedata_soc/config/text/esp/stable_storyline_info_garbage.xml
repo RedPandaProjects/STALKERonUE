@@ -1,0 +1,63 @@
+	<string id="gar_seryi_info">
+		<text>Mole y compañía han descubierto el escondite de Strelok en Agroprom, no muy lejos de la fábrica en ruinas. ¿Por qué no vas a averiguar qué está pasando allí? Al fin y al cabo, él nos invitó a unirnos a la investigación. </text>
+	</string>
+	<string id="memuars">
+		<text>Nota personal</text>
+	</string>
+	<string id="sl_beginning">
+		<text>¿Quién soy?</text>
+	</string>
+	<string id="sl_beginning_text">
+		<text>Maldita sea, tengo muchas lagunas... Recuerdo un coche... Me llevaron a algún lugar; el viaje fue muy largo y me dolía todo el cuerpo... Estaba oscuro... ¿Qué pasó antes de eso? No tengo ni idea... Estoy tan confundido... Ahora ese gordo me llama Marcado, probablemente por el extraño tatuaje que tengo en el brazo. Y luego está en mi PDA esa extraña misión en la que hay que matar a un tal Strelok... Si es que esa PDA es mía... Miro la foto de Strelok y no estoy seguro de si lo conozco o no... ¡Maldita sea! Es como una pesadilla de la que no te puedes despertar. ¿Qué hago? ¿Dónde voy? Y lo peor de todo: ¿quién soy? Vale, vale, cálmate, contrólate. Lo primero que tengo que hacer son unos trabajos para ese tal Sidorovich. Después de todo, dice que me ha salvado la vida... Seguro que todo va bien. Voy a darme un paseo y a calmarme; a lo mejor así se me aclara la cabeza.</text>
+	</string>
+	<string id="sl_first_deep_raid">
+		<text>La primera incursión en profundidad.</text>
+	</string>
+	<string id="sl_first_deep_raid_text">
+		<text>Bueno, voy a tener mi primera incursión profunda en la Zona. El objetivo es el Instituto Agroprom. Tengo que recuperar unos documentos que pertenecen a una expedición militar. Aparte de la misión, el comerciante me dio información sobre un lugar donde "hierven los cerebros", al Norte, de camino al centro de la Zona... Seguramente será más una leyenda que un hecho en sí, pero ya que está claro que algo me anda mal en la cabeza, debería echar un vistazo y hablar con gente. Nunca se sabe; quizás ya he estado allí antes... Además, el comerciante dijo que Strelok había descubierto un camino para llegar a ese sector y los comerciantes quieren saber cuál es. Sus razones son claras: acceder a campos de artefactos intactos. Bueno, no pasará nada si les ayudo.</text>
+	</string>
+	<string id="sl_first_opinions">
+		<text>Primeras impresiones.</text>
+	</string>
+	<string id="sl_first_opinions_text">
+		<text>Bueno... He tomado aire fresco y he visto la fauna y la flora de los alrededores... Parece que las cosas me suenan de algo, pero tengo muchas lagunas... He tenido oportunidad de probar las "diversiones" de la zona, las llamadas anomalías... Teniendo en cuenta que he sobrevivido, lo más seguro es que me las haya encontrado antes, pero mi cerebro se niega a recordar... Sidorovich es un tío listo. Sabe que puede utilizarme casi gratis y eso es exactamente lo que está haciendo. En fin, quizás me ayude a encontrar al maldito Strelok... Él es el único vínculo con mi pasado.</text>
+	</string>
+	<string id="sl_fox_meet">
+		<text>Encuentro con Fox.</text>
+	</string>
+	<string id="sl_fox_meet_text">
+		<text>He estado con Fox. Tengo buenas y malas noticias. Las malas es que sabe muy poco sobre Strelok. Las buenas es que su hermano Seriy sabe más que él. Parece que Seriy está en un hangar a unos 2 kilómetros al norte de aquí, en un vertedero lleno de residuos radiactivos. Mi tarea está clara: llegar allí antes de que se marche.</text>
+	</string>
+	<string id="sl_monolith_off">
+		<text>Desactiva el Monolito.</text>
+	</string>
+	<string id="sl_monolith_off_text">
+		<text>Estoy a solo un paso de los que crearon esta maldita red de psicounidades por toda la Zona. Parece que el Monolito es simplemente otro zombificador, con la excepción de que alguien se tomó la molestia de instalar un holograma con la forma de un cristal enorme dentro del sarcófago. Cuando los "afortunados" se acercan, les manipula el cerebro. Quizás hasta les haga creer que sus sueños se han cumplido, ¿quién sabe? ¿Me ha afectado a mí esta mierda antes? No estoy seguro, pero quienquiera que esté detrás de todo esto responderá muy pronto a mis preguntas. Incluso me han invitado... Bueno, ¡allá voy, mamones!</text>
+	</string>
+	<string id="sl_provodnik">
+		<text>Guía</text>
+	</string>
+	<string id="sl_provodnik_text">
+		<text>Guía dijo que Doc cree que le han estado siguiendo y que se quedará en el antiguo escondite de Strelok. Bueno, supongo que tendré que ir a hacerle una visita.</text>
+	</string>
+	<string id="sl_seryi_meet">
+		<text>Encuentro con Seriy.</text>
+	</string>
+	<string id="sl_seryi_meet_text">
+		<text>Aún tendré que esperar más para enterarme de algo sobre Strelok: Seriy me ha enviado al encuentro de un stalker llamado Mole, que supuestamente conoce la ubicación del escondite secreto de Strelok... No es mucho, pero si está en lo cierto, tendré algo al menos... ¿Quién sabe?, quizá me enteré de algo útil allí.</text>
+	</string>
+	<string id="sl_usefull_info">
+		<text>La información del comerciante.</text>
+	</string>
+	<string id="sl_usefull_info_text">
+		<text>Mmm... El comerciante no me falló y le estoy muy agradecido porque me echó un cable con la búsqueda de Strelok. Ha aparecido por aquí cerca un stalker llamado Fox que necesita ayuda. Sidorovich cree que Fox podría conocer a Strelok.</text>
+	</string>
+	<string id="sl_wishmaster_legend">
+		<text>La leyenda del Genio.</text>
+	</string>
+	<string id="sl_wishmaster_legend_text">
+		<text>He aprendido un poco de folclore local: la leyenda cuenta que hay un Genio en lo más profundo de la Zona. Se desconoce su ubicación exacta, pero está en algún lugar del centro. Según parece, si consigues llegar hasta allí... de repente tu vida empieza a ser mucho más fácil. Mmm... ¿Qué tal si lo encontrara y le dijera "quiero recordar todo mi pasado"? Pero claro, no quiero gastar un deseo. ¿Y si lo recuerdo todo y resulta que soy un auténtico mamonazo? Eso sería una faena. ¿Cuántos deseos podrá conceder...?</text>
+	</string>
+	<string id="storyline_seriy_flash_info">
+		<text>Bruiser escribe a Seriy: Mole y compañía han descubierto el escondite de Strelok en el Instituto. Averigua qué está pasando. Seriy a Bruiser: Irán más tarde al bar de todas formas, así que les esperaré en el camino del vertedero.</text>
+	</string>

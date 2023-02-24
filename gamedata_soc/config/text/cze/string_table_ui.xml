@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cant_walk">
+		<text>Jsi pшнliљ vyиerpanэ, nemщћeљ ani chodit.</text>
+	</string>
+	<string id="cant_walk_weight">
+		<text>Jsi pшнliљ naloћenэ, nemщћeљ jнt dбl.</text>
+	</string>
+	<string id="dar_poltergeist_hold_the_door">
+		<text>Nмkdo drћн dveшe.</text>
+	</string>
+	<string id="Global Map">
+		<text>Globбlnн mapa</text>
+	</string>
+	<string id="gun_jammed">
+		<text>Zbraт se zasekla. Musнљ ji pшebнt.</text>
+	</string>
+	<string id="inventory_box_use">
+		<text>Prohledat krabici ($$ACTION_USE$$)</text>
+	</string>
+	<string id="Local Map">
+		<text>Mнstnн mapa</text>
+	</string>
+	<string id="st_game_saved">
+		<text>Hra uloћena</text>
+	</string>
+	<string id="tip_car_locked">
+		<text>Zablokovбno</text>
+	</string>
+	<string id="tip_car_use">
+		<text>Otevшнt dveшe ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_close">
+		<text>Stiskem ($$ACTION_USE$$) zavшeљ dveшe</text>
+	</string>
+	<string id="tip_door_coded">
+		<text>Dveшe jsou zamиeny na kуd</text>
+	</string>
+	<string id="tip_door_decode">
+		<text>Stiskem ($$ACTION_USE$$) dekуdujeљ dveшe</text>
+	</string>
+	<string id="tip_door_decoding">
+		<text>Probнhб dekуdovбnн</text>
+	</string>
+	<string id="tip_door_locked">
+		<text>Dveшe jsou zamиeny</text>
+	</string>
+	<string id="tip_door_open">
+		<text>Stiskem ($$ACTION_USE$$) otevшeљ dveшe</text>
+	</string>
+	<string id="tip_gate_close">
+		<text>Stiskem ($$ACTION_USE$$) zavшeљ brбnu</text>
+	</string>
+	<string id="tip_gate_locked">
+		<text>Brбna je zamиenб</text>
+	</string>
+	<string id="tip_gate_open">
+		<text>Stiskem ($$ACTION_USE$$) otevшeљ brбnu</text>
+	</string>
+	<string id="tip_monolith">
+		<text>PШEJ SI NМCO ($$ACTION_USE$$)</text>
+	</string>
+</string_table>

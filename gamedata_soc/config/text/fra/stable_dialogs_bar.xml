@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bar_arena_man_job_0">
+		<text>Continue...</text>
+	</string>
+	<string id="bar_arena_man_job_11">
+		<text>Alors, c'est ton premier combat ? Ton adversaire n'est qu'un tas de viande, comme toi. Il est lа parce qu'il a des dettes et il a que deux options : venir se battre ou se retrouver face а l'anomalie la plus proche. Il va se battre comme un animal acculй. L'йquipement pour aujourd'hui... Voyons voir... OK ! Pourquoi pas des PMMs... Deux chargeurs chacun, зa devrait suffire. Soit tu lui bottes le cul, soit tu sers de nourriture aux chiens, t'as pas trop le choix. C'est parti.</text>
+	</string>
+	<string id="bar_arena_man_job_111">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_112">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_12">
+		<text>Ton dernier combat ne voulait rien dire. T'es toujours le mкme tas de viande qu'avant et personne ne va parier le moindre magazine sur toi. Si tu veux gagner de l'argent, va falloir venir plus souvent dans l'Arиne. Ton nouvel adversaire a passй la premiиre manche aussi et son combat йtait bien plus compliquй que le tien. Pour tout dire, je ne l'aime pas, il tue trop vite et le public n'aime pas зa. Alors, vas-y et montre-nous ce que tu sais faire ! Les paris vont augmenter aprиs ce combat, tout ce que t'as а faire, c'est rester en vie. Allez !</text>
+	</string>
+	<string id="bar_arena_man_job_121">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_122">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_13">
+		<text>Bien, bien... T'es pas si mauvais que зa. Maintenant, il est temps de voir ce que tu vaux dans un vrai combat. Tu vas affronter deux gars. Le premier s'appelle le Suйdois, le deuxiиme, je m'en souviens plus. Ils ont йtй mis ensemble exprиs parce qu'ils peuvent pas se sentir, alors t'inquiиte pas, ils vont pas vraiment combattre en йquipe, il y a plus de chances qu'ils se tirent dessus. Aujourd'hui, c'est fusil, alors les laisse pas s'approcher de trop sinon, on risque de te ramasser en mille morceaux. Les cotes sont de 10 contre 1 alors si tu l'emportes, tu gagneras pas mal de pognon. C'est parti !</text>
+	</string>
+	<string id="bar_arena_man_job_131">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_132">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_14">
+		<text>Bien, а prйsent, je peux dire que t'es un combattant, un vrai combattant. Maintenant, il est temps de te battre en йquipe. Tu vas avoir deux nouveaux avec toi, deux frиres. Ils n'ont pas encore combattu, mais ce sont des frиres, alors j'ai dы les mettre dans une йquipe. Si j'йtais toi, je m'attendrais pas а grand-chose de leur part. Tu vas affronter une йquipe expйrimentйe, les prйtendants а la finale cette saison. Pas facile. Ils utilisent des armes diffйrentes, mais, il y en a un qui a un fusil automatique, fais gaffe а lui. Bonne chance, mon pote... t'en auras besoin.</text>
+	</string>
+	<string id="bar_arena_man_job_141">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_142">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_15">
+		<text>T'as un combat spйcial aujourd'hui. Mкme l'armйe a entendu parler de toi ! Sois pas surpris, ils combattent ici aussi, il y a mкme un gйnйral dans le public. Ces gars font partie des Spetsnaz ou des OMON. Ils sont bien armйs et protйgйs comme tu t'en doutes. Mais, t'en fais pas, je vais pas non plus te lвcher comme зa sous la pluie. Tu vas avoir une veste que ceux de la Libertй utilisent, elle est lйgиre donc elle te gкnera pas. Allez, montre-leur de quoi les Stalkers sont capables. Bonne chance !</text>
+	</string>
+	<string id="bar_arena_man_job_151">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_152">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_16">
+		<text>Il est temps pour toi de montrer de quoi t'es capable. Les gars du Devoir ont capturй un groupe de bandits qui posaient problиme au Stalkers prиs de Rostok. Ils les ont attrapйs de nuit alors beaucoup sont encore vivants. Ils allaient кtre exйcutйs de toute faзon donc j'ai convaincu les mecs du Devoir de leur donner une chance. S'il reste des survivants, ils seront envoyйs dans la prison а l'extйrieur de la Zone, c'est mieux que de mourir ici. Ils sont pas trиs bien armйs, juste quelques pistolets et des canons sciйs, mais ils sont six alors fais gaffe. Allez, vas-y !</text>
+	</string>
+	<string id="bar_arena_man_job_161">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_162">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_17">
+		<text>Parfait, t'es presque en finale. Maintenant, tu vas affronter un vrai Stalker. Il est seul, mais il a un FT 200 M et un exosquelette, alors fais attention. Il y aura aussi une surprise, mais je peux pas t'en parler... Un conseil : prйpare-toi bien, зa va кtre dur. Le vainqueur ira en finale. C'est une lutte а mort, allez !</text>
+	</string>
+	<string id="bar_arena_man_job_171">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_172">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_18">
+		<text>Fйlicitations, t'es en finale ! Encore un combat, mais celui-lа, c'est une lutte а mort, chacun pour sa peau. Il y aura 4 autres Stalkers dans l'Arиne : tous des pros avec un exosquelette et des GP 37 mais cette fois, vous serez а йgalitй, vous aurez tous la mкme chose. Faut pas oublier qu'il y a ni kit mйdical, ni bandage dans une lutte а mort. Prкt ? Allez, montre que t'es le meilleur, GO !</text>
+	</string>
+	<string id="bar_arena_man_job_181">
+		<text>Je suis prкt.</text>
+	</string>
+	<string id="bar_arena_man_job_182">
+		<text>Je suis pas prкt.</text>
+	</string>
+	<string id="bar_arena_man_start_11">
+		<text>Salut ! J'ai un nouveau combat pour toi.</text>
+	</string>
+	<string id="bar_arena_man_start_21">
+		<text>Va boire un verre ou autre, l'Arиne est pas encore prкte.</text>
+	</string>
+	<string id="bar_arena_man_start_31">
+		<text>T'es devenu un vrai pro !!!</text>
+	</string>
+	<string id="bar_arena_man_start_41">
+		<text>T'as gagnй ! Tiens, voilа ta rйcompense.</text>
+	</string>
+	<string id="bar_arena_man_start_51">
+		<text>T'as pas assez d'expйrience pour ce combat.</text>
+	</string>
+	<string id="bar_bar_barman_ecolog_flash_done_0">
+		<text>Voilа la clй USB que le professeur Kruglov m'a donnйe.</text>
+	</string>
+	<string id="bar_bar_barman_ecolog_flash_done_21">
+		<text>Bien jouй. Les gars du Devoir te seront reconnaissants pour cette info. Voilа ta rйcompense.</text>
+	</string>
+	<string id="bar_bar_barman_ecolog_flash_done_31">
+		<text>Bien, bien. Des informations ? Directement du professeur Kruglov, hein ? Tu te fous de qui ? "Je suis le professeur Kruglov et j'efface des rapports sur nos recherches au nom de la science et de l'humanitй..." C'est зa ton info ?! Bordel... Je suis sыr que les gars du Devoir seront "contents" avec зa.</text>
+	</string>
+	<string id="bar_bar_barman_killer_ambush_0">
+		<text>J'ai accompli ma mission. Voilа le PDA de Tyran.</text>
+	</string>
+	<string id="bar_bar_barman_killer_ambush_1">
+		<text>Bravo, le Tatouй. Bon boulot ! Je sais pas quoi dire. Tu pouvais pas me faire plus plaisir, mec. Pour кtre franc, je pensais pas que tu y arriverais... Mais t'es vivant et pas eux !</text>
+	</string>
+	<string id="bar_bar_barman_killer_ambush_2">
+		<text>Et pour ma rйcompense ?</text>
+	</string>
+	<string id="bar_bar_barman_killer_ambush_3">
+		<text>Tiens. Tout est lа, comme convenu.</text>
+	</string>
+	<string id="bar_bar_barman_veterans_finish_0">
+		<text>Voilа le PDA du Chanceux. J'ai rempli ma mission.</text>
+	</string>
+	<string id="bar_bar_barman_veterans_finish_1">
+		<text>Bien jouй, le Tatouй. Bon boulot ! Je sais pas quoi dire. Tu pouvais pas me faire plus plaisir, mec. Pour кtre franc, je pensais pas que tu y arriverais... Mais t'es vivant et pas eux !</text>
+	</string>
+	<string id="bar_bar_barman_veterans_finish_11">
+		<text>Et pour la rйcompense ?</text>
+	</string>
+	<string id="bar_bar_barman_veterans_finish_111">
+		<text>T'es un hйros, un vrai hйros. Tiens, зa devrait faire ton bonheur.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_0">
+		<text>Pas de boulot а me faire faire ?</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_111">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_21">
+		<text>Venons-en aux faits. Qu'est-ce que je dois faire ?</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_221">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2311">
+		<text>J'ai une mission importante. Un groupe d'assassins vйtйrans est rйapparu dans les Terres abandonnйes. Des gars du Devoir m'ont demandй de m'occuper de ces vйtйrans. Ils seraient responsables de la mort de plusieurs Stalkers solitaires. Le problиme, c'est que les vйtйrans et le Devoir ont des sortes de vieux accords et ils ne veulent pas les briser, mais ils trouvent que les vйtйrans vont trop loin. En un mot, ils veulent les faire dйgager sans faire de vagues. Зa sera pas facile, mais ce boulot en vaut la peine.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_23111">
+		<text>Autre chose ? C'est bizarre que les gars du Devoir les laissent partir comme зa.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_231111">
+		<text>Les gars du Devoir font attention а leur rйputation, c'est pour зa qu'ils veulent que зa soit fait dans le calme. Tout ce que tu dois faire, c'est tuer le Chanceux, leur chef, et me rapporter son PDA comme preuve.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2311111">
+		<text>Je vais le faire. J'espиre juste que je vais pas le regretter.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_23111111">
+		<text>Bonne dйcision, mec. Tu le regretteras pas.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2311112">
+		<text>Non, c'est pas pour moi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_23111121">
+		<text>C'est toi qui vois, mais зa peut toujours servir de gagner la reconnaissance du Devoir.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_24">
+		<text>Venons-en aux faits. Qu'est-ce que je dois faire ?</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_241">
+		<text>Ta mission est de tuer Tyran, le chef des Mercenaires. Ses hommes sont entrйs dans les Terres abandonnйes et y ont installй une base sur le chantier. Fais gaffe, ses hommes sont en embuscade sur le chemin du site. Rapporte-moi le PDA de Tyran et la rйcompense est а toi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2411">
+		<text>Je vais le faire. J'espиre juste que je vais pas le regretter.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_24111">
+		<text>Bonne dйcision, mec. Tu le regretteras pas.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2412">
+		<text>Non, c'est pas pour moi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_24121">
+		<text>Comme tu veux.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_251">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_261">
+		<text>Ta mission est de tuer Tyran, le chef des Mercenaires. Ses hommes sont entrйs dans les Terres abandonnйes et y ont installй une base sur le chantier. Fais gaffe, ses hommes sont en embuscade sur le chemin du site. Rapporte-moi le PDA de Tyran et la rйcompense est а toi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2611">
+		<text>Je vais le faire. J'espиre juste que je vais pas le regretter.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_26111">
+		<text>Bonne dйcision, mec. Tu le regretteras pas.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_2612">
+		<text>Non, c'est pas pour moi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_26121">
+		<text>Comme tu veux.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_266">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_271">
+		<text>T'emballe pas trop vite, le Tatouй. Tu cherches plus de boulot, mais t'as encore jamais eu affaire aux vйtйrans...</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_311">
+		<text>Non, rien aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_321">
+		<text>J'ai une mission importante. Un groupe d'assassins vйtйrans est rйapparu dans les Terres abandonnйes. Des gars du Devoir m'ont demandй de m'occuper de ces vйtйrans. Ils seraient responsables de la mort de plusieurs Stalkers solitaires. Le problиme, c'est que les vйtйrans et le Devoir ont des sortes de vieux accords et ils ne veulent pas les briser, mais ils trouvent que les vйtйrans vont trop loin. En un mot, ils veulent les faire dйgager sans faire de vagues. Зa sera pas facile, mais ce boulot en vaut la peine.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_3211">
+		<text>Autre chose ?</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_32111">
+		<text>Les gars du Devoir font attention а leur rйputation, c'est pour зa qu'ils veulent que зa soit fait dans le calme. Tout ce que tu dois faire, c'est tuer le Chanceux, leur chef, et me rapporter son PDA comme preuve.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_32112">
+		<text>Je vais le faire.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_321121">
+		<text>Bonne dйcision, mec. Tu le regretteras pas.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_32113">
+		<text>Non, c'est pas pour moi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_321131">
+		<text>C'est toi qui vois, mais зa peut toujours servir de gagner la reconnaissance du Devoir.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_32121">
+		<text>default text</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_331">
+		<text>Ta mission est de tuer Tyran, le chef des Mercenaires. Ses hommes sont entrйs dans les Terres abandonnйes et y ont installй une base sur le chantier. Fais gaffe, ses hommes sont en embuscade sur le chemin du site. Rapporte-moi le PDA de Tyran et la rйcompense est а toi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_3312">
+		<text>Je vais le faire.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_33121">
+		<text>Bonne dйcision, mec. Tu le regretteras pas.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_3313">
+		<text>Non, c'est pas pour moi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_33131">
+		<text>Comme tu veux.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_341">
+		<text>Non, rien aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_351">
+		<text>Non, rien aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_361">
+		<text>Non, rien aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_371">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_41">
+		<text>Pas encore, la prochaine fois.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_441">
+		<text>J'ai un boulot pour un pro.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_442">
+		<text>Venons-en aux faits. Qu'est-ce que je dois faire ?</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_443">
+		<text>Ta mission est de tuer Tyran, le chef des Mercenaires. Ses hommes sont entrйs dans les Terres abandonnйes et y ont installй une base sur le chantier. Fais gaffe, ses hommes sont en embuscade sur le chemin du site. Rapporte-moi le PDA de Tyran et la rйcompense est а toi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_4431">
+		<text>Je vais le faire. J'espиre juste que je vais pas le regretter.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_44311">
+		<text>Bonne dйcision, mec. Tu le regretteras pas.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_4432">
+		<text>Non, c'est pas pour moi.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_44321">
+		<text>Comme tu veux.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_444">
+		<text>Non, зa m'intйresse pas pour l'instant.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_52">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_531">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_541">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_62">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_jobs_72">
+		<text>Non, j'ai rien pour aujourd'hui.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1111">
+		<text>C'est parti. T'es prкt ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_1131">
+		<text>Humm... D'oщ tu viens ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_121">
+		<text>Alors, le Tatouй, tu as les documents du labo X16 ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_1211">
+		<text>Ouais, les voici.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1212">
+		<text>Non.</text>
+	</string>
+	<string id="bar_bar_barmen_start_12121">
+		<text>Bordel ! Je suis lа а me bouger le cul pendant que tu te promиnes dans les bois ! Trouve ces foutus documents, sinon on y arrivera jamais !</text>
+	</string>
+	<string id="bar_bar_barmen_start_121211">
+		<text>OK.</text>
+	</string>
+	<string id="bar_bar_barmen_start_131">
+		<text>Parfait, le Tatouй, maintenant, faut qu'on s'occupe du lobotomisateur et qu'on ouvre la route vers le nord ! T'es prкt а y aller ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_1312">
+		<text>Oui.</text>
+	</string>
+	<string id="bar_bar_barmen_start_13121">
+		<text>OK, le Tatouй, tu portes le prototype de protection qui t'immunisera contre les йmissions. J'ai les coordonnйes du bunker. Oublie pas que le prototype est efficace pendant un temps limitй, alors tu dois arriver au bunker le plus vite possible pour dйsactiver le lobotomisateur. Je sais pas ce qui se passera aprиs, mais je suis sыr que зa en vaut la peine. Notre seule certitude est que la route qui conduit au centre de la Zone sera ouverte.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1313">
+		<text>Continue.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1314">
+		<text>Il faut rйussir а atteindre les antennes et а les dйsactiver. Compris ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_1315">
+		<text>Зa marche.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1316">
+		<text>Oh, j'allais oublier ! Le leader de la faction du Devoir, dont le camp est indiquй sur la carte, a besoin d'un volontaire pour accomplir une mission un peu spйciale dans les entrepфts militaires. Si зa t'intйresse, va y faire un tour. J'avertirai les gardes pour qu'ils te laissent passer.</text>
+	</string>
+	<string id="bar_bar_barmen_start_132">
+		<text>Non, je suis pas encore prкt.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1321">
+		<text>Magne-toi, le Tatouй ! Зa peut pas attendre !</text>
+	</string>
+	<string id="bar_bar_barmen_start_151">
+		<text>OK, les documents que tu as rapportйs de l'Institut nous permettent d'y voir un peu plus clair, mais il nous manque toujours des infos essentielles pour tout comprendre. Un labo qui s'appelle X18 est йvoquй et sa description correspond aux souterrains abandonnйs dans la Vallйe obscure. On dirait que tu vas devoir y aller pour obtenir les infos qu'il nous faut. Le labo est fermй ; deux clйs йlectroniques sont nйcessaires pour y entrer. Je vais t'en filer une, mais c'est le Sanglier dans la Vallйe obscure qui te donnera la deuxiиme.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1511">
+		<text>Continue</text>
+	</string>
+	<string id="bar_bar_barmen_start_15111">
+		<text>Ta mission est d'obtenir la deuxiиme clй du labo X18, d'y pйnйtrer et de rйcupйrer le reste des documents. Pense а porter une tenue de protection si tu veux avoir une chance d'arriver jusqu'au labo. Bon, t'es partant pour le faire ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_15112">
+		<text>Je vais essayer.</text>
+	</string>
+	<string id="bar_bar_barmen_start_15113">
+		<text>Gйnial ! Je t'attendrai.</text>
+	</string>
+	<string id="bar_bar_barmen_start_15114">
+		<text>Non, je veux pas encore le faire.</text>
+	</string>
+	<string id="bar_bar_barmen_start_15115">
+		<text>Comme tu veux, mais n'oublie pas que c'est le seul moyen qui puisse nous aider а ouvrir la route vers le nord.</text>
+	</string>
+	<string id="bar_bar_barmen_start_161">
+		<text>Qu'est-ce que tu veux, le Tatouй ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_162">
+		<text>Hй, le Tatouй ! Le temps passe, mais tu changes pas, toujours grognon et distant. Viens, assieds-toi et prends un verre, tu seras peut-кtre plus aimable aprиs...</text>
+	</string>
+	<string id="bar_bar_barmen_start_171">
+		<text>Alors, le Tatouй, tu as ramenй les documents du labo X18 ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_172">
+		<text>Ouais. Voilа.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1721">
+		<text>Bien, la situation s'йclaircit. C'est ce que je croyais, ce lobotomisateur a йtй fabriquй par l'homme. C'est un йmetteur expйrimental de Kaymanov et ses composants ont йtй fabriquйs dans le labo X18. Ces documents font rйfйrence au labo X16 oщ certains composants ont йtй envoyйs. Apparemment, le labo X16 se trouve dans la zone de production au niveau du lac de Yantar. Les scientifiques ont installй un laboratoire mobile dans ce coin-lа. Ils peuvent peut-кtre nous aider.</text>
+	</string>
+	<string id="bar_bar_barmen_start_17211">
+		<text>Continue.</text>
+	</string>
+	<string id="bar_bar_barmen_start_17212">
+		<text>C'est pas simple. Tu dois parvenir aux scientifiques et dйcouvrir l'emplacement du labo X16 pour rйussir а trouver les documents manquants. Alors, зa te tente ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_17213">
+		<text>Ouais.</text>
+	</string>
+	<string id="bar_bar_barmen_start_172131">
+		<text>Gйnial ! Je t'attendrai.</text>
+	</string>
+	<string id="bar_bar_barmen_start_17214">
+		<text>Non, je suis pas encore prкt.</text>
+	</string>
+	<string id="bar_bar_barmen_start_172141">
+		<text>OK, mais dйpкche-toi, le Tatouй ! C'est le genre d'affaire qui n'attend pas.</text>
+	</string>
+	<string id="bar_bar_barmen_start_173">
+		<text>Non.</text>
+	</string>
+	<string id="bar_bar_barmen_start_1731">
+		<text>Qu'est-ce que t'attends ? Va chercher ces maudits documents, sinon, on va jamais y arriver !</text>
+	</string>
+	<string id="bar_bar_barmen_start_181">
+		<text>Qu'est-ce que tu veux, le Tatouй ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_182">
+		<text>Hй, le Tatouй ! Le temps passe, mais tu changes pas, toujours grognon et distant. Viens, assieds-toi et prends un verre, tu seras peut-кtre plus aimable aprиs...</text>
+	</string>
+	<string id="bar_bar_barmen_start_2">
+		<text>Hй, le Tatouй ! T'as rapportй les documents de l'Institut ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_21">
+		<text>Non, j'ai pas encore les documents de l'Institut.</text>
+	</string>
+	<string id="bar_bar_barmen_start_211">
+		<text>C'est pas bon, le Tatouй, pas bon du tout... Tu te rends bien compte de leur importance ? On en a vraiment besoin, tu comprends ? Le lobotomisateur est juste sous notre nez et on ne sait mкme pas ce que    c'est ! Va chercher les documents, on discutera aprиs.</text>
+	</string>
+	<string id="bar_bar_barmen_start_2111">
+		<text>Je vois ce que tu veux dire.</text>
+	</string>
+	<string id="bar_bar_barmen_start_22">
+		<text>Voilа les documents de l'Institut.</text>
+	</string>
+	<string id="bar_bar_barmen_start_221">
+		<text>Bien jouй, le Tatouй ! On a enfin les documents. Je dois y jeter un oeil pour dйcouvrir comment trouver la partie nord de la Zone. Au fait, si tu es un peu а sec, t'as qu'а aller te battre dans l'Arиne. Le propriйtaire s'appelle Arni. Je t'ai transfйrй ses coordonnйes.</text>
+	</string>
+	<string id="bar_bar_barmen_start_2211">
+		<text>OK.</text>
+	</string>
+	<string id="bar_bar_barmen_start_22111">
+		<text>Hй !</text>
+	</string>
+	<string id="bar_bar_barmen_start_3">
+		<text>Qu'est-ce que tu veux, le Tatouй ?</text>
+	</string>
+	<string id="bar_bar_barmen_start_4">
+		<text>Hй, le Tatouй ! Le temps passe, mais tu changes pas, toujours grognon et distant. Viens, assieds-toi et prends un verre, tu seras peut-кtre plus aimable aprиs...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_0">
+		<text>Je veux savoir quelque chose.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_1">
+		<text>Qu'est-ce que c'est ?</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_10">
+		<text>Merci.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_3">
+		<text>Qu'est-ce que tu sais sur Strelok ?</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_31">
+		<text>C'est un Stalker d'expйrience d'aprиs ce que je sais. Il "travaillait" vers les sorties nord de la Zone. On ne l'a pas vu souvent par lа-bas, mais certains disent qu'il a rйussi а entrer au centre de la Zone avec ses hommes.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_4">
+		<text>Qu'est-ce que tu sais d'un Stalker qu'on appellerait Spectre ?</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_41">
+		<text>C'est un des hommes de Strelok. On dit qu'il peut s'infiltrer partout sans кtre vu. J'ai entendu dire qu'il avait descendu le leader d'un groupe bizarre... qui s'appelait comment dйjа ? "Dernier Jour", c'est зa. Ils йtaient tous un peu siphonnйs... Ah, au fait, on m'a dit que Spectre bossait pour les scientifiques, alors si tu le cherches, essaie le laboratoire mobile, prиs du lac de Yantar.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_51">
+		<text>C'est un vieux Stalker а la retraite. Il vit dans les marйcages, je vais te l'indiquer sur la carte. Il faisait partie du groupe de Strelok avant.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_6">
+		<text>Qu'est-ce que tu sais d'un Stalker qu'on appelle les Crocs ?</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_61">
+		<text>Il y avait un homme qui portait ce nom, il parlait en zozotant... Je lui ai parlй une fois ou deux, il йtait un peu bizarre, c'est sыr... mais зa allait. Зa fait une paye que je ne l'ai pas vu au bar.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_7">
+		<text>Parle-moi des laboratoires scientifiques mobiles.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_71">
+		<text>Les scientifiques en installent de temps en temps. Des bunkers mйtalliques isolйs, avec tout ce qu'il faut pour vivre. On est en contact avec un de ces laboratoires а Yantar. Les scientifiques sont des bons gars, ils nous disent pas mal de choses et on les aide quand on peut... une sorte d'йchange...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_8">
+		<text>Qu'est-ce que c'est l'exauceur ?</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_81">
+		<text>Oh ! C'est une bonne question... J'aurais bien aimй le savoir moi-mкme. Je peux te raconter la lйgende sur l'exauceur si tu veux, mais а toi de distinguer le vrai du faux. Tu veux\nl'entendre ?</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_811">
+		<text>Eh bien, c'est trиs intйressant.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_8111">
+		<text>La lйgende concerne le Monolithe, qui est probablement а l'origine de la Zone. Quand la Zone a explosй en 2006, les habitants alentour ont йtй йvacuйs et la Zone elle-mкme a йtй bouclйe par l'armйe. Tout le monde paniquait, personne ne comprenait ce qui se passait, la Zone s'йtendait et les laboratoires mobiles ne pouvaient rien faire ! Des milliers de personnes sont mortes ici. Tout le monde craignait les radiations qui pouvaient toucher la moitiй de l'Europe. Au bout de quelques annйes, on a vu apparaоtre des tйmйraires comme toi. Ils se faisaient appeler Stalkers. Ils ont commencй а s'infiltrer derriиre les cordons de l'armйe dans l'espoir de faire fortune dans la Zone. Petit а petit, ils ont ramenй des artefacts bizarres et c'est devenu une sorte de course entre eux. Les scientifiques se sont trиs vite intйressйs а ces choses, а l'йpoque, ils payaient des sommes folles pour la moindre babiole, pas comme maintenant.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_81111">
+		<text>Continue...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_811111">
+		<text>Au bout d'un moment, les premiиres lйgendes а propos de ce qui se cachait а l'intйrieur de la Zone, sous les ruines de la centrale nuclйaire, ont commencй а circuler. C'est aussi а cette йpoque qu'un vйtйran nous a parlй d'un Monolithe censй exaucer les voeux. C'йtait de la folie : mкme les gens expйrimentйs et sains d'esprit essayaient de pйnйtrer au centre, tout le monde voulait quelque chose du Monolithe. On a eu des dйtails morbides sur les premiers Stalkers qui ont rйussi а atteindre le Monolithe...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_8111111">
+		<text>Continue... dis-m'en plus.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_81111111">
+		<text>Quand la Zone est apparue, de nombreuses personnes ont йtй prises au piиge а l'intйrieur et coupйes du monde. Beaucoup sont mortes rapidement, mais les rares qui ont survйcu ont tentй de faire quelque chose. L'un des survivants s'est retrouvй prиs de la centrale et a remarquй une lumiиre йtrange а l'intйrieur. Ne pouvant plus reculer, il a dйcidй de s'en approcher. Il a vu le toit dйtruit du sarcophage et la lumiиre qui s'en dйgageait. Il a donc escaladй le mur pour voir ce qu'il y avait а l'intйrieur. Parmi les dйbris mйtalliques et le bйton, il y avait un gros rocher noir. C'йtait le Monolithe. Le Stalker a rйussi а se "dйsenvoыter" et s'est alors rendu compte qu'il йtait montй trиs prиs du sarcophage radioactif. Il йtait terrifiй, mais malgrй tout, il ressentait l'appel du Monolithe. Le Monolithe l'appelait et il a commencй а voir dans son esprit des choses йtranges, incroyables sur le Monolithe...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_811111111">
+		<text>Cool...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_811111112">
+		<text>Je sais pas ce qui est vrai ou pas dans cette histoire, en tout cas, le gars a fait un voeu et le Monolithe l'a exaucй, tandis que la Zone s'est agrandie de 5 kilomиtres. On dirait que la Zone engloutit davantage de terrain а chaque voeu exaucй... Mais c'est pas зa qui va arrкter les gars de ton espиce. Ils essaient tous de pйnйtrer, chacun ayant un voeu dans le coin de la tкte...</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_812">
+		<text>Je m'intйresse а autre chose pour le moment.</text>
+	</string>
+	<string id="bar_bar_barmen_talk_info_8121">
+		<text>C'est toi qui vois, mec. Qu'est-ce que tu veux savoir exactement ?</text>
+	</string>
+	<string id="bar_bar_drunk_dolg_start_11">
+		<text>Hic... Bordel ! Oui, je suis bourrй, je suis bourrй ! Ils veulent... ils... veulent me virer du Devoir si j'йchoue aussi dans cette mission...tu sais ? Mais, je me... Hic... sens pas... trиs bien pour l'instant... tu sais...</text>
+	</string>
+	<string id="bar_bar_drunk_dolg_start_111">
+		<text>Je comprends.</text>
+	</string>
+	<string id="bar_bar_drunk_dolg_start_21">
+		<text>Comment зa va ? Du nouveau ? T'as pas trouvй le moindre petit truc, je le vois dans tes yeux. Saloperie de vie... Allez, au moins, viens boire un verre, tu veux, hein ?</text>
+	</string>
+	<string id="bar_bar_drunk_dolg_start_31">
+		<text>Meeec... hic... tu... tu... tu m'as aidй ! Buvons а la santй du Devoir... J'imagine ! Et... Oh !</text>
+	</string>
+	<string id="bar_bar_hunter_quest_finish_0">
+		<text>Je l'ai trouvй. Voilа ton fusil.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_finish_1">
+		<text>Зa alors ! T'as trouvй mon fusil ?! Je sais pas quoi dire, mec ! Merci beaucoup ! MERCI ! Je suis tellement content ! Tu m'as rendu un sacrй service, зa c'est sыr. Bordel. Tiens, prends зa, c'est pas grand-chose mais c'est tout ce que j'ai. Je t'oublierai pas et j'espиre te donner ce que je te dois plus tard. Йcoute, je vais te dire un truc. Il y a une maison bizarre, avec des planches cloutйes aux portes et aux fenкtres, prиs de l'endroit oщ t'as retrouvй mon fusil. Personne sait ce qu'il y a vraiment dedans, mais on peut voir par les fenкtres qu'il y a des anomalies lа-bas, des tas. Il y a sыrement des artefacts aussi... Mais je sais pas comment y entrer.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_0">
+		<text>Continue.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_1">
+		<text>Je te donnerai tout ce que tu veux, je te le promets, mais ramиne-moi mon fusil. Je l'ai perdu lа oщ les sangsues vivent. Tiens, voilа les coordonnйes. Mais fais gaffe, ces saloperies sont coriaces.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_11">
+		<text>OK, je vais essayer de rйcupйrer ton fusil.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_111">
+		<text>Tu peux me faire confiance.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_1111">
+		<text>C'est dans ton intйrкt.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_12">
+		<text>Non, j'ai des choses plus importantes а faire.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_121">
+		<text>C'est toi qui vois... Mais j'espиre que tu vas changer d'avis.</text>
+	</string>
+	<string id="bar_bar_hunter_quest_start_1212">
+		<text>On verra.</text>
+	</string>
+	<string id="bar_bar_hunter_start_11">
+		<text>J'ai un gros problиme, mec ! J'ai... J'ai perdu mon fusil de famille dans les Terres abandonnйes. Je voulais tirer sur des sangsues mais j'ai а peine eu le temps de m'йchapper. Bordel ! Йcoute, mec... si tu le rйcupиres, je te paierai un bon prix. J'ai йconomisй un peu d'argent et je te donnerai tout, mais rapporte-moi mon fusil. C'est un fusil de famille, tu sais, on se le passe de pиre en fils... Et je l'ai perdu ! J'ai grandi avec, c'est comme le prolongement de mon bras maintenant...</text>
+	</string>
+	<string id="bar_bar_hunter_start_21">
+		<text>Hй ! Du nouveau ? Tu l'as trouvй ?!</text>
+	</string>
+	<string id="bar_bar_hunter_start_31">
+		<text>Merci, mec ! J'oublierai jamais ce que t'as fait pour moi !</text>
+	</string>
+	<string id="bar_bar_osvedomitel_reward_0">
+		<text>Le Doberman m'a dit que t'avais quelque chose pour moi.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_reward_1">
+		<text>Bien sыr. Voilа un lance-grenades pour l'avoir aidй avec Kruglov, et 1000 roubles en liquide en plus. Pour couronner le tout, je vais te filer des infos gratuitement.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_reward_2">
+		<text>Merci.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_reward_3">
+		<text>Voilа ce que j'ai а dire. T'as aidй les gars de la Libertй et t'as fait le bon choix. Ton avenir dйpend maintenant de la Libertй, et le Devoir t'a а l'oeil. Pour moi, tu ferais mieux d'aller а la base militaire abandonnйe pour rejoindre les rangs de la Libertй, ils ont besoin de gars comme toi. Зa va bientфt chauffer entre les deux camps et ceux qui seront du bon cфtй le regretteront pas.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_start_11">
+		<text>Je marchande des informations. Je vends des infos importantes et j'achиte des cartes, des documents et des rapports de labo. Mes informations sont prйcieuses et trиs utiles pour ceux qui les possиdent !</text>
+	</string>
+	<string id="bar_bar_osvedomitel_start_21">
+		<text>Salut, le Tatouй. T'as aidй les gars de la Libertй et t'as fait le bon choix. Ton avenir dйpend maintenant de la Libertй, et le Devoir t'a а l'oeil. Pour moi, tu ferais mieux d'aller а la base militaire abandonnйe pour rejoindre les rangs de la Libertй, ils ont besoin de gars comme toi.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_start_211">
+		<text>Je vais y rйflйchir.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_start_2111">
+		<text>Alors, le tatouй, qu'est-ce qui t'amиne ? Tu veux acheter des informations ou tu vends aujourd'hui ?</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_0">
+		<text>Alors, t'es liй а la Libertй, maintenant ?</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_1">
+		<text>Je peux pas te rйpondre maintenant. Tout ce que je peux dire, c'est que je fais partie d'aucun groupe.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_about_freedom_0">
+		<text>Parle-moi de la faction de la Libertй.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_about_freedom_1">
+		<text>Bien sыr, pas de problиme ! La libertй est l'un des plus anciens groupes de la Zone et le seul qui s'oppose ouvertement aux troupes du gouvernement et aux йquipes de recherche. Ses fondateurs sont morts dans un bain de sang. L'armйe avait larguй des forces d'assaut dans la Zone et elle a ainsi perdu le contrфle de la Zone а partir de l'extйrieur. Tout porte а croire que la premiиre Zone йtait un site secret de l'armйe pour tester ses armes. Si c'est vrai, ils ont dы utiliser des trucs sacrйment puissants. Bref, qu'est-ce que je disais... ? Ah oui, la Libertй est le seul groupe qui s'oppose au gouvernement pour qu'il ne reprenne pas le contrфle du site. Dieu sait ce qui peut arriver s'ils recommencent а tester leur merde, alors la Libertй tente de les en empкcher.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_about_freedom_2">
+		<text>Et le Devoir ?</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_about_freedom_3">
+		<text>En gros, le Devoir est contrфlй de l'extйrieur par le gouvernement. Leur objectif actuel est de dйbarrasser le territoire des mutants et d'йliminer la Libertй, ce qu'ils font en ce moment. Quand le moment sera venu, ils largueront des forces d'assaut dans la Zone pour en prendre le contrфle.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_talk_about_freedom_4">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_0">
+		<text>Je veux acheter des informations.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_21">
+		<text>Pour le moment, je peux te vendre des infos sur le groupe de Strelok pour une bouchйe de pain : 4000 roubles.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_211">
+		<text>OK, je marche. Voilа 4000.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_2111">
+		<text>Il se trouve prиs de l'Institut de Recherche Agroprom, il y a une planque dans le sous-sol. Elle contient sыrement des informations sur les plans du groupe et une liste des membres. Tu trouveras ci-joint les coordonnйes de la planque.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_212">
+		<text>Non, j'ai changй d'avis.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_2121">
+		<text>Comme tu veux. Viens au bar si tu changes d'avis, j'y suis toujours.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_31">
+		<text>Pour le moment, j'ai des infos sur un groupe qui a rйussi а atteindre le centre de la Zone. C'est presque donnй : 2000 roubles.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_311">
+		<text>OK, je marche. Voilа 2000.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_3111">
+		<text>Strelok, Spectre et les Crocs sont allйs au centre de la Zone. Ce qu'ils ont trouvй lа-bas, personne ne le sait, mais Strelok a disparu et Spectre et les Crocs sont revenus complиtement abattus et dйprimйs. Aux derniиres nouvelles, Spectre serait allй au laboratoire mobile du lac de Yantar. Les coordonnйes du camp des scientifiques sont jointes.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_312">
+		<text>Non, j'ai changй d'avis.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_3121">
+		<text>Comme tu veux. Viens au bar si tu changes d'avis, j'y suis toujours.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_41">
+		<text>J'ai des informations sur le secret du lac de Yantar. Tout зa pour une somme modique : 3500 roubles !</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_411">
+		<text>OK, j'achиte. Pour 3500 roubles.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_4111">
+		<text>Le secret du lac de Yantar est similaire au secret du lobotomisateur et leurs effets ont de nombreux points communs. Des sortes d'йmissions transforment tous ceux qui s'en approchent en zombies. Ils dйambulent au centre d'une espиce d'йmetteur, en attaquant tout le monde. D'aprиs certaines infos, la solution de l'йnigme du lac de Yantar se trouverait sous terre. Voilа les coordonnйes de l'йmetteur du lac de Yantar et celles du lobotomisateur.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_412">
+		<text>Non, j'ai changй d'avis.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_4121">
+		<text>Comme tu veux. Viens au bar si tu changes d'avis, j'y suis toujours.</text>
+	</string>
+	<string id="bar_bar_osvedomitel_trade_info_999">
+		<text>J'ai aucune nouvelle information pour le moment.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_11">
+		<text>... c'est pas trop tфt, quelqu'un a foutu une raclйe а Borov ! Si je savais qui c'est, je lui paierais un verre.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_111">
+		<text>Ouais, il йtait temps.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_21">
+		<text>... quelqu'un est en train d'en faire baver aux gars de la Libertй. On m'a dit qu'un de leurs groupes avait йtй abattu dans les Terres abandonnйes... Je me demande qui c'est ! </text>
+	</string>
+	<string id="bar_bar_visitors_1_start_211">
+		<text>Ouais, j'aimerais bien savoir qui...</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_31">
+		<text>... quelqu'un a enfin eu le cran de nous dйbarrasser des sangsues dans les Terres abandonnйes... Qu'est-ce que le Devoir pouvait bien faire pendant tout ce temps ?</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_311">
+		<text>Qu'est-ce que les gars du Devoir faisaient ? Leur devoir, qu'est-ce que tu veux qu'ils fassent d'autre ?</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_41">
+		<text>... on m'a dit qu'on avait liquidй le chef de la Libertй. А mon avis, ils vont avoir chaud au derriиre. Le Devoir va les harceler maintenant...</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_411">
+		<text>J'espиre.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_51">
+		<text>Alors t'as liquidй ces vйtйrans ? Bien jouй, mon gars ! Environ six Stalkers ont disparu dans cette zone rйcemment... on pense que c'est eux qui ont fait le coup. C'est une bonne chose que quelqu'un s'en soit chargй.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_511">
+		<text>Ouais, beaucoup de personnes voulaient que ces vйtйrans "partent".</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_61">
+		<text>T'as rйussi а arrкter les йmissions а Yantar ? Зa alors, t'es un sacrй veinard, bon sang, je suis content que quelqu'un ait enfin rйussi а en finir avec зa ! Tu peux pas savoir combien de nos hommes sont morts lа-bas... mais maintenant, les scientifiques vont pouvoir chercher ce que c'йtait. On va peut-кtre mкme pouvoir s'occuper du lobotomisateur maintenant...</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_611">
+		<text>J'espиre que le lobotomisateur peut кtre dйsactivй.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_71">
+		<text>Qu'est-ce que tu veux ? Tu vois pas que j'essaie de me reposer lа...</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_711">
+		<text>Du nouveau ?</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_7111">
+		<text>On m'a dit que Strelok йtait revenu. Il a tout l'йquipement nйcessaire pour arriver а la machine... Mais pour l'instant, il se cache parce que tout le monde le cherche. Certains savent pas trop quoi penser mais d'autres s'intйressent au secret. On dit mкme que le Devoir et la Libertй ont pris part а la chasse... chacun avec ses propres objectifs.</text>
+	</string>
+	<string id="bar_bar_visitors_1_start_71111">
+		<text>On dirait que Strelok a raison de se planquer.</text>
+	</string>
+	<string id="bar_bar_visitors_10_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_10_start_711">
+		<text>Tu peux me dire des trucs utiles pour un nouveau ?</text>
+	</string>
+	<string id="bar_bar_visitors_10_start_7111">
+		<text>Utiles pour un nouveau ? Bien, йcoute. Au nord, pas loin du lobotomisateur, les gars de la Libertй ont installй leur QG dans une vieille base militaire. Ce sont des nihilistes, des anarchistes et des criminels notoires, tous des combattants de la libertй et des enfoirйs de guйrilleros. Tout ce qu'ils font, c'est perturber les groupes de recherche, attaquer les unitйs armйes et chercher la merde avec ceux du Devoir. Ces йchauffourйes sont devenues une bataille а petite йchelle pour la survie. Laisse-moi te donner un conseil : ne t'engage jamais avec eux. Ils ne t'accepteront que si t'es complиtement cinglй ou si ta tкte est mise а prix. Ha ha ha. Tu le crois зa ?</text>
+	</string>
+	<string id="bar_bar_visitors_10_start_71111">
+		<text>Merci pour ton conseil.</text>
+	</string>
+	<string id="bar_bar_visitors_12_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_12_start_711">
+		<text>Tu peux me dire des trucs utiles pour un nouveau ?</text>
+	</string>
+	<string id="bar_bar_visitors_12_start_7111">
+		<text>Eh bien, il y avait ce groupe dirigй par Strelok. Beaucoup de lйgendes ont circulй sur lui dans la Zone... des bonnes et des mauvaises, mais peu de personnes ont vraiment su la vйritй. La vйritй, c'est qu'ils voulaient rйgler le problиme de la Zone, savoir ce qui l'avait crййe. C'est pour зa que les Stalkers militaires йtaient aprиs eux mais ils ignoraient oщ chercher. Le gouvernement ne voulait pas que les Stalkers normaux soient au courant de secrets. Un jour, Strelok a dйcouvert quelque chose de trиs important et a pйnйtrй au centre de la Zone avec ses hommes. La moitiй est morte en chemin, mais le reste a continuй... Ce qui leur est arrivй, personne le sait. Ils ont certainement trinquй. Les autres membres du groupe ont йtй capturйs et tuйs. Je pense pas qu'il y ait encore de vivants. Une sale histoire, hein ?</text>
+	</string>
+	<string id="bar_bar_visitors_12_start_71111">
+		<text>Ouais... on dirait que quelqu'un veut vraiment pas qu'on comprenne la Zone...</text>
+	</string>
+	<string id="bar_bar_visitors_13_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_13_start_711">
+		<text>Tu peux me dire des trucs utiles pour un nouveau ?</text>
+	</string>
+	<string id="bar_bar_visitors_13_start_7111">
+		<text>Les Mercenaires sont un peu comme les gars de la Libertй, en pire. Au moins, les gars de la Libertй ont des idйaux, mais ces enfoirйs, ils en ont que pour le fric. Faut que quelqu'un les butte avant qu'ils ramиnent un truc vraiment dangereux de la Zone dans le monde normal ! Ils sont installйs dans la ville morte et il y a un sniper en haut de chaque immeuble, tu comprends ? Ils aiment pas trop les йtrangers.</text>
+	</string>
+	<string id="bar_bar_visitors_13_start_71111">
+		<text>Je vois, apparemment, faut кtre prudent dans la ville morte.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_711">
+		<text>Tu peux me dire des trucs utiles pour un nouveau ?</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_7111">
+		<text>Si t'es jamais allй dans l'Arиne, je te conseille de le faire, c'est un bon moyen de gagner de l'argent et de montrer de quoi t'es capable. Tout le monde n'a pas le cran d'affronter le prochain monstre, dommage ! Mec, dиs que j'ai assez d'argent pour m'йquiper correctement, j'y vais.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_81">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_82">
+		<text>C'est toi Crвne d'oeuf ? Faut que je te parle.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_83">
+		<text>On va dire que c'est moi. Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_84">
+		<text>Le Boutonneux a йtй sauvй de la Forкt rouge mais le Bossu est mort.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_85">
+		<text>Merde !</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_86">
+		<text>Le Boutonneux est mal, son cerveau marche plus. Tu peux peut-кtre lui parler ? Faut qu'on trouve le programme du lobotomisateur.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_87">
+		<text>Non ! Me demande pas de faire зa. Le Bossu est mort а cause de moi et ce qui est arrivй aux Boutonneux est de ma faute aussi. Je les ai quittйs, trahis, dйsertйs et fuis ! Je peux plus regarder le Boutonneux dans les yeux aprиs ce que j'ai fait !</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_88">
+		<text>Allez, du calme, mec. Dis-moi ce qui s'est passй.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_89">
+		<text>Tous les trois, on se prйparait а pйnйtrer au nord. On savait pas quand les йmissions du lobotomisateur йtaient les moins fortes, mais le Boutonneux a rйussi а dйgoter l'info quelque part... Je sais pas oщ... On йtait а mi-chemin quand le lobotomisateur s'est soudainement rallumй. Le boutonneux s'est йvanoui tout de suite et est tombй dans un ravin. J'ai paniquй et j'ai dit qu'on devait tout abandonner et s'en aller. Le Bossu a rйussi а se convaincre et a dit qu'on devait prendre le Boutonneux avec nous... Je lui ai dit "T'es con ou quoi, tu veux pas vivre ? C'est fini pour lui, comment tu veux qu'on le ramиne ?" Alors qu'il venait de me convaincre et commenзait а descendre pour rйcupйrer le Boutonneux... il y a eu une autre vague. Avant que je reprenne mes esprits, j'йtais dйjа arrivй а la base militaire... Je croyais que le Bossu et le Boutonneux йtaient restйs lа-bas... mais il l'a sorti de lа au pйril de sa vie... il l'a sorti de lа...</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_90">
+		<text>OK, Crвne d'oeuf, OK. Du calme, mec. Merci de m'avoir tout racontй. Je vais aller parler au Boutonneux.</text>
+	</string>
+	<string id="bar_bar_visitors_14_start_91">
+		<text>Dйsolй, mon frиre. Je suis pas d'humeur а parler... Je vais plutфt aller boire un autre verre.</text>
+	</string>
+	<string id="bar_bar_visitors_2_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_2_start_711">
+		<text>Du nouveau ?</text>
+	</string>
+	<string id="bar_bar_visitors_2_start_7111">
+		<text>Il y avait un gars... Il zozotait et avait le dos voыtй alors on l'a appelй le Bossu. Il йtait un peu cinglй... il parlait tout seul et aux animaux... mais а part зa, зa allait. Il a disparu il y a longtemps dans le centre avec Strelok et on dit que Strelok est revenu maintenant.</text>
+	</string>
+	<string id="bar_bar_visitors_2_start_71111">
+		<text>Je me demande oщ il peut кtre maintenant.</text>
+	</string>
+	<string id="bar_bar_visitors_3_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_3_start_711">
+		<text>Quoi de neuf ?</text>
+	</string>
+	<string id="bar_bar_visitors_3_start_7111">
+		<text>Les Terres abandonnйes sont infestйes de sangsues maintenant ! Elles viennent la nuit. On m'a dit qu'il y avait un truc trиs important а l'usine d'а cфtй, quelque chose d'essentiel pour quelqu'un. Le Devoir a envoyй des gars lа-bas rйcemment mais ils sont tous morts et on a entendu leurs cris а des kilomиtres а la ronde.</text>
+	</string>
+	<string id="bar_bar_visitors_3_start_71111">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_bar_visitors_4_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_4_start_711">
+		<text>Qu'est-ce que t'as entendu dire ?</text>
+	</string>
+	<string id="bar_bar_visitors_4_start_7111">
+		<text>Si tu vas vers le lac de Yantar, tu trouveras le camp des scientifiques, ils font plein de recherches lа-bas. Ils y sont allйs par hйlicoptиre et ils sont rйguliиrement approvisionnйs en vivres. Ils sont bien installйs lа-bas, vraiment... Tu peux faire affaire avec eux aussi, ils achиtent des artefacts et peuvent mкme te filer du boulot.</text>
+	</string>
+	<string id="bar_bar_visitors_4_start_71111">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_bar_visitors_5_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_5_start_711">
+		<text>Qu'est-ce que t'as entendu dire ?</text>
+	</string>
+	<string id="bar_bar_visitors_5_start_7111">
+		<text>Personne n'a rйussi а aller dans la casse а cause du lobotomisateur. Certains racontent qu'ils ont vu un Stalker traverser la frontiиre invisible, tomber, puis se relever au bout d'un moment et se diriger vers le centre de la casse. On l'a pas revu depuis...</text>
+	</string>
+	<string id="bar_bar_visitors_5_start_71111">
+		<text>Intйressant...</text>
+	</string>
+	<string id="bar_bar_visitors_6_start_71">
+		<text>Qu'est-ce tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_6_start_711">
+		<text>Qu'est-ce que t'as entendu ?</text>
+	</string>
+	<string id="bar_bar_visitors_6_start_7111">
+		<text>Des Stalkers disparus rйapparaissent de temps en temps. Ils sont effrayants, je te raconte pas. Ils marmonnent des trucs et cherchent а prendre leurs armes, alors qu'ils n'en ont pas... Un Stalker comme зa s'est prйsentй а l'avant-poste du Devoir un jour. Une foule s'est rйunie pour l'observer. Quelqu'un l'a mкme reconnu... Il йtait terrifiant... avec des yeux rouges, meurtris et injectйs de sang... Il ne disait rien distinctement, il grognait comme un animal et tournait en rond. Le Devoir l'a emmenй, mais il est mort quelques jours plus tard. C'est clair qu'il arrive un truc aux gens dans la Zone, mais quoi ?</text>
+	</string>
+	<string id="bar_bar_visitors_6_start_71111">
+		<text>J'aimerais bien le savoir aussi.</text>
+	</string>
+	<string id="bar_bar_visitors_7_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_7_start_711">
+		<text>Qu'est-ce que t'as entendu ?</text>
+	</string>
+	<string id="bar_bar_visitors_7_start_7111">
+		<text>Il y a beaucoup de zombies autour du lac de Yantar. Ces zombies errants attaquent tout кtre humain qui passe. Si t'es repйrй, t'as intйrкt а prendre tes jambes а ton cou parce que beaucoup de ces zombies sont d'anciens Stalkers... Ils sont morts au lac et voilа ce qu'ils sont devenus.</text>
+	</string>
+	<string id="bar_bar_visitors_7_start_71111">
+		<text>Ouais, j'aimerais pas subir le mкme sort.</text>
+	</string>
+	<string id="bar_bar_visitors_8_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_8_start_711">
+		<text>Qu'est-ce que t'as entendu ?</text>
+	</string>
+	<string id="bar_bar_visitors_8_start_7111">
+		<text>Les marchands racontent qu'il y'a un vйritable trйsor rempli d'artefacts au centre de la Zone et que celui qui rйussira а le rйcupйrer aura assez d'argent pour vivre 200 ans. Moi, je crois que c'est bien plus que зa. Il est clair que les marchands ne pensent qu'а leurs intйrкts, mais des rumeurs йtranges circulent. Apparemment, quelque chose de plus prйcieux que les artefacts se trouve lа-bas, quelque chose qui vient d'ailleurs, d'une autre planиte ou d'une autre dimension ou les deux ! Ils appellent зa l'exauceur. Il paraоt qu'un Stalker a dйjа rйussi а voir cette machine. А chaque fois que quelqu'un fait un voeu, la Zone s'йtend : en fait, personne n'utilise son voeu pour faire disparaоtre la Zone. А mon avis, quand t'arrives devant cette machine, tu te fous de tout le reste.</text>
+	</string>
+	<string id="bar_bar_visitors_8_start_71111">
+		<text>C'est triste.</text>
+	</string>
+	<string id="bar_bar_visitors_9_start_71">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_bar_visitors_9_start_711">
+		<text>Qu'est-ce que t'as entendu ?</text>
+	</string>
+	<string id="bar_bar_visitors_9_start_7111">
+		<text>Tous ceux qui croient au Monolithe sont complиtement cinglйs. Ils n'arrкtent pas d'en parler, mais en fait, personne ne sait vraiment ce qu'il y a au centre de la Zone. Un cristal invisible qui est tombй du ciel... Ha ha ha ! Je crois qu'un des labos secrets a explosй ; des Stalkers travaillaient dans quelques-uns de ces labos. Mais on peut йvidemment pas bombarder toute la Zone. Non seulement les radiations contamineraient le monde entier, mais la moitiй de l'Europe serait aussi anйantie par la rйaction immйdiate dans la Zone. "Des gens" sont devenus totalement barjos ces derniers temps. J'ai entendu dire que des Stalkers normaux йtaient tuйs sans aucune raison. Tu trouves зa normal ? Quels sales fanatiques !</text>
+	</string>
+	<string id="bar_bar_visitors_9_start_71111">
+		<text>Зa peut valoir le coup de s'y intйresser.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_0">
+		<text>Je veux rejoindre le Devoir. Qu'est-ce que je dois faire ?</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_1">
+		<text>Il faut payer 1000 roubles pour avoir un laissez-passer que tu iras montrer а Voronin dans le bunker. Il t'arrangera un test.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_11">
+		<text>OK, voici l'argent.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_111">
+		<text>Bien, voilа ton laissez-passer. Va voir Petrenko, l'administrateur. L'endroit est signalй sur la carte.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_12">
+		<text>Non, j'ai changй d'avis.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_121">
+		<text>C'est ton choix, mec. А plus !</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_21">
+		<text>Parce que ces bandits de la Libertй n'ont pas leur place dans la Zone, ils doivent кtre dйtruits. Si зa t'intйresse, va voir le Barman qui t'expliquera tout. Moi, j'ai pas le temps.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_31">
+		<text>Il faut payer 1000 roubles pour avoir un laissez-passer que tu iras montrer а l'administrateur. Il t'arrangera des tests</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_311">
+		<text>OK, voici l'argent.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_3111">
+		<text>Bien, voilа ton laissez-passer. Va voir Petrenko, l'administrateur. L'endroit est signalй sur ta carte.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_312">
+		<text>Non, j'ai changй d'avis.</text>
+	</string>
+	<string id="bar_dolg_base_guard_acces_3121">
+		<text>C'est ton choix, mec. А plus !</text>
+	</string>
+	<string id="bar_dolg_base_guard_rules_0">
+		<text>D'aprиs le Barman, ton chef aurait une mission un peu spйciale pour moi.</text>
+	</string>
+	<string id="bar_dolg_base_guard_rules_1">
+		<text>En effet, on nous a parlй de toi, mais avant de te laisser passer, tu dois connaоtre nos rиgles. Rиgle numйro 1 : il est interdit de tirer sur notre territoire. SI tu enfreins cette rиgle deux fois, nos soldats te tireront dessus. Et mкme si tu t'enfuis, nos gardes veilleront bien а ce que tu ne remettes plus jamais les pieds ici. Alors reste bien calme et t'auras aucun problиme.</text>
+	</string>
+	<string id="bar_dolg_base_guard_rules_2">
+		<text>Compris. C'est tout ?</text>
+	</string>
+	<string id="bar_dolg_base_guard_rules_3">
+		<text>Oui, c'est tout. Tu peux passer.</text>
+	</string>
+	<string id="bar_dolg_base_guard_rules_4">
+		<text>Compris. Autre chose ?</text>
+	</string>
+	<string id="bar_dolg_base_guard_rules_5">
+		<text>C'est tout. Si tu veux tenter de rejoindre le Devoir, hйsite pas. On a toujours besoin d'hommes, mais je te prйviens, avant d'accepter, tu devras exйcuter quelques missions dangereuses. Les trouillards servent а rien, alors on teste tous les candidats.</text>
+	</string>
+	<string id="bar_dolg_base_guard_start_11">
+		<text>Halte ! La base du Devoir est interdite aux йtrangers !</text>
+	</string>
+	<string id="bar_dolg_base_guard_start_21">
+		<text>Pourquoi tu restes campй lа ? Circule.</text>
+	</string>
+	<string id="bar_dolg_base_guard_start_31">
+		<text>Allez ! Faut pas oublier que la mission du Devoir est le nettoyage.</text>
+	</string>
+	<string id="bar_dolg_base_guard_talk_0">
+		<text>Pourquoi ne pas autoriser les йtrangers а entrer ?</text>
+	</string>
+	<string id="bar_dolg_base_guard_talk_1">
+		<text>D'oщ tu viens, petit naпf ? On est en guerre, non ? On se bat contre les bandits de la Libertй ! On est souvent en conflit avec leurs hommes sur les Terres abandonnйes...</text>
+	</string>
+	<string id="bar_dolg_base_guard_talk_2">
+		<text>Une guerre contre ceux de la Libertй ? Pourquoi ?</text>
+	</string>
+	<string id="bar_dolg_base_guard_talk_3">
+		<text>Parce que ces bandits de la Libertй n'ont pas leur place dans la Zone, ils doivent кtre dйtruits. Si зa t'intйresse, va voir le Barman qui t'expliquera tout. Moi, j'ai pas le temps.</text>
+	</string>
+	<string id="bar_dolg_guard_bunker_start_11">
+		<text>Halte ! Seuls les membres sont autorisйs а entrer ! Il faut un laissez-passer spйcial pour entrer dans le bunker. Pour en avoir un, va voir le Colonel Petrenko. Il est а l'administration, aprиs la cour.</text>
+	</string>
+	<string id="bar_dolg_guard_bunker_start_21">
+		<text>Pourquoi tu restes plantй lа ? Circule.</text>
+	</string>
+	<string id="bar_dolg_guard_bunker_start_31">
+		<text>Allez ! Faut pas oublier que la mission du Devoir est le nettoyage.</text>
+	</string>
+	<string id="bar_dolg_ivancov_start_11">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_dolg_ivancov_start_21">
+		<text>J'йcoute.</text>
+	</string>
+	<string id="bar_dolg_ivancov_start_31">
+		<text>Bonjour, mon ami.</text>
+	</string>
+	<string id="bar_dolg_leader_job_0">
+		<text>Qu'est-ce que je peux faire pour le Devoir ?</text>
+	</string>
+	<string id="bar_dolg_leader_job_1">
+		<text>C'est une bonne question, le Tatouй et j'ai une rйponse а la hauteur : tue les anarchistes de la Libertй. Trouve des PDA qui leur appartiennent et tu seras rйcompensй et peut-кtre mкme promu. Rapporte-les а Petrenko, c'est lui qui distribue les rйcompenses.</text>
+	</string>
+	<string id="bar_dolg_leader_join_0">
+		<text>Le Barman m'a parlй d'une mission un peu spйciale а propos des entrepфts militaires....</text>
+	</string>
+	<string id="bar_dolg_leader_join_1">
+		<text>J'aimerais te demander de faire quelque chose pour moi, OK ? On est en pleine guerre avec la faction de la Libertй et on a besoin d'armes plus puissantes. Le groupe de la Libertй possиde d'excellents lance-grenades Bulldog 6. Si tu infiltres leur base et voles au moins un de ces lance-grenades, je serai ravi de te donner une belle rйcompense. Comme t'es pas un de nфtres, ce sera facile pour toi de gagner la confiance des hommes de la Libertй et avec de la chance, tu rйcupйreras des Bulldog 6.</text>
+	</string>
+	<string id="bar_dolg_leader_join_11">
+		<text>Continue.</text>
+	</string>
+	<string id="bar_dolg_leader_join_111">
+		<text>Je vais te communiquer l'emplacement de la base de la Libertй. Tu devras trouver le Chef, un membre de la Libertй. Il sait oщ les Bulldog 6 sont entreposйs. Il aime picoler, alors pense а apporter de la vodka ! Tu vas remplir cette mission ou pas ?</text>
+	</string>
+	<string id="bar_dolg_leader_join_1111">
+		<text>OK, je vais tenter de dйrober un Bulldog 6 dans la base de la Libertй.</text>
+	</string>
+	<string id="bar_dolg_leader_join_11111">
+		<text>Oh, un dernier dйtail. Le colonel Kran et ses hommes m'ont dйsobйi en dйcidant d'attaquer la base de la Libertй sans autorisation. Et ils rйcolteront ce qu'ils ont semй... ces enfoirйs suicidaires. Ne participe pas а ce combat-lа, OK ? Rйcupиre le Bulldog 6, c'est tout ce qui compte !</text>
+	</string>
+	<string id="bar_dolg_leader_join_1112">
+		<text>Je suis pas encore prкt pour de tels exploits.</text>
+	</string>
+	<string id="bar_dolg_leader_join_11121">
+		<text>А toi de voir.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_0">
+		<text>Je veux prкter serment.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_1">
+		<text>Bien ! Rйpиte aprиs moi : "Moi, Stalker connu sous le nom du Tatouй, jure de dйfendre les objectifs et idйaux du Devoir."</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_2">
+		<text>Moi, Stalker connu sous le nom du Tatouй, jure de dйfendre les objectifs et idйaux du Devoir.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_3">
+		<text>De protйger la Terre des dangers de la Zone, de dйcouvrir et dйtruire toutes les menaces qui йmergent а l'intйrieur et au-delа de ses frontiиres.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_4">
+		<text>De protйger la Terre des dangers de la Zone, de dйcouvrir et dйtruire toutes les menaces qui йmergent а l'intйrieur et au-delа de ses frontiиres.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_5">
+		<text>De combattre les non-conformistes, mкme si ce sont des Stalkers seuls ou en groupe.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_6">
+		<text>De combattre les non-conformistes, mкme si ce sont des Stalkers seuls ou en groupe.</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_7">
+		<text>Et de sacrifier ma vie au nom de la justice et de l'ordre sur Terre !</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_8">
+		<text>Et de sacrifier ma vie au nom de la justice et de l'ordre sur Terre !</text>
+	</string>
+	<string id="bar_dolg_leader_prisyaga_9">
+		<text>Fйlicitations ! Tu es dйsormais un membre а part entiиre du Devoir.</text>
+	</string>
+	<string id="bar_dolg_leader_quest_rg6_finish_0">
+		<text>J'ai rйussi la mission. J'ai ramenй le Bulldog 6.</text>
+	</string>
+	<string id="bar_dolg_leader_quest_rg6_finish_1">
+		<text>Bien jouй, Stalker ! C'est exactement ce qu'on cherchait ! Bon, le Tatouй, comme t'as rйussi cette mission, tu peux prendre cette combinaison. Elle devrait te plaire.</text>
+	</string>
+	<string id="bar_dolg_leader_start_11">
+		<text>J'йcoute.</text>
+	</string>
+	<string id="bar_dolg_leader_start_21">
+		<text>Qu'est-ce qui t'amиne, mon ami ?</text>
+	</string>
+	<string id="bar_dolg_leader_start_31">
+		<text>Tu as ramenй le Bulldog 6 ?</text>
+	</string>
+	<string id="bar_dolg_leader_start_311">
+		<text>Oui, le voici.</text>
+	</string>
+	<string id="bar_dolg_leader_start_3111">
+		<text>Bien jouй, Stalker ! C'est exactement ce qu'on cherchait ! Bon, le Tatouй, comme t'as rйussi cette mission, tu peux prendre cette combinaison. Elle devrait te plaire.</text>
+	</string>
+	<string id="bar_dolg_leader_start_41">
+		<text>Qu'est-ce qui t'amиne, mon pote ?</text>
+	</string>
+	<string id="bar_dolg_leader_start_51">
+		<text>La guerre contre la Libertй touche а sa fin, le Tatouй. Tu as jouй ton rфle dans ce combat et maintenant, je veux en finir avec cette guerre. Je veux que tu tues le leader de la Libertй.</text>
+	</string>
+	<string id="bar_dolg_leader_start_81">
+		<text>Qu'est-ce qui t'amиne, mon ami ? Tu as tuй le leader de ces anarchistes de la Libertй et leur groupe s'est dissous. La guerre n'est pas terminйe, mais son issue ne fait plus aucun doute. Tes actions sont mйmorables et on s'en souviendra.</text>
+	</string>
+	<string id="bar_dolg_newbie_start_11">
+		<text>Bonjour, Stalker. Зa te dit de rejoindre le Devoir ? On a besoin de combattants ! Зa fait pas longtemps que j'y suis entrй et regarde un peu le super uniforme qu'ils m'ont donnй !</text>
+	</string>
+	<string id="bar_dolg_newbie_start_21">
+		<text>Bonjour, le Tatouй. Ravi que tu sois parmi nous. Le Devoir aura bientфt grand besoin de bons guerriers.</text>
+	</string>
+	<string id="bar_dolg_novice_start_2">
+		<text>Hй, cher Stalker !</text>
+	</string>
+	<string id="bar_dolg_novice_start_3">
+		<text>Parle-moi du Devoir !</text>
+	</string>
+	<string id="bar_dolg_novice_start_31">
+		<text>On est lа depuis le dйbut. Le premier groupe йtait constituй de rescapйs d'unitйs spйciales qui avaient йtй envoyйes dans la Zone pour dйcouvrir la raison de son apparition. On s'est retrouvйs dans un pйtrin sans nom et aprиs la mort atroce de la moitiй de l'unitй, les survivants ont jurй de ne quitter la Zone qu'une fois avoir compris ce qui s'y passait, qu'une fois l'avoir dйtruite.</text>
+	</string>
+	<string id="bar_dolg_novice_start_4">
+		<text>Parle-moi du groupe de la Libertй !</text>
+	</string>
+	<string id="bar_dolg_novice_start_41">
+		<text>Ce sont des voyous qui comprennent pas que la Zone est un cancer pour la Terre. Ils veulent que la Zone recouvre le monde entier, qu'elle entre dans tous les foyers. Ils feront tout pour y parvenir et j'ai hвte de les en empкcher.</text>
+	</string>
+	<string id="bar_dolg_novice_start_5">
+		<text>Tu veux dйtruire la Zone ?</text>
+	</string>
+	<string id="bar_dolg_novice_start_51">
+		<text>Oui et on arrivera а l'anйantir complиtement. Pendant les opйrations de nettoyage, de grands groupes de mutants, en chemin pour le centre de la Zone, sont йliminйs.</text>
+	</string>
+	<string id="bar_dolg_novice_start_6">
+		<text>Merci.</text>
+	</string>
+	<string id="bar_dolg_petrenko_start_11">
+		<text>J'йcoute.</text>
+	</string>
+	<string id="bar_dolg_petrenko_start_21">
+		<text>Comment je peux t'aider ?</text>
+	</string>
+	<string id="bar_dolg_petrenko_start_31">
+		<text>Bonjour, mon ami ! Qu'est-ce qui t'amиne ?</text>
+	</string>
+	<string id="bar_dolg_veteran_start_2">
+		<text>Qu'est-ce que tu veux ?</text>
+	</string>
+	<string id="bar_dolg_zastava_11">
+		<text>Allez, circule ! Qu'est-ce que tu regardes ?</text>
+	</string>
+	<string id="bar_dolg_zastava_21">
+		<text>Hй, mec ! Cool, t'as pas encore йtй dйvorй par des mutants !</text>
+	</string>
+	<string id="bar_dolg_zastava_about_zastava_0">
+		<text>Un massacre a eu lieu а l'avant-poste. Qu'est-ce qui s'est\npassй ?</text>
+	</string>
+	<string id="bar_dolg_zastava_about_zastava_1">
+		<text>C'est la derniиre vague de mutants qui est arrivйe avant le cataclysme. C'est tranquille pendant trois ou quatre jours et aprиs, d'autres arrivent. Si on n'йtait pas lа, il n'y aurait pas de bar, pas de Devoir. On est le dernier rempart face а ces mutants dйtraquйs. Beaucoup de nos gars sont morts ici.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_0">
+		<text>J'aimerais savoir quelque chose.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_1">
+		<text>Qu'est-ce que tu veux savoir ?</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_2">
+		<text>C'est la premiиre fois que je viens. Tu peux m'en dire un peu plus sur cet endroit ?</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_21">
+		<text>Avant l'accident de 86, il s'agissait d'une zone industrielle. Comme tu peux le voir, il n'en reste plus grand-chose aujourd'hui... Prиs du hangar, tu trouveras un bar souterrain, le 100 Rads. Il est tenu par un marchand du coin, йgalement barman. Si tu veux acheter quelque chose, discuter, trouver une mission ou connaоtre les derniers potins, c'est l'endroit idйal. Il y a aussi l'Arиne oщ tu peux te battre pour gagner de l'argent. La base du Devoir n'est pas trиs loin de l'Arиne. Si tu veux rejoindre le Devoir, vas-y directement ; ils t'orienteront vers le responsable. Oh, au fait, toute cette zone est protйgйe par le Devoir, alors tiens-toi bien et ne dйgaine surtout pas. Si tu te mets а tirer, la patrouille te "calmera" vite fait, bien fait.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_211">
+		<text>Tu as mentionnй un bar. Tu peux me dire oщ il se trouve exactement ?</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_2111">
+		<text>Dans le sous-sol du bвtiment derriиre le hangar... je le signale sur ta carte.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_21111">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_212">
+		<text>La base du Devoir est donc ici. Comment je m'y rends ?</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_2121">
+		<text>C'est pas loin de l'Arиne. Je t'ai mis un point de repиre sur la carte.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_21211">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_213">
+		<text>Tu as bien parlй d'une Arиne ? Elle se situe oщ exactement ?</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_2131">
+		<text>Sors du hangar avec le toit dйtruit et tu arriveras pile en face. Il y a un repиre sur ta carte.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_21311">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_dolg_zastava_talk_214">
+		<text>Merci pour l'information.</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_0">
+		<text>Je suis ici pour affaires.</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_1">
+		<text>J'en dйduis que tu veux quelque chose ?</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_11">
+		<text>J'ai abattu un porc en chemin. Il paraоt qu'il a de la valeur.</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_111">
+		<text>J'ai entendu dire que tu avais tuй Borov. Tu mйrites un peu d'argent et un flingue digne de ce nom pour cet exploit. Fais honneur а ta nouvelle arme ! </text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_1111">
+		<text>T'inquiиte pas pour зa.</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_12">
+		<text>J'ai eu une petite "discussion" avec Tyran du groupe des Mercenaires. En bref, il a compris son erreur et il a promis de mieux se tenir а l'avenir. Je suis sыr qu'il tiendra parole, puisque les morts mentent pas.</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_121">
+		<text>Tyran йtait un emmerdeur de premiиre pour nous ! C'est bien que tu l'aies liquidй. Voici ta rйcompense : un OC-14 Groza, une arme de marque.</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_1211">
+		<text>Pas mal. Je vais continuer mes exploits ! А plus !</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_13">
+		<text>Voronin t'a rien dit ?</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_131">
+		<text>Oh, fйlicitations ! Tuer le leader de la Libertй, зa tient de l'exploit ! Mon pote, j'aimerais кtre aussi costaud que toi !</text>
+	</string>
+	<string id="bar_dolg_zavskald_reward_1311">
+		<text>Alors entraоne-toi, mange des fruits et lйgumes et йcoute ta mиre ! Merci pour le nouvel йquipement. А plus !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_0">
+		<text>J'aimerais savoir quelque chose.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_1">
+		<text>Qu'est-ce que tu veux savoir ?</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_11">
+		<text>Qui t'es et comment t'es arrivй ici ?</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_111">
+		<text>Je m'appelle Kruglov. Je suis professeur de biologie et j'йtudie la Zone. Hier par exemple, j'ai trouvй un animal trиs intйressant, l'Antropomorphus Dendromutantus Vulgaris. En fait, je dйcouvre et rйpertorie les nouvelles espиces d'animaux mutants avec leurs traits caractйristiques. Ces renseignements sont ensuite minutieusement examinйs et transmis au monde extйrieur. Bien sыr, le Barman reзoit certaines de ces infos. Mes dйcouvertes ont permis de sauver les vies de nombreux Stalkers. J'emmenais les rйsultats de mes derniиres recherches au laboratoire prиs du lac de Yantar quand l'hйlicoptиre s'est fait attaquer.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_12">
+		<text>Parle-moi de la Zone !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_121">
+		<text>La Zone est une chance inouпe pour l'humanitй. Bien sыr, avoir une existence normale ici est exclu vu le niveau йlevй de radiations, les anomalies et les mutants hostiles. Tout зa reprйsente йvidemment un grand danger, mais c'est aussi une dйcouverte monumentale pour la science. La Zone est presque une expйrience naturelle, un trйsor pour les scientifiques ! L'avancйe scientifique que pourrait faire l'humanitй grвce а l'йtude de la Zone est inimaginable. On pourrait faire des dйcouvertes dans les domaines de la technologie, de la mйdecine, des plantes (mйdicinales et comestibles), de la biotechnologie, des traitements pour les maladies incurables... dans tout ! On pourrait peut-кtre mettre fin а la famine dans le monde. Si seulement les hommes n'interfйraient pas, la science pourrait faire connaоtre а l'humanitй un nouvel вge d'or !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_1211">
+		<text>Le Devoir pense autrement et mкme la Libertй semble pas кtre d'accord.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_12111">
+		<text>Il faut avoir une vision d'ensemble et pas se focaliser sur ses petits problиmes personnels. L'avenir de l'humanitй est bien plus important !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_1212">
+		<text>C'est peut-кtre utile d'йtudier la Zone.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_12121">
+		<text>Vous кtes d'accord avec зa ? C'est merveilleux de rencontrer des gens parmi vous qui ne sont pas pragmatiques et йtroits d'esprit. J'ai toujours pensй qu'il fallait envisager un problиme sous tous les angles pour avoir une vision d'ensemble, pour prendre du recul face а notre condition de simples mortels. Mкme si la Zone a fait souffrir l'humanitй, elle peut кtre d'une grande utilitй dans l'absolu !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_13">
+		<text>Pourquoi les Mercenaires cherchent cette information ?</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_131">
+		<text>J'espиre ne pas vous offenser, mais beaucoup de Stalkers sont des gamins. Ils sont profondйment affectйs par ce qu'ils dйcouvrent. Pensez а toutes ces lйgendes sur un Monolithe qui exaucerait les voeux. Foutaises ! Le problиme est que ces enfants jouent avec des armes qui tuent pour de vrai. Les gens puйrils sont souvent agacйs par le fait que quelqu'un ne partage pas tout avec eux, notamment des informations qui ne leur sont pas destinйes. Ils utilisent la force sans retenue, ils tuent sans rйflйchir tous ceux qui йtudient la Zone. Ils croient que ces infos leur permettront d'accйder au centre de la Zone. Ce sont des crйtins naпfs et dangereux !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_14">
+		<text>Je cherche le labo X16. Il se trouve oщ ?</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_141">
+		<text>Le labo X16 ? Hum... Sakharov en a dйjа parlй, mais je ne me souviens pas exactement ce qu'il en a dit. Il faut le lui demander directement... Il est dans le laboratoire mobile prиs du lac de Yantar en ce moment.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_give_info_dp_15">
+		<text>Malheureusement, je dois y aller. Bonne chance.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_101">
+		<text>Le Tatouй, arrкtez-les ou ils nous tueront !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_1011">
+		<text>Pas de panique. On s'occupe d'eux.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_10111">
+		<text>OK.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_1012">
+		<text>Avanзons. On va essayer de passer...</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_10121">
+		<text>Dйpкchons !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_11">
+		<text>Stalker, je vous en supplie ! On revenait de Yantar quand les Mercenaires ont abattu notre hйlicoptиre. Il paraоt qu'ils cherchent seulement des informations, mais je suis sыr qu'ils nous tueront. Aidez-nous а aller au lac et je vous dirai tout ce que je sais sur ce que vous appelez le lobotomisateur et le Barman vous paiera gйnйreusement.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_111">
+		<text>OK.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_1111">
+		<text>Merci, Stalker. J'ai rien d'un guerrier, mais je connais le chemin. Alors je vous guide et vous nous couvrez.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_112">
+		<text>Non, essaie de sortir d'ici par tes propres moyens.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_1121">
+		<text>Non, vous le pensez pas. J'arriverai jamais а sortir d'ici sans votre aide. Si vous changez d'avis, je serai lа... si je suis toujours en vie.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_21">
+		<text>Vite, il faut qu'on sorte d'ici rapidement !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_31">
+		<text>Ouf ! On a rйussi а se mettre en sйcuritй ? Enfin ! Merci beaucoup pour votre aide. Je vous suis redevable ; veuillez accepter cette clй USB. Elle contient les rйsultats de ma derniиre expйdition. Je suis sыr que le Barman vous en donnera un bon prix.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_311">
+		<text>Oui, on y est.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_3111">
+		<text>Le Tatouй, si vous voulez visiter notre laboratoire mobile, on vous fournira une combinaison.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_31111">
+		<text>On verra.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_41">
+		<text>Bonjour, Stalker. Permettez-moi de vous exprimer toute ma gratitude au nom de la science !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_51">
+		<text>Le Tatouй, arrкtez-les ou ils nous tueront !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_511">
+		<text>Du calme ! Je m'occupe d'eux.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_5111">
+		<text>OK.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_512">
+		<text>Avanзons. On va essayer de passer...</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_5121">
+		<text>Allons-y !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_61">
+		<text>Le Tatouй, arrкtez-les ou ils nous tueront !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_611">
+		<text>Pas de panique ! On s'occupe d'eux.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_6111">
+		<text>OK, je reste ici.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_612">
+		<text>Avanзons. On va essayer de passer...</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_6121">
+		<text>Dйpкchons !</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_71">
+		<text>Attention а la colonne de feu, le Tatouй. Ma combinaison me protйgera, mais vous, vous avez tout intйrкt а l'йviter.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_711">
+		<text>Merci pour le conseil.</text>
+	</string>
+	<string id="bar_ecolog_crush_professor_start_91">
+		<text>Vite, le Tatouй. On n'a pas le temps de discuter.</text>
+	</string>
+	<string id="bar_ecolog_dialog_11">
+		<text>Stalker, allez parler au professeur Kruglov. Aidez-le а sortir.</text>
+	</string>
+	<string id="bar_ecolog_dialog_21">
+		<text>C'est fini. Ils ont tuй Kruglov !</text>
+	</string>
+</string_table>

@@ -1,0 +1,75 @@
+	<string id="bar_darklab_documents_txt">
+		<text>Barman: "D'après les documents que tu as rapportés d'Agroprom, les choses sont plus claires, mais il manque encore des données. Il y aurait un lobotomisateur qui bloquerait la route menant au nord, mais on n'en sait pas plus. Il y est aussi question d'un Labo X18 dont la description correspond aux structures souterraines abandonnées de la Vallée obscure. Rien sur les activités qui s'y déroulent et en plus, des bandits viennent d'installer leur base dans la Vallée obscure.\n Plusieurs éclaireurs du Devoir y sont allés récemment, mais pas de nouvelles pour le moment.\n Pour t'introduire dans le labo, il va te falloir deux clés électroniques ; je t'en donnerai une. Quant à la deuxième, tu devras la dérober à Borov Le Sanglier, le chef des bandits. \n\n Après t'être procuré cette deuxième clé, introduis-toi dans le labo et récupère les documents.</text>
+	</string>
+	<string id="bar_darklab_documents2_txt">
+		<text>Il faut à tout prix trouver les documents relatifs aux recherches précédemment menées dans le Labo X-18. Elles nous en diront plus sur le "lobotomisateur".</text>
+	</string>
+	<string id="dar_codedoor_1_txt">
+		<text>Une serrure à combinaisons bloque l'entrée aux profondeurs du laboratoire. Tu dois trouver quelqu'un qui connaît la bonne combinaison.</text>
+	</string>
+	<string id="dar_codedoor_2_txt">
+		<text>Il y a une autre porte qui doit certainement cacher quelque chose. Tu dois découvrir le code qui ouvre cette porte.</text>
+	</string>
+	<string id="dar_document1">
+		<text>Le début de l'expérience</text>
+	</string>
+	<string id="dar_document2">
+		<text>La seconde phase de l'expérience</text>
+	</string>
+	<string id="dar_document3">
+		<text>Rapport de sécurité</text>
+	</string>
+	<string id="dar_document4">
+		<text>Attaque du personnel</text>
+	</string>
+	<string id="dar_document5">
+		<text>La dernière phase de l'expérience</text>
+	</string>
+	<string id="documents_1">
+		<text>Voilà une semaine, il a été décidé d'augmenter l'intensité des radiations sur les cobayes. Aucun changement n'a été détecté lors des premiers jours. Après plusieurs jours, d'étranges métamorphoses ont commencé à se manifester : perte de cheveux, accès d'agressivité. Plusieurs cobayes ont été littéralement piétinés par leurs pairs.</text>
+	</string>
+	<string id="documents_2">
+		<text>L'état des cobayes s'est stabilisé. Leurs cheveux ont repoussé de 10 %. Leurs griffes et leurs dents ont considérablement poussé. Des accès d'activité ont mis en évidence un comportement aléatoire. L'expert du laboratoire, A.N. Burnov, pense qu'il peut s'agir d'une amélioration de l'intellect des cobayes. Il a été décidé de tester la nouvelle modulation d'émissions psi sur les cobayes.</text>
+	</string>
+	<string id="documents_3">
+		<text>Chef de la sécurité : Hier, le garde G.P. Glebov a lancé, pour s'amuser, un morceau de viande aux cobayes. Ces derniers l'ont déchiré et dévoré en quelques secondes à peine. Ensuite, plusieurs individus ont tenté de s'échapper de leurs cellules. Dans un tel contexte, les techniciens du laboratoire n'ont pas pu prélever les échantillons nécessaires. Malgré le geste peu réfléchi de G.P. Glebov, je propose que le personnel de maintenant soit équipé des systèmes de protection qui s'imposent en cas d'urgences.</text>
+	</string>
+	<string id="documents_4">
+		<text>Chef de la sécurité : L'expérience d'hier s'est révélée catastrophique. Plus d'une vingtaine de cobayes se sont échappés et ont saccagé deux salles du laboratoire. Heureusement, les chercheurs ont réussi à s'enfermer à l'étage. On nous a ordonnés de nettoyer la salle principale du laboratoire. Au cours de l'opération, trois gardes ont été victimes de morsures. J'espère qu'ils vont se remettre et j'ai hâte que cette expérience se termine.</text>
+	</string>
+	<string id="documents_5">
+		<text>Hier, nous avons administré aux cobayes une nouvelle modulation d'émissions psi. Ça leur a grillé le cerveau. Je n'ose même pas imaginer les conséquences que cela pourrait avoir sur des humains. Nous avons testé chaque type d'émissions et les résultats correspondent à ceux des autres laboratoires. L'expérience peut à présent être considérée comme terminée. De toute évidence, d'ici une semaine, nous devrions être en mesure de mener cette expérience sur de plus grosses créatures.</text>
+	</string>
+	<string id="LabX18 first key">
+		<text>Code d'accès au 2e étage</text>
+	</string>
+	<string id="LabX18 second key">
+		<text>Code d'accès au 1er étage</text>
+	</string>
+	<string id="LabX18_information">
+		<text>Informations issues du X18</text>
+	</string>
+	<string id="pass_to_1st_door">
+		<text>Parfait, cher collègue. Je suis ravi que vous ayez obtenu l'accès au 2e étage. Vous allez enfin savoir ce qui se passe dans notre laboratoire. Votre code d'accès est le 1243. Responsable du Laboratoire X-18, Piotr Ilyitch Kalugin.</text>
+	</string>
+	<string id="pass_to_2nd_door">
+		<text>Cher collègue, Puis-je vous rappeler qu'à partir de demain, vous vous occuperez du conteneur situé dans la salle du laboratoire central. Vous devrez l'inspecter toutes les deux heures et me tenir informé de la situation. Le code d'accès à la salle du laboratoire central est le 9524. Responsable du Laboratoire X18, Piotr Ilyitch Kalugin.</text>
+	</string>
+	<string id="sl_x18_dream_name">
+		<text>Un rêve bizarre</text>
+	</string>
+	<string id="sl_x18_dream_text">
+		<text>J'ai fait un rêve bizarre. La centrale nucléaire de Tchernobyl émerge dans le crépuscule. Tout est paisible. Un homme apparaît. Je le vois de dos, devant la centrale. Le vent se lève. Soudain, des hordes de rats surgissent de la centrale en courant dans toutes les directions. L'homme, toujours de dos, tire sur les rats. Puis, on entend un cri : "Strelok !". L'homme tressaille, s'immobilise un moment, puis se retourne lentement dans ma direction, mais... juste au moment où j'allais voir son visage, je me suis réveillé. Quelle est la signification de ce rêve ? Je l'ignore, mais je pense que j'ai déjà vécu cette scène.</text>
+	</string>
+	<string id="val_captive_help_txt">
+		<text>Cartouche, un membre du Devoir, veut que je libère son partenaire capturé par les bandits. Il va bientôt être escorté jusqu'à l'usine désaffectée.</text>
+	</string>
+	<string id="val_prisoner_help_art_txt">
+		<text>Membre du Devoir : "Ils ont encore capturé un des nôtres : Serega. Ils l'ont enfermé dans une cellule... Il y a un grand bâtiment... pas fini... Va l'aider, OK ? Ou ils vont le tuer, lui aussi..."</text>
+	</string>
+	<string id="val_x18_conclusion">
+		<text>Labo X18</text>
+	</string>
+	<string id="val_x18_conclusion_txt">
+		<text>Bon sang... Quelle galère, ce labo X18 !... Sans compter ses occupants... Comment ça peut exister des choses pareilles ? J'ai trouvé des documents... Je n'y ai pas compris grand-chose, sauf qu'ils contenaient les spécifications techniques de composants d'émetteurs de Kaymanov. L'important, c'est que ces pièces étaient destinées à un autre labo portant le nom de code X16, encore un labo secret, j'imagine.</text>
+	</string>

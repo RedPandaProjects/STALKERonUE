@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_factory_krot_start_0">
+		<text>Grazie per l'aiuto, stalker! Se non fossi arrivato tu, ora sarei un uomo morto.</text>
+	</string>
+	<string id="agr_factory_krot_start_10001">
+		<text>Sto cercando informazioni a proposito di Strelok, forse sai dirmi qualcosa?</text>
+	</string>
+	<string id="agr_factory_krot_start_10002">
+		<text>Come faccio a entrare nello scantinato?</text>
+	</string>
+	<string id="agr_factory_krot_start_15001">
+		<text>Il nascondiglio di Strelok?</text>
+	</string>
+	<string id="agr_factory_krot_start_15002">
+		<text>Grazie per l'informazione.</text>
+	</string>
+	<string id="agr_factory_krot_start_1501">
+		<text>Sм, ne ho sentito parlare. Dicono anche che "lavorasse" da queste parti e che il suo nascondiglio si trovi negli scantinati. Secondo alcune voci anche la base del gruppo si trovava qui.</text>
+	</string>
+	<string id="agr_factory_krot_start_1502">
+		<text>Questa и una delle tante uscite che conducono alla rete di scantinati. Una volta entrato, sarai solo; non ho una mappa e la rete и enorme e intricatissima.</text>
+	</string>
+	<string id="agr_factory_krot_start_2">
+		<text>Sto cercando informazioni a proposito di Strelok. Seriy, dimmi qualcosa su di lui.</text>
+	</string>
+	<string id="agr_factory_krot_start_30001">
+		<text>Grazie.</text>
+	</string>
+	<string id="agr_factory_krot_start_3001">
+		<text>Giа, l'abbiamo cercato anche noi, ma non siamo riusciti a trovarlo. Ti manderт alcune informazioni a riguardo. И tutto quello che sappiamo sul nascondiglio.</text>
+	</string>
+	<string id="agr_factory_stalker_about_0">
+		<text>Che succede qui?</text>
+	</string>
+	<string id="agr_factory_stalker_about_1">
+		<text>Combattiamo, o per meglio dire, ce ne stiamo accampati a fare da bersagli. Parla con la Talpa, se vuoi saperne di piщ. И lui il capo.</text>
+	</string>
+	<string id="agr_factory_stalker_start_0">
+		<text>Accidenti, che battaglia! Roba che non augureresti al tuo peggior nemico. Quei soldati stanno diventando un po' troppo arroganti!</text>
+	</string>
+	<string id="agr_krot_about_agroprom_0">
+		<text>Dove si trova l'istituto di ricerca Agroprom?</text>
+	</string>
+	<string id="agr_krot_about_agroprom_10">
+		<text>Non lontano da qui. Segui la strada verso ovest e arriverai ai cancelli dell'istituto.</text>
+	</string>
+	<string id="agr_krot_about_agroprom_100">
+		<text>Ho sentito dire che i militari hanno allestito una base laggiщ?</text>
+	</string>
+	<string id="agr_krot_about_agroprom_120">
+		<text>Grazie per l'informazione.</text>
+	</string>
+	<string id="agr_krot_about_agroprom_20">
+		<text>Sм, c'и una base militare. Non so esattamente quanti uomini ci siano, ma almeno un plotone. Sono ben armati e non c'и la minima possibilitа di passare. Ti faranno fuori prima che tu riesca a dire: "Ehilа commilitoni". Il modo migliore per raggiungerla и muoversi di notte, perchй di giorno la base и sotto stretta sorveglianza; ci sono posti di guardia dappertutto, perт ho sentito dire che un disertore proveniente da quella base si nasconde nella palude. Se riesci a trovarlo, potrai sicuramente strappargli qualche informazione utile.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_0">
+		<text>Che sta succedendo?</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_100">
+		<text>I miei ragazzi ed io abbiamo trovato un territorio pieno di reperti, ma quei bastardi di militari ci hanno attaccato per qualche motivo. Non so proprio che diavolo volessero da noi...</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_200">
+		<text>Sм, ho sentito parlare di lui. Credo si guadagnasse da vivere in questa zona; и un bel posto in effetti. Se n'и andato tanto tempo fa. Non so esattamente quando, e non ho idea di dove si sia diretto. Non so dirti altro.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_2000">
+		<text>Non sei rimasto ad aspettare senza motivo, vero? Altrimenti perchй mai sono arrivati gli Spetsnaz?</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_250">
+		<text>D'accordo, qualcosa la so a proposito di Strelok.</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_2500">
+		<text>Davvero? Devi dirmi tutto quello che sai!</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_3500">
+		<text>Se mi hai mentito, verrт a scovarti e finirт quello che i soldati hanno lasciato in sospeso!</text>
+	</string>
+	<string id="agr_krot_actor_hasnot_met_seriy_400">
+		<text>Non sto mentendo. So che non ci si puт fidare di nessuno qui, quindi non hai scelta.</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_100">
+		<text>Seriy? Allora, stammi a sentire. Dicono che Strelok si aggirasse da queste parti. Per giunta il suo nascondiglio si trova da qualche parte sotto terra. Ho sentito dire che il suo gruppo ha la propria base qui. Abbiamo cercato il nascondiglio ma non abbiamo trovato un cazzo di niente. Ti passo le informazioni sul nascondiglio, magari sarai piщ fortunato. И tutto quello che sappiamo.</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_2000">
+		<text>Cos'altro sai?</text>
+	</string>
+	<string id="agr_krot_actor_met_seriy_250">
+		<text>Non so nient'altro, ti ho detto tutto quello che sapevo, e ora te la devi vedere da solo. Buona fortuna, amico.</text>
+	</string>
+	<string id="agr_krot_help_0">
+		<text>Aiutami, stalker!!!</text>
+	</string>
+	<string id="agr_krot_help_10">
+		<text>D'accordo.</text>
+	</string>
+	<string id="agr_ratcatcher_start_0">
+		<text>Non sparare, amico!</text>
+	</string>
+	<string id="agr_stalker_esc_0">
+		<text>Cosa stai facendo?</text>
+	</string>
+	<string id="agr_stalker_esc_20">
+		<text>Sto tornando dalla fabbrica in fondo alla strada. Non so come, ma l'esercito ha scoperto il nostro gruppo. Non sono stato ad aspettare che si facessero vivi e me la sono filata il piщ velocemente possibile. Spero che i nostri siano riusciti a scappare, perchй altrimenti non gli resterа molto da vivere. Li hai visti anche tu gli elicotteri.</text>
+	</string>
+	<string id="agr_stalker_esc_300">
+		<text>Capisco, grazie.</text>
+	</string>
+	<string id="agr_stalker_esc_400">
+		<text>Capisco, grazie.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_0">
+		<text>Ho un paio di domande da farti.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_10">
+		<text>Che cosa vuoi sapere?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_1000">
+		<text>C'и qualcosa di interessante in quell'area?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_120">
+		<text>Quanto ti serve?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_130">
+		<text>Ecco, prendi i soldi. Ora dimmi dove si trova.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_131">
+		<text>Vaffanculo!</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_140">
+		<text>Grazie.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_20">
+		<text>Sм, ci sono un paio di posti, ma dovrai sborsare un po' di soldini, bello.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_21">
+		<text>Prima era un posto abbastanza tranquillo, ma ora l'esercito и andato su di giri e ha iniziato a far fuori chiunque. Ultimamente hanno fatto fuori i banditi e ho sentito dire che alcuni sono riusciti a scappare nelle catacombe.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_30">
+		<text>Facciamo trenta, ci stai?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_40">
+		<text>L'uscita dalla galleria della ferrovia и vicina. Il vicolo cieco и un posto abbastanza sicuro. Lм nessuno и mai stato divorato nel sonno... non ancora, almeno. A nordovest della fabbrica troverai una palude con un gabbiotto. Ti ci puoi infilare tranquillamente. L'unico problema и che quel posto и radioattivo da fare schifo, quindi и meglio avvicinarsi dal lato occidentale. Ah, un'altra cosa: и stato visto aggirarsi un soldato da quelle parti. И probabile che provenga dalla base militare dell'istituto. Quel poveraccio dev'essere completamente pazzo, и stato lм per un paio di giorni e dubito che gli resti molto da vivere.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher_9999">
+		<text>Arrivederci!</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_0">
+		<text>Succede niente di interessante qui?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1">
+		<text>Conosci l'Acchiappatopi? L'informazione ti costerа 30 sacchi.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_11">
+		<text>Affare fatto.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_111">
+		<text>Abbiamo un eroe locale qui, noto come l'Acchiappatopi. Vive nella palude. Quel tipo ha allevato cosм tanti ratti nei collettori che presto si divoreranno quei bastardi di militari.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1111">
+		<text>Perfetto. Grazie.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_1112">
+		<text>Raccontami di questi collettori.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_11121">
+		<text>I collettori non sono altro che una merdosa fogna comune che porta i rifiuti dell'istituto fino alla cisterna d'acqua piщ vicina.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_111211">
+		<text>Perfetto. Ci vediamo e stammi bene.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_12">
+		<text>Lo so giа. Grazie.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_121">
+		<text>Non ho altro da dirti.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_13">
+		<text>Non ho abbastanza soldi.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_14">
+		<text>Non sono interessato.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_3">
+		<text>Succede niente di interessante qui?</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_31">
+		<text>Niente. Assolutamente niente.</text>
+	</string>
+	<string id="agr_stalker_talk_about_ratcatcher1_311">
+		<text>Capisco. Arrivederci!</text>
+	</string>
+	<string id="agr_stalker_talk_level_0">
+		<text>Raccontami qualcosa di questo posto.</text>
+	</string>
+	<string id="agr_stalker_talk_level_1">
+		<text>Questa и l'area attorno all'istituto di ricerca Agroprom. L'istituto si trova a sudovest. La fabbrica, che serviva da impianto produttivo per l'istituto, и a nord. Gli edifici sono abbandonati da molto tempo e non c'и piщ niente all'interno, ma di recente l'esercito vi ha compiuto numerose ricerche.</text>
+	</string>
+	<string id="agr_stalker_talk_level_2">
+		<text>Raccontami dell'istituto.</text>
+	</string>
+	<string id="agr_stalker_talk_level_21">
+		<text>Esistono moltissime leggende sull'istituto. Prima dell'incidente del 1986, c'era solo l'Istituto di Genetica e Sperimentazione Agraria. L'area in cui oggi sorge la fabbrica veniva usata per la sperimentazione delle colture. Dopo l'incidente, l'istituto и stato chiuso e i campi bruciati. Poi se ne sono ricordati, hanno imbiancato l'edificio, eretto una recinzione e costruito alcune baracche. Non so cosa facessero nell'Istituto ma non avevano certo problemi di fondi, questo и sicuro.</text>
+	</string>
+	<string id="agr_stalker_talk_level_3">
+		<text>Raccontami della fabbrica.</text>
+	</string>
+	<string id="agr_stalker_talk_level_31">
+		<text>La fabbrica fu costruita alla fine degli anni 80. Dicevano che sarebbe servita alla costruzione e sperimentazione di macchine per il trattamento di terreni contaminati dalle radiazioni. Per quanto ne so, nessuno ha mai visto uscire una sola macchina da quello stabilimento. Ora и completamento vuoto, e questo ne fa un posto perfetto per gli stalker. Pare che sia abbastanza sicuro purchй stai alla larga dagli angoli bui.</text>
+	</string>
+	<string id="agr_stalker_talk_level_4">
+		<text>Grazie.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_0">
+		<text>Cosa stai facendo?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_10">
+		<text>Mi nascondo qui, non voglio guai.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_100">
+		<text>Da chi ti stai nascondendo?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_120">
+		<text>Catacombe?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_130">
+		<text>Sai dove conservano i documenti all'istituto?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_140">
+		<text>Cosa farai adesso?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_141">
+		<text>Cosa farai adesso?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_20">
+		<text>Faccio parte dell'unitа di ricognizione. Ci hanno inviato nelle catacombe per vedere cosa succede sotto la base. Beh, lascia che te lo dica, и un inferno laggiщ. Sono l'unico che и riuscito a salvarsi... Tutti gli altri ormai saranno cibo per i vermi. Non voglio tornare alla base, quei bastardi ci usano sempre come tappabuchi in questa Zona di merda.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_30">
+		<text>Gallerie sotterranee. Vanno dall'istituto alla zona circostante. Ti mostrerт le entrate. Non ho delle mappe delle catacombe.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_40">
+		<text>Nel quartier generale. Al secondo piano dell'Istituto. И lм che tengono quei maledetti documenti. Ma и un'impresa arrivarci. Di giorno l'area brulica di pattuglie, di notte и meno sorvegliata. Te lo dico gratis: se vuoi entrare, devi passare dalle catacombe, non hai nessuna possibilitа di passare dal cancello.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks_50">
+		<text>Mmm. Non so. Per il codice militare sono un disertore e devo trovare il modo di uscire dalla Zona. Quando siamo arrivati qui, in garage c'era una Zaporozhets che non funzionava. Sono riuscito a metterla in moto in mezz'ora, ma quel capitano del cazzo se l'и presa dicendo che gli apparteneva in base al codice. L'ha guidata lungo una strada nei paraggi e l'ha mollata sotto la pioggia vicino al cancello. Se solo riuscissi ad avere quella macchina. Tentare la fuga и molto piщ sicuro su quattro ruote!</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0">
+		<text>Salve.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01">
+		<text>Come va?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_011">
+		<text>Raccontami del collettore. Come faccio a entrarci? Dove sono le entrate e le uscite?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0111">
+		<text>L'interno del collettore и pericoloso. Ci sono sei entrate, due delle quali si trovano nell'area intorno all'Istituto dove i militari hanno allestito una base. Quell'area и sorvegliata e il capitano organizza i turni di guardia nella sua armeria.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01111">
+		<text>Come fai a sapere tutte queste cose?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_011111">
+		<text>Me le hanno dette i topi.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0111111">
+		<text>Capisco. Arrivederci e buona fortuna!</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_012">
+		<text>Di niente. Ci vediamo.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_013">
+		<text>Chi sei tu?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0134">
+		<text>Io vivo qui, se questa si puт chiamare vita. Allevo i topi nel collettore per disturbare i militari all'istituto.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_0135">
+		<text>Sono l'Acchiappatopi.</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_01351">
+		<text>Che ci fai nella palude?</text>
+	</string>
+	<string id="agr_swamp_ratcatcher_talks1_123">
+		<text>Oh... capisco...ho sbagliato storia. Ah-ah-ah...</text>
+	</string>
+</string_table>

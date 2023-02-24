@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>Mich verfolgt eine Zahl, als stamme sie aus einem vorherigen Leben. Ich kannte sie, als ich nicht glaubte ... Jetzt erinnere ich mich daran - 342089. Es ist der Code einer Tür, aber ich erinnere mich nicht an den Weg zur Tür.</text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>Monolithen-PDA</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>Der tote Wissenschaftler trug eine Karte bei sich, auf der eine Tür markiert war. Code 1287975</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Verschlossene Tür</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Wirt: "Hier sind alle total durchgedreht, als sie davon erfuhren! Jeder einzelne machte sich auf den Weg zum Zentrum der Zone: Solitärstalker, Freiheitsanhänger, Wächter, sogar Söldner. Wer als erster dort ankommt, bekommt alles! Der Wunschgönner, eine Goldgrube voller Artefakte und weiß der Schinder was sonst noch. Beeil dich! Wenn sich der Gönner tatsächlich unter dem Mantel befindet, wird er dem ersten, der ihn erreicht, seine Wünsche erfüllen. Im Moment sammelt sich eine Einheit von Veteranen vor Prypjat. Wenn du dich beeilst, kannst du noch mit ihnen aufbrechen."</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>Ich habe den Schmelzer abgeschaltet. Aus irgendeinem Grund habe ich dabei das Bewusstsein verloren. Dann hatte ich einen Traum: Ich sah das große Atomkraftwerk in Tschernobyl und den Mantel. Ein helles Zucken und ich sehe den leuchtenden Monolithen unter dem Mantel. Ich glaube, dass dies der Wunschgönner ist. Ein Stalker, erschöpft und in Lumpen verhüllt, streckt entkräftet seine Hand danach aus ... ein weiteres helles Zucken und ich sehe einen Teil meines ersten Traums ... ein Mann steht mit dem Rücken zu mir und schießt unentwegt. Jemand schreit "Strelok". Der Mann schaudert, bleibt einen Moment regungslos stehen und beginnt sich langsam umzudrehen ... aber die Bilder sind verdreht, als würde man einen Film rückwärts abspielen, und dann sehe ich, wie er die Ratten mit seiner Waffe in den Reaktor zurück drängt ... ich war schon mal dort. Ich muss zum Monolithen.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>Der Schmelzer wäre erledigt.</text>
+	</string>

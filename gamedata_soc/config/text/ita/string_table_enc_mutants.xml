@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Blind">
+		<text>Cane cieco</text>
+	</string>
+	<string id="Bloodsucker">
+		<text>Succhiasangue</text>
+	</string>
+	<string id="Boar">
+		<text>Cinghiale</text>
+	</string>
+	<string id="Crow">
+		<text>Corvo</text>
+	</string>
+	<string id="enc_mutant_blind_general">
+		<text>Dalla catastrofe in poi, si sono succedute parecchie generazioni di cani di diverse specie. Ognuna di loro subiva l'influenza della Zona piщ della precedente. La rapiditа della mutazione ha portato a un notevole miglioramento di abilitа che in precedenza erano marginali, spesso a spese delle abilitа primarie. Il cambiamento biologico piщ evidente и stato la perdita della vista, abbinata a uno straordinario sviluppo dell'olfatto. Si и notato quindi che i cuccioli ciechi sopravvivevano all'interno della Zona come quelli normali, se non meglio. Di conseguenza, il cane comune si и rapidamente estinto all'interno della Zona, dando spazio a una nuova razza: quella dei cani ciechi. Gli animali identificano ed evitano istintivamente anomalie, radiazioni e altri pericoli invisibili che infestano la Zona. Come i loro antenati selvatici, i lupi, i cani ciechi cacciano in branchi. L'incontro con un gruppo numeroso di questi animali puт essere pericoloso anche per gli stalker piщ esperti e bene armati.</text>
+	</string>
+	<string id="enc_mutant_bloodsucker_general">
+		<text>Gli stalker esperti descrivono questa bestia semi-leggendaria come un umanoide alto e curvo, con un gran numero di tentacoli al posto della bocca. A detta di chi l'ha vista ed и sopravvissuto all'incontro, questa creatura usa i tentacoli per afferrare la vittima alla gola, paralizzarla e succhiarne il sangue fino all'ultima goccia, riducendo quello che era un essere vivente a un guscio secco e mummificato. La caratteristica piщ sorprendente del succhiasangue и perт la sua capacitа di rendersi invisibile. Si dice che un numero impressionante di stalker morti o dispersi siano stati vittima della morsa di uno spietato succhiasangue. I racconti da brivido dei pochi e fortunati sopravvissuti parlano di paludi e zone sotterranee infestate da questi "Conti Dracula" in versione Zona.</text>
+	</string>
+	<string id="enc_mutant_boar_general">
+		<text>Un animale mutante di grandi dimensioni, che puт raggiungere anche i 150 cm alla spalla. L'aggressivitа dei cinghiali della Zona e la loro capacitа di sopravvivenza superano di gran lunga quelle dei loro simili che vivono al di fuori dell'area contaminata. Radiazioni e anomalie hanno lasciato il segno anche sull'aspetto fisico dell'animale: in alcuni punti del corpo, il pelo и assente mentre in altri cresce a ciuffi lunghi e ispidi. Gli zoccoli si sono trasformati in artigli robusti e affilati, le pupille hanno perso colore e la testa completamente priva di pelo и sfigurata da pigmentazioni irregolari e profonde rughe. I cinghiali della Zona tollerano bene le radiazioni e possono resistere in aree altamente contaminate per periodi prolungati. Di solito attaccano le loro vittime cercando di farle cadere a terra per poterle dilaniare.</text>
+	</string>
+	<string id="enc_mutant_crow_general">
+		<text>L'unica specie di uccelli sopravvissuta nella Zona, sopportando livelli sempre piщ elevati di radiazioni ed evitando efficacemente le anomalie. Mentre i piloti militari devono affidarsi a complessi sistemi di rilevamento per evitare le turbolenze gravitazionali, il corvo sembra affidarsi solo ai propri sensi: un mistero che sta facendo impazzire biologi e ornitologi. Esistono varie teorie che tentano di spiegare questo fenomeno, ma tutte convergono sull'ipotesi di uno sviluppo altamente specializzato del cervello dell'animale.</text>
+	</string>
+	<string id="enc_mutant_flesh_general">
+		<text>Come molte altre creature che vivono nella Zona, anche il maiale domestico ha subito profonde trasformazioni biologiche dal giorno della catastrofe. Sembra che in questo caso siano stati particolarmente colpiti i geni responsabili del metabolismo. I maiali mutanti, noti tra gli stalker come mostri carnivori, sono uno degli esempi piщ evidenti del disastroso stravolgimento subito dalla natura nella Zona: hanno sviluppato uno strato protettivo di squame e placche sull'esoscheletro. Il loro potenziale di rigenerazione и aumentato di molte volte, cosм come la complessitа del loro sistema nervoso. Proprio come i maiali normali, questi mostri sono onnivori e se sono affamati possono anche attaccare uno stalker.</text>
+	</string>
+	<string id="enc_mutant_poltergeist_general">
+		<text>Per alcuni sono creature soprannaturali e invisibili, che infestano il cuore della Zona soprattutto gli edifici piщ vecchi e abbandonati. Non si sa nulla delle loro origini, sebbene in base ad alcune voci sarebbero spiriti di stalker colpiti da un'ondata massiccia di radiazioni. Compaiono e scompaiono misteriosamente, come i leggendari poltergeist, da cui ha origine il loro nome. A dire il vero, gli incontri documentati con i poltergeist hanno caratteristiche ben diverse: da risate maligne a ululati terrificanti a letali sfere infuocate che compaiono dal nulla. Purtroppo, tutte le informazioni sul fenomeno dei poltergeist derivano da racconti confusi e contraddittori, di discutibile validitа.</text>
+	</string>
+	<string id="enc_mutant_pseudodog_general">
+		<text>A dispetto del nome, gli pseudocani si sono evoluti dai lupi: gli animali che popolavano le foreste al tempo della catastrofe hanno dato origine a una delle specie mutanti piщ pericolose della Zona. Gli pseudocani si differenziano dai cani mutanti quanto i lupi selvatici dai barboncini. Queste creature segnano e proteggono il loro territorio molto attentamente e attaccano chiunque sia abbastanza stupido da avventurarsi in piena vista sul loro terreno. I loro riflessi fulminei, la sorprendente agilitа e i denti affilatissimi fanno dello pseudocane un nemico temibilissimo anche per i mutanti di grosse dimensioni e gli stalker ben armati.</text>
+	</string>
+	<string id="enc_mutant_pseudogiant_general">
+		<text>Lo pseudogigante somiglia a un immenso ventre a forma di goccia con un paio di arti sproporzionatamente grandi. Questi arti fungono insieme da braccia e gambe e vengono utilizzati da questa creatura per spostarsi e afferrare le sue vittime. Uno pseudogigante adulto puт pesare fino a due tonnellate e misurare 2 metri di altezza in posizione eretta. La sua goffaggine puт essere fuorviante, dal momento che in caso di necessitа si muove molto rapidamente. Hanno muscoli eccezionalmente potenti e ossa dure come l'acciaio. Il cervello della creatura и protetto da un solido teschio (spesso fino a 10 centimetri), mentre molte funzioni complesse sono controllate dal midollo spinale. Un'altra caratteristica strabiliante di questa bestia и la sua capacitа di creare onde d'urto localizzate che danneggiano tutti gli esseri viventi nelle vicinanze.</text>
+	</string>
+	<string id="enc_mutant_snork_general">
+		<text>Sembra che queste creature fino a un certo punto siano state umane, sebbene sia difficile immaginare quali condizioni possano aver trasformato un essere umano in una bestia cosм disgustosa. Gli snork sono creature folli che conducono una vita selvaggia e sono ben poco diversi dalle altre creature carnivore della Zona. Si muovono a quattro zampe in lunghi balzi, annusando costantemente il terreno nella speranza di trovare le tracce di una preda. Sono cacciatori cauti, agiscono in modo calcolato e spesso tendono imboscate alle vittime. Grazie agli straordinari riflessi e ai muscoli potenti, gli snork riescono ad avvicinarsi alla vittima, a bloccarla con un salto lungo e preciso e a dilaniarla nel giro di pochi secondi. A volte sui loro corpi si trovano brandelli di uniformi o di altri capi di vestiario. И ragionevole pensare che sia tutto ciт che rimane di molti stalker militari dispersi.</text>
+	</string>
+	<string id="enc_mutant_tushkano">
+		<text>In effetti, questi animali non hanno niente in comune con i gerboa, nonostante la netta somiglianza. I tentativi di stabilire da quale specie il roditore si sia evoluto non hanno portato ancora a nulla, anche si deve trattare di un roditore gregario. Raggiungono i 40 cm di altezza alla spalla e sono molto piщ agili, aggressivi e famelici dei loro cugini che popolano il deserto. I roditori mutanti vivono principalmente nei seminterrati degli edifici distrutti, si cibano di tutto quello che trovano, dalle piante agli stalker piщ imprudenti. Di tanto in tanto, un branco di roditori puт attaccare e uccidere animali e mutanti di grossa taglia, facendoli a pezzi prima che abbiano la possibilitа di fuggire.</text>
+	</string>
+	<string id="enc_mutant_zombie_general">
+		<text>Il Bruciacervella priva le sue vittime della mente e della ragione, riducendole a tanti gusci vuoti. I corpi privi di cervello si trasformano in zombie, animati solo dagli istinti piщ elementari, che vagano senza scopo nella Zona privi di armi o di vestiti. Gli zombie sono poco piщ che cadaveri semoventi, preoccupati solo di riuscire a mangiare e dormire. Mangiano e bevono quasi qualsiasi cosa capiti loro sotto mano, quindi sono con tutta probabilitа un ricettacolo di radiazioni e di scorie tossiche. Di solito battono la Zona senza alcuno scopo apparente oppure giacciono come morti all'interno di edifici abbandonati, ma appena avvertono la presenza di un essere umano reagiscono attaccando immediatamente. Gli stalker esperti hanno imparato ad evitarli se appena possono.</text>
+	</string>
+	<string id="Flesh">
+		<text>Mostro carn.</text>
+	</string>
+	<string id="General">
+		<text>Informazioni generiche</text>
+	</string>
+	<string id="mutant_boar_leg">
+		<text>Zoccolo di cinghiale</text>
+	</string>
+	<string id="mutant_boar_leg_description">
+		<text>Gli zoccoli di cinghiale si possono usare per realizzare numerosi farmaci, fra cui un siero antiradiazioni.</text>
+	</string>
+	<string id="mutant_dog_tail">
+		<text>Coda di cane</text>
+	</string>
+	<string id="mutant_dog_tail_description">
+		<text>La resistenza della pelle dei cani mutanti all'elettricitа e agli agenti chimici и da tempo oggetto di studi scientifici. La coda, essendo quasi priva di tessuto lipidico, и particolarmente idonea agli esami di laboratorio.</text>
+	</string>
+	<string id="mutant_flesh_eye">
+		<text>Occhio di mostro c.</text>
+	</string>
+	<string id="mutant_flesh_eye_description">
+		<text>L'occhio mutato e rigonfio dei mostri carnivori ha acquisito numerose proprietа insolite, la piщ interessante delle quali и la rigenerazione del cristallino. I dettagli del processo sono ancora sconosciuti, ma la loro scoperta rivoluzionerа certamente la medicina moderna. Puoi partecipare allo sviluppo scientifico vendendo occhi di mostri carnivori agli scienziati per i loro esperimenti.</text>
+	</string>
+	<string id="mutant_krovosos_jaw">
+		<text>Tentacolo succhias.</text>
+	</string>
+	<string id="mutant_krovosos_jaw_description">
+		<text>I tentacoli dei succhiasangue contengono una ghiandola che produce un fermento capace di dissolvere la pelle e impedire il coagulo del sangue. Scoprendo la composizione del fermento forse si potranno realizzare importantissimi progressi in medicina.</text>
+	</string>
+	<string id="mutant_psevdodog_tail">
+		<text>Coda di pseudocane</text>
+	</string>
+	<string id="mutant_psevdodog_tail_description">
+		<text>La resistenza della pelle dei cani mutanti all'elettricitа e agli agenti chimici и da tempo oggetto di studi scientifici. La coda, essendo quasi priva di tessuto lipidico, и particolarmente idonea agli esami di laboratorio.</text>
+	</string>
+	<string id="mutant_snork_leg">
+		<text>Piede di snork</text>
+	</string>
+	<string id="mutant_snork_leg_description">
+		<text>I piedi di snork contengono un gran numero di tendini estremamente elastici. Ecco perchй quelle bestie riescono a spiccare salti incredibilmente lunghi.</text>
+	</string>
+	<string id="Mutants">
+		<text>Animali e mutanti</text>
+	</string>
+	<string id="Poltergeist">
+		<text>Poltergeist</text>
+	</string>
+	<string id="Pseudodog">
+		<text>Pseudocane</text>
+	</string>
+	<string id="Pseudogiant">
+		<text>Pseudogigante</text>
+	</string>
+	<string id="Snork">
+		<text>Snork</text>
+	</string>
+	<string id="Tushkano">
+		<text>Roditore</text>
+	</string>
+	<string id="Zombie">
+		<text>Zombie</text>
+	</string>
+	<string id="Controller">
+		<text>controllore</text>
+	</string>
+	<string id="enc_mutant_controller_general">
+		<text>Raro mutante avvistato vicino al centro della Zona. Ha delle vaghe sembianze umanoidi con una testa sproporzionatamente grande. И dotato di un'ottima percezione e una grande abilitа di controllo del comportamento di creature meno evolute. Gli esemplari adulti sono in grado di controllare la mente degli esseri umani. И un nemico feroce, capace di incutere timore anche negli stalker piщ esperti.</text>
+	</string>
+</string_table>

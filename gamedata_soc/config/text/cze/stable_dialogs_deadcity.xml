@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cit_doctor_escape_dialog_0">
+		<text>Potшebuju odpovмdi na pбr otбzek.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1">
+		<text>Jen se ptej, zkusнm ti pomoct.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_11">
+		<text>Kde jsou moje vмci?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_111">
+		<text>Љйf si zabavenэ vмci vмtљinou nechбvб. Mб pokoj v hornнm patшe. Kdyћ mм chytili, tak tam odnesli moje vмci.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1111">
+		<text>Dнky!</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_12">
+		<text>Jak se odsud dostanu?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_121">
+		<text>Kdyћ mм sem vedli, vљiml jsem si pod schodama v pшнzemн kanбlovэ mшнћe...\nKdyby se ti podaшilo otevшнt celu, mohli bychom se kanбlem dostat pryи... \nNejlнp bude jнt na zбpad a pak se mщћeљ tunelem dostat ke Svobodм.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1211">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_14">
+		<text>Kdo nбs zajal?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_141">
+		<text>Drћej nбs tady Ћoldбci. Nikdo doopravdy nevн, co jsou zaи, ale povнdб se, ћe pracujou pro nмjakou cizн tajnou sluћbu. Umнstмnн tэhle zбkladny je pшнsnм tajnэ - nikdo nevн, jak se do Mrtvэho mмsta dostat. O tuhle informaci mб zбjem spousta lidн, pшedevљнm Svoboda a Povinnost.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1411">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_14111">
+		<text>Pokud se ti podaшн sehnat mapu Mrtvэho mмsta, bylo by moћnэ na nм zaъtoиit. Ћoldбci nebo banditi nejspнљ nмjakou majн. Zkus ji sehnat.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_141111">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_15">
+		<text>Co vнљ o tomhle mнstм?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_151">
+		<text>Mмsto je rozdмlenэ na dvм ибsti. My jsme v Ћoldбckэ. Na jihu, za nбmмstнm, je ъzemн banditщ. Zahrabali se v budovм љkoly jihozбpadnм od mмsta. Mezi zбkladnama je zniиenб pмtipatrovб budova a pбr jeљtм stojнcнch domщ. Pokud se nмco posere, mщћeљ se tam schovat a poиkat, aћ se to pшeћene. U banditщ je taky pбr pмtipatrovejch budov a nмkolik menљнch barбkщ. Budova dшнvмjљнho nбrodnнho vэboru je na druhэ stranм nбmмstн.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1511">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_16">
+		<text>Kdo tomu tady љйfuje?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_161">
+		<text>Pмknej hnusбk jmйnem Duљman. Nмkolikrбt jsem ho vidмl, jak se hrabe ve sloћce s nмjakejma papнrama. Urиitм je tam nмco zajнmavэho.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1611">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_17">
+		<text>Ne, nic.</text>
+	</string>
+	<string id="cit_doctor_hello_dialog_11">
+		<text>Stшelиe! Kde jsi sakra byl??? Od poslednнho nбjezdu jsem nikoho z vбs nevidмl! Mмl jsem o vбs strach!</text>
+	</string>
+	<string id="cit_doctor_hello_dialog_21">
+		<text>Tak co, uћ se cнtнљ lнp? Uћ ti to myslн jasnм?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_0">
+		<text>Stшelиe???</text>
+	</string>
+	<string id="cit_doctor_main_dialog_1">
+		<text>Jo, jsi Stшelec, kdo jinej? Jsem Doktor, copak mм nepoznбvбљ? Co se ti stalo, kamarбde? Nevypadбљ dobшe. Dva roky jsme spolu chodili do Zуny. Ty si mм opravdu nepamatujeљ?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_11">
+		<text>Ne.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_2">
+		<text>Fakt ne??? Stшelиe, co to sakra? Nezaиal jsi fetovat, ћe ne? Sakra, a co naљi chlapi? Tesбk, Duch? Pamatujeљ si je, ne?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_21">
+		<text>Tesбka si nepamatuju a Duch je mrtvej - naљel jsem jeho tмlo v Jantaru.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_3">
+		<text>Duch!!?!?! Mrtvej??!!! Sakra, jak se to mohlo stбt?! Oni... byli nejlepљн. Co se stalo tobм?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_31">
+		<text>Jб nevнm, co se stalo. Nic si nepamatuju.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_4">
+		<text>Poиkej, musнm se uklidnit. To jsou ale pмknм mizernэ zprбvy. Urиitм to mб nмco spoleиnйho s tvou poslednн vэpravou do Zуny. Tenkrбt jsme se vidмli naposledy. Nechal jsi mi klниek od skrэљe v Pripjati a mapu jak ji najнt. Podaшilo se mi je schovat pшed Ћoldбkama. Na, vem si to a dobшe do schovej. Moћnб tam najdeљ nмco, co ti poradн. Tvrdil jsi nмco o tom, ћe Monolit je nмjakэ trik. Nemбm tuљenн, co to mмlo znamenat. A tys to tenkrбt taky nevмdмls.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_41">
+		<text>Aha. Kde jsme? Nepamatuju si, jak jsem se sem dostal.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_5">
+		<text>Jsme v Mrtvэm mмstм! V tбboru Ћoldбkщ.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_6">
+		<text>Jsme v Mrtvэm mмstм! V tбboru Ћoldбkщ.</text>
+	</string>
+	<string id="quest_cit_reward_0">
+		<text>Mimochodem, mбm nмjakэ informace o Ћoldбcнch. Mбљ zбjem?</text>
+	</string>
+	<string id="quest_cit_reward_1">
+		<text>Zбleћн na tom, jakэ informace.</text>
+	</string>
+	<string id="quest_cit_reward_11">
+		<text>Mбm mapu, na kterй je jejich zбkladna, pozice strбћnэch, oznaиenб cesta, jak se dostat nepozorovanм dovnitш, a dalљн zajнmavosti.</text>
+	</string>
+	<string id="quest_cit_reward_111">
+		<text>To znн dobшe. Dбm ti za to 300.</text>
+	</string>
+	<string id="quest_cit_reward_1111">
+		<text>Dohodnuto. Tady.</text>
+	</string>
+	<string id="quest_cit_reward_11111">
+		<text>Skvмlэ! Tady mбљ odmмnu.\nBrzo se budou stalkeшi hбdat, jestli Ћoldбci vщbec kdy existovali!</text>
+	</string>
+	<string id="quest_cit_reward_1112">
+		<text>Ne, to nenн dost.</text>
+	</string>
+	<string id="quest_cit_reward_11121">
+		<text>Jak chceљ, vнc ti nedбm.</text>
+	</string>
+	<string id="quest_cit_reward_13">
+		<text>Nic cennэho. Jenom obvyklэ drby. Sorry.</text>
+	</string>
+	<string id="quest_cit_reward_131">
+		<text>Pokud zjistнљ nмco pшesnмjљнho, tak se stav. Zaplatнm ti.</text>
+	</string>
+</string_table>

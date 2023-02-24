@@ -1,0 +1,9 @@
+	<string id="aes_military_task">
+		<text>Operation Monolith</text>
+	</string>
+	<string id="aes_military_task_head">
+		<text>Situation</text>
+	</string>
+	<string id="aes_soldier_info">
+		<text>Militärischer Aktionsplan\n\n Personal:\n Kommando: Rufzeichen Kwartet\n Sieben Luftangriffseinheiten: Sapsan, Korschun, Jastreb, Pustelga, Sokol, Grif, Lun.\n Scharfschützen-Team: Sowa.\n Unterstützung:\n Luft: 018, 030, 031, 48, 49, 52\n 51, 64, 65, 098, 097\n Boden: Armadillo 1, Armadillo 2, Armadillo 3\n Situation: Möglicherweise heftiger Widerstand in der Nähe der Brücke (23,45), des Tores (26,78) und der Straße am Hauptgebäude der Station (12,23-53,76). Der Feind setzt wahrscheinlich schweres Geschütz ein.\n Erwartete Feindstärke: 70 - 100 Mann. Gepanzerte Fahrzeuge: keine.\n Möglicherweise schwere Deckung durch feindliche Scharfschützen.\n Wetterbedingungen: Sichtweite - 700 Meter, möglicherweise bislang unbekannte Anomalien.</text>
+	</string>

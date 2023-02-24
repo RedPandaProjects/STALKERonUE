@@ -1,0 +1,48 @@
+	<string id="gar_angar">
+		<text>Hangar abandonado.</text>
+	</string>
+	<string id="gar_bandit_agr">
+		<text>Campamento de bandidos junto a la salida de Agroprom.</text>
+	</string>
+	<string id="gar_bandit_post">
+		<text>Base bandida en la carretera hacia Agroprom.</text>
+	</string>
+	<string id="gar_bandits_leader">
+		<text>Incursión de bandidos liderada por su jefe.</text>
+	</string>
+	<string id="gar_boars_nest">
+		<text>Horda de jabalís.</text>
+	</string>
+	<string id="gar_car_graveyard">
+		<text>Desguace</text>
+	</string>
+	<string id="gar_dogs_in_forest">
+		<text>Bosque infestado de perros</text>
+	</string>
+	<string id="gar_dolg_blokpost">
+		<text>Punto de control de Deber en la carretera que va al bar.</text>
+	</string>
+	<string id="gar_hellcar">
+		<text>Grupo de stalkers neutrales pidiendo ayuda.</text>
+	</string>
+	<string id="gar_newbie">
+		<text>Novato cansado y asustado.</text>
+	</string>
+	<string id="gar_secret1">
+		<text>Escondite secreto del novato.</text>
+	</string>
+	<string id="gar_seriy">
+		<text>Grupo de Seriy.</text>
+	</string>
+	<string id="gar_swamp">
+		<text>Ciénaga pantanosa.</text>
+	</string>
+	<string id="gar_trash1">
+		<text>Montones de basura con anomalías y artefactos.</text>
+	</string>
+	<string id="gar_tunnel">
+		<text>Túnel del ferrocarril.</text>
+	</string>
+	<string id="gar_wounded_help">
+		<text>Señal de SOS. Probablemente es un stalker herido.</text>
+	</string>

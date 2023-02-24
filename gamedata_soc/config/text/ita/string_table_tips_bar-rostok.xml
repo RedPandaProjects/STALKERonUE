@@ -1,0 +1,144 @@
+	<string id="bar_arena_actor_afraid">
+		<text>Il combattimento è annullato! Lo sfidante se l'è fatta sotto e non si è neanche fatto avanti!</text>
+	</string>
+	<string id="bar_arena_fight_10">
+		<text>Sono trascorsi 10 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_20">
+		<text>Sono trascorsi 20 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_30">
+		<text>Sono trascorsi 30 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_40">
+		<text>Sono trascorsi 40 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_50">
+		<text>Sono trascorsi 50 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_60">
+		<text>1 minuto all'inizio del combattimento!</text>
+	</string>
+	<string id="bar_arena_fight_70">
+		<text>Sono trascorsi 1 minuto e 10 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_80">
+		<text>Sono trascorsi 1 minuto e 20 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_90">
+		<text>Sono trascorsi 1 minuto e 30 secondi!</text>
+	</string>
+	<string id="bar_arena_fight_begin">
+		<text>Combattimento iniziato!</text>
+	</string>
+	<string id="bar_arena_fight_bloodsucker">
+		<text>Attenzione! Attenzione! Un nuovo combattimento sta per avere inizio nell'Arena! All'angolo sinistro l'incubo più spaventoso della Zona: l'insazabile Succhiasangue! E all'angolo destro... un uomo? Sì, è proprio n uomo! Un bell'applauso per il Marchiato!</text>
+	</string>
+	<string id="bar_arena_fight_burer">
+		<text>Attenzione! Attenzione! Un nuovo combattimento sta per avere inizio nell'Arena! All'angolo sinistro, il maestro di kung-fu telecinetico in persona: l'Orrido! E all'angolo destro, l'uomo che sta sempre all'erta! Il Marchiato!</text>
+	</string>
+	<string id="bar_arena_fight_dead">
+		<text>E così, lo sfidante è stato ucciso! Questa sì che è una sorpresa!</text>
+	</string>
+	<string id="bar_arena_fight_lose">
+		<text>A quanto pare, lo sfidante ha ucciso il suo avversario, ma fuori tempo massimo, quindi perde l'incontro!</text>
+	</string>
+	<string id="bar_arena_fight_pseudodog">
+		<text>Attenzione! Attenzione! Un nuovo combattimento sta per avere inizio nell'Arena. All'angolo sinistro... è bianco, peloso e schiumante di rabbia: lo Pseudocane! E all'angolo destro, colui che è arrivato dal nulla e nel nulla sarà rispedito. Lo chiamano il Marchiato!</text>
+	</string>
+	<string id="bar_arena_fight_savage">
+		<text>Attenzione! Attenzione! Un nuovo combattimento sta per avere inizio nell'Arena. All'angolo sinistro... lo conoscete bene, lo adorate e lui vi ricambia con il suo odio! È il Bestione! All'angolo destro, vivo e vegeto, almento per il momento... il Marchiato!</text>
+	</string>
+	<string id="bar_arena_fight_snork">
+		<text>Attenzione! Attenzione! Un nuovo combattimento sta per avere inizio nell'Arena. All'angolo sinistro, il guru delle arti marziali... lo Snork! E all'angolo destro, l'uomo senza passato e senza futuro... il Marchiato!</text>
+	</string>
+	<string id="bar_arena_fight_timeout">
+		<text>Tempo scaduto! Lo sfidante ha perso, ma lotta ancora per la vita!</text>
+	</string>
+	<string id="bar_arena_fight_victory">
+		<text>Però! Lo sfidante ha ucciso il suo avversario in tempo! Ha vinto!</text>
+	</string>
+	<string id="bar_ecolog_attack">
+		<text>Come preferisci.</text>
+	</string>
+	<string id="bar_ecolog_crush_attract_actor">
+		<text>Ti prego, non te ne andare! Aiutaci! Gli anarchici hanno abbattuto il nostro elicottero e stanno per tornare a farci fuori. Siamo feriti, ci serve il tuo aiuto!</text>
+	</string>
+	<string id="bar_ecolog_crush_heli_down">
+		<text>Che fine ha fatto il vostro elicottero, eh, sorci governativi? Il vostro tempo è scaduto!</text>
+	</string>
+	<string id="bar_ecolog_crush_start_heli">
+		<text>Questa volta sei spacciato, Segugio. È in arrivo un elicottero militare. Ti faranno a polpette!</text>
+	</string>
+	<string id="bar_ecolog_escape">
+		<text>Kruglov è fuggito! Trovatelo! Non può essere andato lontano.</text>
+	</string>
+	<string id="bar_ecolog_hit">
+		<text>Aiutami, Marchiato! Mi stanno ammazzando!!!</text>
+	</string>
+	<string id="bar_ecolog_spam_1">
+		<text>Continua a sognare, bastardo! Torna a scuola prima di dettare i tuoi ultimatum.</text>
+	</string>
+	<string id="bar_ecolog_spam_2">
+		<text>Non attaccate, o distruggerò i dati e non avrete un bel niente!</text>
+	</string>
+	<string id="bar_ecolog_spam_3">
+		<text>Se non vuoi che distrugga il materiale di ricerca, ti conviene stare lontano!</text>
+	</string>
+	<string id="bar_ecolog_spam_4">
+		<text>Segugio, prendi i tuoi scagnozzi e levati di torno finché sei in grado di farlo con tue gambe.</text>
+	</string>
+	<string id="bar_freedom_attack">
+		<text>Basta parlare. Facciamo fuori qualcuno!</text>
+	</string>
+	<string id="bar_freedom_attack_attract_actor">
+		<text>Ehi, vieni qui, bello! Possiamo far fuori quei sorci governativi insieme.</text>
+	</string>
+	<string id="bar_freedom_attack_spy">
+		<text>Bastardo! La pagherai cara per averci ingannato. Non te lo dimenticare, Marchiato.</text>
+	</string>
+	<string id="bar_freedom_chase">
+		<text>Ci stanno seguendo?! Marchiato devi fermarli!</text>
+	</string>
+	<string id="bar_freedom_spam_1">
+		<text>Credevo che voi scienziati foste tipi svegli. Cercherò di essere più chiaro: o mi dai i documenti, o uscirai di qui in un sacco di plastica.</text>
+	</string>
+	<string id="bar_freedom_spam_2">
+		<text>Non sarò un pozzo di scienza, Kruglov, ma in quanto a violenza non mi batte nessuno. Vuoi che ti mostri di che pasta sono fatto, o mi dai le informazioni che mi servono?</text>
+	</string>
+	<string id="bar_freedom_spam_3">
+		<text>Sei una persona intelligente, professore. Dammi le informazioni e sarai libero di andare!</text>
+	</string>
+	<string id="bar_freedom_spam_4">
+		<text>Non capisci proprio, vero Kruglov? Abbiamo abbattuto il tuo stupido elicottero e ci servono le informazioni che porti con te. Daccele e potrai filartela insieme ai tuoi amici. È la tua ultima possibilità. Passami la chiavetta e sparisci!</text>
+	</string>
+	<string id="bar_psih_come">
+		<text>Vieni qui, presto! I miei uomini hanno catturato uno stalker impazzito nella Foresta rossa. Stiamo cercando di ottenere delle informazioni da lui.</text>
+	</string>
+	<string id="bar_territory_dolg_1_hit">
+		<text>Marchiato, sei pazzo?! Smettila subito di sparare! È un ordine!</text>
+	</string>
+	<string id="bar_territory_dolg_2_hit">
+		<text>Smettila di sparare, Marchiato! Fai come ti dico o sei un uomo morto!</text>
+	</string>
+	<string id="bar_territory_dolg_3_hit">
+		<text>Marchiato, sei espulso dal gruppo per aver violato il Codice. Non hai più amici fra i Duty.</text>
+	</string>
+	<string id="bar_territory_dolg_kill">
+		<text>Machiato, hai disobbedito a un ordine diretto. I Duty non tollerano comportamenti del genere. Sei un uomo morto.</text>
+	</string>
+	<string id="bar_territory_nodolg_1_hit">
+		<text>Smettila di sparare! È vietato sparare sul territorio dei Duty! Chi trasgredisce deve essere punito!</text>
+	</string>
+	<string id="bar_territory_nodolg_2_hit">
+		<text>Attenzione! Il Marchiato è stato dichiarato criminale per non aver rispettato il divieto di fuoco nel territorio dei Duty.</text>
+	</string>
+	<string id="bar_territory_nodolg_kill">
+		<text>Attenzione! Un assassino si aggira nel territorio dei Duty. Trovatelo e uccidetelo!</text>
+	</string>
+	<string id="rostok_kruglov_spam_1">
+		<text>Ehi stalker, aiutaci! Siamo stati attaccati dai Mercenari e metà della nostra squadra è stata uccisa. Dacci una mano e ti prometto che non te ne pentirai.</text>
+	</string>
+	<string id="rostok_kruglov_spam_2">
+		<text>Aiutaci a combattere nelle imboscate vicino alla fabbrica. Ti ho inviato le coordinate. Ma fai attenzione, Segugio e i suoi tagliagole sono vicino all'elicottero.</text>
+	</string>

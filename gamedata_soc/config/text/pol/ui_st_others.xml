@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="mp_only_one_voting">
+		<text>Dozwolone tylko jedno aktywne gіosowanie</text>
+	</string>
+	<string id="ui_st_patch_download_success">
+		<text>Udaіo siк pobraж poprawkк. Czy chcesz j№ zainstalowaж?</text>
+	</string>
+	<string id="ui_st_patch_download_error">
+		<text>Nie udaіo siк pobraж poprawki.</text>
+	</string>
+	<string id="ui_st_load_game_confirm">
+		<text>Wczytanie gry spowoduje utratк niezapisanych danych. Czy chcesz kontynuowaж?</text>
+	</string>
+</string_table>

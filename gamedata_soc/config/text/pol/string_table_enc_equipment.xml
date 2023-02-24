@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Antirad">
+		<text>Leki przeciwpromienne</text>
+	</string>
+	<string id="Arm-heavy">
+		<text>Ciкїki sprzкt stalkera</text>
+	</string>
+	<string id="Arm-light">
+		<text>Lekki sprzкt stalkera</text>
+	</string>
+	<string id="Arm-medium">
+		<text>Њredni sprzкt stalkera</text>
+	</string>
+	<string id="bandage">
+		<text>Bandaїe</text>
+	</string>
+	<string id="Binocul">
+		<text>Lornetka</text>
+	</string>
+	<string id="Bread">
+		<text>Chleb</text>
+	</string>
+	<string id="cit_deadcity_maps_desc">
+		<text>Szczegуіowy plan Martwego Miasta z zaznaczonymi pozycjami najemnikуw</text>
+	</string>
+	<string id="cit_deadcity_maps_name">
+		<text>Plan Martwego Miasta</text>
+	</string>
+	<string id="cit_doctors_key_desc">
+		<text>Naleї№cy do Doktora klucz do schowka w Prypeci</text>
+	</string>
+	<string id="cit_doctors_key_short_desc">
+		<text>Klucz Doktora</text>
+	</string>
+	<string id="Conserva">
+		<text>"Rozkosz turysty"</text>
+	</string>
+	<string id="Detect1">
+		<text>Detektor anomalii (DA-2)</text>
+	</string>
+	<string id="Devic">
+		<text>Przyrz№dy i urz№dzenia</text>
+	</string>
+	<string id="device-PDA">
+		<text>PDA</text>
+	</string>
+	<string id="device-torch">
+		<text>Latarka</text>
+	</string>
+	<string id="enc_equipment_armors_arm-heavy">
+		<text>Kombinezon ochronny. Waga: 18 kg. Szczegуіy: chroni ciaіo przed obraїeniami fizycznymi, Galaret№, Spalonym Puchem oraz wiкkszoњci№ innych anomalii. Klatka piersiowa i plecy chronione s№ przez wbudowane biometaliczne pіyty. Kombinezon jest wyposaїony we wzmocniony, hermetyczny heіm z plastiku i dwie butle z tlenem. Uwaga: w czasie dіugotrwaіej eksploatacji kombinezon niszczy siк i stopniowo przestaje siк nadawaж do uїytku.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-light">
+		<text>Kombinezon ochronny. Waga: 8 kg. Szczegуіy: chroni ciaіo przed sіabymi anomaliami i obraїeniami fizycznymi. Wyposaїony w maskк tlenow№. Uwaga: w czasie dіugotrwaіej eksploatacji kombinezon niszczy siк i stopniowo przestaje siк nadawaж do uїytku.</text>
+	</string>
+	<string id="enc_equipment_armors_arm-medium">
+		<text>Kombinezon ochronny. Waga: 12 kg. Szczegуіy: chroni ciaіo przed obraїeniami fizycznymi, Galaret№, Spalonym Puchem oraz wieloma innymi anomaliami. Wyposaїony w hermetyczny plastikowy heіm i butlк z tlenem. Uwaga: w czasie dіugotrwaіej eksploatacji kombinezon niszczy siк i stopniowo przestaje siк nadawaж do uїytku.</text>
+	</string>
+	<string id="enc_equipment_armors_sci2">
+		<text>Czerwony kombinezon ciњnieniowy z hermetycznym heіmem. Waga: 11 kg. Szczegуіy: Chroni ciaіo przed ogniem, kwasem, toksycznym gazem, rуїnymi anomaliami (m.in. Spalonym Puchem) i obraїeniami fizycznymi. Wyposaїony w dwie butle z tlenem. Uwaga: w czasie dіugotrwaіej eksploatacji kombinezon niszczy siк i stopniowo przestaje siк nadawaж do uїytku.</text>
+	</string>
+	<string id="enc_equipment_devic_binocul1">
+		<text>Wojskowa lornetka polowa</text>
+	</string>
+	<string id="enc_equipment_devic_detect1">
+		<text>Urz№dzenie sіuї№ce do wykrywania pуl anomalii i zakіуceс. W razie ich wykrycia wydaje sygnaі dџwiкkowy. Їeby sprawnie funkcjonowaіo, naleїy je przymocowaж do pasa i wі№czyж. </text>
+	</string>
+	<string id="enc_equipment_devic_device-PDA1">
+		<text>PDA - niezbкdny w Zonie. </text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1">
+		<text>Mocna latarka. Bardzo przydatna na niedostatecznie oњwietlonym terenie. </text>
+	</string>
+	<string id="enc_equipment_devic_device-torch1_m1">
+		<text>Mocna latarka. Dziкki unowoczeњnionemu transformatorowi skrуcony zostaі czas іadowania baterii.</text>
+	</string>
+	<string id="enc_equipment_energydrink">
+		<text>To wspaniaіy napуj energetyzuj№cy, zawieraj№cy kofeinк, taurynк oraz mieszankк odїywczych witamin. Tego wіaњnie ci trzeba, gdy braknie siі, by ruszyж w dalsz№ drogк!</text>
+	</string>
+	<string id="enc_equipment_food_bread1">
+		<text>Ciкїko stwierdziж, komu siк udaje piec ten chleb w Zonie, ale nie jest skaїony i jak najbardziej nadaje siк do spoїycia. Przynajmniej їaden ze stalkerуw na niego nie psioczyі. </text>
+	</string>
+	<string id="enc_equipment_food_conserva1">
+		<text>Konserwy zabrane przez stalkerуw z wojskowego magazynu. Termin przydatnoњci do spoїycia jeszcze nie min№і.</text>
+	</string>
+	<string id="enc_equipment_food_kolbasa1">
+		<text>Dietetyczna kieіbasa zrobiona z mieszanki kurczaka i soi czкsto jest dla stalkera - z braku innych moїliwoњci - њniadaniem, obiadem i kolacj№ w jednym.</text>
+	</string>
+	<string id="enc_equipment_food_vodka1">
+		<text>Wуdka wyprodukowana przez wytwуrniк GSC. Dobrze wchodzi i znacznie zmniejsza skutki promieniowania, ale z oczywistych wzglкdуw powinno siк jej uїywaж z umiarem.</text>
+	</string>
+	<string id="enc_equipment_medi_antirad1">
+		<text>Zmniejszaj№ skutki promieniowania.</text>
+	</string>
+	<string id="enc_equipment_medi_bandage1">
+		<text>Bandaїe. Pomagaj№ zatrzymaж krwawienie.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit1">
+		<text>Uniwersalna apteczka. Uїywana do leczenia rуїnego typu obraїeс - ran, oparzeс, zatruж, itd.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit2">
+		<text>Specjalistyczny zestaw medyczny pomocny w leczeniu obraїeс fizycznych i zapobieganiu utracie krwi. W jego skіad wchodzi preparat zwiкkszaj№cy krzepliwoњж krwi, antybiotyki, stymulator ukіadu odpornoњciowego oraz leki przeciwbуlowe.</text>
+	</string>
+	<string id="enc_equipment_medi_medkit3">
+		<text>Zestaw medyczny stworzony specjalnie dla Zony. W jego skіad wchodz№ њrodki do opatrywania i leczenia ran oraz do oczyszczania organizmu z radionuklidуw. Zapobiega rozwojowi chorуb popromiennych i obniїa stopieс napromieniowania.</text>
+	</string>
+	<string id="energy_drink_name">
+		<text>Napуj energetyzuj№cy</text>
+	</string>
+	<string id="energy_drink_short_name">
+		<text>Napуj energetyzuj№cy</text>
+	</string>
+	<string id="Equipment">
+		<text>Sprzкt i prowiant</text>
+	</string>
+	<string id="Food">
+		<text>Prowiant</text>
+	</string>
+	<string id="Kolbasa">
+		<text>Dietetyczna kieіbasa</text>
+	</string>
+	<string id="Medi">
+		<text>Lekarstwa</text>
+	</string>
+	<string id="Medkit">
+		<text>Apteczka</text>
+	</string>
+	<string id="Medkit_army">
+		<text>Apteczka wojskowa</text>
+	</string>
+	<string id="Medkit_scientific">
+		<text>Apteczka naukowcуw</text>
+	</string>
+	<string id="Sci2">
+		<text>Naukowy EXP-4</text>
+	</string>
+	<string id="Vodka">
+		<text>Wуdka "Kozak"</text>
+	</string>
+	<string id="st_detector">
+		<text>Detektor anomalii</text>
+	</string>
+	<string id="st_detector_descr">
+		<text>Przeznaczony do wykrywania pуl anomalii oraz ognisk zanieczyszczenia radioaktywnego.</text>
+	</string>
+	<string id="st_grenade_gd5">
+		<text>Granat dymny</text>
+	</string>
+</string_table>

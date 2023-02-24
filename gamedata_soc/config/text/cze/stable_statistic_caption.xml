@@ -1,0 +1,174 @@
+	<string id="bandit_experienced">
+		<text>bandita, zkušený</text>
+	</string>
+	<string id="bandit_master">
+		<text>bandita, expert</text>
+	</string>
+	<string id="bandit_novice">
+		<text>bandita, nováèek</text>
+	</string>
+	<string id="bandit_veteran">
+		<text>bandita, veterán</text>
+	</string>
+	<string id="bloodsucker_normal">
+		<text>podzemní upír</text>
+	</string>
+	<string id="bloodsucker_strong">
+		<text>èerný upír</text>
+	</string>
+	<string id="bloodsucker_weak">
+		<text>upír</text>
+	</string>
+	<string id="boar_normal">
+		<text>vyrostlý kanec</text>
+	</string>
+	<string id="boar_strong">
+		<text>dospìlý kanec</text>
+	</string>
+	<string id="boar_weak">
+		<text>mladý kanec</text>
+	</string>
+	<string id="burer_weak">
+		<text>obr</text>
+	</string>
+	<string id="controller_weak">
+		<text>ovladaè</text>
+	</string>
+	<string id="dog_normal">
+		<text>krysodav</text>
+	</string>
+	<string id="dog_strong">
+		<text>pes albín</text>
+	</string>
+	<string id="dog_weak">
+		<text>divoký pes</text>
+	</string>
+	<string id="dolg_experienced">
+		<text>Povinnost, zkušený</text>
+	</string>
+	<string id="dolg_master">
+		<text>Povinnost, expert</text>
+	</string>
+	<string id="dolg_veteran">
+		<text>Povinnost, veterán</text>
+	</string>
+	<string id="ecolog_experienced">
+		<text>vìdec, zkušený</text>
+	</string>
+	<string id="ecolog_novice">
+		<text>vìdec, nováèek</text>
+	</string>
+	<string id="flesh_normal">
+		<text>lesní flaksa</text>
+	</string>
+	<string id="flesh_strong">
+		<text>bažinná flaksa</text>
+	</string>
+	<string id="flesh_weak">
+		<text>stepní flaksa</text>
+	</string>
+	<string id="freedom_experienced">
+		<text>Svoboda, zkušený</text>
+	</string>
+	<string id="freedom_master">
+		<text>Svoboda, eso</text>
+	</string>
+	<string id="freedom_veteran">
+		<text>Svoboda, váleèný pes</text>
+	</string>
+	<string id="killer_experienced">
+		<text>Žoldák, cvièený</text>
+	</string>
+	<string id="killer_master">
+		<text>Žoldák, drsný</text>
+	</string>
+	<string id="killer_veteran">
+		<text>Žoldák, stará páka</text>
+	</string>
+	<string id="military_experienced">
+		<text>voják, seržant</text>
+	</string>
+	<string id="military_master">
+		<text>voják, kapitán</text>
+	</string>
+	<string id="military_novice">
+		<text>voják, vojín</text>
+	</string>
+	<string id="military_veteran">
+		<text>voják, poruèík</text>
+	</string>
+	<string id="monolith_experienced">
+		<text>Monolit, zkušený</text>
+	</string>
+	<string id="monolith_master">
+		<text>Monolit, expert</text>
+	</string>
+	<string id="monolith_novice">
+		<text>Monolit, nováèek</text>
+	</string>
+	<string id="monolith_veteran">
+		<text>Monolit, veterán</text>
+	</string>
+	<string id="neutral_experienced">
+		<text>stalker, zkušený</text>
+	</string>
+	<string id="neutral_master">
+		<text>stalker, expert</text>
+	</string>
+	<string id="neutral_novice">
+		<text>stalker, nováèek</text>
+	</string>
+	<string id="neutral_veteran">
+		<text>stalker, veterán</text>
+	</string>
+	<string id="poltergeist_weak">
+		<text>poltergeist</text>
+	</string>
+	<string id="pseudo_gigant_weak">
+		<text>pseudoobr</text>
+	</string>
+	<string id="pseudodog_normal">
+		<text>dospìlý pseudopes</text>
+	</string>
+	<string id="pseudodog_strong">
+		<text>šedý pseudopes</text>
+	</string>
+	<string id="pseudodog_weak">
+		<text>pseudopes</text>
+	</string>
+	<string id="psy_dog">
+		<text>soumraèný pseudopes</text>
+	</string>
+	<string id="snork_normal">
+		<text>mrchožravý snork </text>
+	</string>
+	<string id="snork_strong">
+		<text>lidožravý snork</text>
+	</string>
+	<string id="snork_weak">
+		<text>snork </text>
+	</string>
+	<string id="tushkano_weak">
+		<text>Tarbík</text>
+	</string>
+	<string id="zombie_normal">
+		<text>zombie</text>
+	</string>
+	<string id="zombie_strong">
+		<text>zombie</text>
+	</string>
+	<string id="zombie_weak">
+		<text>zombie</text>
+	</string>
+	<string id="zombied_experienced">
+		<text>zombifikovaný stalker, zkušený</text>
+	</string>
+	<string id="zombied_master">
+		<text>zombifikovaný stalker, expert</text>
+	</string>
+	<string id="zombied_novice">
+		<text>zombifikovaný stalker, nováèek</text>
+	</string>
+	<string id="zombied_veteran">
+		<text>zombifikovaný stalker, veterán</text>
+	</string>

@@ -1,0 +1,54 @@
+	<string id="bar_darklab_documents_1_hint">
+		<text>Borov</text>
+	</string>
+	<string id="bar_darklab_documents_2_hint">
+		<text>Tunnel</text>
+	</string>
+	<string id="bar_darklab_documents_3_hint">
+		<text>Entrée du labo</text>
+	</string>
+	<string id="bar_darklab_documents_4_hint">
+		<text>Tuyau</text>
+	</string>
+	<string id="bar_darklab_documents2_1_hint">
+		<text>Documents du labo</text>
+	</string>
+	<string id="bar_darklab_documents2_2_hint">
+		<text>Barman</text>
+	</string>
+	<string id="val_captive_help_1_hint">
+		<text>Cartouche</text>
+	</string>
+	<string id="val_captive_help_2_hint">
+		<text>Prisonnier</text>
+	</string>
+	<string id="val_come_to_trader_1_hint">
+		<text>Porte sud</text>
+	</string>
+	<string id="val_come_to_trader_2_hint">
+		<text>Marchand</text>
+	</string>
+	<string id="val_prisoner_help_main_hint">
+		<text>Membre du Devoir captif</text>
+	</string>
+	<string id="val_sos_help_main_hint">
+		<text>Stalker blessé</text>
+	</string>
+	<string id="val_zone_bandits_hint">
+		<text>Camp des bandits</text>
+	</string>
+	<string id="val_zone_farm_hint">
+		<text>Ferme.\nAcheter le Gauss.</text>
+	</string>
+	<string id="val_zone_monolith_hint">
+		<text>Ancienne usine</text>
+	</string>
+	<string id="val_zone_pipe_hint">
+		<text>Canalisation d'égout</text>
+	</string>
+	<string id="val_zone_robbers_hint">
+		<text>Élevage de porcs abandonné</text>
+	</string>
+	<string id="val_zone_south_gate_hint">
+		<text>Portes</text>
+	</string>

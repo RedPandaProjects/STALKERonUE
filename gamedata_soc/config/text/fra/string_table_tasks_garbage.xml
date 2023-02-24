@@ -1,0 +1,48 @@
+	<string id="gar_car_graveyard_quest">
+		<text>Répondre à l'appel à l'aide.</text>
+	</string>
+	<string id="gar_defend_garbage">
+		<text>Repousser le raid des bandits.</text>
+	</string>
+	<string id="gar_dialog_hellcar">
+		<text>Offrir votre aide au chef de l'équipe neutre.</text>
+	</string>
+	<string id="gar_dialog_hellcar_1">
+		<text>Offrir de l'aide à Bes.</text>
+	</string>
+	<string id="gar_hellcar_alive">
+		<text>Parler à Bes.</text>
+	</string>
+	<string id="gar_help_dymon">
+		<text>Repousser le raid des bandits.</text>
+	</string>
+	<string id="gar_help_tunnel_newbie">
+		<text>Aider le nouveau à la Décharge.</text>
+	</string>
+	<string id="gar_kill_bandits">
+		<text>Repousser le raid des bandits</text>
+	</string>
+	<string id="gar_kill_boars">
+		<text>Aider le poste de contrôle du Devoir</text>
+	</string>
+	<string id="gar_kill_boars_1">
+		<text>Tuer les sangliers.</text>
+	</string>
+	<string id="gar_kill_boars_2">
+		<text>Parler au commandant du Devoir</text>
+	</string>
+	<string id="gar_kill_boars_descr">
+		<text>Devoir : "Bonjour, ici la faction du Devoir en direct de la Décharge. Des mutants ont quitté la Vallée obscure en direction du bar. On sera reconnaissant à tous ceux qui nous aiderons à les éliminer. C'est promis."</text>
+	</string>
+	<string id="gar_kill_boars_main">
+		<text>La quête pour accéder au bar.</text>
+	</string>
+	<string id="garbage_meet_stalker_1">
+		<text>Se renseigner auprès de Seriy sur Strelok.</text>
+	</string>
+	<string id="graveyard_raid_text">
+		<text>Bes : "Ces ordures essaient de prendre le contrôle de la Décharge. Il y a eu une bagarre voilà une heure. On a tué trois de ces tarés. Les autres ont battu en retraite, mais je parie qu'ils vont revenir avec des renforts d'une minute à l'autre. On est pas assez nombreux et on aurait bien besoin d'un coup de main. Si tu nous aides à neutraliser ces renforts, je te revaudrai ça."</text>
+	</string>
+	<string id="help_for_neitrals_text">
+		<text>Il y a eu une fusillade à la casse abandonnée entre des neutres et des bandits. Les neutres ont réussi à repousser les bandits, mais ont besoin d'aide.</text>
+	</string>

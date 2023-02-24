@@ -1,0 +1,78 @@
+	<string id="agr_find_ghost">
+		<text>Scopri che cosa è successo al Fantasma</text>
+	</string>
+	<string id="agr_gunslinger_cache">
+		<text>Il nascondiglio di Strelok</text>
+	</string>
+	<string id="agr_help_krot">
+		<text>Salva la Talpa</text>
+	</string>
+	<string id="agr_help_krot_0">
+		<text>Aiuta la Talpa a respingere i soldati</text>
+	</string>
+	<string id="agr_help_krot_1">
+		<text>Uccidi i soldati</text>
+	</string>
+	<string id="agr_help_krot_2">
+		<text>Salva la Talpa</text>
+	</string>
+	<string id="agr_help_stalkers">
+		<text>Aiuta gli stalker</text>
+	</string>
+	<string id="agr_help_stalkers_0">
+		<text>Aiuta gli stalker a respingere i soldati</text>
+	</string>
+	<string id="agr_help_stalkers_1">
+		<text>Uccidi i soldati</text>
+	</string>
+	<string id="agr_help_stalkers_2">
+		<text>Aiuta gli stalker a respingere i soldati</text>
+	</string>
+	<string id="agr_krot">
+		<text>Incontra gli stalker</text>
+	</string>
+	<string id="agr_meet_krot_band">
+		<text>Recupera informazioni su Strelok</text>
+	</string>
+	<string id="agr_meet_krot_band_0">
+		<text>Recupera informazioni dalla Talpa</text>
+	</string>
+	<string id="agr_meet_krot_band_1">
+		<text>Incontra il gruppo della Talpa</text>
+	</string>
+	<string id="agr_meet_krot_band_2">
+		<text>Recupera informazioni dalla Talpa</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache">
+		<text>Trova il nascondiglio del gruppo di Strelok</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_0">
+		<text>Trova il nascondiglio del gruppo di Strelok</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_1">
+		<text>Trova il nascondiglio</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_2">
+		<text>Trova informazioni su Strelok nel nascondiglio</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_3">
+		<text>Torna in superficie</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom">
+		<text>Trova il Fantasma</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom_0">
+		<text>Il Fantasma sa dove si trova Strelok.</text>
+	</string>
+	<string id="agroprom_get_military_documents">
+		<text>Trova i documenti militari</text>
+	</string>
+	<string id="agroprom_get_military_documents_0">
+		<text>Istituto Agroprom</text>
+	</string>
+	<string id="agroprom_get_military_documents_1">
+		<text>Ruba i documenti militari</text>
+	</string>
+	<string id="agroprom_get_military_documents_2">
+		<text>Porta i documenti al Barista</text>
+	</string>

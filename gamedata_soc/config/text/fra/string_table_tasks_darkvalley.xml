@@ -1,0 +1,72 @@
+	<string id="bar_darklab_documents">
+		<text>Trouver les documents dans le laboratoire souterrain</text>
+	</string>
+	<string id="bar_darklab_documents_1">
+		<text>Prendre la clé du labo à Borov</text>
+	</string>
+	<string id="bar_darklab_documents_2">
+		<text>Quitter la base des bandits</text>
+	</string>
+	<string id="bar_darklab_documents_3">
+		<text>Trouver l'entrée du laboratoire</text>
+	</string>
+	<string id="bar_darklab_documents_4">
+		<text>S'introduire sur la base</text>
+	</string>
+	<string id="bar_darklab_documents2">
+		<text>Trouver les documents dans le X18</text>
+	</string>
+	<string id="bar_darklab_documents2_1">
+		<text>Trouver les documents</text>
+	</string>
+	<string id="bar_darklab_documents2_2">
+		<text>Apporter les documents au Barman</text>
+	</string>
+	<string id="dar_codedoor_1">
+		<text>Trouver le code de la porte </text>
+	</string>
+	<string id="dar_codedoor_1_1">
+		<text>Découvrir le code ouvrant la porte</text>
+	</string>
+	<string id="dar_codedoor_1_2">
+		<text>Ouvrir la porte à l'aide du code</text>
+	</string>
+	<string id="dar_codedoor_2">
+		<text>Ouvrir la porte du centre de contrôle</text>
+	</string>
+	<string id="dar_codedoor_2_1">
+		<text>Découvrir le code ouvrant la porte</text>
+	</string>
+	<string id="dar_codedoor_2_2">
+		<text>Ouvrir la porte à l'aide du code</text>
+	</string>
+	<string id="val_captive_help">
+		<text>Libérer le membre du Devoir</text>
+	</string>
+	<string id="val_captive_help_1">
+		<text>Suivre Cartouche jusqu'au lieu de l'embuscade</text>
+	</string>
+	<string id="val_captive_help_2">
+		<text>Tuer les bandits et libérer le membre du Devoir</text>
+	</string>
+	<string id="val_come_to_trader">
+		<text>Retourner voir le marchand</text>
+	</string>
+	<string id="val_come_to_trader_0">
+		<text>Retourner voir le marchand</text>
+	</string>
+	<string id="val_come_to_trader_1">
+		<text>Quitter la Vallée obscure</text>
+	</string>
+	<string id="val_come_to_trader_2">
+		<text>Montrer les documents au marchand</text>
+	</string>
+	<string id="val_prisoner_help">
+		<text>Libérer de prison le membre du Devoir</text>
+	</string>
+	<string id="val_prisoner_help_0">
+		<text>Libérer le membre du Devoir de la prison des bandits</text>
+	</string>
+	<string id="val_prisoner_help_main">
+		<text>Libérer le membre du Devoir de la prison des bandits</text>
+	</string>

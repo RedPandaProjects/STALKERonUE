@@ -1,0 +1,921 @@
+	<string id="aes_Monolit_master_bio">
+		<text>Hlídaè z frakce Monolit. Radši se mu vyhni. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="aes_Monolit_rpg_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="aes_Monolit_sniper_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="aes_Monolit_sniper_gauss_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="aes_Monolit_specnaz_bio">
+		<text>Bojovník z frakce Monolit. Dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="aes_Soldier_commander_bio">
+		<text>Velitel vojenského nájezdu. </text>
+	</string>
+	<string id="aes_Soldier_military_bio">
+		<text>Vojenskı stalker. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="aes_Soldier_sniper_bio">
+		<text>Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="aes_Soldier_specnaz_aes_bio">
+		<text>Armádní Specnas. Dobøe vybavenı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="aes_Soldier_specnaz_aes_name">
+		<text>Smolaø Vasil</text>
+	</string>
+	<string id="aes_Soldier_specnaz_bio">
+		<text>Armádní Specnas. Dobøe vybavenı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="agr_krot_bio">
+		<text>Døívìjší kopáè útoèící na všechny opuštìné laboratoøe a bunkry, na které se svımi spoleèníky narazí. </text>
+	</string>
+	<string id="agr_krot_name">
+		<text>Krtek</text>
+	</string>
+	<string id="bar_arena_stalker">
+		<text>Jeden z úèastníkù smrtících bojù v Arénì. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="bar_arny_bio">
+		<text>Zkušenı pašerák. Svou slávu si zaslouil propašováním nìkolika set vycpanıch mutantù ze zakázané oblasti. </text>
+	</string>
+	<string id="bar_arny_name">
+		<text>Arnie </text>
+	</string>
+	<string id="bar_bar_guard_bio">
+		<text>Vyhazovaè v baru. Nebo taky barmanùv osobní stráce. O jeho minulosti ani souèasnosti není nic známo.</text>
+	</string>
+	<string id="bar_bar_guard_name">
+		<text>Garik</text>
+	</string>
+	<string id="bar_bar_guard2_bio">
+		<text>Garikovo dvojèe. Vyhazovaè v baru. Stejnì málomluvnı jako jeho bratr.</text>
+	</string>
+	<string id="bar_bar_guard2_name">
+		<text>orik</text>
+	</string>
+	<string id="bar_barmen_bio">
+		<text>Ani svatı, ani lump. Barman zná svou cenu a mezi stalkery je uznávanı. Povídá se, e se v Zónì schovává pøed svou temnou minulostí. Po jednom setkání s anomálií zaèal trochu kulhat a rozhodl se zmìnit zamìstnání. Zaøídil si bar u frakce Povinnost, ze kterého se èasem stalo místo, kde se schází veteráni Zóny. Barman má spoustu kontaktù v Zónì i vnìjším svìtì. </text>
+	</string>
+	<string id="bar_barmen_name">
+		<text>Barman</text>
+	</string>
+	<string id="bar_beast_name">
+		<text>Bestie</text>
+	</string>
+	<string id="bar_drunk_bio">
+		<text>Èlen frakce Povinnost, kterı patøí spíše mezi neschopné. Povinnost mu dala poslední šanci napravit si své postavení a pøidìlila mu úkol, jenome on u se zase staèil orat a nebude schopnı jej zvládnout.</text>
+	</string>
+	<string id="bar_drunk_name">
+		<text>Bróm</text>
+	</string>
+	<string id="bar_hunter_bio">
+		<text>Veselı pohodovı chlápek, kterı má jenom jeden problém, nedokáe støílet z nièeho jiného ne z lovecké pušky. V poslední dobì to Lovec ani s jinou zbraní nezkouší. Dostal se do prùseru v divoké oblasti a ztratil svou rodinnou pušku. Teï vysedává v baru a doufá, e mu nìkdo pušku najde a pøinese. </text>
+	</string>
+	<string id="bar_hunter_name">
+		<text>Lovec</text>
+	</string>
+	<string id="bar_informer_bio">
+		<text>Záhadnı stalker všeználek. V baru prodává a kupuje informace. </text>
+	</string>
+	<string id="bar_informer_name">
+		<text>Práskaè</text>
+	</string>
+	<string id="bar_ivancov_bio">
+		<text>Velitel trestnıch nájezdù a expedic proti hordám mutantù </text>
+	</string>
+	<string id="bar_ivancov_name">
+		<text>Kapitán Ivancov</text>
+	</string>
+	<string id="bar_kicenko_name">
+		<text>Serant Kicenko</text>
+	</string>
+	<string id="bar_lelik_bio">
+		<text>Osobní stráce majitele Arény. O jeho minulosti toho moc známo není a vìtšinou jsou to nepìkné vìci. Nenávidí své bratry. </text>
+	</string>
+	<string id="bar_lelik_name">
+		<text>Ljolik</text>
+	</string>
+	<string id="bar_lisiy_name">
+		<text>Plešoun</text>
+	</string>
+	<string id="bar_petrenko_bio">
+		<text>Jeden ze zakladatelù Povinnosti a také jejich hlavní plánovaè. Vypracoval kodex Povinnosti a právì on pøijal do gangu skoro všechny klíèové èleny. </text>
+	</string>
+	<string id="bar_petrenko_name">
+		<text>Plukovník Petrenko</text>
+	</string>
+	<string id="bar_plichko_bio">
+		<text>Šéf bezpeènosti v oblasti Povinnosti</text>
+	</string>
+	<string id="bar_plichko_name">
+		<text>Serant Plièko</text>
+	</string>
+	<string id="bar_ryaboy_bio">
+		<text>Cizinec zasaenı vypalovaèem mozku. </text>
+	</string>
+	<string id="bar_ryaboy_name">
+		<text>Kropenáè</text>
+	</string>
+	<string id="bar_voronin_bio">
+		<text>Jeden ze zakladatelù Povinnosti a také jejich hlavní plánovaè. Vypracoval kodex Povinnosti a právì on pøijal do gangu skoro všechny klíèové èleny. </text>
+	</string>
+	<string id="bar_voronin_name">
+		<text>Generál Voronin</text>
+	</string>
+	<string id="cit_bandit_drunk_bio">
+		<text>Alkie.</text>
+	</string>
+	<string id="cit_bandit_general_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_bandit_veteran_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_bandits_leader_bio">
+		<text>Jeden z velitelù banditù. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_bandits_leader_name">
+		<text>Høebec</text>
+	</string>
+	<string id="cit_doctor_bio">
+		<text>Doktor.</text>
+	</string>
+	<string id="cit_doctor_name">
+		<text>Doktor</text>
+	</string>
+	<string id="cit_killer_exo_bio">
+		<text>Neznámı oldák. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_killer_general_bio">
+		<text>Neznámı oldák. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_killers_leader_bio">
+		<text>Velitel gangu oldákù. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_killers_leader_name">
+		<text>Dushman</text>
+	</string>
+	<string id="cit_vp_bio">
+		<text>Zkušenı stalker. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="cit_vp_name">
+		<text>Vasilij Petroviè</text>
+	</string>
+	<string id="dar_corpse_bio">
+		<text>Data nejsou dostupná. </text>
+	</string>
+	<string id="dar_explorer_bio">
+		<text>Zkušenı stalker. Vdy si dává pozor. </text>
+	</string>
+	<string id="dar_explorer_name">
+		<text>Kabát eka</text>
+	</string>
+	<string id="dar_kalugin_name">
+		<text>Kalugin P. I.</text>
+	</string>
+	<string id="ds_sergant_regular_bio">
+		<text>Serant ukrajinské armády. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="ds_soldier_regular_bio">
+		<text>Vojín ukrajinské armády. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_bandit_novice_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_captain_bio">
+		<text>Dlouho slouící kapitán ukrajinské armády. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_fanat_bio">
+		<text>Pøevzal po Wolfovi velení nad táborem nováèkù. Odhodlanı, agresivní, u nováèkù má zaslouenou autoritu.</text>
+	</string>
+	<string id="esc_fanat_name">
+		<text>Fanatik</text>
+	</string>
+	<string id="esc_fox_bio">
+		<text>Starı samotáø, zocelenı Zónou.</text>
+	</string>
+	<string id="esc_fox_name">
+		<text>Lišák</text>
+	</string>
+	<string id="esc_killer_specnaz_bio">
+		<text>Neznámı oldák. Zøejmì dobøe vyzbrojenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_petruha_bio">
+		<text>Chytrı nováèek. Wolf ho má zøejmì rád a èasto ho posílá na dùleité mise.</text>
+	</string>
+	<string id="esc_petruha_name">
+		<text>Petruha</text>
+	</string>
+	<string id="esc_provodnik_bio">
+		<text>Tak trochu ijící legenda. Prı vás dokáe odvést na jakékoli místo v Zónì. Jeho sluby jsou drahé a nejsou jen tak pro kadého. Pokud se mu nebudete líbit, nevezme vás nikam ani za všechny peníze na svìtì. Veterán, kterı zná Zónu skrz naskrz. </text>
+	</string>
+	<string id="esc_provodnik_name">
+		<text>Stopaø</text>
+	</string>
+	<string id="esc_sergant_regular_bio">
+		<text>Serant ukrajinské armády. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_shustryi_bio">
+		<text>Stalker, kterı si svou pøezdívku zajistil schopností bıt nepostøehnutelnı a nepostradatelnı. Obchodník ho pouívá na delikátní mise jako je odposlech, špehování a hledání stop. </text>
+	</string>
+	<string id="esc_shustryi_name">
+		<text>Šikula</text>
+	</string>
+	<string id="esc_soldier_commander_bio">
+		<text>Major velící armádní pevnùstce u mostu. Je o nìm známo, e za úplatky pouští stalkery pøes most. </text>
+	</string>
+	<string id="esc_soldier_commander_name">
+		<text>Major Kuznìcov</text>
+	</string>
+	<string id="esc_soldier_regular_bio">
+		<text>Vojín ukrajinské armády. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_specnaz_bio">
+		<text>Specnas. Dobøe vybavenı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="esc_specnaz_killer_bio">
+		<text>Neznámı oldák. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_stalker_novice_bio">
+		<text>Nováèek v Zónì. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="esc_tolik_bio">
+		<text>Typickı stalker.</text>
+	</string>
+	<string id="esc_tolik_name">
+		<text>Tolik</text>
+	</string>
+	<string id="esc_wolf_bio">
+		<text>Šéf tábora nováèkù. Starı stalker, kterı se chystá vypadnout pryè. </text>
+	</string>
+	<string id="esc_wolf_name">
+		<text>Wolf</text>
+	</string>
+	<string id="escape_trader_bio">
+		<text>U od dìtství si vydìlává na ivobytí obchodem. Ve školce prodával pastelky. Ve škole vıkaèky. V institutu mìkké drogy. Jakmile vznikla Zóna, uvìdomil si, kolik by na ní mohl vydìlat. Je známı schopností navázat solidní obchodní styky i s velmi podivnımi klienty. </text>
+	</string>
+	<string id="escape_trader_name">
+		<text>Sidoroviè</text>
+	</string>
+	<string id="gar_bandit_leader_bio">
+		<text>Mezi bandity v Zónì má urèitou autoritu. Borovùv poskok.</text>
+	</string>
+	<string id="gar_bandit_leader_name">
+		<text>Kanec Vasja</text>
+	</string>
+	<string id="gar_dolg_blokpost_bio">
+		<text>Stalker z frakce Povinnost. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="gar_dolg_blokpost_leader_bio">
+		<text>Dùstojník ve frakci Povinnost. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="gar_dolg_blokpost_leader_name">
+		<text>Praporèík</text>
+	</string>
+	<string id="gar_dram_novice_bio">
+		<text>Nováèek. Uèí se, jak to v Zónì chodí.</text>
+	</string>
+	<string id="gar_dram_novice_name">
+		<text>Jurik</text>
+	</string>
+	<string id="gar_hellcar_bio">
+		<text>Skrıvá se v Zónì pøed zákonem. Snaí se v Zónì udrovat poøádek podle svıch vlastních zákonù. Bojuje proti banditùm. Je krutı, ale férovı.</text>
+	</string>
+	<string id="gar_hellcar_name">
+		<text>Bìs</text>
+	</string>
+	<string id="gar_newbie_bio">
+		<text>Nováèek v Zónì. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="gar_seryi_bio">
+		<text>Stalker s oblièejem stejnì poskvrnìnım, jako je jeho svìdomí. </text>
+	</string>
+	<string id="gar_seryi_name">
+		<text>Šedivák</text>
+	</string>
+	<string id="gar_stalker_regular_bio">
+		<text>Zkušenı stalker. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="mil_Dolg_specnaz_bio">
+		<text>Bojovník z frakce Povinnost. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Dolg_specnaz_cherep_bio">
+		<text>Velitel speciálních jednotek ve frakci Povinnost. Vìtšinou dobøe vybavenı.</text>
+	</string>
+	<string id="mil_Dolg_specnaz_cherep_name">
+		<text>Lebka</text>
+	</string>
+	<string id="mil_Dolg_specnaz_silence_bio">
+		<text>Bojovník z frakce Povinnost. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Killer_informator_bio">
+		<text>Informátor a provokatér známı v celé Zónì.</text>
+	</string>
+	<string id="mil_Killer_informator_name">
+		<text>Ara</text>
+	</string>
+	<string id="mil_killer_master_bio">
+		<text>Neznámı oldák. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_killer_sniper_bio">
+		<text>Neznámı oldák. Nejspíš v Zónì novı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Killer_specnaz_bio">
+		<text>Neznámı oldák. Zøejmì dobøe vyzbrojenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Monolit_master_bio">
+		<text>Hlídaè z frakce Monolit. Radši se mu vyhni. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Monolit_regular_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Stalker_master_bio">
+		<text>Jeden z veteránù. Zná Zónu jako vlastní boty. Vìtšinou dobøe vybavenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Stalker_veteran_bio">
+		<text>Veterán stalker. Zøejmì dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_blockpost_leader_bio">
+		<text>Stalker z frakce Svoboda. Velitel Bariéry. Mu, kterı dokázal dát dohromady skupinu lidí ochotnıch obìtovat své ivoty ve prospìch vìtšiny.</text>
+	</string>
+	<string id="mil_Svoboda_blockpost_leader_name">
+		<text>Pan Klobouk</text>
+	</string>
+	<string id="mil_Svoboda_bodyguard_bio">
+		<text>Osobní stráce Lukáše, velitele frakce Svoboda.</text>
+	</string>
+	<string id="mil_Svoboda_cook_bio">
+		<text>Kuchaø frakce Svoboda. Opilec a rváè, ale vıbornì vaøí. </text>
+	</string>
+	<string id="mil_Svoboda_cook_name">
+		<text>Šéfkuchaø</text>
+	</string>
+	<string id="mil_Svoboda_engineer_bio">
+		<text>Mechanik známı v celé Zónì. Dokáe z traktoru udìlat tank, tedy se to aspoò øíká. </text>
+	</string>
+	<string id="mil_Svoboda_engineer_name">
+		<text>Šroub</text>
+	</string>
+	<string id="mil_Svoboda_leader_bio">
+		<text>Velitel frakce Svoboda.</text>
+	</string>
+	<string id="mil_Svoboda_leader_name">
+		<text>Lukáš</text>
+	</string>
+	<string id="mil_Svoboda_master_bio">
+		<text>Velitel frakce Svoboda. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="mil_Svoboda_master_Max_bio">
+		<text>Hlídaè z frakce Svoboda. Fanatik. Velmi dobøe vybavenı a nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_master_Max_name">
+		<text>Max</text>
+	</string>
+	<string id="mil_Svoboda_master_Ugrumiy_bio">
+		<text>Hlídaè z frakce Svoboda. Velmi dobøe vybavenı a nebezpeènı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="mil_Svoboda_master_Ugrumiy_name">
+		<text>Mraèoun</text>
+	</string>
+	<string id="mil_Svoboda_regular_bio">
+		<text>Stalker z frakce Svoboda. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_sniper_bio">
+		<text>Odstøelovaè z frakce Svoboda. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_specnaz_bio">
+		<text>Bojovník z frakce Svoboda. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_stukach_bio">
+		<text>Stalker z frakce Svoboda. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_stukach_name">
+		<text>Pavlík</text>
+	</string>
+	<string id="mil_Svoboda_trader_bio">
+		<text>Nechvalnì proslulı díky své chamtivosti a neústupností, ale údajnì dokáe sehnat cokoli. </text>
+	</string>
+	<string id="mil_Svoboda_trader_name">
+		<text>Lakomec</text>
+	</string>
+	<string id="mil_Svoboda_zombi_stalker_bio">
+		<text>Stalker z frakce Svoboda. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="mil_Svoboda_zombi_stalker_name">
+		<text>Šílenec ze Svobody</text>
+	</string>
+	<string id="mil_Svoboda_zoneguard_bio">
+		<text>Bojovník z frakce Svoboda. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_followers_bomber_name">
+		<text>Saša Bílı</text>
+	</string>
+	<string id="pri_followers_common_bio">
+		<text>Veterán stalker. Zøejmì dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_monolith_common_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_monolith_exo_bio">
+		<text>Elitní stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_monolith_leader_bio">
+		<text>Velitel frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_monolith_leader_name">
+		<text>Cháron</text>
+	</string>
+	<string id="pri_monolith_regular_bio">
+		<text>Obyèejnı stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_monolith_specnaz_bio">
+		<text>Stalker ze speciálních jednotek frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_zombied_soldier_bio">
+		<text>Obyèejnı voják. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="pri_zombied_soldier_name">
+		<text>Zombifikovanı voják</text>
+	</string>
+	<string id="pri_zombied_stalker_bio">
+		<text>Stalker, kterı mìl opravdu smùlu.</text>
+	</string>
+	<string id="pri_zombied_stalker_name">
+		<text>Zombifikovanı stalker</text>
+	</string>
+	<string id="rad_dolg_master_bio">
+		<text>Velitel frakce Povinnost. Velmi dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_ecolog_bio">
+		<text>Vìdec. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_ecolog_guard_bio">
+		<text>Ochranka vìdce. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_ecolog_guard_name">
+		<text>Vızkumnı asistent.</text>
+	</string>
+	<string id="rad_ecolog_name">
+		<text>Vızkumnı asistent.</text>
+	</string>
+	<string id="rad_monolith_general_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_monolith_specnaz_bio">
+		<text>Bojovník z frakce Monolit. Dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_specnaz_bio">
+		<text>Specnas. Dobøe vybavenı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="rad_stalker_master_bio">
+		<text>Jeden z veteránù. Zná Zónu jako vlastní boty. Vìtšinou dobøe vybavenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_stalker_veteran_bio">
+		<text>Veterán stalker. Zøejmì dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="rad_svoboda_master_bio">
+		<text>Velitel frakce Svoboda. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="rad_zombied_general_bio">
+		<text>Stalker, kterı mìl opravdu smùlu.</text>
+	</string>
+	<string id="ros_ecolog_guard_bio">
+		<text>Vızkumník z mobilní laboratoøe. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="ros_freeman_bio">
+		<text>Vìdec, expert na anomálie. Pracoval v USA na pøísnì tajnıch projektech. U nìjakou dobu se pohøešuje. </text>
+	</string>
+	<string id="ros_freeman_name">
+		<text>Freeman</text>
+	</string>
+	<string id="ros_happy_bio">
+		<text>Lupiè a vrah. Na jeho hlavu je vypsaná odmìna. Døíve mìl dobré vztahy s frakcí Povinnost, pomohl jim získat jejich teritorium. Teï se schovává v divoké oblasti a pøepadává se svım gangem osamìlé stalkery.</text>
+	</string>
+	<string id="ros_happy_name">
+		<text>Štístko</text>
+	</string>
+	<string id="ros_kruglov_bio">
+		<text>Ph.D. v oboru biologie. Studoval patogenické mutace zvíøat. V Zónì studuje mutaci slepıch psù.</text>
+	</string>
+	<string id="ros_kruglov_name">
+		<text>Profesor Kruglov</text>
+	</string>
+	<string id="ros_tiran_bio">
+		<text>Jeden z "hrdinù" gangu oldákù. Veterán, kterı má v tìle zaryty støely všech monıch kalibrù. Šílenı psychopat a sadista.</text>
+	</string>
+	<string id="ros_tiran_name">
+		<text>Tyran</text>
+	</string>
+	<string id="ros_volkodav_bio">
+		<text>Jeden z prvních váleènıch velitelù oldákù. Vùdce gangu "Psi". Anarchista nesnášející všechny zákony kromì zákonù dungle.</text>
+	</string>
+	<string id="ros_volkodav_name">
+		<text>Vlkodav</text>
+	</string>
+	<string id="sar_monolith_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sar_monolith_cristall_bio">
+		<text>Stalker ze speciální skupiny "Krystal" zodpovìdnı za zabezpeèení frakce Monolit.</text>
+	</string>
+	<string id="sar2_arena_manager_name">
+		<text>Arnie </text>
+	</string>
+	<string id="sar2_arena_savage_name">
+		<text>Bestie</text>
+	</string>
+	<string id="sar2_bandit_leader_name">
+		<text>Kanec Vasja</text>
+	</string>
+	<string id="sar2_bio">
+		<text>Psychomateriální forma vyrobená Monolitem.</text>
+	</string>
+	<string id="sar2_borov_name">
+		<text>Borov</text>
+	</string>
+	<string id="sar2_crazy_svoboda_name">
+		<text>Šílenı stalker.</text>
+	</string>
+	<string id="sar2_dolg_blokpost_leader_name">
+		<text>Praporèík</text>
+	</string>
+	<string id="sar2_dolg_guard_commander_name">
+		<text>Šéf bezpeènosti</text>
+	</string>
+	<string id="sar2_dolg_skull_name">
+		<text>Lebka</text>
+	</string>
+	<string id="sar2_dolg_zastava_commander_name">
+		<text>Velitel pevnùstky</text>
+	</string>
+	<string id="sar2_dram_novice_name">
+		<text>Jurik</text>
+	</string>
+	<string id="sar2_explorer_name">
+		<text>Kabát eka</text>
+	</string>
+	<string id="sar2_fanat_name">
+		<text>Fanatik</text>
+	</string>
+	<string id="sar2_fox_name">
+		<text>Lišák</text>
+	</string>
+	<string id="sar2_gordon_name">
+		<text>Gordon</text>
+	</string>
+	<string id="sar2_haron_name">
+		<text>Cháron</text>
+	</string>
+	<string id="sar2_hellcar_name">
+		<text>Bestie</text>
+	</string>
+	<string id="sar2_informator_name">
+		<text>Ara</text>
+	</string>
+	<string id="sar2_ivancov_name">
+		<text>Kapitán Ivancov</text>
+	</string>
+	<string id="sar2_krot_name">
+		<text>Stalker Krtek</text>
+	</string>
+	<string id="sar2_kruglov_name">
+		<text>Profesor Kruglov</text>
+	</string>
+	<string id="sar2_kuznetsov_name">
+		<text>Major Kuznìcov</text>
+	</string>
+	<string id="sar2_lucky_name">
+		<text>Štístko</text>
+	</string>
+	<string id="sar2_petrenko_name">
+		<text>Plukovník Petrenko</text>
+	</string>
+	<string id="sar2_petruha_name">
+		<text>orik</text>
+	</string>
+	<string id="sar2_professor_name">
+		<text>Profesor Sacharov</text>
+	</string>
+	<string id="sar2_ryaboy_name">
+		<text>Kropenáè</text>
+	</string>
+	<string id="sar2_seryi_name">
+		<text>Šedivák</text>
+	</string>
+	<string id="sar2_svoboda_blockpost_leader_name">
+		<text>Kep</text>
+	</string>
+	<string id="sar2_svoboda_bodyguard_name">
+		<text>Kaput</text>
+	</string>
+	<string id="sar2_svoboda_cook_name">
+		<text>Šéfkuchaø</text>
+	</string>
+	<string id="sar2_svoboda_engeneer_name">
+		<text>Šroub</text>
+	</string>
+	<string id="sar2_svoboda_leader_name">
+		<text>Lukáš</text>
+	</string>
+	<string id="sar2_svoboda_max_name">
+		<text>Max</text>
+	</string>
+	<string id="sar2_svoboda_stukach_name">
+		<text>Pavlík</text>
+	</string>
+	<string id="sar2_svoboda_trader_name">
+		<text>Lakomec</text>
+	</string>
+	<string id="sar2_svoboda_ugrumyi_name">
+		<text>Mraèoun</text>
+	</string>
+	<string id="sar2_tiran_name">
+		<text>Tyran</text>
+	</string>
+	<string id="sar2_tolik_name">
+		<text>Tolik</text>
+	</string>
+	<string id="sar2_volkodav_name">
+		<text>Vlkodav</text>
+	</string>
+	<string id="sar2_voronin_name">
+		<text>Generál Voronin</text>
+	</string>
+	<string id="sar2_wolf_name">
+		<text>Wolf</text>
+	</string>
+	<string id="sim_bandit_general_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_bandit_master_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_bandit_master_fraer_bio">
+		<text>Pøišel do Zóny pøi hledání dobrodruství. Imituje postavy z populárních komiksù šedesátıch let. Pouívá rùzná jména: Batman, Macho, Black Coat, Banderas. Aèkoli v Zónì pøeívá u dva roky, nikdo ho nebere vánì, co ho dohání k šílenství. </text>
+	</string>
+	<string id="sim_bandit_master_kocherga_bio">
+		<text>Zuøivı, prohnilı, hrubı, bezohlednı, krutı, necitlivı, chladnı. Nikdo neví, kdy a jak se dostal do Zóny. Všichni z nìj mají strach. Nemá ádné pøátele. Prostì ije v Zónì, bez budoucnosti i minulosti. Po jedné z nájezdù do Zóny ztratil pamì, zapomnìl skoro všechno. Nepamatuje si, odkud pochází, nepamatuje si ani své jméno. Je o nìm známo, e bìhem hodiny naprosto zapomene na nìkoho, s kım se seznámil, zaène ho povaovat za nepøítele a zabije ho.</text>
+	</string>
+	<string id="sim_bandit_novice_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_bandit_veteran_bio">
+		<text>Neznámı stalker. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_dolg_master_bio">
+		<text>Hlídaè z frakce Povinnost. Pokud nejsi jejich pøítel, vyhıbej se jim. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_dolg_regular_bio">
+		<text>Stalker z frakce Povinnost. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_dolg_sniper_bio">
+		<text>Bojovník z frakce Povinnost. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_dolg_veteran_barin_bio">
+		<text>Sprosák, pokrytec, patolízal a zbabìlec. Barinovım mottem by klidnì mohlo bıt "Po nás potopa". Je ochotnı vyuít jakoukoli situaci ve svùj vlastní prospìch. Znaènì ambiciózní a nedùtklivı. Nikoho nepøekvapuje, e do Zóny pøišel kvùli penìzùm. U dva roky hromadí majetek jakımikoli prostøedky. </text>
+	</string>
+	<string id="sim_dolg_veteran_bio">
+		<text>Bojovník z frakce Povinnost. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_dolg_veteran_prapor_bio">
+		<text>Oficiální verbíø bezpeènostní sluby Ukrajiny. Èastı návštìvník v baru. Všichni vìdí, co je zaè a také, e v pøípadì nouze je to chlap, na kterého se mohou obrátit. Ale jakmile tuhle hranici jednou nìkdo pøekroèí, u se mezi poctivé stalkery nevrátí.</text>
+	</string>
+	<string id="sim_ecolog_zob_bio">
+		<text>V kadodenním ivotì je to flegmatik, kterı si své pocity nechává pro sebe a zùstává klidnı. Ve stresu ale zaène bıt jedovatı a agresivní. Intelektuál. Materialista, kterı lituje, e kdy do Zóny pøišel. Po dokonèení lékaøské univerzity byl poslán do Zóny, kde vìdci potøebovali asistenta neurochirurga. Pitvá mozky mutantù a zkoumá jejich psychokinetické schopnosti. Tìší se, a se vrátí zpátky do hlavního mìsta, chce bıt od Zóny pokud mono co nejdál. </text>
+	</string>
+	<string id="sim_fresh_Zombied_bio">
+		<text>Stalker, kterı mìl opravdu smùlu.</text>
+	</string>
+	<string id="sim_killer_general_bio">
+		<text>Neznámı oldák. Zøejmì dobøe vyzbrojenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_killer_master_bio">
+		<text>Neznámı oldák. Zøejmì dobøe vyzbrojenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_killer_sniper_bio">
+		<text>Neznámı oldák. Zøejmì dobøe vyzbrojenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_killer_veteran_bio">
+		<text>Neznámı oldák. Zøejmì dobøe vyzbrojenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_monolith_master_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_monolith_regular_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_monolith_sniper_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_monolith_specnaz_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_soldier_commander_bio">
+		<text>Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_Soldier_master_bio">
+		<text>Vojenskı stalker. Dobøe vyzbrojenı a velmi nebezpeènı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="sim_soldier_regular_bio">
+		<text>Obyèejnı voják. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_soldier_sniper_bio">
+		<text>Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_soldier_specnaz_bio">
+		<text>Specnas. Dobøe vybavenı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="sim_stalker_general_bio">
+		<text>Zkušenı stalker. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="sim_stalker_general_upir_bio">
+		<text>Stalker, kterı se zrodil pod šastnou hvìzdou. U mnohokrát se úèastnil akcí, které se pøíliš nevydaøily, a jako jedinı pøeil. Vìtšina stalkerù se mu vyhıbá, protoe údajnì ostatním nosí smùlu. U nìjakou dobu se prochází Zónou sám. </text>
+	</string>
+	<string id="sim_stalker_master_bio">
+		<text>Jeden z veteránù. Zná Zónu jako vlastní boty. Vìtšinou dobøe vybavenı a velmi nebezpeènı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_stalker_master_chuchelo_bio">
+		<text>Zkušenı pašerák. Dlouho pracoval v Africe a jiní Americe. Kdy se doslechl o katastrofì v Èernobylu, vrátil se na Ukrajinu. Bìhem chvíle se mu podaøilo ze zakázané oblasti propašovat stovky vycpanıch mutantù a zaslouil si tak pøezdívku "Preparátor". Kdy "nepracuje" v Zónì, iví se jako úspìšnı obchodník. Miluje obleky od Armaniho a kravaty od Versaceho, ale dává pøednost sovìtskım zbraním. </text>
+	</string>
+	<string id="sim_stalker_master_diador_bio">
+		<text>Úèastnil se války v Afghánistánu. Døíve ateista, ale po pøeití mudahedínského útoku se dal na náboenství. Po válce v Afghánistánu emigroval do Polska a pøihlásil se tam do teologického semináøe. Po dokonèení semináøe nìjakou dobu kázal v katolickém kostele ve Lvovì. Po explozi v Èernobylu se dobrovolnì pøihlásil na pomoc postienım. Posledních pár let káe v Zónì.</text>
+	</string>
+	<string id="sim_stalker_master_master_bio">
+		<text>Døíve byl mechanik v továrnì "CholodMach". Kdy ho opustila manelka, rozhodl se zabít. Jeliko je ale silnì vìøící, vybral si jako nekonvenèní zpùsob sebevrady Zónu. Navzdory svému oèekávání pøeil, získal cenné zkušenosti a respekt ostatních stalkerù. Je to pravdìpodobnì nejkvalifikovanìjší mechanik v Zónì. Opravuje vybavení a vozidla, instaluje do bunkrù gangù bezpeènostní zaøízení, to mu jde nejlépe. Jednoduchı, odhodlanı mu, obèas trochu hrubı.</text>
+	</string>
+	<string id="sim_stalker_master_polkan_bio">
+		<text>Døívìjší vojenskı stalker, podplukovník jednotek ministerstva vnitra. Jedinı voják, kterı se kdy vrátil z katastrofické expedice hluboko do Zóny a kterı pozdìji zjistil, e mise byla od zaèátku zbyteèná a sebevraedná. Proto se rozhodl nevracet, nafilmoval vlastní smrt a pøidal se ke stalkerùm. Tichı, cynickı, odhodlanı. </text>
+	</string>
+	<string id="sim_stalker_novice_bio">
+		<text>Nováèek v Zónì. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_stalker_novice_neumeha_bio">
+		<text>Je starı dvacet let. Ve Velké zemi ztratil všechno a všechny, proto se rozhodl odejít do Zóny, kde sotva pøeívá, ale nemá kam jinam jít. Dluí peníze mnoha stalkerùm. Do Zóny vychází èasto, ale nikdy ne sám, vdy se snaí pøidat se ke skupinì zkušenıch stalkerù. Není pøíliš oblíbenım spoleèníkem, protoe je vìtšinou k nièemu. Není schopnı si vydìlat dost penìz, ije z milodarù ostatních stalkerù a je zadluenı a po uši.</text>
+	</string>
+	<string id="sim_stalker_sniper_bio">
+		<text>Veterán stalker. Zøejmì dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_stalker_veteran_bio">
+		<text>Veterán stalker. Zøejmì dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_stalker_veteran_gusarov_bio">
+		<text>Démon Oleg Gusarov. Døívìjší "èernı baret", slouil v bìloruské brigádì Specnas. Odslouil si mnoho let, dosáhl hodnosti staršiny. Odstøelovaè a pyrotechnik. Povahou samotáø, do Zóny nikdy nevyráí s ostatními, dává pøednost jednání na vlastní pìst. Mnohokrát mu rùzné klany nabízeli èlenství, ale vdy je odmítl. </text>
+	</string>
+	<string id="sim_stalker_veteran_umnik_bio">
+		<text>Student fyziky, kterı v posledním roce vypadl ze školy a vyrazil do Zóny vydìlat peníze snadno a rychle. Rád se pøedvádí se svım "vìdeckım" vzdìláním a s oblibou se hádá o abstraktní filozofické záleitosti, take ho stalkeøi moc rádi nemají. Celkovì docela slušnı chlap. Tak trochu idealista.</text>
+	</string>
+	<string id="sim_stalker_veteran_vorobey_bio">
+		<text>Vrabci je 27 let, je to mazanı a pøedvídavı chlap, schopnı ale i tìch nejhorších pøehmatù. Dokáe bıt docela zlı. Celkovì trochu pochybná osoba. Pohublı a vybledlı. Do Zóny pøišel ze zvìdavosti, sám sobì si slíbil, e se domù vrátí do dvou mìsícù, ale zùstal. Hned na první vıpravì Vrabec narazil na pole plné anomálií, bez nejmenšího tušení, jak jsou nebezpeèné. Jakmile zjistil, co udìlal, hrùzou omdlel. Stalo se to 9. øíjna, od té doby tohle datum slaví jako své druhé narozeniny. </text>
+	</string>
+	<string id="sim_Svoboda_master_bio">
+		<text>Velitel frakce Svoboda. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="sim_Svoboda_regular_bio">
+		<text>Stalker z frakce Svoboda. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_Svoboda_sniper_bio">
+		<text>Stalker z frakce Svoboda. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_Svoboda_specnaz_bio">
+		<text>Bojovník z frakce Svoboda. Vìtšinou dobøe vybavenı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="sim_Svoboda_specnaz_leshii_bio">
+		<text>Goblin, jak mu jeho bratr øíká, pøišel do Zóny jako mladı idealista, ale po pár letech ivota na hranì se z nìj stal cynickı realista. Povauje Zónu za svùj domov a ti, kteøí v ní selou, podle nìj nejsou hodni kráèet po povrchu zemském.</text>
+	</string>
+	<string id="sim_svoboda_specnaz_prut_bio">
+		<text>Pod jménem Arkadij píše pøíbìh o Zónì. Døívìjší novináø. Puntièkáøskı a nevrlı, ale spravedlivı. Mezi stalkery je hodnì uznáván. </text>
+	</string>
+	<string id="sim_zombied_master_bio">
+		<text>Stalker, kterı mìl opravdu smùlu.</text>
+	</string>
+	<string id="sim_zombied_novice_bio">
+		<text>Stalker, kterı mìl opravdu smùlu.</text>
+	</string>
+	<string id="sim_zombied_veteran_bio">
+		<text>Stalker, kterı mìl opravdu smùlu.</text>
+	</string>
+	<string id="val_bandit_bodyguard_bio">
+		<text>Hlídaè banditù. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_bandit_general_bio">
+		<text>Obyèejnı bandita. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_bandit_novice_bio">
+		<text>Nováèek bandita. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_bandit_veteran_bio">
+		<text>Zkušenı bandita. Nechvalnì proslulı. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_borov_bio">
+		<text>Vùdce banditù. </text>
+	</string>
+	<string id="val_borov_name">
+		<text>Borov</text>
+	</string>
+	<string id="val_dolg_common_bio">
+		<text>Stalker z frakce Povinnost. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_monolith_common_bio">
+		<text>Stalker z frakce Monolit. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_prisoner_bio">
+		<text>Stalker z frakce Povinnost. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_prisoner_name">
+		<text>Chlupáè Sergej</text>
+	</string>
+	<string id="val_pulia_bio">
+		<text>Stalker z frakce Povinnost. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_pulia_name">
+		<text>Kulka</text>
+	</string>
+	<string id="val_soldier_regular_bio">
+		<text>Obyèejnı voják. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_soldier_specnaz_bio">
+		<text>Specnas. Dobøe vybavenı. Podrobnosti nejsou dostupné.</text>
+	</string>
+	<string id="val_stalker_general_bio">
+		<text>Zkušenı stalker. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="val_stalker_novice_bio">
+		<text>Nováèek v Zónì. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="yan_ghost_name">
+		<text>Duch</text>
+	</string>
+	<string id="yan_saharov_bio">
+		<text>Veterán vızkumník v Zónì. Úèastnil se první expedice v roce 2007. </text>
+	</string>
+	<string id="yan_saharov_name">
+		<text>Profesor Sacharov</text>
+	</string>
+	<string id="yan_semenov_bio">
+		<text>Vızkumnı asistent v mobilní laboratoøi. Podrobnosti nejsou dostupné. </text>
+	</string>
+	<string id="yan_semenov_name">
+		<text>Asistent Semenov</text>
+	</string>
+	<string id="yan_vasilyev_name">
+		<text>Vasiljev</text>
+	</string>
+	<string id="zombie_name">
+		<text>Zombifikovanı stalker</text>
+	</string>
+	<string id="actor_name">
+		<text>Oznaèenı</text>
+	</string>
+	<string id="sim_bandit_master_fraer_name">
+		<text>Fráter</text>
+	</string>
+	<string id="sim_bandit_master_kocherga_name">
+		<text>Poker</text>
+	</string>
+	<string id="sim_dolg_veteran_barin_name">
+		<text>Barin</text>
+	</string>
+	<string id="sim_dolg_veteran_prapor_name">
+		<text>Praporèík</text>
+	</string>
+	<string id="sim_ecolog_zob_name">
+		<text>Zob</text>
+	</string>
+	<string id="sim_stalker_general_upir_name">
+		<text>Vampír</text>
+	</string>
+	<string id="sim_stalker_master_chuchelo_name">
+		<text>Strašák</text>
+	</string>
+	<string id="sim_stalker_master_diador_name">
+		<text>Otec Diodor</text>
+	</string>
+	<string id="sim_stalker_master_master_name">
+		<text>Mistr</text>
+	</string>
+	<string id="sim_stalker_master_polkan_name">
+		<text>Polkan</text>
+	</string>
+	<string id="sim_stalker_novice_neumeha_name">
+		<text>Neohrabanej</text>
+	</string>
+	<string id="sim_stalker_veteran_gusarov_name">
+		<text>Oleg "Démon" Gusarov</text>
+	</string>
+	<string id="sim_stalker_veteran_umnik_name">
+		<text>Chytráèek</text>
+	</string>
+	<string id="sim_stalker_veteran_vorobey_name">
+		<text>Vrabec</text>
+	</string>
+	<string id="sim_Svoboda_specnaz_leshii_name">
+		<text>Lešij</text>
+	</string>
+	<string id="sim_svoboda_specnaz_prut_name">
+		<text>Vìtvièka</text>
+	</string>

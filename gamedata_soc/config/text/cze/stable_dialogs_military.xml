@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="mil_bodyguard_dialog_0">
+		<text>Co chceљ?</text>
+	</string>
+	<string id="mil_bodyguard_dialog_1">
+		<text>Hledбm vщdce Svobody. Mбm pro nмj extrйmnм dщleћitй informace.</text>
+	</string>
+	<string id="mil_bodyguard_dialog_2">
+		<text>Jo, a jak moc dщleћitэ?</text>
+	</string>
+	<string id="mil_bodyguard_dialog_5">
+		<text>Kousek od vaљн zбkladny jsem narazil na skupinu иlenщ Povinnosti.</text>
+	</string>
+	<string id="mil_bodyguard_dialog_6">
+		<text>A jйje, Povinnost chce asi zase vyrovnat ъиty... \nOk, mщћeљ vejнt, ale bouchaиku schovej. A aќ tм ani nenapadne tady dмlat bordel, nebo tм brzo vynesem nohama napшed.</text>
+	</string>
+	<string id="mil_bodyguard_dialog_7">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_cook_common1_0">
+		<text>Dobrэ odpoledne.</text>
+	</string>
+	<string id="mil_cook_common1_101">
+		<text>Uhuh!</text>
+	</string>
+	<string id="mil_cook_common1_102">
+		<text>A to jako co?</text>
+	</string>
+	<string id="mil_cook_common1_103">
+		<text>Jasnм.</text>
+	</string>
+	<string id="mil_cook_common1_104">
+		<text>Co je tady tak srandovnн?</text>
+	</string>
+	<string id="mil_cook_common1_105">
+		<text>Hej, иlovмиe! Rбd tм vidнm!</text>
+	</string>
+	<string id="mil_cook_common1_106">
+		<text>Nazdar.</text>
+	</string>
+	<string id="mil_cook_common1_107">
+		<text>Dlouho jsme se nevidмli!</text>
+	</string>
+	<string id="mil_cook_common1_108">
+		<text>My uћ jsme se nмkdy setkali?</text>
+	</string>
+	<string id="mil_cook_common1_109">
+		<text>Errrr... Jo! Hehe...</text>
+	</string>
+	<string id="mil_cook_common1_110">
+		<text>No, jб si na tebe fakt ale nepamatuju.</text>
+	</string>
+	<string id="mil_cook_common1_111">
+		<text>Hrm... Jo, to je v pohodм, nмma probljema.</text>
+	</string>
+	<string id="mil_cook_common2_0">
+		<text>Co je tohle vщbec za mнsto?</text>
+	</string>
+	<string id="mil_cook_common2_201">
+		<text>Todle mнsto... moc hezkэ mнsto... je prostм normбlnн mнsto, vљak vнљ... prostм tady ћije pбr lidн, hehe...</text>
+	</string>
+	<string id="mil_cook_common2_202">
+		<text>A co?</text>
+	</string>
+	<string id="mil_cook_common2_203">
+		<text>Pfft... Se ptбљ fakt na tмћkэ otбzky, pane Cizinec!</text>
+	</string>
+	<string id="mil_cook_common2_204">
+		<text>A co kdybys љel rovnou k vмci?</text>
+	</string>
+	<string id="mil_cook_common2_205">
+		<text>Hej, klнdek! Zklidni hormon... no... je to prostм normбlnн flek! Tichej a klidnej. Vљechno dobrэ. Jo...hele\nzklidni, jo? Moc se nerozиiluj...</text>
+	</string>
+	<string id="mil_cook_common3_0">
+		<text>A ty seљ?</text>
+	</string>
+	<string id="mil_cook_common3_301">
+		<text>Jб?</text>
+	</string>
+	<string id="mil_cook_common3_302">
+		<text>Pшesnм tak. Ty. Ne jб.</text>
+	</string>
+	<string id="mil_cook_common3_303">
+		<text>Haha, to je dobrэ! Jб... co se mnou? Jsem v pohodм. No... Jб... vaшнm a tak. Tady. Jsem Љйfkuchaш! Mistr koшenн a vaшenн! Vљak to znбљ - petrћel, kopr, bylinky a tak... taky chleba... Jasnэ?</text>
+	</string>
+	<string id="mil_cook_common3_304">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_cook_common3_305">
+		<text>A taky konzervy... kondenzovanэ slazenэ mlнko... љunka... rostbнf s rajиatovou omбиkou... jo...</text>
+	</string>
+	<string id="mil_cook_common3_306">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_cook_common3_307">
+		<text>Francouzskej chleba... keиup... vajca... hnмdej chleba, sejra. Co mбљ. Taky vнdeтskэ шнzky! A pбrky! Drщbeћ, studenэ, ne lнtajнcн.</text>
+	</string>
+	<string id="mil_cook_common3_308">
+		<text>Jasnм, uћ chбpu! Aspoт mi шekni, jak se jmenujeљ.</text>
+	</string>
+	<string id="mil_cook_common3_309">
+		<text>He?.. Oh! Slavнk, tak mi шнkaj... ale to je akorбt nбlepka... ne! To je zбstмra! Mбm tudle bнlou zбstмru, hele, иum. Sedni si a neиouhej mi tady... protoћe ten jako vodstшelovaи, ten tм normбlnм vodstшelн, ћe jo! Sou takovн, to jo...</text>
+	</string>
+	<string id="mil_cook_common4_0">
+		<text>Nenн tady poblнћ vesnice?</text>
+	</string>
+	<string id="mil_cook_common4_401">
+		<text>Nooo...</text>
+	</string>
+	<string id="mil_cook_common4_402">
+		<text>No co?</text>
+	</string>
+	<string id="mil_cook_common4_403">
+		<text>Eh?</text>
+	</string>
+	<string id="mil_cook_common4_404">
+		<text>Vesnice.</text>
+	</string>
+	<string id="mil_cook_common4_405">
+		<text>Ahh... Nмco tady je. Тбkэ ћrбdlo... urиitм kondenzovanэ mlнko...</text>
+	</string>
+	<string id="mil_cook_common4_406">
+		<text>Jak se tam dostanu?</text>
+	</string>
+	<string id="mil_cook_common4_407">
+		<text>Eh? Moment. Poиkej... hele, fakt to potшebujeљ vмdмt? Klнdek, si sedni, sedni na zadek a dбme cigбro, co?</text>
+	</string>
+	<string id="mil_cook_common4_408">
+		<text>Potшebuju se dostat do vesnice.</text>
+	</string>
+	<string id="mil_cook_common4_409">
+		<text>No jo... si posedнme a zahulнme. Pak pudeљ... tм tam vemu. Nмma probljema.</text>
+	</string>
+	<string id="mil_cook_common4_410">
+		<text>Nemusнљ se obtмћovat, staин, kdyћ mi шekneљ, jak se tam dostanu.</text>
+	</string>
+	<string id="mil_cook_common4_411">
+		<text>Jasnм... hej, nerejpej do mм, jo! Pudem za chviliиku voba, jen vydrћ. Prostм hrkni na zadek, jo, a...</text>
+	</string>
+	<string id="mil_cook_common5_0">
+		<text>Poslouchej, nevнљ, kde bych mohl sehnat nмjakэ vybavenн?</text>
+	</string>
+	<string id="mil_cook_common5_501">
+		<text>Vybavenн? Kurтa, jб tмm vaљim љifrбm jako to... uћ vщbec tohle... nerozumнm, brбcho!</text>
+	</string>
+	<string id="mil_cook_common5_502">
+		<text>Vybavenн. Zbranм. Artefakty.</text>
+	</string>
+	<string id="mil_cook_common5_503">
+		<text>Zbranм... ne...  moje kudla... Chceљ moji kudlu? Ne? Jo... Artefakty. Na co sakra? Hele, hlavnм klнdek, sedni. Dej si se mnou cigбro. Pokecбme, zahulнme, ћe jo, artefakty, no...</text>
+	</string>
+	<string id="mil_cook_common5_504">
+		<text>Kde se tady dajн najнt artefakty?</text>
+	</string>
+	<string id="mil_cook_common5_505">
+		<text>To je lehkэ! Artefakty... My tady jako mбme artefaktщ aћ po krk, ћe jo! Vнљ, jak je takovej ten jako radioaktivnн baћiтбk, teda baћina? No to je fuk. Tam. Jako ty artefakty. Sou tam. Prostм pшestaт poskakovat a bude to, jo? Hlavnм klнdek. Artefakty... he-he-he... artefakty-barfetakty...</text>
+	</string>
+	<string id="mil_cook_common6_0">
+		<text>Ok. Dбvej na sebe bacha.</text>
+	</string>
+	<string id="mil_cook_common6_601">
+		<text>Jasnм... ale sedni, kdyћ uћ seљ tady, ћe jo.</text>
+	</string>
+	<string id="mil_cook_common6_602">
+		<text>Jdu pryи.</text>
+	</string>
+	<string id="mil_cook_common6_603">
+		<text>Eh? Jasnм... klнdek... jo? A zavшi za mnou dveшe, bo du pryи... ta-da-da-da...</text>
+	</string>
+	<string id="mil_cook_dialog_0">
+		<text>No pocem a sedej! Uћijem si to jako ћe jo...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_0">
+		<text>Dбme si panбka, co ty na to?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_1">
+		<text>Jasnб pбka ptбka otvнrбka! Nalejvej!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_2">
+		<text>No... tak na zdravн.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_3">
+		<text>Jo, to je dobrэ... nech si flaљku... jeљtм tam nмco je.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_4">
+		<text>A co jeљtм trochu?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_5">
+		<text>Ahhhh... bombastika! Jako љkoda, ћe ta flaљka uћ je kaputovanб, teda. Nemбљ eљtм?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_1_6">
+		<text>Podнvбm se.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_0">
+		<text>Jo, tady. Jen si dej.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_1">
+		<text>He-he... to bylo dobrэ! Novб, akorбt jako vodnikad. Ty mбљ v kapse skladiљtм, co nebo jako? </text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_2">
+		<text>Ehm, no jen se napij. Jб se v poslednн dobм moc nepocviиil.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_3">
+		<text>Na vнtмzstvн! Joooo... Ahhh, dobrэ иasy, иasy dobrэ, jo to jo.</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_4">
+		<text>Ano... na naљe vнtмzstvн!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_5">
+		<text>Tak co, jako dбme eљtм nebo jak... eљtм urиitм heh mбљ, co, he?</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_2_6">
+		<text>Podнvбm se...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_0">
+		<text>Ok... ale tohle bude poslednн, jo? Vнc uћ dneska nezvlбdnu...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_1">
+		<text>Davaj davббббj sem!</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_2">
+		<text>Uau... hele na tebe... tos jako љesko vyћral sбm jako?...</text>
+	</string>
+	<string id="mil_cook_drink_for_rg6_3_3">
+		<text>Љkyt! Brбcho, to je to, jako dno! Mmmm... Hhhhhm...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_0">
+		<text>Svoboda mб prэ nмjakэ Bulldogy. To by byla sranda, moc si pohrбt s nминm takovэm.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_1">
+		<text>Vo co ti jako jde? Chceљ jako abych tohle... vykecal nмco, jo? Co ty si jako myslнљ, ћe sem za blba?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_2">
+		<text>Zklidni se. Nevмdмl jsem, ћe tohle bereљ tak vбћnм.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_3">
+		<text>Prostм po naљich bouchaиkбch иmuchat nebudeљ, jasan? A kdo sakra vщbec seљ? Sem tм nikdy pшedtнm nevidмl!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_4">
+		<text>Hej, no tak! Jen jsem se na nмco zeptal...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_5">
+		<text>Csss! Dбvej si na to bacha, jo?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_1_6">
+		<text>Dohodnuto.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_0">
+		<text>Jб ehm, no slyљel sem, ћe prej mбte Bulldoga... Bych se na nмj fakt chtмl kouknout, co? Jen tak hodit okem... co ty na to? Jen fakt jedinej pohled...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_1">
+		<text>Cooo?... To jako ty... hele, do pekla... co to... zapomnмl jsem! Na co seљ se to ptбval, co?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_2">
+		<text>Skv... skv... skvм... lэ sakra. Granб-tomato. Sakra, granбtomet, chtмl bych se na nмj kouknout.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_3">
+		<text>Nah... to jako nemщћeљ... co chceљ jinэho, kбmo, ale ne todle ne... to nende!</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_2_4">
+		<text>Umm, ok... jб... ehm to nic! Sem se jen ptal...</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_0">
+		<text>Љkyt! Bulldog, he?</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_1">
+		<text>C-co?.. Oh! Jo no... ve vesnici! Mмli jsme to dva, ale ti... debilovй! Zatrati-ztratili to... nмkde nebo co.</text>
+	</string>
+	<string id="mil_cook_drunk_question_about_rg6_3_2">
+		<text>Vб-vбћnм? No teda... ti... blbi...</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_100">
+		<text>Nazdar, brбcho. Jsem иlen Povinnosti a plnнme tady misi. Nechceљ se k nбm pшidat?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1001">
+		<text>Moc zбjem teda nemбm.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1002">
+		<text>Tak nбm jdi z cesty, ty samotбшi.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_101">
+		<text>Proи ne.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_102">
+		<text>Skvмlэ. Tбmhle za kopcem je hlavnн lнheт tмch hajzlнkщ - "Svobodnejch" a jб s chlapama se jim to tam chystбme trochu rozfofrovat. \nMбme akorбt jeden malej problйm. Do jejich zбkladny vede jenom jeden vstup a ten je dobшe hlнdanej. Chtмli jsme prorazit dнru v plotм, ale jejich snajpr ve vмћi nбm to kapku komplikuje. Nechci poslat chlapy jenom proto, aby to od nмj koupili. Ale ty - tebe klidnм nechб pшijнt blнћ, rozhodnм tм okamћitм neodprбskne. Pokud ho sundбљ, budeљ to mнt u nбs. Navнc pokud pщjde vљechno podle plбnu, mщћeљ si sebrat cokoli, co najdeљ v jejich zбkladnм.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_103">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_104">
+		<text>Uћ jsem ti to шekl: staин, kdyћ sundбљ snajpra ve vмћi nad plotem.\nTak co ty na to?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1041">
+		<text>Ne, jeљtм nejsem pшipravenэ.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1042">
+		<text>Tak nepшekбћej.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_105">
+		<text>Zkusнm to.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_1051">
+		<text>To je skvмlэ! Jakmile ho sundбљ, spustнme ohтostroj.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_106">
+		<text>Mбme akorбt jeden malej problйm. Do jejich zбkladny vede jenom jeden vstup a ten je dobшe hlнdanej. Chtмli jsme si udмlat dalљн, ale...</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_107">
+		<text>Ale co?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_108">
+		<text>Poslal jsem v noci jednoho chlapa vyhodit do vzduchu kus plotu. Buп je jejich snajpr sakra dobrej, nebo jsme mмli smщlu, ale nбљ chlap to koupil. Teп je dynamit pшнmo u plotu, ale my ho vyhodit do luftu nemщћem.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_109">
+		<text>Proи?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_110">
+		<text>Nechci poslat chlapy jenom proto, aby to od toho debila koupili. Ale ty mбљ solidnн љanci ho dostat. Na tebe nebude rovnou stшнlet. Co ty na to?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_111">
+		<text>Kolik za to?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_112">
+		<text>Tak zaиneme mluvit obchodnм. 2000 od nбs za sundбnн snajpra, a navнc si mщћeљ na jejich zбkladnм sebrat spoustu vмcн. Bude tam hromada mrtvol, to ti mщћu slнbit. Takћe nбm pomщћeљ a pomщћeљ pшi tom i sobм. Co ty na to?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_120">
+		<text>Dohodnuto.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_121">
+		<text>Hodnм љtмstн.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_130">
+		<text>Nejdшнv si to chci obhlнdnout, pak ti dбm vмdмt.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_131">
+		<text>Poиkбme. Ale ne dlouho.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_200">
+		<text>Dнky za pomoc, Oznaиenej. Tady mбљ odmмnu.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_201">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_300">
+		<text>Dohodli jsme se, ne?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_400">
+		<text>Takћe jsi sundal toho snajpra. Tady mбљ odmмnu.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_401">
+		<text>Jasnэ.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_402">
+		<text>Ustup, jo? Potшebujem se pшipravit...</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_403">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_411">
+		<text>Nмkdy jindy.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_412">
+		<text>Jak chceљ.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_413">
+		<text>Mмj se.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_420">
+		<text>Budeme pokraиovat?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_421">
+		<text>Co pшesnм?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_450">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_451">
+		<text>Chystбme se vyhodit do luftu plot a zaинt paшit. Vidнm, ћe seљ dobrej stшelec - mohl by ses postarat o snajpry na vмћi? Kdyћ je sundбme, snбz se dostanem k tomu debilovi Lukбљovi.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_501">
+		<text>Sundal jsi toho snajpra?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_502">
+		<text>Ano.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_503">
+		<text>Skvмlб prбce! Vyиistils nбm cestu... na, tady mбљ nмco mбlo.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_504">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_506">
+		<text>Co musнm udмlat?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_507">
+		<text>Postarej se o snajrpy, my si vezmem do prбce zbytek tмch debilщ. Je mi jasnэ, ћe tohle ti pщjde.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_5070">
+		<text>Nмkdy jindy.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_5071">
+		<text>No, rozhodni se podle sebe. Jб tм nutit nebudu.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_508">
+		<text>Dohodnuto.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_5080">
+		<text>Tak jdem na to.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_601">
+		<text>Nepleќ se nбm do cesty, Oznaиenej.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_602">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_701">
+		<text>Jen pokraиuj, padej pryи.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_702">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_801">
+		<text>Co teп?</text>
+	</string>
+	<string id="mil_dolg_skull_dialog_802">
+		<text>Nic.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_0">
+		<text>Tшi debilovй mrtvн, jen tak! Pшiљel jsi prбvм vиas: neprozradils nбs a dostal ses odtamtud v pohodм. Mimochodem, myslнm, ћe o tomhle nemusн nikdo vмdмt, co?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_1">
+		<text>Asi mбљ pravdu.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_2">
+		<text>Skvмlэ. Chceљ si vydмlat nмjakэ prachy, stalkere?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_20">
+		<text>Tмћko шнct.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_21">
+		<text>Co, uћ nemбљ chuќ ћнt?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_22">
+		<text>Ne.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_3">
+		<text>Nмco takovэho.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_30">
+		<text>Moћnб.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_4">
+		<text>Tak pojп s nбmi a hoп шeи s naљнm velitelem.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_5">
+		<text>Velitelem?</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_6">
+		<text>Jasan. Lebka ti шekne vљechno sбm.</text>
+	</string>
+	<string id="mil_dolg_soldier_dialog_7">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_freedom_commander_1001">
+		<text>Jak se vede, stalkere?! Deљ prбvм vиas. Brбnнme to tady pшed tмma debilama z Monolitu a dalљн ъtok bude kaћdou chvilku. Vмш nebo ne, ale prбvм jsme pшiљli o poslednнho snajpra. Mщћeљ nбm pomoct? Po boji ti zaplatнme, nebudeљ litovat!</text>
+	</string>
+	<string id="mil_freedom_commander_10011">
+		<text>Ne, nemщћu vбm pomoct.</text>
+	</string>
+	<string id="mil_freedom_commander_10012">
+		<text>To je smщla. Kdyby sis to rozmyslel, stav se.</text>
+	</string>
+	<string id="mil_freedom_commander_1002">
+		<text>Tak dobшe.</text>
+	</string>
+	<string id="mil_freedom_commander_1003">
+		<text>Skvмlэ! Jdi do vмћe, je tam snajprovka a kupa munice. Sundavej je z vrchu, dolщ nelez, riskoval bys, ћe tм sundб nмkdo z naљich. Je ti to jasnэ?</text>
+	</string>
+	<string id="mil_freedom_commander_1004">
+		<text>Jasnэ.</text>
+	</string>
+	<string id="mil_freedom_commander_1005">
+		<text>Vэbornм. Doufбm, ћe si rбno pokecбme. Jo a nechoп moc daleko... abych si nemyslel, ћe ses rozhodl utэct. A to by znamenalo vљak vнљ co, tak bacha! Teп padej na pozici.</text>
+	</string>
+	<string id="mil_freedom_commander_1007">
+		<text>Pшesnм tak. Ok, jdem do prбce. Monolit se kaћdou chvнli pokusн prorazit. Takћe to tady bude fakt horkэ.</text>
+	</string>
+	<string id="mil_freedom_commander_1008">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_freedom_commander_1009">
+		<text>Mбљ pravdu. Doufбm, ћe jich nebude moc...</text>
+	</string>
+	<string id="mil_freedom_commander_1010">
+		<text>Kde je mб pozice?</text>
+	</string>
+	<string id="mil_freedom_commander_1011">
+		<text>Jdi do vмћe, je tam snapjrovka a kupa munice. Sundavej je z vrchu, dolщ nelez, riskoval bys, ћe tм sundб nмkdo z naљich. Je ti to jasnэ?</text>
+	</string>
+	<string id="mil_freedom_commander_1012">
+		<text>Ano.</text>
+	</string>
+	<string id="mil_freedom_commander_2001">
+		<text>Vyber si plac, protoћe pak uћ na to иas nebude!</text>
+	</string>
+	<string id="mil_freedom_commander_3001">
+		<text>Vypadб to, ћe jsme je sundali vљechny. Шekl bych, ћe to pro dneљek staин. Dнky za pomoc! Na, vem si tohle - pбr drobnejch, aќ se mщћeљ rozveselit.</text>
+	</string>
+	<string id="mil_freedom_commander_3002">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_freedom_commander_3003">
+		<text>Hodnм љtмstн, Oznaиenej!</text>
+	</string>
+	<string id="mil_freedom_commander_4001">
+		<text>Hej, Oznaиenej! Poslal tм Lukбљ?</text>
+	</string>
+	<string id="mil_freedom_commander_4002">
+		<text>Ano. Poћбdal mм, aќ vбm pomщћu.</text>
+	</string>
+	<string id="mil_freedom_commander_4003">
+		<text>Deљ prбvм vиas. Brбnнme to tady pшed tмma debilama z Monolitu a dalљн ъtok bude kaћdou chvilku. Vмш nebo ne, ale prбvм jsme pшiљli o poslednнho snajpra. Mщћeљ nбm pomoct? Po boji ti zaplatнme, nebudeљ litovat!</text>
+	</string>
+	<string id="mil_freedom_commander_5001">
+		<text>Vypadб to, ћe jsme je sundali vљechny. Шekl bych, ћe to pro dneљek staин. Dнky za pomoc! Na, vem si tohle - pбr drobnejch, aќ se mщћeљ rozveselit.</text>
+	</string>
+	<string id="mil_freedom_commander_5002">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_freedom_commander_5003">
+		<text>Hodnм љtмstн, Oznaиenej.</text>
+	</string>
+	<string id="mil_freedom_commander_common2_0">
+		<text>Co je tohle za mнsto?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_1">
+		<text>Шнkбme tomu Bariйra... coћ v podstatм taky je. Poslednн normбlnн stanoviљtм na tэhle stranм stшedu Zуny. Nбraznнkovб zуna, mezi lidma a Divokou oblastн.</text>
+	</string>
+	<string id="mil_freedom_commander_common2_2">
+		<text>A co je za nн?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_3">
+		<text>Jenom smrt... nebo sluћba Monolitu. "Nбљ Monolite! Ve tvйm jmйnм..." Sakra! \nZkrбtka a dobшe, nikdo tam nemб co dмlat. Proto jsme tady, snaћнme se љpнnм zabrбnit v zamoшenн Zуny. Jako nмjacн dћedбjovй, hehehe. Taky chytбme ty opravdu blbэ nebo se jim aspoт snaћнme zabrбnit vlнzt do centra.</text>
+	</string>
+	<string id="mil_freedom_commander_common2_4">
+		<text>Proи to dмlбte?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_5">
+		<text>A kdo jinej neћ my? Povinnost? Ti jsou celэ ћhavэ likvidovat pшнљery a stalkery, co se jim nezamlouvaj, ale zkus nмkterэho z nich pшesvмdиit, aќ udмlб nмco uћiteиnэho! Vidнљ je tady? Ne! Tak vidнљ. My se nesnaћнme zniиit stvoшenн, kterэ tady ћijou. Je to prostм normбlnн bariйra, to musн staиit. Dokud nмkdo nepшekroин lajnu...</text>
+	</string>
+	<string id="mil_freedom_commander_common2_6">
+		<text>A co kdyћ to nмkdo udмlб?</text>
+	</string>
+	<string id="mil_freedom_commander_common2_7">
+		<text>Mщћe se stбt cokoli. Cokoli. Nechci...</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_1000">
+		<text>Halt! Do arzenбlu mщћou jenom иlenovй Svobody.</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2000">
+		<text>Tak jo, mщћeљ jнt do arzenбlu. Akorбt je tady malej problйm...</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2001">
+		<text>Jakej?</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2002">
+		<text>Klid, nic hroznэho. Zбmek se zasek. Jestli fakt nemщћeљ poиkat, tak ho prostм rozstшнlej, pak ho vymмnнm.</text>
+	</string>
+	<string id="mil_guard_arsenal_dialog_2003">
+		<text>Aha.</text>
+	</string>
+	<string id="mil_hunter_dialog_1">
+		<text>Lakomec mм sem poslal zlikvidovat upнry.</text>
+	</string>
+	<string id="mil_hunter_dialog_101">
+		<text>Tak co, stalkere, co tм pшivбdн na tohle pochmurnэ mнsto? Radнm ti, zdrhej jako o ћivot, neћ bude pozdм!</text>
+	</string>
+	<string id="mil_hunter_dialog_2">
+		<text>Ahh, no to je nмco ъplnм jinэho... иert vн co se to tady dмje! Pбr naљich se љlo podнvat do vesnice a uћ se nevrбtili. Sakra, nбm se jeљtм nechce chcнpnout! Sedнme tady a pшemэљlнme, co udмlбme.</text>
+	</string>
+	<string id="mil_hunter_dialog_201">
+		<text>Hej, brбcho, vиera v noci to byla fakt sada!</text>
+	</string>
+	<string id="mil_hunter_dialog_202">
+		<text>To jako co?</text>
+	</string>
+	<string id="mil_hunter_dialog_203">
+		<text>Sedмli jsme tady, koukali kolem a najednou si sem vrazнљ ty, voћralej na padrќ. A pak jsi odpochodoval pшнmo do vesnice mezi upнry! Jeљtм ћe jsme tм dokбzali zarazit a nechat tм, aќ se z toho vyspнљ.</text>
+	</string>
+	<string id="mil_hunter_dialog_204">
+		<text>A co tady dмlбte?</text>
+	</string>
+	<string id="mil_hunter_dialog_205">
+		<text>Иert vн, co se to tady dмje! Pбr naљich se љlo podнvat do vesnice a uћ se nevrбtili. Sakra, nбm se jeљtм nechce chcнpnout! Sedнme tady a pшemejљlнme, co udмlбme.</text>
+	</string>
+	<string id="mil_hunter_dialog_3">
+		<text>Vidмl jsi upнry?</text>
+	</string>
+	<string id="mil_hunter_dialog_301">
+		<text>Tak co? Jak to љlo?</text>
+	</string>
+	<string id="mil_hunter_dialog_302">
+		<text>Zruљil jsem je.</text>
+	</string>
+	<string id="mil_hunter_dialog_303">
+		<text>No teda, ty jedeљ! Sakra, vrбtil ses ћivej, takћe dalљн runda je na tobм!</text>
+	</string>
+	<string id="mil_hunter_dialog_304">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_hunter_dialog_4">
+		<text>Ne. Naљi chlapi mмli jнt do starэ vodбrny, tam to nejspнљ schytali. No jestli ses dohodl s Lakomcem, jdi to tam oинhnout... napiљ mi adresu, jo? Aќ mщћem dбt vмdмt tvэ rodinм.</text>
+	</string>
+	<string id="mil_hunter_dialog_401">
+		<text>Proи se tady plнћнљ jako duch?</text>
+	</string>
+	<string id="mil_hunter_dialog_402">
+		<text>Jen se tak rozhlнћнm.</text>
+	</string>
+	<string id="mil_hunter_dialog_5">
+		<text>Seљ nмjakej podezшele hodnej. Dobшe, pщjdu.</text>
+	</string>
+	<string id="mil_hunter_dialog_501">
+		<text>Co tм sem pшivбdн?</text>
+	</string>
+	<string id="mil_hunter_dialog_502">
+		<text>Jen se tak rozhlнћнm.</text>
+	</string>
+	<string id="mil_hunter_dialog_503">
+		<text>Lepљн mнsto sis najнt nemohl, co? Tohle je asi nejposranмjљн flek v celэ Zуnм...</text>
+	</string>
+	<string id="mil_hunter_dialog_504">
+		<text>Co je na tomhle mнstм tak љpatnэ?</text>
+	</string>
+	<string id="mil_hunter_dialog_505">
+		<text>Ale иert vн. Ve vesnici se nejspнљ usadili upншi. Pбr naљich se tam љlo podнvat a uћ se nevrбtili. Sakra, nбm se jeљtм nechce chcнpnout! Sedнme tady a pшemejљlнme, co udмlбme.</text>
+	</string>
+	<string id="mil_hunter_dialog_506">
+		<text>Takћe si sбm nejseљ jistej?</text>
+	</string>
+	<string id="mil_hunter_dialog_507">
+		<text>Pшesnм! Pokud nemбљ nic lepљнho na prбci a v hlavм to mбљ pomotanэ, klidnм se jdi projнt tou dмdinou. Jestli ty bestie postшнlнљ, tak ti za to Lakomec urиitм nмco dб. A napiљ mi adresu, jo? Aќ mщћem dбt vмdмt tvэ rodinм.</text>
+	</string>
+	<string id="mil_hunter_dialog_508">
+		<text>Ok, pщjdu na to kouknout.</text>
+	</string>
+	<string id="mil_hunter_dialog_601">
+		<text>Neљel jsi nбhodou vesnicн, co?</text>
+	</string>
+	<string id="mil_hunter_dialog_602">
+		<text>Ano.</text>
+	</string>
+	<string id="mil_hunter_dialog_603">
+		<text>Pбr naљich tam љlo a nevrбtili se. Nepotkal jsi je nбhodou?</text>
+	</string>
+	<string id="mil_hunter_dialog_604">
+		<text>Ne. Vidмl jsem jen pбr mrtvol na zemi.</text>
+	</string>
+	<string id="mil_hunter_dialog_605">
+		<text>Vidмl jsi upнry?</text>
+	</string>
+	<string id="mil_hunter_dialog_606">
+		<text>Jo, jen se jdi podнvat sбm, uћ je to bezpeиnэ. Zlikvidoval jsem je.</text>
+	</string>
+	<string id="mil_hunter_dialog_607">
+		<text>No teda, to je nмco! Vнљ co... zajdi za Lakomcem na naљн zбkladnu. Za dobrou prбci dobшe platн.</text>
+	</string>
+	<string id="mil_hunter_dialog_7">
+		<text>Ok, pщjdu na to kouknout.</text>
+	</string>
+	<string id="mil_hunter_dialog_701">
+		<text>Tak co? Jak to љlo?</text>
+	</string>
+	<string id="mil_hunter_dialog_702">
+		<text>Zmasakroval jsem ty bestie.</text>
+	</string>
+	<string id="mil_hunter_dialog_703">
+		<text>No teda, tys jim ukбzal! Vнљ co... zajdi za Lakomcem na naљн zбkladnu. Za dobrou prбci dobшe platн.</text>
+	</string>
+	<string id="mil_hunter_dialog_704">
+		<text>Udмlбm to.</text>
+	</string>
+	<string id="mil_hunter_dialog_80">
+		<text>No jo...</text>
+	</string>
+	<string id="mil_hunter_dialog_801">
+		<text>Co tм sem pшivбdн?</text>
+	</string>
+	<string id="mil_hunter_dialog_802">
+		<text>Jen se tak rozhlнћнm.</text>
+	</string>
+	<string id="mil_hunter_dialog_803">
+		<text>Lepљн mнsto sis najнt nemohl, co? Tohle je asi nejposranмjљн flek v celэ Zуnм...</text>
+	</string>
+	<string id="mil_hunter_dialog_804">
+		<text>Co je na tomhle mнstм tak љpatnэ?</text>
+	</string>
+	<string id="mil_hunter_dialog_805">
+		<text>Ale иert vн. Ve vesnici se nejspнљ usadili upншi. Pбr naљich se tam љlo podнvat a uћ se nevrбtili. Sakra, nбm se jeљtм nechce chcнpnout!</text>
+	</string>
+	<string id="mil_hunter_dialog_806">
+		<text>Takћe si sбm nejseљ jistej?</text>
+	</string>
+	<string id="mil_hunter_dialog_807">
+		<text>Pшesnм! Pokud nemбљ nic lepљнho na prбci a v hlavм to mбљ pomotanэ, klidnм se jdi projнt tou dмdinou. Jestli ty bestie postшнlнљ, tak ti za to Lakomec urиitм nмco dб. A napiљ mi adresu, jo? Aќ mщћem dбt vмdмt tvэ rodinм.</text>
+	</string>
+	<string id="mil_hunter_dialog_808">
+		<text>Ok, pщjdu na to kouknout.</text>
+	</string>
+	<string id="mil_hunter_dialog_901">
+		<text>Tak co? Jak to љlo?</text>
+	</string>
+	<string id="mil_hunter_dialog_902">
+		<text>Zmasakroval jsem ty bestie.</text>
+	</string>
+	<string id="mil_hunter_dialog_903">
+		<text>No to je ъћasnэ! Gratuluju! A nejlepљн na tom je, ћe jeљtм ћijeљ...</text>
+	</string>
+	<string id="mil_hunter_dialog_904">
+		<text>Dмkuju.</text>
+	</string>
+	<string id="mil_leader_start_dialog_10001">
+		<text>Jelikoћ jsi pomohl chlapщm u Bariйry, tak si u nбs mщћeљ odpoиinout, a kdyby nмco, tak ti pomщћem. Jo a tady je nмco osobnм ode mм - takovб trochu prбvnickб zбleћitost. Zapisuju tм mezi иleny naљн grupy.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1001">
+		<text>Hej, stalkere. Co potшebujeљ?</text>
+	</string>
+	<string id="mil_leader_start_dialog_10011">
+		<text>Vlastnм nic moc.</text>
+	</string>
+	<string id="mil_leader_start_dialog_10012">
+		<text>Tak odsud vypadni, jo? Иas sou penнze.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1100">
+		<text>Vidмl jsem skupinu Povinnosti ve farmм kousek od vaљн zбkladny. Asi osm chlapщ, dobшe vybavenэch.</text>
+	</string>
+	<string id="mil_leader_start_dialog_11001">
+		<text>Proи jsi sakra odeљel z Bariйry? Odpal a nepшej si mм, jestli tм u svэ zбkladny jeљtм jednou nachytбm.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1101">
+		<text>Sakra, ti debilovй se prostм neuklidnмj! Fajn, tak jim dбme lekci. Hej, stalkere, nechceљ nбm pнchnout? Nebude to zadarmo. Promluv si s Maxem, naљнm љйfem. Vy dva dбte dohromady bandu a pщjdete ty srбиe vyиistit.</text>
+	</string>
+	<string id="mil_leader_start_dialog_11011">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_leader_start_dialog_11012">
+		<text>Hodnм љtмstн, stalkere.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1200">
+		<text>Uћ jsem se o nм postaral.</text>
+	</string>
+	<string id="mil_leader_start_dialog_12001">
+		<text>Takћe jsi nezvlбdnul prбskaиe a u Bariйry se ti taky nevedlo, co? Tбhni z mэ zбkladny a aќ uћ tм tady nevidнm!</text>
+	</string>
+	<string id="mil_leader_start_dialog_1210">
+		<text>Fakt? Kolik ћe jich tam bylo?</text>
+	</string>
+	<string id="mil_leader_start_dialog_1221">
+		<text>Osm chlapщ.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1222">
+		<text>Ty seљ ale rychlovka, stalkere... Ok, tak co, nechtмl bys nбm pomoct jeљtм s nминm? Nerad to pшiznбvбm, ale mбme mezi sebou prбskaиe. Jmenuje se Pavlнk. Pouљtн ven cennэ informace a to musнme zarazit.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1223">
+		<text>Jak?</text>
+	</string>
+	<string id="mil_leader_start_dialog_1300">
+		<text>Musнљ ho sledovat na farmu a zjistit, komu ta krysa donбљн. Neznб tм a o naљem rozhovoru taky nevн, takћe...</text>
+	</string>
+	<string id="mil_leader_start_dialog_13001">
+		<text>Myslнљ, ћe pro tebe mщћu nмco udмlat?</text>
+	</string>
+	<string id="mil_leader_start_dialog_13002">
+		<text>Moћnб.</text>
+	</string>
+	<string id="mil_leader_start_dialog_13003">
+		<text>Zjistili jsme, ћe mбme mezi sebou krysu jmйnem Pavlнk. Pouљtн ven cennэ informace. Jsme si tнm jistэ, ale nemбme dщkaz. Budeљ ho sledovat a zjistнљ, pro koho u nбs иmuchб. Myslнm, ћe bude mнt dneska schщzku. Budeљ ho tiљe sledovat. Jen si dбvej bacha, aќ tм nezahlнdne, je sakra hodnм opatrnej. Aћ zjistнљ, pro koho makб, tak ho sundej a pro sichr i toho druhэho.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1301">
+		<text>Udмlбm to.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1302">
+		<text>Zjistili jsme, ћe mбme mezi sebou krysu jmйnem Pavlнk. Pouљtн ven cennэ informace. Jsme si tнm jistэ, ale nemбme dщkaz. Budeљ ho sledovat a zjistнљ, pro koho u nбs иmuchб. Myslнm, ћe bude mнt dneska schщzku. Budeљ ho tiљe sledovat. Jen si dбvej bacha, aќ tм nezahlнdne, je sakra hodnм opatrnej. Aћ zjistнљ, pro koho makб, tak ho sundej a pro sichr i toho druhэho.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1391">
+		<text>Ne, teп ne.</text>
+	</string>
+	<string id="mil_leader_start_dialog_14001">
+		<text>Chtмl jsem se na nмco zeptat.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1500">
+		<text>Prбvм odeљel, takћe ho budeљ muset dohonit. Nezapomeт: mщћeљ ho oddмlat a taky bys mмl, ale nejdшнv zjisti, komu donбљн. Budeљ muset oddмlat i toho druhэho chlapa.</text>
+	</string>
+	<string id="mil_leader_start_dialog_1501">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_leader_start_dialog_2001">
+		<text>Шнkal jsem ti, jdi si promluvit s Maxem.</text>
+	</string>
+	<string id="mil_leader_start_dialog_3001">
+		<text>Takћe hotovo. Dobrэ, dobrэ. Mбm pro tebe jeљtм nмco!</text>
+	</string>
+	<string id="mil_leader_start_dialog_3002">
+		<text>Hrm... A co to je?</text>
+	</string>
+	<string id="mil_leader_start_dialog_30021">
+		<text>Bohuћel je mezi nбma prбskaи. Jmenuje se Pavlнk. Pouљtн ven cennэ informace a to musнme zarazit.</text>
+	</string>
+	<string id="mil_leader_start_dialog_3003">
+		<text>Pшesnм. Myslнm, ћe na schщzku vyrazн mezi desбtou a jedenбctou. Bude uћ tma, takћe ho nikdo neuvidн, ale noиnн mutanti budou jeљtм zalezlэ. Jdi na to, stalkere. Aћ skonинљ, staneљ se иlenem naљн grupy. Nezapomeт, musнљ tu krysu chytit pшi иinu! Bмhem tэ schщzky ho budeљ muset sundat, jinak to bude k niиemu.</text>
+	</string>
+	<string id="mil_leader_start_dialog_4001">
+		<text>Ty seљ jeљtм poшбd tady?</text>
+	</string>
+	<string id="mil_leader_start_dialog_5001">
+		<text>Skvмlб prбce, Oznaиenej! Na, vem si tohle... to mбљ za toho prбskaиe. Kdykoli si u nбs mщћeљ odpoиinout a kdyћ budeљ potшebovat, pнchnem ti. Akorбt bych od tebe jeљtм nмco potшeboval. Nejseљ moc unavenej? </text>
+	</string>
+	<string id="mil_leader_start_dialog_5002">
+		<text>Co pшesnм potшebujeљ?</text>
+	</string>
+	<string id="mil_leader_start_dialog_5003">
+		<text>Jestli se na to cнtнљ, jdi k stanoviљti kousek od vэchodu z Rudэho lesa. Mбme zprбvy ћe buп muќбci nebo Monolit chystajн novej pokus o proraћenн. Chlapi budou potшebovat pomoc.</text>
+	</string>
+	<string id="mil_leader_start_dialog_5004">
+		<text>No, chlapщm u Bariйry jsi pomohl, takћe si dej padla.</text>
+	</string>
+	<string id="mil_leader_start_dialog_6001">
+		<text>Klнdek. Prбvм teп ћбdnej dћob nemбm.</text>
+	</string>
+	<string id="mil_leader_start_dialog_7001">
+		<text>Jo, misi jsi posral. To je na hovno. Ale mбљ jeљtм jednu љanci!</text>
+	</string>
+	<string id="mil_leader_start_dialog_7002">
+		<text>Jakou љanci?</text>
+	</string>
+	<string id="mil_leader_start_dialog_7003">
+		<text>Podle vљeho Monolit chystб novej pokus o proraћenн ven z Rudэho lesa. Musнљ jнt za Kepem, dмlб velitele Bariйry, a zjistit, jestli nepotшebuje pomoc. No skoro urиitм bude potшebovat...</text>
+	</string>
+	<string id="mil_leader_start_dialog_7004">
+		<text>Ok, udмlбm to.</text>
+	</string>
+	<string id="mil_leader_start_dialog_7006">
+		<text>Ne, to jeљtм udмlat nemщћu.</text>
+	</string>
+	<string id="mil_leader_start_dialog_7007">
+		<text>Mysli na naљe chlapy, moћnб tam bez tebe chcнpnou! Chбpej, kromм tebe nemщћu nikoho jinэho poslat... nikoho.</text>
+	</string>
+	<string id="mil_leader_start_dialog_8001">
+		<text>Misi jsi posral, takћe tмm dokumentщm mщћem zamбvat. Takovэ srбиe tady nepotшebujeme. Zmiz.</text>
+	</string>
+	<string id="mil_leader_start_dialog_8004">
+		<text>No, posral jsi to... to je fakt na hovno. No, ale pomohl jsi chlapщm u Bariйry - takћe si u nбs mщћeљ odpoиinout. Kdyby nмco, tak ti pнchnem.</text>
+	</string>
+	<string id="mil_leader_start_dialog_8005">
+		<text>Mбљ nмjakou prбci?</text>
+	</string>
+	<string id="mil_leader_start_dialog_8006">
+		<text>Prбvм teп ne.</text>
+	</string>
+	<string id="mil_leader_start_dialog_9001">
+		<text>Шнkal jsem ti - jdi k Bariйшe.</text>
+	</string>
+	<string id="mil_max_dialog_10001">
+		<text>Pokecбme, aћ zruљнme ty debily z Povinnosti.</text>
+	</string>
+	<string id="mil_max_dialog_10002">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_max_dialog_1001">
+		<text>Lukбљ шнkal, ћe to zvlбdneљ. Vidмl jsi je... u farmy?</text>
+	</string>
+	<string id="mil_max_dialog_1100">
+		<text>Ne.</text>
+	</string>
+	<string id="mil_max_dialog_1101">
+		<text>Sakra... Povinnost zas nмco chystб. No co, pщjdeљ s nбmi?</text>
+	</string>
+	<string id="mil_max_dialog_1102">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_max_dialog_1200">
+		<text>Ano.</text>
+	</string>
+	<string id="mil_max_dialog_1201">
+		<text>Je jich tam hodnм?</text>
+	</string>
+	<string id="mil_max_dialog_1210">
+		<text>To se nedб pшesnм шнct. Ale moc jich tam nenн.</text>
+	</string>
+	<string id="mil_max_dialog_1220">
+		<text>Tak љest aћ osm lidн. Docela dobшe vybavenэch.</text>
+	</string>
+	<string id="mil_max_dialog_2001">
+		<text>Jdi za Lukбљem.</text>
+	</string>
+	<string id="mil_max_dialog_3001">
+		<text>Mбљ nмjakэ otбzky?</text>
+	</string>
+	<string id="mil_max_dialog_3002">
+		<text>Ano. Lukбљ mi шekl, ћe mбm odchytit kurэra Povinnosti na cestм z Rudэho lesa do Mrtvйho mмsta. Mщћeљ mi шнct, kde by mohlo bэt tak nejlepљн mнsto?</text>
+	</string>
+	<string id="mil_max_dialog_3003">
+		<text>Hmm. Nejlнp by asi bylo chytnout ho, neћ se dostane k farmм poblнћ cesty do Mrtvэho mмsta. Urиitм tam na nмj иekajн posily, takћe bys mмl pмknej problйm, musel by ses postarat o vљechny. Navнc tak bys musel projнt vesnicн a to je blbэ. Radљi jdi na vэchod od vesnice a to tak, ћe rychle.</text>
+	</string>
+	<string id="mil_max_dialog_3004">
+		<text>Co je ve vesnici?</text>
+	</string>
+	<string id="mil_max_dialog_3005">
+		<text>Vмш mi, ani jedna dobrб vмc. Spousta potvor a anomбliн. Pak ti o tom povyprбvнm.</text>
+	</string>
+	<string id="mil_max_dialog_4001">
+		<text>Je tшeba gratulovat?</text>
+	</string>
+	<string id="mil_max_dialog_4002">
+		<text>Ano.</text>
+	</string>
+	<string id="mil_max_dialog_4003">
+		<text>Vidнm, ћe ty seљ fakt dobrej chlap! Nechtмl bys pro mм udмlat jeљtм jeden malej dћob? Kdyћ to zvlбdneљ, dбm ti svщj Black Kite. Fakt dobrб bouchaиka, prбskб poшбdnм!</text>
+	</string>
+	<string id="mil_max_dialog_4004">
+		<text>Ale co mбm udмlat?</text>
+	</string>
+	<string id="mil_max_dialog_4005">
+		<text>V baћinм je zaљitej jeden chlap. Kluci ho vidмli, jak zdrhб z vesnice pшes kшovн a kanбl. Musel vidмt nмco, co mu v hlavм polбmalo pбr koleиek. Musнљ zjistit, co to vidмl, protoћe naљi lidi maj strach jнt do vesnice.</text>
+	</string>
+	<string id="mil_max_dialog_40051">
+		<text>Ne, teп fakt ne.</text>
+	</string>
+	<string id="mil_max_dialog_400511">
+		<text>No jo, no.</text>
+	</string>
+	<string id="mil_max_dialog_40052">
+		<text>Tady je flashdisk, kterej jsem zнskal od toho magora.</text>
+	</string>
+	<string id="mil_max_dialog_400521">
+		<text>Hej, dнky, stalkere! Vezmi si tuhle bouchaиku - zaslouћil sis ji.</text>
+	</string>
+	<string id="mil_max_dialog_400522">
+		<text>Mбљ pro ni nмjakэ krmivo?</text>
+	</string>
+	<string id="mil_max_dialog_400523">
+		<text>Jenom co je v zбsobбku. Sorry, vнc nemбm. Stav se za Lakomcem, moћnб nмco mб.</text>
+	</string>
+	<string id="mil_max_dialog_4006">
+		<text>Zkusнm to.</text>
+	</string>
+	<string id="mil_max_dialog_4007">
+		<text>Tak hodnм љtмstн. A nezapomeт, je tam starэ minovэ pole, ale se starejma dobrejma љroubama se kolem min snadno dostaneљ.</text>
+	</string>
+	<string id="mil_max_dialog_5001">
+		<text>Tak co jsi zjistil? Co se stalo tomu magorovi?</text>
+	</string>
+	<string id="mil_max_dialog_5002">
+		<text>Tady je flashdisk, dostal jsem ho od toho magora.</text>
+	</string>
+	<string id="mil_max_dialog_6001">
+		<text>Co, uћ?</text>
+	</string>
+	<string id="mil_max_dialog_7001">
+		<text>Co chceљ vмdмt?</text>
+	</string>
+	<string id="mil_max_dialog_8001">
+		<text>Jak se vede, stalkere! Co potшebujeљ?</text>
+	</string>
+	<string id="mil_max_dialog_8002">
+		<text>Mбm tady nмco obchodnм. Mщћeљ mi шнct, kde najdu vaљeho љйfa?</text>
+	</string>
+	<string id="mil_max_dialog_8003">
+		<text>To chceљ Lukбљe - to je nбљ velitel. Jdi do hlavnн budovy.</text>
+	</string>
+	<string id="mil_max_dialog_9001">
+		<text>Takћe jsi to zvlбdnul. Dej ty dokumenty Lukбљovi.</text>
+	</string>
+	<string id="mil_max_dialog_9100">
+		<text>Jdi za Lukбљem a podej mu hlбљenн, pak pokecбme, jo?</text>
+	</string>
+	<string id="mil_max_dialog_9101">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_patrol_dialog1_0">
+		<text>Kбmo, seљ v zбkladnм Svobody! Tak si dej klнdek, buп jako doma!</text>
+	</string>
+	<string id="mil_patrol_dialog1_1">
+		<text>Aha.</text>
+	</string>
+	<string id="mil_patrol_dialog1_2">
+		<text>Chovej se sluљnм, Ok? Jasnэ? Jestli tady zkusнљ vyblbovat, budeљ toho litovat. Mмli jsme tady jednou tэpka, kterэmu to zapalovalo pomalu. Vљechny nasral na tolik, ћe jsme ho poslali na prochбzku minovэm polem - nahatэho. Mмl jsi slyљet Lakomce, jak nadбval, kdyћ mu ruka toho vola vletмla pшнmo do ksichtu! To bylo nмco... jo... tak co, chбpeљ?</text>
+	</string>
+	<string id="mil_patrol_dialog1_3">
+		<text>Jasan.</text>
+	</string>
+	<string id="mil_patrol_dialog1_4">
+		<text>Fajn! Odchod.</text>
+	</string>
+	<string id="mil_patrol_dialog2_0">
+		<text>Б, novбиek... Pocem na chvilku. </text>
+	</string>
+	<string id="mil_patrol_dialog2_1">
+		<text>Nechбpu.</text>
+	</string>
+	<string id="mil_patrol_dialog2_10">
+		<text>Kam jdeљ? Stщj! Tady je hezky... a dneska dobшe poveиeшнme.</text>
+	</string>
+	<string id="mil_patrol_dialog2_11">
+		<text>Бle, tak chutnej snad nejsem.</text>
+	</string>
+	<string id="mil_patrol_dialog2_12">
+		<text>Co?! Do prodele, proиs to neшekl hned! Jenom plejtvбme иasem. Zmizni, ksichte. A teп to myslнm vбћnм...</text>
+	</string>
+	<string id="mil_patrol_dialog2_2">
+		<text>Co nechбpeљ? Jo ty jsi neslyљel tu historku o tom, co mu to pomalu zapalovalo, co?</text>
+	</string>
+	<string id="mil_patrol_dialog2_3">
+		<text>Ne, to ne.</text>
+	</string>
+	<string id="mil_patrol_dialog2_4">
+		<text>Fajn, tak pшemejљlej. Tohle jsou hubenэ иasy...</text>
+	</string>
+	<string id="mil_patrol_dialog2_5">
+		<text>A co jako?</text>
+	</string>
+	<string id="mil_patrol_dialog2_6">
+		<text>No, to je snad lehkэ! Hladovej vojбk je љpatnej vojбk. A je nбs tolik...</text>
+	</string>
+	<string id="mil_patrol_dialog2_7">
+		<text>A?</text>
+	</string>
+	<string id="mil_patrol_dialog2_8">
+		<text>Kde bychom sehnali tolik masa? A hele, prбvм jdeљ ty, jak na zavolanou!</text>
+	</string>
+	<string id="mil_patrol_dialog2_9">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_screw_dialog_1000">
+		<text>Mбљ nмco rozbitэho, kбmo?</text>
+	</string>
+	<string id="mil_screw_dialog_1001">
+		<text>Rozbitэho?</text>
+	</string>
+	<string id="mil_screw_dialog_1002">
+		<text>Ah, ty ode mм nic nechceљ? Pche. Uћ mм to zaинnб unavovat. Jakmile se nмco rozbije, tak bмћej za mnou a zaиnou fтukat.</text>
+	</string>
+	<string id="mil_screw_dialog_1003">
+		<text>A kdo jsi ty?</text>
+	</string>
+	<string id="mil_screw_dialog_1004">
+		<text>Jsem mechanik. Pan spravtovљechno. Opravuju zbranм a cokoli dalљнho co mi kdo pшinese. Zrovna makбm tady na tмhle kбrбch.</text>
+	</string>
+	<string id="mil_screw_dialog_1005">
+		<text>Jak to jde?</text>
+	</string>
+	<string id="mil_screw_dialog_1006">
+		<text>Pfft! Je to љrot. Jsem totбlnм utahanej. Hele, nemбљ u sebe kapku vodky? Jб... hm... nechceљ tuhle hezkou optiku? Nejlepљн puљkohled na svмtм! </text>
+	</string>
+	<string id="mil_screw_dialog_1100">
+		<text>Ne.</text>
+	</string>
+	<string id="mil_screw_dialog_1101">
+		<text>Tvoje chyba. Pokud mбљ nмco, tak nebuп debil.</text>
+	</string>
+	<string id="mil_screw_dialog_1102">
+		<text>Ok.</text>
+	</string>
+	<string id="mil_screw_dialog_1200">
+		<text>Na, vem si.</text>
+	</string>
+	<string id="mil_screw_dialog_1201">
+		<text>No dнky! To je od tebe hezkэ. Aspoт budu mнt s инm relaxovat.</text>
+	</string>
+	<string id="mil_screw_dialog_1202">
+		<text>Hodnм љtмstн.</text>
+	</string>
+	<string id="mil_screw_dialog_2000">
+		<text>Neruљ mм, pшemэљlнm...</text>
+	</string>
+	<string id="mil_screw_dialog_4">
+		<text>No nekecej, fakt jsi pшines vodku?</text>
+	</string>
+	<string id="mil_trader_dialog_1001">
+		<text>A co to je?</text>
+	</string>
+	<string id="mil_trader_dialog_1002">
+		<text>Tak a teп trochu tмћљн otбzka, kde seћenu vмci jako jsou artefakty a zbranм?</text>
+	</string>
+	<string id="mil_trader_dialog_1003">
+		<text>Pшijdeљ za mnou s penмzma. Nebo se vyprav do vesnice, tam je mщћeљ poшнdit zadarmo, ale s mnohem vмtљнm rizikem.</text>
+	</string>
+	<string id="mil_trader_dialog_1004">
+		<text>Vesnice?</text>
+	</string>
+	<string id="mil_trader_dialog_1005">
+		<text>Vesnice. Je plnб anomбliн - novбиci o nм poшбd zakopбvajн. Naљi chlapi tam prбvм vyrazili, tak se k nim mщћeљ pшidat, jestli chceљ.</text>
+	</string>
+	<string id="mil_trader_dialog_1006">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_trader_dialog_2001">
+		<text>Co hezkйho mi neseљ?</text>
+	</string>
+	<string id="mil_trader_dialog_3001">
+		<text>Co budeљ potшebovat?</text>
+	</string>
+	<string id="mil_trader_dialog_3002">
+		<text>Nic... jen se tak rozhlнћнm.</text>
+	</string>
+	<string id="mil_trader_dialog_3003">
+		<text>Mмl bys mнsto toho dмlat nмco uћiteиnэho. Pшedevљнm proto, ћe mбm nмco, co by tм mohlo zajнmat... Chceљ si vydмlat, co?</text>
+	</string>
+	<string id="mil_trader_dialog_3004">
+		<text>Povнdej...</text>
+	</string>
+	<string id="mil_trader_dialog_3005">
+		<text>Dбm ti krystal, kdyћ pro mм nмco udмlбљ. Mбme tady takovou oљklivou situaci... v poslednн dobм z vesnice nikdo nenosн artefakty - majн moc velkej strach. Prej se tam usadili vampншi. V poslednн dobм tam nemбm koho poslat - normбlnм zaинnбm uvaћovat, ћe poћбdбm o pomoc Povinnost!</text>
+	</string>
+	<string id="mil_trader_dialog_3006">
+		<text>Pokraиuj.</text>
+	</string>
+	<string id="mil_trader_dialog_3007">
+		<text>Pбr chlapщ vyrazilo do vesnice a nevrбtili se. Dalљн tшi jen sedмj na okraji a nedмlaj nic. Kdyћ ty upнry zlikvidujeљ, dбm ti krystal. Souhlasнљ?</text>
+	</string>
+	<string id="mil_trader_dialog_30071">
+		<text>Teп zrovna se mi nechce.</text>
+	</string>
+	<string id="mil_trader_dialog_30072">
+		<text>Hej, zбleћн jen na tobм... dшнv nebo pozdмjc je nмkdo vyruљн. A krystal, ten je vzбcnej a taky docela drahej.</text>
+	</string>
+	<string id="mil_trader_dialog_3008">
+		<text>Udмlбm to.</text>
+	</string>
+	<string id="mil_trader_dialog_3009">
+		<text>Ale, to je dobrэ. Jestli najdeљ vнc takovejch, pшines je sem, dobшe ti za nм zaplatнm.</text>
+	</string>
+	<string id="mil_trader_dialog_3101">
+		<text>A?</text>
+	</string>
+	<string id="mil_trader_dialog_3110">
+		<text>Sedмj tam a koukaj dokola...</text>
+	</string>
+	<string id="mil_trader_dialog_3111">
+		<text>Kdyћ jim pomщћeљ v lovu, dбm ti artefakt, kterэmu se шнkб krystal. Tak co ty na to?</text>
+	</string>
+	<string id="mil_trader_dialog_3200">
+		<text>Pokecali jsme a pak jsme љli do vesnice, ulovit pбr mutantщ...</text>
+	</string>
+	<string id="mil_trader_dialog_3201">
+		<text>A? Tak uћ to ze sebe vymбиkni!</text>
+	</string>
+	<string id="mil_trader_dialog_3300">
+		<text>Nмjakou bestii jsme sundali, ale ti chlapi to taky schytali. Jakmile jsme pшiљli k vodбrnм, vљichni se chytili za hlavy, jб taky zaиal vidмt rudм. Ten zasranэ artefakt to leze do hlavy. Zabil jsem to, ale pro ostatnн uћ bylo pozdм.</text>
+	</string>
+	<string id="mil_trader_dialog_3301">
+		<text>To je na houby. Mraиoun byl zkuљenej stalker. Sakra, љkoda. No, vem si tenhle artefakt, za snahu.</text>
+	</string>
+	<string id="mil_trader_dialog_3310">
+		<text>No, chlapi љli lovit a jб se vrбtil sem...</text>
+	</string>
+	<string id="mil_trader_dialog_3311">
+		<text>Aha.</text>
+	</string>
+	<string id="mil_trader_dialog_3400">
+		<text>Mщћu si tady poшнdit nмjakй vybavenн?</text>
+	</string>
+	<string id="mil_trader_dialog_3401">
+		<text>Za sprбvnou cenu je moћnэ vљechno.</text>
+	</string>
+	<string id="mil_trader_dialog_3500">
+		<text>Uћ jsem se o nм postaral.</text>
+	</string>
+	<string id="mil_trader_dialog_3501">
+		<text>Sakra, stalkere! Ty seљ rychlejљн neћ sraиka! Ok, dohoda je dohoda. Tady mбљ krystal.</text>
+	</string>
+	<string id="mil_trader_dialog_4001">
+		<text>Tak jak љel lov?</text>
+	</string>
+	<string id="mil_trader_dialog_4002">
+		<text>Zabil jsem ty pшнљery.</text>
+	</string>
+	<string id="mil_trader_dialog_4003">
+		<text>Jak tмћkэ to bylo?</text>
+	</string>
+	<string id="mil_trader_dialog_4004">
+		<text>Prщmмr.</text>
+	</string>
+	<string id="mil_trader_dialog_4005">
+		<text>Hmm, zajнmavэ... Z centra Zуny vylнzб vљelijakej љmejd... ale kde se tam bere? Ok, vem si tohle, za nбmahu.</text>
+	</string>
+	<string id="mil_trader_dialog_5001">
+		<text>Ale jб od tebe chtмl, aќ pobijeљ vampнry v dмdinм!</text>
+	</string>
+	<string id="mil_trader_dialog_5002">
+		<text>Rozmyslel jsem si to.</text>
+	</string>
+	<string id="mil_trader_dialog_5003">
+		<text>Nenн problйm. Samozшejmм v tom pшнpadм taky nenн odmмna.</text>
+	</string>
+	<string id="mil_trader_dialog_5004">
+		<text>To mм vyhovuje.</text>
+	</string>
+	<string id="mil_trader_dialog_5010">
+		<text>Zkusнm to.</text>
+	</string>
+	<string id="mil_trader_dialog_6001">
+		<text>Uhuh, takћe jsi ten malej problйm nevyшeљil... v tom pшнpadм si ten artefakt nechбm.</text>
+	</string>
+	<string id="mil_trader_dialog_6002">
+		<text>Jб se s tebou hбdat nebudu.</text>
+	</string>
+	<string id="mil_trader_dialog_7001">
+		<text>Chlapi povнdali, ћe prej ses postaral o ty vampнry ve vesnici. Je to pravda?</text>
+	</string>
+	<string id="mil_trader_dialog_7002">
+		<text>Jo, je to pravda.</text>
+	</string>
+	<string id="mil_trader_dialog_7003">
+		<text>Jak tмћkэ to bylo?</text>
+	</string>
+	<string id="mil_trader_dialog_7004">
+		<text>Prщmмr.</text>
+	</string>
+	<string id="mil_trader_dialog_7005">
+		<text>Hmm, zajнmavэ... Z centra Zуny vylнzб vљelijakej љmejd... ale kde se tam bere? Ok, vem si tohle, za nбmahu.</text>
+	</string>
+	<string id="mil_trader_dialog_8001">
+		<text>Tak co jsi mi pшinesl?</text>
+	</string>
+	<string id="mil_zoneguard_common1_0">
+		<text>Je tady nмkde kuchaш?</text>
+	</string>
+	<string id="mil_zoneguard_common1_1">
+		<text>No jasnм, jak bychom bez kuchtнka vydrћeli?! Na co ho vщbec chceљ?</text>
+	</string>
+	<string id="mil_zoneguard_common1_2">
+		<text>No, hodilo by se mi dobrэ jнdlo.</text>
+	</string>
+	<string id="mil_zoneguard_common1_3">
+		<text>Je v kuchyni. Vмtљinou tam sedн a blбbolн.</text>
+	</string>
+	<string id="mil_zoneguard_common1_4">
+		<text>Blбbolн?</text>
+	</string>
+	<string id="mil_zoneguard_common1_5">
+		<text>No co bys иekal? Je to voћrala. Kdyby neumмl vaшit, uћ bychom se ho dбvno zbavili. Je v kuchyni. Шeknu ti, jak se tam dostat.</text>
+	</string>
+	<string id="mil_zoneguard_common1_6">
+		<text>Dнky za informaci.</text>
+	</string>
+	<string id="mil_zoneguard_common1_7">
+		<text>Nenн problйm.</text>
+	</string>
+	<string id="mil_zoneguard_common2_0">
+		<text>Kdo je tady љйf?</text>
+	</string>
+	<string id="mil_zoneguard_common2_1">
+		<text>A co tady chceљ ty?</text>
+	</string>
+	<string id="mil_zoneguard_common2_2">
+		<text>Mбm pro nмj informace.</text>
+	</string>
+	<string id="mil_zoneguard_common2_3">
+		<text>Lukбљ je nбљ velitel. Jdi do hlavnн budovy.</text>
+	</string>
+	<string id="mil_zoneguard_common2_4">
+		<text>Rozumнm. Dнky.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_10">
+		<text>Tobм taky. Co tм sem pшivбdн?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_100">
+		<text>Kdo je tady љйf? Musнm s nнm nмco probrat.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_1000">
+		<text>Lukбљ je nбљ boss, najdeљ ho v hlavnн budovм. Ale aћ vlezeљ dovnitш, tak schovej bouchaиku... pokud nechceљ, aby tм nмkdo odprбsknul.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_10000">
+		<text>Proи?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_100000">
+		<text>Ale mмli jsme tu pбr prщserщ - jednou se jednomu zabijбkovi mбlem podaшilo Lukбљe sundat. Od tэ doby radљi neriskujem.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_1000000">
+		<text>Rozumнm.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_10000000">
+		<text>Ok, mщћeљ jнt.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_20">
+		<text>Tak tak. Dej mi pokoj, neotravuj.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_3">
+		<text>Zdravнm.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_30">
+		<text>Halt! Kdo je tam?!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_31">
+		<text>Jihoafrickб vlaљtovka!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_32">
+		<text>Ha ha! Sprбvnм! Mщћeљ projнt.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_4">
+		<text>Co je zaи ta baћina tady kousek?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_41">
+		<text>Radioaktivnн kaluћ. Radљi na ni ani nesahej, nebo schytбљ tolik radщ, ћe budeљ jak zбшivka. Uprostшed sedн nмjakej magor, nenechб k sobм nikoho pшijнt. No, jб mu rozumнm, kdo by se s tмma debilama taky chtмl zahazovat, ћe jo? Protoћe normбlnн chlap na takovэ mнsto nepoleze.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_42">
+		<text>Co je to vщbec za chlapa?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_43">
+		<text>Иert vн. Prej je to jeden z naљich, co byl na vэpravм ve vesnici.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_44">
+		<text>Jakэ vesnici?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_45">
+		<text>No je tady kousek takovб malб dмdinka. Plnб muќбkщ a anomбliн. Jб tam jeљtм nebyl - na tuhle zбkladnu jsem dorazil nedбvno. Zeptej se Maxe - ten uћ je tady snad sto let.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_5">
+		<text>Hele, mщћu si tu nмkdy doplnit munici? Rostok je docela daleko a mnм se ta љtreka nechce љlapat.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_51">
+		<text>Jdi do hlavnн budovy a koukni se v pшнzemн.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6">
+		<text>Copak, kбmo? Chceљ tady u nбs posedмt, co?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_601">
+		<text>Nмco takovэho.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_602">
+		<text>Co se tak k nбm pшidat, co?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_603">
+		<text>Co takhle ne. Jsem tu obchodnм.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_604">
+		<text>No tak, dej se k nбm. Je to fakt prdel.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_605">
+		<text>Promyslнm si to.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_607">
+		<text>Mluvнcн kщт?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_608">
+		<text>Vedle.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_609">
+		<text>A-9?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_610">
+		<text>Bitevnн loп potopena. Sakra, pшestaт mм mбst! Mбљ jeљtм nмco?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_611">
+		<text>Polib mi.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_612">
+		<text>Dvacet jedna. Sakra, zas mм dostal! Ty seљ ale mizera. Hele, znбљ vщbec heslo, co?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_613">
+		<text>Povнљ mi ho?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_614">
+		<text>No jaaaaasnм.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_615">
+		<text>No tak pusќ mм dovnitш. Nemщћu pшece sedмt celou noc na poli, ne?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_616">
+		<text>Proи ne? Poиasн je fajn, skoro letnн idylka. No dobшe, kdyћ projdeљ test - tak tм pustнm, jinak odpal.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_617">
+		<text>Test?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_618">
+		<text>Jasnм. Jsou to tшi vмci, kterej musн kaћdej sprбvnej chlap znбt.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_619">
+		<text>Nemбm strach. Do toho.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_620">
+		<text>Takћe ta nejlehин. Pшipravenej? Fajn, tak jakou velikost mб podprsenka Pamely Anderson?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6200">
+		<text>34 C.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6201">
+		<text>Ty seљ fakt debil. Jdi se nмkam proletмt!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6202">
+		<text>Sakra.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6203">
+		<text>35 D.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6204">
+		<text>Ty seљ fakt debil. Jdi se nмkam proletмt!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6205">
+		<text>36 DD.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6206">
+		<text>Dobrб prбce! Vidнm, ћe seљ fakt chlap!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6207">
+		<text>Na to si vsaп.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6208">
+		<text>Teп nмco tмћљнho. Ok... kolik se vleze nбbojщ do zбsobбku ruskэho samopalu Bizon?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6300">
+		<text>Dvacet pмt.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6301">
+		<text>Љedesбt osm.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6302">
+		<text>Padesбt иtyшi.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6400">
+		<text>Skvмlэ! Zamlouvбљ se mi инm dбl tнm vнc... nechбpej mм blbм, ne tнm zpщsobem jak se tvбшнљ!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6401">
+		<text>No jasnм.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6402">
+		<text>A teп ta tшetн! Jakб je letovб rychlost jihoafrickэ vlaљtovky?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6403">
+		<text>Jihoafrickэ co?!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6404">
+		<text>Vlaљtovky!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6405">
+		<text>Jak to mбm sakra vмdмt?! Vнљ to vщbec ty?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6406">
+		<text>Samozшejmм ћe ne. Vo to jde, prostм na to nemщћu pшijнt... ok, mщћeљ jнt.</text>
+	</string>
+	<string id="mil_zoneguard_dialog_6407">
+		<text>No teda!</text>
+	</string>
+	<string id="mil_zoneguard_dialog_81">
+		<text>Ok, chceљ to zkusit zase? Fajn. Otбzka: jakб je velikost podprsenky Dotty Strangelov?</text>
+	</string>
+	<string id="mil_zoneguard_dialog_91">
+		<text>Ty seљ ale otrava! Opakuju: jakб je kapacita zбsobnнku ruskэho samopalu Bizon?</text>
+	</string>
+</string_table>

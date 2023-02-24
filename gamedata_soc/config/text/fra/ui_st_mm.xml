@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Clear">
+		<text>clair</text>
+	</string>
+	<string id="Cloudy">
+		<text>nuageux</text>
+	</string>
+	<string id="Default">
+		<text>intermйdiaire</text>
+	</string>
+	<string id="Extreme">
+		<text>maximum</text>
+	</string>
+	<string id="gd_master">
+		<text>maоtre</text>
+	</string>
+	<string id="gd_novice">
+		<text>dйbutant</text>
+	</string>
+	<string id="gd_stalker">
+		<text>Stalker</text>
+	</string>
+	<string id="gd_veteran">
+		<text>vйtйran</text>
+	</string>
+	<string id="High">
+		<text>haut(e)</text>
+	</string>
+	<string id="Low">
+		<text>basse</text>
+	</string>
+	<string id="Minimum">
+		<text>minimum</text>
+	</string>
+	<string id="mm_mp_check_cdkey">
+		<text>vйrifier le numйro de sйrie</text>
+	</string>
+	<string id="Nigth">
+		<text>nuit</text>
+	</string>
+	<string id="Rain">
+		<text>pluvieux</text>
+	</string>
+	<string id="renderer_r1">
+		<text>Йclairage statique</text>
+	</string>
+	<string id="renderer_r2">
+		<text>Йclairage dynamique complet</text>
+	</string>
+	<string id="renderer_r2a">
+		<text>Йclairage dynamique des objets</text>
+	</string>
+	<string id="st_artefacthunt">
+		<text>Chasse aux artefacts</text>
+	</string>
+	<string id="st_deathmatch">
+		<text>Match а mort</text>
+	</string>
+	<string id="st_rank_experienced">
+		<text>Expйrimentй</text>
+	</string>
+	<string id="st_rank_legend">
+		<text>Stalker lйgendaire</text>
+	</string>
+	<string id="st_rank_novice">
+		<text>dйbutant</text>
+	</string>
+	<string id="st_rank_professional">
+		<text>professionnel</text>
+	</string>
+	<string id="st_rank_veteran">
+		<text>Vйtйran</text>
+	</string>
+	<string id="st_team_deathmatch">
+		<text>Jeu en йquipe</text>
+	</string>
+	<string id="testers_mp_agroprom">
+		<text>Usine "Agroprom"</text>
+	</string>
+	<string id="testers_mp_atp">
+		<text>Parking</text>
+	</string>
+	<string id="testers_mp_darkvalley">
+		<text>Vallйe obscure</text>
+	</string>
+	<string id="testers_mp_factory">
+		<text>Usine de "Yantar"</text>
+	</string>
+	<string id="testers_mp_lost_village">
+		<text>Village dйsertй</text>
+	</string>
+	<string id="testers_mp_military_1">
+		<text>Entrepфts militaires</text>
+	</string>
+	<string id="testers_mp_pool">
+		<text>Bassin</text>
+	</string>
+	<string id="testers_mp_railroad">
+		<text>Gare</text>
+	</string>
+	<string id="testers_mp_rostok">
+		<text>Usine de "Rostok"</text>
+	</string>
+	<string id="testers_mp_workshop">
+		<text>Usine dйsaffectйe</text>
+	</string>
+	<string id="ui_mm_60_hz">
+		<text>Frйquence 60Hz</text>
+	</string>
+	<string id="ui_mm_action">
+		<text>action</text>
+	</string>
+	<string id="ui_mm_advanced">
+		<text>Avancй</text>
+	</string>
+	<string id="ui_mm_anisotropic">
+		<text>Filtrage des textures</text>
+	</string>
+	<string id="ui_mm_apply">
+		<text>Accepter</text>
+	</string>
+	<string id="ui_mm_back">
+		<text>Retour</text>
+	</string>
+	<string id="ui_mm_blood">
+		<text>Sang</text>
+	</string>
+	<string id="ui_mm_brightness">
+		<text>Brillance</text>
+	</string>
+	<string id="ui_mm_cancel">
+		<text>Annuler</text>
+	</string>
+	<string id="ui_mm_contrast">
+		<text>Contraste</text>
+	</string>
+	<string id="ui_mm_controls">
+		<text>Commandes</text>
+	</string>
+	<string id="ui_mm_credits">
+		<text>Crйdits</text>
+	</string>
+	<string id="ui_mm_crosshair_distance">
+		<text>Distance cible sur le rйticule</text>
+	</string>
+	<string id="ui_mm_delete">
+		<text>Supprimer</text>
+	</string>
+	<string id="ui_mm_difficulty">
+		<text>Difficultй</text>
+	</string>
+	<string id="ui_mm_disconnect">
+		<text>Dйconnexion</text>
+	</string>
+	<string id="ui_mm_disconnect_message">
+		<text>Voulez-vous vraiment vous\ndйconnecter ?</text>
+	</string>
+	<string id="ui_mm_dyn_crosshair">
+		<text>Rйticule dynamique</text>
+	</string>
+	<string id="ui_mm_eax">
+		<text>EAX</text>
+	</string>
+	<string id="ui_mm_fullscreen">
+		<text>Plein йcran</text>
+	</string>
+	<string id="ui_mm_gameplay">
+		<text>Partie</text>
+	</string>
+	<string id="ui_mm_gamma">
+		<text>Gamma</text>
+	</string>
+	<string id="ui_mm_geometry_lod">
+		<text>Dйtail des objets</text>
+	</string>
+	<string id="ui_mm_invert_mouse">
+		<text>Souris inversйe</text>
+	</string>
+	<string id="ui_mm_key">
+		<text>Touche</text>
+	</string>
+	<string id="ui_mm_keyboard_setup">
+		<text>Configuration du clavier</text>
+	</string>
+	<string id="ui_mm_last_save">
+		<text>Derniиre sauvegarde</text>
+	</string>
+	<string id="ui_mm_light_distance">
+		<text>Distance d'йclairage</text>
+	</string>
+	<string id="ui_mm_load">
+		<text>Charger</text>
+	</string>
+	<string id="ui_mm_load_game">
+		<text>Charger partie</text>
+	</string>
+	<string id="ui_mm_master">
+		<text>Maоtre</text>
+	</string>
+	<string id="ui_mm_master_volume">
+		<text>Volume effets</text>
+	</string>
+	<string id="ui_mm_mouse_sense">
+		<text>Sensibilitй de la souris</text>
+	</string>
+	<string id="ui_mm_multiplayer">
+		<text>PARTIE EN RЙSEAU</text>
+	</string>
+	<string id="ui_mm_multiplayer_n">
+		<text>Partie en rйseau</text>
+	</string>
+	<string id="ui_mm_music_volume">
+		<text>Volume de la musique</text>
+	</string>
+	<string id="ui_mm_need_restart">
+		<text>Les modifications ne seront appliquйes qu'aprиs le redйmarrage du jeu.</text>
+	</string>
+	<string id="ui_mm_newgame">
+		<text>Nouvelle partie</text>
+	</string>
+	<string id="ui_mm_novice">
+		<text>Dйbutant</text>
+	</string>
+	<string id="ui_mm_npc_torch">
+		<text>PNJ avec lampe de poche</text>
+	</string>
+	<string id="ui_mm_options">
+		<text>OPTIONS</text>
+	</string>
+	<string id="ui_mm_options_n">
+		<text>Options</text>
+	</string>
+	<string id="ui_mm_particles_distance">
+		<text>Distance des particules</text>
+	</string>
+	<string id="ui_mm_quality_presets">
+		<text>Paramиtres de qualitй</text>
+	</string>
+	<string id="ui_mm_quit_game">
+		<text>Quitter partie</text>
+	</string>
+	<string id="ui_mm_quit_game_message">
+		<text>Voulez-vous vraiment quitter le jeu ?</text>
+	</string>
+	<string id="ui_mm_quit_windows_message">
+		<text>Voulez-vous vraiment revenir а\nWindows ?</text>
+	</string>
+	<string id="ui_mm_quit2windows">
+		<text>Retour а Windows</text>
+	</string>
+	<string id="ui_mm_renderer">
+		<text>Rendu</text>
+	</string>
+	<string id="ui_mm_resolution">
+		<text>Rйsolution</text>
+	</string>
+	<string id="ui_mm_return_game">
+		<text>Reprendre</text>
+	</string>
+	<string id="ui_mm_save">
+		<text>Sauvegarder</text>
+	</string>
+	<string id="ui_mm_save_game">
+		<text>Sauvegarder</text>
+	</string>
+	<string id="ui_mm_show_crosshair">
+		<text>Afficher le rйticule</text>
+	</string>
+	<string id="ui_mm_show_weapon">
+		<text>Afficher l'arme</text>
+	</string>
+	<string id="ui_mm_simply">
+		<text>Basiques</text>
+	</string>
+	<string id="ui_mm_sound">
+		<text>Audio</text>
+	</string>
+	<string id="ui_mm_sound_quality">
+		<text>Qualitй audio</text>
+	</string>
+	<string id="ui_mm_stalker">
+		<text>Stalker</text>
+	</string>
+	<string id="ui_mm_sun_quality">
+		<text>Qualitй des ombres</text>
+	</string>
+	<string id="ui_mm_supersample">
+		<text>Anticrиnelage</text>
+	</string>
+	<string id="ui_mm_switch_torch">
+		<text>L'IA utilise les lampes de poche</text>
+	</string>
+	<string id="ui_mm_texture_quality">
+		<text>Dйtail des textures</text>
+	</string>
+	<string id="ui_mm_tips">
+		<text>Identification de PNJ</text>
+	</string>
+	<string id="ui_mm_veteran">
+		<text>Vйtйran</text>
+	</string>
+	<string id="ui_mm_video">
+		<text>Vidйo</text>
+	</string>
+	<string id="ui_mm_vis_distance">
+		<text>Distance de vision</text>
+	</string>
+	<string id="ui_mm_vsync">
+		<text>Synchronisation verticale</text>
+	</string>
+	<string id="ui_st_last_set">
+		<text>Derniers param.</text>
+	</string>
+	<string id="ui_st_preset1">
+		<text>Param. prйdйf. 1</text>
+	</string>
+	<string id="ui_st_preset2">
+		<text>Param. prйdйf. 2</text>
+	</string>
+	<string id="ui_st_preset3">
+		<text>Param. prйdйf. 3</text>
+	</string>
+	<string id="ui_st_reset">
+		<text>Rйinitialiser</text>
+	</string>
+	<string id="ui_st_sell_all">
+		<text>Tout vendre</text>
+	</string>
+</string_table>

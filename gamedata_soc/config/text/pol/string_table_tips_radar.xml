@@ -1,0 +1,12 @@
+	<string id="rad_barman_spam">
+		<text>Naznaczony!? Ty ¿yjesz!? Wspaniale! Czyli uda³o ci siê wy³¹czyæ Zwêglacz, hê? Wszyscy staraj¹ siê dotrzeæ do centrum Zony przez Prypeæ. Nikt nie wie, co tam jest... mo¿e skarbnica artefaktów, a mo¿e coœ, co spe³nia wszystkie ¿yczenia. Grupa weteranów w³aœnie teraz siê szykuje do wyruszenia. Jeœli siê poœpieszysz, mo¿e zd¹¿ysz siê do nich przy³¹czyæ. Dam im znaæ, ¿eby poczekali na ciebie.</text>
+	</string>
+	<string id="tips_bun_komand">
+		<text>"Jedynka" i "dwójka" - sprawdziæ parter , "trójka" - korytarz, "czwórka" i "pi¹tka" - pierwsze piêtro.</text>
+	</string>
+	<string id="tips_rad_sos_suicide">
+		<text>...pomocy, umieram...</text>
+	</string>
+	<string id="tips_rad_switcher_press">
+		<text>¯eby wy³¹czyæ maszynê, wciœnij ($$ACTION_USE$$)</text>
+	</string>

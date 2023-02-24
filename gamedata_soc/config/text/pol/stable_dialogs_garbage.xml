@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="gar_dolg_blokpost_11">
+		<text>Staж. Nie moїesz iњж dalej, stalkerze!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111">
+		<text>Dlaczego?</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111">
+		<text>Bo to nasze terytorium - terytorium "Powinnoњci" - a my jesteњmy wybredni w wyborze tych, ktуrych wpuszczamy do bazy. Jeњli nie masz їadnej waїnej sprawy do naszych dowуdcуw, to zapomnij o przejњciu.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11111">
+		<text>Rozumiem.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111111">
+		<text>Takie s№ zasady.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112">
+		<text>Muszк przejњж, mam sprawк do Barmana.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121">
+		<text>Tak, Barman wspominaі nam o tobie. Moїesz przejњж.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111211">
+		<text>Wolк zapіaciж. Masz.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112111">
+		<text>Ekstra! Moїesz iњж, ale lepiej, їebyњ miaі naprawdк waїn№ sprawк do Barmana, jasne? I uwaїaj - z przodu jest w cholerк anomalii.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212">
+		<text>Jaka to przysіuga?</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112121">
+		<text>Nic wielkiego. Niedaleko wіуczy siк stado dzikуw, ktуre trzeba ubiж. Sprz№tnij je, a uznamy, їe przejњcie jest opіacone.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121211">
+		<text>Zgoda.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212111">
+		<text>Powodzenia, stalkerze.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121212">
+		<text>Nie mam tyle kasy.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212121">
+		<text>No to lepiej zacznij siк za ni№ rozgl№daж!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111122">
+		<text>Nie mam tyle kasy.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111123">
+		<text>No to nie moїesz pуjњж do baru.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1231">
+		<text>Dziкki za pomoc w walce z dzikami. Przyjmij zasіuїon№ nagrodк.</text>
+	</string>
+	<string id="gar_dolg_blokpost_12311">
+		<text>Dziкki!</text>
+	</string>
+	<string id="gar_dolg_blokpost_22">
+		<text>I jak? Zabiіeњ juї te dziki?</text>
+	</string>
+	<string id="gar_dolg_blokpost_221">
+		<text>Jeszcze nie.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2211">
+		<text>Szkoda. Jak zaczniesz sobie kroiж kotlety, to przynieњ mi jeden, co?</text>
+	</string>
+	<string id="gar_dolg_blokpost_222">
+		<text>Tak, wszystkie zabiіem.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2221">
+		<text>Dobra, moїesz przejњж. I pozdrуw ode mnie Barmana, okej?</text>
+	</string>
+	<string id="gar_dolg_blokpost_33">
+		<text>Pozdrуw ode mnie Barmana, jak go zobaczysz. Aha, pamiкtaj, їe po drodze jest mnуstwo anomalii, wiкc lepiej uwaїaj.</text>
+	</string>
+	<string id="gar_dramm_novice_start_0">
+		<text>Dziкki, stary - naprawdк bardzo mi pomogіeњ. Nie zapomnк tego.</text>
+	</string>
+	<string id="gar_dramm_novice_start_1">
+		<text>Co tu siк dzieje?</text>
+	</string>
+	<string id="gar_dramm_novice_start_11">
+		<text>Dobra.</text>
+	</string>
+	<string id="gar_dramm_novice_start_2">
+		<text>Prуbujemy oczyњciж Wysypisko z bandytуw. Moi kumple urz№dzili niedaleko zasadzkк na nich. Jak siк ich nie pozbкdziemy, to opanuj№ Wysypisko i nikt nie bкdzie w stanie przejњж w gі№b Zony. Pogadaj z naszym dowуdc№. Jest niedaleko ze swoimi ludџmi, na zіomowisku maszyn. Wіaњnie tam idк, wiкc moїemy iњж razem, jak chcesz.</text>
+	</string>
+	<string id="gar_dramm_novice_start_21">
+		<text>Ruszajmy.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3">
+		<text>Moїesz mi coњ powiedzieж o Wysypisku?</text>
+	</string>
+	<string id="gar_dramm_novice_start_31">
+		<text>Nie bardzo jest o czym gadaж, stary. Wysypisko to takie... wysypisko. Їoіnierze "Powinnoњci" strzeg№ pуіnocnej drogi do baru. Ich lepiej unikaж - "Powinnoњж" to w wiкkszoњci nieџle wredne typy. Po prawej masz њcieїki do Doliny Mroku, ale tam jest bardzo wysoki poziom promieniowania. Nieco bliїej jest Grzкzawisko Grimpena - paskudne bagno peіne anomalii. Podobno іatwo moїna wpaњж tam na caіkiem wypasione artefakty, ale jeszcze іatwiej wpaњж w kіopoty. No, ale przynajmniej na Grzкzawisku nie grozi ci pies Baskerville'уw!</text>
+	</string>
+	<string id="gar_dramm_novice_start_311">
+		<text>Mуw dalej.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3111">
+		<text>Po prawej obok bagna jest tajna kryjуwka. Zobaczysz metalow№ konstrukcjк wisz№c№ nad bajorem. Mуj schowek jest tuї pod ni№... Zrobiіem go dawno temu, ale uratowaіeњ mi їycie i tobie pewnie bardziej siк przyda. Wiкc њmiaіo moїesz z niego korzystaж.</text>
+	</string>
+	<string id="gar_dramm_novice_start_31111">
+		<text>Dziкki, stary, to bardzo przydatne informacje.</text>
+	</string>
+	<string id="gar_dramm_novice_start_312">
+		<text>To ciekawe, dziкki.</text>
+	</string>
+	<string id="gar_hellcar_start_11">
+		<text>Hej, stalkerze, w sam№ porк! Przydaіaby siк nam twoja pomoc. Pieprzeni bandyci chc№ opanowaж Wysypisko. Mieliњmy tu strzelaninк pуі godziny temu i trzech kundli udaіo nam siк zaіatwiж. Reszta siк wycofaіa, ale na pewno lada moment wrуc№ z posiіkami. Nas juї niewielu zostaіo, wiкc bкdziemy wdziкczni za kaїd№ pomoc.</text>
+	</string>
+	<string id="gar_hellcar_start_111">
+		<text>Mуw dalej.</text>
+	</string>
+	<string id="gar_hellcar_start_1111">
+		<text>Urz№dziliњmy tu na nich zasadzkк. Nadejd№ z zachodu, od Instytutu Agroprom. Pomуї nam ich zlikwidowaж, a nie poїaіujesz!</text>
+	</string>
+	<string id="gar_hellcar_start_11111">
+		<text>Dobra, pomogк wam.</text>
+	</string>
+	<string id="gar_hellcar_start_111111">
+		<text>Ekstra.</text>
+	</string>
+	<string id="gar_hellcar_start_11112">
+		<text>To nie moja sprawa i nie zamierzam siк mieszaж.</text>
+	</string>
+	<string id="gar_hellcar_start_111121">
+		<text>Jak sobie chcesz. Pуџniej bкdziesz pluі sobie w brodк za kaїdym razem, jak te matoіy kaї№ ci pіaciж za przejњcie do Zony.</text>
+	</string>
+	<string id="gar_hellcar_start_11113">
+		<text>Zabiіem wszystkich.</text>
+	</string>
+	<string id="gar_hellcar_start_111131">
+		<text>Stary, rz№dzisz! Ale na wszelki wypadek bкdк ostroїny.</text>
+	</string>
+	<string id="gar_hellcar_start_21">
+		<text>Nie mamy o czym gadaж.</text>
+	</string>
+	<string id="gar_hellcar_start_3111">
+		<text>Dziкki stary, bardzo nam pomogіeњ. Przyjmiesz trochк kasy? Taki maіy dowуd wdziкcznoњci.</text>
+	</string>
+	<string id="gar_hellcar_start_31111">
+		<text>Jasne.</text>
+	</string>
+	<string id="gar_hellcar_start_311111">
+		<text>Masz, to powinno wystarczyж, їebyњ siк w peіni wykurowaі.</text>
+	</string>
+	<string id="gar_hellcar_start_3111111">
+		<text>Dziкkujк.</text>
+	</string>
+	<string id="gar_hellcar_start_31113">
+		<text>Opowiedz mi o sobie.</text>
+	</string>
+	<string id="gar_hellcar_start_311131">
+		<text>Woіaj№ na mnie Bies. Przybyіem w te okolice trzy lata temu. Jak wielu kolesiуw w Zonie jestem zbiegiem, poszukiwanym za dwa morderstwa i ciкїkie uszkodzenie ciaіa. Kilka lat temu mojego kumpla nieџle zmaltretowano - w szpitalu musieli go dosіownie pozszywaж. No wiкc odwiedziіem sukinsynуw, ktуrzy mu to zrobili. Jak zjawiіy siк gliny, musiaіem jednego zastrzeliж i wyskoczyж przez okno z drugiego piкtra - od tamtej pory jestem tutaj. Dobrze sobie tu radzк, ale lista przestкpstw teї mi siк nieco wydіuїyіa. Staram siк zwalczaж bezprawie, tak jak to robiіem na zewn№trz. Trenujк kotуw i uczк ich przetrwania w Zonie.</text>
+	</string>
+	<string id="gar_hellcar_start_3111311">
+		<text>No to w takim razie czemu nie doі№czysz do "Powinnoњci"?</text>
+	</string>
+	<string id="gar_hellcar_start_31113111">
+		<text>"Powinnoњж" walczy z Zon№, ja walczк dla ludzi. Zreszt№ oni za mocno zwi№zani s№ z rz№dem i wojskowymi - nie chcк siк ktуregoњ dnia obudziж w zimnej celi.</text>
+	</string>
+	<string id="gar_hellcar_start_311131111">
+		<text>Powodzenia.</text>
+	</string>
+	<string id="gar_hellcar_start_31114">
+		<text>Co to za miejsce?</text>
+	</string>
+	<string id="gar_hellcar_start_311141">
+		<text>Wysypisko. Tu jest nasz dom. Widzisz te sterty gуwna? Tam nie chcesz іaziж, zaufaj mi. Tyle odpadуw radioaktywnych, їe licznikom Geigera brakuje skali. To jedyna porz№dna droga do Zony i ostatnio coraz czкњciej krкc№ siк tam bandyci. Prкdzej siк zesraj№ ze strachu niї wejd№ w gі№b Zony na teren "Powinnoњci", jak doњwiadczeni stalkerzy. Ale te hieny uwielbiaj№ tu rabowaж kotуw. Wiкc skoro nikogo innego to nie obchodzi, sami musimy siк postawiж i walczyж.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411">
+		<text>Mуw dalej.</text>
+	</string>
+	<string id="gar_hellcar_start_31114111">
+		<text>Wszкdzie, a zwіaszcza tutaj, musisz zachowywaж siк jak czіowiek, a nie jak jakieњ pazerne zwierzк. Takie mam podejњcie do їycia.</text>
+	</string>
+	<string id="gar_hellcar_start_311141112">
+		<text>Czy na Wysypisku s№ jakieњ duїe budynki?</text>
+	</string>
+	<string id="gar_hellcar_start_31114111211">
+		<text>Dziкkujк.</text>
+	</string>
+	<string id="gar_hellcar_start_31115">
+		<text>Dziкki, niczego od ciebie nie potrzebujк.</text>
+	</string>
+	<string id="gar_hellcar_start_3112">
+		<text>Wiem caіkiem sporo. Mуgіbym podzieliж siк jakimiњ informacjami.</text>
+	</string>
+	<string id="gar_hellcar_start_41">
+		<text>To jeszcze nie koniec. Skoсczmy i wtedy pogadamy.</text>
+	</string>
+	<string id="gar_hellcar_start_51">
+		<text>Hej, Naznaczony.</text>
+	</string>
+	<string id="gar_seriy_start_11">
+		<text>Cholera jasna, stary, to nie czas na gadanie! Za kilka chwil nasze spluwy przemуwi№. Pomуї mi ich odeprzeж, a potem porozmawiamy.</text>
+	</string>
+	<string id="gar_seriy_start_22">
+		<text>Dziкki za pomoc, zaczynaіo siк robiж nieciekawie. Co ty tu w ogуle robisz?</text>
+	</string>
+	<string id="gar_seriy_start_221">
+		<text>Szukam informacji o Strieloku. Lis powiedziaі mi o tobie, wiкc przyszedіem pogadaж.</text>
+	</string>
+	<string id="gar_seriy_start_2211">
+		<text>Dobra, pomogіeњ mi za friko, wiкc ci powiem. Jeden z chіopakуw, dawny "kopacz" o ksywie Kret, wіaњnie na mnie czeka. Odkryі schowek Strieloka, ale nie wiem, czy coњ tam znalazі. Tu masz wspуіrzкdne miejsca, w ktуrym mamy siк spotkaж. Powiedz mu, їe ciк przysіaіem. Bкd№ mnie teraz szukaж, wiкc na chwilк muszк znikn№ж. Masz tu jeszcze trochк drobnych za pomoc.</text>
+	</string>
+	<string id="gar_seriy_start_2212">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="gar_seriy_start_222">
+		<text>Szukam informacji o Strieloku, moїe ty coњ wiesz?</text>
+	</string>
+	<string id="gar_seriy_start_2221">
+		<text>Dobra, pomogіeњ mi za friko, wiкc ci powiem. Jeden z chіopakуw, dawny "kopacz" o ksywie Kret, wіaњnie na mnie czeka. Odkryі schowek Strieloka i znalazі dokumenty, ktуre wyjaњniaj№ kilka rzeczy. Miaі bandytуw na ogonie, wiкc musiaі je zostawiж, ale zapamiкtaі miejsce. Bкd№ mnie teraz szukaж, wiкc na chwilк muszк znikn№ж. Tu masz wspуіrzкdne miejsca mojego spotkania z Kretem. Powiedz mu, їe ciк przysіaіem. Przeњlк ci trochк danych na PDA. Masz tu jeszcze trochк drobnych za pomoc.</text>
+	</string>
+	<string id="gar_seriy_start_2222">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="gar_seriy_start_33">
+		<text>Hej, stary! Chwilк wczeњniej zaczynaіo siк robiж bardzo nieciekawie, nie powiem. Co ty tu w ogуle robisz?</text>
+	</string>
+	<string id="gar_seriy_start_44">
+		<text>Bezpieczna droga, stalkerze. Bezpieczna droga obok anomalii i wprost do artefaktуw.</text>
+	</string>
+	<string id="gar_seriy_start_441">
+		<text>Co moїna znaleџж na Wysypisku?</text>
+	</string>
+	<string id="gar_seriy_start_4411">
+		<text>Znaleџж to moїna siк w kіopotach i to bardzo szybko. Ale skoro z ciebie taki badacz, to powiem ci wszystko, co wiem. Na wschodzie jest niewielki las. Nic ciekawego, a peіno tam psуw, wiкc uwaїaj. Te tory doprowadz№ ciк do tunelu. Znajdziesz tam w cholerк anomalii, moїe coњ poza tym, ale tego to ci nie powiem - nigdy tam za bardzo nie szperaіem. O posterunku "Powinnoњci" na pуіnocy chyba juї wiesz. No i to wіaњciwie tyle mojej wiedzy o tym miejscu.</text>
+	</string>
+	<string id="gar_seriy_start_44112">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_0">
+		<text>Sіuchaj, stary - co moїna znaleџж na Wysypisku?</text>
+	</string>
+	<string id="gar_seryi_about_garbage_1">
+		<text>Znaleџж to moїna siк w kіopotach i to bardzo szybko. Ale skoro z ciebie taki badacz, to powiem ci wszystko, co wiem. Na wschodzie jest niewielki las. Nic ciekawego, a peіno tam psуw, wiкc uwaїaj. Te tory doprowadz№ ciк do tunelu. Znajdziesz tam w cholerк anomalii, moїe coњ poza tym, ale tego to ci nie powiem - nigdy tam za bardzo nie szperaіem. O posterunku "Powinnoњci" na pуіnocy chyba juї wiesz. No i to wіaњciwie tyle mojej wiedzy o tym miejscu.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_11">
+		<text>Dziкki za informacje. Bкdк pamiкtaі.</text>
+	</string>
+	<string id="gar_stalker_about_level_0">
+		<text>Moїesz mi coњ opowiedzieж o tym miejscu?</text>
+	</string>
+	<string id="gar_stalker_about_level_1">
+		<text>No to sіuchaj. Gdzie nie spojrzysz, wszкdzie cuchn№ce њmietnisko. Po wypadku z 1986 przywieџli tutaj odpady radioaktywne, dџwigi i wszystkie zniszczone maszyny. W gruncie rzeczy peіno tu bezuїytecznego zіomu, a gdzieniegdzie trafi siк anomalia. Moїesz nawet znaleџж jakieњ artefakty, ale nic nadzwyczajnego, wiкc gіуwnie spotyka siк tu kotуw. Duїo kotуw rуwna siк duїo bandytуw, wiкc lepiej siк tu za dіugo nie krкciж. Dalej na wschуd znajdziesz mnуstwo pуl radioaktywnych - bez ochrony tam nie wejdziesz. Jak pуjdziesz na poіudnie, dotrzesz do granicy Zony. Id№c na pуіnoc, znajdziesz w koсcu fabrykк Rostok i bar dla stalkerуw. Na wschodzie - Dolina Mroku, posкpne, spowite mgі№ miejsce. Na zachodzie - Instytut Badawczy Agroprom. Zaznaczк ci bezpieczne przejњcia na mapie.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411121">
+		<text>W centrum znajduje siк duїy hangar, wewn№trz ktуrego jest doњж spokojnie - w najgorszym wypadku moїesz tam przenocowaж. Jak pуjdziesz na zachуd, w stronк Agropromu, znajdziesz obуz bandytуw. To stamt№d byіy te іajzy, ktуre zaіatwiliњmy wczeњniej i coњ czujк, їe jest ich tam wiкcej.</text>
+	</string>
+</string_table>

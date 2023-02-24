@@ -1,0 +1,78 @@
+	<string id="agr_find_ghost">
+		<text>Averigua qué le pasó a Ghost</text>
+	</string>
+	<string id="agr_gunslinger_cache">
+		<text>Escondite de Strelok</text>
+	</string>
+	<string id="agr_help_krot">
+		<text>Salva a Mole</text>
+	</string>
+	<string id="agr_help_krot_0">
+		<text>Ayuda a Mole a derrotar a los soldados</text>
+	</string>
+	<string id="agr_help_krot_1">
+		<text>Mata a los soldados</text>
+	</string>
+	<string id="agr_help_krot_2">
+		<text>Salva a Mole</text>
+	</string>
+	<string id="agr_help_stalkers">
+		<text>Ayuda a los stalkers</text>
+	</string>
+	<string id="agr_help_stalkers_0">
+		<text>Ayuda a los stalkers a derrotar a los soldados</text>
+	</string>
+	<string id="agr_help_stalkers_1">
+		<text>Mata a los soldados</text>
+	</string>
+	<string id="agr_help_stalkers_2">
+		<text>Ayuda a los stalkers a derrotar a los soldados</text>
+	</string>
+	<string id="agr_krot">
+		<text>Ve al encuentro de los stalkers</text>
+	</string>
+	<string id="agr_meet_krot_band">
+		<text>Obtén información sobre Strelok</text>
+	</string>
+	<string id="agr_meet_krot_band_0">
+		<text>Obtén información sobre Mole</text>
+	</string>
+	<string id="agr_meet_krot_band_1">
+		<text>Reúnete con el grupo de Mole</text>
+	</string>
+	<string id="agr_meet_krot_band_2">
+		<text>Obtén información de Mole</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache">
+		<text>Encuentra el escondite del grupo de Strelok.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_0">
+		<text>Encuentra el escondite del grupo de Strelok.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_1">
+		<text>Encuentra el escondite</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_2">
+		<text>Encuentra información sobre Strelok en el escondite</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_3">
+		<text>Sal del subsuelo</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom">
+		<text>Encuentra a Ghost</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom_0">
+		<text>Ghost sabe dónde está Strelok.</text>
+	</string>
+	<string id="agroprom_get_military_documents">
+		<text>Encuentra los documentos militares</text>
+	</string>
+	<string id="agroprom_get_military_documents_0">
+		<text>Instituto Agroprom</text>
+	</string>
+	<string id="agroprom_get_military_documents_1">
+		<text>Roba los documentos militares</text>
+	</string>
+	<string id="agroprom_get_military_documents_2">
+		<text>Lleva los documentos al tabernero</text>
+	</string>

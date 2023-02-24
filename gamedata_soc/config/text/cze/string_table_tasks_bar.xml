@@ -1,0 +1,132 @@
+	<string id="bar_bring_hunter_rifle">
+		<text>Vra lovci rodinnou pušku</text>
+	</string>
+	<string id="bar_bring_PDA_lucky">
+		<text>Pøines Barmanovi velitelovo PDA</text>
+	</string>
+	<string id="bar_crazy_veterans_quest">
+		<text>Zabij šílené veterány</text>
+	</string>
+	<string id="bar_dolg_base_rules">
+		<text>Ohlaš se veliteli Povinnosti</text>
+	</string>
+	<string id="bar_dolg_base_rules_fin">
+		<text>Vra se k Barmanovi</text>
+	</string>
+	<string id="bar_dolg_base_rules_talk">
+		<text>Najdi velitele Povinnosti</text>
+	</string>
+	<string id="bar_dolg_bring_rg6">
+		<text>Seeò Bulldog-6</text>
+	</string>
+	<string id="bar_dolg_community_quest">
+		<text>Pøidej se k frakci Povinnost</text>
+	</string>
+	<string id="bar_dolg_community_quest_prisyaga">
+		<text>Pøísahej</text>
+	</string>
+	<string id="bar_dolg_community_quest_recomendation">
+		<text>Získej kladné reference</text>
+	</string>
+	<string id="bar_dolg_community_quest_vernost">
+		<text>Proka loajalitu Povinnosti</text>
+	</string>
+	<string id="bar_dolg_find_cook">
+		<text>Získej si dùvìru kuchaøe</text>
+	</string>
+	<string id="bar_dolg_find_rg6">
+		<text>Infiltruj základnu Svobody</text>
+	</string>
+	<string id="bar_dolg_info_gain">
+		<text>Najdi informace o laboratoøi X18</text>
+	</string>
+	<string id="bar_dolg_kill_tiran">
+		<text>Zabij Tyrana, velitele skupiny</text>
+	</string>
+	<string id="bar_dolg_return_info">
+		<text>Vra informace o X18 Voroninovi</text>
+	</string>
+	<string id="bar_dolg_return_rg6">
+		<text>Pøines Voroninovi Bulldog-6</text>
+	</string>
+	<string id="bar_dolg_rg6_quest">
+		<text>Mise nutná pro pøipojení k Povinnosti</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_quest">
+		<text>Zlikviduj oldáky</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_return">
+		<text>Dones Voroninovi prouky</text>
+	</string>
+	<string id="bar_dolg_tiran_PDA">
+		<text>Vezmi Tyranovo PDA</text>
+	</string>
+	<string id="bar_hunter_find_rifle">
+		<text>Najdi rodinnou pušku</text>
+	</string>
+	<string id="bar_hunter_return_rifle">
+		<text>Vra pušku lovci v baru</text>
+	</string>
+	<string id="bar_hunter_rifle">
+		<text>Najdi rodinnou pušku</text>
+	</string>
+	<string id="bar_kill_crazy_veterans">
+		<text>Zabij vùdce veteránù</text>
+	</string>
+	<string id="bar_kill_crazy_veterans_PDA">
+		<text>Vezmi PDA jejich vùdce</text>
+	</string>
+	<string id="bar_kill_veterans">
+		<text>Zniè tábor šílenıch veteránù</text>
+	</string>
+	<string id="bar_radar_deactivate">
+		<text>Vypni vypalovaè mozku</text>
+	</string>
+	<string id="bar_resque_information">
+		<text>Setkej se s Kruglovem</text>
+	</string>
+	<string id="bar_resque_information_2">
+		<text>Zaveï Kruglova k Jantaru</text>
+	</string>
+	<string id="bar_resque_scientific_follow">
+		<text>Zaveï Kruglova k Jantaru</text>
+	</string>
+	<string id="bar_resque_scientific_information">
+		<text>...</text>
+	</string>
+	<string id="bar_resque_scientific_information_bring">
+		<text>Promluv si s Kruglovem</text>
+	</string>
+	<string id="bar_resque_scientific_information_get">
+		<text>Dostaò se ke Kruglovi</text>
+	</string>
+	<string id="bar_resque_scientific_information_get_2">
+		<text>Promluv si s Kruglovem</text>
+	</string>
+	<string id="bar_x16_documents">
+		<text>Najdi v X16 dokumenty</text>
+	</string>
+	<string id="bring_x16_documents">
+		<text>Pøines dokumenty Barmanovi</text>
+	</string>
+	<string id="deactivate_radar_now">
+		<text>Vypni stroj</text>
+	</string>
+	<string id="find_and_deactivate_radar">
+		<text>Najdi vstup do bunkru</text>
+	</string>
+	<string id="get_to_antennas">
+		<text>Dostaò se k anténám</text>
+	</string>
+	<string id="Kruglov_research">
+		<text>Kruglovùv vızkum</text>
+	</string>
+	<string id="look_for_x16_lab">
+		<text>Najdi dokumenty z X16</text>
+	</string>
+	<string id="wpn-winchester_m1">
+		<text>Bojovı Chaser</text>
+	</string>
+	<string id="x16_yantar">
+		<text>Promluv si s vìdci</text>
+	</string>

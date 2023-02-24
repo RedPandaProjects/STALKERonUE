@@ -1,0 +1,72 @@
+	<string id="yan_find_ghost">
+		<text>Vezmi od Ducha dokumenty</text>
+	</string>
+	<string id="yan_find_ghost_task">
+		<text>Vezmi dokumenty</text>
+	</string>
+	<string id="yan_find_vasilyev_task">
+		<text>Dostaò se do laboratoøe</text>
+	</string>
+	<string id="yan_find_labX16">
+		<text>Dostaò se do laboratoøe X16</text>
+	</string>
+	<string id="yan_find_scientist">
+		<text>Zmìø radiaci</text>
+	</string>
+	<string id="yan_find_vasilyev">
+		<text>Prohledej Vasiljevovo tìlo</text>
+	</string>
+	<string id="yan_kill_brain">
+		<text>Vypni psi-emise</text>
+	</string>
+	<string id="yan_kill_brain_task">
+		<text>Vypni mechanizmus</text>
+	</string>
+	<string id="yan_kill_brain_task_2">
+		<text>Dostaò se z laboratoøe</text>
+	</string>
+	<string id="yan_provodnik_about_doctor">
+		<text>Promluv si se Stopaøem</text>
+	</string>
+	<string id="yan_provodnik_task">
+		<text>Setkej se se Stopaøem</text>
+	</string>
+	<string id="yan_psi_zone_find">
+		<text>Eskortuj Kruglova na mìøicí lokaci</text>
+	</string>
+	<string id="yan_psi_zone_find_semenov">
+		<text>Eskortuj Semenova na mìøicí lokaci</text>
+	</string>
+	<string id="yan_return_to_bunker">
+		<text>Pøines výsledky Sacharovovi</text>
+	</string>
+	<string id="yan_scientist_return">
+		<text>Promluv si se Sacharovem</text>
+	</string>
+	<string id="yan_scientist_return_task">
+		<text>Promluv si se Sacharovem</text>
+	</string>
+	<string id="yan_secret_tonnel">
+		<text>Dostaò se pryè tajným tunelem</text>
+	</string>
+	<string id="yan_switcher_off_1">
+		<text>Vypni první kontrolní modul</text>
+	</string>
+	<string id="yan_switcher_off_2">
+		<text>Vypni druhý kontrolní modul</text>
+	</string>
+	<string id="yan_switcher_off_3">
+		<text>Vypni tøetí kontrolní modul</text>
+	</string>
+	<string id="yan_talk_to_kruglov">
+		<text>Promluv si s Kruglovem</text>
+	</string>
+	<string id="yan_talk_to_semenov">
+		<text>Promluv si se Semenovem</text>
+	</string>
+	<string id="yan_vasilyev_pda">
+		<text>Vasiljevovo PDA</text>
+	</string>
+	<string id="yan_zombie_zone">
+		<text>Pøedpokládaná pozice laboratoøe X16</text>
+	</string>

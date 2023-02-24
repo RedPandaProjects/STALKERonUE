@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_map_desc_mp_agroprom_large">
+		<text>Un posto strano. Nel silenzio dell'edificio si nascondono numerosi segreti, ma gli stalker sono attirati dal gran numero di reperti, nonostante i pericoli. Movimenti veloci e colpi precisi faranno di te il protetto della dea bendata.</text>
+	</string>
+	<string id="ui_map_desc_mp_agroprom_short">
+		<text>Un posto strano. Nel silenzio dell'edificio si nascondono numerosi segreti, ma gli stalker sono attirati dal gran numero di reperti, nonostante i pericoli.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_large">
+		<text>Il parcheggio degli autobus e dei tram si trova all'ingresso della Zona. Trattori, autobus e camion si sono fermati all'improvviso e per sempre. Non sono mai stati segnalati reperti, ma il posto и frequentato dagli stalker esperti che danno la caccia ai novellini per arraffare quel che capita. Riparati negli edifici e fai attenzione ai nemici appostati sui tetti.</text>
+	</string>
+	<string id="ui_map_desc_mp_atp_short">
+		<text>Il parcheggio degli autobus e dei tram si trova all'ingresso della Zona. Trattori, autobus e camion si sono fermati all'improvviso e per sempre.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_large">
+		<text>Questo posto misterioso ha una strana forza di attrazione. Chi abbia costruito questa piscina per esperimenti e a quale scopo, rimarrа per sempre un mistero. Non ci sono reperti da queste parti. Gli stalker sono attratti dai resti di macchinari e dispositivi strani. Tieni d'occhio i tetti e ricorda che il livello delle radiazioni и estremamente alto.</text>
+	</string>
+	<string id="ui_map_desc_mp_bath_short">
+		<text>Questo posto misterioso ha una strana forza di attrazione. Chi abbia costruito questa piscina per esperimenti e a quale scopo, rimarrа per sempre un mistero.</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_large">
+		<text>Una tetra fabbrica abbandonata. Non c'и modo di sapere quanti stalker abbiano trovato la morte tra queste mura. Ci sono anomalie dappertutto, ma questo posto continua ad attirare gli stalker come una calamita, poichй contiene reperti molto preziosi. Il livello delle radiazioni и molto alto!</text>
+	</string>
+	<string id="ui_map_desc_mp_factory_short">
+		<text>Una tetra fabbrica abbandonata. Non c'и modo di sapere quanti stalker abbiano trovato la morte tra queste mura.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_large">
+		<text>Una sezione dell'enorme discarica dove sono state scaricate montagne di scorie radioattive dopo la catastrofe dell'86... gru e attrezzature in rovina, ecc. Vi sono resti di vecchi impianti e un'enorme hangar. Si trova vicino all'ingresso della Zona ed и un posto pieno di reperti sparsi ovunque.Gli stalker vi si addentrano per una facile caccia.</text>
+	</string>
+	<string id="ui_map_desc_mp_garbage_short">
+		<text>Una sezione dell'enorme discarica dove sono state scaricate montagne di scorie radioattive dopo la catastrofe dell'86... gru e attrezzature in rovina, ecc.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_large">
+		<text>Un villaggio deserto e dimenticato da Dio nel profondo della Zona. Il laghetto, poco prondo e color ruggine, rieno di carcasse d'auto incute una paura inconscia nei cuori degli esploratori della Zona. Fai attenzione ai cecchini, ma ricordati che la Zona aiuta gli audaci.</text>
+	</string>
+	<string id="ui_map_desc_mp_lost_village_short">
+		<text>Un villaggio deserto e dimenticato da Dio nel profondo della Zona. Il laghetto, poco prondo e color ruggine, rieno di carcasse d'auto incute una paura inconscia nei cuori degli esploratori della Zona.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_large">
+		<text>Un'ostile base dell'esercito con camion e autoblindo in disuso lasciati a marcire, un centro di comando in rovina e varie baracche. Ma non и tutto come sembra. La base и ricca di reperti e il nemico si nasconde dietro ogni angolo. Dimostra il tuo ardore e avrai la ricompensa!</text>
+	</string>
+	<string id="ui_map_desc_mp_military_1_short">
+		<text>Un'ostile base dell'esercito con camion e autoblindo in disuso lasciati a marcire, un centro di comando in rovina e varie baracche</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_large">
+		<text>Questo antico borgo и un luogo sinistro e una trappola mortale. Se sei arrivato fin qui, nonostante tutti i pericoli, preparati a una morte improvvisa. Poichй qui non esistono luoghi sicuri, affidati al mirino e al silenziatore per non finire a pezzettini.</text>
+	</string>
+	<string id="ui_map_desc_mp_military_2_short">
+		<text>Questo antico borgo и un luogo sinistro e una trappola mortale. Se sei arrivato fin qui, nonostante tutti i pericoli, preparati a una morte improvvisa. </text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_large">
+		<text>La cittа di Pripjat, residenza degli operai della centrale nucleare, o quello che ne и rimasto. Le rovine di questo scheletro industriale contengono un pericolo imminente. Devi proteggerti seriamente per salvarti la vita.</text>
+	</string>
+	<string id="ui_map_desc_mp_prypiat_short">
+		<text>La cittа di Pripjat non dista molto dalla centrale nucleare, il cimelio della catastofe di Chernobyl.</text>
+	</string>
+	<string id="ui_map_desc_mp_railraod_short">
+		<text>Una piccola stazione ferroviaria alla fabbrica Rostok.</text>
+	</string>
+	<string id="ui_map_desc_mp_railroad_large">
+		<text>Una piccola stazione ferroviaria alla fabbrica Rostok. I vagoni e i locomotori arrugginiti sono fermi a un classico bivio lungo i binari. Il gran numero di reperti trovati da queste parti attirano stalker disperati da tutte le parti della Zona. </text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_large">
+		<text>Fra cumuli di metallo e dietro pareti di cemento, un silenzio del tutto speciale avvolge la fabbrica. Nel secolo appena trascroso fremeva di un'attivitа convulsa, gli operai indaffarati nei loro turni di lavoro, slogan di incitamento scanditi dagli altoparlanti...Oggi la fabbrica sembra aver esaurito la propria vitalitа.</text>
+	</string>
+	<string id="ui_map_desc_mp_rostok_short">
+		<text>Un silenzio profondo avvolge la fabbrica abbandonata fra cumuli di metallo e dietro pareti di cemento.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_large">
+		<text>I dintorni della fabbrica Rostk prima dell'arrivo dei Duty. L'area, benchи in rovina, и molto ricca di reperti. Gli hangar e i magazzini vuoti brulicano di pericoli. Fai molta attenzione e tieni d'occhio l'orologio della torre bianca.</text>
+	</string>
+	<string id="ui_map_desc_mp_workshop_short">
+		<text>I dintorni della fabbrica Rostk prima dell'arrivo dei Duty. L'area, benchи in rovina, и molto ricca di reperti. </text>
+	</string>
+</string_table>

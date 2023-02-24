@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="val_escort_captive_dialog_11">
+		<text>Bandyci... te sukinsyny chciaіy mnie zabraж do starej fabryki. Nie wiem, co planowali ze mn№ tam zrobiж, ale wczeњniej wziкli jednego faceta i juї wiкcej go nie zobaczyіem. Maj№ jeszcze jednego z nas, Sieriogк. Trzymaj№ go w piwnicy... w tamtym wysokim, niewykoсczonym budynku. Pomуgіbyњ chіopakowi, co? Inaczej oni... no wiesz...</text>
+	</string>
+	<string id="val_escort_captive_dialog_2">
+		<text>Masz pojкcie, co trzymaj№ w tej fabryce?</text>
+	</string>
+	<string id="val_escort_captive_dialog_21">
+		<text>Nie sіyszaіem zbyt wiele. Wiem tylko, їe ten caіy Dzik, ich szef, ma czкњж klucza do tamtych podziemi. Kiedyњ tam byіa laborka czy coњ takiego... Gadali miкdzy sob№, їe Dzik strasznie chciaі siк dostaж do њrodka, ale za cholerк nie mуgі bez drugiej poіуwki klucza. Hm... jeњli myњlisz o tym, їeby tam wejњж, to siк dobrze zastanуw. Aї roi siк od bandziorуw.</text>
+	</string>
+	<string id="val_escort_captive_dialog_211">
+		<text>Kumam. Dziкki, bкdк o tym pamiкtaі.</text>
+	</string>
+	<string id="val_escort_captive_dialog_3">
+		<text>Sprуbujк pomуc twojemu kumplowi.</text>
+	</string>
+	<string id="val_escort_captive_dialog_41">
+		<text>Strasznie mi їal partnera... To byі ekstra goњж. Mimo to - jestem twoim dіuїnikiem.</text>
+	</string>
+	<string id="val_escort_captive_dialog_411">
+		<text>Zdarza siк.</text>
+	</string>
+	<string id="val_escort_captive_dialog_51">
+		<text>Dziкki za pomoc!</text>
+	</string>
+	<string id="val_escort_captive_dialog_511">
+		<text>Na razie.</text>
+	</string>
+	<string id="val_escort_captive_dialog_61">
+		<text>Inni ludzie gуwno ciк obchodz№. O czym niby mielibyњmy rozmawiaж?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21">
+		<text>Dziкki! Wyci№gn№іeњ mojego partnera! Masz, weџ to - ze szczerego serca.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2111">
+		<text>Zgoda.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212">
+		<text>Pewnie dobrze znasz tк okolicк. Jest tu coњ ciekawego?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121">
+		<text>Na pуіnocy jest obуz bandytуw. Na wschodzie - stara fabryka. Na poіudniowym zachodzie - opuszczona chlewnia i jakaњ taka brama za ni№... nie mam pojкcia, co tam jest, tak daleko siк nie zapuszczaіem.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21211">
+		<text>Powiedz mi coњ wiкcej o obozie bandytуw.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212111">
+		<text>Hm, co by ci powiedzieж... Osiedlili siк w niewykoсczonym budynku dokіadnie na pуіnoc st№d. Ich przywуdca to Dzik - straszny draс, prawdziwe zwierzк. Po to nas tu przysіali... їeby go zaіatwiж.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212">
+		<text>Co siк dzieje w fabryce?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212121">
+		<text>Udaіo siк nam ustaliж, їe s№ tam jakieњ podziemia. Tylko їe pilnuj№ ich jak Fortu Knox.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2121211">
+		<text>Jakie podziemia? Co jest w њrodku?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21212111">
+		<text>Nie mam pojкcia, ale nie odwaїylibyњmy siк tam wejњж. Wiem tylko, їe Dzik ma poіуwkк klucza do wejњcia.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21213">
+		<text>Prawdziwa chlewnia? Ze њwiniami?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212131">
+		<text>Juї њlinka leci na myњl o schabowym? Zona jest peіna dzikуw, stary! Skosztuj jednego, a juї wiкcej latarka nie bкdzie ci potrzebna - tak siк bкdziesz њwieciі w ciemnoњciach! Dobra, dobra, jaja sobie robiк... Gospodarstwo od dawna byіo opuszczone i teraz zamieszkali tam jacyњ stalkerzy. Nie wywarli na mnie jednak dobrego wraїenia, a ja zwykle ufam instynktowi.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21214">
+		<text>A co to za brama, o ktуrej mуwiіeњ?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212141">
+		<text>Nie mam pojкcia. Zwykіa, stara brama, tyle їe zamkniкta i dobrze strzeїona. Nawet siк tam nie zbliїyliњmy.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_21215">
+		<text>Rozumiem, dziкki.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_212151">
+		<text>Nie ma sprawy! Zawsze moїesz do mnie zajrzeж.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_213">
+		<text>Tylko wy dwaj poszliњcie na zwiad?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_2131">
+		<text>Byі jeszcze jeden koleњ, Sierioga. Sam juї nie wiem... Goњж znikn№і i nie miaіem od niego їadnych wieњci... Banda musiaіa go zaіatwiж.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_214">
+		<text>Trzymaj siк.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_31">
+		<text>Stary... No i co teraz ze mn№ bкdzie...? Dziкki, przynajmniej staraіeњ siк pomуc. A ja dotrzymujк sіowa.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41">
+		<text>Dziкki za pomoc! O co jeszcze chciaіeњ zapytaж?</text>
+	</string>
+	<string id="val_escort_nap1_dialog_61">
+		<text>Prosiіem ciк o pomoc i odmуwiіeњ. Nie mamy o czym gadaж. Spadaj.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_611">
+		<text>Na razie.</text>
+	</string>
+	<string id="val_prisoner_hello_11">
+		<text>Ej, stary! Pomуї mi! Jestem zwiadowc№ "Powinnoњci". Pomуї mi siк wydostaж!</text>
+	</string>
+	<string id="val_prisoner_hello_111">
+		<text>Sprуbujк.</text>
+	</string>
+	<string id="val_prisoner_hello_112">
+		<text>Nie mam jak ci pomуc.</text>
+	</string>
+	<string id="val_prisoner_hello_21">
+		<text>Dziкki, brachu! Jestem twoim dіuїnikiem. Zobacz, co udaіo mi siк ustaliж - moїe ci siк to na coњ przyda, kto wie... Dzik - ten, ktуry poci№ga za sznurki - zebraі niezі№ kolekcjк fantуw. Posiada czкњж klucza do niїszego poziomu w starej fabryce. Podsіuchaіem, jak straїnicy gadali o tym, їe byіo tam kiedyњ jakieњ laboratorium. Sкk w tym, їe nie tak іatwo siк zbliїyж do Dzika.</text>
+	</string>
+	<string id="val_prisoner_hello_211">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="val_prisoner_hello_2111">
+		<text>Pora wrуciж do naszych. Coњ mi mуwi, їe bкdziemy mieж kupк szczкњcia, jeњli wyjdziemy st№d їywi...</text>
+	</string>
+	<string id="val_prisoner_hello_21111">
+		<text>Powodzenia.</text>
+	</string>
+	<string id="val_prisoner_hello_31">
+		<text>Musimy siк st№d wydostaж, zanim te dranie postanowi№ siк tu rozejrzeж! Potrzebujesz czegoњ? To bierz to raz dwa!</text>
+	</string>
+	<string id="val_prisoner_hello_311">
+		<text>Niczego.</text>
+	</string>
+	<string id="val_prisoner_hello_41">
+		<text>Ej! Tam na њcianie jest przeі№cznik - otwiera drzwi do celi.</text>
+	</string>
+	<string id="val_prisoner_hello_411">
+		<text>Dobra, zerknк.</text>
+	</string>
+	<string id="val_rob_dialog_11">
+		<text>Ej, chcesz wypasion№ spluwк? Znalazіem takie coњ koіo Jantaru... to byі chyba czyjњ schowek. No i miкdzy innymi leїaіo tam dziaіko Gaussa. Mуwiк ci, stary, їe to maleсstwo nieџle kopie - ze stu metrуw kaїdego kіadzie trupem... Dostaniesz go za jedyne osiem stуwek!</text>
+	</string>
+	<string id="val_rob_dialog_111">
+		<text>Masz tu kasк.</text>
+	</string>
+	<string id="val_rob_dialog_112">
+		<text>Dziкkujк, ale podziкkujк.</text>
+	</string>
+	<string id="val_rob_dialog_113">
+		<text>Nie, zatrzymaj to. Szmal ciкїko zdobyж.</text>
+	</string>
+	<string id="val_rob_dialog_21">
+		<text>Masz kasк? Lepiej siк poњpiesz, bo ostatnio miaіem tu wielu klientуw... Niebawem wrуc№.</text>
+	</string>
+	<string id="val_rob_dialog_3">
+		<text>Super. Zaczekaj tu, pуjdк po niego.</text>
+	</string>
+	<string id="val_rob_dialog_31">
+		<text>Czekam.</text>
+	</string>
+	<string id="val_sos_dialog_11">
+		<text>Ej, daj mi apteczkк!</text>
+	</string>
+	<string id="val_sos_dialog_111">
+		<text>Masz. </text>
+	</string>
+	<string id="val_sos_dialog_112">
+		<text>Przykro mi, nie mam apteczki.</text>
+	</string>
+	<string id="val_sos_dialog_21">
+		<text>Dziкki, stary, ocaliіeњ mi skуrк. Jeњli poїyjк wystarczaj№co dіugo, sprуbujк oddaж ci co do grosza. Pуki co mam tylko jedn№ ciekawostkк. Idџ na poіudnie st№d, znajdziesz tam gospodarstwo, gdzie kilku wyluzowanych stalkerуw rozbiіo obуz. Jeden z nich pуіdarmo chce sprzedaж dziaіko Gaussa - jedyne 800. Miaіem zamiar go kupiж, ale wpadіem po kolana w gуwno... Wiкc jak masz flotк, to nie zwlekaj.</text>
+	</string>
+	<string id="val_sos_dialog_211">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4111">
+		<text>Jestem ci coњ winny, a ja spіacam dіugi. Ruszajmy.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41111">
+		<text>Ekstra. Teraz dopieprzymy kaїdemu.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_4112">
+		<text>Przykro mi, mam inne plany.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_41121">
+		<text>No dobra, powodzenia zatem.</text>
+	</string>
+	<string id="val_escort_nap1_dialog_412">
+		<text>Na razie.</text>
+	</string>
+</string_table>

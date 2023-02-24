@@ -1,0 +1,51 @@
+	<string id="descr_bar_crazy_veterans_quest">
+		<text>Barman: "Powinnoœæ nie mo¿e naraziæ na szwank swej reputacji. To dlatego chc¹, ¿eby siê wszystkim zaj¹æ po cichu. Musisz jedynie za³atwiæ ich przywódcê zwanego Farciarzem i jako dowód przynieœæ jego PDA".</text>
+	</string>
+	<string id="descr_bar_dolg_community_quest">
+		<text>¯eby do³¹czyæ do "Powinnoœci", musisz zyskaæ aprobatê jednego z najbardziej szanowanych ¿o³nierzy w grupie, a poza tym musisz udowodniæ przywódcy, ¿e zas³ugujesz na miejsce w ich szeregach. </text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_ambush_quest">
+		<text>Barman: "Twoje zadanie to zabiæ Tyrana, przywódcê najemników. Jego ludzie dotarli do Dziczy i za³o¿yli bazê na placu budowy. Pilnuj siê - czêœæ ich ¿o³nierzy przygotowa³a zasadzki po drodze. Jak tylko dostanê PDA Tyrana, nagroda wêdruje do ciebie".</text>
+	</string>
+	<string id="descr_bar_dolg_svoboda_leader_kill_quest">
+		<text>Genera³ Woronin: "Wojna z "Wolnoœci¹" nied³ugo dobiegnie koñca, Naznaczony. Spe³ni³eœ sw¹ rolê, a teraz chcê zakoñczyæ ten konflikt! Trzeba siê pozbyæ przywódcy wroga".</text>
+	</string>
+	<string id="descr_bar_dolg_test_quest">
+		<text>Kapitan Iwancow: "...zanim wyci¹gniemy jakieœ wnioski, chcê, ¿ebyœ zda³ ³atwy test. Musisz zdobyæ teczkê z opuszczonego budynku naprzeciwko. Nic trudnego - wejdŸ do œrodka, zabierz teczkê i przynieœ j¹ do mnie. Bu³ka z mas³em, prawda? A jak dostanê teczkê, zdecydujemy, czy nadajesz siê do "Powinnoœci", czy nie".</text>
+	</string>
+	<string id="descr_bar_hunter_rifle">
+		<text>£owca: "Przynieœ mi karabin. Zgubi³em go niedaleko miejsca, w którym ¿yj¹ pijawki. Przeœlê ci wspó³rzêdne. Uwa¿aj na siebie, z tymi gnojkami nie ma ¿artów".</text>
+	</string>
+	<string id="descr_bar_kill_professor">
+		<text>Wilczarz: "Mamy tu niewielkie polowanie. Zapêdziliœmy naukowców tam, za œmig³owiec. Moi ch³opcy od czasu do czasu do nich strzelaj¹, ¿eby mieæ pewnoœæ, ¿e tamci nie uciekn¹. Przy³¹cz siê, w³aœnie planujemy ich wykoñczyæ. Jeœli nam pomo¿esz, dostaniesz kombinezon naukowca... znaleŸliœmy go w œmig³owcu, który zestrzeliliœmy. Twoim celem jest profesor Krug³ow. Zabij go, bo inaczej ucieknie w trakcie strzelaniny - znam takich. Jeœli go zabijesz, dostaniesz kombinezon, jeœli ci siê nie uda, guzik dostaniesz".</text>
+	</string>
+	<string id="descr_bar_radar_deactivate">
+		<text>Barman: "Ty masz prototyp, który ochroni ciê przed Mózgozwêglaczem a ja znam po³o¿enie bunkra. Nie zapominaj, ¿e prototyp he³mu nie bêdzie ciê chroni³ w nieskoñczonoœæ, wiêc musisz siê dostaæ do bunkra pod antenami i wy³¹czyæ Zwêglacz. Masz tylko dostaæ siê do anten i od³¹czyæ je".</text>
+	</string>
+	<string id="descr_bar_resque_information">
+		<text>Krug³ow: "Stalkerze, pomocy! Zostaliœmy zaatakowani przez najemników - po³owa naszych ludzi ju¿ nie ¿yje. Pomó¿ nam, a nie po¿a³ujesz..."\n \n "...uwa¿aj, jest ich chyba oko³o piêtnastu, ale nie mamy pewnoœci".</text>
+	</string>
+	<string id="descr_bar_resque_information_2">
+		<text>Krug³ow: "Wracaliœmy znad Jantaru, kiedy zestrzelili nas najemnicy. Ludzie mówi¹, ¿e potrzebuj¹ jedynie informacji, ale ja wiem lepiej - wszystkich nas zabij¹. Zabierz mnie z powrotem nad Jantar, a powiem ci wszystko, co wiem o tym twoim Mózgozwêglaczu - Barman dobrze ci za to zap³aci. ¯aden ze mnie wojownik, ale znam drogê, wiêc poprowadzê, a ty nas bêdziesz os³aniaæ".</text>
+	</string>
+	<string id="descr_bar_x16_documents">
+		<text>Barman: "Musisz przedrzeæ siê do naukowców, dowiedzieæ siê, gdzie le¿y laboratorium X16 i znaleŸæ brakuj¹ce dokumenty".</text>
+	</string>
+	<string id="journal_after_agroprom_documents">
+		<text>Przejrza³em dokumenty znalezione w Instytucie. Wygl¹da na to, ¿e w latach poprzedzaj¹cych wypadek Instytut wykorzystywano jako przykrywkê dla nieoficjalnego laboratorium zwanego "X18". Mia³o w nim miejsce kilka niezwyk³ych eksperymentów. Z dokumentów nie wynika, gdzie dok³adnie znajduje siê laboratorium, wojsko te¿ nie wydaje siê niczego o nim wiedzieæ. No, no... sprawy siê komplikuj¹... Ale mo¿e to w³aœnie jest punkt wyjœcia, którego potrzebuj¹ handlarze. Muszê teraz wyruszyæ dalej na pó³noc, do handlarza zwanego Barmanem.</text>
+	</string>
+	<string id="journal_bar_darklab_documents">
+		<text>Psiakrew... W laboratorium X18 nie by³o zbyt przyjemnie... a jego obecni mieszkañcy... nie s¹dzi³em, ¿e takie coœ mo¿e istnieæ. Znalaz³em jakieœ dokumenty... Nie rozumiem za bardzo, o co w nich chodzi - na pewno zawieraj¹ jakieœ szczegó³y techniczne dotycz¹ce czêœci do emiterów Kajmanowa. Co ciekawe, komponenty te mia³y dotrzeæ do innego laboratorium o kryptonimie X16, które prawdopodobnie równie¿ jest tajne. </text>
+	</string>
+	<string id="journal_bar_x16_documents">
+		<text>Hm... Handlarze zdobyli sporo informacji o tych laboratoriach. Barman nie by³ zaskoczony, gdy dowiedzia³ siê o emiterach i o X16. Jest ju¿ przekonany, ¿e ten ca³y Mózgozwêglacz to dzie³o cz³owieka. S¹dzi, ¿e laboratorium X16 znajduje siê niedaleko obozu naukowców nad Jeziorem Jantar. Co ciekawe, oni badaj¹ emisje o efektach zbli¿onych do tych wywo³ywanych przez Zwêglacz. Muszê wiêc teraz z³o¿yæ wizytê spo³ecznoœci naukowej Zony. </text>
+	</string>
+	<string id="journal_before_darklab_documents">
+		<text>Spotka³em siê z Barmanem. Po przejrzeniu dokumentów z Instytutu doszed³ do wniosku, ¿e X18 znajduje siê w tzw. Dolinie Mroku i poprosi³ mnie, ¿ebym siê tam wybra³ w poszukiwaniu informacji i dokumentów. Powiedzia³, ¿e wys³a³ zwiadowców "Powinnoœci" do podziemi, ale ci zniknêli. Barman uwa¿a, ¿e pochwycili ich bandyci, którzy maj¹ niedaleko bazê. Jeœli to prawda, wszystko, co znaleŸli goœcie z "Powinnoœci", znajduje siê w rêkach Dzika, przywódcy bandytów. Barman nakaza³ mi ostro¿noœæ, ale... ewidentnie nie powiedzia³ mi wszystkiego o tych podziemiach. No có¿, trzeba siê zabraæ do roboty: najpierw muszê z³o¿yæ wizytê Dzikowi, a jeœli "rozmowa" siê uda, zbadam podziemia. </text>
+	</string>
+	<string id="journal_before_radar_task">
+		<text>No, mogê ju¿ ruszaæ do Zwêglacza. Dowiedzia³em siê od Psychola, kiedy zmniejsza siê poziom emisji. Powiedzia³ mi równie¿ o bezpiecznym miejscu, w którym mogê na takie momenty poczekaæ. O innej porze moja ochrona psioniczna i tak nie bêdzie dzia³aæ. Bêdê musia³ znaleŸæ jakieœ wejœcie do podziemnego bunkra laboratorium X19. Wewn¹trz powinienem znaleŸæ sterowanie do anten Mózgozwêglacza. </text>
+	</string>
+	<string id="st_gordon_diary">
+		<text>PDA Gordona</text>
+	</string>

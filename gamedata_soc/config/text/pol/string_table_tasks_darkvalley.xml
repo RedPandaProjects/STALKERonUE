@@ -1,0 +1,72 @@
+	<string id="bar_darklab_documents">
+		<text>ZnajdŸ wejœcie do LabX18</text>
+	</string>
+	<string id="bar_darklab_documents_1">
+		<text>WeŸ od Dzika klucz do laboratorium</text>
+	</string>
+	<string id="bar_darklab_documents_2">
+		<text>Wydostañ siê z bazy bandytów</text>
+	</string>
+	<string id="bar_darklab_documents_3">
+		<text>ZnajdŸ wejœcie do laboratorium</text>
+	</string>
+	<string id="bar_darklab_documents_4">
+		<text>Zakradnij siê do bazy</text>
+	</string>
+	<string id="bar_darklab_documents2">
+		<text>ZnajdŸ dokumenty w LabX18</text>
+	</string>
+	<string id="bar_darklab_documents2_1">
+		<text>ZnajdŸ dokumenty</text>
+	</string>
+	<string id="bar_darklab_documents2_2">
+		<text>Przynieœ dokumenty Barmanowi</text>
+	</string>
+	<string id="dar_codedoor_1">
+		<text>Drzwi na poziom drugi</text>
+	</string>
+	<string id="dar_codedoor_1_1">
+		<text>ZnajdŸ kod do drzwi</text>
+	</string>
+	<string id="dar_codedoor_1_2">
+		<text>Otwórz drzwi przy pomocy kodu</text>
+	</string>
+	<string id="dar_codedoor_2">
+		<text>WejdŸ do centrum sterowania</text>
+	</string>
+	<string id="dar_codedoor_2_1">
+		<text>ZnajdŸ kod do drzwi</text>
+	</string>
+	<string id="dar_codedoor_2_2">
+		<text>Otwórz drzwi przy pomocy kodu</text>
+	</string>
+	<string id="val_captive_help">
+		<text>Uratuj cz³onka "Powinnoœci"</text>
+	</string>
+	<string id="val_captive_help_1">
+		<text>IdŸ za Nabojem do miejsca zasadzki</text>
+	</string>
+	<string id="val_captive_help_2">
+		<text>Zabij bandytów i uratuj cz³onka "Powinnoœci"</text>
+	</string>
+	<string id="val_come_to_trader">
+		<text>Wróæ do handlarza</text>
+	</string>
+	<string id="val_come_to_trader_0">
+		<text>Wróæ do handlarza</text>
+	</string>
+	<string id="val_come_to_trader_1">
+		<text>Wydostañ siê z Doliny Mroku </text>
+	</string>
+	<string id="val_come_to_trader_2">
+		<text>Poka¿ dokumenty handlarzowi</text>
+	</string>
+	<string id="val_prisoner_help">
+		<text>Uwolnij cz³onka "Powinnoœci"</text>
+	</string>
+	<string id="val_prisoner_help_0">
+		<text>Wyci¹gnij cz³onka "Powinnoœci" z wiêzienia bandytów</text>
+	</string>
+	<string id="val_prisoner_help_main">
+		<text>Uwolnij cz³onka "Powinnoœci" z wiêzienia bandytów</text>
+	</string>

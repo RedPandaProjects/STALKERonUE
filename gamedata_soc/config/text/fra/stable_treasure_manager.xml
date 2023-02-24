@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="agr_secret_0000_descr">
+		<text>Pour le moment, notre planque secrиte est dans le tunnel. C'est une bonne planque, peu de gens la connaissent et les anomalies dissuaderont les autres d'y entrer.</text>
+	</string>
+	<string id="agr_secret_0000_name">
+		<text>Planque secrиte de Seriy</text>
+	</string>
+	<string id="agr_secret_0001_descr">
+		<text>Je l'ai cachй dans la souche, prиs du tunnel. Il y a un trou а l'intйrieur.</text>
+	</string>
+	<string id="agr_secret_0001_name">
+		<text>Souche trouйe</text>
+	</string>
+	<string id="agr_secret_0002_descr">
+		<text>J'ai enterrй des trucs sous la croix, prиs du buisson.</text>
+	</string>
+	<string id="agr_secret_0002_name">
+		<text>La marque est sous la croix</text>
+	</string>
+	<string id="agr_secret_0003_descr">
+		<text>J'ai dйposй le sac а dos sous l'arbre couchй.</text>
+	</string>
+	<string id="agr_secret_0003_name">
+		<text>Sac а dos sous l'arbre</text>
+	</string>
+	<string id="agr_secret_0004_descr">
+		<text>J'ai mis le sac а dos dans le tuyau, prиs de l'usine. Personne ne le trouvera.</text>
+	</string>
+	<string id="agr_secret_0004_name">
+		<text>Sac а dos d'un ramoneur</text>
+	</string>
+	<string id="agr_secret_0005_descr">
+		<text>J'ai planquй le coffre sur le toit de l'usine. Personne n'ira le chercher lа. Le problиme, c'est qu'il va rouiller sous la pluie.</text>
+	</string>
+	<string id="agr_secret_0005_name">
+		<text>Coffre sur le toit</text>
+	</string>
+	<string id="agr_secret_0006_descr">
+		<text>Ils tiraient, j'ai dы mettre le sac а dos sous le wagon, derriиre le siиge. Le principal, c'est que j'ai rйussi а m'enfuir. Je retournerai le chercher plus tard.</text>
+	</string>
+	<string id="agr_secret_0006_name">
+		<text>Sac а dos de l'ivrogne</text>
+	</string>
+	<string id="agr_secret_0007_descr">
+		<text>Je l'ai cachй sous la croix, derriиre les citernes. Creuse un peu, ne t'affole pas.</text>
+	</string>
+	<string id="agr_secret_0007_name">
+		<text>Prиs des trois citernes</text>
+	</string>
+	<string id="agr_secret_0008_descr">
+		<text>J'ai mis le sac а dos en haut de l'usine pour que personne ne le voie. Le problиme, c'est que je ne sais plus trop ce qu'il contient. </text>
+	</string>
+	<string id="agr_secret_0008_name">
+		<text>Le sac а dos est dans le hublot</text>
+	</string>
+	<string id="agr_secret_0009_descr">
+		<text>J'ai cachй mes affaires dans un coffre, а l'intйrieur de l'usine.</text>
+	</string>
+	<string id="agr_secret_0009_name">
+		<text>Coffre radioactif</text>
+	</string>
+	<string id="agr_secret_0010_descr">
+		<text>Il y a une planque secrиte dans le coffre, sous l'escalier.</text>
+	</string>
+	<string id="agr_secret_0010_name">
+		<text>Coffre dans la cage d'escalier</text>
+	</string>
+	<string id="agr_secret_0011_descr">
+		<text>Je l'ai cachй dans le coffre. Personne ne l'ouvrira.</text>
+	</string>
+	<string id="agr_secret_0011_name">
+		<text>Coffre de l'usine</text>
+	</string>
+	<string id="agr_secret_0012_descr">
+		<text>J'ai mis le sac sur la fenкtre. Je le rйcupйrerai plus tard.</text>
+	</string>
+	<string id="agr_secret_0012_name">
+		<text>Le sac est sur le rebord</text>
+	</string>
+	<string id="agr_secret_0013_descr">
+		<text>Avec Kolyan, on a fait une belle balade а Agroprom. On a trouvй tout un tas de trucs et on a rйussi а en cacher quelques-uns. On a mis le coffre dans la poubelle.</text>
+	</string>
+	<string id="agr_secret_0013_name">
+		<text>Coffre dans la poubelle</text>
+	</string>
+	<string id="agr_secret_0014_descr">
+		<text>J'ai trouvй un coffre-fort sous un arbre couchй. Je vais tout y cacher pour le moment.</text>
+	</string>
+	<string id="agr_secret_0014_name">
+		<text>Coffre-fort sous l'arbre</text>
+	</string>
+	<string id="agr_secret_0015_descr">
+		<text>J'ai mis les affaires dans le tuyau, je viendrai les chercher plus tard. Je n'avais pas le choix, sinon je les aurais gardйes. J'espиre qu'elles ne seront pas mouillйes.</text>
+	</string>
+	<string id="agr_secret_0015_name">
+		<text>Affaires dans le tuyau</text>
+	</string>
+	<string id="agr_secret_0016_descr">
+		<text>Les affaires sont dans le vieux tuyau. Il va falloir le dire aux gars. Pas question que je grimpe lа-dedans.</text>
+	</string>
+	<string id="agr_secret_0016_name">
+		<text>Tuyau radioactif</text>
+	</string>
+	<string id="agr_secret_0017_descr">
+		<text>Je me suis enfui de la base sous les coups de feu des Stalkers. Qu'ils aillent au diable ! J'ai planquй mes affaires dans un tuyau, au milieu des ordures. Je vais attendre qu'ils s'en aillent et j'irai les chercher.</text>
+	</string>
+	<string id="agr_secret_0017_name">
+		<text>Le dйpotoir</text>
+	</string>
+	<string id="agr_secret_0018_descr">
+		<text>Il y a un coffre-fort а moitiй enterrй sous le buisson. J'ai tout planquй а l'intйrieur.</text>
+	</string>
+	<string id="agr_secret_0018_name">
+		<text>Coffre-fort sous le buisson</text>
+	</string>
+	<string id="agr_secret_0019_descr">
+		<text>Ils ont dйcouvert le coffre sous le rebord. Quelqu'un l'a traоnй lа depuis l'Institut de recherche scientifique. Attendons l'hйlico pour aller le chercher.</text>
+	</string>
+	<string id="agr_secret_0019_name">
+		<text>Boоte d'archives</text>
+	</string>
+	<string id="agr_secret_0020_descr">
+		<text>J'ai cachй mes affaires dans une capsule mйtallique.</text>
+	</string>
+	<string id="agr_secret_0020_name">
+		<text>Sous la trappe</text>
+	</string>
+	<string id="agr_secret_0021_descr">
+		<text>Il y a un coffre-fort а moitiй enterrй sous le buisson. J'ai tout planquй а l'intйrieur.</text>
+	</string>
+	<string id="agr_secret_0021_name">
+		<text>Sous le buisson, prиs du mur</text>
+	</string>
+	<string id="agr_secret_0022_descr">
+		<text>Ce coffre est parfait pour y mettre des trucs.</text>
+	</string>
+	<string id="agr_secret_0022_name">
+		<text>Coffre de l'institut</text>
+	</string>
+	<string id="agr_secret_0023_descr">
+		<text>Je l'ai cachй dans le coffre-fort, mais les soldats se sont pointйs et je ne peux pas rйcupйrer les affaires.</text>
+	</string>
+	<string id="agr_secret_0023_name">
+		<text>Agrocoffre-fort</text>
+	</string>
+	<string id="agr_secret_0024_descr">
+		<text>J'ai mis mon barda dans le tuyau. Je le rйcupйrerai plus tard.</text>
+	</string>
+	<string id="agr_secret_0024_name">
+		<text>La carrosserie du camion</text>
+	</string>
+	<string id="agr_secret_0025_descr">
+		<text>Il faut prendre les affaires dans la souche pourrie.</text>
+	</string>
+	<string id="agr_secret_0025_name">
+		<text>Souche pourrie</text>
+	</string>
+	<string id="agr_secret_0026_descr">
+		<text>Ce coffre est parfait pour y mettre des trucs. C'est lа qu'йtait rangй le matйriel de l'institut.</text>
+	</string>
+	<string id="agr_secret_0026_name">
+		<text>Coffre de Zavhoz</text>
+	</string>
+	<string id="agr_secret_0027_descr">
+		<text>Ce coffre est parfait pour les petits objets. Je mettais mes outils dans un coffre comme celui-lа а la maison.</text>
+	</string>
+	<string id="agr_secret_0027_name">
+		<text>Inventaire de ferronnerie</text>
+	</string>
+	<string id="agr_u_secret_0000_descr">
+		<text>Les bandits cachent quelque chose sous le tuyau. Il faut aller voir. D'aprиs notre petite conversation, il est clair qu'ils y cachent leur matos.</text>
+	</string>
+	<string id="agr_u_secret_0000_name">
+		<text>Caisse commune des bandits</text>
+	</string>
+	<string id="agr_u_secret_0001_descr">
+		<text>J'ai cachй le sac а dos derriиre les plaques de bйton pour m'allйger. Je prйfиre avoir faim et кtre en vie.</text>
+	</string>
+	<string id="agr_u_secret_0001_name">
+		<text>Le sac а dos est dans une petite rue</text>
+	</string>
+	<string id="agr_u_secret_0002_descr">
+		<text>Le coffre se trouve derriиre une "barrique" rouillйe, au sous-sol. Tout est dedans. Pas question que j'y retourne. C'est un miracle que j'ai rйussi а me dйbarrasser de la sangsue. Je ne sais pas comment j'ai fait.</text>
+	</string>
+	<string id="agr_u_secret_0002_name">
+		<text>Coffre de la sangsue</text>
+	</string>
+	<string id="agr_u_secret_0003_descr">
+		<text>Il y a des trucs derriиre la porte. Je me servirais bien !</text>
+	</string>
+	<string id="agr_u_secret_0003_name">
+		<text>Affaires du Stalker</text>
+	</string>
+	<string id="agr_u_secret_0004_descr">
+		<text>J'ai enterrй des trucs ici. C'est une super planque. Elle est introuvable !</text>
+	</string>
+	<string id="agr_u_secret_0004_name">
+		<text>Trou de taupe</text>
+	</string>
+	<string id="bar_secret_0000_description">
+		<text>J'ai cachй mon sac а dos prиs de la base du Devoir. Je le rйcupйrerai plus tard.</text>
+	</string>
+	<string id="bar_secret_0000_name">
+		<text>Sac а dos cachй</text>
+	</string>
+	<string id="bar_secret_0001_description">
+		<text>J'ai йtй pris en chasse par une meute de chiens. Si je ne m'йtais pas dйbarrassй de mon sac а dos, je n'aurais jamais atteint la porte.</text>
+	</string>
+	<string id="bar_secret_0001_name">
+		<text>Le sac а dos abandonnй</text>
+	</string>
+	<string id="bar_secret_0002_description">
+		<text>Ils ont enterrй tout ce qui restait sous la croix.</text>
+	</string>
+	<string id="bar_secret_0002_name">
+		<text>Planque secrиte sous la croix</text>
+	</string>
+	<string id="bar_secret_0003_description">
+		<text>Je laisse mon sac а dos ici, зa me facilitera la tвche.</text>
+	</string>
+	<string id="bar_secret_0003_name">
+		<text>Sac а dos</text>
+	</string>
+	<string id="bar_secret_0004_description">
+		<text>Les munitions du poste de contrфle du Devoir sont stockйes dans un bunker, mais personne ne garde le coffre.</text>
+	</string>
+	<string id="bar_secret_0004_name">
+		<text>Matos dans le bunker</text>
+	</string>
+	<string id="bar_secret_0005_description">
+		<text>J'ai vu un membre du Devoir mettre quelque chose dans le tuyau, prиs de la porte.</text>
+	</string>
+	<string id="bar_secret_0005_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="bar_secret_0006_description">
+		<text>Tout зa lui appartenait. Зa peut rester lа pour le moment.</text>
+	</string>
+	<string id="bar_secret_0006_name">
+		<text>Planque secrиte sous la croix</text>
+	</string>
+	<string id="bar_secret_0007_description">
+		<text>Je vais au bar. J'ai laissй le sac а dos dans le hangar.</text>
+	</string>
+	<string id="bar_secret_0007_name">
+		<text>Sac а dos</text>
+	</string>
+	<string id="bar_secret_0008_description">
+		<text>Il paraоt qu'il y a un truc de valeur cachй sur le territoire du Devoir, dans le central.</text>
+	</string>
+	<string id="bar_secret_0008_name">
+		<text>Central abritant une planque secrиte</text>
+	</string>
+	<string id="bar_secret_0009_description">
+		<text>J'ai mis le coffre en haut de la tour, sous le nez du Devoir. Personne ne le remarquera.</text>
+	</string>
+	<string id="bar_secret_0009_name">
+		<text>Planque secrиte sur la tour</text>
+	</string>
+	<string id="bar_secret_0010_description">
+		<text>J'ai tout cachй dans le tuyau, sous l'escalier.</text>
+	</string>
+	<string id="bar_secret_0010_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="bar_secret_0011_description">
+		<text>J'ai cachй les affaires prиs du bar, derriиre les anomalies. Personne n'entrera lа-dedans. Et mкme si quelqu'un y allait, il ne pourrait pas l'ouvrir. Pourtant, c'est simple : il suffit de tirer doucement la porte pour qu'elle s'ouvre.</text>
+	</string>
+	<string id="bar_secret_0011_name">
+		<text>Planque secrиte d'Arni</text>
+	</string>
+	<string id="bar_secret_0012_description">
+		<text>J'ai enterrй les affaires а deux pas du bar.</text>
+	</string>
+	<string id="bar_secret_0012_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="bar_secret_0013_description">
+		<text>Prиs du bar, dans un coffre.</text>
+	</string>
+	<string id="bar_secret_0013_name">
+		<text>Coffre</text>
+	</string>
+	<string id="bar_secret_0014_description">
+		<text>J'ai cachй le coffre dans une petite rue, prиs du bar.</text>
+	</string>
+	<string id="bar_secret_0014_name">
+		<text>Petit coffre</text>
+	</string>
+	<string id="bar_secret_0015_description">
+		<text>Je l'ai enterrй sous la croix, derriиre les pins.</text>
+	</string>
+	<string id="bar_secret_0015_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="bar_secret_0016_description">
+		<text>Sous la croix, prиs du passage qui mиne au Territoire obscur.</text>
+	</string>
+	<string id="bar_secret_0016_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="bar_secret_0017_description">
+		<text>J'ai cachй le coffre contenant l'antiradiation dans un tuyau, prиs de l'Arиne.</text>
+	</string>
+	<string id="bar_secret_0017_name">
+		<text>Petit coffre</text>
+	</string>
+	<string id="bar_secret_0018_description">
+		<text>J'ai cachй mes affaires dans un tuyau, sous la tour.</text>
+	</string>
+	<string id="bar_secret_0018_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="bar_secret_0019_description">
+		<text>Il y a une planque secrиte sous la croix.</text>
+	</string>
+	<string id="bar_secret_0019_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="esc_secret_0000_descr">
+		<text>J'ai cachй mon barda dans un wagon pendant le regroupement. Il faut que je m'en souvienne.</text>
+	</string>
+	<string id="esc_secret_0000_name">
+		<text>Wagon au-dessus du pont</text>
+	</string>
+	<string id="esc_secret_0001_descr">
+		<text>J'ai vu un Stalker descendre sous une anomalie, prиs du tunnel ferroviaire, dans les bois. Il avait l'air d'avoir des trucs intйressants.</text>
+	</string>
+	<string id="esc_secret_0001_name">
+		<text>Affaires de l'homme qui a pйri dans l'anomalie</text>
+	</string>
+	<string id="esc_secret_0002_descr">
+		<text>J'ai cachй le pot de vin prиs du camp des bandits, sous la croix.</text>
+	</string>
+	<string id="esc_secret_0002_name">
+		<text>La croix, prиs du camp des bandits</text>
+	</string>
+	<string id="esc_secret_0003_descr">
+		<text>Le coffre volй par les bandits a йtй retrouvй dans la cave du bвtiment central. Il faut prйparer un dйtachement pour le rйcupйrer.</text>
+	</string>
+	<string id="esc_secret_0003_name">
+		<text>Entrepфt des bandits</text>
+	</string>
+	<string id="esc_secret_0004_descr">
+		<text>Quand je repoussais les chiens en uniformes avec mes potes, j'ai enterrй des trucs sous le pont. On va les laisser lа pour le moment.</text>
+	</string>
+	<string id="esc_secret_0004_name">
+		<text>Sous la croix</text>
+	</string>
+	<string id="esc_secret_0005_descr">
+		<text>J'ai mis le sac а dos dans la cave. Je reviendrai plus tard. Je ne peux pas le rйcupйrer pour le moment.</text>
+	</string>
+	<string id="esc_secret_0005_name">
+		<text>Abri dans la cave</text>
+	</string>
+	<string id="esc_secret_0006_descr">
+		<text>J'ai trouvй un coffre-fort а moitiй enterrй а la ferme. Je vais laisser les affaires dedans pour le moment.</text>
+	</string>
+	<string id="esc_secret_0006_name">
+		<text>Coffre-fort а la ferme</text>
+	</string>
+	<string id="esc_secret_0007_descr">
+		<text>J'ai entendu dire que quelqu'un avait cachй quelque chose dans le wagon, sur le pont. J'irai voir зa au retour. Je me demande qui c'est...</text>
+	</string>
+	<string id="esc_secret_0007_name">
+		<text>Conteneur dans le wagon</text>
+	</string>
+	<string id="esc_secret_0008_descr">
+		<text>J'ai cachй les affaires sous le toit de la petite maison situйe prиs du pont.</text>
+	</string>
+	<string id="esc_secret_0008_name">
+		<text>Affaires du tireur</text>
+	</string>
+	<string id="esc_secret_0009_descr">
+		<text>J'ai cachй mes affaires dans un coffre, prиs du pont. Bon, on va en rester lа. Je quitte la Zone, adieu mes frиres ! Je n'oublierai jamais la mиre patrie.</text>
+	</string>
+	<string id="esc_secret_0009_name">
+		<text>Affaires prиs du pont</text>
+	</string>
+	<string id="esc_secret_0010_descr">
+		<text>Un Stalker est mort prиs du camp des nouveaux. Je devrais aller jeter un coup d'oeil а ses affaires.</text>
+	</string>
+	<string id="esc_secret_0010_name">
+		<text>Le sac а dos se trouve prиs du village</text>
+	</string>
+	<string id="esc_secret_0011_descr">
+		<text>Lihoi m'a dit que la planque secrиte se trouve dans la cave. Il йtait un peu trop bavard, alors on l'a fait taire pour de bon.</text>
+	</string>
+	<string id="esc_secret_0011_name">
+		<text>Cave dans le village</text>
+	</string>
+	<string id="esc_secret_0012_descr">
+		<text>J'ai trouvй une super cachette dans la cave. Je vais attendre que quelqu'un y mette quelque chose.</text>
+	</string>
+	<string id="esc_secret_0012_name">
+		<text>Une super planque</text>
+	</string>
+	<string id="esc_secret_0013_descr">
+		<text>Vorpal m'a dit qu'il y avait une planque secrиte dans la cave. On a des hommes en reconnaissance dans le secteur. Il faut y aller.</text>
+	</string>
+	<string id="esc_secret_0013_name">
+		<text>La planque secrиte de Vorpal</text>
+	</string>
+	<string id="esc_secret_0014_descr">
+		<text>Ils ont vu que le commandant avait un coffre dans son bureau. Il contient des tonnes d'objets de valeur.</text>
+	</string>
+	<string id="esc_secret_0014_name">
+		<text>Les objets de valeur du commandant</text>
+	</string>
+	<string id="esc_secret_0015_descr">
+		<text>Un Stalker est mort prиs du camp des nouveaux. On devrait aller voir ce qu'il a sur lui. Mais qui peut bien les laisser passer ?</text>
+	</string>
+	<string id="esc_secret_0015_name">
+		<text>Sur une route de campagne</text>
+	</string>
+	<string id="esc_secret_0016_descr">
+		<text>Les affaires sont cachйes dans la cave des bandits. Pour l'instant, il n'y a personne. Il va falloir trouver le bon moment pour les cueillir.</text>
+	</string>
+	<string id="esc_secret_0016_name">
+		<text>La cave des voleurs</text>
+	</string>
+	<string id="esc_secret_0017_descr">
+		<text>J'ai dйcouvert l'inventaire dans le tuyau, tout prиs de la ferme. Une fois sorti de cette prison militaire, j'y retournerai.</text>
+	</string>
+	<string id="esc_secret_0017_name">
+		<text>Canalisation de gaz</text>
+	</string>
+	<string id="esc_secret_0018_descr">
+		<text>J'ai laissй mon sac а dos prиs du poste. Il faut que je le rйcupиre au plus vite avant que le commandant nous transfиre ailleurs.</text>
+	</string>
+	<string id="esc_secret_0018_name">
+		<text>Affaires cachйes</text>
+	</string>
+	<string id="esc_secret_0019_descr">
+		<text>J'ai laissй le coffre а la tour. Je le rйcupйrerai dиs que possible.</text>
+	</string>
+	<string id="esc_secret_0019_name">
+		<text>Tour du poste de contrфle</text>
+	</string>
+	<string id="gar_secret_0000_descr">
+		<text>J'ai vu un bandit cacher ses affaires dans un coffre, dans le hangar. Comment le lui voler sans me faire repйrer ?</text>
+	</string>
+	<string id="gar_secret_0000_name">
+		<text>Coffre des bandits</text>
+	</string>
+	<string id="gar_secret_0001_descr">
+		<text>J'йtais allй vйrifier un truc avec Vasya quand il s'est fait tirer dessus. Je n'y suis pour rien. C'est а cause de cette fichue balle. J'ai cachй les affaires dans un tuyau.</text>
+	</string>
+	<string id="gar_secret_0001_name">
+		<text>Vieille grue</text>
+	</string>
+	<string id="gar_secret_0002_descr">
+		<text>Grizzly est mort en laissant toutes ses affaires а la Dйcharge, dans le tunnel ferroviaire, derriиre la locomotive. Dommage pour lui.</text>
+	</string>
+	<string id="gar_secret_0002_name">
+		<text>Affaires de Grizzly</text>
+	</string>
+	<string id="gar_secret_0003_descr">
+		<text>J'ai mis les affaires dans un tuyau, а la dйcharge.</text>
+	</string>
+	<string id="gar_secret_0003_name">
+		<text>Tuyau dans le dйpotoir Nord</text>
+	</string>
+	<string id="gar_secret_0004_descr">
+		<text>Les affaires sont а la dйcharge, dans un tuyau. Impossible de les trouver si on ne connaоt pas leur emplacement exact.</text>
+	</string>
+	<string id="gar_secret_0004_name">
+		<text>Du fric а la casse</text>
+	</string>
+	<string id="gar_secret_0005_descr">
+		<text>J'ai cachй les affaires dans un tuyau mйtallique prиs des deux citernes. Je devrais aller les rйcupйrer, mais je n'ai pas le temps.</text>
+	</string>
+	<string id="gar_secret_0005_name">
+		<text>Fourneau mйtallique prиs de la citerne.</text>
+	</string>
+	<string id="gar_secret_0006_descr">
+		<text>Il y a des trucs intйressants cachйs parmi les dйchets radioactifs. L'endroit n'est pas trиs frйquentй.</text>
+	</string>
+	<string id="gar_secret_0006_name">
+		<text>Tuyau dans le dйpotoir Est</text>
+	</string>
+	<string id="gar_secret_0007_descr">
+		<text>Quelqu'un a laissй son sac а dos dans la vallйe, au milieu des anomalies. Comment le rйcupйrer ?</text>
+	</string>
+	<string id="gar_secret_0007_name">
+		<text>Le sac а dos de personne</text>
+	</string>
+	<string id="gar_secret_0008_descr">
+		<text>On a achevй et enterrй le traоtre dans les marйcages. J'ai mis ses affaires sous la croix. J'avais plus important en tкte.</text>
+	</string>
+	<string id="gar_secret_0008_name">
+		<text>Les affaires de la victime</text>
+	</string>
+	<string id="gar_secret_0009_descr">
+		<text>Il y a une planque secrиte dans l'ombre. C'est une bonne planque.</text>
+	</string>
+	<string id="gar_secret_0009_name">
+		<text>Souche pourrie</text>
+	</string>
+	<string id="gar_secret_0010_descr">
+		<text>Il y a dans la forкt une souche qui contient un trou. Et ce trou renferme un trйsor. Il est temps de le rйcupйrer.</text>
+	</string>
+	<string id="gar_secret_0010_name">
+		<text>Souche dans la forкt</text>
+	</string>
+	<string id="gar_secret_0011_descr">
+		<text>Petrenko voulait qu'on sache qu'il y a des informations sur la planque secrиte de la faction Strelok а la Dйcharge. Lа, dans la vallйe, il y aurait selon lui une bouche d'йgout qui s'ouvre d'une certaine maniиre. Quand le calme sera revenu, on ira voir зa de plus prиs.</text>
+	</string>
+	<string id="gar_secret_0011_name">
+		<text>Planque de la faction de Strelok</text>
+	</string>
+	<string id="gar_secret_0012_descr">
+		<text>Je l'ai cachй dans la voiture. La Tige a dit que c'йtait une bonne planque.</text>
+	</string>
+	<string id="gar_secret_0012_name">
+		<text>Planque secrиte dans la voiture</text>
+	</string>
+	<string id="gar_secret_0013_descr">
+		<text>J'ai mis le sac а dos dans le car. Personne ne le trouvera.</text>
+	</string>
+	<string id="gar_secret_0013_name">
+		<text>Sac а dos du Stalker dans le car</text>
+	</string>
+	<string id="gar_secret_0014_descr">
+		<text>J'ai mis le matos dans le coffre et le coffre dans la vieille maison du coin. Je ne comprends toujours pas а quoi sert cette baraque.</text>
+	</string>
+	<string id="gar_secret_0014_name">
+		<text>Matos variй</text>
+	</string>
+	<string id="gar_secret_0015_descr">
+		<text>Il y a un coffre-fort а moitiй enterrй dans un dйpotoir. J'y ai tout mis. J'ai intйrкt de m'en souvenir.</text>
+	</string>
+	<string id="gar_secret_0015_name">
+		<text>Coffre-fort dans le dйpotoir Sud</text>
+	</string>
+	<string id="gar_secret_0016_descr">
+		<text>J'ai mis les affaires au dйpotoir, dans le tuyau.</text>
+	</string>
+	<string id="gar_secret_0016_name">
+		<text>Planque а la casse</text>
+	</string>
+	<string id="gar_secret_0017_descr">
+		<text>Le chef des communications radio nous a ordonnй de nous replier. J'ai trouvй un coffre, j'y ai mis tout ce qui m'encombrait et je me suis repliй les mains vides.</text>
+	</string>
+	<string id="gar_secret_0017_name">
+		<text>Affaires dans le coffre</text>
+	</string>
+	<string id="gar_secret_0018_descr">
+		<text>J'ai mis le pot de vin dans le tuyau, а la dйcharge. Je ne resterai pas lа longtemps.</text>
+	</string>
+	<string id="gar_secret_0018_name">
+		<text>Tuyau prиs du car</text>
+	</string>
+	<string id="gar_secret_0019_descr">
+		<text>Rien de plus facile que de cacher un sac а dos dans des ruines. J'espиre qu'il sera facile а retrouver, а condition que les bandits ne dйbarquent pas.</text>
+	</string>
+	<string id="gar_secret_0019_name">
+		<text>Sac а dos dans les ruines</text>
+	</string>
+	<string id="gar_secret_0020_descr">
+		<text>Pendant que les membres du Devoir tiraient, j'ai cachй le pot de vin dans le wagon. Il faut que je trouve un moyen de le rйcupйrer. Et de remercier le Devoir.</text>
+	</string>
+	<string id="gar_secret_0020_name">
+		<text>Coffre au point de contrфle militaire lourdement armй</text>
+	</string>
+	<string id="gar_secret_0021_descr">
+		<text>Il paraоt que le Chйtif est mort а la Dйcharge. Il faut que je m'occupe du butin ou il va y avoir foule dans les parages.</text>
+	</string>
+	<string id="gar_secret_0021_name">
+		<text>Sac а dos du Chйtif</text>
+	</string>
+	<string id="gar_secret_0022_descr">
+		<text>Pour l'instant, je vais cacher les affaires dans le trou. Pourvu qu'ils ne les trouvent pas.</text>
+	</string>
+	<string id="gar_secret_0022_name">
+		<text>Sac dans le trou</text>
+	</string>
+	<string id="gar_secret_0023_descr">
+		<text>Quelqu'un s'est fait avoir par une anomalie prиs de l'escalator. Le sac а dos est en vue, mais difficile а atteindre.</text>
+	</string>
+	<string id="gar_secret_0023_name">
+		<text>Sous la benne</text>
+	</string>
+	<string id="gar_secret_0024_descr">
+		<text>Зa n'a pas йtй du gвteau, mais le sac а dos est bien cachй. Personne ne s'aventurera lа-haut.</text>
+	</string>
+	<string id="gar_secret_0024_name">
+		<text>Le fric est sous les blocs de bйton</text>
+	</string>
+	<string id="mil_secret_0000_description">
+		<text>J'ai cachй les affaires dans la souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="mil_secret_0000_name">
+		<text>Planque secrиte dans la souche</text>
+	</string>
+	<string id="mil_secret_0001_description">
+		<text>J'ai cachй les affaires dans le fourneau.</text>
+	</string>
+	<string id="mil_secret_0001_name">
+		<text>Planque secrиte dans le fourneau</text>
+	</string>
+	<string id="mil_secret_0002_description">
+		<text>J'ai cachй les affaires dans le bureau de KAMAZ.</text>
+	</string>
+	<string id="mil_secret_0002_name">
+		<text>Planque secrиte de KAMAZ</text>
+	</string>
+	<string id="mil_secret_0003_description">
+		<text>J'ai enterrй des trucs sous la croix, prиs du village.</text>
+	</string>
+	<string id="mil_secret_0003_name">
+		<text>Trйsor sous la croix</text>
+	</string>
+	<string id="mil_secret_0004_description">
+		<text>J'ai mis mes affaires dans le tuyau. Je les rйcupйrerai plus tard.</text>
+	</string>
+	<string id="mil_secret_0004_name">
+		<text>Planque secrиte dans le tuyau</text>
+	</string>
+	<string id="mil_secret_0005_description">
+		<text>Planque secrиte а l'intйrieur du coffre, dans le chвteau d'eau.</text>
+	</string>
+	<string id="mil_secret_0005_name">
+		<text>Trйsor dans le chвteau d'eau</text>
+	</string>
+	<string id="mil_secret_0006_description">
+		<text>J'ai mis mon sac а dos dans le fourneau. Il me servira plus tard.</text>
+	</string>
+	<string id="mil_secret_0006_name">
+		<text>Planque secrиte du fourneau</text>
+	</string>
+	<string id="mil_secret_0007_description">
+		<text>J'ai cachй des trucs а l'intйrieur de la voiture, dans le village abandonnй.</text>
+	</string>
+	<string id="mil_secret_0007_name">
+		<text>Planque secrиte dans une voiture</text>
+	</string>
+	<string id="mil_secret_0008_description">
+		<text>J'ai laissй le sac а dos dans les ruines radioactives. J'avais peur d'y montrer mon visage.</text>
+	</string>
+	<string id="mil_secret_0008_name">
+		<text>Dangereux secret</text>
+	</string>
+	<string id="mil_secret_0009_description">
+		<text>J'ai enterrй des trucs sous la croix, dans un endroit cachй.</text>
+	</string>
+	<string id="mil_secret_0009_name">
+		<text>Planque du Stalker</text>
+	</string>
+	<string id="mil_secret_0010_description">
+		<text>J'ai mis le sac а dos contenant le matйriel bien au chaud. </text>
+	</string>
+	<string id="mil_secret_0010_name">
+		<text>Sac а dos contenant le matйriel</text>
+	</string>
+	<string id="mil_secret_0011_description">
+		<text>J'ai cachй mes affaires dans la voiture, sur une colline.</text>
+	</string>
+	<string id="mil_secret_0011_name">
+		<text>Planque secrиte sur une colline</text>
+	</string>
+	<string id="mil_secret_0012_description">
+		<text>Un hйlicoptиre s'est йcrasй tout prиs de la base militaire abandonnйe et le coffre se trouve juste en dessous de l'йpave. Le problиme, c'est que l'endroit est hautement radioactif et grouille d'anomalies.</text>
+	</string>
+	<string id="mil_secret_0012_name">
+		<text>Coffre de l'hйlicoptиre</text>
+	</string>
+	<string id="mil_secret_0013_description">
+		<text>J'ai enterrй les affaires sur la colline, sous la croix.</text>
+	</string>
+	<string id="mil_secret_0013_name">
+		<text>Secret dans la pierre tombale</text>
+	</string>
+	<string id="mil_secret_0014_description">
+		<text>Il y a une planque secrиte dans la souche. C'est une bonne planque.</text>
+	</string>
+	<string id="mil_secret_0014_name">
+		<text>Souche secrиte</text>
+	</string>
+	<string id="mil_secret_0015_description">
+		<text>J'ai laissй le sac а dos dans la cabine de la grue. Je le rйcupйrerai plus tard.</text>
+	</string>
+	<string id="mil_secret_0015_name">
+		<text>Planque secrиte du grutier</text>
+	</string>
+	<string id="mil_secret_0016_description">
+		<text>Tout est dans le coffre, dans un wagon situй prиs de la base. Tout se dйroule comme prйvu, il n'y a plus qu'а attendre.</text>
+	</string>
+	<string id="mil_secret_0016_name">
+		<text>Planque secrиte convenue</text>
+	</string>
+	<string id="mil_secret_0017_description">
+		<text>J'ai mis les affaires dans la souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="mil_secret_0017_name">
+		<text>Trйsor dans la souche</text>
+	</string>
+	<string id="mil_secret_0018_description">
+		<text>J'ai mis les affaires dans un tuyau, au bord d'un lac.</text>
+	</string>
+	<string id="mil_secret_0018_name">
+		<text>Tuyau renfermant des affaires</text>
+	</string>
+	<string id="mil_secret_0019_description">
+		<text>J'ai cachй mes affaires dans une capsule mйtallique.</text>
+	</string>
+	<string id="mil_secret_0019_name">
+		<text>Planque secrиte du Stalker</text>
+	</string>
+	<string id="mil_secret_0020_description">
+		<text>J'ai mis les affaires dans une souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="mil_secret_0020_name">
+		<text>Affaires dans la souche</text>
+	</string>
+	<string id="mil_secret_0021_description">
+		<text>Bon coffre pour cacher des affaires.</text>
+	</string>
+	<string id="mil_secret_0021_name">
+		<text>Super coffre</text>
+	</string>
+	<string id="mil_secret_0022_description">
+		<text>J'ai cachй le sac а dos contenant les affaires dans le tunnel.</text>
+	</string>
+	<string id="mil_secret_0022_name">
+		<text>Sac а dos dans le tunnel</text>
+	</string>
+	<string id="mil_secret_0023_description">
+		<text>Bon coffre pour cacher des affaires.</text>
+	</string>
+	<string id="mil_secret_0023_name">
+		<text>Coffre contenant des affaires</text>
+	</string>
+	<string id="mil_secret_0024_description">
+		<text>J'ai mis les affaires dans une souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="mil_secret_0024_name">
+		<text>Planque secrиte dans la souche</text>
+	</string>
+	<string id="mil_secret_0025_description">
+		<text>J'ai mis les affaires dans le coffre. Je les rйcupйrerai plus tard.</text>
+	</string>
+	<string id="mil_secret_0025_name">
+		<text>Planque secrиte temporaire</text>
+	</string>
+	<string id="mil_secret_0026_description">
+		<text>J'ai cachй les affaires dans la bouche d'йgout. Зa peut servir un jour.</text>
+	</string>
+	<string id="mil_secret_0026_name">
+		<text>Planque secrиte en acier</text>
+	</string>
+	<string id="mil_secret_0027_description">
+		<text>J'ai mis les affaires dans le coffre. Je les rйcupйrerai plus tard.</text>
+	</string>
+	<string id="mil_secret_0027_name">
+		<text>Coffre contenant des affaires</text>
+	</string>
+	<string id="mil_secret_0028_description">
+		<text>J'ai cachй les affaires dans la voiture, sous le nez des membres de la Libertй. Je n'ai pas eu le temps de trouver mieux.</text>
+	</string>
+	<string id="mil_secret_0028_name">
+		<text>Planque secrиte dans la voiture</text>
+	</string>
+	<string id="pri_secret_0000_description">
+		<text>Il paraоt qu'un Stalker cйlиbre a cassй sa pipe ici, et personne n'a encore rйcupйrй ses affaires.</text>
+	</string>
+	<string id="pri_secret_0000_name">
+		<text>Affaires du Stalker mort</text>
+	</string>
+	<string id="pri_secret_0001_description">
+		<text>Il paraоt qu'il y a dans le garage un coffre contenant des tonnes de trucs intйressants.</text>
+	</string>
+	<string id="pri_secret_0001_name">
+		<text>Trйsor dans le garage</text>
+	</string>
+	<string id="pri_secret_0002_description">
+		<text>Il paraоt qu'il y a а la maternelle un coffre contenant des tonnes de trucs intйressants.</text>
+	</string>
+	<string id="pri_secret_0002_name">
+		<text>Vieille planque secrиte</text>
+	</string>
+	<string id="pri_secret_0003_description">
+		<text>Ils ont enterrй les Crocs а Pripyat, sous un monument, avec toutes ses affaires. Зa ne se fait pas de piller les morts.</text>
+	</string>
+	<string id="pri_secret_0003_name">
+		<text>Affaires du dйnommй les Crocs</text>
+	</string>
+	<string id="pri_secret_0004_description">
+		<text>Ce qu'ils ignorent, c'est que c'йtait le seul survivant aprиs le passage du lobotomisateur. Il a laissй tout le matos dans un ancien supermarchй. Rien ne s'est passй comme prйvu. La Libertй n'avait jamais eu de meilleur leader.</text>
+	</string>
+	<string id="pri_secret_0004_name">
+		<text>Matos du leader de la Libertй</text>
+	</string>
+	<string id="rad_secret_0000_description">
+		<text>La croix se trouve sur la route qui mиne au lobotomisateur. Je ne me suis pas aventurй plus loin, j'ai tout cachй en dessous.</text>
+	</string>
+	<string id="rad_secret_0000_name">
+		<text>Trйsor du Magouilleur</text>
+	</string>
+	<string id="rad_secret_0001_description">
+		<text>Un Stalker est mort ici et ses affaires sont toujours sur place. Personne ne peut y accйder.</text>
+	</string>
+	<string id="rad_secret_0001_name">
+		<text>Affaires du Stalker mort</text>
+	</string>
+	<string id="rad_secret_0002_description">
+		<text>Il paraоt qu'il y a un coffre-fort contenant des trucs intйressants а moitiй enterrй dans la forкt.</text>
+	</string>
+	<string id="rad_secret_0002_name">
+		<text>Trucs intйressants dans le coffre-fort</text>
+	</string>
+	<string id="rad_secret_0003_description">
+		<text>On leur avait dit de ne pas survoler le lobotomisateur et voilа ce qui est arrivй. Ils se sont posйs au milieu de la forкt et les chances sont minces pour qu'il y ait des survivants. Quand je pense а ce qu'ils devaient nous livrer !</text>
+	</string>
+	<string id="rad_secret_0003_name">
+		<text>Paquet pour le Devoir</text>
+	</string>
+	<string id="rad_secret_0004_description">
+		<text>Il paraоt que le matos de la faction qui a essayй d'accйder au centre de la Zone est toujours lа, sous les radiations du lobotomisateur. Personne n'est revenu et le matos est restй lа, en attendant que quelqu'un vienne le rйcupйrer.</text>
+	</string>
+	<string id="rad_secret_0004_name">
+		<text>Matos du groupe d'imprudents</text>
+	</string>
+	<string id="rad_secret_0005_description">
+		<text>Il paraоt que le chef d'une ancienne faction est mort ici et qu'il avait sur lui des tas de trucs intйressants.</text>
+	</string>
+	<string id="rad_secret_0005_name">
+		<text>Affaires du chef de l'ancienne faction</text>
+	</string>
+	<string id="ros_secret_0000_description">
+		<text>J'ai cachй le sac а dos derriиre le panneau mйtallique.</text>
+	</string>
+	<string id="ros_secret_0000_name">
+		<text>Sac а dos cachй</text>
+	</string>
+	<string id="ros_secret_0001_description">
+		<text>J'ai planquй les affaires sous la croix</text>
+	</string>
+	<string id="ros_secret_0001_name">
+		<text>Planque secrиte sous la croix</text>
+	</string>
+	<string id="ros_secret_0002_description">
+		<text>J'ai cachй quelque chose dans le coffre, sous la petite maison. Il faut absolument que je m'en souvienne.</text>
+	</string>
+	<string id="ros_secret_0002_name">
+		<text>Coffre sous la petite maison</text>
+	</string>
+	<string id="ros_secret_0003_description">
+		<text>J'ai mis le sac а dos sous les marches, mais il a fallu que ces fumiers dйbarquent. Bon sang, comment je vais le rйcupйrer ?</text>
+	</string>
+	<string id="ros_secret_0003_name">
+		<text>Sac а dos du Stalker</text>
+	</string>
+	<string id="ros_secret_0004_description">
+		<text>Il y a un coffre-fort а moitiй enterrй dans le coin, derriиre l'arbre. Mon barda y est en sйcuritй pour le moment.</text>
+	</string>
+	<string id="ros_secret_0004_name">
+		<text>Planque secrиte derriиre l'arbre</text>
+	</string>
+	<string id="ros_secret_0005_description">
+		<text>Ils ont cachй ce qu'ils ont rйcupйrй pendant l'averse dans un coffre, dans le garage.</text>
+	</string>
+	<string id="ros_secret_0005_name">
+		<text>Planque secrиte dans le garage</text>
+	</string>
+	<string id="ros_secret_0006_description">
+		<text>J'ai cachй des trucs dans le coffre, derriиre la baraque.</text>
+	</string>
+	<string id="ros_secret_0006_name">
+		<text>Coffre cachй</text>
+	</string>
+	<string id="ros_secret_0007_description">
+		<text>J'ai cachй le sac а dos dans un trou. Je crois qu'on ne le voit pas d'en haut.</text>
+	</string>
+	<string id="ros_secret_0007_name">
+		<text>Sac а dos dans la planque secrиte</text>
+	</string>
+	<string id="ros_secret_0008_description">
+		<text>J'ai mis le petit coffre en lieu sыr.</text>
+	</string>
+	<string id="ros_secret_0008_name">
+		<text>Coffre en lieu sыr</text>
+	</string>
+	<string id="ros_secret_0009_description">
+		<text>Mon sac а dos est sous le toit. Il peut encore servir.</text>
+	</string>
+	<string id="ros_secret_0009_name">
+		<text>Planque secrиte de Strelok</text>
+	</string>
+	<string id="ros_secret_0010_description">
+		<text>Il paraоt que cette petite maison abrite un coffre-fort renfermant quelque chose.</text>
+	</string>
+	<string id="ros_secret_0010_name">
+		<text>Coffre-fort dans la maison</text>
+	</string>
+	<string id="ros_secret_0011_description">
+		<text>Je l'ai cachй dans la maison, dans un tuyau. Attention, tout est dйglinguй lа-dedans.</text>
+	</string>
+	<string id="ros_secret_0011_name">
+		<text>Planque secrиte dans le tuyau</text>
+	</string>
+	<string id="ros_secret_0012_description">
+		<text>Ce dont on a parlй est dans le coffre. En gйnйral, personne ne regarde lа-dedans.</text>
+	</string>
+	<string id="ros_secret_0012_name">
+		<text>Coffre cachй</text>
+	</string>
+	<string id="ros_secret_0013_description">
+		<text>Je l'ai cachй sous la croix, dans une petite rue.</text>
+	</string>
+	<string id="ros_secret_0013_name">
+		<text>Planque secrиte sous la croix</text>
+	</string>
+	<string id="ros_secret_0014_description">
+		<text>Ils ont cachй le matos sous le bйton, sur le chantier.</text>
+	</string>
+	<string id="ros_secret_0014_name">
+		<text>Planque secrиte sous le bйton</text>
+	</string>
+	<string id="ros_secret_0015_description">
+		<text>On va mettre le pot de vin dans le coffre, sur le chantier, au cas oщ on devrait dйcoller rapidement.</text>
+	</string>
+	<string id="ros_secret_0015_name">
+		<text>Planque secrиte du Chanceux</text>
+	</string>
+	<string id="ros_secret_0016_description">
+		<text>Je l'ai cachй dans une petite rue, sur le chantier.</text>
+	</string>
+	<string id="ros_secret_0016_name">
+		<text>Nychka</text>
+	</string>
+	<string id="ros_secret_0017_description">
+		<text>J'ai mis quelque chose dans un tuyau. Je le rйcupйrerai plus tard.</text>
+	</string>
+	<string id="ros_secret_0017_name">
+		<text>Planque secrиte dans le tuyau</text>
+	</string>
+	<string id="ros_secret_0018_description">
+		<text>J'ai cachй le mйdicament dans un coffre, tout prиs du chantier.</text>
+	</string>
+	<string id="ros_secret_0018_name">
+		<text>Coffre contenant un mйdicament</text>
+	</string>
+	<string id="ros_secret_0019_description">
+		<text>J'ai traоnй le coffre dans la cabine de la grue.</text>
+	</string>
+	<string id="ros_secret_0019_name">
+		<text>Coffre sur la grue</text>
+	</string>
+	<string id="ros_secret_0020_description">
+		<text>Dans le coin, j'ai cachй mes affaires dans une bouche d'йgout.</text>
+	</string>
+	<string id="ros_secret_0020_name">
+		<text>Planque secrиte dans la bouche d'йgout</text>
+	</string>
+	<string id="ros_secret_0021_description">
+		<text>En cherchant l'artefact, je suis tombй sur une anomalie. J'ai abandonnй le sac а dos dans le coin.</text>
+	</string>
+	<string id="ros_secret_0021_name">
+		<text>Le sac а dos abandonnй</text>
+	</string>
+	<string id="ros_secret_0022_description">
+		<text>J'ai mis le coffre sous le toit, prиs de la tour, pour que personne ne le voie.</text>
+	</string>
+	<string id="ros_secret_0022_name">
+		<text>Petit coffre sous le toit</text>
+	</string>
+	<string id="ros_secret_0023_description">
+		<text>On a cachй ce qu'on a trouvй dans le tuyau, prиs du chantier.</text>
+	</string>
+	<string id="ros_secret_0023_name">
+		<text>Planque secrиte dans le tuyau</text>
+	</string>
+	<string id="ros_secret_0024_description">
+		<text>J'ai mis toutes les affaires dans la souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="ros_secret_0024_name">
+		<text>Planque secrиte</text>
+	</string>
+	<string id="ros_secret_0025_description">
+		<text>J'ai laissй le sac а dos prиs de la grue.</text>
+	</string>
+	<string id="ros_secret_0025_name">
+		<text>Sac а dos</text>
+	</string>
+	<string id="val_secret_0000_description">
+		<text>J'ai cachй les affaires sous la croix, prиs de la montagne.</text>
+	</string>
+	<string id="val_secret_0000_name">
+		<text>Planque secrиte sous la croix</text>
+	</string>
+	<string id="val_secret_0001_description">
+		<text>J'ai mis les affaires dans une souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="val_secret_0001_name">
+		<text>Planque secrиte dans la souche</text>
+	</string>
+	<string id="val_secret_0002_description">
+		<text>J'ai mis le sac а dos sous le pont. Je vais le laisser lа pour le moment.</text>
+	</string>
+	<string id="val_secret_0002_name">
+		<text>Sac а dos sous le pont</text>
+	</string>
+	<string id="val_secret_0003_description">
+		<text>J'ai mis le coffre dans la voiture, prиs du marйcage.</text>
+	</string>
+	<string id="val_secret_0003_name">
+		<text>Voiture abritant la planque secrиte</text>
+	</string>
+	<string id="val_secret_0004_description">
+		<text>Il y a une planque secrиte dans une souche. C'est une bonne planque.</text>
+	</string>
+	<string id="val_secret_0004_name">
+		<text>Planque secrиte dans une souche</text>
+	</string>
+	<string id="val_secret_0005_description">
+		<text>J'ai trouvй un grand coffre а la ferme. Je vais laisser le matos lа pour le moment.</text>
+	</string>
+	<string id="val_secret_0005_name">
+		<text>Coffre avec du matos</text>
+	</string>
+	<string id="val_secret_0006_description">
+		<text>J'ai mis mes affaires dans le tuyau. Je les rйcupйrerai plus tard.</text>
+	</string>
+	<string id="val_secret_0006_name">
+		<text>Planque secrиte dans le tuyau</text>
+	</string>
+	<string id="val_secret_0007_description">
+		<text>J'ai cachй le sac а dos sous un pin.</text>
+	</string>
+	<string id="val_secret_0007_name">
+		<text>Planque secrиte sous le pin</text>
+	</string>
+	<string id="val_secret_0008_description">
+		<text>Le nouveau a fini par voler le coffre aux bandits. Il l'a mis dans le Niva et l'a retournй. D'aprиs lui, зa ressemble а un coffre gouvernemental. Il va falloir qu'on arme nos gars pour aller le rйcupйrer.</text>
+	</string>
+	<string id="val_secret_0008_name">
+		<text>Coffre gouvernemental</text>
+	</string>
+	<string id="val_secret_0009_description">
+		<text>Tout le monde vole. Certains se volent mкme entre eux. Mais personne ne trouvera jamais mon coffre.</text>
+	</string>
+	<string id="val_secret_0009_name">
+		<text>Coffre</text>
+	</string>
+	<string id="val_secret_0010_description">
+		<text>J'ai cachй mes affaires dans la bouche d'йgout. Зa peut servir un jour.</text>
+	</string>
+	<string id="val_secret_0010_name">
+		<text>Planque secrиte dans la bouche d'йgout</text>
+	</string>
+	<string id="val_secret_0011_description">
+		<text>J'ai laissй le sac а dos sous un arbre, sinon je n'aurais jamais pu йchapper aux bandits.</text>
+	</string>
+	<string id="val_secret_0011_name">
+		<text>Sac а dos du Stalker</text>
+	</string>
+	<string id="val_secret_0012_description">
+		<text>J'ai mis mon barda dans un tuyau. Je le rйcupйrerai plus tard.</text>
+	</string>
+	<string id="val_secret_0012_name">
+		<text>Planque secrиte </text>
+	</string>
+	<string id="val_secret_0013_description">
+		<text>J'ai cachй tout ce que j'ai volй а Borov dans un coffre-fort, sous le pin. Je n'ai plus qu'а attendre que зa se calme.</text>
+	</string>
+	<string id="val_secret_0013_name">
+		<text>Coffre-fort cachй</text>
+	</string>
+	<string id="val_secret_0014_description">
+		<text>Le Q.G. temporaire est dans le wagon, avec le coffre contenant le matos.</text>
+	</string>
+	<string id="val_secret_0014_name">
+		<text>Entrepфt dans le wagon</text>
+	</string>
+	<string id="val_secret_0015_description">
+		<text>J'ai fini par accйder au tuyau, sous la route. Maintenant, j'ai un endroit oщ planquer mon sac а dos.</text>
+	</string>
+	<string id="val_secret_0015_name">
+		<text>Planque secrиte dans le tuyau</text>
+	</string>
+	<string id="val_secret_0016_description">
+		<text>J'ai mis les affaires dans le coffre. Je les rйcupйrerai plus tard.</text>
+	</string>
+	<string id="val_secret_0016_name">
+		<text>Coffre contenant des affaires</text>
+	</string>
+	<string id="val_secret_0017_description">
+		<text>J'ai cachй les affaires derriиre le tuyau. C'est difficile d'accиs, mais au moins ils ne s'en empareront pas.</text>
+	</string>
+	<string id="val_secret_0017_name">
+		<text>Planque secrиte derriиre le tuyau</text>
+	</string>
+	<string id="val_secret_0018_description">
+		<text>J'ai trouvй des cartouches dans le local йlectrique.</text>
+	</string>
+	<string id="val_secret_0018_name">
+		<text>Planque secrиte dans le local йlectrique</text>
+	</string>
+	<string id="val_secret_0019_description">
+		<text>On a mis tout ce qu'on a trouvй dans le coffre. On rйcupйrera tout зa au retour.</text>
+	</string>
+	<string id="val_secret_0019_name">
+		<text>Planque secrиte dans le coffre</text>
+	</string>
+	<string id="val_secret_0020_description">
+		<text>J'ai cachй le sac а dos du nouveau. Il ne l'a jamais retrouvй.</text>
+	</string>
+	<string id="val_secret_0020_name">
+		<text>Sac а dos cachй</text>
+	</string>
+	<string id="val_secret_0021_description">
+		<text>Le coffre est restй dans la camionnette. Il faut le rйcupйrer.</text>
+	</string>
+	<string id="val_secret_0021_name">
+		<text>Coffre oubliй</text>
+	</string>
+	<string id="val_secret_0022_description">
+		<text>J'ai trouvй un coffre-fort а la station-service. J'y ai cachй mes affaires. Personne ne viendra jamais les chercher lа.</text>
+	</string>
+	<string id="val_secret_0022_name">
+		<text>Coffre-fort а la station-service</text>
+	</string>
+	<string id="val_secret_0023_description">
+		<text>J'ai traоnй le coffre sur la citerne.</text>
+	</string>
+	<string id="val_secret_0023_name">
+		<text>Coffre</text>
+	</string>
+	<string id="val_secret_0024_description">
+		<text>J'ai cachй le matos dans le coffre-fort, а la station-service.</text>
+	</string>
+	<string id="val_secret_0024_name">
+		<text>Coffre-fort а la station-service</text>
+	</string>
+	<string id="val_secret_0025_description">
+		<text>Il y a un coffre dans la voiture, sur le camp des bandits. Il faut qu'on se faufile jusqu'а cette voiture pour le fouiller. Je suis sыr qu'il contient quelque chose d'intйressant.</text>
+	</string>
+	<string id="val_secret_0025_name">
+		<text>Coffre dans la voiture</text>
+	</string>
+	<string id="val_secret_0026_description">
+		<text>J'ai mis le coffre dans la planque secrиte. C'est une bonne planque.</text>
+	</string>
+	<string id="val_secret_0026_name">
+		<text>Coffre dans la planque secrиte</text>
+	</string>
+	<string id="val_secret_0027_description">
+		<text>J'ai laissй le sac а dos dans un bвtiment abandonnй. Personne ne viendra rфder lа.</text>
+	</string>
+	<string id="val_secret_0027_name">
+		<text>Le sac а dos abandonnй</text>
+	</string>
+	<string id="val_secret_0028_description">
+		<text>On va mettre les affaires dans le coffre-fort, dans un endroit discret. Tфt ou tard, les soldats vont dйbarquer, mais ils ne resteront pas longtemps et les choses les plus prйcieuses seront а moi.</text>
+	</string>
+	<string id="val_secret_0028_name">
+		<text>Planque secrиte de Borov</text>
+	</string>
+	<string id="val_secret_0029_description">
+		<text>J'ai planquй le sac а dos prиs du bвtiment.</text>
+	</string>
+	<string id="val_secret_0029_name">
+		<text>Sac а dos dans un endroit secret</text>
+	</string>
+	<string id="val_secret_0030_description">
+		<text>J'ai mis les affaires dans un coffre indйtectable. Je les rйcupйrerai plus tard.</text>
+	</string>
+	<string id="val_secret_0030_name">
+		<text>Coffre indйtectable</text>
+	</string>
+	<string id="val_secret_0031_description">
+		<text>J'ai cachй le sac а dos sous la voiture. Personne ne regardera lа-dessous.</text>
+	</string>
+	<string id="val_secret_0031_name">
+		<text>Sac а dos cachй</text>
+	</string>
+	<string id="val_secret_0032_description">
+		<text>J'ai cachй les affaires dans la voiture, sous le nez des bandits. Je n'avais pas le temps de trouver mieux.</text>
+	</string>
+	<string id="val_secret_0032_name">
+		<text>Planque secrиte dans la voiture</text>
+	</string>
+	<string id="x16_secret_0000_description">
+		<text>On dit qu'un Stalker s'est introduit dans le labo et qu'il a cachй ses affaires dans les prises de courant de la gaine d'ascenseur. Et quand enfin il aurait pu aller les rйcupйrer, il йtait mort.</text>
+	</string>
+	<string id="x16_secret_0000_name">
+		<text>Affaires dans les prises de courant</text>
+	</string>
+	<string id="x16_secret_0001_description">
+		<text>On dit qu'un Stalker s'est introduit dans ce labo et qu'il est mort dans le secteur oщ ils faisaient des expйriences, avec toutes ses affaires.</text>
+	</string>
+	<string id="x16_secret_0001_name">
+		<text>Sac а dos de l'йclaireur</text>
+	</string>
+	<string id="x18_secret_0000_description">
+		<text>Le Fumй a tout mis dans un coffre-fort du laboratoire souterrain. Pas mal comme planque, personne n'a les clйs du labo. Le problиme, c'est que tout peut se mettre а voler dans tous les sens а tout moment. Il paraоt que quelqu'un est mort comme зa.</text>
+	</string>
+	<string id="x18_secret_0000_name">
+		<text>Planque secrиte du Fumй</text>
+	</string>
+	<string id="x18_secret_0001_description">
+		<text>J'ai dы abandonner le sac а dos.</text>
+	</string>
+	<string id="x18_secret_0001_name">
+		<text>Le sac а dos abandonnй</text>
+	</string>
+	<string id="yan_secret_0000_description">
+		<text>La croix se trouve sur une colline et le sac а dos est juste en dessous.</text>
+	</string>
+	<string id="yan_secret_0000_name">
+		<text>Planque secrиte sous la croix</text>
+	</string>
+	<string id="yan_secret_0001_description">
+		<text>Il paraоt qu'il y a un coffre-fort а moitiй enterrй sur une petite оle des marйcages. Il faut que je me renseigne.</text>
+	</string>
+	<string id="yan_secret_0001_name">
+		<text>Vieux coffre-fort</text>
+	</string>
+	<string id="yan_secret_0002_description">
+		<text>J'ai mis les affaires dans un tuyau, prиs du camp.</text>
+	</string>
+	<string id="yan_secret_0002_name">
+		<text>Tuyau contenant des affaires</text>
+	</string>
+	<string id="yan_secret_0003_description">
+		<text>J'ai planquй les affaires derriиre les garages.</text>
+	</string>
+	<string id="yan_secret_0003_name">
+		<text>Sac а dos derriиre les garages</text>
+	</string>
+	<string id="yan_secret_0004_description">
+		<text>J'ai cachй le sac а dos dans une baraque, juste derriиre la casse.</text>
+	</string>
+	<string id="yan_secret_0004_name">
+		<text>Sac а dos contenant le butin</text>
+	</string>
+	<string id="yan_secret_0005_description">
+		<text>J'ai mis le coffre dans le car. Personne ne le remarquera.</text>
+	</string>
+	<string id="yan_secret_0005_name">
+		<text>Planque secrиte dans le car</text>
+	</string>
+	<string id="yan_secret_0006_description">
+		<text>Les affaires sont cachйes dans la voiture, а deux pas du territoire. Les radiations ne sont pas trиs fortes.</text>
+	</string>
+	<string id="yan_secret_0006_name">
+		<text>Le butin est dans la voiture</text>
+	</string>
+	<string id="yan_secret_0007_description">
+		<text>Il paraоt qu'il contient les affaires de quelqu'un, mais je ne peux pas y accйder а cause des radiations.</text>
+	</string>
+	<string id="yan_secret_0007_name">
+		<text>Vieux sac а dos</text>
+	</string>
+	<string id="yan_secret_0008_description">
+		<text>Il paraоt qu'il s'agit de la planque secrиte d'une faction. Mais comment ont-ils pu y accйder avec ces radiations ?</text>
+	</string>
+	<string id="yan_secret_0008_name">
+		<text>Planque secrиte d'une faction</text>
+	</string>
+	<string id="yan_secret_0009_description">
+		<text>Un autre Stalker volontaire est mort а cause d'un prototype incapable de le protйger des radiations. Il йtait en plein milieu du territoire. Sakharov veut faire des mesures plus prйcises, mais je refuse d'y aller. Pas question que je sois la prochaine victime. </text>
+	</string>
+	<string id="yan_secret_0009_name">
+		<text>Sac а dos du volontaire</text>
+	</string>
+	<string id="yan_secret_0010_description">
+		<text>Il paraоt qu'elle renferme le pot de vin de quelqu'un, mais avec les radiations, elle est totalement inaccessible.</text>
+	</string>
+	<string id="yan_secret_0010_name">
+		<text>Ancienne planque secrиte</text>
+	</string>
+	<string id="yan_secret_0011_description">
+		<text>Il faut que je me tire. Saharov et Kruglov sont de vrais malades. Ils veulent que j'accompagne un Stalker en plein coeur de la zone radioactive. Qu'ils aillent au diable ! Je vais chercher le matos а la bouche d'йgout et je me barre.</text>
+	</string>
+	<string id="yan_secret_0011_name">
+		<text>Planque secrиte du scientifique</text>
+	</string>
+	<string id="yan_secret_0012_description">
+		<text>J'ai mis les affaires dans une souche. Personne ne devrait les trouver.</text>
+	</string>
+	<string id="yan_secret_0012_name">
+		<text>Trйsor dans une souche</text>
+	</string>
+	<string id="yan_secret_0013_description">
+		<text>Il paraоt qu'il y a lа le coffre-fort de quelqu'un, mais la zone est totalement inaccessible а cause des radiations.</text>
+	</string>
+	<string id="yan_secret_0013_name">
+		<text>Coffre contenant des affaires</text>
+	</string>
+	<string id="st_found_new_treasure">
+		<text>Informations sur la planque</text>
+	</string>
+</string_table>

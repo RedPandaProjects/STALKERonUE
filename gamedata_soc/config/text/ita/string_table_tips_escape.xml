@@ -1,0 +1,60 @@
+	<string id="esc_direction_fire">
+		<text>Non ci saranno sparatorie senza un mio preciso ordine. Niente grilletti facili, chiaro?</text>
+	</string>
+	<string id="esc_fanat_victory">
+		<text>Vittoria!!! Venite tutti qui. Vieni, Marchiato, dobbiamo parlare.</text>
+	</string>
+	<string id="esc_return_dv">
+		<text>Bene, Marchiato. Sono contento che tu sia vivo e abbia deciso di farci visita. Vieni, facciamo una chiacchierata. Ci sono delle novità in vista.</text>
+	</string>
+	<string id="esc_tutorial_end">
+		<text>Perfetto, la missione è compiuta. Possiamo dire che hai imparato i fondamentali.</text>
+	</string>
+	<string id="esc_wolf_thanks">
+		<text>Marchiato, adesso hai via libera verso l'accampamento. Vieni che ne parliamo.</text>
+	</string>
+	<string id="escape_fox_quest">
+		<text>Un paio di cose a proposito di Strelok, Marchiato. Uno stalker è appena tornato da un lungo raid. Si chiama Volpe. Sembra che se la sia vista brutta, e ha bisogno di aiuto. Delle strane bestiacce lo hanno seguito sulla via del ritorno e dice che non resisterà a lungo. Scommetto che quel tipo sa qualcosa riguardo Strelok. Ecco le sue coordinate. Farai meglio a sbrigarti.</text>
+	</string>
+	<string id="escape_stalker_death">
+		<text>Un vero peccato, Marchiato. I ragazzi sono morti , anche se non è stata proprio colpa tua. Sono cose che capitano nella Zona. Ad ogni modo, hai superato la prova, quindi torna qui e parleremo di affari.</text>
+	</string>
+	<string id="escape_stalker_helped">
+		<text>Ottimo lavoro, Marchiato. Continua così e ti farai parecchi amici. Vieni a trovarmi, che parliamo di affari.</text>
+	</string>
+	<string id="escape_stalker_killed">
+		<text>Non è stata una bella mossa, Marchiato. Hai superato la prova, ma ora dovrai vedertela con il Lupo e i suoi scagnozzi da solo. Comunque io sono qui che ti aspetto. C'è del lavoro di cui dobbiamo parlare.</text>
+	</string>
+	<string id="info_esc_give_agroprom_task">
+		<text>Marchiato, i militari hanno scovato della roba interessante all'Istituto di Ricerca Agroprom. Mi piacerebbe metterci le mani sopra, e magari piacerebbe anche a te. Trova le informazioni e portale al Barista, al bar degli stalker. Forza, datti da fare!</text>
+	</string>
+	<string id="tips_esc_trader_about_anomalies">
+		<text>Attento! Sei vicinissimo alle anomalie. Usa i bulloni per rilevarne la forma e la posizione esatte.</text>
+	</string>
+	<string id="tips_esc_trader_about_pda">
+		<text>Premi Contatto ($$ACTION_CONTACTS$$). Le persone che si trovano in un raggio di 250 metri e hanno il palmare accesso, diventeranno visibili nella scheda Contatti della tua Minimappa. Verrà visualizzato anche il loro atteggiamento nei tuoi confronti, in modo da identificare i possibili nemici. Tuttavia i banditi e i mutanti non tengono acceso il palmare (e ti pareva...), quindi stai molto attentol!</text>
+	</string>
+	<string id="tips_esc_trader_activate_map">
+		<text>Per attivare la mappa, premi '$$ACTION_MAP$$'.</text>
+	</string>
+	<string id="tips_esc_trader_activate_pda">
+		<text>Per attivare il palmare, premi '$$ACTION_ACTIVE_JOBS$$'.</text>
+	</string>
+	<string id="tips_esc_trader_how_to_talk">
+		<text>Per parlare con qualcuno, rivolgiti verso di lui e premi '$$ACTION_USE$$'.</text>
+	</string>
+	<string id="tips_esc_trader_quest_1">
+		<text>Trova il reperto nell'area contrassegnata sulla mappa e portalo al trafficante.</text>
+	</string>
+	<string id="tutorial_flash_anomaly_alarm">
+		<text>Fai attenzione, Marchiato. La prossima volta potrebbe toccare a te.</text>
+	</string>
+	<string id="tutorial_trader_give_medikit">
+		<text>Date un kit medico a questo idiota.</text>
+	</string>
+	<string id="tutorial_trader_look_vagon">
+		<text>Marchiato! Lascia stare il reperto, lo porterai dopo. Vai subito alla roulotte vicino alla strada. I miei uomini hanno bisogno di aiuto. Quegli idioti hanno aperto il fuoco contro un elicottero. Ti ho mandato le coordinate.</text>
+	</string>
+	<string id="tutorial_trader_search_corpses">
+		<text>Fruga i cadaveri, potresti trovare qualcosa di utile.</text>
+	</string>

@@ -1,0 +1,78 @@
+	<string id="agr_find_ghost">
+		<text>Herausfinden, was mit Ghost passiert ist.</text>
+	</string>
+	<string id="agr_gunslinger_cache">
+		<text>Streloks Versteck</text>
+	</string>
+	<string id="agr_help_krot">
+		<text>Den Maulwurf retten.</text>
+	</string>
+	<string id="agr_help_krot_0">
+		<text>Dem Maulwurf dabei helfen, die Soldaten abzuwehren.</text>
+	</string>
+	<string id="agr_help_krot_1">
+		<text>Die Soldaten töten.</text>
+	</string>
+	<string id="agr_help_krot_2">
+		<text>Den Maulwurf retten.</text>
+	</string>
+	<string id="agr_help_stalkers">
+		<text>Den Stalkern helfen.</text>
+	</string>
+	<string id="agr_help_stalkers_0">
+		<text>Den Stalkern dabei helfen, die Soldaten abzuwehren.</text>
+	</string>
+	<string id="agr_help_stalkers_1">
+		<text>Die Soldaten töten.</text>
+	</string>
+	<string id="agr_help_stalkers_2">
+		<text>Den Stalkern dabei helfen, die Soldaten abzuwehren.</text>
+	</string>
+	<string id="agr_krot">
+		<text>Mit den Stalkern treffen.</text>
+	</string>
+	<string id="agr_meet_krot_band">
+		<text>Informationen über Strelok beschaffen.</text>
+	</string>
+	<string id="agr_meet_krot_band_0">
+		<text>Informationen vom Maulwurf beschaffen.</text>
+	</string>
+	<string id="agr_meet_krot_band_1">
+		<text>Die Gruppe vom Maulwurf treffen.</text>
+	</string>
+	<string id="agr_meet_krot_band_2">
+		<text>Informationen vom Maulwurf beschaffen.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache">
+		<text>Das Versteck von Streloks Gruppe finden.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_0">
+		<text>Das Versteck von Streloks Gruppe finden.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_1">
+		<text>Das Versteck finden.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_2">
+		<text>Im Versteck nach Informationen über Strelok suchen.</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_3">
+		<text>Den Untergrund verlassen.</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom">
+		<text>Ghost finden.</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom_0">
+		<text>Ghost weiß, wo Strelok ist.</text>
+	</string>
+	<string id="agroprom_get_military_documents">
+		<text>Die Militärdokumente finden.</text>
+	</string>
+	<string id="agroprom_get_military_documents_0">
+		<text>Agroprom Forschungsinstitut</text>
+	</string>
+	<string id="agroprom_get_military_documents_1">
+		<text>Die Militärdokumente stehlen.</text>
+	</string>
+	<string id="agroprom_get_military_documents_2">
+		<text>Die Dokumente zum Wirt bringen.</text>
+	</string>

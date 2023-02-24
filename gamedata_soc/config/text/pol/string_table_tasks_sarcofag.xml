@@ -1,0 +1,48 @@
+	<string id="sar_monolith">
+		<text>Spe³niacz ¯yczeñ</text>
+	</string>
+	<string id="sar_monolith_0">
+		<text>Dotrzyj do Monolitu</text>
+	</string>
+	<string id="sar_monolith_1">
+		<text>Zakradnij siê do sarkofagu</text>
+	</string>
+	<string id="sar_monolith_2">
+		<text>ZnajdŸ Spe³niacz ¯yczeñ</text>
+	</string>
+	<string id="sar_monolith_destroy">
+		<text>Tajemnica Monolitu</text>
+	</string>
+	<string id="sar_monolith_destroy_0">
+		<text>Dostañ siê do tajnego laboratorium.</text>
+	</string>
+	<string id="sar_monolith_destroy_1">
+		<text>Rozwi¹¿ zagadkê Monolitu</text>
+	</string>
+	<string id="sar_monolith_destroy_2">
+		<text>Zniszcz generatory mocy Monolitu.</text>
+	</string>
+	<string id="sar_perception">
+		<text>Tajemnica Zony.</text>
+	</string>
+	<string id="sar_perception_1">
+		<text>Spotkaj siê z osob¹, która stoi za Monolitem.</text>
+	</string>
+	<string id="sar_perception_2">
+		<text>ZnajdŸ tajne laboratorium i spotkaj siê z "lalkarzami".</text>
+	</string>
+	<string id="sar_secret_lab">
+		<text>Tajne laboratorium</text>
+	</string>
+	<string id="sar_secret_lab_0">
+		<text>WejdŸ do tajnego bunkra.</text>
+	</string>
+	<string id="sar_secret_lab_1">
+		<text>ZnajdŸ ukryte drzwi</text>
+	</string>
+	<string id="sar_secret_lab_2">
+		<text>Otwórz drzwi przy u¿yciu dekodera</text>
+	</string>
+	<string id="sar_secret_lab_3">
+		<text>Dowiedz siê, co jest za drzwiami</text>
+	</string>

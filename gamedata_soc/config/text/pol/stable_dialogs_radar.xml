@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="rad_chief_start_dialog_0">
+		<text>Hej!</text>
+	</string>
+	<string id="rad_chief_start_dialog_100">
+		<text>Hej!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_0">
+		<text>Gdzie kasa za misjк?</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_100">
+		<text>Znajdџ mojego zastкpcк, a dostaniesz pieni№dze!</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_1000">
+		<text>Dobra, ale tym razem lepiej, їebyњ nie kіamaі!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_0">
+		<text>Kim jesteњ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_10">
+		<text>Nazywam siк Lecha "Szczкki"! Te zabijaki to moja ekipa!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_100">
+		<text>Co wy tu robicie?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_20">
+		<text>Chіopaki i ja odpoczywamy! Jak skoсczymy, to ruszamy do Prypeci!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_0">
+		<text>Co wiesz o Prypeci?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_10">
+		<text>Stare, opuszczone miasto z epoki komunizmu. Kawaі historii! Teraz pewnie roi siк tam od potworуw i hord Monolitu! Nikogo z tych, co tam poszli, nie widziano wiкcej na oczy!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_100">
+		<text>Myњlisz, їe jest tam niebezpiecznie?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_20">
+		<text>Bez dwуch zdaс - stamt№d nikt jeszcze nie wrуciі.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_0">
+		<text>S№ jacyњ їoіnierze w pobliїu?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_10">
+		<text>Nie, їadnych wojskowych od dawna nie widziaіem.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_100">
+		<text>A wojskowi stalkerzy?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_20">
+		<text>Chodz№ plotki, їe pokazali siк tuї przy Czerwonym Lesie, przy antenach! Kiedy je wyі№czono, masa ludzi poszіa do Czerwonego Lasu i dalej do Prypeci! Jesteњmy tu juї caіy dzieс i nikogo nie widzieliњmy. Ktoњ pewnie zablokowaі drogк.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_200">
+		<text>S№dzisz, їe wojsko zablokowaіo drogк do Czerwonego Lasu?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_30">
+		<text>Nie s№dzк, їeby to byіo wojsko, od dawna nie widziaіem їadnego їoіnierza, ale to mogli byж wojskowi stalkerzy! Ci to nie marnuj№ czasu. Nie bawi№ siк w pierdoіy, dziaіaj№ szybko i skutecznie, w druїynach albo pojedynczo... Dziwne, їe wczeњniej nie zablokowali drogi.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_300">
+		<text>Czemu nie poszli do Prypeci albo nie zablokowali drogi tam?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_40">
+		<text>Nie wiem. Moїe siк boj№ albo siк do czegoњ szykuj№. Mogк tylko zgadywaж.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_0">
+		<text>Moїe masz dla mnie jak№њ robotк?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_10">
+		<text>No, niby jedn№ mam, ale іatwa to ona nie jest... zgadzasz siк?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_100">
+		<text>Mуwi№c, їe nie jest іatwa, na pewno mnie nie wystraszysz!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_101">
+		<text>Nie da rady. Nie mam czasu!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_11">
+		<text>Rozumiem. Teї siк bojк... wolк wydaж trochк gotуwki, niї posyіaж chіopakуw czy iњж samemu.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_20">
+		<text>Super! Twoje zadanie to odszukaж moich zwiadowcуw, Јoma i Kіodк! Poszli do Prypeci, bo postanowiіem, їe bкdziemy ostroїni i wysіaіem najlepszych ludzi! Jeњli znajdziesz ich їywych, przyprowadџ ich do mnie. Jeњli zginкli, przynieњ mi ich broс. Zrуb to dla mnie, a dostaniesz 2000!!!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_200">
+		<text>Zgoda!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_201">
+		<text>Za maіo. 4000 i siк dogadamy, okej?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_21">
+		<text>To wszystko, co mogк ci zaproponowaж!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_30">
+		<text>Dobra, bкdк tu na ciebie czekaж!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_0">
+		<text>Zadanie wykonane!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_100">
+		<text>Њwietnie, daj mi swуj PDA!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1000">
+		<text>Proszк. A teraz kasa!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1100">
+		<text>Prуbujesz mnie zrobiж w konia. On nic nie miaі!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1200">
+		<text>Zaraz ciк rozwalк!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1300">
+		<text>Jak ciк jeszcze raz zobaczк, nie їyjesz!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1400">
+		<text>Dobra, rozumiem. Powodzenia!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_200">
+		<text>Nie mogк ci nic daж - nie mam pieniкdzy. Moїesz zatrzymaж jego rzeczy.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_300">
+		<text>Nie mam pieniкdzy! Odwal siк!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_0">
+		<text>Nie mogіem go znaleџж!</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_10">
+		<text>Jak chcesz kasк, to lepiej go szybko znajdџ!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_0">
+		<text>Znalazіem twoich chіopakуw. Nie їyj№, ale tu masz ich broс.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_100">
+		<text>Dziкki. Czyli zginкli. Teraz juї chyba nie ma sensu iњж do Prypeci! Jest tylko jeden problem - nie mam twojej kasy. Mуj zastкpca znikn№і, a wszystkie pieni№dze byіy u niego!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_1001">
+		<text>Dobra, znajdк go! Powiedz mi, gdzie go szukaж. I tym razem lepiej nie prуbuj їadnych numerуw z kas№!!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_200">
+		<text>Daleko nie mуgі zajњж. Pewnie jest tu albo tu, zaznaczк ci na mapie! Jak go znajdziesz, to go przyprowadџ - albo chociaї przynieњ jego PDA!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_2000">
+		<text>Dobra, czekaj na mnie!!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_0">
+		<text>Nie mogіem ich znaleџж.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_10">
+		<text>No to siк poњpiesz! Nie mogк czekaж wiecznie!!! Powodzenia!</text>
+	</string>
+</string_table>

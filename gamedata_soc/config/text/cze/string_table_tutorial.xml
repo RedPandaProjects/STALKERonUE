@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="binoc_tutorial">
+		<text>Pro pouћitн dalekohledu si ho vyber ($$ACTION_wpn_5$$) a pomocн "stшelby" si pohled pшiblнћнљ.</text>
+	</string>
+	<string id="binocular">
+		<text>Dalekohled</text>
+	</string>
+	<string id="crouch">
+		<text>Poklek</text>
+	</string>
+	<string id="crouch_down_tutorial">
+		<text>Pro niћљн pшikrиenн stiskni ($$ACTION_crouch$$) + (Shift)</text>
+	</string>
+	<string id="crouch_tutorial">
+		<text>Pro pшikrиenн stiskni ($$ACTION_crouch$$). Pro jeљtм niћљн pшikrиenн stiskni ($$ACTION_crouch$$) + ($$ACTION_accel$$).</text>
+	</string>
+	<string id="hide_weapon">
+		<text>Vэbмr zbranм</text>
+	</string>
+	<string id="hide_weapon_tutorial">
+		<text>Nмkteшн stalkeшi nemajн rбdi, kdyћ na nм mншнљ. Pro skrytн zbranм si vyber љrouby ($$ACTION_wpn_6$$).</text>
+	</string>
+	<string id="jump">
+		<text>Skбkбnн</text>
+	</string>
+	<string id="jump_tutorial">
+		<text>Skokem se mщћeљ vyљplhat na stшednм vysokй bariйry. Pro vэskok stiskni ($$ACTION_jump$$).</text>
+	</string>
+	<string id="move_tutorial">
+		<text>Druhy pohybu</text>
+	</string>
+	<string id="overload">
+		<text>Pшetнћenн</text>
+	</string>
+	<string id="overload_tutorial">
+		<text>Nejsi nбkladnн mula, takћe existuje limit vмcн, kterй uneseљ. Jakmile se vбha tvйho vybavenн dostane pшes limit, zaиneљ rychle ztrбcet energii. Vбhu svйho nбkladu mщћeљ vidмt v inventбшi.</text>
+	</string>
+	<string id="radiation">
+		<text>Radiace</text>
+	</string>
+	<string id="radiation_tutorial">
+		<text>Kdyћ postava nosн na opasku radioaktivnн artefakt nebo se dostane do oblasti s velkou ъrovnн ozбшenн, zaиne ztrбcet zdravн a projevн se u nн nбsledky nemoci z ozбшenн. Ъиinky radiace je moћnй blokovat pomocн protiradiaиnнch drog a vodky.</text>
+	</string>
+	<string id="relation">
+		<text>Pшнstup</text>
+	</string>
+	<string id="relation_tutorial">
+		<text>Pomбhбnнm ostatnнm postavбm zlepљujeљ jejich pшнstup k sobм a takй svou obecnou reputaci. Lepљн pшнstup a vyљљн reputace ti pomщћe pшi kontaktech s lidmi, kterй potkбљ. Kdyћ u nich budeљ zapsanэ dobшe, budou mнt sklony dбt ti vнce informacн a prodбvat ti pшedmмty levnмji. Na druhou stranu pokud na nмkoho zaиneљ stшнlet, jeho nбlada se rychle stane negativnн a stejnм tak i jeho pшбtel, takћe na tebe zaъtoин spoleиnм.</text>
+	</string>
+	<string id="sleep_tutorial">
+		<text>Tohle je dobrй mнsto na vyspбnн se, pшeиkбnн noci, nebo prostм zabitн иasu. Pokud chceљ spбt, otevшi inventбш, nastav dobu, po kterou chceљ odpoинvat, a stiskni tlaинtko odpoиinek. Tvoje postava se probudн v urиenэ иas. Nмkdy se jн i mohou zdбt sny.</text>
+	</string>
+	<string id="sprint">
+		<text>Sprint</text>
+	</string>
+	<string id="sprint_tutorial">
+		<text>Obиas je tшeba bмћet rychleji neћ obvykle. Pokud chceљ sprintovat, stiskni pшi bмhu ($$ACTION_sprint_toggle$$). Sprintujнcн postava bмћн rychleji a doskoин dбl, ale takй se rychleji unavн a nemщћe stшнlet.</text>
+	</string>
+	<string id="starvation_tutorial">
+		<text>Pokud postava nмjakou dobu nejн, dostane hlad. Pokud nenajde nмco k jнdlu, zaиne ztrбcet zdravн. Proto musн postava pravidelnм jнst. Kus chleba, konzerva nebo pбrek problйm snadno vyшeљн, alespoт na иas.</text>
+	</string>
+	<string id="tutorial">
+		<text>Vэcvik</text>
+	</string>
+	<string id="weakness">
+		<text>Ъnava</text>
+	</string>
+	<string id="weakness_tutorial">
+		<text>Bмh na delљн tratм zpщsobuje ъnavu. Vyиerpanб postava nemщћe bмhat a pokraиuje dбl krokem. Pokud zщstane pбr sekund stбt, znovu nabere dech.</text>
+	</string>
+	<string id="weapon">
+		<text>Stav zbranм</text>
+	</string>
+	<string id="weapon_tutorial">
+		<text>Vљechny zbranм majн vlastnн spolehlivost. Инm niћљн spolehlivost zbranм, tнm иastмji se zasekne. Pokud chceљ zbraт opмt zprovoznit, pшebij zbraт stiskem $$ACTION_wpn_reload$$. Spolehlivost zbranм se s pouћнvбnнm pomalu sniћuje. Zbraт zasaћenб vэstшelem mщћe bэt ъplnм k niиemu.</text>
+	</string>
+	<string id="wound">
+		<text>Otevшenй rбny</text>
+	</string>
+	<string id="wound_tutorial">
+		<text>Zasaћenб postava zaиne krvбcet. Krvбcenн znamenб, ћe postava neustбle ztrбcн zdravн. Инm vбћnмjљн krvбcenн (zelenб ikona znamenб lehkй krvбcenн, rudб znamenб vбћnй krvбcenн), tнm rychleji bude postava ztrбcet zdravн. Krvбcenн se иasem zastavн, ale i vбћnй krvбcenн je moћnй okamћitм zastavit pomocн obvazщ.</text>
+	</string>
+	<string id="pda_diary_tutorial">
+		<text>V PDA mrtvйho stalkera jsi objevil jeho zбznamy o anomбliнch v tunelech. Vypadб to, ћe objevil vzor, podle kterйho fungujн. Tyto informace si mщћeљ pшeинst ve svйm PDA v sekci denнk.</text>
+	</string>
+</string_table>

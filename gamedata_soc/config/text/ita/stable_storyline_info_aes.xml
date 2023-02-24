@@ -1,0 +1,9 @@
+	<string id="aes_military_task">
+		<text>Operazione Monolith</text>
+	</string>
+	<string id="aes_military_task_head">
+		<text>Situazione</text>
+	</string>
+	<string id="aes_soldier_info">
+		<text>Piano di azione militare\n\n Truppe:\n Comandante dell'operazione: nome in codice Quartetto\n Sette unità aeree di assalto: Sapsan, Korshun, Yastreb, Pustelga, Sokol, Grif, Lun. \n Squadra cecchini: Sova\n Supporto:\n Aria: 018, 030, 031, 48, 49, 52\n 51, 64, 65, 098, 097\n Terra: Armadillo 1, Armadillo 2, Armadillo 3\n Situazione: possibilità di forte resistenza in prossimità del ponte (23,45), del cancello (26,78) e della strada lungo l'edificio principale della stazione (12,23-53,76). Probabilmente il nemico impiegherà armi pesanti. \n Entità prevista truppe nemiche: 70-100. Veicoli corazzati: nessuno.\n Possibile copertura pesante da cecchini nemici.\n Condizioni meteo: visibilità 700 m, possibili anomalie mai incontrate in precedenza.</text>
+	</string>

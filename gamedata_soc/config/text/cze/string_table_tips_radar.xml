@@ -1,0 +1,12 @@
+	<string id="rad_barman_spam">
+		<text>Oznaèenej!? Ty iješ!? Skvìlı! Take se ti podaøilo vypnout vypalovaè, co? Všichni se teï snaí dostat pøes Pripja do centra Zóny. Nikdo neví, co tam je... moná hromada pokladù, moná nìco, co splní všechny pøání.\n Parta veteránù se tam právì chystá. Pokud si mákneš, tak je ještì dohoníš. Dám jim vìdìt, e tì mají èekat.</text>
+	</string>
+	<string id="tips_bun_komand">
+		<text>Jednotky jedna a dva - zkontrolujte pøízemí, jednotka tøi hlavní budovu. Ètyøka a pìtka první patro</text>
+	</string>
+	<string id="tips_rad_sos_suicide">
+		<text>...pomoz mi, umírám...</text>
+	</string>
+	<string id="tips_rad_switcher_press">
+		<text>Pro vypnutí stroje stiskni ($$ACTION_USE$$)</text>
+	</string>

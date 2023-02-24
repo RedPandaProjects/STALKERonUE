@@ -1,0 +1,132 @@
+	<string id="bar_bring_hunter_rifle">
+		<text>Das Familiengewehr des Jägers zurückbringen.</text>
+	</string>
+	<string id="bar_bring_PDA_lucky">
+		<text>Den PDA des Anführers zum Wirt bringen.</text>
+	</string>
+	<string id="bar_crazy_veterans_quest">
+		<text>Die verrückten Veteranen töten.</text>
+	</string>
+	<string id="bar_dolg_base_rules">
+		<text>Beim Wachkommandanten der Wächter melden.</text>
+	</string>
+	<string id="bar_dolg_base_rules_fin">
+		<text>Zum Wirt zurückkehren.</text>
+	</string>
+	<string id="bar_dolg_base_rules_talk">
+		<text>Den Wachkommandanten der Wächter finden und registrieren lassen.</text>
+	</string>
+	<string id="bar_dolg_bring_rg6">
+		<text>Ein Bulldog 6 für General Woronin besorgen.</text>
+	</string>
+	<string id="bar_dolg_community_quest">
+		<text>Den Wächtern beitreten.</text>
+	</string>
+	<string id="bar_dolg_community_quest_prisyaga">
+		<text>Den Schwur ablegen.</text>
+	</string>
+	<string id="bar_dolg_community_quest_recomendation">
+		<text>Eine Referenz von Hauptmann Iwantsow beschaffen.</text>
+	</string>
+	<string id="bar_dolg_community_quest_vernost">
+		<text>Loyalität den Wächtern gegenüber beweisen.</text>
+	</string>
+	<string id="bar_dolg_find_cook">
+		<text>Das Vertrauen des Kochs der Freiheitsfraktion verdienen und herausfinden, wo der Bulldog 6 Granatwerfer ist.</text>
+	</string>
+	<string id="bar_dolg_find_rg6">
+		<text>Die Basis der Freiheit unterwandern und den Bulldog 6 Granatwerfer finden und stehlen.</text>
+	</string>
+	<string id="bar_dolg_info_gain">
+		<text>Die Information über Labor X18 finden.</text>
+	</string>
+	<string id="bar_dolg_kill_tiran">
+		<text>Tyran eliminieren, den Anführer der Truppe.</text>
+	</string>
+	<string id="bar_dolg_return_info">
+		<text>Informationen über Labor X18 zu General Woronin bringen.</text>
+	</string>
+	<string id="bar_dolg_return_rg6">
+		<text>General Woronin den Bulldog 6 Granatwerfer bringen.</text>
+	</string>
+	<string id="bar_dolg_rg6_quest">
+		<text>Mission erforderlich zum Beitreten der Wächterfraktion</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_quest">
+		<text>Die Söldner ausschalten.</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_return">
+		<text>General Woronin die Streifen geben.</text>
+	</string>
+	<string id="bar_dolg_tiran_PDA">
+		<text>Tyrans PDA nehmen.</text>
+	</string>
+	<string id="bar_hunter_find_rifle">
+		<text>Das Familiengewehr finden.</text>
+	</string>
+	<string id="bar_hunter_return_rifle">
+		<text>Das Gewehr zum Jäger in der Bar zurückbringen.</text>
+	</string>
+	<string id="bar_hunter_rifle">
+		<text>Das Familiengewehr finden.</text>
+	</string>
+	<string id="bar_kill_crazy_veterans">
+		<text>Den Anführer der Veteranen eliminieren.</text>
+	</string>
+	<string id="bar_kill_crazy_veterans_PDA">
+		<text>Den PDA des Anführers nehmen.</text>
+	</string>
+	<string id="bar_kill_veterans">
+		<text>Das Lager der verrückten Veteranen zerstören.</text>
+	</string>
+	<string id="bar_radar_deactivate">
+		<text>Den Hirnschmelzer deaktivieren.</text>
+	</string>
+	<string id="bar_resque_information">
+		<text>Mit Kruglow treffen.</text>
+	</string>
+	<string id="bar_resque_information_2">
+		<text>Kruglow nach Jantar führen.</text>
+	</string>
+	<string id="bar_resque_scientific_follow">
+		<text>Kruglow herausbringen.</text>
+	</string>
+	<string id="bar_resque_scientific_information">
+		<text>...</text>
+	</string>
+	<string id="bar_resque_scientific_information_bring">
+		<text>Mit Kruglow reden.</text>
+	</string>
+	<string id="bar_resque_scientific_information_get">
+		<text>Kruglow erreichen.</text>
+	</string>
+	<string id="bar_resque_scientific_information_get_2">
+		<text>Mit Professor Kruglow reden.</text>
+	</string>
+	<string id="bar_x16_documents">
+		<text>Die Dokumente in Labor X16 finden.</text>
+	</string>
+	<string id="bring_x16_documents">
+		<text>Dem Wirt die Dokumente bringen.</text>
+	</string>
+	<string id="deactivate_radar_now">
+		<text>Die Maschine deaktivieren.</text>
+	</string>
+	<string id="find_and_deactivate_radar">
+		<text>Den Eingang zum Steuerungsbunker finden.</text>
+	</string>
+	<string id="get_to_antennas">
+		<text>Die Antenne erreichen.</text>
+	</string>
+	<string id="Kruglov_research">
+		<text>Kruglows Forschung</text>
+	</string>
+	<string id="look_for_x16_lab">
+		<text>Die X16-Unterlagen finden.</text>
+	</string>
+	<string id="wpn-winchester_m1">
+		<text>Combat Chaser</text>
+	</string>
+	<string id="x16_yantar">
+		<text>Mit den Wissenschaftlern sprechen.</text>
+	</string>

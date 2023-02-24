@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cit_doctor_escape_dialog_0">
+		<text>Potrzebujк odpowiedzi na kilka pytaс.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1">
+		<text>Wal њmiaіo, sprуbujк pomуc.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_11">
+		<text>Gdzie s№ moje rzeczy?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_111">
+		<text>Dowуdca zazwyczaj zatrzymuje caіy skonfiskowany towar. Jego pokуj jest na samej gуrze. Jak mnie zіapali, to tam wіaњnie zabrali moje rzeczy.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1111">
+		<text>Dziкki!</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_12">
+		<text>Jak mogк siк st№d wydostaж?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_121">
+		<text>Kiedy mnie prowadzili, zauwaїyіem kratkк њciekow№ pod schodami na parterze... Gdyby ci siк udaіo otworzyж celк, moїna by siк st№d wydostaж kanaіami... Najlepiej bкdzie iњж na zachуd, a potem tunelem, їeby dostaж siк do "Wolnoњci".</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1211">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_14">
+		<text>Kto nas zіapaі?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_141">
+		<text>Przetrzymuj№ nas najemnicy. Nikt tak naprawdк nie wie, kim s№, ale kr№ї№ plotki, їe wspуіpracuj№ z obcym wywiadem. Poіoїenie tej bazy jest њciњle tajne - nie wiadomo, jak moїna dostaж siк do Martwego Miasta, a wiele osуb jest tym zainteresowanych, zwіaszcza "Wolnoњж" i "Powinnoњж".</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1411">
+		<text>Mуw dalej.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_14111">
+		<text>Jeњli uda ci siк zdobyж plan Martwego Miasta, bкdzie moїliwy skuteczny atak. Najemnicy albo bandyci pewnie jakiњ maj№. Moїesz sprуbowaж go zdobyж.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_141111">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_15">
+		<text>Co wiesz o tym miejscu?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_151">
+		<text>Miasto podzielone jest na dwa obszary. My jesteњmy w czкњci najemnikуw. Na poіudnie st№d, za placem, jest teren bandytуw. Zaszyli siк w budynku szkoіy na poіudniowym zachodzie miasta. Pomiкdzy bazami znajduje siк zrujnowany, piкciopiкtrowy budynek i kilka takich wzglкdnie nietkniкtych. Jak siк zrobi rozpierducha, moїesz tam przeczekaж. W okolicy teї s№ jakieњ garaїe i kilka domkуw. Po stronie bandytуw teї znajdziesz kilka piкciopiкtrowcуw i kilkanaњcie garaїy. Dawny ratusz jest po drugiej stronie placu.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1511">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_16">
+		<text>Kto tu dowodzi?</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_161">
+		<text>Paskudny koleњ o nazwisku Duszman. Kilka razy widziaіem, jak nosiі teczkк z jakimiњ dokumentami. W њrodku pewnie jest coњ ciekawego.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_1611">
+		<text>Dziкki za informacje.</text>
+	</string>
+	<string id="cit_doctor_escape_dialog_17">
+		<text>Niczego.</text>
+	</string>
+	<string id="cit_doctor_hello_dialog_11">
+		<text>Strielok! Gdzieњ ty siк, do cholery, podziewaі??? Od ostatniego wypadu nie widziaіem ani ciebie, ani chіopakуw! Zacz№іem siк juї martwiж!</text>
+	</string>
+	<string id="cit_doctor_hello_dialog_21">
+		<text>No jak tam, czujesz siк juї lepiej? Kontaktujesz?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_0">
+		<text>Strielok???</text>
+	</string>
+	<string id="cit_doctor_main_dialog_1">
+		<text>No... Strielok, a kto niby? Ja jestem Doktor, nie poznajesz mnie? Co ci siк staіo, stary? Nie wygl№dasz za dobrze. Przez dwa lata razem chodziliњmy do Zony. Naprawdк mnie nie pamiкtasz?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_11">
+		<text>Nie.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_2">
+		<text>No co ty??? Strielok, co ty...? Jaja sobie robisz, nie? Stary... A co z chіopakami, z naszymi kumplami? Kieі? Duch? Pamiкtasz ich, no nie?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_21">
+		<text>Kіa nie pamiкtam, a Duch nie їyje - znalazіem jego ciaіo nad Jantarem.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_3">
+		<text>Duch?!?! Nie їyje?!?! Ja pierdzielк, jak to siк mogіo staж?! Przecieї... oni byli najlepsi. A z tob№ co siк staіo?</text>
+	</string>
+	<string id="cit_doctor_main_dialog_31">
+		<text>Nie wiem, co siк staіo, nie pamiкtam.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_4">
+		<text>Czekaj, daj mi ochіon№ж. To jest jakiњ niezіy szajs, stary. Myњlк, їe to siк wszystko і№czy z twoj№ ostatni№ wypraw№ do Zony. Kiedy widzieliњmy siк ostatni raz, zostawiіeњ mi klucz do schowka w Prypeci i mapк wskazuj№c№ drogк do niego. Udaіo mi siк to zachowaж, ukryж przed najemnikami. Masz, schowaj to dobrze. Moїe coњ tam znajdziesz. Mуwiіeњ, їe w Monolicie tkwi jakiњ podstкp. Ale nie wiem, o co chodziіo i ty teї nie wiedziaіeњ.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_41">
+		<text>No tak. Gdzie jesteњmy? Nie pamiкtam, jak siк tu znalazіem.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_5">
+		<text>Jesteњmy w Martwym Mieњcie! W obozie najemnikуw.</text>
+	</string>
+	<string id="cit_doctor_main_dialog_6">
+		<text>Jesteњmy w Martwym Mieњcie! W obozie najemnikуw...</text>
+	</string>
+	<string id="quest_cit_reward_0">
+		<text>A tak w ogуle, to mam informacje o najemnikach. Zainteresowany?</text>
+	</string>
+	<string id="quest_cit_reward_1">
+		<text>To zaleїy od informacji.</text>
+	</string>
+	<string id="quest_cit_reward_11">
+		<text>Dysponujк map№, ktуra szczegуіowo wskazuje lokalizacjк ich bazy, posterunkуw, sposуb na dostanie siк do њrodka niepostrzeїenie i sporo innych rzeczy.</text>
+	</string>
+	<string id="quest_cit_reward_111">
+		<text>Cenna rzecz. Dam ci za to 3000.</text>
+	</string>
+	<string id="quest_cit_reward_1111">
+		<text>Stoi. Proszк.</text>
+	</string>
+	<string id="quest_cit_reward_11111">
+		<text>Ekstra! Tu masz nagrodк. Wkrуtce stalkerzy zaczn№ siк kіуciж o to, czy najemnicy w ogуle kiedykolwiek istnieli!</text>
+	</string>
+	<string id="quest_cit_reward_1112">
+		<text>Nie, to wystarczy.</text>
+	</string>
+	<string id="quest_cit_reward_11121">
+		<text>Jak sobie їyczysz - wiкcej nie dostaniesz.</text>
+	</string>
+	<string id="quest_cit_reward_13">
+		<text>Nic interesuj№cego. Zwykіe plotki. Przykro mi.</text>
+	</string>
+	<string id="quest_cit_reward_131">
+		<text>Jeњli dowiesz siк czegoњ bardziej konkretnego, to wrуж. Zapіacк.</text>
+	</string>
+</string_table>

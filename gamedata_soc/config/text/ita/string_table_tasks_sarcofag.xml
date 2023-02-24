@@ -1,0 +1,48 @@
+	<string id="sar_monolith">
+		<text>Esauditore di desideri</text>
+	</string>
+	<string id="sar_monolith_0">
+		<text>Raggiungi il Monolite</text>
+	</string>
+	<string id="sar_monolith_1">
+		<text>Entra di nascosto nel sarcofago</text>
+	</string>
+	<string id="sar_monolith_2">
+		<text>Trova l'Esauditore di desideri</text>
+	</string>
+	<string id="sar_monolith_destroy">
+		<text>Il segreto del Monolite.</text>
+	</string>
+	<string id="sar_monolith_destroy_0">
+		<text>Entra nel laboratorio segreto.</text>
+	</string>
+	<string id="sar_monolith_destroy_1">
+		<text>Scopri il segreto del Monolite.</text>
+	</string>
+	<string id="sar_monolith_destroy_2">
+		<text>Distruggi i generatori del Monolite.</text>
+	</string>
+	<string id="sar_perception">
+		<text>Il segreto della Zona.</text>
+	</string>
+	<string id="sar_perception_1">
+		<text>Scopri chi si nasconde dietro il Monolite.</text>
+	</string>
+	<string id="sar_perception_2">
+		<text>Trova il laboratorio segreto e incontra i "burattinai".</text>
+	</string>
+	<string id="sar_secret_lab">
+		<text>Laboratorio segreto.</text>
+	</string>
+	<string id="sar_secret_lab_0">
+		<text>Entra nel bunker segreto.</text>
+	</string>
+	<string id="sar_secret_lab_1">
+		<text>Trova la porta nascosta.</text>
+	</string>
+	<string id="sar_secret_lab_2">
+		<text>Aprila con il decodificatore.</text>
+	</string>
+	<string id="sar_secret_lab_3">
+		<text>Scopri cosa c'è dietro la porta.</text>
+	</string>

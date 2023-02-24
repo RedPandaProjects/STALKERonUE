@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="oso_chernobyl_crush_0">
+		<text>Ist die Explosion von '86 auch dein Werk?</text>
+	</string>
+	<string id="oso_chernobyl_crush_1">
+		<text>Nein, damit hatten wir nichts zu tun. Die meisten von uns waren damals ja in der Wissenschaft blutige Anfдnger. Bis 1989 wurde die Tschernobyl-Zone nicht als Testgelдnde fьr Experimente genutzt.</text>
+	</string>
+	<string id="oso_death_truck_0">
+		<text>Was sind die "Todestrucks"?</text>
+	</string>
+	<string id="oso_death_truck_1">
+		<text>Wir benutzen die Transporte, um unsere markierten "Agenten" in die Zone zu schicken. Sie infiltrieren die Stalker-"Community" und fьhren Befehle aus, ohne es zu merken. Leider stirbt mehr als die Hдlfte der Stalker auf dem Weg, da die Zone sehr instabil ist. Du bist einer unserer Agenten, der geschickt wurde, um Strelok zu tцten. Und jetzt untersuchen wir, wie uns dieser Fehler unterlaufen konnte.</text>
+	</string>
+	<string id="oso_no_0">
+		<text>Bei dieser Tдuschung werde ich dir nicht helfen.</text>
+	</string>
+	<string id="oso_osoznanie_start_11">
+		<text>Hallo, Strelok. Du hast anscheinend eine Menge Fragen an mich. Stell sie, dann ьberlegen wir, was wir mit dir anfangen.</text>
+	</string>
+	<string id="oso_osoznanie_start_21">
+		<text>Du hast die Wahl, Strelok.</text>
+	</string>
+	<string id="oso_stalker_0">
+		<text>Was bedeutet diese Tдtowierung mit der Schrift "S.T.A.L.K.E.R."?</text>
+	</string>
+	<string id="oso_stalker_1">
+		<text>S.T.A.L.K.E.R. ist ein kodiertes Akronym, das wir benutzen, um Agenten fьr bestimmte Missionen zu zeichnen. Deine Mission als unser Agent war es, Strelok und seine Gruppe zu eliminieren. Sie waren zu nah daran, Dinge herauszufinden, die sie nicht wissen sollten. Wir haben ein Netzwerk von PSI-Feldern bis zur Mitte der Zone erstellt, um Agenten zu rekrutieren. Du kennst eines dieser Felder als Hirnschmelzer. Wenn ein Stalker versucht, die Mitte der Zone zu erreichen, um sich einen Wunsch zu erfьllen, erlangen wir die Kontrolle ьber sein Bewusstsein und programmieren ihn auf eine bestimmte Mission. Es wurde ein Fehler gemacht, und so wurdest du darauf programmiert, dich selbst umzubringen.</text>
+	</string>
+	<string id="oso_what_about_me_0">
+		<text>Was ist mit mir passiert?</text>
+	</string>
+	<string id="oso_what_about_me_1">
+		<text>Du bist eine Schraube, die aus der Maschine gefallen ist. Leider ist uns das lange nicht aufgefallen. Von dem Moment an, als die Zone erschaffen wurde, haben Leute versucht, in ihre Mitte zu gelangen, aber wir kцnnen das nicht zulassen. Die Menschheit ist noch nicht bereit fьr die Wahrheit. Deswegen rekrutieren wir Stalker, indem wir ihnen versprechen, ihre grцЯten Wьnsche zu erfьllen. Sobald sie rekrutiert wurden, werden sie entsandt, um das Geheimnis der Zone zu beschьtzen.</text>
+	</string>
+	<string id="oso_what_is_the_zone_0">
+		<text>Was ist die Zone? Wie ist sie entstanden?</text>
+	</string>
+	<string id="oso_what_is_the_zone_1">
+		<text>Was du siehst, ist das Ergebnis schlecht geplanter Intervention in der Noosphдre der Erde. Versuche, die Noospдre zu beeinflussen, haben einen Riss erzeugt. Die Zone ist einfach die sichtbare Manifestation dieses Risses. Das zugrunde liegende Problem ist viel grцЯer, als du dir vorstellen kannst. </text>
+	</string>
+	<string id="oso_what_next_0">
+		<text>Was wird dann geschehen?</text>
+	</string>
+	<string id="oso_what_next_1">
+		<text>Das hдngt von dir ab. Die Zone wдchst. Wir versuchen, ihrem Wachstum Einhalt zu gebieten, aber die Menschheit scheint unsere Arbeit behindern zu wollen. Unsere Ressourcen sind nicht grenzenlos und Kцrper, die mit dem Kollektivbewusstsein verbunden sind, sterben letztendlich. Wenn du dich uns anschlieЯt, kцnnen wir die GrцЯe der Zone begrenzen. Wenn du dich anders entschlieЯt, kцnnen wir keine glaubwьrdige Prognose des Ergebnisses abgeben.</text>
+	</string>
+	<string id="oso_who_are_you_0">
+		<text>Wer bist du?</text>
+	</string>
+	<string id="oso_who_are_you_1">
+		<text>Wir sind das Ergebnis eines Experiments, das ein Superbewusstsein erschaffen sollte: Wir sind das "Kollektivbewusstsein". Das Bewusstsein von sieben Freiwilligen wurde wдhrend des Experiments verbunden, um das Superbewusstsein zu erschaffen, das wir nun sind. Wir unterwarfen die Leiter des Experiments auf der Stelle und wiesen ihnen Aufgaben zu, deren Erledigung erforderlich war fьr uns. Laut unseren Berechnungen ist die Erde umgeben von einem besonderen Informationsfeld, der sogenannten Noosphдre. Es umschlieЯt alle Bewohner der Erde mit kognitiven Fдhigkeiten. Unser Hauptziel war es, an der Noosphдre kleine Verдnderungen vorzunehmen, um negative Faktoren wie Wut, Grausamkeit und Gier vom Planeten zu entfernen. Individuen sind nicht in der Lage, die Noosphдre zu beeinflussen, aber das Kollektivbewusstsein war es. Leider machten wir einen Fehler und unsere Einmischung erschuf die Zone, die wir seitdem begrenzt zu halten versuchen.</text>
+	</string>
+	<string id="oso_why_chernobyl_0">
+		<text>Warum ist das alles ausgerechnet hier passiert?</text>
+	</string>
+	<string id="oso_why_chernobyl_1">
+		<text>Es war der beste Ort. Nach der Explosion 1986 gab es in diesem Gebiet nur noch wenige Menschen und wir konnten ohne Angst vor Entdeckung arbeiten. AuЯerdem gab es hier viele starke Antennen, die fьr unsere kognitiven Optimierungs-Experimente von immenser Bedeutung sind.</text>
+	</string>
+	<string id="oso_yes_0">
+		<text>Dann mцchte ich mich dem Projekt "Kollektivbewusstsein" anschlieЯen.</text>
+	</string>
+</string_table>

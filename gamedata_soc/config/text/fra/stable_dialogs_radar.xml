@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="rad_chief_start_dialog_0">
+		<text>Salut !</text>
+	</string>
+	<string id="rad_chief_start_dialog_100">
+		<text>Salut !</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_0">
+		<text>Oщ est l'argent de la mission ?</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_100">
+		<text>Trouve mon bras droit et tu auras ton argent !</text>
+	</string>
+	<string id="rad_find_deputy_dialog_1_1000">
+		<text>OK, mais t'as pas intйrкt а me baratiner cette fois !</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_0">
+		<text>Qui es-tu ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_10">
+		<text>Je m'appelle Leha la Mвchoire ! Ces types bossent pour moi !</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_100">
+		<text>Qu'est-ce que tu fais lа ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_1_20">
+		<text>Mes gars et moi, on se repose ! Ensuite, on ira а Pripyat.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_0">
+		<text>Qu'est-ce que tu sais de Pripyat ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_10">
+		<text>C'est une vieille ville de l'иre communiste abandonnйe. Une ville historique ! Je crois qu'elle grouille de monstres et de hordes de Monolithes maintenant ! Je n'ai jamais vu personne en revenir !</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_100">
+		<text>Tu crois que c'est dangereux ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_2_20">
+		<text>J'en suis sыr, personne n'en est jamais revenu.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_0">
+		<text>T'as vu des soldats dans le coin ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_10">
+		<text>Non, зa fait un bail que j'ai pas vu de soldat.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_100">
+		<text>Qu'est-ce que tu sais des Stalkers militaires ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_20">
+		<text>Il paraоt qu'ils ont йtй vus du cфtй de la Forкt rouge, prиs des antennes. Quand elles ont йtй dйsactivйes, beaucoup de gens sont allйs а la Forкt rouge et а Pripyat ! Зa fait une journйe qu'on est lа et on n'a vu personne. Quelqu'un a dы bloquer la route.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_200">
+		<text>Tu penses que les militaires ont bloquй la route de la Forкt rouge ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_30">
+		<text>Je ne pense pas que ce soit les militaires, зa fait longtemps que je n'en ai pas vu, mais зa peut кtre un coup des Stalkers militaires. Ils ne perdent pas de temps. Ils sont du genre direct, ils travaillent vite et bien, en йquipe comme en solo... C'est mкme bizarre qu'ils n'aient pas bloquй la route plus tфt.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_300">
+		<text>Pourquoi ils n'ont pas dйcidй d'aller а Pripyat ou de bloquer la route lа-bas ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_3_40">
+		<text>J'en sais rien. Peut-кtre qu'ils ont peur ou qu'ils prйparent quelque chose. Je sais pas.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_0">
+		<text>Tu n'aurais pas une mission pour moi ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_10">
+		<text>J'en ai une, mais зa va pas кtre facile... Зa t'intйresse ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_100">
+		<text>La difficultй me fait pas peur !</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_101">
+		<text>Non, pas du tout. J'ai pas le temps.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_11">
+		<text>Je comprends. Moi aussi j'ai peur... Je paierais cher pour ne pas devoir envoyer mes gars ou y aller moi-mкme.</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_20">
+		<text>Bien ! La mission consiste а retrouver mes йclaireurs, Pied-de-biche et Bulldozer. Ils sont partis а Pripyat quand j'ai dйcidй de ne pas y aller moi-mкme et d'envoyer mes meilleurs йlйments а la place. Retrouve-les et ramиne-les-moi ici. S'ils sont morts, rapporte-moi leurs armes ! Fais зa pour moi et je te donnerai 2000 roubles !!!</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_200">
+		<text>OK, зa marche !</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_201">
+		<text>C'est pas assez. Qu'est-ce que tu dirais de 4000 ?</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_21">
+		<text>C'est tout ce que j'ai а proposer pour cette mission !</text>
+	</string>
+	<string id="rad_find_stalkers_dialog_4_30">
+		<text>OK, je t'attends ici !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_0">
+		<text>Mission accomplie !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_100">
+		<text>Bien, file-moi son PDA !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1000">
+		<text>Voilа. Oщ est mon fric ?</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1100">
+		<text>Tu essaies de m'arnaquer. Il n'avait rien.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1200">
+		<text>Je vais t'exploser !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1300">
+		<text>Si je te revoie, t'es mort !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_1400">
+		<text>OK, je comprends. Bonne chance !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_200">
+		<text>Je peux rien te donner, j'ai pas d'argent. Tu peux garder son truc si tu veux.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_1_300">
+		<text>J'ai pas d'argent ! Lвche-moi !</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_0">
+		<text>Je l'ai pas trouvй.</text>
+	</string>
+	<string id="rad_found_deputy_dialog_2_10">
+		<text>Trouve-le vite si tu veux ton fric !</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_0">
+		<text>J'ai trouvй tes gars. Ils sont morts, mais voilа leurs armes !</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_100">
+		<text>Merci. Alors comme зa ils sont morts... C'est plus la peine d'aller а Pripyat ! Mais il y a un problиme, j'ai pas ton fric. Mon bras droit a disparu et c'est lui qui l'avait !</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_1001">
+		<text>OK, je vais le chercher ! Dis-moi oщ je peux le trouver ? Et n'essaie pas de m'arnaquer cette fois !!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_200">
+		<text>Il n'a pas dы aller bien loin. Il doit кtre ici ou lа, je vais te l'indiquer sur la carte. Quand tu l'auras trouvй, ramиne-le-moi, ou au moins son PDA.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_1_2000">
+		<text>OK, attends-moi !!!</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_0">
+		<text>Je l'ai pas trouvй.</text>
+	</string>
+	<string id="rad_found_stalkers_dialog_2_10">
+		<text>Dйpкche-toi ! J'ai pas que зa а faire !!! Bonne chance !</text>
+	</string>
+</string_table>

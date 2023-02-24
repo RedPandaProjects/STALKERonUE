@@ -1,0 +1,72 @@
+	<string id="yan_find_ghost">
+		<text>Die Dokumente von Ghost beschaffen.</text>
+	</string>
+	<string id="yan_find_ghost_task">
+		<text>Die Dokumente beschaffen.</text>
+	</string>
+	<string id="yan_find_vasilyev_task">
+		<text>Ins Labor gelangen.</text>
+	</string>
+	<string id="yan_find_labX16">
+		<text>Ins Labor X16 gelangen.</text>
+	</string>
+	<string id="yan_find_scientist">
+		<text>Strahlenmessungen durchführen.</text>
+	</string>
+	<string id="yan_find_vasilyev">
+		<text>Wasiliews Leiche durchsuchen.</text>
+	</string>
+	<string id="yan_kill_brain">
+		<text>Die Psi-Emission ausschalten.</text>
+	</string>
+	<string id="yan_kill_brain_task">
+		<text>Den Mechanismus deaktivieren.</text>
+	</string>
+	<string id="yan_kill_brain_task_2">
+		<text>Aus dem Labor verschwinden.</text>
+	</string>
+	<string id="yan_provodnik_about_doctor">
+		<text>Mit Prowodnik reden.</text>
+	</string>
+	<string id="yan_provodnik_task">
+		<text>Mit Prowodnik treffen.</text>
+	</string>
+	<string id="yan_psi_zone_find">
+		<text>Kruglow zum Messpunkt geleiten.</text>
+	</string>
+	<string id="yan_psi_zone_find_semenov">
+		<text>Semenow zum Messpunkt geleiten.</text>
+	</string>
+	<string id="yan_return_to_bunker">
+		<text>Die Ergebnisse zu Sacharow bringen.</text>
+	</string>
+	<string id="yan_scientist_return">
+		<text>Mit Sacharow sprechen.</text>
+	</string>
+	<string id="yan_scientist_return_task">
+		<text>Mit Sacharow sprechen.</text>
+	</string>
+	<string id="yan_secret_tonnel">
+		<text>Durch den geheimen Tunnel verschwinden.</text>
+	</string>
+	<string id="yan_switcher_off_1">
+		<text>Das erste Kontrollmodul ausschalten.</text>
+	</string>
+	<string id="yan_switcher_off_2">
+		<text>Das zweite Kontrollmodul ausschalten.</text>
+	</string>
+	<string id="yan_switcher_off_3">
+		<text>Das dritte Kontrollmodul ausschalten.</text>
+	</string>
+	<string id="yan_talk_to_kruglov">
+		<text>Mit Kruglow sprechen</text>
+	</string>
+	<string id="yan_talk_to_semenov">
+		<text>Mit Semenow sprechen.</text>
+	</string>
+	<string id="yan_vasilyev_pda">
+		<text>Wasiliews PDA.</text>
+	</string>
+	<string id="yan_zombie_zone">
+		<text>Geschätzter Standort von Labor X16.</text>
+	</string>

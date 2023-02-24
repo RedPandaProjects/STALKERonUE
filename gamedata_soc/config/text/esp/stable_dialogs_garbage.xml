@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="gar_dolg_blokpost_11">
+		<text>Alto ahн. ЎNo des ni un paso mбs!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111">
+		<text>їPor quй?</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111">
+		<text>Porque es nuestro territorio, el territorio de Deber, y no dejamos entrar a cualquiera en la base. Si no tienes nada importante que tratar con nuestros lнderes no podrбs pasar de aquн.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11111">
+		<text>Ya veo.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111111">
+		<text>Son las normas.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112">
+		<text>Tengo que pasar, tengo asuntos que tratar con el tabernero.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121">
+		<text>Sн, el tabernero nos ha hablado de ti. Puedes pasar.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111211">
+		<text>Prefiero pagar. Aquн tenйis.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112111">
+		<text>ЎPerfecto! Puedes pasar, pero mбs vale que tengas algo importante que tratar con el tabernero, їentendido? Y ten cuidado, hay muchas anomalнas en el camino.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212">
+		<text>їQuй favor es йse?</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112121">
+		<text>Nada complicado. Debes acabar con una manada de jabalнes que deambula por aquн cerca. Acaba con ellos y consideraremos el peaje pagado.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121211">
+		<text>Hecho.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212111">
+		<text>Buena suerte, stalker.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121212">
+		<text>No tengo ese dinero.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212121">
+		<text>ЎEntonces mбs te vale empezar a buscarlo!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111122">
+		<text>No tengo ese dinero.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111123">
+		<text>Entonces no podrбs pasar para ir al bar.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1231">
+		<text>Gracias por ayudarnos a acabar con los jabalнs; la recompensa es tuya.</text>
+	</string>
+	<string id="gar_dolg_blokpost_12311">
+		<text>ЎGracias!</text>
+	</string>
+	<string id="gar_dolg_blokpost_22">
+		<text>їAcabaste ya con los jabalнes?</text>
+	</string>
+	<string id="gar_dolg_blokpost_221">
+		<text>Todavнa no.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2211">
+		<text>Una pena. Cuando empieces a cortarlos en chuletas, trбeme una, їde acuerdo?</text>
+	</string>
+	<string id="gar_dolg_blokpost_222">
+		<text>Si, he acabado con todos.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2221">
+		<text>Perfecto, pasa. Y saluda al tabernero de mi parte, їvale?</text>
+	</string>
+	<string id="gar_dolg_blokpost_33">
+		<text>Saluda al tabernero de mi parte cuando lo veas. Y no olvides que el camino estб lleno de anomalнas, ten cuidado.</text>
+	</string>
+	<string id="gar_dramm_novice_start_0">
+		<text>Gracias amigo, me has sido de gran ayuda. No lo olvidarй.</text>
+	</string>
+	<string id="gar_dramm_novice_start_1">
+		<text>їQuй ocurre aquн?</text>
+	</string>
+	<string id="gar_dramm_novice_start_11">
+		<text>Vale.</text>
+	</string>
+	<string id="gar_dramm_novice_start_2">
+		<text>Intentamos despejar el vertedero de bandidos. Mis compaсeros van a tender una emboscada a una pandilla de bandidos aquн cerca. Si no los detenemos, se harбn con el control del vertedero y nadie podrб adentrarse en la Zona. Habla con nuestro comandante. Йl y sus hombres se encuentran cerca de aquн, en el desguace. Yo voy para allб, podemos ir juntos si quieres.</text>
+	</string>
+	<string id="gar_dramm_novice_start_21">
+		<text>En marcha.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3">
+		<text>їPuedes contarme algo del vertedero?</text>
+	</string>
+	<string id="gar_dramm_novice_start_31">
+		<text>No hay mucho que contar, amigo. El vertedero es... un vertedero. La carretera norte que conduce al bar estб protegida por soldados de Deber. Te aconsejo que los evites, en Deber hay muchos tipos muy desagradables. A la derecha se encuentran los caminos hacia el Valle Oscuro, pero los niveles de radiaciуn son muy elevados. La ciйnaga pantanosa estб mбs cerca, pero estб repleta de anomalнas. Dicen que es fбcil encontrar artefactos decentes, pero mucho mбs fбcil buscarse problemas. ЎAl menos no hay ningъn monstruo mitolуgico!</text>
+	</string>
+	<string id="gar_dramm_novice_start_311">
+		<text>Adelante.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3111">
+		<text>A la derecha, junto a los pantanos, hay un escondite secreto. Verбs una construcciуn metбlica que cuelga sobre un estanque. Mi escondite se encuentra justo debajo... Lo puse allн hace tiempo pero me salvaste la vida y seguramente lo necesites mбs que yo. ЎAsн que utilнzalo cuando quieras!</text>
+	</string>
+	<string id="gar_dramm_novice_start_31111">
+		<text>Gracias amigo, eso me vendrб muy bien.</text>
+	</string>
+	<string id="gar_dramm_novice_start_312">
+		<text>Muy interesante, gracias.</text>
+	</string>
+	<string id="gar_hellcar_start_11">
+		<text>ЎEh, stalker, justo a tiempo! Nos vendrнa bien tu ayuda. Esos malditos bandidos intentan hacerse con el control del vertedero. Hubo un tiroteo hace una media hora y conseguimos acabar con tres de esos canallas. Los otros se retiraron, pero me juego la cabeza a que volverбn con refuerzos en cualquier momento. No quedamos muchos y tu apoyo no nos vendrнa mal. </text>
+	</string>
+	<string id="gar_hellcar_start_111">
+		<text>Adelante.</text>
+	</string>
+	<string id="gar_hellcar_start_1111">
+		<text>Les tenderemos una emboscada aquн. Vendrбn desde el Oeste, del Instituto Agroprom. ЎAyъdanos a destruir sus refuerzos y no te arrepentirбs!</text>
+	</string>
+	<string id="gar_hellcar_start_11111">
+		<text>Bien, os ayudarй.</text>
+	</string>
+	<string id="gar_hellcar_start_111111">
+		<text>Genial.</text>
+	</string>
+	<string id="gar_hellcar_start_11112">
+		<text>No es asunto mнo, y no quiero verme implicado.</text>
+	</string>
+	<string id="gar_hellcar_start_111121">
+		<text>Como quieras. Maldecirбs tu estupidez cada vez que tengas que pagar a esos idiotas por pasar a la Zona.</text>
+	</string>
+	<string id="gar_hellcar_start_11113">
+		<text>He acabado con todos.</text>
+	</string>
+	<string id="gar_hellcar_start_111131">
+		<text>ЎTъ sн que sabes! Pero prefiero asegurarme por si acaso.</text>
+	</string>
+	<string id="gar_hellcar_start_21">
+		<text>No tenemos nada de lo que hablar.</text>
+	</string>
+	<string id="gar_hellcar_start_3111">
+		<text>Gracias amigo, nos has sido de gran ayuda. їAceptarнas algo de dinero? Una pequeсa muestra de nuestra gratitud.</text>
+	</string>
+	<string id="gar_hellcar_start_31111">
+		<text>Claro.</text>
+	</string>
+	<string id="gar_hellcar_start_311111">
+		<text>Toma, esto te servirб para pagarte tratamiento mйdico y recuperarte.</text>
+	</string>
+	<string id="gar_hellcar_start_3111111">
+		<text>Gracias.</text>
+	</string>
+	<string id="gar_hellcar_start_31113">
+		<text>Hбblame de ti.</text>
+	</string>
+	<string id="gar_hellcar_start_311131">
+		<text>Me llamo Bes. Lleguй a este lugar hace tres aсos. Como muchos de los tipos de la Zona, soy un fugitivo, buscado por dos asesinatos y agresiones. Hace unos aсos, un amigo mнo recibiу una buena paliza; en el hospital tuvieron que coserle el cuerpo literalmente. Asн que les hice una pequeсa "visita" a esos desgraciados. Cuando llegу la pasma tuve que disparar a uno y saltar desde la ventana de un segundo piso. Llevo aquн desde entonces. No me ha ido mal en este lugar, pero mi lista de crнmenes ha ido aumentando. Trato de luchar contra los criminales del mismo modo que hice en el exterior. Entreno a los novatos y les enseсo a sobrevivir en la Zona.</text>
+	</string>
+	<string id="gar_hellcar_start_3111311">
+		<text>їPor quй no te unes a Deber si piensas de esa forma?</text>
+	</string>
+	<string id="gar_hellcar_start_31113111">
+		<text>Deber lucha contra la Zona, yo lucho por el pueblo. Ademбs, tienen demasiada relaciуn con el gobierno y el ejйrcito. No me gustarнa despertarme un dнa en una celda oscura.</text>
+	</string>
+	<string id="gar_hellcar_start_311131111">
+		<text>Que tengas suerte.</text>
+	</string>
+	<string id="gar_hellcar_start_31114">
+		<text>їQuй lugar es йste?</text>
+	</string>
+	<string id="gar_hellcar_start_311141">
+		<text>El vertedero. Aquн estamos en casa. їVes las montaсas de basura? No deberнas acercarte, crйeme. Hay tantos desechos radioactivos que los contadores Geiger se vuelven locos. Es el acceso mбs decente hacia la Zona y, ъltimamente, los bandidos se han mostrado muy activos. Les aterroriza adentrarse en la Zona, en territorio de Deber, como los stalkers experimentados. Pero a esos chacales les encanta robar a los novatos. Y como a nadie le importa, tenemos que defender nuestra tierra y luchar.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411">
+		<text>Adelante.</text>
+	</string>
+	<string id="gar_hellcar_start_31114111">
+		<text>En todas partes, y en especial aquн, debes actuar como un ser humano, no como un animal cegado por la avaricia. Asн veo yo la vida.</text>
+	</string>
+	<string id="gar_hellcar_start_311141112">
+		<text>їHay edificios grandes en el vertedero?</text>
+	</string>
+	<string id="gar_hellcar_start_31114111211">
+		<text>Gracias.</text>
+	</string>
+	<string id="gar_hellcar_start_31115">
+		<text>Gracias, no necesito nada de ti.</text>
+	</string>
+	<string id="gar_hellcar_start_3112">
+		<text>Sй muchas cosas, podrнa compartir cierta informaciуn contigo.</text>
+	</string>
+	<string id="gar_hellcar_start_41">
+		<text>El trabajo no estб terminado. Terminйmoslo y hablemos despuйs.</text>
+	</string>
+	<string id="gar_hellcar_start_51">
+		<text>Eh, Marcado.</text>
+	</string>
+	<string id="gar_seriy_start_11">
+		<text>ЎMaldita sea, no es momento de charlas! En unos segundos, lo ъnico que escucharбs serб el sonido de las armas. Ayъdame a acabar con ellos y hablaremos despuйs.</text>
+	</string>
+	<string id="gar_seriy_start_22">
+		<text>Gracias por la ayuda, las cosa pintaba fea. Dime, їquй te trae por aquн?</text>
+	</string>
+	<string id="gar_seriy_start_221">
+		<text>Busco informaciуn sobre Strelok. Fox me hablу de ti, asн que he venido a que me cuentes.</text>
+	</string>
+	<string id="gar_seriy_start_2211">
+		<text>Estб bien, me ayudaste sin pedir nada a cambio, asн que te lo contarй. Uno de los tipos, un antiguo "excavador" llamado Mole, me espera. Ha excavado en el compartimento de Strelok pero no sй si ha encontrado algo. Estas son las coordenadas de nuestro punto de encuentro. Dile que vas de mi parte. Me estarбn buscando, asн que tendrй que desaparecer durante un tiempo. Aquн tienes algo de dinero por tu ayuda.</text>
+	</string>
+	<string id="gar_seriy_start_2212">
+		<text>Gracias por la informaciуn.</text>
+	</string>
+	<string id="gar_seriy_start_222">
+		<text>Busco informaciуn sobre Strelok, quizбs me puedas decir algo.</text>
+	</string>
+	<string id="gar_seriy_start_2221">
+		<text>Estб bien, me ayudaste sin pedir nada a cambio, asн que te lo contarй. Uno de los tipos, un antiguo "excavador" llamado Mole, me espera. Ha excavado en el compartimento de Strelok y ha encontrado unos documentos que explicarнan ciertas cosas. Unos bandidos le pisaban los talones y tuvo que dejar los documentos, pero recuerda dуnde. Me estarбn buscando, asн que tendrй que desaparecer durante un tiempo. Estas son las coordenadas del punto de encuentro con Mole. Dile que vas de mi parte. Cargarй la informaciуn en tu PDA. Aquн tienes algo de dinero por tu ayuda.</text>
+	</string>
+	<string id="gar_seriy_start_2222">
+		<text>Gracias por la informaciуn.</text>
+	</string>
+	<string id="gar_seriy_start_33">
+		<text>ЎEh, colega! Confieso que las cosas pintaban mal hace un segundo. En fin, їquй te trae por aquн?</text>
+	</string>
+	<string id="gar_seriy_start_44">
+		<text>Un camino seguro, stalker. Un camino seguro para evitar las anomalнas y llegar a los artefactos.</text>
+	</string>
+	<string id="gar_seriy_start_441">
+		<text>їQuй se puede encontrar en el vertedero?</text>
+	</string>
+	<string id="gar_seriy_start_4411">
+		<text>Puedes encontrar muchos problemas enseguida, eso seguro. Pero a un explorador como tъ le contarй lo que sй. Hacia el Este encontrarбs un pequeсo bosque. No esconde nada interesante y estб plagado de perros, asн que ve con cuidado. Estas vнas te conducen hacia un tъnel. Hay multitud de anomalнas por allн, y puede que algo mбs, aunque no lo sй, nunca me he fijado demasiado. Probablemente conozcas el punto de control de Deber, al Norte. Es todo lo que sй sobre este lugar.</text>
+	</string>
+	<string id="gar_seriy_start_44112">
+		<text>Gracias por la informaciуn.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_0">
+		<text>Oye, colega, їquй puedo encontrar en ese vertedero?</text>
+	</string>
+	<string id="gar_seryi_about_garbage_1">
+		<text>Puedes encontrar muchos problemas enseguida, eso seguro. Pero a un explorador como tъ le contarй lo que sй. Hacia el Este encontrarбs un pequeсo bosque. No esconde nada interesante y estб plagado de perros, asн que ve con cuidado. Estas vнas te conducen hacia un tъnel. Hay multitud de anomalнas por allн, y puede que algo mбs, aunque no lo sй, nunca me he fijado demasiado. Probablemente conozcas el punto de control de Deber, al Norte. Es todo lo que sй sobre este lugar.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_11">
+		<text>Gracias por la informaciуn. Lo tendrй en cuenta.</text>
+	</string>
+	<string id="gar_stalker_about_level_0">
+		<text>їPuedes contarme algo sobre este lugar?</text>
+	</string>
+	<string id="gar_stalker_about_level_1">
+		<text>Bien, escucha. Mires donde mires, es un enorme y apestoso vertedero. Despuйs del accidente de 1986 trajeron aquн desechos radioactivos, grъas y toda la maquinaria destruida. Bбsicamente, estб repleto de basura inservible y algunas anomalнas. Incluso puedes encontrar artefactos, pero nada espectacular. Por eso el lugar estб plagado de novatos. Muchos novatos quiere decir muchos bandidos, por lo que no te aconsejo que deambules demasiado por aquн. Mбs al Este abundan las bolsas de radiaciуn y no puedes pasearte sin protecciуn. Hacia el Sur llegarбs a la frontera de la Zona. Hacia el Norte se encuentra la fбbrica Rostok y el bar de stalkers. Hacia el Este queda el Valle Oscuro, un lugar tenebroso y lъgubre. Hacia el Oeste estб el Instituto Agroprom. Te marcarй las rutas seguras en el mapa.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411121">
+		<text>En el centro hay un hangar enorme que normalmente suele estar bastante tranquilo. En el peor de los casos, puedes pasar la noche allн. Si vas hacia el oeste, en direcciуn a Agroprom, hay un campamento de bandidos del que proceden esos tipos que matamos hace poco. Pero tengo la sensaciуn de que hay mбs en el lugar del que vinieron.</text>
+	</string>
+</string_table>

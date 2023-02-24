@@ -1,0 +1,132 @@
+	<string id="bar_bring_hunter_rifle">
+		<text>Riporta il fucile di famiglia al cacciatore</text>
+	</string>
+	<string id="bar_bring_PDA_lucky">
+		<text>Porta il palmare del capo al Barista</text>
+	</string>
+	<string id="bar_crazy_veterans_quest">
+		<text>Uccidi i veterani impazziti</text>
+	</string>
+	<string id="bar_dolg_base_rules">
+		<text>Presentati al comandante della guardia dei Duty</text>
+	</string>
+	<string id="bar_dolg_base_rules_fin">
+		<text>Ritorna dal Barista</text>
+	</string>
+	<string id="bar_dolg_base_rules_talk">
+		<text>Trova il comandante della guardia dei Duty e presentati</text>
+	</string>
+	<string id="bar_dolg_bring_rg6">
+		<text>Recupera un Bulldog 6 per il generale Voronin</text>
+	</string>
+	<string id="bar_dolg_community_quest">
+		<text>Unisciti alla fazione dei Duty</text>
+	</string>
+	<string id="bar_dolg_community_quest_prisyaga">
+		<text>Pronuncia il giuramento</text>
+	</string>
+	<string id="bar_dolg_community_quest_recomendation">
+		<text>Ottieni delle referenze dal capitano Ivantsov</text>
+	</string>
+	<string id="bar_dolg_community_quest_vernost">
+		<text>Dimostra la tua lealtà ai Duty</text>
+	</string>
+	<string id="bar_dolg_find_cook">
+		<text>Guadagnati la fiducia del cuoco dei Freedom e scopri dove vengono conservati i Bulldog 6</text>
+	</string>
+	<string id="bar_dolg_find_rg6">
+		<text>Inflitrati nella base dei Freedom, trova e ruba un Bulldog 6</text>
+	</string>
+	<string id="bar_dolg_info_gain">
+		<text>Trova le informazioni intercettate sul laboratorio X18</text>
+	</string>
+	<string id="bar_dolg_kill_tiran">
+		<text>Uccidi Tyran, il capo della squadra</text>
+	</string>
+	<string id="bar_dolg_return_info">
+		<text>Riporta le informazioni sul laboratorio X18 al generale Voronin</text>
+	</string>
+	<string id="bar_dolg_return_rg6">
+		<text>Porta il Bulldog 6 al generale Voronin</text>
+	</string>
+	<string id="bar_dolg_rg6_quest">
+		<text>Missione richiesta per unirti ai Duty</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_quest">
+		<text>Elimina i mercenari</text>
+	</string>
+	<string id="bar_dolg_svoboda_ambush_return">
+		<text>Dai i galloni al generale Voronin</text>
+	</string>
+	<string id="bar_dolg_tiran_PDA">
+		<text>Prendi il palmare di Tyran</text>
+	</string>
+	<string id="bar_hunter_find_rifle">
+		<text>Trova il fucile di famiglia</text>
+	</string>
+	<string id="bar_hunter_return_rifle">
+		<text>Restituisci il fucile al cacciatore al bar</text>
+	</string>
+	<string id="bar_hunter_rifle">
+		<text>Trova il fucile di famiglia</text>
+	</string>
+	<string id="bar_kill_crazy_veterans">
+		<text>Uccidi il capo dei veterani</text>
+	</string>
+	<string id="bar_kill_crazy_veterans_PDA">
+		<text>Prendi il palmare del loro capo</text>
+	</string>
+	<string id="bar_kill_veterans">
+		<text>Distruggi il campo dei veterani impazziti</text>
+	</string>
+	<string id="bar_radar_deactivate">
+		<text>Disattiva il Bruciacervella</text>
+	</string>
+	<string id="bar_resque_information">
+		<text>Incontra Kruglov</text>
+	</string>
+	<string id="bar_resque_information_2">
+		<text>Porta Kruglov a Yantar</text>
+	</string>
+	<string id="bar_resque_scientific_follow">
+		<text>Porta Kruglov all'uscita per Yantar</text>
+	</string>
+	<string id="bar_resque_scientific_information">
+		<text>...</text>
+	</string>
+	<string id="bar_resque_scientific_information_bring">
+		<text>Parla con Kruglov</text>
+	</string>
+	<string id="bar_resque_scientific_information_get">
+		<text>Raggiungi Kruglov</text>
+	</string>
+	<string id="bar_resque_scientific_information_get_2">
+		<text>Parla con il professor Kruglov</text>
+	</string>
+	<string id="bar_x16_documents">
+		<text>Trova i documenti nel laboratorio X16</text>
+	</string>
+	<string id="bring_x16_documents">
+		<text>Porta i documenti al Barista</text>
+	</string>
+	<string id="deactivate_radar_now">
+		<text>Disattiva la macchina</text>
+	</string>
+	<string id="find_and_deactivate_radar">
+		<text>Trova l'entrata del bunker di controllo</text>
+	</string>
+	<string id="get_to_antennas">
+		<text>Raggiungi le antenne</text>
+	</string>
+	<string id="Kruglov_research">
+		<text>Ricerca di Kruglov</text>
+	</string>
+	<string id="look_for_x16_lab">
+		<text>Trova i documenti dell'X16</text>
+	</string>
+	<string id="wpn-winchester_m1">
+		<text>Chaser da comb.</text>
+	</string>
+	<string id="x16_yantar">
+		<text>Parla con gli scienziati</text>
+	</string>

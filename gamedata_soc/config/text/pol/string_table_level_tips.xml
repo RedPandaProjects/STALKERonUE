@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bar_rostok">
+		<text>Do Dziczy</text>
+	</string>
+	<string id="car_character_use">
+		<text>Otwуrz drzwi ($$ACTION_USE$$)</text>
+	</string>
+	<string id="character_use">
+		<text>Rozmawiaj ($$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use_or_drag">
+		<text>Przeszukaj ciaіo ($$ACTION_USE$$) \n Przeci№gnij ciaіo (SHIFT+$$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use">
+		<text>Przeszukaj ciaіo ($$ACTION_USE$$)</text>
+	</string>
+	<string id="general_complete_task">
+		<text>Zadanie wykonane:</text>
+	</string>
+	<string id="general_fail_task">
+		<text>Zadanie nie powiodіo siк:</text>
+	</string>
+	<string id="general_help">
+		<text>Szybko! Potrzebujк apteczki! Umieram!</text>
+	</string>
+	<string id="general_in_item">
+		<text>Otrzymany przedmiot:</text>
+	</string>
+	<string id="general_in_money">
+		<text>Otrzymane pieni№dze:</text>
+	</string>
+	<string id="general_new_diary">
+		<text>Nowy wpis w dzienniku.</text>
+	</string>
+	<string id="general_new_encyclopedy">
+		<text>Nowe hasіo w encyklopedii.</text>
+	</string>
+	<string id="general_new_task">
+		<text>Nowe zadanie:</text>
+	</string>
+	<string id="general_out_item">
+		<text>Utracony przedmiot:</text>
+	</string>
+	<string id="general_out_money">
+		<text>Utracone pieni№dze:</text>
+	</string>
+	<string id="general_update_task">
+		<text>Nowe informacje o zadaniu:</text>
+	</string>
+	<string id="physic_shell_use">
+		<text>Przesuс obiekt ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_codelock">
+		<text>Zamek szyfrowy ($$ACTION_USE$$)</text>
+	</string>
+	<string id="to_aes">
+		<text>Do Czarnobylskiej Elektrowni J№drowej</text>
+	</string>
+	<string id="to_agroprom">
+		<text>Do Agropromu</text>
+	</string>
+	<string id="to_agroprom_underground">
+		<text>Do katakumb</text>
+	</string>
+	<string id="to_bar">
+		<text>Do Rostoka</text>
+	</string>
+	<string id="to_darkvalley">
+		<text>Do Doliny Mroku</text>
+	</string>
+	<string id="to_escape">
+		<text>Do Kordonu</text>
+	</string>
+	<string id="to_garbage">
+		<text>Na Wysypisko</text>
+	</string>
+	<string id="to_military">
+		<text>Do magazynуw</text>
+	</string>
+	<string id="to_pripyat">
+		<text>Do Prypeci</text>
+	</string>
+	<string id="to_radar">
+		<text>Do Mуzgozwкglacza</text>
+	</string>
+	<string id="to_rostok">
+		<text>Do Dziczy</text>
+	</string>
+	<string id="to_yantar">
+		<text>Nad Jantar</text>
+	</string>
+	<string id="st_helmet_countdown">
+		<text>Wyі№czenie ochrony</text>
+	</string>
+	<string id="st_psy_danger">
+		<text>Krytyczny poziom emisji psionicznych. Natychmiast opuњж niebezpieczn№ strefк.</text>
+	</string>
+	<string id="st_radiation_danger">
+		<text>Niebezpieczny poziom promieniowania. Їeby przejњж, konieczna jest ochrona.</text>
+	</string>
+	<string id="st_found_new_pda">
+		<text>Zdobyte informacje:</text>
+	</string>
+</string_table>

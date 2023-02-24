@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="gar_dolg_blokpost_11">
+		<text>Halt, Stalker. Hier geht es nicht weiter!</text>
+	</string>
+	<string id="gar_dolg_blokpost_111">
+		<text>Warum?</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111">
+		<text>Weil das unser Territorium ist - Wдchterterritorium. Und wir sind sehr wдhlerisch, wen wir zu unserer Basis durchlassen. Wenn du nichts Wichtiges mit unseren Anfьhrern zu besprechen hast, kommst du hier nicht weiter.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11111">
+		<text>Ich verstehe.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111111">
+		<text>Das sind die Regeln.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112">
+		<text>Ich muss aber durch, ich habe etwas mit dem Wirt zu erledigen.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121">
+		<text>Ja, der Wirt hat uns von dir erzдhlt. Du kannst durch.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111211">
+		<text>Ich zahle lieber. Hier.</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112111">
+		<text>Gut! Du kannst gehen, aber dein Geschдft mit dem Wirt sollte wirklich wichtig sein, hцrst du? Und sei vorsichtig - vor dir liegen eine Menge Anomalien.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212">
+		<text>Was ist das fьr ein Gefallen?</text>
+	</string>
+	<string id="gar_dolg_blokpost_11112121">
+		<text>Nichts GroЯes. In der Nдhe streunt eine Herde Wildschweine umher. Die mьssen umgelegt werden. Mach sie kalt, dann ist deine Schuld beglichen.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121211">
+		<text>Abgemacht.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212111">
+		<text>Viel Glьck, Stalker.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111121212">
+		<text>Ich habe das Geld nicht.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1111212121">
+		<text>Nun, dann solltest du besser anfangen, danach zu suchen.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111122">
+		<text>Ich habe das Geld nicht.</text>
+	</string>
+	<string id="gar_dolg_blokpost_111123">
+		<text>Tja, dann darfst du auch nicht durch zur Bar.</text>
+	</string>
+	<string id="gar_dolg_blokpost_1231">
+		<text>Danke, dass du uns gegen die Wildschweine geholfen hast. Hier, das hast du verdient.</text>
+	</string>
+	<string id="gar_dolg_blokpost_12311">
+		<text>Danke!</text>
+	</string>
+	<string id="gar_dolg_blokpost_22">
+		<text>Und? Hast du diese Wildschweine schon erledigt?</text>
+	</string>
+	<string id="gar_dolg_blokpost_221">
+		<text>Noch nicht.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2211">
+		<text>Mist. Wenn du anfдngst, sie zu zerlegen, dann bring mir eins, okay?</text>
+	</string>
+	<string id="gar_dolg_blokpost_222">
+		<text>Ja, hab sie alle umgelegt.</text>
+	</string>
+	<string id="gar_dolg_blokpost_2221">
+		<text>Na gut, dann geh weiter. Und grьЯ den Wirt von mir, okay?</text>
+	</string>
+	<string id="gar_dolg_blokpost_33">
+		<text>GrьЯ den Wirt von mir, wenn du ihn siehst. Ach, und vergiss nicht: Auf dem Weg gibt es viele Anomalien, sei also vorsichtig.</text>
+	</string>
+	<string id="gar_dramm_novice_start_0">
+		<text>Danke, Kumpel - du hast mir wirklich geholfen. Das werde ich dir nicht vergessen.</text>
+	</string>
+	<string id="gar_dramm_novice_start_1">
+		<text>Was geht hier vor sich?</text>
+	</string>
+	<string id="gar_dramm_novice_start_11">
+		<text>In Ordnung.</text>
+	</string>
+	<string id="gar_dramm_novice_start_2">
+		<text>Wir versuchen, die Mьllhalde von Banditen zu sдubern. Meine Freunde legen gerade in der Nдhe einen Hinterhalt fьr einen Banditentrupp. Wenn wir die nicht aufhalten, ьbernehmen sie die Kontrolle ьber die Mьllhalde und keiner wird mehr in der Lage sein, tiefer in die Zone zu gehen. Sprich mit unserem Kommandanten. Er und seine Mдnner sind ganz in der Nдhe, beim Maschinenschrottplatz. Ich muss selbst auch dorthin - wir kцnnen zusammen gehen, wenn du willst.</text>
+	</string>
+	<string id="gar_dramm_novice_start_21">
+		<text>Dann lass uns gehen.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3">
+		<text>Kannst du mir etwas ьber die Mьllhalde erzдhlen?</text>
+	</string>
+	<string id="gar_dramm_novice_start_31">
+		<text>Da gibt es nicht viel zu erzдhlen, Kumpel. Die Mьllhalde ist ... eine Mьllhalde. Kдmpfer der Wдchter bewachen die NordstraЯe zur Bar. Denen solltest du ausweichen - bei den Wдchtern gibt es jede Menge fieser Typen. Zur Rechten sind die Wege ins Dunkle Tal, aber die Strahlungswerte sind dort sehr hoch. Etwas nдher befindet sich das Modermoor - schreckliche Sьmpfe voller Anomalien. Man sagt, es sei leicht, dort ein paar ordentliche Artefakte zu finden, noch einfacher kann man da aber Probleme finden. Na ja, wenigstens gibt es keinen Hund von Baskerville im Moor.</text>
+	</string>
+	<string id="gar_dramm_novice_start_311">
+		<text>Erzдhl weiter.</text>
+	</string>
+	<string id="gar_dramm_novice_start_3111">
+		<text>Zur Rechten, bei dem Moor, gibt es ein Geheimversteck. Dort siehst du eine Metallkonstruktion, die ьber einem Sumpfteich hдngt. Mein Versteck ist genau darunter ... Ich habe es dort vor einer ganzen Weile angelegt, aber du hast mein Leben gerettet und brauchst es wahrscheinlich sowieso dringender als ich. Benutze es also ruhig, wenn du willst.</text>
+	</string>
+	<string id="gar_dramm_novice_start_31111">
+		<text>Danke, Kumpel. Das sind recht nьtzliche Informationen.</text>
+	</string>
+	<string id="gar_dramm_novice_start_312">
+		<text>Das ist interessant, danke.</text>
+	</string>
+	<string id="gar_hellcar_start_11">
+		<text>He, Stalker, du kommst gerade rechtzeitig! Wir kцnnten deine Hilfe wirklich gut gebrauchen. Diese Banditenbastarde versuchen die Kontrolle ьber die Mьllhalde an sich zu reiЯen. Wir hatten vor einer halben Stunde eine SchieЯerei und konnten dabei drei von den Hunden erledigen. Die anderen haben sich zurьckgezogen, aber ich bin mir sicher, dass sie jeden Moment mit Verstдrkung zurьckkommmen. Wir sind nicht mehr viele, und ein zusдtzlicher Mann kцnnte nicht schaden.</text>
+	</string>
+	<string id="gar_hellcar_start_111">
+		<text>Erzдhl weiter.</text>
+	</string>
+	<string id="gar_hellcar_start_1111">
+		<text>Wir haben hier einen Hinterhalt fьr sie gelegt. Sie werden von Westen kommen, vom Agroprom Forschungsinstitut. Hilf uns, ihre Verstдrkung zu erledigen. Du wirst es nicht bereuen!</text>
+	</string>
+	<string id="gar_hellcar_start_11111">
+		<text>In Ordnung, ich helfe euch.</text>
+	</string>
+	<string id="gar_hellcar_start_111111">
+		<text>Sehr schцn.</text>
+	</string>
+	<string id="gar_hellcar_start_11112">
+		<text>Das geht mich nichts an und ich mцchte nichts damit zu tun haben.</text>
+	</string>
+	<string id="gar_hellcar_start_111121">
+		<text>Wie du willst. Du wirst deine Dummheit noch jedes Mal verfluchen, wenn du diese Dickkцpfe auf dem Weg in die Zone bezahlst.</text>
+	</string>
+	<string id="gar_hellcar_start_11113">
+		<text>Ich habe sie alle umgelegt.</text>
+	</string>
+	<string id="gar_hellcar_start_111131">
+		<text>Du bist mein Mann! Aber ich gehe auf Nummer sicher, nur fьr den Fall.</text>
+	</string>
+	<string id="gar_hellcar_start_21">
+		<text>Wir haben nichts zu besprechen.</text>
+	</string>
+	<string id="gar_hellcar_start_3111">
+		<text>Danke, Kumpel, du hast uns wirklich sehr geholfen. Mцchtest du als Zeichen unserer Dankbarkeit ein bisschen Bargeld haben?</text>
+	</string>
+	<string id="gar_hellcar_start_31111">
+		<text>Klar.</text>
+	</string>
+	<string id="gar_hellcar_start_311111">
+		<text>Hier, damit solltest du die medizinische Behandlung bezahlen kцnnen, damit du wieder fit wirst.</text>
+	</string>
+	<string id="gar_hellcar_start_3111111">
+		<text>Danke.</text>
+	</string>
+	<string id="gar_hellcar_start_31113">
+		<text>Erzдhle mir etwas ьber dich selbst.</text>
+	</string>
+	<string id="gar_hellcar_start_311131">
+		<text>Mein Name ist Bes. Ich bin vor drei Jahren hierher gekommen. Wie viele von den Jungs in der Zone, bin ich auf der Flucht. Ich werde wegen zwei Morden und schwerer Kцrperverletzung gesucht. Vor ein paar Jahren wurde ein Kumpel von mir ьbel zusammengeschlagen - die mussten ihn im Krankenhaus buchstдblich wieder zusammenflicken. Also lieЯ ich die Mistkerle dafьr bezahlen. Als die Bullen auftauchten, musste ich einen davon erschieЯen und sprang aus einem Fenster im dritten Stock - seitdem bin ich hier. Ich habe mich hier ganz gut eingelebt, aber die Liste meiner Straftaten ist auch lдnger geworden. Ich versuche, die Gesetzlosen zu bekдmpfen - genau, wie ich es drauЯen auch gemacht habe. Ich bilde die Neulinge aus und bringe ihnen bei, in der Zone zu ьberleben.</text>
+	</string>
+	<string id="gar_hellcar_start_3111311">
+		<text>Warum schlieЯt du dich denn nicht den Wдchtern an, wenn du schon die gleiche Gesinnung hast?</text>
+	</string>
+	<string id="gar_hellcar_start_31113111">
+		<text>Die Wдchter kдmpfen gegen die Zone, ich kдmpfe fьr Leute. AuЯerdem stehen sie in enger Verbindung mir der Regierung und der Armee. Ich mцchte nicht eines Tages in einer kalten Zelle aufwachen.</text>
+	</string>
+	<string id="gar_hellcar_start_311131111">
+		<text>Ich wьnsch dir viel Glьck.</text>
+	</string>
+	<string id="gar_hellcar_start_31114">
+		<text>Was ist das fьr ein Ort?</text>
+	</string>
+	<string id="gar_hellcar_start_311141">
+		<text>Die Mьllhalde. Wir sind hier zuhause. Siehst du diese Stapel aus Schrott? Da willst du gar nicht hin, glaube mir. So verstrahlt, dass der Geigerzдhler nicht mitkommt. Dies ist der einzige brauchbare Weg in die Zone, und die Banditen werden hier in letzter Zeit immer aktiver. Die scheiЯen sich in die Hose bei dem Gedanken, weiter in die Zone, ins Gebiet der Wдchter zu gehen. Aber sie lieben es, die Neulinge hier auszunehmen. Wenn das also sonst niemanden kьmmert, mьssen wir uns selbst gegen sie zur Wehr setzen.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411">
+		<text>Erzдhl weiter.</text>
+	</string>
+	<string id="gar_hellcar_start_31114111">
+		<text>Ьberall - und insbesondere hier - hast du dich wie ein Mensch zu benehmen, nicht wie ein triebgesteuertes Tier. Das ist meine Sicht des Lebens.</text>
+	</string>
+	<string id="gar_hellcar_start_311141112">
+		<text>Gibt es groЯe Gebдude auf der Mьllhalde?</text>
+	</string>
+	<string id="gar_hellcar_start_31114111211">
+		<text>Danke.</text>
+	</string>
+	<string id="gar_hellcar_start_31115">
+		<text>Danke, ich brauche nichts von dir.</text>
+	</string>
+	<string id="gar_hellcar_start_3112">
+		<text>Ich weiЯ eine ganze Menge. Ich kцnnte dir so einiges erzдhlen.</text>
+	</string>
+	<string id="gar_hellcar_start_41">
+		<text>Der Job ist noch nicht erledigt. Lass uns ihn zu Ende bringen und danach reden.</text>
+	</string>
+	<string id="gar_hellcar_start_51">
+		<text>He, Gezeichneter.</text>
+	</string>
+	<string id="gar_seriy_start_11">
+		<text>Verdammt, Mann, jetzt ist nicht die Zeit zum Reden! In ein paar Sekunden werden nur noch Waffen sprechen. Hilf mir, die Hunde zu bekдmpfen, dann kцnnen wir uns immer noch unterhalten.</text>
+	</string>
+	<string id="gar_seriy_start_22">
+		<text>Danke fьr die Hilfe, das war schon ziemlich haarig. Was machst du hier eigentlich?</text>
+	</string>
+	<string id="gar_seriy_start_221">
+		<text>Ich suche nach Informationen ьber Strelok. Fuchs hat mir von dir erzдhlt, deshalb bin ich fьr ein Gesprдch hierher gekommen.</text>
+	</string>
+	<string id="gar_seriy_start_2211">
+		<text>In Ordnung, du hast mir einfach so geholfen, daher werde ich dir was erzдhlen. Einer der Typen, ein ehemaliger "Grдber" namens Maulwurf wartet auf mich. Er hat Streloks Versteck ausgehoben, aber ich weiЯ nicht, ob er dort irgendwas gefunden hat. Hier sind die Koordinaten von unserem Treffpunkt. Sag ihm, dass ich dich geschickt habe. Die werden jetzt nach mir Ausschau halten, daher werde ich fьr eine Weile untertauchen. Hier hast du auch noch etwas Bargeld fьr deine Hilfe.</text>
+	</string>
+	<string id="gar_seriy_start_2212">
+		<text>Danke fьr die Informationen.</text>
+	</string>
+	<string id="gar_seriy_start_222">
+		<text>Ich suche nach Informationen ьber Strelok. WeiЯt du vielleicht etwas?</text>
+	</string>
+	<string id="gar_seriy_start_2221">
+		<text>In Ordnung, du hast mir einfach so geholfen, daher werde ich dir was erzдhlen. Einer der Typen, ein ehemaliger "Grдber" namens Maulwurf wartet auf mich. Er hat Streloks Versteck ausgehoben und Dokumente gefunden, die ein paar Dinge erklдren. Er wurde von Banditen verfolgt, daher musste er die Dokumente zurьcklassen. Aber er kann sich an die Stelle erinnern. Die werden nach mir Ausschau halten, daher werde ich fьr eine Weile untertauchen. Hier sind die Koordinaten fьr meinen Treffpunkt mit Maulwurf. Sag ihm, dass ich dich geschickt habe. Ich werde ein paar Informationen auf deinen PDA hochladen. Und hier ist noch etwas Bargeld fьr deine Hilfe.</text>
+	</string>
+	<string id="gar_seriy_start_2222">
+		<text>Danke fьr die Informationen.</text>
+	</string>
+	<string id="gar_seriy_start_33">
+		<text>He, Kumpel! Hier wurde es eben ziemlich haarig, muss ich sagen. Was macht du denn ьberhaupt hier?</text>
+	</string>
+	<string id="gar_seriy_start_44">
+		<text>Ein sicherer Weg, Stalker. Ein sicherer Weg an den Anomalien vorbei und direkt zu den Artefakten.</text>
+	</string>
+	<string id="gar_seriy_start_441">
+		<text>Was kann man auf der Mьllhalde finden?</text>
+	</string>
+	<string id="gar_seriy_start_4411">
+		<text>Du kannst ziemlich schnell viel Дrger finden, so viel ist sicher. Aber, da du so neugierig bist, werde ich dir sagen, was ich weiЯ. Цstlich von hier liegt ein kleiner Wald. Dort gibt es nichts Interessantes und er ist voller Hunde, sei also vorsichtig. Die Bahnstrecke fьhrt zu einem Tunnel, dort gibt es viele Anomalien. Vielleicht auch noch etwas anderes, aber davon weiЯ ich nichts - hab nie so genau hingeschaut. Vom Wдchterposten im Norden wirst du ja vermutlich schon wissen. Das ist im Grunde alles, was ich ьber diesen Ort hier weiЯ.</text>
+	</string>
+	<string id="gar_seriy_start_44112">
+		<text>Danke fьr die Informationen.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_0">
+		<text>Hцr zu, Mann. Was kann ich auf dieser Mьllhalde finden?</text>
+	</string>
+	<string id="gar_seryi_about_garbage_1">
+		<text>Du kannst ziemlich schnell viel Дrger finden, so viel ist sicher. Aber, da du so neugierig bist, werde ich dir sagen, was ich weiЯ. Цstlich von hier liegt ein kleiner Wald. Dort gibt es nichts Interessantes und er ist voller Hunde, sei also vorsichtig. Die Bahnstrecke fьhrt zu einem Tunnel, dort gibt es viele Anomalien. Vielleicht auch noch etwas anderes, aber davon weiЯ ich nichts - hab nie so genau hingeschaut. Vom Wдchterposten im Norden wirst du ja vermutlich schon wissen. Das ist im Grunde alles, was ich ьber diesen Ort hier weiЯ.</text>
+	</string>
+	<string id="gar_seryi_about_garbage_11">
+		<text>Danke fьr die Informationen. Ich werde es mir merken.</text>
+	</string>
+	<string id="gar_stalker_about_level_0">
+		<text>Kannst du mir irgendwas ьber diesen Ort erzдhlen?</text>
+	</string>
+	<string id="gar_stalker_about_level_1">
+		<text>Nun, hцr zu. Ьberall, wo du guckst, gibt es ein wenig stinkenden Mьll. Nach dem Unfall von 1986 haben sie radioaktiven Schrott, Krдne und all die zerstцrten Maschinen hierher gebracht. Eigentlich liegt hier nur nutzloser Schrott, und es gibt hier und da ein paar Anomalien. Du kannst sogar Artefakte finden, aber die sind nicht so besonders, daher wirst du hier in der Gegend hauptsдchlich Anfдnger vorfinden. Viele Anfдnger bedeutet aber auch viele Banditen, daher sollte man hier am besten nicht zu lange herumhдngen. Weiter im Osten sind jede Menge Strahlungstaschen; ohne Schutz kannst du dort nicht hingehen. Im Sьden erreichst du die Grenze der Zone. Im Norden kommst du irgendwann zur Rostok Fabrik und der Stalker-Bar. Im Osten ist das Dunkle Tal, ein unheimlicher und nebliger Ort. Im Westen ist das Agroprom Forschungsinstitut. Ich trage dir auf deiner Karte sichere Wege ein.</text>
+	</string>
+	<string id="gar_hellcar_start_3111411121">
+		<text>Im Zentrum ist ein groЯer Hangar, da ist es meist ziemlich still. Wenn's hart auf hart kommt, kannst du da pennen. Wenn du nach Westen gehst, in Richtung Agroprom, stцЯt du auf ein Banditenlager. Da kamen die Freaks her, die wir vor 'ner Weile kaltgemacht haben. Aber ich hab das Gefьhl, von denen gibt's da noch mehr.</text>
+	</string>
+</string_table>

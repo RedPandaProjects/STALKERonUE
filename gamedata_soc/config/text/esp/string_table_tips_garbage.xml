@@ -1,0 +1,27 @@
+	<string id="gar_actor_looser">
+		<text>Eres de lo peor, Marcado. ¡Un completo inútil! No esperes gratitud... ¡No hay nada que agradecerte!</text>
+	</string>
+	<string id="gar_actor_normal">
+		<text>¡No está mal, stalker! Has acabado tú solo con algunos mutantes, pero no eres tan rápido sacando el arma, ¿eh? Si quieres pasar, tendrás que soltar algo de pasta.</text>
+	</string>
+	<string id="gar_actor_winner">
+		<text>Excelente, Marcado, nos has ayudado mucho. Eso servirá como pago para pasar. Ve al bar.</text>
+	</string>
+	<string id="gar_direction_fire">
+		<text>Deja que se acerquen y que así nadie pueda escapar. Yo disparo primero y tú me sigues.</text>
+	</string>
+	<string id="gar_dolg_blokpost_warning">
+		<text>Stalker, estás en territorio de Deber. No está permitido luchar aquí.</text>
+	</string>
+	<string id="gar_dolg_monster_rush">
+		<text>¡Atención! Este es el punto de control de Deber. Una horda de mutantes se está desplazando desde el Valle Oscuro en dirección al bar. Cualquiera que nos ayude a detener a los monstruos no lo lamentará.</text>
+	</string>
+	<string id="gar_dolg_warning">
+		<text>Stalker, estás en territorio de Deber. Empieza a hacer el tonto y comerás por una pajita durante el resto de tu vida.</text>
+	</string>
+	<string id="gar_hellcar_victory">
+		<text>Bien hecho, caballeros, les tenemos. Ahora podéis tomaros un descanso, chavales. Stalker, ven aquí. Vamos a hablar.</text>
+	</string>
+	<string id="tips_gar_hellcar_alarm">
+		<text>Chicos, el comandante de los neutrales. Hemos echado a los bandidos del desguace, pero seguramente intenten retomarlo. Somos inferiores en número, así que aceptamos ayuda.</text>
+	</string>

@@ -1,0 +1,9 @@
+	<string id="val_give_escort_task_pda">
+		<text>J'ai besoin d'aide pour sauver un ami.</text>
+	</string>
+	<string id="val_monolith_trader_pda1">
+		<text>La base des bandits a été attaquée par les militaires. L'entrée de la Décharge est bloquée, mais il y a une vieille route qui va vers le sud. Tu peux l'emprunter, à condition d'être prudent. Bonne chance.</text>
+	</string>
+	<string id="val_sos_pda">
+		<text>Au secours, je vais mourir.</text>
+	</string>

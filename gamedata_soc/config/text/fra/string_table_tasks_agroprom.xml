@@ -1,0 +1,78 @@
+	<string id="agr_find_ghost">
+		<text>Trouver ce qui est arrivé à Spectre</text>
+	</string>
+	<string id="agr_gunslinger_cache">
+		<text>Planque de Strelok</text>
+	</string>
+	<string id="agr_help_krot">
+		<text>Sauver la Taupe</text>
+	</string>
+	<string id="agr_help_krot_0">
+		<text>Aider la Taupe à repousser les soldats</text>
+	</string>
+	<string id="agr_help_krot_1">
+		<text>Tuer les soldats</text>
+	</string>
+	<string id="agr_help_krot_2">
+		<text>Sauver la Taupe</text>
+	</string>
+	<string id="agr_help_stalkers">
+		<text>Aider les Stalkers</text>
+	</string>
+	<string id="agr_help_stalkers_0">
+		<text>Aider les Stalkers à repousser les soldats</text>
+	</string>
+	<string id="agr_help_stalkers_1">
+		<text>Tuer les soldats</text>
+	</string>
+	<string id="agr_help_stalkers_2">
+		<text>Aider les Stalkers à repousser les soldats</text>
+	</string>
+	<string id="agr_krot">
+		<text>Rencontrer les Stalkers</text>
+	</string>
+	<string id="agr_meet_krot_band">
+		<text>Obtenir des informations sur Strelok</text>
+	</string>
+	<string id="agr_meet_krot_band_0">
+		<text>Obtenir de la Taupe des informations</text>
+	</string>
+	<string id="agr_meet_krot_band_1">
+		<text>Rencontrer le groupe de la Taupe</text>
+	</string>
+	<string id="agr_meet_krot_band_2">
+		<text>Obtenir de la Taupe des informations</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache">
+		<text>Trouver la planque du groupe de Strelok</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_0">
+		<text>Trouver la planque du groupe de Strelok</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_1">
+		<text>Trouver la planque</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_2">
+		<text>Trouver des informations sur Strelok dans la planque</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_3">
+		<text>Quitter le souterrain</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom">
+		<text>Trouver Spectre</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom_0">
+		<text>Spectre sait où se trouve Strelok.</text>
+	</string>
+	<string id="agroprom_get_military_documents">
+		<text>Trouver les documents militaires</text>
+	</string>
+	<string id="agroprom_get_military_documents_0">
+		<text>Institut Rech. Agroprom</text>
+	</string>
+	<string id="agroprom_get_military_documents_1">
+		<text>Voler les documents militaires</text>
+	</string>
+	<string id="agroprom_get_military_documents_2">
+		<text>Apporter les documents au Barman</text>
+	</string>

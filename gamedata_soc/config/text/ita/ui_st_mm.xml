@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Clear">
+		<text>sereno</text>
+	</string>
+	<string id="Cloudy">
+		<text>nuvoloso</text>
+	</string>
+	<string id="Default">
+		<text>medie</text>
+	</string>
+	<string id="Extreme">
+		<text>massime</text>
+	</string>
+	<string id="gd_master">
+		<text>maestro</text>
+	</string>
+	<string id="gd_novice">
+		<text>principiante</text>
+	</string>
+	<string id="gd_stalker">
+		<text>stalker</text>
+	</string>
+	<string id="gd_veteran">
+		<text>veterano</text>
+	</string>
+	<string id="High">
+		<text>alta</text>
+	</string>
+	<string id="Low">
+		<text>basse</text>
+	</string>
+	<string id="Minimum">
+		<text>minime</text>
+	</string>
+	<string id="mm_mp_check_cdkey">
+		<text>verifica codice CD-key</text>
+	</string>
+	<string id="Nigth">
+		<text>notte</text>
+	</string>
+	<string id="Rain">
+		<text>pioggia</text>
+	</string>
+	<string id="renderer_r1">
+		<text>Illuminazione fissa</text>
+	</string>
+	<string id="renderer_r2">
+		<text>Illuminazione dinamica</text>
+	</string>
+	<string id="renderer_r2a">
+		<text>Illuminazione dinamica oggetti</text>
+	</string>
+	<string id="st_artefacthunt">
+		<text>Caccia ai reperti</text>
+	</string>
+	<string id="st_deathmatch">
+		<text>Tutti contro tutti</text>
+	</string>
+	<string id="st_rank_experienced">
+		<text>Esperto</text>
+	</string>
+	<string id="st_rank_legend">
+		<text>leggenda</text>
+	</string>
+	<string id="st_rank_novice">
+		<text>principiante</text>
+	</string>
+	<string id="st_rank_professional">
+		<text>professionista</text>
+	</string>
+	<string id="st_rank_veteran">
+		<text>Veterano</text>
+	</string>
+	<string id="st_team_deathmatch">
+		<text>Partita a squadre</text>
+	</string>
+	<string id="testers_mp_agroprom">
+		<text>Fabbrica "Agroprom"</text>
+	</string>
+	<string id="testers_mp_atp">
+		<text>Parcheggio</text>
+	</string>
+	<string id="testers_mp_darkvalley">
+		<text>Valle Oscura</text>
+	</string>
+	<string id="testers_mp_factory">
+		<text>Fabbrica di "Yantar"</text>
+	</string>
+	<string id="testers_mp_lost_village">
+		<text>Villaggio abbandonato</text>
+	</string>
+	<string id="testers_mp_military_1">
+		<text>Depositi militari</text>
+	</string>
+	<string id="testers_mp_pool">
+		<text>Piscina</text>
+	</string>
+	<string id="testers_mp_railroad">
+		<text>Stazione ferroviaria</text>
+	</string>
+	<string id="testers_mp_rostok">
+		<text>Fabbrica "Rostok"</text>
+	</string>
+	<string id="testers_mp_workshop">
+		<text>Fabbrica deserta</text>
+	</string>
+	<string id="ui_mm_60_hz">
+		<text>Frequenza 60Hz</text>
+	</string>
+	<string id="ui_mm_action">
+		<text>azione</text>
+	</string>
+	<string id="ui_mm_advanced">
+		<text>Avanzate</text>
+	</string>
+	<string id="ui_mm_anisotropic">
+		<text>Filtro anisotropico</text>
+	</string>
+	<string id="ui_mm_apply">
+		<text>Applica</text>
+	</string>
+	<string id="ui_mm_back">
+		<text>Indietro</text>
+	</string>
+	<string id="ui_mm_blood">
+		<text>Sangue</text>
+	</string>
+	<string id="ui_mm_brightness">
+		<text>Luminositа</text>
+	</string>
+	<string id="ui_mm_cancel">
+		<text>Annulla</text>
+	</string>
+	<string id="ui_mm_contrast">
+		<text>Contrasto</text>
+	</string>
+	<string id="ui_mm_controls">
+		<text>Controlli</text>
+	</string>
+	<string id="ui_mm_credits">
+		<text>Riconoscimenti</text>
+	</string>
+	<string id="ui_mm_crosshair_distance">
+		<text>Distanza mirino</text>
+	</string>
+	<string id="ui_mm_delete">
+		<text>Elimina</text>
+	</string>
+	<string id="ui_mm_difficulty">
+		<text>Difficoltа</text>
+	</string>
+	<string id="ui_mm_disconnect">
+		<text>Disconnetti</text>
+	</string>
+	<string id="ui_mm_disconnect_message">
+		<text>Disconnettersi?</text>
+	</string>
+	<string id="ui_mm_dyn_crosshair">
+		<text>Mirino dinamico</text>
+	</string>
+	<string id="ui_mm_eax">
+		<text>EAX</text>
+	</string>
+	<string id="ui_mm_fullscreen">
+		<text>Schermo intero</text>
+	</string>
+	<string id="ui_mm_gameplay">
+		<text>Gioco</text>
+	</string>
+	<string id="ui_mm_gamma">
+		<text>Gamma</text>
+	</string>
+	<string id="ui_mm_geometry_lod">
+		<text>Dettaglio oggetti</text>
+	</string>
+	<string id="ui_mm_invert_mouse">
+		<text>Inverti mouse</text>
+	</string>
+	<string id="ui_mm_key">
+		<text>pulsante</text>
+	</string>
+	<string id="ui_mm_keyboard_setup">
+		<text>Configurazione tastiera</text>
+	</string>
+	<string id="ui_mm_last_save">
+		<text>Ultimo salvataggio</text>
+	</string>
+	<string id="ui_mm_light_distance">
+		<text>Distanza illuminazione</text>
+	</string>
+	<string id="ui_mm_load">
+		<text>Carica</text>
+	</string>
+	<string id="ui_mm_load_game">
+		<text>Carica partita</text>
+	</string>
+	<string id="ui_mm_master">
+		<text>Maestro</text>
+	</string>
+	<string id="ui_mm_master_volume">
+		<text>Volume effetti</text>
+	</string>
+	<string id="ui_mm_mouse_sense">
+		<text>Sensibilitа mouse</text>
+	</string>
+	<string id="ui_mm_multiplayer">
+		<text>PARTITA IN RETE</text>
+	</string>
+	<string id="ui_mm_multiplayer_n">
+		<text>Partita in rete</text>
+	</string>
+	<string id="ui_mm_music_volume">
+		<text>Volume musica</text>
+	</string>
+	<string id="ui_mm_need_restart">
+		<text>Le modifiche diverranno effettive solo dopo il riavvio del gioco</text>
+	</string>
+	<string id="ui_mm_newgame">
+		<text>Nuova partita</text>
+	</string>
+	<string id="ui_mm_novice">
+		<text>Principiante</text>
+	</string>
+	<string id="ui_mm_npc_torch">
+		<text>Torce PNG</text>
+	</string>
+	<string id="ui_mm_options">
+		<text>OPZIONI</text>
+	</string>
+	<string id="ui_mm_options_n">
+		<text>Opzioni</text>
+	</string>
+	<string id="ui_mm_particles_distance">
+		<text>Distanza particelle</text>
+	</string>
+	<string id="ui_mm_quality_presets">
+		<text>Impostazioni qualitа</text>
+	</string>
+	<string id="ui_mm_quit_game">
+		<text>Esci dal gioco</text>
+	</string>
+	<string id="ui_mm_quit_game_message">
+		<text>Uscire dal gioco?</text>
+	</string>
+	<string id="ui_mm_quit_windows_message">
+		<text>Tornare a Windows?</text>
+	</string>
+	<string id="ui_mm_quit2windows">
+		<text>Torna a Windows</text>
+	</string>
+	<string id="ui_mm_renderer">
+		<text>Rendering</text>
+	</string>
+	<string id="ui_mm_resolution">
+		<text>Risoluzione</text>
+	</string>
+	<string id="ui_mm_return_game">
+		<text>Torna al gioco</text>
+	</string>
+	<string id="ui_mm_save">
+		<text>Salva</text>
+	</string>
+	<string id="ui_mm_save_game">
+		<text>Salva partita</text>
+	</string>
+	<string id="ui_mm_show_crosshair">
+		<text>Mostra mirino</text>
+	</string>
+	<string id="ui_mm_show_weapon">
+		<text>Mostra arma</text>
+	</string>
+	<string id="ui_mm_simply">
+		<text>di base</text>
+	</string>
+	<string id="ui_mm_sound">
+		<text>Audio</text>
+	</string>
+	<string id="ui_mm_sound_quality">
+		<text>Qualitа audio</text>
+	</string>
+	<string id="ui_mm_stalker">
+		<text>Stalker</text>
+	</string>
+	<string id="ui_mm_sun_quality">
+		<text>Qualitа ombre</text>
+	</string>
+	<string id="ui_mm_supersample">
+		<text>Antialiasing</text>
+	</string>
+	<string id="ui_mm_switch_torch">
+		<text>AI utilizza torcia</text>
+	</string>
+	<string id="ui_mm_texture_quality">
+		<text>Dettagli texture</text>
+	</string>
+	<string id="ui_mm_tips">
+		<text>Identificazione PNG</text>
+	</string>
+	<string id="ui_mm_veteran">
+		<text>Veterano</text>
+	</string>
+	<string id="ui_mm_video">
+		<text>Video</text>
+	</string>
+	<string id="ui_mm_vis_distance">
+		<text>Distanza visione</text>
+	</string>
+	<string id="ui_mm_vsync">
+		<text>Sincronizzazione verticale</text>
+	</string>
+	<string id="ui_st_last_set">
+		<text>Ultima predef.</text>
+	</string>
+	<string id="ui_st_preset1">
+		<text>Imp. predef. 1</text>
+	</string>
+	<string id="ui_st_preset2">
+		<text>Imp. predef. 2</text>
+	</string>
+	<string id="ui_st_preset3">
+		<text>Imp. predef. 3</text>
+	</string>
+	<string id="ui_st_reset">
+		<text>Ripristina</text>
+	</string>
+	<string id="ui_st_sell_all">
+		<text>Vendi tutto</text>
+	</string>
+</string_table>

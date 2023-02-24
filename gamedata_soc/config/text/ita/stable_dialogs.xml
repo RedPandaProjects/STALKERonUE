@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_break_dialog_0">
+		<text>Ci vediamo!</text>
+	</string>
+	<string id="actor_help_wounded_0">
+		<text>Tutto bene?</text>
+	</string>
+	<string id="actor_help_wounded_1">
+		<text>Sono ferito, maledizione, non lo vedi? Mi serve un kit medico o almeno una benda.</text>
+	</string>
+	<string id="actor_help_wounded_11">
+		<text>Ecco, prendi questo kit medico.</text>
+	</string>
+	<string id="actor_help_wounded_111">
+		<text>Grazie, bello, me ne ricorderт.</text>
+	</string>
+	<string id="actor_help_wounded_12">
+		<text>Tieni, prendi questa benda.</text>
+	</string>
+	<string id="actor_help_wounded_13">
+		<text>Mi dispiace, non ne ho.</text>
+	</string>
+	<string id="actor_help_wounded_131">
+		<text>E tu vorresti andartene in giro per la Zona cosм? E se ti becchi un'infezione o roba del genere? Non potrai neanche curarti!</text>
+	</string>
+	<string id="actor_help_wounded_14">
+		<text>Eh eh, caschi male, bello. Mi dispiace, ma se ti do il mio, resterт senza.</text>
+	</string>
+	<string id="actor_help_wounded_141">
+		<text>Sono affari tuoi, bello, ma non ti fa certo onore.</text>
+	</string>
+	<string id="hello_dialog_2">
+		<text>Ehi!</text>
+	</string>
+	<string id="hello_dialog_3">
+		<text>Aiutami, ti prego.</text>
+	</string>
+</string_table>

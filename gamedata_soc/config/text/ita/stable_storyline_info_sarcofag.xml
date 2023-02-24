@@ -1,0 +1,12 @@
+	<string id="sar_command_center_text">
+		<text>Dottore: "Tutto ciò che hai detto sul Monolite è giusto. È solo un'illusione creata da un laboratorio vicino al Sarcofago... Nel complesso, sembra l'unico modo per scoprire il vero segreto della Zona... quello che hai sempre cercato."</text>
+	</string>
+	<string id="sar_monolith_call_text">
+		<text>Ho sentito il richiamo del Monolite. Mi ha chiamato a sé. Ora devo raggiungerlo e ottenere le risposte a tutte le mie domande.</text>
+	</string>
+	<string id="sar_secret_lab_text">
+		<text>Dottore: "Allora, facciamo così. C'è un decodificatore che apre la porta dell'impianto operativo del Monolite. Il decodificatore si trova in un nascondiglio a Pripjat. Io ti do le sue coordinate e la chiave. Tu prendi il decodificatore, trova la porta giusta nel sarcofago e poi... e poi vedi cosa succede."</text>
+	</string>
+	<string id="zones_mystery_text">
+		<text>Ce l'hai fatta, stalker. Ti sei dimostrato molto più forte di quanto ci aspettassimo. È arrivato il momento di fare una chiacchierata. Dirigiti verso il segnale, ci vediamo lì.</text>
+	</string>

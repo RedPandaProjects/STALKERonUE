@@ -1,0 +1,27 @@
+	<string id="gar_actor_looser">
+		<text>Fai schifo, Marchiato. Sei un buono a nulla! Non aspettarti gratitudine, perché non c'è niente di cui ringraziarti!</text>
+	</string>
+	<string id="gar_actor_normal">
+		<text>Non male, stalker! Sei riuscito a centrare qualche mutante, ma di certo non sei un granché in fatto di rapidità, non è vero? SE vuoi passare, dovrai sganciare un po' di grana.</text>
+	</string>
+	<string id="gar_actor_winner">
+		<text>Ottimo lavoro, Marchiato, ci sei stato di grande aiuto. Direi che ti sei meritato di passare. Vai al bar.</text>
+	</string>
+	<string id="gar_direction_fire">
+		<text>Falli avvicinare, così nessuno farà in tempo a scappare. Sparo prima io, e tu mi segui a ruota.</text>
+	</string>
+	<string id="gar_dolg_blokpost_warning">
+		<text>Sei sul territorio dei Duty, stalker. I combattimenti non sono consentiti qui.</text>
+	</string>
+	<string id="gar_dolg_monster_rush">
+		<text>Attenzione!! È il checkpoint dei Duty che parla. Un'orda di mutanti si sta spostando dalla Valle Oscura in direzione del bar. Chiunque ci aiuterà a fermare i mostri, non se ne pentirà.</text>
+	</string>
+	<string id="gar_dolg_warning">
+		<text>Sei sul territorio dei Duty, stalker. Combina qualche casino e finirai per mangiare attraverso una cannuccia per il resto dei tuoi giorni.</text>
+	</string>
+	<string id="gar_hellcar_victory">
+		<text>Ben fatto, signori, li abbiamo accoppati tutti. Direi che ora potete tirare il fiato, ragazzi. Tu, stalker, vieni qui. Facciamo due chiacchiere.</text>
+	</string>
+	<string id="tips_gar_hellcar_alarm">
+		<text>Ascoltate, è il comandate di una fazione neutrale che vi parla. Abbiamo cacciato i banditi dal parcheggio abbandonato, ma torneranno sicuramente per riprenderselo. Siamo in pochi e se vorrete darci una mano, saremo felici di tenervi un posto libero.</text>
+	</string>

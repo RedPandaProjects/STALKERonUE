@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor_break_dialog_0">
+		<text>ЎNos vemos!</text>
+	</string>
+	<string id="actor_help_wounded_0">
+		<text>їEstбs bien?</text>
+	</string>
+	<string id="actor_help_wounded_1">
+		<text>Estoy herido, maldita sea, їno lo ves? Necesito un botiquнn, o al menos una venda.</text>
+	</string>
+	<string id="actor_help_wounded_11">
+		<text>Toma este botiquнn.</text>
+	</string>
+	<string id="actor_help_wounded_111">
+		<text>Gracias, no lo olvidarй.</text>
+	</string>
+	<string id="actor_help_wounded_12">
+		<text>Toma esta venda.</text>
+	</string>
+	<string id="actor_help_wounded_13">
+		<text>Lo siento, no tengo.</text>
+	</string>
+	<string id="actor_help_wounded_131">
+		<text>їCуmo se te ocurre ir a la Zona? їQuй pasa si te infectas? ЎNi siquiera podrбs curarte! </text>
+	</string>
+	<string id="actor_help_wounded_14">
+		<text>Mala suerte, tнo. Lo siento, si te doy, se me acaban. </text>
+	</string>
+	<string id="actor_help_wounded_141">
+		<text>Es tu trabajo, colega, pero no te da ningъn mйrito.</text>
+	</string>
+	<string id="hello_dialog_2">
+		<text>ЎEh!</text>
+	</string>
+	<string id="hello_dialog_3">
+		<text>Eh, colega, їme ayudas?</text>
+	</string>
+</string_table>

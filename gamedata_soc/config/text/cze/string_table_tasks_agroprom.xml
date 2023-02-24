@@ -1,0 +1,78 @@
+	<string id="agr_find_ghost">
+		<text>Zjisti, co se stalo s Duchem</text>
+	</string>
+	<string id="agr_gunslinger_cache">
+		<text>Støelcova skrýš</text>
+	</string>
+	<string id="agr_help_krot">
+		<text>Zachraò Krtka</text>
+	</string>
+	<string id="agr_help_krot_0">
+		<text>Pomož Krtkovi odrazit vojáky</text>
+	</string>
+	<string id="agr_help_krot_1">
+		<text>Zabij vojáky</text>
+	</string>
+	<string id="agr_help_krot_2">
+		<text>Zachraò Krtka</text>
+	</string>
+	<string id="agr_help_stalkers">
+		<text>Pomož stalkerùm</text>
+	</string>
+	<string id="agr_help_stalkers_0">
+		<text>Pomož stalkerùm odrazit vojáky</text>
+	</string>
+	<string id="agr_help_stalkers_1">
+		<text>Zabij vojáky</text>
+	</string>
+	<string id="agr_help_stalkers_2">
+		<text>Pomož stalkerùm odrazit vojáky</text>
+	</string>
+	<string id="agr_krot">
+		<text>Setkej se se stalkery</text>
+	</string>
+	<string id="agr_meet_krot_band">
+		<text>Získej informace o Støelci</text>
+	</string>
+	<string id="agr_meet_krot_band_0">
+		<text>Získej od Krtka informace</text>
+	</string>
+	<string id="agr_meet_krot_band_1">
+		<text>Setkej se s Krtkovou skupinou</text>
+	</string>
+	<string id="agr_meet_krot_band_2">
+		<text>Získej od Krtka informace</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache">
+		<text>Najdi skrýš Støelcovy skupiny</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_0">
+		<text>Najdi skrýš Støelcovy skupiny</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_1">
+		<text>Najdi skrýš</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_2">
+		<text>Najdi ve skrýši informace o Støelcovi</text>
+	</string>
+	<string id="agroprom_find_gunslinger_cache_3">
+		<text>Najdi cestu z podzemí.</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom">
+		<text>Najdi Ducha</text>
+	</string>
+	<string id="agroprom_find_stalker_phantom_0">
+		<text>Duch ví, kde je Støelec.</text>
+	</string>
+	<string id="agroprom_get_military_documents">
+		<text>Najdi vojenské dokumenty</text>
+	</string>
+	<string id="agroprom_get_military_documents_0">
+		<text>Výzkumný institut Agroprom</text>
+	</string>
+	<string id="agroprom_get_military_documents_1">
+		<text>Ukradni vojenské dokumenty</text>
+	</string>
+	<string id="agroprom_get_military_documents_2">
+		<text>Dones dokumenty Barmanovi</text>
+	</string>

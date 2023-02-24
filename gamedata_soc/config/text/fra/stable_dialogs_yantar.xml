@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="yantar_general_ucheniy_talk_start_101">
+		<text>Merci... euh... le Tatouй, c'est зa ? Vous nous avez aidйs а sauver notre associй Kruglov et pour vous remercier, je tiens а vous offrir une de nos combinaisons. C'est trиs utile, vous verrez... Est-ce que je peux faire autre chose pour vous ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1011">
+		<text>Je cherche le labo X16. Le Barman m'a dit que vous aviez des informations sur son emplacement.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1012">
+		<text>Зa fait longtemps qu'on s'intйresse au labo X16... enfin, au mйcanisme qu'il renferme et qui gйnиre des йmissions affectant directement la conscience humaine. Je vais certainement vous dйcevoir, mais il est impossible d'y entrer sans une armure psi spйciale. Les dangers sont bien connus : mкme si vous rйussissiez а йchapper aux groupes de zombies qui infestent l'entrйe du laboratoire, vous risqueriez de devenir l'un d'entre eux. C'est trиs sйrieux. J'ai imaginй un dispositif de protection qui immunise contre les йmissions, mais pour le finaliser, il nous manque encore quelques mesures. Si vous nous aidez, on pourra vous donner un prototype en йtat de marche.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1013">
+		<text>Des mesures ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1014">
+		<text>Si vous et notre associй prenez toutes les mesures nйcessaires, je finaliserai un prototype de l'armure et je vous le donnerai. Зa vous aidera sыrement а entrer dans le laboratoire.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10141">
+		<text>OK, зa marche.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101411">
+		<text>Parfait ! Allez parler а Kruglov et foncez. Il a tout le matйriel nйcessaire.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101412">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10142">
+		<text>OK, зa marche.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101421">
+		<text>Parfait ! Allez parler а Semenov et foncez. Il a tout ce qu'il vous faut.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101422">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10143">
+		<text>Non... Je n'ai pas envie de зa maintenant.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101431">
+		<text>C'est dommage, vraiment dommage... Je ne sais pas quand et comment on pourra aller prendre ces mesures.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_11">
+		<text>Oui, Monsieur ? Qu'est-ce que vous cherchez ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_111">
+		<text>Je cherche le labo X16. Le Barman m'a dit que vous aviez des informations sur son emplacement.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12">
+		<text>Merci, le Tatouй, d'avoir sauvй Kruglov. Pour vous remercier d'avoir pris tant de risques, voici un scaphandre. Mais, je sens que vous n'кtes pas venu jusqu'ici pour зa, n'est-ce pas ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121">
+		<text>Je cherche le labo X16. Le Barman m'a dit que vous aviez des informations sur son emplacement.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1211">
+		<text>On йtudie les йmissions dans le labo X16 depuis longtemps, mais hors de question d'y entrer sans йquipement spйcial. On a crйй un dispositif de protection psi qui immunise contre les йmissions, mais il n'est pas encore au point. Si vous nous aidez а le finaliser, je vous donnerai un prototype en bon йtat de marche et vous pourrez ainsi pйnйtrer dans le labo.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12111">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121111">
+		<text>Parfait ! Allez parler а Kruglov et foncez. Il a tout ce dont vous avez besoin.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12112">
+		<text>Non, je ne me sens pas prкt.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121122">
+		<text>C'est vraiment dommage. Nous n'avons encore rйussi а envoyer personne prendre ces mesures.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21">
+		<text>Oui, Monsieur ? Qu'est-ce que vous cherchez ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211">
+		<text>Зa fait longtemps qu'on s'intйresse au labo X16... enfin, au mйcanisme qu'il renferme et qui gйnиre des йmissions affectant directement la conscience humaine. Je vais certainement vous dйcevoir, mais il est impossible d'y entrer sans une armure psi spйciale. Les dangers sont bien connus : mкme si vous rйussissiez а йchapper aux groupes de zombies qui infestent l'entrйe du laboratoire, vous risqueriez de devenir l'un d'entre eux. C'est trиs sйrieux. J'ai imaginй un dispositif de protection qui immunise contre les йmissions, mais pour le finaliser, il nous manque encore quelques mesures. Si vous nous aidez, on pourra vous donner un prototype en йtat de marche.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111">
+		<text>Allez.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21111">
+		<text>On йtudie les йmissions dans le labo X16 depuis longtemps, mais hors de question d'y entrer sans йquipement spйcial. On a crйй un dispositif de protection psi qui immunise contre les йmissions, mais il n'est pas encore au point. Si vous nous aidez а le finaliser, je vous donnerai un prototype en bon йtat de marche et vous pourrez ainsi pйnйtrer dans le labo.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21112">
+		<text>OK, зa marche.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211121">
+		<text>Parfait ! Allez parler а Kruglov et foncez. Il a tout le matйriel nйcessaire.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111211">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21113">
+		<text>OK, зa marche.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211131">
+		<text>Parfait ! Allez parler а Semenov et foncez. Il a tout ce qu'il vous faut.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211132">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211141">
+		<text>Vous ne comprenez pas, il y a un йmetteur. Personne n'a pu s'approcher а moins de 500 mиtres, зa transforme tout le monde en zombie. Aller lа-bas sans combinaison, c'est du suicide, compris ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111411">
+		<text>Hmm. Зa change la donne.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211142">
+		<text>Laissez tomber, dites-moi tout ce que vous savez.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211143">
+		<text>D'accord, mais vous ne pourrez pas dire que je ne vous avais pas prйvenu. Vasiliev travaillait sur le laboratoire. La semaine derniиre, lui et un Stalker du nom de Spectre ont essayй d'y entrer. Au bout de quelques heures, on a senti une secousse et les йmissions se sont arrкtйes. Une heure plus tard, on a reзu un signal de Vasiliev qui provenait des marйcages, mais on l'a perdu. Tout laisse а penser que Vasiliev a disparu. Essayez de retrouver son corps, il dйtenait des informations importantes sur le laboratoire : son emplacement et comment y entrer. Il savait peut-кtre mкme comment stopper les йmissions. L'entrйe du labo est certainement dissimulйe dans le sous-sol de l'un des bвtiments situйs aux alentours de la centrale.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211144">
+		<text>Et ben voilа, super !</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21115">
+		<text>Non... Je n'ai pas envie de зa maintenant.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211151">
+		<text>C'est dommage, vraiment dommage... Je ne sais pas quand et comment on pourra envoyer quelqu'un prendre ces mesures.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_221">
+		<text>Merci... euh... le Tatouй, c'est зa ? Vous nous avez aidйs а sauver notre associй Kruglov et pour vous remercier, je tiens а vous offrir une de nos combinaisons. C'est trиs utile, vous verrez...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_231">
+		<text>Vous avez fait un excellent travail, le Tatouй ! Maintenant que les йmissions ont stoppй, on va pouvoir organiser de nouvelles expйditions et explorer des zones jusque lа inaccessibles. On va se montrer plus gйnйreux avec vous maintenant.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2311">
+		<text>Merci.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_241">
+		<text>Oui, le Tatouй ? Qu'est-ce que vous cherchez ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_31">
+		<text>Excellent travail ! Si les mesures sont correctes, le prototype devrait vous fournir une protection maximale contre les йmissions.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311">
+		<text>Ravi de l'apprendre.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_3111">
+		<text>Vous pouvez aller au laboratoire... sauf que si la source des йmissions n'a pas йtй dйtruite et que sa puissance ne diminue pas, vous n'aurez peut-кtre pas le temps de revenir. Alors, voilа comment nous allons procйder. Grвce а nos calculs, nous avons pu dйterminer l'emplacement de la source, elle se trouve sous terre. Avec votre permission, nous avons dйjа indiquй son emplacement sur votre carte.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_31111">
+		<text>Comment est-ce qu'on accиde au labo X16 ? Oщ se trouve l'entrйe ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311111">
+		<text>Vasiliev travaillait au labo. Il y a une semaine, avec un Stalker du nom de Spectre, il a tentй d'entrer. Quelques heures plus tard, on a ressenti une secousse terrible et une heure aprиs, on a interceptй un signal de Vasiliev qui provenait des marйcages et qui s'est brutalement interrompu. Il semblerait que Vasiliev ait disparu. Essayez de retrouver son cadavre. Il dйtenait des informations prйcises sur l'accиs au labo et peut-кtre  mкme des renseignements pour neutraliser cette source d'йmissions. Je vous ai transfйrй toutes nos donnйes.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311112">
+		<text>Euh... J'aimerais beaucoup jeter un oeil а ces documents. Vous pensez que Vasiliev les a ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311113">
+		<text>C'est possible. De toute faзon, vous devez commencer par trouver le corps de Vasiliev. C'est le seul moyen d'obtenir des informations fiables sur l'emplacement du labo. Le corps de votre collиgue, Spectre, doit кtre lа-bas lui aussi. А mon avis, il en savait beaucoup plus sur le labo X16 qu'il ne voulait l'admettre. Si jamais il a survйcu... Enfin, il ne vaut mieux pas se faire trop d'illusions, bien sыr.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311114">
+		<text>OK, je vais essayer.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41">
+		<text>Pourquoi est-il mort ? Vous йtiez censй le protйger !</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_411">
+		<text>Kruglov a йtй tuй par les zombies... Je n'ai rien pu faire, ils йtaient trop nombreux.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_4111">
+		<text>Oh non... comment зa a pu arriver ? Comment c'est possible ??! C'est pas vrai, tout va encore de travers. Maintenant, il va falloir qu'on fasse appel а des renforts... On a dйjа assez de problиmes comme зa... Merde...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41111">
+		<text>Йcoutez... Kruglov est mort, mais moi je suis lа. Donnez-moi le prototype. Je trouverai un moyen d'entrer dans le labo X16.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_411111">
+		<text>C'est un prototype, faites trиs attention ! Il n'est pas rйglй avec prйcision, mais c'est votre faute ; vous n'avez pas rйussi а sauver votre йquipier. Le dispositif ne fournira pas une protection maximale, mais au moins il rйduira l'intensitй des йmissions. Stalker, il faudra que vous vous dйplaciez vite jusqu'а la source.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_4111111">
+		<text>Comment est-ce qu'on accиde au labo X16 ? Oщ se trouve l'entrйe ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41111111">
+		<text>Vasiliev travaillait au labo. Il y a une semaine, avec un Stalker du nom de Spectre, il a tentй d'entrer. Quelques heures plus tard, on a ressenti une secousse terrible et une heure aprиs, on a interceptй un signal de Vasiliev qui provenait des marйcages et qui s'est brutalement interrompu. Il semblerait que Vasiliev ait disparu. Essayez de retrouver son cadavre. Il dйtenait des informations prйcises sur l'accиs au labo et peut-кtre  mкme des renseignements pour neutraliser cette source d'йmissions. Je vous ai transfйrй toutes nos donnйes.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41112">
+		<text>C'est tout ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41113">
+		<text>Vous devez commencer par trouver le corps de Vasiliev. C'est le seul moyen d'obtenir des informations fiables sur l'emplacement du labo. Le corps de votre collиgue, Spectre, doit кtre lа-bas lui aussi. А mon avis, il en savait beaucoup plus sur le labo X16 qu'il ne voulait l'admettre. Si jamais il a survйcu... Enfin, il ne vaut mieux pas se faire trop d'illusions, bien sыr.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41114">
+		<text>D'accord, je vais essayer.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51">
+		<text>Pourquoi est-il mort ? Vous йtiez censй le protйger !</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511">
+		<text>Semenov a йtй tuй par les zombies... Je n'ai rien pu faire, ils йtaient trop nombreux.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_5111">
+		<text>Oh non... comment зa a pu arriver ? Comment c'est possible ??! C'est pas vrai, tout va encore de travers. Maintenant, il va falloir qu'on fasse appel а des renforts... On a dйjа assez de problиmes comme зa... Merde...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51111">
+		<text>Йcoutez... Semenov est mort, mais moi je suis lа. Donnez-moi le prototype. Je trouverai un moyen d'entrer dans le labo X16.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511111">
+		<text>C'est un prototype, faites trиs attention ! Il n'est pas rйglй avec prйcision, mais c'est votre faute ; vous n'avez pas rйussi а sauver votre йquipier. Le dispositif ne fournira pas une protection maximale, mais au moins il rйduira l'intensitй des йmissions. Stalker, il faudra que vous vous dйplaciez vite jusqu'а la source.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_5111111">
+		<text>Comment est-ce qu'on accиde au labo X16 ? Oщ se trouve l'entrйe ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511111111">
+		<text>Vasiliev travaillait au labo. Il y a une semaine, avec un Stalker du nom de Spectre, il a tentй d'entrer. Quelques heures plus tard, on a ressenti une secousse terrible et une heure aprиs, on a interceptй un signal de Vasiliev qui provenait des marйcages et qui s'est brutalement interrompu. Il semblerait que Vasiliev ait disparu. Essayez de retrouver son cadavre. Il dйtenait des informations prйcises sur l'accиs au labo et peut-кtre  mкme des renseignements pour neutraliser cette source d'йmissions. Je vous ai transfйrй toutes nos donnйes.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51112">
+		<text>Euh... J'aimerais beaucoup jeter un oeil а ces documents. Vous pensez que Vasiliev les a ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51113">
+		<text>C'est possible. De toute faзon, vous devez commencer par trouver le corps de Vasiliev. C'est le seul moyen d'obtenir des informations fiables sur l'emplacement du labo. Le corps de votre collиgue, Spectre, doit кtre lа-bas lui aussi. А mon avis, il en savait beaucoup plus sur le labo X16 qu'il ne voulait l'admettre. Si jamais il a survйcu... Enfin, il ne vaut mieux pas se faire trop d'illusions, bien sыr.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51114">
+		<text>D'accord, je vais essayer.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_61">
+		<text>Oui, le Tatouй ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_71">
+		<text>Oui, le Tatouй ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_81">
+		<text>C'est vraiment dommage que Kruglov soit mort... Hйlas, rien ne pourra le faire revenir. Le plus important, c'est que vous nous avez apportй les mesures. N'est-ce pas ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_811">
+		<text>Oui. Voilа.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_8111">
+		<text>Bon, je vais finaliser le prototype. Attendez-moi ici.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_81111">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_812">
+		<text>Non.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_8121">
+		<text>Eh bien allez-y et vite ! Je ne peux pas terminer les rйglages du prototype sans зa.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_91">
+		<text>Excellent travail ! Si les mesures sont correctes, le prototype devrait vous fournir une protection maximale contre les йmissions.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_911">
+		<text>Vous pouvez кtre un peu plus prйcis ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9111">
+		<text>Stalker, vous pouvez pйnйtrer dans le labo, mais si vous ne dйsactivez pas l'йmetteur, vous mourrez vite mкme avec la protection psi. D'aprиs nos estimations, l'йmetteur se trouve au sous-sol du bвtiment. J'ai fait une marque sur la carte.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9112">
+		<text>Comment est-ce que je fais pour accйder au labo X16 ? Oщ se trouve l'entrйe ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9113">
+		<text>Vasiliev travaillait au labo. Il y a une semaine, avec un Stalker du nom de Spectre, il a tentй d'entrer. Quelques heures plus tard, on a ressenti une secousse terrible et une heure aprиs, on a interceptй un signal de Vasiliev qui provenait des marйcages et qui s'est brutalement interrompu. Il semblerait que Vasiliev ait disparu. Essayez de retrouver son cadavre. Il dйtenait des informations prйcises sur l'accиs au labo et peut-кtre  mкme des renseignements pour neutraliser cette source d'йmissions. Je vous ai transfйrй toutes nos donnйes.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9114">
+		<text>Euh... J'aimerais beaucoup jeter un oeil а ces documents. Vous pensez que Vasiliev les a ?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9115">
+		<text>C'est possible. De toute faзon, vous devez commencer par trouver le corps de Vasiliev. C'est le seul moyen d'obtenir des informations fiables sur l'emplacement du labo. Le corps de votre collиgue, Spectre, doit кtre lа-bas lui aussi. А mon avis, il en savait beaucoup plus sur le labo X16 qu'il ne voulait l'admettre. Si jamais il a survйcu... Enfin, il ne vaut mieux pas se faire trop d'illusions, bien sыr.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9116">
+		<text>D'accord, je vais essayer.</text>
+	</string>
+	<string id="yantar_help_scientist_101">
+		<text>On n'a pas le temps...</text>
+	</string>
+	<string id="yantar_help_scientist_11">
+		<text>Oui, le Tatouй ?</text>
+	</string>
+	<string id="yantar_help_scientist_111">
+		<text>Le professeur m'a demandй d'aller prendre des mesures.</text>
+	</string>
+	<string id="yantar_help_scientist_1111">
+		<text>Vous commencez а m'intйresser ! On y va. Tout seul, зa ne servait а rien, mais avec vous, c'est diffйrent... On devrait y arriver. Ne vous laissez pas approcher par ces cadavres. Vous кtes prкt ?</text>
+	</string>
+	<string id="yantar_help_scientist_11111">
+		<text>Ouais.</text>
+	</string>
+	<string id="yantar_help_scientist_111111">
+		<text>Heu, а vous l'honneur ! Vous avez bien plus d'expйrience que moi. Et ces cadavres recommencent а bouger...</text>
+	</string>
+	<string id="yantar_help_scientist_1111111">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_help_scientist_21">
+		<text>Oh, le Tatouй ! Une petite visite de courtoisie ! Il йtait temps que vous nous trouviez. Le Prof aimerait vous parler pour vous remercier de m'кtre venu au secours.</text>
+	</string>
+	<string id="yantar_help_scientist_31">
+		<text>А plus tard !</text>
+	</string>
+	<string id="yantar_help_scientist_41">
+		<text>Hй, le Tatouй ! Comment зa va ?</text>
+	</string>
+	<string id="yantar_help_scientist_51">
+		<text>Oui, le Tatouй ?</text>
+	</string>
+	<string id="yantar_help_scientist_511">
+		<text>Le professeur m'a demandй d'aller prendre des mesures.</text>
+	</string>
+	<string id="yantar_help_scientist_512">
+		<text>Vous commencez а m'intйresser ! On y va. Tout seul, зa ne servait а rien, mais avec vous, c'est diffйrent... On devrait y arriver. Ne vous laissez pas approcher par ces cadavres. Vous кtes prкt ?</text>
+	</string>
+	<string id="yantar_help_scientist_513">
+		<text>Ouais.</text>
+	</string>
+	<string id="yantar_help_scientist_514">
+		<text>Vous savez quoi... Vous devriez passer devant. Vous avez bien plus d'expйrience que moi. Et ces cadavres recommencent а bouger...</text>
+	</string>
+	<string id="yantar_help_scientist_515">
+		<text>OK.</text>
+	</string>
+	<string id="yantar_help_scientist_61">
+		<text>Dйsolй, je n'ai pas le temps lа.</text>
+	</string>
+	<string id="yantar_help_scientist_71">
+		<text>Hй, le Tatouй ! Comment зa va ?</text>
+	</string>
+	<string id="yantar_help_scientist_81">
+		<text>Attendez un peu... Il faut qu'on parle.</text>
+	</string>
+	<string id="yantar_help_scientist_91">
+		<text>Attendez ! Je n'ai pas fini de prendre les mesures !</text>
+	</string>
+	<string id="yantar_wounded_scientist_11">
+		<text>Ouais ! Aпe... Argh...</text>
+	</string>
+	<string id="yantar_wounded_scientist_111">
+		<text>Vous кtes vivant ? Allez, levez-vous... Doucement. C'est fini. C'est passй.</text>
+	</string>
+	<string id="yantar_wounded_scientist_21">
+		<text>Hй, le Tatouй ! Comment зa va ?</text>
+	</string>
+	<string id="yantar_wounded_scientist_211">
+		<text>C'est bon ! Prenez l'appareil photo, faut y aller !</text>
+	</string>
+	<string id="yantar_wounded_scientist_31">
+		<text>Hй, le Tatouй ! Comment зa va ?</text>
+	</string>
+</string_table>

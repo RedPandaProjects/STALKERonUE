@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="yantar_general_ucheniy_talk_start_101">
+		<text>Dziкkujк ci... eee... Naznaczony, zgadza siк? Pomogіeњ uratowaж naszego wspуіpracownika, Krugіowa, i w dowуd mej szczerej wdziкcznoњci chcк ci podarowaж jeden z naszych kombinezonуw roboczych. Takie coњ bardzo siк przydaje, sam pewnie wiesz... Czy mogк ci w czymњ jeszcze pomуc?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1011">
+		<text>Szukam laboratorium X16. Barman twierdzi, їe moїesz znaж jego lokalizacjк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1012">
+		<text>Od dawna interesowaliњmy siк laboratorium X16... albo raczej znajduj№cym siк w њrodku mechanizmem, ktуry wytwarza emisje bezpoњrednio wpіywaj№ce na ludzk№ њwiadomoњж. Niestety, muszк ciк zmartwiж: bez specjalnego pancerza psionicznego nie masz szans na zbadanie tego miejsca. Wynik byіby przes№dzony - nawet, gdyby udaіo ci siк unikn№ж chmar zombi, ktуre zalкgіy siк przy wejњciu do laboratorium, ryzykowaіbyњ, їe staniesz siк jednym z nich. To bardzo ciкїka sprawa. Udaіo siк nam jednak zaprojektowaж urz№dzenie ochronne, ktуre osіania przed emisj№, lecz їeby je dostroiж, potrzebne nam s№ dodatkowe pomiary. Jeњli pomoїesz nam w tym zadaniu, pewnie mуgіbyњ otrzymaж od nas w peіni skalibrowany prototyp do testуw w warunkach polowych.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1013">
+		<text>Pomiary?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1014">
+		<text>Gdybyњcie razem z naszym wspуіpracownikiem zdoіali dokonaж wszelkich niezbкdnych pomiarуw, wtedy przygotowaіbym dla ciebie w peіni dziaіaj№cy prototyp pancerza. Istnieje duїe prawdopodobieсstwo, їe dostaіbyњ siк dziкki niemu do laboratorium.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10141">
+		<text>W porz№dku, zgadzam siк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101411">
+		<text>Wspaniale! Porozmawiaj z Krugіowem i ruszaj. On juї ma caіe niezbкdne wyposaїenie.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101412">
+		<text>Dobra.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10142">
+		<text>W porz№dku, zgadzam siк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101421">
+		<text>Wspaniale! Porozmawiaj z Siemienowem i ruszaj. On ma wszystko, czego ci potrzeba.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101422">
+		<text>Dobra.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_10143">
+		<text>Nie... W tym momencie nie chcк siк tego podejmowaж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_101431">
+		<text>Niedobrze, wielka szkoda... Nie wiem jak i kiedy moglibyњmy sami dokonaж tych pomiarуw.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_11">
+		<text>Tak? Czego pan tu szuka?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_111">
+		<text>Szukam laboratorium X16. Barman twierdzi, їe moїesz znaж jego lokalizacjк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12">
+		<text>Dziкkujк ci, Naznaczony, za ocalenie Krugіowa. Przyjmij ten kombinezon ciњnieniowy w nagrodк za swуj trud. Przypuszczam teї, їe nie przybyіeњ tu tylko po zapіatк, mam racjк?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121">
+		<text>Szukam laboratorium X16. Barman twierdzi, їe moїesz znaж jego lokalizacjк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_1211">
+		<text>Od pewnego czasu badamy emisje w laboratorium X16 i nie dostaniesz siк tam bez specjalnego wyposaїenia. Zbudowaliњmy urz№dzenie do ochrony przeciwpsionicznej, ktуre osіoni ciк przed emisj№, ale trzeba je dostroiж. Jeњli nam w tym pomoїesz, otrzymasz ode mnie dziaіaj№cy prototyp, dziкki ktуremu dasz radк wejњж do laboratorium. </text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12111">
+		<text>Dobra.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121111">
+		<text>Wspaniale, porozmawiaj z Krugіowem i ruszaj. On ma wszystko, czego ci potrzeba.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_12112">
+		<text>Nie, jeszcze nie jestem na to gotowy.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_121122">
+		<text>Wielka szkoda. Jak dot№d nie byliњmy w stanie wysіaж sami ekspedycji pomiarowej.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21">
+		<text>Tak? Czego pan tu szuka?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211">
+		<text>Od dawna interesowaliњmy siк laboratorium X16... albo raczej znajduj№cym siк w њrodku mechanizmem, ktуry wytwarza emisje bezpoњrednio wpіywaj№ce na ludzk№ њwiadomoњж. Niestety, muszк ciк zmartwiж: bez specjalnego pancerza psionicznego nie masz szans na zbadanie tego miejsca. Wynik byіby przes№dzony - nawet, gdyby udaіo ci siк unikn№ж chmar zombi, ktуre zalкgіy siк przy wejњciu do laboratorium, ryzykowaіbyњ, їe staniesz siк jednym z nich. To bardzo ciкїka sprawa. Udaіo siк nam jednak zaprojektowaж urz№dzenie ochronne, ktуre osіania przed emisj№, lecz їeby je dostroiж, potrzebne nam s№ dodatkowe pomiary. Jeњli pomoїesz nam w tym zadaniu, pewnie mуgіbyњ otrzymaж od nas w peіni skalibrowany prototyp do testуw w warunkach polowych.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111">
+		<text>Mуw dalej.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21111">
+		<text>Od pewnego czasu badamy emisje w laboratorium X16 i nie dostaniesz siк tam bez specjalnego wyposaїenia. Zbudowaliњmy urz№dzenie do ochrony przeciwpsionicznej, ktуre osіoni ciк przed emisj№, ale trzeba je dostroiж. Jeњli nam w tym pomoїesz, otrzymasz ode mnie dziaіaj№cy prototyp, dziкki ktуremu dasz radк wejњж do laboratorium. </text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21112">
+		<text>W porz№dku, zgadzam siк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211121">
+		<text>Wspaniale! Porozmawiaj z Krugіowem i ruszaj. On juї ma caіe niezbкdne wyposaїenie.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111211">
+		<text>Dobra.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21113">
+		<text>W porz№dku, zgadzam siк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211131">
+		<text>Wspaniale! Porozmawiaj z Siemienowem i ruszaj. On ma wszystko, czego ci potrzeba.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211132">
+		<text>Dobra.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211141">
+		<text>Nie rozumiesz, tam jest emiter. Nikt nie byі w stanie podejњж bliїej niї pуі kilometra - z kaїdego robi zombi. Wybieranie siк tam bez kombinezonu to samobуjstwo, rozumiesz?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2111411">
+		<text>Hm. To nieco zmienia sytuacjк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211142">
+		<text>Chrzaniж to - powiedz mi wszystko, co wiesz.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211143">
+		<text>W porz№dku, ale nie mуw, їe ciк nie ostrzegaіem. Wasiliew zajmowaі siк problemem laboratorium. Jakiњ tydzieс temu on i stalker o ksywie Duch prуbowali dostaж siк do њrodka. Po kilku godzinach poczuliњmy wstrz№s i emisje ustaіy; minкіa kolejna godzina i odebraliњmy sygnaі od Wasiliewa - dochodziі gdzieњ z terenu bagna - ale potem znikn№і. Wszystko wskazuje na to, їe juї po Wasiliewie. Sprуbuj znaleџж jego ciaіo - miaі przy sobie precyzyjne informacje dotycz№ce laboratorium: gdzie jest poіoїone i jak siк dostaж do њrodka. Mуgі teї wiedzieж, jak wyі№czyж emisje. Wejњcie do laboratorium jest zapewne ukryte w piwnicy jednego z budynkуw w rejonie elektrowni.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211144">
+		<text>No i juї, wspaniale.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_21115">
+		<text>Nie... W tym momencie nie chcк siк tego podejmowaж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_211151">
+		<text>Niedobrze, wielka szkoda... Nie wiem jak i kiedy moglibyњmy sami dokonaж tych pomiarуw.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_221">
+		<text>Dziкkujк ci... mmm... Naznaczony, zgadza siк? Pomogіeњ uratowaж naszego wspуіpracownika, Krugіowa, i w dowуd mej szczerej wdziкcznoњci chcк podarowaж ci jeden z naszych kombinezonуw roboczych. Takie coњ bardzo siк przydaje, sam pewnie wiesz...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_231">
+		<text>Њwietna robota, Naznaczony! Teraz gdy juї emisje s№ wyі№czone, bкdziemy mogli wysіaж nowe ekspedycje i zbadaж wczeњniej niedostкpne tereny. A poza tym... od tej pory bкdziemy stosowaж wobec ciebie niezwykle korzystn№ politykк cenow№.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_2311">
+		<text>Dziкkujк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_241">
+		<text>Tak, Naznaczony? Czego szukasz?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_31">
+		<text>Wspaniale siк spisaіeњ! Jeњli pomiary s№ wiarygodne, prototyp powinien zapewniж ci maksymaln№ ochronк przed emisj№.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311">
+		<text>Miіo mi to sіyszeж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_3111">
+		<text>Teraz bкdziesz w stanie przebiж siк do laboratorium, ale jeњli nie wyі№czysz emitera, to dіugo nie poci№gniesz - nawet z wі№czon№ osіon№ przeciwpsioniczn№. Udaіo nam siк ustaliж przypuszczaln№ lokalizacjк emitera. Znajduje siк w czкњci podziemnej. Zaznaczyіem ci to juї na mapie.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_31111">
+		<text>Jak dokіadnie moїna siк dostaж do laboratorium X16? Gdzie jest wejњcie?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311111">
+		<text>Problemem laboratorium zajmowaі siк Wasiliew. Mniej wiкcej tydzieс temu, razem ze stalkerem o ksywce Duch, usiіowali dostaж siк do њrodka. Po kilku godzinach poczuliњmy silny wstrz№s, a po upіywie kolejnej godziny odebraliњmy sygnaі od Wasiliewa - dochodziі z rejonu bagna, ale w koсcu ustaі. Wygl№da na to, їe wraz z nim ustaіo їycie Wasiliewa. Sprуbuj odszukaж jego ciaіo. Miaі przy sobie precyzyjne dane o laboratorium i sposobie dostania siк do њrodka. Mog№ tam teї byж informacje o tym, jak wyі№czyж џrуdіo emisji. Przesіaіem ci juї wszystkie dane, jakie posiadamy.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311112">
+		<text>Hm... Rzeczywiњcie dobrze byіoby mуc zerkn№ж do tych dokumentуw. Myњlisz wiкc, їe Wasiliew je ma?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311113">
+		<text>Byж moїe. Tak czy inaczej, musisz zacz№ж od poszukiwaс ciaіa Wasiliewa - to jedyna szansa uzyskania precyzyjnych informacji o poіoїeniu laboratorium. Ciaіo twojego kolegi, Ducha, musi teї gdzieњ tam byж. Wydaje mi siк, їe on wiedziaі o X16 znacznie wiкcej, niї nam powiedziaі. Gdyby jakimњ cudem przeїyі... A zreszt№... nie ma sensu siк іudziж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_311114">
+		<text>Dobrze, sprуbujк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41">
+		<text>Dlaczego zgin№і? Miaіeњ go chroniж!</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_411">
+		<text>Zombi zabiіy Krugіowa... Nie mogіem nic poradziж, byіo ich za wiele.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_4111">
+		<text>Ale jak... jak to siк mogіo staж?! Cholera jasna, wszystko bierze w іeb! Bкdziemy musieli poprosiж o nowych ludzi... I tak mamy wystarczaj№co duїo problemуw... Szlag by to trafiі...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41111">
+		<text>Sіuchaj... Krugіow nie їyje, ale ja tak. Daj mi prototyp. Przebijк siк do њrodka X16.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_411111">
+		<text>Masz tu prototyp, ale uwaїaj, nie jest odpowiednio skalibrowany - to zreszt№ twoja wina, bo nie obroniіeњ naszego kolegi. Urz№dzenie nie zapewni ci maksymalnej ochrony, ale przynajmniej zmniejszy intensywnoњж emisji. Tak wiкc, stalkerze, musisz siк њpieszyж w drodze do џrуdіa.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_4111111">
+		<text>Jak moїna siк dostaж do laboratorium X16? Gdzie jest wejњcie?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41111111">
+		<text>Problemem laboratorium zajmowaі siк Wasiliew. Mniej wiкcej tydzieс temu, razem ze stalkerem o ksywce Duch, usiіowali dostaж siк do њrodka. Po kilku godzinach poczuliњmy silny wstrz№s, a po upіywie kolejnej godziny odebraliњmy sygnaі od Wasiliewa - dochodziі z rejonu bagna, ale w koсcu ustaі. Wygl№da na to, їe wraz z nim ustaіo їycie Wasiliewa. Sprуbuj odszukaж jego ciaіo. Miaі przy sobie precyzyjne dane o laboratorium i sposobie dostania siк do њrodka. Mog№ tam teї byж informacje o tym, jak wyі№czyж џrуdіo emisji. Przesіaіem ci juї wszystkie dane, jakie posiadamy.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41112">
+		<text>Coњ jeszcze?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41113">
+		<text>Musisz zacz№ж od poszukiwaс ciaіa Wasiliewa - to jedyna szansa uzyskania precyzyjnych informacji o poіoїeniu laboratorium. Ciaіo twojego kolegi, Ducha, musi teї gdzieњ tam byж. Wydaje mi siк, їe on wiedziaі o X16 znacznie wiкcej, niї nam powiedziaі. Gdyby jakimњ cudem przeїyі... A zreszt№... nie ma sensu siк іudziж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_41114">
+		<text>Dobrze, sprуbujк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51">
+		<text>Dlaczego zgin№і? Nie miaіeњ go chroniж?!</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511">
+		<text>Zombi zabiіy Siemienowa... Nie mogіem nic poradziж, byіo ich za wiele.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_5111">
+		<text>Ale jak... jak to siк mogіo staж?! Cholera jasna, wszystko bierze w іeb! Bкdziemy musieli poprosiж o nowych ludzi... I tak mamy wystarczaj№co duїo problemуw... Szlag by to trafiі...</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51111">
+		<text>Sіuchaj... Siemienow nie їyje, ale ja tak. Daj mi prototyp. Przebijк siк do њrodka X16.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511111">
+		<text>Masz tu prototyp, ale uwaїaj, nie jest odpowiednio skalibrowany - to zreszt№ twoja wina, bo nie obroniіeњ naszego kolegi. Urz№dzenie nie zapewni ci maksymalnej ochrony, ale przynajmniej zmniejszy intensywnoњж emisji. Tak wiкc, stalkerze, musisz siк њpieszyж w drodze do џrуdіa.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_5111111">
+		<text>Jak moїna siк dostaж do laboratorium X16? Gdzie jest wejњcie?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_511111111">
+		<text>Problemem laboratorium zajmowaі siк Wasiliew. Mniej wiкcej tydzieс temu, razem ze stalkerem o ksywce Duch, usiіowali dostaж siк do њrodka. Po kilku godzinach poczuliњmy silny wstrz№s, a po upіywie kolejnej godziny odebraliњmy sygnaі od Wasiliewa - dochodziі z rejonu bagna, ale w koсcu ustaі. Wygl№da na to, їe wraz z nim ustaіo їycie Wasiliewa. Sprуbuj odszukaж jego ciaіo. Miaі przy sobie precyzyjne dane o laboratorium i sposobie dostania siк do њrodka. Mog№ tam teї byж informacje o tym, jak wyі№czyж џrуdіo emisji. Przesіaіem ci juї wszystkie dane, jakie posiadamy.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51112">
+		<text>Hm... Rzeczywiњcie dobrze byіoby mуc zerkn№ж do tych dokumentуw. Myњlisz wiкc, їe Wasiliew je ma?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51113">
+		<text>Byж moїe. Tak czy inaczej, musisz zacz№ж od poszukiwaс ciaіa Wasiliewa - to jedyna szansa uzyskania precyzyjnych informacji o poіoїeniu laboratorium. Ciaіo twojego kolegi, Ducha, musi teї gdzieњ tam byж. Wydaje mi siк, їe on wiedziaі o X16 znacznie wiкcej, niї nam powiedziaі. Gdyby jakimњ cudem przeїyі... A zreszt№... nie ma sensu siк іudziж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_51114">
+		<text>Dobrze, sprуbujк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_61">
+		<text>Tak, Naznaczony?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_71">
+		<text>Tak, Naznaczony?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_81">
+		<text>Bardzo niedobrze, їe Krugіow nie їyje... Ale niestety nic go do їycia nie przywrуci. Najwaїniejsze, їebyњmy dostali wyniki pomiarуw. Masz je?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_811">
+		<text>Tak. Proszк.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_8111">
+		<text>Dobrze, muszк tylko dostosowaж prototyp. Zaczekaj tu na mnie.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_81111">
+		<text>Okej.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_812">
+		<text>Nie.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_8121">
+		<text>To je zdob№dџ, i to szybko! Bez nich nie dam rady odpowiednio skalibrowaж prototypu.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_91">
+		<text>Wspaniale siк spisaіeњ! Jeњli pomiary s№ wiarygodne, prototyp powinien zapewniж ci maksymaln№ ochronк przed emisj№.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_911">
+		<text>Moїesz mуwiж nieco jaњniej?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9111">
+		<text>Teraz bкdziesz w stanie przebiж siк do laboratorium, ale jeњli nie wyі№czysz emitera, to dіugo nie poci№gniesz - nawet z wі№czon№ osіon№ przeciwpsioniczn№. Udaіo siк nam ustaliж przypuszczaln№ lokalizacjк emitera - znajduje siк w czкњci podziemnej. Zaznaczyіem ci to juї na mapie.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9112">
+		<text>Jak moїna siк dostaж do laboratorium X16? Gdzie jest wejњcie?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9113">
+		<text>Problemem laboratorium zajmowaі siк Wasiliew. Mniej wiкcej tydzieс temu, razem ze stalkerem o ksywce Duch, usiіowali dostaж siк do њrodka. Po kilku godzinach poczuliњmy silny wstrz№s, a po upіywie kolejnej godziny odebraliњmy sygnaі od Wasiliewa - dochodziі z rejonu bagna, ale w koсcu ustaі. Wygl№da na to, їe wraz z nim ustaіo їycie Wasiliewa. Sprуbuj odszukaж jego ciaіo. Miaі przy sobie precyzyjne dane o laboratorium i sposobie dostania siк do њrodka. Mog№ tam teї byж informacje o tym, jak wyі№czyж џrуdіo emisji. Przesіaіem ci juї wszystkie dane, jakie posiadamy.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9114">
+		<text>Hm... Rzeczywiњcie dobrze byіoby mуc zerkn№ж do tych dokumentуw. Myњlisz wiкc, їe Wasiliew je ma?</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9115">
+		<text>Byж moїe. Tak czy inaczej, musisz zacz№ж od poszukiwaс ciaіa Wasiliewa - to jedyna szansa uzyskania precyzyjnych informacji o poіoїeniu laboratorium. Ciaіo twojego kolegi, Ducha, musi teї gdzieњ tam byж. Wydaje mi siк, їe on wiedziaі o X16 znacznie wiкcej, niї nam powiedziaі. Gdyby jakimњ cudem przeїyі... A zreszt№... nie ma sensu siк іudziж.</text>
+	</string>
+	<string id="yantar_general_ucheniy_talk_start_9116">
+		<text>Dobrze, sprуbujк.</text>
+	</string>
+	<string id="yantar_help_scientist_101">
+		<text>Nie ma czasu...</text>
+	</string>
+	<string id="yantar_help_scientist_11">
+		<text>Tak, Naznaczony?</text>
+	</string>
+	<string id="yantar_help_scientist_111">
+		<text>Profesor poprosiі mnie, їebym wybraі siк z tob№ na obszar pomiarowy.</text>
+	</string>
+	<string id="yantar_help_scientist_1111">
+		<text>To siк nazywa powaїna rozmowa! Ruszajmy natychmiast. Samemu nie miaіem po co siк tam wybieraж, ale z tob№ to co innego... Myњlк, їe uporamy siк z tym raz dwa - tylko pilnuj, їeby truposze za bardzo siк nie zbliїyіy. To jak - gotowy?</text>
+	</string>
+	<string id="yantar_help_scientist_11111">
+		<text>Tak.</text>
+	</string>
+	<string id="yantar_help_scientist_111111">
+		<text>Wiesz co...? Moїe ty byњ poszedі pierwszy? Masz sporo doњwiadczenia, w przeciwieсstwie do mnie. A te umarlaki znowu zaczynaj№ siк ruszaж...</text>
+	</string>
+	<string id="yantar_help_scientist_1111111">
+		<text>Okej.</text>
+	</string>
+	<string id="yantar_help_scientist_21">
+		<text>Ho, ho! Naznaczony tutaj we wіasnej osobie! Nareszcie zajrzaіeњ w nasze strony. Porozmawiaj z profesorem - chce ci podziкkowaж za ocalenie mi їycia.</text>
+	</string>
+	<string id="yantar_help_scientist_31">
+		<text>Pуџniej, pуџniej!</text>
+	</string>
+	<string id="yantar_help_scientist_41">
+		<text>Hej, Naznaczony! Jak leci?</text>
+	</string>
+	<string id="yantar_help_scientist_51">
+		<text>Tak, Naznaczony?</text>
+	</string>
+	<string id="yantar_help_scientist_511">
+		<text>Profesor poprosiі mnie, їebym wybraі siк z tob№ na obszar pomiarowy.</text>
+	</string>
+	<string id="yantar_help_scientist_512">
+		<text>To siк nazywa powaїna rozmowa! Ruszajmy natychmiast. Samemu nie miaіem po co siк tam wybieraж, ale z tob№ to co innego... Myњlк, їe uporamy siк z tym raz dwa - tylko pilnuj, їeby truposze za bardzo siк nie zbliїyіy. To jak - gotowy?</text>
+	</string>
+	<string id="yantar_help_scientist_513">
+		<text>Tak.</text>
+	</string>
+	<string id="yantar_help_scientist_514">
+		<text>Wiesz co...? Moїe ty byњ poszedі pierwszy? Masz sporo doњwiadczenia, w przeciwieсstwie do mnie. A te umarlaki znowu zaczynaj№ siк ruszaж...</text>
+	</string>
+	<string id="yantar_help_scientist_515">
+		<text>Okej.</text>
+	</string>
+	<string id="yantar_help_scientist_61">
+		<text>Przykro mi, ale w tym momencie nie mam czasu.</text>
+	</string>
+	<string id="yantar_help_scientist_71">
+		<text>Hej, Naznaczony! Jak zdrуwko?</text>
+	</string>
+	<string id="yantar_help_scientist_81">
+		<text>Zaczekaj chwilkк... Musimy skoсczyж rozmowк.</text>
+	</string>
+	<string id="yantar_help_scientist_91">
+		<text>Zaczekaj! Nie skoсczyіem pomiarуw!</text>
+	</string>
+	<string id="yantar_wounded_scientist_11">
+		<text>Aj! Au... aaaa...</text>
+	</string>
+	<string id="yantar_wounded_scientist_111">
+		<text>Їyjesz? No dalej, wstawaj... Podnieњ siк powoli. Juї po wszystkim. To juї za nami.</text>
+	</string>
+	<string id="yantar_wounded_scientist_21">
+		<text>Hej, Naznaczony. Jak siк masz?</text>
+	</string>
+	<string id="yantar_wounded_scientist_211">
+		<text>Gotowe! Pakuj aparat, pora siк ulotniж!</text>
+	</string>
+	<string id="yantar_wounded_scientist_31">
+		<text>Hej, Naznaczony! Jak siк їyje?</text>
+	</string>
+</string_table>

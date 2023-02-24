@@ -1,0 +1,60 @@
+	<string id="esc_direction_fire">
+		<text>Nikt nie strzela, dopóki nie wydam rozkazu. ¯eby nikogo palec nie zaswêdzi³!</text>
+	</string>
+	<string id="esc_fanat_victory">
+		<text>Zwyciêstwo!!! Zbierzcie siê tu wszyscy. ChodŸ, Naznaczony, musimy pogadaæ.</text>
+	</string>
+	<string id="esc_return_dv">
+		<text>Dobrze, Naznaczony. Cieszê siê, ¿e ¿yjesz i ¿e postanowi³eœ nas odwiedziæ. PrzyjdŸ tu, porozmawiamy. Coœ siê szykuje.</text>
+	</string>
+	<string id="esc_tutorial_end">
+		<text>Œwietnie, zadanie wykonane. Mo¿na œmia³o powiedzieæ, ¿e nauczy³eœ siê podstaw.</text>
+	</string>
+	<string id="esc_wolf_thanks">
+		<text>Naznaczony, droga do obozu stoi teraz przed tob¹ otworem. PodejdŸ, to porozmawiamy.</text>
+	</string>
+	<string id="escape_fox_quest">
+		<text>S³ówko o Strieloku. Pewien stalker w³aœnie wróci³ z d³ugiego wypadu. Zwie siê Lis. Wygl¹da na to, ¿e mia³ spore k³opoty i prosi o pomoc. Ca³¹ drogê laz³y za nim jakieœ dziwne stwory - mówi, ¿e d³ugo ju¿ nie wytrzyma. S¹dzê, ¿e on wie trochê o Strieloku. Tu masz wspó³rzêdne. Lepiej, ¿ebyœ siê poœpieszy³.</text>
+	</string>
+	<string id="escape_stalker_death">
+		<text>Kiepsko, Naznaczony. Ch³opaki nie ¿yj¹, choæ to w³aœciwie nie twoja wina. Takie rzeczy siê zdarzaj¹ w Zonie. Tak czy inaczej zda³eœ test, wiêc wróæ tutaj i pogadamy o interesach.</text>
+	</string>
+	<string id="escape_stalker_helped">
+		<text>Dobra robota, Naznaczony. Trzymaj tak dalej, a zdobêdziesz kilku przyjació³. OdwiedŸ mnie - musimy pogadaæ o interesach.</text>
+	</string>
+	<string id="escape_stalker_killed">
+		<text>To nie by³o zbyt m¹dre, Naznaczony. Przeszed³eœ próbê, ale teraz bêdziesz siê musia³ sam zaj¹æ Wilkiem i jego zbirami. Tak czy inaczej czekam na ciebie. Musimy pogadaæ o robocie.</text>
+	</string>
+	<string id="info_esc_give_agroprom_task">
+		<text>Naznaczony, wojskowi znaleŸli ciekawe rzeczy w Instytucie Badawczym Agroprom. Chcia³bym je dostaæ w swoje rêce - ty zreszt¹ pewnie te¿. Zdob¹dŸ informacje i dostarcz je Barmanowi w barze stalkerów. Ruszaj!</text>
+	</string>
+	<string id="tips_esc_trader_about_anomalies">
+		<text>Uwa¿aj! Jesteœ niedaleko anomalii. U¿yj œrub, ¿eby okreœliæ ich dok³adne po³o¿enie i kszta³t. </text>
+	</string>
+	<string id="tips_esc_trader_about_pda">
+		<text>Wciœnij "Kontakty" ($$ACTION_CONTACTS$$). Przebywaj¹ce w promieniu 250 metrów osoby, które maj¹ w³¹czone PDA, wyœwietl¹ siê na liœcie kontaktów i minimapie twojego wizjera. Zobaczysz równie¿, jak s¹ do ciebie nastawieni - bêdziesz móg³ uwa¿aæ na potencjalnych wrogów. Jednak uwa¿aj, gdy¿ bandyci i mutanty (he, he, he) zazwyczaj nie w³¹czaj¹ PDA!</text>
+	</string>
+	<string id="tips_esc_trader_activate_map">
+		<text>¯eby w³¹czyæ mapê, wciœnij '$$ACTION_MAP$$'.</text>
+	</string>
+	<string id="tips_esc_trader_activate_pda">
+		<text>¯eby w³¹czyæ PDA, wciœnij '$$ACTION_ACTIVE_JOBS$$'.</text>
+	</string>
+	<string id="tips_esc_trader_how_to_talk">
+		<text>¯eby z kimœ porozmawiaæ, ustaw siê na wprost i wciœnij '$$ACTION_USE$$'.</text>
+	</string>
+	<string id="tips_esc_trader_quest_1">
+		<text>ZnajdŸ artefakt na terenie zaznaczonym na mapie i zabierz go do handlarza.</text>
+	</string>
+	<string id="tutorial_flash_anomaly_alarm">
+		<text>Uwa¿aj, Naznaczony. Nastêpnym razem to mo¿esz byæ ty.</text>
+	</string>
+	<string id="tutorial_trader_give_medikit">
+		<text>Daj temu kretynowi apteczkê.</text>
+	</string>
+	<string id="tutorial_trader_look_vagon">
+		<text>Naznaczony! Zapomnij o artefakcie, podrzucisz go póŸniej. Jak najszybciej dostañ siê do przyczepy przy drodze. Moi ch³opcy potrzebuj¹ tam pomocy. Idioci otworzyli ogieñ do przelatuj¹cego œmig³owca. Wys³a³em ci wspó³rzêdne.</text>
+	</string>
+	<string id="tutorial_trader_search_corpses">
+		<text>Przeszukaj cia³a - mo¿e znajdziesz coœ przydatnego.</text>
+	</string>
