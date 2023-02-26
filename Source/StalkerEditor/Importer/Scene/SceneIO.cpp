@@ -348,9 +348,15 @@ bool EScene::LoadToolLTX(ObjClassID clsid, LPCSTR fn)
 
 bool EScene::ReadObjectStream(IReader& F, CCustomObject*& O)
 {
-    ObjClassID clsid		=OBJCLASS_DUMMY;
+    ObjClassID clsid		= OBJCLASS_DUMMY;
     R_ASSERT				(F.find_chunk(CHUNK_OBJECT_CLASS));
     clsid 					= ObjClassID(F.r_u32());
+
+    if (GetTool(clsid) == nullptr)
+    {
+        return false;
+    }
+
 	O 						= GetOTool(clsid)->CreateObject(0,0);
 
     IReader* S 				= F.open_chunk(CHUNK_OBJECT_BODY);
@@ -371,6 +377,12 @@ bool EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name, CCustomObject*& O)
 {
     ObjClassID clsid		= OBJCLASS_DUMMY;
     clsid 					= ObjClassID(ini.r_u32(sect_name,"clsid"));
+
+    if (GetTool(clsid) == nullptr)
+    {
+        return false;
+    }
+
 	O 						= GetOTool(clsid)->CreateObject(0,0);
 
     bool bRes 				= O->LoadLTX(ini, sect_name);

@@ -32,6 +32,8 @@ public:
 	float						AIMapCanDOWN = 400.f;
 	UPROPERTY(EditAnywhere, Category = "Stalker|Editor")
 	float						AIMapTestHeight = 150.f;
+	UPROPERTY()
+	bool						NeedRebuildSpawn = true;
 #endif
 private:
 	UPROPERTY()

@@ -14,6 +14,9 @@ void StalkerEditorCommands::RegisterCommands()
 	UI_COMMAND(BuildLevelSpawn, "BuildLevelSpawn", "Build LevelSpawn", EUserInterfaceActionType::Button, FInputChord());
 	UI_COMMAND(BuildGameSpawn, "BuildGameSpawn", "Build GameSpawn", EUserInterfaceActionType::Button, FInputChord());
 	UI_COMMAND(ReloadConfigsAndScript, "ReloadConfigsAndScript", "Reload configs and script", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(ImportUITextures, "ImportUITextures", "Import UI Textures", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(ImportMeshes, "ImportMeshes", "Import Meshes", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(ImportPhysicalMaterials, "ImportPhysicalMaterials", "Import Physical Materials", EUserInterfaceActionType::Button, FInputChord());
 }
 
 #undef  LOCTEXT_NAMESPACE 

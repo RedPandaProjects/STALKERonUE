@@ -5,6 +5,8 @@
 #include "Tools/WayPoint/ESceneWayTools.h"
 #include "Tools/Shape/ESceneShapeTools.h"
 #include "Tools/Spawn/ESceneSpawnTools.h"
+#include "Tools/Group/ESceneGroupTools.h"
+#include "Entitys/GroupObject/GroupObject.h"
 
 
 EScene* Scene;
@@ -178,6 +180,7 @@ void EScene::CreateSceneTools()
 	RegisterSceneTools(new ESceneWayTool); //+
 	RegisterSceneTools(new ESceneShapeTool); //+
 	RegisterSceneTools(new ESceneSpawnTool); //+
+	RegisterSceneTools(new ESceneGroupTool); //+
 }
 
 void EScene::DestroySceneTools()
@@ -201,6 +204,29 @@ bool EScene::GetSubstObjectName(const xr_string& _from, xr_string& _to) const
 {
     return false;
 }
+
+void EScene::GetObjects(ObjClassID InType, ObjectList& OutObjects)
+{
+	ObjectList&ObjectsFromTool = GetOTool(InType)->GetObjects();
+	for (CCustomObject* Object : ObjectsFromTool)
+	{
+		OutObjects.push_back(Object);
+	}
+	/*for (auto& GroupObj : ListObj(OBJCLASS_GROUP))
+	{
+		ObjectList ObjectsFromGroups;
+		CGroupObject* Group = reinterpret_cast<CGroupObject*>(GroupObj->QueryInterface(OBJCLASS_GROUP));
+		Group->GetObjects(ObjectsFromGroups);
+		for (auto& Object : ObjectsFromGroups)
+		{
+			if (GroupObj->FClassID == InType)
+			{
+				OutObjects.push_back(Object);
+			}
+		}
+	}*/
+}
+
 int EScene::ObjCount()
 {
 	int cnt = 0;

@@ -14,6 +14,7 @@
 #include "../../../SEFactory/StalkerSEFactoryManager.h"
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "SpaceRestrictorWrapper/space_restrictor_wrapper.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 THIRD_PARTY_INCLUDES_START
 #include "xrServerEntities/xrMessages.h"
 #include "xrServerEntities/clsid_game.h"
@@ -473,6 +474,14 @@ bool CLevelSpawnConstructor::update								()
 bool CLevelSpawnConstructor::verify_space_restrictors			()
 {
 	UE_LOG(LogXRayLevelSpawnConstructor, Log, TEXT("Level [%S] : searching for AI map separators space restrictors"), game_graph().header().level(LevelSpawn->LevelID).name().c_str());
+	const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>();
+	if(!SGSettings->VerifySpaceRestrictorBorders)
+	{
+		UE_LOG(LogXRayLevelSpawnConstructor, Warning, TEXT("Skip verify space restrictors"));
+		return true;
+	}
+
+
 	SPACE_RESTRICTORS::iterator			I = m_space_restrictors.begin();
 	SPACE_RESTRICTORS::iterator			E = m_space_restrictors.end();
 	bool bResult = true;

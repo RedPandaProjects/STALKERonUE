@@ -19,9 +19,12 @@ public:
 	void										CalculateIndex				();
 	void										Destroyed					() override;
 	bool										Modify						(bool bAlwaysMarkDirty = true) override;
+	void										PostEditUndo				() override;
 
 	UPROPERTY(EditInstanceOnly, EditFixedSize, NoClear, Category = "WayObject")
 	TArray<class UStalkerWayPointComponent*>	Points;
+
+
 
 private:
 	void										GetSelectedPoint			(TArray<class UStalkerWayPointComponent*>& SelectedPoints);

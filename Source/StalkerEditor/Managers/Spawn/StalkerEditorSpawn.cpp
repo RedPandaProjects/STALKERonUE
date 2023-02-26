@@ -51,7 +51,7 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawnIfNeeded()
 	UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
 	UStalkerAIMap* AIMap = StalkerWorldSettings->GetOrCreateAIMap();
 	check(AIMap);
-	if (!Spawn || Spawn->NeedRebuild || !Spawn->SpawnGuid.IsValid() || AIMap->AIMapGuid != Spawn->AIMapGuid)
+	if (!Spawn ||StalkerWorldSettings->NeedRebuildSpawn|| Spawn->NeedRebuild || !Spawn->SpawnGuid.IsValid() || AIMap->AIMapGuid != Spawn->AIMapGuid)
 	{
 		return BuildLevelSpawn();
 	}
@@ -226,6 +226,8 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 		}
 
 	}
+	StalkerWorldSettings->Modify();
+	StalkerWorldSettings->NeedRebuildSpawn = false;
 	Spawn->NeedRebuild = false;
 	Spawn->MarkPackageDirty();
 	UE_LOG(LogStalkerEditor, Log, TEXT("Build level spawn is complete!"));
@@ -365,6 +367,14 @@ bool UStalkerEditorSpawn::BuildGameSpawn(UStalkerLevelSpawn* OnlyIt, bool IfNeed
 			for (int32 i = 0; i < GameSpawn->LevelsInfo.Num(); i++)
 			{
 				if (GameSpawn->LevelsInfo[i].LevelSpawnGuid != NewLevelsInfo[i].LevelSpawnGuid)
+				{
+					NeedRebuild = true;
+				}
+				else if (GameSpawn->LevelsInfo[i].Name != NewLevelsInfo[i].Name)
+				{
+					NeedRebuild = true;
+				}
+				else if (GameSpawn->LevelsInfo[i].Map != NewLevelsInfo[i].Map)
 				{
 					NeedRebuild = true;
 				}

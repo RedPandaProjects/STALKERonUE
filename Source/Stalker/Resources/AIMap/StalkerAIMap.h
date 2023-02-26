@@ -61,6 +61,9 @@ public:
 
 	CHeader						LevelGraphHeader;
 	TArray< CVertex>			LevelGraphVertices;
+
+	void PostEditUndo() override;
+
 private:
 #if WITH_EDITORONLY_DATA
 	void						ClearNodes			();

@@ -57,6 +57,10 @@ FPrimitiveSceneProxy* UStalkerWayPointComponent::CreateSceneProxy()
 					Collector.GetPDI(ViewIndex)->DrawLine(Position, Position + FVector(0, 0, -WayPointSize * 0.85f), PointColor, SDPG_World, 3.f);
 					Collector.GetPDI(ViewIndex)->DrawLine(Position, Position + FVector(0, 0, WayPointSize * 0.15f), PointColor, SDPG_World, 3.f);
 					Collector.GetPDI(ViewIndex)->SetHitProxy(nullptr);
+					if (!StalkerWayPointComponent.IsValid())
+					{
+						return;
+					}
 					if (StalkerWayPointComponent->bIsSelected)
 					{
 						const ESceneDepthPriorityGroup DrawBoundsDPG = SDPG_World;

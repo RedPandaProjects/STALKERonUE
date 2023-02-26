@@ -406,7 +406,7 @@ void UStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessa
 			Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("NEED REBUILD AI MAP!")));
 		}
 		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
-		if (!IsValid(Spawn) || Spawn->NeedRebuild)
+		if (!IsValid(Spawn) || Spawn->NeedRebuild||StalkerWorldSettings->NeedRebuildSpawn)
 		{
 			Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("NEED REBUILD LEVEL SPAWN!")));
 		}

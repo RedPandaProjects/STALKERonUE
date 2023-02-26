@@ -948,7 +948,7 @@ void UStalkerEditorAIMap::Build()
 				nodes[i].link(u8(j), renumbering[vertex_id]);
 			}
 		}
-		nodes.StableSort([](const NodeCompressed& vertex0, const NodeCompressed& vertex1)
+		nodes.Sort( [](const NodeCompressed& vertex0, const NodeCompressed& vertex1)
 			{
 				return		(vertex0.p.xz() < vertex1.p.xz());
 			});
@@ -971,13 +971,19 @@ void UStalkerEditorAIMap::Build()
 	AIMap->HashFill();
 	AIMap->CalculateIndex();
 	AIMap->AIMapGuid = FGuid::NewGuid();
+	auto CalculateAABB = [&AIMap](Fbox& BB)->float
+	{
+		BB.invalidate();
+		for (int32 i = 0; i < AIMap->Nodes.Num(); i++)
+		{
+			BB.modify(StalkerMath::UnrealLocationToXRay(AIMap->Nodes[i]->Position));
+		}
+		return BB.max.y - BB.min.y + EPS_L;
+	};
 	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).version = XRAI_CURRENT_VERSION;
 	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).count = AIMap->Nodes.Num();
 	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).size = NodeSize;
-	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).size_y = (AIMap->AABB.Max.Z - AIMap->AABB.Min.Z)/100.f +EPS_L;
-	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb.invalidate();
-	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb.modify(StalkerMath::UnrealLocationToXRay(AIMap->AABB.Min));
-	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb.modify(StalkerMath::UnrealLocationToXRay(AIMap->AABB.Max));
+	static_cast<hdrNODES&>(AIMap->LevelGraphHeader).size_y = CalculateAABB(static_cast<hdrNODES&>(AIMap->LevelGraphHeader).aabb) + EPS_L;
 	FMemory::Memcpy(&static_cast<hdrNODES&>(AIMap->LevelGraphHeader).guid, &AIMap->AIMapGuid,sizeof(FGuid));
 	AIMap->LevelGraphVertices.Empty(AIMap->Nodes.Num());
 

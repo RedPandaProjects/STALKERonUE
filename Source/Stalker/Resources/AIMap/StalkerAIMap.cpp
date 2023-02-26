@@ -19,11 +19,12 @@ void UStalkerAIMap::Serialize(FArchive& Ar)
 		if (CurrentVersion == 1)
 		{
 			Ar << LevelGraphHeader.count << LevelGraphHeader.size << LevelGraphHeader.size_y << static_cast<hdrNODES&>(LevelGraphHeader).version;
-			if (Ar.IsLoading()&& LevelGraphHeader.count)
+			if (LevelGraphHeader.count)
 			{
-				LevelGraphHeader.aabb.invalidate();
-				LevelGraphHeader.aabb.modify(StalkerMath::UnrealLocationToXRay(AABB.Min));
-				LevelGraphHeader.aabb.modify(StalkerMath::UnrealLocationToXRay(AABB.Max));
+				Ar <<LevelGraphHeader.aabb.min.x<<LevelGraphHeader.aabb.min.y<<LevelGraphHeader.aabb.min.z;
+				Ar <<LevelGraphHeader.aabb.max.x<<LevelGraphHeader.aabb.max.y<<LevelGraphHeader.aabb.max.z;
+			}
+			{
 				static_assert(sizeof(FGuid)==sizeof(xrGUID));
 				FMemory::Memcpy(&static_cast<hdrNODES&>(LevelGraphHeader).guid,&AIMapGuid,sizeof(FGuid));
 			}
@@ -576,6 +577,12 @@ void UStalkerAIMap::RefreshAIMapMetadata()
 	m_access_mask.assign(header().vertex_count(), true);
 	unpack_xz(vertex_position(header().box().max), m_max_x, m_max_z);
 	m_level_id = -1;
+}
+
+void UStalkerAIMap::PostEditUndo()
+{
+	Super::PostEditUndo();
+	NeedRebuild = true;
 }
 
 void UStalkerAIMap::ClearNodes()

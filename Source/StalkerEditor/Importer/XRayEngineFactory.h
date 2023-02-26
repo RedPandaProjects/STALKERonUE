@@ -19,7 +19,7 @@ public:
 	UObject*						ImportPhysicsMaterials		(const FString& FileName);
 	class UStalkerPhysicalMaterial* ImportPhysicsMaterial (class SGameMtl*Materials);
 	UTexture2D*						ImportTextureDDS			(const FString& FileName);
-	UTexture2D*						ImportTexture				(const FString& FileName);
+	UTexture2D*						ImportTexture				(const FString& FileName, bool IsUI = false);
 	UTexture2D*						ImportTexture				(const FString& FileName,const FString& PacketName);
 	void							ImportBump2D				(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Specular, TObjectPtr<UTexture2D>& Height);
 	inline UObject*					GetCreatedObject			() { if (ObjectCreated.Num())return ObjectCreated[0]; return nullptr; }

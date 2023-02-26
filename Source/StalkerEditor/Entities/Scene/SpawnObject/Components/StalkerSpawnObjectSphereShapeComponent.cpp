@@ -35,6 +35,10 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectSphereShapeComponent::CreateSceneProxy(
 		void GetDynamicMeshElements(const TArray<const FSceneView*>& Views, const FSceneViewFamily& ViewFamily, uint32 VisibilityMap, class FMeshElementCollector& Collector) const override
 		{
 			UWorld* World = GetScene().GetWorld();
+			if (!SphereShapeComponent.IsValid())
+			{
+				return;
+			}
 			for (int32 ViewIndex = 0; ViewIndex < Views.Num(); ViewIndex++)
 			{
 				if (VisibilityMap & (1 << ViewIndex))

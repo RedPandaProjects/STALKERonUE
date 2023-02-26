@@ -278,6 +278,11 @@ void UStalkerResourcesManager::Desotry(class IRender_Light* InLight)
 
 class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char* InName)
 {
+	if (!FApp::IsGame()&&(!InName || !InName[0]))
+	{
+		return nullptr;
+	}
+
 	UStalkerKinematicsData* KinematicsData  = LoadObject<UStalkerKinematicsData>(nullptr, *FString(InName), nullptr, LOAD_NoWarn);;
 
 	FString Name = InName;

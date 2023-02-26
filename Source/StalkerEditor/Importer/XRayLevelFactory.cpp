@@ -75,7 +75,8 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportStaticMeshes)
 	{
-		ObjectList& ListObj = Scene->ListObj(OBJCLASS_SCENEOBJECT);
+		ObjectList ListObj;
+		Scene->GetObjects(OBJCLASS_SCENEOBJECT,ListObj);
 		for (CCustomObject* Object : ListObj)
 		{
 			CSceneObject* SceneObject = reinterpret_cast<CSceneObject*>(Object->QueryInterface(OBJCLASS_SCENEOBJECT));
@@ -106,7 +107,8 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportWayObjects)
 	{
-		ObjectList& ListWay = Scene->ListObj(OBJCLASS_WAY);
+		ObjectList ListWay;
+		Scene->GetObjects(OBJCLASS_WAY,ListWay);
 		for (CCustomObject* Object : ListWay)
 		{
 			CWayObject* WayObject = reinterpret_cast<CWayObject*>(Object->QueryInterface(OBJCLASS_WAY));
@@ -137,7 +139,8 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportSpawnObjects)
 	{
-		ObjectList& ListSpawn = Scene->ListObj(OBJCLASS_SPAWNPOINT);
+		ObjectList ListSpawn;
+		Scene->GetObjects(OBJCLASS_SPAWNPOINT,ListSpawn);
 		for (CCustomObject* Object : ListSpawn)
 		{
 			CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(OBJCLASS_SPAWNPOINT));

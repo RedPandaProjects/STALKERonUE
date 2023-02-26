@@ -1445,7 +1445,7 @@ UTexture2D* XRayEngineFactory::ImportTextureDDS(const FString& InFileName)
 	return BaseTexture;
 }
 
-UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
+UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName,bool bIsUI)
 {
 	UTexture2D*   Texture2D = nullptr;
 	 
@@ -1480,6 +1480,11 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName)
 	}
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
+	if(bIsUI)
+	{
+		Texture2D->LODGroup = TEXTUREGROUP_UI;
+		Texture2D->NeverStream = false;
+	}
 	Texture2D->Modify();
 	Texture2D->PostEditChange();
 	return Texture2D;

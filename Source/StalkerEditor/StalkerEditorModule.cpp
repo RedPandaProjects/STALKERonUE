@@ -42,6 +42,7 @@ void FStalkerEditorModule::StartupModule()
 		ToolBarMenu.Initialize();
 		BuildMenu.Initialize();
 		PlayMenu.Initialize();
+		ToolsMenu.Initialize();
 
 		FStalkerEditorStyle::Initialize();
 		FStalkerEditorStyle::ReloadTextures();
@@ -82,6 +83,7 @@ void FStalkerEditorModule::ShutdownModule()
 		ToolBarMenu.Destroy();
 		MainMenu.Destroy();
 		BuildMenu.Destroy();
+		ToolsMenu.Destroy();
 		StalkerEditorCommands::Unregister();
 	}
 }
@@ -92,6 +94,11 @@ void FStalkerEditorModule::OnPostEngineInit()
 	FComponentTypeRegistry::Get().Invalidate();
 	FMessageLogModule& MessageLogModule = FModuleManager::LoadModuleChecked<FMessageLogModule>("MessageLog");
 	MessageLogModule.RegisterLogListing( "StalkerEditor",FText::FromString(TEXT("StalkerEditor Errors")));
+	auto GInterchangeEnableDDSImportVar = IConsoleManager::Get().FindConsoleVariable(TEXT("Interchange.FeatureFlags.Import.DDS"));
+	if (GInterchangeEnableDDSImportVar)
+	{
+		GInterchangeEnableDDSImportVar->Set(false);
+	}
 }
 
 void FStalkerEditorModule::OnPreExit()

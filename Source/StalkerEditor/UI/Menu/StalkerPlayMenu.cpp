@@ -53,7 +53,7 @@ void StalkerPlayMenu::Initialize()
 			}));
 			Section.AddMenuEntry("BuildFullGameSpawn",FText::FromString(TEXT("Build full spawn")), FText::FromString(TEXT("Build full spawn")), FSlateIcon(), Action, EUserInterfaceActionType::RadioButton);
 		}
-
+		Section.AddSeparator(NAME_None);
 		{
 			FUIAction Action(FExecuteAction::CreateLambda(
 			[]()
@@ -70,6 +70,23 @@ void StalkerPlayMenu::Initialize()
 				return SGSettings->IgnoreIncludeInBuildSpawn;
 			}));
 			Section.AddMenuEntry("IgnoreIncludeInBuildSpawn", FText::FromString(TEXT("Ignore \"Include In Build Spawn\"")), FText::FromString(TEXT("Ignore \"Include In Build Spawn\"")), FSlateIcon(), Action, EUserInterfaceActionType::Check);
+		}
+		{
+			FUIAction Action(FExecuteAction::CreateLambda(
+			[]()
+			{
+					UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+					SGSettings->VerifySpaceRestrictorBorders = !SGSettings->VerifySpaceRestrictorBorders;
+					SGSettings->PostEditChange();
+					SGSettings->SaveConfig();
+			}),
+			FCanExecuteAction(),
+			FIsActionChecked::CreateLambda([]()
+			{
+				UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+				return SGSettings->VerifySpaceRestrictorBorders;
+			}));
+			Section.AddMenuEntry("VerifySpaceRestrictorBorders", FText::FromString(TEXT("Verify Space Restrictor Borders")), FText::FromString(TEXT("Verify Space Restrictor Borders")), FSlateIcon(), Action, EUserInterfaceActionType::Check);
 		}
 
 	}

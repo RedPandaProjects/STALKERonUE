@@ -489,6 +489,8 @@ void AStalkerSpawnObject::Destroyed()
 		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
 		if (IsValid(Spawn))
 		{
+			StalkerWorldSettings->Modify();
+			StalkerWorldSettings->NeedRebuildSpawn = true;
 			Spawn->NeedRebuild = true;
 			Spawn->Modify();
 		}
@@ -508,11 +510,34 @@ bool AStalkerSpawnObject::Modify(bool bAlwaysMarkDirty /*= true*/)
 		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
 		if (IsValid(Spawn))
 		{
+			StalkerWorldSettings->Modify();
+			StalkerWorldSettings->NeedRebuildSpawn = true;
 			Spawn->NeedRebuild = true;
 			Spawn->Modify();
 		}
 	}
 	return bResult;
+}
+
+void AStalkerSpawnObject::PostEditUndo()
+{
+	Super::PostEditUndo();
+	if (!IsValid(GetWorld()))
+	{
+		return;
+	}
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GetWorld()->GetWorldSettings());
+	if (IsValid(StalkerWorldSettings))
+	{
+		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
+		if (IsValid(Spawn))
+		{
+			StalkerWorldSettings->Modify();
+			StalkerWorldSettings->NeedRebuildSpawn = true;
+			Spawn->NeedRebuild = true;
+			Spawn->Modify();
+		}
+	}
 }
 
 void AStalkerSpawnObject::PostEditImport()

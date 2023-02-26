@@ -83,7 +83,6 @@ public:
 	IC int 			ObjCount(ObjClassID cat) { return ListObj(cat).size(); }
 	int 			ObjCount();
 
-
 	IC ESceneToolBase*	  GetTool(ObjClassID cat) { return m_SceneTools[cat]; }
 	IC u32				  ToolCount() { return m_SceneTools.size(); }
 	IC ESceneCustomOTool* GetOTool(ObjClassID cat) { return GetTool(cat)->CastToESceneCustomOTool(); }
@@ -97,6 +96,9 @@ public:
 	shared_str 		LevelPrefix() { return m_LevelOp.m_LevelPrefix; }
 
 	bool            GetSubstObjectName(const xr_string& from, xr_string& to) const;
+	
+	void			GetObjects(ObjClassID InType,ObjectList&OutObjects);
+
 };
 
 extern EScene* Scene;

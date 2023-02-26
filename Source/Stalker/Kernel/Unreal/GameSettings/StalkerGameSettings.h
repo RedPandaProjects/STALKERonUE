@@ -53,6 +53,8 @@ public:
 	bool	UseCurrentWorldSpawn	= true;
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
 	bool	IgnoreIncludeInBuildSpawn = false;
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
+	bool	VerifySpaceRestrictorBorders = true;
 #endif
 
 	const TMap<FName, FStalkerLevelInfo> & GetCurrentLevels() const;
