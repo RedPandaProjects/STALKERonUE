@@ -28,6 +28,7 @@ void UStalkerCForm::InvalidCForm()
 {
 	Vertices.Empty();
 	Triangles.Empty();
+	Name2ID.Empty();
 	AABB = FBox3f(ForceInit);
 	Modify();
 }
