@@ -146,10 +146,8 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 					for (u32 i = 0; i < XRayEntity->visual_collection_size(); i++)
 					{
 						Fmatrix		Matrix = XRayEntity->visual_collection()[i].matrix;
-						ISE_Visual* IVisual = XRayEntity->visual_collection()[i].visual;
 						UStalkerKinematicsComponent* Visual = Visuals[i];
-						check(IVisual);
-						Visual->Initilize(GXRayEngineManager->GetResourcesManager()->GetKinematics(IVisual->visual_name.c_str()));
+						Visual->InitilizeEditor();
 						Visual->SetRelativeLocation(FVector(StalkerMath::XRayLocationToUnreal(Matrix.c)));
 						Visual->SetRelativeRotation(FQuat(StalkerMath::XRayQuatToUnreal(Matrix)));
 					}
@@ -161,13 +159,21 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 			{
 				UStalkerKinematicsComponent* Visual = Visuals[i];
 				ISE_Visual* IVisual = XRayEntity->visual_collection()[i].visual;
-				if (Visual->IsActive() != Selected)
+				if ((!!Visual->KinematicsData) != Selected)
 				{
-					Visual->SetActive(Selected);
-					MotionID M = Visual->ID_Cycle_Safe(IVisual->startup_animation.c_str());
-					if (M.valid())
+					if (Selected)
 					{
-						Visual->EditorPlay(M, false);
+						check(IVisual);
+						Visual->Initilize(GXRayEngineManager->GetResourcesManager()->GetKinematics(IVisual->visual_name.c_str()));
+						MotionID M = Visual->ID_Cycle_Safe(IVisual->startup_animation.c_str());
+						if (M.valid())
+						{
+							Visual->EditorPlay(M, false);
+						}
+					}
+					else
+					{
+						Visual->Initilize(nullptr);
 					}
 				}
 			}
@@ -251,7 +257,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 						SpotLight->AttachToComponent(GetRootComponent(), AttachmentTransformRules);
 					}
 
-					SpotLight->SetIntensityUnits(ELightUnits::Lumens);
+					SpotLight->SetIntensityUnits(ELightUnits::Candelas);
 					SpotLight->SetLightBrightness(ALifeObjectHangingLamp->brightness * 100.f * 100.f);
 					SpotLight->SetAttenuationRadius(ALifeObjectHangingLamp->range * 100);
 					SpotLight->SetInnerConeAngle(rad2deg(ALifeObjectHangingLamp->spot_cone_angle) * 0.125f);
@@ -275,7 +281,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 						FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::KeepRelative, false);
 						PointLight->AttachToComponent(GetRootComponent(), AttachmentTransformRules);
 					}
-					PointLight->SetIntensityUnits(ELightUnits::Lumens);
+					PointLight->SetIntensityUnits(ELightUnits::Candelas);
 					PointLight->SetSourceRadius(ALifeObjectHangingLamp->range * 100);
 					PointLight->SetIntensity(ALifeObjectHangingLamp->brightness);
 					PointLight->SetLightFColor(FColor(ALifeObjectHangingLamp->color));
@@ -471,6 +477,10 @@ void AStalkerSpawnObject::SpawnRead()
 		{
 			DestroyEntity();
 			EntityData.Reset();
+		}
+		else if (XRayEntity->QueryPropertiesInterface(EXRaySpawnPropertiesType::CSE_SmartCover))
+		{
+			reinterpret_cast<ISE_SmartCover*>(XRayEntity->QueryPropertiesInterface(EXRaySpawnPropertiesType::CSE_SmartCover))->OnChangeLoopholes();
 		}
 	}
 	CreateSpawnData();

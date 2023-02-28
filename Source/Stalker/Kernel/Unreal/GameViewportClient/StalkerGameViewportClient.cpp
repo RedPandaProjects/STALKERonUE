@@ -6,11 +6,14 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
 #include "XrEngine/XRayEngineInterface.h"
 #include "XrEngine/CustomHUD.h"
+#include "XrEngine/IGame_Level.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/XRay/Core/XRayInput.h"
 #include "Kernel/XRay/Render/Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
 #include "../GameMode/StalkerGameMode.h"
+#include "../WorldSettings/StalkerWorldSettings.h"
+#include "../LevelScriptActor/StalkerLevelScriptActor.h"
 DECLARE_CYCLE_STAT(TEXT("XRay ~ Frame"), STAT_XRayEngineFrame, STATGROUP_XRayEngine);
 DECLARE_CYCLE_STAT(TEXT("XRay ~ MT Frame"), STAT_XRayEngineMTFrame, STATGROUP_XRayEngine);
 void UStalkerGameViewportClient::Activated(FViewport* InViewport, const FWindowActivateEvent& InActivateEvent)
@@ -122,6 +125,21 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
 		g_bEnableStatGather = psDeviceFlags.is_any(rsStatistic);
 	
+		if (IsValid(GWorld) && g_pGameLevel&&g_pGameLevel->GetActor())
+		{
+			if (AStalkerWorldSettings* WorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings()))
+			{
+				if (IsValid(WorldSettings) && WorldSettings->NeedBeginPlay)
+				{
+					 WorldSettings->NeedBeginPlay = false;
+					 if (AStalkerLevelScriptActor* LevelScriptActor = Cast<AStalkerLevelScriptActor>(WorldSettings->GetLevel()->GetLevelScriptActor()))
+					 {
+						LevelScriptActor->StalkerBeginPlay();
+					 }
+				}
+			}
+		}
+
 		g_Engine->OnFrame();
 
 		Device->dwFrame++;

@@ -61,7 +61,8 @@ FPrimitiveSceneProxy* UStalkerWayPointComponent::CreateSceneProxy()
 					{
 						return;
 					}
-					if (StalkerWayPointComponent->bIsSelected)
+					const UStalkerWayPointComponent*InStalkerWayPointComponent = StalkerWayPointComponent.Get();
+					if (InStalkerWayPointComponent->bIsSelected)
 					{
 						const ESceneDepthPriorityGroup DrawBoundsDPG = SDPG_World;
 
@@ -73,13 +74,13 @@ FPrimitiveSceneProxy* UStalkerWayPointComponent::CreateSceneProxy()
 						DrawWireBox(Collector.GetPDI(ViewIndex), BBox, FColor::White, DrawBoundsDPG);
 
 					}
-					for (const FStalkerWayPointLink& Link : StalkerWayPointComponent->Links)
+					for (const FStalkerWayPointLink& Link : InStalkerWayPointComponent->Links)
 					{
 						
 						FVector ToPosition =  Link.Point->GetComponentLocation() + FVector(0, 0, WayPointSize * 0.85f);;
 						if (!IsSelected())
 						{
-							Collector.GetPDI(ViewIndex)->DrawLine(Position, ToPosition, StalkerWayPointComponent->bIsSelected ? FColor::Red : FColor(0x0000ff00), SDPG_World, 1.f);
+							Collector.GetPDI(ViewIndex)->DrawLine(Position, ToPosition, InStalkerWayPointComponent->bIsSelected ? FColor::Red : FColor(0x0000ff00), SDPG_World, 1.f);
 						}
 						else
 						{
@@ -103,9 +104,9 @@ FPrimitiveSceneProxy* UStalkerWayPointComponent::CreateSceneProxy()
 								ToPosition -= ArrowTangetX * 50.f;
 							}
 
-							Collector.GetPDI(ViewIndex)->DrawLine(Position, ToPosition, StalkerWayPointComponent->bIsSelected ? FColor::Yellow: FColor::Red , SDPG_World, 1.f);
+							Collector.GetPDI(ViewIndex)->DrawLine(Position, ToPosition, InStalkerWayPointComponent->bIsSelected ? FColor::Yellow: FColor::Red , SDPG_World, 1.f);
 
-							DrawDirectionalArrow(Collector.GetPDI(ViewIndex), PlaneMatrix, StalkerWayPointComponent->bIsSelected ? FColor::Cyan : FColor::Orange, 50.f, 50.f * 0.35f, SDPG_World, 1.f);
+							DrawDirectionalArrow(Collector.GetPDI(ViewIndex), PlaneMatrix, InStalkerWayPointComponent->bIsSelected ? FColor::Cyan : FColor::Orange, 50.f, 50.f * 0.35f, SDPG_World, 1.f);
 						}
 						
 						//Draw

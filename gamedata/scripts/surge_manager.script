@@ -51,7 +51,7 @@ function CSurgeManager:initialize()
 	self.surge_time = 190
 	self.inited_time = game.CTime()
 	self.last_surge_time = game.get_game_time()
-	self._delta = math.random(START_MIN_SURGE_TIME, START_MAX_SURGE_TIME) -- global minutes, время между выбросами
+	self._delta = math.random(START_MIN_SURGE_TIME, START_MAX_SURGE_TIME) -- global minutes, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 	self.count = 0
 	self.covers = {}
@@ -145,6 +145,9 @@ function CSurgeManager:get_nearest_cover()
 end
 
 function CSurgeManager:update()
+	if true then 
+		return 
+	end
 	if(device().precache_frame > 1) then
 		return
 	end

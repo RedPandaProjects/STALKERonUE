@@ -35,7 +35,10 @@ public:
 	UPROPERTY()
 	bool						NeedRebuildSpawn = true;
 #endif
+	UPROPERTY(Transient)
+	bool						NeedBeginPlay	 = true;
 private:
+
 	UPROPERTY()
 	class UStalkerCForm* CForm;
 	UPROPERTY()

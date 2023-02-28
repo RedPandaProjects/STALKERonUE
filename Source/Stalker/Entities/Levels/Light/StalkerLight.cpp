@@ -18,8 +18,8 @@ AStalkerLight::AStalkerLight()
 	SpotPoint->SetVisibility(false);
 	LightType = IRender_Light::DIRECT;
 	SpotPoint->SetRelativeRotation(FRotator(0,90,0));
-	SpotPoint->SetIntensityUnits(ELightUnits::Lumens);
-	LightPoint->SetIntensityUnits(ELightUnits::Lumens);
+	SpotPoint->SetIntensityUnits(ELightUnits::Candelas);
+	LightPoint->SetIntensityUnits(ELightUnits::Candelas);
 }
 
 // Called when the game starts or when spawned

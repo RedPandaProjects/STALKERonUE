@@ -932,10 +932,12 @@ void UStalkerEditorAIMap::Build()
 		for (u32 i = 0; i < N; ++i)
 			sorted[i] = i;
 
-		std::stable_sort(sorted.begin(), sorted.end(), [&nodes](u32 vertex_id0, u32 vertex_id1)
-			{
-				return		(nodes[vertex_id0].p.xz() < nodes[vertex_id1].p.xz());
-			});
+		std::sort(sorted.begin(), sorted.end(), [&nodes](u32 vertex_id0, u32 vertex_id1)
+		{
+				if(nodes[vertex_id0].p.xz() != nodes[vertex_id1].p.xz())
+					return		(nodes[vertex_id0].p.xz() < nodes[vertex_id1].p.xz());
+				return nodes[vertex_id0].p.y() < nodes[vertex_id1].p.y();
+		});
 
 		for (u32 i = 0; i < N; ++i)
 			renumbering[sorted[i]] = i;
@@ -950,7 +952,9 @@ void UStalkerEditorAIMap::Build()
 		}
 		nodes.Sort( [](const NodeCompressed& vertex0, const NodeCompressed& vertex1)
 			{
-				return		(vertex0.p.xz() < vertex1.p.xz());
+				if(vertex0.p.xz() != vertex1.p.xz())
+					return		(vertex0.p.xz() < vertex1.p.xz());
+				return vertex0.p.y() < vertex1.p.y();
 			});
 	};
 
