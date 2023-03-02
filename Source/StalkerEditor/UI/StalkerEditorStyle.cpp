@@ -53,6 +53,9 @@ TSharedRef< FSlateStyleSet > FStalkerEditorStyle::Create()
 	Style->Set("StalkerEditor.Stalker20x", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon20"), TEXT("stalker_20x")), Icon20x20));
 	Style->Set("StalkerEditor.Select", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("Select_40x")), Icon20x20));
 	Style->Set("StalkerEditor.Paint", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("Paint_40x")), Icon20x20));
+	Style->Set("StalkerEditor.COP", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("stalker_cop")), Icon40x40));
+	Style->Set("StalkerEditor.CS", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("stalker_cs")), Icon40x40));
+	Style->Set("StalkerEditor.SOC", new IMAGE_BRUSH(*FPaths::Combine(TEXT("Icon40"), TEXT("stalker_soc")), Icon40x40));
 	return Style;
 }
 
