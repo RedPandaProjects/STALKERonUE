@@ -2,6 +2,8 @@
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Framework/Commands/Commands.h"
 #include "../StalkerEditorStyle.h"
+#include "../../StalkerEditorManager.h"
+#include "../Commands/StalkerEditorCommands.h"
 
 void StalkerMainMenu::Initialize()
 {
@@ -10,7 +12,7 @@ void StalkerMainMenu::Initialize()
 		FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
 		auto LevelEditorMenuExtensibilityManager = LevelEditorModule.GetMenuExtensibilityManager();
 		MenuExtender = MakeShareable(new FExtender);
-		MenuExtender->AddMenuBarExtension("Window", EExtensionHook::After, nullptr, FMenuBarExtensionDelegate::CreateRaw(this, &StalkerMainMenu::MakePulldownMenu));
+		MenuExtender->AddMenuBarExtension("Help", EExtensionHook::After, GStalkerEditorManager->UICommandList, FMenuBarExtensionDelegate::CreateRaw(this, &StalkerMainMenu::MakePulldownMenu));
 		LevelEditorMenuExtensibilityManager->AddExtender(MenuExtender);
 	}
 }
@@ -26,15 +28,13 @@ void StalkerMainMenu::MakePulldownMenu(FMenuBarBuilder& InMenuBuilder)
 		FText::FromString("Stalker"),
 		FText::FromString("Open the Stalker menu"),
 		FNewMenuDelegate::CreateRaw(this, &StalkerMainMenu::FillPulldownMenu),
-		"Stalker",
-		"StalkerMenu"
+		"Stalker"
 	);
 }
 
 void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 {
 	InMenuBuilder.BeginSection(NAME_None, FText::FromString("Games"));
-
 	{
 		FUIAction Action(
 			FExecuteAction::CreateLambda([]()
@@ -103,6 +103,52 @@ void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 					)
 					);
 		InMenuBuilder.AddMenuEntry(FText::FromString("Shadow of Chernobyl"), FText::GetEmpty(), FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.SOC"), Action, NAME_None, EUserInterfaceActionType::RadioButton);
+	}
+
+	InMenuBuilder.EndSection();
+
+	InMenuBuilder.BeginSection(NAME_None, FText::FromString("Tools"));
+	{
+		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportUITextures, "ImportUITextures", FText::FromString("Import UI Textures"));
+		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportPhysicalMaterials, "ImportPhysicalMaterials", FText::FromString("Import Physical Materials"));
+		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportMeshes, "ImportMeshes", FText::FromString("Import Meshes"));
+	}
+
+	InMenuBuilder.EndSection();
+
+	InMenuBuilder.BeginSection(NAME_None, FText::FromString("Build"));
+	{
+		InMenuBuilder.AddMenuEntry(
+			StalkerEditorCommands::Get().BuildCForm,
+			"BuildCForm",
+			FText::FromString("Build CForm"),
+			FText::GetEmpty(),
+			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.BuildCForm")
+		);
+
+		InMenuBuilder.AddMenuEntry(
+			StalkerEditorCommands::Get().BuildAIMap,
+			"BuildAIMap",
+			FText::FromString("Build AIMap"),
+			FText::GetEmpty(),
+			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(),	"StalkerEditor.BuildAIMap")
+		);
+
+		InMenuBuilder.AddMenuEntry(
+			StalkerEditorCommands::Get().BuildLevelSpawn,
+			"BuildLevelSpawn",
+			FText::FromString("Build LevelSpawn"),
+			FText::GetEmpty(),
+			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.BuildLevelSpawn")
+		);
+
+		InMenuBuilder.AddMenuEntry(
+			StalkerEditorCommands::Get().BuildGameSpawn,
+			"BuildGameSpawn",
+			FText::FromString("Build GameSpawn"),
+			FText::GetEmpty(),
+			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.BuildGameSpawn")
+		);
 	}
 
 	InMenuBuilder.EndSection();
