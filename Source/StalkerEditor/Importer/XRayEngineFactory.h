@@ -8,9 +8,9 @@ public:
 									XRayEngineFactory			(UObject* InParentPackage, EObjectFlags InFlags);
 									~XRayEngineFactory			();
 	class UStalkerKinematicsData*	ImportOGF					(const FString& FileName);
-	UObject*						ImportObject				(const FString& FileName, bool UseOnlyFullPath = false);
+	UObject*						ImportObject				(const FString& FileName, bool DivideSubObject = false);
 	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
-	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object,const FString&Name);
+	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object, const FString&Name, int32 MeshID = -1);
 	USkeletalMesh*					ImportObjectAsDynamicMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
 	UMaterialInterface*				ImportSurface				(const FString& Path, CSurface* Surface);
 	UMaterialInterface*				ImportSurface				(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial);

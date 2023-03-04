@@ -74,7 +74,7 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 		}
 		GRayObjectLibrary->ReloadObjects();
 		XRayEngineFactory Factory(ParentPackage, Flags);
-		Object = Factory.ImportObject(Filename);
+		Object = Factory.ImportObject(Filename,ImporterOptions->DivideSubObject);
 	}
 	else
 	{

@@ -17,10 +17,13 @@ public:
 	{
 		ObjectImportGameFormat = EXRayObjectImportGameFormat::AUTO;
 		AngleNormalSmoth = 75;
+		DivideSubObject = false;
 	}
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere,Category = "Object")
 	EXRayObjectImportGameFormat ObjectImportGameFormat;
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Object",meta = (DisplayName="Angle Normal Smoth(for soc)"))
 	float						AngleNormalSmoth;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Object",meta = (DisplayName="DivideSubObject(not support for level import)"))
+	bool						DivideSubObject;
 	
 };

@@ -282,7 +282,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 						PointLight->AttachToComponent(GetRootComponent(), AttachmentTransformRules);
 					}
 					PointLight->SetIntensityUnits(ELightUnits::Candelas);
-					PointLight->SetSourceRadius(ALifeObjectHangingLamp->range * 100);
+					PointLight->SetAttenuationRadius(ALifeObjectHangingLamp->range * 100);
 					PointLight->SetIntensity(ALifeObjectHangingLamp->brightness);
 					PointLight->SetLightFColor(FColor(ALifeObjectHangingLamp->color));
 					PointLight->SetCastShadows(ALifeObjectHangingLamp->light_flags.is(ISE_ALifeObjectHangingLamp::flCastShadow));

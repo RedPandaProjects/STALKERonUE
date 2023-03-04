@@ -11,7 +11,7 @@ public:
 	void							Destroy						() override;
 
 
-	class XRayUnrealProxyInterface* CreateUnrealProxy			(class CObject*) override;
+	class XRayUnrealProxyInterface* CreateUnrealProxy			() override;
 	void							Destroy						(class XRayUnrealProxyInterface*) override;
 
 	class ILevelGraph*				GetLevelGraph				(const char*Name) override;
@@ -22,5 +22,8 @@ public:
 	bool							LoadWorld					(const char* Name) override;
 	void							LoadCFormFormCurrentWorld	(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback);
 	EXRayWorldStatus				GetWorldStatus				() override;
+
+
+	class XRayUnrealProxyInterface* GetUnrealPlayerCharacter	() override;
 
 };

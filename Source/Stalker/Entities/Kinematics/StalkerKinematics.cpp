@@ -81,7 +81,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 
 	KinematicsData->BuildBones(Bones);
 	BonesInstance.AddDefaulted(Bones.Num());
-	if (KinematicsData->UserData.Len())
+	if (KinematicsData->UserData.Len()&&FApp::IsGame())
 	{
 		TArray<char> UserDataMemory;
 		UserDataMemory.Append(TCHAR_TO_ANSI(*KinematicsData->UserData), KinematicsData->UserData.Len());
@@ -250,7 +250,39 @@ void UStalkerKinematicsComponent::DestroyBlend(TSharedPtr<CBlend>& Blend)
 	BlendsPool.Add(Blend);
 }
 
+void UStalkerKinematicsComponent::SetOwnerNoSee(bool Enable)
+{
+	Super::SetOwnerNoSee(Enable);
+}
 
+void UStalkerKinematicsComponent::SetOnlyOwnerSee(bool Enable)
+{
+	Super::SetOnlyOwnerSee(Enable);
+}
+
+void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset)
+{
+	SetRelativeLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(offset.c)), FQuat(StalkerMath::XRayQuatToUnreal(offset)));
+}
+
+void UStalkerKinematicsComponent::Lock(class CObject* InXRayObject)
+{
+	check(XRayObject == nullptr);
+	check(InXRayObject);
+	XRayObject = InXRayObject;
+}
+
+void UStalkerKinematicsComponent::Unlock(class CObject* InXRayObject)
+{
+	check(XRayObject == InXRayObject);
+	XRayObject = nullptr;
+}
+
+void UStalkerKinematicsComponent::BeginDestroy()
+{
+	check(XRayObject == nullptr);
+	Super::BeginDestroy();
+}
 
 void UStalkerKinematicsComponent::PostLoad()
 {

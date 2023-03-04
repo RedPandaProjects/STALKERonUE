@@ -20,6 +20,14 @@ public:
 	void											Initilize							(class UStalkerKinematicsData* KinematicsData);
 	void											InitilizeEditor						();
 	void											PostLoad							() override;
+	void											BeginDestroy						() override;
+	void											Lock								(class CObject* Parent) override;
+	void											Unlock								(class CObject* Parent) override;
+	
+	void											SetOwnerNoSee						(bool Enable) override;
+	void											SetOnlyOwnerSee						(bool Enable) override;
+	void											SetOffset							(const Fmatrix&offset) override;
+
 
 	void											TickComponent						(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
@@ -179,4 +187,5 @@ private:
 	UPROPERTY(Transient)
 	bool											bIsErrorMesh;
 #endif
+	class CObject*									XRayObject;		
 };

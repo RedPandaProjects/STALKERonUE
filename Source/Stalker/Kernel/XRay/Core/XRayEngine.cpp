@@ -16,6 +16,7 @@
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Resources/Spawn/StalkerGameSpawn.h"
+#include "Entities/Player/Character/StalkerPlayerCharacter.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -62,8 +63,7 @@ void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
 		return;
 	}
 	AStalkerProxy * StalkerProxy = InProxy->CastToStalkerProxy();
-	GXRayEngineManager->GetResourcesManager()->Destroy(StalkerProxy);
-	
+	StalkerProxy->Destroy();
 }
 
 class ILevelGraph* XRayEngine::GetLevelGraph(const char* Name)
@@ -97,9 +97,12 @@ bool XRayEngine::LoadWorld(const char* Name)
 	return GXRayEngineManager->LoadWorld(Name);
 }
 
-class XRayUnrealProxyInterface* XRayEngine::CreateUnrealProxy(class CObject*InObject)
+class XRayUnrealProxyInterface* XRayEngine::CreateUnrealProxy()
 {
-	return GXRayEngineManager->GetResourcesManager()->CreateProxy(InObject);
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(SpawnParameters);
+	return Result;
 }
 void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback)
 {
@@ -176,4 +179,17 @@ EXRayWorldStatus XRayEngine::GetWorldStatus()
 		return EXRayWorldStatus::Failure;
 		break;
 	} 
+}
+
+class XRayUnrealProxyInterface* XRayEngine::GetUnrealPlayerCharacter()
+{
+	if (IsValid(GWorld))
+	{
+		if (APlayerController* PC = GWorld->GetFirstPlayerController())
+		{
+			return Cast<AStalkerPlayerCharacter>(PC->GetPawn());
+		}
+	}
+
+	return nullptr;
 }

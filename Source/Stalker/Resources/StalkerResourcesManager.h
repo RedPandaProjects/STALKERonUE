@@ -18,6 +18,8 @@ public:
 	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name, bool NeedRefence = false);
 	class UStalkerKinematicsComponent*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
 	void								Destroy			(class UStalkerKinematicsComponent* Mesh);
+	void								RegisterKinematics(class UStalkerKinematicsComponent* Mesh);
+	void								UnregisterKinematics(class UStalkerKinematicsComponent* Mesh);
 	void								Refresh			();
 	FString								GetGamePath		();
 	class UStalkerGameSpawn*			GetGameSpawn	();
@@ -25,8 +27,6 @@ public:
 	class UStalkerGameSpawn*			GetOrCreateGameSpawn();
 #endif
 
-	class AStalkerProxy * CreateProxy(class CObject*Object);
-	void Destroy(class AStalkerProxy* Proxy);
 
 	UPROPERTY(Transient)
 	TObjectPtr < class UWorld>	GameWorld;
@@ -52,10 +52,6 @@ private:
 	
 	UPROPERTY(Transient)
 	TSet<UStalkerKinematicsComponent*> Meshes;
-
-
-	UPROPERTY(Transient)
-	TSet<AStalkerProxy*>			ProxyArray;
 
 	UPROPERTY(Transient)
 	TSet<class AStalkerLight*> Lights;

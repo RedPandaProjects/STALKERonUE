@@ -399,17 +399,20 @@ class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(co
 
 void UStalkerResourcesManager::Destroy(UStalkerKinematicsComponent* Mesh)
 {
-	checkSlow(Meshes.Contains(Mesh));
 	Meshes.Remove(Mesh);
 	Mesh->MarkAsGarbage();
 }
 
-void UStalkerResourcesManager::Destroy(class AStalkerProxy* Proxy)
+
+void UStalkerResourcesManager::RegisterKinematics(class UStalkerKinematicsComponent* Mesh)
 {
-	checkSlow(ProxyArray.Contains(Proxy));
-	ProxyArray.Remove(Proxy);
-	Proxy->DetachAll();
-	Proxy->Destroy();
+	Mesh->Rename(nullptr,GXRayEngineManager->GetResourcesManager());
+	Meshes.Add(Mesh);
+}
+
+void UStalkerResourcesManager::UnregisterKinematics(class UStalkerKinematicsComponent* Mesh)
+{
+	Meshes.Remove(Mesh);
 }
 
 void UStalkerResourcesManager::Refresh()
@@ -464,25 +467,4 @@ UStalkerGameSpawn* UStalkerResourcesManager::GetOrCreateGameSpawn()
 		GameSpawn = NewObject<UStalkerGameSpawn>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public);
 	}
 	return GameSpawn;
-}
-
-AStalkerProxy* UStalkerResourcesManager::CreateProxy(class CObject* Object)
-{
-	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
-	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
-
-	FString Name = Object->cName().c_str();
-	for (; Name.Len() && FChar::IsDigit(Name[Name.Len() - 1]);)
-	{
-		Name.RemoveAt(Name.Len() - 1);
-	}
-	SpawnParameters.NameMode = FActorSpawnParameters::ESpawnActorNameMode::Requested;
-	SpawnParameters.Name = *Name;
-	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(SpawnParameters);
-	Result->Initilize(Object);
-#if WITH_EDITORONLY_DATA
-	Result->SetActorLabel(Object->cName().c_str());
-#endif
-	ProxyArray.Add(Result);
-	return Result;
 }

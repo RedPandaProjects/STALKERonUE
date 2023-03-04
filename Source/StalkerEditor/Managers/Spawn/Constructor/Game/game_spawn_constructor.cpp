@@ -122,7 +122,7 @@ u32	CGameSpawnConstructor::level_id(LPCSTR level_name)
 	auto	I = game_graph().header().levels().begin();
 	auto	E = game_graph().header().levels().end();
 	for (; I != E; ++I)
-		if (!xr_strcmp((*I).second.name(), level_name))
+		if (!FCStringAnsi::Stricmp((*I).second.name().c_str(), level_name))
 			return				((*I).second).id();
 	return -1;
 }

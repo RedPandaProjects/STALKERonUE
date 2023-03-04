@@ -293,6 +293,8 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 				for (int32 i = 0; i < AIMapTool->m_Nodes.size(); i++)
 				{
 					INAIMap->Nodes[i]->Position = StalkerMath::XRayLocationToUnreal(AIMapTool->m_Nodes[i]->Pos);
+					INAIMap->Nodes[i]->Position.X = INAIMap->NodeSize*FMath::RoundToDouble(INAIMap->Nodes[i]->Position.X/INAIMap->NodeSize);
+					INAIMap->Nodes[i]->Position.Y = INAIMap->NodeSize*FMath::RoundToDouble(INAIMap->Nodes[i]->Position.Y/INAIMap->NodeSize);
 					FVector3f PlaneNormal = StalkerMath::XRayNormalToUnreal(AIMapTool->m_Nodes[i]->Plane.n);
 					INAIMap->Nodes[i]->Plane.X = PlaneNormal.X;
 					INAIMap->Nodes[i]->Plane.Y = PlaneNormal.Y;

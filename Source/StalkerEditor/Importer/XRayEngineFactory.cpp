@@ -636,7 +636,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	return StalkerKinematicsData;
 }
 
-UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFullPath)
+UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool DivideSubObject)
 {
 	CEditableObject* Object = GRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*FileName));
 	if (Object)
@@ -644,11 +644,25 @@ UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool UseOnlyFu
 		Objects.Add(Object);
 		if (Object->IsSkeleton())
 		{
-			return ImportObjectAsDynamicMesh(Object, UseOnlyFullPath);
+			return ImportObjectAsDynamicMesh(Object, false);
 		}
 		else
 		{
-			return ImportObjectAsStaticMesh(Object, UseOnlyFullPath);
+			if(DivideSubObject)
+			{
+				TArray<UObject*> OutObjects;
+				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
+				{
+					const FString ObjectPath = ParentPackage->GetName() / FString(Object->Meshes()[MeshID]->Name().c_str());
+					OutObjects.Add(ImportObjectAsStaticMesh(Object, ObjectPath, MeshID));
+				}
+				return OutObjects.Num() ? OutObjects[0] : nullptr;
+			}
+			else
+			{
+				return ImportObjectAsStaticMesh(Object, false);
+			}
+			
 		}
 	}
 	return nullptr;
@@ -673,10 +687,9 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 }
 
 
-UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& PackageName)
+UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& PackageName,int32 InMeshID)
 {
 	UStaticMesh* StaticMesh = nullptr;
-
 	const FString& LocalPackageName = PackageName;
 	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
 	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
@@ -723,6 +736,10 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 				xr_vector< st_MeshVertex> Vertices;
 				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 				{
+					if(InMeshID	!= -1&&InMeshID!=MeshID)
+					{
+						continue;
+					}
 					Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
 				}
 

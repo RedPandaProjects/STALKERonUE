@@ -135,7 +135,7 @@ void AStalkerLight::set_range(float R)
 	switch (LightType)
 	{
 	case IRender_Light::POINT:
-		LightPoint->SetSourceRadius(R * 100);
+		LightPoint->SetAttenuationRadius(R * 100);
 		break;
 	case IRender_Light::SPOT:
 		SpotPoint->SetAttenuationRadius(R * 100);
