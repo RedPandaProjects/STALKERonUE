@@ -6,7 +6,7 @@ THIRD_PARTY_INCLUDES_END
 #include "StalkerPlayerCharacter.generated.h"
 
 UCLASS()
-class AStalkerPlayerCharacter : public ACharacter, public XRayUnrealProxyInterface
+class AStalkerPlayerCharacter : public ACharacter, public XRayUnrealPlayerCharacterInterface
 {
 	GENERATED_BODY()
 
@@ -18,6 +18,7 @@ public:
 	virtual void				SetupPlayerInputComponent	(class UInputComponent* PlayerInputComponent) override;
 	void						AttachAsRoot				(class IRenderVisual* Visual) override;
 	void						Attach						(class IRenderVisual* Visual, const char* BoneName) override;
+	void						AttachToCamera				(class IRenderVisual* Visual) override;
 	class AStalkerProxy*		CastToStalkerProxy			() override;
 	AStalkerPlayerCharacter*	CastToStalkerPlayerCharacter() override;
 	void						Lock						(class CObject*) override;
@@ -25,6 +26,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Stalker|Player", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent*			FirstPersonCameraComponent;
+
+
 protected:
 	virtual void				BeginPlay					() override;
 private:

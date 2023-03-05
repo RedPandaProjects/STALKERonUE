@@ -21,8 +21,8 @@ public:
 	void											InitilizeEditor						();
 	void											PostLoad							() override;
 	void											BeginDestroy						() override;
-	void											Lock								(class CObject* Parent) override;
-	void											Unlock								(class CObject* Parent) override;
+	void											Lock								(void* Parent) override;
+	void											Unlock								(void* Parent) override;
 	void											Detach								() override;
 	
 	void											SetOwnerNoSee						(bool Enable) override;
@@ -188,5 +188,5 @@ private:
 	UPROPERTY(Transient)
 	bool											bIsErrorMesh;
 #endif
-	class CObject*									XRayObject;		
+	void*											XRayParent  = nullptr;		
 };

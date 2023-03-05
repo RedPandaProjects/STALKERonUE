@@ -282,17 +282,17 @@ void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset,bool IsWorldLo
 	}
 }
 
-void UStalkerKinematicsComponent::Lock(class CObject* InXRayObject)
+void UStalkerKinematicsComponent::Lock(void* InXRayParent)
 {
-	check(XRayObject == nullptr);
-	check(InXRayObject);
-	XRayObject = InXRayObject;
+	check(XRayParent == nullptr);
+	check(InXRayParent);
+	XRayParent = InXRayParent;
 }
 
-void UStalkerKinematicsComponent::Unlock(class CObject* InXRayObject)
+void UStalkerKinematicsComponent::Unlock(void* InXRayParent)
 {
-	check(XRayObject == InXRayObject);
-	XRayObject = nullptr;
+	check(XRayParent == InXRayParent);
+	XRayParent = nullptr;
 }
 
 void UStalkerKinematicsComponent::Detach()
@@ -309,7 +309,7 @@ void UStalkerKinematicsComponent::Detach()
 
 void UStalkerKinematicsComponent::BeginDestroy()
 {
-	check(XRayObject == nullptr);
+	check(XRayParent == nullptr);
 	Super::BeginDestroy();
 }
 

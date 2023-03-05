@@ -59,13 +59,19 @@ void AStalkerProxy::Attach(class IRenderVisual* Visual, const char* BoneName)
 
 	GXRayEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->Rename(nullptr,this);
-
-	
+	//Set
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
 	StalkerKinematicsComponent->AttachToComponent(GetRootComponent(),AttachmentTransformRules,BoneName);
 	StalkerKinematicsComponent->SetSimulatePhysics(false);
 	StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	StalkerKinematicsComponent->RegisterComponent();
+	
+	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(GetRootComponent()))
+	{
+		StalkerKinematicsComponent->SetOwnerNoSee(PrimitiveComponen->bOwnerNoSee);
+		StalkerKinematicsComponent->SetOnlyOwnerSee(PrimitiveComponen->bOnlyOwnerSee);
+	}
+
 	AddInstanceComponent(StalkerKinematicsComponent);
 }
 
