@@ -92,20 +92,6 @@ void AStalkerPlayerCharacter::AttachAsRoot(class IRenderVisual* Visual)
 	AddInstanceComponent(StalkerKinematicsComponent);
 }
 
-void AStalkerPlayerCharacter::Detach(class IRenderVisual* Visual)
-{
-	UStalkerKinematicsComponent* StalkerKinematicsComponent = Visual->CastToStalkerKinematicsComponent();
-	check(StalkerKinematicsComponent);
-	if (StalkerKinematicsComponent == StalkerRootComponent)
-	{
-		StalkerRootComponent = nullptr;
-	}
-	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
-	RemoveInstanceComponent(StalkerKinematicsComponent);
-	StalkerKinematicsComponent->DetachFromComponent(DetachmentTransformRules);
-	StalkerKinematicsComponent->UnregisterComponent();
-	GXRayEngineManager->GetResourcesManager()->RegisterKinematics(StalkerKinematicsComponent);
-}
 
 void AStalkerPlayerCharacter::Attach(class IRenderVisual* Visual, const char* BoneName)
 {

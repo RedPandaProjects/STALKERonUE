@@ -19,7 +19,6 @@ public:
 	
 	void							Attach						(class IRenderVisual* Visual, const char* BoneName) override;
 	void							AttachAsRoot				(class IRenderVisual* Visual) override;
-	void							Detach						(class IRenderVisual* Visual) override;
 	AStalkerProxy*					CastToStalkerProxy			() override;
 	class AStalkerPlayerCharacter*	CastToStalkerPlayerCharacter() override;
 protected:

@@ -23,10 +23,11 @@ public:
 	void											BeginDestroy						() override;
 	void											Lock								(class CObject* Parent) override;
 	void											Unlock								(class CObject* Parent) override;
+	void											Detach								() override;
 	
 	void											SetOwnerNoSee						(bool Enable) override;
 	void											SetOnlyOwnerSee						(bool Enable) override;
-	void											SetOffset							(const Fmatrix&offset) override;
+	void											SetOffset							(const Fmatrix&offset,bool IsWorldLocation = false,bool IsWorldRotation = false) override;
 
 
 	void											TickComponent						(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

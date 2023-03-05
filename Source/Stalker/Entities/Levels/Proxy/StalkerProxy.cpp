@@ -91,21 +91,3 @@ void AStalkerProxy::AttachAsRoot(class IRenderVisual* Visual)
 	StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	StalkerKinematicsComponent->RegisterComponent();
 }
-
-void AStalkerProxy::Detach(class IRenderVisual* Visual)
-{
-	UStalkerKinematicsComponent* StalkerKinematicsComponent = Visual->CastToStalkerKinematicsComponent();
-	check(StalkerKinematicsComponent);
-	if (StalkerKinematicsComponent == GetRootComponent())
-	{
-		SetRootComponent(nullptr);
-	}
-	else
-	{	
-		FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative,false);
-		StalkerKinematicsComponent->DetachFromComponent(DetachmentTransformRules);
-	}
-	StalkerKinematicsComponent->UnregisterComponent();
-	GXRayEngineManager->GetResourcesManager()->RegisterKinematics(StalkerKinematicsComponent);
-	RemoveInstanceComponent(StalkerKinematicsComponent);
-}

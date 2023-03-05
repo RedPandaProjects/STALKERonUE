@@ -4,6 +4,8 @@
 #include "Animation/AnimSequence.h"
 #include "AnimInstance/StalkerKinematicsAnimInstance_Default.h"
 #include "AnimInstance/StalkerKinematicsAnimInstanceProxy.h"
+#include "Kernel/StalkerEngineManager.h"
+#include "Resources/StalkerResourcesManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/RenderVisual.h"
 #include "XrEngine/IRenderable.h"
@@ -260,9 +262,24 @@ void UStalkerKinematicsComponent::SetOnlyOwnerSee(bool Enable)
 	Super::SetOnlyOwnerSee(Enable);
 }
 
-void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset)
+void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset,bool IsWorldLocation,bool IsWorldRotation)
 {
-	SetRelativeLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(offset.c)), FQuat(StalkerMath::XRayQuatToUnreal(offset)));
+	if (IsWorldLocation)
+	{
+		SetWorldLocation(FVector(StalkerMath::XRayLocationToUnreal(offset.c)));
+	}
+	else
+	{
+		SetRelativeLocation(FVector(StalkerMath::XRayLocationToUnreal(offset.c)));
+	}
+	if (IsWorldRotation)
+	{
+		SetWorldRotation(FQuat(StalkerMath::XRayQuatToUnreal(offset)));
+	}
+	else
+	{
+		SetRelativeRotation(FQuat(StalkerMath::XRayQuatToUnreal(offset)));
+	}
 }
 
 void UStalkerKinematicsComponent::Lock(class CObject* InXRayObject)
@@ -276,6 +293,18 @@ void UStalkerKinematicsComponent::Unlock(class CObject* InXRayObject)
 {
 	check(XRayObject == InXRayObject);
 	XRayObject = nullptr;
+}
+
+void UStalkerKinematicsComponent::Detach()
+{
+	if (IsRegistered())
+	{
+		FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+		DetachFromComponent(DetachmentTransformRules);
+		UnregisterComponent();
+	}
+
+	GXRayEngineManager->GetResourcesManager()->RegisterKinematics(this);
 }
 
 void UStalkerKinematicsComponent::BeginDestroy()

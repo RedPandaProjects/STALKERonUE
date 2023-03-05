@@ -17,7 +17,6 @@ public:
 	void						BeginDestroy				() override;
 	virtual void				SetupPlayerInputComponent	(class UInputComponent* PlayerInputComponent) override;
 	void						AttachAsRoot				(class IRenderVisual* Visual) override;
-	void						Detach						(class IRenderVisual* Visual) override;
 	void						Attach						(class IRenderVisual* Visual, const char* BoneName) override;
 	class AStalkerProxy*		CastToStalkerProxy			() override;
 	AStalkerPlayerCharacter*	CastToStalkerPlayerCharacter() override;
