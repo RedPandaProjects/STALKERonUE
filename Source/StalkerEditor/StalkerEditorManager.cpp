@@ -14,6 +14,7 @@
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "HAL/FileManager.h"
+#include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
 ///////////////////////////////////////////////////////////////////////////////////////////
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypes.h"
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypeCustomization.h"
@@ -201,8 +202,23 @@ void UStalkerEditorManager::ImportPhysicalMaterials()
 
 void UStalkerEditorManager::OnPreBeginPIE(const bool)
 {
-
 	const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>();
+	
+	if (FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport))
+	{
+		if (UWorld* World = WorldContext->World())
+		{
+			if (AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings()))
+			{
+				if (StalkerWorldSettings->NotForXRay)
+				{
+					GXRayEngineManager->AppStart();
+					return;
+				}
+			}
+		
+		}
+	}
 	if (SGSettings->NeedAutoBuildCForm)
 	{
 		EditorCFrom->Build();
@@ -242,7 +258,17 @@ void UStalkerEditorManager::OnPreBeginPIE(const bool)
 
 void UStalkerEditorManager::OnPostPIEStarted(const bool)
 {
-	g_Engine->RunGame();
+	if (IsValid(GWorld))
+	{
+		if (AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings()))
+		{
+			if (!StalkerWorldSettings->NotForXRay)
+			{
+				g_Engine->RunGame();
+			}
+		}
+	}
+
 }
 
 void UStalkerEditorManager::OnEndPIE(const bool)

@@ -2,6 +2,7 @@
 #include "../StalkerSpawnObject.h"
 #include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
 #include "Resources/Spawn/StalkerLevelSpawn.h"
+#include "UObject/GCObjectScopeGuard.h"
 
 FPrimitiveSceneProxy* UStalkerSpawnObjectSphereShapeComponent::CreateSceneProxy()
 {
@@ -34,31 +35,30 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectSphereShapeComponent::CreateSceneProxy(
 
 		void GetDynamicMeshElements(const TArray<const FSceneView*>& Views, const FSceneViewFamily& ViewFamily, uint32 VisibilityMap, class FMeshElementCollector& Collector) const override
 		{
-			UWorld* World = GetScene().GetWorld();
-			if (!SphereShapeComponent.IsValid())
+			if (const UStalkerSpawnObjectSphereShapeComponent*InSphereShapeComponent = SphereShapeComponent)
 			{
-				return;
-			}
-			for (int32 ViewIndex = 0; ViewIndex < Views.Num(); ViewIndex++)
-			{
-				if (VisibilityMap & (1 << ViewIndex))
+				UWorld* World = GetScene().GetWorld();
+				for (int32 ViewIndex = 0; ViewIndex < Views.Num(); ViewIndex++)
 				{
-					const FSceneView* View = Views[ViewIndex];
-					FPrimitiveDrawInterface* PDI = Collector.GetPDI(ViewIndex);
-					FVector Position = GetLocalToWorld().GetOrigin();
-					FColor Color = SphereShapeComponent->ShapeColor;
-					if (IsSelected())
+					if (VisibilityMap & (1 << ViewIndex))
 					{
-						Color.A = Color.A * 2;
+						const FSceneView* View = Views[ViewIndex];
+						FPrimitiveDrawInterface* PDI = Collector.GetPDI(ViewIndex);
+						FVector Position = GetLocalToWorld().GetOrigin();
+						FColor Color = InSphereShapeComponent->ShapeColor;
+						if (IsSelected())
+						{
+							Color.A = Color.A * 2;
+						}
+						const FMaterialRenderProxy* const ColoredMeshInstance = &Collector.AllocateOneFrameResource<FColoredMaterialRenderProxy>(GEngine->DebugMeshMaterial->GetRenderProxy(), Color);
+						GetSphereMesh(Position, GetBounds().GetBox().GetExtent(), 10, 7, ColoredMeshInstance, SDPG_World, false, ViewIndex, Collector, false, new HActor(InSphereShapeComponent->GetOwner(), InSphereShapeComponent));
 					}
-					const FMaterialRenderProxy* const ColoredMeshInstance = &Collector.AllocateOneFrameResource<FColoredMaterialRenderProxy>(GEngine->DebugMeshMaterial->GetRenderProxy(), Color);
-					GetSphereMesh(Position, GetBounds().GetBox().GetExtent(), 10, 7, ColoredMeshInstance, SDPG_World, false, ViewIndex, Collector, false, new HActor(SphereShapeComponent->GetOwner(), SphereShapeComponent.Get()));
 				}
 			}
-
 		}
 		int32 ViewFlagIndex;
-		TWeakObjectPtr<const UStalkerSpawnObjectSphereShapeComponent> SphereShapeComponent;
+		const UStalkerSpawnObjectSphereShapeComponent* SphereShapeComponent;
+
 	};
 
 	return new FStalkerSpawnObjectSphereShapeComponent(*this);

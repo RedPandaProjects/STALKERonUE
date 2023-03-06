@@ -1,6 +1,7 @@
 #include "StalkerWayPointComponent.h"
 #include "StalkerWayObject.h"
 #include "../../../UI/EdMode/WayPoints/StalkerWayObjectEditMode.h"
+#include "UObject/GCObjectScopeGuard.h"
 
 TCustomShowFlag<> StalkerShowWayPoint(TEXT("StalkerShowWayPoint"), true /*DefaultEnabled*/, SFG_Normal, FText::FromString(TEXT("Way point")));
 
@@ -57,11 +58,8 @@ FPrimitiveSceneProxy* UStalkerWayPointComponent::CreateSceneProxy()
 					Collector.GetPDI(ViewIndex)->DrawLine(Position, Position + FVector(0, 0, -WayPointSize * 0.85f), PointColor, SDPG_World, 3.f);
 					Collector.GetPDI(ViewIndex)->DrawLine(Position, Position + FVector(0, 0, WayPointSize * 0.15f), PointColor, SDPG_World, 3.f);
 					Collector.GetPDI(ViewIndex)->SetHitProxy(nullptr);
-					if (!StalkerWayPointComponent.IsValid())
-					{
-						return;
-					}
-					const UStalkerWayPointComponent*InStalkerWayPointComponent = StalkerWayPointComponent.Get();
+				
+					const UStalkerWayPointComponent*InStalkerWayPointComponent = StalkerWayPointComponent;
 					if (InStalkerWayPointComponent->bIsSelected)
 					{
 						const ESceneDepthPriorityGroup DrawBoundsDPG = SDPG_World;
@@ -115,12 +113,7 @@ FPrimitiveSceneProxy* UStalkerWayPointComponent::CreateSceneProxy()
 			}
 
 		}
-
-
-	
-
-
-		TWeakObjectPtr<const UStalkerWayPointComponent> StalkerWayPointComponent;
+		const UStalkerWayPointComponent* StalkerWayPointComponent;
 		int32 ViewFlagIndex;
 	};
 

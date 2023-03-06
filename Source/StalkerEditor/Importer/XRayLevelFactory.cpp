@@ -280,37 +280,39 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 		AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 		if (StalkerWorldSettings)
 		{
-			UStalkerAIMap* INAIMap = StalkerWorldSettings->GetOrCreateAIMap();
-			ESceneAIMapTool* AIMapTool = static_cast<ESceneAIMapTool*>(Scene->GetTool(OBJCLASS_AIMAP));
-			INAIMap->ClearAIMap();
-			if (AIMapTool)
+			if(UStalkerAIMap* INAIMap = StalkerWorldSettings->GetOrCreateAIMap())
 			{
-				INAIMap->Nodes.AddDefaulted(AIMapTool->m_Nodes.size());
-				for (int32 i = 0; i < AIMapTool->m_Nodes.size(); i++)
+				ESceneAIMapTool* AIMapTool = static_cast<ESceneAIMapTool*>(Scene->GetTool(OBJCLASS_AIMAP));
+				INAIMap->ClearAIMap();
+				if (AIMapTool)
 				{
-					INAIMap->Nodes[i] = new FStalkerAIMapNode;
-				}
-				for (int32 i = 0; i < AIMapTool->m_Nodes.size(); i++)
-				{
-					INAIMap->Nodes[i]->Position = StalkerMath::XRayLocationToUnreal(AIMapTool->m_Nodes[i]->Pos);
-					INAIMap->Nodes[i]->Position.X = INAIMap->NodeSize*FMath::RoundToDouble(INAIMap->Nodes[i]->Position.X/INAIMap->NodeSize);
-					INAIMap->Nodes[i]->Position.Y = INAIMap->NodeSize*FMath::RoundToDouble(INAIMap->Nodes[i]->Position.Y/INAIMap->NodeSize);
-					FVector3f PlaneNormal = StalkerMath::XRayNormalToUnreal(AIMapTool->m_Nodes[i]->Plane.n);
-					INAIMap->Nodes[i]->Plane.X = PlaneNormal.X;
-					INAIMap->Nodes[i]->Plane.Y = PlaneNormal.Y;
-					INAIMap->Nodes[i]->Plane.Z = PlaneNormal.Z;
-					INAIMap->Nodes[i]->Plane.W = -AIMapTool->m_Nodes[i]->Plane.d * 100.f;
-					for (int32 Link = 0; Link < 4; Link++)
+					INAIMap->Nodes.AddDefaulted(AIMapTool->m_Nodes.size());
+					for (int32 i = 0; i < AIMapTool->m_Nodes.size(); i++)
 					{
-						if (AIMapTool->m_Nodes[i]->n[Link])
+						INAIMap->Nodes[i] = new FStalkerAIMapNode;
+					}
+					for (int32 i = 0; i < AIMapTool->m_Nodes.size(); i++)
+					{
+						INAIMap->Nodes[i]->Position = StalkerMath::XRayLocationToUnreal(AIMapTool->m_Nodes[i]->Pos);
+						INAIMap->Nodes[i]->Position.X = INAIMap->NodeSize * FMath::RoundToDouble(INAIMap->Nodes[i]->Position.X / INAIMap->NodeSize);
+						INAIMap->Nodes[i]->Position.Y = INAIMap->NodeSize * FMath::RoundToDouble(INAIMap->Nodes[i]->Position.Y / INAIMap->NodeSize);
+						FVector3f PlaneNormal = StalkerMath::XRayNormalToUnreal(AIMapTool->m_Nodes[i]->Plane.n);
+						INAIMap->Nodes[i]->Plane.X = PlaneNormal.X;
+						INAIMap->Nodes[i]->Plane.Y = PlaneNormal.Y;
+						INAIMap->Nodes[i]->Plane.Z = PlaneNormal.Z;
+						INAIMap->Nodes[i]->Plane.W = -AIMapTool->m_Nodes[i]->Plane.d * 100.f;
+						for (int32 Link = 0; Link < 4; Link++)
 						{
-							INAIMap->Nodes[i]->Nodes[Link] = INAIMap->Nodes[AIMapTool->m_Nodes[i]->n[Link]->idx];
+							if (AIMapTool->m_Nodes[i]->n[Link])
+							{
+								INAIMap->Nodes[i]->Nodes[Link] = INAIMap->Nodes[AIMapTool->m_Nodes[i]->n[Link]->idx];
+							}
 						}
 					}
 				}
+				INAIMap->HashFill();
+				INAIMap->Modify();
 			}
-			INAIMap->HashFill();
-			INAIMap->Modify();
 		}
 	}
 	Scene = nullptr;

@@ -51,6 +51,10 @@ void UStalkerEditorCForm::Build()
 	{
 		return;
 	}
+	if (StalkerWorldSettings->NotForXRay)
+	{
+		return;
+	}
 	UStalkerCForm*CForm = StalkerWorldSettings->GetOrCreateCForm();
 	CForm->InvalidCForm();
 

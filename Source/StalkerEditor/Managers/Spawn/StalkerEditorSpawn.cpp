@@ -48,6 +48,10 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawnIfNeeded()
 	{
 		return nullptr;
 	}
+	if (StalkerWorldSettings->NotForXRay)
+	{
+		return nullptr;
+	}
 	UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
 	UStalkerAIMap* AIMap = StalkerWorldSettings->GetOrCreateAIMap();
 	check(AIMap);
@@ -78,6 +82,10 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
 	if (!StalkerWorldSettings)
+	{
+		return nullptr;
+	}
+	if (StalkerWorldSettings->NotForXRay)
 	{
 		return nullptr;
 	}

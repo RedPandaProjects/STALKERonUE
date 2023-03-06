@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<background x="0" y="0" width="1024" height="768">
+	<!-- <background x="0" y="0" width="1024" height="768">
 		<texture>ui_menu_backgraund</texture>
 	</background>
 	
@@ -10,7 +10,7 @@
 	
 	<fire_movie x="525" y="459" width="128" height="256">
 		<texture>ui\ui_mm_fire</texture>
-	</fire_movie>
+	</fire_movie> -->
 
 	<shniaga_wnd x="590" y="419" width="392" height="280">
 		<buttons_region	x="110" y="0" width="164" height="280" always_show_scroll="false"/>

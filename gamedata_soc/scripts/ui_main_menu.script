@@ -23,9 +23,9 @@ function main_menu:InitControls()
     local xml = CScriptXmlInit()
     xml:ParseFile("ui_mm_main.xml")
      
-    xml:InitStatic("back_movie", self)
-    xml:InitStatic("background", self)
-    xml:InitStatic("fire_movie", self)
+    --xml:InitStatic("back_movie", self)
+    --xml:InitStatic("background", self)
+    --xml:InitStatic("fire_movie", self)
     self.shniaga = xml:InitMMShniaga("shniaga_wnd",self);
 	
 	self.message_box = CUIMessageBoxEx()

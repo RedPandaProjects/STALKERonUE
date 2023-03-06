@@ -398,7 +398,7 @@ void UStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessa
 		return;
 	}
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
-	if (IsValid(StalkerWorldSettings))
+	if (IsValid(StalkerWorldSettings)&&!StalkerWorldSettings->NotForXRay)
 	{
 		UStalkerAIMap* AIMap = StalkerWorldSettings->GetAIMap();
 		if (!IsValid(AIMap) || AIMap->NeedRebuild)
@@ -420,6 +420,10 @@ void UStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessa
 	{
 		Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("WORLD INVALID!")));
 		Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("* NEED AStalkerWorldSettings!")));
+		return;
+	}
+	if(StalkerWorldSettings->NotForXRay)
+	{
 		return;
 	}
 	UStalkerCForm* CForm = StalkerWorldSettings->GetCForm();

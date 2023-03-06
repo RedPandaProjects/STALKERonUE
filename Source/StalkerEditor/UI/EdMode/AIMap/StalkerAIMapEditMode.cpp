@@ -1040,7 +1040,15 @@ bool FStalkerAIMapEditMode::IsEnabled()
 	{
 		return false;
 	}
-
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
+	if (!StalkerWorldSettings)
+	{
+		return false;
+	}
+	if (StalkerWorldSettings->NotForXRay)
+	{
+		return false;
+	}
 	return true;
 }
 

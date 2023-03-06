@@ -1,5 +1,6 @@
 #include "StalkerSpawnObjectGraphPointComponent.h"
 #include "../StalkerSpawnObject.h"
+#include "UObject/GCObjectScopeGuard.h"
 
 FPrimitiveSceneProxy* UStalkerSpawnObjectGraphPointComponent::CreateSceneProxy()
 {
@@ -39,9 +40,9 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectGraphPointComponent::CreateSceneProxy()
 					const FSceneView* View = Views[ViewIndex];
 					FVector Position = GetLocalToWorld().GetOrigin();
 					FColor Color = FColor::Green;
-					if (IsValid(GraphPointComponent.Get()))
+					if (const UStalkerSpawnObjectGraphPointComponent*InGraphPointComponent = GraphPointComponent)
 					{
-						Color = GraphPointComponent->GraphPointColor;
+						Color = InGraphPointComponent->GraphPointColor;
 						if (IsSelected())
 						{
 							Color.A = Color.A * 2;
@@ -92,7 +93,7 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectGraphPointComponent::CreateSceneProxy()
 			}
 
 		}
-		TWeakObjectPtr<const UStalkerSpawnObjectGraphPointComponent> GraphPointComponent;
+		const UStalkerSpawnObjectGraphPointComponent* GraphPointComponent;
 	};
 
 	return new FStalkerSpawnObjectGraphPointComponent(*this);

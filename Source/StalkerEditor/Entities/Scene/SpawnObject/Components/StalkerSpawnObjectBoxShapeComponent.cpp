@@ -1,5 +1,6 @@
 #include "StalkerSpawnObjectBoxShapeComponent.h"
 #include "../StalkerSpawnObject.h"
+#include "UObject/GCObjectScopeGuard.h"
 
 FPrimitiveSceneProxy* UStalkerSpawnObjectBoxShapeComponent::CreateSceneProxy()
 {
@@ -33,28 +34,27 @@ FPrimitiveSceneProxy* UStalkerSpawnObjectBoxShapeComponent::CreateSceneProxy()
 		void GetDynamicMeshElements(const TArray<const FSceneView*>& Views, const FSceneViewFamily& ViewFamily, uint32 VisibilityMap, class FMeshElementCollector& Collector) const override
 		{
 			UWorld* World = GetScene().GetWorld();
-			if (!SphereShapeComponent.IsValid())
+			if (const UStalkerSpawnObjectBoxShapeComponent*InSphereShapeComponent = SphereShapeComponent)
 			{
-				return;
-			}
-			for (int32 ViewIndex = 0; ViewIndex < Views.Num(); ViewIndex++)
-			{
-				if (VisibilityMap & (1 << ViewIndex))
+				for (int32 ViewIndex = 0; ViewIndex < Views.Num(); ViewIndex++)
 				{
-					const FSceneView* View = Views[ViewIndex];
-					FColor Color = SphereShapeComponent->ShapeColor;
-					if (IsSelected())
+					if (VisibilityMap & (1 << ViewIndex))
 					{
-						Color.A = Color.A * 2;
+						const FSceneView* View = Views[ViewIndex];
+						FColor Color = InSphereShapeComponent->ShapeColor;
+						if (IsSelected())
+						{
+							Color.A = Color.A * 2;
+						}
+						const FMaterialRenderProxy* const ColoredMeshInstance = &Collector.AllocateOneFrameResource<FColoredMaterialRenderProxy>(GEngine->DebugMeshMaterial->GetRenderProxy(), Color);
+						GetBoxMesh(GetLocalToWorld(), InSphereShapeComponent->BoxExtent, ColoredMeshInstance, SDPG_World, ViewIndex, Collector,new HActor(InSphereShapeComponent->GetOwner(), SphereShapeComponent));
 					}
-					const FMaterialRenderProxy* const ColoredMeshInstance = &Collector.AllocateOneFrameResource<FColoredMaterialRenderProxy>(GEngine->DebugMeshMaterial->GetRenderProxy(), Color);
-					GetBoxMesh(GetLocalToWorld(), SphereShapeComponent->BoxExtent, ColoredMeshInstance, SDPG_World, ViewIndex, Collector,new HActor(SphereShapeComponent->GetOwner(), SphereShapeComponent.Get()));
 				}
 			}
 
 		}
 		int32 ViewFlagIndex;
-		TWeakObjectPtr<const UStalkerSpawnObjectBoxShapeComponent> SphereShapeComponent;
+		const UStalkerSpawnObjectBoxShapeComponent* SphereShapeComponent;
 	};
 
 	return new FStalkerSpawnObjectBoxShapeComponent(*this);

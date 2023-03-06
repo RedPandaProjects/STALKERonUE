@@ -37,6 +37,8 @@ public:
 #endif
 	UPROPERTY(Transient)
 	bool						NeedBeginPlay	 = true;
+	UPROPERTY(EditAnywhere)
+	bool						NotForXRay		 = false;
 private:
 
 	UPROPERTY()

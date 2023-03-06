@@ -881,6 +881,10 @@ void UStalkerEditorAIMap::Build()
 		return;
 	}
 	UStalkerAIMap* AIMap = StalkerWorldSettings->GetOrCreateAIMap();
+	if (!AIMap)
+	{
+		return;
+	}
 	const float NodeSize = AIMap->NodeSize/100.f;
 	auto CNodePositionCompressor = [NodeSize](NodePosition & Pdest,const Fvector & Psrc, hdrNODES & H)
 	{
@@ -1020,6 +1024,10 @@ void UStalkerEditorAIMap::BuildIfNeeded()
 		return;
 	}
 	UStalkerAIMap* AIMap = StalkerWorldSettings->GetOrCreateAIMap();
+	if (!AIMap)
+	{
+		return;
+	}
 	if (AIMap->NeedRebuild || !AIMap->AIMapGuid.IsValid())
 	{
 		Build();
