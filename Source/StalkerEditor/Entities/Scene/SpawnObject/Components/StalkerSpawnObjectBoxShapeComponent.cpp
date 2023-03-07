@@ -1,6 +1,8 @@
 #include "StalkerSpawnObjectBoxShapeComponent.h"
 #include "../StalkerSpawnObject.h"
 #include "UObject/GCObjectScopeGuard.h"
+#include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
+#include "Resources/Spawn/StalkerLevelSpawn.h"
 
 FPrimitiveSceneProxy* UStalkerSpawnObjectBoxShapeComponent::CreateSceneProxy()
 {
@@ -82,4 +84,34 @@ void UStalkerSpawnObjectBoxShapeComponent::OnComponentCreated()
 {
 	Super::OnComponentCreated();
 	UpdateColor();
+}
+
+bool UStalkerSpawnObjectBoxShapeComponent::Modify(bool bAlwaysMarkDirty /*= true*/)
+{
+	bool bResult = Super::Modify(bAlwaysMarkDirty);
+
+	if (!IsValid(GetWorld()) || GetWorld()->IsGameWorld()||!bAlwaysMarkDirty)
+	{
+		return bResult;
+	}
+	if (AActor* Actor = GetAttachParentActor())
+	{
+		if (!Actor->IsA<AStalkerSpawnObject>())
+		{
+			return bResult;
+		}
+	}
+	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(GetWorld()->GetWorldSettings());
+	if (IsValid(StalkerWorldSettings))
+	{
+		UStalkerLevelSpawn* Spawn = StalkerWorldSettings->GetSpawn();
+		if (IsValid(Spawn))
+		{
+			StalkerWorldSettings->Modify();
+			StalkerWorldSettings->NeedRebuildSpawn = true;
+			Spawn->NeedRebuild = true;
+			Spawn->Modify();
+		}
+	}
+	return bResult;
 }

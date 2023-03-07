@@ -22,6 +22,7 @@ public:
 	FBox						GetPointBox				();
 	void						PreEditChange			(FProperty* PropertyThatWillChange) override;
 	void						PostEditChangeProperty	(FPropertyChangedEvent& PropertyChangedEvent) override;
+	bool						Modify					(bool bAlwaysMarkDirty = true) override;
 
 	UPROPERTY(EditAnywhere, Category = "WayPoint")
 	FString						PointName;

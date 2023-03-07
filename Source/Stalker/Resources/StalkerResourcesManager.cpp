@@ -83,7 +83,7 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		ParentMaterial = UnkownMaterial;
 	}
 
-	UTexture2D* Texture = nullptr;
+	UTexture* Texture = nullptr;
 	if(InNameTexture!=NAME_None)
 	{
 		
@@ -93,21 +93,21 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		{
 			const FString ParentPackageName = TEXT("/Game/COP/Textures") / NameTexture;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			Texture = LoadObject<UTexture>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 			break;
 		case EGame::CS:
 		{
 			const FString ParentPackageName = TEXT("/Game/CS/Textures") / NameTexture;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			Texture = LoadObject<UTexture>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 			break;
 		case EGame::SHOC:
 		{
 			const FString ParentPackageName = TEXT("/Game/SHOC/Textures") / NameTexture;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			Texture = LoadObject<UTexture>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 			break;
 		}
@@ -115,12 +115,12 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		{
 			const FString ParentPackageName = TEXT("/Game/Base/Textures") / NameTexture;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			Texture = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			Texture = LoadObject<UTexture>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
 		if (!IsValid(Texture))
 		{
 			UE_LOG(LogStalker, Warning, TEXT("Can't found texture:%s"), *NameTexture);
-			UTexture2D* UnkownTextuer = LoadObject<UTexture2D>(nullptr, TEXT("/Game/Base/Textures/Unkown.Unkown"));
+			UTexture* UnkownTextuer = LoadObject<UTexture>(nullptr, TEXT("/Game/Base/Textures/Unkown.Unkown"));
 			check(IsValid(UnkownTextuer));
 			Texture = UnkownTextuer;
 		}
@@ -136,12 +136,12 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		USlateBrushAsset* NewSlateBrushAsset = Brushes[InNameMaterial][InNameTexture];
 		NewSlateBrushAsset->SetFlags(RF_Transient);
 		FVector2D TextureSize = FVector2D(32, 32);
-		if (InNameTexture != NAME_None)
-		{
-			TextureSize = Texture->GetImportedSize();
-		}
 		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material, TextureSize);
 		BrushesMaterials.Add(NewSlateBrushAsset, Material);
+		if (InNameTexture != NAME_None)
+		{
+			BrushesTextures.Add(NewSlateBrushAsset, Texture);
+		}
 #if WITH_EDITORONLY_DATA
 		BrushesNeedReloading.Remove(NewSlateBrushAsset);
 #endif
@@ -151,14 +151,14 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 	USlateBrushAsset* NewSlateBrushAsset = NewObject<USlateBrushAsset>(this);
 	NewSlateBrushAsset->SetFlags(RF_Transient);
 	FVector2D TextureSize = FVector2D(32,32);
-	if (InNameTexture != NAME_None)
-	{
-		TextureSize = Texture->GetImportedSize();
-	}
 	NewSlateBrushAsset->Brush =  FSlateMaterialBrush(*Material, TextureSize);
 	Brushes.FindOrAdd(InNameMaterial).Add(InNameTexture, NewSlateBrushAsset);
 	BrushesCounter.Add(NewSlateBrushAsset,1);
 	BrushesMaterials.Add(NewSlateBrushAsset, Material);
+	if (InNameTexture != NAME_None)
+	{
+		BrushesTextures.Add(NewSlateBrushAsset, Texture);
+	}
 	BrushInfo Info ={ InNameMaterial ,InNameTexture };
 	BrushesInfo.Add(NewSlateBrushAsset, Info);
 	return NewSlateBrushAsset;
@@ -206,6 +206,7 @@ void UStalkerResourcesManager::Free(USlateBrushAsset* Brush)
 		BrushesNeedReloading.Remove(Brush);
 #endif
 		BrushesMaterials.Remove(Brush);
+		BrushesTextures.Remove(Brush);
 		Brushes[BrushesInfo[Brush].Matrrial].Remove(BrushesInfo[Brush].Texture);
 		if (Brushes[BrushesInfo[Brush].Matrrial].Num() == 0)
 		{
@@ -233,6 +234,7 @@ void UStalkerResourcesManager::CheckLeak()
 		check(Brushes.Num() == 0);
 		check(BrushesCounter.Num() == 0);
 		check(BrushesMaterials.Num() == 0);
+		check(BrushesTextures.Num() == 0);
 		check(BrushesInfo.Num() == 0);
 		check(Meshes.Num() == 0);
 	}
@@ -241,6 +243,7 @@ void UStalkerResourcesManager::CheckLeak()
 		Brushes.Empty();
 		BrushesCounter.Empty();
 		BrushesMaterials.Empty();
+		BrushesTextures.Empty();
 		BrushesInfo.Empty();
 		Meshes.Empty();
 	}

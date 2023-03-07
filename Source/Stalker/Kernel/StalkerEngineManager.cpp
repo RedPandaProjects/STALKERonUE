@@ -266,6 +266,31 @@ void UStalkerEngineManager::SetInput(class XRayInput* InXRayInput)
 	MyXRayInput = InXRayInput;
 }
 
+void UStalkerEngineManager::LoadDefaultWorld()
+{
+	const UGameMapsSettings* GameMapsSettings = GetDefault<UGameMapsSettings>();
+	if(IsValid(GWorld))
+	{
+		CurrentWorldPath = 	UWorld::RemovePIEPrefix(*GWorld->GetPathName());
+		if (GameMapsSettings->GetGameDefaultMap() == CurrentWorldPath.GetLongPackageName())
+		{
+			return;
+		}
+	}
+	const ETravelType TravelType = TRAVEL_Absolute;
+	FWorldContext& WorldContext = GEngine->GetWorldContextFromWorldChecked(GWorld);
+	FString Cmd = GameMapsSettings->GetGameDefaultMap();
+	FURL TestURL(&WorldContext.LastURL, *Cmd, TravelType);
+	if (TestURL.IsLocalInternal())
+	{
+		check (GEngine->MakeSureMapNameIsValid(TestURL.Map));
+	}
+	GEngine->SetClientTravel(GWorld, *Cmd, TravelType);
+	WorldStatus = EStalkerWorldStatus::None;
+	CurrentWorldPath.Reset();
+	CurrentWorldName.Empty();
+}
+
 bool UStalkerEngineManager::LoadWorld(FString LevelName)
 {
 	CurrentWorldName.Empty();

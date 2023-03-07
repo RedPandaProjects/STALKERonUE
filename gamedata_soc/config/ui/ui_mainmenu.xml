@@ -41,7 +41,7 @@
     <texture id="ui_menu_roll_R_18" x="55" y="878" width="55" height="55" />
     <texture id="ui_menu_roll_R_19" x="110" y="878" width="55" height="55" />
     <texture id="ui_menu_roll_R_20" x="165" y="878" width="55" height="55" />
-    <texture id="ui_menu_move" x="7" y="951" width="392" height="73" />
+    <texture id="ui_menu_move" x="80" y="951" width="240" height="70" />
     <texture id="ui_menu_bigroll_r" x="635" y="878" width="86" height="86" />
     <texture id="ui_menu_bigroll_l" x="723" y="878" width="86" height="86" />
     <texture id="ui_menu_smallroll_r" x="691" y="964" width="55" height="55" />

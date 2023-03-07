@@ -193,3 +193,14 @@ class XRayUnrealProxyInterface* XRayEngine::GetUnrealPlayerCharacter()
 
 	return nullptr;
 }
+
+shared_str XRayEngine::GetUnrealVersion()
+{
+	return TCHAR_TO_ANSI(FApp::GetBuildVersion()); 
+}
+
+void XRayEngine::LoadDefaultWorld()
+{	
+	GXRayEngineManager->LoadDefaultWorld();
+	
+}

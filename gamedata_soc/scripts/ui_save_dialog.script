@@ -46,7 +46,7 @@ function save_dialog:__finalize()
 end
 
 function save_dialog:FillList()
-	local flist = getFS():file_list_open_ex("$game_saves$",FS.FS_ListFiles,"*.sav")
+	local flist = getFS():file_list_open_ex("$game_saves$",FS.FS_ListFiles,"*.sue")
 	local f_cnt = flist:Size()
 	
 	flist:Sort(FS.FS_sort_by_modif_down)
@@ -190,7 +190,7 @@ function save_dialog:OnButton_ok_clicked()
 	// check for match name
 	local f = getFS()
 	local flist = f:file_list_open("$game_saves$",FS.FS_ListFiles)
-	local file_struct = f:exist("$game_saves$", self.new_save .. ".sav" )
+	local file_struct = f:exist("$game_saves$", self.new_save .. ".sue" )
 
 	if file_struct ~= nil then
 		self.mbox_mode = 1

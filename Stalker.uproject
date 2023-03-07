@@ -17,6 +17,7 @@
 		{
 			"Name": "StalkerEditor",
 			"Type": "Editor",
+			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Stalker",
 				"Engine"
@@ -30,6 +31,10 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "BinkMedia",
+			"Enabled": true
 		}
 	]
 }

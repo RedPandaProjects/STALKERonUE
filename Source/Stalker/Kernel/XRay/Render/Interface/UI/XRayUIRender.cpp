@@ -91,8 +91,15 @@ void XRayUIRender::SetScissor(Irect* rect)
 void XRayUIRender::GetActiveTextureResolution(Fvector2& res)
 {
 	if(!CurrentShader.Brush)return;
-	res.x = CurrentShader.Brush->Brush.GetImageSize().X;
-	res.y = CurrentShader.Brush->Brush.GetImageSize().Y;
+	UTexture**Texture =  GXRayEngineManager->GetResourcesManager()->BrushesTextures .Find(CurrentShader.Brush);
+	if (!Texture)
+	{
+		res.x =32;
+		res.y =32;
+		return;
+	}
+	res.x = (*Texture)->GetSurfaceWidth();
+	res.y =  (*Texture)->GetSurfaceHeight();
 }
 
 void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
@@ -108,7 +115,7 @@ void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
 void XRayUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, float FontSize, const TCHAR* String)
 {
 	Text InText;
-	InText.Position.Set(x, y);
+	InText.Position.Set(FMath::Floor(x), FMath::Floor(y));
 	InText.Color = FColor(color_rgba(color_get_R(C), color_get_G(C), color_get_B(C), color_get_A(C)));
 	InText.Data = String;
 	InText.Scale = Scale;

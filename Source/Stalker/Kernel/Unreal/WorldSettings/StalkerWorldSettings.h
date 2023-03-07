@@ -16,9 +16,6 @@ public:
 #endif
 
 	void						PostInitProperties	() override;
-
-	UPROPERTY(EditAnywhere,BlueprintReadOnly)
-	FString						AlifeName;
 	UPROPERTY(Transient)
 	class AStalkerDebugRender*	DebugRender;
 #if WITH_EDITORONLY_DATA
@@ -35,8 +32,6 @@ public:
 	UPROPERTY()
 	bool						NeedRebuildSpawn = true;
 #endif
-	UPROPERTY(Transient)
-	bool						NeedBeginPlay	 = true;
 	UPROPERTY(EditAnywhere)
 	bool						NotForXRay		 = false;
 private:

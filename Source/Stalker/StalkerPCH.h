@@ -31,4 +31,4 @@ THIRD_PARTY_INCLUDES_END
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
 DECLARE_STATS_GROUP(TEXT("XRayEngine"), STATGROUP_XRayEngine, STATCAT_XRayEngine);
-DECLARE_LOG_CATEGORY_EXTERN(LogStalker, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(LogStalker, Log, All); 

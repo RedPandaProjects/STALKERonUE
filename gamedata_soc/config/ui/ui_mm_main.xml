@@ -13,31 +13,17 @@
 	</fire_movie> -->
 
 	<shniaga_wnd x="590" y="419" width="392" height="280">
-		<buttons_region	x="110" y="0" width="164" height="280" always_show_scroll="false"/>
-		
-		<shniaga x="9" y="0" width="392" height="73">
+		<buttons_region	x="110" y="5" width="164" height="280" always_show_scroll="false"/>
+		<shniaga x="80" y="0" width="240" height="70">
 			<texture>ui_menu_move</texture>			
-			<magnifire x="76" y="22" width="232" height="36" stretch="1">
-				<texture>ui\ui_magnifier</texture>
-        <y_offset>0</y_offset>
+			<magnifire x="0" y="22" width="232" height="36" stretch="1">
+				<texture shader = "hud\magnifier">ui\ui_magnifier</texture>
+        		<y_offset>0</y_offset>
 			</magnifire>
-			
-			<left_anim x="43" y="37" width="55" height="55" stretch="1" heading="1" alignment="c">
-				<texture>ui_menu_bigroll_l</texture>
-			</left_anim>			
-			<right_anim x="340" y="37" width="55" height="55" stretch="1" heading="1" alignment="c">
-				<texture>ui_menu_bigroll_r</texture>
-			</right_anim>
-			<left_grating x="0" y="4" width="55" height="67">
-				<texture>ui_menu_grating_l</texture>
-			</left_grating>
-			<right_grating x="337" y="4" width="55" height="67">
-				<texture>ui_menu_grating_r</texture>
-			</right_grating>
 		</shniaga>		
 	</shniaga_wnd>
 	
-	<menu_main btn_height="30" font="graffiti22" a="255" r="0" g="0" b="0">
+	<menu_main btn_height="30" font="graffiti22" a="255" r="135" g="123" b="116">
 		<btn name="btn_new_game"	caption="ui_mm_newgame" />
 		<btn name="btn_load"		caption="ui_mm_load_game" />
 		<btn name="btn_multiplayer"	caption="ui_mm_multiplayer_n" />
@@ -46,7 +32,7 @@
 		<btn name="btn_quit"		caption="ui_mm_quit2windows" />
 	</menu_main>
 	
-	<menu_main_last_save btn_height="30" font="graffiti22" a="255" r="0" g="0" b="0">
+	<menu_main_last_save btn_height="30" font="graffiti22" a="255" r="135" g="123" b="116">
 		<btn name="btn_new_game"	caption="ui_mm_newgame" />
 		<btn name="btn_load"		caption="ui_mm_load_game" />
 		<btn name="btn_lastsave"	caption="ui_mm_last_save" />
@@ -56,7 +42,7 @@
 		<btn name="btn_quit"		caption="ui_mm_quit2windows" />
 	</menu_main_last_save>
 	
-	<menu_new_game btn_height="30" font="graffiti22" a="255" r="0" g="0" b="0">
+	<menu_new_game btn_height="30" font="graffiti22" a="255" r="135" g="123" b="116">
 		<btn name="btn_novice"		caption="ui_mm_novice" />
 		<btn name="btn_stalker"		caption="ui_mm_stalker" />
 		<btn name="btn_veteran"		caption="ui_mm_veteran" />
@@ -64,7 +50,7 @@
 		<btn name="btn_new_back"	caption="ui_mm_back" />
 	</menu_new_game>
 	
-	<menu_main_single btn_height="30" font="graffiti22" a="255" r="0" g="0" b="0">
+	<menu_main_single btn_height="30" font="graffiti22" a="255" r="135" g="123" b="116">
 		<btn name="btn_ret"			caption="ui_mm_return_game" />
 		<btn name="btn_lastsave"	caption="ui_mm_last_save" />
 		<btn name="btn_load"		caption="ui_mm_load_game" />
@@ -75,7 +61,7 @@
 		<btn name="btn_quit"		caption="ui_mm_quit2windows" />
 	</menu_main_single>
 	
-	<menu_main_single_dead btn_height="30" font="graffiti22" a="255" r="0" g="0" b="0">
+	<menu_main_single_dead btn_height="30" font="graffiti22" a="255" r="135" g="123" b="116">
 		<btn name="btn_lastsave"	caption="ui_mm_last_save" />
 		<btn name="btn_load"		caption="ui_mm_load_game" />
 		<btn name="btn_options"		caption="ui_mm_options_n" />
@@ -84,7 +70,7 @@
 		<btn name="btn_quit"		caption="ui_mm_quit2windows" />
 	</menu_main_single_dead>
 	
-	<menu_main_mm btn_height="30" font="graffiti22" a="255" r="0" g="0" b="0">
+	<menu_main_mm btn_height="30" font="graffiti22" a="255" r="135" g="123" b="116">
 		<btn name="btn_ret"			caption="ui_mm_return_game" />
 		<btn name="btn_options"		caption="ui_mm_options_n" />
     <btn name="btn_multiplayer"	caption="ui_mm_multiplayer_n" />
@@ -105,7 +91,7 @@
 		
 	</menu_sound>
 
-	<static_version x="15" y="740" width="100" height="30">
+	<static_version x="15" y="710" width="100" height="30">
 		<text align="l" font="graffiti19" r="135" g="123" b="116" complex_mode="0"/>
 	</static_version>
 	

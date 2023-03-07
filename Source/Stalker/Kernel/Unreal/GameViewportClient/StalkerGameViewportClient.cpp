@@ -14,6 +14,7 @@ THIRD_PARTY_INCLUDES_END
 #include "../GameMode/StalkerGameMode.h"
 #include "../WorldSettings/StalkerWorldSettings.h"
 #include "../LevelScriptActor/StalkerLevelScriptActor.h"
+#include "Engine/Console.h"
 DECLARE_CYCLE_STAT(TEXT("XRay ~ Frame"), STAT_XRayEngineFrame, STATGROUP_XRayEngine);
 DECLARE_CYCLE_STAT(TEXT("XRay ~ MT Frame"), STAT_XRayEngineMTFrame, STATGROUP_XRayEngine);
 void UStalkerGameViewportClient::Activated(FViewport* InViewport, const FWindowActivateEvent& InActivateEvent)
@@ -45,6 +46,10 @@ bool UStalkerGameViewportClient::InputKey(const FInputKeyEventArgs& InKeyEvent)
 	if (IgnoreInput())
 	{
 		return false;
+	}
+	if (ViewportConsole && ViewportConsole->ConsoleState != NAME_None)
+	{
+		return Result;
 	}
 	if (GXRayEngineManager->GetGameViewportClient()==this)
 	{
@@ -108,6 +113,11 @@ void UStalkerGameViewportClient::ReceivedFocus(FViewport* InViewport)
 void UStalkerGameViewportClient::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	Device->fTimeDelta = DeltaTime;
+	Device->fTimeGlobal = GWorld->TimeSeconds;
+	Device->dwTimeDelta = static_cast<u32>(DeltaTime * 1000);
+	Device->dwTimeGlobal = static_cast<u32>(GWorld->TimeSeconds * 1000);
+	Device->dwTimeContinual = static_cast<u32>(GWorld->UnpausedTimeSeconds * 1000);
 	if (g_loading_events->size())
 	{
 		if (g_loading_events->front()())
@@ -117,31 +127,8 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 	else
 	{
 		SCOPE_CYCLE_COUNTER(STAT_XRayEngineFrame);
-		Device->fTimeDelta = DeltaTime;
-		Device->fTimeGlobal = GWorld->TimeSeconds;
-		Device->dwTimeDelta = static_cast<u32>(DeltaTime * 1000);
-		Device->dwTimeGlobal = static_cast<u32>(GWorld->TimeSeconds * 1000);
-		Device->dwTimeContinual = static_cast<u32>(GWorld->UnpausedTimeSeconds * 1000);
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
-		g_bEnableStatGather = psDeviceFlags.is_any(rsStatistic);
-	
-		if (IsValid(GWorld) && g_pGameLevel&&g_pGameLevel->GetActor())
-		{
-			if (AStalkerWorldSettings* WorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings()))
-			{
-				if (IsValid(WorldSettings) && WorldSettings->NeedBeginPlay)
-				{
-					 WorldSettings->NeedBeginPlay = false;
-					 if (AStalkerLevelScriptActor* LevelScriptActor = Cast<AStalkerLevelScriptActor>(WorldSettings->GetLevel()->GetLevelScriptActor()))
-					 {
-						LevelScriptActor->StalkerBeginPlay();
-					 }
-				}
-			}
-		}
-
 		g_Engine->OnFrame();
-
 		Device->dwFrame++;
 		GXRaySkeletonMeshManager->Flush();
 		{

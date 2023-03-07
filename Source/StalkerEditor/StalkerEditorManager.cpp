@@ -133,7 +133,7 @@ FString UStalkerEditorManager::GetGamePath()
 
 void UStalkerEditorManager::ReloadConfigs()
 {
-	if (!FApp::IsGame())
+	if (FApp::IsGame())
 	{
 		return;
 	}
@@ -212,6 +212,8 @@ void UStalkerEditorManager::OnPreBeginPIE(const bool)
 			{
 				if (StalkerWorldSettings->NotForXRay)
 				{
+				
+					GXRayEngineManager->GetResourcesManager()->Reload();
 					GXRayEngineManager->AppStart();
 					return;
 				}

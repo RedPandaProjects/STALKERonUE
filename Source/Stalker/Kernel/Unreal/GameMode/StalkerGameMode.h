@@ -6,7 +6,7 @@
  * 
  */
 UCLASS()
-class STALKER_API AStalkerGameMode : public AGameModeBase
+class STALKER_API AStalkerGameMode : public AGameMode
 {
 	GENERATED_BODY()
 public:
@@ -16,4 +16,7 @@ public:
 	void StartPlay() override;
 	void ResetLevel() override;
 	void Reset() override;
+
+	bool ReadyToStartMatch_Implementation() override;
+
 };

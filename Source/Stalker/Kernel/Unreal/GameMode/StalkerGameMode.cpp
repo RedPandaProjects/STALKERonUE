@@ -1,6 +1,7 @@
 #include "StalkerGameMode.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XR_IOConsole.h"
+#include "XrEngine/IGame_Level.h"
 THIRD_PARTY_INCLUDES_END
 
 #include "Entities/Player/Character/StalkerPlayerCharacter.h"
@@ -51,4 +52,33 @@ void AStalkerGameMode::ResetLevel()
 void AStalkerGameMode::Reset()
 {
 	Super::Reset();
+}
+
+bool AStalkerGameMode::ReadyToStartMatch_Implementation()
+{
+	if (!Super::ReadyToStartMatch_Implementation())
+	{
+		return false;
+	}
+	if (AStalkerWorldSettings* WorldSettings = Cast<AStalkerWorldSettings>(GetWorld()->GetWorldSettings()))
+	{
+		if (WorldSettings->NotForXRay)
+		{
+			return Device->b_is_Active;
+		}
+		if (!g_pGameLevel)
+		{
+			return false;
+		}
+		if (!g_pGameLevel->GetActor())
+		{
+			return false;
+		}
+		if (!g_loading_events->size())
+		{
+			return true;
+		}
+		return false;
+	}
+	return true;
 }

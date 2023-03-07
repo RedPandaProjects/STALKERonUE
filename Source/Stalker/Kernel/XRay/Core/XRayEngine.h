@@ -17,6 +17,7 @@ public:
 	class ILevelGraph*				GetLevelGraph				(const char*Name) override;
 	class IGameGraph*				GetGameGraph				() override;
 	IReader							GetGameSpawn				() override;
+	void							LoadDefaultWorld			() override;
 
 
 	bool							LoadWorld					(const char* Name) override;
@@ -25,5 +26,10 @@ public:
 
 
 	class XRayUnrealProxyInterface* GetUnrealPlayerCharacter	() override;
+
+
+	shared_str						GetUnrealVersion			() override;
+
+
 
 };

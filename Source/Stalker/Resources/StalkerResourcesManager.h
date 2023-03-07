@@ -26,10 +26,10 @@ public:
 #if WITH_EDITORONLY_DATA
 	class UStalkerGameSpawn*			GetOrCreateGameSpawn();
 #endif
-
-
 	UPROPERTY(Transient)
 	TObjectPtr < class UWorld>	GameWorld;
+	UPROPERTY(Transient)
+	TMap<USlateBrushAsset*, UTexture*> BrushesTextures;
 private:
 
 	UPROPERTY(Transient)

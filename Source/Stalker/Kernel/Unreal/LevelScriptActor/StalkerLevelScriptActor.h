@@ -5,6 +5,4 @@ class STALKER_API AStalkerLevelScriptActor : public ALevelScriptActor
 {
 	GENERATED_BODY()
 public:
-	UFUNCTION(BlueprintImplementableEvent)
-	void StalkerBeginPlay();
 };

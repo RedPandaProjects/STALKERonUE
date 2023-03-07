@@ -36,6 +36,7 @@ public:
 
 	inline class UStalkerGameViewportClient*			GetGameViewportClient				()								{return GameViewportClient;}
 
+	void												LoadDefaultWorld					();
 	bool												LoadWorld							(FString LevelName);
 	inline EStalkerWorldStatus							GetWorldStatus						() const{return WorldStatus;}
 	inline	EStalkerGame								GetCurrentGame						() const { return CurrentGame; }
