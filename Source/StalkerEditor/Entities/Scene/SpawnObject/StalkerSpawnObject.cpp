@@ -1,7 +1,7 @@
 #include "StalkerSpawnObject.h"
 #include "../../../StalkerEditorManager.h"
 #include "../../../Managers/SEFactory/StalkerSEFactoryManager.h"
-#include "Entities/Kinematics/StalkerKinematics.h"
+#include "Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
 
@@ -99,7 +99,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 				}
 				if (XRayEntity->visual()->visual_name.size())
 				{
-					MainVisual->Initilize(GXRayEngineManager->GetResourcesManager()->GetKinematics(XRayEntity->visual()->visual_name.c_str()));
+					MainVisual->Initilize(GStalkerEngineManager->GetResourcesManager()->GetKinematics(XRayEntity->visual()->visual_name.c_str()));
 					XRayEntity->set_editor_flag(ISE_Abstract::flVisualAnimationChange);
 				}
 				else
@@ -164,7 +164,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 					if (Selected)
 					{
 						check(IVisual);
-						Visual->Initilize(GXRayEngineManager->GetResourcesManager()->GetKinematics(IVisual->visual_name.c_str()));
+						Visual->Initilize(GStalkerEngineManager->GetResourcesManager()->GetKinematics(IVisual->visual_name.c_str()));
 						MotionID M = Visual->ID_Cycle_Safe(IVisual->startup_animation.c_str());
 						if (M.valid())
 						{

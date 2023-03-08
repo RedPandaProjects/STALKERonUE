@@ -13,16 +13,16 @@ void UStalkerSEFactoryManager::Initialized()
 {
 	CreatePlaceableSpawn();
 
-	GXRayEngineManager->PostReInitializedMulticastDelegate.AddUObject(this, &UStalkerSEFactoryManager::OnPostReInitialized);
-	GXRayEngineManager->PreReInitializedMulticastDelegate.AddUObject(this, &UStalkerSEFactoryManager::OnPreReInitialized);
+	GStalkerEngineManager->PostReInitializedMulticastDelegate.AddUObject(this, &UStalkerSEFactoryManager::OnPostReInitialized);
+	GStalkerEngineManager->PreReInitializedMulticastDelegate.AddUObject(this, &UStalkerSEFactoryManager::OnPreReInitialized);
 
 	OnPostReInitialized();
 }
 
 void UStalkerSEFactoryManager::Destroy()
 {
-	GXRayEngineManager->PostReInitializedMulticastDelegate.RemoveAll(this);
-	GXRayEngineManager->PreReInitializedMulticastDelegate.RemoveAll(this);
+	GStalkerEngineManager->PostReInitializedMulticastDelegate.RemoveAll(this);
+	GStalkerEngineManager->PreReInitializedMulticastDelegate.RemoveAll(this);
 
 	OnPreReInitialized();
 

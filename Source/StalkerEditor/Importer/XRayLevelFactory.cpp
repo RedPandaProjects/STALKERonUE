@@ -27,20 +27,20 @@ XRayLevelFactory::~XRayLevelFactory()
 bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptions&LevelImportOptions)
 {
 
-	GRayObjectLibrary->AngleSmooth = LevelImportOptions.AngleNormalSmoth;
+	GXRayObjectLibrary->AngleSmooth = LevelImportOptions.AngleNormalSmoth;
 	switch (LevelImportOptions.ObjectImportGameFormat)
 	{
 	default:
-		GRayObjectLibrary->LoadAsGame = EGame::NONE;
+		GXRayObjectLibrary->LoadAsGame = EGame::NONE;
 		break;
 	case EXRayObjectImportGameFormat::SOC:
-		GRayObjectLibrary->LoadAsGame = EGame::SHOC;
+		GXRayObjectLibrary->LoadAsGame = EGame::SHOC;
 		break;
 	case EXRayObjectImportGameFormat::CS_COP:
-		GRayObjectLibrary->LoadAsGame = EGame::COP;
+		GXRayObjectLibrary->LoadAsGame = EGame::COP;
 		break;
 	}
-	GRayObjectLibrary->ReloadObjects();
+	GXRayObjectLibrary->ReloadObjects();
 	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
 	if (!WorldContext)
 		return false;

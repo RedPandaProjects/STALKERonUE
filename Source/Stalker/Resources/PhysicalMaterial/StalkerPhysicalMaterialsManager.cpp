@@ -16,7 +16,7 @@ void UStalkerPhysicalMaterialsManager::Build()
 	LegacyPhysicalMaterialPairs.Num()||
 	Name2ID.Num())==false);
 
-	const FString PackageName = GXRayEngineManager->GetResourcesManager()->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials");
+	const FString PackageName = GStalkerEngineManager->GetResourcesManager()->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials");
 	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
 	TArray<FAssetData> AssetData;
 	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData, true);
@@ -47,7 +47,7 @@ void UStalkerPhysicalMaterialsManager::Build()
 		}
 	}
 
-	const FString MaterialPairsPackageName = GXRayEngineManager->GetResourcesManager()->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("MaterialPairs");
+	const FString MaterialPairsPackageName = GStalkerEngineManager->GetResourcesManager()->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("MaterialPairs");
 	const FString MaterialPairsObjectPath = MaterialPairsPackageName + TEXT(".") + FPaths::GetBaseFilename(MaterialPairsPackageName);
 
 	UStalkerPhysicalMaterialPairsData* PhysicalMaterialPairs = LoadObject<UStalkerPhysicalMaterialPairsData>(nullptr, *MaterialPairsObjectPath, nullptr, LOAD_NoWarn);

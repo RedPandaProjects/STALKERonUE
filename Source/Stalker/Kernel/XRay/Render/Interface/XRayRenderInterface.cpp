@@ -4,7 +4,7 @@
 #include "../Resources/Visual/XRaySkeletonVisual.h"
 #include "../../../StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
-#include "Entities/Kinematics/StalkerKinematics.h"
+#include "Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "Entities/Levels/Light/StalkerLight.h"
 XRayRenderInterface GRenderInterface;
 
@@ -179,7 +179,7 @@ void XRayRenderInterface::ros_destroy(IRender_ObjectSpecific*& V)
 }
 IRender_Light* XRayRenderInterface::light_create()
 {
-	return GXRayEngineManager->GetResourcesManager()->CreateLight();
+	return GStalkerEngineManager->GetResourcesManager()->CreateLight();
 }
 class XRayRenderGlow :public IRender_Glow
 {
@@ -241,7 +241,7 @@ IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
 	
-	UStalkerKinematicsComponent* Kinematics =  GXRayEngineManager->GetResourcesManager()->CreateKinematics(name,true);
+	UStalkerKinematicsComponent* Kinematics =  GStalkerEngineManager->GetResourcesManager()->CreateKinematics(name,true);
 	check(Kinematics);
 	if (Kinematics)
 	{
@@ -266,7 +266,7 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 	{	
 		if (V->CastToStalkerKinematicsComponent())
 		{
-			GXRayEngineManager->GetResourcesManager()->Destroy(V->CastToStalkerKinematicsComponent());
+			GStalkerEngineManager->GetResourcesManager()->Destroy(V->CastToStalkerKinematicsComponent());
 		}
 		else
 		{
@@ -374,7 +374,7 @@ void XRayRenderInterface::light_destroy(IRender_Light* p_)
 {
 	if (p_)
 	{
-		GXRayEngineManager->GetResourcesManager()->Desotry(p_);
+		GStalkerEngineManager->GetResourcesManager()->Desotry(p_);
 	}
 	p_ = nullptr;
 }

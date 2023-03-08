@@ -39,7 +39,8 @@ public:
 	UPROPERTY(SkipSerialization)
 	TArray<uint8>						EntityData;
 	ISE_Abstract*						XRayEntity;
-
+	UPROPERTY(EditAnywhere)
+	bool								ExcludeFromBuild = false;
 
 protected:
 	void								BeginPlay					() override;

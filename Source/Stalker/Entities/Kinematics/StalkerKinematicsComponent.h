@@ -7,7 +7,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/animation_blend.h"
 #include "XrEngine/vis_common.h"
 THIRD_PARTY_INCLUDES_END
-#include "StalkerKinematics.generated.h"
+#include "StalkerKinematicsComponent.generated.h"
 
 UCLASS(BlueprintType)
 class STALKER_API UStalkerKinematicsComponent : public USkeletalMeshComponent, public IRenderVisual,public IKinematics,public IKinematicsAnimated

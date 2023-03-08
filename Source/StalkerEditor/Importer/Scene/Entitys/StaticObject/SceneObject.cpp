@@ -25,7 +25,7 @@ void CSceneObject::Construct(LPVOID data)
 CSceneObject::~CSceneObject()
 {
     for (CSurface* i : m_Surfaces) { i->OnDeviceDestroy(); delete i; }
-	GRayObjectLibrary->RemoveEditObject(m_pReference);
+	GXRayObjectLibrary->RemoveEditObject(m_pReference);
 }
 
 
@@ -89,8 +89,8 @@ CEditableObject* CSceneObject::UpdateReference()
 {
     for (CSurface* i : m_Surfaces) { i->OnDeviceDestroy(); delete i; }
     m_Surfaces.clear();
-    GRayObjectLibrary->RemoveEditObject(m_pReference);
-	m_pReference		= (m_ReferenceName.size())? GRayObjectLibrary->CreateEditObject(*m_ReferenceName):0;
+    GXRayObjectLibrary->RemoveEditObject(m_pReference);
+	m_pReference		= (m_ReferenceName.size())? GXRayObjectLibrary->CreateEditObject(*m_ReferenceName):0;
     UpdateTransform		();
     if (m_pReference)
     {

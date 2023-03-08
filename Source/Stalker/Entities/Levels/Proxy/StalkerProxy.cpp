@@ -1,5 +1,5 @@
 #include "StalkerProxy.h"
-#include "../../Kinematics/StalkerKinematics.h"
+#include "../../Kinematics/StalkerKinematicsComponent.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
 
@@ -57,7 +57,7 @@ void AStalkerProxy::Attach(class IRenderVisual* Visual, const char* BoneName)
 	check(StalkerKinematicsComponent);
 	check(GetRootComponent());
 
-	GXRayEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
+	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->Rename(nullptr,this);
 	//Set
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
@@ -90,7 +90,7 @@ void AStalkerProxy::AttachAsRoot(class IRenderVisual* Visual)
 {
 	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
 	check(StalkerKinematicsComponent);
-	GXRayEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
+	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->Rename(nullptr,this);
 	SetRootComponent(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->SetSimulatePhysics(false);

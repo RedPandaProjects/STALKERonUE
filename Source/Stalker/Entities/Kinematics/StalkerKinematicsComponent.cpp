@@ -1,4 +1,4 @@
-#include "StalkerKinematics.h"
+#include "StalkerKinematicsComponent.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
 #include "Animation/AnimSequence.h"
@@ -304,7 +304,7 @@ void UStalkerKinematicsComponent::Detach()
 		UnregisterComponent();
 	}
 
-	GXRayEngineManager->GetResourcesManager()->RegisterKinematics(this);
+	GStalkerEngineManager->GetResourcesManager()->RegisterKinematics(this);
 }
 
 void UStalkerKinematicsComponent::BeginDestroy()

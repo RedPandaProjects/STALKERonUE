@@ -111,21 +111,29 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 	CGameGraphBuilder GameGraphBuilder(AIMap);
 	TArray<UStalkerSpawnObjectSphereShapeComponent*>SphereShapeComponents;
 	TArray<UStalkerSpawnObjectBoxShapeComponent*>BoxShapeComponents;
-	//GXRayEngineManager->DebugShapes.Empty();
+	//GStalkerEngineManager->DebugShapes.Empty();
+	
+	FSoftObjectPath WorldSoftPath =   UWorld::RemovePIEPrefix(*World->GetPathName());
 	for (TActorIterator<AStalkerSpawnObject> AactorItr(World); AactorItr; ++AactorItr)
 	{
 		if (!AactorItr->XRayEntity)
 		{
 			continue;
 		}
-		FString Name = AactorItr->GetActorLabel(true);
-		if (Name.StartsWith( AactorItr->GetDefaultActorLabel() ))
+		if (AactorItr->ExcludeFromBuild)
 		{
-			Name = AactorItr->GetPathName();
+			continue;
 		}
-		else
+		FString Name = AactorItr->GetActorLabel(true);
+		Name.ToLowerInline();
+		FString ActorLabel =  AactorItr->GetDefaultActorLabel();
+		while (ActorLabel.Len() && FChar::IsDigit(ActorLabel[ActorLabel.Len() - 1]))
 		{
-			Name.ToLowerInline();
+			ActorLabel.RemoveAt(ActorLabel.Len() - 1);
+		}
+		if (!ActorLabel.Len()||Name.StartsWith(ActorLabel ))
+		{
+			Name = WorldSoftPath.GetAssetName() + TEXT("_") + Name;
 		}
 		AactorItr->XRayEntity->unreal_soft_refence = TCHAR_TO_ANSI(*AactorItr->GetPathName());
 		AactorItr->XRayEntity->set_name_replace(TCHAR_TO_ANSI(*Name));
@@ -173,7 +181,7 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 
 					CShapeData::shape_def ToShape =Shape;
 					ToShape.data.box.mul_43(xform, Shape.data.box);
-				//	GXRayEngineManager->DebugShapes.Add(ToShape);
+				//	GStalkerEngineManager->DebugShapes.Add(ToShape);
 				}
 			/*	for (int32 i = 0; i < _countof(du_box_lines);)
 				{
@@ -248,7 +256,7 @@ bool UStalkerEditorSpawn::BuildGameSpawn(UStalkerLevelSpawn* OnlyIt, bool IfNeed
 	{
 		return true;
 	}
-	UStalkerGameSpawn* GameSpawn = GXRayEngineManager->GetResourcesManager()->GetOrCreateGameSpawn();
+	UStalkerGameSpawn* GameSpawn = GStalkerEngineManager->GetResourcesManager()->GetOrCreateGameSpawn();
 	check(GameSpawn);
 	if (!ensure(GameSpawn->LevelsInfo.Num() == GameSpawn->GameGraph.header().level_count()))
 	{

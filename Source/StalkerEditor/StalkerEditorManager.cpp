@@ -33,13 +33,13 @@ void UStalkerEditorManager::Initialized()
 	if (GIsEditor)
 	{
 		UICommandList = MakeShareable(new FUICommandList);
-		GRayObjectLibrary = new XRayObjectLibrary;
-		GRayObjectLibrary->OnCreate();
-		if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+		GXRayObjectLibrary = new XRayObjectLibrary;
+		GXRayObjectLibrary->OnCreate();
+		if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
 		{
 			SOCMaterials.Load();
 		}
-		GXRayEngineManager->PostReInitializedMulticastDelegate.AddUObject(this, &UStalkerEditorManager::OnReInitialized);
+		GStalkerEngineManager->PostReInitializedMulticastDelegate.AddUObject(this, &UStalkerEditorManager::OnReInitialized);
 
 		ScanSkeletons();
 		EditorCFrom = NewObject<UStalkerEditorCForm>(this);
@@ -112,9 +112,9 @@ void UStalkerEditorManager::Destroy()
 		EditorSpawn->Destroy();
 		EditorSpawn->MarkAsGarbage();
 		EditorSpawn = nullptr;
-		GXRayEngineManager->PostReInitializedMulticastDelegate.RemoveAll(this);
-		GRayObjectLibrary->OnDestroy();
-		delete GRayObjectLibrary;
+		GStalkerEngineManager->PostReInitializedMulticastDelegate.RemoveAll(this);
+		GXRayObjectLibrary->OnDestroy();
+		delete GXRayObjectLibrary;
 	}
 }
 
@@ -213,8 +213,8 @@ void UStalkerEditorManager::OnPreBeginPIE(const bool)
 				if (StalkerWorldSettings->NotForXRay)
 				{
 				
-					GXRayEngineManager->GetResourcesManager()->Reload();
-					GXRayEngineManager->AppStart();
+					GStalkerEngineManager->GetResourcesManager()->Reload();
+					GStalkerEngineManager->AppStart();
 					return;
 				}
 			}
@@ -244,7 +244,7 @@ void UStalkerEditorManager::OnPreBeginPIE(const bool)
 			}
 			else
 			{
-				UStalkerGameSpawn* GameSpawn = GXRayEngineManager->GetResourcesManager()->GetOrCreateGameSpawn();
+				UStalkerGameSpawn* GameSpawn = GStalkerEngineManager->GetResourcesManager()->GetOrCreateGameSpawn();
 				check(GameSpawn);
 				GameSpawn->InvalidGameSpawn();
 			}
@@ -254,8 +254,8 @@ void UStalkerEditorManager::OnPreBeginPIE(const bool)
 			EditorSpawn->BuildGameSpawn(nullptr,true);
 		}
 	}
-	GXRayEngineManager->GetResourcesManager()->Reload();
-	GXRayEngineManager->AppStart();
+	GStalkerEngineManager->GetResourcesManager()->Reload();
+	GStalkerEngineManager->AppStart();
 }
 
 void UStalkerEditorManager::OnPostPIEStarted(const bool)
@@ -276,15 +276,15 @@ void UStalkerEditorManager::OnPostPIEStarted(const bool)
 void UStalkerEditorManager::OnEndPIE(const bool)
 {
 	g_Engine->StopGame();
-	GXRayEngineManager->AppEnd();
+	GStalkerEngineManager->AppEnd();
 }
 
 void UStalkerEditorManager::OnReInitialized()
 {
-	GRayObjectLibrary->OnDestroy();
-	GRayObjectLibrary->OnCreate();
+	GXRayObjectLibrary->OnDestroy();
+	GXRayObjectLibrary->OnCreate();
 	SOCMaterials.UnLoad();
-	if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
 	{
 		SOCMaterials.Load();
 	}

@@ -22,7 +22,7 @@ void UStalkerGameViewportClient::Activated(FViewport* InViewport, const FWindowA
 	Super::Activated(InViewport, InActivateEvent);
 	if (!IsActive)
 	{
-		if (GXRayEngineManager->GetGameViewportClient() == this)
+		if (GStalkerEngineManager->GetGameViewportClient() == this)
 		{
 			Device->seqAppActivate.Process(rp_AppActivate);
 			IsActive = true;
@@ -51,9 +51,9 @@ bool UStalkerGameViewportClient::InputKey(const FInputKeyEventArgs& InKeyEvent)
 	{
 		return Result;
 	}
-	if (GXRayEngineManager->GetGameViewportClient()==this)
+	if (GStalkerEngineManager->GetGameViewportClient()==this)
 	{
-		GXRayEngineManager->GetInput()->KeyEvent(InKeyEvent);
+		GStalkerEngineManager->GetInput()->KeyEvent(InKeyEvent);
 		return true;
 	}
 	return Result;
@@ -68,15 +68,15 @@ bool UStalkerGameViewportClient::InputAxis(FViewport* InViewport, FInputDeviceId
 		{
 			return false;
 		}
-		if (GXRayEngineManager->GetGameViewportClient() == this)
+		if (GStalkerEngineManager->GetGameViewportClient() == this)
 		{
 			if (Key.GetFName() == EKeys::MouseX)
 			{
-				GXRayEngineManager->GetInput()->MouseEvent(Delta, 0);
+				GStalkerEngineManager->GetInput()->MouseEvent(Delta, 0);
 			}
 			if (Key.GetFName() == EKeys::MouseY)
 			{
-				GXRayEngineManager->GetInput()->MouseEvent(0, Delta);
+				GStalkerEngineManager->GetInput()->MouseEvent(0, Delta);
 			}
 			return true;
 		}
@@ -87,7 +87,7 @@ bool UStalkerGameViewportClient::InputAxis(FViewport* InViewport, FInputDeviceId
 void UStalkerGameViewportClient::LostFocus(FViewport* InViewport)
 {
 	Super::LostFocus(InViewport);
-	if (GIsEditor && GXRayEngineManager->GetGameViewportClient() == this)
+	if (GIsEditor && GStalkerEngineManager->GetGameViewportClient() == this)
 	{
 		if (!IsActive)
 		{

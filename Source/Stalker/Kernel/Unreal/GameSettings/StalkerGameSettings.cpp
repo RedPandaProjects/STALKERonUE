@@ -7,7 +7,7 @@ UStalkerGameSettings::UStalkerGameSettings()
 
 const TMap<FName, FStalkerLevelInfo>& UStalkerGameSettings::GetCurrentLevels() const
 {
-	switch (GXRayEngineManager->GetCurrentGame())
+	switch (GStalkerEngineManager->GetCurrentGame())
 	{
 	default:
 		return LevelsCOP;
@@ -25,7 +25,7 @@ void UStalkerGameSettings::ReInitilizeXRay()
 	{
 		return;
 	}
-    GXRayEngineManager->ReInitialized(EditorStartupGame);
+    GStalkerEngineManager->ReInitialized(EditorStartupGame);
 #endif
 }
 

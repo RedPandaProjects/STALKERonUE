@@ -23,16 +23,15 @@ THIRD_PARTY_INCLUDES_END
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Resources/Spawn/StalkerLevelSpawn.h"
 
-STALKER_API UStalkerEngineManager* GXRayEngineManager = nullptr;
-
+STALKER_API UStalkerEngineManager* GStalkerEngineManager = nullptr;
+static XRayMemory	GXRayMemory;
+static XRayLog	GXRayLog;
+static XRayDebug	GXRayDebug;
 void UStalkerEngineManager::Initialized()
 {
 	ResourcesManager = NewObject<UStalkerResourcesManager>(this);
 	PhysicalMaterialsManager = NewObject<UStalkerPhysicalMaterialsManager>(this);
 	MyXRayInput = nullptr;
-	GXRayMemory = new XRayMemory;
-	GXRayDebug = new XRayDebug;
-	GXRayLog = new XRayLog;
 	FString FSName;
 	EGamePath GamePath = EGamePath::COP_1602;
 	if (GIsEditor)
@@ -60,7 +59,7 @@ void UStalkerEngineManager::Initialized()
 
 	FSName += TEXT(".ltx");
 	FSName = FPaths::Combine(FPaths::ProjectDir(), FSName);
-	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
+	Core.Initialize(&GXRayMemory, &GXRayLog, &GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
 
 	MyXRayEngine = new XRayEngine;
 	g_Engine = MyXRayEngine;
@@ -106,12 +105,6 @@ void UStalkerEngineManager::Destroy()
 	delete g_Engine;
 	MyXRayEngine = nullptr;
 	Core.Destroy();
-	delete GXRayMemory;
-	GXRayMemory = nullptr;
-	delete GXRayDebug;
-	GXRayDebug = nullptr;
-	delete GXRayLog;
-	GXRayLog = nullptr;
 	GameMaterialLibrary = nullptr;
 	ResourcesManager->CheckLeak();
 }
@@ -247,7 +240,7 @@ void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
 	FSName += TEXT(".ltx");
 	FSName = FPaths::Combine(FPaths::ProjectDir(), FSName);
 
-	Core.Initialize(GXRayMemory, GXRayLog, GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
+	Core.Initialize(&GXRayMemory, &GXRayLog, &GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
 	MyXRayEngine = new XRayEngine;
 	g_Engine = MyXRayEngine;
 	g_Engine->Initialize();

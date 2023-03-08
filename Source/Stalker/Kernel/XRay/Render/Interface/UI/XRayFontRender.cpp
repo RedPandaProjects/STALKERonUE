@@ -19,7 +19,7 @@ XRayFontRender::~XRayFontRender()
 
 void XRayFontRender::Initialize(LPCSTR font, float size)
 {
-	Font = GXRayEngineManager->GetResourcesManager()->GetFont(font);
+	Font = GStalkerEngineManager->GetResourcesManager()->GetFont(font);
 	FontSize = size*0.7f;
 }
 

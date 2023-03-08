@@ -8,9 +8,9 @@ DEFINE_LOG_CATEGORY(LogStalker);
 
 void FStalkerModule::StartupModule()
 {
-	GXRayEngineManager = NewObject< UStalkerEngineManager>();
-	GXRayEngineManager->AddToRoot();
-	GXRayEngineManager->Initialized();
+	GStalkerEngineManager = NewObject< UStalkerEngineManager>();
+	GStalkerEngineManager->AddToRoot();
+	GStalkerEngineManager->Initialized();
 	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerModule::OnPreExit);
 
 }
@@ -22,9 +22,9 @@ void FStalkerModule::ShutdownModule()
 
 void FStalkerModule::OnPreExit()
 {
-	GXRayEngineManager->Destroy();
-	GXRayEngineManager->RemoveFromRoot();
-	GXRayEngineManager->MarkAsGarbage();
+	GStalkerEngineManager->Destroy();
+	GStalkerEngineManager->RemoveFromRoot();
+	GStalkerEngineManager->MarkAsGarbage();
 
 }
 

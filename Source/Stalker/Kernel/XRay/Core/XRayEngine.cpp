@@ -34,7 +34,7 @@ void XRayEngine::Initialize()
 	Console = new  XRayConsole;
 
 	XRayInput* MyInput = new XRayInput;
-	GXRayEngineManager->SetInput(MyInput);
+	GStalkerEngineManager->SetInput(MyInput);
 	GXRayInput = MyInput;
 	::Render = &GRenderInterface;
 	::RenderFactory = &GRenderFactory;
@@ -46,7 +46,7 @@ void XRayEngine::Initialize()
 
 void XRayEngine::Destroy()
 {
-	GXRayEngineManager->SetInput(nullptr);
+	GStalkerEngineManager->SetInput(nullptr);
 	XRayEngineInterface::Destroy();
 	delete GXRayInput;
 	delete Console;
@@ -68,12 +68,12 @@ void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
 
 class ILevelGraph* XRayEngine::GetLevelGraph(const char* Name)
 {
-	return GXRayEngineManager->GetLevelGraph(Name);
+	return GStalkerEngineManager->GetLevelGraph(Name);
 }
 
 class IGameGraph* XRayEngine::GetGameGraph()
 {
-	UStalkerGameSpawn*GameSpawn =  GXRayEngineManager->GetResourcesManager()->GetGameSpawn();
+	UStalkerGameSpawn*GameSpawn =  GStalkerEngineManager->GetResourcesManager()->GetGameSpawn();
 	if (IsValid(GameSpawn))
 	{
 		GameSpawn->GameGraph.ResetEnabled();
@@ -84,7 +84,7 @@ class IGameGraph* XRayEngine::GetGameGraph()
 
 IReader XRayEngine::GetGameSpawn()
 {
-	UStalkerGameSpawn* GameSpawn = GXRayEngineManager->GetResourcesManager()->GetGameSpawn();
+	UStalkerGameSpawn* GameSpawn = GStalkerEngineManager->GetResourcesManager()->GetGameSpawn();
 	if (IsValid(GameSpawn))
 	{
 		return  { GameSpawn->SpawnData.GetData(),GameSpawn->SpawnData.Num() };;
@@ -94,7 +94,7 @@ IReader XRayEngine::GetGameSpawn()
 
 bool XRayEngine::LoadWorld(const char* Name)
 {
-	return GXRayEngineManager->LoadWorld(Name);
+	return GStalkerEngineManager->LoadWorld(Name);
 }
 
 class XRayUnrealProxyInterface* XRayEngine::CreateUnrealProxy()
@@ -112,7 +112,7 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 	check(StalkerWorldSettings);
 	UStalkerCForm* CForm = StalkerWorldSettings->GetCForm();
 	check(IsValid(CForm)); 
-	check (IsValid(GXRayEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial));
+	check (IsValid(GStalkerEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial));
 	static_assert(sizeof(FVector3f)==sizeof(Fvector));
 
 	TMap<uint32,uint32>		CFormMaterialID2GlobalID;
@@ -120,11 +120,11 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 	{
 		FString& Name = CForm->Name2ID[Index];
 		shared_str LegacyName = TCHAR_TO_ANSI(*Name);
-		int32 GlobalIndex =  GXRayEngineManager->GetPhysicalMaterialsManager()->Names.IndexOfByKey(LegacyName);
+		int32 GlobalIndex =  GStalkerEngineManager->GetPhysicalMaterialsManager()->Names.IndexOfByKey(LegacyName);
 		if (GlobalIndex == INDEX_NONE)
 		{
 			UE_LOG(LogStalker,Error,TEXT("Can't found material %s in time build cform"),*Name);
-			GlobalIndex = GXRayEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.IndexOfByKey(GXRayEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial);
+			GlobalIndex = GStalkerEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.IndexOfByKey(GStalkerEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial);
 			check(GlobalIndex!= INDEX_NONE);
 		}
 		CFormMaterialID2GlobalID.Add(Index,static_cast<uint32>(GlobalIndex));
@@ -161,7 +161,7 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 
 EXRayWorldStatus XRayEngine::GetWorldStatus()
 {
-	switch (GXRayEngineManager->GetWorldStatus())
+	switch (GStalkerEngineManager->GetWorldStatus())
 	{
 	default:
 		return EXRayWorldStatus::Failure;
@@ -201,6 +201,6 @@ shared_str XRayEngine::GetUnrealVersion()
 
 void XRayEngine::LoadDefaultWorld()
 {	
-	GXRayEngineManager->LoadDefaultWorld();
+	GStalkerEngineManager->LoadDefaultWorld();
 	
 }

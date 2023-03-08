@@ -299,7 +299,7 @@ void UStalkerSpawnProperties_ALifeZoneVisual::PostEditChangeProperty(struct FPro
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeZoneVisual, AttackAnimation))
 	{
 		check(Entity->visual());
-		UStalkerKinematicsData* Kinematics = GXRayEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
+		UStalkerKinematicsData* Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
 		FName AnimName;
 		if (CheckAnim(AttackAnimation, AnimName, Kinematics))
 		{
@@ -315,7 +315,7 @@ void UStalkerSpawnProperties_ALifeZoneVisual::PostEditChangeProperty(struct FPro
 void UStalkerSpawnProperties_ALifeZoneVisual::SetAnim()
 {
 	check(Entity->visual());
-	UStalkerKinematicsData*  Kinematics = GXRayEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
+	UStalkerKinematicsData*  Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
 	auto FindAnim = [Kinematics](FName  StartupAnimation)->class UAnimSequence*
 	{
 		if (Kinematics)

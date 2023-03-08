@@ -30,8 +30,8 @@ void UStalkerEditorCForm::Build()
 	{
 		return;
 	}
-	GXRayEngineManager->GetPhysicalMaterialsManager()->Build();
-	if (!GXRayEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial)
+	GStalkerEngineManager->GetPhysicalMaterialsManager()->Build();
+	if (!GStalkerEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial)
 	{
 		UE_LOG(LogStalkerEditor,Error,TEXT("Stalker physical materials is empty"));
 		return;
@@ -58,12 +58,12 @@ void UStalkerEditorCForm::Build()
 	UStalkerCForm*CForm = StalkerWorldSettings->GetOrCreateCForm();
 	CForm->InvalidCForm();
 
-	for (int32 Index = 0; Index < GXRayEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.Num(); Index++)
+	for (int32 Index = 0; Index < GStalkerEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.Num(); Index++)
 	{
-		PhysicalMaterial2ID.FindOrAdd(GXRayEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials[Index]) = Index;
-		CForm->Name2ID.Add(GXRayEngineManager->GetPhysicalMaterialsManager()->Names[Index].c_str());
+		PhysicalMaterial2ID.FindOrAdd(GStalkerEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials[Index]) = Index;
+		CForm->Name2ID.Add(GStalkerEngineManager->GetPhysicalMaterialsManager()->Names[Index].c_str());
 	}
-	int32 DefaultID = GXRayEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.IndexOfByKey(GXRayEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial);
+	int32 DefaultID = GStalkerEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.IndexOfByKey(GStalkerEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial);
 	check(DefaultID != INDEX_NONE);
 
 	const int32 TerrainExportLOD = 0;
@@ -260,7 +260,7 @@ void UStalkerEditorCForm::Build()
 	PhysicalMaterial2ID.Empty(PhysicalMaterial2ID.Num());
 
 
-	GXRayEngineManager->GetPhysicalMaterialsManager()->Clear();
+	GStalkerEngineManager->GetPhysicalMaterialsManager()->Clear();
 	CForm->Modify();
 	if (CForm->Triangles.Num() == 0)
 	{

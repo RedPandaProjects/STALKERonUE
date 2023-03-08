@@ -59,20 +59,20 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 	TStrongObjectPtr<UXRayObjectImportOptions> ImporterOptions(NewObject<UXRayObjectImportOptions>(GetTransientPackage(),TEXT("XRay Object Importer Options")));
 	if(IsAutomatedImport()||ShowOptionsWindow(Filename, NewPackageName,*ImporterOptions))
 	{
-		GRayObjectLibrary->AngleSmooth = ImporterOptions->AngleNormalSmoth;
+		GXRayObjectLibrary->AngleSmooth = ImporterOptions->AngleNormalSmoth;
 		switch (ImporterOptions->ObjectImportGameFormat)
 		{
 		default:
-		GRayObjectLibrary->LoadAsGame = EGame::NONE;
+		GXRayObjectLibrary->LoadAsGame = EGame::NONE;
 			break;
 		case EXRayObjectImportGameFormat::SOC:
-		GRayObjectLibrary->LoadAsGame = EGame::SHOC;
+		GXRayObjectLibrary->LoadAsGame = EGame::SHOC;
 			break;
 		case EXRayObjectImportGameFormat::CS_COP:
-		GRayObjectLibrary->LoadAsGame = EGame::COP;
+		GXRayObjectLibrary->LoadAsGame = EGame::COP;
 			break;
 		}
-		GRayObjectLibrary->ReloadObjects();
+		GXRayObjectLibrary->ReloadObjects();
 		XRayEngineFactory Factory(ParentPackage, Flags);
 		Object = Factory.ImportObject(Filename,ImporterOptions->DivideSubObject);
 	}

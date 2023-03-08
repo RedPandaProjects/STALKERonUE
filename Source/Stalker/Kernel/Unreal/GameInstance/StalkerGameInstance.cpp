@@ -8,12 +8,12 @@ void UStalkerGameInstance::Init()
 
 void UStalkerGameInstance::Shutdown()
 {
-	GXRayEngineManager->DetachViewport(GetGameViewportClient());
+	GStalkerEngineManager->DetachViewport(GetGameViewportClient());
 	Super::Shutdown();
 }
 
 void UStalkerGameInstance::OnStart()
 {
 	Super::OnStart();
-	GXRayEngineManager->AttachViewport(GetGameViewportClient());
+	GStalkerEngineManager->AttachViewport(GetGameViewportClient());
 }

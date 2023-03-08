@@ -19,7 +19,7 @@ void XRayUIShader::Copy(IUIShader& _in)
 	TextureName = static_cast<XRayUIShader&>(_in).TextureName; 
 	if (static_cast<XRayUIShader&>(_in).Brush)
 	{
-		Brush = GXRayEngineManager->GetResourcesManager()->Copy(static_cast<XRayUIShader&>(_in).Brush);
+		Brush = GStalkerEngineManager->GetResourcesManager()->Copy(static_cast<XRayUIShader&>(_in).Brush);
 	}
 }
 
@@ -30,7 +30,7 @@ void XRayUIShader::create(LPCSTR sh, LPCSTR tex)
 	TextureName = tex? FName(tex) : NAME_None;
 	if (MaterialName != NAME_None)
 	{
-		Brush = GXRayEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
+		Brush = GStalkerEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
 	}
 }
 
@@ -43,7 +43,7 @@ void XRayUIShader::destroy()
 {
 	if (Brush)
 	{
-		GXRayEngineManager->GetResourcesManager()->Free(Brush);
+		GStalkerEngineManager->GetResourcesManager()->Free(Brush);
 		Brush = nullptr;
 	}
 }
@@ -91,7 +91,7 @@ void XRayUIRender::SetScissor(Irect* rect)
 void XRayUIRender::GetActiveTextureResolution(Fvector2& res)
 {
 	if(!CurrentShader.Brush)return;
-	UTexture**Texture =  GXRayEngineManager->GetResourcesManager()->BrushesTextures .Find(CurrentShader.Brush);
+	UTexture**Texture =  GStalkerEngineManager->GetResourcesManager()->BrushesTextures .Find(CurrentShader.Brush);
 	if (!Texture)
 	{
 		res.x =32;
@@ -137,7 +137,7 @@ void XRayUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePoint
 	Items.Last().ScissorsID = CurrentScissor;
 	Items.Last().PrimitiveType = primType;
 	Items.Last().PointType = pointType;
-	Items.Last().Brush = CurrentShader.Brush ? GXRayEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush) : nullptr;
+	Items.Last().Brush = CurrentShader.Brush ? GStalkerEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush) : nullptr;
 }
 void XRayUIRender::FlushPrimitive()
 {

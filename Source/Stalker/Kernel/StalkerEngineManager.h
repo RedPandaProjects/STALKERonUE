@@ -69,9 +69,6 @@ private:
 	UPROPERTY(Transient)
 	TObjectPtr<class  UStalkerAIMap>					CurrentAIMap;
 	class XRayEngine*									MyXRayEngine;
-	class XRayMemory*									GXRayMemory;
-	class XRayLog*										GXRayLog;
-	class XRayDebug*									GXRayDebug;
 	class XRayInput*									MyXRayInput;
 	EStalkerGame										CurrentGame;
 
@@ -81,4 +78,4 @@ private:
 
 };
 
-extern STALKER_API UStalkerEngineManager* GXRayEngineManager;
+extern STALKER_API UStalkerEngineManager* GStalkerEngineManager;

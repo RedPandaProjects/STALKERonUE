@@ -1,6 +1,6 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "../Kernel/StalkerEngineManager.h"
-#include "../Entities/Kinematics/StalkerKinematics.h"
+#include "../Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "SkeletonMesh/StalkerKinematicsData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
@@ -229,25 +229,7 @@ void UStalkerResourcesManager::CheckLeak()
 #if WITH_EDITORONLY_DATA
 	check(BrushesNeedReloading.Num() == 0);
 #endif
-	if (GIsEditor || UE_BUILD_SHIPPING || UE_BUILD_DEBUG|| UE_BUILD_TEST)
-	{
-		check(Brushes.Num() == 0);
-		check(BrushesCounter.Num() == 0);
-		check(BrushesMaterials.Num() == 0);
-		check(BrushesTextures.Num() == 0);
-		check(BrushesInfo.Num() == 0);
-		check(Meshes.Num() == 0);
-	}
-	else
-	{
-		Brushes.Empty();
-		BrushesCounter.Empty();
-		BrushesMaterials.Empty();
-		BrushesTextures.Empty();
-		BrushesInfo.Empty();
-		Meshes.Empty();
-	}
-	//check(MeshesLegacy.Num() == 0);
+	check(Meshes.Num() == 0);
 	check(Lights.Num() == 0);
 }
 
@@ -307,7 +289,7 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 				{
 					FString NewName = Name;
 					NewName.RemoveFromStart(TEXT("meshes/"));
-					const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/levels") / GXRayEngineManager->GetCurrentWorldName() / NewName;
+					const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/levels") / GStalkerEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
@@ -325,7 +307,7 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 				{
 					FString NewName = Name;
 					NewName.RemoveFromStart(TEXT("meshes/"));
-					const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/levels") / GXRayEngineManager->GetCurrentWorldName() / NewName;
+					const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/levels") / GStalkerEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
@@ -343,7 +325,7 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 				{
 					FString NewName = Name;
 					NewName.RemoveFromStart(TEXT("meshes/"));
-					const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/levels") / GXRayEngineManager->GetCurrentWorldName() / NewName;
+					const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/levels") / GStalkerEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
 					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
@@ -409,7 +391,7 @@ void UStalkerResourcesManager::Destroy(UStalkerKinematicsComponent* Mesh)
 
 void UStalkerResourcesManager::RegisterKinematics(class UStalkerKinematicsComponent* Mesh)
 {
-	Mesh->Rename(nullptr,GXRayEngineManager->GetResourcesManager());
+	Mesh->Rename(nullptr,GStalkerEngineManager->GetResourcesManager());
 	Meshes.Add(Mesh);
 }
 

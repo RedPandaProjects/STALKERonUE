@@ -101,7 +101,7 @@ XRayEngineFactory::~XRayEngineFactory()
 	ShaderXRLC.Unload();
 	for (CEditableObject* Object : Objects)
 	{
-		GRayObjectLibrary->RemoveEditObject(Object);
+		GXRayObjectLibrary->RemoveEditObject(Object);
 	}
 }
 inline bool operator == (const Fmatrix33& Left, const Fmatrix33& Right)
@@ -638,7 +638,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 
 UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool DivideSubObject)
 {
-	CEditableObject* Object = GRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*FileName));
+	CEditableObject* Object = GXRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*FileName));
 	if (Object)
 	{
 		Objects.Add(Object);
@@ -1024,7 +1024,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 {
 	if (ShaderName.size() == 0)
 		return nullptr;
-	if (GXRayEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
 	{
 		return ImportSurfaceSOC(Path, ShaderName, TextureName, GameMaterial);
 	}

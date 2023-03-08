@@ -1,6 +1,6 @@
 #include "StalkerPlayerCharacter.h"
 #include "../Controller/StalkerPlayerController.h"
-#include "../../Kinematics/StalkerKinematics.h"
+#include "../../Kinematics/StalkerKinematicsComponent.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
 THIRD_PARTY_INCLUDES_START
@@ -80,7 +80,7 @@ void AStalkerPlayerCharacter::AttachAsRoot(class IRenderVisual* Visual)
 	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
 	check(StalkerKinematicsComponent);
 
-	GXRayEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
+	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->Rename(nullptr,this);
 	
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
@@ -98,7 +98,7 @@ void AStalkerPlayerCharacter::Attach(class IRenderVisual* Visual, const char* Bo
 	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
 	check(StalkerKinematicsComponent);
 
-	GXRayEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
+	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->Rename(nullptr,this);
 
 	
@@ -147,7 +147,7 @@ void AStalkerPlayerCharacter::AttachToCamera(class IRenderVisual* Visual)
 	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
 	check(StalkerKinematicsComponent);
 
-	GXRayEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
+	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 	StalkerKinematicsComponent->Rename(nullptr,this);
 	
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);

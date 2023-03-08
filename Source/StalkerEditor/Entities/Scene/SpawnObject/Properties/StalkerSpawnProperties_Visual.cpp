@@ -22,7 +22,7 @@ void UStalkerSpawnProperties_Visual::FillProperties()
 		return;
 	}
 
-	Kinematics = GXRayEngineManager->GetResourcesManager()->GetKinematics(EntityVisual->get_visual());
+	Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(EntityVisual->get_visual());
 	Obstacle = EntityVisual->flags.is(ISE_Visual::flObstacle);
 	SetAnim();
 }
