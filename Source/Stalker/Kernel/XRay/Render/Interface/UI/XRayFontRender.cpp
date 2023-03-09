@@ -52,7 +52,7 @@ float XRayFontRender::GetTextSize(const TCHAR* Text)
 		return 0;
 	}
 	float Scale = FontSize / Font->LegacyFontSize;
-	return Font->GetStringSize(Text)* Scale;
+	return Font->GetStringSize(Text)* Scale*g_current_font_scale.y;
 }
 
 void XRayFontRender::OnRender(CGameFont& owner)
@@ -77,7 +77,7 @@ void XRayFontRender::OnRender(CGameFont& owner)
 		float fSize = 0;
 		if (PS.align)
 		{
-			fSize = GetTextSize(*Text);
+			fSize = GetTextSize(*Text)/g_current_font_scale.y;
 		}
 
 		switch (PS.align)
@@ -90,7 +90,7 @@ void XRayFontRender::OnRender(CGameFont& owner)
 			X -= iFloor(fSize);
 			break;
 		}
-		GXRayUIRender.PushText(X,PS.y+ (FontSize /2.f)* PS.height, PS.height*g_current_font_scale.y,PS.c,Font,FontSize, *Text);
+		GXRayUIRender.PushText(X,PS.y+(FontSize/2.f), PS.height * g_current_font_scale.y, PS.c, Font, FontSize, *Text);
 	} 
 //	if (!FontShader.Brush)
 //	{

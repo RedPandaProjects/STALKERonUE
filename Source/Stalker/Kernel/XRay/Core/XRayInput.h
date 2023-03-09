@@ -43,6 +43,7 @@ public:
 	IInputReceiver* CurrentIR() override;
 	void KeyEvent(const FInputKeyEventArgs& InEvent);
 	void MouseEvent(float x,float y);
+	void MouseWheelEvent(float x);
 	void ClearStates();
 private:
 	
@@ -65,4 +66,5 @@ private:
 	TMap<FName, uint32>		FKeyToVK;
 	TMap<uint32, FName>		VKToFKey;
 	FVector2f				MouseDelta;
+	float					MouseWheelDelta;
 };

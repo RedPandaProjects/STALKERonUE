@@ -78,6 +78,10 @@ bool UStalkerGameViewportClient::InputAxis(FViewport* InViewport, FInputDeviceId
 			{
 				GStalkerEngineManager->GetInput()->MouseEvent(0, Delta);
 			}
+			if (Key.GetFName() == EKeys::MouseWheelAxis)
+			{
+				GStalkerEngineManager->GetInput()->MouseWheelEvent(Delta);
+			}
 			return true;
 		}
 		return false;
@@ -89,10 +93,10 @@ void UStalkerGameViewportClient::LostFocus(FViewport* InViewport)
 	Super::LostFocus(InViewport);
 	if (GIsEditor && GStalkerEngineManager->GetGameViewportClient() == this)
 	{
-		if (!IsActive)
+		if (IsActive)
 		{
 			Device->seqAppDeactivate.Process(rp_AppDeactivate);
-			IsActive = true;
+			IsActive = false;
 		}
 	}
 }
@@ -102,10 +106,10 @@ void UStalkerGameViewportClient::ReceivedFocus(FViewport* InViewport)
 	Super::ReceivedFocus(InViewport);
 	if (GIsEditor)
 	{
-		if (IsActive)
+		if (!IsActive)
 		{
-			Device->seqAppDeactivate.Process(rp_AppDeactivate);
-			IsActive = false;
+			Device->seqAppActivate.Process(rp_AppActivate);
+			IsActive = true;
 		}
 	}
 }
@@ -113,11 +117,22 @@ void UStalkerGameViewportClient::ReceivedFocus(FViewport* InViewport)
 void UStalkerGameViewportClient::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Device->fTimeDelta = DeltaTime;
-	Device->fTimeGlobal = GWorld->TimeSeconds;
-	Device->dwTimeDelta = static_cast<u32>(DeltaTime * 1000);
-	Device->dwTimeGlobal = static_cast<u32>(GWorld->TimeSeconds * 1000);
-	Device->dwTimeContinual = static_cast<u32>(GWorld->UnpausedTimeSeconds * 1000);
+	Device->fTimeContinual += DeltaTime;
+	Device->dwTimeContinual = static_cast<u32>(Device->fTimeContinual * 1000); 
+	if (!Device->Paused())
+	{
+		Device->fTimeDelta = DeltaTime;
+	}
+	else
+	{
+		Device->fTimeDelta = 0;
+	}
+	
+	Device->dwTimeDelta = static_cast<u32>(Device->fTimeDelta * 1000);
+
+	Device->fTimeGlobal += 	Device->fTimeDelta;
+	Device->dwTimeGlobal = static_cast<u32>(Device->fTimeGlobal * 1000);
+
 	if (g_loading_events->size())
 	{
 		if (g_loading_events->front()())

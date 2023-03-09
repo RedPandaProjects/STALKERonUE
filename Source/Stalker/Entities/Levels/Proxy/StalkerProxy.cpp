@@ -42,8 +42,7 @@ void AStalkerProxy::Tick(float DeltaTime)
 	{
 		return;
 	}
-	SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(XRayObject->XFORM().c)), FQuat(StalkerMath::XRayQuatToUnreal(XRayObject->XFORM())));
-
+	SetActorTransform(FTransform(StalkerMath::XRayMatrixToUnreal( XRayObject->XFORM())));
 }
 
 class AStalkerPlayerCharacter* AStalkerProxy::CastToStalkerPlayerCharacter()

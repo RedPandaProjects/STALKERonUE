@@ -1,4 +1,7 @@
 #include "XRayDevice.h"
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/IGame_Persistent.h"
+THIRD_PARTY_INCLUDES_END
 
 XRayDevice::XRayDevice()
 {
@@ -23,10 +26,11 @@ XRayDevice::XRayDevice()
 	fTimeGlobal = 0;
 	dwTimeDelta = 0;
 	dwTimeGlobal = 0;
-
+	fTimeContinual = 0;
 	fASPECT = 1.f;
 	fFOV = 60.f;
 	dwPrecacheFrame = 0;
+	IsTimerPaused = false;
 }
 
 XRayDevice::~XRayDevice()
@@ -41,7 +45,7 @@ bool XRayDevice::IsEditorMode()
 
 bool XRayDevice::Paused() const
 {
-	return false;
+	return IsTimerPaused;
 }
 
 void XRayDevice::Reset(bool precache /*= false*/)
@@ -49,7 +53,35 @@ void XRayDevice::Reset(bool precache /*= false*/)
 }
 
 void XRayDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
-{
+{	
+	if(bOn)
+	{
+		if( bTimer && (!g_pGamePersistent || g_pGamePersistent->CanBePaused()) )
+		{
+			IsTimerPaused = true;
+		}
+	
+		if (bSound && ::Sound)
+		{
+			SndEmitters =					::Sound->pause_emitters(true);
+		}
+	}
+	else
+	{
+		if( bTimer && IsTimerPaused )
+		{
+			fTimeDelta						= EPS_S + EPS_S;
+			IsTimerPaused = false;
+		}
+		
+		if(bSound)
+		{
+			if(SndEmitters>0) 
+			{
+				SndEmitters =			::Sound->pause_emitters(false);
+			}
+		}
+	}
 }
 
 void XRayDevice::PreCache(u32 amount, bool b_draw_loadscreen, bool b_wait_user_input)

@@ -5,6 +5,7 @@ THIRD_PARTY_INCLUDES_END
 
 XRayInput::XRayInput()
 {
+	MouseWheelDelta = 0;
 	MouseDelta.Set(0, 0);
 	for (int32 i = 0; i < COUNT_KB_BUTTONS; i++)
 	{
@@ -77,7 +78,7 @@ BOOL XRayInput::iGetAsyncKeyState(int dik)
 
 BOOL XRayInput::iGetAsyncBtnState(int dik)
 {
-	return KeysState[dik] == KS_Down || KeysState[dik] == KS_Hold;
+	return MouseState[dik] == KS_Down || MouseState[dik] == KS_Hold;
 }
 
 void XRayInput::iGetLastMouseDelta(Ivector2& p)
@@ -90,6 +91,10 @@ void XRayInput::OnFrame(void)
 	if (CurrentIR()&&MouseDelta.X+MouseDelta.Y!=0.f)
 	{
 		CurrentIR()->IR_OnMouseMove(MouseDelta.X,MouseDelta.Y);
+	}
+	if (CurrentIR()&&MouseWheelDelta!=0.f)
+	{
+		CurrentIR()->IR_OnMouseWheel(static_cast<int>(FMath::Sign( MouseWheelDelta)));
 	}
 	for (int32 i = 0; i < COUNT_MOUSE_BUTTONS; i++)
 	{
@@ -146,6 +151,7 @@ void XRayInput::OnFrame(void)
 			KeysState[i] = KS_None;
 		}
 	}
+	MouseWheelDelta = 0;
 	MouseDelta.Set(0, 0);
 }
 
@@ -201,6 +207,11 @@ void XRayInput::MouseEvent(float x, float y)
 	MouseDelta+=FVector2f(x,-y);
 }
 
+void XRayInput::MouseWheelEvent(float x)
+{
+	MouseWheelDelta+=x;
+}
+
 void XRayInput::ClearStates()
 {
 	for (int32 i = 0; i < COUNT_KB_BUTTONS; i++)
@@ -212,6 +223,7 @@ void XRayInput::ClearStates()
 		MouseState[i] = KS_None;
 	}
 	MouseDelta.Set(0, 0);
+	MouseWheelDelta = 0;
 }
 
 void XRayInput::InitKeyMap()

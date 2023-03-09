@@ -189,7 +189,7 @@ function save_dialog:OnButton_ok_clicked()
 	
 	// check for match name
 	local f = getFS()
-	local flist = f:file_list_open("$game_saves$",FS.FS_ListFiles)
+	--local flist = f:file_list_open("$game_saves$",FS.FS_ListFiles)
 	local file_struct = f:exist("$game_saves$", self.new_save .. ".sue" )
 
 	if file_struct ~= nil then
@@ -197,10 +197,10 @@ function save_dialog:OnButton_ok_clicked()
 		self.message_box:Init("message_box_file_already_exist")
 		self:GetHolder():start_stop_menu(self.message_box, true)
 		
-		flist:Free()	
+	--	flist:Free()	
 		return
 	end
-	flist:Free()	
+	--flist:Free()	
 	self:SaveFile(self.new_save)
 
 	self:GetHolder():start_stop_menu	(self.owner, true) --new

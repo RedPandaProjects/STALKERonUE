@@ -27,7 +27,7 @@ public:
 	
 	void											SetOwnerNoSee						(bool Enable) override;
 	void											SetOnlyOwnerSee						(bool Enable) override;
-	void											SetOffset							(const Fmatrix&offset,bool IsWorldLocation = false,bool IsWorldRotation = false) override;
+	void											SetOffset							(const Fmatrix&offset) override;
 
 
 	void											TickComponent						(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

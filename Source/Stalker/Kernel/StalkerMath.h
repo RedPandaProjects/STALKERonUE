@@ -1,6 +1,20 @@
 #pragma once
 namespace StalkerMath
 {
+	inline FMatrix	XRayMatrixToUnreal(const Fmatrix& InMatrix)
+	{
+		FPlane InTargetX = FPlane(InMatrix.i.x, -InMatrix.i.z,-InMatrix.i.y,-InMatrix._14);
+		FPlane InTargetZ = FPlane( -InMatrix.j.x,InMatrix.j.z,InMatrix.j.y,InMatrix._24);
+		FPlane InTargetY = FPlane( -InMatrix.k.x,InMatrix.k.z,InMatrix.k.y,InMatrix._34);
+		FPlane InTargetW = FPlane( -InMatrix.c.x*100,InMatrix.c.z*100,InMatrix.c.y*100,InMatrix._44);
+		return {InTargetX, InTargetY, InTargetZ, InTargetW};
+	}
+	/*inline Fmatrix	UnrealMatrixToXRay(const FMatrix& InMatrix)
+	{
+		Fvector4 InTargetX;InTargetX.set(-InMatrix.M[0], InMatrix.M[2],InMatrix.M[1],InMatrix.M[3]);
+		
+		return {InTargetX, InTargetY, InTargetZ, InTargetW};
+	}*/
 	inline FVector3f XRayLocationToUnreal(Fvector Location)
 	{
 		return FVector3f(-Location.x * 100, Location.z * 100, Location.y * 100);

@@ -262,24 +262,9 @@ void UStalkerKinematicsComponent::SetOnlyOwnerSee(bool Enable)
 	Super::SetOnlyOwnerSee(Enable);
 }
 
-void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset,bool IsWorldLocation,bool IsWorldRotation)
+void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset)
 {
-	if (IsWorldLocation)
-	{
-		SetWorldLocation(FVector(StalkerMath::XRayLocationToUnreal(offset.c)));
-	}
-	else
-	{
-		SetRelativeLocation(FVector(StalkerMath::XRayLocationToUnreal(offset.c)));
-	}
-	if (IsWorldRotation)
-	{
-		SetWorldRotation(FQuat(StalkerMath::XRayQuatToUnreal(offset)));
-	}
-	else
-	{
-		SetRelativeRotation(FQuat(StalkerMath::XRayQuatToUnreal(offset)));
-	}
+	SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal( offset)));
 }
 
 void UStalkerKinematicsComponent::Lock(void* InXRayParent)
@@ -623,8 +608,7 @@ void UStalkerKinematicsComponent::LL_UpdateTracks(float Delta, bool b_force, boo
 				i++;
 				break;
 			case CBlend::eFalloff:
-				B.blendAmount -= Delta * B.blendFalloff * B.blendPower * B.speed;
-				if (B.blendAmount <= 0)
+				if (B.blendAmount == 0)
 				{
 					B.set_free_state();
 					DestroyBlend(BlendsFX[PartID][i]);
@@ -634,6 +618,8 @@ void UStalkerKinematicsComponent::LL_UpdateTracks(float Delta, bool b_force, boo
 				{
 					i++;
 				}
+				B.blendAmount -= Delta * B.blendFalloff * B.blendPower * B.speed;
+				B.blendAmount  = FMath::Max(0,B.blendAmount);
 				break;
 			default:
 				checkSlow(false);

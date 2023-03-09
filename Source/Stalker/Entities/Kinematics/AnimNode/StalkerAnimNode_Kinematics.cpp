@@ -241,7 +241,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 		FilteredPoses.SetNum(MaxBlendChannel, false);
 		FilteredCurve.SetNum(MaxBlendChannel, false);
 		FilteredAttributes.SetNum(MaxBlendChannel, false);
-		BlendWeights.Add(1);
+		BlendWeights.Add(Owner->ChannelsFactor[0]);
 		for (int32 i = 0; i < MaxBlendChannel; ++i)
 		{
 			PosesToEvaluate.Add(i);
@@ -257,7 +257,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_PartID(FPoseContext& Output, int32 Pa
 			FilteredCurve[i].MoveFrom(EvaluateContext.Curve);
 			FilteredAttributes[i].MoveFrom(EvaluateContext.CustomAttributes);
 		}
-		float SumWeight = 1;
+		float SumWeight = Owner->ChannelsFactor[0];
 		TotalWeights = Owner->ChannelsFactor[0];
 		for (int32 i = 1; i < MaxBlendChannel; ++i)
 		{
@@ -320,7 +320,7 @@ float FStalkerAnimNode_Kinematics::Evaluate_Channal(FPoseContext& Output, int32 
 	FilteredPoses.SetNum(BlendOfChannal[Channal].Num(), false);
 	FilteredCurve.SetNum(BlendOfChannal[Channal].Num(), false);
 	FilteredAttributes.SetNum(BlendOfChannal[Channal].Num(), false);
-	BlendWeights.Add(1);
+	BlendWeights.Add( BlendOfChannal[Channal][0]->blendAmount);
 
 	for (int32 i = 0; i < BlendOfChannal[Channal].Num(); ++i)
 	{
@@ -335,7 +335,7 @@ float FStalkerAnimNode_Kinematics::Evaluate_Channal(FPoseContext& Output, int32 
 	}
 
 	float   TotalWeights = BlendOfChannal[Channal][0]->blendAmount;
-	float SumWeight = 1;
+	float SumWeight = TotalWeights;
 	for (int32 i = 1; i < BlendOfChannal[Channal].Num(); ++i)
 	{
 		TotalWeights += BlendOfChannal[Channal][i]->blendAmount;

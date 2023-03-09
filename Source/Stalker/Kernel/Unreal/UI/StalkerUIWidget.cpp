@@ -47,7 +47,23 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 			FontInfo.OutlineSettings.OutlineSize = 0.5f;
 
 			FontInfo.Size = TextItem.FontSize;
+			if (Item.ScissorsID >= 0)
+			{
+				FVector2D XY(GXRayUIRender.Scissors[Item.ScissorsID].X, GXRayUIRender.Scissors[Item.ScissorsID].Y);
+				FVector2D ZW(GXRayUIRender.Scissors[Item.ScissorsID].Z, GXRayUIRender.Scissors[Item.ScissorsID].W);
+
+				XY = AllottedGeometry.LocalToAbsolute(XY * MultiplerSize);
+				ZW = AllottedGeometry.LocalToAbsolute(ZW * MultiplerSize);
+
+				FSlateRect ClipRect(XY, ZW);
+				FSlateClippingZone Clip(ClipRect);
+				OutDrawElements.PushClip(Clip);
+			}
 			FSlateDrawElement::MakeText(OutDrawElements, LayerId++, AllottedGeometry.ToPaintGeometry(FVector2D(TextItem.Position.X, TextItem.Position.Y - (FontInfo.Size * 0.5f)) / TextItem.Scale, AllottedGeometry.GetLocalSize(), FMath::Sqrt(MultiplerSize.X * MultiplerSize.Y) * TextItem.Scale), TextItem.Data, FontInfo, ESlateDrawEffect::NoGamma, TextItem.Color.ReinterpretAsLinear());
+			if (Item.ScissorsID >= 0)
+			{
+				OutDrawElements.PopClip();
+			}
 			continue;
 		}
 		if (Item.StartVertex == Item.EndVertex)

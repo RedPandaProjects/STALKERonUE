@@ -44,21 +44,17 @@ void AStalkerPlayerCharacter::Tick(float DeltaTime)
 	{
 		return;
 	}
-	SetActorLocationAndRotation(FVector(StalkerMath::XRayLocationToUnreal(XRayObject->XFORM().c)), FQuat(StalkerMath::XRayQuatToUnreal(XRayObject->XFORM())));
+	SetActorTransform(FTransform(StalkerMath::XRayMatrixToUnreal(XRayObject->XFORM())));
 
-	Fquaternion XRayQuat;
-	Fmatrix View;
-	View.identity();
-	View.i = Device->vCameraTop;
-	View.j = Device->vCameraDirection;
-	View.k = Device->vCameraRight;
+	Fmatrix InView = Device->mView;
+	InView.c.set(Device->vCameraPosition);
+	FTransform View = FTransform(StalkerMath::XRayMatrixToUnreal(InView));
 
-	XRayQuat.set(View);
-	FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
-	FVector Location(-Device->vCameraPosition.x * 100, Device->vCameraPosition.z * 100, Device->vCameraPosition.y * 100);
-	FirstPersonCameraComponent->SetWorldLocationAndRotation(Location,Quat);
-	FRotator RotationToUnreal(90,0,0);
-	FRotator Rotation(Quat*FQuat(RotationToUnreal));
+	View.SetRotation(View.GetRotation().Inverse());
+	FirstPersonCameraComponent->SetWorldTransform(View);
+	FirstPersonCameraComponent->FieldOfView = Device->fFOV;
+	FRotator RotationToUnreal(0,90,0);
+	FRotator Rotation(FQuat(View.GetRotation())*FQuat(RotationToUnreal));
 	CastChecked<APlayerController>(GetController())->SetControlRotation(Rotation);
 }
 
@@ -155,7 +151,6 @@ void AStalkerPlayerCharacter::AttachToCamera(class IRenderVisual* Visual)
 	StalkerKinematicsComponent->SetSimulatePhysics(false);
 	StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	StalkerKinematicsComponent->RegisterComponent();
-	StalkerRootComponent = StalkerKinematicsComponent;
 	AddInstanceComponent(StalkerKinematicsComponent);
 }
 

@@ -126,6 +126,7 @@ void XRayUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, f
 	Items.AddDefaulted();
 	Items.Last().StartVertex = Vertices.Num();
 	Items.Last().EndVertex = Vertices.Num();
+	Items.Last().ScissorsID = CurrentScissor;
 	Items.Last().TextID = Texts.Num()-1;
 }
 
