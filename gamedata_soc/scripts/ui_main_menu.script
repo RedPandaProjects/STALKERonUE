@@ -264,14 +264,10 @@ function main_menu:OnKeyboard(dik, keyboard_action)  --virtual function
 			if level.present() and (db.actor ~= nil) and db.actor:alive() then
 				console:execute("main_menu off")
 			end
-		end
-		
---		if dik == DIK_keys.DIK_S then
---			self:OnButton_load_spawn()
-			
---		else
-		if dik == DIK_keys.DIK_Q then
+		elseif dik == DIK_keys.DIK_Q then
 			self:OnMessageQuitWin()
+		else
+			god.key_binder(dik, keyboard_action, self)
 		end
 	
 	end

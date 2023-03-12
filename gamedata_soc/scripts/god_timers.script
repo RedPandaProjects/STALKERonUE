@@ -1,0 +1,175 @@
+-- Таймеры из АМК мода --
+
+
+local timer_trigger=nil
+
+function main()
+ if not timer_trigger then 
+    timer_trigger=game.time() 
+ end
+
+ if timer_trigger<=game.time() then
+    timer_trigger=game.time()+1000
+    check_timers()
+ end
+end
+
+
+--старт таймера в реальном времени
+function start_timer(name,delay,action)
+  if not delay then
+    return false
+  end
+  
+  if not action then
+    action = ""
+  end
+
+    local time = game.time() --time in seconds since 1970
+  local a=1
+  while db.storage[db.actor:id()].pstor["xt"..a] do
+    a=a+1
+    if a>100 then 
+      return false 
+    end
+  end
+  save_variable("xt"..a, name)
+  save_variable("xd"..a, time+delay*1000*system_ini():r_float("alife","time_factor"))
+  save_variable("xp"..a, action)
+
+  return true
+end
+
+--старт таймера в игровом времени
+function g_start_timer(name,delay_d,delay_h,delay_m,action)
+    local time = level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+  if delay_d==nil or delay_h==nil or delay_m==nil then
+    return false
+  end
+  
+  if action==nil then
+    action = ""
+  end
+
+  local a=1
+  while db.storage[db.actor:id()].pstor["gt"..a] do
+    a=a+1
+    if a>100 then 
+      return false 
+    end
+  end
+
+  save_variable("gt"..a, name)
+  save_variable("gd"..a, time+delay_d*60*24+delay_h*60+delay_m)
+  save_variable("gp"..a, action)
+
+  return true
+end
+
+function has_timer(name)
+  for a=1,100,1 do
+    tmp=load_variable("xt"..a,nil)
+    if tmp and tmp==name then
+      return true
+    end
+  end  
+  return false
+end
+
+function has_g_timer(name)
+  for a=1,100,1 do
+    tmp=load_variable("gt"..a,nil)
+    if tmp and tmp==name then
+      return true
+    end
+  end  
+  return false
+end
+
+
+
+--проверка таймеров, использует 3 следующие за ним функции для выбора действия
+function check_timers()
+  local tmp
+  for a=1,100,1 do
+    tmp=load_variable("xt"..a,nil)
+    if tmp~=nil then
+      __timer_found(a)  
+    end
+  end
+  
+  for a=1,100,1 do
+    tmp=load_variable("gt"..a,nil)
+    if tmp~=nil then
+      __g_timer_found(a)  
+    end
+  end
+end
+function __timer_found(idx)
+    local time = game.time() --time in seconds since 1970
+  local name,params
+  if load_variable("xd"..idx, nil)<=time then
+    name=load_variable("xt"..idx, nil)
+    params=load_variable("xp"..idx, nil)
+    del_variable("xt"..idx)
+    del_variable("xd"..idx)
+    del_variable("xp"..idx)
+		--oau_reason=name.." "..params
+    __do_timer_action(name,params)
+    return true
+  end
+  return false
+end
+function __g_timer_found(idx)
+    local gtime = level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+  local name,params
+  if load_variable("gd"..idx, nil)<=gtime then
+    name=load_variable("gt"..idx, nil)
+    params=load_variable("gp"..idx, nil)
+    del_variable("gt"..idx)
+    del_variable("gd"..idx)
+    del_variable("gp"..idx)
+		--oau_reason=name.." "..params
+    __do_timer_action(name,params)
+    return true
+  end
+  return false
+end
+function __do_timer_action(select_string,params_string)
+
+  --[[
+  здесь описываем вызовы, оформялять в виде
+
+  if select_string=="название условия" then
+    <вызов сторонних функций>
+    -- можно передавать npc как параметр
+  end
+  
+  ]]
+
+  if select_string=="dlc_timer" then
+    alife():release(alife():object(params_string),true)
+  end  
+end
+------------------------------------------
+
+--записываем переменную
+function save_variable(variable_name, value)
+  if value==nil then
+    del_variable(variable_name)
+  else
+    xr_logic.pstor_store(db.actor, variable_name, value)
+  end
+end
+
+--загружаем переменную
+function load_variable(variable_name, value_if_not_found)
+  return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+--удаляем переменную
+function del_variable(variable_name)
+  if db.storage[db.actor:id()].pstor[variable_name] then
+    db.storage[db.actor:id()].pstor[variable_name] = nil
+  end
+end

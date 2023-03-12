@@ -1,0 +1,421 @@
+<w>
+
+  <gina x="-40" y="0" width="1024" height="768">
+    <auto_static x="16" y="124" width="304" height="304" stretch="1">
+      <texture x="0" y="0" width="256" height="256">fx\fx_stalker</texture>
+    </auto_static>
+  </gina>
+  <background x="0" y="0" width="1024" height="768">
+    <auto_static x="0" y="0" width="602" height="570" stretch="1">
+      <texture>ui\ui_vid_back_03</texture>
+    </auto_static>
+    <auto_static x="0" y="0" width="1024" height="768">
+      <texture a="255">ui\ui_inGame2_back_02</texture>
+    </auto_static>
+  </background>
+
+
+<!----------- Форма телепортации  ------------->
+
+<dialog x="460" y="0" width="610" height="270">
+			<texture>ui_frame_error</texture>
+
+		<capt x="90" y="7" width="200" height="29">
+			<text font="graffiti19" r="240" g="217" b="182">Меню телепортации</text>
+		</capt>
+
+		<msg3 x="400" y="130" width="200" height="30">
+			<text font="letterica18" r="240" g="217" b="182">Имя коорд.</text>
+		</msg3>
+
+		<msg2 x="215" y="50" width="200" height="30">
+			<text font="letterica18" r="240" g="217" b="182">Введите координаты: X, Y, Z</text>
+		</msg2>
+		
+		<msg x="180" y="55" width="200" height="30">
+			<text font="letterica18" r="240" g="217" b="182"></text>
+		</msg>
+
+		<edit_box x="200" y="85" width="70" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box>
+
+		<edit_box2 x="290" y="85" width="70" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box2>
+
+		<edit_box3 x="380" y="85" width="70" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box3>
+
+
+		<edit_box4 x="200" y="130" width="190" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box4>
+
+		<btn_1 x="25" y="70" width="117" height="29">
+			<texture_e>ui_button_ordinary_e</texture_e>
+			<texture_t>ui_button_ordinary_t</texture_t>
+			<texture_h>ui_button_ordinary_h</texture_h>
+			<text>Взять из таблицы</text>
+		</btn_1>
+
+		<btn_2 x="25" y="125" width="117" height="29">
+			<texture_e>ui_button_ordinary_e</texture_e>
+			<texture_t>ui_button_ordinary_t</texture_t>
+			<texture_h>ui_button_ordinary_h</texture_h>
+			<text>Сохранить</text>
+		</btn_2>
+
+		<btn_3 x="25" y="98" width="117" height="29">
+			<texture_e>ui_button_ordinary_e</texture_e>
+			<texture_t>ui_button_ordinary_t</texture_t>
+			<texture_h>ui_button_ordinary_h</texture_h>
+			<text>Позиция ГГ</text>
+		</btn_3>
+
+            <btn_4 x="210" y="165" width="157" height="48">
+		  <texture>ui_button_main02</texture>
+		  <text font="graffiti22">Переместиться</text>
+		  <text_color>
+			  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+		  </text_color>
+	      </btn_4>
+
+		<btn_5 x="360" y="160" width="137" height="29">
+			<texture_e>ui_button_ordinary_e</texture_e>
+			<texture_t>ui_button_ordinary_t</texture_t>
+			<texture_h>ui_button_ordinary_h</texture_h>
+			<text>Телеп. на 5м вперёд</text>
+		</btn_5>
+
+
+</dialog>
+
+  <btn_nextdlg x="820" y="5" width="105" height="29">
+     <text align="c" font="letterica16" r="227" g="199" b="178">Дальше</text>
+     <texture>ui_button_ordinary</texture>
+  </btn_nextdlg>
+
+  <btn_weather x="800" y="30" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Погода</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_weather>
+
+  <btn_level x="800" y="70" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Локации</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_level>
+
+
+  <btn_stalker x="800" y="110" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Персонажи</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_stalker>
+
+  <btn_mob x="800" y="150" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Монстры</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_mob>
+
+  <btn_ammo x="800" y="190" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Аммуниция</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_ammo>
+
+  <btn_wpn x="800" y="230" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Оружие</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_wpn>
+
+  <btn_item x="800" y="270" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Вещи</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_item>
+
+  <btn_art x="800" y="310" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Артефакты</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_art>
+
+  <btn_otf x="800" y="350" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Броня</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_otf>
+
+  <btn_anom x="800" y="390" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Аномалии</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_anom>
+
+  <btn_other x="800" y="30" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Другое</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_other>
+
+  <btn_squads x="800" y="70" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Группировки</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_squads>
+
+  <btn_war x="800" y="110" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Видеоролики</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_war>
+
+  <btn_music x="800" y="150" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Музыка</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_music>
+
+  <btn_portal x="800" y="190" width="157" height="48">
+	  <texture>ui_button_main02</texture>
+	  <text font="graffiti22">Телепортация</text>
+	  <text_color>
+		  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+	  </text_color>
+  </btn_portal>
+
+
+  <btn_form x="-490" y="212" width="5600" height="4600" >
+  </btn_form>
+
+
+  <form x="440" y="190" width="560" height="460">
+    <texture>ui_menu_options_dlg</texture>
+    <!--texture>ui\ui_options_menu_static</texture-->
+
+    <btn_cycle_weather x="396" y="434" width="132" height="29">
+      <text align="c" font="letterica16" r="227" g="199" b="178">Выкл. динам. погоду</text>
+      <texture>ui_button_ordinary</texture>
+    </btn_cycle_weather>
+
+    <caption x="55" y="7" width="400" height="25" complex_mode="0">
+      <text font="graffiti22" r="184" g="168" b="131">Повелитель Зоны v5.0 Gold для ТЧ</text>
+    </caption>
+	
+	  <!--picture x="105" y="71" width="128" height="128">
+		  <texture width="128" height="128">ui\ui_noise</texture>
+	  </picture-->
+
+    <cap_rubel x="60" y="45" width="200" height="23">
+      <text font="letterica16" r="115" g="114" b="112" vert_align="c">Деньги</text>
+    </cap_rubel>
+    <cap_rubel_currently x="69" y="45" width="200" height="23">
+      <text align="r" font="graffiti22" r="238" g="155" b="23"/>
+    </cap_rubel_currently>
+
+    <spin_rubel x="115" y="80" width="45" height="23">
+      <options_item entry="spin_rubel"/>
+    </spin_rubel>
+
+
+   <spin_spawn x="245" y="136" width="45" height="23">
+     <options_item entry="spin_rubel"/>
+     <text align="c" font="letterica16" r="227" g="199" b="178"> 3</text>
+   </spin_spawn>
+
+    <cap_spawn_coeff x="291" y="136" width="90" height="23">
+      <text vert_align="c" font="letterica16" r="115" g="114" b="112"/>
+    </cap_spawn_coeff>
+
+    <cap_rubel_coeff x="165" y="80" width="90" height="23">
+      <text vert_align="c" font="letterica16" r="115" g="114" b="112"/>
+    </cap_rubel_coeff>
+    <btn_moneyplus x="57" y="107" width="105" height="29">
+      <text align="c" font="letterica16" r="227" g="199" b="178">Увеличить</text>
+      <texture>ui_button_ordinary</texture>
+    </btn_moneyplus>
+    <btn_moneyminus x="169" y="107" width="105" height="29">
+      <text align="c" font="letterica16" r="227" g="199" b="178"> Уменьшить</text>
+      <texture>ui_button_ordinary</texture>
+    </btn_moneyminus>
+
+    <cap_timefactor x="317" y="45" width="200" height="23">
+      <text font="letterica16" r="115" g="114" b="112" vert_align="c">Скорость течения времени</text>
+    </cap_timefactor>
+    <cap_timefactor_currently x="328" y="45" width="200" height="23">
+      <text align="r" font="graffiti22" r="240" g="217" b="182"/>
+    </cap_timefactor_currently>
+    <cap_timefactor_desc x="322" y="80" width="200" height="23">
+      <text align="c" vert_align="c" font="letterica16" r="240" g="217" b="182"/>
+    </cap_timefactor_desc>
+    <btn_timeminus x="314" y="107" width="105" height="29">
+      <text align="c" font="letterica16" r="227" g="199" b="178">Замедлить</text>
+      <texture>ui_button_ordinary</texture>
+    </btn_timeminus>
+    <btn_timeplus x="426" y="107" width="105" height="29">
+      <text align="c" font="letterica16" r="227" g="199" b="178">Ускорить</text>
+      <texture>ui_button_ordinary</texture>
+    </btn_timeplus>
+
+	  <cap_sel_item x="61" y="143" width="472" height="23">
+		  <text font="letterica16" r="255" g="255" b="255" vert_align="c"/>
+	  </cap_sel_item>
+
+	  <list_frame x="61" y="166" width="472" height="240">
+		  <texture>ui_tablist_textbox</texture>
+	  </list_frame>
+  		
+	  <list x="71" y="176" width="452" height="220" item_height="18">
+		  <font font="letterica16" r="216" g="186" b="140" />
+	  </list>
+
+	  <cap_coords x="61" y="405" width="382" height="23" complex_mode="1">
+		  <text font="graffiti19"/>
+	  </cap_coords>
+
+	<btn_spawnitem x="396" y="405" width="135" height="29">
+	  <text align="c" font="letterica16" r="227" g="199" b="178">Сделать</text>
+	  <texture>ui_button_ordinary</texture>
+	</btn_spawnitem>
+  		
+    <check_weather x="350" y="587" width="33" height="23">
+      <text font="letterica16" r="240" g="217" b="182">Зациклить погоду</text>
+    </check_weather>
+
+	  <btn_close x="221" y="422" width="157" height="48">
+		  <texture>ui_button_main02</texture>
+		  <text font="graffiti22">Выход</text>
+		  <text_color>
+			  <e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+		  </text_color>
+	  </btn_close>
+  </form>
+
+  <cheat_item>
+    <main width="320" height="22"/>
+    <dn width="250" height="22"/>
+    <name x="270" y="0" width="50" height="22"/>
+  </cheat_item>
+
+  <static_cheat_help_k x="0" y="20" width="50" height="23">
+    <text align="r" font="graffiti19" r="240" g="217" b="182" complex_mode="1"/>
+  </static_cheat_help_k>
+  <static_cheat_help_t x="60" y="20" width="700" height="23">
+    <text align="l" font="graffiti19" r="135" g="123" b="116" complex_mode="1"/>
+  </static_cheat_help_t>
+</w>
+
+<!-- Ролики -->
+	<mov_csky_outro2>
+		<play_each_item>1</play_each_item>
+			<global_wnd x="0" y="0" width="1024" height="768">				
+			</global_wnd>
+			<item type="image">
+				<length_sec>3</length_sec>
+	  			<pause_state>off</pause_state>
+				<main_wnd>
+			 	<auto_static start_time="0" length_sec="3"  x="0" y="0" width="1024" height="768" light_anim="outro_la" light_anim_cyclic="0" la_alpha="1" la_texture="1" stretch="1">
+					<window_name>w1</window_name>
+					<texture>intro\intro_back</texture>
+				</auto_static>
+			</main_wnd>
+			</item>
+			<item type="video">
+				<sound>characters_voice\scenario\video\outro</sound>
+				<pause_state>on</pause_state>
+				<can_be_stopped>on</can_be_stopped>
+				<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
+					<texture x="0" y="1" width="512" height="286">intro\outro_half</texture>
+				</video_wnd>
+				<background x="0" y="0" width="1024" height="768" stretch="1">
+            		<texture>intro\intro_back</texture>
+                       </background>
+			</item>
+     </mov_csky_outro2>
+
+<intro_game2>
+		<play_each_item>1</play_each_item>
+		<global_wnd x="0" y="0" width="1024" height="768">
+			<_auto_static x="0" y="0" width="1024" height="768" stretch="1">
+				<window_name>back</window_name>				
+				<texture>intro\intro_back</texture>				
+			</_auto_static>
+		</global_wnd>		
+		<item type="video">
+      		<sound>characters_voice\scenario\video\intro</sound>
+      		<pause_state>on</pause_state>
+      		<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
+        		<texture x="1" y="1" width="628" height="358">intro\intro_half</texture>
+          </video_wnd>
+          
+          <background x="0" y="0" width="1024" height="768" stretch="1">
+            <texture>intro\intro_back</texture>
+          </background>
+        </item>
+		<item type="image">
+	  		<length_sec>5</length_sec>
+			<pause_state>off</pause_state>
+			<main_wnd>
+			 	<auto_static start_time="0" length_sec="5"  x="0" y="0" width="1230" height="768" light_anim="intro_1" light_anim_cyclic="0" la_alpha="1" la_texture="1" stretch="1">
+					<window_name>w1</window_name>
+					<texture>intro\intro_back</texture>
+				</auto_static>
+			</main_wnd>
+		</item>
+</intro_game2>
+
+<intro_logo_gsc>
+		<global_wnd x="0" y="0" width="1024" height="768">
+			<auto_static x="0" y="0" width="1024" height="768" stretch="1">
+				<texture>intro\intro_back</texture>
+			</auto_static>
+		</global_wnd>
+		<item type="video">
+			<delay>1</delay>
+			<pause_state>on</pause_state>
+			<sound>characters_voice\scenario\video\intro_gsc_wp</sound>
+			<video_wnd x="0" y="0" width="1024" height="768" stretch="1">
+				<texture x="0" y="1" width="800" height="358">intro\intro_gsc-wp</texture>
+			</video_wnd>
+		</item>
+</intro_logo_gsc>
+
+	

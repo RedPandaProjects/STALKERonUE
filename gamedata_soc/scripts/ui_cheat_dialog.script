@@ -1,0 +1,1446 @@
+-- File:        UI_CHEAT_DIALOG.SCRIPT
+-- Description: Cheat Dialog for STALKER
+
+local mode -- Режим спауна
+local next
+ 
+local stalker_table = {
+ {"mil_stalker_respawn_1", "Сталкер (Опытный)"},
+ {"mil_stalker_respawn_2", "Сталкер (Ветеран)"},
+ {"mil_stalker_respawn_3", "Сталкер (Мастер)"},
+
+ {"bar_dolg_respawn_1", "Долг (Опытный)"},
+ {"bar_dolg_respawn_2", "Долг (Ветеран)"},
+ {"bar_dolg_respawn_3", "Долг (Мастер)"},
+
+ {"mil_freedom_respawn_2", "Свобода (Опытный)"},
+ {"mil_freedom_respawn_1", "Свобода (Ветеран)"},
+ {"mil_freedom_respawn_3", "Свобода (Мастер)"},
+
+ {"pri_monolith_respawn_1", "Монолит (Опытный)"},
+ {"pri_monolith_respawn_2", "Монолит (Ветеран)"},
+ {"pri_monolith_respawn_3", "Монолит (Мастер)"},
+
+ {"agr_bandit_respawn_1", "Бандит (Новичок)"},
+ {"agr_bandit_respawn_2", "Бандит (Опытный)"},
+ {"ds_bandit_respawn_3", "Бандит (Ветеран)"},
+ {"val_bandit_respawn_4", "Бандит (Мастер)"},
+
+ {"agr_soldier_regular", "Военный (Опытный)"},
+ {"agr_soldier_veteran", "Военный (Ветеран)"},
+ {"pri_respawn_military", "Военный (Мастер)"},
+
+ {"cit_killer_respawn_1", "Наёмник (Опытный)"},
+ {"cit_killer_respawn_2", "Наёмник (Ветеран)"},
+ {"cit_killer_respawn_3", "Наёмник (Мастер)"},
+
+ {"yan_zombied_respawn_1", "Зомбированный (Опытный)"},
+ {"yan_zombied_respawn_2", "Зомбированный (Ветеран)"},
+ {"yan_zombied_respawn_3", "Зомбированный (Мастер)"}
+}
+
+local vid_table = {
+ {"pripyat_tutorial", "Бармен: прорыв в Припять"}
+}
+
+local other_table = {
+ {"explosive_barrel_low", "Бочка (Слабая)"},
+ {"explosive_barrel", "Бочка"},
+ {"explosive_mobiltank", "Канистра"},
+ {"explosive_fuelcan", "Балон"}
+}
+
+local community_table = {
+ {"actor", "Игрок"},
+ {"bandit", "Бандит"},
+ {"dolg", "Долг"},
+ {"ecolog", "Эколог"},
+ {"freedom", "Свобода"},
+ {"killer", "Наёмник"},
+ {"army", "Военный"},
+ {"monolith", "Монолит"},
+ {"monster", "Монстры"},
+ {"stalker", "Сталкер"},
+ {"trader", "Торговец"},
+ {"zombied", "Зомбированый"}
+}
+
+local weather_table = {
+ {"[default]",      "Стандартная (Динамическая)"},
+ {"default_clear",  "Стандартная (Ясная)"},
+ {"default_cloudy", "Стандартная (Облачно)"},
+ {"default_rain",   "Стандартная (Дождь)"},
+ {"default_thunder","Стандартная (Гроза)"},
+ {"indoor",         "В помещении"},
+ {"map",            "Для съёмки карты ПДА"},
+ {"night",          "Ночь (Интро)"},
+ {"stancia2",       "ЧАЭС"},
+ {"sun_shafts",     "Лучи света"}
+}
+
+local anom_table = {
+{"zone_mincer", "Карусель"},
+{"zone_mosquito_bald", "Трамплин"},
+{"zone_gravi_zone", "Воронка"},
+{"zone_witches_galantine", "Электра"},
+{"zone_zharka_static", "Жарка"},
+{"zone_buzz", "Холодец"},
+{"zone_radioactive", "Радиактивная зона"},
+{"zone_ameba", "???"},
+{"zone_campfire_grill", "Костёр для мяса"},
+{"zone_flame", "???"},
+{"zone_flame_small", "???"},
+{"zone_zhar", "Жарка (2)"},
+{"zone_emi", "ЭМИ"},
+{"zone_monolith", "Свечение Монолита (в Саркофаге)"},
+{"zone_no_gravity", "Невесомость"},
+}
+
+local mob_table = {
+ {"bloodsucker_weak",       	 "Кровосос (Слабый)"},
+ {"bloodsucker_normal",          "Кровосос (Средний)"},
+ {"bloodsucker_strong",          "Кровосос (Сильный)"},
+ {"bloodsucker_mil",             "Кровосос (Военные склады)"},
+ {"bloodsucker_arena",      	 "Кровосос (На Арене)"},
+ {"boar_weak",                   "Кабан (Слабый)"},
+ {"boar_normal",                 "Кабан (Средний)"},
+ {"boar_strong",                 "Кабан (Сильный)"},
+ {"m_controller_normal",         "Контролёр"},
+ {"m_controller_normal_fat",     "Контролёр (Толстый)"},
+ {"m_controller_old",            "Контролёр (Старый)"},
+ {"m_controller_old_fat",        "Контролёр (Старый и толстый)"},
+ {"controller_tubeman",          "Контролёр (Тунельный)"},
+ {"dog_normal",                  "Пёс (Средний)"},
+ {"dog_strong",                  "Пёс (Сильный)"},
+ {"flesh_normal",                "Плоть (Средний)"},
+ {"flesh_strong",                "Плоть (Сильный)"},
+ {"gigant_normal",               "Псевдогигант (Средний)"},
+ {"gigant_strong",               "Псевдогигант (Сильный)"},
+ {"m_poltergeist_normal_flame",  "Полтергейст (Пламя)"},
+ {"m_poltergeist_strong_flame",  "Полтергейст (Пламя-Сильный)"},
+ {"m_poltergeist_normal_tele",   "Полтергейст (Телекинетик)"},
+ {"pseudodog_weak",              "Чернобыльский пёс (Слабый)"},
+ {"psy_dog",                     "ПсиПёс"},
+ {"psy_dog_radar",               "ПсиПёс (Радарный)"},
+ {"snork_normal",                "Снорк (Средний)"},
+ {"snork_strong",                "Снорк (Сильный)"},
+ {"tushkano_normal",             "Тушканчик"},
+ {"m_crow",             		 "Ворона"},
+ {"***********************",     "ВЫРЕЗАННЫЕ МОНСТРЫ ***********************"},
+ {"zombie_weak",                 "Зомби (Слабый)"},
+ {"zombie_normal",               "Зомби (Средний)"},
+ {"zombie_strong",               "Зомби (Сильный)"},
+ {"m_burer_normal",              "Бюрер"},
+ {"m_burer_normal_black",        "Бюрер (Чёрный плащ)"},
+ {"m_cat_e",                 	 "Кошка"},
+ {"m_fracture_e",             	 "Излом"},
+ {"m_chimera_e",                 "Химера"},
+}
+
+
+local item_table = {
+	"bread",
+	"kolbasa",
+	"conserva",
+	"vodka",
+	"energy_drink",
+	"medkit",
+	"medkit_army",
+	"medkit_scientic",
+	"bandage",
+	"antirad",
+	"detector_elite",
+	"mutant_flesh_eye",
+	"mutant_boar_leg",
+	"mutant_dog_tail",
+	"mutant_psevdodog_tail",
+	"mutant_krovosos_jaw",
+	"mutant_burer_hand",
+	"mutant_zombie_hand",
+	"mutant_snork_leg",
+	"quest_case_01",
+	"quest_case_02",
+	"dynamite",
+	"esc_wounded_flash",
+	"gunslinger_flash",
+	"val_key_to_underground",
+	"bar_tiran_pda",
+	"bar_lucky_pda",
+	"bar_ecolog_flash",
+	"lab_x16_documents",
+	"good_psy_helmet",
+	"bad_psy_helmet",
+	"kruglov_flash",
+	"crazy_flash",
+	"mil_svoboda_leader_pda",
+	"dar_pass_flash",
+	"dar_pass_document",
+	"dar_document1",
+	"dar_document2",
+	"dar_document3",
+	"dar_document4",
+	"dar_document5",
+	"pri_decoder_documents",
+	"cit_doctors_key",
+	"decoder",
+	"af_blood_tutorial"
+}
+local ammo_table = {
+	"ammo_9x18_fmj",
+	"ammo_9x18_pmm",
+	"ammo_9x19_pbp",
+	"ammo_9x19_fmj",
+	"ammo_11.43x23_hydro",
+	"ammo_11.43x23_fmj",
+	"ammo_12x70_buck",
+	"ammo_12x76_dart",
+	"ammo_12x76_zhekan",
+	"ammo_5.45x39_ap",
+	"ammo_5.45x39_fmj",
+	"ammo_9x39_sp5",
+	"ammo_9x39_ap",
+	"ammo_9x39_pab9",
+	"ammo_5.56x45_ss190",
+	"ammo_5.56x45_ap",
+	"ammo_7.62x54_7h14",
+	"ammo_7.62x54_7h1",
+	"ammo_7.62x54_ap",
+	"ammo_gauss",
+	"ammo_og-7b",
+	"ammo_vog-25",
+	"ammo_vog-25p",
+	"ammo_m209"
+}
+local wpn_table = {
+	"wpn_pm",
+	"wpn_pb",
+	"wpn_fort",
+	"wpn_hpsa",
+	"wpn_beretta",
+	"wpn_walther",
+	"wpn_mp5",
+	"wpn_sig220",
+	"wpn_colt1911",
+	"wpn_usp",
+	"wpn_desert_eagle",
+	"wpn_bm16",
+	"wpn_toz34",
+	"wpn_wincheaster1300",
+	"wpn_spas12",
+	"wpn_ak74u",
+	"wpn_ak74",
+	"wpn_abakan",
+	"wpn_groza",
+	"wpn_val",
+	"wpn_vintorez",
+	"wpn_l85",
+	"wpn_lr300",
+	"wpn_sig550",
+	"wpn_fn2000",
+	"wpn_g36",
+	"wpn_svu",
+	"wpn_svd",
+	"wpn_rpg7",
+	"wpn_gauss",
+	"wpn_ak74_m1",
+	"wpn_abakan_m1",
+	"wpn_abakan_m2",
+	"wpn_fort_m1",
+	"wpn_ak74u_m1",
+	"wpn_mp5_m1",
+	"wpn_mp5_m2",
+	"wpn_groza_m1",
+	"wpn_spas12_m1",
+	"wpn_winchester_m1",
+	"wpn_l85_m1",
+	"wpn_l85_m2",
+	"wpn_lr300_m1",
+	"wpn_svd_m1",
+	"wpn_sig_m1",
+	"wpn_sig_m2",
+	"wpn_eagle_m1",
+	"wpn_colt_m1",
+	"wpn_val_m1",
+	"wpn_rg6_m1",
+	"wpn_walther_m1",
+	"wpn_addon_scope",
+	"wpn_addon_silencer",
+	"wpn_addon_grenade_launcher",
+	"wpn_addon_grenade_launcher_m203"
+}
+local art_table = {
+	"af_medusa",
+	"af_cristall_flower",
+	"af_night_star",
+	"af_vyvert",
+	"af_gravi",
+	"af_gold_fish",
+	"af_drops",
+	"af_fireball",
+	"af_cristall",
+	"af_blood",
+	"af_mincer_meat",
+	"af_soul",
+	"af_electra_sparkler",
+	"af_electra_flash",
+	"af_electra_moonlight",
+	"af_ameba_slime",
+	"af_ameba_slug",
+	"af_ameba_mica",
+	"af_dummy_spring",
+	"af_dummy_dummy",
+	"af_dummy_battery",
+	"af_dummy_pellicle",
+	"af_dummy_glassbeads",
+	"af_rusty_thorn",
+	"af_rusty_kristall",
+	"af_rusty_sea-urchin",
+	"af_fuzz_kolobok"
+}
+local outf_table = {
+	"novice_outfit",
+	"bandit_outfit",
+	"killer_outfit",
+	"monolit_outfit",
+	"specops_outfit",
+	"military_outfit",
+	"soldier_outfit",
+	"stalker_outfit",
+	"scientific_outfit",
+	"exo_outfit",
+	"svoboda_light_outfit",
+	"svoboda_heavy_outfit",
+	"dolg_outfit",
+	"dolg_scientific_outfit",
+	"ecolog_outfit",
+	"protection_outfit",
+	"outfit_novice_m1",
+	"outfit_bandit_m1",
+	"outfit_dolg_m1",
+	"outfit_killer_m1",
+	"outfit_specnaz_m1",
+	"outfit_stalker_m1",
+	"outfit_stalker_m2",
+	"outfit_svoboda_m1",
+	"outfit_exo_m1"
+}
+
+
+local snd_table = {
+ {"Меню", [[music\wasteland2]]},
+ {"Зона"        , [[music\credits]]}, 
+ {"Битва на ЧАЭС" , [[music\combat\aes_main]]},
+ {"База Долга 1" , [[ambient\special\duty_base_radio_1]]},
+ {"База Долга 2" , [[ambient\special\duty_base_radio_2]]},
+ {"База Свободы" , [[ambient\special\freedom_base_radio_1]]},
+ {"База Бандитов" , [[ambient\special\garbage_bandits_radio_1]]},
+ {"База Чистого Неба 1" , [[ambient\special\marsh_radio_1]]},
+ {"База Чистого Неба 2" , [[ambient\special\marsh_radio_2]]},
+ {"Гитара 1" , [[music\guitar_1]]},
+ {"Гитара 2" , [[music\guitar_2]]},
+ {"Гитара 3" , [[music\guitar_3]]},
+ {"Гитара 4" , [[music\guitar_4]]},
+ {"Гитара 5" , [[music\guitar_5]]},
+ {"Гитара 6" , [[music\guitar_6]]},
+ {"Гитара 7" , [[music\guitar_7]]},
+ {"Гитара 8" , [[music\guitar_8]]},
+ {"Гитара 9" , [[music\guitar_9]]},
+ {"Гитара 10" , [[music\guitar_10]]},
+ {"Гитара 11" , [[music\guitar_11]]}
+}
+
+class "cheat_item" (CUIListItemEx)
+
+function cheat_item:__init() super()
+	self.item_name		= "itemname"
+	self:SetWndRect		(Frect():set(0,0,430,22))
+	
+	local ca = 255
+	local cr = 216
+	local cg = 186
+	local cb = 140
+	
+	self.dn					= CUIStatic	()
+	self.dn:SetAutoDelete	(true)
+	self:AttachChild		(self.dn)
+	self.dn:SetWndRect		(Frect():set(0,0,280,22))
+	self.dn:SetFont			(GetFontLetterica18Russian())
+	self.dn:SetTextColor	(ca,cr,cg,cb)
+--	self.dn:SetElipsis		(2,2);
+
+	self.name				= CUIStatic	()
+	self.name:SetAutoDelete	(true)
+	self:AttachChild		(self.name)
+	self.name:SetWndRect	(Frect():set(290,0,250+110,22))
+	self.name:SetFont		(GetFontLetterica16Russian())
+	self.name:SetTextColor	(ca,cr,cg,cb)
+end
+
+
+class "cheat_dialog" (CUIScriptWnd)
+
+function cheat_dialog:__init() super()
+   self:InitControls()
+   self:InitCallBacks()     
+end
+              
+function cheat_dialog:__finalize()
+end
+
+cost_easy = nil
+cost_dffclt = nil
+
+local time_factor_desc_by_num = {
+				[0] = "Реальное",
+				[1] = "Игровое",
+				[2] = "Ускоренное",
+				[3] = "Быстрое",
+				[4] = "Очень быстрое",
+				[5] = "Мгновенное"
+				}
+
+local RU_coeff = 1000
+local time_factor, actor_money
+
+function cheat_dialog:InitControls()
+	self:SetWndRect			(Frect():set(0,0,1024,768))
+	
+	local xml			= CScriptXmlInit()
+	xml:ParseFile			("ui_mm_cheat_dlg.xml")
+
+	local ctrl			= CUIWindow()
+
+	self.gina			= xml:InitStatic("gina",			self)
+	self.gina:Show			(false)
+
+	xml:InitStatic			("background",					self)
+	
+	xml:InitWindow			("cheat_item:main",0,ctrl)
+	self.cheat_item_main_sz	= vector():set(ctrl:GetWidth(),ctrl:GetHeight(),0)
+
+	xml:InitWindow			("cheat_item:dn",0,ctrl)
+	self.cheat_item_dn_sz	= vector():set(ctrl:GetWidth(),ctrl:GetHeight(),0)
+
+	xml:InitWindow			("cheat_item:name",0,ctrl)
+	self.cheat_item_name_sz	= vector():set(ctrl:GetWidth(),ctrl:GetHeight(),0)
+
+	self.btn_form		= xml:InitStatic("btn_form",			self)
+	self.form			= xml:InitStatic("form",			self)
+
+	btn = xml:InitStatic		("form:caption",				self.form)
+	self:Register			(btn, "button_formcapt")
+
+--	ctrl				= xml:InitStatic("form:picture",		self.form)
+--	ctrl:SetWindowName		("static_pict")	
+
+--	xml:InitStatic			("form:sect_bg1",				self.form)
+
+	self.cap_timefactor 		= xml:InitStatic("form:cap_timefactor",		self.form)
+
+	self.cap_timefactor_currently	= xml:InitStatic("form:cap_timefactor_currently", self.form)
+	if level.present() then time_factor = level.get_time_factor() else time_factor = 10 end
+
+	self.cap_timefactor_desc	= xml:InitStatic("form:cap_timefactor_desc",	self.form)
+	self:RefreshTimeFactorDisplay()
+
+	btn				= xml:Init3tButton("form:btn_timeplus",		self.form)
+	self:Register			(btn, "button_timeplus")
+	btn				= xml:Init3tButton("form:btn_timeminus",	self.form)
+	self:Register			(btn, "button_timeminus")
+
+	self.cap_rubel	 		= xml:InitStatic("form:cap_rubel",		self.form)
+
+	self.spin_rubel			= xml:InitSpinNum("form:spin_rubel",		self.form)
+	self.spin_rubel:Show		(true)
+
+	self.cap_rubel_coeff		= xml:InitStatic("form:cap_rubel_coeff",	self.form)
+	self.cap_rubel_coeff:SetText	(game.translate_string("x") .. " " .. tostring(RU_coeff) .. " RU")
+
+	self.spin_spawn			= xml:InitSpinNum("form:spin_spawn",		self.form)
+	self.spin_spawn:Show		(true)
+
+	self.cap_spawn_coeff		= xml:InitStatic("form:cap_spawn_coeff",	self.form)
+	self.cap_spawn_coeff:SetText	("Дистанция (от ГГ) для создания предмета")
+
+	self.cap_rubel_currently	= xml:InitStatic("form:cap_rubel_currently",	self.form)
+	if db.actor ~= nil then actor_money = db.actor:money() else actor_money = 0 end
+	self:RefreshMoneyDisplay()
+
+	btn				= xml:Init3tButton("btn_nextdlg",	self.btn_form)
+	self:Register			(btn, "btn_nextdlg")
+      self.next_dlg_b = btn
+
+	btn				= xml:Init3tButton("btn_weather",	self.btn_form)
+	self:Register			(btn, "btn_weather")
+      self.btn_1 = btn
+
+	btn				= xml:Init3tButton("btn_level",	self.btn_form)
+	self:Register			(btn, "btn_level")
+      self.btn_2 = btn
+
+	btn				= xml:Init3tButton("btn_stalker",	self.btn_form)
+	self:Register			(btn, "btn_stalker")
+      self.btn_3 = btn
+
+	btn				= xml:Init3tButton("btn_mob",	self.btn_form)
+	self:Register			(btn, "btn_mob")
+      self.btn_4 = btn
+
+	btn				= xml:Init3tButton("btn_ammo",	self.btn_form)
+	self:Register			(btn, "btn_ammo")
+      self.btn_5 = btn
+
+	btn				= xml:Init3tButton("btn_wpn",	self.btn_form)
+	self:Register			(btn, "btn_wpn")
+      self.btn_6 = btn
+
+	btn				= xml:Init3tButton("btn_item",	self.btn_form)
+	self:Register			(btn, "btn_item")
+      self.btn_7 = btn
+
+	btn				= xml:Init3tButton("btn_art",	self.btn_form)
+	self:Register			(btn, "btn_art")
+      self.btn_8 = btn
+
+	btn				= xml:Init3tButton("btn_otf",	self.btn_form)
+	self:Register			(btn, "btn_otf")
+      self.btn_9 = btn
+
+	btn				= xml:Init3tButton("btn_anom",	self.btn_form)
+	self:Register			(btn, "btn_anom")
+      self.btn_10 = btn
+
+-- Лист 2 --
+	btn				= xml:Init3tButton("btn_other",	self.btn_form)
+	self:Register			(btn, "btn_other")
+      self.btn_11 = btn
+      self.btn_11:Show(false)
+
+	btn				= xml:Init3tButton("btn_squads",	self.btn_form)
+	self:Register			(btn, "btn_squads")
+      self.btn_12 = btn
+      self.btn_12:Show(false)
+
+	btn				= xml:Init3tButton("btn_music",	self.btn_form)
+	self:Register			(btn, "btn_music")
+      self.btn_13 = btn
+      self.btn_13:Show(false)
+
+	btn				= xml:Init3tButton("btn_war",	self.btn_form)
+	self:Register			(btn, "btn_war")
+      self.btn_14 = btn
+      self.btn_14:Show(false)
+
+	btn				= xml:Init3tButton("btn_portal",	self.btn_form)
+	self:Register			(btn, "btn_portal")
+      self.btn_15 = btn
+      self.btn_15:Show(false)
+
+-------------
+	btn				= xml:Init3tButton("form:btn_cycle_weather",	self.form)
+	self:Register			(btn, "btn_cycle_weather")
+      self.wt_btn = btn
+      self.wt_btn:Show(false)
+
+        if db.actor then
+           if god.load_var("weather_state",false)==false then
+             self.wt_btn:SetText("Выкл. динам. погоду")
+           else
+             self.wt_btn:SetText("Вкл. динам. погоду")
+           end
+        end
+
+
+	btn				= xml:Init3tButton("form:btn_moneyplus",	self.form)
+	self:Register			(btn, "button_moneyplus")
+	btn				= xml:Init3tButton("form:btn_moneyminus",	self.form)
+	self:Register			(btn, "button_moneyminus")
+
+	self.capt_sel			= xml:InitStatic("form:cap_sel_item",		self.form)
+	xml:InitFrame			("form:list_frame",self.form)
+
+	self.list_box			= xml:InitList("form:list",			self.form)
+	self.list_box:ShowSelectedItem	(true)
+	self:Register			(self.list_box, "list_window")
+
+	self.capt_coords		= xml:InitStatic("form:cap_coords",		self.form)
+	if db.actor ~= nil then
+		local ca, cv, ap		= "%c[255,255,232,208]", "%c[255,128,128,128]", db.actor:position()
+		local coordtxt			= format_num(ap.x, 2, ca .. "X" .. cv) .. "  " ..
+						  format_num(ap.y, 2, ca .. "Y" .. cv) .. "  " ..
+						  format_num(ap.z, 2, ca .. "Z" .. cv)
+		self.capt_coords:SetText	(coordtxt)
+	end
+
+	btn				= xml:Init3tButton("form:btn_spawnitem",	self.form)
+	self:Register			(btn, "button_spawnitem")
+      self.btn_sp = btn
+
+--      Сцуко не работает как надо
+--	self.chek_box = xml:InitCheck("form:check_weather",		self)        
+--	self:Register			(self.chek_box, "check_weather")
+
+     	ctrl				= xml:Init3tButton("form:btn_close",		self.form)	
+	self:Register			(ctrl, "button_close")
+
+	self.message_box		= CUIMessageBoxEx()
+	self:Register			(self.message_box,"message_box")
+
+-- Меню телепортации --
+	self.dialog			= xml:InitStatic("dialog",			self)
+	xml:InitStatic				("dialog:capt", self.dialog)
+	xml:InitStatic				("dialog:msg2", self.dialog)
+	xml:InitStatic				("dialog:msg3", self.dialog)
+      self.dialog:Show(false)
+
+	-- кнопки
+	self:Register(xml:Init3tButton("dialog:btn_1", self.dialog),"btn_1")
+	self:Register(xml:Init3tButton("dialog:btn_2", self.dialog),"btn_2")
+	self:Register(xml:Init3tButton("dialog:btn_3", self.dialog),"btn_3")
+	self:Register(xml:Init3tButton("dialog:btn_4", self.dialog),"btn_4")
+	self:Register(xml:Init3tButton("dialog:btn_5", self.dialog),"btn_5")
+	self:Register(xml:InitEditBox("dialog:edit_box", 	self.dialog), "edit_box")
+	self:Register(xml:InitEditBox("dialog:edit_box2", 	self.dialog), "edit_box2")
+	self:Register(xml:InitEditBox("dialog:edit_box3", 	self.dialog), "edit_box3")
+	self:Register(xml:InitEditBox("dialog:edit_box4", 	self.dialog), "edit_box4")
+end
+
+function cheat_dialog:InitCallBacks()
+	self:AddCallback("button_moneyplus",	ui_events.BUTTON_CLICKED,		self.OnButton_moneyplus_clicked,	self)
+	self:AddCallback("button_moneyminus",	ui_events.BUTTON_CLICKED,		self.OnButton_moneyminus_clicked,	self)
+	self:AddCallback("button_timeplus",	ui_events.BUTTON_CLICKED,		self.OnButton_timeplus_clicked,		self)
+	self:AddCallback("button_timeminus",	ui_events.BUTTON_CLICKED,		self.OnButton_timeminus_clicked,	self)
+	self:AddCallback("button_spawnitem",	ui_events.BUTTON_CLICKED,		self.OnButton_spawnitem_clicked,	self)
+	self:AddCallback("button_close",	ui_events.BUTTON_CLICKED,		self.OnButton_close_clicked,		self)
+
+	self:AddCallback("list_window", ui_events.LIST_ITEM_CLICKED, 			  self.OnListItemClicked,		self)
+	self:AddCallback("list_window", ui_events.WINDOW_LBUTTON_DB_CLICK,		  self.OnButton_spawnitem_clicked,	self)
+----------------
+	self:AddCallback("btn_nextdlg",	ui_events.BUTTON_CLICKED,		self.OnButton_nextdlg_clicked,		self)
+
+	self:AddCallback("btn_item",	ui_events.BUTTON_CLICKED,		self.OnButton_item_clicked,	self)
+	self:AddCallback("btn_otf",	ui_events.BUTTON_CLICKED,		self.OnButton_otf_clicked,	self)
+	self:AddCallback("btn_ammo",	ui_events.BUTTON_CLICKED,		self.OnButton_ammo_clicked,	self)
+	self:AddCallback("btn_wpn",	ui_events.BUTTON_CLICKED,		self.OnButton_wpn_clicked,	self)
+	self:AddCallback("btn_art",	ui_events.BUTTON_CLICKED,		self.OnButton_art_clicked,	self)
+	self:AddCallback("btn_stalker", ui_events.BUTTON_CLICKED,		self.OnButton_stlk_clicked,	self)
+	self:AddCallback("btn_level", ui_events.BUTTON_CLICKED,		self.OnButton_level_clicked,	self)
+	self:AddCallback("btn_weather", ui_events.BUTTON_CLICKED,		self.OnButton_weather_clicked,	self)
+	self:AddCallback("btn_anom", ui_events.BUTTON_CLICKED,		self.OnButton_anom_clicked,	self)
+	self:AddCallback("btn_mob", ui_events.BUTTON_CLICKED,		self.OnButton_mob_clicked,	self)
+	self:AddCallback("btn_cycle_weather", ui_events.BUTTON_CLICKED,		self.OnButton_wt_clicked,	self)
+	self:AddCallback("btn_other", ui_events.BUTTON_CLICKED,		self.OnButton_other_clicked,	self)
+	self:AddCallback("btn_squads", ui_events.BUTTON_CLICKED,		self.OnButton_squads_clicked,	self)
+	self:AddCallback("btn_music", ui_events.BUTTON_CLICKED,		self.OnButton_music_clicked,	self)
+	self:AddCallback("btn_war", ui_events.BUTTON_CLICKED,		self.OnButton_vid_clicked,	self)
+	self:AddCallback("btn_portal", ui_events.BUTTON_CLICKED,		self.OnButton_portal_clicked,	self)
+	self:AddCallback("btn_1", ui_events.BUTTON_CLICKED,		self.OnButton_btn1_clicked,	self)
+	self:AddCallback("btn_2", ui_events.BUTTON_CLICKED,		self.OnButton_btn2_clicked,	self)
+	self:AddCallback("btn_3", ui_events.BUTTON_CLICKED,		self.OnButton_btn3_clicked,	self)
+	self:AddCallback("btn_4", ui_events.BUTTON_CLICKED,		self.OnButton_btn4_clicked,	self)
+	self:AddCallback("btn_5", ui_events.BUTTON_CLICKED,		self.OnButton_btn5_clicked,	self)
+end
+
+-- Телепортация на 5м.
+function cheat_dialog:OnButton_btn5_clicked()
+local dir = db.actor:direction()
+local pos = db.actor:position()
+pos = pos:add(dir:mul(5))
+
+db.actor:set_actor_position(pos)
+end
+
+-- Телепортация
+function cheat_dialog:OnButton_btn4_clicked()
+
+	edit_box		= self:GetEditBox("edit_box")
+	edit_box2		= self:GetEditBox("edit_box2")
+	edit_box3		= self:GetEditBox("edit_box3")
+	edit_box4		= self:GetEditBox("edit_box4")
+
+      pos_x = tonumber(edit_box:GetText())
+      pos_y = tonumber(edit_box2:GetText())
+      pos_z = tonumber(edit_box3:GetText())
+ 
+      if pos_x==nil then pos_x=db.actor:position().x end
+      if pos_y==nil then pos_y=db.actor:position().y end
+      if pos_z==nil then pos_z=db.actor:position().z end
+
+      db.actor:set_actor_position(vector():set(pos_x,pos_y,pos_z))
+
+end
+
+-- Взятие позиции ГГ
+function cheat_dialog:OnButton_btn3_clicked()
+
+	edit_box		= self:GetEditBox("edit_box")
+	edit_box2		= self:GetEditBox("edit_box2")
+	edit_box3		= self:GetEditBox("edit_box3")
+	edit_box4		= self:GetEditBox("edit_box4")
+
+      local pos_xt = str_explode(".", db.actor:position().x) -- Обрезаный X
+      local pos_yt = str_explode(".", db.actor:position().y) -- Обрезаный Y
+      local pos_zt = str_explode(".", db.actor:position().z) -- Обрезаный Z
+
+      local pos_x = pos_xt[1]
+      local pos_y = pos_yt[1]
+      local pos_z = pos_zt[1]
+
+	edit_box:SetText(pos_x)
+	edit_box2:SetText(pos_y)
+	edit_box3:SetText(pos_z)
+end
+
+-- Взятие из таблицы
+function cheat_dialog:OnButton_btn1_clicked()
+	if self.list_box:GetSize()==0 then 
+		return 
+	end
+
+	local index = self.list_box:GetSelectedItem()
+	
+	if index == -1 then 
+		return 
+	end
+
+	local item			= self.list_box:GetItem(index)
+      local itmname			= item.name:GetText()  -- Координаты
+
+      local pos_tbl = str_explode("|", itmname)
+
+	edit_box		= self:GetEditBox("edit_box")
+	edit_box2		= self:GetEditBox("edit_box2")
+	edit_box3		= self:GetEditBox("edit_box3")
+	edit_box4		= self:GetEditBox("edit_box4")
+
+	edit_box:SetText(pos_tbl[1])
+	edit_box2:SetText(pos_tbl[2])
+	edit_box3:SetText(pos_tbl[3])
+end
+
+-- Запись в таблицу 
+function cheat_dialog:OnButton_btn2_clicked()
+	edit_box		= self:GetEditBox("edit_box")
+	edit_box2		= self:GetEditBox("edit_box2")
+	edit_box3		= self:GetEditBox("edit_box3")
+	edit_box4		= self:GetEditBox("edit_box4")
+
+      pos_x = tostring(edit_box:GetText())
+      pos_y = tostring(edit_box2:GetText())
+      pos_z = tostring(edit_box3:GetText())
+      pos_name = tostring(edit_box4:GetText())
+
+ if pos_x~="" and pos_y~="" and pos_z~="" and pos_name~="" then
+      self:OnButton_portal_clicked()
+ end
+
+end
+
+function cheat_dialog:OnButton_portal_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(true)
+      self.btn_sp:Enable(false)
+
+	self.list_box:RemoveAll()
+      mode = "tlp"
+
+end
+
+-- Видео
+function cheat_dialog:OnButton_vid_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+      mode = "vid"
+
+	local tbl
+	tbl = vid_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+
+end
+
+function cheat_dialog:OnButton_music_clicked()
+      self.wt_btn:Show(true)
+      self.wt_btn:SetText("Стоп")
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+      mode = "snd"
+
+	local tbl
+	tbl = snd_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[1], v[2])
+      end
+
+end
+
+function cheat_dialog:OnButton_other_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "npc"
+
+	local tbl
+	tbl = other_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+
+end
+
+function cheat_dialog:OnButton_squads_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "com"
+
+	local tbl
+	tbl = community_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+
+end
+
+function cheat_dialog:OnButton_wt_clicked()
+if mode == "weather" then
+ if god.load_var("weather_state",false)==false then
+  self.wt_btn:SetText("Вкл. динам. погоду")
+  god.save_var("weather_state",true)
+ else
+  self.wt_btn:SetText("Выкл. динам. погоду")
+  god.save_var("weather_state",false)
+ end
+end
+
+if mode == "snd" then
+  if db.actor then
+    local s =  ui_cheat_dialog.last_music
+    if s~=nil then
+      s:stop()
+      ui_cheat_dialog.last_music = nil
+    end
+  end
+end
+
+end
+
+function cheat_dialog:OnButton_weather_clicked()
+      self.wt_btn:Show(true)
+      self.wt_btn:SetText("Выкл. динам. погоду")
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+      if db.actor then
+         if god.load_var("weather_state",false)==false then
+           self.wt_btn:SetText("Выкл. динам. погоду")
+         else
+           self.wt_btn:SetText("Вкл. динам. погоду")
+         end
+      end
+
+	self.list_box:RemoveAll()
+        mode = "weather"
+	local tbl
+	tbl = weather_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+end
+
+function cheat_dialog:OnButton_stlk_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "npc"
+
+	local tbl
+	tbl = stalker_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+
+end
+
+function cheat_dialog:OnButton_mob_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "npc"
+
+	local tbl
+	tbl = mob_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+
+end
+
+function cheat_dialog:OnButton_anom_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "anom"
+
+	local tbl
+	tbl = anom_table 
+
+      for i,v in ipairs(tbl) do
+		self:AddItemToList(v[2], v[1])
+      end
+
+end
+
+function cheat_dialog:OnButton_item_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+      mode = "item"
+
+	local tbl
+	local name
+	tbl = item_table
+	for i, v in ipairs(tbl) do
+		name = game.translate_string(system_ini():r_string(v, "inv_name"))
+		self:AddItemToList(name, v)
+	end
+end
+
+function cheat_dialog:OnButton_level_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+      mode = "level"
+	self.list_box:RemoveAll()
+
+	for i=1, 65535 do
+		local obj = alife():object(i)
+		if obj and obj:clsid() == clsid.smart_terrain and 
+			   obj:name() ~= "val_smart_terrain_9_11" and 
+			   obj:name() ~= "yan_smart_terrain_5_4" then
+                  -------------
+            local ln = game.translate_string(alife():level_name(game_graph():vertex(obj.m_game_vertex_id):level_id()))
+            local sn = game.translate_string("st_name_"..obj:name()) 
+		self:AddItemToList(ln.." ("..sn..")", obj:name())
+                  -------------
+           end
+	end
+
+      	local obj = self:get_teleport_pos(1)
+            local ln = "Госпиталь"
+            local sn = "Вход" 
+		self:AddItemToList(ln.." ("..sn..")", obj:name())
+
+      	local obj = self:get_teleport_pos(2)
+            local ln = "ЧАЭС"
+            local sn = "Вход" 
+		self:AddItemToList(ln.." ("..sn..")", obj:name())
+
+end
+
+function cheat_dialog:get_teleport_pos(num)
+-- Госпиталь
+if num==1 then
+ if god.load_var("hos_lc",false)==false then
+    local obj = alife():create("space_restrictor", vector():set(-75,29,862), 1, 1587)
+    god.save_var("hos_lc",obj.id) 
+ end
+   return alife():object(god.load_var("hos_lc",false))
+end
+
+-- ЧАЭС
+if num==2 then
+ if god.load_var("stnc_lc",false)==false then
+    local obj = alife():create("space_restrictor", vector():set(249,0,439), 1, 1569)
+    god.save_var("stnc_lc",obj.id) 
+ end
+   return alife():object(god.load_var("stnc_lc",false))
+end
+
+end
+
+
+function cheat_dialog:OnButton_otf_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "item"
+    
+	local tbl
+	local name
+	tbl = outf_table
+	for i, v in ipairs(tbl) do
+		name = game.translate_string(system_ini():r_string(v, "inv_name"))
+		self:AddItemToList(name, v)
+	end
+end
+
+function cheat_dialog:OnButton_ammo_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "item"
+
+	local tbl
+	local name
+	tbl = ammo_table 
+	for i, v in ipairs(tbl) do
+		name = game.translate_string(system_ini():r_string(v, "inv_name"))
+		self:AddItemToList(name, v)
+	end
+end
+
+function cheat_dialog:OnButton_wpn_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "item"
+
+	local tbl
+	local name
+	tbl = wpn_table 
+	for i, v in ipairs(tbl) do
+		name = game.translate_string(system_ini():r_string(v, "inv_name"))
+		self:AddItemToList(name, v)
+	end
+end
+
+function cheat_dialog:OnButton_art_clicked()
+      self.wt_btn:Show(false)
+      self.dialog:Show(false)
+      self.btn_sp:Enable(true)
+
+	self.list_box:RemoveAll()
+        mode = "item"
+
+	local tbl
+	local name
+	tbl = art_table 
+	for i, v in ipairs(tbl) do
+		name = game.translate_string(system_ini():r_string(v, "inv_name"))
+		self:AddItemToList(name, v)
+	end
+end
+-------------------------------------------------------
+function cheat_dialog:RefreshMoneyDisplay()
+	local am = actor_money
+	local st_rubles = "st_rubles"
+	local ru = game.translate_string(st_rubles)
+	if ru == st_rubles then ru = "RU" end
+	local thsep = game.translate_string("ui_ch_thousand_separator_in_quotes")
+	if string.len(thsep) == 3 then
+		thsep = string.sub(thsep, 2, 2)
+		am = string.gsub(am, ",", thsep)
+	end
+	self.cap_rubel_currently:SetText(am .. " " .. ru)
+end
+
+function cheat_dialog:RefreshTimeFactorDisplay()
+	local tf = time_factor
+	local thsep = game.translate_string("ui_ch_thousand_separator_in_quotes")
+	if string.len(thsep) == 3 then
+		thsep = string.sub(thsep, 2, 2)
+		tf = string.gsub(tf, ",", thsep)
+	end
+	self.cap_timefactor_currently:SetText(tf.."x")
+	local tfd = game.translate_string(time_factor_desc_by_num[tf_exp(time_factor)])
+	self.cap_timefactor_desc:SetText(tfd)
+end
+
+function cheat_dialog:OnButton_timeminus_clicked()
+	local exp = tf_exp(time_factor)
+	time_factor = tonumber("1" .. string.rep("0", exp - 1))
+	if level.present() then level.set_time_factor(time_factor) end
+	self:RefreshTimeFactorDisplay()
+end
+
+function cheat_dialog:OnButton_timeplus_clicked()
+	local exp, explimit = tf_exp(time_factor), 4
+	if exp > explimit then exp = explimit end
+	time_factor = tonumber("1" .. string.rep("0", exp + 1))
+	if level.present() then level.set_time_factor(time_factor) end
+	self:RefreshTimeFactorDisplay()
+end
+
+function cheat_dialog:OnButton_moneyplus_clicked()
+	local s = tonumber(self.spin_rubel:GetText())
+	if s == 0 then s = 0.01 end
+	actor_money = actor_money + s * RU_coeff
+	if db.actor ~= nil then
+		local am = actor_money - db.actor:money()
+		db.actor:give_money(am)
+	end
+	self:RefreshMoneyDisplay()
+end
+
+function cheat_dialog:OnButton_moneyminus_clicked()
+	local s = tonumber(self.spin_rubel:GetText())
+	if s == 0 then s = 0.01 end
+	actor_money = actor_money - s * RU_coeff
+	if actor_money < 0 then actor_money = 0 end
+	if db.actor ~= nil then
+		local am = actor_money - db.actor:money()
+		db.actor:give_money(am)
+	end
+	self:RefreshMoneyDisplay()
+end
+
+function cheat_dialog:OnListItemClicked()
+	if self.list_box:GetSize()==0 then return end
+	
+	local itm_index			= self.list_box:GetSelectedItem()
+	
+	local item			= self.list_box:GetItem(itm_index)
+
+	if item == nil then
+		self.capt_sel:SetText	("")
+		return
+	end
+	
+	local item_text			= item.dn:GetText()
+	self.capt_sel:SetText		(item_text)
+--	self.capt_sel:SetElipsis	(2,2)
+end
+
+function cheat_dialog:OnButton_spawnitem_clicked()
+	if self.list_box:GetSize()==0 then 
+		return 
+	end
+
+	local index = self.list_box:GetSelectedItem()
+	
+	if index == -1 then 
+		return 
+	end
+
+       	local dis = tonumber(self.spin_spawn:GetText())
+
+            local pos = db.actor:position()
+            local dir = db.actor:direction()
+ 
+            local item2			= self.list_box:GetItem(index)
+            local itmname2			= item2.name:GetText()  -- Секция
+    --      local itmsec = self.list_box:GetItem(index).text:GetText()
+
+            if dis==0 then
+            dis = 3 
+            end
+
+if not string.find(itmname2, "***") then   
+--------------------------------------------------------------------------------
+if mode == "item" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+	if (db.actor ~= nil) then
+            if tonumber(self.spin_spawn:GetText())==0 then
+		alife():create(itmname, db.actor:position(), 0, 0, db.actor:id())
+            else
+		pos = pos:add(dir:mul(dis))
+ 		alife():create(itmname, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+            end
+	end
+end
+
+if mode == "npc" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+     
+	if (db.actor ~= nil) then
+		pos = pos:add(dir:mul(dis))
+ 		alife():create(itmname, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+	end
+end
+
+if mode == "com" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+
+     
+	if (db.actor ~= nil) then
+        db.actor:set_character_community(itmname, 0, 0)
+	end
+end
+
+if mode == "snd" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+     
+	if (db.actor ~= nil) then
+       local snd = sound_object(itmname)
+   
+       if ui_cheat_dialog.last_music ~= nil then
+       ui_cheat_dialog.last_music:stop()
+       end
+  
+       snd:play_at_pos (db.actor, vector ():set (0, 0, 0), 0, sound_object.s2d)
+       ui_cheat_dialog.last_music = snd 
+	end
+end
+
+if mode == "anom" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+	if (db.actor ~= nil) then
+		pos = pos:add(dir:mul(dis))
+ 		spawn_anom(itmname,pos)
+	end
+end
+
+if mode == "tlp" then
+self:OnButton_btn1_clicked()
+end
+
+if mode == "weather" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+	if (db.actor ~= nil) then
+        if string.find(itmname, "fx_") then
+		level.set_weather_fx(itmname)
+            god.save_var("god_weather_fx",true)
+         else
+	      level.set_weather(itmname,true)
+            god.save_var("god_weather_fx",false)
+        end
+            god.save_var("god_weather_type",itmname)
+	end
+end
+
+if mode == "vid" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+                              
+      self:OnButton_close_clicked()
+      xr_effects.run_tutorial(nil,nil,{itmname})
+end
+
+if mode == "level" then
+	local item			= self.list_box:GetItem(index)
+	local itmname			= item.name:GetText()  -- Секция
+      local obj = alife():object(itmname)
+      local pos2 = db.actor:position() 
+      local lv1 = alife():level_name(game_graph():vertex(obj.m_game_vertex_id):level_id())
+	  self:OnButton_close_clicked()
+	  level.add_pp_effector ("teleport.ppe", 2006, false)
+	  local snd = sound_object([[affects\hit_fist]])
+	  snd:play_no_feedback(db.actor,sound_object.s2d, 0, vector():set(0, 0, 0), 1.5)
+if level.name()==lv1 then 
+ db.actor:set_actor_position(obj.position)
+else
+  local lc = god.create_level_changer(pos2, db.actor:level_vertex_id(), db.actor:game_vertex_id(), obj.m_level_vertex_id, obj.m_game_vertex_id, obj.position, db.actor:direction(), lv1, 1)
+  god_timers.start_timer("dlc_timer",0.5, lc)
+end
+end
+
+--------------------------------------------------------------------------------
+end
+end
+
+function tf_exp(num)
+	local tf, exp = tostring(math.floor(num)), 2
+	--for z in string.gmatch(tf, "0") do exp = exp + 1 end 
+	exp = string.len(tf) - 1 if exp > 6 then exp = 6 end
+	return exp
+end
+
+---============================================================
+-- rounds a number to the nearest decimal places
+--
+function round(val, decimal)
+  if (decimal) then
+    return math.floor( (val * 10^decimal) + 0.5) / (10^decimal)
+  else
+    return math.floor(val+0.5)
+  end
+end
+
+
+function format_num(amount, decimal, prefix)
+  local str_amount,  formatted, famount, remain
+
+  decimal = decimal or 2  -- default 2 decimal places
+  neg_prefix = "-"
+
+  famount = math.abs(round(amount, decimal))
+  --famount = math.floor(famount)
+
+  local s = tostring(famount)
+  local i = string.find(s, ".", 1, true)
+  if (i == nil) then s = s .. "." .. string.rep("0", decimal) i = -decimal - 1 end
+  formatted = string.sub(s, 1, i + decimal)
+
+        -- if value is negative then format accordingly
+  if (amount<0) then
+      formatted = neg_prefix .. formatted 
+  end
+
+        -- attach prefix string e.g '$' 
+  formatted = (prefix or "") .. formatted 
+
+  return formatted
+end
+
+function cheat_dialog:OnButton_close_clicked()
+	self:GetHolder():start_stop_menu	(self,false)
+	self.owner:Show						(true)
+	if level.present() and db.actor and db.actor:alive() then
+		get_console():execute("main_menu off")
+	end
+end
+
+
+function cheat_dialog:OnButton_nextdlg_clicked()
+if next==nil then
+      self.btn_1:Show(false)
+      self.btn_2:Show(false)
+      self.btn_3:Show(false)
+      self.btn_4:Show(false)
+      self.btn_5:Show(false)
+      self.btn_6:Show(false)
+      self.btn_7:Show(false)
+      self.btn_8:Show(false)
+      self.btn_9:Show(false)
+      self.btn_10:Show(false)
+      self.btn_11:Show(true)
+      self.btn_12:Show(true)
+      self.btn_13:Show(true)
+      self.btn_14:Show(true)
+      self.btn_15:Show(true)
+      self.next_dlg_b:SetText("Назад") 
+      next=true
+else
+      self.btn_1:Show(true)
+      self.btn_2:Show(true)
+      self.btn_3:Show(true)
+      self.btn_4:Show(true)
+      self.btn_5:Show(true)
+      self.btn_6:Show(true)
+      self.btn_7:Show(true)
+      self.btn_8:Show(true)
+      self.btn_9:Show(true)
+      self.btn_10:Show(true)
+      self.btn_11:Show(false)
+      self.btn_12:Show(false)
+      self.btn_13:Show(false)
+      self.btn_14:Show(false)
+      self.btn_15:Show(false)
+      self.next_dlg_b:SetText("Дальше") 
+      next = nil
+end
+end
+
+function cheat_dialog:AddItemToList(item_dispname, item_name)
+	local _itm				= cheat_item()
+
+	_itm.dn:SetText			(item_dispname)
+	_itm.name:SetText		(item_name)
+
+	self:GetListWnd("list_window"):AddItem(_itm)
+end
+
+function cheat_dialog:OnKeyboard(dik, keyboard_action)  --virtual function
+	CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
+	local bind = dik_to_bind(dik)
+	if bind == key_bindings.kQUIT then
+		self:OnButton_close_clicked()
+	else  
+		if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+			if (dik == DIK_keys.DIK_INSERT) then
+				self:OnButton_moneyplus_clicked()
+			elseif (dik == DIK_keys.DIK_DELETE) then
+				self:OnButton_moneyminus_clicked()
+			elseif (dik == DIK_keys.DIK_PRIOR) then
+				self:OnButton_timeplus_clicked()
+			elseif (dik == DIK_keys.DIK_NEXT) then
+				self:OnButton_timeminus_clicked()
+                        end
+		end
+	end
+	return true
+end
+
+
+-- Спауним аномалию
+function spawn_anom(item,pos)
+
+local obj = alife():create(item,pos,db.actor:level_vertex_id(),db.actor:game_vertex_id())
+    if string.find(obj:section_name(), "zone_mine_gravitational") or
+       string.find(obj:section_name(), "field") or 
+       string.find(obj:section_name(), "teleport") or
+       string.find(obj:section_name(), "death") or  
+       string.find(obj:section_name(), "sarcofag") or  
+       string.find(obj:section_name(), "zone_radioactive") then
+     anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id(),"field")
+       else
+     anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+end
+end
+
+function str_explode(div,str,pos1,pos2,clear)
+	local t={}
+	local cpt, pos
+
+	if pos1 == nil then pos1 = 1 end
+	if pos2 == nil then pos2 = pos1 end
+
+	local cpt1 = string.find (str, div, pos1, true)
+	local cpt2 = string.find (str, div, pos2, true)
+
+	if cpt1 and cpt2 then
+
+		if cpt2-cpt1 > 5 then
+			cpt = cpt1
+			pos = pos1
+		else
+			cpt = cpt2
+			pos = pos2
+		end
+
+		repeat
+			if clear then
+				table.insert( t, trim(string.sub(str, 1, cpt-1)) )
+			else
+				table.insert( t, string.sub(str, 1, cpt-1) )
+			end
+			str = string.sub( str, cpt+string.len(div) )
+			cpt = string.find (str, div, pos, true)
+		until cpt==nil
+	end
+	if clear then
+		table.insert(t, trim(str))
+	else
+		table.insert(t, str)
+	end
+	return t
+end

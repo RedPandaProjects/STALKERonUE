@@ -1,0 +1,181 @@
+
+local actor = db.actor
+
+function main()
+
+end
+
+--Спавним все аномалии
+function spawn_all(respawn)
+
+end
+
+-- Time1 - время работы  в сек
+-- time2 - время неработы в сек
+
+function create_anom(an,rad_anom,pos,lv,gv,mode,time1,time2)
+      if gv==nil then gv=db.actor:game_vertex_id() end
+      if lv==nil then lv=db.actor:level_vertex_id() end
+      if pos==nil then pos=db.actor:position() end
+
+      local p_obj = an
+
+      local packet = net_packet()
+      packet:w_begin(0)
+      p_obj:STATE_Write(packet)
+      packet:r_seek(2)
+
+	local game_vertex_id = packet:r_u16()
+	local cse_alife_object__unk1_f32 = packet:r_float()
+	local cse_alife_object__unk2_u32 = packet:r_s32()
+	local level_vertex_id = packet:r_s32()
+	local object_flags = packet:r_s32()
+	local custom_data = packet:r_stringZ()
+	local story_id = packet:r_s32()
+	local cse_alife_object__unk3_u32 = packet:r_s32()
+
+	local shape_count = packet:r_u8()
+	for i=1,shape_count do
+		local shape_type = packet:r_u8()
+		if shape_type == 0 then
+			local center = packet:r_vec3()
+			local radius = packet:r_float()
+		else
+			local box = packet:r_matrix()
+		end
+	end
+
+	local restrictor_type = packet:r_u8()
+
+	local cse_alife_custom_zone__unk1_f32 = packet:r_float()
+	local cse_alife_custom_zone__unk2_u32 = packet:r_s32()
+	local on_off_mode_enabled_time = packet:r_s32()
+	local on_off_mode_disabled_time = packet:r_s32()
+	local on_off_mode_shift_time = packet:r_s32()
+
+	local offline_interactive_radius = packet:r_float()
+	local artefact_spawn_places_count = packet:r_u16()
+	local cse_alife_anomalous_zone__unk1_u32 = packet:r_s32()
+
+	local last_spawn_time_present = packet:r_u8()
+
+--	if packet:r_elapsed() ~= 0 then abort("left=%d", packet:r_elapsed()) end
+
+	packet:w_u16(game_vertex_id)
+	packet:w_float(cse_alife_object__unk1_f32)
+	packet:w_s32(cse_alife_object__unk2_u32)
+	packet:w_s32(level_vertex_id)
+	packet:w_s32(object_flags)
+	if mode~=nil then custom_data = mode end
+	packet:w_stringZ(custom_data)
+	packet:w_s32(story_id)
+	packet:w_s32(cse_alife_object__unk3_u32)
+
+	packet:w_u8(1)
+	packet:w_u8(0)
+	local sphere_center = vector()
+	sphere_center:set(0, 0, 0)
+	packet:w_vec3(sphere_center)
+	radius = rad_anom
+	packet:w_float(radius)
+
+	packet:w_u8(restrictor_type)
+
+	packet:w_float(cse_alife_custom_zone__unk1_f32)
+	cse_alife_custom_zone__unk2_u32 = bit_not(0)
+	packet:w_s32(cse_alife_custom_zone__unk2_u32)
+
+if time1 ~= nil then
+	packet:w_s32(time1)
+else
+	packet:w_s32(on_off_mode_enabled_time)
+end
+
+if time2 ~= nil then
+	packet:w_s32(time2)
+else      
+	packet:w_s32(on_off_mode_disabled_time)
+end
+	packet:w_s32(on_off_mode_shift_time)
+
+	packet:w_float(offline_interactive_radius)
+	packet:w_u16(artefact_spawn_places_count)
+	packet:w_s32(cse_alife_anomalous_zone__unk1_u32)
+
+     if mode==nil then
+      	packet:w_u8(last_spawn_time_present)
+     else
+     end
+
+	p_obj:STATE_Read(packet, packet:w_tell()-packet:r_tell())
+
+	return p_obj
+end
+
+-- Записываем переменную
+function save(variable_name, value)
+	xr_logic.pstor_store(db.actor, variable_name, value)
+end
+
+-- Загружаем переменную
+function load(variable_name, value_if_not_found)
+	return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+-- Удаляем переменную
+function del(variable_name)
+	if db.storage[db.actor:id()].pstor[variable_name] then
+		db.storage[db.actor:id()].pstor[variable_name] = nil
+	end
+end
+
+-- Функция спауна объекта
+function spawn(section,pos,lv,gv)
+ 
+--    vector():set(x,y,z) 
+
+      if gv==nil then gv=db.actor:game_vertex_id() end
+      if lv==nil then lv=db.actor:level_vertex_id() end
+      if pos==nil then pos=db.actor:position() end
+
+      if section==nil then
+		get_console():execute("Не_указанная_секция")
+      else
+      return alife():create(section,pos,lv,gv)
+      end
+
+end
+
+
+function IsAnom (obj)  -- Выясняем, объект аномалия или нет.
+local s = obj:section() 
+    if string.find(s, "zone_mine_gravitational") or
+   --    string.find(s, "zone_burning_") or
+       string.find(s, "zone_field_acidic") or
+       string.find(s, "zone_field_psychic") or
+       string.find(s, "zone_field_radioactive") or
+       string.find(s, "zone_field_thermal") or
+       string.find(s, "zone_gravi_zone") or
+       string.find(s, "zone_mincer") or
+       string.find(s, "zone_mine_acidic") or
+       string.find(s, "zone_mine_electric") or
+       string.find(s, "zone_mine_thermal") or
+    --   string.find(s, "zone_mosquito_bald") or
+       string.find(s, "zone_radioactive") or
+       string.find(s, "zone_witches_galantine") or
+       string.find(s, "zone_zharka_static") then
+
+       return true
+       else
+       return false
+    end
+end
+
+function add_spot_on_map(obj_id,type,text)
+  --возможные типы type смотри в ui\map_spots.xml 
+  if obj_id then
+    if text==nil then text=" " end
+    -- Ставим метку на серверный объект чтобы её не пришлось обновлять
+    level.map_add_object_spot_ser(obj_id, type, text)
+  end
+end

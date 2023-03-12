@@ -1,0 +1,204 @@
+-- GOD of the zone MOD v3.0 --
+-- �����: Shoker
+
+-- ���������� ����������
+function save_var(variable_name, value)
+	xr_logic.pstor_store(db.actor, variable_name, value)
+end
+
+-- ��������� ����������
+function load_var(variable_name, value_if_not_found)
+	return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+-- ������� ����������
+function del(variable_name)
+	if db.storage[db.actor:id()].pstor[variable_name] then
+		db.storage[db.actor:id()].pstor[variable_name] = nil
+	end
+end
+
+-- ���������� ������� �� ������� � ������� ���� 
+function key_binder(dik, keyboard_action, self)
+if db.actor then
+--------------------------HUD DISABLE MOD----------------------------
+		if dik == DIK_keys.DIK_H then
+            level.hide_indicators()
+            end
+
+		if dik == DIK_keys.DIK_J then
+   		level.show_indicators()
+            end
+---------------------------------------------------------------------
+
+	     if dik == DIK_keys.DIK_N then
+      	if self.spawn_dlg == nil then
+		 self.spawn_dlg = ui_cheat_dialog.cheat_dialog()
+		 self.spawn_dlg.owner = self
+	      end
+	
+	      self:GetHolder():start_stop_menu(self.spawn_dlg, true)
+	      self:Show(false)
+           end
+end
+end
+
+function main()
+god_timers.main()
+if load_var("weather_state",false)==true then
+ local wt = load_var("god_weather_type","none")
+ if wt~="none" then
+  if load_var("god_weather_fx",false)==false then
+ 	      level.set_weather(wt,true)
+  else
+		level.set_weather_fx(wt)
+  end
+ end
+end
+if load_var("smart_name",false)==false then
+find_smart() 
+save_var("smart_name",true)
+end
+end
+
+
+function find_smart() 
+	local name
+	for i=1, 65535 do
+		local obj = alife():object(i)
+		if obj and obj:clsid() == clsid.smart_terrain then
+			name = game.translate_string("st_name_"..obj:name()) 
+			level.map_add_object_spot_ser(obj.id, "name_location", name)
+		end
+	end
+end
+
+function spawn_item_in_inv(spawn_item,npc)
+  if npc==nil then 
+    npc=db.actor 
+  end
+  return alife():create(spawn_item, 
+      npc:position(),
+      npc:level_vertex_id(),  
+      npc:game_vertex_id(),
+      npc:id())
+end
+
+function spawn(spawn_item)
+   local npc=db.actor 
+
+  return alife():create(spawn_item, 
+      npc:position(),
+      npc:level_vertex_id(),  
+      npc:game_vertex_id())
+end
+
+--���������� ��� ������ ��������
+function spawn_ammo_in_inv(spawn_item,number,npc)
+  if npc==nil then 
+    npc=db.actor 
+  end
+  if number > 0 then
+    return se_respawn.create_ammo(spawn_item, 
+        npc:position(),
+        npc:level_vertex_id(),  
+        npc:game_vertex_id(),
+        npc:id(),
+        number)
+  end
+end
+
+function create_level_changer(
+	p_position, -- ������, ���������� �����, � ������� ����� ������������� ����� ������ level_changer 
+	p_lvertex_id, -- level_vertext_id - �������������� �������, �� ������� ����� ������ level_changer 
+	p_gvertex_id, -- game_vertext_id
+	
+	p_dest_lv, -- level_vertex_id - �������������� �������, �� ������� level_changer ����� ������������� ������ 
+	p_dest_gv, -- game_vertex_id 
+	p_dest_pos, -- ���������� �����, � ������� �� ����� ������ �������� ����� 
+	p_dest_dir, -- ����������� ������� ������ 
+	p_dest_level, -- �������� ������, �������� "L11_Pripyat" 
+	p_silent -- ������� ������ 1, ����� �������� ������ � ����� ������ (�������������� �������) 
+	) 
+	local obj = alife():create("level_changer", p_position, p_lvertex_id, p_gvertex_id)
+	local packet = net_packet() 
+	obj:STATE_Write(packet)
+	
+	-- �������� cse_alife_object 
+	local game_vertex_id = packet:r_u16()
+	local cse_alife_object__unk1_f32 = packet:r_float()
+	local cse_alife_object__unk2_u32 = packet:r_u32()
+	local level_vertex_id = packet:r_u32()
+	local object_flags = packet:r_u32()
+	local custom_data = packet:r_stringZ()
+	local story_id = packet:r_u32()
+	local spawn_story_id = packet:r_u32()
+	
+	-- �������� cse_shape 
+	local shape_count = packet:r_u8() 
+	for i=1,shape_count do 
+	local shape_type = packet:r_u8() 
+	if shape_type == 0 then 
+	-- sphere 
+	local center = packet:r_vec3() 
+	local radius = packet:r_float() 
+	else 
+		for i = 1, 12 do
+			local r = packet:r_float()
+		end
+	end
+	end
+	
+	-- �������� cse_alife_space_restrictor 
+	local restrictor_type = packet:r_u8()
+	
+	-- �������� cse_level_changer 
+	local dest_game_vertex_id = packet:r_u16() 
+	local dest_level_vertex_id = packet:r_u32() 
+	local dest_position = packet:r_vec3() 
+	local dest_direction = packet:r_vec3() 
+	local dest_level_name = packet:r_stringZ() 
+	local dest_graph_point = packet:r_stringZ() 
+	local silent_mode = packet:r_u8()
+	
+	packet:w_begin(game_vertex_id) -- game_vertex_id
+	packet:w_float(cse_alife_object__unk1_f32)
+	packet:w_u32(cse_alife_object__unk2_u32)
+	packet:w_u32(level_vertex_id) -- level_vertex_id
+	packet:w_u32(bit_not(193)) -- object_flags = -193 = 0xFFFFFF3E
+	packet:w_stringZ(custom_data)
+	packet:w_u32(obj.id) -- story_id
+	packet:w_u32(spawn_story_id)
+	
+	packet:w_u8(1) -- ���������� �����
+	-- packet:w_u8(0) -- ��� ������: �����
+	-- packet:w_vec3(vector():set(0, 0, 0)) -- sphere_center
+	-- packet:w_float(3.0)
+	packet:w_u8(1) -- ��� ������: box
+	packet:w_float(2) -- axis_x_x
+	packet:w_float(0) -- axis_x_y
+	packet:w_float(0) -- axis_x_z
+	packet:w_float(0) -- axis_y_x
+	packet:w_float(4) -- axis_y_y
+	packet:w_float(0) -- axis_y_z
+	packet:w_float(0) -- axis_z_x
+	packet:w_float(0) -- axis_z_y
+	packet:w_float(4) -- axis_z_z
+	packet:w_float(0) -- offset_x
+	packet:w_float(0) -- offset_y
+	packet:w_float(0) -- offset_z
+	
+	packet:w_u8(3) -- restrictor_type
+	
+	packet:w_u16(p_dest_gv) -- destination game_vertex_id 
+	packet:w_s32(p_dest_lv) -- destination level_vertex_id 
+	packet:w_vec3(p_dest_pos) -- destination position 
+	packet:w_vec3(p_dest_dir) -- destination direction (����������� �������) 
+	packet:w_stringZ(p_dest_level) -- destination level name 
+	packet:w_stringZ("GAYSEX") -- some string, always const 
+	packet:w_u8(p_silent) -- 1 for silent level changing
+	
+	packet:r_seek(0) 
+	obj:STATE_Read(packet, packet:w_tell())
+	return obj.id
+end
