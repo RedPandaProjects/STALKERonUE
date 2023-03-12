@@ -49,7 +49,7 @@ void UStalkerSpawnProperties_ALifeObjectHangingLamp::PostEditChangeProperty(stru
 	}
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeObjectHangingLamp, Color))
 	{
-		ALifeObjectHangingLamp->color = Color.ToPackedRGBA();
+		ALifeObjectHangingLamp->color = Color.ToPackedARGB();
 		Entity->set_editor_flag(ISE_Abstract::flLightChange);
 	}
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeObjectHangingLamp, Intensity))
