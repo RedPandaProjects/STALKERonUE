@@ -17,7 +17,6 @@ UObject* UXRayGameMtlImporterFactory::FactoryCreateFile(UClass* InClass, UObject
 {
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();
-
 	Warn->Log(Filename);
 	UObject* Object = nullptr;
 	// show import options window
