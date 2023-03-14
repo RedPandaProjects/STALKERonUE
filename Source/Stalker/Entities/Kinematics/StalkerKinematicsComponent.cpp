@@ -23,7 +23,9 @@ UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 	SetAnimationMode(EAnimationMode::Type::AnimationBlueprint);
 	AnimClass = UStalkerKinematicsAnimInstance_Default::StaticClass();
 	SkipDeltaTime = 0;
+#if WITH_EDITORONLY_DATA
 	bIsErrorMesh = false;
+#endif
 }
 
 void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKinematicsData)
@@ -57,7 +59,9 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		BonesPartsBoneID2ID.Empty();
 		BonesParts.Empty();
 		DataName = "";
+#if WITH_EDITORONLY_DATA
 		bIsErrorMesh = false;
+#endif
 		BlendDestroyCallback  = nullptr;
 		UpdateTracksCallback = nullptr;
 		MyUpdateCallback = nullptr;
@@ -74,7 +78,9 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	{
 		return;
 	}
+#if WITH_EDITORONLY_DATA
 	bIsErrorMesh =  InKinematicsData->GetPathName() == TEXT("/Game/Base/Meshes/Error_KinematicsData.Error_KinematicsData");
+#endif
 	for (float& Factor : ChannelsFactor)
 	{
 		Factor = 0;
@@ -177,11 +183,13 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	TickAnimation(0,false);
 }
 
+#if WITH_EDITOR
 void UStalkerKinematicsComponent::InitilizeEditor()
 {
 	bUpdateAnimationInEditor = true;
 	InitAnim(false);
 }
+#endif
 
 void UStalkerKinematicsComponent::BlendSetup(CBlend& Blend, u32 PartID, u8 Channel, MotionID InMotionID, bool IsMixing, float BlendAccrue, float Speed, bool NoLoop, PlayCallback Callback, LPVOID CallbackParam)
 {
@@ -689,7 +697,7 @@ CBlend* UStalkerKinematicsComponent::PlayCycle(u16 BonesPartID, MotionID InMotio
 {
 	return LL_PlayCycle(BonesPartID, InMotionID, bMixIn, Callback, CallbackParam, channel);
 }
-
+#if WITH_EDITOR
 void UStalkerKinematicsComponent::EditorPlay(MotionID InMotionID, bool InLoop)
 {
 	if(!bUpdateAnimationInEditor)
@@ -700,7 +708,7 @@ void UStalkerKinematicsComponent::EditorPlay(MotionID InMotionID, bool InLoop)
 	CMotionDef& MotionDef = AnimsDef[InMotionID.val];
 	LL_PlayCycle(MotionDef.bone_or_part, InMotionID, FALSE, MotionDef.Accrue(), MotionDef.Falloff(), MotionDef.Speed(), !InLoop, nullptr, nullptr, 0);
 }
-
+#endif
 MotionID UStalkerKinematicsComponent::ID_FX(LPCSTR Name)
 {
 	MotionID Result = ID_FX_Safe(Name);
@@ -1107,7 +1115,13 @@ void UStalkerKinematicsComponent::TickComponent(float DeltaTime, enum ELevelTick
 			SkipDeltaTime = 0;
 		return;
 	}
-	LL_UpdateTracks(DeltaTime + SkipDeltaTime, bUpdateAnimationInEditor, false);
+	LL_UpdateTracks(DeltaTime + SkipDeltaTime,
+#if WITH_EDITORONLY_DATA
+	bUpdateAnimationInEditor
+#else
+false
+#endif
+	, false);
 	SkipDeltaTime = 0;
 
 	if (MyUpdateCallback)	MyUpdateCallback(this);

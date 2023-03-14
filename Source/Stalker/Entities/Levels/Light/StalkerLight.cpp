@@ -22,12 +22,16 @@ AStalkerLight::AStalkerLight()
 	LightPoint->SetIntensityUnits(ELightUnits::Candelas);
 }
 
-// Called when the game starts or when spawned
 void AStalkerLight::BeginPlay()
 {
 	Super::BeginPlay();
-	SetActorLocation(StartPosition);
-	
+	SetActorLocation(StartPosition);	
+}
+
+void AStalkerLight::BeginDestroy()
+{
+	check(IsLocked == false);
+	Super::BeginDestroy();
 }
 
 void AStalkerLight::set_type(LT type)
@@ -180,6 +184,25 @@ void AStalkerLight::set_hud_mode(bool b)
 bool AStalkerLight::get_hud_mode()
 {
 	return false;
+}
+
+void AStalkerLight::set_volumetric_intensity(float Inintensity)
+{
+	LightPoint->SetVolumetricScatteringIntensity(Inintensity);
+	SpotPoint->SetVolumetricScatteringIntensity(Inintensity);
+}
+
+void AStalkerLight::Lock()
+{
+	check(IsLocked == false);
+	IsLocked = true;
+}
+
+void AStalkerLight::Unlock()
+{
+
+	check(IsLocked == true);
+	IsLocked = false;
 }
 
 // Called every frame

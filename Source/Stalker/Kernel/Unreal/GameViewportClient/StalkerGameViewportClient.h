@@ -20,13 +20,10 @@ public:
 	void Tick(float DeltaTime) override;
 	void LostFocus(FViewport* Viewport) override;
 	void ReceivedFocus(FViewport* Viewport) override;
+	void BeginDestroy() override;
+
 
 	UPROPERTY(Transient)
 	bool IsActive = false;
-
-
-
-
-
 
 };

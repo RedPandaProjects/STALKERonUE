@@ -56,9 +56,9 @@ public:
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
 	bool	VerifySpaceRestrictorBorders = true;
 #endif
-
+#if WITH_EDITOR
 	const TMap<FName, FStalkerLevelInfo> & GetCurrentLevels() const;
-
+#endif
 	void ReInitilizeXRay();
 #if WITH_EDITOR
 	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;

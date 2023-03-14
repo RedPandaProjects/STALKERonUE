@@ -8,9 +8,8 @@ DEFINE_LOG_CATEGORY(LogStalker);
 
 void FStalkerModule::StartupModule()
 {
-	GStalkerEngineManager = NewObject< UStalkerEngineManager>();
-	GStalkerEngineManager->AddToRoot();
-	GStalkerEngineManager->Initialized();
+	GStalkerEngineManager = new FStalkerEngineManager();
+	GStalkerEngineManager->Initialize();
 	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerModule::OnPreExit);
 
 }
@@ -22,10 +21,7 @@ void FStalkerModule::ShutdownModule()
 
 void FStalkerModule::OnPreExit()
 {
-	GStalkerEngineManager->Destroy();
-	GStalkerEngineManager->RemoveFromRoot();
-	GStalkerEngineManager->MarkAsGarbage();
-
+	delete GStalkerEngineManager;
 }
 
 #undef LOCTEXT_NAMESPACE

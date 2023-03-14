@@ -1,61 +1,53 @@
 #pragma once
-#include "StalkerResourcesManager.generated.h"
 class USlateBrushAsset;
-UCLASS()
-class STALKER_API UStalkerResourcesManager : public UObject
+class STALKER_API FStalkerResourcesManager	: public FGCObject
 {
-	GENERATED_BODY()
 public:
-	USlateBrushAsset*					GetBrush		(FName NameMaterial, FName NameTexture);
-	UFont*								GetFont			(FName Name);
-	void								Free			(USlateBrushAsset* Brush);
-	USlateBrushAsset*					Copy			(USlateBrushAsset* Brush);
-	void								CheckLeak		();
-	void								Reload			();
-	class AStalkerLight*				CreateLight		();
-	void								Desotry			(class IRender_Light*Light);
-	class UStalkerKinematicsData*		GetKinematics	(const char* Name);
-	class UStalkerKinematicsComponent*	CreateKinematics(const char*Name, bool NeedRefence = false);
-	class UStalkerKinematicsComponent*	CreateKinematics(class UStalkerKinematicsData* KinematicsData);
-	void								Destroy			(class UStalkerKinematicsComponent* Mesh);
-	void								RegisterKinematics(class UStalkerKinematicsComponent* Mesh);
-	void								UnregisterKinematics(class UStalkerKinematicsComponent* Mesh);
-	void								Refresh			();
-	FString								GetGamePath		();
-	class UStalkerGameSpawn*			GetGameSpawn	();
+														FStalkerResourcesManager	();
+														~FStalkerResourcesManager	();
+	void												AddReferencedObjects		(FReferenceCollector& Collector) override;
+	FString												GetReferencerName			() const override;
+	USlateBrushAsset*									GetBrush					(FName NameMaterial, FName NameTexture);
+	UFont*												GetFont						(FName Name);
+	void												Free						(USlateBrushAsset* Brush);
+	USlateBrushAsset*									Copy						(USlateBrushAsset* Brush);
+	void												CheckLeak					();
+	void												Reload						();
+	class AStalkerLight*								CreateLight					();
+	void												Desotry						(class IRender_Light*Light);
+	class UStalkerKinematicsData*						GetKinematics				(const char* Name);
+	class UStalkerKinematicsComponent*					CreateKinematics			(const char*Name, bool NeedRefence = false);
+	class UStalkerKinematicsComponent*					CreateKinematics			(class UStalkerKinematicsData* KinematicsData);
+	void												Destroy						(class UStalkerKinematicsComponent* Mesh);
+	void												RegisterKinematics			(class UStalkerKinematicsComponent* Mesh);
+	void												UnregisterKinematics		(class UStalkerKinematicsComponent* Mesh);
+	void												Refresh						();
+	FString												GetGamePath					();
+	class UStalkerGameSpawn*							GetGameSpawn				();
 #if WITH_EDITORONLY_DATA
-	class UStalkerGameSpawn*			GetOrCreateGameSpawn();
+	class UStalkerGameSpawn*							GetOrCreateGameSpawn		();
 #endif
-	UPROPERTY(Transient)
-	TObjectPtr < class UWorld>	GameWorld;
-	UPROPERTY(Transient)
-	TMap<USlateBrushAsset*, UTexture*> BrushesTextures;
+	TMap<USlateBrushAsset*, UTexture*>					BrushesTextures;
+
+
 private:
 
-	UPROPERTY(Transient)
-	TMap<FName, UFont*> Fonts;
+	TMap<FName, UFont*>									Fonts;
 
-	UPROPERTY(Transient)
-	TMap<USlateBrushAsset*,int32> BrushesCounter;
-	UPROPERTY(Transient)
-	TMap<USlateBrushAsset*, UMaterialInstanceDynamic*> BrushesMaterials;
+	TMap<USlateBrushAsset*,int32>						BrushesCounter;
+	TMap<USlateBrushAsset*, UMaterialInstanceDynamic*>	BrushesMaterials;
 #if WITH_EDITORONLY_DATA
-	TSet< USlateBrushAsset*>	 BrushesNeedReloading;
+	TSet< USlateBrushAsset*>							BrushesNeedReloading;
 #endif
-	TMap<FName, TMap<FName, USlateBrushAsset*>> Brushes;
+	TMap<FName, TMap<FName, USlateBrushAsset*>>			Brushes;
 	struct  BrushInfo
 	{
 		FName Matrrial;
 		FName Texture;
 	};
-	TMap<USlateBrushAsset*, BrushInfo> BrushesInfo;
+	TMap<USlateBrushAsset*, BrushInfo>					BrushesInfo;
 	
-	UPROPERTY(Transient)
-	TSet<UStalkerKinematicsComponent*> Meshes;
+	TSet<UStalkerKinematicsComponent*>					Meshes;
 
-	UPROPERTY(Transient)
-	TSet<class AStalkerLight*> Lights;
-	
-	UPROPERTY(Transient)
-	class UStalkerGameSpawn* GameSpawn;
+	class UStalkerGameSpawn*							GameSpawn = nullptr;
 };

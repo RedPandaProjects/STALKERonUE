@@ -10,7 +10,7 @@ void XRayUISequenceVideoItem::Copy(IUISequenceVideoItem & _in)
 
 bool XRayUISequenceVideoItem::HasTexture()
 {
-	return false;
+	return true;
 }
 void XRayUISequenceVideoItem::CaptureTexture()
 {

@@ -23,14 +23,50 @@ THIRD_PARTY_INCLUDES_END
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Resources/Spawn/StalkerLevelSpawn.h"
 
-STALKER_API UStalkerEngineManager* GStalkerEngineManager = nullptr;
+STALKER_API FStalkerEngineManager* GStalkerEngineManager = nullptr;
 static XRayMemory	GXRayMemory;
 static XRayLog	GXRayLog;
 static XRayDebug	GXRayDebug;
-void UStalkerEngineManager::Initialized()
+
+FStalkerEngineManager::FStalkerEngineManager()
 {
-	ResourcesManager = NewObject<UStalkerResourcesManager>(this);
-	PhysicalMaterialsManager = NewObject<UStalkerPhysicalMaterialsManager>(this);
+	
+}
+
+FStalkerEngineManager::~FStalkerEngineManager()
+{
+	if (!GIsEditor)
+	{
+		AppEnd();
+	}
+	FCoreDelegates::OnPostEngineInit.RemoveAll(this);
+	FCoreUObjectDelegates::PostLoadMapWithWorld.RemoveAll(this);
+	if(IsValid(GEngine))
+	{
+		GEngine->OnTravelFailure().RemoveAll(this);
+	}
+#if WITH_EDITOR
+	FGameDelegates::Get().GetEndPlayMapDelegate().RemoveAll(this);
+#endif
+#if WITH_EDITORONLY_DATA
+	FCoreDelegates::OnGetOnScreenMessages.RemoveAll(this);
+#endif
+	DetachViewport(GameViewportClient);
+	delete GXRaySkeletonMeshManager;
+	GXRaySkeletonMeshManager = nullptr;
+	g_Engine->Destroy();
+	delete g_Engine;
+	MyXRayEngine = nullptr;
+	Core.Destroy();
+	GameMaterialLibrary = nullptr;
+	ResourcesManager->CheckLeak();
+	delete ResourcesManager;
+}
+
+void FStalkerEngineManager::Initialize()
+{
+	ResourcesManager = new FStalkerResourcesManager;
+	PhysicalMaterialsManager = NewObject<UStalkerPhysicalMaterialsManager>();
 	MyXRayInput = nullptr;
 	FString FSName;
 	EGamePath GamePath = EGamePath::COP_1602;
@@ -67,56 +103,27 @@ void UStalkerEngineManager::Initialized()
 	g_Engine->Initialize();
 	GXRaySkeletonMeshManager = new XRaySkeletonMeshManager;
 #if WITH_EDITOR
-	FGameDelegates::Get().GetEndPlayMapDelegate().AddUObject(this, &UStalkerEngineManager::OnEndPlayMap);
+	FGameDelegates::Get().GetEndPlayMapDelegate().AddRaw(this, &FStalkerEngineManager::OnEndPlayMap);
 #endif
 #if WITH_EDITORONLY_DATA
-	FCoreDelegates::OnGetOnScreenMessages.AddUObject(this, &UStalkerEngineManager::OnGetOnScreenMessages);
+	FCoreDelegates::OnGetOnScreenMessages.AddRaw(this, &FStalkerEngineManager::OnGetOnScreenMessages);
 #endif
-	FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(this, &UStalkerEngineManager::OnPostLoadMap);
-	FCoreDelegates::OnPostEngineInit.AddUObject(this, &UStalkerEngineManager::OnPostEngineInit);
+	FCoreUObjectDelegates::PostLoadMapWithWorld.AddRaw(this, &FStalkerEngineManager::OnPostLoadMap);
+	FCoreDelegates::OnPostEngineInit.AddRaw(this, &FStalkerEngineManager::OnPostEngineInit);
 	if (!GIsEditor)
 	{
 		AppStart();
 	}
 }
 
-void UStalkerEngineManager::Destroy()
-{
-	if (!GIsEditor)
-	{
-		AppEnd();
-	}
-	FCoreDelegates::OnPostEngineInit.RemoveAll(this);
-	FCoreUObjectDelegates::PostLoadMapWithWorld.RemoveAll(this);
-	if(IsValid(GEngine))
-	{
-		GEngine->OnTravelFailure().RemoveAll(this);
-	}
-#if WITH_EDITOR
-	FGameDelegates::Get().GetEndPlayMapDelegate().RemoveAll(this);
-#endif
-#if WITH_EDITORONLY_DATA
-	FCoreDelegates::OnGetOnScreenMessages.RemoveAll(this);
-#endif
-	DetachViewport(GameViewportClient);
-	delete GXRaySkeletonMeshManager;
-	GXRaySkeletonMeshManager = nullptr;
-	g_Engine->Destroy();
-	delete g_Engine;
-	MyXRayEngine = nullptr;
-	Core.Destroy();
-	GameMaterialLibrary = nullptr;
-	ResourcesManager->CheckLeak();
-}
-
-void UStalkerEngineManager::AppStart()
+void FStalkerEngineManager::AppStart()
 { 
 	PhysicalMaterialsManager->Build();
 	Device->seqAppStart.Process(rp_AppStart);
 	Device->b_is_Active = TRUE;
 }
 
-void UStalkerEngineManager::AppEnd()
+void FStalkerEngineManager::AppEnd()
 {
 	Device->seqParallel.clear();
 	Device->b_is_Active = FALSE;
@@ -126,8 +133,24 @@ void UStalkerEngineManager::AppEnd()
 	PhysicalMaterialsManager->Clear();
 }
 
+void FStalkerEngineManager::AddReferencedObjects(FReferenceCollector& Collector)
+{
+	if(PhysicalMaterialsManager)
+	{
+		Collector.AddReferencedObject(PhysicalMaterialsManager);
+	}
+	if(CurrentAIMap)
+	{
+		Collector.AddReferencedObject(CurrentAIMap);
+	}
+}
 
-void UStalkerEngineManager::AttachViewport(class UGameViewportClient* InGameViewportClient)
+FString FStalkerEngineManager::GetReferencerName() const
+{
+	return TEXT("StalkerEngineManager");
+}
+
+void FStalkerEngineManager::AttachViewport(class UGameViewportClient* InGameViewportClient)
 {
 	if (GameViewportClient )
 	{
@@ -138,7 +161,7 @@ void UStalkerEngineManager::AttachViewport(class UGameViewportClient* InGameView
 		return;
 	}
 	GameViewportClient = CastChecked<UStalkerGameViewportClient>(InGameViewportClient);
-	FViewport::ViewportResizedEvent.AddUObject(this, &UStalkerEngineManager::OnViewportResized);
+	FViewport::ViewportResizedEvent.AddRaw(this, &FStalkerEngineManager::OnViewportResized);
 	FVector2D ScreenSize;
 	GameViewportClient->GetViewportSize(ScreenSize);
 	if (u32(ScreenSize.X) != Device->dwWidth || u32(ScreenSize.Y) != Device->dwHeight)
@@ -151,14 +174,14 @@ void UStalkerEngineManager::AttachViewport(class UGameViewportClient* InGameView
 		Device->seqDeviceReset.Process(rp_DeviceReset);
 		Device->seqResolutionChanged.Process(rp_ScreenResolutionChanged);
 	}
-	GameViewportClient->OnCloseRequested().AddUObject(this, &UStalkerEngineManager::OnViewportCloseRequested);
+	GameViewportClient->OnCloseRequested().AddRaw(this, &FStalkerEngineManager::OnViewportCloseRequested);
 	if (GameViewportClient->IsActive)
 	{
 		Device->seqAppActivate.Process(rp_AppActivate);
 	}
 }
 
-void UStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameViewportClient)
+void FStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameViewportClient)
 {
 	if (GameViewportClient&&GameViewportClient == InGameViewportClient)
 	{
@@ -169,12 +192,12 @@ void UStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameView
 	}
 }
 
-FString UStalkerEngineManager::GetCurrentWorldName()
+FString FStalkerEngineManager::GetCurrentWorldName()
 {
 	return CurrentWorldName;
 }
 
-class UStalkerAIMap* UStalkerEngineManager::GetLevelGraph(FString LevelName)
+class UStalkerAIMap* FStalkerEngineManager::GetLevelGraph(FString LevelName)
 {
 	UStalkerGameSpawn* GameSpawn = GetResourcesManager()->GetGameSpawn();
 	check (IsValid(GameSpawn) && GameSpawn->GameSpawnGuid.IsValid());
@@ -190,7 +213,7 @@ class UStalkerAIMap* UStalkerEngineManager::GetLevelGraph(FString LevelName)
 	return CurrentAIMap;
 }
 
-void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
+void FStalkerEngineManager::ReInitialized(EStalkerGame Game)
 {
 #if WITH_EDITOR
 	if (GEditor->PlayWorld != nullptr||GEditor->bIsSimulatingInEditor)
@@ -248,7 +271,7 @@ void UStalkerEngineManager::ReInitialized(EStalkerGame Game)
 	PostReInitializedMulticastDelegate.Broadcast();
 }
 
-void UStalkerEngineManager::SetInput(class XRayInput* InXRayInput)
+void FStalkerEngineManager::SetInput(class XRayInput* InXRayInput)
 {
 	if (InXRayInput == nullptr) 
 	{ 
@@ -259,7 +282,7 @@ void UStalkerEngineManager::SetInput(class XRayInput* InXRayInput)
 	MyXRayInput = InXRayInput;
 }
 
-void UStalkerEngineManager::LoadDefaultWorld()
+void FStalkerEngineManager::LoadDefaultWorld()
 {
 	const UGameMapsSettings* GameMapsSettings = GetDefault<UGameMapsSettings>();
 	if(IsValid(GWorld))
@@ -284,7 +307,7 @@ void UStalkerEngineManager::LoadDefaultWorld()
 	CurrentWorldName.Empty();
 }
 
-bool UStalkerEngineManager::LoadWorld(FString LevelName)
+bool FStalkerEngineManager::LoadWorld(FString LevelName)
 {
 	CurrentWorldName.Empty();
 	CurrentWorldPath.Reset();
@@ -336,7 +359,7 @@ bool UStalkerEngineManager::LoadWorld(FString LevelName)
 	return true;
 }
 
-bool UStalkerEngineManager::CheckCurrentWorld()
+bool FStalkerEngineManager::CheckCurrentWorld()
 {
 	UWorld* World = GWorld;
 	if (!IsValid(World))
@@ -380,7 +403,7 @@ bool UStalkerEngineManager::CheckCurrentWorld()
 	return true;
 }
 
-void UStalkerEngineManager::OnViewportResized(FViewport* InViewport, uint32)
+void FStalkerEngineManager::OnViewportResized(FViewport* InViewport, uint32)
 
 {
 	if (GameViewportClient && GameViewportClient->Viewport == InViewport)
@@ -400,7 +423,7 @@ void UStalkerEngineManager::OnViewportResized(FViewport* InViewport, uint32)
 	}
 }
 
-void UStalkerEngineManager::OnEndPlayMap()
+void FStalkerEngineManager::OnEndPlayMap()
 {
 #if WITH_EDITOR
 	ReInitialized(GetDefault<UStalkerGameSettings>()->EditorStartupGame);
@@ -408,7 +431,7 @@ void UStalkerEngineManager::OnEndPlayMap()
 
 }
 #if WITH_EDITORONLY_DATA
-void UStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessageMap& Out)
+void FStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessageMap& Out)
 {
 	UWorld* World = GWorld;
 	if (!IsValid(World))
@@ -487,12 +510,12 @@ void UStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessa
 }
 #endif
 
-void UStalkerEngineManager::OnPostEngineInit()
+void FStalkerEngineManager::OnPostEngineInit()
 {
-	GEngine->OnTravelFailure().AddUObject(this, &UStalkerEngineManager::OnTravelFailure);
+	GEngine->OnTravelFailure().AddRaw(this, &FStalkerEngineManager::OnTravelFailure);
 }
 
-void UStalkerEngineManager::OnPostLoadMap(UWorld* World)
+void FStalkerEngineManager::OnPostLoadMap(UWorld* World)
 {
 #if WITH_EDITOR
 	if (GIsEditor)
@@ -523,7 +546,7 @@ void UStalkerEngineManager::OnPostLoadMap(UWorld* World)
 	}
 }
 
-void UStalkerEngineManager::OnTravelFailure(UWorld* NextWorld, ETravelFailure::Type FailureType, const FString& Name)
+void FStalkerEngineManager::OnTravelFailure(UWorld* NextWorld, ETravelFailure::Type FailureType, const FString& Name)
 {
 	if (WorldStatus == EStalkerWorldStatus::Loading)
 	{
@@ -533,7 +556,7 @@ void UStalkerEngineManager::OnTravelFailure(UWorld* NextWorld, ETravelFailure::T
 	}
 }
 
-void UStalkerEngineManager::OnViewportCloseRequested(FViewport* InViewport)
+void FStalkerEngineManager::OnViewportCloseRequested(FViewport* InViewport)
 {
 	check(GameViewportClient->Viewport== InViewport);
 	DetachViewport(GameViewportClient);

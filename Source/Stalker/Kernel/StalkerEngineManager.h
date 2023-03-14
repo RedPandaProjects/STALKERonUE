@@ -14,22 +14,22 @@ enum class EStalkerWorldStatus :uint8
 	Loading,
 	Failure
 };
-UCLASS()
-class STALKER_API UStalkerEngineManager : public UObject
+class STALKER_API FStalkerEngineManager : public FGCObject
 {
-	GENERATED_BODY()
 public:
+														FStalkerEngineManager				();
+														~FStalkerEngineManager				();
+	void												Initialize							();
+	void												AddReferencedObjects				(FReferenceCollector& Collector) override;
+	FString												GetReferencerName					() const override;
 	void												AttachViewport						(class UGameViewportClient* InGameViewportClient);
 	void												DetachViewport						(class UGameViewportClient* InGameViewportClient);
-
-	void												Initialized							();
-	void												Destroy								();
 
 	void												AppStart							();
 	void												AppEnd								();
 
 	void												ReInitialized						(EStalkerGame Game);
-	inline class UStalkerResourcesManager*				GetResourcesManager					()								{return ResourcesManager;	}
+	inline class FStalkerResourcesManager*				GetResourcesManager					()								{return ResourcesManager;	}
 
 	void												SetInput							(class XRayInput* InXRayInput);
 	inline class XRayInput*								GetInput							()								{return MyXRayInput;}
@@ -48,6 +48,8 @@ public:
 
 	FSimpleMulticastDelegate							PreReInitializedMulticastDelegate;
 	FSimpleMulticastDelegate							PostReInitializedMulticastDelegate;
+
+
 private:
 
 	void												OnPostEngineInit					();
@@ -60,16 +62,12 @@ private:
 #if WITH_EDITORONLY_DATA
 	void												OnGetOnScreenMessages				(FCoreDelegates::FSeverityMessageMap& Out);
 #endif
-	UPROPERTY(Transient)
-	TObjectPtr<class UStalkerResourcesManager>			ResourcesManager;
-	UPROPERTY(Transient)
-	TObjectPtr < class UStalkerGameViewportClient>		GameViewportClient;
-	UPROPERTY(Transient)
-	TObjectPtr<class UStalkerPhysicalMaterialsManager>	PhysicalMaterialsManager;
-	UPROPERTY(Transient)
+	FStalkerResourcesManager*							ResourcesManager = nullptr;
+	TObjectPtr<class  UStalkerGameViewportClient>		GameViewportClient;
+	TObjectPtr<class  UStalkerPhysicalMaterialsManager>	PhysicalMaterialsManager;
 	TObjectPtr<class  UStalkerAIMap>					CurrentAIMap;
-	class XRayEngine*									MyXRayEngine;
-	class XRayInput*									MyXRayInput;
+	class XRayEngine*									MyXRayEngine = nullptr;
+	class XRayInput*									MyXRayInput = nullptr;
 	EStalkerGame										CurrentGame;
 
 	EStalkerWorldStatus									WorldStatus = EStalkerWorldStatus::None;
@@ -78,4 +76,4 @@ private:
 
 };
 
-extern STALKER_API UStalkerEngineManager* GStalkerEngineManager;
+extern STALKER_API FStalkerEngineManager* GStalkerEngineManager;

@@ -1,6 +1,6 @@
 #include "StalkerAIMapNode.h"
 #include "StalkerAIMap.h"
-
+#if WITH_EDITORONLY_DATA
 FStalkerAIMapNode::FStalkerAIMapNode()
 {
 	Flags = EStalkerAIMapNodeFlags::None;
@@ -52,3 +52,4 @@ void FStalkerAIMapNode::Serialize(FArchive& Ar, UStalkerAIMap* Parent)
 		Flags = EStalkerAIMapNodeFlags::None;
 	}
 }
+#endif

@@ -464,6 +464,10 @@ void AStalkerSpawnObject::SpawnWrite()
 
 void AStalkerSpawnObject::SpawnRead()
 {
+	if (!IsValid(GetWorld()))
+	{
+		return;
+	}
 	CreateEntity();
 	if (XRayEntity)
 	{
@@ -582,7 +586,7 @@ void AStalkerSpawnObject::Serialize(FArchive& Ar)
 			SpawnWrite();
 		}
 		Ar<< EntityData;
-		if (Ar.IsLoading())
+		if (Ar.IsLoading()&&!Ar.IsCooking())
 		{
 			SpawnRead();
 		}

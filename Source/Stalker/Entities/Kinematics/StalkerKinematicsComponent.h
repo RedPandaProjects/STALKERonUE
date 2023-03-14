@@ -18,7 +18,9 @@ public:
 													UStalkerKinematicsComponent			();
 	UFUNCTION(BlueprintCallable)
 	void											Initilize							(class UStalkerKinematicsData* KinematicsData);
+#if WITH_EDITOR
 	void											InitilizeEditor						();
+#endif
 	void											PostLoad							() override;
 	void											BeginDestroy						() override;
 	void											Lock								(void* Parent) override;
@@ -111,7 +113,9 @@ public:
 
 	CBlend*											PlayCycle							(LPCSTR N, BOOL bMixIn = TRUE, PlayCallback Callback = 0, LPVOID CallbackParam = 0, u8 channel = 0) override;
 	CBlend*											PlayCycle							(MotionID InMotionID, BOOL bMixIn = TRUE, PlayCallback Callback = 0, LPVOID CallbackParam = 0, u8 channel = 0) override;
+#if WITH_EDITOR
 	void											EditorPlay							(MotionID InMotionID,bool InLoop=true);
+#endif
 	CBlend*											PlayCycle							(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn = TRUE, PlayCallback Callback = 0, LPVOID CallbackParam = 0, u8 channel = 0) override;
 	CBlend*											LL_PlayCycle						(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn, float blendAccrue, float blendFalloff, float Speed, BOOL noloop, PlayCallback Callback, LPVOID CallbackParam, u8 channel = 0) override;
 	CBlend*											LL_PlayCycle						(u16 BonesPartID, MotionID InMotionID, BOOL bMixIn, PlayCallback Callback, LPVOID CallbackParam, u8 channel = 0) override;

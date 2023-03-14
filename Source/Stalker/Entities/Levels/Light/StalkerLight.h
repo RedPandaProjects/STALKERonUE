@@ -12,10 +12,11 @@ class STALKER_API AStalkerLight : public AActor,public IRender_Light
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
 	AStalkerLight();
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	void Tick(float DeltaTime) override;
+	void Lock();
+	void Unlock();
+	void BeginDestroy() override;
 
 	void set_type(LT type) override;
 	void set_active(bool) override;
@@ -31,10 +32,10 @@ public:
 	void set_color(float r, float g, float b) override;
 	void set_hud_mode(bool b) override;
 	bool get_hud_mode() override;
+	void set_volumetric_intensity(float Inintensity) override;
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	void BeginPlay() override;
 private:
 	UPROPERTY(VisibleAnywhere)
 	class UPointLightComponent*LightPoint;
@@ -42,7 +43,7 @@ private:
 	class USpotLightComponent* SpotPoint;
 	UPROPERTY(VisibleAnywhere)
 	class USceneComponent* SceneComponent;
+	bool					   IsLocked = false;
 	LT						   LightType;
 	FVector					   StartPosition;
-
 };

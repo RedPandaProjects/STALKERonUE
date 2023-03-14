@@ -54,6 +54,7 @@ void UStalkerSEFactoryManager::Load()
 	{
 		return;
 	}
+
 	SEFactoryInterface->Create();
 	for (const shared_str& Profile : SEFactoryInterface->GetSmartCovers())
 	{
@@ -105,16 +106,12 @@ void UStalkerSEFactoryManager::Load()
 		LightAnims_ForComboBox.Add(TSharedPtr<FString>(new FString(Item->cName.c_str())));
 	}
 	
-	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
-	if (WorldContext)
+
+	for (TObjectIterator<AStalkerSpawnObject> AactorItr; AactorItr; ++AactorItr)
 	{
-		UWorld* World = WorldContext->World();
-		if (IsValid(World))
+		if (IsValid(AactorItr->GetWorld()))
 		{
-			for (TActorIterator<AStalkerSpawnObject> AactorItr(World); AactorItr; ++AactorItr)
-			{
-				AactorItr->SpawnRead();
-			}
+			AactorItr->SpawnRead();
 		}
 	}
 }
@@ -126,19 +123,15 @@ void UStalkerSEFactoryManager::UnLoad()
 		return;
 	}
 
-	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
-	if (WorldContext)
+	for (TObjectIterator<AStalkerSpawnObject> AactorItr; AactorItr; ++AactorItr)
 	{
-		UWorld* World = WorldContext->World();
-		if (IsValid(World))
+		if (IsValid(AactorItr->GetWorld()))
 		{
-			for (TActorIterator<AStalkerSpawnObject> AactorItr(World); AactorItr; ++AactorItr)
-			{
-				AactorItr->SpawnWrite();
-				AactorItr->DestroyEntity();
-			}
+			AactorItr->SpawnWrite();
+			AactorItr->DestroyEntity();
 		}
 	}
+
 
 	SEFactoryInterface->Destroy();
 	SEFactoryInterface = nullptr;

@@ -4,7 +4,6 @@
 
 UStalkerAIMap::UStalkerAIMap()
 {
-	InvalidAIMap();
 }
 
 void UStalkerAIMap::Serialize(FArchive& Ar)
@@ -84,6 +83,38 @@ void UStalkerAIMap::Serialize(FArchive& Ar)
 	}
 
 }
+
+
+const ILevelGraph::CHeader& UStalkerAIMap::header() const
+{
+	return LevelGraphHeader;
+}
+
+const ILevelGraph::CVertex* UStalkerAIMap::get_nodes() const
+{
+	return LevelGraphVertices.GetData();
+}
+
+void UStalkerAIMap::RefreshAIMapMetadata()
+{
+	if (!LevelGraphHeader.count)
+	{
+		m_row_length = 0;
+		m_column_length = 0;
+		m_level_id = -1;
+		m_max_x = 0;
+		m_max_z = 0;
+		m_access_mask.clear();
+		return;
+	}
+	m_row_length = FMath::FloorToInt((header().box().max.z - header().box().min.z) / header().cell_size() + EPS_L + 1.5f);
+	m_column_length = FMath::FloorToInt((header().box().max.x - header().box().min.x) / header().cell_size() + EPS_L + 1.5f);
+	m_access_mask.assign(header().vertex_count(), true);
+	unpack_xz(vertex_position(header().box().max), m_max_x, m_max_z);
+	m_level_id = -1;
+}
+
+
 #if WITH_EDITORONLY_DATA
 void UStalkerAIMap::InvalidAIMap()
 {
@@ -550,34 +581,7 @@ void UStalkerAIMap::CalculateIndex()
 
 }
 
-const ILevelGraph::CHeader& UStalkerAIMap::header() const
-{
-	return LevelGraphHeader;
-}
 
-const ILevelGraph::CVertex* UStalkerAIMap::get_nodes() const
-{
-	return LevelGraphVertices.GetData();
-}
-
-void UStalkerAIMap::RefreshAIMapMetadata()
-{
-	if (!LevelGraphHeader.count)
-	{
-		m_row_length = 0;
-		m_column_length = 0;
-		m_level_id = -1;
-		m_max_x = 0;
-		m_max_z = 0;
-		m_access_mask.clear();
-		return;
-	}
-	m_row_length = FMath::FloorToInt((header().box().max.z - header().box().min.z) / header().cell_size() + EPS_L + 1.5f);
-	m_column_length = FMath::FloorToInt((header().box().max.x - header().box().min.x) / header().cell_size() + EPS_L + 1.5f);
-	m_access_mask.assign(header().vertex_count(), true);
-	unpack_xz(vertex_position(header().box().max), m_max_x, m_max_z);
-	m_level_id = -1;
-}
 
 void UStalkerAIMap::PostEditUndo()
 {

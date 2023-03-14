@@ -101,16 +101,12 @@ void UStalkerEditorManager::Destroy()
 		FWorldDelegates::OnPostWorldInitialization.RemoveAll(this);
 		SEFactoryManager->UnLoad();
 		SEFactoryManager->Destroy();
-		SEFactoryManager->MarkAsGarbage();
 		SEFactoryManager = nullptr;
 		EditorAIMap->Destroy();
-		EditorAIMap->MarkAsGarbage();
 		EditorAIMap = nullptr;
 		EditorCFrom->Destroy();
-		EditorCFrom->MarkAsGarbage();
 		EditorCFrom = nullptr;
 		EditorSpawn->Destroy();
-		EditorSpawn->MarkAsGarbage();
 		EditorSpawn = nullptr;
 		GStalkerEngineManager->PostReInitializedMulticastDelegate.RemoveAll(this);
 		GXRayObjectLibrary->OnDestroy();

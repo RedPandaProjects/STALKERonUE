@@ -18,7 +18,7 @@ public:
 	class IGameGraph*				GetGameGraph				() override;
 	IReader							GetGameSpawn				() override;
 	void							LoadDefaultWorld			() override;
-
+	void							Exit						() override;
 
 	bool							LoadWorld					(const char* Name) override;
 	void							LoadCFormFormCurrentWorld	(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback);

@@ -1,11 +1,11 @@
 #pragma once
+#if WITH_EDITORONLY_DATA
 enum class EStalkerAIMapNodeFlags
 {
 	None = 0,
 	Selected,
 };
 ENUM_CLASS_FLAGS(EStalkerAIMapNodeFlags);
-
 struct STALKER_API FStalkerAIMapNode 
 {
 	FPlane4f	Plane;
@@ -29,3 +29,4 @@ struct STALKER_API FStalkerAIMapNode
 	uint32		Index;
 	int32		Version = 0;
 };
+#endif

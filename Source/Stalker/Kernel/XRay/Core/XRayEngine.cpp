@@ -127,6 +127,11 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 			GlobalIndex = GStalkerEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.IndexOfByKey(GStalkerEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial);
 			check(GlobalIndex!= INDEX_NONE);
 		}
+		if (GStalkerEngineManager->GetPhysicalMaterialsManager()->GetMaterialByID(GlobalIndex)->Flags.is(SGameMtl::flDynamic))
+		{
+			GlobalIndex = GStalkerEngineManager->GetPhysicalMaterialsManager()->PhysicalMaterials.IndexOfByKey(GStalkerEngineManager->GetPhysicalMaterialsManager()->DefaultPhysicalMaterial);
+			check(GlobalIndex!= INDEX_NONE);
+		}
 		CFormMaterialID2GlobalID.Add(Index,static_cast<uint32>(GlobalIndex));
 	}
 
@@ -203,4 +208,9 @@ void XRayEngine::LoadDefaultWorld()
 {	
 	GStalkerEngineManager->LoadDefaultWorld();
 	
+}
+
+void XRayEngine::Exit()
+{	
+	GEngine->Exec(nullptr, TEXT( "Exit" ) );
 }

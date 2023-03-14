@@ -10,7 +10,7 @@ THIRD_PARTY_INCLUDES_START
 THIRD_PARTY_INCLUDES_END
 
 
-USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
+USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
 {
 	bool NeedReload = false;
 	check(InNameMaterial!=NAME_None);
@@ -125,7 +125,7 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 			Texture = UnkownTextuer;
 		}
 	}
-	UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(ParentMaterial, this,NAME_None);
+	UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(ParentMaterial,nullptr,NAME_None);
 	Material->SetFlags(RF_Transient);
 	if (InNameTexture != NAME_None)
 	{
@@ -148,7 +148,7 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		BrushesCounter[NewSlateBrushAsset]++;
 		return NewSlateBrushAsset;
 	}
-	USlateBrushAsset* NewSlateBrushAsset = NewObject<USlateBrushAsset>(this);
+	USlateBrushAsset* NewSlateBrushAsset = NewObject<USlateBrushAsset>();
 	NewSlateBrushAsset->SetFlags(RF_Transient);
 	FVector2D TextureSize = FVector2D(32,32);
 	NewSlateBrushAsset->Brush =  FSlateMaterialBrush(*Material, TextureSize);
@@ -164,7 +164,7 @@ USlateBrushAsset* UStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 	return NewSlateBrushAsset;
 }
 
-UFont* UStalkerResourcesManager::GetFont(FName Name)
+UFont* FStalkerResourcesManager::GetFont(FName Name)
 {
 	if (Fonts.Contains(Name))
 	{
@@ -194,7 +194,7 @@ UFont* UStalkerResourcesManager::GetFont(FName Name)
 	return Font;
 }
 
-void UStalkerResourcesManager::Free(USlateBrushAsset* Brush)
+void FStalkerResourcesManager::Free(USlateBrushAsset* Brush)
 {
 	int32*Counter = BrushesCounter.Find(Brush);
 	check(Counter);
@@ -216,7 +216,7 @@ void UStalkerResourcesManager::Free(USlateBrushAsset* Brush)
 	}
 }
 
-USlateBrushAsset* UStalkerResourcesManager::Copy(USlateBrushAsset* Brush)
+USlateBrushAsset* FStalkerResourcesManager::Copy(USlateBrushAsset* Brush)
 {
 	int32* Counter = BrushesCounter.Find(Brush);
 	check(Counter);
@@ -224,16 +224,12 @@ USlateBrushAsset* UStalkerResourcesManager::Copy(USlateBrushAsset* Brush)
 	return Brush;
 }
 
-void UStalkerResourcesManager::CheckLeak()
+void FStalkerResourcesManager::CheckLeak()
 {
-#if WITH_EDITORONLY_DATA
-	check(BrushesNeedReloading.Num() == 0);
-#endif
 	check(Meshes.Num() == 0);
-	check(Lights.Num() == 0);
 }
 
-void UStalkerResourcesManager::Reload()
+void FStalkerResourcesManager::Reload()
 {
 #if WITH_EDITORONLY_DATA
 	for (auto& [Key, Data] : BrushesCounter)
@@ -244,24 +240,23 @@ void UStalkerResourcesManager::Reload()
 }
 
 
-class AStalkerLight* UStalkerResourcesManager::CreateLight()
+class AStalkerLight* FStalkerResourcesManager::CreateLight()
 {
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerLight* Result = GWorld->SpawnActor< AStalkerLight>(SpawnParameters);
-	Lights.Add(Result);
+	Result->Lock();
 	return Result;
 }
 
-void UStalkerResourcesManager::Desotry(class IRender_Light* InLight)
+void FStalkerResourcesManager::Desotry(class IRender_Light* InLight)
 {
 	AStalkerLight*Light =  static_cast<AStalkerLight*>(InLight);
-	checkSlow(Lights.Contains(Light));
-	Lights.Remove(Light);
+	Light->Unlock();
 	Light->Destroy();
 }
 
-class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char* InName)
+class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char* InName)
 {
 	if (!FApp::IsGame()&&(!InName || !InName[0]))
 	{
@@ -358,15 +353,15 @@ class UStalkerKinematicsData* UStalkerResourcesManager::GetKinematics(const char
 	return KinematicsData;
 }
 
-class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
+class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
 {
-	UStalkerKinematicsComponent* Result =  NewObject< UStalkerKinematicsComponent>(this);
+	UStalkerKinematicsComponent* Result =  NewObject< UStalkerKinematicsComponent>();
 	Result->SetFlags(EObjectFlags::RF_Transient);
 	Result->Initilize(KinematicsData);
 	return Result;
 }
 
-class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(const char* InName, bool NeedRefence)
+class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(const char* InName, bool NeedRefence)
 {
 	UStalkerKinematicsData* KinematicsData = GetKinematics(InName);
 	if (IsValid(KinematicsData))
@@ -382,30 +377,30 @@ class UStalkerKinematicsComponent* UStalkerResourcesManager::CreateKinematics(co
 }
 
 
-void UStalkerResourcesManager::Destroy(UStalkerKinematicsComponent* Mesh)
+void FStalkerResourcesManager::Destroy(UStalkerKinematicsComponent* Mesh)
 {
 	Meshes.Remove(Mesh);
 	Mesh->MarkAsGarbage();
 }
 
 
-void UStalkerResourcesManager::RegisterKinematics(class UStalkerKinematicsComponent* Mesh)
+void FStalkerResourcesManager::RegisterKinematics(class UStalkerKinematicsComponent* Mesh)
 {
-	Mesh->Rename(nullptr,GStalkerEngineManager->GetResourcesManager());
+	Mesh->Rename(nullptr,GetTransientPackage());
 	Meshes.Add(Mesh);
 }
 
-void UStalkerResourcesManager::UnregisterKinematics(class UStalkerKinematicsComponent* Mesh)
+void FStalkerResourcesManager::UnregisterKinematics(class UStalkerKinematicsComponent* Mesh)
 {
 	Meshes.Remove(Mesh);
 }
 
-void UStalkerResourcesManager::Refresh()
+void FStalkerResourcesManager::Refresh()
 {
 	GameSpawn = nullptr;
 }
 
-FString UStalkerResourcesManager::GetGamePath()
+FString FStalkerResourcesManager::GetGamePath()
 {
 	switch (xrGameManager::GetGame())
 	{
@@ -418,23 +413,24 @@ FString UStalkerResourcesManager::GetGamePath()
 	}
 }
 
-UStalkerGameSpawn* UStalkerResourcesManager::GetGameSpawn()
+UStalkerGameSpawn* FStalkerResourcesManager::GetGameSpawn()
 {
 	if (!GameSpawn)
 	{
-		const FString ParentPackageName = GetGamePath() / TEXT("GlobalSpawn");
+		const FString ParentPackageName = GetGamePath() /TEXT("Spawns") / TEXT("GlobalSpawn");
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		GameSpawn = LoadObject<UStalkerGameSpawn>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
 ;	return GameSpawn;
 }
 
-UStalkerGameSpawn* UStalkerResourcesManager::GetOrCreateGameSpawn()
+#if WITH_EDITORONLY_DATA
+UStalkerGameSpawn* FStalkerResourcesManager::GetOrCreateGameSpawn()
 {
 	GetGameSpawn();
 	auto CreatePackageSpawn = [this]()
 	{
-		FString PackageName = GetGamePath() / TEXT("GlobalSpawn");
+		FString PackageName = GetGamePath() /TEXT("Spawns") / TEXT("GlobalSpawn");
 		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
 		return BuiltDataPackage;
 	};
@@ -453,3 +449,44 @@ UStalkerGameSpawn* UStalkerResourcesManager::GetOrCreateGameSpawn()
 	}
 	return GameSpawn;
 }
+
+
+#endif
+void FStalkerResourcesManager::AddReferencedObjects(FReferenceCollector& Collector)
+{
+	for (auto& [Key, Value] : BrushesMaterials)
+	{
+		Collector.AddReferencedObject(Key);
+		Collector.AddReferencedObject(Value);
+	}
+	for (auto& [Key, Value] : BrushesTextures)
+	{
+		Collector.AddReferencedObject(Value);
+	}
+	for (auto& [Key, Value] : Fonts)
+	{
+		Collector.AddReferencedObject(Value);
+	}
+	for (auto&  Value : Meshes)
+	{
+		Collector.AddReferencedObject(Value);
+	}
+	Collector.AddReferencedObject(GameSpawn);
+}
+
+FString FStalkerResourcesManager::GetReferencerName() const
+{
+	return TEXT("Stalker Resources Manager");
+}
+
+FStalkerResourcesManager::FStalkerResourcesManager()
+{
+
+}
+
+FStalkerResourcesManager::~FStalkerResourcesManager()
+{
+
+}
+
+

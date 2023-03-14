@@ -114,6 +114,12 @@ void UStalkerGameViewportClient::ReceivedFocus(FViewport* InViewport)
 	}
 }
 
+void UStalkerGameViewportClient::BeginDestroy()
+{
+	check(GStalkerEngineManager->GetGameViewportClient()!=this);
+	Super::BeginDestroy();
+}
+
 void UStalkerGameViewportClient::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -143,8 +149,8 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 	{
 		SCOPE_CYCLE_COUNTER(STAT_XRayEngineFrame);
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
-		g_Engine->OnFrame();
 		Device->dwFrame++;
+		g_Engine->OnFrame();
 		GXRaySkeletonMeshManager->Flush();
 		{
 			SCOPE_CYCLE_COUNTER(STAT_XRayEngineMTFrame);
