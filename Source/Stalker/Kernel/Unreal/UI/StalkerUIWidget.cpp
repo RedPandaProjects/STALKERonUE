@@ -44,7 +44,6 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 			XRayUIRender::Text& TextItem = GXRayUIRender.Texts[Item.TextID];
 			FSlateFontInfo FontInfo = TextItem.Font->GetLegacySlateFontInfo();
 			FontInfo.OutlineSettings.OutlineColor = TextItem.Color.ReinterpretAsLinear();
-			FontInfo.OutlineSettings.OutlineSize = 0.5f;
 
 			FontInfo.Size = TextItem.FontSize;
 			if (Item.ScissorsID >= 0)
@@ -59,7 +58,7 @@ int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& All
 				FSlateClippingZone Clip(ClipRect);
 				OutDrawElements.PushClip(Clip);
 			}
-			FSlateDrawElement::MakeText(OutDrawElements, LayerId++, AllottedGeometry.ToPaintGeometry(FVector2D(TextItem.Position.X, TextItem.Position.Y - (FontInfo.Size * 0.5f)) / TextItem.Scale, AllottedGeometry.GetLocalSize(), FMath::Sqrt(MultiplerSize.X * MultiplerSize.Y) * TextItem.Scale), TextItem.Data, FontInfo, ESlateDrawEffect::NoGamma, TextItem.Color.ReinterpretAsLinear());
+			FSlateDrawElement::MakeText(OutDrawElements, LayerId++, AllottedGeometry.ToPaintGeometry(FVector2D(TextItem.Position.X, TextItem.Position.Y ) / TextItem.Scale, AllottedGeometry.GetLocalSize(), FMath::Sqrt(MultiplerSize.X * MultiplerSize.Y) * TextItem.Scale), TextItem.Data, FontInfo, ESlateDrawEffect::NoGamma, TextItem.Color.ReinterpretAsLinear());
 			if (Item.ScissorsID >= 0)
 			{
 				OutDrawElements.PopClip();
