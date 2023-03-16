@@ -471,7 +471,7 @@ void FStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessa
 	if (!IsValid(CForm) || CForm->Triangles.IsEmpty())
 	{
 		Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("WORLD INVALID!")));
-		Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("* CFROM IS EMPTY!")));
+		Out.Add(FCoreDelegates::EOnScreenMessageSeverity::Error, FText::FromString(TEXT("* CFORM IS EMPTY!")));
 		return;
 	}
 
