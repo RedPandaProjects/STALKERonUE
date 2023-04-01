@@ -1,6 +1,6 @@
 ![Open for everyone](Resources/Media/GitLogo.png)
 
-Stalker2UE [![Discord](https://img.shields.io/discord/530968529311367178?label=discord)](https://discord.gg/AyyCFs7)
+Stalker2UE [![Discord](https://img.shields.io/discord/530968529311367178?label=discord)](https://discord.gg/dbBdK2GxKf)
 ==========================
 A non-commercial project aiming to port the original S.T.A.LK.E.R. game series to Unreal Engine 5 with the intention of being mod-friendly and allowing to port existing mods to a modern engine.
 
