@@ -5,7 +5,11 @@
 #include "../../../StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Entities/Kinematics/StalkerKinematicsComponent.h"
+#include "Entities/Levels/Decal/StalkerDecal.h"
 #include "Entities/Levels/Light/StalkerLight.h"
+#include "Kernel/StalkerMath.h"
+#include "Shader/XRayUIShader.h"
+#include "XrRender/Public/WallMarkArray.h"
 XRayRenderInterface GRenderInterface;
 
 XRayRenderInterface::XRayRenderInterface()
@@ -119,14 +123,32 @@ void XRayRenderInterface::add_Geometry(IRenderVisual* V)
 
 void XRayRenderInterface::add_StaticWallmark(const wm_shader& S, const Fvector& P, float s, CDB::TRI* T, Fvector* V)
 {
+	VERIFY2(_valid(P) && _valid(s) && T && verts && (s > EPS_L), "Invalid static wallmark params");
+
+	XRayUIShader &Shader = (XRayUIShader &)(*S);
+	if (!Shader.Material) return;
+
+	Fvector N;
+    N.mknormal(V[T->verts[0]], V[T->verts[1]], V[T->verts[2]]);
+
+	AStalkerDecal *Decal = GStalkerEngineManager->GetResourcesManager()->CreateDecal();
+	Decal->SetDecalData(
+		static_cast<FVector>(StalkerMath::XRayLocationToUnreal(P)), 
+		StalkerMath::XRaySizeToUnreal(s),
+		static_cast<FVector>(StalkerMath::XRayNormalToUnreal(N)),
+		Shader.Material->GetMaterial());
 }
 
 void XRayRenderInterface::add_StaticWallmark(IWallMarkArray* pArray, const Fvector& P, float s, CDB::TRI* T, Fvector* V)
 {
+	wm_shader pShader = pArray->GenerateWallmark();
+    if (pShader)
+        add_StaticWallmark(pShader, P, s, T, V);
 }
 
 void XRayRenderInterface::add_SkeletonWallmark(const Fmatrix* xf, IKinematics* obj, IWallMarkArray* pArray, const Fvector& start, const Fvector& dir, float size)
 {
+	// TODO: skeleton wallmarks
 }
 
 void XRayRenderInterface::clear_static_wallmarks()

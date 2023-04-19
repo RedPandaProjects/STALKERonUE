@@ -1,19 +1,9 @@
 #pragma once
-#include "XrRender/Public/UIShader.h"
+
+#include "Kernel/XRay/Render/Interface/Shader/XRayUIShader.h"
+
 #include "XrRender/Public/UIRender.h"
-class XRayUIShader :public IUIShader
-{
-public:
-	XRayUIShader();
-	~XRayUIShader() override;
-	 void Copy(IUIShader& _in) override;
-	 void create(LPCSTR sh, LPCSTR tex = 0) override;
-	 bool inited() override;
-	 void destroy() override;
-	 FName MaterialName;
-	 FName TextureName;
-	 TObjectPtr<USlateBrushAsset> Brush;
-};
+
 class XRayUIRender:public IUIRender
 {
 public:

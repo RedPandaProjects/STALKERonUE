@@ -2,52 +2,6 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "Kernel/StalkerEngineManager.h"
 
-XRayUIShader::XRayUIShader()
-{
-	Brush = nullptr;
-}
-
-XRayUIShader::~XRayUIShader()
-{
-	destroy();
-}
-
-void XRayUIShader::Copy(IUIShader& _in)
-{
-	destroy();
-	MaterialName = static_cast<XRayUIShader&>(_in).MaterialName;
-	TextureName = static_cast<XRayUIShader&>(_in).TextureName; 
-	if (static_cast<XRayUIShader&>(_in).Brush)
-	{
-		Brush = GStalkerEngineManager->GetResourcesManager()->Copy(static_cast<XRayUIShader&>(_in).Brush);
-	}
-}
-
-void XRayUIShader::create(LPCSTR sh, LPCSTR tex)
-{
-	MaterialName = sh;
-	check(MaterialName != NAME_None);
-	TextureName = tex? FName(tex) : NAME_None;
-	if (MaterialName != NAME_None)
-	{
-		Brush = GStalkerEngineManager->GetResourcesManager()->GetBrush(MaterialName, TextureName);
-	}
-}
-
-bool XRayUIShader::inited()
-{
-	return !!Brush;
-}
-
-void XRayUIShader::destroy()
-{
-	if (Brush)
-	{
-		GStalkerEngineManager->GetResourcesManager()->Free(Brush);
-		Brush = nullptr;
-	}
-}
-
 XRayUIRender::XRayUIRender()
 {
 	CurrentScissor = -1;
@@ -91,15 +45,15 @@ void XRayUIRender::SetScissor(Irect* rect)
 void XRayUIRender::GetActiveTextureResolution(Fvector2& res)
 {
 	if(!CurrentShader.Brush)return;
-	UTexture**Texture =  GStalkerEngineManager->GetResourcesManager()->BrushesTextures .Find(CurrentShader.Brush);
+	UTexture*Texture =  GStalkerEngineManager->GetResourcesManager()->FindBrushTexture(CurrentShader.Brush);
 	if (!Texture)
 	{
 		res.x =32;
 		res.y =32;
 		return;
 	}
-	res.x = (*Texture)->GetSurfaceWidth();
-	res.y =  (*Texture)->GetSurfaceHeight();
+	res.x = Texture->GetSurfaceWidth();
+	res.y =  Texture->GetSurfaceHeight();
 }
 
 void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)

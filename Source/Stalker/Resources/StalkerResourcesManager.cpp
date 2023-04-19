@@ -3,34 +3,31 @@
 #include "../Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "SkeletonMesh/StalkerKinematicsData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
+#include "../Entities/Levels/Decal/StalkerDecal.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
 #include "Spawn/StalkerGameSpawn.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
 THIRD_PARTY_INCLUDES_END
 
-
-USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName InNameTexture)
-{
+FStalkerResourcesManager::ShaderMaterialInfo* FStalkerResourcesManager::GetShaderMaterial(FName InNameMaterial, FName InNameTexture) {
+	
 	bool NeedReload = false;
 	check(InNameMaterial!=NAME_None);
-	if (Brushes.Find(InNameMaterial))
-	{
-		if (Brushes[InNameMaterial].Find(InNameTexture))
-		{
 
-			
-			USlateBrushAsset*  Result = Brushes[InNameMaterial][InNameTexture];
-#if WITH_EDITORONLY_DATA
-			if (BrushesNeedReloading.Find(Result))
-			{
+	ShaderMaterialInfo *materialInfo = nullptr;
+
+	if (auto *texturesMap = ShaderMaterials.Find(InNameMaterial))
+	{
+		ShaderMaterialInfo **ppMaterialInfo = texturesMap->Find(InNameTexture);
+		if (ppMaterialInfo)
+		{
+			materialInfo = *ppMaterialInfo;
+			if (materialInfo->NeedsReloading) {
 				NeedReload = true;
-			}
-			else
-#endif
-			{
-				BrushesCounter[Result]++;
-				return Result;
+			} else {
+				materialInfo->RefCount++;
+				return materialInfo;
 			}
 		}
 	}
@@ -40,7 +37,7 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 
 	FString	NameMaterial = FPaths::GetBaseFilename(InNameMaterial.ToString(), false);
 	NameMaterial.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	UE_LOG(LogStalker, Log, TEXT("Create slate brush:[%s]%s"), *NameMaterial,*NameTexture);
+	UE_LOG(LogStalker, Log, TEXT("Load shader material:[%s]%s"), *NameMaterial,*NameTexture);
 
 	UMaterialInterface* ParentMaterial = nullptr;
 
@@ -77,7 +74,7 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 	}
 	if (!IsValid(ParentMaterial))
 	{
-		UE_LOG(LogStalker, Warning, TEXT("Can't found ui material:%s"), *NameMaterial);
+		UE_LOG(LogStalker, Warning, TEXT("Can't found shader material:%s"), *NameMaterial);
 		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/UIUnkown.UIUnkown"));
 		check(IsValid(UnkownMaterial));
 		ParentMaterial = UnkownMaterial;
@@ -131,36 +128,100 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 	{
 		Material->SetTextureParameterValue(TEXT("Base"), Texture);
 	}
+	
 	if (NeedReload)
 	{
-		USlateBrushAsset* NewSlateBrushAsset = Brushes[InNameMaterial][InNameTexture];
+		materialInfo->Material = Material;
+		materialInfo->NeedsReloading = false;
+		materialInfo->RefCount++;
+		return materialInfo;
+	}
+	materialInfo = new ShaderMaterialInfo;
+	materialInfo->Material = Material;
+	materialInfo->Texture = Texture;
+	materialInfo->MaterialName = InNameMaterial;
+	materialInfo->TextureName = InNameTexture;
+	ShaderMaterials.FindOrAdd(InNameMaterial).Add(InNameTexture, materialInfo);
+	return materialInfo;
+}
+
+void FStalkerResourcesManager::Free(ShaderMaterialInfo* MaterialInfo) {
+	if (--MaterialInfo->RefCount == 0)
+	{
+		UE_LOG(LogStalker, Log, TEXT("Release shader material:[%s]%s"), *MaterialInfo->MaterialName.ToString(), *MaterialInfo->TextureName.ToString());
+
+		auto *map = ShaderMaterials.Find(MaterialInfo->MaterialName);
+		check(map);
+		if (map) {
+			map->Remove(MaterialInfo->TextureName);
+		}
+		if (map->IsEmpty()) {
+			ShaderMaterials.Remove(MaterialInfo->MaterialName);
+		}
+		delete MaterialInfo;
+	}
+}
+
+FStalkerResourcesManager::ShaderMaterialInfo* FStalkerResourcesManager::Copy(ShaderMaterialInfo* MaterialInfo) {
+	MaterialInfo->RefCount++;
+	return MaterialInfo;
+}
+
+UTexture* FStalkerResourcesManager::FindBrushTexture(USlateBrushAsset* Brush) {
+	if (auto *ppBrushInfo = BrushInfoRefs.Find(Brush)) {
+		if (auto *material = (*ppBrushInfo)->Material) {
+			return material->Texture;
+		}
+	}
+	return nullptr;
+}
+
+USlateBrushAsset* FStalkerResourcesManager::GetBrush(ShaderMaterialInfo *Material)
+{
+	bool NeedReload = false;
+	check(Material != nullptr);
+
+	BrushInfo *pBrushInfo = nullptr;
+	BrushInfo **ppBrushInfo = Brushes.Find(Material);
+
+	if (ppBrushInfo)
+	{
+		pBrushInfo = *ppBrushInfo;
+#if WITH_EDITORONLY_DATA
+		if (pBrushInfo->NeedsReloading)
+		{
+			NeedReload = true;
+		}
+		else
+#endif
+		{
+			pBrushInfo->RefCount++;
+			return pBrushInfo->Brush;
+		}
+	}
+	if (NeedReload && pBrushInfo)
+	{
+		USlateBrushAsset* NewSlateBrushAsset = pBrushInfo->Brush;
 		NewSlateBrushAsset->SetFlags(RF_Transient);
 		FVector2D TextureSize = FVector2D(32, 32);
-		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material, TextureSize);
-		BrushesMaterials.Add(NewSlateBrushAsset, Material);
-		if (InNameTexture != NAME_None)
-		{
-			BrushesTextures.Add(NewSlateBrushAsset, Texture);
-		}
+		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material->GetMaterial(), TextureSize);
 #if WITH_EDITORONLY_DATA
-		BrushesNeedReloading.Remove(NewSlateBrushAsset);
+		pBrushInfo->NeedsReloading = false;
 #endif
-		BrushesCounter[NewSlateBrushAsset]++;
+		pBrushInfo->RefCount++;
 		return NewSlateBrushAsset;
 	}
 	USlateBrushAsset* NewSlateBrushAsset = NewObject<USlateBrushAsset>();
 	NewSlateBrushAsset->SetFlags(RF_Transient);
 	FVector2D TextureSize = FVector2D(32,32);
-	NewSlateBrushAsset->Brush =  FSlateMaterialBrush(*Material, TextureSize);
-	Brushes.FindOrAdd(InNameMaterial).Add(InNameTexture, NewSlateBrushAsset);
-	BrushesCounter.Add(NewSlateBrushAsset,1);
-	BrushesMaterials.Add(NewSlateBrushAsset, Material);
-	if (InNameTexture != NAME_None)
-	{
-		BrushesTextures.Add(NewSlateBrushAsset, Texture);
-	}
-	BrushInfo Info ={ InNameMaterial ,InNameTexture };
-	BrushesInfo.Add(NewSlateBrushAsset, Info);
+	NewSlateBrushAsset->Brush =  FSlateMaterialBrush(*Material->GetMaterial(), TextureSize);
+
+	pBrushInfo = new BrushInfo;
+	pBrushInfo->Brush = NewSlateBrushAsset;
+	pBrushInfo->Material = Material;
+
+	Brushes.Add(Material, pBrushInfo);
+	BrushInfoRefs.Add(pBrushInfo->Brush, pBrushInfo);
 	return NewSlateBrushAsset;
 }
 
@@ -196,31 +257,22 @@ UFont* FStalkerResourcesManager::GetFont(FName Name)
 
 void FStalkerResourcesManager::Free(USlateBrushAsset* Brush)
 {
-	int32*Counter = BrushesCounter.Find(Brush);
-	check(Counter);
-	if (--(*Counter) == 0)
+	auto *BrushInfo = BrushInfoRefs.Find(Brush);
+	check(BrushInfo);
+	if (--(*BrushInfo)->RefCount == 0)
 	{
-		UE_LOG(LogStalker, Log, TEXT("Destroy slate brush:[%s]%s"), *BrushesInfo[Brush].Matrrial.ToString(), *BrushesInfo[Brush].Texture.ToString());
-		BrushesCounter.Remove(Brush);
-#if WITH_EDITORONLY_DATA
-		BrushesNeedReloading.Remove(Brush);
-#endif
-		BrushesMaterials.Remove(Brush);
-		BrushesTextures.Remove(Brush);
-		Brushes[BrushesInfo[Brush].Matrrial].Remove(BrushesInfo[Brush].Texture);
-		if (Brushes[BrushesInfo[Brush].Matrrial].Num() == 0)
-		{
-			Brushes.Remove(BrushesInfo[Brush].Matrrial);
-		}
-		BrushesInfo.Remove(Brush);
+		// UE_LOG(LogStalker, Log, TEXT("Destroy slate brush:[%s]%s"), *BrushesInfo[Brush].Matrrial.ToString(), *BrushesInfo[Brush].Texture.ToString());
+		Brushes.Remove((*BrushInfo)->Material);
+		BrushInfoRefs.Remove(Brush);
+		delete *BrushInfo;
 	}
 }
 
 USlateBrushAsset* FStalkerResourcesManager::Copy(USlateBrushAsset* Brush)
 {
-	int32* Counter = BrushesCounter.Find(Brush);
-	check(Counter);
-	(*Counter)++;
+	auto *info = BrushInfoRefs.Find(Brush);
+	check(info);
+	(*info)->RefCount++;
 	return Brush;
 }
 
@@ -232,9 +284,16 @@ void FStalkerResourcesManager::CheckLeak()
 void FStalkerResourcesManager::Reload()
 {
 #if WITH_EDITORONLY_DATA
-	for (auto& [Key, Data] : BrushesCounter)
+	for (auto& [Key, Data] : Brushes)
 	{
-		BrushesNeedReloading.FindOrAdd(Key);
+		Data->NeedsReloading = true;
+	}
+	for (auto& [Key, Data] : ShaderMaterials)
+	{
+		for (auto& [Key2, Data2] : Data)
+		{
+			Data2->NeedsReloading = true;
+		}
 	}
 #endif
 }
@@ -246,6 +305,15 @@ class AStalkerLight* FStalkerResourcesManager::CreateLight()
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerLight* Result = GWorld->SpawnActor< AStalkerLight>(SpawnParameters);
 	Result->Lock();
+	return Result;
+}
+
+
+class AStalkerDecal* FStalkerResourcesManager::CreateDecal()
+{
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+	AStalkerDecal* Result = GWorld->SpawnActor<AStalkerDecal>(SpawnParameters);
 	return Result;
 }
 
@@ -454,14 +522,15 @@ UStalkerGameSpawn* FStalkerResourcesManager::GetOrCreateGameSpawn()
 #endif
 void FStalkerResourcesManager::AddReferencedObjects(FReferenceCollector& Collector)
 {
-	for (auto& [Key, Value] : BrushesMaterials)
+	for (auto& [Key, Value] : Brushes)
 	{
-		Collector.AddReferencedObject(Key);
-		Collector.AddReferencedObject(Value);
+		Collector.AddReferencedObject(Value->Brush);
 	}
-	for (auto& [Key, Value] : BrushesTextures)
-	{
-		Collector.AddReferencedObject(Value);
+	for (auto& [Key, Value] : ShaderMaterials) {
+		for (auto &[Key2, Value2] : Value) {
+			Collector.AddReferencedObject(Value2->Material);
+			Collector.AddReferencedObject(Value2->Texture);
+		}
 	}
 	for (auto& [Key, Value] : Fonts)
 	{

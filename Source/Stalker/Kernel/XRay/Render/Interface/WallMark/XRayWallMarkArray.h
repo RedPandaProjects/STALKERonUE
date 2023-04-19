@@ -10,4 +10,8 @@ public:
 	virtual void	clear();
 	virtual bool	empty() ;
 	virtual wm_shader GenerateWallmark();
+	
+    using ShaderVec = xr_vector<wm_shader>;
+
+    ShaderVec m_CollideMarks;
 };

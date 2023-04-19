@@ -19,6 +19,10 @@ namespace StalkerMath
 	{
 		return FVector3f(-Location.x * 100, Location.z * 100, Location.y * 100);
 	}
+	inline float XRaySizeToUnreal(float Size)
+	{
+		return Size * 100;
+	}
 	inline FVector3f XRayNormalToUnreal(Fvector Location)
 	{
 		return FVector3f(-Location.x , Location.z , Location.y );
