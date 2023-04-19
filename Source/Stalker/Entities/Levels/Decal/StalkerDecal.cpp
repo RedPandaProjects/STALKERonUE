@@ -14,8 +14,10 @@ void AStalkerDecal::SetDecalData
 {
 	Decal->SetDecalMaterial(Material);
 	Decal->SetRelativeLocation(Location);
+	FRotator Rotator = FRotationMatrix::MakeFromX(Normal).Rotator();
+	Rotator.Roll += 90.f + FMath::FRandRange(-20.0f, 20.0f);
+	Decal->SetRelativeRotation(Rotator);
 	Decal->DecalSize = FVector{Size};
-	// TODO: set rotation according to normal
 }
 
 // Called when the game starts or when spawned

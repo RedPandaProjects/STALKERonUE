@@ -5,6 +5,7 @@
 #include "../Entities/Levels/Light/StalkerLight.h"
 #include "../Entities/Levels/Decal/StalkerDecal.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
+#include "Entities/Player/Character/StalkerPlayerCharacter.h"
 #include "Spawn/StalkerGameSpawn.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
@@ -308,6 +309,12 @@ class AStalkerLight* FStalkerResourcesManager::CreateLight()
 	return Result;
 }
 
+void FStalkerResourcesManager::Desotry(class IRender_Light* InLight)
+{
+	AStalkerLight*Light =  static_cast<AStalkerLight*>(InLight);
+	Light->Unlock();
+	Light->Destroy();
+}
 
 class AStalkerDecal* FStalkerResourcesManager::CreateDecal()
 {
@@ -317,11 +324,12 @@ class AStalkerDecal* FStalkerResourcesManager::CreateDecal()
 	return Result;
 }
 
-void FStalkerResourcesManager::Desotry(class IRender_Light* InLight)
-{
-	AStalkerLight*Light =  static_cast<AStalkerLight*>(InLight);
-	Light->Unlock();
-	Light->Destroy();
+void FStalkerResourcesManager::ClearDecals() {
+	TArray<AActor *> ActorArray;
+	UGameplayStatics::GetAllActorsOfClass(static_cast<UWorld *>(GWorld), AStalkerDecal::StaticClass(), ActorArray);
+	for (AActor *Actor : ActorArray) {
+		Actor->Destroy();
+	}
 }
 
 class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char* InName)

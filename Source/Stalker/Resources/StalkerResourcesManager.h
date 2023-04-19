@@ -15,10 +15,10 @@ public:
 
 	public:
 		ShaderMaterialInfo() :
-			RefCount(1),
-			NeedsReloading(false),
 			Texture(nullptr),
-			Material(nullptr) {}
+			Material(nullptr),
+			RefCount(1),
+			NeedsReloading(false) {}
 
 		auto *GetMaterial() const { return Material; }
 		auto GetTextureName() const { return TextureName; }
@@ -39,8 +39,9 @@ public:
 	void												CheckLeak					();
 	void												Reload						();
 	class AStalkerLight*								CreateLight					();
-	class AStalkerDecal*								CreateDecal					();
 	void												Desotry						(class IRender_Light*Light);
+	class AStalkerDecal*								CreateDecal					();
+	void												ClearDecals();
 	class UStalkerKinematicsData*						GetKinematics				(const char* Name);
 	class UStalkerKinematicsComponent*					CreateKinematics			(const char*Name, bool NeedRefence = false);
 	class UStalkerKinematicsComponent*					CreateKinematics			(class UStalkerKinematicsData* KinematicsData);
@@ -68,10 +69,10 @@ private:
 		bool NeedsReloading;
 
 		BrushInfo() :
-			RefCount(1),
-			NeedsReloading(false),
 			Material(nullptr),
-			Brush(nullptr) {}
+			Brush(nullptr),
+			RefCount(1),
+			NeedsReloading(false) {}
 	};
 	TMap<ShaderMaterialInfo *, BrushInfo*>				Brushes;
 	TMap<USlateBrushAsset *, BrushInfo *>				BrushInfoRefs;

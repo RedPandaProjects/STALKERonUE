@@ -7,7 +7,6 @@
 #include "Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "Entities/Levels/Decal/StalkerDecal.h"
 #include "Entities/Levels/Light/StalkerLight.h"
-#include "Kernel/StalkerMath.h"
 #include "Shader/XRayUIShader.h"
 #include "XrRender/Public/WallMarkArray.h"
 XRayRenderInterface GRenderInterface;
@@ -153,6 +152,7 @@ void XRayRenderInterface::add_SkeletonWallmark(const Fmatrix* xf, IKinematics* o
 
 void XRayRenderInterface::clear_static_wallmarks()
 {
+	GStalkerEngineManager->GetResourcesManager()->ClearDecals();
 }
 
 void XRayRenderInterface::flush()
