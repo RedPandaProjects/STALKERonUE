@@ -15,6 +15,7 @@ public:
 	void											ImportUITextures			();
 	void											ImportMeshes				();
 	void											ImportPhysicalMaterials		();
+	void											ImportParticles				();
 
 	UPROPERTY(Transient)
 	TArray< USkeleton*>								Skeletons;

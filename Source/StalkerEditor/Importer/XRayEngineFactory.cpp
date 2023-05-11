@@ -1068,6 +1068,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	FAssetRegistryModule::AssetCreated(NewMaterial);
 	ObjectCreated.Add(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
+	if(GameMaterial.size())
 	{
 		FString NameGameMtl = GameMaterial.c_str();
 		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1097,7 +1098,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 				SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
 				SwitchParameter.Value = true;
 				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 			}
 
 			{
@@ -1105,7 +1106,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 				SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
 				SwitchParameter.Value = THM._Format().bump_mode == STextureParams::tbmUseParallax;
 				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 			}
 
 			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
@@ -1137,7 +1138,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 				SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
 				SwitchParameter.Value = true;
 				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 				if (DetailTexture)
 				{
 					NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
@@ -1147,7 +1148,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
 					SwitchParameter.Value = true;
 					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
 
 					if (NormalMapTextureDetail)
@@ -1219,6 +1220,8 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	FAssetRegistryModule::AssetCreated(NewMaterial);
 	ObjectCreated.Add(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
+
+	if(GameMaterial.size())
 	{
 		FString NameGameMtl = GameMaterial.c_str();
 		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1247,7 +1250,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 			SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 			if (DetailTexture)
 			{
 				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
@@ -1260,7 +1263,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
 					SwitchParameter.Value = true;
 					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 
 
 
@@ -1295,11 +1298,11 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 			SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.EditorOnly.StaticSwitchParameters.Add(SwitchParameter);
+			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 
 			ImportBump2D(Bump.Key.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
 			if (NormalMapTexture)
@@ -1428,6 +1431,7 @@ UObject* XRayEngineFactory::ImportPhysicsMaterials(const FString& FileName)
 	Library.Unload();
 	return ObjectCreated.Num()? ObjectCreated.Last(): nullptr;
 }
+
 
 
 UStalkerPhysicalMaterial* XRayEngineFactory::ImportPhysicsMaterial(class SGameMtl*Materials)

@@ -20,6 +20,7 @@
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypeCustomization.h"
 ///////////////////////////////////////////////////////////////////////////////////////////
 #include "UI/Commands/StalkerEditorCommands.h"
+#include "Importer/XRayParticlesFactory.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XRayEngineInterface.h"
 #include "Importer/XRayEngineFactory.h"
@@ -74,6 +75,7 @@ void UStalkerEditorManager::Initialized()
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportUITextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportUITextures));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportMeshes, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportMeshes));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportPhysicalMaterials, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportPhysicalMaterials));
+		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportParticles, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportParticles));
 	}
 	
 }
@@ -194,6 +196,12 @@ void UStalkerEditorManager::ImportPhysicalMaterials()
 	FS.update_path(GameMaterialFilePath, "$game_data$", "gamemtl.xr");
 	XRayEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
 	EngineFactory.ImportPhysicsMaterials(ANSI_TO_TCHAR(GameMaterialFilePath));
+}
+
+void UStalkerEditorManager::ImportParticles()
+{
+	XRayParticlesFactory Factory;
+	Factory.ImportParticles();
 }
 
 void UStalkerEditorManager::OnPreBeginPIE(const bool)

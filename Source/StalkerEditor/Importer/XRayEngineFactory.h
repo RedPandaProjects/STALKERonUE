@@ -6,7 +6,9 @@ class XRayEngineFactory
 {
 public:
 									XRayEngineFactory			(UObject* InParentPackage, EObjectFlags InFlags);
-									~XRayEngineFactory			();
+									~XRayEngineFactory			();								
+	inline UObject*					GetCreatedObject			() { if (ObjectCreated.Num())return ObjectCreated[0]; return nullptr; }
+
 	class UStalkerKinematicsData*	ImportOGF					(const FString& FileName);
 	UObject*						ImportObject				(const FString& FileName, bool DivideSubObject = false);
 	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
@@ -17,12 +19,13 @@ public:
 	UMaterialInterface*				ImportSurfaceSOC			(const FString& Path, shared_str ShaderName, shared_str TextureName,  shared_str GameMaterial);
 	UTexture2D*						ImportTextureTHM			(const FString& FileName);
 	UObject*						ImportPhysicsMaterials		(const FString& FileName);
-	class UStalkerPhysicalMaterial* ImportPhysicsMaterial (class SGameMtl*Materials);
+	class UStalkerPhysicalMaterial* ImportPhysicsMaterial		(class SGameMtl*Materials);
 	UTexture2D*						ImportTextureDDS			(const FString& FileName);
 	UTexture2D*						ImportTexture				(const FString& FileName, bool IsUI = false);
 	UTexture2D*						ImportTexture				(const FString& FileName,const FString& PacketName);
 	void							ImportBump2D				(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Specular, TObjectPtr<UTexture2D>& Height);
-	inline UObject*					GetCreatedObject			() { if (ObjectCreated.Num())return ObjectCreated[0]; return nullptr; }
+	
+
 private:
 	int32							FindBoneIDOrAdd				(TArray<CBone*>& InBones, CBone* InBone);
 	int32							FindBoneIDOrAdd				(TArray<uint32>& OutBones, TArray<TSharedPtr<CBoneData>>& InBones, CBoneData* InBone);

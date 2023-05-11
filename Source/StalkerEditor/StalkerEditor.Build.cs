@@ -58,7 +58,11 @@ public class StalkerEditor : ModuleRules
                 "BlueprintGraph",
                 "EditorFramework",
                 "PlacementMode",
-                "MessageLog"
+                "MessageLog",
+                "Niagara", 
+                "NiagaraCore",
+                "NiagaraEditor",
+                "Sequencer"
             }
             );
     }

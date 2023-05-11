@@ -27,6 +27,13 @@ void StalkerToolsMenu::Initialize()
 			FText::FromString(TEXT("Import Meshes")),
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
+
+		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportParticles,
+			FText::FromString(TEXT("Import Particles")),
+			FText::FromString(TEXT("Import Particles")),
+			FSlateIcon()
+		).SetCommandList(GStalkerEditorManager->UICommandList);
+
 	}
 	else
 	{

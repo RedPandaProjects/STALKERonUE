@@ -17,6 +17,7 @@ void StalkerEditorCommands::RegisterCommands()
 	UI_COMMAND(ImportUITextures, "ImportUITextures", "Import UI Textures", EUserInterfaceActionType::Button, FInputChord());
 	UI_COMMAND(ImportMeshes, "ImportMeshes", "Import Meshes", EUserInterfaceActionType::Button, FInputChord());
 	UI_COMMAND(ImportPhysicalMaterials, "ImportPhysicalMaterials", "Import Physical Materials", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(ImportParticles, "ImportParticles", "Import Particles", EUserInterfaceActionType::Button, FInputChord());
 }
 
 #undef  LOCTEXT_NAMESPACE 
