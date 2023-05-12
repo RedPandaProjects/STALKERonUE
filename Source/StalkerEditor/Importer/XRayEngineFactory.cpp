@@ -1953,7 +1953,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	const bool bShouldTransact = false;
 	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "XRayEngineFactory Animation Data"), bShouldTransact);
 	Controller.ResetModel(bShouldTransact);
-
+	Controller.InitializeModel();
 	// Bake the animation for each frame.
 	// An alternative route would be to convert the time samples into TransformCurves, add them to UAnimSequence::RawCurveData,
 	// and then call UAnimSequence::BakeTrackCurvesToRawAnimation. Doing it this way provides a few benefits though: The main one is that the way with which
@@ -2168,6 +2168,7 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 	const bool bShouldTransact = false;
 	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "XRayEngineFactory Animation Data"), bShouldTransact);
 	Controller.ResetModel(bShouldTransact);
+	Controller.InitializeModel();
 
 	// Bake the animation for each frame.
 	// An alternative route would be to convert the time samples into TransformCurves, add them to UAnimSequence::RawCurveData,
