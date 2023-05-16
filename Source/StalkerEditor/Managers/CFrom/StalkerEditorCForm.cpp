@@ -122,31 +122,49 @@ void UStalkerEditorCForm::Build()
 				MeshColisionData.MaterialIndices.Reset();
 				StaticMeshComponent->GetStaticMesh()->GetPhysicsTriMeshData(&MeshColisionData, false);
 
-				int32 StartVertexIdx = CForm->Vertices.Num();
-
-				for (FVector3f& InVertex : MeshColisionData.Vertices)
+			
+				//UInstancedStaticMeshComponent
+			
+				auto BuildStaticMesh = [this,&MeshColisionData,StaticMeshComponent,CForm,DefaultID](const FTransform&Transform)
 				{
-					FVector3f Vertex = FVector3f(StaticMeshComponent->GetComponentTransform().TransformPosition(FVector(InVertex)));
-					CForm->Vertices.Add(Vertex);
-				}
+					int32 StartVertexIdx = CForm->Vertices.Num();
+					for (FVector3f& InVertex : MeshColisionData.Vertices)
+					{
+						FVector3f Vertex = FVector3f(Transform.TransformPosition(FVector(InVertex)));
+						CForm->AABB +=	Vertex;
+						CForm->Vertices.Add(Vertex);
+					}
 
-				for (int32 i = 0; i < MeshColisionData.Indices.Num(); ++i)
+					for (int32 i = 0; i < MeshColisionData.Indices.Num(); ++i)
+					{
+						UMaterialInterface* Material = StaticMeshComponent->GetMaterial(MeshColisionData.MaterialIndices[i]);
+
+						UPhysicalMaterial* PhysMaterial = Material ? Material->GetPhysicalMaterial() : nullptr;
+						int32* IndexMaterial = PhysicalMaterial2ID.Find(Cast<UStalkerPhysicalMaterial>(PhysMaterial));
+						FStalkerCFormTriangle Triangle;
+						Triangle.MaterialIndex = IndexMaterial ? static_cast<uint32>(*IndexMaterial) : DefaultID;
+
+						Triangle.VertexIndex0 = StartVertexIdx + MeshColisionData.Indices[i].v0;
+						Triangle.VertexIndex1 = StartVertexIdx + MeshColisionData.Indices[i].v2;
+						Triangle.VertexIndex2 = StartVertexIdx + MeshColisionData.Indices[i].v1;
+						CForm->Triangles.Add(Triangle);
+
+					}
+				};
+				if (UInstancedStaticMeshComponent*InstancedStaticMeshComponent = Cast<UInstancedStaticMeshComponent>(StaticMeshComponent))
 				{
-					UMaterialInterface* Material = StaticMeshComponent->GetMaterial(MeshColisionData.MaterialIndices[i]);
-
-					UPhysicalMaterial* PhysMaterial = Material ? Material->GetPhysicalMaterial() : nullptr;
-					int32* IndexMaterial = PhysicalMaterial2ID.Find(Cast<UStalkerPhysicalMaterial>(PhysMaterial));
-					FStalkerCFormTriangle Triangle;
-					Triangle.MaterialIndex = IndexMaterial ? static_cast<uint32>(*IndexMaterial) : DefaultID;
-
-					Triangle.VertexIndex0 = StartVertexIdx + MeshColisionData.Indices[i].v0;
-					Triangle.VertexIndex1 = StartVertexIdx + MeshColisionData.Indices[i].v2;
-					Triangle.VertexIndex2 = StartVertexIdx + MeshColisionData.Indices[i].v1;
-					CForm->Triangles.Add(Triangle);
-		
+					for (int32 i = 0; i < InstancedStaticMeshComponent->GetInstanceCount(); i++)
+					{	
+						FTransform WorldSpaceInstanceTransform;
+						InstancedStaticMeshComponent->GetInstanceTransform(i,WorldSpaceInstanceTransform,true);
+						BuildStaticMesh(WorldSpaceInstanceTransform);
+					}
 				}
-
-				CForm->AABB +=	FBox3f(StaticMeshComponent->Bounds.GetBox());
+				else
+				{
+					BuildStaticMesh(StaticMeshComponent->GetComponentTransform());
+				}
+			
 			}
 
 		}
