@@ -149,7 +149,21 @@ void UStalkerEditorManager::ReloadConfigs()
 
 void UStalkerEditorManager::ImportUITextures()
 {
-	auto ImportFromPath = [](const char*PathName)
+	auto CaclImportFromPath = [](const char*PathName)
+	{
+		string_path	GameTexturePath;
+		FS.update_path(GameTexturePath, "$game_textures$", PathName);
+		TArray<FString> Files;
+		FString TexturePath = GameTexturePath;
+		TexturePath.ReplaceCharInline(TEXT('\\'),TEXT('/'));
+		IFileManager::Get().FindFilesRecursive(Files,*TexturePath,TEXT("*.dds"),true,false);
+		return Files.Num();
+	};
+
+	FScopedSlowTask Progress(CaclImportFromPath("ui")+CaclImportFromPath("map"), FText::FromString(TEXT("Import UI Textures")), true);
+	Progress.MakeDialog(true);
+
+	auto ImportFromPath = [&Progress](const char*PathName)
 	{
 		string_path	GameTexturePath;
 		FS.update_path(GameTexturePath, "$game_textures$", PathName);
@@ -163,8 +177,16 @@ void UStalkerEditorManager::ImportUITextures()
 		{
 			FileName = FPaths::GetPath(FileName) / FPaths::GetBaseFilename(FileName);
 			if(FCString::Strstr((*FileName) + TexturePath.Len() - FCStringAnsi::Strlen(PathName),TEXT("ui_font"))!=nullptr)
+			{
+				Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Skip UI texture:%S"),*FileName)));
 				continue;
+			}
 			EngineFactory.ImportTexture((*FileName)+ TexturePath.Len() - FCStringAnsi::Strlen(PathName),true);
+			Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import UI texture:%s"),*FileName)));
+			if (GWarn->ReceivedUserCancel())
+			{
+				break;
+			}
 		}
 	};
 	ImportFromPath("ui");
@@ -180,6 +202,10 @@ void UStalkerEditorManager::ImportMeshes()
 	FString MeshesPath = GameMeshesPath;
 	MeshesPath.ReplaceCharInline(TEXT('\\'),TEXT('/'));
 	IFileManager::Get().FindFilesRecursive(Files,*MeshesPath,TEXT("*.ogf"),true,false);
+
+	FScopedSlowTask Progress(Files.Num(), FText::FromString(TEXT("Import Meshes")), true);
+	Progress.MakeDialog(true);
+
 	for(FString FileName:Files)
 	{
 		FString FileNameWithoutExtension = FPaths::GetPath(FileName) / FPaths::GetBaseFilename(FileName);
@@ -187,11 +213,19 @@ void UStalkerEditorManager::ImportMeshes()
 		UnrealPath = UnrealPath/ (*FileNameWithoutExtension + MeshesPath.Len());
 		XRayEngineFactory EngineFactory(CreatePackage(*FPaths::GetPath(UnrealPath)), RF_Standalone | RF_Public);
 		EngineFactory.ImportOGF(FileName);
+		Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import Meshes:%s"),*FileName)));
+		if (GWarn->ReceivedUserCancel())
+		{
+			break;
+		}
 	}
 }
 
 void UStalkerEditorManager::ImportPhysicalMaterials()
 {
+	FScopedSlowTask Progress(0, FText::FromString(TEXT("Import PhysicalMaterials")), true);
+	Progress.MakeDialog(false);
+
 	string_path	GameMaterialFilePath;
 	FS.update_path(GameMaterialFilePath, "$game_data$", "gamemtl.xr");
 	XRayEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);

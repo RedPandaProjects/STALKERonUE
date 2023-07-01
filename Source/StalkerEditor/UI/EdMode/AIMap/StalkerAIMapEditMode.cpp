@@ -237,6 +237,7 @@ bool FStalkerAIMapEditMode::HandleClick(FEditorViewportClient* InViewportClient,
 				else
 				{
 					StalkerAIMap->PostEditChange();
+					StalkerAIMap->MarkPackageDirty();
 					if (Index != INDEX_NONE)
 					{
 						GEditor->CancelTransaction(Index);

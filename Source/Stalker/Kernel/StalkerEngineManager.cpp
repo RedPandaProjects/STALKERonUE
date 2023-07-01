@@ -22,6 +22,8 @@ THIRD_PARTY_INCLUDES_END
 #include "Resources/CFrom/StalkerCForm.h"
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Resources/Spawn/StalkerLevelSpawn.h"
+#include "NiagaraTypes.h"
+#include "../Resources/Particle/StalkerParticleDomain.h"
 
 STALKER_API FStalkerEngineManager* GStalkerEngineManager = nullptr;
 static XRayMemory	GXRayMemory;
@@ -65,6 +67,9 @@ FStalkerEngineManager::~FStalkerEngineManager()
 
 void FStalkerEngineManager::Initialize()
 {
+	FString GameShaderDir = FPaths::Combine(FPaths::ProjectDir(), TEXT("Shaders"));
+	AddShaderSourceDirectoryMapping(TEXT("/Game"), GameShaderDir);
+
 	ResourcesManager = new FStalkerResourcesManager;
 	PhysicalMaterialsManager = NewObject<UStalkerPhysicalMaterialsManager>();
 	MyXRayInput = nullptr;
@@ -513,6 +518,10 @@ void FStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessa
 void FStalkerEngineManager::OnPostEngineInit()
 {
 	GEngine->OnTravelFailure().AddRaw(this, &FStalkerEngineManager::OnTravelFailure);
+
+	FNiagaraTypeRegistry::Register(FStalkerParticleDomain::StaticStruct(), 	ENiagaraTypeRegistryFlags::AllowAnyVariable |ENiagaraTypeRegistryFlags::AllowParameter|ENiagaraTypeRegistryFlags::AllowPayload);
+	FNiagaraTypeRegistry::Register(StaticEnum<EStalkerParticleDomainType>(), ENiagaraTypeRegistryFlags::AllowAnyVariable | ENiagaraTypeRegistryFlags::AllowParameter);
+	FNiagaraTypeRegistry::Register(FNiagaraTypeDefinition(StaticEnum<EStalkerParticleDomainType>()).ToStaticDef(), ENiagaraTypeRegistryFlags::AllowAnyVariable | ENiagaraTypeRegistryFlags::AllowParameter);
 }
 
 void FStalkerEngineManager::OnPostLoadMap(UWorld* World)

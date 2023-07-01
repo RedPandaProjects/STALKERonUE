@@ -9,6 +9,15 @@ namespace StalkerMath
 		FPlane InTargetW = FPlane( -InMatrix.c.x*100,InMatrix.c.z*100,InMatrix.c.y*100,InMatrix._44);
 		return {InTargetX, InTargetY, InTargetZ, InTargetW};
 	}
+	inline Fmatrix	UnrealMatrixToXRay(const FMatrix& InMatrix)
+	{
+		Fmatrix Result;
+		Result.i.set(InMatrix.M[0][0],-InMatrix.M[0][2],-InMatrix.M[0][1]); Result._14 = -InMatrix.M[0][4];
+		Result.j.set(-InMatrix.M[2][0],InMatrix.M[2][2],InMatrix.M[2][1]); Result._34 = InMatrix.M[2][4];
+		Result.k.set(-InMatrix.M[1][0],InMatrix.M[1][2],InMatrix.M[1][1]); Result._24 = InMatrix.M[2][4];
+		Result.c.set(-InMatrix.M[3][0]/100.f,InMatrix.M[3][2]/100.f,InMatrix.M[3][1]/100.f); Result._44 = InMatrix.M[4][4];
+		return Result;
+	}
 	/*inline Fmatrix	UnrealMatrixToXRay(const FMatrix& InMatrix)
 	{
 		Fvector4 InTargetX;InTargetX.set(-InMatrix.M[0], InMatrix.M[2],InMatrix.M[1],InMatrix.M[3]);

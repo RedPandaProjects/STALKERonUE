@@ -2,6 +2,8 @@
 
 #include "Stalker.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Resources/Particle/StalkerParticleDomain.h"
+#include "NiagaraTypes.h"
 
 #define LOCTEXT_NAMESPACE "StalkerModule"
 DEFINE_LOG_CATEGORY(LogStalker);
@@ -11,7 +13,7 @@ void FStalkerModule::StartupModule()
 	GStalkerEngineManager = new FStalkerEngineManager();
 	GStalkerEngineManager->Initialize();
 	FCoreDelegates::OnPreExit.AddRaw(this, &FStalkerModule::OnPreExit);
-
+	
 }
 
 void FStalkerModule::ShutdownModule()

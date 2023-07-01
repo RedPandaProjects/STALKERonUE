@@ -1,0 +1,26 @@
+#ifndef PARTICLES_NOISE_H
+#define PARTICLES_NOISE_H
+
+float StalkerParticlesNoiseAT(float rx,float ry,float rz,float3 q)
+{
+	return rx*q[0] + ry*q[1] + rz*q[2];
+}
+
+float StalkerParticlesNoiseSCurve(float t)
+{
+	return t*t*(3.f-2.f*t);
+}
+
+float StalkerParticlesNoiseLerp(float t,float a,float b)
+{
+	return a + t*(b-a) ;
+}
+void StalkerParticlesNoisePNSetup(float3 vec,const int i,out int2 b,out float2 r)
+{
+	float	t = vec[i] + 10000.f;
+	b.x = int(floor(t)) & (256-1);
+	b.y = (b.x+1) & (256-1);
+	r.x = t - floor(t);
+	r.y = r.x - 1.f;
+}
+#endif
