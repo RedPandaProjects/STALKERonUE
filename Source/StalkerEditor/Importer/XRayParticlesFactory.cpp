@@ -31,6 +31,7 @@ THIRD_PARTY_INCLUDES_END
 #include "NiagaraSystemEditorData.h"
 #include "ViewModels/Stack/NiagaraStackInputCategory.h"
 #include "NiagaraDataInterfaceParticleRead.h"
+#include "Resources/Particle/StalkerNiagaraSystem.h"
 
 XRayParticlesFactory::XRayParticlesFactory()
 {
@@ -69,7 +70,7 @@ void XRayParticlesFactory::ImportParticles()
 	for (auto Iterator = PSLibrary.FirstPED(); Iterator != PSLibrary.LastPED(); Iterator++)
 	{
 		PS::CPEDef* PEDef = (*Iterator);
-		if (PEDef/*&&FCStringAnsi::Strstr(PEDef->m_Name.c_str(),"_samples_particles_\\flash_light")*/)
+		if (PEDef/*&&FCStringAnsi::Strstr(PEDef->m_Name.c_str(),"campfire_smoke")*/)
 		{
 		
 			Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import PE:%S"),PEDef->Name())));
@@ -128,12 +129,12 @@ UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
 	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
-	UNiagaraSystem* NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (NiagaraSystem)
-		return NiagaraSystem;
+	UNiagaraSystem* CheckNiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (CheckNiagaraSystem)
+		return CheckNiagaraSystem;
 		
 	UPackage* AssetPackage = CreatePackage(*PackageName);
-	NiagaraSystem = NewObject<UNiagaraSystem>(AssetPackage, *FPaths::GetBaseFilename(PackageName), RF_Standalone|RF_Public);
+	UStalkerNiagaraSystem* NiagaraSystem = NewObject<UStalkerNiagaraSystem>(AssetPackage, *FPaths::GetBaseFilename(PackageName), RF_Standalone|RF_Public);
 	NiagaraSystem->SetFlags(RF_Transactional);
 	UNiagaraSystemFactoryNew::InitializeSystem(NiagaraSystem,true);
 	FAssetRegistryModule::AssetCreated(NiagaraSystem);
@@ -161,6 +162,7 @@ UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
 			
 			FNiagaraVariable Velocity(FNiagaraTypeDefinition::GetVec3Def(),"User.Velocity");
 			SystemViewModel->GetSystem().GetExposedParameters().AddParameter(Velocity);
+			NiagaraSystem->IsLooping = !PEDef->m_Flags.is(PS::CPEDef::dfTimeLimit);
 		}
 		ImportToEmitter(PackageName,PEDef, SystemViewModel->AddEmptyEmitter());
 	}
@@ -182,12 +184,12 @@ class UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
-	UNiagaraSystem* NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (NiagaraSystem)
-		return NiagaraSystem;
+	UNiagaraSystem* CheckNiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (CheckNiagaraSystem)
+		return CheckNiagaraSystem;
 		
 	UPackage* AssetPackage = CreatePackage(*PackageName);
-	NiagaraSystem = NewObject<UNiagaraSystem>(AssetPackage, *FPaths::GetBaseFilename(PackageName), RF_Standalone|RF_Public);
+	UStalkerNiagaraSystem* NiagaraSystem = NewObject<UStalkerNiagaraSystem>(AssetPackage, *FPaths::GetBaseFilename(PackageName), RF_Standalone|RF_Public);
 	NiagaraSystem->SetFlags(RF_Transactional);
 
 	UNiagaraSystemFactoryNew::InitializeSystem(NiagaraSystem,true);
@@ -219,6 +221,7 @@ class UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 			}
 			FNiagaraVariable Velocity(FNiagaraTypeDefinition::GetVec3Def(),"User.Velocity");
 			SystemViewModel->GetSystem().GetExposedParameters().AddParameter(Velocity);
+			NiagaraSystem->IsLooping = PGDef->m_fTimeLimit<=0;
 		}
 		for (PS::CPGDef::SEffect* Effect : PGDef->m_Effects)
 		{
@@ -276,18 +279,33 @@ void XRayParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDef
 	InEmiter->SetName(FName(FPaths::GetBaseFilename(ANSI_TO_TCHAR(InParticleEffect->m_Name.c_str()))));
 	{
 		UNiagaraSpriteRendererProperties*NiagaraSpriteRendererProperties =  NewObject<UNiagaraSpriteRendererProperties>(Emitter, "Renderer");
+		FString MaterialUserParametrName = FString::Printf(TEXT("User.%sMaterial"),*InEmiter->GetName().ToString());
+		FNiagaraVariable MaterialUserParametr(FNiagaraTypeDefinition::GetUMaterialDef(), *MaterialUserParametrName);
 
+		FStalkerEmiterMaterial StalkerEmiterMaterial;
 		if (GroupEffect&&ImportToEmitterAs == EImportToEmitterAs::None)
 		{
 			FString Name =  GroupEffect->m_EffectName.c_str();
 			Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 			const FString EffectPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
-			NiagaraSpriteRendererProperties->Material = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName);
+			NiagaraSpriteRendererProperties->Material = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,false);
+			StalkerEmiterMaterial.Material =NiagaraSpriteRendererProperties->Material;
+			StalkerEmiterMaterial.HudMaterial = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
 		}
 		else
 		{
-			NiagaraSpriteRendererProperties->Material = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName);
+			NiagaraSpriteRendererProperties->Material = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,false);
+			StalkerEmiterMaterial.Material = 			NiagaraSpriteRendererProperties->Material;
+			StalkerEmiterMaterial.HudMaterial = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
 		}
+
+		if (UStalkerNiagaraSystem* StalkerNiagaraSystem = Cast<UStalkerNiagaraSystem>(&InEmiter->GetOwningSystemViewModel()->GetSystem()))
+		{
+			StalkerNiagaraSystem->Materials.Add(*MaterialUserParametrName,StalkerEmiterMaterial);
+		}
+		InEmiter->GetOwningSystemViewModel()->GetSystem().GetExposedParameters().AddParameter( MaterialUserParametr);
+		NiagaraSpriteRendererProperties->MaterialUserParamBinding.Parameter = MaterialUserParametr;
+
 		Emitter->AddRenderer(NiagaraSpriteRendererProperties, EmitterData->Version.VersionGuid);
 		if(InParticleEffect->m_Flags.is(PS::CPEDef::dfAlignToPath))
 		{	
@@ -605,7 +623,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 		}
 		else
 		{
-			SetModuletLinkedParameter(InEmiter,*StalkerTargetSourceNode,TEXT("ParentVelocity"),FNiagaraTypeDefinition::GetFloatDef(),FNiagaraParameterHandle("User","Velocity"));
+			SetModuletLinkedParameter(InEmiter,*StalkerTargetSourceNode,TEXT("ParentVelocity"),FNiagaraTypeDefinition::GetVec3Def(),FNiagaraParameterHandle("User","Velocity"));
 		}
 		
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->SpawnScriptProps.Script, *StalkerTargetSourceNode, "ParentMotion", static_cast<float>(InSourceAction->parent_motion));
@@ -1206,13 +1224,17 @@ void XRayParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, ESt
 
 }
 
-UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName)
+UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, shared_str ShaderName, shared_str TextureName, bool HudMode)
 {
 	if (ShaderName.size() == 0)
 		return nullptr;
 		
 	XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
-
+	FString Path = InPath;
+	if (HudMode)
+	{
+		Path+=TEXT("_HUD");
+	}
 	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
 	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 	if (Material)

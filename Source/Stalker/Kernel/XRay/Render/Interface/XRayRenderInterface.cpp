@@ -6,6 +6,7 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "Entities/Levels/Light/StalkerLight.h"
+#include "Entities/Particles/StalkerNiagaraActor.h"
 XRayRenderInterface GRenderInterface;
 
 XRayRenderInterface::XRayRenderInterface()
@@ -235,7 +236,7 @@ IRender_Glow* XRayRenderInterface::glow_create()
 
 IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 {
-	return nullptr;
+	return GStalkerEngineManager->GetResourcesManager()->CreateParticles(name);
 }
 
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
@@ -267,6 +268,10 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 		if (V->CastToStalkerKinematicsComponent())
 		{
 			GStalkerEngineManager->GetResourcesManager()->Destroy(V->CastToStalkerKinematicsComponent());
+		}
+		else if (V->dcast_ParticleCustom())
+		{
+			GStalkerEngineManager->GetResourcesManager()->Desotry(V->dcast_ParticleCustom());
 		}
 		else
 		{

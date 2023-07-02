@@ -1,0 +1,2 @@
+#include "StalkerNiagaraSystem.h"
+

@@ -21,6 +21,8 @@ public:
 	void												Destroy						(class UStalkerKinematicsComponent* Mesh);
 	void												RegisterKinematics			(class UStalkerKinematicsComponent* Mesh);
 	void												UnregisterKinematics		(class UStalkerKinematicsComponent* Mesh);
+	class AStalkerNiagaraActor*							CreateParticles				(const char* Name);
+	void												Desotry						(class IParticleCustom*Particles);
 	void												Refresh						();
 	FString												GetGamePath					();
 	class UStalkerGameSpawn*							GetGameSpawn				();

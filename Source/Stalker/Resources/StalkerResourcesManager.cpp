@@ -4,6 +4,7 @@
 #include "SkeletonMesh/StalkerKinematicsData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
+#include "../Entities/Particles/StalkerNiagaraActor.h"
 #include "Spawn/StalkerGameSpawn.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
@@ -256,6 +257,13 @@ void FStalkerResourcesManager::Desotry(class IRender_Light* InLight)
 	Light->Destroy();
 }
 
+void FStalkerResourcesManager::Desotry(class IParticleCustom* InParticles)
+{
+	AStalkerNiagaraActor*Particles =  static_cast<AStalkerNiagaraActor*>(InParticles);
+	Particles->Unlock();
+	Particles->Destroy();
+}
+
 class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char* InName)
 {
 	if (!FApp::IsGame()&&(!InName || !InName[0]))
@@ -393,6 +401,16 @@ void FStalkerResourcesManager::RegisterKinematics(class UStalkerKinematicsCompon
 void FStalkerResourcesManager::UnregisterKinematics(class UStalkerKinematicsComponent* Mesh)
 {
 	Meshes.Remove(Mesh);
+}
+
+AStalkerNiagaraActor* FStalkerResourcesManager::CreateParticles(const char* Name)
+{
+	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+	AStalkerNiagaraActor* Result = GWorld->SpawnActor< AStalkerNiagaraActor>(SpawnParameters);
+	Result->Lock();
+	Result->Initialize(Name);
+	return Result;
 }
 
 void FStalkerResourcesManager::Refresh()

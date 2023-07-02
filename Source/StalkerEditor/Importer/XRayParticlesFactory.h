@@ -93,7 +93,7 @@ private:
 	class UNiagaraNodeFunctionCall*	FindModuleInScript				(UNiagaraScript* SystemUpdateScript,FSoftObjectPath FunctionPath);
 	void							XRayDomainToUnreal				(const PAPI::pDomain&InDomain,EStalkerParticleDomainType&OutTypeDomain,FStalkerParticleDomain&OutDomain,bool LocationSpace = false,bool UnrealTangent = true);
 	
-	UMaterialInterface*				ImportSurface					(const FString& Path, shared_str ShaderName, shared_str TextureName);
+	UMaterialInterface*				ImportSurface					(const FString& Path, shared_str ShaderName, shared_str TextureName,bool HudMode);
 	void							Flush							();
 	TArray<PAPI::PActionEnum>		TypesNotImplemented;
 	class CPSLibrary				*MyLibrary = nullptr;
