@@ -1,3 +1,3 @@
 [submodule "Plugins/XRayEngine/Source/ThirdParty"]
 	path = Source/XRayEngine
-	url = https://github.com/RedPandaProjects/XRayEngine
+	url = https://git.s2ue.org/psiget/XRayEngine
