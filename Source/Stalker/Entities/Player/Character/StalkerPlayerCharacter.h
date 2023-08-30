@@ -11,25 +11,35 @@ class AStalkerPlayerCharacter : public ACharacter, public XRayUnrealPlayerCharac
 	GENERATED_BODY()
 
 public:
-								AStalkerPlayerCharacter		();
-	void						PossessedBy					(AController* NewController) override;
-	virtual void				Tick						(float DeltaTime) override;
-	void						BeginDestroy				() override;
-	virtual void				SetupPlayerInputComponent	(class UInputComponent* PlayerInputComponent) override;
-	void						AttachAsRoot				(class IRenderVisual* Visual) override;
-	void						Attach						(class IRenderVisual* Visual, const char* BoneName) override;
-	void						AttachToCamera				(class IRenderVisual* Visual) override;
-	class AStalkerProxy*		CastToStalkerProxy			() override;
-	AStalkerPlayerCharacter*	CastToStalkerPlayerCharacter() override;
-	void						Lock						(class CObject*) override;
-	void						Unlock						(class CObject*) override;
+									AStalkerPlayerCharacter		();
+	void							PossessedBy					(AController* NewController) override;
+	virtual void					Tick						(float DeltaTime) override;
+	void							BeginDestroy				() override;
+	virtual void					SetupPlayerInputComponent	(class UInputComponent* PlayerInputComponent) override;
+
+	
+	void							SetOffset					(const Fmatrix& offset) override;
+	void							SetOwnerNoSee				(bool Enable) override;
+	void							SetOnlyOwnerSee				(bool Enable) override;
+	void							AttachTo					(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
+	void							Detach						() override;
+	void							Lock						(void*) override;
+	void							Lock						(class CObject*) override;
+	void							Unlock						(void*) override;
+	void*							CastUnrealObject			(EXRayUnrealObjectType ObjectType) override;
+	void							SetAsRoot					(XRayUnrealAttachableInterface* Attachable) override;
+	XRayUnrealAttachableInterface*	GetCameraComponent			() override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Stalker|Player", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent*			FirstPersonCameraComponent;
-
+	UPROPERTY(Transient)
+	class UStalkerAttachable*	FirstPersonCameraAttachable;
 
 protected:
 	virtual void				BeginPlay					() override;
+
+public:
+
 private:
 	class CObject*				XRayObject;
 	UPROPERTY()

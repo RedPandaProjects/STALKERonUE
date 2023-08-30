@@ -1,7 +1,5 @@
 #include "XRayRenderInterface.h"
 #include "XRayRenderTarget.h"
-#include "../Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
-#include "../Resources/Visual/XRaySkeletonVisual.h"
 #include "../../../StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Entities/Kinematics/StalkerKinematicsComponent.h"
@@ -241,14 +239,9 @@ IRenderVisual* XRayRenderInterface::model_CreateParticles(LPCSTR name)
 
 IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 {
-	
 	UStalkerKinematicsComponent* Kinematics =  GStalkerEngineManager->GetResourcesManager()->CreateKinematics(name,true);
 	check(Kinematics);
-	if (Kinematics)
-	{
-		return Kinematics;
-	}
-	return GXRaySkeletonMeshManager->Get(name);
+	return Kinematics;
 }
 
 IRenderVisual* XRayRenderInterface::model_CreateChild(LPCSTR name, IReader* data)
@@ -265,9 +258,9 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 {
 	if (V)
 	{	
-		if (V->CastToStalkerKinematicsComponent())
+		if (V->CastUnrealObject(EXRayUnrealObjectType::StalkerKinematicsComponent))
 		{
-			GStalkerEngineManager->GetResourcesManager()->Destroy(V->CastToStalkerKinematicsComponent());
+			GStalkerEngineManager->GetResourcesManager()->Destroy(reinterpret_cast<UStalkerKinematicsComponent*>(V->CastUnrealObject(EXRayUnrealObjectType::StalkerKinematicsComponent)));
 		}
 		else if (V->dcast_ParticleCustom())
 		{
@@ -276,7 +269,6 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 		else
 		{
 			check(false);
-			//GXRaySkeletonMeshManager->Destroy(V->CastToRaySkeletonVisual());
 		}
 		V = nullptr;
 	}

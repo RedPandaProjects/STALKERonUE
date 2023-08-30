@@ -260,6 +260,34 @@ void UStalkerKinematicsComponent::DestroyBlend(TSharedPtr<CBlend>& Blend)
 	BlendsPool.Add(Blend);
 }
 
+void* UStalkerKinematicsComponent::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+{
+	switch (ObjectType)
+	{
+	case EXRayUnrealObjectType::Object:
+		return static_cast<UObject*>(this);
+	case EXRayUnrealObjectType::SceneComponent:
+		return static_cast<USceneComponent*>(this);
+	case EXRayUnrealObjectType::StalkerKinematicsComponent:
+		return this;
+	default: 
+		return nullptr;
+	}
+}
+
+void* UStalkerKinematicsComponent::QueryInterface(EXRayUnrealInterfaceType AttachableType)
+{
+	switch (AttachableType)
+	{
+	case EXRayUnrealInterfaceType::Kinematics:
+		return static_cast<IKinematics*>(this);
+	case EXRayUnrealInterfaceType::KinematicsAnimated:
+		return Anims.Num()>0? static_cast<IKinematicsAnimated*>(this):nullptr;
+	default: ;
+		return IRenderVisual::QueryInterface(AttachableType);
+	}
+}
+
 void UStalkerKinematicsComponent::SetOwnerNoSee(bool Enable)
 {
 	Super::SetOwnerNoSee(Enable);
@@ -300,10 +328,39 @@ void UStalkerKinematicsComponent::Detach()
 	GStalkerEngineManager->GetResourcesManager()->RegisterKinematics(this);
 }
 
+void UStalkerKinematicsComponent::AttachTo(XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName)
+{
+	USceneComponent* InSceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	check(InSceneComponent);
+	AActor* ActorOwner = InSceneComponent->GetOwner();
+	check(ActorOwner);
+	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(this);
+	Rename(nullptr,ActorOwner);
+	//Set
+	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
+	AttachToComponent(InSceneComponent,AttachmentTransformRules,BoneName);
+	SetSimulatePhysics(false);
+	SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	RegisterComponent();
+	
+	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(InSceneComponent))
+	{
+		SetOwnerNoSee(PrimitiveComponen->bOwnerNoSee);
+		SetOnlyOwnerSee(PrimitiveComponen->bOnlyOwnerSee);
+	}
+	
+	ActorOwner->AddInstanceComponent(this);
+}
+
 void UStalkerKinematicsComponent::BeginDestroy()
 {
 	check(XRayParent == nullptr);
 	Super::BeginDestroy();
+}
+
+void UStalkerKinematicsComponent::Lock(CObject*InObject)
+{
+	Lock((void*)InObject);
 }
 
 void UStalkerKinematicsComponent::PostLoad()
@@ -334,11 +391,6 @@ float UStalkerKinematicsComponent::LL_GetMotionTime(MotionID id)
 		return Anims[id.val].Amim->GetPlayLength() / Anims[id.val].Amim->RateScale;
 	}
 	return 0;
-}
-
-class UStalkerKinematicsComponent* UStalkerKinematicsComponent::CastToStalkerKinematicsComponent()
-{
-	return this;
 }
 
 void UStalkerKinematicsComponent::OnCalculateBones()
@@ -770,10 +822,6 @@ vis_data& _BCL UStalkerKinematicsComponent::getVisData()
 	return VisData;
 }
 
-u32 UStalkerKinematicsComponent::getType()
-{
-	return Anims.Num() ? MT_SKELETON_ANIM : MT_SKELETON_RIGID;
-}
 
 IKinematics* _BCL UStalkerKinematicsComponent::dcast_PKinematics()
 {

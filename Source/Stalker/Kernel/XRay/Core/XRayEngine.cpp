@@ -62,7 +62,7 @@ void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
 	{
 		return;
 	}
-	AStalkerProxy * StalkerProxy = InProxy->CastToStalkerProxy();
+	AStalkerProxy * StalkerProxy =  reinterpret_cast<	AStalkerProxy *>(InProxy->CastUnrealObject(EXRayUnrealObjectType::StalkerProxy));
 	StalkerProxy->Destroy();
 }
 

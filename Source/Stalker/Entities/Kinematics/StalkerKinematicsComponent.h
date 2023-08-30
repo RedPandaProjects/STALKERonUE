@@ -23,9 +23,13 @@ public:
 #endif
 	void											PostLoad							() override;
 	void											BeginDestroy						() override;
+	void											Lock								(CObject*) override;
 	void											Lock								(void* Parent) override;
 	void											Unlock								(void* Parent) override;
 	void											Detach								() override;
+	void											AttachTo							(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
+	void*											CastUnrealObject					(EXRayUnrealObjectType ObjectType) override;
+	void*											QueryInterface						(EXRayUnrealInterfaceType AttachableType) override;
 	
 	void											SetOwnerNoSee						(bool Enable) override;
 	void											SetOnlyOwnerSee						(bool Enable) override;
@@ -71,12 +75,9 @@ public:
 	void											DebugRender							(Fmatrix& XFORM) override;
 	shared_str										getDebugName						() override;
 	vis_data& _BCL									getVisData							() override;
-	u32												getType								() override;
-	IKinematics* _BCL								dcast_PKinematics					() override;
 
 
 //IKinematicsAnimated
-	class UStalkerKinematicsComponent*				CastToStalkerKinematicsComponent	() override;
 	void											OnCalculateBones					() override;
 	std::pair<LPCSTR, LPCSTR>						LL_MotionDefName_dbg				(MotionID ID) override;
 	void											LL_DumpBlends_dbg					() override;
@@ -129,6 +130,7 @@ public:
 	MotionID										LL_MotionID							(LPCSTR B) override;
 	float											LL_GetMotionTime					(MotionID id) override;
 	float											get_animation_length				(MotionID motion_ID) override;
+	IKinematics*									dcast_PKinematics					() override;
 
 	u16												LL_PartID							(LPCSTR B) override;
 	u32												BonesPartsCount						() const override;
@@ -159,6 +161,7 @@ private:
 	TSharedPtr<CBlend>								CreateBlend							();
 	void											DestroyBlend						(TSharedPtr<CBlend>& Blend);
 
+private:
 	TArray <TSharedPtr<CBlend>>						BlendsPool;
 
 	vis_data										VisData;

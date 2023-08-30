@@ -12,15 +12,20 @@ class STALKER_API AStalkerNiagaraActor : public ANiagaraActor, public IRenderVis
 	
 public:
 								AStalkerNiagaraActor		(const FObjectInitializer& ObjectInitializer);
-	void						Lock						();
-	void						Unlock						();
-	void						BeginDestroy				() override;
 	void						Initialize					(shared_str Name);
-	vis_data&					getVisData					() override;
-	u32							getType						() override;
-	shared_str					getDebugName				() override;
-	IParticleCustom*			dcast_ParticleCustom		() override;
+
+	void						AttachTo					(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
 	void						Detach						() override;
+	void						Lock						(CObject*) override;
+	void						Lock						(void*) override;
+	void						Unlock						(void*) override;
+
+	void*						CastUnrealObject			(EXRayUnrealObjectType ObjectType) override;
+	void*						QueryInterface				(EXRayUnrealInterfaceType AttachableType) override;
+
+	void						BeginDestroy				() override;
+	vis_data&					getVisData					() override;
+	shared_str					getDebugName				() override;
 	void						UpdateParent				(const Fmatrix& m, const Fvector& velocity, BOOL bXFORM) override;
 	void						Play						() override;
 	void						Stop						(BOOL bDefferedStop = TRUE) override;
@@ -30,7 +35,17 @@ public:
 	void						SetHudMode					(BOOL b) override;
 	BOOL						GetHudMode					() override;
 	bool						Alive						() override;
+	void						SetOffset					(const Fmatrix&offset) override;
+	void						SetEnableVelocity			(bool EnableVelocity) override ;
+	
+	void						BeginPlay					() override;
+	void						Tick						(float DeltaSeconds) override;
+	void						SetOwnerNoSee				(bool Enable) override;
+	void						SetOnlyOwnerSee				(bool Enable) override;
+
 	shared_str					ParticlesName;
+
+public:
 	UPROPERTY(Transient)
 	bool						HudMode = false;
 	UPROPERTY(Transient)
@@ -39,8 +54,13 @@ private:
 	UFUNCTION()
 	void						OnSystemFinished			(class UNiagaraComponent* PSystem);
 
-	bool						IsLocked = false;
+public:
+	
+
+private:
+	void*						Locked = nullptr;
 	vis_data					VisData;
 
 	bool						IsLive  = true;
+	FVector						LastPosition;
 };

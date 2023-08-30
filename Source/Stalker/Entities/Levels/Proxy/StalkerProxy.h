@@ -14,16 +14,25 @@ class STALKER_API AStalkerProxy : public AActor,public XRayUnrealProxyInterface
 public:	
 									AStalkerProxy				();
 	void							BeginDestroy				() override;
-	void							Lock						(class CObject* XRayObject) override;
-	void							Unlock						(class CObject* XRayObject) override;
+	void							Lock						(CObject*XRayObject) override;
+	void							Lock						(void* XRayObject) override;
+	void							Unlock						(void* XRayObject) override;
 	
-	void							Attach						(class IRenderVisual* Visual, const char* BoneName) override;
-	void							AttachAsRoot				(class IRenderVisual* Visual) override;
-	AStalkerProxy*					CastToStalkerProxy			() override;
-	class AStalkerPlayerCharacter*	CastToStalkerPlayerCharacter() override;
+	void							SetAsRoot					(class XRayUnrealAttachableInterface* Visual) override;
+	
+	void							AttachTo					(class XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName) override;
+	void							Detach						() override;
+	void							SetOffset					(const Fmatrix&offset) override;
+	void*							CastUnrealObject			(EXRayUnrealObjectType ObjectType) override;
+	void							SetOwnerNoSee				(bool Enable) override;
+	void							SetOnlyOwnerSee				(bool Enable) override;
+
 protected:
 	virtual void					BeginPlay					() override;
 	virtual void					Tick						(float DeltaTime) override;
+
+public:
+
 private:
 	class CObject*					XRayObject;
 

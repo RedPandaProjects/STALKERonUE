@@ -260,7 +260,6 @@ void FStalkerResourcesManager::Desotry(class IRender_Light* InLight)
 void FStalkerResourcesManager::Desotry(class IParticleCustom* InParticles)
 {
 	AStalkerNiagaraActor*Particles =  static_cast<AStalkerNiagaraActor*>(InParticles);
-	Particles->Unlock();
 	Particles->Destroy();
 }
 
@@ -408,7 +407,6 @@ AStalkerNiagaraActor* FStalkerResourcesManager::CreateParticles(const char* Name
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerNiagaraActor* Result = GWorld->SpawnActor< AStalkerNiagaraActor>(SpawnParameters);
-	Result->Lock();
 	Result->Initialize(Name);
 	return Result;
 }

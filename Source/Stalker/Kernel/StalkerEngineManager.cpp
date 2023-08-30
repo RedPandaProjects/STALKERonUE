@@ -1,6 +1,5 @@
 #include "StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
-#include "XRay/Render/Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
 #include "XrEngine/XRayEngineInterface.h"
@@ -54,8 +53,6 @@ FStalkerEngineManager::~FStalkerEngineManager()
 	FCoreDelegates::OnGetOnScreenMessages.RemoveAll(this);
 #endif
 	DetachViewport(GameViewportClient);
-	delete GXRaySkeletonMeshManager;
-	GXRaySkeletonMeshManager = nullptr;
 	g_Engine->Destroy();
 	delete g_Engine;
 	MyXRayEngine = nullptr;
@@ -106,7 +103,6 @@ void FStalkerEngineManager::Initialize()
 	g_Engine = MyXRayEngine;
 	GameMaterialLibrary = PhysicalMaterialsManager;
 	g_Engine->Initialize();
-	GXRaySkeletonMeshManager = new XRaySkeletonMeshManager;
 #if WITH_EDITOR
 	FGameDelegates::Get().GetEndPlayMapDelegate().AddRaw(this, &FStalkerEngineManager::OnEndPlayMap);
 #endif
@@ -133,7 +129,6 @@ void FStalkerEngineManager::AppEnd()
 	Device->seqParallel.clear();
 	Device->b_is_Active = FALSE;
 	Device->seqAppEnd.Process(rp_AppEnd);
-	GXRaySkeletonMeshManager->Flush();
 	MyXRayInput->ClearStates();
 	PhysicalMaterialsManager->Clear();
 }

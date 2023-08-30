@@ -581,7 +581,10 @@ bool FStalkerWayObjectEditMode::IsEnabled()
 	{
 		return false;
 	}
-	
+	else if (WayObject== nullptr)
+	{
+		return false;
+	}
 	return true;
 }
 

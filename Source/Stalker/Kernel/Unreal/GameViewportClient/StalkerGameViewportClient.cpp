@@ -10,7 +10,6 @@ THIRD_PARTY_INCLUDES_START
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/XRay/Core/XRayInput.h"
-#include "Kernel/XRay/Render/Resources/SkeletonMesh/XRaySkeletonMeshManager.h"
 #include "../GameMode/StalkerGameMode.h"
 #include "../WorldSettings/StalkerWorldSettings.h"
 #include "../LevelScriptActor/StalkerLevelScriptActor.h"
@@ -151,7 +150,6 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
 		Device->dwFrame++;
 		g_Engine->OnFrame();
-		GXRaySkeletonMeshManager->Flush();
 		{
 			SCOPE_CYCLE_COUNTER(STAT_XRayEngineMTFrame);
 			for (u32 pit = 0; pit < Device->seqParallel.size(); pit++)

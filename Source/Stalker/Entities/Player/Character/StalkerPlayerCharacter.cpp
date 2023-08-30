@@ -2,6 +2,7 @@
 #include "../Controller/StalkerPlayerController.h"
 #include "../../Kinematics/StalkerKinematicsComponent.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Resources/StalkerAttachable.h"
 #include "Resources/StalkerResourcesManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
@@ -33,6 +34,8 @@ void AStalkerPlayerCharacter::PossessedBy(AController* NewController)
 void AStalkerPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	FirstPersonCameraAttachable = NewObject<UStalkerAttachable>(this);
+	FirstPersonCameraAttachable->OwnerComponent = FirstPersonCameraComponent;
 	
 }
 
@@ -71,55 +74,16 @@ void AStalkerPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 }
 
-void AStalkerPlayerCharacter::AttachAsRoot(class IRenderVisual* Visual)
+void AStalkerPlayerCharacter::SetOffset(const Fmatrix& offset)
 {
-	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
-	check(StalkerKinematicsComponent);
-
-	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
-	StalkerKinematicsComponent->Rename(nullptr,this);
-	
-	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
-	StalkerKinematicsComponent->AttachToComponent(GetRootComponent(),AttachmentTransformRules);
-	StalkerKinematicsComponent->SetSimulatePhysics(false);
-	StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	StalkerKinematicsComponent->RegisterComponent();
-	StalkerRootComponent = StalkerKinematicsComponent;
-	AddInstanceComponent(StalkerKinematicsComponent);
 }
 
-
-void AStalkerPlayerCharacter::Attach(class IRenderVisual* Visual, const char* BoneName)
+void AStalkerPlayerCharacter::SetOwnerNoSee(bool Enable)
 {
-	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
-	check(StalkerKinematicsComponent);
-
-	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
-	StalkerKinematicsComponent->Rename(nullptr,this);
-
-	
-	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
-	StalkerKinematicsComponent->AttachToComponent(StalkerRootComponent?StalkerRootComponent:GetRootComponent(),AttachmentTransformRules,BoneName);
-	StalkerKinematicsComponent->SetSimulatePhysics(false);
-	StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	StalkerKinematicsComponent->RegisterComponent();
-	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(StalkerRootComponent))
-	{
-		StalkerKinematicsComponent->SetOwnerNoSee(PrimitiveComponen->bOwnerNoSee);
-		StalkerKinematicsComponent->SetOnlyOwnerSee(PrimitiveComponen->bOnlyOwnerSee);
-	}
-
-	AddInstanceComponent(StalkerKinematicsComponent);
 }
 
-class AStalkerProxy* AStalkerPlayerCharacter::CastToStalkerProxy()
+void AStalkerPlayerCharacter::SetOnlyOwnerSee(bool Enable)
 {
-	return nullptr;
-}
-
-class AStalkerPlayerCharacter* AStalkerPlayerCharacter::CastToStalkerPlayerCharacter()
-{
-	return this;
 }
 
 void AStalkerPlayerCharacter::Lock(class CObject* InXRayObject)
@@ -132,25 +96,67 @@ void AStalkerPlayerCharacter::Lock(class CObject* InXRayObject)
 #endif
 }
 
-void AStalkerPlayerCharacter::Unlock(class CObject*InXRayObject)
+void* AStalkerPlayerCharacter::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+{
+	switch (ObjectType)
+	{
+	case EXRayUnrealObjectType::Object:
+		return static_cast<UObject*>(this);
+	case EXRayUnrealObjectType::Actor:
+		return static_cast<AActor*>(this);
+	case EXRayUnrealObjectType::StalkerPlayerCharacter:
+		return static_cast<AStalkerPlayerCharacter*>(this);
+	case EXRayUnrealObjectType::SceneComponent:
+		return static_cast<USceneComponent*>(GetRootComponent());
+	default: 
+		return nullptr;
+	}
+}
+
+void AStalkerPlayerCharacter::SetAsRoot(XRayUnrealAttachableInterface* AttachableInterface)
+{
+	check(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::Actor)==nullptr);
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	check(SceneComponent);
+	if(	UStalkerKinematicsComponent* StalkerKinematicsComponent = Cast<UStalkerKinematicsComponent>(SceneComponent))
+	{
+		GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
+		StalkerKinematicsComponent->Rename(nullptr,this);
+		SetRootComponent(StalkerKinematicsComponent);
+		StalkerKinematicsComponent->SetSimulatePhysics(false);
+		StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		StalkerKinematicsComponent->RegisterComponent();
+	}
+	else
+	{
+		SetRootComponent(SceneComponent);
+	}
+}
+
+
+void AStalkerPlayerCharacter::Unlock(void*InXRayObject)
 {
 	check(XRayObject == InXRayObject);
 	XRayObject = nullptr;
 }
 
-void AStalkerPlayerCharacter::AttachToCamera(class IRenderVisual* Visual)
+XRayUnrealAttachableInterface* AStalkerPlayerCharacter::GetCameraComponent()
 {
-	UStalkerKinematicsComponent* StalkerKinematicsComponent  = Visual->CastToStalkerKinematicsComponent();
-	check(StalkerKinematicsComponent);
+	return FirstPersonCameraAttachable;
+}
 
-	GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
-	StalkerKinematicsComponent->Rename(nullptr,this);
-	
-	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
-	StalkerKinematicsComponent->AttachToComponent(FirstPersonCameraComponent,AttachmentTransformRules);
-	StalkerKinematicsComponent->SetSimulatePhysics(false);
-	StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	StalkerKinematicsComponent->RegisterComponent();
-	AddInstanceComponent(StalkerKinematicsComponent);
+void AStalkerPlayerCharacter::AttachTo(XRayUnrealAttachableInterface* Attach, const char* BoneName)
+{
+	unimplemented();
+}
+
+void AStalkerPlayerCharacter::Detach()
+{
+	unimplemented();
+}
+
+void AStalkerPlayerCharacter::Lock(void*)
+{
+	unimplemented();
 }
 

@@ -8,21 +8,71 @@ AStalkerNiagaraActor::AStalkerNiagaraActor(const FObjectInitializer& ObjectIniti
 	StalkerNiagaraSystem = nullptr;
 }
 
-void AStalkerNiagaraActor::Lock()
+void AStalkerNiagaraActor::AttachTo(XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName)
 {
-	check(IsLocked == false);
-	IsLocked = true;
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	check(SceneComponent);
+	check(GetRootComponent());
+	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
+	check(AttachToComponent(SceneComponent,AttachmentTransformRules,BoneName));
+	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(SceneComponent))
+	{
+		SetOwnerNoSee(PrimitiveComponen->bOwnerNoSee);
+		SetOnlyOwnerSee(PrimitiveComponen->bOnlyOwnerSee);
+	}
+}
+void AStalkerNiagaraActor::Detach()
+{
+	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+	DetachFromActor(DetachmentTransformRules);
+}
+void AStalkerNiagaraActor::Lock(CObject* Object)
+{
+	Lock((void*)Object);
 }
 
-void AStalkerNiagaraActor::Unlock()
+void AStalkerNiagaraActor::Lock(void* Pointer)
 {
-	check(IsLocked == true);
-	IsLocked = false;
+	check(Locked == nullptr);
+	Locked = Pointer;
+}
+
+void AStalkerNiagaraActor::Unlock(void* Pointer)
+{
+	check(Locked == Pointer);
+	Locked = nullptr;
+}
+
+void* AStalkerNiagaraActor::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+{
+	switch (ObjectType)
+	{
+	case EXRayUnrealObjectType::Object:
+		return static_cast<UObject*>(this);
+	case EXRayUnrealObjectType::Actor:
+		return static_cast<AActor*>(this);
+	case EXRayUnrealObjectType::StalkerNiagaraActor:
+		return this;
+	case EXRayUnrealObjectType::SceneComponent:
+		return static_cast<USceneComponent*>(GetNiagaraComponent());
+	default:
+		return nullptr;
+	}
+}
+
+void* AStalkerNiagaraActor::QueryInterface(EXRayUnrealInterfaceType AttachableType)
+{
+	switch (AttachableType)
+	{
+	case EXRayUnrealInterfaceType::ParticleCustom:
+		return static_cast<IParticleCustom*>(this);
+	}
+	return IRenderVisual::QueryInterface(AttachableType);
 }
 
 void AStalkerNiagaraActor::BeginDestroy()
 {
-	check(IsLocked == false);
+	check(Locked == nullptr);
 	Super::BeginDestroy();
 }
 
@@ -110,24 +160,9 @@ vis_data& AStalkerNiagaraActor::getVisData()
 	return VisData;
 }
 
-u32 AStalkerNiagaraActor::getType()
-{
-	throw MT_PARTICLE_GROUP;
-}
-
 shared_str AStalkerNiagaraActor::getDebugName()
 {
 	return ParticlesName;
-}
-
-IParticleCustom* AStalkerNiagaraActor::dcast_ParticleCustom()
-{
-	return this;
-}
-
-void AStalkerNiagaraActor::Detach()
-{
-	 ensureMsgf(false && "NotImplemented", TEXT("NotImplemented"));
 }
 
 void AStalkerNiagaraActor::UpdateParent(const Fmatrix& m, const Fvector& velocity, BOOL bXFORM)
@@ -198,6 +233,47 @@ BOOL AStalkerNiagaraActor::GetHudMode()
 bool AStalkerNiagaraActor::Alive()
 {
 	return IsLive;
+}
+
+void AStalkerNiagaraActor::SetOffset(const Fmatrix& offset)
+{
+	GetNiagaraComponent()->SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal(offset)));
+}
+
+void AStalkerNiagaraActor::SetEnableVelocity(bool EnableVelocity)
+{
+	SetActorTickEnabled(EnableVelocity);
+	LastPosition = GetActorLocation();
+}
+
+void AStalkerNiagaraActor::BeginPlay()
+{
+	Super::BeginPlay();
+	LastPosition = GetActorLocation();
+}
+
+void AStalkerNiagaraActor::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	static FName NAME_UserVelocity = "User.Velocity";
+	GetNiagaraComponent()->SetVariableVec3(NAME_UserVelocity,	(GetActorLocation()-LastPosition));
+	LastPosition = GetActorLocation();
+}
+
+void AStalkerNiagaraActor::SetOwnerNoSee(bool Enable)
+{
+	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(GetRootComponent()))
+	{
+		PrimitiveComponen->SetOwnerNoSee(Enable);
+	}
+}
+
+void AStalkerNiagaraActor::SetOnlyOwnerSee(bool Enable)
+{
+	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(GetRootComponent()))
+	{
+		PrimitiveComponen->SetOnlyOwnerSee(Enable);
+	}
 }
 
 void AStalkerNiagaraActor::OnSystemFinished(class UNiagaraComponent* PSystem)
