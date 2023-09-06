@@ -29,7 +29,7 @@ In the future, it will be possible to build for all other platforms, including m
 You need to do this recursively using the `--recursive` parameter
 
 ```bash
-git clone https://github.com/RedPandaProjects/Stalker2UE --recursive
+git clone https://git.s2ue.org/RedProjects/SonUE.git --recursive
 ```
 
 <center>
