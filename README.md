@@ -1,7 +1,5 @@
 <p align="center">
-
-![STALKER on UE Logo](Resources/Media/LogoText.png)
-
+    <img src="Resources/Media/LogoText.png" alt="STALKER on UE Logo" />
 </p>
 
 # STALKER on UE ![Unreal Engine 5.2](https://img.shields.io/badge/Unreal_Engine-5.2-blue) [![Discord](https://img.shields.io/discord/530968529311367178?style=social&logo=Discord&label=Discord)](https://discord.gg/dbBdK2GxKf) 
@@ -33,9 +31,7 @@ git clone https://git.s2ue.org/RedProjects/SonUE.git --recursive
 ```
 
 <p align="center">
-
-![Terminal](Resources/Media/git-clone.png)
-
+    <img src="Resources/Media/git-clone.png" alt="Terminal" />
 </p>
 
 ## Building X-Ray Engine
@@ -56,9 +52,7 @@ Building `DebugGame Editor` in the Unreal project. To do this, I need to build a
 > Everything should be as described in [that](https://s2ue.org/docs/install-and-build/build) table; otherwise, it won't work!
 
 <p align="center">
-
-![Visual Studio](Resources/Media/xray-build.png)
-
+    <img src="Resources/Media/xray-build.png" alt="Visual Studio" />
 </p>
 
 ## Building the UE Project
@@ -67,9 +61,7 @@ Building `DebugGame Editor` in the Unreal project. To do this, I need to build a
 After successfully building X-Ray Engine, return to the repository's root folder and generate the project.
 
 <p align="center">
-
-![Generate Visual Studio Project](Resources/Media/generate-vs-project.png)
-
+    <img src="Resources/Media/generate-vs-project.png" alt="Generate Visual Studio Project" />
 </p>
 
 **Note**
@@ -84,9 +76,7 @@ After generating the Visual Studio project, open it and select the desired build
 The generated file can be found at `{src}/Stalker.sln`
 
 <p align="center">
-
-![UE Build](Resources/Media/ue-build.png)
-
+    <img src="Resources/Media/ue-build.png" alt="UE Build" />
 </p>
 
 **Note**
