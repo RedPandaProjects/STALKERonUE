@@ -30,7 +30,7 @@ You need to do this recursively using the `--recursive` parameter
 git clone https://git.s2ue.org/RedProjects/SonUE.git --recursive
 ```
 
-<p align="center">
+<p>
     <img src="Resources/Media/git-clone.png" alt="Terminal" />
 </p>
 
@@ -51,7 +51,7 @@ Building `DebugGame Editor` in the Unreal project. To do this, I need to build a
 > [!WARNING]
 > Everything should be as described in [that](https://s2ue.org/docs/install-and-build/build) table; otherwise, it won't work!
 
-<p align="center">
+<p>
     <img src="Resources/Media/xray-build.png" alt="Visual Studio" />
 </p>
 
@@ -60,7 +60,7 @@ Building `DebugGame Editor` in the Unreal project. To do this, I need to build a
 ### 1. Creating a Visual Studio Project for UE Build
 After successfully building X-Ray Engine, return to the repository's root folder and generate the project.
 
-<p align="center">
+<p>
     <img src="Resources/Media/generate-vs-project.png" alt="Generate Visual Studio Project" />
 </p>
 
@@ -75,7 +75,7 @@ After generating the Visual Studio project, open it and select the desired build
 
 The generated file can be found at `{src}/Stalker.sln`
 
-<p align="center">
+<p>
     <img src="Resources/Media/ue-build.png" alt="UE Build" />
 </p>
 
