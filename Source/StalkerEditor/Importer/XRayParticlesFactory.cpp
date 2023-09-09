@@ -3,6 +3,7 @@
 #include "ImportUtils/StaticMeshImportUtils.h"
 #include "../StalkerEditorManager.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 THIRD_PARTY_INCLUDES_START
 #include "Editors/XrECore/Particles/PSLibrary.h"
 #include "Editors/XrECore/Particles/ParticleEffectDef.h"
@@ -279,33 +280,51 @@ void XRayParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDef
 	InEmiter->SetName(FName(FPaths::GetBaseFilename(ANSI_TO_TCHAR(InParticleEffect->m_Name.c_str()))));
 	{
 		UNiagaraSpriteRendererProperties*NiagaraSpriteRendererProperties =  NewObject<UNiagaraSpriteRendererProperties>(Emitter, "Renderer");
-		FString MaterialUserParametrName = FString::Printf(TEXT("User.%sMaterial"),*InEmiter->GetName().ToString());
-		FNiagaraVariable MaterialUserParametr(FNiagaraTypeDefinition::GetUMaterialDef(), *MaterialUserParametrName);
-
 		FStalkerEmiterMaterial StalkerEmiterMaterial;
+
+		FString ParticleEffectName = InParticleEffect->Name();
+		bool UseHUD = false;
+		for(const FString&Path: GetDefault<UStalkerGameSettings>()->ParticlesUsingHudMode)
+		{
+			if(ParticleEffectName.Find(Path) == 0)
+			{
+				UseHUD = true;
+			}
+		}
+
 		if (GroupEffect&&ImportToEmitterAs == EImportToEmitterAs::None)
 		{
 			FString Name =  GroupEffect->m_EffectName.c_str();
 			Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 			const FString EffectPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
 			NiagaraSpriteRendererProperties->Material = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,false);
-			StalkerEmiterMaterial.Material =NiagaraSpriteRendererProperties->Material;
-			StalkerEmiterMaterial.HudMaterial = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
+			if(UseHUD)
+			{
+				StalkerEmiterMaterial.Material =NiagaraSpriteRendererProperties->Material;
+				StalkerEmiterMaterial.HudMaterial = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
+			}
 		}
 		else
 		{
 			NiagaraSpriteRendererProperties->Material = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,false);
-			StalkerEmiterMaterial.Material = 			NiagaraSpriteRendererProperties->Material;
-			StalkerEmiterMaterial.HudMaterial = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
+			if(UseHUD)
+			{
+				StalkerEmiterMaterial.Material = 			NiagaraSpriteRendererProperties->Material;
+				StalkerEmiterMaterial.HudMaterial = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
+			}
 		}
-
-		if (UStalkerNiagaraSystem* StalkerNiagaraSystem = Cast<UStalkerNiagaraSystem>(&InEmiter->GetOwningSystemViewModel()->GetSystem()))
+		
+		if(UseHUD)
 		{
-			StalkerNiagaraSystem->Materials.Add(*MaterialUserParametrName,StalkerEmiterMaterial);
+			FString MaterialUserParametrName = FString::Printf(TEXT("User.%sMaterial"),*InEmiter->GetName().ToString());
+			FNiagaraVariable MaterialUserParametr(FNiagaraTypeDefinition::GetUMaterialDef(), *MaterialUserParametrName);
+			if (UStalkerNiagaraSystem* StalkerNiagaraSystem = Cast<UStalkerNiagaraSystem>(&InEmiter->GetOwningSystemViewModel()->GetSystem()))
+			{
+				StalkerNiagaraSystem->Materials.Add(*MaterialUserParametrName,StalkerEmiterMaterial);
+			}
+			InEmiter->GetOwningSystemViewModel()->GetSystem().GetExposedParameters().AddParameter( MaterialUserParametr);
+			NiagaraSpriteRendererProperties->MaterialUserParamBinding.Parameter = MaterialUserParametr;
 		}
-		InEmiter->GetOwningSystemViewModel()->GetSystem().GetExposedParameters().AddParameter( MaterialUserParametr);
-		NiagaraSpriteRendererProperties->MaterialUserParamBinding.Parameter = MaterialUserParametr;
-
 		Emitter->AddRenderer(NiagaraSpriteRendererProperties, EmitterData->Version.VersionGuid);
 		if(InParticleEffect->m_Flags.is(PS::CPEDef::dfAlignToPath))
 		{	
@@ -1233,7 +1252,34 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 	FString Path = InPath;
 	if (HudMode)
 	{
+		const FString ObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
 		Path+=TEXT("_HUD");
+		const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
+		UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+		if (Material)
+			return Material;
+		UPackage* AssetPackage = CreatePackage(*Path);
+		UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), RF_Standalone|RF_Public);
+		FAssetRegistryModule::AssetCreated(NewMaterial);
+		{
+			UMaterialInterface* ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ObjectPath, nullptr, LOAD_NoWarn);
+			if(!ensure(ParentMaterial))
+			{
+				return nullptr;
+			}
+			NewMaterial->Parent = ParentMaterial;
+		}
+		FStaticParameterSet NewStaticParameterSet;
+		FStaticSwitchParameter SwitchParameter;
+		SwitchParameter.ParameterInfo.Name = TEXT("HUD Mode");
+		SwitchParameter.Value = true;
+		SwitchParameter.bOverride = true;
+		NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+		NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
+		NewMaterial->InitStaticPermutation();
+		NewMaterial->Modify();
+		NewMaterial->PostEditChange();
+		return NewMaterial;
 	}
 	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
 	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
