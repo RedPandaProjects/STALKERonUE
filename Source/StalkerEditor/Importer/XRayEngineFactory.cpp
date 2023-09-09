@@ -1988,7 +1988,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 			RotKey = FQuat4f(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w);
 			PosKeys.Add(FVector(PosKey.X, PosKey.Y, PosKey.Z));
 			RotKeys.Add(FQuat(RotKey.X, RotKey.Y, RotKey.Z, RotKey.W));
-		
+			RotKeys.Last().Normalize();
 			ScaleKeys.Add(FVector(ScaleKey.X, ScaleKey.Y, ScaleKey.Z));
 		}
 
@@ -2112,7 +2112,6 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 		for(auto&[Key,Value]:*Motions.motion_map())
 		{
 			FStalkerKinematicsAnimData OutAnim;
-
 			const FString MotionPath = Name / FString(Key.c_str());
 			OutAnim.Amim = CreateAnim(MotionPath, InMesh->Mesh->GetSkeleton(), BonesData, Motions, Value);
 			if (!OutAnim.Amim)
@@ -2141,6 +2140,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 
 UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion, u16 ID)
 {
+
 	const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
 	const FString MotionFullPath = CorrectName + TEXT(".") + FPaths::GetBaseFilename(CorrectName);
 	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
@@ -2225,6 +2225,7 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 			FVector3f ScaleKey(1, 1, 1);
 			PosKeys.Add(FVector(PosKey.X, PosKey.Y, PosKey.Z));
 			RotKeys.Add(FQuat(RotKey.X, RotKey.Y, RotKey.Z, RotKey.W));
+			RotKeys.Last().Normalize();
 			ScaleKeys.Add(FVector(ScaleKey.X, ScaleKey.Y, ScaleKey.Z));
 		}
 
