@@ -59,6 +59,7 @@ void AStalkerPlayerCharacter::Tick(float DeltaTime)
 	FRotator RotationToUnreal(0,90,0);
 	FRotator Rotation(FQuat(View.GetRotation())*FQuat(RotationToUnreal));
 	CastChecked<APlayerController>(GetController())->SetControlRotation(Rotation);
+
 }
 
 void AStalkerPlayerCharacter::BeginDestroy()
@@ -143,6 +144,20 @@ void AStalkerPlayerCharacter::Unlock(void*InXRayObject)
 XRayUnrealAttachableInterface* AStalkerPlayerCharacter::GetCameraComponent()
 {
 	return FirstPersonCameraAttachable;
+}
+
+bool AStalkerPlayerCharacter::IsAttached(XRayUnrealAttachableInterface* Attach)
+{
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	{
+		return RootComponent->IsAttachedTo(RootComp);
+	}
+	return false;
+}
+
+void AStalkerPlayerCharacter::GetWorldTransform(Fmatrix& OutXForm)
+{
+	OutXForm = StalkerMath::UnrealMatrixToXRay(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
 void AStalkerPlayerCharacter::AttachTo(XRayUnrealAttachableInterface* Attach, const char* BoneName)

@@ -23,7 +23,7 @@ void AStalkerNiagaraActor::AttachTo(XRayUnrealAttachableInterface* AttachableInt
 }
 void AStalkerNiagaraActor::Detach()
 {
-	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepWorld, false);
 	DetachFromActor(DetachmentTransformRules);
 }
 void AStalkerNiagaraActor::Lock(CObject* Object)
@@ -274,6 +274,20 @@ void AStalkerNiagaraActor::SetOnlyOwnerSee(bool Enable)
 	{
 		PrimitiveComponen->SetOnlyOwnerSee(Enable);
 	}
+}
+
+void AStalkerNiagaraActor::GetWorldTransform(Fmatrix& OutXForm)
+{
+	OutXForm = StalkerMath::UnrealMatrixToXRay(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
+}
+
+bool AStalkerNiagaraActor::IsAttached(XRayUnrealAttachableInterface* Attach)
+{
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	{
+		return RootComponent->IsAttachedTo(RootComp);
+	}
+	return false;
 }
 
 void AStalkerNiagaraActor::OnSystemFinished(class UNiagaraComponent* PSystem)

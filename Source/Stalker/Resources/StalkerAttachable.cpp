@@ -20,7 +20,7 @@ void UStalkerAttachable::AttachTo(XRayUnrealAttachableInterface* AttachableInter
 
 void UStalkerAttachable::Detach()
 {
-	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepWorld, false);
 	OwnerComponent->DetachFromComponent(DetachmentTransformRules);
 }
 
@@ -72,3 +72,18 @@ void* UStalkerAttachable::CastUnrealObject(EXRayUnrealObjectType ObjectType)
 		return nullptr;
 	}
 }
+
+void UStalkerAttachable::GetWorldTransform(Fmatrix& OutXForm)
+{
+	OutXForm = StalkerMath::UnrealMatrixToXRay(OwnerComponent->GetComponentToWorld().ToMatrixWithScale());
+}
+
+bool UStalkerAttachable::IsAttached(XRayUnrealAttachableInterface* Attach)
+{
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	{
+		return OwnerComponent->IsAttachedTo(RootComp);
+	}
+	return false;
+}
+

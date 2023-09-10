@@ -91,7 +91,7 @@ void AStalkerProxy::SetAsRoot(XRayUnrealAttachableInterface* AttachableInterface
 
 void AStalkerProxy::Detach()
 {
-	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+	FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepWorld, false);
 	DetachFromActor(DetachmentTransformRules);
 }
 
@@ -133,3 +133,16 @@ void AStalkerProxy::SetOnlyOwnerSee(bool Enable)
 	}
 }
 
+void AStalkerProxy::GetWorldTransform(Fmatrix& OutXForm)
+{
+	OutXForm = StalkerMath::UnrealMatrixToXRay(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
+}
+
+bool AStalkerProxy::IsAttached(XRayUnrealAttachableInterface* Attach)
+{
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	{
+		return RootComponent->IsAttachedTo(RootComp);
+	}
+	return false;
+}

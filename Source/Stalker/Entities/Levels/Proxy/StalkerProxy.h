@@ -26,7 +26,8 @@ public:
 	void*							CastUnrealObject			(EXRayUnrealObjectType ObjectType) override;
 	void							SetOwnerNoSee				(bool Enable) override;
 	void							SetOnlyOwnerSee				(bool Enable) override;
-
+	void							GetWorldTransform			(Fmatrix& OutXForm) override;
+	bool							IsAttached					(XRayUnrealAttachableInterface* Attach) override;
 protected:
 	virtual void					BeginPlay					() override;
 	virtual void					Tick						(float DeltaTime) override;

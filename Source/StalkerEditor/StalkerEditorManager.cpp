@@ -76,6 +76,7 @@ void UStalkerEditorManager::Initialized()
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportMeshes, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportMeshes));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportPhysicalMaterials, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportPhysicalMaterials));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportParticles, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportParticles));
+		g_pMotionsContainer = new motions_container();
 	}
 	
 }
@@ -84,6 +85,7 @@ void UStalkerEditorManager::Destroy()
 {
 	if (GIsEditor)
 	{
+		delete g_pMotionsContainer;
 		FEditorDelegates::PreBeginPIE.RemoveAll(this);
 		if (FModuleManager::Get().IsModuleLoaded("PropertyEditor"))
 		{

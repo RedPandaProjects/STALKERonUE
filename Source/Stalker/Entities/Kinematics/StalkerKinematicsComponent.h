@@ -34,7 +34,8 @@ public:
 	void											SetOwnerNoSee						(bool Enable) override;
 	void											SetOnlyOwnerSee						(bool Enable) override;
 	void											SetOffset							(const Fmatrix&offset) override;
-
+	void											GetWorldTransform					(Fmatrix& OutXForm) override;
+	bool											IsAttached							(XRayUnrealAttachableInterface* Attach) override;
 
 	void											TickComponent						(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
@@ -195,5 +196,7 @@ private:
 	UPROPERTY(Transient)
 	bool											bIsErrorMesh;
 #endif
-	void*											XRayParent  = nullptr;		
+	void*											XRayParent  = nullptr;
+
+	int32											DelayUpdateVisData = -1; 
 };

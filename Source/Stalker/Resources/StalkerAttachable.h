@@ -17,7 +17,9 @@ public:
 	void	Lock				(void*) override;
 	void	Unlock				(void*) override;
 	void*	CastUnrealObject	(EXRayUnrealObjectType ObjectType) override;
-
+	
+	void	GetWorldTransform	(Fmatrix& OutXForm) override;
+	bool	IsAttached			(XRayUnrealAttachableInterface* Attach) override;
 	UPROPERTY(Transient)
 	USceneComponent* OwnerComponent;
 };

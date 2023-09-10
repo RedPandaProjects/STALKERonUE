@@ -42,6 +42,8 @@ public:
 	void						Tick						(float DeltaSeconds) override;
 	void						SetOwnerNoSee				(bool Enable) override;
 	void						SetOnlyOwnerSee				(bool Enable) override;
+	void						GetWorldTransform			(Fmatrix& OutXForm) override;
+	bool						IsAttached					(XRayUnrealAttachableInterface* Attach) override;
 
 	shared_str					ParticlesName;
 

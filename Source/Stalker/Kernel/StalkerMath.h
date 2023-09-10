@@ -12,10 +12,10 @@ namespace StalkerMath
 	inline Fmatrix	UnrealMatrixToXRay(const FMatrix& InMatrix)
 	{
 		Fmatrix Result;
-		Result.i.set(InMatrix.M[0][0],-InMatrix.M[0][2],-InMatrix.M[0][1]); Result._14 = -InMatrix.M[0][4];
-		Result.j.set(-InMatrix.M[2][0],InMatrix.M[2][2],InMatrix.M[2][1]); Result._34 = InMatrix.M[2][4];
-		Result.k.set(-InMatrix.M[1][0],InMatrix.M[1][2],InMatrix.M[1][1]); Result._24 = InMatrix.M[2][4];
-		Result.c.set(-InMatrix.M[3][0]/100.f,InMatrix.M[3][2]/100.f,InMatrix.M[3][1]/100.f); Result._44 = InMatrix.M[4][4];
+		Result.i.set(InMatrix.M[0][0],-InMatrix.M[0][2],-InMatrix.M[0][1]); Result._14 = -InMatrix.M[0][3];
+		Result.j.set(-InMatrix.M[2][0],InMatrix.M[2][2],InMatrix.M[2][1]); Result._34 = InMatrix.M[2][3];
+		Result.k.set(-InMatrix.M[1][0],InMatrix.M[1][2],InMatrix.M[1][1]); Result._24 = InMatrix.M[1][3];
+		Result.c.set(-InMatrix.M[3][0]/100.f,InMatrix.M[3][2]/100.f,InMatrix.M[3][1]/100.f); Result._44 = InMatrix.M[3][3];
 		return Result;
 	}
 	/*inline Fmatrix	UnrealMatrixToXRay(const FMatrix& InMatrix)

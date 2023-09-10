@@ -55,6 +55,10 @@ public:
 	bool	IgnoreIncludeInBuildSpawn = false;
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
 	bool	VerifySpaceRestrictorBorders = true;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TArray<FString> ParticlesUsingHudMode; 
+
 #endif
 #if WITH_EDITOR
 	const TMap<FName, FStalkerLevelInfo> & GetCurrentLevels() const;

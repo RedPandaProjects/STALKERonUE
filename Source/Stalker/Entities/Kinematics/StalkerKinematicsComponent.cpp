@@ -58,6 +58,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		BonesPartsName2ID.Empty();
 		BonesPartsBoneID2ID.Empty();
 		BonesParts.Empty();
+		DelayUpdateVisData = -1;
 		DataName = "";
 #if WITH_EDITORONLY_DATA
 		bIsErrorMesh = false;
@@ -303,6 +304,11 @@ void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset)
 	SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal( offset)));
 }
 
+void UStalkerKinematicsComponent::GetWorldTransform(Fmatrix& OutXForm)
+{
+	OutXForm = StalkerMath::UnrealMatrixToXRay(GetComponentToWorld().ToMatrixWithScale());
+}
+
 void UStalkerKinematicsComponent::Lock(void* InXRayParent)
 {
 	check(XRayParent == nullptr);
@@ -320,7 +326,7 @@ void UStalkerKinematicsComponent::Detach()
 {
 	if (IsRegistered())
 	{
-		FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepRelative, false);
+		FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepWorld, false);
 		DetachFromComponent(DetachmentTransformRules);
 		UnregisterComponent();
 	}
@@ -1149,12 +1155,53 @@ shared_str UStalkerKinematicsComponent::getDebugName()
 	return shared_str(TCHAR_TO_ANSI(*Name));
 }
 
+bool UStalkerKinematicsComponent::IsAttached(XRayUnrealAttachableInterface* Attach)
+{
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	{
+		return IsAttachedTo(RootComp);
+	}
+	return false;
+}
+
 void UStalkerKinematicsComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	SCOPE_CYCLE_COUNTER(STAT_XRayEngineKinematics);
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 
+	Fbox Box;Box.invalidate();
+	if(DelayUpdateVisData<0)
+	{
+		if(GetWorld()->IsGameWorld())
+		{
+			for(const StalkerKinematicsBone&Bone:Bones)
+			{
+				Fmatrix&	Mbone	= BonesInstance[Bone.SelfID].Transform;
+				Fmatrix		Mbox;	Bone.Obb.xform_get(Mbox);
+				Fmatrix		X;		X.mul_43(Mbone,Mbox);
+				Fvector	S		= Bone.Obb.m_halfsize;
+				
+				Fvector			P,A;
+
+				A.set( -S.x,	-S.y,	-S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set( -S.x,	-S.y,	 S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set(  S.x,	-S.y,	 S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set(  S.x,	-S.y,	-S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set( -S.x,	 S.y,	-S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set( -S.x,	 S.y,	 S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set(  S.x, 	 S.y,	 S.z ); X.transform_tiny(P,A); Box.modify(P);
+				A.set(  S.x, 	 S.y,	-S.z ); X.transform_tiny(P,A); Box.modify(P);
+			}
+			VisData.box = Box;
+			VisData.box.getsphere	(VisData.sphere.P,VisData.sphere.R);
+		}
+		DelayUpdateVisData = FMath::RandRange(2,32);
+	}
+	else
+	{
+		DelayUpdateVisData --;
+	}
 
 	if (GetUpdateTracksCalback())
 	{
