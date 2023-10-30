@@ -16,10 +16,11 @@ AStalkerLight::AStalkerLight()
 	SpotPoint = CreateDefaultSubobject<USpotLightComponent>(TEXT("Spot"));
 	SpotPoint->SetupAttachment(GetRootComponent());
 	SpotPoint->SetVisibility(false);
-	LightType = IRender_Light::DIRECT;
+	LightType = IRender_Light::POINT;
 	SpotPoint->SetRelativeRotation(FRotator(0,90,0));
 	SpotPoint->SetIntensityUnits(ELightUnits::Candelas);
 	LightPoint->SetIntensityUnits(ELightUnits::Candelas);
+	set_active(false);
 }
 
 void AStalkerLight::BeginPlay()
@@ -36,7 +37,6 @@ void AStalkerLight::BeginDestroy()
 
 void AStalkerLight::set_type(LT type)
 {
-	set_active(false);
 	LightType = type;
 }
 
@@ -53,7 +53,6 @@ void AStalkerLight::set_active(bool InActive)
 		SpotPoint->SetVisibility(InActive);
 		break;
 	}
-
 }
 
 bool AStalkerLight::get_active()
@@ -168,10 +167,10 @@ void AStalkerLight::set_color(const Fcolor& C)
 void AStalkerLight::set_color(float r, float g, float b)
 {
 	float Mag = FMath::Sqrt(r*r+g*g+b*b);
-	if (Mag > 1)
+	if (Mag > 0)
 	{
-		LightPoint->Intensity = 500 * Mag;
-		SpotPoint->Intensity = 500 * Mag;
+		LightPoint->Intensity = 1 * Mag;
+		SpotPoint->Intensity = 1 * Mag;
 	}
 	LightPoint->SetLightColor(FLinearColor(r / Mag, g / Mag, b / Mag, 1.0f));
 	SpotPoint->SetLightColor(FLinearColor(r / Mag, g / Mag, b / Mag, 1.0f));
