@@ -31,6 +31,7 @@ public:
 	XRayUnrealAttachableInterface*	GetCameraComponent			() override;
 	void							GetWorldTransform			(Fmatrix& OutXForm) override;
 	bool							IsAttached					(XRayUnrealAttachableInterface* Attach) override;
+	void							SetVisibility				(bool NewVisibility) override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Stalker|Player", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent*			FirstPersonCameraComponent;

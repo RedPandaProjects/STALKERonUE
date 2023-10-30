@@ -28,6 +28,7 @@ public:
 	void							SetOnlyOwnerSee				(bool Enable) override;
 	void							GetWorldTransform			(Fmatrix& OutXForm) override;
 	bool							IsAttached					(XRayUnrealAttachableInterface* Attach) override;
+	void							SetVisibility				(bool NewVisibility) override;
 protected:
 	virtual void					BeginPlay					() override;
 	virtual void					Tick						(float DeltaTime) override;

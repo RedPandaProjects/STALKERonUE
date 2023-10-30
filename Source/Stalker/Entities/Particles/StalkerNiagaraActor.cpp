@@ -290,6 +290,11 @@ bool AStalkerNiagaraActor::IsAttached(XRayUnrealAttachableInterface* Attach)
 	return false;
 }
 
+void AStalkerNiagaraActor::SetVisibility(bool NewVisibility)
+{
+	GetNiagaraComponent()->SetVisibility(NewVisibility);
+}
+
 void AStalkerNiagaraActor::OnSystemFinished(class UNiagaraComponent* PSystem)
 {
 	IsLive = false;

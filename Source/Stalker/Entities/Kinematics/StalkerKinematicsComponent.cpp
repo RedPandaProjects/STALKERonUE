@@ -289,6 +289,11 @@ void* UStalkerKinematicsComponent::QueryInterface(EXRayUnrealInterfaceType Attac
 	}
 }
 
+void UStalkerKinematicsComponent::SetVisibility(bool NewVisibility)
+{
+	Super::SetVisibility(NewVisibility);
+}
+
 void UStalkerKinematicsComponent::SetOwnerNoSee(bool Enable)
 {
 	Super::SetOwnerNoSee(Enable);
@@ -324,6 +329,8 @@ void UStalkerKinematicsComponent::Unlock(void* InXRayParent)
 
 void UStalkerKinematicsComponent::Detach()
 {
+	Super::SetOwnerNoSee(false);
+	Super::SetOnlyOwnerSee(false);
 	if (IsRegistered())
 	{
 		FDetachmentTransformRules DetachmentTransformRules(EDetachmentRule::KeepWorld, false);

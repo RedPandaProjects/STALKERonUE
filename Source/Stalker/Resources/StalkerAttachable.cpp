@@ -73,6 +73,11 @@ void* UStalkerAttachable::CastUnrealObject(EXRayUnrealObjectType ObjectType)
 	}
 }
 
+void UStalkerAttachable::SetVisibility(bool NewVisibility)
+{
+	OwnerComponent->SetVisibility(NewVisibility);
+}
+
 void UStalkerAttachable::GetWorldTransform(Fmatrix& OutXForm)
 {
 	OutXForm = StalkerMath::UnrealMatrixToXRay(OwnerComponent->GetComponentToWorld().ToMatrixWithScale());

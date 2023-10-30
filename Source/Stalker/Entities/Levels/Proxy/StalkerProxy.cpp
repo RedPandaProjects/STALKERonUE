@@ -146,3 +146,8 @@ bool AStalkerProxy::IsAttached(XRayUnrealAttachableInterface* Attach)
 	}
 	return false;
 }
+
+void AStalkerProxy::SetVisibility(bool NewVisibility)
+{
+	SetActorHiddenInGame(!NewVisibility);
+}

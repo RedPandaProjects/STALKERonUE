@@ -44,6 +44,7 @@ public:
 	void						SetOnlyOwnerSee				(bool Enable) override;
 	void						GetWorldTransform			(Fmatrix& OutXForm) override;
 	bool						IsAttached					(XRayUnrealAttachableInterface* Attach) override;
+	void						SetVisibility				(bool NewVisibility) override;
 
 	shared_str					ParticlesName;
 

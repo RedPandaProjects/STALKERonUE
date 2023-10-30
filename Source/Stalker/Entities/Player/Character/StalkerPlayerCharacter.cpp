@@ -108,7 +108,14 @@ void* AStalkerPlayerCharacter::CastUnrealObject(EXRayUnrealObjectType ObjectType
 	case EXRayUnrealObjectType::StalkerPlayerCharacter:
 		return static_cast<AStalkerPlayerCharacter*>(this);
 	case EXRayUnrealObjectType::SceneComponent:
-		return static_cast<USceneComponent*>(GetRootComponent());
+		{
+			const TArray<TObjectPtr<USceneComponent>>& Components = GetMesh()->GetAttachChildren();
+			if(ensure(Components.Num() == 1))
+			{
+				return static_cast<USceneComponent*>(Components[0]);
+			}
+			return static_cast<USceneComponent*>(GetRootComponent());
+		}
 	default: 
 		return nullptr;
 	}
@@ -123,15 +130,18 @@ void AStalkerPlayerCharacter::SetAsRoot(XRayUnrealAttachableInterface* Attachabl
 	{
 		GStalkerEngineManager->GetResourcesManager()->UnregisterKinematics(StalkerKinematicsComponent);
 		StalkerKinematicsComponent->Rename(nullptr,this);
-		SetRootComponent(StalkerKinematicsComponent);
+		FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
+		StalkerKinematicsComponent->AttachToComponent(GetMesh(),AttachmentTransformRules);
 		StalkerKinematicsComponent->SetSimulatePhysics(false);
 		StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		StalkerKinematicsComponent->RegisterComponent();
 	}
 	else
 	{
-		SetRootComponent(SceneComponent);
+		FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
+		AttachToComponent(GetMesh(),AttachmentTransformRules);
 	}
+	AddInstanceComponent(SceneComponent);
 }
 
 
@@ -153,6 +163,11 @@ bool AStalkerPlayerCharacter::IsAttached(XRayUnrealAttachableInterface* Attach)
 		return RootComponent->IsAttachedTo(RootComp);
 	}
 	return false;
+}
+
+void AStalkerPlayerCharacter::SetVisibility(bool NewVisibility)
+{
+	SetActorHiddenInGame(!NewVisibility);
 }
 
 void AStalkerPlayerCharacter::GetWorldTransform(Fmatrix& OutXForm)

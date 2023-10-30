@@ -23,6 +23,7 @@ public:
 #endif
 	void											PostLoad							() override;
 	void											BeginDestroy						() override;
+
 	void											Lock								(CObject*) override;
 	void											Lock								(void* Parent) override;
 	void											Unlock								(void* Parent) override;
@@ -30,12 +31,13 @@ public:
 	void											AttachTo							(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
 	void*											CastUnrealObject					(EXRayUnrealObjectType ObjectType) override;
 	void*											QueryInterface						(EXRayUnrealInterfaceType AttachableType) override;
-	
+	void											SetVisibility						(bool NewVisibility) override;
 	void											SetOwnerNoSee						(bool Enable) override;
 	void											SetOnlyOwnerSee						(bool Enable) override;
 	void											SetOffset							(const Fmatrix&offset) override;
 	void											GetWorldTransform					(Fmatrix& OutXForm) override;
 	bool											IsAttached							(XRayUnrealAttachableInterface* Attach) override;
+
 
 	void											TickComponent						(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
