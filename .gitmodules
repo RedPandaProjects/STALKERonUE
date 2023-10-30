@@ -1,3 +1,6 @@
 [submodule "Plugins/XRayEngine/Source/ThirdParty"]
 	path = Source/XRayEngine
 	url = https://git.s2ue.org/psiget/XRayEngine
+[submodule "Plugins/VisualStudioTools"]
+	path = Plugins/VisualStudioTools
+	url = https://github.com/microsoft/vc-ue-extensions.git
