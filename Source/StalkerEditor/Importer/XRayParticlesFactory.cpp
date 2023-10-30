@@ -1352,16 +1352,16 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 void XRayParticlesFactory::Flush()
 {
 	CurrentSlowTask->EnterProgressFrame(0, FText::FromString(FString::Printf(TEXT("WaitForCompilationComplete ..."))));
-	for (TSharedPtr<FNiagaraSystemViewModel>& SystemViewModel : NiagaraSystemViewModels)
-	{
-		do
-		{
-			SystemViewModel->GetSystem().WaitForCompilationComplete(true);
-			SystemViewModel->RefreshAll();
-			SystemViewModel->Tick(0);
-		}
-		while(SystemViewModel->GetSystem().HasOutstandingCompilationRequests(true));
-	}
+	//for (TSharedPtr<FNiagaraSystemViewModel>& SystemViewModel : NiagaraSystemViewModels)
+	//{
+	//	do
+	//	{
+	//		SystemViewModel->GetSystem().WaitForCompilationComplete(true);
+	//		SystemViewModel->RefreshAll();
+	//		SystemViewModel->Tick(0);
+	//	}
+	//	while(SystemViewModel->GetSystem().HasOutstandingCompilationRequests(true));
+	//}
 	NiagaraSystemViewModels.Empty();
 }
 
