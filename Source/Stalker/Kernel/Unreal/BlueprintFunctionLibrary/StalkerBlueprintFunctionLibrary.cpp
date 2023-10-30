@@ -137,3 +137,13 @@ void UStalkerBlueprintFunctionLibrary::StalkerSpawnObject(const FString& Section
 		LevelToBlueprint->SpawnObject(TCHAR_TO_ANSI(*SectionName),TCHAR_TO_ANSI(*WayObjectName),PointIndex,Angle);
 	}
 }
+
+float UStalkerBlueprintFunctionLibrary::StalkerGetGameTime()
+{
+	XRayLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
+	if (LevelToBlueprint)
+	{
+		return LevelToBlueprint->GetGameTimeAsFloat();
+	}
+	return 0;
+}

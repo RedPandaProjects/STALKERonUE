@@ -28,4 +28,6 @@ public:
 	static bool StalkerActorGetInfo(const FString&Name);
 	UFUNCTION(BlueprintCallable, Category = "Stalker|Level Script",meta = (WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))
 	static void StalkerSpawnObject(const FString&SectionName,const FString&WayObjectName,int32 PointIndex = 0, float Angle = 0);
+	UFUNCTION(BlueprintCallable, Category = "Stalker|Level Script",meta = ( UnsafeDuringActorConstruction = "true"))
+	static float StalkerGetGameTime();
 };
