@@ -4,7 +4,6 @@
 
 #if WITH_EDITOR
 
-#include "Slate/Public/Framework/Commands/Commands.h"
 
 #include "OptickStyle.h"
 

@@ -27,7 +27,7 @@
 #include "Editor/EditorPerformanceSettings.h"
 #include "Editor/LevelEditor/Public/LevelEditor.h"
 #include "Editor/UnrealEd/Public/SEditorViewportToolBarMenu.h"
-#include "Projects/Public/Interfaces/IPluginManager.h"
+#include "Interfaces/IPluginManager.h"
 #include "ToolMenus.h"
 //#include "Windows/WindowsPlatformProcess.h"
 

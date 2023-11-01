@@ -7,7 +7,6 @@
 // RenderCore
 #include "GPUProfiler.h"
 #include "ProfilingDebugging/RealtimeGPUProfiler.h"
-#include "ProfilingDebugging/TracingProfiler.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 #define REALTIME_GPU_PROFILER_EVENT_TRACK_FRAME_NUMBER (TRACING_PROFILER || DO_CHECK)

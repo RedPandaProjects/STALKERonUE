@@ -4,7 +4,7 @@
 
 #if WITH_EDITOR
 
-#include "SlateCore/Public/Styling/SlateStyle.h"
+#include "Styling/SlateStyle.h"
 
 /**  */
 class FOptickStyle

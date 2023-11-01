@@ -9,6 +9,7 @@ class STALKER_API UStalkerAIMap : public UObject,public ILevelGraph
 public:
 								UStalkerAIMap		();
 	void						Serialize			(FArchive& Ar) override;
+	void						PostInitProperties	() override;
 
 	const						CHeader& header		() const override;
 	const						CVertex* get_nodes	() const override;
@@ -41,23 +42,21 @@ public:
 #endif
 	
 	UPROPERTY()
+	bool	NeedRebuild;
+	UPROPERTY()
 	FBox3f	AABB;
 	UPROPERTY()
 	FGuid	AIMapGuid;
-	UPROPERTY()
-	bool	NeedRebuild = true;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY()
 	float NodeSize = 70.f;
 
-	TArray<FStalkerAIMapNode*>	Nodes;
-	static const int32			NodesHashSize = 256;
-	TArray<FStalkerAIMapNode*>	NodesHash[NodesHashSize + 1][NodesHashSize + 1];
-	bool						NodesHashSelected[NodesHashSize + 1][NodesHashSize + 1];
+	TArray<FStalkerAIMapNode*>					Nodes;
+	static const int32							NodesHashSize = 256;
+	TArray<TArray<TArray<FStalkerAIMapNode*>>>	NodesHash;
+	TArray<TArray<bool>>						NodesHashSelected;
 #endif
-
-
 
 	CHeader						LevelGraphHeader;
 	TArray< CVertex>			LevelGraphVertices;
@@ -68,6 +67,7 @@ public:
 private:
 #if WITH_EDITORONLY_DATA
 	void						ClearNodes			();
+private:
 #endif
 	const int32					Version = 1;
 };

@@ -1,8 +1,6 @@
 #include "StalkerAIMap.h"
 
-
-
-UStalkerAIMap::UStalkerAIMap()
+UStalkerAIMap::UStalkerAIMap():NeedRebuild(true)
 {
 }
 
@@ -82,6 +80,18 @@ void UStalkerAIMap::Serialize(FArchive& Ar)
 		
 	}
 
+}
+
+void UStalkerAIMap::PostInitProperties()
+{
+	Super::PostInitProperties();
+	NodesHash.SetNum(NodesHashSize+1);
+	NodesHashSelected.SetNum(NodesHashSize+1);
+	for(int32 i = 0;i<=NodesHashSize;i++)
+	{
+		NodesHash[i].SetNum(NodesHashSize+1);
+		NodesHashSelected[i].SetNum(NodesHashSize+1);
+	}
 }
 
 

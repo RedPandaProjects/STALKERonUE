@@ -17,7 +17,7 @@
 #if defined(OPTICK_MSVC)
 
 #ifdef OPTICK_UE4
-#include "Core/Public/Windows/AllowWindowsPlatformTypes.h"
+#include "Windows/AllowWindowsPlatformTypes.h"
 #endif
 
 #ifndef WIN32_LEAN_AND_MEAN
@@ -29,7 +29,7 @@
 #include <windows.h>
 
 #ifdef OPTICK_UE4
-#include "Core/Public/Windows/HideWindowsPlatformTypes.h"
+#include "Windows/HideWindowsPlatformTypes.h"
 #endif
 
 #ifndef TRUE

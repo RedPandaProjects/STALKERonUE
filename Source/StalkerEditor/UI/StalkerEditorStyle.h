@@ -1,5 +1,5 @@
 #pragma once
-#include "SlateCore/Public/Styling/SlateStyle.h"
+#include "Styling/SlateStyle.h"
 
 /**  */
 class FStalkerEditorStyle

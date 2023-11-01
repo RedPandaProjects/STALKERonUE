@@ -1,7 +1,7 @@
 #include "StalkerEditorCForm.h"
 #include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
 #include "Resources/CFrom/StalkerCForm.h"
-#include "ToolMenus/Public/ToolMenus.h"
+#include "ToolMenus.h"
 #include "../../UI/Commands/StalkerEditorCommands.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Kernel/StalkerEngineManager.h"

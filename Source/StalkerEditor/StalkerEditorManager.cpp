@@ -5,7 +5,7 @@
 #include "Managers/AIMap/StalkerEditorAIMap.h"
 #include "UI/StalkerEditorStyle.h"
 #include "Entities/EditorRender/StalkerEditorRenderProxy.h"
-#include "PlacementMode/Public/IPlacementModeModule.h"
+#include "IPlacementModeModule.h"
 #include "Entities/Scene/SpawnObject/StalkerSpawnObject.h"
 #include "Entities/Scene/SpawnObject/StalkerSpawnObjectFactory.h"
 #include "Managers/SEFactory/StalkerSEFactoryManager.h"

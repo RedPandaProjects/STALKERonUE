@@ -6,8 +6,8 @@
 
 #include "Framework/Application/SlateApplication.h"
 #include "Slate/SlateGameResources.h"
-#include "SlateCore/Public/Styling/SlateStyleRegistry.h"
-#include "Projects/Public/Interfaces/IPluginManager.h"
+#include "Styling/SlateStyleRegistry.h"
+#include "Interfaces/IPluginManager.h"
 
 TSharedPtr< FSlateStyleSet > FOptickStyle::StyleInstance = NULL;
 
