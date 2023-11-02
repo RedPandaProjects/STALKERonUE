@@ -898,10 +898,10 @@ void UStalkerEditorAIMap::Build()
 	};
 	auto CompressNode  = [](NodeCompressed & Dest, FStalkerAIMapNode* Src)
 	{
-		constexpr int32 InvalidNode = (1 << 24) - 1;
+		constexpr int32 StalkerInvalidNode = (1 << 24) - 1;
 		Dest.light(15);
 		for (u8 L = 0; L < 4; ++L)
-			Dest.link(L, Src->Nodes[L] ? Src->Nodes[L]->Index : InvalidNode);
+			Dest.link(L, Src->Nodes[L] ? Src->Nodes[L]->Index : StalkerInvalidNode);
 	};
 	auto CompressCover = [](float c, int max_value)
 	{
