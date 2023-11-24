@@ -1,11 +1,17 @@
 #include "XRayEngineFactory.h"
+
+#include <Resources/StaticMesh/StalkerStaticMeshAssetUserData.h>
+
 #include "PhysicsEngine/PhysicsAsset.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneData.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "Engine/EngineTypes.h"
 #include "ImportUtils/StaticMeshImportUtils.h"
 #include "../StalkerEditorManager.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
+#include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 THIRD_PARTY_INCLUDES_START
 #include "Editors/XrECore/Engine/GameMtlLib.h"
 THIRD_PARTY_INCLUDES_END
@@ -163,16 +169,16 @@ inline bool operator == (const SJointIKData& Left, const SJointIKData& Right)
 		Left.type == Right.type;
 
 }
-UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
+USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 {
-	UStalkerKinematicsData* StalkerKinematicsData = nullptr;
+	USkeletalMesh* SkeletalMesh = nullptr;
 	FString PackageName;
 	PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	StalkerKinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (StalkerKinematicsData)
-		return StalkerKinematicsData;
+	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (SkeletalMesh)
+		return SkeletalMesh;
 
 	IReader* FileData = FS.r_open(TCHAR_TO_ANSI(*FileName));
 	if (!FileData)
@@ -443,8 +449,7 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	}
 	check(MaterialsAndTextures.Num() == Vertices.Num());
 	// Load animation
-	UPackage* AssetPackage = CreatePackage(*(PackageName + "_SkeletalMesh"));
-	USkeletalMesh* SkeletalMesh = NewObject<USkeletalMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName + "_SkeletalMesh"), ObjectFlags);
+	SkeletalMesh = NewObject<USkeletalMesh>(CreatePackage(*PackageName), *FPaths::GetBaseFilename(PackageName), ObjectFlags);
 
 	TArray<SkeletalMeshImportData::FBone> UBones;
 	UBones.AddDefaulted(Bones.Num());
@@ -531,9 +536,8 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 			}
 			const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / TEXT("Mat_") + FString::FromInt(ElementID));
 
-
 			SkeletalMeshImportData::FMaterial Material;
-			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value,"default");
+			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value,"default",PackageName.EndsWith(TEXT("_hud")));
 			Material.MaterialImportName = TEXT("Mat_") + FString::FromInt(ElementID);
 			InMaterials.Add(FSkeletalMaterial(Material.Material.Get(), true, false, FName(Material.MaterialImportName), FName(Material.MaterialImportName)));
 			int32 MaterialID = InSkeletalMeshImportData.Materials.Add(Material);
@@ -602,14 +606,9 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	SkeletalMesh->SetSkeleton(Skeleton);
 
 	SkeletalMesh->PostEditChange();
+	SkeletalMesh->AddAssetUserData(NewObject<UStalkerKinematicsAssetUserData>(SkeletalMesh));
+	UStalkerKinematicsAssetUserData* StalkerKinematicsData = SkeletalMesh->GetAssetUserDataChecked<UStalkerKinematicsAssetUserData>();
 
-	AssetPackage = CreatePackage(*PackageName);
-	StalkerKinematicsData = NewObject<UStalkerKinematicsData>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
-
-	FAssetRegistryModule::AssetCreated(StalkerKinematicsData);
-	ObjectCreated.Add(StalkerKinematicsData);
-
-	StalkerKinematicsData->Mesh = SkeletalMesh;
 	IReader* UD = FileData->open_chunk(OGF_S_USERDATA);
 	if (UD)
 	{
@@ -627,13 +626,14 @@ UStalkerKinematicsData* XRayEngineFactory::ImportOGF(const FString& FileName)
 	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
 	if (Header.type == MT_SKELETON_ANIM)
 	{
-		CreateAnims(PackageName / TEXT("Anims"), StalkerKinematicsData, Bones, FileData);
+		CreateAnims(PackageName / TEXT("Anims"), SkeletalMesh, Bones, FileData);
 	}
 	g_pMotionsContainer->clean(false);
 	FS.r_close(FileData);
 
 	StalkerKinematicsData->Modify();
-	return StalkerKinematicsData;
+	SkeletalMesh->PostEditChange();
+	return SkeletalMesh;
 }
 
 UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool DivideSubObject)
@@ -683,7 +683,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	{
 		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
-	return ImportObjectAsStaticMesh(Object, PackageName);
+	return ImportObjectAsStaticMesh(Object, PackageName,-1);
 }
 
 
@@ -702,11 +702,37 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	FAssetRegistryModule::AssetCreated(StaticMesh);
 	ObjectCreated.Add(StaticMesh);
 	TArray<FStaticMaterial> Materials;
-	TArray<bool> EnableColision;
-	FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
-	int32 MaterialIndex = 0;
-	for (int32 LodIndex = 0; LodIndex < 1; LodIndex++)
+
+	bool NeedLodForCollision = false;
+	bool NeedLodForRender = false;
+	for (size_t ElementID = 0; ElementID < Object->SurfaceCount(); ElementID++)
 	{
+		if (ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName()))
+		{
+			if (!ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision && !ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering)
+			{
+				continue;
+			}
+			NeedLodForCollision |= ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision&&!ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;
+			NeedLodForRender |= ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;;
+		}
+	}
+
+	int32 MaterialIndex = 0;
+	int32 LodIndex = 0;
+	TMap<int32,TArray<int32>> MaterialsIdOfLod;
+	TMap<int32,TArray<bool>> CollisionEnableIdOfLod;
+	TMap<int32,TArray<bool>> RenderingEnableIdOfLod;
+	TMap<int32,TArray<bool>> CastShadowEnableIdOfLod;
+	TMap<int32,TArray<bool>> AffectDistanceFieldLightingEnableIdOfLod;
+	auto CreateLod = [&](bool OnlyCollsion)
+	{
+		MaterialsIdOfLod.Add(LodIndex);
+		CollisionEnableIdOfLod.Add(LodIndex);
+		RenderingEnableIdOfLod.Add(LodIndex);
+		CastShadowEnableIdOfLod.Add(LodIndex);
+		AffectDistanceFieldLightingEnableIdOfLod.Add(LodIndex);
+		FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
 		FMeshDescription* MeshDescription = StaticMesh->CreateMeshDescription(LodIndex);
 		if (MeshDescription)
 		{
@@ -719,24 +745,32 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 			TVertexInstanceAttributesRef<float> VertexInstanceBinormalSigns = StaticMeshAttributes.GetVertexInstanceBinormalSigns();
 			TVertexInstanceAttributesRef<FVector2f> VertexInstanceUVs = StaticMeshAttributes.GetVertexInstanceUVs();
 			TVertexInstanceAttributesRef<FVector4f> VertexInstanceColors = StaticMeshAttributes.GetVertexInstanceColors();
-
+			
 			for (size_t ElementID = 0; ElementID < Object->SurfaceCount(); ElementID++)
 			{
-				bool bRendering = true;
-				if (ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName()))
+				Shader_xrLC* ShaderLC = ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName());
+				if (ShaderLC)
 				{
-					if (!ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision && !ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering)
+					if(OnlyCollsion)
 					{
-						continue;
+						if(!ShaderLC->flags.bCollision&&!ShaderLC->flags.bRendering)
+						{
+							continue;
+						}
 					}
-					bRendering = ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;
+					else
+					{
+						if ( !ShaderLC->flags.bRendering)
+						{
+							continue;
+						}
+					}
 				}
-
-
+			
 				xr_vector< st_MeshVertex> Vertices;
 				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 				{
-					if(InMeshID	!= -1&&InMeshID!=MeshID)
+					if(InMeshID	!= -1&&InMeshID != MeshID)
 					{
 						continue;
 					}
@@ -747,14 +781,29 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 				{
 					continue;
 				}
-				if (ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName()))
+
+				if(ShaderLC)
 				{
-					EnableColision.Add(ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision);
+					CollisionEnableIdOfLod[LodIndex].Add(!!ShaderLC->flags.bCollision);
+					RenderingEnableIdOfLod[LodIndex].Add(!!ShaderLC->flags.bRendering);
+					CastShadowEnableIdOfLod[LodIndex].Add(!!ShaderLC->flags.bLIGHT_CastShadow);
+					if(GetDefault<UStalkerGameSettings>()->DisableDistanceFieldOfCompilerShaderWhenImport.Contains(ShaderLC->Name))
+					{
+						AffectDistanceFieldLightingEnableIdOfLod[LodIndex].Add(false);
+					}
+					else
+					{
+						AffectDistanceFieldLightingEnableIdOfLod[LodIndex].Add(true);
+					}
 				}
 				else
 				{
-					EnableColision.Add(true);
+					CollisionEnableIdOfLod[LodIndex].Add(true);
+					RenderingEnableIdOfLod[LodIndex].Add(true);
+					CastShadowEnableIdOfLod[LodIndex].Add(true);
+					AffectDistanceFieldLightingEnableIdOfLod[LodIndex].Add(true);
 				}
+
 				VertexInstanceUVs.SetNumChannels(1);
 				FPolygonGroupID CurrentPolygonGroupID = MeshDescription->CreatePolygonGroup();
 				PolygonGroupImportedMaterialSlotNames[CurrentPolygonGroupID] = *FString::Printf(TEXT("mat_%d"), MaterialIndex);
@@ -781,65 +830,61 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 					}
 					const FPolygonID NewPolygonID = MeshDescription->CreatePolygon(CurrentPolygonGroupID, VertexInstanceIDs);
 				}
-				if (bRendering)
-				{
-					const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
-					Materials.AddUnique(FStaticMaterial(ImportSurface(SurfacePackageName, Object->Surfaces()[ElementID]), *FString::Printf(TEXT("mat_%d"), MaterialIndex), *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
-				}
-				else
-				{
-					const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
-					const FString SurfaceObjectPath = SurfacePackageName + TEXT(".") + FPaths::GetBaseFilename(SurfacePackageName);
-					UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *SurfaceObjectPath, nullptr, LOAD_NoWarn);
-					if (!Material)
-					{
-						UMaterialInterface* NoRenderMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/NoRender.NoRender"));
-						check(IsValid(NoRenderMaterial));
-
-						UPackage* AssetPackageMaterial = CreatePackage(*SurfacePackageName);
-						UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackageMaterial, *FPaths::GetBaseFilename(SurfacePackageName), ObjectFlags);
-						FAssetRegistryModule::AssetCreated(NewMaterial);
-						ObjectCreated.Add(NewMaterial);
-						NewMaterial->Parent = NoRenderMaterial;
-
-						FString NameGameMtl = Object->Surfaces()[ElementID]->_GameMtlName();
-						NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-						const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
-						const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
-						UStalkerPhysicalMaterial* PhysicalMaterial= LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
-						NewMaterial->PhysMaterial = PhysicalMaterial;
-						NewMaterial->InitStaticPermutation();
-						NewMaterial->Modify();
-						NewMaterial->PostEditChange();
-						Material = NewMaterial;
-					}
-					Materials.AddUnique(FStaticMaterial(Material, *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
-				}
-
-				MaterialIndex++;
+				MaterialsIdOfLod[LodIndex].Add(MaterialIndex++);
+				const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
+				Materials.AddUnique(FStaticMaterial(ImportSurface(SurfacePackageName, Object->Surfaces()[ElementID]), *FString::Printf(TEXT("mat_%d"), MaterialIndex), *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
 			}
 		}
 
-		StaticMesh->CommitMeshDescription(LodIndex);
-	}
-	SourceModel.BuildSettings.bRecomputeNormals = false;
-	SourceModel.BuildSettings.bGenerateLightmapUVs = true;
-	SourceModel.BuildSettings.DstLightmapIndex = 1;
-	SourceModel.BuildSettings.MinLightmapResolution = 128;
-	StaticMesh->SetStaticMaterials(Materials);
-	check(Materials.Num() == EnableColision.Num());
-	for (size_t i = 0; i < Materials.Num(); i++)
+		StaticMesh->CommitMeshDescription(LodIndex++);
+		SourceModel.BuildSettings.bRecomputeNormals = false;
+		SourceModel.BuildSettings.bGenerateLightmapUVs = true;
+		SourceModel.BuildSettings.DstLightmapIndex = 1;
+		SourceModel.BuildSettings.MinLightmapResolution = 128;
+	};
+	if(NeedLodForCollision)
 	{
-		FMeshSectionInfo MeshSectionInfo = StaticMesh->GetSectionInfoMap().Get(0, i);
-		MeshSectionInfo.bEnableCollision = EnableColision[i];
-		MeshSectionInfo.bCastShadow = true;
-		StaticMesh->GetSectionInfoMap().Set(0, i, MeshSectionInfo);
-
+		CreateLod(true);
 	}
+	if(NeedLodForRender)
+	{
+		CreateLod(false);
+	}
+	StaticMesh->SetStaticMaterials(Materials);
 	StaticMesh->Build();
-	StaticMesh->GetBodySetup()->CollisionTraceFlag = ECollisionTraceFlag::CTF_UseSimpleAndComplex;
+	for(auto&[Key,Value]:MaterialsIdOfLod)
+	{
+		for (size_t i = 0; i < Value.Num(); i++)
+		{
+			FMeshSectionInfo MeshSectionInfo = StaticMesh->GetSectionInfoMap().Get(Key, i);
+			MeshSectionInfo.bCastShadow = true;
+			MeshSectionInfo.bEnableCollision = CollisionEnableIdOfLod[Key][i];
+			if(!RenderingEnableIdOfLod[Key][i])
+			{
+				MeshSectionInfo.bCastShadow = false;
+				MeshSectionInfo.bAffectDistanceFieldLighting = false;
+				MeshSectionInfo.bVisibleInRayTracing = false;
+			}
+			else
+			{
+				MeshSectionInfo.bCastShadow = CastShadowEnableIdOfLod[Key][i];
+				MeshSectionInfo.bAffectDistanceFieldLighting = AffectDistanceFieldLightingEnableIdOfLod[Key][i];
+			}
+			MeshSectionInfo.MaterialIndex = Value[i];
+			StaticMesh->GetSectionInfoMap().Set(Key, i, MeshSectionInfo);
+		}
+	}
+
+	StaticMesh->GetBodySetup()->CollisionTraceFlag = ECollisionTraceFlag::CTF_UseComplexAsSimple;
+	if(NeedLodForCollision&&NeedLodForRender)
+	{
+		StaticMesh->SetMinLOD(1);
+	}
 	StaticMesh->Modify();
 	StaticMesh->PostEditChange();
+	UStalkerStaticMeshAssetUserData * StalkerStaticMeshAssetUserData  = NewObject<UStalkerStaticMeshAssetUserData>(StaticMesh);
+	StalkerStaticMeshAssetUserData->IsOnlyCollision = NeedLodForCollision&&!NeedLodForRender;
+	StaticMesh->AddAssetUserData(StalkerStaticMeshAssetUserData);
 	return StaticMesh;
 }
 
@@ -1020,119 +1065,277 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurfa
 	return ImportSurface(Path, Surface->_ShaderName(), Surface->_Texture(),Surface->_GameMtlName());
 }
 
-UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial)
+UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
 {
-	if (ShaderName.size() == 0)
-		return nullptr;
-	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	auto LoadGameMaterial = [](shared_str GameMaterial)
 	{
-		return ImportSurfaceSOC(Path, ShaderName, TextureName, GameMaterial);
-	}
-	ETextureThumbnail THM(TextureName.c_str());
-
-	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
-	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (Material)
-		return Material;
-	FString ParentName = FString(ShaderName.c_str());
-	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	UMaterialInterface* ParentMaterial = nullptr;
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
-		check(IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-
-		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
-		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
-		NewParentMaterial->Parent = UnkownMaterial;
-		FAssetRegistryModule::AssetCreated(NewParentMaterial);
-		ObjectCreated.Add(NewParentMaterial);
-		NewParentMaterial->Modify();
-		NewParentMaterial->PostEditChange();
-		ParentMaterial = NewParentMaterial;
-	}
-	UPackage* AssetPackage = CreatePackage(*Path);
-	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), ObjectFlags);
-	FAssetRegistryModule::AssetCreated(NewMaterial);
-	ObjectCreated.Add(NewMaterial);
-	NewMaterial->Parent = ParentMaterial;
-	if(GameMaterial.size())
-	{
+		if(GameMaterial.size() == 0)
+		{
+			GameMaterial = "default";
+		}
 		FString NameGameMtl = GameMaterial.c_str();
 		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
 		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
-		UStalkerPhysicalMaterial* PhysicalMaterial = LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
-		NewMaterial->PhysMaterial = PhysicalMaterial;
-	}
-	FStaticParameterSet NewStaticParameterSet;
+		return LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
+	};
 
-	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
-	if (BaseTexture)
+	if(GetDefault<UStalkerGameSettings>()->ReplaceShaderWhenImport.Contains(ShaderName.c_str()))
 	{
-		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Default")), BaseTexture);
+		ShaderName = TCHAR_TO_ANSI(*GetDefault<UStalkerGameSettings>()->ReplaceShaderWhenImport[ShaderName.c_str()]);
 	}
-	if (THM.Load(TextureName.c_str()))
-	{
-		TObjectPtr<UTexture2D> NormalMapTexture;
-		TObjectPtr<UTexture2D> GlossTexture;
-		TObjectPtr<UTexture2D> HeightTexture;
-		NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), ((static_cast<float>(THM._Format().material) + static_cast<float>(THM._Format().material_weight)) + .5f) / 4.f);
 
-		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
+	if (ShaderName.size() == 0)
+		return nullptr;
+
+	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	{
+		return ImportSurfaceSOC(Path, ShaderName, TextureName, GameMaterial,HudMode);
+	}
+
+	UMaterialInterface* LocalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(Path + TEXT(".") + FPaths::GetBaseFilename(Path)), nullptr, LOAD_NoWarn);
+	if (LocalMaterialInstance)
+	{
+		return LocalMaterialInstance;
+	}
+
+
+	ETextureThumbnail THM(TextureName.c_str());
+	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
+	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
+
+	UMaterialInterface* GlobalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
+	if (!GlobalMaterialInstance)
+	{
+		UMaterialInterface* ParentMaterial = nullptr;
 		{
-			{
-				FStaticSwitchParameter SwitchParameter;
-				SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
-				SwitchParameter.Value = true;
-				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-			}
-
-			{
-				FStaticSwitchParameter SwitchParameter;
-				SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
-				SwitchParameter.Value = THM._Format().bump_mode == STextureParams::tbmUseParallax;
-				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-			}
-
-			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
-			if (NormalMapTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
-			}
-			if (GlossTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Gloss")), GlossTexture);
-			}
-			if (HeightTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Height")), HeightTexture);
-			}
-			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height / 5.f);
+			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 		}
-		if (THM._Format().detail_name.size())
+		if (!IsValid(ParentMaterial))
 		{
-			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
-			TObjectPtr<UTexture2D> NormalMapTextureDetail;
-			TObjectPtr<UTexture2D> GlossTextureDetail;
-			TObjectPtr<UTexture2D> HeightTextureDetail;
+			const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		}
+		if (!IsValid(ParentMaterial))
+		{
+			UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
+			check(IsValid(UnkownMaterial));
+			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
 
-			ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
-			if (THMDetail.Load(THM._Format().detail_name.c_str()))
+			UPackage* AssetPackage = CreatePackage(*ParentPackageName);
+			UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
+			NewParentMaterial->Parent = UnkownMaterial;
+			FAssetRegistryModule::AssetCreated(NewParentMaterial);
+			ObjectCreated.Add(NewParentMaterial);
+			NewParentMaterial->Modify();
+			NewParentMaterial->PostEditChange();
+			ParentMaterial = NewParentMaterial;
+		}
+
+		UMaterialInstanceConstant* NewGlobalMaterialInstance = NewObject<UMaterialInstanceConstant>(CreatePackage(*GlobalMaterialInstanceName), *FPaths::GetBaseFilename(GlobalMaterialInstanceName), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(NewGlobalMaterialInstance);
+		ObjectCreated.Add(NewGlobalMaterialInstance);
+		NewGlobalMaterialInstance->Parent = ParentMaterial;
+		NewGlobalMaterialInstance->PhysMaterial = LoadGameMaterial(GameMaterial);
+		
+		FStaticParameterSet NewStaticParameterSet;
+
+		TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
+		if (BaseTexture)
+		{
+			NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Diffuse")), BaseTexture);
+		}
+		if (THM.Load(TextureName.c_str()))
+		{
+			TObjectPtr<UTexture2D> NormalMapTexture;
+			TObjectPtr<UTexture2D> HeightGlossTexture;
+			NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), ((static_cast<float>(THM._Format().material) + static_cast<float>(THM._Format().material_weight)) + .5f) / 4.f);
+
+			if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
+			{
+				{
+					FStaticSwitchParameter SwitchParameter;
+					SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
+					SwitchParameter.Value = true;
+					SwitchParameter.bOverride = true;
+					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+				}
+
+				{
+					FStaticSwitchParameter SwitchParameter;
+					SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
+					SwitchParameter.Value = THM._Format().bump_mode == STextureParams::tbmUseParallax;
+					SwitchParameter.bOverride = true;
+					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+				}
+
+				ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, HeightGlossTexture);
+				if (NormalMapTexture)
+				{
+					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
+				}
+				if (HeightGlossTexture)
+				{
+					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGloss")), HeightGlossTexture);
+				}
+				NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height / 5.f);
+			}
+			if (THM._Format().detail_name.size())
+			{
+				TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
+				TObjectPtr<UTexture2D> NormalMapTextureDetail;
+				TObjectPtr<UTexture2D> HeightGlossTextureDetail;
+
+				ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
+				if (THMDetail.Load(THM._Format().detail_name.c_str()))
+				{
+					FStaticSwitchParameter SwitchParameter;
+					SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
+					SwitchParameter.Value = true;
+					SwitchParameter.bOverride = true;
+					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+					if (DetailTexture)
+					{
+						NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDiffuse")), DetailTexture);
+					}
+					if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUse)
+					{
+						SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
+						SwitchParameter.Value = true;
+						SwitchParameter.bOverride = true;
+						NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+						ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, HeightGlossTextureDetail);
+
+						if (NormalMapTextureDetail)
+						{
+							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
+						}
+
+						if (HeightGlossTextureDetail)
+						{
+							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGlossDetail")), HeightGlossTextureDetail);
+						}
+
+						NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), THM._Format().detail_scale);
+					}
+				}
+			}
+		}
+		else
+		{
+			UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
+		}
+		NewGlobalMaterialInstance->UpdateStaticPermutation(NewStaticParameterSet);
+		NewGlobalMaterialInstance->InitStaticPermutation();
+		NewGlobalMaterialInstance->Modify();
+		NewGlobalMaterialInstance->PostEditChange();
+		if(!HudMode)return NewGlobalMaterialInstance;
+		GlobalMaterialInstance = NewGlobalMaterialInstance;
+	}
+	if(GlobalMaterialInstance->GetPhysicalMaterial()!=LoadGameMaterial(GameMaterial)||HudMode)
+	{
+		FStaticParameterSet NewStaticParameterSet;
+		UMaterialInstanceConstant*LocalMaterialInstanceNew = NewObject<UMaterialInstanceConstant>(CreatePackage(*Path), *FPaths::GetBaseFilename(Path), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(LocalMaterialInstanceNew);
+		ObjectCreated.Add(LocalMaterialInstanceNew);
+		LocalMaterialInstanceNew->Parent = GlobalMaterialInstance;
+		LocalMaterialInstanceNew->PhysMaterial = LoadGameMaterial(GameMaterial);
+		if(HudMode)
+		{
+			FStaticSwitchParameter SwitchParameter;
+			SwitchParameter.ParameterInfo.Name = TEXT("HUD Mode");
+			SwitchParameter.Value = true;
+			SwitchParameter.bOverride = true;
+			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+		}
+		LocalMaterialInstanceNew->UpdateStaticPermutation(NewStaticParameterSet);
+		LocalMaterialInstanceNew->InitStaticPermutation();
+		LocalMaterialInstanceNew->Modify();
+		LocalMaterialInstanceNew->PostEditChange();
+		return LocalMaterialInstanceNew;
+	}
+	return GlobalMaterialInstance;
+}
+
+UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
+{
+	if (ShaderName.size() == 0)
+		return nullptr;
+	auto LoadGameMaterial = [](shared_str GameMaterial)
+	{
+		if(GameMaterial.size() == 0)
+		{
+			GameMaterial = "default";
+		}
+		FString NameGameMtl = GameMaterial.c_str();
+		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
+		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
+		return LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
+	};
+	UMaterialInterface* LocalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(Path + TEXT(".") + FPaths::GetBaseFilename(Path)), nullptr, LOAD_NoWarn);
+	if (LocalMaterialInstance)
+	{
+		return LocalMaterialInstance;
+	}
+
+	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
+	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
+
+	UMaterialInterface* GlobalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
+	if (!GlobalMaterialInstance)
+	{
+		UMaterialInterface* ParentMaterial = nullptr;
+		{
+			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		}
+		if (!IsValid(ParentMaterial))
+		{
+			const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
+			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		}
+		if (!IsValid(ParentMaterial))
+		{
+			UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
+			check(IsValid(UnkownMaterial));
+			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
+
+			UPackage* AssetPackage = CreatePackage(*ParentPackageName);
+			UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
+			NewParentMaterial->Parent = UnkownMaterial;
+			FAssetRegistryModule::AssetCreated(NewParentMaterial);
+			ObjectCreated.Add(NewParentMaterial);
+			NewParentMaterial->Modify();
+			NewParentMaterial->PostEditChange();
+			ParentMaterial = NewParentMaterial;
+		}
+
+		UMaterialInstanceConstant* NewGlobalMaterialInstance = NewObject<UMaterialInstanceConstant>(CreatePackage(*GlobalMaterialInstanceName), *FPaths::GetBaseFilename(GlobalMaterialInstanceName), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(NewGlobalMaterialInstance);
+		ObjectCreated.Add(NewGlobalMaterialInstance);
+		NewGlobalMaterialInstance->Parent = ParentMaterial;
+
+		NewGlobalMaterialInstance->PhysMaterial = LoadGameMaterial(GameMaterial);
+		FStaticParameterSet NewStaticParameterSet;
+
+		TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
+		if (BaseTexture)
+		{
+			NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Diffuse")), BaseTexture);
+		}
+		if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Details().Contains(TextureName))
+		{
+			const TPair<shared_str, float>& Detail = GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName];
+			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(Detail.Key.c_str());
+
+			TObjectPtr<UTexture2D> NormalMapTextureDetail;
+			TObjectPtr<UTexture2D>  HeightGlossTextureDetail;
 			{
 				FStaticSwitchParameter SwitchParameter;
 				SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
@@ -1141,194 +1344,102 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 				if (DetailTexture)
 				{
-					NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
+					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDiffuse")), DetailTexture);
 				}
-				if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUse)
+				if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(Detail.Key))
 				{
-					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
-					SwitchParameter.Value = true;
-					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
-
-					if (NormalMapTextureDetail)
+					const TPair<shared_str, float>& DetailBump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[Detail.Key];
+					if (DetailBump.Key.size())
 					{
-						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
-					}
+						SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
+						SwitchParameter.Value = true;
+						SwitchParameter.bOverride = true;
+						NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 
-					if (GlossTextureDetail)
-					{
-						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("GlossDetail")), GlossTextureDetail);
-					}
 
-					NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), THM._Format().detail_scale);
+
+						ImportBump2D(DetailBump.Key.c_str(), NormalMapTextureDetail, HeightGlossTextureDetail);
+
+						if (NormalMapTextureDetail)
+						{
+							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
+						}
+
+						if (HeightGlossTextureDetail)
+						{
+							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGlossDetail")), HeightGlossTextureDetail);
+						}
+					}
+					NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName].Value);
 				}
 			}
 		}
-	}
-	else
-	{
-		UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
-	}
-	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
-	NewMaterial->InitStaticPermutation();
-	NewMaterial->Modify();
-	NewMaterial->PostEditChange();
-	return NewMaterial;
-}
 
-UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial)
-{
-	if (ShaderName.size() == 0)
-		return nullptr;
+		if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(TextureName))
+		{
+			const TPair<shared_str, float>& Bump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[TextureName];
+			TObjectPtr<UTexture2D> NormalMapTexture;
+			TObjectPtr<UTexture2D> HeightGlossTexture;
+			NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), (Bump.Value + .5f) / 4.f);
 
-	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
-	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (Material)
-		return Material;
-	FString ParentName = FString(ShaderName.c_str());
-	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	UMaterialInterface* ParentMaterial = nullptr;
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
-		check(IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
+			if (Bump.Key.size())
+			{
+				FStaticSwitchParameter SwitchParameter;
+				SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
+				SwitchParameter.Value = true;
+				SwitchParameter.bOverride = true;
+				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
+				SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
+				SwitchParameter.Value = true;
+				SwitchParameter.bOverride = true;
+				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
 
-		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
-		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
-		NewParentMaterial->Parent = UnkownMaterial;
-		FAssetRegistryModule::AssetCreated(NewParentMaterial);
-		ObjectCreated.Add(NewParentMaterial);
-		NewParentMaterial->Modify();
-		NewParentMaterial->PostEditChange();
-		ParentMaterial = NewParentMaterial;
+				ImportBump2D(Bump.Key.c_str(), NormalMapTexture, HeightGlossTexture);
+				if (NormalMapTexture)
+				{
+					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
+				}
+				if (HeightGlossTexture)
+				{
+					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGloss")), HeightGlossTexture);
+				}
+				NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), 0.05f / 5.f);
+			}
+		}
+		else
+		{
+			UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
+		}
+		NewGlobalMaterialInstance->UpdateStaticPermutation(NewStaticParameterSet);
+		NewGlobalMaterialInstance->InitStaticPermutation();
+		NewGlobalMaterialInstance->Modify();
+		NewGlobalMaterialInstance->PostEditChange();
+		if(!HudMode)return NewGlobalMaterialInstance;
+		GlobalMaterialInstance = NewGlobalMaterialInstance;
 	}
-	UPackage* AssetPackage = CreatePackage(*Path);
-	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), ObjectFlags);
-	FAssetRegistryModule::AssetCreated(NewMaterial);
-	ObjectCreated.Add(NewMaterial);
-	NewMaterial->Parent = ParentMaterial;
-
-	if(GameMaterial.size())
+	if(GlobalMaterialInstance->GetPhysicalMaterial()!=LoadGameMaterial(GameMaterial)||HudMode)
 	{
-		FString NameGameMtl = GameMaterial.c_str();
-		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
-		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
-		UStalkerPhysicalMaterial* PhysicalMaterial = LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
-		NewMaterial->PhysMaterial = PhysicalMaterial;
-	}
-	FStaticParameterSet NewStaticParameterSet;
-
-	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
-	if (BaseTexture)
-	{
-		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Default")), BaseTexture);
-	}
-	if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Details().Contains(TextureName))
-	{
-		const TPair<shared_str, float>& Detail = GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName];
-		TObjectPtr<UTexture2D> DetailTexture = ImportTexture(Detail.Key.c_str());
-
-		TObjectPtr<UTexture2D> NormalMapTextureDetail;
-		TObjectPtr<UTexture2D> GlossTextureDetail;
-		TObjectPtr<UTexture2D> HeightTextureDetail;
+		FStaticParameterSet NewStaticParameterSet;
+		UMaterialInstanceConstant*LocalMaterialInstanceNew = NewObject<UMaterialInstanceConstant>(CreatePackage(*Path), *FPaths::GetBaseFilename(Path), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(LocalMaterialInstanceNew);
+		ObjectCreated.Add(LocalMaterialInstanceNew);
+		LocalMaterialInstanceNew->Parent = GlobalMaterialInstance;
+		LocalMaterialInstanceNew->PhysMaterial = LoadGameMaterial(GameMaterial);
+		if(HudMode)
 		{
 			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
+			SwitchParameter.ParameterInfo.Name = TEXT("HUD Mode");
 			SwitchParameter.Value = true;
 			SwitchParameter.bOverride = true;
 			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-			if (DetailTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDefault")), DetailTexture);
-			}
-			if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(Detail.Key))
-			{
-				const TPair<shared_str, float>& DetailBump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[Detail.Key];
-				if (DetailBump.Key.size())
-				{
-					SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
-					SwitchParameter.Value = true;
-					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-
-
-
-					ImportBump2D(DetailBump.Key.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
-
-					if (NormalMapTextureDetail)
-					{
-						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
-					}
-
-					if (GlossTextureDetail)
-					{
-						NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("GlossDetail")), GlossTextureDetail);
-					}
-				}
-				NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName].Value);
-			}
 		}
+		LocalMaterialInstanceNew->UpdateStaticPermutation(NewStaticParameterSet);
+		LocalMaterialInstanceNew->InitStaticPermutation();
+		LocalMaterialInstanceNew->Modify();
+		LocalMaterialInstanceNew->PostEditChange();
+		return LocalMaterialInstanceNew;
 	}
-
-	if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(TextureName))
-	{
-		const TPair<shared_str, float>& Bump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[TextureName];
-		TObjectPtr<UTexture2D> NormalMapTexture;
-		TObjectPtr<UTexture2D> GlossTexture;
-		TObjectPtr<UTexture2D> HeightTexture;
-		NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), (Bump.Value + .5f) / 4.f);
-
-		if (Bump.Key.size())
-		{
-			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-			SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-
-			ImportBump2D(Bump.Key.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
-			if (NormalMapTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
-			}
-			if (GlossTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Gloss")), GlossTexture);
-			}
-			if (HeightTexture)
-			{
-				NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Height")), HeightTexture);
-			}
-			NewMaterial->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), 0.05f / 5.f);
-		}
-	}
-	else
-	{
-		UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
-	}
-	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
-	NewMaterial->InitStaticPermutation();
-	NewMaterial->Modify();
-	NewMaterial->PostEditChange();
-	return NewMaterial;
+	return GlobalMaterialInstance;
 }
 
 UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
@@ -1361,16 +1472,14 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 		if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
 		{
 			TObjectPtr<UTexture2D> NormalMapTexture;
-			TObjectPtr<UTexture2D> GlossTexture;
-			TObjectPtr<UTexture2D> HeightTexture;
-			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, GlossTexture, HeightTexture);
+			TObjectPtr<UTexture2D> HeightGlossTexture;
+			ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, HeightGlossTexture);
 		}
 		if (THM._Format().detail_name.size())
 		{
 			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
 			TObjectPtr<UTexture2D> NormalMapTextureDetail;
-			TObjectPtr<UTexture2D> GlossTextureDetail;
-			TObjectPtr<UTexture2D> HeightTextureDetail;
+			TObjectPtr<UTexture2D> HeightGlossTextureDetail;
 
 			ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
 			if (THMDetail.Load(THM._Format().detail_name.c_str()))
@@ -1379,7 +1488,7 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 				if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUseParallax)
 				{
 
-					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, GlossTextureDetail, HeightTextureDetail);
+					ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail,HeightGlossTextureDetail);
 				}
 			}
 		}
@@ -1493,19 +1602,24 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName,bool bIsUI)
 	ObjectCreated.Add(Texture2D);
 	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
 	size_t CountPixel = Image.GetSizeInMemory()/4;
+	bool UseAlpha = false;
 	for (size_t x = 0; x < CountPixel; x++)
 	{
 		uint8*Pixel = ((uint8*)*Image) + x*4;
 		Swap(Pixel[0], Pixel[2]);
-
+		UseAlpha = UseAlpha || Pixel[3] <255;
 	}
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
+	Texture2D->LODGroup = TEXTUREGROUP_World;
+	Texture2D->SRGB = false;
 	if(bIsUI)
 	{
 		Texture2D->LODGroup = TEXTUREGROUP_UI;
 		Texture2D->NeverStream = false;
+		Texture2D->SRGB = true;
 	}
+	Texture2D->CompressionNoAlpha = !UseAlpha;
 	Texture2D->Modify();
 	Texture2D->PostEditChange();
 	return Texture2D;
@@ -1533,7 +1647,6 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FStr
 	FAssetRegistryModule::AssetCreated(Texture2D);
 	ObjectCreated.Add(Texture2D);
 	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
-	Image.SaveToPng("E:\\test.png");
 	size_t CountPixel = Image.GetSizeInMemory() / 4;
 	for (size_t x = 0; x < CountPixel; x++)
 	{
@@ -1542,13 +1655,15 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FStr
 
 	}
 	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
+	Texture2D->SRGB = false;
 	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
+	Texture2D->LODGroup = TEXTUREGROUP_World;
 	Texture2D->Modify();
 	Texture2D->PostEditChange();
 	return Texture2D;
 }
 
-void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& Gloss, TObjectPtr<UTexture2D>& Height)
+void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& HeightGloss)
 {
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1556,20 +1671,14 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
 
 
-	FString PackageFileNameGloss = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_Gloss");
+	FString PackageFileNameGloss = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_height_gloss");
 	PackageFileNameGloss.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	const FString PackageNameGloss = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileNameGloss);
 	const FString NewObjectPathGloss = PackageNameGloss + TEXT(".") + FPaths::GetBaseFilename(PackageNameGloss);
 
-	FString PackageFileNameHeight = FPaths::ChangeExtension(FileName, TEXT("")) + TEXT("_height");
-	PackageFileNameHeight.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameHeight = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileNameHeight);
-	const FString NewObjectPathHeight = PackageNameHeight + TEXT(".") + FPaths::GetBaseFilename(PackageNameHeight);
-
 	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	Gloss = LoadObject<UTexture2D>(nullptr, *NewObjectPathGloss, nullptr, LOAD_NoWarn);
-	Height = LoadObject<UTexture2D>(nullptr, *NewObjectPathHeight, nullptr, LOAD_NoWarn);
-	if (NormalMap&& Gloss&& Height)
+	HeightGloss = LoadObject<UTexture2D>(nullptr, *NewObjectPathGloss, nullptr, LOAD_NoWarn);
+	if (NormalMap&& HeightGloss)
 		return;
 
 	RedImageTool::RedImage ImageBump, ImageBumpError;
@@ -1589,8 +1698,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	if (ImageBump.GetHeight() != ImageBumpError.GetHeight())return;
 
 	RedImageTool::RedImage NormalMapImage;
-	RedImageTool::RedImage GlossImage;
-	RedImageTool::RedImage HeightImage;
+	RedImageTool::RedImage HeightGlossImage;
 
 	ImageBump.ClearMipLevels();
 	ImageBump.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
@@ -1598,8 +1706,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	ImageBumpError.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
 
 	NormalMapImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight());
-	GlossImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(),1,1,RedImageTool::RedTexturePixelFormat::R8);
-	HeightImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(), 1,1,RedImageTool::RedTexturePixelFormat::R8);
+	HeightGlossImage.Create(ImageBump.GetWidth(), ImageBump.GetHeight(),1,1,RedImageTool::RedTexturePixelFormat::R8G8B8A8);
 
 	for (size_t x = 0; x < ImageBump.GetWidth(); x++)
 	{
@@ -1607,18 +1714,16 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		{
 			RedImageTool::RedColor Pixel = ImageBump.GetPixel(x, y);
 			RedImageTool::RedColor PixelError = ImageBumpError.GetPixel(x, y);
-			RedImageTool::RedColor  NormalMapPixel, GlossPixel, HeightPixel;
+			RedImageTool::RedColor  NormalMapPixel, HeightGlossPixel;
 
 			NormalMapPixel.R32F = Pixel.A32F + (PixelError.R32F - 0.5f);
 			NormalMapPixel.G32F = Pixel.B32F + (PixelError.G32F - 0.5f);
 			NormalMapPixel.B32F = Pixel.G32F + (PixelError.B32F - 0.5f);
 			NormalMapPixel.A32F = 1.f;
 			NormalMapPixel.SetAsFloat(NormalMapPixel.R32F, NormalMapPixel.G32F, NormalMapPixel.B32F, NormalMapPixel.A32F);
-			GlossPixel.SetAsFloat(Pixel.R32F, Pixel.R32F, Pixel.R32F, Pixel.R32F);
-			HeightPixel.SetAsFloat(PixelError.A32F, PixelError.A32F, PixelError.A32F, PixelError.A32F);
+			HeightGlossPixel.SetAsFloat(PixelError.A32F, Pixel.R32F,0,0);
 			NormalMapImage.SetPixel(NormalMapPixel, x, y);
-			GlossImage.SetPixel(GlossPixel, x, y);
-			HeightImage.SetPixel(HeightPixel, x, y);
+			HeightGlossImage.SetPixel(HeightGlossPixel, x, y);
 		}
 	}
 	float MaxHeight = 0;
@@ -1626,7 +1731,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	{
 		for (size_t y = 0; y < ImageBump.GetHeight(); y++)
 		{
-			RedImageTool::RedColor Pixel = HeightImage.GetPixel(x, y);
+			RedImageTool::RedColor Pixel = HeightGlossImage.GetPixel(x, y);
 			MaxHeight = std::max(Pixel.R32F, MaxHeight);
 		}
 	}
@@ -1634,14 +1739,14 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	{
 		for (size_t y = 0; y < ImageBump.GetHeight(); y++)
 		{
-			RedImageTool::RedColor Pixel = HeightImage.GetPixel(x, y);
+			RedImageTool::RedColor Pixel = HeightGlossImage.GetPixel(x, y);
 			Pixel.R32F = Pixel.R32F/ MaxHeight;
-			Pixel.SetAsFloat(Pixel.R32F, Pixel.R32F, Pixel.R32F, Pixel.R32F);
-			HeightImage.SetPixel(Pixel,x,y);
+			Pixel.SetAsFloat(Pixel.R32F, Pixel.G32F, Pixel.B32F, Pixel.A32F);
+			HeightGlossImage.SetPixel(Pixel,x,y);
 		}
 	}
 	NormalMapImage.SwapRB();
-	//GlossImage.SwapRB();
+	HeightGlossImage.SwapRB();
 	//HeightImage.SwapRB();
 	if (!NormalMap)
 	{
@@ -1652,39 +1757,26 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
 		NormalMapImage.GenerateMipmap();
 		NormalMap->CompressionSettings = TextureCompressionSettings::TC_Normalmap;
+		NormalMap->LODGroup = TEXTUREGROUP_WorldNormalMap;
 		NormalMap->SRGB = false;
 		NormalMap->Source.Init(NormalMapImage.GetWidth(), NormalMapImage.GetHeight(), 1, NormalMapImage.GetMips(), SourceFormat, (uint8*)*NormalMapImage);
 		NormalMap->Modify();
 		NormalMap->PostEditChange();
 	}
-	if (!Gloss)
+	if (!HeightGloss)
 	{
 		UPackage* AssetPackage = CreatePackage(*PackageNameGloss);
-		Gloss = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameGloss), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(Gloss);
-		ObjectCreated.Add(Gloss);
-		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
-		GlossImage.GenerateMipmap();
-		Gloss->CompressionSettings = TextureCompressionSettings::TC_Alpha;
-		Gloss->SRGB = false;
-		Gloss->Source.Init(GlossImage.GetWidth(), GlossImage.GetHeight(), 1, GlossImage.GetMips(), SourceFormat, (uint8*)*GlossImage);
-		Gloss->Modify();
-		Gloss->PostEditChange();
-	}
-	if (!Height)
-	{
-		
-		UPackage* AssetPackage = CreatePackage(*PackageNameHeight);
-		Height = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameHeight), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(Height);
-		ObjectCreated.Add(Height);
-		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_G8;
-		HeightImage.GenerateMipmap();
-		Height->CompressionSettings = TextureCompressionSettings::TC_Alpha;
-		Height->SRGB = false;
-		Height->Source.Init(HeightImage.GetWidth(), HeightImage.GetHeight(), 1, HeightImage.GetMips(), SourceFormat, (uint8*)*HeightImage);
-		Height->Modify();
-		Height->PostEditChange();
+		HeightGloss = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameGloss), ObjectFlags);
+		FAssetRegistryModule::AssetCreated(HeightGloss);
+		ObjectCreated.Add(HeightGloss);
+		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
+		HeightGlossImage.GenerateMipmap();
+		HeightGloss->CompressionSettings = TextureCompressionSettings::TC_Masks;
+		HeightGloss->LODGroup = TEXTUREGROUP_WorldSpecular;
+		HeightGloss->SRGB = false;
+		HeightGloss->Source.Init(HeightGlossImage.GetWidth(), HeightGlossImage.GetHeight(), 1, HeightGlossImage.GetMips(), SourceFormat, (uint8*)*HeightGlossImage);
+		HeightGloss->Modify();
+		HeightGloss->PostEditChange();
 	}
 }
 
@@ -2018,7 +2110,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 }
 
-void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData* InMesh, TArray<TSharedPtr<CBoneData>>&BonesData, IReader* InMotion)
+void XRayEngineFactory::CreateAnims(const FString& Name, USkeletalMesh* InMesh, TArray<TSharedPtr<CBoneData>>&BonesData, IReader* InMotion)
 {
 	shared_motions Motions;
 	if (InMotion->find_chunk(OGF_S_MOTION_REFS))
@@ -2087,12 +2179,13 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 	}
 	else
 	{
+		UStalkerKinematicsAssetUserData*StalkerKinematicsAssetUserData = InMesh->GetAssetUserDataChecked<UStalkerKinematicsAssetUserData>();
 		const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
 		const FString NewObjectPath = CorrectName + TEXT(".") + FPaths::GetBaseFilename(CorrectName);
 		UStalkerKinematicsAnimsData* StalkerKinematicsAnimsData = LoadObject<UStalkerKinematicsAnimsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
 		if (StalkerKinematicsAnimsData)
 		{
-			InMesh->Anims.Add(StalkerKinematicsAnimsData);
+			StalkerKinematicsAssetUserData->Anims.Add(StalkerKinematicsAnimsData);
 			return;
 		}
 		UPackage* AssetPackage = CreatePackage(*CorrectName);
@@ -2111,14 +2204,15 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 		
 		for(auto&[Key,Value]:*Motions.motion_map())
 		{
-			FStalkerKinematicsAnimData OutAnim;
 			const FString MotionPath = Name / FString(Key.c_str());
-			OutAnim.Amim = CreateAnim(MotionPath, InMesh->Mesh->GetSkeleton(), BonesData, Motions, Value);
-			if (!OutAnim.Amim)
+			UAnimSequence* OutAnim = CreateAnim(MotionPath,  InMesh->GetSkeleton(), BonesData, Motions, Value);
+			if (!OutAnim)
 			{
 				continue;
 			}
-			OutAnim.BuildFromLegacy(*Motions.motion_def(Value), BonesData, *Motions.partition());
+			OutAnim->AddAssetUserData(NewObject<UStalkerKinematicsAnimAssetUserData>(OutAnim));
+			UStalkerKinematicsAnimAssetUserData* StalkerKinematicsAnimAssetUserData =  OutAnim->GetAssetUserDataChecked<UStalkerKinematicsAnimAssetUserData>();
+			StalkerKinematicsAnimAssetUserData->BuildFromLegacy(*Motions.motion_def(Value), BonesData, *Motions.partition());
 			StalkerKinematicsAnimsData->Anims.Add(FName(Key.c_str()), OutAnim);
 		}
 		for (u8 i = 0; i < Motions.partition()->count()&&i<4; i++)
@@ -2131,7 +2225,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, UStalkerKinematicsData*
 			}
 		}
 
-		InMesh->Anims.Add(StalkerKinematicsAnimsData);
+		StalkerKinematicsAssetUserData->Anims.Add(StalkerKinematicsAnimsData);
 
 		StalkerKinematicsAnimsData->Modify();
 		StalkerKinematicsAnimsData->PostEditChange();
@@ -2154,13 +2248,6 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 	AnimSequence->SetSkeleton(InMesh);
 	AnimSequence->SetPreviewMesh(InMesh->GetPreviewMesh());
 
-
-	// In a regular import workflow this NameMapping will exist and be populated with the blend shape names we imported, if any
-	const FSmartNameMapping* NameMapping = InMesh->GetSmartNameContainer(USkeleton::AnimCurveMappingName);
-	if (!NameMapping)
-	{
-		return nullptr;
-	}
 	IAnimationDataController& Controller = AnimSequence->GetController();
 
 	// If we should transact, we'll already have a transaction from somewhere else. We should suppress this because

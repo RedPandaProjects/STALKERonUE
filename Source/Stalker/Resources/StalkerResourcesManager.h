@@ -15,9 +15,9 @@ public:
 	void												Reload						();
 	class AStalkerLight*								CreateLight					();
 	void												Desotry						(class IRender_Light*Light);
-	class UStalkerKinematicsData*						GetKinematics				(const char* Name);
+	class USkeletalMesh*								GetKinematics				(const char* Name);
 	class UStalkerKinematicsComponent*					CreateKinematics			(const char*Name, bool NeedRefence = false);
-	class UStalkerKinematicsComponent*					CreateKinematics			(class UStalkerKinematicsData* KinematicsData);
+	class UStalkerKinematicsComponent*					CreateKinematics			(class USkeletalMesh* KinematicsData);
 	void												Destroy						(class UStalkerKinematicsComponent* Mesh);
 	void												RegisterKinematics			(class UStalkerKinematicsComponent* Mesh);
 	void												UnregisterKinematics		(class UStalkerKinematicsComponent* Mesh);

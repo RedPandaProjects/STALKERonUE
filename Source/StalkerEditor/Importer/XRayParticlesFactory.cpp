@@ -1248,21 +1248,22 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 	if (ShaderName.size() == 0)
 		return nullptr;
 		
-	XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
-	FString Path = InPath;
+	XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);	
+	
+	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
+	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
+
 	if (HudMode)
 	{
-		const FString ObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
-		Path+=TEXT("_HUD");
-		const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
-		UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+		const FString GlobalMaterialInstanceNameForHUD = GlobalMaterialInstanceName + TEXT("_HUD");
+		UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceNameForHUD+ TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceNameForHUD)), nullptr, LOAD_NoWarn);
 		if (Material)
 			return Material;
-		UPackage* AssetPackage = CreatePackage(*Path);
-		UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), RF_Standalone|RF_Public);
+		UPackage* AssetPackage = CreatePackage(*GlobalMaterialInstanceNameForHUD);
+		UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(GlobalMaterialInstanceNameForHUD), RF_Standalone|RF_Public);
 		FAssetRegistryModule::AssetCreated(NewMaterial);
 		{
-			UMaterialInterface* ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ObjectPath, nullptr, LOAD_NoWarn);
+			UMaterialInterface* ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
 			if(!ensure(ParentMaterial))
 			{
 				return nullptr;
@@ -1281,13 +1282,10 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 		NewMaterial->PostEditChange();
 		return NewMaterial;
 	}
-	const FString NewObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
-	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
 	if (Material)
 		return Material;
 
-	FString ParentName = FString(ShaderName.c_str());
-	ParentName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	UMaterialInterface* ParentMaterial = nullptr;
 	{
 		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
@@ -1314,8 +1312,8 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 		NewParentMaterial->PostEditChange();
 		ParentMaterial = NewParentMaterial;
 	}
-	UPackage* AssetPackage = CreatePackage(*Path);
-	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(Path), RF_Standalone|RF_Public);
+	UPackage* AssetPackage = CreatePackage(*GlobalMaterialInstanceName);
+	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(GlobalMaterialInstanceName), RF_Standalone|RF_Public);
 	FAssetRegistryModule::AssetCreated(NewMaterial);
 	NewMaterial->Parent = ParentMaterial;
 
@@ -1324,7 +1322,7 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 	TArray<FString> TexturesNames;
 	if (Textures.ParseIntoArray(TexturesNames, TEXT(",")) > 2)
 	{
-		UE_LOG(LogXRayImporter, Warning, TEXT("Exceeded texture stack[%S] in %s "),TextureName.c_str(),*NewObjectPath);
+		UE_LOG(LogXRayImporter, Warning, TEXT("Exceeded texture stack[%S] in %s "),TextureName.c_str(),*GlobalMaterialInstanceName);
 	}
 
 	for (int32 i = 0; i < 2; i++)

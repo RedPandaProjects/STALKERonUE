@@ -1,7 +1,7 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "../Kernel/StalkerEngineManager.h"
 #include "../Entities/Kinematics/StalkerKinematicsComponent.h"
-#include "SkeletonMesh/StalkerKinematicsData.h"
+#include "SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
 #include "../Entities/Particles/StalkerNiagaraActor.h"
@@ -263,17 +263,17 @@ void FStalkerResourcesManager::Desotry(class IParticleCustom* InParticles)
 	Particles->Destroy();
 }
 
-class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char* InName)
+USkeletalMesh* FStalkerResourcesManager::GetKinematics(const char* InName)
 {
 	if (!FApp::IsGame()&&(!InName || !InName[0]))
 	{
 		return nullptr;
 	}
 
-	UStalkerKinematicsData* KinematicsData  = LoadObject<UStalkerKinematicsData>(nullptr, *FString(InName), nullptr, LOAD_NoWarn);;
+	USkeletalMesh* Kinematics  = LoadObject<USkeletalMesh>(nullptr, *FString(InName), nullptr, LOAD_NoWarn);;
 
 	FString Name = InName;
-	if(!IsValid(KinematicsData))
+	if(!IsValid(Kinematics))
 	{
 	
 		Name.ReplaceInline(TEXT("\\"), TEXT("/"));
@@ -284,8 +284,8 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 		{
 			const FString ParentPackageName = TEXT("/Game/COP/Meshes") / Name;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-			if (!IsValid(KinematicsData))
+			Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			if (!IsValid(Kinematics))
 			{
 				if (Name.StartsWith(TEXT("meshes/")))
 				{
@@ -293,7 +293,7 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 					NewName.RemoveFromStart(TEXT("meshes/"));
 					const FString ParentPackageNameFromLevel = TEXT("/Game/COP/Meshes/levels") / GStalkerEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
-					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
+					Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
 			}
 		}
@@ -302,8 +302,8 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 		{
 			const FString ParentPackageName = TEXT("/Game/CS/Meshes") / Name;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-			if (!IsValid(KinematicsData))
+			Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			if (!IsValid(Kinematics))
 			{
 				if (Name.StartsWith(TEXT("meshes/")))
 				{
@@ -311,7 +311,7 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 					NewName.RemoveFromStart(TEXT("meshes/"));
 					const FString ParentPackageNameFromLevel = TEXT("/Game/CS/Meshes/levels") / GStalkerEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
-					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
+					Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
 			}
 		}
@@ -320,8 +320,8 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 		{
 			const FString ParentPackageName = TEXT("/Game/SHOC/Meshes") / Name;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-			if (!IsValid(KinematicsData))
+			Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+			if (!IsValid(Kinematics))
 			{
 				if (Name.StartsWith(TEXT("meshes/")))
 				{
@@ -329,20 +329,20 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 					NewName.RemoveFromStart(TEXT("meshes/"));
 					const FString ParentPackageNameFromLevel = TEXT("/Game/SHOC/Meshes/levels") / GStalkerEngineManager->GetCurrentWorldName() / NewName;
 					const FString ParentObjectPathFromLevel = ParentPackageNameFromLevel + TEXT(".") + FPaths::GetBaseFilename(ParentPackageNameFromLevel);
-					KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
+					Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPathFromLevel, nullptr, LOAD_NoWarn);
 				}
 			}
 		}
 		break;
 		}
 	}
-	if (!IsValid(KinematicsData))
+	if (!IsValid(Kinematics))
 	{
 		const FString ParentPackageName = TEXT("/Game/Base/Meshes") / Name;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+		Kinematics = LoadObject<USkeletalMesh>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
-	if (!ensure(IsValid(KinematicsData))||!ensure(IsValid(KinematicsData->Mesh)))
+	if (!ensure(IsValid(Kinematics))||!ensure(IsValid(Kinematics->GetAssetUserData<UStalkerKinematicsAssetUserData>())))
 	{
 #ifdef WITH_EDITOR
 		FMessageLog StalkerEditorFMessageLog("StalkerEditor");
@@ -353,14 +353,14 @@ class UStalkerKinematicsData* FStalkerResourcesManager::GetKinematics(const char
 		}
 #endif
 		UE_LOG(LogStalker, Error, TEXT("Can't found mesh %S"),InName);
-		KinematicsData = LoadObject<UStalkerKinematicsData>(nullptr,TEXT("/Game/Base/Meshes/Error_KinematicsData.Error_KinematicsData"));
-		check(KinematicsData);
-		check(KinematicsData->Mesh);
+		Kinematics = LoadObject<USkeletalMesh>(nullptr,TEXT("/Game/Base/Meshes/Error_KinematicsData.Error_KinematicsData"));
+		check(Kinematics);
+		check(Kinematics->GetAssetUserData<UStalkerKinematicsAssetUserData>());
 	}
-	return KinematicsData;
+	return Kinematics;
 }
 
-class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(class UStalkerKinematicsData* KinematicsData)
+class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(class USkeletalMesh* KinematicsData)
 {
 	UStalkerKinematicsComponent* Result =  NewObject< UStalkerKinematicsComponent>();
 	Result->SetFlags(EObjectFlags::RF_Transient);
@@ -370,10 +370,10 @@ class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(cl
 
 class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(const char* InName, bool NeedRefence)
 {
-	UStalkerKinematicsData* KinematicsData = GetKinematics(InName);
-	if (IsValid(KinematicsData))
+	USkeletalMesh* Kinematics = GetKinematics(InName);
+	if (IsValid(Kinematics))
 	{
-		UStalkerKinematicsComponent* Result = CreateKinematics(KinematicsData);;
+		UStalkerKinematicsComponent* Result = CreateKinematics(Kinematics);
 		if (NeedRefence)
 		{
 			Meshes.Add(Result);

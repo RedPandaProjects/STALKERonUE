@@ -1,7 +1,7 @@
 #pragma once
 #include "Resources/SkeletonMesh/StalkerKinematicsBone.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneInstance.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/animation_blend.h"
@@ -17,7 +17,7 @@ class STALKER_API UStalkerKinematicsComponent : public USkeletalMeshComponent, p
 public:	
 													UStalkerKinematicsComponent			();
 	UFUNCTION(BlueprintCallable)
-	void											Initilize							(class UStalkerKinematicsData* KinematicsData);
+	void											Initilize							(class USkeletalMesh* Kinematics);
 #if WITH_EDITOR
 	void											InitilizeEditor						();
 #endif
@@ -141,12 +141,18 @@ public:
 	shared_str										GetNameData							() override;
 
 	UPROPERTY()
-	class UStalkerKinematicsData*					KinematicsData;
+	class USkeletalMesh*							Kinematics;
+
+	UPROPERTY(Transient)
+	class UStalkerKinematicsAssetUserData*			KinematicsData;
 
 	TArray<StalkerKinematicsBone>					Bones;
 	TMap<u16, shared_str>							BonesID2Name;
 
-	TArray<FStalkerKinematicsAnimData>				Anims;
+	UPROPERTY(Transient)
+	TArray<UAnimSequence*>							Anims;
+	TArray<bool>									AnimsFXType;
+
 	TArray <TSharedPtr<CBlend>>						BlendsCycles[4];
 	TArray<TSharedPtr<CBlend>>						BlendsFX[4];
 

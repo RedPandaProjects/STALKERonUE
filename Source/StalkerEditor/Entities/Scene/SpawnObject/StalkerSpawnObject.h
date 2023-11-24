@@ -1,4 +1,5 @@
 #pragma once
+#include "Kernel/StalkerEngineManager.h"
 #include "StalkerSpawnObject.generated.h"
 
 UCLASS()
@@ -35,6 +36,9 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	FString								SectionName;
+
+	UPROPERTY(VisibleAnywhere)
+	EStalkerGame						GameType;
 
 	UPROPERTY(SkipSerialization)
 	TArray<uint8>						EntityData;
@@ -79,10 +83,11 @@ private:
 	class UStalkerSpawnProperties_ALifeTraderAbstract* NCPData;
 	UPROPERTY()
 	UBillboardComponent*				SpawnBillboard;
+	UPROPERTY()
+	UBillboardComponent*				SpawnBillboardBad;
 
 	class CLAItem*						LightAnim;
-
-
-
-
+	
+	UPROPERTY()
+	TObjectPtr<class UArrowComponent>	ArrowComponent;
 };

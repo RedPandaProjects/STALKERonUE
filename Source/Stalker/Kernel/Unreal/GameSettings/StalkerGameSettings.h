@@ -58,6 +58,12 @@ public:
 	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TArray<FString> ParticlesUsingHudMode; 
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TMap<FString,FString> ReplaceShaderWhenImport;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TSet<FString> DisableDistanceFieldOfCompilerShaderWhenImport; 
 
 #endif
 #if WITH_EDITOR

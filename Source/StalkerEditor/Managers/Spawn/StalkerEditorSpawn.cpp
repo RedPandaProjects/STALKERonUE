@@ -145,7 +145,7 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 			XRayMatrix.getHPB(AactorItr->XRayEntity->angle());
 			Swap(AactorItr->XRayEntity->angle().x, AactorItr->XRayEntity->angle().y);
 		}
-		ISE_Shape* ShapeInterface=  AactorItr->XRayEntity->shape();
+		ISE_Shape* ShapeInterface  =  AactorItr->XRayEntity->shape();
 		if (ShapeInterface)
 		{
 			TArray< CShapeData::shape_def> Shapes;

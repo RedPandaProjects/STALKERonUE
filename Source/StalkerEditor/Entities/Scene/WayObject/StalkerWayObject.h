@@ -30,5 +30,7 @@ private:
 	void										GetSelectedPoint			(TArray<class UStalkerWayPointComponent*>& SelectedPoints);
 	UPROPERTY()
 	class USceneComponent*						SceneComponent;
+	UPROPERTY()
+	UBillboardComponent *						Billboard;
 
 };

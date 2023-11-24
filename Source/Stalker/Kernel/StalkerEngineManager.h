@@ -6,6 +6,7 @@ enum class EStalkerGame:uint8
 	COP UMETA(DisplayName = "Call of Pripyat"),
 	CS UMETA(DisplayName = "Clear Sky"),
 	SHOC UMETA(DisplayName = "Shadow of Chernobyl"),
+	Unkown UMETA(Hidden),
 };
 enum class EStalkerWorldStatus :uint8
 {

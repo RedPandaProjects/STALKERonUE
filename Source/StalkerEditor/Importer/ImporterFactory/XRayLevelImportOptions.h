@@ -13,6 +13,8 @@ public:
 		ImportSpawnObjects = true;
 		ImportWayObjects = true;
 		ImportAIMap = true;
+		ImportParticles = true;
+		ImportWallmark = true;
 	}
 
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
@@ -23,5 +25,9 @@ public:
 	bool						ImportWayObjects;
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
 	bool						ImportAIMap;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	bool						ImportParticles;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	bool						ImportWallmark;
 	
 };

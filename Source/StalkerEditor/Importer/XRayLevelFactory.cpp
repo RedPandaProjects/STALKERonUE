@@ -1,4 +1,8 @@
 #include "XRayLevelFactory.h"
+
+#include "NiagaraActor.h"
+#include "NiagaraComponent.h"
+#include "NiagaraSystem.h"
 #include "Scene/Entitys/StaticObject/SceneObject.h"
 #include "Scene/Tools/AIMap/ESceneAIMapTools.h"
 #include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
@@ -14,6 +18,10 @@
 #include "ImporterFactory/XRayLevelImportOptions.h"
 #include "Scene/GeometryPartExtractor.h"
 #include "Scene/Tools/StaticObject/ESceneObjectTools.h"
+#include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
+#include "Scene/Entitys/ParticlesObject/ParticlesObject.h"
+#include "Scene/Tools/Wallmark/ESceneWallmarkTool.h"
+#include "StalkerEditor/StalkerEditorManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "Editors/XrECore/Engine/GameMtlLib.h"
 THIRD_PARTY_INCLUDES_END
@@ -88,6 +96,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 			CEditableObject* EditableObject = SceneObject->GetReference();
 			if (EditableObject)
 			{
+				bool UseOnlyCollision = false;
 				UStaticMesh* StaticMesh = EngineFactory.ImportObjectAsStaticMesh(EditableObject, true);
 				if (StaticMesh)
 				{
@@ -106,7 +115,65 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 					FString Label = EditableObject->GetName();
 					Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 					StaticMeshActor->SetActorLabel(Label);
+					if(UStalkerStaticMeshAssetUserData* StalkerStaticMeshAssetUserData = StaticMesh->GetAssetUserData<UStalkerStaticMeshAssetUserData>())
+					{
+						StaticMeshActor->GetStaticMeshComponent()->SetVisibility(!StalkerStaticMeshAssetUserData->IsOnlyCollision);
+					}
 				}
+			}
+		}
+	}
+	if (LevelImportOptions.ImportParticles)
+	{
+		ObjectList ListPS;
+		Scene->GetObjects(OBJCLASS_PS,ListPS);
+		for (CCustomObject* Object : ListPS)
+		{
+			CParticlesObject* PSObject = reinterpret_cast<CParticlesObject*>(Object->QueryInterface(OBJCLASS_PS));
+			FString Name =  PSObject->m_RefName.c_str();
+			UNiagaraSystem * NiagaraSystem = nullptr;
+			{
+				Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+				switch (xrGameManager::GetGame())
+				{
+				default:
+				{
+					const FString ParentPackageName = TEXT("/Game/COP/Particles") / Name;
+					const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+					NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+				}
+				break;
+				case EGame::SHOC:
+				{
+					const FString ParentPackageName = TEXT("/Game/SHOC/Particles") / Name;
+					const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+					NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+				}
+				break;
+				case EGame::CS:
+				{
+					const FString ParentPackageName = TEXT("/Game/CS/Particles") / Name;
+					const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+					NiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+				}
+				break;
+				}
+			}
+			if (NiagaraSystem)
+			{
+				PSObject->UpdateTransform(true);
+				Fquaternion XRayQuat;
+				XRayQuat.set(PSObject->FTransformR);
+				FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
+				FVector Location(-PSObject->GetPosition().x * 100, PSObject->GetPosition().z * 100, PSObject->GetPosition().y * 100);
+				FRotator Rotation(Quat);
+
+				ANiagaraActor* NiagaraActor = World->SpawnActor<ANiagaraActor>(Location, Rotation);
+				NiagaraActor->GetNiagaraComponent()->SetAsset(NiagaraSystem);
+				NiagaraActor->SetFolderPath(TEXT("Particles"));
+				FString Label = PSObject->GetName();
+				Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+				NiagaraActor->SetActorLabel(Label);
 			}
 		}
 	}
@@ -446,6 +513,90 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 			}
 		}
 	}
+	if (LevelImportOptions.ImportWallmark)
+	{
+		if(ESceneWallmarkTool* WallmarkTool = static_cast<ESceneWallmarkTool*>(Scene->GetTool(OBJCLASS_WM)))
+		{
+			for( ESceneWallmarkTool::wm_slot*slot:WallmarkTool->marks)
+			{
+				for(ESceneWallmarkTool::wallmark* item: slot->items)
+				{
+					Fvector XRayPosition,XRaySize;
+					item->bbox.getcenter(XRayPosition);
+					item->bbox.getsize(XRaySize);
+					FVector Location(StalkerMath::XRayLocationToUnreal(XRayPosition));
+					FPlane4f WMPlane = FPlane4f(StalkerMath::XRayLocationToUnreal(item->verts[0].p),StalkerMath::XRayLocationToUnreal(item->verts[1].p),StalkerMath::XRayLocationToUnreal(item->verts[2].p));
+					;
+					FQuat Rotation = FQuat(WMPlane.ToOrientationQuat())*FRotator(-90,0,0).Quaternion();
+					Rotation = Rotation*FRotator(0,FMath::RadiansToDegrees(item->r)-90,0).Quaternion();
+					ADecalActor* DecalActor = World->SpawnActor<ADecalActor>(Location, Rotation.Rotator());
+					DecalActor->SetFolderPath(TEXT("Decals"));
+					DecalActor->GetDecal()->DecalSize = FVector(FMath::Max(item->w,item->h)*12.5f,item->h*50,item->w*50);
+					DecalActor->SetDecalMaterial(ImportSurfaceForDecal(slot->sh_name,slot->tx_name));
+				}
+			}
+		}
+	}
 	Scene = nullptr;
 	return true;
+}
+
+UMaterialInterface* XRayLevelFactory::ImportSurfaceForDecal(shared_str ShaderName, shared_str TextureName)
+{
+	if (ShaderName.size() == 0)
+		return nullptr;
+			
+	
+	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
+	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
+
+	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
+	if (Material)
+		return Material;
+
+	UMaterialInterface* ParentMaterial = nullptr;
+	{
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	if (!IsValid(ParentMaterial))
+	{
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
+		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
+	}
+	if (!IsValid(ParentMaterial))
+	{
+		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Decals/Unkown.Unkown"));
+		check(IsValid(UnkownMaterial));
+		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
+
+		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
+		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), RF_Standalone|RF_Public);
+		NewParentMaterial->Parent = UnkownMaterial;
+		FAssetRegistryModule::AssetCreated(NewParentMaterial);
+		NewParentMaterial->Modify();
+		NewParentMaterial->PostEditChange();
+		ParentMaterial = NewParentMaterial;
+	}
+	UPackage* AssetPackage = CreatePackage(*GlobalMaterialInstanceName);
+	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(GlobalMaterialInstanceName), RF_Standalone|RF_Public);
+	FAssetRegistryModule::AssetCreated(NewMaterial);
+	NewMaterial->Parent = ParentMaterial;
+
+	FStaticParameterSet NewStaticParameterSet;
+	TObjectPtr<UTexture2D> BaseTexture = EngineFactory.ImportTexture(TextureName.c_str());
+	static FName NAME_Diffuse = "Diffuse";
+	if (BaseTexture)
+	{
+		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(NAME_Diffuse), BaseTexture);
+	}
+
+	
+	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
+	NewMaterial->InitStaticPermutation();
+	NewMaterial->Modify();
+	NewMaterial->PostEditChange();
+	return NewMaterial;
 }

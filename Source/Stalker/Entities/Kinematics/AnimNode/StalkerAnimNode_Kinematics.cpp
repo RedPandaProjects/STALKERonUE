@@ -1,7 +1,7 @@
 #include "StalkerAnimNode_Kinematics.h"
 #include "Entities/Kinematics/StalkerKinematicsComponent.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 
 FStalkerAnimNode_Kinematics::FStalkerAnimNode_Kinematics()
 {
@@ -420,7 +420,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_Blend(FPoseContext& Output, CBlend& A
 	FAnimationPoseData AnimationPoseData(Output);
 	FDeltaTimeRecord DeltaTimeRecord;
 	bool NeedAdditive = AnimBlend.channel>1;
-	UAnimSequence* Anim = Owner->Anims[AnimBlend.motionID.val].Amim;
+	UAnimSequence* Anim = Owner->Anims[AnimBlend.motionID.val];
 	Anim->GetAnimationPose(AnimationPoseData, FAnimExtractContext(AnimBlend.timeCurrent, Output.AnimInstanceProxy->ShouldExtractRootMotion(), DeltaTimeRecord, false));
 	if (Anim->IsValidAdditive() != NeedAdditive)
 	{

@@ -6,6 +6,8 @@
 #include "Tools/Shape/ESceneShapeTools.h"
 #include "Tools/Spawn/ESceneSpawnTools.h"
 #include "Tools/Group/ESceneGroupTools.h"
+#include "Tools/Particles/EScenePSTools.h"
+#include "Tools/Wallmark/ESceneWallmarkTool.h"
 #include "Entitys/GroupObject/GroupObject.h"
 
 
@@ -181,6 +183,8 @@ void EScene::CreateSceneTools()
 	RegisterSceneTools(new ESceneShapeTool); //+
 	RegisterSceneTools(new ESceneSpawnTool); //+
 	RegisterSceneTools(new ESceneGroupTool); //+
+	RegisterSceneTools(new EScenePSTools); //+
+	RegisterSceneTools(new ESceneWallmarkTool); //+
 }
 
 void EScene::DestroySceneTools()

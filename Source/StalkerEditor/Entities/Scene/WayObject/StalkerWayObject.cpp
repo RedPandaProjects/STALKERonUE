@@ -15,7 +15,7 @@ AStalkerWayObject::AStalkerWayObject(const FObjectInitializer& ObjectInitializer
 	MainPoint->PointName = TEXT("wp_00");
 	Points.Add(MainPoint);
 
-	UBillboardComponent * Billboard = CreateDefaultSubobject<UBillboardComponent>(TEXT("Billboard"));
+	Billboard = CreateDefaultSubobject<UBillboardComponent>(TEXT("Billboard"));
 	Billboard->SetupAttachment(MainPoint);
 }
 

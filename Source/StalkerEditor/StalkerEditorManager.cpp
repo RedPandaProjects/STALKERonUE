@@ -162,7 +162,7 @@ void UStalkerEditorManager::ImportUITextures()
 		return Files.Num();
 	};
 
-	FScopedSlowTask Progress(CaclImportFromPath("ui")+CaclImportFromPath("map"), FText::FromString(TEXT("Import UI Textures")), true);
+	FScopedSlowTask Progress(CaclImportFromPath("ui")+CaclImportFromPath("map")+CaclImportFromPath("controller"), FText::FromString(TEXT("Import UI Textures")), true);
 	Progress.MakeDialog(true);
 
 	auto ImportFromPath = [&Progress](const char*PathName)
@@ -193,6 +193,7 @@ void UStalkerEditorManager::ImportUITextures()
 	};
 	ImportFromPath("ui");
 	ImportFromPath("map");
+	ImportFromPath("controller");
 
 }
 

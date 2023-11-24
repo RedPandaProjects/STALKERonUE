@@ -1,11 +1,12 @@
 #include "StalkerKinematicsComponent.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
 #include "Animation/AnimSequence.h"
 #include "AnimInstance/StalkerKinematicsAnimInstance_Default.h"
 #include "AnimInstance/StalkerKinematicsAnimInstanceProxy.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/RenderVisual.h"
 #include "XrEngine/IRenderable.h"
@@ -26,11 +27,13 @@ UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 #if WITH_EDITORONLY_DATA
 	bIsErrorMesh = false;
 #endif
+	bRenderCustomDepth = true;
+	CustomDepthStencilValue = 1;
 }
 
-void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKinematicsData)
+void UStalkerKinematicsComponent::Initilize(class USkeletalMesh* InKinematics)
 {
-	if (KinematicsData)
+	if (Kinematics)
 	{
 		ClearAnimScriptInstance();
 	
@@ -73,21 +76,22 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		}
 		KinematicsAnimInstanceForCompute = nullptr;
 		SetSkeletalMesh(nullptr);
+		KinematicsData = nullptr;
 	}
-	KinematicsData = InKinematicsData;
-	if (!KinematicsData)
+	Kinematics = InKinematics;
+	if (!Kinematics)
 	{
 		return;
 	}
+	KinematicsData =  Kinematics->GetAssetUserDataChecked<UStalkerKinematicsAssetUserData>();
 #if WITH_EDITORONLY_DATA
-	bIsErrorMesh =  InKinematicsData->GetPathName() == TEXT("/Game/Base/Meshes/Error_KinematicsData.Error_KinematicsData");
+	bIsErrorMesh =  Kinematics->GetPathName() == TEXT("/Game/Base/Meshes/Error.Error");
 #endif
 	for (float& Factor : ChannelsFactor)
 	{
 		Factor = 0;
 	}
 	ChannelsFactor[0] = 1;
-
 	KinematicsData->BuildBones(Bones);
 	BonesInstance.AddDefaulted(Bones.Num());
 	if (KinematicsData->UserData.Len()&&FApp::IsGame())
@@ -130,25 +134,31 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	u32 AnimID = 0;
 	for (int32 i = 0; i < KinematicsData->Anims.Num(); i++)
 	{
-		for (auto& [Name,AnimData ]: KinematicsData->Anims[i]->Anims)
+		for (auto& [Name,Anim ]: KinematicsData->Anims[i]->Anims)
 		{
-			if (!IsValid(AnimData.Amim))
+			if (!IsValid(Anim))
 			{
 				checkSlow(false);
 				continue;
 			}
-			if (!AnimData.Amim->GetSkeleton()->IsCompatible(KinematicsData->Mesh->GetSkeleton()))
+			if (!Anim->GetSkeleton()->IsCompatible(Kinematics->GetSkeleton()))
 			{
 				checkSlow(false);
 				continue;
+			}
+			UStalkerKinematicsAnimAssetUserData* KinematicsAnim = Anim->GetAssetUserData<UStalkerKinematicsAnimAssetUserData>();
+			if (!KinematicsAnim)
+			{
+				KinematicsAnim=  NewObject<UStalkerKinematicsAnimAssetUserData>(this);
 			}
 			AnimsName2ID.Add(TCHAR_TO_ANSI(*Name.ToString().ToLower()),AnimID);
-			Anims.Add(AnimData);
+			Anims.Add(Anim);
+			AnimsFXType.Add((KinematicsAnim->Flags&int32(EStalkerKinematicsAnimFlags::FX))!=0);
 			AnimID++;
 			AnimsDef.AddDefaulted();
 			CMotionDef& MotionDef =  AnimsDef.Last();
-			AnimData.BuildToLegacy(MotionDef,BonesName2ID,BonesPartsName2ID);
-			MotionDef.speed = MotionDef.Quantize(AnimData.Amim->RateScale);
+			KinematicsAnim->BuildToLegacy(MotionDef,BonesName2ID,BonesPartsName2ID);
+			MotionDef.speed = MotionDef.Quantize(Anim->RateScale);
 		}
 	
 	}
@@ -166,9 +176,9 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 		}
 		BonesInstance[i].Transform.mul_43(Parent,Bones[i].get_bind_transform());
 	}
-	SetSkeletalMesh(KinematicsData->Mesh);
+	SetSkeletalMesh(Kinematics);
 	{
-		FBox Box = KinematicsData->Mesh->GetBounds().GetBox();
+		FBox Box = Kinematics->GetBounds().GetBox();
 
 		VisData.box.invalidate();
 		VisData.box.modify(StalkerMath::UnrealLocationToXRay(Box.Min));
@@ -179,7 +189,7 @@ void UStalkerKinematicsComponent::Initilize(class UStalkerKinematicsData* InKine
 	}
 	SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	FString InDataName;
-	InKinematicsData->GetName(InDataName);
+	Kinematics->GetName(InDataName);
 	DataName = TCHAR_TO_ANSI(*InDataName);
 	TickAnimation(0,false);
 }
@@ -211,7 +221,7 @@ void UStalkerKinematicsComponent::BlendSetup(CBlend& Blend, u32 PartID, u8 Chann
 	Blend.speed = Speed;
 	Blend.motionID = InMotionID;
 	Blend.timeCurrent = 0;
-	Blend.timeTotal = Anims[InMotionID.val].Amim->GetPlayLength();
+	Blend.timeTotal = Anims[InMotionID.val]->GetPlayLength();
 	Blend.bone_or_part = PartID;
 	Blend.stop_at_end = NoLoop;
 	Blend.playing = TRUE;
@@ -233,7 +243,7 @@ void UStalkerKinematicsComponent::FXBlendSetup(CBlend& Blend, MotionID InMotionI
 	Blend.speed = Speed;
 	Blend.motionID = InMotionID;
 	Blend.timeCurrent = 0;
-	Blend.timeTotal = Anims[InMotionID.val].Amim->GetPlayLength();
+	Blend.timeTotal = Anims[InMotionID.val]->GetPlayLength();
 	Blend.bone_or_part = Bone;
 
 	Blend.playing = TRUE;
@@ -379,17 +389,17 @@ void UStalkerKinematicsComponent::Lock(CObject*InObject)
 void UStalkerKinematicsComponent::PostLoad()
 {
 	Super::PostLoad();
-	UStalkerKinematicsData *InKinematicsData = KinematicsData;
-	if (InKinematicsData)
+	USkeletalMesh *InKinematics = Kinematics;
+	if (InKinematics)
 	{
 		Initilize(nullptr);
-		Initilize(InKinematicsData);
+		Initilize(InKinematics);
 	}
 }
 
 shared_str UStalkerKinematicsComponent::GetNameData()
 {
-	if (KinematicsData)
+	if (Kinematics)
 	{
 		return DataName;
 	}
@@ -401,7 +411,7 @@ float UStalkerKinematicsComponent::LL_GetMotionTime(MotionID id)
 {
 	if (id.valid())
 	{
-		return Anims[id.val].Amim->GetPlayLength() / Anims[id.val].Amim->RateScale;
+		return Anims[id.val]->GetPlayLength() / Anims[id.val]->RateScale;
 	}
 	return 0;
 }
@@ -737,7 +747,7 @@ MotionID UStalkerKinematicsComponent::ID_Cycle_Safe(shared_str Name)
 	u32* ID = AnimsName2ID.Find(Name);
 	if (ID)
 	{
-		if (Anims[*ID].Flags & int32(EStalkerKinematicsAnimFlags::FX))
+		if (AnimsFXType[*ID])
 		{
 			return ResultMotionID;
 		}
@@ -795,7 +805,7 @@ MotionID UStalkerKinematicsComponent::ID_FX_Safe(LPCSTR Name)
 	u32* ID = AnimsName2ID.Find(Name);
 	if (ID)
 	{
-		if (!(Anims[*ID].Flags & int32(EStalkerKinematicsAnimFlags::FX)))
+		if (!AnimsFXType[*ID])
 		{
 			return ResultMotionID;
 		}
@@ -923,7 +933,7 @@ bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_res
 
 void UStalkerKinematicsComponent::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
 {
-	FSkeletalMeshRenderData* RenderResource = KinematicsData->Mesh->GetResourceForRendering();
+	FSkeletalMeshRenderData* RenderResource = Kinematics->GetResourceForRendering();
 	FStaticMeshVertexBuffers* StaticVertexBuffers = &RenderResource->LODRenderData[0].StaticVertexBuffers;
 	FPositionVertexBuffer* PositionVertexBuffer = &StaticVertexBuffers->PositionVertexBuffer;
 	FSkinWeightVertexBuffer* SkinWeightVertexBuffer = RenderResource->LODRenderData[0].GetSkinWeightVertexBuffer();

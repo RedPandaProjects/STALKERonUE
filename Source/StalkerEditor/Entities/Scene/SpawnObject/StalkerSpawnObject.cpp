@@ -26,6 +26,7 @@ THIRD_PARTY_INCLUDES_END
 #include "Components/StalkerSpawnObjectBoxShapeComponent.h"
 #include "Kernel/Unreal/WorldSettings/StalkerWorldSettings.h"
 #include "Resources/Spawn/StalkerLevelSpawn.h"
+#include "UObject/ConstructorHelpers.h"
 
 TCustomShowFlag<> StalkerShowSpawnShape(TEXT("StalkerShowSpawnShape"), true /*DefaultEnabled*/, SFG_Normal, FText::FromString(TEXT("Spawn shape")));
 
@@ -41,11 +42,33 @@ AStalkerSpawnObject::AStalkerSpawnObject(const FObjectInitializer& ObjectInitial
 	SpawnBillboard->SetupAttachment(SceneComponent);
 	SpawnBillboard->SetWorldScale3D(FVector(2,2,2));		
 	SpawnBillboard->Sprite = LoadObject<UTexture2D>(this, TEXT("/Game/Editor/Textures/ed_actor.ed_actor"));
+
+	SpawnBillboardBad = CreateDefaultSubobject<UBillboardComponent>(TEXT("BillboardBad"));
+	SpawnBillboardBad->SetupAttachment(SceneComponent);
+	SpawnBillboardBad->SetWorldScale3D(FVector(2,2,2));		
+	SpawnBillboardBad->Sprite = LoadObject<UTexture2D>(this, TEXT("/Game/Editor/Textures/ed_actor_bad.ed_actor_bad"));
+	SpawnBillboardBad->SetVisibility(false);
+
 	checkSlow(SpawnBillboard->Sprite);
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
 	PrimaryActorTick.SetTickFunctionEnable(true);
-	PrimaryActorTick.TickInterval = 0.2f;
+	PrimaryActorTick.TickInterval = 0.3f;
+
+	ArrowComponent = CreateEditorOnlyDefaultSubobject<UArrowComponent>(TEXT("Arrow"));
+	if (ArrowComponent)
+	{
+		static FName ID_Navigation = "Navigation";
+		ArrowComponent->ArrowColor = FColor(150, 200, 255);
+		ArrowComponent->ArrowSize = 1.0f;
+		ArrowComponent->bTreatAsASprite = true;
+		ArrowComponent->SpriteInfo.Category = ID_Navigation;
+		ArrowComponent->SpriteInfo.DisplayName = NSLOCTEXT("SpriteCategory", "Navigation", "Navigation");
+		ArrowComponent->SetupAttachment(SceneComponent);
+		ArrowComponent->bIsScreenSizeScaled = true;
+		ArrowComponent->SetVisibility(false);
+	}
+	GameType = EStalkerGame::Unkown;
 }
 
 void AStalkerSpawnObject::PostActorCreated()
@@ -87,6 +110,8 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 	if (GetWorld() != nullptr && GetWorld()->WorldType == EWorldType::Editor)
 	{
 		bool Selected = IsSelected();
+		SpawnBillboardBad->SetVisibility(XRayEntity == nullptr);
+		SpawnBillboard->SetVisibility(XRayEntity != nullptr);
 		if (XRayEntity&&XRayEntity->visual())
 		{
 			if (XRayEntity->m_editor_flags.is(ISE_Abstract::flVisualChange))
@@ -110,6 +135,8 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 				{
 					XRayEntity->set_editor_flag(ISE_Abstract::flLightChange);
 				}
+				ArrowComponent->SetVisibility(true);
+				ArrowComponent->SetRelativeLocationAndRotation(MainVisual->GetLocalBounds().GetSphere().Center,FRotator(0,90,0));
 			}
 
 		}
@@ -122,6 +149,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 			Detach(MainVisual);
 			MainVisual->MarkAsGarbage();
 			MainVisual = nullptr;
+			ArrowComponent->SetVisibility(false);
 		}
 		if (XRayEntity && XRayEntity->GetPropertiesType() == EXRaySpawnPropertiesType::CSE_SmartCover)
 		{
@@ -159,7 +187,7 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 			{
 				UStalkerKinematicsComponent* Visual = Visuals[i];
 				ISE_Visual* IVisual = XRayEntity->visual_collection()[i].visual;
-				if ((!!Visual->KinematicsData) != Selected)
+				if ((!!Visual->Kinematics) != Selected)
 				{
 					if (Selected)
 					{
@@ -390,6 +418,14 @@ void AStalkerSpawnObject::CreateEntity()
 		return;
 	}
 	if (GStalkerEditorManager->SEFactoryManager->IsVoid())
+	{
+		return;
+	}
+	if(GameType == EStalkerGame::Unkown)
+	{
+		GameType = GStalkerEngineManager->GetCurrentGame();
+	}
+	if(GameType != GStalkerEngineManager->GetCurrentGame())
 	{
 		return;
 	}

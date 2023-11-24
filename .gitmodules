@@ -4,3 +4,6 @@
 [submodule "Plugins/VisualStudioTools"]
 	path = Plugins/VisualStudioTools
 	url = https://github.com/microsoft/vc-ue-extensions.git
+[submodule "Source/Utils/XRayReTools"]
+	path = Source/Utils/XRayReTools
+	url = https://github.com/BearIvan/xray_re-tools

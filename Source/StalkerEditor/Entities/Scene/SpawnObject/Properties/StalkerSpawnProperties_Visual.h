@@ -10,7 +10,7 @@ public:
 	void FillProperties	();
 
 	UPROPERTY(EditAnywhere, Category = "Base")
-	class UStalkerKinematicsData*	Kinematics;
+	class USkeletalMesh*			Kinematics;
 	UPROPERTY(EditAnywhere, Category = "Base")
 	class UAnimSequence*			Anim;
 	UPROPERTY(EditAnywhere,Category = "Base")

@@ -4,9 +4,9 @@
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 
 void UStalkerSpawnProperties_ALifeSpaceRestrictor::SetEntity(ISE_Abstract* InEntity)
 {
@@ -273,7 +273,7 @@ void UStalkerSpawnProperties_ALifeZoneVisual::FillProperties()
 
 void UStalkerSpawnProperties_ALifeZoneVisual::PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent)
 {
-	auto CheckAnim = [](class UAnimSequence* Anim, FName& Name, UStalkerKinematicsData* Kinematics)->bool
+	auto CheckAnim = [](class UAnimSequence* Anim, FName& Name, UStalkerKinematicsAssetUserData* Kinematics)->bool
 	{
 		if (Kinematics)
 		{
@@ -281,7 +281,7 @@ void UStalkerSpawnProperties_ALifeZoneVisual::PostEditChangeProperty(struct FPro
 			{
 				for (const auto& [Key, InAnim] : AnimsData->Anims)
 				{
-					if (InAnim.Amim == Anim)
+					if (InAnim == Anim)
 					{
 						Name = Key;
 						return true;
@@ -299,9 +299,9 @@ void UStalkerSpawnProperties_ALifeZoneVisual::PostEditChangeProperty(struct FPro
 	if (PropertyChangedEvent.Property->GetFName() == GET_MEMBER_NAME_CHECKED(UStalkerSpawnProperties_ALifeZoneVisual, AttackAnimation))
 	{
 		check(Entity->visual());
-		UStalkerKinematicsData* Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
+		USkeletalMesh* Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
 		FName AnimName;
-		if (CheckAnim(AttackAnimation, AnimName, Kinematics))
+		if (Kinematics&&CheckAnim(AttackAnimation, AnimName, Kinematics->GetAssetUserData<UStalkerKinematicsAssetUserData>()))
 		{
 			ALifeZoneVisual->attack_animation = TCHAR_TO_ANSI(*AnimName.ToString().ToLower());
 		}
@@ -315,18 +315,21 @@ void UStalkerSpawnProperties_ALifeZoneVisual::PostEditChangeProperty(struct FPro
 void UStalkerSpawnProperties_ALifeZoneVisual::SetAnim()
 {
 	check(Entity->visual());
-	UStalkerKinematicsData*  Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
+	USkeletalMesh*  Kinematics = GStalkerEngineManager->GetResourcesManager()->GetKinematics(Entity->visual()->get_visual());
 	auto FindAnim = [Kinematics](FName  StartupAnimation)->class UAnimSequence*
 	{
 		if (Kinematics)
 		{
-			for (const UStalkerKinematicsAnimsData* AnimsData : Kinematics->Anims)
+			if(UStalkerKinematicsAssetUserData*StalkerKinematicsAssetUserData = Kinematics->GetAssetUserData<UStalkerKinematicsAssetUserData>())
 			{
-				for (const auto& [Key, InAnim] : AnimsData->Anims)
+				for (const UStalkerKinematicsAnimsData* AnimsData : StalkerKinematicsAssetUserData->Anims)
 				{
-					if (Key == StartupAnimation)
+					for (const auto& [Key, InAnim] : AnimsData->Anims)
 					{
-						return InAnim.Amim;
+						if (Key == StartupAnimation)
+						{
+							return InAnim;
+						}
 					}
 				}
 			}

@@ -4,9 +4,9 @@
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 
 void UStalkerSpawnProperties_SmartCover::SetEntity(ISE_Abstract* InEntity)
 {

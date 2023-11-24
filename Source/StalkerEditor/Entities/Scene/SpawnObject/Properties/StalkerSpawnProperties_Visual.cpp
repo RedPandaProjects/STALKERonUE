@@ -1,9 +1,9 @@
 #include "StalkerSpawnProperties_Visual.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
-#include "Resources/SkeletonMesh/StalkerKinematicsAnimData.h"
+#include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 
 void UStalkerSpawnProperties_Visual::SetEntity(ISE_Abstract* InEntity)
 {
@@ -34,14 +34,17 @@ void UStalkerSpawnProperties_Visual::PostEditChangeProperty(struct FPropertyChan
 	{
 		if (Kinematics)
 		{
-			for (const UStalkerKinematicsAnimsData* AnimsData : Kinematics->Anims)
+			if(UStalkerKinematicsAssetUserData *StalkerKinematicsAnimsData =  Kinematics->GetAssetUserData<UStalkerKinematicsAssetUserData>())
 			{
-				for (const auto& [Key, InAnim] : AnimsData->Anims)
+				for (const UStalkerKinematicsAnimsData* AnimsData : StalkerKinematicsAnimsData->Anims)
 				{
-					if (InAnim.Amim == Anim)
+					for (const auto& [Key, InAnim] : AnimsData->Anims)
 					{
-						Name = Key;
-						return true;
+						if (InAnim == Anim)
+						{
+							Name = Key;
+							return true;
+						}
 					}
 				}
 			}
@@ -96,16 +99,20 @@ void UStalkerSpawnProperties_Visual::SetAnim()
 	{
 		if (Kinematics)
 		{
-			for (const UStalkerKinematicsAnimsData* AnimsData : Kinematics->Anims)
+			if(UStalkerKinematicsAssetUserData *StalkerKinematicsAnimsData =  Kinematics->GetAssetUserData<UStalkerKinematicsAssetUserData>())
 			{
-				for (const auto& [Key, InAnim] : AnimsData->Anims)
+				for (const UStalkerKinematicsAnimsData* AnimsData : StalkerKinematicsAnimsData->Anims)
 				{
-					if (Key == StartupAnimation)
+					for (const auto& [Key, InAnim] : AnimsData->Anims)
 					{
-						return InAnim.Amim;
+						if (Key == StartupAnimation)
+						{
+							return InAnim;
+						}
 					}
 				}
 			}
+		
 		}
 		return nullptr;
 	};
