@@ -3,12 +3,14 @@ Content/Movies
 Content/COP
 Content/SHOC
 Content/CS
+Content/MSPresets
 Content/BaseNoGit
 DerivedDataCache/**
 Intermediate
 Binaries
 *.sln
 Saved
+logs/
 gamedata/levels/
 gamedata/meshes/
 gamedata/shaders/

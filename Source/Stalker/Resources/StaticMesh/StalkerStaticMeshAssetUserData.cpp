@@ -1,0 +1,2 @@
+#include "StalkerStaticMeshAssetUserData.h"
+
