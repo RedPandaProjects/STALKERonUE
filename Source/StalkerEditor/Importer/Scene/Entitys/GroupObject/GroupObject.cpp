@@ -8,7 +8,7 @@
 #define GROUPOBJ_CHUNK_REFERENCE	  	0x0004
 #define GROUPOBJ_CHUNK_OPEN_OBJECT_LIST	0x0005
 
-CGroupObject::CGroupObject(LPVOID data, LPCSTR name):CCustomObject(data,name)
+CGroupObject::CGroupObject(LPVOID data, LPCSTR name):FXRayCustomObject(data,name)
 {
 	Construct	(data);
 }
@@ -25,16 +25,16 @@ CGroupObject::~CGroupObject()
 u32 CGroupObject::GetObjects(ObjectList& lst)
 {
 	lst.clear();
-    for (CCustomObject*Obect:m_ObjectsInGroup)
+    for (FXRayCustomObject*Obect:m_ObjectsInGroup)
     {
         lst.push_back	(Obect);
     }
     return lst.size();
 }
 
-void CGroupObject::ClearInternal(xr_list<CCustomObject*>& Objects)
+void CGroupObject::ClearInternal(xr_list<FXRayCustomObject*>& Objects)
 {
-    for (CCustomObject*Object:Objects)
+    for (FXRayCustomObject*Object:Objects)
     {
         Object->m_pOwnerObject		= 0;
         delete  Object;
@@ -42,7 +42,7 @@ void CGroupObject::ClearInternal(xr_list<CCustomObject*>& Objects)
     Objects.clear();
 }
 
-bool CGroupObject::AppendObjectLoadCB(CCustomObject* object)
+bool CGroupObject::AppendObjectLoadCB(FXRayCustomObject* object)
 {
     object->m_pOwnerObject			= this;
     object->m_CO_Flags.set			(flObjectInGroup, TRUE);
@@ -81,7 +81,7 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
         ELog.DlgMsg( mtError, "CGroupObject: unsupported file version. Object can't load.");
         return false;
     }
-	CCustomObject::LoadLTX(ini, sect_name);
+	FXRayCustomObject::LoadLTX(ini, sect_name);
 
     Flags32 tmp_flags;tmp_flags.zero();
     if(version<0x0012)
@@ -102,7 +102,7 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
 
     if(version<0x0012)
     {
-        for (CCustomObject*Obect:m_ObjectsInGroup)
+        for (FXRayCustomObject*Obect:m_ObjectsInGroup)
         {
             if(Obect)
             {
@@ -115,7 +115,7 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     return 			true;
 }
 
-void* CGroupObject::QueryInterface(ObjClassID InClassID)
+void* CGroupObject::QueryInterface(EXRayObjectClassID InClassID)
 {
 	if (InClassID == OBJCLASS_GROUP)
 		return this;
@@ -132,7 +132,7 @@ bool CGroupObject::LoadStream(IReader& F)
         ELog.DlgMsg( mtError, "CGroupObject: unsupported file version. Object can't load.");
         return false;
     }
-	CCustomObject::LoadStream(F);
+	FXRayCustomObject::LoadStream(F);
 
     Flags32 tmp_flags; tmp_flags.zero();
     if(version<0x0012)
@@ -167,7 +167,7 @@ bool CGroupObject::LoadStream(IReader& F)
      
     if(version<0x0012)
     {
-        for (CCustomObject*Obect:m_ObjectsInGroup)
+        for (FXRayCustomObject*Obect:m_ObjectsInGroup)
         {
             if(Obect)
             {
@@ -183,6 +183,6 @@ bool CGroupObject::LoadStream(IReader& F)
 void CGroupObject::OnUpdateTransform()
 {
 	inherited::OnUpdateTransform();
-	 for (CCustomObject*Obect:m_ObjectsInGroup)
+	 for (FXRayCustomObject*Obect:m_ObjectsInGroup)
     	Obect->OnUpdateTransform();
 }

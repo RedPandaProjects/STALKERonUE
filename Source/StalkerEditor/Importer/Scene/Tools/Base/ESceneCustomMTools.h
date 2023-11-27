@@ -1,23 +1,21 @@
 #pragma once
-class ESceneCustomMTools;
 
-class ESceneToolBase
+class FXRaySceneToolBase
 {
 public:
-                                         ESceneToolBase          (ObjClassID cls);
-    virtual                             ~ESceneToolBase          ();
+											FXRaySceneToolBase      (EXRayObjectClassID cls);
+    virtual                                 ~FXRaySceneToolBase     ();
 
-    ObjClassID 			                FClassID;
-	BOOL				                IsEnabled               () { return TRUE; }
-	BOOL				                IsEditable              () { return TRUE; }
-    virtual bool		                LoadStream            	(IReader&)=0;
-    virtual bool   		                LoadLTX            		(CInifile&)=0;
-    virtual bool		                can_use_inifile			() {return true;}
-    virtual void                        Clear                   () = 0;
-	virtual LPCSTR		                ClassName               () = 0;
+	bool                                    IsEnabled               () { return true; }
+	bool		                            IsEditable              () { return true; }
+    virtual bool                            LoadStream            	(IReader&)  = 0;
+    virtual bool                            LoadLTX            		(CInifile&) = 0;
+    virtual bool                            CanUseInifile			() {return true;}
+    virtual void                            Clear                   () = 0;
+	virtual const char*                     ClassName               () = 0;
 
-    virtual bool		                LoadSelection      		(IReader&)=0;
-    virtual class ESceneCustomOTool*    CastToESceneCustomOTool () {return nullptr;}
+    virtual bool		                    LoadSelection      		(IReader&)  = 0;
+    virtual class FXRaySceneCustomOTool*    CastToSceneCustomOTool () {return nullptr;}
+    
+    EXRayObjectClassID                              FClassID;
 };
-
-DEFINE_MAP(ObjClassID,ESceneToolBase*,SceneToolsMap,SceneToolsMapPairIt);

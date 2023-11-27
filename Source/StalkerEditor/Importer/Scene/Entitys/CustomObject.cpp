@@ -10,7 +10,7 @@
 #define CUSTOMOBJECT_CHUNK_MOTION_PARAM	0xF908
 
 
-CCustomObject::CCustomObject(LPVOID data, LPCSTR name)
+FXRayCustomObject::FXRayCustomObject(LPVOID data, LPCSTR name)
 {
 	save_id				= 0;
     FClassID 			= OBJCLASS_DUMMY;
@@ -31,13 +31,13 @@ CCustomObject::CCustomObject(LPVOID data, LPCSTR name)
 }
 
 
-CCustomObject::~CCustomObject()
+FXRayCustomObject::~FXRayCustomObject()
 {
 	delete m_Motion;
     delete m_MotionParams;
 }
 
-void CCustomObject::OnUpdateTransform()
+void FXRayCustomObject::OnUpdateTransform()
 {
 
 	m_RT_Flags.set			(flRT_UpdateTransform,FALSE);
@@ -55,14 +55,14 @@ void CCustomObject::OnUpdateTransform()
     if (Motionable()&&Visible()&&Selected()&&m_CO_Flags.is(flAutoKey)) AnimationCreateKey(m_MotionParams->Frame());
 }
 
-BOOL   CCustomObject::Editable() const 
+BOOL   FXRayCustomObject::Editable() const 
 {
 	BOOL b1 = m_CO_Flags.is(flObjectInGroup);
     BOOL b2 = m_CO_Flags.is(flObjectInGroupUnique);
 	return !b1 || (b1&&b2);
 }
 
-bool  CCustomObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
+bool  FXRayCustomObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
 {
 	m_CO_Flags.assign	(ini.r_u32(sect_name, "co_flags") );
 
@@ -90,7 +90,7 @@ bool  CCustomObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
 	return true;
 }
 
-bool CCustomObject::LoadStream(IReader& F)
+bool FXRayCustomObject::LoadStream(IReader& F)
 {
     R_ASSERT(F.find_chunk(CUSTOMOBJECT_CHUNK_FLAGS));
     {
@@ -132,7 +132,7 @@ bool CCustomObject::LoadStream(IReader& F)
 	return true;
 }
 
-void CCustomObject::OnDetach()
+void FXRayCustomObject::OnDetach()
 {
 	if (m_pOwnerObject) {
 		m_pOwnerObject = 0;
@@ -144,7 +144,7 @@ void CCustomObject::OnDetach()
 	m_CO_Flags.set(flObjectInGroup, FALSE);
 }
 
-void CCustomObject::OnAttach(CCustomObject* owner)
+void FXRayCustomObject::OnAttach(FXRayCustomObject* owner)
 {
 	R_ASSERT(owner);
 	R_ASSERT2(((!m_pOwnerObject) || (m_pOwnerObject == owner)), "Object already has owner!");

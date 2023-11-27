@@ -9,6 +9,7 @@
 #include "Tools/Particles/EScenePSTools.h"
 #include "Tools/Wallmark/ESceneWallmarkTool.h"
 #include "Entitys/GroupObject/GroupObject.h"
+#include "Tools/Detail/ESceneDOTools.h"
 
 
 EScene* Scene;
@@ -29,8 +30,10 @@ void st_LevelOptions::Reset()
 
 EScene::EScene()
 {
-    for (int i=0; i<OBJCLASS_COUNT; i++)
-        m_SceneTools.insert(mk_pair((ObjClassID)i,(ESceneToolBase*)NULL));
+    for (int32 i=0; i<OBJCLASS_COUNT; i++)
+    {
+    	SceneTools.Add(static_cast<EXRayObjectClassID>(i));
+    }
 	CreateSceneTools();
 }
 
@@ -40,20 +43,20 @@ EScene::~EScene()
 }
 
 
-void EScene::AppendObject( CCustomObject* object, bool bUndo )
+void EScene::AppendObject( FXRayCustomObject* object, bool bUndo )
 {
 	VERIFY			  	(object);
 	VERIFY				(m_Valid);
-    ESceneCustomOTool* Mt	= GetOTool(object->FClassID);
+    FXRaySceneCustomOTool* Mt	= GetOTool(object->FClassID);
     Mt->_AppendObject	(object);
 }
 
-bool EScene::RemoveObject( CCustomObject* object, bool bUndo, bool bDeleting )
+bool EScene::RemoveObject( FXRayCustomObject* object, bool bUndo, bool bDeleting )
 {
 	VERIFY				(object);
 	VERIFY				(m_Valid);
 
-    ESceneCustomOTool* mt 	= GetOTool(object->FClassID);
+    FXRaySceneCustomOTool* mt 	= GetOTool(object->FClassID);
     if (mt)
     {
     	mt->_RemoveObject(object);
@@ -64,15 +67,13 @@ bool EScene::RemoveObject( CCustomObject* object, bool bUndo, bool bDeleting )
 
 void EScene::Clear()
 {
-    // clear scene tools
-    SceneToolsMapPairIt t_it = m_SceneTools.begin();
-    SceneToolsMapPairIt t_end = m_SceneTools.end();
-    for (; t_it != t_end; t_it++)
-        if (t_it->second && t_it->first != OBJCLASS_DUMMY) 
-        {
-                t_it->second->Clear();
-        }
-
+	for(auto&[Key,Value]:SceneTools)
+	{
+		if(Key!=OBJCLASS_DUMMY&&Value)
+		{
+			Value->Clear();
+		}
+	}
 }
 
 
@@ -88,55 +89,72 @@ xr_string EScene::LevelPath()
 }
 
 
-CCustomObject* EScene::FindObjectByName(LPCSTR name, ObjClassID classfilter)
+FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, EXRayObjectClassID classfilter)
 {
 	if (!name)
-		return NULL;
+	{
+		return nullptr;
+	}
 
-	CCustomObject* object = 0;
+	FXRayCustomObject* Result = nullptr;
 	if (classfilter == OBJCLASS_DUMMY)
 	{
-		SceneToolsMapPairIt _I = m_SceneTools.begin();
-		SceneToolsMapPairIt _E = m_SceneTools.end();
-		for (; _I != _E; ++_I)
+		for(auto&[Key,Value]:SceneTools)
 		{
-			if (!_I->second)
+			if(!Value)
 			{
 				continue;
 			}
-			ESceneCustomOTool* mt = _I->second->CastToESceneCustomOTool();
 
-			if (mt && (0 != (object = mt->FindObjectByName(name))))
-				return object;
+			if(FXRaySceneCustomOTool* SceneCustomOTool = Value->CastToSceneCustomOTool())
+			{
+				Result = SceneCustomOTool->FindObjectByName(name);
+				if(Result)
+				{
+					return Result;
+				}
+			}
 		}
 	}
-	else {
-		ESceneCustomOTool* mt = GetOTool(classfilter); VERIFY(mt);
-		if (mt && (0 != (object = mt->FindObjectByName(name)))) return object;
+	else 
+	{
+		if(FXRaySceneCustomOTool* SceneCustomOTool = GetOTool(classfilter))
+		{
+			Result = SceneCustomOTool->FindObjectByName(name);
+			if(Result)
+			{
+				return Result;
+			}
+		}
 	}
-	return object;
+	return Result;
 }
 
 
-CCustomObject* EScene::FindObjectByName(LPCSTR name, CCustomObject* pass_object)
+FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, FXRayCustomObject* pass_object)
 {
-	CCustomObject* object = 0;
-	SceneToolsMapPairIt _I = m_SceneTools.begin();
-	SceneToolsMapPairIt _E = m_SceneTools.end();
-	for (; _I != _E; _I++)
+	FXRayCustomObject* Result = 0;
+	for(auto&[Key,Value]:SceneTools)
 	{
-		if (!_I->second)
+		if(!Value)
 		{
 			continue;
 		}
-		ESceneCustomOTool* mt = _I->second->CastToESceneCustomOTool();
-		if (mt && (0 != (object = mt->FindObjectByName(name, pass_object)))) return object;
+
+		if(FXRaySceneCustomOTool* SceneCustomOTool = Value->CastToSceneCustomOTool())
+		{
+			Result = SceneCustomOTool->FindObjectByName(name,pass_object);
+			if(Result)
+			{
+				return Result;
+			}
+		}
 	}
-	return 0;
+	return nullptr;
 }
 
 
-void EScene::GenObjectName(ObjClassID cls_id, char* buffer, const char* pref)
+void EScene::GenObjectName(EXRayObjectClassID cls_id, char* buffer, const char* pref)
 {
 
 
@@ -169,38 +187,28 @@ void EScene::GenObjectName(ObjClassID cls_id, char* buffer, const char* pref)
     }
 }
 
-void EScene::RegisterSceneTools(ESceneToolBase* mt)
+void EScene::RegisterSceneTools(TSharedPtr<FXRaySceneToolBase> SceneToolBase)
 {
-	m_SceneTools[mt->FClassID] = mt;
+	SceneTools.FindOrAdd(SceneToolBase->FClassID,SceneToolBase);
 }
 
 void EScene::CreateSceneTools()
 {
-	RegisterSceneTools(new ESceneDummyTool); //+
-	RegisterSceneTools(new ESceneObjectTool); //+
-	RegisterSceneTools(new ESceneAIMapTool); //+
-	RegisterSceneTools(new ESceneWayTool); //+
-	RegisterSceneTools(new ESceneShapeTool); //+
-	RegisterSceneTools(new ESceneSpawnTool); //+
-	RegisterSceneTools(new ESceneGroupTool); //+
-	RegisterSceneTools(new EScenePSTools); //+
-	RegisterSceneTools(new ESceneWallmarkTool); //+
+	RegisterSceneTools(MakeShared<ESceneDummyTool>() );
+	RegisterSceneTools(MakeShared<ESceneObjectTool>());
+	RegisterSceneTools(MakeShared<ESceneAIMapTool>());
+	RegisterSceneTools(MakeShared<ESceneWayTool>()); 
+	RegisterSceneTools(MakeShared<ESceneShapeTool>());
+	RegisterSceneTools(MakeShared<ESceneSpawnTool>());
+	RegisterSceneTools(MakeShared<ESceneGroupTool>()); 
+	RegisterSceneTools(MakeShared<EScenePSTools>());
+	RegisterSceneTools(MakeShared<ESceneWallmarkTool>());
+	RegisterSceneTools(MakeShared<EDetailManager>());
 }
 
 void EScene::DestroySceneTools()
 {
-	SceneToolsMapPairIt _I = m_SceneTools.begin();
-	SceneToolsMapPairIt _E = m_SceneTools.end();
-	for (; _I != _E; _I++)
-	{
-		if (_I->second)
-		{
-			delete _I->second;
-			_I->second = nullptr;
-		}
-		
-	}
-	m_SceneTools.clear();
+	SceneTools.Empty();
 }
 
 
@@ -209,10 +217,10 @@ bool EScene::GetSubstObjectName(const xr_string& _from, xr_string& _to) const
     return false;
 }
 
-void EScene::GetObjects(ObjClassID InType, ObjectList& OutObjects)
+void EScene::GetObjects(EXRayObjectClassID InType, ObjectList& OutObjects)
 {
 	ObjectList&ObjectsFromTool = GetOTool(InType)->GetObjects();
-	for (CCustomObject* Object : ObjectsFromTool)
+	for (FXRayCustomObject* Object : ObjectsFromTool)
 	{
 		OutObjects.push_back(Object);
 	}
@@ -233,18 +241,20 @@ void EScene::GetObjects(ObjClassID InType, ObjectList& OutObjects)
 
 int EScene::ObjCount()
 {
-	int cnt = 0;
-	SceneToolsMapPairIt _I = m_SceneTools.begin();
-	SceneToolsMapPairIt _E = m_SceneTools.end();
-	for (; _I != _E; _I++)
+	int32 Counter = 0;
+
+	for(auto&[Key,Value]:SceneTools)
 	{
-		if (!_I->second)
+		if(!Value)
 		{
 			continue;
 		}
-		ESceneCustomOTool* mt = _I->second->CastToESceneCustomOTool();
-		if (mt)
-			cnt += mt->ObjCount();
+
+		if(FXRaySceneCustomOTool* SceneCustomOTool = Value->CastToSceneCustomOTool())
+		{
+			Counter += SceneCustomOTool->ObjCount();
+		}
 	}
-	return cnt;
+
+	return Counter;
 }

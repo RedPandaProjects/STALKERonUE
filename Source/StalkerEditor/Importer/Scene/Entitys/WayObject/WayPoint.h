@@ -39,14 +39,14 @@ public:
 
 DEFINE_VECTOR(CWayPoint*,WPVec,WPIt);
 
-class CWayObject: public CCustomObject
+class CWayObject: public FXRayCustomObject
 {
 protected:
     friend class TfrmPropertiesWayPoint;
     friend class CPatrolPath;
 	friend class CPatrolPoint;
 	friend class Gizmo;
-    typedef CCustomObject inherited;
+    typedef FXRayCustomObject inherited;
 public:
 					CWayObject		(LPVOID data, const char* name);
 	virtual			~CWayObject		();
@@ -63,6 +63,6 @@ public:
   	virtual bool 	LoadLTX			(CInifile& ini, const char* sect_name);
 	virtual bool	CanAttach() { return true; }
 	
-	void*			QueryInterface(ObjClassID InClassID) override;
+	void*			QueryInterface(EXRayObjectClassID InClassID) override;
 	WPVec			m_WayPoints;
 };

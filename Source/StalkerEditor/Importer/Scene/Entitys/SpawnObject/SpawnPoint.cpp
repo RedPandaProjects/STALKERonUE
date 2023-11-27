@@ -132,7 +132,7 @@ bool CSpawnPoint::SSpawnData::LoadStream(IReader& F)
     return Valid();
 }
 
-CSpawnPoint::CSpawnPoint(LPVOID data, LPCSTR name):CCustomObject(data,name),m_SpawnData(this)
+CSpawnPoint::CSpawnPoint(LPVOID data, LPCSTR name):FXRayCustomObject(data,name),m_SpawnData(this)
 {
 	m_rpProfile			= "";
     m_EM_Flags.one		();
@@ -155,7 +155,7 @@ CSpawnPoint::~CSpawnPoint()
 }
 
 
-bool CSpawnPoint::AttachObject(CCustomObject* obj)
+bool CSpawnPoint::AttachObject(FXRayCustomObject* obj)
 {
 	bool bAllowed = false;
     //  
@@ -199,7 +199,7 @@ bool CSpawnPoint::CreateSpawnData(LPCSTR entity_ref)
     m_SpawnData.Create	(entity_ref);
     return m_SpawnData.Valid();
 }
-bool CSpawnPoint::OnAppendObject(CCustomObject* object)
+bool CSpawnPoint::OnAppendObject(FXRayCustomObject* object)
 {
 	R_ASSERT(!m_AttachedObject);
     if (object->FClassID!=OBJCLASS_SHAPE) return false;
@@ -241,7 +241,7 @@ bool CSpawnPoint::LoadLTX(CInifile& ini, LPCSTR sect_name)
         return false;
     }
 
-	CCustomObject::LoadLTX(ini, sect_name);
+	FXRayCustomObject::LoadLTX(ini, sect_name);
     EPointType Type 			= (EPointType)ini.r_u32(sect_name, "type");
 
     if (Type != ptSpawnPoint)
@@ -283,7 +283,7 @@ bool CSpawnPoint::LoadStream(IReader& F)
         return false;
     }
 
-	CCustomObject::LoadStream(F);
+	FXRayCustomObject::LoadStream(F);
 
     // new generation
     if (F.find_chunk(SPAWNPOINT_CHUNK_ENTITYREF))
@@ -307,7 +307,7 @@ bool CSpawnPoint::LoadStream(IReader& F)
     
     return true;
 }
-void* CSpawnPoint::QueryInterface(ObjClassID InClassID)
+void* CSpawnPoint::QueryInterface(EXRayObjectClassID InClassID)
 {
 	if (InClassID == OBJCLASS_SPAWNPOINT)
 		return this;

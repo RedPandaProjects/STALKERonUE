@@ -14,7 +14,7 @@ bool CSceneObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     {
         u32 version = ini.r_u32(sect_name, "version");
 
-		CCustomObject::LoadLTX						(ini, sect_name);
+		FXRayCustomObject::LoadLTX						(ini, sect_name);
 
         xr_string ref_name  = ini.r_string			(sect_name, "reference_name");
 
@@ -112,7 +112,7 @@ bool CSceneObject::LoadStream(IReader& F)
     	    F.r_fvector3(FScale);
         }
 
-		CCustomObject::LoadStream(F);
+		FXRayCustomObject::LoadStream(F);
 
         R_ASSERT(F.find_chunk(SCENEOBJ_CHUNK_REFERENCE));
         if(version<=0x0011)

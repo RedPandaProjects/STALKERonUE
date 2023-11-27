@@ -15,9 +15,9 @@ public:
     CLE_Visual(ISE_Visual* src);
     virtual			~CLE_Visual();
 };
-class CSpawnPoint : public CCustomObject
+class CSpawnPoint : public FXRayCustomObject
 {
-	typedef CCustomObject inherited;
+	typedef FXRayCustomObject inherited;
 
     friend class    SceneBuilder;
 public:                           
@@ -66,7 +66,7 @@ public:
 	};
 
 	SSpawnData    	m_SpawnData;
-	CCustomObject*	m_AttachedObject;
+	FXRayCustomObject*	m_AttachedObject;
 
     shared_str		m_rpProfile;
     union{
@@ -88,7 +88,7 @@ public:
         };
     };
 
-    bool 			OnAppendObject			(CCustomObject* object);
+    bool 			OnAppendObject			(FXRayCustomObject* object);
 public:
 	                CSpawnPoint    	(LPVOID data, LPCSTR name);
     void            Construct   	(LPVOID data);
@@ -102,9 +102,9 @@ public:
 
 
 
-    bool			AttachObject	(CCustomObject* obj);
+    bool			AttachObject	(FXRayCustomObject* obj);
     void			DetachObject	();
 
 
-	void* QueryInterface(ObjClassID InClassID) override;
+	void* QueryInterface(EXRayObjectClassID InClassID) override;
 };

@@ -62,7 +62,7 @@ bool CWayPoint::DeleteLink(CWayPoint* P)
     return false;
 }
 // Way Object
-CWayObject::CWayObject(LPVOID data, const char* name):CCustomObject(data,name)
+CWayObject::CWayObject(LPVOID data, const char* name):FXRayCustomObject(data,name)
 {
 	Construct(data);
 }
@@ -97,7 +97,7 @@ bool CWayObject::LoadLTX(CInifile& ini, const char* sect_name)
         return 		false;
     }
 
-	CCustomObject::LoadLTX(ini, sect_name);
+	FXRayCustomObject::LoadLTX(ini, sect_name);
 
     if(!GetName())
 	{
@@ -150,7 +150,7 @@ bool CWayObject::LoadLTX(CInifile& ini, const char* sect_name)
     return true;
 }
 
-void* CWayObject::QueryInterface(ObjClassID InClassID)
+void* CWayObject::QueryInterface(EXRayObjectClassID InClassID)
 {
 	if (InClassID == OBJCLASS_WAY)
 		return this;
@@ -171,7 +171,7 @@ bool CWayObject::LoadStream(IReader& F)
         return false;
     }
 
-	CCustomObject::LoadStream(F);
+	FXRayCustomObject::LoadStream(F);
 
 	check(F.find_chunk(WAYOBJECT_CHUNK_POINTS));
     m_WayPoints.resize(F.r_u16());

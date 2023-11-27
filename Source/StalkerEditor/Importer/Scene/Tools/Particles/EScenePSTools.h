@@ -1,10 +1,10 @@
 #pragma once
 
-class EScenePSTools: public ESceneCustomOTool
+class EScenePSTools: public FXRaySceneCustomOTool
 {
-	typedef ESceneCustomOTool inherited;
+	typedef FXRaySceneCustomOTool inherited;
 public:
-					EScenePSTools			():ESceneCustomOTool(OBJCLASS_PS){;}
+					EScenePSTools			():FXRaySceneCustomOTool(OBJCLASS_PS){;}
                     ~EScenePSTools          () override;
 	// definition
     LPCSTR			ClassName				() override {return "ps";}
@@ -15,5 +15,5 @@ public:
     bool   		    LoadLTX            		(CInifile&) override;
     bool		    LoadSelection      		(IReader&) override;
 
-    CCustomObject* CreateObject			    (LPVOID data, LPCSTR name) override;
+    FXRayCustomObject* CreateObject			    (LPVOID data, LPCSTR name) override;
 };

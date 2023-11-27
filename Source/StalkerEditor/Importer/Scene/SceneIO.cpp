@@ -213,12 +213,12 @@ void st_LevelOptions::Read(IReader& F)
 
 // Scene
 
-BOOL EScene::LoadLevelPartLTX(ESceneToolBase* M, LPCSTR mn)
+BOOL EScene::LoadLevelPartLTX(FXRaySceneToolBase* M, LPCSTR mn)
 {
 	string_path map_name;
     FCStringAnsi::Strcpy(map_name, mn);
     
-	if(!M->can_use_inifile())
+	if(!M->CanUseInifile())
     	return LoadLevelPartStream(M, map_name);
 
     int fnidx=0;
@@ -256,15 +256,15 @@ BOOL EScene::LoadLevelPartLTX(ESceneToolBase* M, LPCSTR mn)
     return 					TRUE;
 }
 
-BOOL EScene::LoadLevelPart(ESceneToolBase* M, LPCSTR map_name)
+BOOL EScene::LoadLevelPart(FXRaySceneToolBase* M, LPCSTR map_name)
 {
-	if(M->can_use_inifile())
+	if(M->CanUseInifile())
 	    return LoadLevelPartLTX(M, map_name);
     return LoadLevelPartStream(M, map_name);
 	
 }
 
-BOOL EScene::LoadLevelPartStream(ESceneToolBase* M, LPCSTR map_name)
+BOOL EScene::LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name)
 {
     if (FS.exist(map_name))
     {
@@ -303,7 +303,7 @@ BOOL EScene::LoadLevelPartStream(ESceneToolBase* M, LPCSTR map_name)
     return 					TRUE;
 }
 
-BOOL EScene::LoadLevelPart(LPCSTR map_name, ObjClassID cls)
+BOOL EScene::LoadLevelPart(LPCSTR map_name, EXRayObjectClassID cls)
 {
 	xr_string pn	= LevelPartName(map_name,cls);
     if (LoadLevelPart(GetTool(cls),pn.c_str()))
@@ -312,13 +312,13 @@ BOOL EScene::LoadLevelPart(LPCSTR map_name, ObjClassID cls)
 	    return 			FALSE;
 }
 
-BOOL EScene::UnloadLevelPart(ESceneToolBase* M)
+BOOL EScene::UnloadLevelPart(FXRaySceneToolBase* M)
 {
 	M->Clear		();
     return 			TRUE;
 }
 
-BOOL EScene::UnloadLevelPart(LPCSTR map_name, ObjClassID cls)
+BOOL EScene::UnloadLevelPart(LPCSTR map_name, EXRayObjectClassID cls)
 {
 	xr_string pn	= LevelPartName(map_name,cls);
     if (UnloadLevelPart(GetTool(cls)))
@@ -332,25 +332,25 @@ xr_string EScene::LevelPartPath(LPCSTR full_name)
     return 			EFS.ExtractFilePath(full_name)+EFS.ExtractFileName(full_name)+"\\";
 }
 
-xr_string EScene::LevelPartName(LPCSTR map_name, ObjClassID cls)
+xr_string EScene::LevelPartName(LPCSTR map_name, EXRayObjectClassID cls)
 {
     return 			LevelPartPath(map_name)+GetTool(cls)->ClassName() + ".part";
 }
 
-bool EScene::LoadToolLTX(ObjClassID clsid, LPCSTR fn)
+bool EScene::LoadToolLTX(EXRayObjectClassID clsid, LPCSTR fn)
 {
-    ESceneToolBase* tool 	= GetTool(clsid);
+    FXRaySceneToolBase* tool 	= GetTool(clsid);
     tool->Clear				();
 	bool res 				= LoadLevelPartLTX(tool, fn);
 	return 					res;
 }
 
 
-bool EScene::ReadObjectStream(IReader& F, CCustomObject*& O)
+bool EScene::ReadObjectStream(IReader& F, FXRayCustomObject*& O)
 {
-    ObjClassID clsid		= OBJCLASS_DUMMY;
+    EXRayObjectClassID clsid		= OBJCLASS_DUMMY;
     R_ASSERT				(F.find_chunk(CHUNK_OBJECT_CLASS));
-    clsid 					= ObjClassID(F.r_u32());
+    clsid 					= EXRayObjectClassID(F.r_u32());
 
     if (GetTool(clsid) == nullptr)
     {
@@ -373,10 +373,10 @@ bool EScene::ReadObjectStream(IReader& F, CCustomObject*& O)
 	return bRes;
 }
 
-bool EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name, CCustomObject*& O)
+bool EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name, FXRayCustomObject*& O)
 {
-    ObjClassID clsid		= OBJCLASS_DUMMY;
-    clsid 					= ObjClassID(ini.r_u32(sect_name,"clsid"));
+    EXRayObjectClassID clsid		= OBJCLASS_DUMMY;
+    clsid 					= EXRayObjectClassID(ini.r_u32(sect_name,"clsid"));
 
     if (GetTool(clsid) == nullptr)
     {
@@ -396,7 +396,7 @@ bool EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name, CCustomObject*& O)
 	return bRes;
 }
 
-bool EScene::OnLoadAppendObject(CCustomObject* O)
+bool EScene::OnLoadAppendObject(FXRayCustomObject* O)
 {
 	AppendObject	(O,false);
     return true;
@@ -435,17 +435,15 @@ bool EScene::LoadLTX(LPCSTR map_name, bool bUndo)
         m_CreateTime			= ini.r_u32("level_tag","create_time");
 
 
-        SceneToolsMapPairIt _I 	= m_SceneTools.begin();
-        SceneToolsMapPairIt _E 	= m_SceneTools.end();
-        for (; _I!=_E; ++_I)
+    	for(auto&[Key,Value]:SceneTools)
         {
-            if (_I->second)
+            if (Value)
             {
                 {
-                    if (!bUndo && _I->second->IsEnabled() && (_I->first!=OBJCLASS_DUMMY))
+                    if (!bUndo && Value->IsEnabled() && (Key!=OBJCLASS_DUMMY))
                     {
-                        xr_string fn 		 = LevelPartName(map_name, _I->first).c_str();
-                        LoadLevelPartLTX	(_I->second, fn.c_str());
+                        xr_string fn 		 = LevelPartName(map_name,Key).c_str();
+                        LoadLevelPartLTX	(Value.Get(), fn.c_str());
                     }
                 }
             }
@@ -522,20 +520,21 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
       
         ReadObjectsStream	(*F,CHUNK_OBJECT_LIST, TAppendObject(this, &EScene::OnLoadAppendObject));
 
-        SceneToolsMapPairIt _I = m_SceneTools.begin();
-        SceneToolsMapPairIt _E = m_SceneTools.end();
-        for (; _I!=_E; ++_I)
+        for(auto&[Key,Value]:SceneTools)
         {
-            if (_I->second)
+            if (Value)
             {
-			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+_I->first);
-            	if (chunk){
-	                _I->second->LoadStream(*chunk);
+			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+Key);
+            	if (chunk)
+                {
+	                Value->LoadStream(*chunk);
     	            chunk->close	();
-                }else{
-                    if (!bUndo && _I->second->IsEnabled() && (_I->first!=OBJCLASS_DUMMY))
+                }
+            	else
+                {
+                    if (!bUndo && Value->IsEnabled() && (Key!=OBJCLASS_DUMMY))
                     {
-                        LoadLevelPart	(_I->second,LevelPartName(map_name,_I->first).c_str());
+                        LoadLevelPart	(Value.Get(),LevelPartName(map_name,Key).c_str());
                     }
                 }
             }
@@ -549,14 +548,15 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
 		FS.r_close(F);
 
 		return true;
-    }else
+    }
+	else
     {
     	ELog.Msg(mtError,"Can't find file: '%s'",map_name);
     }
 	return false;
 }
 
-bool EScene::OnLoadSelectionAppendObject(CCustomObject* obj)
+bool EScene::OnLoadSelectionAppendObject(FXRayCustomObject* obj)
 {
     string256 				buf;
     GenObjectName			(obj->FClassID,buf,obj->GetName());
@@ -600,16 +600,16 @@ bool EScene::LoadSelection( LPCSTR fname )
             res = false;
         }
 
-        SceneToolsMapPairIt _I = m_SceneTools.begin();
-        SceneToolsMapPairIt _E = m_SceneTools.end();
-        for (; _I!=_E; _I++)
-            if (_I->second&&_I->second->IsEnabled()&&_I->second->IsEditable()){
-			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+_I->first);
+         for(auto&[Key,Value]:SceneTools)
+         {
+            if (Value&&Value->IsEnabled()&&Value->IsEditable()){
+			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+Key);
             	if (chunk){
-	                _I->second->LoadSelection(*chunk);
+	                Value->LoadSelection(*chunk);
     	            chunk->close	();
                 }
             }
+         }
         // Synchronize
 		FS.r_close(F);
     }
@@ -628,12 +628,12 @@ bool EScene::ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_
     for (u32 i = 0; i < count; ++i)
     {
         FCStringAnsi::Sprintf(buff, "%s_%s_%d", sect_name_parent, sect_name_prefix, i);
-        CCustomObject* obj = NULL;
+        FXRayCustomObject* obj = NULL;
 
         if (ReadObjectLTX(ini, buff, obj))
         {
             LPCSTR obj_name = obj->GetName();
-            CCustomObject* existing = FindObjectByName(obj_name, obj->FClassID);
+            FXRayCustomObject* existing = FindObjectByName(obj_name, obj->FClassID);
             if (existing)
             {
                 string256 				buf;
@@ -665,11 +665,11 @@ bool EScene::ReadObjectsStream(IReader& F, u32 chunk_id, TAppendObject on_append
         IReader* O = OBJ->open_chunk(0);
         for (int count = 1; O; ++count)
         {
-            CCustomObject* obj = NULL;
+            FXRayCustomObject* obj = NULL;
             if (ReadObjectStream(*O, obj))
             {
                 LPCSTR obj_name = obj->GetName();
-                CCustomObject* existing = FindObjectByName(obj_name, obj->FClassID);
+                FXRayCustomObject* existing = FindObjectByName(obj_name, obj->FClassID);
                 if (existing)
                 {
                     /*if(g_frmConflictLoadObject->m_result!=2 && g_frmConflictLoadObject->m_result!=4 && g_frmConflictLoadObject->m_result!=6)

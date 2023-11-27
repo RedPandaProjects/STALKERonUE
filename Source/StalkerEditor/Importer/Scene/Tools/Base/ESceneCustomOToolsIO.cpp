@@ -7,7 +7,7 @@ static const u32 OTOOL_CHUNK_OBJECTS			= 0x0003;
 static const u32 OTOOL_CHUNK_FLAGS			= 0x0004;
 
 
-bool ESceneCustomOTool::OnLoadSelectionAppendObject(CCustomObject* obj)
+bool FXRaySceneCustomOTool::OnLoadSelectionAppendObject(FXRayCustomObject* obj)
 {
     string256 				buf;
     Scene->GenObjectName	(obj->FClassID,buf,obj->GetName());
@@ -17,26 +17,26 @@ bool ESceneCustomOTool::OnLoadSelectionAppendObject(CCustomObject* obj)
 }
 
 
-bool ESceneCustomOTool::OnLoadAppendObject(CCustomObject* O)
+bool FXRaySceneCustomOTool::OnLoadAppendObject(FXRayCustomObject* O)
 {
 	Scene->AppendObject	(O,false);
     return true;
 }
 
 
-bool ESceneCustomOTool::LoadSelection(IReader& F)
+bool FXRaySceneCustomOTool::LoadSelection(IReader& F)
 {
     int count					= 0;
 	F.r_chunk					(OTOOL_CHUNK_OBJECT_COUNT,&count);
 
-    Scene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, EScene::TAppendObject(this, &ESceneCustomOTool::OnLoadSelectionAppendObject));
+    Scene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, EScene::TAppendObject(this, &FXRaySceneCustomOTool::OnLoadSelectionAppendObject));
 
     return true;
 }
 
 
 
-bool ESceneCustomOTool::LoadLTX(CInifile& ini)
+bool FXRaySceneCustomOTool::LoadLTX(CInifile& ini)
 {
 	inherited::LoadLTX	(ini);
 
@@ -50,7 +50,7 @@ bool ESceneCustomOTool::LoadLTX(CInifile& ini)
       {
       	
         
-          CCustomObject* obj	= NULL;
+          FXRayCustomObject* obj	= NULL;
           FCStringAnsi::Sprintf				(buff, "object_%d", i);
           if( Scene->ReadObjectLTX(ini, buff, obj) )
           {
@@ -63,14 +63,14 @@ bool ESceneCustomOTool::LoadLTX(CInifile& ini)
     return true;
 }
 
-bool ESceneCustomOTool::LoadStream(IReader& F)
+bool FXRaySceneCustomOTool::LoadStream(IReader& F)
 {
 	inherited::LoadStream		(F);
 
     int count					= 0;
 	F.r_chunk					(OTOOL_CHUNK_OBJECT_COUNT,&count);
 
-    Scene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, EScene::TAppendObject(this, &ESceneCustomOTool::OnLoadAppendObject));
+    Scene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, EScene::TAppendObject(this, &FXRaySceneCustomOTool::OnLoadAppendObject));
 
     return true;
 }

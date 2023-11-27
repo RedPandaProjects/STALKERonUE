@@ -6,9 +6,9 @@ ESceneWayTool::~ESceneWayTool()
 
 }
 
-CCustomObject* ESceneWayTool::CreateObject(LPVOID data, LPCSTR name)
+FXRayCustomObject* ESceneWayTool::CreateObject(LPVOID data, LPCSTR name)
 {
-	CCustomObject* O	= new CWayObject(data,name);
+	FXRayCustomObject* O	= new CWayObject(data,name);
     O->FParentTools		= this;
     return O;
 }

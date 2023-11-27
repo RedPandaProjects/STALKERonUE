@@ -43,9 +43,9 @@ struct SAINode					// definition of "patch" or "node"
 
 DEFINE_VECTOR(SAINode*, AINodeVec, AINodeIt);
 
-class ESceneAIMapTool : public ESceneToolBase
+class ESceneAIMapTool : public FXRaySceneToolBase
 {
-	typedef ESceneToolBase inherited;
+	typedef FXRaySceneToolBase inherited;
 public:
 	ESceneAIMapTool();
 	~ESceneAIMapTool() override;
@@ -54,7 +54,7 @@ public:
 	// IO
 
 	bool   				LoadStream(IReader&) override;
-	bool 				can_use_inifile() override { return false; }
+	bool 				CanUseInifile() override { return false; }
 	void 				UnpackPosition(Fvector& Pdest, const SNodePositionOld& Psrc, Fbox& bb, SAIParams& params);
 	u32 				UnpackLink(u32& L);
 	void				DenumerateNodes();

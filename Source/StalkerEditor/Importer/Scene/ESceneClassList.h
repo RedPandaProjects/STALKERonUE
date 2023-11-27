@@ -1,9 +1,9 @@
 #pragma once
 
-// refs 
-class CCustomObject;
 
-typedef u32	ObjClassID;
+class FXRayCustomObject;
+
+typedef u32	EXRayObjectClassID;
 
 
 enum{
@@ -30,7 +30,7 @@ enum{
 };
 
 
-typedef xr_list<CCustomObject*> 		ObjectList;
-typedef ObjectList::iterator 			ObjectIt;
-typedef xr_map<ObjClassID,ObjectList> 	ObjectMap;
-typedef ObjectMap::iterator 			ObjectPairIt;
+typedef xr_list<FXRayCustomObject*> 		    ObjectList;
+typedef ObjectList::iterator 			        ObjectIt;
+typedef xr_map<EXRayObjectClassID,ObjectList> 	ObjectMap;
+typedef ObjectMap::iterator 			        ObjectPairIt;

@@ -1,18 +1,18 @@
 #include "CustomObject.h"
 
-void CCustomObject::AnimationCreateKey(float t)
+void FXRayCustomObject::AnimationCreateKey(float t)
 {
     Fvector R;		R.set(-GetRotation().x,-GetRotation().y,-GetRotation().z);
     m_Motion->CreateKey(t,GetPosition(),R);
 }
 
-void CCustomObject::AnimationDeleteKey(float t)
+void FXRayCustomObject::AnimationDeleteKey(float t)
 {
     m_Motion->DeleteKey(t);
 }
 
 //float speed = 0.f;
-void CCustomObject::AnimationUpdate(float t)
+void FXRayCustomObject::AnimationUpdate(float t)
 {
     Fvector R,P,r;   
     m_Motion->_Evaluate		(t,P,r);
@@ -28,7 +28,7 @@ void CCustomObject::AnimationUpdate(float t)
     m_CO_Flags.set			(flAutoKey,bAK);
 }
 
-void CCustomObject::AnimationOnFrame()
+void FXRayCustomObject::AnimationOnFrame()
 {
 	VERIFY (m_Motion);
 

@@ -1,15 +1,15 @@
 #pragma once
 
-class ESceneWallmarkTool : public ESceneToolBase
+class ESceneWallmarkTool : public FXRaySceneToolBase
 {
-	typedef ESceneToolBase inherited;
+	typedef FXRaySceneToolBase inherited;
 public:
 	ESceneWallmarkTool();
 	~ESceneWallmarkTool() override;
 	// definition
 	LPCSTR				ClassName() override { return "wallmark"; }
 	// IO
-	bool 				can_use_inifile() override { return false; }
+	bool 				CanUseInifile() override { return false; }
 
 	bool   				LoadStream(IReader&) override;
 	bool				LoadLTX(CInifile&) override;

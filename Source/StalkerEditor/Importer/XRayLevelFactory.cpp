@@ -90,7 +90,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	{
 		ObjectList ListObj;
 		Scene->GetObjects(OBJCLASS_SCENEOBJECT,ListObj);
-		for (CCustomObject* Object : ListObj)
+		for (FXRayCustomObject* Object : ListObj)
 		{
 			CSceneObject* SceneObject = reinterpret_cast<CSceneObject*>(Object->QueryInterface(OBJCLASS_SCENEOBJECT));
 			CEditableObject* EditableObject = SceneObject->GetReference();
@@ -127,7 +127,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	{
 		ObjectList ListPS;
 		Scene->GetObjects(OBJCLASS_PS,ListPS);
-		for (CCustomObject* Object : ListPS)
+		for (FXRayCustomObject* Object : ListPS)
 		{
 			CParticlesObject* PSObject = reinterpret_cast<CParticlesObject*>(Object->QueryInterface(OBJCLASS_PS));
 			FString Name =  PSObject->m_RefName.c_str();
@@ -181,7 +181,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	{
 		ObjectList ListWay;
 		Scene->GetObjects(OBJCLASS_WAY,ListWay);
-		for (CCustomObject* Object : ListWay)
+		for (FXRayCustomObject* Object : ListWay)
 		{
 			CWayObject* WayObject = reinterpret_cast<CWayObject*>(Object->QueryInterface(OBJCLASS_WAY));
 			if (WayObject&& WayObject->m_WayPoints.size())
@@ -213,7 +213,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	{
 		ObjectList ListSpawn;
 		Scene->GetObjects(OBJCLASS_SPAWNPOINT,ListSpawn);
-		for (CCustomObject* Object : ListSpawn)
+		for (FXRayCustomObject* Object : ListSpawn)
 		{
 			CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(OBJCLASS_SPAWNPOINT));
 			if (SpawnObject && SpawnObject->m_SpawnData.m_Data)

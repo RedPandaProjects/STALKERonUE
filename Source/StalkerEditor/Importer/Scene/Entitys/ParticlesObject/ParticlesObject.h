@@ -1,9 +1,9 @@
 #pragma once
 
 
-class CParticlesObject: public CCustomObject
+class CParticlesObject: public FXRayCustomObject
 {
-    typedef CCustomObject inherited;
+    typedef FXRayCustomObject inherited;
 
 public:
 					        CParticlesObject    (LPVOID data, LPCSTR name);
@@ -12,6 +12,6 @@ public:
     virtual bool	        CanAttach		    () {return true;}
   	virtual bool 	        LoadStream			(IReader&);
   	virtual bool 	        LoadLTX				(CInifile& ini, LPCSTR sect_name);
-	void*                   QueryInterface      (ObjClassID InClassID) override;
+	void*                   QueryInterface      (EXRayObjectClassID InClassID) override;
     shared_str				m_RefName;
 };

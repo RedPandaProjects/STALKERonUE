@@ -9,7 +9,7 @@ class IWriter;
 class COMotion;
 class CCustomMotion;
 class SSceneSummary;
-class ESceneCustomOTool;
+class FXRaySceneCustomOTool;
 
 struct SExportStreamItem
 {
@@ -31,7 +31,7 @@ struct SExportStreams
 	SExportStreamItem	fog_vol;
 };
 
-class  CCustomObject
+class  FXRayCustomObject
 {
 protected:
     shared_str		EName;
@@ -91,7 +91,7 @@ public:
     Fmatrix			FITransformRP;
 	Fmatrix 		FITransform;
 
-    CCustomObject*	m_pOwnerObject;
+    FXRayCustomObject*	m_pOwnerObject;
 public:
 	LPCSTR			GetName			() const {return *FName; }
 	void			SetName			(LPCSTR N){string256 tmp;FCStringAnsi::Strcpy(tmp,N); strlwr(tmp); FName=tmp;}
@@ -107,8 +107,8 @@ public:
 
     virtual void	DeleteThis		(){m_RT_Flags.set(flRT_NeedSelfDelete,TRUE);}
 public:
-					CCustomObject	(LPVOID data, LPCSTR name);
-	virtual 		~CCustomObject	();
+					FXRayCustomObject	(LPVOID data, LPCSTR name);
+	virtual 		~FXRayCustomObject	();
 
     BOOL 			Editable		() const ;
     
@@ -137,8 +137,8 @@ public:
     
     // grouping methods
     virtual void	OnDetach		();
-    virtual void	OnAttach		(CCustomObject* owner);
-    CCustomObject* 	GetOwner		(){return m_pOwnerObject;}
+    virtual void	OnAttach		(FXRayCustomObject* owner);
+    FXRayCustomObject* 	GetOwner		(){return m_pOwnerObject;}
     virtual bool	CanAttach		()=0;
 
     virtual bool	OnChooseQuery	(LPCSTR specific){return true;}
@@ -163,10 +163,10 @@ public:
     virtual void           PositionSave          () { EPositionSaved = FPosition; }
 	IC const Fvector& GetSavePosition       () { return EPositionSaved; }
 
-    virtual void* QueryInterface(ObjClassID InClassID) { if(InClassID == OBJCLASS_DUMMY) return this; return nullptr;;}
+    virtual void* QueryInterface(EXRayObjectClassID InClassID) { if(InClassID == OBJCLASS_DUMMY) return this; return nullptr;;}
 
-    ObjClassID		FClassID;
-    ESceneCustomOTool* FParentTools;
+    EXRayObjectClassID		FClassID;
+    FXRaySceneCustomOTool* FParentTools;
 private:
     int m_ButtonId;
     float m_FromTime;

@@ -7,7 +7,7 @@
 #define CPSOBJECT_CHUNK_PARAMS			0x0003
 #define CPSOBJECT_CHUNK_GAMETYPE		0x0004
 
-CParticlesObject::CParticlesObject(LPVOID data, LPCSTR name):CCustomObject(data,name)
+CParticlesObject::CParticlesObject(LPVOID data, LPCSTR name):FXRayCustomObject(data,name)
 {
 	Construct	(data);
 }
@@ -32,7 +32,7 @@ bool CParticlesObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     return true;
 }
 
-void* CParticlesObject::QueryInterface(ObjClassID InClassID)
+void* CParticlesObject::QueryInterface(EXRayObjectClassID InClassID)
 {
 	if (InClassID == OBJCLASS_PS)
 		return this;

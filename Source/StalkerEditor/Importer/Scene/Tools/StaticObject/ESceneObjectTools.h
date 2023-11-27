@@ -1,8 +1,8 @@
 #pragma once
 
-class ESceneObjectTool: public ESceneCustomOTool
+class ESceneObjectTool: public FXRaySceneCustomOTool
 {
-	typedef ESceneCustomOTool inherited;
+	typedef FXRaySceneCustomOTool inherited;
 public:
     ESceneObjectTool();
     ~ESceneObjectTool() override;
@@ -17,5 +17,5 @@ public:
     bool   		LoadLTX            		(CInifile&) override;
     bool		LoadSelection      		(IReader&) override;
 
-    CCustomObject* CreateObject			(LPVOID data, LPCSTR name) override;
+    FXRayCustomObject* CreateObject			(LPVOID data, LPCSTR name) override;
 };

@@ -2,9 +2,9 @@
 
 enum eShapeUsage{eShapeCommon=0, eShapeLevelBound};
 
-class CEditShape: public CCustomObject,protected CShapeData
+class CEditShape: public FXRayCustomObject,protected CShapeData
 {
-	typedef CCustomObject inherited;
+	typedef FXRayCustomObject inherited;
 public:
 	u8				m_shape_type;
 	u32				m_DrawTranspColor;
@@ -41,5 +41,5 @@ public:
 
     virtual void	OnDetach	();
 
-	void*           QueryInterface(ObjClassID InClassID) override;
+	void*           QueryInterface(EXRayObjectClassID InClassID) override;
 };

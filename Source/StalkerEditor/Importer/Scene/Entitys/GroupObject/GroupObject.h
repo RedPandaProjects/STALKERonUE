@@ -1,9 +1,9 @@
 #pragma once
 
 
-class CGroupObject: public CCustomObject
+class CGroupObject: public FXRayCustomObject
 {
-    typedef CCustomObject inherited;
+    typedef FXRayCustomObject inherited;
 
 public:
 					        CGroupObject	    (LPVOID data, LPCSTR name);
@@ -17,11 +17,11 @@ public:
     virtual void 	        OnUpdateTransform   ();
   	virtual bool 	        LoadStream			(IReader&);
   	virtual bool 	        LoadLTX				(CInifile& ini, LPCSTR sect_name);
-	void*                   QueryInterface      (ObjClassID InClassID) override;
+	void*                   QueryInterface      (EXRayObjectClassID InClassID) override;
 private:
 
-    void			        ClearInternal		(xr_list<CCustomObject*>& v);
-    bool			        AppendObjectLoadCB	(CCustomObject* object);
-    xr_list<CCustomObject*> m_ObjectsInGroup;
+    void			        ClearInternal		(xr_list<FXRayCustomObject*>& v);
+    bool			        AppendObjectLoadCB	(FXRayCustomObject* object);
+    xr_list<FXRayCustomObject*> m_ObjectsInGroup;
     shared_str		        m_GroupReferenceName;
 };

@@ -29,39 +29,39 @@ public:
 	xrGUID			m_GUID;
 	shared_str		m_OwnerName;
 	time_t			m_CreateTime;
-	SceneToolsMap   m_SceneTools;
+	TMap<EXRayObjectClassID,TSharedPtr<FXRaySceneToolBase>>   SceneTools;
 protected:
-	bool 			OnLoadAppendObject(CCustomObject* O);
-	bool 			OnLoadSelectionAppendObject(CCustomObject* O);
+	bool 			OnLoadAppendObject(FXRayCustomObject* O);
+	bool 			OnLoadSelectionAppendObject(FXRayCustomObject* O);
 protected:
-	void			RegisterSceneTools(ESceneToolBase* mt);
+	void			RegisterSceneTools(TSharedPtr<FXRaySceneToolBase> SceneToolBase);
 	void			CreateSceneTools();
 	void			DestroySceneTools();
 
 public:
-	typedef  fastdelegate::FastDelegate1<CCustomObject*, bool> TAppendObject;
+	typedef  fastdelegate::FastDelegate1<FXRayCustomObject*, bool> TAppendObject;
 
-	bool 			ReadObjectStream(IReader& F, CCustomObject*& O);
-	bool 			ReadObjectLTX(CInifile& ini, LPCSTR sect_name, CCustomObject*& O);
+	bool 			ReadObjectStream(IReader& F, FXRayCustomObject*& O);
+	bool 			ReadObjectLTX(CInifile& ini, LPCSTR sect_name, FXRayCustomObject*& O);
 	bool 			ReadObjectsStream(IReader& F, u32 chunk_id, TAppendObject on_append);
 	bool 			ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_name_prefix, TAppendObject on_append);
 
 
 	xr_string		LevelPartPath(LPCSTR map_name);
-	xr_string		LevelPartName(LPCSTR map_name, ObjClassID cls);
+	xr_string		LevelPartName(LPCSTR map_name, EXRayObjectClassID cls);
 
-	BOOL			LoadLevelPart(ESceneToolBase* M, LPCSTR map_name);
-	BOOL			LoadLevelPartStream(ESceneToolBase* M, LPCSTR map_name);
-	BOOL			LoadLevelPartLTX(ESceneToolBase* M, LPCSTR map_name);
+	BOOL			LoadLevelPart(FXRaySceneToolBase* M, LPCSTR map_name);
+	BOOL			LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name);
+	BOOL			LoadLevelPartLTX(FXRaySceneToolBase* M, LPCSTR map_name);
 
-	BOOL			LoadLevelPart(LPCSTR map_name, ObjClassID cls);
-	BOOL		 	UnloadLevelPart(ESceneToolBase* M);
-	BOOL			UnloadLevelPart(LPCSTR map_name, ObjClassID cls);
+	BOOL			LoadLevelPart(LPCSTR map_name, EXRayObjectClassID cls);
+	BOOL		 	UnloadLevelPart(FXRaySceneToolBase* M);
+	BOOL			UnloadLevelPart(LPCSTR map_name, EXRayObjectClassID cls);
 
-	CCustomObject*  FindObjectByName(LPCSTR name, ObjClassID classfilter);
-	CCustomObject*	FindObjectByName(LPCSTR name, CCustomObject* pass_object);
-	void			GenObjectName(ObjClassID cls_id, char* buffer, const char* pref);
-	void 			FindObjectByNameCB(LPCSTR new_name, bool& res) { res = !!FindObjectByName(new_name, (CCustomObject*)0); }
+	FXRayCustomObject*  FindObjectByName(LPCSTR name, EXRayObjectClassID classfilter);
+	FXRayCustomObject*	FindObjectByName(LPCSTR name, FXRayCustomObject* pass_object);
+	void			GenObjectName(EXRayObjectClassID cls_id, char* buffer, const char* pref);
+	void 			FindObjectByNameCB(LPCSTR new_name, bool& res) { res = !!FindObjectByName(new_name, (FXRayCustomObject*)0); }
 public:
 	bool			ExportGame(SExportStreams* F);
 
@@ -71,25 +71,25 @@ public:
 
 	bool 			LoadSelection(LPCSTR fname);
 
-	bool			LoadToolLTX(ObjClassID clsid, LPCSTR fn);
+	bool			LoadToolLTX(EXRayObjectClassID clsid, LPCSTR fn);
 
 	
 	void 			Clear();
 	void			Reset();
 
-	IC ObjectList&  ListObj(ObjClassID cat) { VERIFY(GetOTool(cat)); return GetOTool(cat)->GetObjects(); }
-	IC ObjectIt 	FirstObj(ObjClassID cat) { VERIFY(GetOTool(cat)); return ListObj(cat).begin(); }
-	IC ObjectIt 	LastObj(ObjClassID cat) { VERIFY(GetOTool(cat)); return ListObj(cat).end(); }
-	IC int 			ObjCount(ObjClassID cat) { return ListObj(cat).size(); }
+	IC ObjectList&  ListObj(EXRayObjectClassID cat) { VERIFY(GetOTool(cat)); return GetOTool(cat)->GetObjects(); }
+	IC ObjectIt 	FirstObj(EXRayObjectClassID cat) { VERIFY(GetOTool(cat)); return ListObj(cat).begin(); }
+	IC ObjectIt 	LastObj(EXRayObjectClassID cat) { VERIFY(GetOTool(cat)); return ListObj(cat).end(); }
+	IC int 			ObjCount(EXRayObjectClassID cat) { return ListObj(cat).size(); }
 	int 			ObjCount();
 
-	IC ESceneToolBase*	  GetTool(ObjClassID cat) { return m_SceneTools[cat]; }
-	IC u32				  ToolCount() { return m_SceneTools.size(); }
-	IC ESceneCustomOTool* GetOTool(ObjClassID cat) { return GetTool(cat)->CastToESceneCustomOTool(); }
+	IC FXRaySceneToolBase*	  GetTool(EXRayObjectClassID cat) { return SceneTools[cat].Get(); }
+	IC int32				  ToolCount() { return SceneTools.Num(); }
+	IC FXRaySceneCustomOTool* GetOTool(EXRayObjectClassID cat) { return GetTool(cat)->CastToSceneCustomOTool(); }
 
 
-	virtual void 	AppendObject(CCustomObject* object, bool bExecUnd = true);
-	virtual bool 	RemoveObject(CCustomObject* object, bool bExecUndo, bool bDeleting);
+	virtual void 	AppendObject(FXRayCustomObject* object, bool bExecUnd = true);
+	virtual bool 	RemoveObject(FXRayCustomObject* object, bool bExecUndo, bool bDeleting);
 
 
 	xr_string		LevelPath();
@@ -97,7 +97,7 @@ public:
 
 	bool            GetSubstObjectName(const xr_string& from, xr_string& to) const;
 	
-	void			GetObjects(ObjClassID InType,ObjectList&OutObjects);
+	void			GetObjects(EXRayObjectClassID InType,ObjectList&OutObjects);
 
 };
 

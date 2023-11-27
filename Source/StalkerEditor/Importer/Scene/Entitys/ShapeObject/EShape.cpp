@@ -19,7 +19,7 @@ xr_token shape_type_tok[]=
 	{ 0,				0	}
 };
 
-CEditShape::CEditShape(LPVOID data, LPCSTR name):CCustomObject(data,name)
+CEditShape::CEditShape(LPVOID data, LPCSTR name):FXRayCustomObject(data,name)
 {
 	Construct(data);
 }
@@ -169,7 +169,7 @@ void CEditShape::OnDetach()
 }
 
 
-void* CEditShape::QueryInterface(ObjClassID InClassID)
+void* CEditShape::QueryInterface(EXRayObjectClassID InClassID)
 {
 	if (InClassID == OBJCLASS_SHAPE)
 		return this;

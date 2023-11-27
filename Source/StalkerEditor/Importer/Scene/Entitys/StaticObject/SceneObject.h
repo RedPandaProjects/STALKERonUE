@@ -1,5 +1,5 @@
 #pragma once
-class CSceneObject : public CCustomObject
+class CSceneObject : public FXRayCustomObject
 {
 	shared_str		m_ReferenceName;
 	CEditableObject*m_pReference;
@@ -26,7 +26,7 @@ public:
         }
     }
 protected:
-	typedef CCustomObject inherited;
+	typedef FXRayCustomObject inherited;
     int				m_iBlinkTime;
     CSurface*		m_BlinkSurf;
 	void 			RenderBlink				();
@@ -81,6 +81,6 @@ public:
 
 	void ClearSurface();
 
-	void* QueryInterface(ObjClassID InClassID) override;
+	void* QueryInterface(EXRayObjectClassID InClassID) override;
 };
 

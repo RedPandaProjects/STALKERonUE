@@ -2,17 +2,17 @@
 #include "ESceneCustomMTools.h"
 struct SRayPickInfo;
 struct mesh_build_data;
-class ESceneCustomOTool: public ESceneToolBase
+class FXRaySceneCustomOTool: public FXRaySceneToolBase
 {
-	typedef ESceneToolBase inherited;
+	typedef FXRaySceneToolBase inherited;
 protected:
 	ObjectList			m_Objects;
     
-	bool 				OnLoadSelectionAppendObject(CCustomObject* obj);
-	bool 				OnLoadAppendObject		(CCustomObject* obj);
+	bool 				OnLoadSelectionAppendObject(FXRayCustomObject* obj);
+	bool 				OnLoadAppendObject		(FXRayCustomObject* obj);
 public:
-						ESceneCustomOTool		(ObjClassID cls);
-	virtual				~ESceneCustomOTool		();
+						FXRaySceneCustomOTool		(EXRayObjectClassID cls);
+	virtual				~FXRaySceneCustomOTool		();
 
     virtual bool   		LoadStream            		(IReader&);
     virtual bool   		LoadLTX            		(CInifile&);
@@ -20,14 +20,14 @@ public:
 	IC int				ObjCount() { return m_Objects.size(); }
     virtual bool		LoadSelection      		(IReader&);
 
-    virtual CCustomObject* CreateObject			(LPVOID data, LPCSTR name)=0;
+    virtual FXRayCustomObject* CreateObject			(LPVOID data, LPCSTR name)=0;
 
-	virtual BOOL _AppendObject(CCustomObject* object);
-	virtual BOOL _RemoveObject(CCustomObject* object);
+	virtual BOOL _AppendObject(FXRayCustomObject* object);
+	virtual BOOL _RemoveObject(FXRayCustomObject* object);
 
-	virtual CCustomObject* FindObjectByName(LPCSTR name, CCustomObject* pass = 0);
+	virtual FXRayCustomObject* FindObjectByName(LPCSTR name, FXRayCustomObject* pass = 0);
 
-	class ESceneCustomOTool* CastToESceneCustomOTool() override { return this; }
+	class FXRaySceneCustomOTool* CastToSceneCustomOTool() override { return this; }
 
 
 

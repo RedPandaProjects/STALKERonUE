@@ -2,9 +2,9 @@
 
 class CEditableObject;
 
-class ESceneSpawnTool: public ESceneCustomOTool
+class ESceneSpawnTool: public FXRaySceneCustomOTool
 {
-	typedef ESceneCustomOTool inherited;
+	typedef FXRaySceneCustomOTool inherited;
     friend class 		CSpawnPoint;
 protected:
 	enum{
@@ -26,11 +26,11 @@ public:
     virtual bool   		IsNeedSave				(){return true;}
     virtual bool   		LoadStream            		(IReader&);
     virtual bool   		LoadLTX            		(CInifile&);
-    virtual bool		can_use_inifile			()				{return true;}
+    virtual bool		CanUseInifile			()				{return true;}
     virtual bool		LoadSelection      		(IReader&);
 /*
     virtual void		GetStaticDesc			(int& v_cnt, int& f_cnt, bool b_selected_only);
     virtual bool		ExportStatic			(SceneBuilder* B, bool b_selected_only);
 */
-    virtual CCustomObject* CreateObject			(LPVOID data, LPCSTR name);
+    virtual FXRayCustomObject* CreateObject			(LPVOID data, LPCSTR name);
 };

@@ -6,9 +6,9 @@ EScenePSTools::~EScenePSTools()
 
 }
 
-CCustomObject* EScenePSTools::CreateObject(LPVOID data, LPCSTR name)
+FXRayCustomObject* EScenePSTools::CreateObject(LPVOID data, LPCSTR name)
 {
-	CCustomObject* O	= new CParticlesObject(data,name);
+	FXRayCustomObject* O	= new CParticlesObject(data,name);
     O->FParentTools		= this;
     return O;
 }

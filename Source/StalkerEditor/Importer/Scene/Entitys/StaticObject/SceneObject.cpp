@@ -3,7 +3,7 @@
 #define BLINK_TIME 300.f
 
 
-CSceneObject::CSceneObject(LPVOID data, LPCSTR name):CCustomObject(data,name)
+CSceneObject::CSceneObject(LPVOID data, LPCSTR name):FXRayCustomObject(data,name)
 {
 	Construct	(data);
 }
@@ -78,7 +78,7 @@ void CSceneObject::GetFullTransformToLocal( Fmatrix& m )
     m.set(_ITransform());
 }
 
-void* CSceneObject::QueryInterface(ObjClassID InClassID)
+void* CSceneObject::QueryInterface(EXRayObjectClassID InClassID)
 {
     if (InClassID == OBJCLASS_SCENEOBJECT)
         return this;

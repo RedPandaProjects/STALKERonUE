@@ -1,25 +1,25 @@
 #include "ESceneCustomOTools.h"
 
-ESceneCustomOTool::ESceneCustomOTool(ObjClassID cls):ESceneToolBase(cls)
+FXRaySceneCustomOTool::FXRaySceneCustomOTool(EXRayObjectClassID cls):FXRaySceneToolBase(cls)
 {
 }
 
 
-ESceneCustomOTool::~ESceneCustomOTool()
+FXRaySceneCustomOTool::~FXRaySceneCustomOTool()
 {
-	for (CCustomObject *Obj : m_Objects)
+	for (FXRayCustomObject *Obj : m_Objects)
 	{
 		delete			Obj;
 	}
 }
 
-CCustomObject* ESceneCustomOTool::FindObjectByName(LPCSTR name, CCustomObject* pass)
+FXRayCustomObject* FXRaySceneCustomOTool::FindObjectByName(LPCSTR name, FXRayCustomObject* pass)
 {
 	ObjectIt _I = m_Objects.begin();
 	ObjectIt _E = m_Objects.end();
 	for (; _I != _E; _I++)
 	{
-		CCustomObject* CO = (*_I);
+		FXRayCustomObject* CO = (*_I);
 		LPCSTR _name = CO->GetName();
 		R_ASSERT3(_name, "Invalid object name, position:", (std::to_string(CO->GetPosition().x) + ", " + std::to_string(CO->GetPosition().y) + ", " + std::to_string(CO->GetPosition().z)).c_str());
 		if ((pass != *_I) && (0 == FCStringAnsi::Strcmp(_name, name)))
@@ -29,7 +29,7 @@ CCustomObject* ESceneCustomOTool::FindObjectByName(LPCSTR name, CCustomObject* p
 }
 
 
-BOOL ESceneCustomOTool::_AppendObject(CCustomObject* object)
+BOOL FXRaySceneCustomOTool::_AppendObject(FXRayCustomObject* object)
 {
     m_Objects.push_back(object);
     object->FParentTools = this;
@@ -37,7 +37,7 @@ BOOL ESceneCustomOTool::_AppendObject(CCustomObject* object)
 }
 
 
-BOOL ESceneCustomOTool::_RemoveObject(CCustomObject* object)
+BOOL FXRaySceneCustomOTool::_RemoveObject(FXRayCustomObject* object)
 {
 	m_Objects.remove(object);
     return FALSE;

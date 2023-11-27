@@ -2,26 +2,25 @@
 
 #define CHUNK_TOOLS_TAG	0x7777
 
-ESceneToolBase::ESceneToolBase(ObjClassID cls)
+FXRaySceneToolBase::FXRaySceneToolBase(EXRayObjectClassID cls)
 {
     FClassID				= cls;
 }
 
-ESceneToolBase::~ESceneToolBase()
+FXRaySceneToolBase::~FXRaySceneToolBase()
 {
 }
-bool ESceneToolBase::LoadLTX(CInifile& ini)
+
+bool FXRaySceneToolBase::LoadLTX(CInifile& ini)
 {
-   
 	return 			true;
 }
 
-bool ESceneToolBase::LoadStream(IReader& F)
+bool FXRaySceneToolBase::LoadStream(IReader& F)
 {
-	
     return true;
 }
 
-void ESceneToolBase::Clear()
+void FXRaySceneToolBase::Clear()
 {
 }

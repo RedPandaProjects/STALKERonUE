@@ -1,10 +1,10 @@
 #pragma once
 
-class ESceneGroupTool: public ESceneCustomOTool
+class ESceneGroupTool: public FXRaySceneCustomOTool
 {
-	typedef ESceneCustomOTool inherited;
+	typedef FXRaySceneCustomOTool inherited;
  public:
-				                ESceneGroupTool		    ():ESceneCustomOTool(OBJCLASS_GROUP){;}
+				                ESceneGroupTool		    ():FXRaySceneCustomOTool(OBJCLASS_GROUP){;}
 	// definition
     IC LPCSTR			        ClassName			    (){return "group";}
     IC LPCSTR			        ClassDesc			    (){return "Group";}
@@ -16,7 +16,7 @@ class ESceneGroupTool: public ESceneCustomOTool
     virtual bool   		        LoadLTX            	    (CInifile&);
     virtual bool		        LoadSelection      	    (IReader&);
 
-    virtual CCustomObject*      CreateObject			(LPVOID data, LPCSTR name);
+    virtual FXRayCustomObject*      CreateObject			(LPVOID data, LPCSTR name);
 private:
     xr_string			        m_CurrentObject;
     xr_vector<bool>		        m_stored_state;

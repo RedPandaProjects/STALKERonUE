@@ -1,7 +1,7 @@
 #include "ESceneObjectTools.h"
 #include "../../Entitys/StaticObject/SceneObject.h"
 
-ESceneObjectTool::ESceneObjectTool():ESceneCustomOTool(OBJCLASS_SCENEOBJECT)
+ESceneObjectTool::ESceneObjectTool():FXRaySceneCustomOTool(OBJCLASS_SCENEOBJECT)
 {
 }
 
@@ -17,9 +17,9 @@ void ESceneObjectTool::Clear		()
 }
 
 
-CCustomObject* ESceneObjectTool::CreateObject(LPVOID data, LPCSTR name)
+FXRayCustomObject* ESceneObjectTool::CreateObject(LPVOID data, LPCSTR name)
 {
-	CCustomObject* O	= new CSceneObject(data,name);                     
+	FXRayCustomObject* O	= new CSceneObject(data,name);                     
     O->FParentTools		= this;
     return O;
 }
