@@ -15,6 +15,7 @@ public:
 		ImportAIMap = true;
 		ImportParticles = true;
 		ImportWallmark = true;
+		ImportDetail = true;
 	}
 
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
@@ -29,5 +30,9 @@ public:
 	bool						ImportParticles;
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
 	bool						ImportWallmark;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	bool						ImportDetail;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level", meta=(ClampMin = 0.2, ClampMax = 1))
+	float						DetailDensity		= 0.4f;
 	
 };

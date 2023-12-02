@@ -16,7 +16,7 @@ class ESceneGroupTool: public FXRaySceneCustomOTool
     virtual bool   		        LoadLTX            	    (CInifile&);
     virtual bool		        LoadSelection      	    (IReader&);
 
-    virtual FXRayCustomObject*      CreateObject			(LPVOID data, LPCSTR name);
+    virtual FXRayCustomObject*  CreateObject			(LPVOID data, LPCSTR name);
 private:
     xr_string			        m_CurrentObject;
     xr_vector<bool>		        m_stored_state;

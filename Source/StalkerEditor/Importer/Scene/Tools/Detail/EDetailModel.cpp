@@ -1,265 +1,278 @@
 #include "EDetailModel.h"
 
-//------------------------------------------------------------------------------
-#define DETOBJ_CHUNK_VERSION		0x1000
-#define DETOBJ_CHUNK_REFERENCE 		0x0101                               
-#define DETOBJ_CHUNK_SCALE_LIMITS	0x0102
-#define DETOBJ_CHUNK_DENSITY_FACTOR	0x0103
-#define DETOBJ_CHUNK_FLAGS			0x0104
+#include "PhysicsEngine/BodySetup.h"
+#include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
+#include "StalkerEditor/StalkerEditorManager.h"
+#include "StalkerEditor/Importer/XRayEngineFactory.h"
 
-#define DETOBJ_VERSION 				0x0001
-//------------------------------------------------------------------------------
-void EDetail::EVertexIn::remapUV(const fvfVertexIn& src, const Fvector2& offs, const Fvector2& scale, bool bRotate)
+FXRayDetail::FXRayDetail()
 {
-unimplemented();
-    P.set		(src.P);
-  //  ImageLib.MergedTextureRemapUV(u,v,src.u,src.v, offs, scale, bRotate);
+	ReferencePtr		= nullptr;
+    MinScale			= 0.5f;
+    MaxScale   		    = 2.f;
+    DensityFactor	    = 1.f;
 }
 
-EDetail::EDetail()
+FXRayDetail::~FXRayDetail()
 {
-	//shader				= 0;
-	m_Flags.zero		();
-	m_pRefs				= 0;
-    m_fMinScale			= 0.5f;
-    m_fMaxScale   		= 2.f;
-    m_fDensityFactor	= 1.f;
-    m_sRefs				= "";
-	vertices			= 0;
-	number_vertices		= 0;
-	indices				= 0;
-	number_indices		= 0;
-}
-
-EDetail::~EDetail()
-{
-	Unload();
-}
-
-void EDetail::Unload()
-{
-	CDetail::Unload		();
-    GXRayObjectLibrary->RemoveEditObject(m_pRefs);
-    OnDeviceDestroy		();
-}
-
-LPCSTR EDetail::GetName	()
-{
-    return m_pRefs?m_pRefs->GetName():m_sRefs.c_str();
-}
-
-LPCSTR EDetail::GetTextureName()
-{
-	VERIFY(m_pRefs);
-    CSurface* surf		= *m_pRefs->FirstSurface(); VERIFY(surf);
-    return surf->_Texture();
-}
-
-void EDetail::DefferedLoad()
-{
-}
-
-void EDetail::OnDeviceCreate()
-{
-	if (!m_pRefs)		return;
-    CSurface* surf		= *m_pRefs->FirstSurface();
-    VERIFY				(surf);
-    xr_string	s_name	= surf->_ShaderName();
-    xr_string	t_name	= surf->_Texture();
-//	shader.create		(s_name.c_str(),t_name.c_str());
-}
-
-void EDetail::OnDeviceDestroy()
-{
-	///shader.destroy();
-}
-
-u16 EDetail::_AddVert(const Fvector& p, float u, float v)
-{
-	EVertexIn V(p,u,v);
-    for (u16 k=0; k<(u16)number_vertices; k++)
-    	if (V.similar((EVertexIn&)vertices[k])) return k;
-    number_vertices++;
-    vertices = (fvfVertexIn*)xr_realloc(vertices,number_vertices*sizeof(fvfVertexIn));
-    vertices[number_vertices-1] = V;
-    return u16(number_vertices-1);
-}
-
-IC BOOL isDegenerated(u16 v[3])
-{
-	return (v[0]==v[1] || v[0]==v[2] || v[1]==v[2]);
-};
-IC BOOL isEqual(U16Vec& ind, u16 v[3])
-{
-	for (U16It it=ind.begin(); it!=ind.end(); it+=3){
-        // Test for 6 variations
-        if ((*(it+0)==v[0]) && (*(it+1)==v[1]) && (*(it+2)==v[2])) return true;
-        if ((*(it+0)==v[0]) && (*(it+2)==v[1]) && (*(it+1)==v[2])) return true;
-        if ((*(it+2)==v[0]) && (*(it+0)==v[1]) && (*(it+1)==v[2])) return true;
-        if ((*(it+2)==v[0]) && (*(it+1)==v[1]) && (*(it+0)==v[2])) return true;
-        if ((*(it+1)==v[0]) && (*(it+0)==v[1]) && (*(it+2)==v[2])) return true;
-        if ((*(it+1)==v[0]) && (*(it+2)==v[1]) && (*(it+0)==v[2])) return true;
+    if(ReferencePtr)
+    {
+		GXRayObjectLibrary->RemoveEditObject(ReferencePtr);
     }
-    return false;
 }
 
-bool EDetail::Update	(LPCSTR name)
+bool FXRayDetail::Update	(const FString&Name)
 {
-	m_sRefs				= name;
-    // update link
     
-    CEditableObject* R	= GXRayObjectLibrary->CreateEditObject(name);
-    if (!R){
- 		ELog.Msg		(mtError,"Can't load detail object '%s'.", name);
+	auto IsDegeneratedLambda = [](int32 InIndices[3])
+	{
+		return (InIndices[0]==InIndices[1] || InIndices[0]==InIndices[2] || InIndices[1]==InIndices[2]);
+	};
+    TArray<int32> IsEqualTemp;
+    auto IsEqualLambda = [&IsEqualTemp](int32 InIndices[3])
+	{
+    	for (int32 i = 0;IsEqualTemp.Num(); i+=3)
+	    {
+            if(IsEqualTemp[i + 0] == InIndices[0]&&IsEqualTemp[i + 1] == InIndices[1]&&IsEqualTemp[i + 2] == InIndices[2])return true;
+            if(IsEqualTemp[i + 0] == InIndices[0]&&IsEqualTemp[i + 2] == InIndices[1]&&IsEqualTemp[i + 1] == InIndices[2])return true;
+            if(IsEqualTemp[i + 2] == InIndices[0]&&IsEqualTemp[i + 0] == InIndices[1]&&IsEqualTemp[i + 1] == InIndices[2])return true;
+            if(IsEqualTemp[i + 2] == InIndices[0]&&IsEqualTemp[i + 1] == InIndices[1]&&IsEqualTemp[i + 0] == InIndices[2])return true;
+            if(IsEqualTemp[i + 1] == InIndices[0]&&IsEqualTemp[i + 0] == InIndices[1]&&IsEqualTemp[i + 2] == InIndices[2])return true;
+            if(IsEqualTemp[i + 1] == InIndices[0]&&IsEqualTemp[i + 2] == InIndices[1]&&IsEqualTemp[i + 0] == InIndices[2])return true;
+	    }
+	    return false;
+	};
+	ReferenceName = Name;
+
+
+    CEditableObject* InReference	= GXRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*Name));
+    if (!InReference)
+    {
+		UE_LOG(LogXRayImporter,Error,TEXT("Can't load detail object '%s'."),*Name);
         return false;
     }
-    if(R->SurfaceCount()!=1){
-    	ELog.Msg		(mtError,"Object must contain 1 material.");
-	    GXRayObjectLibrary->RemoveEditObject(R);
-    	return false;
-    }
-	if(R->MeshCount()==0){
-    	ELog.Msg		(mtError,"Object must contain 1 mesh.");
-	    GXRayObjectLibrary->RemoveEditObject(R);
-    	return false;
-    }
-
-    GXRayObjectLibrary->RemoveEditObject(m_pRefs);
-    m_pRefs				= R;
-
-    // fill geometry
-    CEditableMesh* M	= *m_pRefs->FirstMesh();
-    U16Vec inds;
-
-    // fill vertices
-    bv_bb.invalidate();
-    u32 idx			= 0;
-    for (u32 f_id=0; f_id<M->GetFCount(); f_id++)
+    if(InReference->SurfaceCount() != 1)
     {
-      const  st_Face& F 	= M->GetFaces()[f_id];
-    	u16 ind[3];
-    	for (int k=0; k<3; k++,idx++){
-            const Fvector& P  = M->GetVertices()[F.pv[k].pindex];
-            st_VMapPt&vm= M->GetVMRefs()[F.pv[k].vmref].pts[0];
-            Fvector2& uv= M->GetVMaps()[vm.vmap_index]->getUV(vm.index);
-        	ind[k]		= _AddVert	(P,uv.x,uv.y);
-	        bv_bb.modify(vertices[ind[k]].P);
-        }
-        if (isDegenerated(ind))	continue;
-        if (isEqual(inds,ind))	continue;
-        inds.push_back(ind[0]);
-        inds.push_back(ind[1]);
-        inds.push_back(ind[2]);
+        UE_LOG(LogXRayImporter,Error,TEXT("Detail object '%s' must contain 1 material."),*Name);
+	    GXRayObjectLibrary->RemoveEditObject(InReference);
+    	return false;
     }
-	number_indices 		= inds.size();
-	indices				= (u16*)xr_malloc(number_indices*sizeof(u16));
-    FMemory::Memcpy	(indices, inds.data(), number_indices * sizeof(u16));
+	if(InReference->MeshCount() == 0)
+    {
+        UE_LOG(LogXRayImporter,Error,TEXT("Detail object '%s' must contain 1 mesh."),*Name);
+	    GXRayObjectLibrary->RemoveEditObject(InReference);
+    	return false;
+    }
 
-	bv_bb.getsphere		(bv_sphere.P,bv_sphere.R);
+    GXRayObjectLibrary->RemoveEditObject(ReferencePtr);
+    ReferencePtr				= InReference;
 
-    OnDeviceCreate		();
+    CEditableMesh* Mesh	= *ReferencePtr->FirstMesh();
+    FBox3f Box;
+    for (u32 FaceID=0; FaceID<Mesh->GetFCount(); FaceID++)
+    {
+		const  st_Face& Face = Mesh->GetFaces()[FaceID];
+    	int32 Triangle[3];
+    	for (int32 VertexID=0; VertexID<3; VertexID++)
+        {
+            FXRayDetailVertex Vertex;
 
+    		Vertex.Position = StalkerMath::XRayLocationToUnreal( Mesh->GetVertices()[Face.pv[VertexID].pindex]);
+
+            const st_VMapPt&VertexMap = Mesh->GetVMRefs()[Face.pv[VertexID].vmref].pts[0];
+            const Fvector2 InUV = Mesh->GetVMaps()[VertexMap.vmap_index]->getUV(VertexMap.index);
+			Vertex.UV.X =  InUV.x;
+			Vertex.UV.Y =  InUV.y;
+
+        	Triangle[VertexID] = Vertices.Find(Vertex);
+            if(Triangle[VertexID] == INDEX_NONE)
+            {
+	             Box += Vertex.Position;
+                 Triangle[VertexID] = Vertices.Add(Vertex);
+            }
+        }
+        if (IsDegeneratedLambda(Triangle))	continue;
+        if (IsEqualLambda(Triangle))	continue;
+		Indices.Add(Triangle[0]);
+		Indices.Add(Triangle[1]);
+        Indices.Add(Triangle[2]);
+    }
+    Bound = FBoxSphereBounds3f(Box);
+
+	{
+        CSurface* Surface		= *ReferencePtr->FirstSurface();
+		if(ensure(Surface))
+		{
+			ShaderName = Surface->_ShaderName();
+			TextureName	= Surface->_Texture();
+		}
+	}
     return true;
 }
 
-bool EDetail::Load(IReader& F)
+UStaticMesh* FXRayDetail::GetOrCreateStaticMesh()
 {
-	// check version
-    R_ASSERT			(F.find_chunk(DETOBJ_CHUNK_VERSION));
-    u32 version		= F.r_u32();
-    if (version!=DETOBJ_VERSION){
-    	ELog.Msg(mtError,"EDetail: unsupported version.");
+    XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
+
+	UStaticMesh* StaticMesh = nullptr;
+	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName();
+    LocalPackageName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
+
+	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (StaticMesh)
+		return StaticMesh;
+
+	UE_LOG(LogXRayImporter, Log, TEXT("Import detail object %s"), *GetName());
+
+    
+	TArray<FStaticMaterial> Materials;
+
+	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
+
+	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), RF_Standalone|RF_Public);
+    FAssetRegistryModule::AssetCreated(StaticMesh);
+    Materials.AddUnique(FStaticMaterial(EngineFactory.ImportSurface(LocalPackageName + TEXT("_Mat"), TCHAR_TO_ANSI(*ShaderName), TCHAR_TO_ANSI(*TextureName), "", false), TEXT("root_mat"), TEXT("root_mat")));
+    {
+		const int32 LodIndex = 0;
+    	FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
+		FMeshDescription* MeshDescription = StaticMesh->CreateMeshDescription(LodIndex);
+		if (MeshDescription)
+		{
+			FStaticMeshAttributes StaticMeshAttributes(*MeshDescription);
+			TVertexAttributesRef<FVector3f> VertexPositions = StaticMeshAttributes.GetVertexPositions();
+			TEdgeAttributesRef<bool>  EdgeHardnesses = StaticMeshAttributes.GetEdgeHardnesses();
+			TPolygonGroupAttributesRef<FName> PolygonGroupImportedMaterialSlotNames = StaticMeshAttributes.GetPolygonGroupMaterialSlotNames();
+			TVertexInstanceAttributesRef<FVector2f> VertexInstanceUVs = StaticMeshAttributes.GetVertexInstanceUVs();
+			{
+				VertexInstanceUVs.SetNumChannels(1);
+				FPolygonGroupID CurrentPolygonGroupID = MeshDescription->CreatePolygonGroup();
+				PolygonGroupImportedMaterialSlotNames[CurrentPolygonGroupID] = TEXT("root_mat");
+				TArray<FVertexInstanceID> VertexInstanceIDs;
+				VertexInstanceIDs.SetNum(3);
+				for (size_t FaceID = 0; FaceID < Indices.Num() / 3; FaceID++)
+				{
+					for (size_t VirtualVertexID = 0; VirtualVertexID < 3; VirtualVertexID++)
+					{
+						static size_t VirtualVertices[3] = { 0,2,1 };
+						size_t VertexID = Indices[VirtualVertices[VirtualVertexID] + FaceID * 3];
+						FVertexID VertexIDs = MeshDescription->CreateVertex();
+						VertexPositions[VertexIDs] = Vertices[VertexID].Position;
+						VertexInstanceIDs[VirtualVertexID] = MeshDescription->CreateVertexInstance(VertexIDs);
+						VertexInstanceUVs.Set(VertexInstanceIDs[VirtualVertexID], 0, Vertices[VertexID].UV);
+					}
+					const FPolygonID NewPolygonID = MeshDescription->CreatePolygon(CurrentPolygonGroupID, VertexInstanceIDs);
+				}
+			}
+		}
+
+		StaticMesh->CommitMeshDescription(LodIndex);
+		SourceModel.BuildSettings.bRecomputeNormals = true;
+		SourceModel.BuildSettings.bGenerateLightmapUVs = true;
+		SourceModel.BuildSettings.DstLightmapIndex = 1;
+		SourceModel.BuildSettings.MinLightmapResolution = 128;
+    }
+    StaticMesh->SetStaticMaterials(Materials);
+	StaticMesh->Build();
+    {
+	    FMeshSectionInfo MeshSectionInfo = StaticMesh->GetSectionInfoMap().Get(0, 0);
+		MeshSectionInfo.bCastShadow = true;
+		MeshSectionInfo.bEnableCollision = false;
+		MeshSectionInfo.bAffectDistanceFieldLighting = false;
+		MeshSectionInfo.bVisibleInRayTracing = false;
+		MeshSectionInfo.MaterialIndex = 0;
+		StaticMesh->GetSectionInfoMap().Set(0, 0, MeshSectionInfo);
+    }
+	StaticMesh->GetBodySetup()->CollisionTraceFlag = ECollisionTraceFlag::CTF_UseDefault;
+	StaticMesh->Modify();
+	StaticMesh->PostEditChange();
+    return StaticMesh;
+}
+
+UFoliageType_InstancedStaticMesh* FXRayDetail::GetOrCreateFoliageType()
+{
+	
+	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName() + TEXT("_FoliageType");
+    LocalPackageName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
+
+	UFoliageType_InstancedStaticMesh *FoliageType = LoadObject<UFoliageType_InstancedStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
+	if (FoliageType)
+	{
+		return FoliageType;
+	}
+	
+	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
+	FoliageType = NewObject<UFoliageType_InstancedStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), RF_Standalone|RF_Public);
+    FAssetRegistryModule::AssetCreated(FoliageType);
+	FoliageType->SetStaticMesh(GetOrCreateStaticMesh());
+	FoliageType->ScaleX.Max = MaxScale;
+	FoliageType->ScaleX.Max = MinScale;
+	FoliageType->CullDistance.Max = 7500;
+	FoliageType->CullDistance.Min = 7400;
+	FoliageType->bEnableCullDistanceScaling = true;
+	FoliageType->Modify();
+	FoliageType->PostEditChange();
+	return FoliageType;
+}
+
+
+bool FXRayDetail::Load(IReader& F)
+{
+	enum
+	{
+		DETOBJ_CHUNK_VERSION = 0x1000,
+		DETOBJ_CHUNK_REFERENCE = 0x0101,                           
+		DETOBJ_CHUNK_SCALE_LIMITS = 0x0102,
+		DETOBJ_CHUNK_DENSITY_FACTOR = 0x0103,
+		DETOBJ_CHUNK_FLAGS = 0x0104,
+		DETOBJ_VERSION = 0x0001,
+	};
+    string256 InName;
+
+
+    check(F.find_chunk(DETOBJ_CHUNK_VERSION));
+
+    if (!ensure(F.r_u32() == DETOBJ_VERSION))
+    {
         return false;
     }
 
-	// references
-	string256 buf;
-    R_ASSERT			(F.find_chunk(DETOBJ_CHUNK_REFERENCE));
-    F.r_stringZ			(buf,sizeof(buf));
+    check(F.find_chunk(DETOBJ_CHUNK_REFERENCE));
+    F.r_stringZ(InName,sizeof(InName));
 
-    // scale
-    R_ASSERT			(F.find_chunk(DETOBJ_CHUNK_SCALE_LIMITS));
-    m_fMinScale			= F.r_float(); if (fis_zero(m_fMinScale))	m_fMinScale = 0.1f;
-	m_fMaxScale			= F.r_float(); if (m_fMaxScale<m_fMinScale)	m_fMaxScale = m_fMinScale;
+    check(F.find_chunk(DETOBJ_CHUNK_SCALE_LIMITS));
 
-	// density factor
+    MinScale    = F.r_float();
+	if (FMath::IsNearlyZero(MinScale))	
+	{
+		MinScale = 0.1f;
+	}
+
+	MaxScale = F.r_float();
+	if (MaxScale<MinScale)
+	{
+		MaxScale = MinScale;
+	}
+
     if (F.find_chunk(DETOBJ_CHUNK_DENSITY_FACTOR))
-	    m_fDensityFactor= F.r_float();
+    {
+    	DensityFactor = F.r_float();
+    }
 
     if (F.find_chunk(DETOBJ_CHUNK_FLAGS))
-    	m_Flags.assign	(F.r_u32());
-
-    // update object
-    return 				Update(buf);
-}
-
-void EDetail::Save(IWriter& F)
-{
-	// version
-	F.open_chunk		(DETOBJ_CHUNK_VERSION);
-    F.w_u32				(DETOBJ_VERSION);
-    F.close_chunk		();
-
-    // reference
-	F.open_chunk		(DETOBJ_CHUNK_REFERENCE);
-    F.w_stringZ			(m_sRefs.c_str());
-    F.close_chunk		();
-
-	// scale
-	F.open_chunk		(DETOBJ_CHUNK_SCALE_LIMITS);
-    F.w_float			(m_fMinScale);
-    F.w_float			(m_fMaxScale);
-    F.close_chunk		();
-
-	// density factor
-	F.open_chunk		(DETOBJ_CHUNK_DENSITY_FACTOR);
-    F.w_float			(m_fDensityFactor);
-    F.close_chunk		();
-
-    // flags
-	F.open_chunk		(DETOBJ_CHUNK_FLAGS);
-    F.w_u32				(m_Flags.get());
-    F.close_chunk		();
-}
-
-void EDetail::Export(IWriter& F, LPCSTR tex_name, const Fvector2& offs, const Fvector2& scale, bool rot)
-{
-	R_ASSERT			(m_pRefs);
-    CSurface* surf		= *m_pRefs->FirstSurface();
-	R_ASSERT			(surf);
-    // write data
-	F.w_stringZ			(surf->_ShaderName());
-	F.w_stringZ			(tex_name);//surf->_Texture());
-
-    F.w_u32				(m_Flags.get());
-    F.w_float			(m_fMinScale);
-    F.w_float			(m_fMaxScale);
-
-    F.w_u32				(number_vertices);
-    F.w_u32				(number_indices);
-
-    // remap UV
-    EVertexIn* rm_vertices = xr_alloc<EVertexIn>(number_vertices);
-    for (u32 k=0; k<number_vertices; k++) rm_vertices[k].remapUV(vertices[k],offs,scale,rot);
-    
-    F.w					(rm_vertices, 	number_vertices*sizeof(fvfVertexIn));
-    F.w					(indices, 		number_indices*sizeof(WORD));
-
-    xr_free				(rm_vertices);
-}
-
-void EDetail::Export(LPCSTR name)
-{
-    CSurface* surf		= *m_pRefs->FirstSurface();
-	R_ASSERT			(surf);
-    IWriter* F 			= FS.w_open(name);
-    if (F){
-        Fvector2 offs	= {0,0};
-        Fvector2 scale	= {1,1};
-        Export			(*F,surf->_Texture(),offs,scale,false);
-        FS.w_close		(F);
-    }else{
-        Log				("!Can't export detail:",name);
+    {
+    	Flags.assign(F.r_u32());
     }
+
+    return  Update(ANSI_TO_TCHAR(InName));
 }
 
+FString FXRayDetail::GetName() const
+{
+	if(ReferencePtr)
+	{
+		return ReferencePtr->GetName();
+	}
+    return ReferenceName;
+}

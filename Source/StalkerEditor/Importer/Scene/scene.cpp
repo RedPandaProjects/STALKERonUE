@@ -189,7 +189,7 @@ void EScene::GenObjectName(EXRayObjectClassID cls_id, char* buffer, const char* 
 
 void EScene::RegisterSceneTools(TSharedPtr<FXRaySceneToolBase> SceneToolBase)
 {
-	SceneTools.FindOrAdd(SceneToolBase->FClassID,SceneToolBase);
+	SceneTools.FindOrAdd(SceneToolBase->FClassID) = SceneToolBase;
 }
 
 void EScene::CreateSceneTools()

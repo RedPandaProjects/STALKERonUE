@@ -63,7 +63,8 @@ public class StalkerEditor : ModuleRules
                 "NiagaraCore",
                 "NiagaraEditor",
                 "Sequencer",
-                "RHI"
+                "RHI",
+                "Foliage"
             }
             );
     }

@@ -15,7 +15,8 @@ public:
 	virtual const char*                     ClassName               () = 0;
 
     virtual bool		                    LoadSelection      		(IReader&)  = 0;
-    virtual class FXRaySceneCustomOTool*    CastToSceneCustomOTool () {return nullptr;}
+    virtual class FXRaySceneCustomOTool*    CastToSceneCustomOTool  () {return nullptr;}
+    virtual void                            ExportToCurrentWorld    (){};
     
     EXRayObjectClassID                              FClassID;
 };
