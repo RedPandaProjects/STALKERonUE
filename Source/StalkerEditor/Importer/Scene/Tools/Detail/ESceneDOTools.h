@@ -1,6 +1,6 @@
 #pragma once
-#include "DetailFormat.h"
-#include "EDetailModel.h"
+#include "RBMKDetailFormat.h"
+#include "RBMKDetailModel.h"
 
 class EDetailManager: public FXRaySceneToolBase
 {
@@ -30,7 +30,7 @@ public:
     float							DetailDensity;
 private:
     
-	FDetailSlot&					QueryDB			        (int32 X,int32 Z);
+	FRBMKDetailSlot&					QueryDB			        (int32 X,int32 Z);
 	void							RenderSlot              (int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances);
 
 	static constexpr int32			DetailSize				= 24;	
@@ -38,9 +38,9 @@ private:
 	static constexpr float			DetailSlotSize		    = 2;
 
 	int32							Dither[16][16];
-	FDetailHeader					DetailHeader;
-	TArray<FDetailSlot>				DetailSlots;		// note: pointer into VFS
-	FDetailSlot						DetailSlotEmpty;
+	FRBMKDetailHeader					DetailHeader;
+	TArray<FRBMKDetailSlot>				DetailSlots;		// note: pointer into VFS
+	FRBMKDetailSlot						DetailSlotEmpty;
 
 	TArray<TSharedPtr<FRBMKDetail>>	Objects;
     ColorIndexMap					ColorIndices;

@@ -1,20 +1,20 @@
 #pragma once
 #pragma pack(push,1)
-struct FDetailHeader
+struct FRBMKDetailHeader
 {
 	uint32		Version;
 	uint32		ObjectCount;
 	int32		OffsetX,OffsetZ;
 	uint32		SizeX,	SizeZ;
 };
-struct FDetailPalette
+struct FRBMKDetailPalette
 {
 	uint16		Alpha0:4;
 	uint16		Alpha1:4;
 	uint16		Alpha2:4;
 	uint16		Alpha3:4;
 };
-struct FDetailSlot					// was(4+4+3*4+2 = 22b), now(8+2*4=16b)
+struct FRBMKDetailSlot					// was(4+4+3*4+2 = 22b), now(8+2*4=16b)
 {
 	static constexpr uint32	IDEmpty	= 0x3f;
 
@@ -56,7 +56,7 @@ struct FDetailSlot					// was(4+4+3*4+2 = 22b), now(8+2*4=16b)
 	uint32				ColorR			:	4;	// 56	// rgb = 4.4.4
 	uint32				ColorG			:	4;	// 60	// rgb = 4.4.4
 	uint32				ColorB			:	4;	// 64	// rgb = 4.4.4
-	FDetailPalette		Palette [4];
+	FRBMKDetailPalette		Palette [4];
 };
 
 #pragma pack(pop)

@@ -1,5 +1,5 @@
 #include "ESceneDOTools.h"
-#include "DetailFormat.h"
+#include "RBMKDetailFormat.h"
 #include "InstancedFoliageActor.h"
 #include "StalkerEditor/Importer/Scene/Entitys/StaticObject/SceneObject.h"
 THIRD_PARTY_INCLUDES_START
@@ -248,7 +248,7 @@ bool EDetailManager::LoadStream(IReader& F)
 	}
     DetailSlots.Empty();
     DetailSlots.AddZeroed( F.r_u32());
-	F.r(DetailSlots.GetData(),DetailSlots.Num()*sizeof(FDetailSlot));
+	F.r(DetailSlots.GetData(),DetailSlots.Num()*sizeof(FRBMKDetailSlot));
 
     // Objects
     if (!LoadColorIndices(F))
@@ -292,12 +292,12 @@ bool EDetailManager::LoadSelection(IReader& F)
 
 void EDetailManager::InvalidateSlots()
 {
-	for (FDetailSlot& DetailSlot : DetailSlots)
+	for (FRBMKDetailSlot& DetailSlot : DetailSlots)
     {
-    	DetailSlot.SetID(0,FDetailSlot::IDEmpty);
-    	DetailSlot.SetID(1,FDetailSlot::IDEmpty);
-    	DetailSlot.SetID(2,FDetailSlot::IDEmpty);
-    	DetailSlot.SetID(3,FDetailSlot::IDEmpty);
+    	DetailSlot.SetID(0,FRBMKDetailSlot::IDEmpty);
+    	DetailSlot.SetID(1,FRBMKDetailSlot::IDEmpty);
+    	DetailSlot.SetID(2,FRBMKDetailSlot::IDEmpty);
+    	DetailSlot.SetID(3,FRBMKDetailSlot::IDEmpty);
     }
 }
 
@@ -320,7 +320,7 @@ FRBMKDetail* EDetailManager::FindDOByName(const TCHAR* Name)
     return nullptr;
 }
 
-FDetailSlot&	EDetailManager::QueryDB(int32 X, int32 Z)
+FRBMKDetailSlot&	EDetailManager::QueryDB(int32 X, int32 Z)
 {
 	int32 XWithOffset = X+DetailHeader.OffsetX;
 	int32 ZWithOffset = Z+DetailHeader.OffsetZ;
@@ -332,10 +332,10 @@ FDetailSlot&	EDetailManager::QueryDB(int32 X, int32 Z)
 	else 
 	{
 		// Empty slot
-		DetailSlotEmpty.SetID				(0,FDetailSlot::IDEmpty);
-		DetailSlotEmpty.SetID				(1,FDetailSlot::IDEmpty);
-		DetailSlotEmpty.SetID				(2,FDetailSlot::IDEmpty);
-		DetailSlotEmpty.SetID				(3,FDetailSlot::IDEmpty);
+		DetailSlotEmpty.SetID				(0,FRBMKDetailSlot::IDEmpty);
+		DetailSlotEmpty.SetID				(1,FRBMKDetailSlot::IDEmpty);
+		DetailSlotEmpty.SetID				(2,FRBMKDetailSlot::IDEmpty);
+		DetailSlotEmpty.SetID				(3,FRBMKDetailSlot::IDEmpty);
 		return DetailSlotEmpty;
 	}
 }
@@ -371,7 +371,7 @@ void		EDetailManager::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutI
 		return	c	> dither[col][row];
 	};
 
-	FDetailSlot&DetailSlot = QueryDB(X,Z);
+	FRBMKDetailSlot&DetailSlot = QueryDB(X,Z);
 
 	Fbox BoundBox;
 
@@ -432,10 +432,10 @@ void		EDetailManager::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutI
 			const int32 ShiftX =  RandomJitter.randI(16);
 			const int32 ShiftZ =  RandomJitter.randI(16);
 
-			if ((DetailSlot.id0!=FDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[0],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(0);
-			if ((DetailSlot.id1!=FDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[1],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(1);
-			if ((DetailSlot.id2!=FDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[2],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(2);
-			if ((DetailSlot.id3!=FDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[3],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(3);
+			if ((DetailSlot.id0!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[0],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(0);
+			if ((DetailSlot.id1!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[1],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(1);
+			if ((DetailSlot.id2!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[2],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(2);
+			if ((DetailSlot.id3!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[3],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(3);
 			
 			// Select
 			if (Selected.IsEmpty())	continue;
