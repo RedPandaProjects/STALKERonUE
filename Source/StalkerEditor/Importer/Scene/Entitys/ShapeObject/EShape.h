@@ -41,5 +41,5 @@ public:
 
     virtual void	OnDetach	();
 
-	void*           QueryInterface(EXRayObjectClassID InClassID) override;
+	void*           QueryInterface(ERBMKSceneObjectType InClassID) override;
 };

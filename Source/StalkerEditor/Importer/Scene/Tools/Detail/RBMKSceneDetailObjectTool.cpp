@@ -6,7 +6,7 @@ THIRD_PARTY_INCLUDES_START
 #include "xrEngine/cl_intersect.h"
 THIRD_PARTY_INCLUDES_END
 
-FRBMKSceneDetailObjectTool::FRBMKSceneDetailObjectTool():FXRaySceneToolBase(OBJCLASS_DO)
+FRBMKSceneDetailObjectTool::FRBMKSceneDetailObjectTool():FXRaySceneToolBase(ERBMKSceneObjectType::DetailObject)
 {
     DetailHeader = {};
     InitRender();
@@ -264,7 +264,7 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
         for (int32 i=0; i<Count; i++)
         {
     	    F.r_stringZ	(BufferStr,sizeof(BufferStr));
-            FXRayCustomObject* O = Scene->FindObjectByName(BufferStr,OBJCLASS_SCENEOBJECT);
+            FXRayCustomObject* O = Scene->FindObjectByName(BufferStr,ERBMKSceneObjectType::SceneObject);
             if (!O)	
             {
 				UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Can't find snap object '%S'."),BufferStr);
@@ -389,7 +389,7 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 
 	for(FXRayCustomObject*Object:SnapObjects)
 	{
-		if(CSceneObject* SceneObject =  reinterpret_cast<CSceneObject*>(Object->QueryInterface(OBJCLASS_SCENEOBJECT)))
+		if(CSceneObject* SceneObject =  reinterpret_cast<CSceneObject*>(Object->QueryInterface(ERBMKSceneObjectType::SceneObject)))
 		{
 			if(SceneObject->GetReference())
 			{

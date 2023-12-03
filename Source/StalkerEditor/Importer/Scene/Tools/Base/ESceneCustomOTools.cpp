@@ -1,6 +1,6 @@
 #include "ESceneCustomOTools.h"
 
-FXRaySceneCustomOTool::FXRaySceneCustomOTool(EXRayObjectClassID cls):FXRaySceneToolBase(cls)
+FXRaySceneCustomOTool::FXRaySceneCustomOTool(ERBMKSceneObjectType cls):FXRaySceneToolBase(cls)
 {
 }
 

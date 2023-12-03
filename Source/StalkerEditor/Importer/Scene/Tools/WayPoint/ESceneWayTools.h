@@ -4,7 +4,7 @@ class ESceneWayTool: public FXRaySceneCustomOTool
 {
 	typedef FXRaySceneCustomOTool inherited;
 public:
-					ESceneWayTool			():FXRaySceneCustomOTool(OBJCLASS_WAY){;}
+					ESceneWayTool			():FXRaySceneCustomOTool(ERBMKSceneObjectType::Way){;}
                     ~ESceneWayTool          () override;
 	// definition
     LPCSTR			ClassName				() override {return "way";}

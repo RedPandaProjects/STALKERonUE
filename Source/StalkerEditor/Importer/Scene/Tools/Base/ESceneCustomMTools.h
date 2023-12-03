@@ -3,7 +3,7 @@
 class FXRaySceneToolBase
 {
 public:
-											FXRaySceneToolBase      (EXRayObjectClassID cls);
+											FXRaySceneToolBase      (ERBMKSceneObjectType cls);
     virtual                                 ~FXRaySceneToolBase     ();
 
 	bool                                    IsEnabled               () { return true; }
@@ -18,5 +18,5 @@ public:
     virtual class FXRaySceneCustomOTool*    CastToSceneCustomOTool  () {return nullptr;}
     virtual void                            ExportToCurrentWorld    (){};
     
-    EXRayObjectClassID                              FClassID;
+    ERBMKSceneObjectType                              FClassID;
 };

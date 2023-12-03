@@ -13,7 +13,7 @@
 
 static const DWORD InvalidNode = (1 << 24) - 1;
 
-ESceneAIMapTool::ESceneAIMapTool() :FXRaySceneToolBase(OBJCLASS_AIMAP)
+ESceneAIMapTool::ESceneAIMapTool() :FXRaySceneToolBase(ERBMKSceneObjectType::AIMap)
 {
 
 }

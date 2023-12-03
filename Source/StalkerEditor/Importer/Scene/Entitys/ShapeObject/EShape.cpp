@@ -30,7 +30,7 @@ CEditShape::~CEditShape()
 
 void CEditShape::Construct(LPVOID data)
 {
-	FClassID				= OBJCLASS_SHAPE;
+	FClassID				= ERBMKSceneObjectType::Shape;
     m_DrawTranspColor	= SHAPE_COLOR_TRANSP;
     m_DrawEdgeColor		= SHAPE_COLOR_EDGE;
     m_shape_type		= eShapeCommon;
@@ -132,7 +132,7 @@ void CEditShape::Detach()
         ShapeIt it=shapes.begin(); it++;
         for (; it!=shapes.end(); it++){
             string256 namebuffer;
-            Scene->GenObjectName	(OBJCLASS_SHAPE, namebuffer, GetName());
+            Scene->GenObjectName	(ERBMKSceneObjectType::Shape, namebuffer, GetName());
             CEditShape* shape 	= (CEditShape*)Scene->GetOTool(FClassID)->CreateObject(0, namebuffer);
             switch (it->type){
             case cfSphere:{
@@ -169,9 +169,9 @@ void CEditShape::OnDetach()
 }
 
 
-void* CEditShape::QueryInterface(EXRayObjectClassID InClassID)
+void* CEditShape::QueryInterface(ERBMKSceneObjectType InClassID)
 {
-	if (InClassID == OBJCLASS_SHAPE)
+	if (InClassID == ERBMKSceneObjectType::Shape)
 		return this;
 	return inherited::QueryInterface(InClassID);
 }

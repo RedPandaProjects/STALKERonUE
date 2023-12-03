@@ -69,7 +69,7 @@ CWayObject::CWayObject(LPVOID data, const char* name):FXRayCustomObject(data,nam
 
 void CWayObject::Construct(LPVOID data)
 {
-	FClassID   	= OBJCLASS_WAY;
+	FClassID   	= ERBMKSceneObjectType::Way;
 }
 
 CWayObject::~CWayObject()
@@ -150,9 +150,9 @@ bool CWayObject::LoadLTX(CInifile& ini, const char* sect_name)
     return true;
 }
 
-void* CWayObject::QueryInterface(EXRayObjectClassID InClassID)
+void* CWayObject::QueryInterface(ERBMKSceneObjectType InClassID)
 {
-	if (InClassID == OBJCLASS_WAY)
+	if (InClassID == ERBMKSceneObjectType::Way)
 		return this;
 	return inherited::QueryInterface(InClassID);
 }

@@ -141,7 +141,7 @@ CSpawnPoint::CSpawnPoint(LPVOID data, LPCSTR name):FXRayCustomObject(data,name),
 
 void CSpawnPoint::Construct(LPVOID data)
 {
-	FClassID			= OBJCLASS_SPAWNPOINT;
+	FClassID			= ERBMKSceneObjectType::SpawnPoint;
     m_AttachedObject= 0;
     if (data)
     {
@@ -161,10 +161,10 @@ bool CSpawnPoint::AttachObject(FXRayCustomObject* obj)
     //  
     if (m_SpawnData.Valid()){
     	switch(obj->FClassID){
-        case OBJCLASS_SHAPE:
+        case ERBMKSceneObjectType::Shape:
 	    	bAllowed = !!m_SpawnData.m_Data->shape();
         break;
-//        case OBJCLASS_SCENEOBJECT:
+//        case ERBMKSceneObjectType::SceneObject:
 //	    	bAllowed = !!dynamic_cast<xrSE_Visualed*>(m_SpawnData.m_Data);
 //        break;
         }
@@ -202,13 +202,13 @@ bool CSpawnPoint::CreateSpawnData(LPCSTR entity_ref)
 bool CSpawnPoint::OnAppendObject(FXRayCustomObject* object)
 {
 	R_ASSERT(!m_AttachedObject);
-    if (object->FClassID!=OBJCLASS_SHAPE) return false;
+    if (object->FClassID!=ERBMKSceneObjectType::Shape) return false;
     // all right
     m_AttachedObject 		= object;
     object->m_pOwnerObject	= this;
     Scene->RemoveObject		(object, false, false);
 
-    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(OBJCLASS_SHAPE));
+    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
     if(m_SpawnData.Valid())
     {
         if(pSettings->line_exist(m_SpawnData.m_Data->name(),"shape_transp_color"))
@@ -264,7 +264,7 @@ bool CSpawnPoint::LoadLTX(CInifile& ini, LPCSTR sect_name)
 	UpdateTransform	();
 
 	// BUG fix
-    CEditShape* shape	= m_AttachedObject ? reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(OBJCLASS_SHAPE)):nullptr;
+    CEditShape* shape	= m_AttachedObject ? reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape)):nullptr;
     if (shape)
     	SetScale 	( shape->GetScale());
     
@@ -302,14 +302,14 @@ bool CSpawnPoint::LoadStream(IReader& F)
 	// objects
     Scene->ReadObjectsStream(F,SPAWNPOINT_CHUNK_ATTACHED_OBJ, EScene::TAppendObject(this, &CSpawnPoint::OnAppendObject));
 
-    CEditShape* shape	= m_AttachedObject?reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(OBJCLASS_SHAPE)):nullptr;
+    CEditShape* shape	= m_AttachedObject?reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape)):nullptr;
     if (shape) 	SetScale(shape->GetScale());
     
     return true;
 }
-void* CSpawnPoint::QueryInterface(EXRayObjectClassID InClassID)
+void* CSpawnPoint::QueryInterface(ERBMKSceneObjectType InClassID)
 {
-	if (InClassID == OBJCLASS_SPAWNPOINT)
+	if (InClassID ==  ERBMKSceneObjectType::SpawnPoint)
 		return this;
 	return inherited::QueryInterface(InClassID);
 }

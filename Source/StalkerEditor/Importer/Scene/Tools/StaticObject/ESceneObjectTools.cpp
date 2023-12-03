@@ -1,7 +1,7 @@
 #include "ESceneObjectTools.h"
 #include "../../Entitys/StaticObject/SceneObject.h"
 
-ESceneObjectTool::ESceneObjectTool():FXRaySceneCustomOTool(OBJCLASS_SCENEOBJECT)
+ESceneObjectTool::ESceneObjectTool():FXRaySceneCustomOTool(ERBMKSceneObjectType::SceneObject)
 {
 }
 

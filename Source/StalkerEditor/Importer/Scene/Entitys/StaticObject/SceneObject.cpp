@@ -10,7 +10,7 @@ CSceneObject::CSceneObject(LPVOID data, LPCSTR name):FXRayCustomObject(data,name
 
 void CSceneObject::Construct(LPVOID data)
 {
-	FClassID		= OBJCLASS_SCENEOBJECT;
+	FClassID		= ERBMKSceneObjectType::SceneObject;
 
     m_ReferenceName = "";
 	m_pReference 	= 0;
@@ -78,9 +78,9 @@ void CSceneObject::GetFullTransformToLocal( Fmatrix& m )
     m.set(_ITransform());
 }
 
-void* CSceneObject::QueryInterface(EXRayObjectClassID InClassID)
+void* CSceneObject::QueryInterface(ERBMKSceneObjectType InClassID)
 {
-    if (InClassID == OBJCLASS_SCENEOBJECT)
+    if (InClassID == ERBMKSceneObjectType::SceneObject)
         return this;
     return inherited::QueryInterface(InClassID);
 }

@@ -12,6 +12,6 @@ public:
     virtual bool	        CanAttach		    () {return true;}
   	virtual bool 	        LoadStream			(IReader&);
   	virtual bool 	        LoadLTX				(CInifile& ini, LPCSTR sect_name);
-	void*                   QueryInterface      (EXRayObjectClassID InClassID) override;
+	void*                   QueryInterface      (ERBMKSceneObjectType InClassID) override;
     shared_str				m_RefName;
 };

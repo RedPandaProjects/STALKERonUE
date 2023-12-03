@@ -4,7 +4,7 @@ class EScenePSTools: public FXRaySceneCustomOTool
 {
 	typedef FXRaySceneCustomOTool inherited;
 public:
-					EScenePSTools			():FXRaySceneCustomOTool(OBJCLASS_PS){;}
+					EScenePSTools			():FXRaySceneCustomOTool(ERBMKSceneObjectType::ParticleSystem){;}
                     ~EScenePSTools          () override;
 	// definition
     LPCSTR			ClassName				() override {return "ps";}

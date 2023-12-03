@@ -63,6 +63,6 @@ public:
   	virtual bool 	LoadLTX			(CInifile& ini, const char* sect_name);
 	virtual bool	CanAttach() { return true; }
 	
-	void*			QueryInterface(EXRayObjectClassID InClassID) override;
+	void*			QueryInterface(ERBMKSceneObjectType InClassID) override;
 	WPVec			m_WayPoints;
 };

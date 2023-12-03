@@ -106,5 +106,5 @@ public:
     void			DetachObject	();
 
 
-	void* QueryInterface(EXRayObjectClassID InClassID) override;
+	void* QueryInterface(ERBMKSceneObjectType InClassID) override;
 };

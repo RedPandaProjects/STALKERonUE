@@ -8,7 +8,7 @@ protected:
     virtual void 		CreateControls			();
 	virtual void 		RemoveControls			();
 public:
-						ESceneDummyTool			():FXRaySceneCustomOTool(OBJCLASS_DUMMY){;}
+						ESceneDummyTool			():FXRaySceneCustomOTool(ERBMKSceneObjectType::AllTypes){;}
                         
     virtual void		Clear					(){inherited::Clear();}
 	// definition

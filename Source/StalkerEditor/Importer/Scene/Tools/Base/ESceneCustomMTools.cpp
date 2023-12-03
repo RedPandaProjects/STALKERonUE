@@ -2,7 +2,7 @@
 
 #define CHUNK_TOOLS_TAG	0x7777
 
-FXRaySceneToolBase::FXRaySceneToolBase(EXRayObjectClassID cls)
+FXRaySceneToolBase::FXRaySceneToolBase(ERBMKSceneObjectType cls)
 {
     FClassID				= cls;
 }

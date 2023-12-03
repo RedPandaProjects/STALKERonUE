@@ -15,7 +15,7 @@ CGroupObject::CGroupObject(LPVOID data, LPCSTR name):FXRayCustomObject(data,name
 
 void CGroupObject::Construct(LPVOID data)
 {
-	FClassID		= OBJCLASS_GROUP;
+	FClassID		= ERBMKSceneObjectType::Group;
 }
 
 CGroupObject::~CGroupObject()
@@ -115,9 +115,9 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     return 			true;
 }
 
-void* CGroupObject::QueryInterface(EXRayObjectClassID InClassID)
+void* CGroupObject::QueryInterface(ERBMKSceneObjectType InClassID)
 {
-	if (InClassID == OBJCLASS_GROUP)
+	if (InClassID == ERBMKSceneObjectType::Group)
 		return this;
 	return inherited::QueryInterface(InClassID);
 }

@@ -14,7 +14,7 @@ CParticlesObject::CParticlesObject(LPVOID data, LPCSTR name):FXRayCustomObject(d
 
 void CParticlesObject::Construct(LPVOID data)
 {
-	FClassID		= OBJCLASS_PS;
+	FClassID		= ERBMKSceneObjectType::ParticleSystem;
 }
 
 CParticlesObject::~CParticlesObject()
@@ -32,9 +32,9 @@ bool CParticlesObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     return true;
 }
 
-void* CParticlesObject::QueryInterface(EXRayObjectClassID InClassID)
+void* CParticlesObject::QueryInterface(ERBMKSceneObjectType InClassID)
 {
-	if (InClassID == OBJCLASS_PS)
+	if (InClassID == ERBMKSceneObjectType::ParticleSystem)
 		return this;
 	return inherited::QueryInterface(InClassID);
 }

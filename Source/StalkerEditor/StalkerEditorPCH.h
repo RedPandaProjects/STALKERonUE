@@ -105,7 +105,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/game_level_cross_table.h"
 #include "XrEngine/level_graph.h"
 THIRD_PARTY_INCLUDES_END
-#include "Importer/Scene/ESceneClassList.h"
+#include "Importer/Scene/RBMKSceneObjectType.h"
 #include "Importer/Scene/iniStreamImpl.h"
 #include "Importer/Scene/Entitys/CustomObject.h"
 #include "Importer/Scene/Tools/Base/ESceneCustomMTools.h"

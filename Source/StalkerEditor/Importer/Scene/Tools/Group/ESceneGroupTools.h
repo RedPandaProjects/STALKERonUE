@@ -4,7 +4,7 @@ class ESceneGroupTool: public FXRaySceneCustomOTool
 {
 	typedef FXRaySceneCustomOTool inherited;
  public:
-				                ESceneGroupTool		    ():FXRaySceneCustomOTool(OBJCLASS_GROUP){;}
+				                ESceneGroupTool		    ():FXRaySceneCustomOTool(ERBMKSceneObjectType::Group){;}
 	// definition
     IC LPCSTR			        ClassName			    (){return "group";}
     IC LPCSTR			        ClassDesc			    (){return "Group";}

@@ -284,7 +284,7 @@ BOOL EScene::LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name)
             return 			FALSE;
         }*/
         // read data
-        IReader* chunk = R->open_chunk(CHUNK_TOOLS_DATA + M->FClassID);
+        IReader* chunk = R->open_chunk(CHUNK_TOOLS_DATA + static_cast<int32>(M->FClassID));
         if (chunk != NULL)
         {
             M->LoadStream(*chunk);
@@ -303,7 +303,7 @@ BOOL EScene::LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name)
     return 					TRUE;
 }
 
-BOOL EScene::LoadLevelPart(LPCSTR map_name, EXRayObjectClassID cls)
+BOOL EScene::LoadLevelPart(LPCSTR map_name, ERBMKSceneObjectType cls)
 {
 	xr_string pn	= LevelPartName(map_name,cls);
     if (LoadLevelPart(GetTool(cls),pn.c_str()))
@@ -318,7 +318,7 @@ BOOL EScene::UnloadLevelPart(FXRaySceneToolBase* M)
     return 			TRUE;
 }
 
-BOOL EScene::UnloadLevelPart(LPCSTR map_name, EXRayObjectClassID cls)
+BOOL EScene::UnloadLevelPart(LPCSTR map_name, ERBMKSceneObjectType cls)
 {
 	xr_string pn	= LevelPartName(map_name,cls);
     if (UnloadLevelPart(GetTool(cls)))
@@ -332,12 +332,12 @@ xr_string EScene::LevelPartPath(LPCSTR full_name)
     return 			EFS.ExtractFilePath(full_name)+EFS.ExtractFileName(full_name)+"\\";
 }
 
-xr_string EScene::LevelPartName(LPCSTR map_name, EXRayObjectClassID cls)
+xr_string EScene::LevelPartName(LPCSTR map_name, ERBMKSceneObjectType cls)
 {
     return 			LevelPartPath(map_name)+GetTool(cls)->ClassName() + ".part";
 }
 
-bool EScene::LoadToolLTX(EXRayObjectClassID clsid, LPCSTR fn)
+bool EScene::LoadToolLTX(ERBMKSceneObjectType clsid, LPCSTR fn)
 {
     FXRaySceneToolBase* tool 	= GetTool(clsid);
     tool->Clear				();
@@ -348,9 +348,9 @@ bool EScene::LoadToolLTX(EXRayObjectClassID clsid, LPCSTR fn)
 
 bool EScene::ReadObjectStream(IReader& F, FXRayCustomObject*& O)
 {
-    EXRayObjectClassID clsid		= OBJCLASS_DUMMY;
+    ERBMKSceneObjectType clsid		= ERBMKSceneObjectType::Unkown;
     R_ASSERT				(F.find_chunk(CHUNK_OBJECT_CLASS));
-    clsid 					= EXRayObjectClassID(F.r_u32());
+    clsid 					= ERBMKSceneObjectType(F.r_u32());
 
     if (GetTool(clsid) == nullptr)
     {
@@ -375,8 +375,8 @@ bool EScene::ReadObjectStream(IReader& F, FXRayCustomObject*& O)
 
 bool EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name, FXRayCustomObject*& O)
 {
-    EXRayObjectClassID clsid		= OBJCLASS_DUMMY;
-    clsid 					= EXRayObjectClassID(ini.r_u32(sect_name,"clsid"));
+    ERBMKSceneObjectType clsid = ERBMKSceneObjectType::Unkown;
+    clsid 					= ERBMKSceneObjectType(ini.r_u32(sect_name,"clsid"));
 
     if (GetTool(clsid) == nullptr)
     {
@@ -440,7 +440,7 @@ bool EScene::LoadLTX(LPCSTR map_name, bool bUndo)
             if (Value)
             {
                 {
-                    if (!bUndo && Value->IsEnabled() && (Key!=OBJCLASS_DUMMY))
+                    if (!bUndo && Value->IsEnabled() && (Key!=ERBMKSceneObjectType::AllTypes))
                     {
                         xr_string fn 		 = LevelPartName(map_name,Key).c_str();
                         LoadLevelPartLTX	(Value.Get(), fn.c_str());
@@ -524,7 +524,7 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
         {
             if (Value)
             {
-			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+Key);
+			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+static_cast<int32>(Key));
             	if (chunk)
                 {
 	                Value->LoadStream(*chunk);
@@ -532,7 +532,7 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
                 }
             	else
                 {
-                    if (!bUndo && Value->IsEnabled() && (Key!=OBJCLASS_DUMMY))
+                    if (!bUndo && Value->IsEnabled() && (Key!=ERBMKSceneObjectType::AllTypes))
                     {
                         LoadLevelPart	(Value.Get(),LevelPartName(map_name,Key).c_str());
                     }
@@ -603,7 +603,7 @@ bool EScene::LoadSelection( LPCSTR fname )
          for(auto&[Key,Value]:SceneTools)
          {
             if (Value&&Value->IsEnabled()&&Value->IsEditable()){
-			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+Key);
+			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+static_cast<int32>(Key));
             	if (chunk){
 	                Value->LoadSelection(*chunk);
     	            chunk->close	();

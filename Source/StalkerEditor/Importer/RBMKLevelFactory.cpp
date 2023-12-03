@@ -90,10 +90,10 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	if (LevelImportOptions.ImportStaticMeshes)
 	{
 		ObjectList ListObj;
-		Scene->GetObjects(OBJCLASS_SCENEOBJECT,ListObj);
+		Scene->GetObjects(ERBMKSceneObjectType::SceneObject,ListObj);
 		for (FXRayCustomObject* Object : ListObj)
 		{
-			CSceneObject* SceneObject = reinterpret_cast<CSceneObject*>(Object->QueryInterface(OBJCLASS_SCENEOBJECT));
+			CSceneObject* SceneObject = reinterpret_cast<CSceneObject*>(Object->QueryInterface(ERBMKSceneObjectType::SceneObject));
 			CEditableObject* EditableObject = SceneObject->GetReference();
 			if (EditableObject)
 			{
@@ -127,10 +127,10 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	if (LevelImportOptions.ImportParticles)
 	{
 		ObjectList ListPS;
-		Scene->GetObjects(OBJCLASS_PS,ListPS);
+		Scene->GetObjects(ERBMKSceneObjectType::ParticleSystem,ListPS);
 		for (FXRayCustomObject* Object : ListPS)
 		{
-			CParticlesObject* PSObject = reinterpret_cast<CParticlesObject*>(Object->QueryInterface(OBJCLASS_PS));
+			CParticlesObject* PSObject = reinterpret_cast<CParticlesObject*>(Object->QueryInterface(ERBMKSceneObjectType::ParticleSystem));
 			FString Name =  PSObject->m_RefName.c_str();
 			UNiagaraSystem * NiagaraSystem = nullptr;
 			{
@@ -181,10 +181,10 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	if (LevelImportOptions.ImportWayObjects)
 	{
 		ObjectList ListWay;
-		Scene->GetObjects(OBJCLASS_WAY,ListWay);
+		Scene->GetObjects(ERBMKSceneObjectType::Way,ListWay);
 		for (FXRayCustomObject* Object : ListWay)
 		{
-			CWayObject* WayObject = reinterpret_cast<CWayObject*>(Object->QueryInterface(OBJCLASS_WAY));
+			CWayObject* WayObject = reinterpret_cast<CWayObject*>(Object->QueryInterface(ERBMKSceneObjectType::Way));
 			if (WayObject&& WayObject->m_WayPoints.size())
 			{
 				AStalkerWayObject* WayObjectActor = World->SpawnActor<AStalkerWayObject>(FVector(StalkerMath::XRayLocationToUnreal( WayObject->m_WayPoints[0]->m_vPosition)),FRotator(0,0,0));
@@ -213,10 +213,10 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	if (LevelImportOptions.ImportSpawnObjects)
 	{
 		ObjectList ListSpawn;
-		Scene->GetObjects(OBJCLASS_SPAWNPOINT,ListSpawn);
+		Scene->GetObjects(ERBMKSceneObjectType::SpawnPoint,ListSpawn);
 		for (FXRayCustomObject* Object : ListSpawn)
 		{
-			CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(OBJCLASS_SPAWNPOINT));
+			CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(ERBMKSceneObjectType::SpawnPoint));
 			if (SpawnObject && SpawnObject->m_SpawnData.m_Data)
 			{
 				SpawnObject->UpdateTransform(true);
@@ -245,7 +245,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 
 				if (SpawnObject->m_AttachedObject)
 				{
-					CEditShape* Shape = reinterpret_cast<CEditShape*>(SpawnObject->m_AttachedObject->QueryInterface(OBJCLASS_SHAPE));
+					CEditShape* Shape = reinterpret_cast<CEditShape*>(SpawnObject->m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
 					Shape->UpdateTransform(true);
 					if (Shape)
 					{
@@ -386,7 +386,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 			};
 
 			CGeomPartExtractor* extractor   = 0;
-			ESceneObjectTool* ObjectTool = static_cast<ESceneObjectTool*>(Scene->GetTool(OBJCLASS_SCENEOBJECT));
+			ESceneObjectTool* ObjectTool = static_cast<ESceneObjectTool*>(Scene->GetTool(ERBMKSceneObjectType::SceneObject));
 			Fbox 		bb;
 
 			extractor	                    = new CGeomPartExtractor;
@@ -396,7 +396,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 			{
 				for (ObjectIt it=ObjectTool->GetObjects().begin(); it != ObjectTool->GetObjects().end(); it++)
 				{
-					CSceneObject* obj 		= reinterpret_cast<CSceneObject*>((*it)->QueryInterface(OBJCLASS_SCENEOBJECT));
+					CSceneObject* obj 		= reinterpret_cast<CSceneObject*>((*it)->QueryInterface(ERBMKSceneObjectType::SceneObject));
 					VERIFY                  (obj);
 					if (obj->IsStatic())
 					{
@@ -481,7 +481,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 		{
 			if(UStalkerAIMap* INAIMap = StalkerWorldSettings->GetOrCreateAIMap())
 			{
-				ESceneAIMapTool* AIMapTool = static_cast<ESceneAIMapTool*>(Scene->GetTool(OBJCLASS_AIMAP));
+				ESceneAIMapTool* AIMapTool = static_cast<ESceneAIMapTool*>(Scene->GetTool(ERBMKSceneObjectType::AIMap));
 				INAIMap->ClearAIMap();
 				if (AIMapTool)
 				{
@@ -516,7 +516,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportWallmark)
 	{
-		if(ESceneWallmarkTool* WallmarkTool = static_cast<ESceneWallmarkTool*>(Scene->GetTool(OBJCLASS_WM)))
+		if(ESceneWallmarkTool* WallmarkTool = static_cast<ESceneWallmarkTool*>(Scene->GetTool(ERBMKSceneObjectType::Wallmark)))
 		{
 			for( ESceneWallmarkTool::wm_slot*slot:WallmarkTool->marks)
 			{
@@ -540,7 +540,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportDetail)
 	{
-		if(FRBMKSceneDetailObjectTool* DOSceneTool = static_cast<FRBMKSceneDetailObjectTool*>(Scene->GetTool(OBJCLASS_DO)))
+		if(FRBMKSceneDetailObjectTool* DOSceneTool = static_cast<FRBMKSceneDetailObjectTool*>(Scene->GetTool(ERBMKSceneObjectType::DetailObject)))
 		{
 			DOSceneTool->DetailDensity = LevelImportOptions.DetailDensity;
 			DOSceneTool->ExportToCurrentWorld();

@@ -163,9 +163,9 @@ public:
     virtual void           PositionSave          () { EPositionSaved = FPosition; }
 	IC const Fvector& GetSavePosition       () { return EPositionSaved; }
 
-    virtual void* QueryInterface(EXRayObjectClassID InClassID) { if(InClassID == OBJCLASS_DUMMY) return this; return nullptr;;}
+    virtual void* QueryInterface(ERBMKSceneObjectType InClassID) { if(InClassID == ERBMKSceneObjectType::AllTypes) return this; return nullptr;;}
 
-    EXRayObjectClassID		FClassID;
+    ERBMKSceneObjectType		FClassID;
     FXRaySceneCustomOTool* FParentTools;
 private:
     int m_ButtonId;

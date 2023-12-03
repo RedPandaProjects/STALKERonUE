@@ -30,9 +30,9 @@ void st_LevelOptions::Reset()
 
 EScene::EScene()
 {
-    for (int32 i=0; i<OBJCLASS_COUNT; i++)
+    for (int32 i = 0; i < static_cast<int32>(ERBMKSceneObjectType::Count); i++)
     {
-    	SceneTools.Add(static_cast<EXRayObjectClassID>(i));
+    	SceneTools.Add(static_cast<ERBMKSceneObjectType>(i));
     }
 	CreateSceneTools();
 }
@@ -69,7 +69,7 @@ void EScene::Clear()
 {
 	for(auto&[Key,Value]:SceneTools)
 	{
-		if(Key!=OBJCLASS_DUMMY&&Value)
+		if(Key!=ERBMKSceneObjectType::AllTypes&&Value)
 		{
 			Value->Clear();
 		}
@@ -89,7 +89,7 @@ xr_string EScene::LevelPath()
 }
 
 
-FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, EXRayObjectClassID classfilter)
+FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType classfilter)
 {
 	if (!name)
 	{
@@ -97,7 +97,7 @@ FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, EXRayObjectClassID clas
 	}
 
 	FXRayCustomObject* Result = nullptr;
-	if (classfilter == OBJCLASS_DUMMY)
+	if (classfilter == ERBMKSceneObjectType::AllTypes)
 	{
 		for(auto&[Key,Value]:SceneTools)
 		{
@@ -154,7 +154,7 @@ FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, FXRayCustomObject* pass
 }
 
 
-void EScene::GenObjectName(EXRayObjectClassID cls_id, char* buffer, const char* pref)
+void EScene::GenObjectName(ERBMKSceneObjectType cls_id, char* buffer, const char* pref)
 {
 
 
@@ -217,17 +217,17 @@ bool EScene::GetSubstObjectName(const xr_string& _from, xr_string& _to) const
     return false;
 }
 
-void EScene::GetObjects(EXRayObjectClassID InType, ObjectList& OutObjects)
+void EScene::GetObjects(ERBMKSceneObjectType InType, ObjectList& OutObjects)
 {
 	ObjectList&ObjectsFromTool = GetOTool(InType)->GetObjects();
 	for (FXRayCustomObject* Object : ObjectsFromTool)
 	{
 		OutObjects.push_back(Object);
 	}
-	/*for (auto& GroupObj : ListObj(OBJCLASS_GROUP))
+	/*for (auto& GroupObj : ListObj(ERBMKSceneObjectType::Group))
 	{
 		ObjectList ObjectsFromGroups;
-		CGroupObject* Group = reinterpret_cast<CGroupObject*>(GroupObj->QueryInterface(OBJCLASS_GROUP));
+		CGroupObject* Group = reinterpret_cast<CGroupObject*>(GroupObj->QueryInterface(ERBMKSceneObjectType::Group));
 		Group->GetObjects(ObjectsFromGroups);
 		for (auto& Object : ObjectsFromGroups)
 		{

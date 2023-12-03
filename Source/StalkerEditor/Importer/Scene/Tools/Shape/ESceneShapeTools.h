@@ -4,7 +4,7 @@ class ESceneShapeTool: public FXRaySceneCustomOTool
 {
 	typedef FXRaySceneCustomOTool inherited;
 public:
-						ESceneShapeTool			():FXRaySceneCustomOTool(OBJCLASS_SHAPE){;}
+						ESceneShapeTool			():FXRaySceneCustomOTool(ERBMKSceneObjectType::Shape){;}
 	// definition
     IC LPCSTR			ClassName				(){return "shape";}
     IC LPCSTR			ClassDesc				(){return "Shape";}

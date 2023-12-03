@@ -13,7 +13,7 @@
 FXRayCustomObject::FXRayCustomObject(LPVOID data, LPCSTR name)
 {
 	save_id				= 0;
-    FClassID 			= OBJCLASS_DUMMY;
+    FClassID 			= ERBMKSceneObjectType::Unkown;
 
     FParentTools = 0;
     if (name) 	FName 	= name;
@@ -150,6 +150,6 @@ void FXRayCustomObject::OnAttach(FXRayCustomObject* owner)
 	R_ASSERT2(((!m_pOwnerObject) || (m_pOwnerObject == owner)), "Object already has owner!");
 	m_pOwnerObject = owner;
 	//.    Scene->RemoveObject		(this,false,false);
-	if (owner->FClassID == OBJCLASS_GROUP)
+	if (owner->FClassID == ERBMKSceneObjectType::Group)
 		m_CO_Flags.set(flObjectInGroup, TRUE);
 }

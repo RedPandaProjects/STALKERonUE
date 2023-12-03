@@ -2,7 +2,7 @@
 #include "../../Entitys/SpawnObject/SpawnPoint.h"
 
 
-ESceneSpawnTool::ESceneSpawnTool():FXRaySceneCustomOTool(OBJCLASS_SPAWNPOINT)
+ESceneSpawnTool::ESceneSpawnTool():FXRaySceneCustomOTool(ERBMKSceneObjectType::SpawnPoint)
 {
 	m_Flags.zero();
 }

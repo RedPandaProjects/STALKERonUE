@@ -81,6 +81,6 @@ public:
 
 	void ClearSurface();
 
-	void* QueryInterface(EXRayObjectClassID InClassID) override;
+	void* QueryInterface(ERBMKSceneObjectType InClassID) override;
 };
 

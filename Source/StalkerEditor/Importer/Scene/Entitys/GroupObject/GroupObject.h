@@ -17,7 +17,7 @@ public:
     virtual void 	        OnUpdateTransform   ();
   	virtual bool 	        LoadStream			(IReader&);
   	virtual bool 	        LoadLTX				(CInifile& ini, LPCSTR sect_name);
-	void*                   QueryInterface      (EXRayObjectClassID InClassID) override;
+	void*                   QueryInterface      (ERBMKSceneObjectType InClassID) override;
 private:
 
     void			        ClearInternal		(xr_list<FXRayCustomObject*>& v);

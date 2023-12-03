@@ -7,7 +7,7 @@
 #define WM_CHUNK_ITEMS				0x0004
 #define WM_CHUNK_ITEMS2				0x0005
 
-ESceneWallmarkTool::ESceneWallmarkTool() :FXRaySceneToolBase(OBJCLASS_WM)
+ESceneWallmarkTool::ESceneWallmarkTool() :FXRaySceneToolBase(ERBMKSceneObjectType::Wallmark)
 {
 
 }

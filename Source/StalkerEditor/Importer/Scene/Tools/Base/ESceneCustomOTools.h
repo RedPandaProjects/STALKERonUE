@@ -11,7 +11,7 @@ protected:
 	bool 				OnLoadSelectionAppendObject(FXRayCustomObject* obj);
 	bool 				OnLoadAppendObject		(FXRayCustomObject* obj);
 public:
-						FXRaySceneCustomOTool		(EXRayObjectClassID cls);
+						FXRaySceneCustomOTool		(ERBMKSceneObjectType cls);
 	virtual				~FXRaySceneCustomOTool		();
 
     virtual bool   		LoadStream            		(IReader&);
