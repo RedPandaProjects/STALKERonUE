@@ -2,11 +2,9 @@
 #include "../../Entitys/GroupObject/GroupObject.h"
 constexpr u16 GROUP_TOOLS_VERSION  	= 0x0000;
 #define  CHUNK_VERSION			 0x1001ul
-FXRayCustomObject* ESceneGroupTool::CreateObject(LPVOID data, LPCSTR name)
+TSharedPtr<FXRayCustomObject> ESceneGroupTool::CreateObject(LPVOID data, LPCSTR name)
 {
-	FXRayCustomObject* O	= xr_new<CGroupObject>(data, name);
-    O->FParentTools		= this;
-    return O;
+    return MakeShared<CGroupObject>(data,name); 
 }
 
 bool ESceneGroupTool::LoadStream(IReader& F)

@@ -17,10 +17,8 @@ void ESceneObjectTool::Clear		()
 }
 
 
-FXRayCustomObject* ESceneObjectTool::CreateObject(LPVOID data, LPCSTR name)
+TSharedPtr<FXRayCustomObject> ESceneObjectTool::CreateObject(LPVOID data, LPCSTR name)
 {
-	FXRayCustomObject* O	= new CSceneObject(data,name);                     
-    O->FParentTools		= this;
-    return O;
+	return MakeShared<CSceneObject>(data,name);
 }
 

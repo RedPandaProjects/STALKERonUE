@@ -17,5 +17,5 @@ public:
     bool   		LoadLTX            		(CInifile&) override;
     bool		LoadSelection      		(IReader&) override;
 
-    FXRayCustomObject* CreateObject			(LPVOID data, LPCSTR name) override;
+   TSharedPtr<FXRayCustomObject> CreateObject			(LPVOID data, LPCSTR name) override;
 };

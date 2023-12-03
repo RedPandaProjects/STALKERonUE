@@ -151,7 +151,6 @@ void CSpawnPoint::Construct(LPVOID data)
 
 CSpawnPoint::~CSpawnPoint()
 {
-	delete m_AttachedObject;
 }
 
 
@@ -204,18 +203,17 @@ bool CSpawnPoint::LoadLTX(CInifile& ini, LPCSTR sect_name)
     if(ini.line_exist(sect_name, "attached_count"))
     {
         FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-		AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+		AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
 		{
 		    R_ASSERT(!m_AttachedObject);
-		    if (object->FClassID!=ERBMKSceneObjectType::Shape)
+		    if (Object->FClassID!=ERBMKSceneObjectType::Shape)
 		    {
-			    delete object;
 				return;
 		    }
 		    // all right
-		    m_AttachedObject 		= object;
-		    object->m_pOwnerObject	= this;
-		    Scene->RemoveObject		(object, false, false);
+		    m_AttachedObject 		= Object;
+		    Object->m_pOwnerObject	= this;
+		    Scene->RemoveObject		(Object);
 
 		    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
 		    if(m_SpawnData.Valid())
@@ -270,19 +268,18 @@ bool CSpawnPoint::LoadStream(IReader& F)
 
 	// objects
     FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-	AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> object)
 	{
 	    R_ASSERT(!m_AttachedObject);
 
 	    if (object->FClassID!=ERBMKSceneObjectType::Shape)
 	    {
-		    delete object;
             return;
 	    }
 	    // all right
 	    m_AttachedObject 		= object;
 	    object->m_pOwnerObject	= this;
-	    Scene->RemoveObject		(object, false, false);
+	    Scene->RemoveObject		(object);
 
 	    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
 	    if(m_SpawnData.Valid())

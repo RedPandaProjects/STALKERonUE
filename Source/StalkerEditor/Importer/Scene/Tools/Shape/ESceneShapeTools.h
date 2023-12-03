@@ -1,10 +1,10 @@
 #pragma once
 
-class ESceneShapeTool: public FXRaySceneCustomOTool
+class ESceneShapeTool: public FRBMKSceneObjectsToolBase
 {
-	typedef FXRaySceneCustomOTool inherited;
+	typedef FRBMKSceneObjectsToolBase inherited;
 public:
-						ESceneShapeTool			():FXRaySceneCustomOTool(ERBMKSceneObjectType::Shape){;}
+						ESceneShapeTool			():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::Shape){;}
 	// definition
     IC LPCSTR			ClassName				(){return "shape";}
     IC LPCSTR			ClassDesc				(){return "Shape";}
@@ -15,5 +15,5 @@ public:
     virtual bool   		LoadLTX            		(CInifile&);
     virtual bool		LoadSelection      		(IReader&);
 
-    virtual FXRayCustomObject* CreateObject			(LPVOID data, LPCSTR name);
+    virtual TSharedPtr<FXRayCustomObject> CreateObject			(LPVOID data, LPCSTR name);
 };

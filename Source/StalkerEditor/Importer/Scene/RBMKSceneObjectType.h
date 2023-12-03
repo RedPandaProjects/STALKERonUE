@@ -22,6 +22,3 @@ enum class ERBMKSceneObjectType: uint32
     Count		        = 16,
 	Unkown,
 };
-
-typedef xr_list<FXRayCustomObject*> 		    ObjectList;
-typedef ObjectList::iterator 			        ObjectIt;

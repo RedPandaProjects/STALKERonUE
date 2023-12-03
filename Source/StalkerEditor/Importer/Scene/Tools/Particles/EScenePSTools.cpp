@@ -6,11 +6,7 @@ EScenePSTools::~EScenePSTools()
 
 }
 
-FXRayCustomObject* EScenePSTools::CreateObject(LPVOID data, LPCSTR name)
+TSharedPtr<FXRayCustomObject> EScenePSTools::CreateObject(LPVOID data, LPCSTR name)
 {
-	FXRayCustomObject* O	= new CParticlesObject(data,name);
-    O->FParentTools		= this;
-    return O;
+	return MakeShared<CParticlesObject>(data,name);
 }
-
-

@@ -6,11 +6,9 @@ ESceneWayTool::~ESceneWayTool()
 
 }
 
-FXRayCustomObject* ESceneWayTool::CreateObject(LPVOID data, LPCSTR name)
+TSharedPtr<FXRayCustomObject> ESceneWayTool::CreateObject(LPVOID data, LPCSTR name)
 {
-	FXRayCustomObject* O	= new CWayObject(data,name);
-    O->FParentTools		= this;
-    return O;
+    return MakeShared<CWayObject>(data,name);
 }
 
 

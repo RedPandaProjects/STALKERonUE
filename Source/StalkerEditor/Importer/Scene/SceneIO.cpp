@@ -346,7 +346,7 @@ bool EScene::LoadToolLTX(ERBMKSceneObjectType clsid, LPCSTR fn)
 }
 
 
-bool EScene::ReadObjectStream(IReader& F, FXRayCustomObject*& O)
+TSharedPtr<FXRayCustomObject> EScene::ReadObjectStream(IReader& F)
 {
     ERBMKSceneObjectType clsid		= ERBMKSceneObjectType::Unkown;
     R_ASSERT				(F.find_chunk(CHUNK_OBJECT_CLASS));
@@ -354,53 +354,43 @@ bool EScene::ReadObjectStream(IReader& F, FXRayCustomObject*& O)
 
     if (GetTool(clsid) == nullptr)
     {
-        return false;
+        return nullptr;
     }
 
-	O 						= GetOTool(clsid)->CreateObject(0,0);
+	TSharedPtr<FXRayCustomObject> O = GetOTool(clsid)->CreateObject(0,0);
 
     IReader* S 				= F.open_chunk(CHUNK_OBJECT_BODY);
     R_ASSERT				(S);
     bool bRes 				= O->LoadStream(*S);
     S->close				();
-
 	if (!bRes)
     {
-        delete			O;
-        O = nullptr;
+        return nullptr;
     }
-
-	return bRes;
+	return O;
 }
 
-bool EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name, FXRayCustomObject*& O)
+TSharedPtr<FXRayCustomObject> EScene::ReadObjectLTX(CInifile& ini, LPCSTR sect_name)
 {
     ERBMKSceneObjectType clsid = ERBMKSceneObjectType::Unkown;
     clsid 					= ERBMKSceneObjectType(ini.r_u32(sect_name,"clsid"));
 
     if (GetTool(clsid) == nullptr)
     {
-        return false;
+        return nullptr;
     }
 
-	O 						= GetOTool(clsid)->CreateObject(0,0);
+	TSharedPtr<FXRayCustomObject> O = GetOTool(clsid)->CreateObject(0,0);
 
     bool bRes 				= O->LoadLTX(ini, sect_name);
 
 	if (!bRes)
 	{
-		delete			O;
-		O = nullptr;
+		return nullptr;
 	}
-
-	return bRes;
+	return O;
 }
 
-bool EScene::OnLoadAppendObject(FXRayCustomObject* O)
-{
-	AppendObject	(O,false);
-    return true;
-}
 
 
 bool EScene::LoadLTX(LPCSTR map_name, bool bUndo)
@@ -518,9 +508,9 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
         	obj_cnt 		= F->r_u32();
 
       	FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-		AppendObjectDelegate.BindLambda([this](FXRayCustomObject* Object)
+		AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
 		{
-			AppendObject	(Object,false);
+			AppendObject	(Object);
 		});
         ReadObjectsStream	(*F,CHUNK_OBJECT_LIST, AppendObjectDelegate);
 
@@ -560,14 +550,6 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
 	return false;
 }
 
-bool EScene::OnLoadSelectionAppendObject(FXRayCustomObject* obj)
-{
-    string256 				buf;
-    GenObjectName			(obj->FClassID,buf,obj->GetName());
-    obj->SetName(buf);
-    AppendObject			(obj, false);
-    return 					true;
-}
 
 
 bool EScene::LoadSelection( LPCSTR fname )
@@ -597,12 +579,12 @@ bool EScene::LoadSelection( LPCSTR fname )
             return false;
         }
     	FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-		AppendObjectDelegate.BindLambda([this](FXRayCustomObject* Object)
+		AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
 		{
 			string256 				buf;
 		    GenObjectName			(Object->FClassID,buf,Object->GetName());
 		    Object->SetName(buf);
-		    AppendObject			(Object, false);
+		    AppendObject			(Object);
 		});
         // Objects
         if (!ReadObjectsStream(*F,CHUNK_OBJECT_LIST, AppendObjectDelegate))
@@ -639,19 +621,17 @@ bool EScene::ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_
     for (u32 i = 0; i < count; ++i)
     {
         FCStringAnsi::Sprintf(buff, "%s_%s_%d", sect_name_parent, sect_name_prefix, i);
-        FXRayCustomObject* obj = NULL;
-
-        if (ReadObjectLTX(ini, buff, obj))
+        if (TSharedPtr<FXRayCustomObject> Object = ReadObjectLTX(ini, buff))
         {
-            LPCSTR obj_name = obj->GetName();
-            FXRayCustomObject* existing = FindObjectByName(obj_name, obj->FClassID);
+            LPCSTR obj_name = Object->GetName();
+            TSharedPtr<FXRayCustomObject> existing = FindObjectByName(obj_name, Object->FClassID);
             if (existing)
             {
                 string256 				buf;
-                GenObjectName(obj->FClassID, buf, obj->GetName());
-                obj->SetName(buf);
+                GenObjectName(Object->FClassID, buf, Object->GetName());
+                Object->SetName(buf);
             }
-			on_append.Execute(obj);
+			on_append.Execute(Object);
 
         }
 
@@ -671,47 +651,17 @@ bool EScene::ReadObjectsStream(IReader& F, u32 chunk_id, FRMBKSceneAppendObjectD
         IReader* O = OBJ->open_chunk(0);
         for (int count = 1; O; ++count)
         {
-            FXRayCustomObject* obj = NULL;
-            if (ReadObjectStream(*O, obj))
+            if (TSharedPtr<FXRayCustomObject> Object = ReadObjectStream(*O))
             {
-                LPCSTR obj_name = obj->GetName();
-                FXRayCustomObject* existing = FindObjectByName(obj_name, obj->FClassID);
+                LPCSTR obj_name = Object->GetName();
+                TSharedPtr<FXRayCustomObject> existing = FindObjectByName(obj_name, Object->FClassID);
                 if (existing)
                 {
-                    /*if(g_frmConflictLoadObject->m_result!=2 && g_frmConflictLoadObject->m_result!=4 && g_frmConflictLoadObject->m_result!=6)
-                    {
-                        g_frmConflictLoadObject->m_existing_object 	= existing;
-                        g_frmConflictLoadObject->m_new_object 		= obj;
-                        g_frmConflictLoadObject->Prepare			();
-                        g_frmConflictLoadObject->ShowModal			();
-                    }
-                    switch(g_frmConflictLoadObject->m_result)
-                    {
-                        case 1: //Overwrite
-                        case 2: //Overwrite All
-                        {
-                           bool res = RemoveObject		(existing, true, true);
-                            if(!res)
-                                Msg("! RemoveObject [%s] failed", existing->Name);
-                             else
-                                xr_delete(existing);
-                        }break;
-                        case 3: //Insert new
-                        case 4: //Insert new All*/
-
                     string256 				buf;
-                    GenObjectName(obj->FClassID, buf, obj->GetName());
-                    obj->SetName(buf);
-                    /*}break;
-                    case 0: //Cancel
-                    case 5: //Skip
-                    case 6: //Skip All
-                    {
-                        xr_delete(obj);
-                    }break;
-                }*/
+                    GenObjectName(Object->FClassID, buf, Object->GetName());
+                    Object->SetName(buf);
                 }
-                on_append.Execute(obj);
+                on_append.Execute(Object);
             }
             else
                 bRes = false;

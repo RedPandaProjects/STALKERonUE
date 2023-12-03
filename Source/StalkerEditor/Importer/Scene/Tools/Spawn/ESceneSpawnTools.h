@@ -2,9 +2,9 @@
 
 class CEditableObject;
 
-class ESceneSpawnTool: public FXRaySceneCustomOTool
+class ESceneSpawnTool: public FRBMKSceneObjectsToolBase
 {
-	typedef FXRaySceneCustomOTool inherited;
+	typedef FRBMKSceneObjectsToolBase inherited;
     friend class 		CSpawnPoint;
 protected:
 	enum{
@@ -32,5 +32,5 @@ public:
     virtual void		GetStaticDesc			(int& v_cnt, int& f_cnt, bool b_selected_only);
     virtual bool		ExportStatic			(SceneBuilder* B, bool b_selected_only);
 */
-    virtual FXRayCustomObject* CreateObject			(LPVOID data, LPCSTR name);
+    virtual TSharedPtr<FXRayCustomObject> CreateObject			(LPVOID data, LPCSTR name);
 };

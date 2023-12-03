@@ -1,10 +1,10 @@
 #pragma once
 
-class EScenePSTools: public FXRaySceneCustomOTool
+class EScenePSTools: public FRBMKSceneObjectsToolBase
 {
-	typedef FXRaySceneCustomOTool inherited;
+	typedef FRBMKSceneObjectsToolBase inherited;
 public:
-					EScenePSTools			():FXRaySceneCustomOTool(ERBMKSceneObjectType::ParticleSystem){;}
+					EScenePSTools			():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::ParticleSystem){;}
                     ~EScenePSTools          () override;
 	// definition
     LPCSTR			ClassName				() override {return "ps";}
@@ -15,5 +15,5 @@ public:
     bool   		    LoadLTX            		(CInifile&) override;
     bool		    LoadSelection      		(IReader&) override;
 
-    FXRayCustomObject* CreateObject			    (LPVOID data, LPCSTR name) override;
+  TSharedPtr<FXRayCustomObject> CreateObject			    (LPVOID data, LPCSTR name) override;
 };

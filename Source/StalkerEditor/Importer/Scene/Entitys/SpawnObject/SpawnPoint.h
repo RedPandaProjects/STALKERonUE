@@ -66,7 +66,7 @@ public:
 	};
 
 	SSpawnData    	m_SpawnData;
-	FXRayCustomObject*	m_AttachedObject;
+	TSharedPtr<FXRayCustomObject>	m_AttachedObject;
 
     shared_str		m_rpProfile;
     union{

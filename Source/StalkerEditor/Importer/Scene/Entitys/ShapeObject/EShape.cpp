@@ -93,72 +93,72 @@ void CEditShape::add_box(const Fmatrix& B)
 	shapes.back().data.box.set(B);
 
 }
+//
+//void CEditShape::Attach(CEditShape* from)
+//{
+//	ApplyScale				();
+//	// transfer data
+//    from->ApplyScale		();
+//	Fmatrix M 				= from->_Transform();
+//    M.mulA_43				(_ITransform());
+//	for (ShapeIt it=from->shapes.begin(); it!=from->shapes.end(); it++){
+//		switch (it->type){
+//		case cfSphere:{
+//            Fsphere& T		= it->data.sphere;
+//            M.transform_tiny(T.P);
+//            add_sphere		(T);
+//		}break;
+//		case cfBox:{
+//            Fmatrix B		= it->data.box;
+//            B.mulA_43		(M);
+//            add_box			(B);
+//		}break;
+//        default: THROW;
+//		}
+//    }
+//    // common
+//    Scene->RemoveObject		(from);
+//    delete from;
+//
+//}
 
-void CEditShape::Attach(CEditShape* from)
-{
-	ApplyScale				();
-	// transfer data
-    from->ApplyScale		();
-	Fmatrix M 				= from->_Transform();
-    M.mulA_43				(_ITransform());
-	for (ShapeIt it=from->shapes.begin(); it!=from->shapes.end(); it++){
-		switch (it->type){
-		case cfSphere:{
-            Fsphere& T		= it->data.sphere;
-            M.transform_tiny(T.P);
-            add_sphere		(T);
-		}break;
-		case cfBox:{
-            Fmatrix B		= it->data.box;
-            B.mulA_43		(M);
-            add_box			(B);
-		}break;
-        default: THROW;
-		}
-    }
-    // common
-    Scene->RemoveObject		(from,true,true);
-    delete from;
-
-}
-
-void CEditShape::Detach()
-{
-	if (shapes.size()>1){
-    	
-        ApplyScale		();
-        // create scene shapes
-        const Fmatrix& M = _Transform();
-        ShapeIt it=shapes.begin(); it++;
-        for (; it!=shapes.end(); it++){
-            string256 namebuffer;
-            Scene->GenObjectName	(ERBMKSceneObjectType::Shape, namebuffer, GetName());
-            CEditShape* shape 	= (CEditShape*)Scene->GetOTool(FClassID)->CreateObject(0, namebuffer);
-            switch (it->type){
-            case cfSphere:{
-                Fsphere	T		= it->data.sphere;
-                M.transform_tiny(T.P);
-                shape->SetPosition( T.P);
-                T.P.set			(0,0,0);
-                shape->add_sphere(T);
-            }break;
-            case cfBox:{
-                Fmatrix B		= it->data.box;
-                B.mulA_43		(M);
-                shape->SetPosition(B.c);
-                B.c.set			(0,0,0);
-                shape->add_box	(B);
-            }break;
-            default: THROW;
-            }
-            Scene->AppendObject	(shape,false);
-        }
-        // erase shapes in base object
-        it=shapes.begin(); it++;
-        shapes.erase(it,shapes.end());
-
-    }
-}
+//void CEditShape::Detach()
+//{
+//	if (shapes.size()>1){
+//    	
+//        ApplyScale		();
+//        // create scene shapes
+//        const Fmatrix& M = _Transform();
+//        ShapeIt it=shapes.begin(); it++;
+//        for (; it!=shapes.end(); it++){
+//            string256 namebuffer;
+//            Scene->GenObjectName	(ERBMKSceneObjectType::Shape, namebuffer, GetName());
+//            CEditShape* shape 	= (CEditShape*)Scene->GetOTool(FClassID)->CreateObject(0, namebuffer);
+//            switch (it->type){
+//            case cfSphere:{
+//                Fsphere	T		= it->data.sphere;
+//                M.transform_tiny(T.P);
+//                shape->SetPosition( T.P);
+//                T.P.set			(0,0,0);
+//                shape->add_sphere(T);
+//            }break;
+//            case cfBox:{
+//                Fmatrix B		= it->data.box;
+//                B.mulA_43		(M);
+//                shape->SetPosition(B.c);
+//                B.c.set			(0,0,0);
+//                shape->add_box	(B);
+//            }break;
+//            default: THROW;
+//            }
+//            Scene->AppendObject	(shape,false);
+//        }
+//        // erase shapes in base object
+//        it=shapes.begin(); it++;
+//        shapes.erase(it,shapes.end());
+//
+//    }
+//}
 
 void CEditShape::OnDetach()
 {

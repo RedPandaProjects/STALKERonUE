@@ -9,7 +9,7 @@ class IWriter;
 class COMotion;
 class CCustomMotion;
 class SSceneSummary;
-class FXRaySceneCustomOTool;
+class FRBMKSceneObjectsToolBase;
 
 struct SExportStreamItem
 {
@@ -166,7 +166,7 @@ public:
     virtual void* QueryInterface(ERBMKSceneObjectType InClassID) { if(InClassID == ERBMKSceneObjectType::AllTypes) return this; return nullptr;;}
 
     ERBMKSceneObjectType		FClassID;
-    FXRaySceneCustomOTool* FParentTools;
+    FRBMKSceneObjectsToolBase* FParentTools;
 private:
     int m_ButtonId;
     float m_FromTime;

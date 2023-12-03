@@ -14,7 +14,7 @@ public:
 	virtual const char*                     ClassName               () = 0;
 
     virtual void                            ExportToCurrentWorld    ()  {};
-    virtual class FXRaySceneCustomOTool*    CastToSceneCustomOTool  () {return nullptr;}
+    virtual class FRBMKSceneObjectsToolBase*    CastToSceneCustomOTool  () {return nullptr;}
     
     ERBMKSceneObjectType                    ObjectType;
 };

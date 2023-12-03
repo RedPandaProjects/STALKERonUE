@@ -89,9 +89,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportStaticMeshes)
 	{
-		ObjectList ListObj;
-		Scene->GetObjects(ERBMKSceneObjectType::SceneObject,ListObj);
-		for (FXRayCustomObject* Object : ListObj)
+		for (TSharedPtr<FXRayCustomObject>& Object : Scene->GetOTool(ERBMKSceneObjectType::SceneObject)->Objects)
 		{
 			CSceneObject* SceneObject = reinterpret_cast<CSceneObject*>(Object->QueryInterface(ERBMKSceneObjectType::SceneObject));
 			CEditableObject* EditableObject = SceneObject->GetReference();
@@ -126,9 +124,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportParticles)
 	{
-		ObjectList ListPS;
-		Scene->GetObjects(ERBMKSceneObjectType::ParticleSystem,ListPS);
-		for (FXRayCustomObject* Object : ListPS)
+		for (TSharedPtr<FXRayCustomObject>& Object : Scene->GetOTool(ERBMKSceneObjectType::ParticleSystem)->Objects)
 		{
 			CParticlesObject* PSObject = reinterpret_cast<CParticlesObject*>(Object->QueryInterface(ERBMKSceneObjectType::ParticleSystem));
 			FString Name =  PSObject->m_RefName.c_str();
@@ -180,9 +176,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportWayObjects)
 	{
-		ObjectList ListWay;
-		Scene->GetObjects(ERBMKSceneObjectType::Way,ListWay);
-		for (FXRayCustomObject* Object : ListWay)
+		for (TSharedPtr<FXRayCustomObject>& Object : Scene->GetOTool(ERBMKSceneObjectType::Way)->Objects)
 		{
 			CWayObject* WayObject = reinterpret_cast<CWayObject*>(Object->QueryInterface(ERBMKSceneObjectType::Way));
 			if (WayObject&& WayObject->m_WayPoints.size())
@@ -212,9 +206,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportSpawnObjects)
 	{
-		ObjectList ListSpawn;
-		Scene->GetObjects(ERBMKSceneObjectType::SpawnPoint,ListSpawn);
-		for (FXRayCustomObject* Object : ListSpawn)
+		for (TSharedPtr<FXRayCustomObject>& Object : Scene->GetOTool(ERBMKSceneObjectType::SpawnPoint)->Objects)
 		{
 			CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(ERBMKSceneObjectType::SpawnPoint));
 			if (SpawnObject && SpawnObject->m_SpawnData.m_Data)
@@ -394,9 +386,9 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 
 			// collect verts&&faces
 			{
-				for (ObjectIt it=ObjectTool->GetObjects().begin(); it != ObjectTool->GetObjects().end(); it++)
+				for (TSharedPtr<FXRayCustomObject>& Object : ObjectTool->Objects)
 				{
-					CSceneObject* obj 		= reinterpret_cast<CSceneObject*>((*it)->QueryInterface(ERBMKSceneObjectType::SceneObject));
+					CSceneObject* obj 		= reinterpret_cast<CSceneObject*>(Object->QueryInterface(ERBMKSceneObjectType::SceneObject));
 					VERIFY                  (obj);
 					if (obj->IsStatic())
 					{

@@ -22,16 +22,6 @@ CGroupObject::~CGroupObject()
 {
 }
 
-u32 CGroupObject::GetObjects(ObjectList& lst)
-{
-	lst.clear();
-    for (FXRayCustomObject*Obect:m_ObjectsInGroup)
-    {
-        lst.push_back	(Obect);
-    }
-    return lst.size();
-}
-
 void CGroupObject::ClearInternal(xr_list<FXRayCustomObject*>& Objects)
 {
     for (FXRayCustomObject*Object:Objects)
@@ -74,23 +64,23 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     {
         
 		FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-    	AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+    	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
         {
-		    object->m_pOwnerObject			= this;
-		    object->m_CO_Flags.set			(flObjectInGroup, TRUE);
-		    m_ObjectsInGroup.push_back(object);
+		    Object->m_pOwnerObject			= this;
+		    Object->m_CO_Flags.set			(flObjectInGroup, TRUE);
+		    m_ObjectsInGroup.Add(Object);
 
 
 		    string256 			buf;
-		    Scene->GenObjectName(object->FClassID, buf, object->GetName());
-		    LPCSTR N = object->GetName();
+		    Scene->GenObjectName(Object->FClassID, buf, Object->GetName());
+		    LPCSTR N = Object->GetName();
 		    if (xr_strcmp(N,buf)!=0)
 		    {
-       			Msg					("Load_Append name changed from[%s] to[%s]",object->GetName(), buf);
-		        object->SetName(buf);
+       			Msg					("Load_Append name changed from[%s] to[%s]",Object->GetName(), buf);
+		        Object->SetName(buf);
 		    }
 
-			Scene->AppendObject				(object, false);
+			Scene->AppendObject				(Object);
 		}
 		);
 	    Scene->ReadObjectsLTX			(ini, sect_name, "ingroup", AppendObjectDelegate);
@@ -104,13 +94,10 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
 
     if(version<0x0012)
     {
-        for (FXRayCustomObject*Obect:m_ObjectsInGroup)
+        for (TSharedPtr<FXRayCustomObject>& Obect :m_ObjectsInGroup)
         {
-            if(Obect)
-            {
-            	Obect->m_CO_Flags.set(flObjectInGroup, TRUE);
-            	Obect->m_CO_Flags.set(flObjectInGroupUnique, TRUE);
-            }
+			Obect->m_CO_Flags.set(flObjectInGroup, TRUE);
+        	Obect->m_CO_Flags.set(flObjectInGroupUnique, TRUE);
         }
     }
 
@@ -153,27 +140,28 @@ bool CGroupObject::LoadStream(IReader& F)
             F.r_stringZ				(m_ObjectsInGroup.back().ObjectName);
         }
 */        
-    }else
+    }
+	else
     {
 
 		FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-    	AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+    	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
         {
-		    object->m_pOwnerObject			= this;
-		    object->m_CO_Flags.set			(flObjectInGroup, TRUE);
-		    m_ObjectsInGroup.push_back(object);
+		    Object->m_pOwnerObject			= this;
+		    Object->m_CO_Flags.set			(flObjectInGroup, TRUE);
+		    m_ObjectsInGroup.Add(Object);
 
 
 		    string256 			buf;
-		    Scene->GenObjectName(object->FClassID, buf, object->GetName());
-		    LPCSTR N = object->GetName();
+		    Scene->GenObjectName(Object->FClassID, buf, Object->GetName());
+		    LPCSTR N = Object->GetName();
 		    if (xr_strcmp(N,buf)!=0)
 		    {
-       			Msg					("Load_Append name changed from[%s] to[%s]",object->GetName(), buf);
-		        object->SetName(buf);
+       			Msg					("Load_Append name changed from[%s] to[%s]",Object->GetName(), buf);
+		        Object->SetName(buf);
 		    }
 
-			Scene->AppendObject				(object, false);
+			Scene->AppendObject				(Object);
 		}
 		);
 	    Scene->ReadObjectsStream(F,GROUPOBJ_CHUNK_OBJECT_LIST, AppendObjectDelegate);
@@ -189,7 +177,7 @@ bool CGroupObject::LoadStream(IReader& F)
      
     if(version<0x0012)
     {
-        for (FXRayCustomObject*Obect:m_ObjectsInGroup)
+        for (TSharedPtr<FXRayCustomObject>& Obect :m_ObjectsInGroup)
         {
             if(Obect)
             {
@@ -205,6 +193,6 @@ bool CGroupObject::LoadStream(IReader& F)
 void CGroupObject::OnUpdateTransform()
 {
 	inherited::OnUpdateTransform();
-	 for (FXRayCustomObject*Obect:m_ObjectsInGroup)
+	 for (TSharedPtr<FXRayCustomObject>&Obect:m_ObjectsInGroup)
     	Obect->OnUpdateTransform();
 }

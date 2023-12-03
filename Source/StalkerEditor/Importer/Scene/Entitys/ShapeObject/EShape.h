@@ -33,8 +33,8 @@ public:
   	virtual bool 		LoadLTX				(CInifile& ini, LPCSTR sect_name);
     
     // tools
-    void			Attach		(CEditShape* from);
-    void			Detach		();
+    //void			Attach		(CEditShape* from);
+    //void			Detach		();
 
     ShapeVec&		GetShapes	(){return shapes;}
 

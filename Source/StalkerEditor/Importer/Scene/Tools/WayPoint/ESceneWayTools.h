@@ -1,10 +1,10 @@
 #pragma once
 
-class ESceneWayTool: public FXRaySceneCustomOTool
+class ESceneWayTool: public FRBMKSceneObjectsToolBase
 {
-	typedef FXRaySceneCustomOTool inherited;
+	typedef FRBMKSceneObjectsToolBase inherited;
 public:
-					ESceneWayTool			():FXRaySceneCustomOTool(ERBMKSceneObjectType::Way){;}
+					ESceneWayTool			():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::Way){;}
                     ~ESceneWayTool          () override;
 	// definition
     LPCSTR			ClassName				() override {return "way";}
@@ -15,5 +15,5 @@ public:
     bool   		    LoadLTX            		(CInifile&) override;
     bool		    LoadSelection      		(IReader&) override;
 
-    FXRayCustomObject* CreateObject			    (LPVOID data, LPCSTR name) override;
+    TSharedPtr<FXRayCustomObject> CreateObject			    (LPVOID data, LPCSTR name) override;
 };

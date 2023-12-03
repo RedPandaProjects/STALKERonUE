@@ -30,7 +30,7 @@ void FRBMKSceneDetailObjectTool::Clear()
 {
 	ClearColorIndices	();
     ClearSlots			();
-    SnapObjects.clear   ();
+    SnapObjects.Empty   ();
 }
 
 void FRBMKSceneDetailObjectTool::ExportToCurrentWorld()
@@ -263,14 +263,14 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
         for (int32 i=0; i<Count; i++)
         {
     	    F.r_stringZ	(BufferStr,sizeof(BufferStr));
-            FXRayCustomObject* O = Scene->FindObjectByName(BufferStr,ERBMKSceneObjectType::SceneObject);
+	        TSharedPtr<FXRayCustomObject>  O = Scene->FindObjectByName(BufferStr, ERBMKSceneObjectType::SceneObject);
             if (!O)	
             {
 				UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Can't find snap object '%S'."),BufferStr);
             }
             else	
             {
-            	SnapObjects.push_back(O);
+            	SnapObjects.Add(O);
             }
         }
     }
@@ -386,7 +386,7 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 	
 	SBoxPickInfoVec		PickInfos;
 
-	for(FXRayCustomObject*Object:SnapObjects)
+	for(TSharedPtr<FXRayCustomObject>& Object :SnapObjects)
 	{
 		if(CSceneObject* SceneObject =  reinterpret_cast<CSceneObject*>(Object->QueryInterface(ERBMKSceneObjectType::SceneObject)))
 		{

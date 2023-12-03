@@ -41,23 +41,21 @@ EScene::~EScene()
 }
 
 
-void EScene::AppendObject( FXRayCustomObject* object, bool bUndo )
+void EScene::AppendObject(TSharedPtr<FXRayCustomObject> Object )
 {
-	VERIFY			  	(object);
-	VERIFY				(m_Valid);
-    FXRaySceneCustomOTool* Mt	= GetOTool(object->FClassID);
-    Mt->_AppendObject	(object);
+	if(ensure(Object))
+	{
+		FRBMKSceneObjectsToolBase* Mt	= GetOTool(Object->FClassID);
+		Mt->Objects.Add(Object);
+	}
 }
 
-bool EScene::RemoveObject( FXRayCustomObject* object, bool bUndo, bool bDeleting )
+bool EScene::RemoveObject(TSharedPtr<FXRayCustomObject> Object )
 {
-	VERIFY				(object);
-	VERIFY				(m_Valid);
-
-    FXRaySceneCustomOTool* mt 	= GetOTool(object->FClassID);
-    if (mt)
+    FRBMKSceneObjectsToolBase* mt 	= GetOTool(Object->FClassID);
+    if (mt&&Object)
     {
-    	mt->_RemoveObject(object);
+    	mt->Objects.Remove(Object);
     }
     return true;
 }
@@ -87,14 +85,14 @@ xr_string EScene::LevelPath()
 }
 
 
-FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType classfilter)
+TSharedPtr<FXRayCustomObject>  EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType classfilter)
 {
 	if (!name)
 	{
 		return nullptr;
 	}
 
-	FXRayCustomObject* Result = nullptr;
+	TSharedPtr<FXRayCustomObject> Result = nullptr;
 	if (classfilter == ERBMKSceneObjectType::AllTypes)
 	{
 		for(auto&[Key,Value]:SceneTools)
@@ -104,7 +102,7 @@ FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType cl
 				continue;
 			}
 
-			if(FXRaySceneCustomOTool* SceneCustomOTool = Value->CastToSceneCustomOTool())
+			if(FRBMKSceneObjectsToolBase* SceneCustomOTool = Value->CastToSceneCustomOTool())
 			{
 				Result = SceneCustomOTool->FindObjectByName(name);
 				if(Result)
@@ -116,7 +114,7 @@ FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType cl
 	}
 	else 
 	{
-		if(FXRaySceneCustomOTool* SceneCustomOTool = GetOTool(classfilter))
+		if(FRBMKSceneObjectsToolBase* SceneCustomOTool = GetOTool(classfilter))
 		{
 			Result = SceneCustomOTool->FindObjectByName(name);
 			if(Result)
@@ -129,9 +127,9 @@ FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType cl
 }
 
 
-FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, FXRayCustomObject* pass_object)
+TSharedPtr<FXRayCustomObject>  EScene::FindObjectByName(LPCSTR name)
 {
-	FXRayCustomObject* Result = 0;
+	TSharedPtr<FXRayCustomObject>  Result = 0;
 	for(auto&[Key,Value]:SceneTools)
 	{
 		if(!Value)
@@ -139,9 +137,9 @@ FXRayCustomObject* EScene::FindObjectByName(LPCSTR name, FXRayCustomObject* pass
 			continue;
 		}
 
-		if(FXRaySceneCustomOTool* SceneCustomOTool = Value->CastToSceneCustomOTool())
+		if(FRBMKSceneObjectsToolBase* SceneCustomOTool = Value->CastToSceneCustomOTool())
 		{
-			Result = SceneCustomOTool->FindObjectByName(name,pass_object);
+			Result = SceneCustomOTool->FindObjectByName(name);
 			if(Result)
 			{
 				return Result;
@@ -175,8 +173,7 @@ void EScene::GenObjectName(ERBMKSceneObjectType cls_id, char* buffer, const char
         {
             temp.Printf("%02d", i);
         }
-
-        FindObjectByNameCB(temp.c_str(), result);
+		result = FindObjectByName(temp.c_str()).IsValid();
         if (!result)
         {
             xr_strcpy(buffer, 256, temp.c_str());
@@ -213,28 +210,6 @@ bool EScene::GetSubstObjectName(const xr_string& _from, xr_string& _to) const
     return false;
 }
 
-void EScene::GetObjects(ERBMKSceneObjectType InType, ObjectList& OutObjects)
-{
-	ObjectList&ObjectsFromTool = GetOTool(InType)->GetObjects();
-	for (FXRayCustomObject* Object : ObjectsFromTool)
-	{
-		OutObjects.push_back(Object);
-	}
-	/*for (auto& GroupObj : ListObj(ERBMKSceneObjectType::Group))
-	{
-		ObjectList ObjectsFromGroups;
-		CGroupObject* Group = reinterpret_cast<CGroupObject*>(GroupObj->QueryInterface(ERBMKSceneObjectType::Group));
-		Group->GetObjects(ObjectsFromGroups);
-		for (auto& Object : ObjectsFromGroups)
-		{
-			if (GroupObj->ObjectType == InType)
-			{
-				OutObjects.push_back(Object);
-			}
-		}
-	}*/
-}
-
 int EScene::ObjCount()
 {
 	int32 Counter = 0;
@@ -246,9 +221,9 @@ int EScene::ObjCount()
 			continue;
 		}
 
-		if(FXRaySceneCustomOTool* SceneCustomOTool = Value->CastToSceneCustomOTool())
+		if(FRBMKSceneObjectsToolBase* SceneCustomOTool = Value->CastToSceneCustomOTool())
 		{
-			Counter += SceneCustomOTool->ObjCount();
+			Counter += SceneCustomOTool->Objects.Num();
 		}
 	}
 
