@@ -155,42 +155,6 @@ CSpawnPoint::~CSpawnPoint()
 }
 
 
-bool CSpawnPoint::AttachObject(FXRayCustomObject* obj)
-{
-	bool bAllowed = false;
-    //  
-    if (m_SpawnData.Valid()){
-    	switch(obj->FClassID){
-        case ERBMKSceneObjectType::Shape:
-	    	bAllowed = !!m_SpawnData.m_Data->shape();
-        break;
-//        case ERBMKSceneObjectType::SceneObject:
-//	    	bAllowed = !!dynamic_cast<xrSE_Visualed*>(m_SpawnData.m_Data);
-//        break;
-        }
-    }
-    //  
-	if (bAllowed)
-    {
-        DetachObject				();
-        OnAppendObject				(obj);
-        m_AttachedObject->OnAttach	(this);
-        SetPosition( m_AttachedObject->GetPosition());
-        FRotation 	= m_AttachedObject->GetRotation();
-        SetScale( 		 m_AttachedObject->GetScale());
-    }
-    return bAllowed;
-}
-
-void CSpawnPoint::DetachObject()
-{
-	if (m_AttachedObject)
-    {
-		m_AttachedObject->OnDetach();
-        Scene->AppendObject(m_AttachedObject,false);
-    	m_AttachedObject = 0;
-    }
-}
 
 bool CSpawnPoint::CreateSpawnData(LPCSTR entity_ref)
 {
@@ -198,27 +162,6 @@ bool CSpawnPoint::CreateSpawnData(LPCSTR entity_ref)
     m_SpawnData.Destroy	();
     m_SpawnData.Create	(entity_ref);
     return m_SpawnData.Valid();
-}
-bool CSpawnPoint::OnAppendObject(FXRayCustomObject* object)
-{
-	R_ASSERT(!m_AttachedObject);
-    if (object->FClassID!=ERBMKSceneObjectType::Shape) return false;
-    // all right
-    m_AttachedObject 		= object;
-    object->m_pOwnerObject	= this;
-    Scene->RemoveObject		(object, false, false);
-
-    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
-    if(m_SpawnData.Valid())
-    {
-        if(pSettings->line_exist(m_SpawnData.m_Data->name(),"shape_transp_color"))
-        {
-            sh->m_DrawTranspColor = pSettings->r_color(m_SpawnData.m_Data->name(),"shape_transp_color");
-            sh->m_DrawEdgeColor = pSettings->r_color(m_SpawnData.m_Data->name(),"shape_edge_color");
-        }
-    }
-
-    return true;
 }
 enum EPointType
 
@@ -259,7 +202,33 @@ bool CSpawnPoint::LoadLTX(CInifile& ini, LPCSTR sect_name)
     }
 	// objects
     if(ini.line_exist(sect_name, "attached_count"))
-	    Scene->ReadObjectsLTX(ini, sect_name, "attached", EScene::TAppendObject(this, &CSpawnPoint::OnAppendObject));
+    {
+        FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
+		AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+		{
+		    R_ASSERT(!m_AttachedObject);
+		    if (object->FClassID!=ERBMKSceneObjectType::Shape)
+		    {
+			    delete object;
+				return;
+		    }
+		    // all right
+		    m_AttachedObject 		= object;
+		    object->m_pOwnerObject	= this;
+		    Scene->RemoveObject		(object, false, false);
+
+		    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
+		    if(m_SpawnData.Valid())
+		    {
+		        if(pSettings->line_exist(m_SpawnData.m_Data->name(),"shape_transp_color"))
+		        {
+		            sh->m_DrawTranspColor = pSettings->r_color(m_SpawnData.m_Data->name(),"shape_transp_color");
+		            sh->m_DrawEdgeColor = pSettings->r_color(m_SpawnData.m_Data->name(),"shape_edge_color");
+		        }
+		    }
+		});
+    	Scene->ReadObjectsLTX(ini, sect_name, "attached", AppendObjectDelegate);
+    }
 
 	UpdateTransform	();
 
@@ -300,7 +269,32 @@ bool CSpawnPoint::LoadStream(IReader& F)
     }
 
 	// objects
-    Scene->ReadObjectsStream(F,SPAWNPOINT_CHUNK_ATTACHED_OBJ, EScene::TAppendObject(this, &CSpawnPoint::OnAppendObject));
+    FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
+	AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+	{
+	    R_ASSERT(!m_AttachedObject);
+
+	    if (object->FClassID!=ERBMKSceneObjectType::Shape)
+	    {
+		    delete object;
+            return;
+	    }
+	    // all right
+	    m_AttachedObject 		= object;
+	    object->m_pOwnerObject	= this;
+	    Scene->RemoveObject		(object, false, false);
+
+	    CEditShape* sh = reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
+	    if(m_SpawnData.Valid())
+	    {
+	        if(pSettings->line_exist(m_SpawnData.m_Data->name(),"shape_transp_color"))
+	        {
+	            sh->m_DrawTranspColor = pSettings->r_color(m_SpawnData.m_Data->name(),"shape_transp_color");
+	            sh->m_DrawEdgeColor = pSettings->r_color(m_SpawnData.m_Data->name(),"shape_edge_color");
+	        }
+	    }
+	});
+    Scene->ReadObjectsStream(F,SPAWNPOINT_CHUNK_ATTACHED_OBJ, AppendObjectDelegate);
 
     CEditShape* shape	= m_AttachedObject?reinterpret_cast<CEditShape*>(m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape)):nullptr;
     if (shape) 	SetScale(shape->GetScale());

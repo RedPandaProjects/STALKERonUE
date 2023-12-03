@@ -42,26 +42,7 @@ void CGroupObject::ClearInternal(xr_list<FXRayCustomObject*>& Objects)
     Objects.clear();
 }
 
-bool CGroupObject::AppendObjectLoadCB(FXRayCustomObject* object)
-{
-    object->m_pOwnerObject			= this;
-    object->m_CO_Flags.set			(flObjectInGroup, TRUE);
-    m_ObjectsInGroup.push_back(object);
 
-
-    string256 			buf;
-    Scene->GenObjectName(object->FClassID, buf, object->GetName());
-    LPCSTR N = object->GetName();
-    if (xr_strcmp(N,buf)!=0)
-    {
-       	Msg					("Load_Append name changed from[%s] to[%s]",object->GetName(), buf);
-        object->SetName(buf);
-    }
-
-	Scene->AppendObject				(object, false);
-    
-    return true;
-}
 
 void  CGroupObject::SetRefName(LPCSTR nm)
 {
@@ -91,7 +72,28 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
         return false;
     }else
     {
-	    Scene->ReadObjectsLTX			(ini, sect_name, "ingroup", EScene::TAppendObject(this, &CGroupObject::AppendObjectLoadCB));
+        
+		FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
+    	AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+        {
+		    object->m_pOwnerObject			= this;
+		    object->m_CO_Flags.set			(flObjectInGroup, TRUE);
+		    m_ObjectsInGroup.push_back(object);
+
+
+		    string256 			buf;
+		    Scene->GenObjectName(object->FClassID, buf, object->GetName());
+		    LPCSTR N = object->GetName();
+		    if (xr_strcmp(N,buf)!=0)
+		    {
+       			Msg					("Load_Append name changed from[%s] to[%s]",object->GetName(), buf);
+		        object->SetName(buf);
+		    }
+
+			Scene->AppendObject				(object, false);
+		}
+		);
+	    Scene->ReadObjectsLTX			(ini, sect_name, "ingroup", AppendObjectDelegate);
     }
     VERIFY(m_ObjectsInGroup.size());
 
@@ -121,7 +123,6 @@ void* CGroupObject::QueryInterface(ERBMKSceneObjectType InClassID)
 		return this;
 	return inherited::QueryInterface(InClassID);
 }
-
 bool CGroupObject::LoadStream(IReader& F)
 {
     u16 version=0;
@@ -154,7 +155,28 @@ bool CGroupObject::LoadStream(IReader& F)
 */        
     }else
     {
-	    Scene->ReadObjectsStream(F,GROUPOBJ_CHUNK_OBJECT_LIST, EScene::TAppendObject(this, &CGroupObject::AppendObjectLoadCB));
+
+		FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
+    	AppendObjectDelegate.BindLambda([this](FXRayCustomObject* object)
+        {
+		    object->m_pOwnerObject			= this;
+		    object->m_CO_Flags.set			(flObjectInGroup, TRUE);
+		    m_ObjectsInGroup.push_back(object);
+
+
+		    string256 			buf;
+		    Scene->GenObjectName(object->FClassID, buf, object->GetName());
+		    LPCSTR N = object->GetName();
+		    if (xr_strcmp(N,buf)!=0)
+		    {
+       			Msg					("Load_Append name changed from[%s] to[%s]",object->GetName(), buf);
+		        object->SetName(buf);
+		    }
+
+			Scene->AppendObject				(object, false);
+		}
+		);
+	    Scene->ReadObjectsStream(F,GROUPOBJ_CHUNK_OBJECT_LIST, AppendObjectDelegate);
     }
     VERIFY(m_ObjectsInGroup.size());
 

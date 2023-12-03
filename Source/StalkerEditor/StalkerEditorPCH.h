@@ -108,7 +108,7 @@ THIRD_PARTY_INCLUDES_END
 #include "Importer/Scene/RBMKSceneObjectType.h"
 #include "Importer/Scene/iniStreamImpl.h"
 #include "Importer/Scene/Entitys/CustomObject.h"
-#include "Importer/Scene/Tools/Base/ESceneCustomMTools.h"
+#include "Importer\Scene\Tools\Base\RBMKSceneToolBase.h"
 #include "Importer/Scene/Tools/Base/ESceneCustomOTools.h"
 #include "Importer/Scene/Scene.h"
 #include "Kernel/StalkerMath.h"

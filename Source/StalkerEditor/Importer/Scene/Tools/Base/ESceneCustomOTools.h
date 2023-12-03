@@ -1,15 +1,12 @@
 #pragma once
-#include "ESceneCustomMTools.h"
+#include "RBMKSceneToolBase.h"
 struct SRayPickInfo;
 struct mesh_build_data;
-class FXRaySceneCustomOTool: public FXRaySceneToolBase
+class FXRaySceneCustomOTool: public FRBMKSceneToolBase
 {
-	typedef FXRaySceneToolBase inherited;
+	typedef FRBMKSceneToolBase inherited;
 protected:
 	ObjectList			m_Objects;
-    
-	bool 				OnLoadSelectionAppendObject(FXRayCustomObject* obj);
-	bool 				OnLoadAppendObject		(FXRayCustomObject* obj);
 public:
 						FXRaySceneCustomOTool		(ERBMKSceneObjectType cls);
 	virtual				~FXRaySceneCustomOTool		();

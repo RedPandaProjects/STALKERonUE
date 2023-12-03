@@ -88,7 +88,6 @@ public:
         };
     };
 
-    bool 			OnAppendObject			(FXRayCustomObject* object);
 public:
 	                CSpawnPoint    	(LPVOID data, LPCSTR name);
     void            Construct   	(LPVOID data);
@@ -101,9 +100,6 @@ public:
 	virtual bool 	LoadLTX			(CInifile& ini, LPCSTR sect_name);
 
 
-
-    bool			AttachObject	(FXRayCustomObject* obj);
-    void			DetachObject	();
 
 
 	void* QueryInterface(ERBMKSceneObjectType InClassID) override;

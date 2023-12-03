@@ -1,6 +1,6 @@
 #pragma once
 
-//refs
+DECLARE_DELEGATE_OneParam( FRMBKSceneAppendObjectDelegate, FXRayCustomObject*);
 
 struct st_LevelOptions
 {
@@ -29,33 +29,32 @@ public:
 	xrGUID			m_GUID;
 	shared_str		m_OwnerName;
 	time_t			m_CreateTime;
-	TMap<ERBMKSceneObjectType,TSharedPtr<FXRaySceneToolBase>>   SceneTools;
+	TMap<ERBMKSceneObjectType,TSharedPtr<FRBMKSceneToolBase>>   SceneTools;
 protected:
 	bool 			OnLoadAppendObject(FXRayCustomObject* O);
 	bool 			OnLoadSelectionAppendObject(FXRayCustomObject* O);
 protected:
-	void			RegisterSceneTools(TSharedPtr<FXRaySceneToolBase> SceneToolBase);
+	void			RegisterSceneTools(TSharedPtr<FRBMKSceneToolBase> SceneToolBase);
 	void			CreateSceneTools();
 	void			DestroySceneTools();
 
 public:
-	typedef  fastdelegate::FastDelegate1<FXRayCustomObject*, bool> TAppendObject;
 
 	bool 			ReadObjectStream(IReader& F, FXRayCustomObject*& O);
 	bool 			ReadObjectLTX(CInifile& ini, LPCSTR sect_name, FXRayCustomObject*& O);
-	bool 			ReadObjectsStream(IReader& F, u32 chunk_id, TAppendObject on_append);
-	bool 			ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_name_prefix, TAppendObject on_append);
+	bool 			ReadObjectsStream(IReader& F, u32 chunk_id, FRMBKSceneAppendObjectDelegate on_append);
+	bool 			ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_name_prefix, FRMBKSceneAppendObjectDelegate on_append);
 
 
 	xr_string		LevelPartPath(LPCSTR map_name);
 	xr_string		LevelPartName(LPCSTR map_name, ERBMKSceneObjectType cls);
 
-	BOOL			LoadLevelPart(FXRaySceneToolBase* M, LPCSTR map_name);
-	BOOL			LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name);
-	BOOL			LoadLevelPartLTX(FXRaySceneToolBase* M, LPCSTR map_name);
+	BOOL			LoadLevelPart(FRBMKSceneToolBase* M, LPCSTR map_name);
+	BOOL			LoadLevelPartStream(FRBMKSceneToolBase* M, LPCSTR map_name);
+	BOOL			LoadLevelPartLTX(FRBMKSceneToolBase* M, LPCSTR map_name);
 
 	BOOL			LoadLevelPart(LPCSTR map_name, ERBMKSceneObjectType cls);
-	BOOL		 	UnloadLevelPart(FXRaySceneToolBase* M);
+	BOOL		 	UnloadLevelPart(FRBMKSceneToolBase* M);
 	BOOL			UnloadLevelPart(LPCSTR map_name, ERBMKSceneObjectType cls);
 
 	FXRayCustomObject*  FindObjectByName(LPCSTR name, ERBMKSceneObjectType classfilter);
@@ -83,7 +82,7 @@ public:
 	IC int 			ObjCount(ERBMKSceneObjectType cat) { return ListObj(cat).size(); }
 	int 			ObjCount();
 
-	IC FXRaySceneToolBase*	  GetTool(ERBMKSceneObjectType cat) { return SceneTools[cat].Get(); }
+	IC FRBMKSceneToolBase*	  GetTool(ERBMKSceneObjectType cat) { return SceneTools[cat].Get(); }
 	IC int32				  ToolCount() { return SceneTools.Num(); }
 	IC FXRaySceneCustomOTool* GetOTool(ERBMKSceneObjectType cat) { return GetTool(cat)->CastToSceneCustomOTool(); }
 

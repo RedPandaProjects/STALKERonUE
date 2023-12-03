@@ -43,9 +43,9 @@ struct SAINode					// definition of "patch" or "node"
 
 DEFINE_VECTOR(SAINode*, AINodeVec, AINodeIt);
 
-class ESceneAIMapTool : public FXRaySceneToolBase
+class ESceneAIMapTool : public FRBMKSceneToolBase
 {
-	typedef FXRaySceneToolBase inherited;
+	typedef FRBMKSceneToolBase inherited;
 public:
 	ESceneAIMapTool();
 	~ESceneAIMapTool() override;

@@ -213,7 +213,7 @@ void st_LevelOptions::Read(IReader& F)
 
 // Scene
 
-BOOL EScene::LoadLevelPartLTX(FXRaySceneToolBase* M, LPCSTR mn)
+BOOL EScene::LoadLevelPartLTX(FRBMKSceneToolBase* M, LPCSTR mn)
 {
 	string_path map_name;
     FCStringAnsi::Strcpy(map_name, mn);
@@ -256,7 +256,7 @@ BOOL EScene::LoadLevelPartLTX(FXRaySceneToolBase* M, LPCSTR mn)
     return 					TRUE;
 }
 
-BOOL EScene::LoadLevelPart(FXRaySceneToolBase* M, LPCSTR map_name)
+BOOL EScene::LoadLevelPart(FRBMKSceneToolBase* M, LPCSTR map_name)
 {
 	if(M->CanUseInifile())
 	    return LoadLevelPartLTX(M, map_name);
@@ -264,7 +264,7 @@ BOOL EScene::LoadLevelPart(FXRaySceneToolBase* M, LPCSTR map_name)
 	
 }
 
-BOOL EScene::LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name)
+BOOL EScene::LoadLevelPartStream(FRBMKSceneToolBase* M, LPCSTR map_name)
 {
     if (FS.exist(map_name))
     {
@@ -284,7 +284,7 @@ BOOL EScene::LoadLevelPartStream(FXRaySceneToolBase* M, LPCSTR map_name)
             return 			FALSE;
         }*/
         // read data
-        IReader* chunk = R->open_chunk(CHUNK_TOOLS_DATA + static_cast<int32>(M->FClassID));
+        IReader* chunk = R->open_chunk(CHUNK_TOOLS_DATA + static_cast<int32>(M->ObjectType));
         if (chunk != NULL)
         {
             M->LoadStream(*chunk);
@@ -312,7 +312,7 @@ BOOL EScene::LoadLevelPart(LPCSTR map_name, ERBMKSceneObjectType cls)
 	    return 			FALSE;
 }
 
-BOOL EScene::UnloadLevelPart(FXRaySceneToolBase* M)
+BOOL EScene::UnloadLevelPart(FRBMKSceneToolBase* M)
 {
 	M->Clear		();
     return 			TRUE;
@@ -339,7 +339,7 @@ xr_string EScene::LevelPartName(LPCSTR map_name, ERBMKSceneObjectType cls)
 
 bool EScene::LoadToolLTX(ERBMKSceneObjectType clsid, LPCSTR fn)
 {
-    FXRaySceneToolBase* tool 	= GetTool(clsid);
+    FRBMKSceneToolBase* tool 	= GetTool(clsid);
     tool->Clear				();
 	bool res 				= LoadLevelPartLTX(tool, fn);
 	return 					res;
@@ -440,7 +440,7 @@ bool EScene::LoadLTX(LPCSTR map_name, bool bUndo)
             if (Value)
             {
                 {
-                    if (!bUndo && Value->IsEnabled() && (Key!=ERBMKSceneObjectType::AllTypes))
+                    if (!bUndo && (Key!=ERBMKSceneObjectType::AllTypes))
                     {
                         xr_string fn 		 = LevelPartName(map_name,Key).c_str();
                         LoadLevelPartLTX	(Value.Get(), fn.c_str());
@@ -517,8 +517,12 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
         if (F->find_chunk(CHUNK_OBJECT_COUNT))
         	obj_cnt 		= F->r_u32();
 
-      
-        ReadObjectsStream	(*F,CHUNK_OBJECT_LIST, TAppendObject(this, &EScene::OnLoadAppendObject));
+      	FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
+		AppendObjectDelegate.BindLambda([this](FXRayCustomObject* Object)
+		{
+			AppendObject	(Object,false);
+		});
+        ReadObjectsStream	(*F,CHUNK_OBJECT_LIST, AppendObjectDelegate);
 
         for(auto&[Key,Value]:SceneTools)
         {
@@ -532,7 +536,7 @@ bool EScene::Load(LPCSTR map_name, bool bUndo)
                 }
             	else
                 {
-                    if (!bUndo && Value->IsEnabled() && (Key!=ERBMKSceneObjectType::AllTypes))
+                    if (!bUndo  && (Key!=ERBMKSceneObjectType::AllTypes))
                     {
                         LoadLevelPart	(Value.Get(),LevelPartName(map_name,Key).c_str());
                     }
@@ -592,9 +596,16 @@ bool EScene::LoadSelection( LPCSTR fname )
             FS.r_close(F);
             return false;
         }
-
+    	FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
+		AppendObjectDelegate.BindLambda([this](FXRayCustomObject* Object)
+		{
+			string256 				buf;
+		    GenObjectName			(Object->FClassID,buf,Object->GetName());
+		    Object->SetName(buf);
+		    AppendObject			(Object, false);
+		});
         // Objects
-        if (!ReadObjectsStream(*F,CHUNK_OBJECT_LIST, TAppendObject (this,&EScene::OnLoadSelectionAppendObject)))
+        if (!ReadObjectsStream(*F,CHUNK_OBJECT_LIST, AppendObjectDelegate))
         {
             ELog.DlgMsg(mtError,"EScene. Failed to load selection.");
             res = false;
@@ -602,7 +613,7 @@ bool EScene::LoadSelection( LPCSTR fname )
 
          for(auto&[Key,Value]:SceneTools)
          {
-            if (Value&&Value->IsEnabled()&&Value->IsEditable()){
+            if (Value){
 			    IReader* chunk 		= F->open_chunk(CHUNK_TOOLS_DATA+static_cast<int32>(Key));
             	if (chunk){
 	                Value->LoadSelection(*chunk);
@@ -617,10 +628,10 @@ bool EScene::LoadSelection( LPCSTR fname )
 }
 
 
-bool EScene::ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_name_prefix, TAppendObject on_append)
+bool EScene::ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_name_prefix, FRMBKSceneAppendObjectDelegate on_append)
 {
     string128			buff;
-    R_ASSERT(on_append);
+
     FCStringAnsi::Sprintf(buff, "%s_count", sect_name_prefix);
     u32 count = ini.r_u32(sect_name_parent, buff);
     bool bRes = true;
@@ -640,11 +651,7 @@ bool EScene::ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_
                 GenObjectName(obj->FClassID, buf, obj->GetName());
                 obj->SetName(buf);
             }
-            if (obj && !on_append(obj))
-            {
-                delete obj;
-                obj = nullptr;
-            }
+			on_append.Execute(obj);
 
         }
 
@@ -655,9 +662,8 @@ bool EScene::ReadObjectsLTX(CInifile& ini, LPCSTR sect_name_parent, LPCSTR sect_
     return bRes;
 }
 
-bool EScene::ReadObjectsStream(IReader& F, u32 chunk_id, TAppendObject on_append)
+bool EScene::ReadObjectsStream(IReader& F, u32 chunk_id, FRMBKSceneAppendObjectDelegate on_append)
 {
-    R_ASSERT(on_append);
     bool bRes = true;
     IReader* OBJ = F.open_chunk(chunk_id);
     if (OBJ)
@@ -705,11 +711,7 @@ bool EScene::ReadObjectsStream(IReader& F, u32 chunk_id, TAppendObject on_append
                     }break;
                 }*/
                 }
-                if (obj && !on_append(obj))
-                {
-                    delete obj;
-                    obj = nullptr;
-                }
+                on_append.Execute(obj);
             }
             else
                 bRes = false;

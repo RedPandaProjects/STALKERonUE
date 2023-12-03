@@ -6,7 +6,7 @@ THIRD_PARTY_INCLUDES_START
 #include "xrEngine/cl_intersect.h"
 THIRD_PARTY_INCLUDES_END
 
-FRBMKSceneDetailObjectTool::FRBMKSceneDetailObjectTool():FXRaySceneToolBase(ERBMKSceneObjectType::DetailObject)
+FRBMKSceneDetailObjectTool::FRBMKSceneDetailObjectTool():FRBMKSceneToolBase(ERBMKSceneObjectType::DetailObject)
 {
     DetailHeader = {};
     InitRender();
@@ -18,7 +18,7 @@ FRBMKSceneDetailObjectTool::~FRBMKSceneDetailObjectTool()
 
 void FRBMKSceneDetailObjectTool::ClearColorIndices()
 {
-	FXRaySceneToolBase::Clear	();
+	FRBMKSceneToolBase::Clear	();
 }
 void FRBMKSceneDetailObjectTool::ClearSlots()
 {
@@ -94,7 +94,6 @@ void FRBMKSceneDetailObjectTool::ExportToCurrentWorld()
 			AddInstances(World,Objects[i]->GetOrCreateFoliageType(), Instances[i]);
         }
 	}
-
 }
 
 void FRBMKSceneDetailObjectTool::InitRender()
@@ -212,7 +211,7 @@ bool FRBMKSceneDetailObjectTool::LoadLTX(CInifile& ini)
 
 bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 {
-	FXRaySceneToolBase::LoadStream	(F);
+	FRBMKSceneToolBase::LoadStream	(F);
 	
 	const uint32 DETMGR_VERSION = 0x0003ul;
 	

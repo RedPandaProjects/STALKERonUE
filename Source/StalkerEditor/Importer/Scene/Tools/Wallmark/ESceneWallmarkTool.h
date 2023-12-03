@@ -1,8 +1,8 @@
 #pragma once
 
-class ESceneWallmarkTool : public FXRaySceneToolBase
+class ESceneWallmarkTool : public FRBMKSceneToolBase
 {
-	typedef FXRaySceneToolBase inherited;
+	typedef FRBMKSceneToolBase inherited;
 public:
 	ESceneWallmarkTool();
 	~ESceneWallmarkTool() override;

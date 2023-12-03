@@ -2,7 +2,7 @@
 #include "RBMKDetailFormat.h"
 #include "RBMKDetailModel.h"
 
-class FRBMKSceneDetailObjectTool: public FXRaySceneToolBase
+class FRBMKSceneDetailObjectTool: public FRBMKSceneToolBase
 {
 using ColorIndexMap = TMap<uint32,TArray<FRBMKDetail*>>;
 public:

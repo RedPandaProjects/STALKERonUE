@@ -1,6 +1,4 @@
 #include "scene.h"
-#include "Tools/StaticObject/ESceneObjectTools.h"
-#include "Tools/Base/ESceneDummyTools.h"
 #include "Tools/AIMap/ESceneAIMapTools.h"
 #include "Tools/WayPoint/ESceneWayTools.h"
 #include "Tools/Shape/ESceneShapeTools.h"
@@ -187,15 +185,13 @@ void EScene::GenObjectName(ERBMKSceneObjectType cls_id, char* buffer, const char
     }
 }
 
-void EScene::RegisterSceneTools(TSharedPtr<FXRaySceneToolBase> SceneToolBase)
+void EScene::RegisterSceneTools(TSharedPtr<FRBMKSceneToolBase> SceneToolBase)
 {
-	SceneTools.FindOrAdd(SceneToolBase->FClassID) = SceneToolBase;
+	SceneTools.FindOrAdd(SceneToolBase->ObjectType) = SceneToolBase;
 }
 
 void EScene::CreateSceneTools()
 {
-	RegisterSceneTools(MakeShared<ESceneDummyTool>() );
-	RegisterSceneTools(MakeShared<ESceneObjectTool>());
 	RegisterSceneTools(MakeShared<ESceneAIMapTool>());
 	RegisterSceneTools(MakeShared<ESceneWayTool>()); 
 	RegisterSceneTools(MakeShared<ESceneShapeTool>());
@@ -231,7 +227,7 @@ void EScene::GetObjects(ERBMKSceneObjectType InType, ObjectList& OutObjects)
 		Group->GetObjects(ObjectsFromGroups);
 		for (auto& Object : ObjectsFromGroups)
 		{
-			if (GroupObj->FClassID == InType)
+			if (GroupObj->ObjectType == InType)
 			{
 				OutObjects.push_back(Object);
 			}
