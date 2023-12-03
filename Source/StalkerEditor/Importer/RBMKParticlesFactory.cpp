@@ -1,4 +1,4 @@
-#include "XRayParticlesFactory.h"
+#include "RBMKParticlesFactory.h"
 #include "Engine/EngineTypes.h"
 #include "ImportUtils/StaticMeshImportUtils.h"
 #include "../StalkerEditorManager.h"
@@ -23,7 +23,7 @@ THIRD_PARTY_INCLUDES_END
 #include "ViewModels/NiagaraEmitterHandleViewModel.h"
 #include "NiagaraEmitterHandle.h"
 #include "NiagaraSpriteRendererProperties.h"
-#include "XRayEngineFactory.h"
+#include "RBMKEngineFactory.h"
 #include "NiagaraScriptSourceBase.h"
 #include "NiagaraDataInterfaceSpriteRendererInfo.h"
 #include "NiagaraNodeFunctionCall.h"
@@ -34,12 +34,12 @@ THIRD_PARTY_INCLUDES_END
 #include "NiagaraDataInterfaceParticleRead.h"
 #include "Resources/Particle/StalkerNiagaraSystem.h"
 
-XRayParticlesFactory::XRayParticlesFactory()
+RBMKParticlesFactory::RBMKParticlesFactory()
 {
 
 }
 
-XRayParticlesFactory::~XRayParticlesFactory()
+RBMKParticlesFactory::~RBMKParticlesFactory()
 {
 
 }
@@ -59,7 +59,7 @@ inline const TCHAR*ActionNoSupportEnum2Str(PAPI::PActionEnum ActionEnum)
 	}
 		
 }
-void XRayParticlesFactory::ImportParticles()
+void RBMKParticlesFactory::ImportParticles()
 {
 	UE_LOG(LogXRayImporter, Log, TEXT("Start Import Particles"));
 	CPSLibrary PSLibrary;
@@ -122,7 +122,7 @@ void XRayParticlesFactory::ImportParticles()
 }
 
 
-UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
+UNiagaraSystem* RBMKParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
 {
 
 	FString Name =  PEDef->m_Name.c_str();
@@ -178,7 +178,7 @@ UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
 }
 
 
-class UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
+class UNiagaraSystem* RBMKParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 {
 	FString Name =  PGDef->m_Name.c_str();
 	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -247,10 +247,10 @@ class UNiagaraSystem* XRayParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 	SystemEditorData->SynchronizeOverviewGraphWithSystem(*NiagaraSystem);
 	return NiagaraSystem;
 }
-void XRayParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*InGroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter,EImportToEmitterAs ImportToEmitterAs )
+void RBMKParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*InGroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter,EImportToEmitterAs ImportToEmitterAs )
 {
 	PS::CPGDef::SEffect* GroupEffect  = reinterpret_cast<PS::CPGDef::SEffect*>(InGroupEffect);
-	XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
+	RBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
 
 	FNiagaraEmitterHandle*	EmitterHandle	=	InEmiter->GetEmitterHandle();
 	if (!ensure(EmitterHandle))
@@ -528,7 +528,7 @@ void XRayParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDef
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<FNiagaraEmitterHandleViewModel> InEmiter,void*InGroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs ,UNiagaraEmitter*	Emitter,FVersionedNiagaraEmitterData* EmitterData,UNiagaraNodeOutput* EmitterSpawnOutputNode,UNiagaraNodeOutput* EmitterUpdateOutputNode,UNiagaraNodeOutput* ParticleSpawnOutputNode,UNiagaraNodeOutput* ParticleUpdateOutputNode,PAPI::PASource* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<FNiagaraEmitterHandleViewModel> InEmiter,void*InGroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs ,UNiagaraEmitter*	Emitter,FVersionedNiagaraEmitterData* EmitterData,UNiagaraNodeOutput* EmitterSpawnOutputNode,UNiagaraNodeOutput* EmitterUpdateOutputNode,UNiagaraNodeOutput* ParticleSpawnOutputNode,UNiagaraNodeOutput* ParticleUpdateOutputNode,PAPI::PASource* InSourceAction)
 {
 	PS::CPGDef::SEffect* GroupEffect  = reinterpret_cast<PS::CPGDef::SEffect*>(InGroupEffect);
 	if (ImportToEmitterAs == EImportToEmitterAs::None)
@@ -728,7 +728,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs ,class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAKillOld* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs ,class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAKillOld* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerKillOldNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerKillOld.StalkerKillOld"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerKillOldNode))
@@ -738,7 +738,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetColor* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetColor* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerTargetColorNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerTargetColor.StalkerTargetColor"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerTargetColorNode))
@@ -750,7 +750,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAMove* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAMove* InSourceAction)
 {
 	if (InParticleEffect->m_Flags.is(PS::CPEDef::dfCollision))
 	{
@@ -776,7 +776,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAGravity* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAGravity* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerGravityNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerGravity.StalkerGravity"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerGravityNode))
@@ -785,7 +785,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATurbulence* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATurbulence* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerTurbulenceNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerTurbulence.StalkerTurbulence"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerTurbulenceNode))
@@ -799,7 +799,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetSize* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetSize* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerTargetSizeNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerTargetSize.StalkerTargetSize"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerTargetSizeNode))
@@ -809,7 +809,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetVelocity* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetVelocity* InSourceAction)
 {
 	UNiagaraNodeFunctionCall*StalkerTargetVelocityNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerTargetVelocity.StalkerTargetVelocity"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerTargetVelocityNode))
@@ -820,7 +820,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetRotate* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PATargetRotate* InSourceAction)
 {	
 	UNiagaraNodeFunctionCall* StalkerTargetRotateNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerTargetRotate.StalkerTargetRotate"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerTargetRotateNode))
@@ -830,7 +830,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAScatter* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAScatter* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerScatterNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerScatter.StalkerScatter"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerScatterNode))
@@ -846,7 +846,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PASpeedLimit* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PASpeedLimit* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerSpeedLimitNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerSpeedLimit.StalkerSpeedLimit"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerSpeedLimitNode))
@@ -857,7 +857,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PASink* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PASink* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerSinkNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerSink.StalkerSink"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerSinkNode))
@@ -880,7 +880,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PARandomAccel* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PARandomAccel* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerRandomAccelNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerRandomAccel.StalkerRandomAccel"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerRandomAccelNode))
@@ -902,7 +902,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAOrbitPoint* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAOrbitPoint* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerOrbitPointNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerOrbitPoint.StalkerOrbitPoint"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerOrbitPointNode))
@@ -919,7 +919,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PABounce* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PABounce* InSourceAction)
 {	
 	UNiagaraNodeFunctionCall* StalkerBounceNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerBounce.StalkerBounce"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerBounceNode))
@@ -946,7 +946,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAVortex* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAVortex* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerVortexNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerVortex.StalkerVortex"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerVortexNode))
@@ -966,7 +966,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PADamping* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*GroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter ,EImportToEmitterAs ImportToEmitterAs , class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PADamping* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerDampingNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerDamping.StalkerDamping"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerDampingNode))
@@ -977,7 +977,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAGravitate* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAGravitate* InSourceAction)
 {
 	EmitterData->bRequiresPersistentIDs = true;
 	UNiagaraNodeFunctionCall* StalkerGravitateConstuctorNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerGravitateConstuctor.StalkerGravitateConstuctor"), *EmitterSpawnOutputNode);
@@ -998,7 +998,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PARandomDisplace* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PARandomDisplace* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerRandomDisplaceNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerRandomDisplace.StalkerRandomDisplace"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerRandomDisplaceNode))
@@ -1022,7 +1022,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PARandomVelocity* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PARandomVelocity* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerRandomVelocityNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerRandomVelocity.StalkerRandomVelocity"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerRandomVelocityNode))
@@ -1046,7 +1046,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAJet* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAJet* InSourceAction)
 {
 	UNiagaraNodeFunctionCall* StalkerJetNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerJet.StalkerJet"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerJetNode))
@@ -1078,7 +1078,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAFollow* InSourceAction)
+void RBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter, void* GroupEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter, EImportToEmitterAs ImportToEmitterAs, class UNiagaraEmitter* Emitter, struct FVersionedNiagaraEmitterData* EmitterData, class UNiagaraNodeOutput* EmitterSpawnOutputNode, class UNiagaraNodeOutput* EmitterUpdateOutputNode, class UNiagaraNodeOutput* ParticleSpawnOutputNode, class UNiagaraNodeOutput* ParticleUpdateOutputNode, PAPI::PAFollow* InSourceAction)
 {
 	EmitterData->bRequiresPersistentIDs = true;
 	UNiagaraNodeFunctionCall* StalkerFollowConstuctorNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerFollowConstuctor.StalkerFollowConstuctor"), *EmitterSpawnOutputNode);
@@ -1099,7 +1099,7 @@ void XRayParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, T
 	}
 }
 
-FNiagaraVariable XRayParticlesFactory::CreateRapidIterationParameter(const FString& UniqueEmitterName, ENiagaraScriptUsage ScriptUsage, const FName& AliasedInputName, const FNiagaraTypeDefinition& InputType)
+FNiagaraVariable RBMKParticlesFactory::CreateRapidIterationParameter(const FString& UniqueEmitterName, ENiagaraScriptUsage ScriptUsage, const FName& AliasedInputName, const FNiagaraTypeDefinition& InputType)
 {
 	FNiagaraVariable InputVariable(InputType, AliasedInputName);
 	FNiagaraVariable RapidIterationVariable;
@@ -1116,12 +1116,12 @@ FNiagaraVariable XRayParticlesFactory::CreateRapidIterationParameter(const FStri
 }
 
 template<typename ValueType>
-void XRayParticlesFactory::SetRapidIterationParameter(FString UniqueEmitterName, UNiagaraScript& TargetScript, UNiagaraNodeFunctionCall& TargetFunctionCallNode,FName InputName, FNiagaraTypeDefinition InputType, ValueType Value)
+void RBMKParticlesFactory::SetRapidIterationParameter(FString UniqueEmitterName, UNiagaraScript& TargetScript, UNiagaraNodeFunctionCall& TargetFunctionCallNode,FName InputName, FNiagaraTypeDefinition InputType, ValueType Value)
 {
 	static_assert(!TIsUECoreVariant<ValueType, double>::Value, "Double core variant. Must be float type!");
 	FNiagaraParameterHandle InputHandle = FNiagaraParameterHandle::CreateModuleParameterHandle(InputName);
 	FNiagaraParameterHandle AliasedInputHandle = FNiagaraParameterHandle::CreateAliasedModuleParameterHandle(InputHandle, &TargetFunctionCallNode);
-	FNiagaraVariable RapidIterationParameter = XRayParticlesFactory::CreateRapidIterationParameter(UniqueEmitterName, TargetScript.GetUsage(),		AliasedInputHandle.GetParameterHandleString(), InputType);
+	FNiagaraVariable RapidIterationParameter = RBMKParticlesFactory::CreateRapidIterationParameter(UniqueEmitterName, TargetScript.GetUsage(),		AliasedInputHandle.GetParameterHandleString(), InputType);
 	bool bAddParameterIfMissing = true;
 	{
 		RapidIterationParameter.SetValue(Value);
@@ -1129,7 +1129,7 @@ void XRayParticlesFactory::SetRapidIterationParameter(FString UniqueEmitterName,
 	}
 }
 
-UNiagaraNodeFunctionCall* XRayParticlesFactory::AddModuleFromAssetPath(FString AssetPath, UNiagaraNodeOutput& TargetOutputNode)
+UNiagaraNodeFunctionCall* RBMKParticlesFactory::AddModuleFromAssetPath(FString AssetPath, UNiagaraNodeOutput& TargetOutputNode)
 {
 	FSoftObjectPath AssetRef(AssetPath);
 	UNiagaraScript* AssetScript = Cast<UNiagaraScript>(AssetRef.TryLoad());
@@ -1145,7 +1145,7 @@ UNiagaraNodeFunctionCall* XRayParticlesFactory::AddModuleFromAssetPath(FString A
 	}
 }
 
-class UNiagaraNodeFunctionCall* XRayParticlesFactory::FindModuleInScript(UNiagaraScript* SystemUpdateScript, FSoftObjectPath FunctionPath)
+class UNiagaraNodeFunctionCall* RBMKParticlesFactory::FindModuleInScript(UNiagaraScript* SystemUpdateScript, FSoftObjectPath FunctionPath)
 {
 	UNiagaraScriptSource* SystemScriptSource = Cast<UNiagaraScriptSource>(SystemUpdateScript->GetLatestSource());
 	for (TObjectPtr< UEdGraphNode>& Node : SystemScriptSource->NodeGraph->Nodes)
@@ -1161,7 +1161,7 @@ class UNiagaraNodeFunctionCall* XRayParticlesFactory::FindModuleInScript(UNiagar
 	return nullptr;
 }
 
-void XRayParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, EStalkerParticleDomainType& OutTypeDomain, FStalkerParticleDomain& OutDomain,bool LocationSpace,bool UnrealTangent)
+void RBMKParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, EStalkerParticleDomainType& OutTypeDomain, FStalkerParticleDomain& OutDomain,bool LocationSpace,bool UnrealTangent)
 {
 	switch ( InDomain.type)
 	{
@@ -1243,12 +1243,12 @@ void XRayParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, ESt
 
 }
 
-UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, shared_str ShaderName, shared_str TextureName, bool HudMode)
+UMaterialInterface* RBMKParticlesFactory::ImportSurface(const FString& InPath, shared_str ShaderName, shared_str TextureName, bool HudMode)
 {
 	if (ShaderName.size() == 0)
 		return nullptr;
 		
-	XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);	
+	RBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);	
 	
 	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
 	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
@@ -1347,7 +1347,7 @@ UMaterialInterface* XRayParticlesFactory::ImportSurface(const FString& InPath, s
 	return NewMaterial;
 }
 
-void XRayParticlesFactory::Flush()
+void RBMKParticlesFactory::Flush()
 {
 	CurrentSlowTask->EnterProgressFrame(0, FText::FromString(FString::Printf(TEXT("WaitForCompilationComplete ..."))));
 	//for (TSharedPtr<FNiagaraSystemViewModel>& SystemViewModel : NiagaraSystemViewModels)
@@ -1363,22 +1363,22 @@ void XRayParticlesFactory::Flush()
 	NiagaraSystemViewModels.Empty();
 }
 
-void XRayParticlesFactory::SetModuleParameter(FString UniqueEmitterName, UNiagaraScript& TargetScript, UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, float Value)
+void RBMKParticlesFactory::SetModuleParameter(FString UniqueEmitterName, UNiagaraScript& TargetScript, UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, float Value)
 {
 	SetRapidIterationParameter<float>(UniqueEmitterName,TargetScript,TargetFunctionCallNode,InputName,FNiagaraTypeDefinition::GetFloatDef(),Value);
 }
 
-void XRayParticlesFactory::SetModuleParameter(FString UniqueEmitterName, UNiagaraScript& TargetScript, UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, int32 Value)
+void RBMKParticlesFactory::SetModuleParameter(FString UniqueEmitterName, UNiagaraScript& TargetScript, UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, int32 Value)
 {
 	SetRapidIterationParameter<int32>(UniqueEmitterName,TargetScript,TargetFunctionCallNode,InputName,FNiagaraTypeDefinition::GetIntDef(),Value);
 }
 
-//void XRayParticlesFactory::SetModuleParameter(FString UniqueEmitterName, class UNiagaraScript& TargetScript, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, const FStalkerParticleDomain& Domain)
+//void RBMKParticlesFactory::SetModuleParameter(FString UniqueEmitterName, class UNiagaraScript& TargetScript, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, const FStalkerParticleDomain& Domain)
 //{
 //	SetRapidIterationParameter<FStalkerParticleDomain>(UniqueEmitterName,TargetScript,TargetFunctionCallNode,InputName,FNiagaraTypeDefinition(FStalkerParticleDomain::StaticStruct()), Domain);
 //}
 
-void XRayParticlesFactory::SetModuleParameter(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, bool Value,bool IsStatic)
+void RBMKParticlesFactory::SetModuleParameter(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, bool Value,bool IsStatic)
 {
 	UNiagaraStackFunctionInput* Input = NewObject<UNiagaraStackFunctionInput>();
 	UNiagaraStackEntry::FRequiredEntryData RequiredEntryData(Emitter->GetOwningSystemViewModel(), Emitter->GetEmitterViewModel(), NAME_None, NAME_None, Emitter->GetOwningSystemViewModel()->GetEditorData().GetStackEditorData());
@@ -1396,7 +1396,7 @@ void XRayParticlesFactory::SetModuleParameter(TSharedPtr<class FNiagaraEmitterHa
 	Input->Finalize();
 }
 
-void XRayParticlesFactory::SetModuleParameter(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, UNiagaraDataInterface* DataInterface)
+void RBMKParticlesFactory::SetModuleParameter(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, UNiagaraDataInterface* DataInterface)
 {
 	UNiagaraStackFunctionInput* Input = NewObject<UNiagaraStackFunctionInput>();
 	UNiagaraStackEntry::FRequiredEntryData RequiredEntryData(Emitter->GetOwningSystemViewModel(), Emitter->GetEmitterViewModel(), NAME_None, NAME_None, Emitter->GetOwningSystemViewModel()->GetEditorData().GetStackEditorData());
@@ -1413,18 +1413,18 @@ void XRayParticlesFactory::SetModuleParameter(TSharedPtr<class FNiagaraEmitterHa
 	Input->Finalize();
 }
 
-void XRayParticlesFactory::SetModuleParameter(FString UniqueEmitterName, class UNiagaraScript& TargetScript, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, const FLinearColor& Color)
+void RBMKParticlesFactory::SetModuleParameter(FString UniqueEmitterName, class UNiagaraScript& TargetScript, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, const FLinearColor& Color)
 {
 	SetRapidIterationParameter<FLinearColor>(UniqueEmitterName,TargetScript,TargetFunctionCallNode,InputName,FNiagaraTypeDefinition::GetColorDef(), Color);
 }
 
-void XRayParticlesFactory::SetModuleParameter(FString UniqueEmitterName, class UNiagaraScript& TargetScript, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, const FVector3f& Vector)
+void RBMKParticlesFactory::SetModuleParameter(FString UniqueEmitterName, class UNiagaraScript& TargetScript, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FName InputName, const FVector3f& Vector)
 {
 	SetRapidIterationParameter<FVector3f>(UniqueEmitterName,TargetScript,TargetFunctionCallNode,InputName,FNiagaraTypeDefinition::GetVec3Def(), Vector);
 
 }
 
-void XRayParticlesFactory::SetModuletLinkedParameter(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, const struct FNiagaraTypeDefinition& InputType, const class FNiagaraParameterHandle& NiagaraParameterHandle)
+void RBMKParticlesFactory::SetModuletLinkedParameter(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, const struct FNiagaraTypeDefinition& InputType, const class FNiagaraParameterHandle& NiagaraParameterHandle)
 {
 	UNiagaraStackFunctionInput* Input = NewObject<UNiagaraStackFunctionInput>();
 	UNiagaraStackEntry::FRequiredEntryData RequiredEntryData(Emitter->GetOwningSystemViewModel(), Emitter->GetEmitterViewModel(), NAME_None, NAME_None, Emitter->GetOwningSystemViewModel()->GetEditorData().GetStackEditorData());
@@ -1437,7 +1437,7 @@ void XRayParticlesFactory::SetModuletLinkedParameter(TSharedPtr<class FNiagaraEm
 	Input->Finalize();
 }
 
-void XRayParticlesFactory::SetModuleBlueprintEnum(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, FString EnumPath, FString DisplayEnumValue,bool IsStatic)
+void RBMKParticlesFactory::SetModuleBlueprintEnum(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, FString EnumPath, FString DisplayEnumValue,bool IsStatic)
 {
 	UUserDefinedEnum* BlueprintEnum = LoadObject<UUserDefinedEnum>(nullptr,*EnumPath);
 	if (ensure(BlueprintEnum))
@@ -1470,7 +1470,7 @@ void XRayParticlesFactory::SetModuleBlueprintEnum(TSharedPtr<class FNiagaraEmitt
 	}
 }
 
-void XRayParticlesFactory::SetModuleBlueprintEnum(TSharedPtr<FNiagaraSystemViewModel> System, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, FString EnumPath, FString DisplayEnumValue, bool IsStatic /*= true*/)
+void RBMKParticlesFactory::SetModuleBlueprintEnum(TSharedPtr<FNiagaraSystemViewModel> System, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, FString EnumPath, FString DisplayEnumValue, bool IsStatic /*= true*/)
 {
 	UUserDefinedEnum* BlueprintEnum = LoadObject<UUserDefinedEnum>(nullptr,*EnumPath);
 	if (ensure(BlueprintEnum))
@@ -1503,7 +1503,7 @@ void XRayParticlesFactory::SetModuleBlueprintEnum(TSharedPtr<FNiagaraSystemViewM
 	}
 }
 
-void XRayParticlesFactory::SetModuleEnum(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, UEnum* EnumClass, int32 Value,bool IsStatic)
+void RBMKParticlesFactory::SetModuleEnum(TSharedPtr<class FNiagaraEmitterHandleViewModel> Emitter, class UNiagaraNodeFunctionCall& TargetFunctionCallNode, FString Name, UEnum* EnumClass, int32 Value,bool IsStatic)
 {
 		Name = TEXT("Module.")+Name;
 		UNiagaraStackFunctionInput* Input = NewObject<UNiagaraStackFunctionInput>();

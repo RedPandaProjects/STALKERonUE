@@ -1,12 +1,12 @@
 #pragma once
 #include "FoliageType_InstancedStaticMesh.h"
 
-struct FXRayDetailVertex
+struct FRBMKDetailVertex
 {
 	FVector3f Position;
 	FVector2f UV;
 
-	inline bool	operator == (const FXRayDetailVertex& V) const
+	inline bool	operator == (const FRBMKDetailVertex& V) const
     {
         if (!UV.Equals(V.UV))	return false;
         if (!Position.Equals(V.Position))	return false;
@@ -14,11 +14,11 @@ struct FXRayDetailVertex
     }
 };
 
-class  FXRayDetail
+class  FRBMKDetail
 {
 public:
-													FXRayDetail				();
-													~FXRayDetail			();
+													FRBMKDetail				();
+													~FRBMKDetail			();
 
 	bool											Load					(IReader&Reader);
     FString											GetName					() const;
@@ -26,7 +26,7 @@ public:
 	UFoliageType_InstancedStaticMesh*				GetOrCreateFoliageType	();
 
 	FBoxSphereBounds3f								Bound;
-	TArray<FXRayDetailVertex>						Vertices;
+	TArray<FRBMKDetailVertex>						Vertices;
 	TArray<int32>									Indices;
 	Flags32											Flags;
 	float											MinScale;

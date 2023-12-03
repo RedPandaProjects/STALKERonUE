@@ -2,11 +2,11 @@
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/Shader_xrLC.h"
 THIRD_PARTY_INCLUDES_END
-class XRayEngineFactory
+class RBMKEngineFactory
 {
 public:
-									XRayEngineFactory			(UObject* InParentPackage, EObjectFlags InFlags);
-									~XRayEngineFactory			();								
+									RBMKEngineFactory			(UObject* InParentPackage, EObjectFlags InFlags);
+									~RBMKEngineFactory			();								
 	inline UObject*					GetCreatedObject			() { if (ObjectCreated.Num())return ObjectCreated[0]; return nullptr; }
 
 	class USkeletalMesh*			ImportOGF					(const FString& FileName);

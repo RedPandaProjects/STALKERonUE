@@ -1,4 +1,4 @@
-#include "XRayLevelFactory.h"
+#include "RBMKLevelFactory.h"
 
 #include "NiagaraActor.h"
 #include "NiagaraComponent.h"
@@ -28,17 +28,17 @@ THIRD_PARTY_INCLUDES_START
 THIRD_PARTY_INCLUDES_END
 
 
-XRayLevelFactory::XRayLevelFactory(UObject* InParentPackage, EObjectFlags InFlags):EngineFactory(InParentPackage, InFlags),ParentPackage(InParentPackage),ObjectFlags(InFlags)
+RBMKLevelFactory::RBMKLevelFactory(UObject* InParentPackage, EObjectFlags InFlags):EngineFactory(InParentPackage, InFlags),ParentPackage(InParentPackage),ObjectFlags(InFlags)
 {
 
 }
 
-XRayLevelFactory::~XRayLevelFactory()
+RBMKLevelFactory::~RBMKLevelFactory()
 {
 
 }
 
-bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptions&LevelImportOptions)
+bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptions&LevelImportOptions)
 {
 
 	GXRayObjectLibrary->AngleSmooth = LevelImportOptions.AngleNormalSmoth;
@@ -550,7 +550,7 @@ bool XRayLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	return true;
 }
 
-UMaterialInterface* XRayLevelFactory::ImportSurfaceForDecal(shared_str ShaderName, shared_str TextureName)
+UMaterialInterface* RBMKLevelFactory::ImportSurfaceForDecal(shared_str ShaderName, shared_str TextureName)
 {
 	if (ShaderName.size() == 0)
 		return nullptr;

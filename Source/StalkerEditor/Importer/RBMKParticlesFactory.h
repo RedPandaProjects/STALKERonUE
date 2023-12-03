@@ -33,11 +33,11 @@ namespace PAPI
 	enum PActionEnum;
 };
 enum class ENiagaraScriptUsage : uint8;
-class XRayParticlesFactory
+class RBMKParticlesFactory
 {
 public:
-	XRayParticlesFactory			();
-	~XRayParticlesFactory			();	
+	RBMKParticlesFactory			();
+	~RBMKParticlesFactory			();	
 	void							ImportParticles					();
 	class UNiagaraSystem*			ImportParticle					(PS::CPEDef*PEDef);		
 	class UNiagaraSystem*			ImportParticle					(PS::CPGDef*PGDef);		

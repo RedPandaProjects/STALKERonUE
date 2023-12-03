@@ -160,7 +160,7 @@ bool EDetailManager::LoadColorIndices(IReader& F)
         IReader* Data   	= Chunk->open_chunk(0);
         for (int32 i =1; Data; i++) 
         {
-            TSharedPtr<FXRayDetail> NewDetail =  MakeShared<FXRayDetail>();
+            TSharedPtr<FRBMKDetail> NewDetail =  MakeShared<FRBMKDetail>();
             if (NewDetail->Load(*Data)) 
             {
             	Objects.Add(NewDetail);
@@ -190,7 +190,7 @@ bool EDetailManager::LoadColorIndices(IReader& F)
 			for (int32 ReferenceID = 0; ReferenceID<ReferenceCount; ReferenceID++)
 			{
         		F.r_stringZ	(BufferStr,sizeof(BufferStr));
-	            FXRayDetail* DO	= FindDOByName(ANSI_TO_TCHAR(BufferStr));
+	            FRBMKDetail* DO	= FindDOByName(ANSI_TO_TCHAR(BufferStr));
 	            if (DO)
 	            {
 	            	ColorIndices.FindOrAdd(Index).Add(DO);
@@ -308,9 +308,9 @@ int EDetailManager::RemoveDOs()
     return Num;
 }
 
-FXRayDetail* EDetailManager::FindDOByName(const TCHAR* Name)
+FRBMKDetail* EDetailManager::FindDOByName(const TCHAR* Name)
 {
-	for(TSharedPtr<FXRayDetail>&Detail:Objects)
+	for(TSharedPtr<FRBMKDetail>&Detail:Objects)
 	{
 		if(Detail->GetName() == Name)
 		{
@@ -451,7 +451,7 @@ void		EDetailManager::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutI
 			}
 
 			int32 ObjectIndex = static_cast<int32>(DetailSlot.GetID(Index));
-			TSharedPtr<FXRayDetail>	ObjectPtr= Objects[ObjectIndex];
+			TSharedPtr<FRBMKDetail>	ObjectPtr= Objects[ObjectIndex];
 
 			const float		WorldX = (static_cast<float>(x)/static_cast<float>(DSize))*DetailSlotSize + BoundBox.min.x;
 			const float		WorldZ = (static_cast<float>(z)/static_cast<float>(DSize))*DetailSlotSize + BoundBox.min.z;

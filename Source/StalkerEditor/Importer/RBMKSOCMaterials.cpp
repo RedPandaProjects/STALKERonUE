@@ -1,6 +1,6 @@
-#include "XRaySOCMaterials.h"
+#include "RBMKSOCMaterials.h"
 
-void XRaySOCMaterials::Load()
+void RBMKSOCMaterials::Load()
 {
 	string_path INIFileName;
 	if (FS.exist(INIFileName, "$game_textures$", "textures.ltx"))
@@ -51,7 +51,7 @@ void XRaySOCMaterials::Load()
 	}//file-exist*/
 }
 
-void XRaySOCMaterials::UnLoad()
+void RBMKSOCMaterials::UnLoad()
 {
 	Texture2Details.Empty();
 	Texture2Bumps.Empty();

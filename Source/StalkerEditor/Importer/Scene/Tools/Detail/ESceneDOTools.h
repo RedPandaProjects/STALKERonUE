@@ -4,7 +4,7 @@
 
 class EDetailManager: public FXRaySceneToolBase
 {
-using ColorIndexMap = TMap<uint32,TArray<FXRayDetail*>>;
+using ColorIndexMap = TMap<uint32,TArray<FRBMKDetail*>>;
 public:
 									EDetailManager			();
 			 						~EDetailManager			() override;
@@ -22,7 +22,7 @@ public:
     bool							LoadColorIndices		(IReader&);
 
     int								RemoveDOs				();
-    FXRayDetail*					FindDOByName			(const TCHAR* Name);
+    FRBMKDetail*					FindDOByName			(const TCHAR* Name);
     
     void							InvalidateSlots			();
     void							ClearColorIndices		();
@@ -42,7 +42,7 @@ private:
 	TArray<FDetailSlot>				DetailSlots;		// note: pointer into VFS
 	FDetailSlot						DetailSlotEmpty;
 
-	TArray<TSharedPtr<FXRayDetail>>	Objects;
+	TArray<TSharedPtr<FRBMKDetail>>	Objects;
     ColorIndexMap					ColorIndices;
     ObjectList						SnapObjects;
 };

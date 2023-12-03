@@ -1,5 +1,5 @@
 #pragma once
-class XRaySOCMaterials
+class RBMKSOCMaterials
 {
 public:
 	void Load();

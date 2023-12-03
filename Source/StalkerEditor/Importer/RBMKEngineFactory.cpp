@@ -1,4 +1,4 @@
-#include "XRayEngineFactory.h"
+#include "RBMKEngineFactory.h"
 
 #include <Resources/StaticMesh/StalkerStaticMeshAssetUserData.h>
 
@@ -85,7 +85,7 @@ IC void QT16_2T(const CKeyQT16& K, const CMotion& M, Fvector& T)
 	T.z = float(K.z1) * M._sizeT.z + M._initT.z;
 }
 
-XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFlags)
+RBMKEngineFactory::RBMKEngineFactory(UObject* InParentPackage, EObjectFlags InFlags)
 {
 	ParentPackage = InParentPackage;
 	ObjectFlags = InFlags;
@@ -102,7 +102,7 @@ XRayEngineFactory::XRayEngineFactory(UObject* InParentPackage, EObjectFlags InFl
 	}
 }
 
-XRayEngineFactory::~XRayEngineFactory()
+RBMKEngineFactory::~RBMKEngineFactory()
 {
 	ShaderXRLC.Unload();
 	for (CEditableObject* Object : Objects)
@@ -169,7 +169,7 @@ inline bool operator == (const SJointIKData& Left, const SJointIKData& Right)
 		Left.type == Right.type;
 
 }
-USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
+USkeletalMesh* RBMKEngineFactory::ImportOGF(const FString& FileName)
 {
 	USkeletalMesh* SkeletalMesh = nullptr;
 	FString PackageName;
@@ -636,7 +636,7 @@ USkeletalMesh* XRayEngineFactory::ImportOGF(const FString& FileName)
 	return SkeletalMesh;
 }
 
-UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool DivideSubObject)
+UObject* RBMKEngineFactory::ImportObject(const FString& FileName, bool DivideSubObject)
 {
 	CEditableObject* Object = GXRayObjectLibrary->CreateEditObject(TCHAR_TO_ANSI(*FileName));
 	if (Object)
@@ -668,7 +668,7 @@ UObject* XRayEngineFactory::ImportObject(const FString& FileName, bool DivideSub
 	return nullptr;
 }
 
-UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, bool UseOnlyFullPath)
+UStaticMesh* RBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, bool UseOnlyFullPath)
 {
 
 
@@ -687,7 +687,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 }
 
 
-UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& PackageName,int32 InMeshID)
+UStaticMesh* RBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& PackageName,int32 InMeshID)
 {
 	UStaticMesh* StaticMesh = nullptr;
 	const FString& LocalPackageName = PackageName;
@@ -888,7 +888,7 @@ UStaticMesh* XRayEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object
 	return StaticMesh;
 }
 
-USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Object, bool UseOnlyFullPath /*= false*/)
+USkeletalMesh* RBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Object, bool UseOnlyFullPath /*= false*/)
 {
 	USkeletalMesh* SkeletalMesh = nullptr;
 
@@ -1060,12 +1060,12 @@ USkeletalMesh* XRayEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Obj
 	return SkeletalMesh;
 }
 
-UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, CSurface* Surface)
+UMaterialInterface* RBMKEngineFactory::ImportSurface(const FString& Path, CSurface* Surface)
 {
 	return ImportSurface(Path, Surface->_ShaderName(), Surface->_Texture(),Surface->_GameMtlName());
 }
 
-UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
+UMaterialInterface* RBMKEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
 {
 	auto LoadGameMaterial = [](shared_str GameMaterial)
 	{
@@ -1260,7 +1260,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurface(const FString& Path, shared
 	return GlobalMaterialInstance;
 }
 
-UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
+UMaterialInterface* RBMKEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
 {
 	if (ShaderName.size() == 0)
 		return nullptr;
@@ -1442,7 +1442,7 @@ UMaterialInterface* XRayEngineFactory::ImportSurfaceSOC(const FString& Path, sha
 	return GlobalMaterialInstance;
 }
 
-UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
+UTexture2D* RBMKEngineFactory::ImportTextureTHM(const FString& InFileName)
 {
 
 	string_path TexturesGamedataPath;
@@ -1497,7 +1497,7 @@ UTexture2D* XRayEngineFactory::ImportTextureTHM(const FString& InFileName)
 	return nullptr;
 }
 
-UObject* XRayEngineFactory::ImportPhysicsMaterials(const FString& FileName)
+UObject* RBMKEngineFactory::ImportPhysicsMaterials(const FString& FileName)
 {
 	CGameMtlLibrary Library;
 	Library.Load(TCHAR_TO_ANSI(*FileName));
@@ -1543,7 +1543,7 @@ UObject* XRayEngineFactory::ImportPhysicsMaterials(const FString& FileName)
 
 
 
-UStalkerPhysicalMaterial* XRayEngineFactory::ImportPhysicsMaterial(class SGameMtl*Materials)
+UStalkerPhysicalMaterial* RBMKEngineFactory::ImportPhysicsMaterial(class SGameMtl*Materials)
 {
 	FString Name =  Materials->m_Name.c_str();
 	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1566,7 +1566,7 @@ UStalkerPhysicalMaterial* XRayEngineFactory::ImportPhysicsMaterial(class SGameMt
 
 }
 
-UTexture2D* XRayEngineFactory::ImportTextureDDS(const FString& InFileName)
+UTexture2D* RBMKEngineFactory::ImportTextureDDS(const FString& InFileName)
 {
 	const FString PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(InFileName));
 
@@ -1575,7 +1575,7 @@ UTexture2D* XRayEngineFactory::ImportTextureDDS(const FString& InFileName)
 	return BaseTexture;
 }
 
-UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName,bool bIsUI)
+UTexture2D* RBMKEngineFactory::ImportTexture(const FString& FileName,bool bIsUI)
 {
 	UTexture2D*   Texture2D = nullptr;
 	 
@@ -1625,7 +1625,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName,bool bIsUI)
 	return Texture2D;
 }
 
-UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FString& PacketName)
+UTexture2D* RBMKEngineFactory::ImportTexture(const FString& FileName, const FString& PacketName)
 {
 	UTexture2D* Texture2D = nullptr;
 
@@ -1663,7 +1663,7 @@ UTexture2D* XRayEngineFactory::ImportTexture(const FString& FileName, const FStr
 	return Texture2D;
 }
 
-void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& HeightGloss)
+void RBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& HeightGloss)
 {
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
@@ -1780,7 +1780,7 @@ void XRayEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextur
 	}
 }
 
-int32 XRayEngineFactory::FindBoneIDOrAdd(TArray<CBone*>& InBones, CBone* InBone)
+int32 RBMKEngineFactory::FindBoneIDOrAdd(TArray<CBone*>& InBones, CBone* InBone)
 {
 	if (InBones.Find(InBone)!=INDEX_NONE)
 	{
@@ -1799,7 +1799,7 @@ int32 XRayEngineFactory::FindBoneIDOrAdd(TArray<CBone*>& InBones, CBone* InBone)
 	return InBones.Num()-1;
 }
 
-int32 XRayEngineFactory::FindBoneIDOrAdd(TArray<uint32>& OutBones, TArray<TSharedPtr<CBoneData>>& InBones, CBoneData* InBone)
+int32 RBMKEngineFactory::FindBoneIDOrAdd(TArray<uint32>& OutBones, TArray<TSharedPtr<CBoneData>>& InBones, CBoneData* InBone)
 {
 	if (OutBones.Find(InBone->GetSelfID()) != INDEX_NONE)
 	{
@@ -1814,7 +1814,7 @@ int32 XRayEngineFactory::FindBoneIDOrAdd(TArray<uint32>& OutBones, TArray<TShare
 	return OutBones.Add(InBone->GetSelfID());
 }
 
-bool XRayEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<FSkeletalMeshImportData>& LODIndexToSkeletalMeshImportData, const TArray<SkeletalMeshImportData::FBone>& InSkeletonBones)
+bool RBMKEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<FSkeletalMeshImportData>& LODIndexToSkeletalMeshImportData, const TArray<SkeletalMeshImportData::FBone>& InSkeletonBones)
 {
 	if (LODIndexToSkeletalMeshImportData.Num() == 0 || InSkeletonBones.Num() == 0)
 	{
@@ -1960,7 +1960,7 @@ bool XRayEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<F
 	return true;
 }
 
-USkeleton* XRayEngineFactory::FindOrCreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
+USkeleton* RBMKEngineFactory::FindOrCreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
 {
 	for (USkeleton* Skeleton : GStalkerEditorManager->Skeletons)
 	{
@@ -2008,7 +2008,7 @@ USkeleton* XRayEngineFactory::FindOrCreateSkeleton(const FString& FullName, USke
 	return Skeleton;
 }
 
-void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* InMesh, CEditableObject* Object)
+void RBMKEngineFactory::CreateAnims(const FString& FullName, USkeleton* InMesh, CEditableObject* Object)
 {
 	for (CSMotion* Motion : Object->SMotions())
 	{
@@ -2016,7 +2016,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* InMesh, 
 	}
 }
 
-void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton, CSMotion* InMotion)
+void RBMKEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton, CSMotion* InMotion)
 {
 	const FString MotionPath = UPackageTools::SanitizePackageName(FullName / FString( InMotion->name.c_str()));
 	const FString MotionFullPath = MotionPath + TEXT(".") + FPaths::GetBaseFilename(MotionPath);
@@ -2043,7 +2043,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	// If we should transact, we'll already have a transaction from somewhere else. We should suppress this because
 	// it will also create a transaction when importing into UE assets, and the level sequence assets can emit some warnings about it
 	const bool bShouldTransact = false;
-	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "XRayEngineFactory Animation Data"), bShouldTransact);
+	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "RBMKEngineFactory Animation Data"), bShouldTransact);
 	Controller.ResetModel(bShouldTransact);
 	Controller.InitializeModel();
 	// Bake the animation for each frame.
@@ -2110,7 +2110,7 @@ void XRayEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton
 	FAssetRegistryModule::AssetCreated(AnimSequence);
 }
 
-void XRayEngineFactory::CreateAnims(const FString& Name, USkeletalMesh* InMesh, TArray<TSharedPtr<CBoneData>>&BonesData, IReader* InMotion)
+void RBMKEngineFactory::CreateAnims(const FString& Name, USkeletalMesh* InMesh, TArray<TSharedPtr<CBoneData>>&BonesData, IReader* InMotion)
 {
 	shared_motions Motions;
 	if (InMotion->find_chunk(OGF_S_MOTION_REFS))
@@ -2232,7 +2232,7 @@ void XRayEngineFactory::CreateAnims(const FString& Name, USkeletalMesh* InMesh, 
 	}
 }
 
-UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion, u16 ID)
+UAnimSequence* RBMKEngineFactory::CreateAnim(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion, u16 ID)
 {
 
 	const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
@@ -2253,7 +2253,7 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 	// If we should transact, we'll already have a transaction from somewhere else. We should suppress this because
 	// it will also create a transaction when importing into UE assets, and the level sequence assets can emit some warnings about it
 	const bool bShouldTransact = false;
-	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "XRayEngineFactory Animation Data"), bShouldTransact);
+	Controller.OpenBracket(LOCTEXT("XRayEngineFactoryImporterAnimData_Bracket", "RBMKEngineFactory Animation Data"), bShouldTransact);
 	Controller.ResetModel(bShouldTransact);
 	Controller.InitializeModel();
 
@@ -2343,7 +2343,7 @@ UAnimSequence* XRayEngineFactory::CreateAnim(const FString& Name, USkeleton* InM
 	return AnimSequence;
 }	
 
-void XRayEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh,const TArray<IBoneData*>&Bones)
+void RBMKEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh,const TArray<IBoneData*>&Bones)
 {
 	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
 	UPhysicsAsset* PhysicsAsset = LoadObject<UPhysicsAsset>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);

@@ -1,5 +1,5 @@
 #include "XRayGameMtlImporterFactory.h"
-#include "../XRayEngineFactory.h"
+#include "../RBMKEngineFactory.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
 UXRayGameMtlImporterFactory::UXRayGameMtlImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -24,7 +24,7 @@ UObject* UXRayGameMtlImporterFactory::FactoryCreateFile(UClass* InClass, UObject
 	const FString NewPackageName = UPackageTools::SanitizePackageName(*(FPaths::GetPath(InParent->GetName())));
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
-	XRayEngineFactory Factory(ParentPackage, Flags);
+	RBMKEngineFactory Factory(ParentPackage, Flags);
 	Object = Factory.ImportPhysicsMaterials(Filename);
 	if (!IsValid(Object))
 	{

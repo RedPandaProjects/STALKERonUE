@@ -3,9 +3,9 @@
 #include "PhysicsEngine/BodySetup.h"
 #include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
 #include "StalkerEditor/StalkerEditorManager.h"
-#include "StalkerEditor/Importer/XRayEngineFactory.h"
+#include "StalkerEditor/Importer/RBMKEngineFactory.h"
 
-FXRayDetail::FXRayDetail()
+FRBMKDetail::FRBMKDetail()
 {
 	ReferencePtr		= nullptr;
     MinScale			= 0.5f;
@@ -13,7 +13,7 @@ FXRayDetail::FXRayDetail()
     DensityFactor	    = 1.f;
 }
 
-FXRayDetail::~FXRayDetail()
+FRBMKDetail::~FRBMKDetail()
 {
     if(ReferencePtr)
     {
@@ -21,7 +21,7 @@ FXRayDetail::~FXRayDetail()
     }
 }
 
-bool FXRayDetail::Update	(const FString&Name)
+bool FRBMKDetail::Update	(const FString&Name)
 {
     
 	auto IsDegeneratedLambda = [](int32 InIndices[3])
@@ -75,7 +75,7 @@ bool FXRayDetail::Update	(const FString&Name)
     	int32 Triangle[3];
     	for (int32 VertexID=0; VertexID<3; VertexID++)
         {
-            FXRayDetailVertex Vertex;
+            FRBMKDetailVertex Vertex;
 
     		Vertex.Position = StalkerMath::XRayLocationToUnreal( Mesh->GetVertices()[Face.pv[VertexID].pindex]);
 
@@ -110,9 +110,9 @@ bool FXRayDetail::Update	(const FString&Name)
     return true;
 }
 
-UStaticMesh* FXRayDetail::GetOrCreateStaticMesh()
+UStaticMesh* FRBMKDetail::GetOrCreateStaticMesh()
 {
-    XRayEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
+    RBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
 
 	UStaticMesh* StaticMesh = nullptr;
 	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName();
@@ -189,7 +189,7 @@ UStaticMesh* FXRayDetail::GetOrCreateStaticMesh()
     return StaticMesh;
 }
 
-UFoliageType_InstancedStaticMesh* FXRayDetail::GetOrCreateFoliageType()
+UFoliageType_InstancedStaticMesh* FRBMKDetail::GetOrCreateFoliageType()
 {
 	
 	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName() + TEXT("_FoliageType");
@@ -217,7 +217,7 @@ UFoliageType_InstancedStaticMesh* FXRayDetail::GetOrCreateFoliageType()
 }
 
 
-bool FXRayDetail::Load(IReader& F)
+bool FRBMKDetail::Load(IReader& F)
 {
 	enum
 	{
@@ -268,7 +268,7 @@ bool FXRayDetail::Load(IReader& F)
     return  Update(ANSI_TO_TCHAR(InName));
 }
 
-FString FXRayDetail::GetName() const
+FString FRBMKDetail::GetName() const
 {
 	if(ReferencePtr)
 	{
