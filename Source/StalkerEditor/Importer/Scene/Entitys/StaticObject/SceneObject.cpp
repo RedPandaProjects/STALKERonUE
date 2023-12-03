@@ -44,13 +44,13 @@ int CSceneObject::GetVertexCount()
 	return m_pReference?m_pReference->GetVertexCount():0;
 }
 
-void CSceneObject::OnUpdateTransform()
+void CSceneObject::UpdateTransform()
 {
-	inherited::OnUpdateTransform();
+	inherited::UpdateTransform();
     // update bounding volume
     if (m_pReference){
     	m_TBBox.set		(m_pReference->GetBox());
-    	m_TBBox.xform	(_Transform());
+    	m_TBBox.xform	(FTransform);
     }
 }
 
@@ -70,12 +70,12 @@ bool CSceneObject::GetUTBox( Fbox& box )
 
 void CSceneObject::GetFullTransformToWorld( Fmatrix& m )
 {
-    m.set(_Transform());
+    m.set(FTransform);
 }
 
 void CSceneObject::GetFullTransformToLocal( Fmatrix& m )
 {
-    m.set(_ITransform());
+    m.set(FITransform);
 }
 
 void* CSceneObject::QueryInterface(ERBMKSceneObjectType InClassID)

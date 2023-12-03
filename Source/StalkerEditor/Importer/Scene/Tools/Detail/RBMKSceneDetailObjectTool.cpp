@@ -392,7 +392,7 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 		{
 			if(SceneObject->GetReference())
 			{
-				SceneObject->GetReference()->BoxPick(SceneObject, BoundBox, SceneObject->_ITransform(), PickInfos);
+				SceneObject->GetReference()->BoxPick(SceneObject, BoundBox, SceneObject->FTransform, PickInfos);
 			}
 		}
 	}
@@ -468,7 +468,7 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 				for (size_t k=0; k<I.inf.size(); k++)
 				{
 					VERIFY(I.s_obj);
-					I.e_obj->GetFaceWorld(I.s_obj->_Transform(),I.e_mesh,I.inf[k].id,Vertices);
+					I.e_obj->GetFaceWorld(I.s_obj->FTransform,I.e_mesh,I.inf[k].id,Vertices);
 					if (CDB::TestRayTri(WorldPosition,RayDirection,Vertices,RayU,RayV,RayRange,TRUE))
 					{
 						if (RayRange>=0)	{

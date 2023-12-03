@@ -12,7 +12,7 @@ public:
 	virtual LPCSTR          RefName             () { return m_GroupReferenceName.size() ? m_GroupReferenceName.c_str() : "group"; }
 	void 			        SetRefName		    (LPCSTR nm);
     virtual bool	        CanAttach		    () {return false;}
-    virtual void 	        OnUpdateTransform   ();
+    virtual void 	        UpdateTransform   ();
   	virtual bool 	        LoadStream			(IReader&);
   	virtual bool 	        LoadLTX				(CInifile& ini, LPCSTR sect_name);
 	void*                   QueryInterface      (ERBMKSceneObjectType InClassID) override;

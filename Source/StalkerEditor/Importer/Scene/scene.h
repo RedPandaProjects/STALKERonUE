@@ -2,33 +2,12 @@
 
 DECLARE_DELEGATE_OneParam( FRMBKSceneAppendObjectDelegate,TSharedPtr<FXRayCustomObject>);
 
-struct st_LevelOptions
-{
-	shared_str		m_FNLevelPath;
-    shared_str		m_LevelPrefix;
-	shared_str 		m_BOPText;
-	shared_str 		m_map_version;
-    
-
-    GameTypeChooser	m_mapUsage;
-    st_LevelOptions	();
-
-    
-
-	void 			Read			(IReader&);
-	void 			ReadLTX			(CInifile&);
-    void			Reset			();
-};
-
 class EScene 
 {
 public:
 	EScene();
 	~EScene();
-	st_LevelOptions	m_LevelOp;
 	xrGUID			m_GUID;
-	shared_str		m_OwnerName;
-	time_t			m_CreateTime;
 	TMap<ERBMKSceneObjectType,TSharedPtr<FRBMKSceneToolBase>>   SceneTools;
 protected:
 	void			RegisterSceneTools(TSharedPtr<FRBMKSceneToolBase> SceneToolBase);
@@ -80,9 +59,6 @@ public:
 	 void 	AppendObject(TSharedPtr<FXRayCustomObject> Object);
 	 bool 	RemoveObject(TSharedPtr<FXRayCustomObject> Object);
 
-
-	xr_string		LevelPath();
-	shared_str 		LevelPrefix() { return m_LevelOp.m_LevelPrefix; }
 
 	bool            GetSubstObjectName(const xr_string& from, xr_string& to) const;
 	

@@ -36,63 +36,22 @@ void CEditShape::Construct(LPVOID data)
     m_shape_type		= eShapeCommon;
 }
 
-void CEditShape::OnUpdateTransform()
-{
-	inherited::OnUpdateTransform();
-}
-
-void CEditShape::SetScale(const Fvector& val)
-{
-	if (shapes.size()==1){
-		switch (shapes[0].type){
-		case cfSphere:{
-        	FScale.set(val.x,val.x,val.x);
-        }break;
-		case cfBox:		FScale.set(val.x,val.y,val.z);	break;
-        default: THROW;
-		}
-    }else{
-		FScale.set(val.x,val.x,val.x);
-
-    }
-    UpdateTransform	();
-}
-
-void CEditShape::ApplyScale()
-{
-	for (ShapeIt it=shapes.begin(); it!=shapes.end(); it++){
-		switch (it->type){
-		case cfSphere:{
-            Fsphere&	T	= it->data.sphere;
-            FTransformS.transform_tiny(T.P);
-            T.R				*= FScale.x;
-		}break;
-		case cfBox:{
-            Fmatrix& B		= it->data.box;
-            B.mulA_43		(FTransformS);
-		}break;
-        }
-    }
-    FScale.set		(1.f,1.f,1.f);
-    UpdateTransform	(true);
-
-}
-
-void CEditShape::add_sphere(const Fsphere& S)
-{
-	shapes.push_back(shape_def());
-	shapes.back().type	= cfSphere;
-	shapes.back().data.sphere.set(S);
-
-}
-
-void CEditShape::add_box(const Fmatrix& B)
-{
-	shapes.push_back(shape_def());
-	shapes.back().type	= cfBox;
-	shapes.back().data.box.set(B);
-
-}
+//
+//void CEditShape::add_sphere(const Fsphere& S)
+//{
+//	shapes.push_back(shape_def());
+//	shapes.back().type	= cfSphere;
+//	shapes.back().data.sphere.set(S);
+//
+//}
+//
+//void CEditShape::add_box(const Fmatrix& B)
+//{
+//	shapes.push_back(shape_def());
+//	shapes.back().type	= cfBox;
+//	shapes.back().data.box.set(B);
+//
+//}
 //
 //void CEditShape::Attach(CEditShape* from)
 //{
@@ -159,15 +118,6 @@ void CEditShape::add_box(const Fmatrix& B)
 //
 //    }
 //}
-
-void CEditShape::OnDetach()
-{
-	inherited::OnDetach	();
-
-    m_DrawTranspColor	= SHAPE_COLOR_TRANSP;
-    m_DrawEdgeColor		= SHAPE_COLOR_EDGE;
-}
-
 
 void* CEditShape::QueryInterface(ERBMKSceneObjectType InClassID)
 {

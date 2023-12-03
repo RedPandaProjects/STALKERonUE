@@ -56,7 +56,7 @@ public:
     int 			GetSurfFaceCount		(const char* surf_name);
 
     // render methods
-    virtual void	OnUpdateTransform		();
+    virtual void	UpdateTransform		();
 
     // misc
 	void		    EvictObject				();

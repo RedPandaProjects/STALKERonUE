@@ -12,20 +12,6 @@
 
 EScene* Scene;
 
-st_LevelOptions::st_LevelOptions()
-{
-	Reset();
-}
-
-void st_LevelOptions::Reset()
-{
-	m_FNLevelPath		= "level";
-    m_LevelPrefix		= "level_prefix";
-	m_BOPText			= "";
-	m_map_version		= "1.0";
-	m_mapUsage.SetDefaults	();
-}
-
 EScene::EScene()
 {
     for (int32 i = 0; i < static_cast<int32>(ERBMKSceneObjectType::Count); i++)
@@ -71,19 +57,6 @@ void EScene::Clear()
 		}
 	}
 }
-
-
-
-xr_string EScene::LevelPath()
-{
-    string_path path;
-	if (m_LevelOp.m_FNLevelPath.size()){
-        FS.update_path	(path,"$level$",m_LevelOp.m_FNLevelPath.c_str());
-        FCStringAnsi::Strcat(path,"\\");
-    }
-    return xr_string(path);
-}
-
 
 TSharedPtr<FXRayCustomObject>  EScene::FindObjectByName(LPCSTR name, ERBMKSceneObjectType classfilter)
 {

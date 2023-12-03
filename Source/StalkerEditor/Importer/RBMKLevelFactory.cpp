@@ -99,7 +99,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 				UStaticMesh* StaticMesh = EngineFactory.ImportObjectAsStaticMesh(EditableObject, true);
 				if (StaticMesh)
 				{
-					SceneObject->UpdateTransform(true);
+					SceneObject->UpdateTransform();
 					Fquaternion XRayQuat;
 					XRayQuat.set(SceneObject->FTransformR);
 					FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
@@ -158,7 +158,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 			}
 			if (NiagaraSystem)
 			{
-				PSObject->UpdateTransform(true);
+				PSObject->UpdateTransform();
 				Fquaternion XRayQuat;
 				XRayQuat.set(PSObject->FTransformR);
 				FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
@@ -211,7 +211,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 			CSpawnPoint* SpawnObject = reinterpret_cast<CSpawnPoint*>(Object->QueryInterface(ERBMKSceneObjectType::SpawnPoint));
 			if (SpawnObject && SpawnObject->m_SpawnData.m_Data)
 			{
-				SpawnObject->UpdateTransform(true);
+				SpawnObject->UpdateTransform();
 				Fquaternion XRayQuat;
 				XRayQuat.set(SpawnObject->FTransformR);
 				FQuat Quat(XRayQuat.x, -XRayQuat.z, -XRayQuat.y, XRayQuat.w);
@@ -238,7 +238,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 				if (SpawnObject->m_AttachedObject)
 				{
 					CEditShape* Shape = reinterpret_cast<CEditShape*>(SpawnObject->m_AttachedObject->QueryInterface(ERBMKSceneObjectType::Shape));
-					Shape->UpdateTransform(true);
+					Shape->UpdateTransform();
 					if (Shape)
 					{
 						for (CShapeData::shape_def& ShapeData : Shape->GetShapes())
@@ -251,7 +251,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 								NewShapeComponent->OnComponentCreated();
 								NewShapeComponent->RegisterComponent();
 								FTransform ShapeTransform;
-								ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(ShapeData.data.sphere.P) + StalkerMath::XRayLocationToUnreal(Shape->_Transform().c)));
+								ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(ShapeData.data.sphere.P) + StalkerMath::XRayLocationToUnreal(Shape->FTransform.c)));
 								NewShapeComponent->SphereRadius = ShapeData.data.sphere.R * 100.f;
 								NewShapeComponent->SetWorldTransform(ShapeTransform);
 								NewShapeComponent->UpdateBounds();
@@ -266,7 +266,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 								NewShapeComponent->RegisterComponent();
 
 								Fmatrix MBox = ShapeData.data.box;
-								MBox.mulA_43(Shape->_Transform());
+								MBox.mulA_43(Shape->FTransform);
 
 								FTransform ShapeTransform;
 								ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(MBox.c)));
@@ -393,8 +393,8 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 					if (obj->IsStatic())
 					{
 						CEditableObject *O 	= obj->GetReference();
-						obj->UpdateTransform(true);
-						const Fmatrix& T 	= obj->_Transform();
+						obj->UpdateTransform();
+						const Fmatrix& T 	= obj->FTransform;
                 
 						for(EditMeshIt M =O->FirstMesh(); M!=O->LastMesh(); M++)
 						{

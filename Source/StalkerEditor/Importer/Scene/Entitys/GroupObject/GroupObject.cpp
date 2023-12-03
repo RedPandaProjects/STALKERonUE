@@ -37,10 +37,6 @@ void CGroupObject::ClearInternal(xr_list<FXRayCustomObject*>& Objects)
 void  CGroupObject::SetRefName(LPCSTR nm)
 {
 	m_GroupReferenceName = nm;
-    if(nm && strstr(nm, "light_preset"))
-    	save_id = 1;
-    else
-    	save_id = 0;
 }
 
 
@@ -67,7 +63,6 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
     	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
         {
 		    Object->m_pOwnerObject			= this;
-		    Object->m_CO_Flags.set			(flObjectInGroup, TRUE);
 		    m_ObjectsInGroup.Add(Object);
 
 
@@ -91,15 +86,6 @@ bool CGroupObject::LoadLTX(CInifile& ini, LPCSTR sect_name)
 	if (!m_GroupReferenceName.size())
         ELog.Msg			(mtError,"ERROR: group '%s' - has empty reference. Corrupted file?", GetName());
     
-
-    if(version<0x0012)
-    {
-        for (TSharedPtr<FXRayCustomObject>& Obect :m_ObjectsInGroup)
-        {
-			Obect->m_CO_Flags.set(flObjectInGroup, TRUE);
-        	Obect->m_CO_Flags.set(flObjectInGroupUnique, TRUE);
-        }
-    }
 
     return 			true;
 }
@@ -148,7 +134,6 @@ bool CGroupObject::LoadStream(IReader& F)
     	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
         {
 		    Object->m_pOwnerObject			= this;
-		    Object->m_CO_Flags.set			(flObjectInGroup, TRUE);
 		    m_ObjectsInGroup.Add(Object);
 
 
@@ -175,24 +160,13 @@ bool CGroupObject::LoadStream(IReader& F)
         SetRefName(rn.c_str());
      }
      
-    if(version<0x0012)
-    {
-        for (TSharedPtr<FXRayCustomObject>& Obect :m_ObjectsInGroup)
-        {
-            if(Obect)
-            {
-            	Obect->m_CO_Flags.set(flObjectInGroup, TRUE);
-            	Obect->m_CO_Flags.set(flObjectInGroupUnique, TRUE);
-            }
-        }
-    }
 
     return 			true;
 }
 
-void CGroupObject::OnUpdateTransform()
+void CGroupObject::UpdateTransform()
 {
-	inherited::OnUpdateTransform();
+	inherited::UpdateTransform();
 	 for (TSharedPtr<FXRayCustomObject>&Obect:m_ObjectsInGroup)
-    	Obect->OnUpdateTransform();
+    	Obect->UpdateTransform();
 }

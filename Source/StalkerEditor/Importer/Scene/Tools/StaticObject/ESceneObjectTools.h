@@ -1,8 +1,8 @@
 #pragma once
 
-class ESceneObjectTool: public FXRaySceneCustomOTool
+class ESceneObjectTool: public FRBMKSceneObjectsToolBase
 {
-	typedef FXRaySceneCustomOTool inherited;
+	typedef FRBMKSceneObjectsToolBase inherited;
 public:
     ESceneObjectTool();
     ~ESceneObjectTool() override;
