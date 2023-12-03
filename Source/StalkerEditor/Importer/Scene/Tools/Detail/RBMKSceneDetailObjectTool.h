@@ -2,12 +2,12 @@
 #include "RBMKDetailFormat.h"
 #include "RBMKDetailModel.h"
 
-class EDetailManager: public FXRaySceneToolBase
+class FRBMKSceneDetailObjectTool: public FXRaySceneToolBase
 {
 using ColorIndexMap = TMap<uint32,TArray<FRBMKDetail*>>;
 public:
-									EDetailManager			();
-			 						~EDetailManager			() override;
+									FRBMKSceneDetailObjectTool			();
+			 						~FRBMKSceneDetailObjectTool			() override;
     void							Clear					() override;
 									
     bool							LoadStream         		(IReader&) override;

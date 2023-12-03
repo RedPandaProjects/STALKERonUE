@@ -20,7 +20,7 @@
 #include "Scene/Tools/StaticObject/ESceneObjectTools.h"
 #include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
 #include "Scene/Entitys/ParticlesObject/ParticlesObject.h"
-#include "Scene/Tools/Detail/ESceneDOTools.h"
+#include "Scene/Tools/Detail/RBMKSceneDetailObjectTool.h"
 #include "Scene/Tools/Wallmark/ESceneWallmarkTool.h"
 #include "StalkerEditor/StalkerEditorManager.h"
 THIRD_PARTY_INCLUDES_START
@@ -540,7 +540,7 @@ bool RBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptio
 	}
 	if (LevelImportOptions.ImportDetail)
 	{
-		if(EDetailManager* DOSceneTool = static_cast<EDetailManager*>(Scene->GetTool(OBJCLASS_DO)))
+		if(FRBMKSceneDetailObjectTool* DOSceneTool = static_cast<FRBMKSceneDetailObjectTool*>(Scene->GetTool(OBJCLASS_DO)))
 		{
 			DOSceneTool->DetailDensity = LevelImportOptions.DetailDensity;
 			DOSceneTool->ExportToCurrentWorld();

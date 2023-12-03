@@ -9,7 +9,7 @@
 #include "Tools/Particles/EScenePSTools.h"
 #include "Tools/Wallmark/ESceneWallmarkTool.h"
 #include "Entitys/GroupObject/GroupObject.h"
-#include "Tools/Detail/ESceneDOTools.h"
+#include "Tools/Detail/RBMKSceneDetailObjectTool.h"
 
 
 EScene* Scene;
@@ -203,7 +203,7 @@ void EScene::CreateSceneTools()
 	RegisterSceneTools(MakeShared<ESceneGroupTool>()); 
 	RegisterSceneTools(MakeShared<EScenePSTools>());
 	RegisterSceneTools(MakeShared<ESceneWallmarkTool>());
-	RegisterSceneTools(MakeShared<EDetailManager>());
+	RegisterSceneTools(MakeShared<FRBMKSceneDetailObjectTool>());
 }
 
 void EScene::DestroySceneTools()

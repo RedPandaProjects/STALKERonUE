@@ -1,4 +1,4 @@
-#include "ESceneDOTools.h"
+#include "RBMKSceneDetailObjectTool.h"
 #include "RBMKDetailFormat.h"
 #include "InstancedFoliageActor.h"
 #include "StalkerEditor/Importer/Scene/Entitys/StaticObject/SceneObject.h"
@@ -6,34 +6,34 @@ THIRD_PARTY_INCLUDES_START
 #include "xrEngine/cl_intersect.h"
 THIRD_PARTY_INCLUDES_END
 
-EDetailManager::EDetailManager():FXRaySceneToolBase(OBJCLASS_DO)
+FRBMKSceneDetailObjectTool::FRBMKSceneDetailObjectTool():FXRaySceneToolBase(OBJCLASS_DO)
 {
     DetailHeader = {};
     InitRender();
 }
 
-EDetailManager::~EDetailManager()
+FRBMKSceneDetailObjectTool::~FRBMKSceneDetailObjectTool()
 {
 }
 
-void EDetailManager::ClearColorIndices()
+void FRBMKSceneDetailObjectTool::ClearColorIndices()
 {
 	FXRaySceneToolBase::Clear	();
 }
-void EDetailManager::ClearSlots()
+void FRBMKSceneDetailObjectTool::ClearSlots()
 {
     DetailHeader = {};
 	DetailSlots.Empty();
 }
 
-void EDetailManager::Clear()
+void FRBMKSceneDetailObjectTool::Clear()
 {
 	ClearColorIndices	();
     ClearSlots			();
     SnapObjects.clear   ();
 }
 
-void EDetailManager::ExportToCurrentWorld()
+void FRBMKSceneDetailObjectTool::ExportToCurrentWorld()
 {
     auto AddInstances = [](UWorld* World, UFoliageType* InFoliageType, const TArray<FTransform>& InTransforms)
 	{
@@ -97,7 +97,7 @@ void EDetailManager::ExportToCurrentWorld()
 
 }
 
-void EDetailManager::InitRender()
+void FRBMKSceneDetailObjectTool::InitRender()
 {
     //--------------------------------------------------- Decompression
 	static int32 Magic4x4[4][4] =
@@ -142,7 +142,7 @@ void EDetailManager::InitRender()
 	BWDitherMap		(2,Dither);
 }
 
-bool EDetailManager::LoadColorIndices(IReader& F)
+bool FRBMKSceneDetailObjectTool::LoadColorIndices(IReader& F)
 {
 	enum
 	{
@@ -204,13 +204,13 @@ bool EDetailManager::LoadColorIndices(IReader& F)
     }
     return Result;
 }
-bool EDetailManager::LoadLTX(CInifile& ini)
+bool FRBMKSceneDetailObjectTool::LoadLTX(CInifile& ini)
 {
 	checkNoEntry();
     return true;
 }
 
-bool EDetailManager::LoadStream(IReader& F)
+bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 {
 	FXRaySceneToolBase::LoadStream	(F);
 	
@@ -233,7 +233,7 @@ bool EDetailManager::LoadStream(IReader& F)
 	const uint32 Version = F.r_u32();
     if (Version != DETMGR_VERSION)
     {
-		UE_LOG(LogXRayImporter,Error,TEXT("EDetailManager: unsupported version."));
+		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: unsupported version."));
         return false;
     }
 	// header
@@ -253,7 +253,7 @@ bool EDetailManager::LoadStream(IReader& F)
     // Objects
     if (!LoadColorIndices(F))
 	{
-		UE_LOG(LogXRayImporter,Error,TEXT("EDetailManager: Some Objects removed. Reinitialize Objects."));
+		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Some Objects removed. Reinitialize Objects."));
         InvalidateSlots	();
     }
 	
@@ -267,7 +267,7 @@ bool EDetailManager::LoadStream(IReader& F)
             FXRayCustomObject* O = Scene->FindObjectByName(BufferStr,OBJCLASS_SCENEOBJECT);
             if (!O)	
             {
-				UE_LOG(LogXRayImporter,Error,TEXT("EDetailManager: Can't find snap object '%S'."),BufferStr);
+				UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Can't find snap object '%S'."),BufferStr);
             }
             else	
             {
@@ -283,14 +283,14 @@ bool EDetailManager::LoadStream(IReader& F)
 
 }
 
-bool EDetailManager::LoadSelection(IReader& F)
+bool FRBMKSceneDetailObjectTool::LoadSelection(IReader& F)
 {
 	Clear();
 	return LoadStream			(F);
 }
 
 
-void EDetailManager::InvalidateSlots()
+void FRBMKSceneDetailObjectTool::InvalidateSlots()
 {
 	for (FRBMKDetailSlot& DetailSlot : DetailSlots)
     {
@@ -301,14 +301,14 @@ void EDetailManager::InvalidateSlots()
     }
 }
 
-int EDetailManager::RemoveDOs()
+int FRBMKSceneDetailObjectTool::RemoveDOs()
 {
 	int32 Num = Objects.Num();
     Objects.Empty();
     return Num;
 }
 
-FRBMKDetail* EDetailManager::FindDOByName(const TCHAR* Name)
+FRBMKDetail* FRBMKSceneDetailObjectTool::FindDOByName(const TCHAR* Name)
 {
 	for(TSharedPtr<FRBMKDetail>&Detail:Objects)
 	{
@@ -320,7 +320,7 @@ FRBMKDetail* EDetailManager::FindDOByName(const TCHAR* Name)
     return nullptr;
 }
 
-FRBMKDetailSlot&	EDetailManager::QueryDB(int32 X, int32 Z)
+FRBMKDetailSlot&	FRBMKSceneDetailObjectTool::QueryDB(int32 X, int32 Z)
 {
 	int32 XWithOffset = X+DetailHeader.OffsetX;
 	int32 ZWithOffset = Z+DetailHeader.OffsetZ;
@@ -341,7 +341,7 @@ FRBMKDetailSlot&	EDetailManager::QueryDB(int32 X, int32 Z)
 }
 
 
-void		EDetailManager::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances)
+void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances)
 {
 	auto	Interpolate = [](float * base, uint32 x, uint32 y, uint32 size)
 	{
