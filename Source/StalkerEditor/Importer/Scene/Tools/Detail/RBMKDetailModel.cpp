@@ -1,4 +1,4 @@
-#include "EDetailModel.h"
+#include "RBMKDetailModel.h"
 
 #include "PhysicsEngine/BodySetup.h"
 #include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
