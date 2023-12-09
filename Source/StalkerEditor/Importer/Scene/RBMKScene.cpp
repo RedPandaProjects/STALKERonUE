@@ -6,9 +6,9 @@
 #include "Tools/Particles/RBMKSceneParticleSystemsTool.h"
 #include "Tools/Shape/RBMKSceneShapesTool.h"
 #include "Tools/Spawn/RBMKSpawnPointsTool.h"
-#include "Tools/StaticObject/RBMKSceneStaticMeshesTool.h"
+#include "Tools/StaticMesh/RBMKSceneStaticMeshesTool.h"
 #include "Tools/Wallmark/FRBMKSceneWallmarkTool.h"
-#include "Tools/WayPoint/RBMKSceneWayObjectsTool.h"
+#include "Tools/Way/RBMKSceneWayObjectsTool.h"
 
 FRBMKScene*GRBMKScene = nullptr;
 FRBMKScene::FRBMKScene(): SceneXRGUID()

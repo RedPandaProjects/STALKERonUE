@@ -1,6 +1,6 @@
 #include "RBMKSceneShapesTool.h"
 
-#include "Importer/Scene/Entitys/ShapeObject/RBMKSceneShape.h"
+#include "Importer/Scene/Entitys/Shape/RBMKSceneShape.h"
 
 FRBMKSceneShapesTool::FRBMKSceneShapesTool():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::Shape)
 {

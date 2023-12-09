@@ -1,7 +1,7 @@
 #include "RBMKSceneStaticMeshesTool.h"
 
 #include "Importer/FRBMKEngineFactory.h"
-#include "Importer/Scene/Entitys/StaticObject/RBMKSceneStaticMesh.h"
+#include "Importer/Scene/Entitys/StaticMesh//RBMKSceneStaticMesh.h"
 #include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
 
 FRBMKSceneStaticMeshesTool::FRBMKSceneStaticMeshesTool():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::StaticMesh)

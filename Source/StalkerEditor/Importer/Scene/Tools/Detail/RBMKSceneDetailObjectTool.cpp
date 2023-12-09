@@ -2,7 +2,7 @@
 
 #include "RBMKDetailFormat.h"
 #include "InstancedFoliageActor.h"
-#include "Importer/Scene/Entitys/StaticObject/RBMKSceneStaticMesh.h"
+#include "Importer/Scene/Entitys/StaticMesh//RBMKSceneStaticMesh.h"
 
 THIRD_PARTY_INCLUDES_START
 #include "xrEngine/cl_intersect.h"

@@ -1,7 +1,7 @@
 #include "RBMKSceneSpawnPoint.h"
 
 #include "StalkerEditorManager.h"
-#include "Importer/Scene/Entitys/ShapeObject/RBMKSceneShape.h"
+#include "Importer/Scene/Entitys/Shape//RBMKSceneShape.h"
 #include "Managers/SEFactory/StalkerSEFactoryManager.h"
 
 THIRD_PARTY_INCLUDES_START

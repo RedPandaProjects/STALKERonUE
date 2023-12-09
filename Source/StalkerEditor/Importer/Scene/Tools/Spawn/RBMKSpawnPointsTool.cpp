@@ -3,11 +3,11 @@
 #include "Entities/Scene/SpawnObject/Components/StalkerSpawnObjectBoxShapeComponent.h"
 #include "Entities/Scene/SpawnObject/Components/StalkerSpawnObjectSphereShapeComponent.h"
 #include "Entities/Scene/SpawnObject/StalkerSpawnObject.h"
-#include "Importer/Scene/Entitys/ShapeObject/RBMKSceneShape.h"
-#include "Importer/Scene/Entitys/SpawnObject/RBMKSceneSpawnPoint.h"
-#include "Importer/Scene/Entitys/StaticObject/RBMKSceneStaticMesh.h"
+#include "Importer/Scene/Entitys/Shape/RBMKSceneShape.h"
+#include "Importer/Scene/Entitys/SpawnPoint//RBMKSceneSpawnPoint.h"
+#include "Importer/Scene/Entitys/StaticMesh//RBMKSceneStaticMesh.h"
 #include "Importer/Scene/GeometryPartExtractor.h"
-#include "Importer/Scene/Tools/StaticObject/RBMKSceneStaticMeshesTool.h"
+#include "Importer/Scene/Tools/StaticMesh/RBMKSceneStaticMeshesTool.h"
 
 THIRD_PARTY_INCLUDES_START
 #include "Editors/XrECore/Engine/GameMtlLib.h"

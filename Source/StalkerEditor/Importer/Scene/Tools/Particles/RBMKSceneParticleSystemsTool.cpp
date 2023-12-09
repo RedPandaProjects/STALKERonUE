@@ -4,7 +4,7 @@
 #include "NiagaraComponent.h"
 #include "NiagaraSystem.h"
 #include "StalkerEditor/StalkerEditorManager.h"
-#include "StalkerEditor/Importer/Scene/Entitys/ParticlesObject/RBMKSceneParticleSystem.h"
+#include "StalkerEditor/Importer/Scene/Entitys/ParticleSystem//RBMKSceneParticleSystem.h"
 
 FRBMKSceneParticleSystemsTool::FRBMKSceneParticleSystemsTool():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::ParticleSystem)
 {
