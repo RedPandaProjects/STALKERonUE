@@ -3,16 +3,16 @@
 class FRBMKSceneObjectsToolBase: public FRBMKSceneToolBase
 {
 public:
-											FRBMKSceneObjectsToolBase	(ERBMKSceneObjectType cls);
-											~FRBMKSceneObjectsToolBase	();
+												FRBMKSceneObjectsToolBase	(ERBMKSceneObjectType InObjectType);
+												~FRBMKSceneObjectsToolBase	();
 
-    bool   									LoadStream            		(IReader&);
-    bool   									LoadLTX            			(CInifile&);
-    bool									LoadSelection      			(IReader&);
+    bool   										LoadStream            		(IReader&);
+    bool   										LoadLTX            			(CInifile&);
+    bool										LoadSelection      			(IReader&);
 	
-	TSharedPtr<FXRayCustomObject>			FindObjectByName			(LPCSTR name);
+	TSharedPtr<FRBMKSceneObjectBase>			FindObjectByName			(const FString&Name);
 
-    virtual TSharedPtr<FXRayCustomObject>	CreateObject				(LPVOID data, LPCSTR name) = 0;
-	FRBMKSceneObjectsToolBase*				CastToSceneCustomOTool		() override { return this; }
-	TArray<TSharedPtr<FXRayCustomObject>>	Objects;
+    virtual TSharedPtr<FRBMKSceneObjectBase>	CreateObject				(const FString&Name) = 0;
+	FRBMKSceneObjectsToolBase*					CastToSceneCustomOTool		() override { return this; }
+	TArray<TSharedPtr<FRBMKSceneObjectBase>>	Objects;
 };

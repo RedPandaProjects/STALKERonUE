@@ -5,7 +5,7 @@ enum class ERBMKSceneObjectType: uint32
     AllTypes            = 0xFFFFFFFF,
     Group       		= 0,
     Glow        	   	= 1,
-    SceneObject         = 2,
+    StaticMesh          = 2,
     Light       	   	= 3,
     Shape             	= 4,
     SoundSource      	= 5,

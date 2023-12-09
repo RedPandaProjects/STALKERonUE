@@ -1,6 +1,6 @@
 #include "RBMKSceneObjectsToolBase.h"
 
-FRBMKSceneObjectsToolBase::FRBMKSceneObjectsToolBase(ERBMKSceneObjectType cls):FRBMKSceneToolBase(cls)
+FRBMKSceneObjectsToolBase::FRBMKSceneObjectsToolBase(ERBMKSceneObjectType InObjectType):FRBMKSceneToolBase(InObjectType)
 {
 }
 
@@ -9,12 +9,11 @@ FRBMKSceneObjectsToolBase::~FRBMKSceneObjectsToolBase()
 {
 }
 
-TSharedPtr<FXRayCustomObject>  FRBMKSceneObjectsToolBase::FindObjectByName(LPCSTR name)
+TSharedPtr<FRBMKSceneObjectBase>  FRBMKSceneObjectsToolBase::FindObjectByName(const FString&Name)
 {
-	for(TSharedPtr<FXRayCustomObject>& Object :Objects)
+	for(TSharedPtr<FRBMKSceneObjectBase>& Object :Objects)
 	{
-		LPCSTR _name = Object->GetName();
-		if (0 == FCStringAnsi::Strcmp(_name, name))
+		if (Name == Object->GetName())
 		{
 			return Object;
 		}
@@ -24,21 +23,18 @@ TSharedPtr<FXRayCustomObject>  FRBMKSceneObjectsToolBase::FindObjectByName(LPCST
 
 bool FRBMKSceneObjectsToolBase::LoadSelection(IReader& F)
 {
-	static const u32 OTOOL_CHUNK_OBJECT_COUNT		= 0x0002;
-	static const u32 OTOOL_CHUNK_OBJECTS			= 0x0003;
-    int count					= 0;
-	F.r_chunk					(OTOOL_CHUNK_OBJECT_COUNT,&count);
+	static constexpr uint32 OTOOL_CHUNK_OBJECT_COUNT	= 0x0002;
+	static constexpr uint32 OTOOL_CHUNK_OBJECTS			= 0x0003;
+    int32 Count					= 0;
+	F.r_chunk					(OTOOL_CHUNK_OBJECT_COUNT,&Count);
 
 	FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
+	AppendObjectDelegate.BindLambda([this](TSharedPtr<FRBMKSceneObjectBase> Object)
 	{
-		string256 				buf;
-	    Scene->GenObjectName	(Object->FClassID,buf,Object->GetName());
-	    Object->SetName(buf);
-	    Scene->AppendObject		(Object);
+	    GRBMKScene->AppendObject		(Object);
 	});
 
-    Scene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, AppendObjectDelegate);
+    GRBMKScene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, AppendObjectDelegate);
 
     return true;
 }
@@ -47,18 +43,14 @@ bool FRBMKSceneObjectsToolBase::LoadLTX(CInifile& ini)
 {
 	FRBMKSceneToolBase::LoadLTX	(ini);
 
-    u32 count			= ini.r_u32("main", "objects_count");
-
-
-    u32 i				= 0;
-    string128			buff;
-
-	for(i=0; i<count; ++i)
+	const uint32 Count			= ini.r_u32("main", "objects_count");
+	for(uint32 i=0; i<Count; ++i)
 	{
-		FCStringAnsi::Sprintf				(buff, "object_%d", i);
-		if(TSharedPtr<FXRayCustomObject> Object = Scene->ReadObjectLTX(ini, buff) )
+		string128 BufferStr;
+		FCStringAnsi::Sprintf				(BufferStr, "object_%d", i);
+		if(TSharedPtr<FRBMKSceneObjectBase> Object = GRBMKScene->ReadObjectLTX(ini, BufferStr) )
 		{
-			Scene->AppendObject	(Object);
+			GRBMKScene->AppendObject	(Object);
 		}
 	}
 
@@ -70,19 +62,19 @@ bool FRBMKSceneObjectsToolBase::LoadStream(IReader& F)
 {
 	FRBMKSceneToolBase::LoadStream		(F);
 
-	static const u32 OTOOL_CHUNK_OBJECT_COUNT		= 0x0002;
-	static const u32 OTOOL_CHUNK_OBJECTS			= 0x0003;
+	static constexpr uint32 OTOOL_CHUNK_OBJECT_COUNT		= 0x0002;
+	static constexpr uint32 OTOOL_CHUNK_OBJECTS			= 0x0003;
 
-    int count					= 0;
-	F.r_chunk					(OTOOL_CHUNK_OBJECT_COUNT,&count);
+    int32 Count = 0;
+	F.r_chunk(OTOOL_CHUNK_OBJECT_COUNT,&Count);
 
 	FRMBKSceneAppendObjectDelegate AppendObjectDelegate;
-	AppendObjectDelegate.BindLambda([this](TSharedPtr<FXRayCustomObject> Object)
+	AppendObjectDelegate.BindLambda([this](TSharedPtr<FRBMKSceneObjectBase> Object)
 	{
-		Scene->AppendObject	(Object);
+		GRBMKScene->AppendObject	(Object);
 	});
 
-    Scene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, AppendObjectDelegate);
+    GRBMKScene->ReadObjectsStream	(F,OTOOL_CHUNK_OBJECTS, AppendObjectDelegate);
 
     return true;
 }
