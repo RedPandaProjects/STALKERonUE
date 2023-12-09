@@ -15,24 +15,27 @@ public:
 		ImportAIMap = true;
 		ImportParticles = true;
 		ImportWallmark = true;
-		ImportDetail = true;
+		ImportDetails = true;
+		ImportMultipleUsageMeshesAsFoliage = true;
 	}
 
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|StaticMeshes")
 	bool						ImportStaticMeshes;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|StaticMeshes")
+	bool						ImportMultipleUsageMeshesAsFoliage;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Logic")
 	bool						ImportSpawnObjects;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Logic")
 	bool						ImportWayObjects;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Logic")
 	bool						ImportAIMap;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Environment")
 	bool						ImportParticles;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Environment")
 	bool						ImportWallmark;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level")
-	bool						ImportDetail;
-	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level", meta=(ClampMin = 0.2, ClampMax = 1))
-	float						DetailDensity		= 0.4f;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Details")
+	bool						ImportDetails;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Details", meta=(ClampMin = 0.2, ClampMax = 1))
+	float						DetailsDensity		= 0.4f;
 	
 };

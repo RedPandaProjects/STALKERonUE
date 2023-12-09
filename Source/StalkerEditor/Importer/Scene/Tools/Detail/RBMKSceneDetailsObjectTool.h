@@ -2,12 +2,12 @@
 #include "RBMKDetailFormat.h"
 #include "RBMKDetailModel.h"
 
-class FRBMKSceneDetailObjectTool: public FRBMKSceneToolBase
+class FRBMKSceneDetailsObjectTool: public FRBMKSceneToolBase
 {
 using ColorIndexMap = TMap<uint32,TArray<FRBMKDetail*>>;
 public:
-									        FRBMKSceneDetailObjectTool	();
-			 						        ~FRBMKSceneDetailObjectTool	() override;
+									        FRBMKSceneDetailsObjectTool	();
+			 						        ~FRBMKSceneDetailsObjectTool	() override;
 
     const TCHAR* 					        ClassName				    () override {return TEXT("detail_object");}
 									

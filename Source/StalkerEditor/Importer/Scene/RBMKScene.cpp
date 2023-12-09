@@ -1,7 +1,7 @@
 #include "RBMKScene.h"
 
 #include "Tools/AIMap/RBMKSceneAIMapTool.h"
-#include "Tools/Detail/RBMKSceneDetailObjectTool.h"
+#include "Tools/Detail/RBMKSceneDetailsObjectTool.h"
 #include "Tools/Group/RBMKSceneGroupObjectsTool.h"
 #include "Tools/Particles/RBMKSceneParticleSystemsTool.h"
 #include "Tools/Shape/RBMKSceneShapesTool.h"
@@ -26,7 +26,7 @@ FRBMKScene::FRBMKScene(): SceneXRGUID()
 	RegisterToolLambda(MakeShared<FRBMKSceneGroupObjectsTool>());
 	RegisterToolLambda(MakeShared<FRBMKSceneParticleSystemsTool>());
 	RegisterToolLambda(MakeShared<FRBMKSceneWallmarkTool>());
-	RegisterToolLambda(MakeShared<FRBMKSceneDetailObjectTool>());
+	RegisterToolLambda(MakeShared<FRBMKSceneDetailsObjectTool>());
 }
 
 FRBMKScene::~FRBMKScene()

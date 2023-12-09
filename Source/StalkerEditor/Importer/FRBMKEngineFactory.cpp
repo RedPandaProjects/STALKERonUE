@@ -671,7 +671,6 @@ UObject* FRBMKEngineFactory::ImportObject(const FString& FileName, bool DivideSu
 UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, bool UseOnlyFullPath)
 {
 
-
 	FString FileName = Object->GetName();
 	FString PackageName;
 	if (UseOnlyFullPath)

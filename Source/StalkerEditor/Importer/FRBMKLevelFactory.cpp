@@ -1,4 +1,6 @@
 #include "FRBMKLevelFactory.h"
+
+#include "InstancedFoliageActor.h"
 #include "ImporterFactory/XRayLevelImportOptions.h"
 
 
@@ -49,12 +51,13 @@ bool FRBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOpti
 	{
 		if (NeedExport)
 		{
-			if(FRBMKSceneObjectsToolBase* Tool = CurrentScene.GetObjectTool(ObjectType))
+			if(FRBMKSceneToolBase* Tool = CurrentScene.GetTool(ObjectType))
 			{
 				Tool->ExportToWorld(World,ObjectFlags,LevelImportOptions);
 			}
 		}
 	};
+
 
 	ExportToWorldLamda(LevelImportOptions.ImportStaticMeshes,ERBMKSceneObjectType::StaticMesh);
 	ExportToWorldLamda(LevelImportOptions.ImportWayObjects,ERBMKSceneObjectType::Way);
@@ -62,7 +65,19 @@ bool FRBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOpti
 	ExportToWorldLamda(LevelImportOptions.ImportSpawnObjects,ERBMKSceneObjectType::SpawnPoint);
 	ExportToWorldLamda(LevelImportOptions.ImportParticles,ERBMKSceneObjectType::ParticleSystem);
 	ExportToWorldLamda(LevelImportOptions.ImportWallmark,ERBMKSceneObjectType::Wallmark);
-	ExportToWorldLamda(LevelImportOptions.ImportDetail,ERBMKSceneObjectType::DetailObject);
+	ExportToWorldLamda(LevelImportOptions.ImportDetails,ERBMKSceneObjectType::DetailObject);
+
+	if(LevelImportOptions.ImportDetails||(LevelImportOptions.ImportStaticMeshes&&LevelImportOptions.ImportMultipleUsageMeshesAsFoliage))
+	{
+		for (TActorIterator<AInstancedFoliageActor> It(World); It; ++It)
+		{
+			AInstancedFoliageActor* IFA = *It;
+			for(auto&[Key,Value]:IFA->GetAllInstancesFoliageType())
+			{
+				Value->Refresh(true,false);
+			}
+		}
+	}
 
 
 	GRBMKScene = nullptr;

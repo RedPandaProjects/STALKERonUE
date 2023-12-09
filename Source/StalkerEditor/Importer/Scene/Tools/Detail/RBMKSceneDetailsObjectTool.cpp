@@ -1,4 +1,4 @@
-#include "RBMKSceneDetailObjectTool.h"
+#include "RBMKSceneDetailsObjectTool.h"
 
 #include "RBMKDetailFormat.h"
 #include "InstancedFoliageActor.h"
@@ -8,18 +8,18 @@ THIRD_PARTY_INCLUDES_START
 #include "xrEngine/cl_intersect.h"
 THIRD_PARTY_INCLUDES_END
 
-FRBMKSceneDetailObjectTool::FRBMKSceneDetailObjectTool():FRBMKSceneToolBase(ERBMKSceneObjectType::DetailObject)
+FRBMKSceneDetailsObjectTool::FRBMKSceneDetailsObjectTool():FRBMKSceneToolBase(ERBMKSceneObjectType::DetailObject)
 {
     DetailHeader = {};
     InitRender();
 }
 
-FRBMKSceneDetailObjectTool::~FRBMKSceneDetailObjectTool()
+FRBMKSceneDetailsObjectTool::~FRBMKSceneDetailsObjectTool()
 {
 }
 
 
-void FRBMKSceneDetailObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneDetailsObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
 {
     auto AddInstances = [](UWorld* World, const UFoliageType* InFoliageType, const TArray<FTransform>& InTransforms)
 	{
@@ -49,7 +49,7 @@ void FRBMKSceneDetailObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags
 		}
 	};
 
-	DetailDensity = LevelImportOptions.DetailDensity;
+	DetailDensity = LevelImportOptions.DetailsDensity;
     check(XRC);
 
 	TArray<TArray<FTransform>> Instances;
@@ -70,7 +70,7 @@ void FRBMKSceneDetailObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags
 	}
 }
 
-void FRBMKSceneDetailObjectTool::InitRender()
+void FRBMKSceneDetailsObjectTool::InitRender()
 {
     //--------------------------------------------------- Decompression
 	static int32 Magic4x4[4][4] =
@@ -115,7 +115,7 @@ void FRBMKSceneDetailObjectTool::InitRender()
 	BWDitherMap		(2,Dither);
 }
 
-bool FRBMKSceneDetailObjectTool::LoadColorIndices(IReader& F)
+bool FRBMKSceneDetailsObjectTool::LoadColorIndices(IReader& F)
 {
 	enum
 	{
@@ -176,13 +176,13 @@ bool FRBMKSceneDetailObjectTool::LoadColorIndices(IReader& F)
     }
     return Result;
 }
-bool FRBMKSceneDetailObjectTool::LoadLTX(CInifile& ini)
+bool FRBMKSceneDetailsObjectTool::LoadLTX(CInifile& ini)
 {
 	checkNoEntry();
     return true;
 }
 
-bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
+bool FRBMKSceneDetailsObjectTool::LoadStream(IReader& F)
 {
 	FRBMKSceneToolBase::LoadStream	(F);
 
@@ -205,7 +205,7 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 	const uint32 Version = F.r_u32();
     if (Version != DETMGR_VERSION)
     {
-		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: unsupported version."));
+		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailsObjectTool: unsupported version."));
         return false;
     }
 	// header
@@ -225,7 +225,7 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
     // Objects
     if (!LoadColorIndices(F))
 	{
-		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Some Objects removed. Reinitialize Objects."));
+		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailsObjectTool: Some Objects removed. Reinitialize Objects."));
         InvalidateSlots	();
     }
 
@@ -239,7 +239,7 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 	        TSharedPtr<FRBMKSceneObjectBase>  Object = GRBMKScene->FindObjectByName(BufferStr, ERBMKSceneObjectType::StaticMesh);
             if (!Object)	
             {
-				UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Can't find snap object '%S'."),BufferStr);
+				UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailsObjectTool: Can't find snap object '%S'."),BufferStr);
             }
             else	
             {
@@ -251,13 +251,13 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 
 }
 
-bool FRBMKSceneDetailObjectTool::LoadSelection(IReader& F)
+bool FRBMKSceneDetailsObjectTool::LoadSelection(IReader& F)
 {
 	return LoadStream			(F);
 }
 
 
-void FRBMKSceneDetailObjectTool::InvalidateSlots()
+void FRBMKSceneDetailsObjectTool::InvalidateSlots()
 {
 	for (FRBMKDetailSlot& DetailSlot : DetailSlots)
     {
@@ -268,14 +268,14 @@ void FRBMKSceneDetailObjectTool::InvalidateSlots()
     }
 }
 
-int FRBMKSceneDetailObjectTool::RemoveDOs()
+int FRBMKSceneDetailsObjectTool::RemoveDOs()
 {
 	const int32 Num = Objects.Num();
     Objects.Empty();
     return Num;
 }
 
-FRBMKDetail* FRBMKSceneDetailObjectTool::FindDOByName(const TCHAR* Name)
+FRBMKDetail* FRBMKSceneDetailsObjectTool::FindDOByName(const TCHAR* Name)
 {
 	for(const TSharedPtr<FRBMKDetail>&Detail:Objects)
 	{
@@ -287,7 +287,7 @@ FRBMKDetail* FRBMKSceneDetailObjectTool::FindDOByName(const TCHAR* Name)
     return nullptr;
 }
 
-FRBMKDetailSlot&	FRBMKSceneDetailObjectTool::QueryDB(int32 X, int32 Z)
+FRBMKDetailSlot&	FRBMKSceneDetailsObjectTool::QueryDB(int32 X, int32 Z)
 {
 	const int32 XWithOffset = X+DetailHeader.OffsetX;
 	const int32 ZWithOffset = Z+DetailHeader.OffsetZ;
@@ -308,7 +308,7 @@ FRBMKDetailSlot&	FRBMKSceneDetailObjectTool::QueryDB(int32 X, int32 Z)
 }
 
 
-void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances)
+void		FRBMKSceneDetailsObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances)
 {
 	auto	Interpolate = [](const float * base, uint32 x, uint32 y, uint32 size)
 	{
