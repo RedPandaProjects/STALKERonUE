@@ -8,7 +8,7 @@ FRBMKSceneToolBase::~FRBMKSceneToolBase()
 {
 }
 
-bool FRBMKSceneToolBase::LoadLTX(CInifile& ini)
+bool FRBMKSceneToolBase::LoadLTX(CInifile& INI)
 {
 	return 			true;
 }
@@ -16,8 +16,4 @@ bool FRBMKSceneToolBase::LoadLTX(CInifile& ini)
 bool FRBMKSceneToolBase::LoadStream(IReader& F)
 {
     return true;
-}
-
-void FRBMKSceneToolBase::Clear()
-{
 }

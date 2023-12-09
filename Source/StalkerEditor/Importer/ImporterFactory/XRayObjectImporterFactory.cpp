@@ -1,5 +1,5 @@
 #include "XRayObjectImporterFactory.h"
-#include "../RBMKEngineFactory.h"
+#include "../FRBMKEngineFactory.h"
 #include "XRayObjectImportOptions.h"
 #include "UI/StalkerImporterOptionsWindow.h"
 
@@ -73,7 +73,7 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 			break;
 		}
 		GXRayObjectLibrary->ReloadObjects();
-		RBMKEngineFactory Factory(ParentPackage, Flags);
+		FRBMKEngineFactory Factory(ParentPackage, Flags);
 		Object = Factory.ImportObject(Filename,ImporterOptions->DivideSubObject);
 	}
 	else

@@ -1,5 +1,5 @@
 #include "XRayOGFImporterFactory.h"
-#include "../RBMKEngineFactory.h"
+#include "../FRBMKEngineFactory.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
 UXRayOGFImporterFactory::UXRayOGFImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -26,7 +26,7 @@ UObject* UXRayOGFImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 	const FString NewPackageName = UPackageTools::SanitizePackageName(*(FPaths::GetPath(InParent->GetName())));
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
-	RBMKEngineFactory Factory(ParentPackage, Flags);
+	FRBMKEngineFactory Factory(ParentPackage, Flags);
 	Object = Factory.ImportOGF(Filename);
 	if (!ensure(IsValid(Object)))
 	{

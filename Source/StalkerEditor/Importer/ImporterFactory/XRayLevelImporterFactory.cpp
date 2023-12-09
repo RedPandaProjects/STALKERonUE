@@ -1,5 +1,5 @@
 #include "XRayLevelImporterFactory.h"
-#include "../RBMKLevelFactory.h"
+#include "../FRBMKLevelFactory.h"
 #include "UI/StalkerImporterOptionsWindow.h"
 #include "XRayLevelImportOptions.h"
 UXRayLevelImporterFactory::UXRayLevelImporterFactory(const FObjectInitializer& ObjectInitializer)
@@ -52,7 +52,7 @@ UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* 
 	UObject* Object = nullptr;
 	if(ShowOptionsWindow(Filename, NewPackageName,*ImporterOptions))
 	{
-		RBMKLevelFactory Factory(ParentPackage, Flags);
+		FRBMKLevelFactory Factory(ParentPackage, Flags);
 		if (!Factory.ImportLevel(Filename,*ImporterOptions))
 		{
 			bOutOperationCanceled = true;

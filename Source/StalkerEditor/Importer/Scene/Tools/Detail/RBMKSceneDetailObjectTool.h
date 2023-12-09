@@ -6,36 +6,38 @@ class FRBMKSceneDetailObjectTool: public FRBMKSceneToolBase
 {
 using ColorIndexMap = TMap<uint32,TArray<FRBMKDetail*>>;
 public:
-									        FRBMKSceneDetailObjectTool			();
-			 						        ~FRBMKSceneDetailObjectTool			() override;
-    void							        Clear					() override;
-									        
-    bool							        LoadStream         		(IReader&) override;
-	bool							        LoadSelection      		(IReader&) override;
-    bool							        LoadLTX            		(CInifile&) override;
-    bool							        CanUseInifile			() override {return false;}
-    const char* 					        ClassName				() override {return "detail_object";}
-    void							        ExportToCurrentWorld    () override;
+									        FRBMKSceneDetailObjectTool	();
+			 						        ~FRBMKSceneDetailObjectTool	() override;
 
-    void 							        InitRender				();
+    const TCHAR* 					        ClassName				    () override {return TEXT("detail_object");}
+									
+    bool							        LoadStream         		    (IReader&) override;
+	bool							        LoadSelection      		    (IReader&) override;
+    bool							        LoadLTX            		    (CInifile&) override;
 
-    bool							        LoadColorIndices		(IReader&);
+    bool							        CanUseInifile			    () override {return false;}
 
-    int								        RemoveDOs				();
-    FRBMKDetail*					        FindDOByName			(const TCHAR* Name);
-    
-    void							        InvalidateSlots			();
-    void							        ClearColorIndices		();
-    void							        ClearSlots				();
-    float							        DetailDensity;
+    void						            ExportToWorld               (UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) override;
+
+    void 							        InitRender				    ();
+
+    bool							        LoadColorIndices		    (IReader&);
+
+    int								        RemoveDOs				    ();
+    FRBMKDetail*					        FindDOByName			    (const TCHAR* Name);
+
+    void							        InvalidateSlots			    ();
+    void							        ClearColorIndices		    ();
+    void							        ClearSlots				    ();
+    float							        DetailDensity               = 0.4f;
 private:
-    
-	FRBMKDetailSlot&				        QueryDB			        (int32 X,int32 Z);
-	void							        RenderSlot              (int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances);
 
-	static constexpr int32			        DetailSize				= 24;	
-	static constexpr int32			        DetailObjectsInSlot		= 4;
-	static constexpr float			        DetailSlotSize		    = 2;
+	FRBMKDetailSlot&				        QueryDB			            (int32 X,int32 Z);
+	void							        RenderSlot                  (int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances);
+
+	static constexpr int32			        DetailSize				    = 24;	
+	static constexpr int32			        DetailObjectsInSlot		    = 4;
+	static constexpr float			        DetailSlotSize		        = 2;
 
 	int32							        Dither[16][16];
 	FRBMKDetailHeader				        DetailHeader;
@@ -44,5 +46,5 @@ private:
 
 	TArray<TSharedPtr<FRBMKDetail>>	        Objects;
     ColorIndexMap					        ColorIndices;
-    TArray<TSharedPtr<FXRayCustomObject>>   SnapObjects;
+    TArray<TSharedPtr<FRBMKSceneObjectBase>>SnapObjects;
 };

@@ -106,11 +106,11 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/level_graph.h"
 THIRD_PARTY_INCLUDES_END
 #include "Importer/Scene/RBMKSceneObjectType.h"
-#include "Importer/Scene/iniStreamImpl.h"
-#include "Importer/Scene/Entitys/CustomObject.h"
+#include "Importer\Scene\RBMKSceneIniFileStream.h"
+#include "Importer\Scene\Entitys\RBMKSceneObjectBase.h"
 #include "Importer\Scene\Tools\Base\RBMKSceneToolBase.h"
 #include "Importer\Scene\Tools\Base\RBMKSceneObjectsToolBase.h"
-#include "Importer/Scene/Scene.h"
+#include "Importer/Scene/RBMKScene.h"
 #include "Kernel/StalkerMath.h"
 #include "ScopedTransaction.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);

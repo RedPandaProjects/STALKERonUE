@@ -1,4 +1,5 @@
 #pragma once
+#include "Importer/ImporterFactory/XRayLevelImportOptions.h"
 
 class FRBMKSceneToolBase
 {
@@ -10,10 +11,9 @@ public:
     virtual bool		                    LoadSelection      		(IReader&)  = 0;
     virtual bool                            LoadLTX            		(CInifile&) = 0;
     virtual bool                            CanUseInifile			() {return true;}
-    virtual void                            Clear                   () = 0;
-	virtual const char*                     ClassName               () = 0;
+	virtual const TCHAR*                    ClassName               () = 0;
 
-    virtual void                            ExportToCurrentWorld    ()  {};
+    virtual void                            ExportToWorld           (UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) {};
     virtual class FRBMKSceneObjectsToolBase*CastToSceneCustomOTool  () {return nullptr;}
     
     ERBMKSceneObjectType                    ObjectType;

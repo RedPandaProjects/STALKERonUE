@@ -17,9 +17,8 @@ struct SBFace
 	Fvector			n[3];
     Fvector2		uv[3];
     int				bone_id;
-    CSurface*		surf;
 public:		
-					SBFace	(CSurface* _surf, const Fvector2* _uv[3]):surf(_surf),marked(false),bone_id(-1)
+					SBFace	(const Fvector2* _uv[3]):marked(false),bone_id(-1)
 	{
     	vert_id[0]	= -1;
     	vert_id[1]	= -1;
@@ -44,14 +43,10 @@ public:
 
 struct SBBone
 {
-	xr_string		mtl;
-	xr_string		name;
-	xr_string		parent;
 	Fvector			offset;
     u32				f_cnt;
     float			area;
-				    SBBone				(xr_string _nm, xr_string _parent, xr_string _mtl, u32 _f_cnt, float _area)
-                    					:name(_nm),parent(_parent),mtl(_mtl),f_cnt(_f_cnt),area(_area)
+				    SBBone				( u32 _f_cnt, float _area)                   					:f_cnt(_f_cnt),area(_area)
     {
     	offset.set	(0,0,0);
     }
@@ -101,7 +96,7 @@ public:
 	void			Initialize			(const Fbox& bb, float eps, u32 per_bone_face_count_min);
     void			Clear				();
 	// I/O routines
-	void			AppendFace			(CSurface* surf, const Fvector* v, const Fvector* n, const Fvector2* uvs[3]);
+	void			AppendFace			( const Fvector* v, const Fvector* n, const Fvector2* uvs[3]);
     SBPartVec&		GetParts			(){return m_Parts;}
     // utilities
     BOOL			Process				();

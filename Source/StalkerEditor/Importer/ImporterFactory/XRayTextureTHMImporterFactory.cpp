@@ -1,5 +1,5 @@
 #include "XRayTextureTHMImporterFactory.h"
-#include "../RBMKEngineFactory.h"
+#include "../FRBMKEngineFactory.h"
 UXRayTextureTHMImporterFactory::UXRayTextureTHMImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
@@ -26,7 +26,7 @@ UObject* UXRayTextureTHMImporterFactory::FactoryCreateFile(UClass* InClass, UObj
 	const FString NewPackageName = UPackageTools::SanitizePackageName(*(FPaths::GetPath(InParent->GetName())));
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
-	RBMKEngineFactory Factory(ParentPackage, Flags);
+	FRBMKEngineFactory Factory(ParentPackage, Flags);
 	Object = Factory.ImportTextureTHM(Filename);
 	if (!IsValid(Object))
 	{

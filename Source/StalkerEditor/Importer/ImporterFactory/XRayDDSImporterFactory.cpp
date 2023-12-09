@@ -1,5 +1,5 @@
 #include "XRayDDSImporterFactory.h"
-#include "../RBMKEngineFactory.h"
+#include "../FRBMKEngineFactory.h"
 UXRayDDSImporterFactory::UXRayDDSImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
@@ -25,7 +25,7 @@ UObject* UXRayDDSImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 	const FString NewPackageName = UPackageTools::SanitizePackageName(*(FPaths::GetPath(InParent->GetName())));
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
-	RBMKEngineFactory Factory(ParentPackage, Flags);
+	FRBMKEngineFactory Factory(ParentPackage, Flags);
 	Object = Factory.ImportTextureDDS(Filename);
 	if (!IsValid(Object))
 	{

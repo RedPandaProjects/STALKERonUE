@@ -1,9 +1,8 @@
 #include "RBMKDetailModel.h"
 
 #include "PhysicsEngine/BodySetup.h"
-#include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
 #include "StalkerEditor/StalkerEditorManager.h"
-#include "StalkerEditor/Importer/RBMKEngineFactory.h"
+#include "StalkerEditor/Importer/FRBMKEngineFactory.h"
 
 FRBMKDetail::FRBMKDetail()
 {
@@ -112,7 +111,7 @@ bool FRBMKDetail::Update	(const FString&Name)
 
 UStaticMesh* FRBMKDetail::GetOrCreateStaticMesh()
 {
-    RBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
+    FRBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
 
 	UStaticMesh* StaticMesh = nullptr;
 	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName();

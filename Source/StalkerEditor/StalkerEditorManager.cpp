@@ -20,10 +20,10 @@
 #include "Entities/Scene/SpawnObject/Properties/StalkerSpawnPropertiesTypeCustomization.h"
 ///////////////////////////////////////////////////////////////////////////////////////////
 #include "UI/Commands/StalkerEditorCommands.h"
-#include "Importer/RBMKParticlesFactory.h"
+#include "Importer/FRBMKParticlesFactory.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XRayEngineInterface.h"
-#include "Importer/RBMKEngineFactory.h"
+#include "Importer/FRBMKEngineFactory.h"
 THIRD_PARTY_INCLUDES_END
 
 UStalkerEditorManager* GStalkerEditorManager = nullptr;
@@ -174,7 +174,7 @@ void UStalkerEditorManager::ImportUITextures()
 		TexturePath.ReplaceCharInline(TEXT('\\'),TEXT('/'));
 		IFileManager::Get().FindFilesRecursive(Files,*TexturePath,TEXT("*.dds"),true,false);
 	
-		RBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
+		FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
 		for(FString FileName:Files)
 		{
 			FileName = FPaths::GetPath(FileName) / FPaths::GetBaseFilename(FileName);
@@ -214,7 +214,7 @@ void UStalkerEditorManager::ImportMeshes()
 		FString FileNameWithoutExtension = FPaths::GetPath(FileName) / FPaths::GetBaseFilename(FileName);
 		FString UnrealPath = GStalkerEditorManager->GetGamePath() / TEXT("Meshes");
 		UnrealPath = UnrealPath/ (*FileNameWithoutExtension + MeshesPath.Len());
-		RBMKEngineFactory EngineFactory(CreatePackage(*FPaths::GetPath(UnrealPath)), RF_Standalone | RF_Public);
+		FRBMKEngineFactory EngineFactory(CreatePackage(*FPaths::GetPath(UnrealPath)), RF_Standalone | RF_Public);
 		EngineFactory.ImportOGF(FileName);
 		Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import Meshes:%s"),*FileName)));
 		if (GWarn->ReceivedUserCancel())
@@ -231,13 +231,13 @@ void UStalkerEditorManager::ImportPhysicalMaterials()
 
 	string_path	GameMaterialFilePath;
 	FS.update_path(GameMaterialFilePath, "$game_data$", "gamemtl.xr");
-	RBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
+	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
 	EngineFactory.ImportPhysicsMaterials(ANSI_TO_TCHAR(GameMaterialFilePath));
 }
 
 void UStalkerEditorManager::ImportParticles()
 {
-	RBMKParticlesFactory Factory;
+	FRBMKParticlesFactory Factory;
 	Factory.ImportParticles();
 }
 

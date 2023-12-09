@@ -1,8 +1,10 @@
 #include "GeometryPartExtractor.h"
+
 THIRD_PARTY_INCLUDES_START
-void ECORE_API 			ComputeOBB_RAPID	(Fobb &B, FvectorVec& V, u32 t_cnt);
-void ECORE_API 			ComputeOBB_WML		(Fobb &B, FvectorVec& V);
+void ECORE_API ComputeOBB_RAPID	(Fobb &B, FvectorVec& V, u32 t_cnt);
+void ECORE_API ComputeOBB_WML	(Fobb &B, FvectorVec& V);
 THIRD_PARTY_INCLUDES_END
+
 void SBPart::append_face			(SBFace* F)
 {
     m_Faces.push_back				(F);
@@ -118,8 +120,7 @@ bool SBPart::prepare				(SBAdjVec& adjs, u32 bone_face_min)
 //            	F->marked				= false;
                 F->bone_id				= -1;
             }else{
-                m_Bones.push_back		(SBBone(bone_idx,parent_bone,F->surf->_GameMtlName(),face_accum,area));
-                parent_bone				= "0";
+                m_Bones.push_back		(SBBone(face_accum,area));
                 bone_idx				++;
                 face_accum_total		+= face_accum;
             }
@@ -187,146 +188,6 @@ bool SBPart::prepare				(SBAdjVec& adjs, u32 bone_face_min)
     }
     return m_bValid;
 }
-//
-//bool SBPart::Export	(IWriter& F, u8 infl)
-//{
-//	VERIFY			(!m_Bones.empty());
-//    if (m_Bones.size()>63){
-//    	ELog.Msg(mtError,"Breakable object cannot handle more than 63 parts.");
-//     	return false;
-//    }
-//
-//    bool bRes = true;
-//
-//    u32 bone_count			= m_Bones.size();
-//                    
-//    xr_vector<FvectorVec>	bone_points;
-//	bone_points.resize		(bone_count);
-//
-//    u32 mtl_cnt				= 0;
-//                                  
-//    for (SBFaceVecIt pf_it=m_Faces.begin(); pf_it!=m_Faces.end(); pf_it++)
-//    {
-//    	SBFace* face		= *pf_it;
-//        int mtl_idx			= FindSplit(face->surf->_ShaderName(),face->surf->_Texture(),0);
-//        if (mtl_idx<0){
-//            m_Splits.push_back(SSplit(face->surf,m_BBox,0));
-//            mtl_idx	= mtl_cnt++;
-//        }
-//        SSplit& split=m_Splits[mtl_idx];
-//        SSkelVert v[3];
-//        for (int k=0; k<3; k++){
-//            st_SVert::bone b[1];
-//            b[0].id		= face->bone_id;
-//            b[0].w		= 1.f;
-//            v[k].set	(face->o[k],face->n[k],face->uv[k],1,b);
-//        }
-//        split.add_face		(v[0], v[1], v[2]);
-//
-//        if (face->surf->m_Flags.is(CSurface::sf2Sided)){
-//            v[0].norm.invert(); v[1].norm.invert(); v[2].norm.invert();
-//            if (!split.add_face(v[0], v[2], v[1])) split.invalid_faces++;
-//        }
-//    }
-//
-//    // fill per bone vertices
-//    for (SplitIt split_it=m_Splits.begin(); split_it!=m_Splits.end(); split_it++){
-//        if (!split_it->valid()){
-//            ELog.Msg(mtError,"Degenerate part found (Texture '%s').",*split_it->m_Texture);
-//            bRes = false;
-//            break;
-//        }
-//        if (0!=split_it->invalid_faces){
-//	        ELog.Msg(mtError,"Part [texture '%s'] have %d duplicate(degenerate) face(s).",*split_it->m_Texture,split_it->invalid_faces);
-//        }
-//    	// calculate T&B components
-//		split_it->CalculateTB();
-//        // subtract offset
-//		SkelVertVec& lst = split_it->getV_Verts();
-//	    for (SkelVertIt sv_it=lst.begin(); sv_it!=lst.end(); sv_it++){
-//		    bone_points[sv_it->bones[0].id].push_back(sv_it->offs);
-//            bone_points[sv_it->bones[0].id].back().sub(m_Bones[sv_it->bones[0].id].offset);
-//        }
-//    }
-//
-//    if (!bRes) return false;
-//
-//    // compute bounding
-//    ComputeBounding	();
-//
-//	// create OGF
-//    // Header
-//    ogf_header 		H;
-//    H.format_version= xrOGF_FormatVersion;
-//    H.type			= MT_SKELETON_RIGID;
-//    H.shader_id		= 0;
-//    H.bb.min		= m_Box.min;
-//    H.bb.max		= m_Box.max;
-//    m_Box.getsphere	(H.bs.c,H.bs.r);
-//    F.w_chunk		(OGF_HEADER,&H,sizeof(H));
-//
-//    // Desc
-//    ogf_desc		desc;
-//    F.open_chunk	(OGF_S_DESC);
-//    desc.Save		(F);
-//    F.close_chunk	();
-//	
-//    // OGF_CHILDREN
-//    F.open_chunk	(OGF_CHILDREN);
-//    int chield=0;
-//    for (auto split_it=m_Splits.begin(); split_it!=m_Splits.end(); split_it++){
-//	    F.open_chunk(chield++);
-//        split_it->Save(F);
-//	    F.close_chunk();
-//    }
-//    F.close_chunk();
-//
-//    // BoneNames                   
-//    F.open_chunk(OGF_S_BONE_NAMES); 
-//    F.w_u32		(bone_count);
-//    // write other bones
-//    for (u32 bone_idx=0; bone_idx<bone_count; bone_idx++){
-//    	SBBone& bone=m_Bones[bone_idx];
-//        F.w_stringZ	(bone.name.c_str());
-//        F.w_stringZ	(bone.parent.c_str());
-//        Fobb		obb;
-//        ComputeOBB_WML	(obb,bone_points[bone_idx]);
-//        F.w				(&obb,sizeof(Fobb));
-//    }
-//    F.close_chunk();
-//
-//    F.open_chunk(OGF_S_IKDATA);
-//    for (u32 bone_idx=0; bone_idx<bone_count; bone_idx++)
-//    {
-//    	SBBone& bone=m_Bones[bone_idx];
-//
-//        F.w_u32		(0x0001); VERIFY(0x0001==OGF_IKDATA_VERSION);
-//        // material
-//        F.w_stringZ (bone.mtl.c_str());
-//        // shape
-//        SBoneShape	shape;
-//        shape.type	= SBoneShape::stBox;
-//        shape.flags.assign(SBoneShape::sfRemoveAfterBreak);
-//        ComputeOBB_WML	(shape.box,bone_points[bone_idx]);
-//	    F.w				(&shape,sizeof(SBoneShape));
-//        // IK data
-//        SJointIKData 	ik_data;
-//        ik_data.Reset	();
-//        ik_data.type	= jtNone;
-//        ik_data.ik_flags.set(SJointIKData::flBreakable,TRUE);
-//        ik_data.Export	(F);
-//
-//        Fvector rot={0,0,0};
-//        F.w_fvector3(rot);
-//        F.w_fvector3(bone.offset);
-//        F.w_float   (bone.area);	// mass (для Кости посчитал площадь)
-//        F.w_fvector3(shape.box.m_translate);	// center of mass        
-//    }
-//    F.close_chunk();
-//
-//    return bRes;
-//}
-
 
 IC void recurse_tri(SBPart* P, SBFaceVec& faces, SBAdjVec& adjs, SBFace* F)
 {
@@ -343,9 +204,9 @@ IC void recurse_tri(SBPart* P, SBFaceVec& faces, SBAdjVec& adjs, SBFace* F)
     }
 }
 
-void CGeomPartExtractor::AppendFace(CSurface* surf, const Fvector* v, const Fvector* n, const Fvector2* uvs[3])
+void CGeomPartExtractor::AppendFace(const Fvector* v, const Fvector* n, const Fvector2* uvs[3])
 {
-	SBFace* F			= new SBFace(surf,uvs);
+	SBFace* F			= new SBFace(uvs);
     // insert verts
     for (int k=0; k<3; k++){
         F->vert_id[k] 	= m_Verts->add_vert(v[k]);

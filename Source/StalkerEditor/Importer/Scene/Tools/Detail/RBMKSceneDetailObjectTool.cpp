@@ -1,7 +1,9 @@
 #include "RBMKSceneDetailObjectTool.h"
+
 #include "RBMKDetailFormat.h"
 #include "InstancedFoliageActor.h"
-#include "StalkerEditor/Importer/Scene/Entitys/StaticObject/SceneObject.h"
+#include "Importer/Scene/Entitys/StaticObject/RBMKSceneStaticMesh.h"
+
 THIRD_PARTY_INCLUDES_START
 #include "xrEngine/cl_intersect.h"
 THIRD_PARTY_INCLUDES_END
@@ -16,38 +18,22 @@ FRBMKSceneDetailObjectTool::~FRBMKSceneDetailObjectTool()
 {
 }
 
-void FRBMKSceneDetailObjectTool::ClearColorIndices()
-{
-	FRBMKSceneToolBase::Clear	();
-}
-void FRBMKSceneDetailObjectTool::ClearSlots()
-{
-    DetailHeader = {};
-	DetailSlots.Empty();
-}
 
-void FRBMKSceneDetailObjectTool::Clear()
+void FRBMKSceneDetailObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
 {
-	ClearColorIndices	();
-    ClearSlots			();
-    SnapObjects.Empty   ();
-}
-
-void FRBMKSceneDetailObjectTool::ExportToCurrentWorld()
-{
-    auto AddInstances = [](UWorld* World, UFoliageType* InFoliageType, const TArray<FTransform>& InTransforms)
+    auto AddInstances = [](UWorld* World, const UFoliageType* InFoliageType, const TArray<FTransform>& InTransforms)
 	{
 		TMap<AInstancedFoliageActor*, TArray<const FFoliageInstance*>> InstancesToAdd;
 		TArray<FFoliageInstance> FoliageInstances;
 		FoliageInstances.Reserve(InTransforms.Num()); // Reserve 
 
-		for (const FTransform& InstanceTransfo : InTransforms)
+		for (const FTransform& InstanceTransform : InTransforms)
 		{
-			AInstancedFoliageActor* IFA = AInstancedFoliageActor::Get(World, true, World->PersistentLevel, InstanceTransfo.GetLocation());
+			AInstancedFoliageActor* IFA = AInstancedFoliageActor::Get(World, true, World->PersistentLevel, InstanceTransform.GetLocation());
 			FFoliageInstance FoliageInstance;
-			FoliageInstance.Location = InstanceTransfo.GetLocation();
-			FoliageInstance.Rotation = InstanceTransfo.GetRotation().Rotator();
-			FoliageInstance.DrawScale3D = (FVector3f)InstanceTransfo.GetScale3D();
+			FoliageInstance.Location = InstanceTransform.GetLocation();
+			FoliageInstance.Rotation = InstanceTransform.GetRotation().Rotator();
+			FoliageInstance.DrawScale3D = FVector3f(InstanceTransform.GetScale3D());
 
 			FoliageInstances.Add(FoliageInstance);
 			InstancesToAdd.FindOrAdd(IFA).Add(&FoliageInstances[FoliageInstances.Num() - 1]);
@@ -56,26 +42,14 @@ void FRBMKSceneDetailObjectTool::ExportToCurrentWorld()
 		for (const auto& Pair : InstancesToAdd)
 		{
 			FFoliageInfo* TypeInfo = nullptr;
-			if (UFoliageType* FoliageType = Pair.Key->AddFoliageType(InFoliageType, &TypeInfo))
+			if (const UFoliageType* FoliageType = Pair.Key->AddFoliageType(InFoliageType, &TypeInfo))
 			{
 				TypeInfo->AddInstances(FoliageType, Pair.Value);
 			}
 		}
 	};
 
-
-    FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
-	if (!WorldContext)
-	{
-		return;
-	}
-
-	UWorld* World = WorldContext->World();
-	if (!IsValid(World))
-	{
-        return;
-    }
-	
+	DetailDensity = LevelImportOptions.DetailDensity;
     check(XRC);
 
 	TArray<TArray<FTransform>> Instances;
@@ -122,7 +96,7 @@ void FRBMKSceneDetailObjectTool::InitRender()
 		* pixel value with mod N == 0 at the next level).
 		*/
 
-	    float	magicfact = (N - 1) / 16;
+		const float	MagicFact = (N - 1) / 16;
 	    for ( int32 i = 0; i < 4; i++ )
 	    {
 	    	for ( int32 j = 0; j < 4; j++ )
@@ -131,7 +105,7 @@ void FRBMKSceneDetailObjectTool::InitRender()
 				{
 					for ( int32 l = 0; l < 4; l++ )
                     {
-						magic[4*k+i][4*l+j] = FMath::TruncToInt32(0.5 + Magic4x4[i][j] * magicfact + (Magic4x4[k][l] / 16.) * magicfact);
+						magic[4*k+i][4*l+j] = FMath::TruncToInt32(0.5 + Magic4x4[i][j] * MagicFact + (Magic4x4[k][l] / 16.) * MagicFact);
                     }
 				}
 			}
@@ -179,20 +153,19 @@ bool FRBMKSceneDetailObjectTool::LoadColorIndices(IReader& F)
 	    return false;
     }
 
-    if(int32  Count	= static_cast<int32>(F.r_u8()))
+    if(const int32  Count	= static_cast<int32>(F.r_u8()))
     {
-	    string256 BufferStr;
 	    for (int32 i = 0; i<Count; i++)
 		{
 			uint32 Index	= F.r_u32();
-	        int32 ReferenceCount = static_cast<int32>(F.r_u8());
+			const int32 ReferenceCount = static_cast<int32>(F.r_u8());
 			for (int32 ReferenceID = 0; ReferenceID<ReferenceCount; ReferenceID++)
 			{
-        		F.r_stringZ	(BufferStr,sizeof(BufferStr));
-	            FRBMKDetail* DO	= FindDOByName(ANSI_TO_TCHAR(BufferStr));
-	            if (DO)
+				string256 BufferStr;
+				F.r_stringZ	(BufferStr,sizeof(BufferStr));
+		        if (FRBMKDetail* Detail	= FindDOByName(ANSI_TO_TCHAR(BufferStr)))
 	            {
-	            	ColorIndices.FindOrAdd(Index).Add(DO);
+	            	ColorIndices.FindOrAdd(Index).Add(Detail);
 	            }
 	            else
 	            {
@@ -212,8 +185,8 @@ bool FRBMKSceneDetailObjectTool::LoadLTX(CInifile& ini)
 bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 {
 	FRBMKSceneToolBase::LoadStream	(F);
-	
-	const uint32 DETMGR_VERSION = 0x0003ul;
+
+	constexpr uint32 DETMGR_VERSION = 0x0003ul;
 	
 	enum
 	{
@@ -255,36 +228,31 @@ bool FRBMKSceneDetailObjectTool::LoadStream(IReader& F)
 		UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Some Objects removed. Reinitialize Objects."));
         InvalidateSlots	();
     }
-	
-    string256 BufferStr;
+
 	if (F.find_chunk(DETMGR_CHUNK_SNAP_OBJECTS))
     {
-		int32 Count = F.r_s32();
+	    const int32 Count = F.r_s32();
         for (int32 i=0; i<Count; i++)
         {
-    	    F.r_stringZ	(BufferStr,sizeof(BufferStr));
-	        TSharedPtr<FXRayCustomObject>  O = Scene->FindObjectByName(BufferStr, ERBMKSceneObjectType::SceneObject);
-            if (!O)	
+	        string256 BufferStr;
+	        F.r_stringZ	(BufferStr,sizeof(BufferStr));
+	        TSharedPtr<FRBMKSceneObjectBase>  Object = GRBMKScene->FindObjectByName(BufferStr, ERBMKSceneObjectType::StaticMesh);
+            if (!Object)	
             {
 				UE_LOG(LogXRayImporter,Error,TEXT("FRBMKSceneDetailObjectTool: Can't find snap object '%S'."),BufferStr);
             }
             else	
             {
-            	SnapObjects.Add(O);
+            	SnapObjects.Add(Object);
             }
         }
     }
-	if (F.find_chunk(DETMGR_CHUNK_DENSITY))
-	{
-		DetailDensity = F.r_float();
-	}
     return true;
 
 }
 
 bool FRBMKSceneDetailObjectTool::LoadSelection(IReader& F)
 {
-	Clear();
 	return LoadStream			(F);
 }
 
@@ -302,14 +270,14 @@ void FRBMKSceneDetailObjectTool::InvalidateSlots()
 
 int FRBMKSceneDetailObjectTool::RemoveDOs()
 {
-	int32 Num = Objects.Num();
+	const int32 Num = Objects.Num();
     Objects.Empty();
     return Num;
 }
 
 FRBMKDetail* FRBMKSceneDetailObjectTool::FindDOByName(const TCHAR* Name)
 {
-	for(TSharedPtr<FRBMKDetail>&Detail:Objects)
+	for(const TSharedPtr<FRBMKDetail>&Detail:Objects)
 	{
 		if(Detail->GetName() == Name)
 		{
@@ -321,8 +289,9 @@ FRBMKDetail* FRBMKSceneDetailObjectTool::FindDOByName(const TCHAR* Name)
 
 FRBMKDetailSlot&	FRBMKSceneDetailObjectTool::QueryDB(int32 X, int32 Z)
 {
-	int32 XWithOffset = X+DetailHeader.OffsetX;
-	int32 ZWithOffset = Z+DetailHeader.OffsetZ;
+	const int32 XWithOffset = X+DetailHeader.OffsetX;
+	const int32 ZWithOffset = Z+DetailHeader.OffsetZ;
+
 	if ((XWithOffset>=0) && (XWithOffset<static_cast<int32>(DetailHeader.SizeX)) && 
 		(ZWithOffset>=0) && (ZWithOffset<static_cast<int32>(DetailHeader.SizeZ)))
 	{
@@ -330,7 +299,6 @@ FRBMKDetailSlot&	FRBMKSceneDetailObjectTool::QueryDB(int32 X, int32 Z)
 	}
 	else 
 	{
-		// Empty slot
 		DetailSlotEmpty.SetID				(0,FRBMKDetailSlot::IDEmpty);
 		DetailSlotEmpty.SetID				(1,FRBMKDetailSlot::IDEmpty);
 		DetailSlotEmpty.SetID				(2,FRBMKDetailSlot::IDEmpty);
@@ -342,31 +310,33 @@ FRBMKDetailSlot&	FRBMKSceneDetailObjectTool::QueryDB(int32 X, int32 Z)
 
 void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTransform>>&OutInstances)
 {
-	auto	Interpolate = [](float * base, uint32 x, uint32 y, uint32 size)
+	auto	Interpolate = [](const float * base, uint32 x, uint32 y, uint32 size)
 	{
-		float	f	= float(size);
-		float	fx	= float(x)/f; float ifx = 1.f-fx;
-		float	fy	= float(y)/f; float ify = 1.f-fy;
+		const float	f	= static_cast<float>(size);
+		const float	fx	= static_cast<float>(x)/f;
+		const float ifx = 1.f-fx;
+		const float	fy	= static_cast<float>(y)/f;
+		const float ify = 1.f-fy;
 
-		float	c01	= base[0]*ifx + base[1]*fx;
-		float	c23	= base[2]*ifx + base[3]*fx;
+		const float	c01	= base[0]*ifx + base[1]*fx;
+		const float	c23	= base[2]*ifx + base[3]*fx;
 
-		float	c02	= base[0]*ify + base[2]*fy;
-		float	c13	= base[1]*ify + base[3]*fy;
+		const float	c02	= base[0]*ify + base[2]*fy;
+		const float	c13	= base[1]*ify + base[3]*fy;
 
-		float	cx	= ify*c01 + fy*c23;
-		float	cy	= ifx*c02 + fx*c13;
+		const float	cx	= ify*c01 + fy*c23;
+		const float	cy	= ifx*c02 + fx*c13;
 		return	(cx+cy)/2;
 	};
 
-	auto InterpolateAndDither = [Interpolate](float* alpha255,	uint32 x, uint32 y, uint32 sx, uint32 sy, uint32 size, int32 dither[16][16] )
+	auto InterpolateAndDither = [Interpolate](const float* alpha255,	uint32 x, uint32 y, uint32 sx, uint32 sy, uint32 size, int32 dither[16][16] )
 	{
 		x = FMath::Clamp(x,0u,size-1);
 		y = FMath::Clamp(y,0u,size-1);
 		int32 c = FMath::FloorToInt(Interpolate(alpha255,x,y,size)+.5f);
 		c  = FMath::Clamp(c,0,256);
-		uint32	row	= (y+sy) % 16;
-		uint32	col	= (x+sx) % 16;
+		const uint32	row	= (y+sy) % 16;
+		const uint32	col	= (x+sx) % 16;
 		return	c	> dither[col][row];
 	};
 
@@ -386,13 +356,13 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 	
 	SBoxPickInfoVec		PickInfos;
 
-	for(TSharedPtr<FXRayCustomObject>& Object :SnapObjects)
+	for(TSharedPtr<FRBMKSceneObjectBase>& Object :SnapObjects)
 	{
-		if(CSceneObject* SceneObject =  reinterpret_cast<CSceneObject*>(Object->QueryInterface(ERBMKSceneObjectType::SceneObject)))
+		if(FRBMKSceneStaticMesh* SceneObject =  reinterpret_cast<FRBMKSceneStaticMesh*>(Object->QueryInterface(ERBMKSceneObjectType::StaticMesh)))
 		{
-			if(SceneObject->GetReference())
+			if(SceneObject->GetReferenceObject())
 			{
-				SceneObject->GetReference()->BoxPick(SceneObject, BoundBox, SceneObject->FTransform, PickInfos);
+				SceneObject->GetReferenceObject()->BoxPick(SceneObject, BoundBox,StalkerMath::UnrealMatrixToXRay(SceneObject->GetTransform().ToMatrixWithScale()), PickInfos);
 			}
 		}
 	}
@@ -403,14 +373,14 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 		return;
 	}
 
-	// Build shading table
+
 	float		alpha255	[DetailObjectsInSlot][4];
 	for (int i=0; i<DetailObjectsInSlot; i++)
 	{
-		alpha255[i][0]	= 255.f*float(DetailSlot.Palette[i].Alpha0)/15.f;
-		alpha255[i][1]	= 255.f*float(DetailSlot.Palette[i].Alpha1)/15.f;
-		alpha255[i][2]	= 255.f*float(DetailSlot.Palette[i].Alpha2)/15.f;
-		alpha255[i][3]	= 255.f*float(DetailSlot.Palette[i].Alpha3)/15.f;
+		alpha255[i][0]	= 255.f*static_cast<float>(DetailSlot.Palette[i].Alpha0)/15.f;
+		alpha255[i][1]	= 255.f*static_cast<float>(DetailSlot.Palette[i].Alpha1)/15.f;
+		alpha255[i][2]	= 255.f*static_cast<float>(DetailSlot.Palette[i].Alpha2)/15.f;
+		alpha255[i][3]	= 255.f*static_cast<float>(DetailSlot.Palette[i].Alpha3)/15.f;
 	}
 	const int32 SendRnd					= X*Z;
 	CRandom				RandomSelection	(0x12071980^SendRnd);
@@ -431,10 +401,10 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 			const int32 ShiftX =  RandomJitter.randI(16);
 			const int32 ShiftZ =  RandomJitter.randI(16);
 
-			if ((DetailSlot.id0!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[0],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(0);
-			if ((DetailSlot.id1!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[1],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(1);
-			if ((DetailSlot.id2!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[2],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(2);
-			if ((DetailSlot.id3!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[3],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(3);
+			if ((DetailSlot.ID0!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[0],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(0);
+			if ((DetailSlot.ID1!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[1],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(1);
+			if ((DetailSlot.ID2!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[2],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(2);
+			if ((DetailSlot.ID3!=FRBMKDetailSlot::IDEmpty)&& InterpolateAndDither(alpha255[3],x,z,ShiftX,ShiftZ,DSize,Dither))	Selected.Add(3);
 			
 			// Select
 			if (Selected.IsEmpty())	continue;
@@ -463,15 +433,16 @@ void		FRBMKSceneDetailObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTran
 			float RayU,RayV,RayRange;
 			for (uint32 TriID=0; TriID<TriCount; TriID++)
 			{
-				Fvector Vertices[3];
 				SBoxPickInfo& I=PickInfos[TriID];
 				for (size_t k=0; k<I.inf.size(); k++)
 				{
-					VERIFY(I.s_obj);
-					I.e_obj->GetFaceWorld(I.s_obj->FTransform,I.e_mesh,I.inf[k].id,Vertices);
+					Fvector Vertices[3];
+					checkSlow(I.s_obj);
+					I.e_obj->GetFaceWorld(StalkerMath::UnrealMatrixToXRay(I.s_obj->GetTransform().ToMatrixWithScale()),I.e_mesh,I.inf[k].id,Vertices);
 					if (CDB::TestRayTri(WorldPosition,RayDirection,Vertices,RayU,RayV,RayRange,TRUE))
 					{
-						if (RayRange>=0)	{
+						if (RayRange>=0)	
+						{
 							float y_test	= WorldPosition.y - RayRange;
 							if (y_test>WorldY)	WorldY = y_test;
 						}

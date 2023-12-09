@@ -10,23 +10,7 @@ public class StalkerEditor : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PrivatePCHHeaderFile = "StalkerEditorPCH.h";
 
-        PublicIncludePaths.AddRange(
-            new string[] {
-					// ... add public include paths required here ...
-            }
-            );
-
-        PrivateIncludePaths.AddRange(
-            new string[] {
-                // ... add other private include paths required here ...
-            }
-            );
-
-        PublicDependencyModuleNames.AddRange(
-            new string[] 
-            {
-            }
-        );
+        PublicIncludePaths.Add(ModuleDirectory);
 
         PrivateDependencyModuleNames.AddRange(
             new string[]
