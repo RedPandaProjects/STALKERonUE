@@ -3,7 +3,7 @@
 #include "XRayLevelImportOptions.generated.h"
 
 UCLASS(Config = EditorPerProjectUserSettings, HideCategories = (DebugProperty))
-class UXRayLevelImportOptions : public UXRayObjectImportOptions
+class UXRayLevelImportOptions : public UObject
 {
 	GENERATED_BODY()
 public:
@@ -17,12 +17,23 @@ public:
 		ImportWallmark = true;
 		ImportDetails = true;
 		ImportMultipleUsageMeshesAsFoliage = true;
+		ObjectImportGameFormat = EXRayObjectImportGameFormat::AUTO;
+		AngleNormalSmoth = 75;
+		DivideSubObject = true;
 	}
+
+
 
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|StaticMeshes")
 	bool						ImportStaticMeshes;
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|StaticMeshes")
 	bool						ImportMultipleUsageMeshesAsFoliage;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere,Category = "Level|StaticMeshes")
+	EXRayObjectImportGameFormat ObjectImportGameFormat;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|StaticMeshes",meta = (DisplayName="Angle Normal Smoth(for soc)"))
+	float						AngleNormalSmoth;
+	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|StaticMeshes")
+	bool						DivideSubObject;
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Logic")
 	bool						ImportSpawnObjects;
 	UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, Category = "Level|Logic")

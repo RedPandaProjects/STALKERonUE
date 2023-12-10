@@ -679,6 +679,20 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 	return ImportObjectAsStaticMesh(Object, NewPath,-1);
 }
 
+TArray<UStaticMesh*> FRBMKEngineFactory::ImportObjectAsStaticMeshWithDivideSubObject(CEditableObject* Object)
+{
+	FString FileName = Object->GetName();
+	FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString Path = PackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));;
+	TArray<UStaticMesh*> Result;
+	for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
+	{
+		const FString ObjectPath = Path + TEXT("_") + ANSI_TO_TCHAR(Object->Meshes()[MeshID]->Name().c_str());
+		Result.Add(ImportObjectAsStaticMesh(Object, ObjectPath, MeshID));
+	}
+	return Result;
+}
+
 
 UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& Path,int32 InMeshID)
 {

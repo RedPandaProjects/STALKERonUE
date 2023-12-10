@@ -6,6 +6,7 @@
 #include "StalkerEditorManager.h"
 #include "Importer/FRBMKEngineFactory.h"
 #include "Importer/Scene/Entitys/StaticMesh//RBMKSceneStaticMesh.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Resources/StaticMesh/StalkerStaticMeshAssetUserData.h"
 
 FRBMKSceneStaticMeshesTool::FRBMKSceneStaticMeshesTool():FRBMKSceneObjectsToolBase(ERBMKSceneObjectType::StaticMesh)
@@ -85,22 +86,54 @@ void FRBMKSceneStaticMeshesTool::ExportToWorld(UWorld*World,EObjectFlags InFlags
 				}
 				else
 				{
-					UStaticMesh* StaticMesh = EngineFactory.ImportObjectAsStaticMesh(EditableObject, true);
-					if (StaticMesh)
+					bool NeedDivideSubObject = false;
+
+					for(const FString&Path: GetDefault<UStalkerGameSettings>()->MeshesDivideSubObjectWhenImportLevel)
 					{
-						AStaticMeshActor* StaticMeshActor = World->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass(),SceneObject->GetTransform());
-						StaticMeshActor->GetStaticMeshComponent()->SetStaticMesh(StaticMesh);
-						StaticMeshActor->SetFolderPath(TEXT("StaticMeshes"));
-						FString Label = EditableObject->GetName();
-						Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-						StaticMeshActor->SetActorLabel(Label);
-						if(UStalkerStaticMeshAssetUserData* StalkerStaticMeshAssetUserData = StaticMesh->GetAssetUserData<UStalkerStaticMeshAssetUserData>())
+						if(SceneObject->ReferenceName.Find(Path) == 0)
 						{
-							StaticMeshActor->GetStaticMeshComponent()->SetVisibility(!StalkerStaticMeshAssetUserData->IsOnlyCollision);
+							NeedDivideSubObject = true;
 						}
 					}
-				}
 
+					if(LevelImportOptions.DivideSubObject&&NeedDivideSubObject)
+					{
+						TArray<UStaticMesh*> StaticMeshes = EngineFactory.ImportObjectAsStaticMeshWithDivideSubObject(EditableObject);
+						int32 Index = 0;
+						for(UStaticMesh* StaticMesh:StaticMeshes)
+						{
+							AStaticMeshActor* StaticMeshActor = World->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass(),SceneObject->GetTransform());
+							StaticMeshActor->GetStaticMeshComponent()->SetStaticMesh(StaticMesh);
+							StaticMeshActor->SetFolderPath(TEXT("StaticMeshes"));
+							FString Label = EditableObject->GetName();
+							Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+							Label += FString::Printf(TEXT("_part%d"),Index++);
+							StaticMeshActor->SetActorLabel(Label);
+							if(UStalkerStaticMeshAssetUserData* StalkerStaticMeshAssetUserData = StaticMesh->GetAssetUserData<UStalkerStaticMeshAssetUserData>())
+							{
+								StaticMeshActor->GetStaticMeshComponent()->SetVisibility(!StalkerStaticMeshAssetUserData->IsOnlyCollision);
+							}
+						}
+					}
+					else
+					{
+						UStaticMesh* StaticMesh = EngineFactory.ImportObjectAsStaticMesh(EditableObject, true);
+						if (StaticMesh)
+						{
+							AStaticMeshActor* StaticMeshActor = World->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass(),SceneObject->GetTransform());
+							StaticMeshActor->GetStaticMeshComponent()->SetStaticMesh(StaticMesh);
+							StaticMeshActor->SetFolderPath(TEXT("StaticMeshes"));
+							FString Label = EditableObject->GetName();
+							Label.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+							StaticMeshActor->SetActorLabel(Label);
+							if(UStalkerStaticMeshAssetUserData* StalkerStaticMeshAssetUserData = StaticMesh->GetAssetUserData<UStalkerStaticMeshAssetUserData>())
+							{
+								StaticMeshActor->GetStaticMeshComponent()->SetVisibility(!StalkerStaticMeshAssetUserData->IsOnlyCollision);
+							}
+						}
+					}
+					
+				}
 			}
 		}
 		

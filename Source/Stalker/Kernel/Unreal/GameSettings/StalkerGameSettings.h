@@ -64,7 +64,10 @@ public:
 	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSet<FString> DisableDistanceFieldOfCompilerShaderWhenImport;
-	
+
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TArray<FString> MeshesDivideSubObjectWhenImportLevel;
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	bool	AlwaysOverwriteAssetsWhenImport  = false;
 	

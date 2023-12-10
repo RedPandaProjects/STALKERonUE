@@ -13,9 +13,9 @@ public:
 	bool 				IsMUStatic     			() const;
 	bool 				IsStatic     			() const;
 	CEditableObject*	GetReferenceObject		() const;
+	FString				ReferenceName;
 private:
 	void				UpdateReference			();
-	FString				ReferenceName;
 	CEditableObject*	ReferenceObject;
 };
 

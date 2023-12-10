@@ -13,6 +13,7 @@ public:
 	class USkeletalMesh*			ImportOGF					(const FString& FileName);
 	UObject*						ImportObject				(const FString& FileName, bool DivideSubObject = false);
 	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
+	TArray<UStaticMesh*>			ImportObjectAsStaticMeshWithDivideSubObject	(CEditableObject* Object);
 	UStaticMesh*					ImportObjectAsStaticMesh	(CEditableObject* Object, const FString&Path, int32 MeshID = -1);
 	USkeletalMesh*					ImportObjectAsDynamicMesh	(CEditableObject* Object, bool UseOnlyFullPath = false);
 	UMaterialInterface*				ImportSurface				(const FString& Path, CSurface* Surface);

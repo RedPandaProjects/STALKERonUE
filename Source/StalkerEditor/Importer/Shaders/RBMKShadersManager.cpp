@@ -7,6 +7,7 @@
 #include "StalkerEditorManager.h"
 #include "Importer/FRBMKEngineFactory.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 
 FRBMKShadersManager::FRBMKShadersManager(FRBMKEngineFactory* InOwner):Owner(InOwner)
 {
@@ -49,7 +50,13 @@ void FRBMKShadersManager::Load()
 
 UMaterialInterface* FRBMKShadersManager::ImportSurface(const FString& Path, const FString&ShaderName, const FString& TextureName, const FString& GameMaterial,bool HudMode)
 {
-	FRBMKShaderBase* Shader = GetOrCreateShader(ShaderName);
+	const UStalkerGameSettings* StalkerGameSettings = GetDefault<UStalkerGameSettings>();
+	FString NewShaderName = ShaderName;
+	if(const FString* InShaderName = StalkerGameSettings->ReplaceShaderWhenImport.Find(ShaderName))
+	{
+		NewShaderName = *InShaderName;
+	}
+	FRBMKShaderBase* Shader = GetOrCreateShader(NewShaderName);
 	return Shader->ImportSurface(Path,TextureName,GameMaterial,HudMode);
 }
 
