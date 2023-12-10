@@ -36,10 +36,6 @@ void UStalkerEditorManager::Initialized()
 		UICommandList = MakeShareable(new FUICommandList);
 		GXRayObjectLibrary = new XRayObjectLibrary;
 		GXRayObjectLibrary->OnCreate();
-		if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
-		{
-			SOCMaterials.Load();
-		}
 		GStalkerEngineManager->PostReInitializedMulticastDelegate.AddUObject(this, &UStalkerEditorManager::OnReInitialized);
 
 		ScanSkeletons();
@@ -237,7 +233,7 @@ void UStalkerEditorManager::ImportPhysicalMaterials()
 
 void UStalkerEditorManager::ImportParticles()
 {
-	FRBMKParticlesFactory Factory;
+	FRBMKParticlesFactory Factory(nullptr,RF_Public|RF_Standalone);
 	Factory.ImportParticles();
 }
 
@@ -324,11 +320,6 @@ void UStalkerEditorManager::OnReInitialized()
 {
 	GXRayObjectLibrary->OnDestroy();
 	GXRayObjectLibrary->OnCreate();
-	SOCMaterials.UnLoad();
-	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
-	{
-		SOCMaterials.Load();
-	}
 }
 
 void UStalkerEditorManager::ScanSkeletons()

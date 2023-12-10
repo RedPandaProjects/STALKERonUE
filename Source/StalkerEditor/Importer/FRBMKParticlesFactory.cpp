@@ -34,7 +34,7 @@ THIRD_PARTY_INCLUDES_END
 #include "NiagaraDataInterfaceParticleRead.h"
 #include "Resources/Particle/StalkerNiagaraSystem.h"
 
-FRBMKParticlesFactory::FRBMKParticlesFactory()
+FRBMKParticlesFactory::FRBMKParticlesFactory(UObject* InParentPackage, EObjectFlags InFlags):EngineFactory(InParentPackage,InFlags)
 {
 
 }
@@ -124,18 +124,16 @@ void FRBMKParticlesFactory::ImportParticles()
 
 UNiagaraSystem* FRBMKParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
 {
-
 	FString Name =  PEDef->m_Name.c_str();
 	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	const FString NewObjectPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
 
-	UNiagaraSystem* CheckNiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (CheckNiagaraSystem)
-		return CheckNiagaraSystem;
-		
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	UStalkerNiagaraSystem* NiagaraSystem = NewObject<UStalkerNiagaraSystem>(AssetPackage, *FPaths::GetBaseFilename(PackageName), RF_Standalone|RF_Public);
+	UStalkerNiagaraSystem* NiagaraSystem = nullptr;
+	if(!FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(NewObjectPath,RF_Standalone|RF_Public,NiagaraSystem))
+	{
+		return NiagaraSystem;
+	}
+
 	NiagaraSystem->SetFlags(RF_Transactional);
 	UNiagaraSystemFactoryNew::InitializeSystem(NiagaraSystem,true);
 	FAssetRegistryModule::AssetCreated(NiagaraSystem);
@@ -165,7 +163,7 @@ UNiagaraSystem* FRBMKParticlesFactory::ImportParticle(PS::CPEDef* PEDef)
 			SystemViewModel->GetSystem().GetExposedParameters().AddParameter(Velocity);
 			NiagaraSystem->IsLooping = !PEDef->m_Flags.is(PS::CPEDef::dfTimeLimit);
 		}
-		ImportToEmitter(PackageName,PEDef, SystemViewModel->AddEmptyEmitter());
+		ImportToEmitter(NewObjectPath,PEDef, SystemViewModel->AddEmptyEmitter());
 	}
 	if (NiagaraSystemViewModels.Num() >= 100)
 	{
@@ -182,15 +180,14 @@ class UNiagaraSystem* FRBMKParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 {
 	FString Name =  PGDef->m_Name.c_str();
 	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	const FString NewObjectPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
 
-	UNiagaraSystem* CheckNiagaraSystem = LoadObject<UNiagaraSystem>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (CheckNiagaraSystem)
-		return CheckNiagaraSystem;
-		
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	UStalkerNiagaraSystem* NiagaraSystem = NewObject<UStalkerNiagaraSystem>(AssetPackage, *FPaths::GetBaseFilename(PackageName), RF_Standalone|RF_Public);
+	UStalkerNiagaraSystem* NiagaraSystem = nullptr;
+	if(!FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(NewObjectPath,RF_Standalone|RF_Public,NiagaraSystem))
+	{
+		return NiagaraSystem;
+	}
+
 	NiagaraSystem->SetFlags(RF_Transactional);
 
 	UNiagaraSystemFactoryNew::InitializeSystem(NiagaraSystem,true);
@@ -231,7 +228,7 @@ class UNiagaraSystem* FRBMKParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 				PS::CPEDef* InPEDef = MyLibrary->FindPED(Effect->m_EffectName.c_str());
 				if (InPEDef)
 				{
-					ImportToEmitter(PackageName,InPEDef, SystemViewModel->AddEmptyEmitter() ,Effect);
+					ImportToEmitter(NewObjectPath,InPEDef, SystemViewModel->AddEmptyEmitter() ,Effect);
 				}
 			}
 		}
@@ -250,7 +247,6 @@ class UNiagaraSystem* FRBMKParticlesFactory::ImportParticle(PS::CPGDef* PGDef)
 void FRBMKParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDef* InParticleEffect, TSharedPtr<class FNiagaraEmitterHandleViewModel> InEmiter,void*InGroupEffect,TSharedPtr<class FNiagaraEmitterHandleViewModel> OwnerEmitter,EImportToEmitterAs ImportToEmitterAs )
 {
 	PS::CPGDef::SEffect* GroupEffect  = reinterpret_cast<PS::CPGDef::SEffect*>(InGroupEffect);
-	FRBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
 
 	FNiagaraEmitterHandle*	EmitterHandle	=	InEmiter->GetEmitterHandle();
 	if (!ensure(EmitterHandle))
@@ -297,20 +293,20 @@ void FRBMKParticlesFactory::ImportToEmitter(const FString&PackageName ,PS::CPEDe
 			FString Name =  GroupEffect->m_EffectName.c_str();
 			Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 			const FString EffectPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Particles")/ Name);
-			NiagaraSpriteRendererProperties->Material = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,false);
+			NiagaraSpriteRendererProperties->Material = EngineFactory.ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,"",false);
 			if(UseHUD)
 			{
 				StalkerEmiterMaterial.Material =NiagaraSpriteRendererProperties->Material;
-				StalkerEmiterMaterial.HudMaterial = ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
+				StalkerEmiterMaterial.HudMaterial = EngineFactory.ImportSurface(EffectPackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,"",true);
 			}
 		}
 		else
 		{
-			NiagaraSpriteRendererProperties->Material = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,false);
+			NiagaraSpriteRendererProperties->Material = EngineFactory.ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,"",false);
 			if(UseHUD)
 			{
 				StalkerEmiterMaterial.Material = 			NiagaraSpriteRendererProperties->Material;
-				StalkerEmiterMaterial.HudMaterial = ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,true);
+				StalkerEmiterMaterial.HudMaterial = EngineFactory.ImportSurface(PackageName+TEXT("_Mat"),InParticleEffect->m_ShaderName,InParticleEffect->m_TextureName,"",true);
 			}
 		}
 		
@@ -1243,109 +1239,6 @@ void FRBMKParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, ES
 
 }
 
-UMaterialInterface* FRBMKParticlesFactory::ImportSurface(const FString& InPath, shared_str ShaderName, shared_str TextureName, bool HudMode)
-{
-	if (ShaderName.size() == 0)
-		return nullptr;
-		
-	FRBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);	
-	
-	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
-	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
-
-	if (HudMode)
-	{
-		const FString GlobalMaterialInstanceNameForHUD = GlobalMaterialInstanceName + TEXT("_HUD");
-		UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceNameForHUD+ TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceNameForHUD)), nullptr, LOAD_NoWarn);
-		if (Material)
-			return Material;
-		UPackage* AssetPackage = CreatePackage(*GlobalMaterialInstanceNameForHUD);
-		UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(GlobalMaterialInstanceNameForHUD), RF_Standalone|RF_Public);
-		FAssetRegistryModule::AssetCreated(NewMaterial);
-		{
-			UMaterialInterface* ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
-			if(!ensure(ParentMaterial))
-			{
-				return nullptr;
-			}
-			NewMaterial->Parent = ParentMaterial;
-		}
-		FStaticParameterSet NewStaticParameterSet;
-		FStaticSwitchParameter SwitchParameter;
-		SwitchParameter.ParameterInfo.Name = TEXT("HUD Mode");
-		SwitchParameter.Value = true;
-		SwitchParameter.bOverride = true;
-		NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-		NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
-		NewMaterial->InitStaticPermutation();
-		NewMaterial->Modify();
-		NewMaterial->PostEditChange();
-		return NewMaterial;
-	}
-	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
-	if (Material)
-		return Material;
-
-	UMaterialInterface* ParentMaterial = nullptr;
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/ParticleUnkown.ParticleUnkown"));
-		check(IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-
-		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
-		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), RF_Standalone|RF_Public);
-		NewParentMaterial->Parent = UnkownMaterial;
-		FAssetRegistryModule::AssetCreated(NewParentMaterial);
-		NewParentMaterial->Modify();
-		NewParentMaterial->PostEditChange();
-		ParentMaterial = NewParentMaterial;
-	}
-	UPackage* AssetPackage = CreatePackage(*GlobalMaterialInstanceName);
-	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(GlobalMaterialInstanceName), RF_Standalone|RF_Public);
-	FAssetRegistryModule::AssetCreated(NewMaterial);
-	NewMaterial->Parent = ParentMaterial;
-
-	FStaticParameterSet NewStaticParameterSet;
-	FString Textures =  TextureName.c_str();
-	TArray<FString> TexturesNames;
-	if (Textures.ParseIntoArray(TexturesNames, TEXT(",")) > 2)
-	{
-		UE_LOG(LogXRayImporter, Warning, TEXT("Exceeded texture stack[%S] in %s "),TextureName.c_str(),*GlobalMaterialInstanceName);
-	}
-
-	for (int32 i = 0; i < 2; i++)
-	{
-		if (TexturesNames.Num() <= i)
-		{
-			continue;
-		}
-		TObjectPtr<UTexture2D> BaseTexture = EngineFactory.ImportTexture(TexturesNames[i]);
-		if (BaseTexture)
-		{
-			FString CurrentTextureName = FString::Printf(TEXT("Base%d"),i);
-			NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(*CurrentTextureName), BaseTexture);
-		}
-	}
-
-	
-	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
-	NewMaterial->InitStaticPermutation();
-	NewMaterial->Modify();
-	NewMaterial->PostEditChange();
-	return NewMaterial;
-}
 
 void FRBMKParticlesFactory::Flush()
 {

@@ -109,29 +109,23 @@ bool FRBMKDetail::Update	(const FString&Name)
     return true;
 }
 
-UStaticMesh* FRBMKDetail::GetOrCreateStaticMesh()
+UStaticMesh* FRBMKDetail::GetOrCreateStaticMesh(EObjectFlags InFlags)
 {
-    FRBMKEngineFactory EngineFactory(nullptr,RF_Standalone|RF_Public);
+    FRBMKEngineFactory EngineFactory(nullptr,InFlags);
+
+	FString NewObjectPath = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName();
+    NewObjectPath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 
 	UStaticMesh* StaticMesh = nullptr;
-	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName();
-    LocalPackageName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
-
-	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (StaticMesh)
+	if(!FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(NewObjectPath,InFlags,StaticMesh))
+	{
 		return StaticMesh;
+	}
 
 	UE_LOG(LogXRayImporter, Log, TEXT("Import detail object %s"), *GetName());
-
-    
 	TArray<FStaticMaterial> Materials;
-
-	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
-
-	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), RF_Standalone|RF_Public);
     FAssetRegistryModule::AssetCreated(StaticMesh);
-    Materials.AddUnique(FStaticMaterial(EngineFactory.ImportSurface(LocalPackageName + TEXT("_Mat"), TCHAR_TO_ANSI(*ShaderName), TCHAR_TO_ANSI(*TextureName), "", false), TEXT("root_mat"), TEXT("root_mat")));
+    Materials.AddUnique(FStaticMaterial(EngineFactory.ImportSurface(NewObjectPath + TEXT("_Mat"), TCHAR_TO_ANSI(*ShaderName), TCHAR_TO_ANSI(*TextureName), "", false), TEXT("root_mat"), TEXT("root_mat")));
     {
 		const int32 LodIndex = 0;
     	FStaticMeshSourceModel& SourceModel = StaticMesh->AddSourceModel();
@@ -188,23 +182,19 @@ UStaticMesh* FRBMKDetail::GetOrCreateStaticMesh()
     return StaticMesh;
 }
 
-UFoliageType_InstancedStaticMesh* FRBMKDetail::GetOrCreateFoliageType()
+UFoliageType_InstancedStaticMesh* FRBMKDetail::GetOrCreateFoliageType(EObjectFlags InFlags)
 {
-	
-	FString LocalPackageName = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName() + TEXT("_FoliageType");
-    LocalPackageName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
+	FString NewObjectPath = GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / GetName() + TEXT("_FoliageType");
+    NewObjectPath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	UFoliageType_InstancedStaticMesh *FoliageType = nullptr;
 
-	UFoliageType_InstancedStaticMesh *FoliageType = LoadObject<UFoliageType_InstancedStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (FoliageType)
+	if(!FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(NewObjectPath,InFlags,FoliageType))
 	{
 		return FoliageType;
 	}
-	
-	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
-	FoliageType = NewObject<UFoliageType_InstancedStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), RF_Standalone|RF_Public);
+
     FAssetRegistryModule::AssetCreated(FoliageType);
-	FoliageType->SetStaticMesh(GetOrCreateStaticMesh());
+	FoliageType->SetStaticMesh(GetOrCreateStaticMesh(InFlags));
 	FoliageType->ScaleX.Max = MaxScale;
 	FoliageType->ScaleX.Max = MinScale;
 	FoliageType->CullDistance.Max = 7500;

@@ -2,6 +2,7 @@
 
 #include <Resources/StaticMesh/StalkerStaticMeshAssetUserData.h>
 
+#include "ObjectTools.h"
 #include "PhysicsEngine/PhysicsAsset.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
@@ -93,12 +94,9 @@ FRBMKEngineFactory::FRBMKEngineFactory(UObject* InParentPackage, EObjectFlags In
 
 	string_path fn;
 	FS.update_path(fn, _game_data_, "shaders_xrlc.xr");
-	if (FS.exist(fn)) {
-		ShaderXRLC.Load(fn);
-	}
-	else
+	if (ensure(FS.exist(fn)))
 	{
-
+		ShaderXRLC.Load(fn);
 	}
 }
 
@@ -172,13 +170,11 @@ inline bool operator == (const SJointIKData& Left, const SJointIKData& Right)
 USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 {
 	USkeletalMesh* SkeletalMesh = nullptr;
-	FString PackageName;
-	PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
-
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (SkeletalMesh)
+	FString ObjectPath = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
+	if(!LoadOrCreateOrOverwriteAsset(ObjectPath,ObjectFlags,SkeletalMesh))
+	{
 		return SkeletalMesh;
+	}
 
 	IReader* FileData = FS.r_open(TCHAR_TO_ANSI(*FileName));
 	if (!FileData)
@@ -448,9 +444,6 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 
 	}
 	check(MaterialsAndTextures.Num() == Vertices.Num());
-	// Load animation
-	SkeletalMesh = NewObject<USkeletalMesh>(CreatePackage(*PackageName), *FPaths::GetBaseFilename(PackageName), ObjectFlags);
-
 	TArray<SkeletalMeshImportData::FBone> UBones;
 	UBones.AddDefaulted(Bones.Num());
 	for (int32 BoneIndex = 0; BoneIndex < Bones.Num(); BoneIndex++)
@@ -534,10 +527,10 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 			{
 				continue;
 			}
-			const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / TEXT("Mat_") + FString::FromInt(ElementID));
+			const FString SurfacePackageName = UPackageTools::SanitizePackageName(ObjectPath / TEXT("Materials") / TEXT("Mat_") + FString::FromInt(ElementID));
 
 			SkeletalMeshImportData::FMaterial Material;
-			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value,"default",PackageName.EndsWith(TEXT("_hud")));
+			Material.Material = ImportSurface(SurfacePackageName, MaterialsAndTextures[ElementID].Key, MaterialsAndTextures[ElementID].Value,"default",ObjectPath.EndsWith(TEXT("_hud")));
 			Material.MaterialImportName = TEXT("Mat_") + FString::FromInt(ElementID);
 			InMaterials.Add(FSkeletalMaterial(Material.Material.Get(), true, false, FName(Material.MaterialImportName), FName(Material.MaterialImportName)));
 			int32 MaterialID = InSkeletalMeshImportData.Materials.Add(Material);
@@ -600,7 +593,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 	SkeletalMesh->SetMaterials(InMaterials);
 	SkeletalMesh->PostEditChange();
 
-	USkeleton* Skeleton = FindOrCreateSkeleton(PackageName + "_Skeleton", SkeletalMesh);
+	USkeleton* Skeleton = FindOrCreateSkeleton(ObjectPath + "_Skeleton", SkeletalMesh);
 
 	Skeleton->SetPreviewMesh(SkeletalMesh);
 	SkeletalMesh->SetSkeleton(Skeleton);
@@ -623,10 +616,10 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 	{
 		BonesPtr.Add(Bone.Get());
 	}
-	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
+	CreatePhysicsAsset(ObjectPath + "_PhysicsAsset", SkeletalMesh, BonesPtr);
 	if (Header.type == MT_SKELETON_ANIM)
 	{
-		CreateAnims(PackageName / TEXT("Anims"), SkeletalMesh, Bones, FileData);
+		CreateAnims(ObjectPath / TEXT("Anims"), SkeletalMesh, Bones, FileData);
 	}
 	g_pMotionsContainer->clean(false);
 	FS.r_close(FileData);
@@ -670,34 +663,33 @@ UObject* FRBMKEngineFactory::ImportObject(const FString& FileName, bool DivideSu
 
 UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, bool UseOnlyFullPath)
 {
-
 	FString FileName = Object->GetName();
-	FString PackageName;
+	FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+
+	FString NewPath;
 	if (UseOnlyFullPath)
 	{
-		FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
+		NewPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
 	}
 	else
 	{
-		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
+		NewPath  = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
-	return ImportObjectAsStaticMesh(Object, PackageName,-1);
+
+	return ImportObjectAsStaticMesh(Object, NewPath,-1);
 }
 
 
-UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& PackageName,int32 InMeshID)
+UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Object, const FString& Path,int32 InMeshID)
 {
 	UStaticMesh* StaticMesh = nullptr;
-	const FString& LocalPackageName = PackageName;
-	const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
-	StaticMesh = LoadObject<UStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (StaticMesh)
+	if(!LoadOrCreateOrOverwriteAsset(*Path,ObjectFlags,StaticMesh))
+	{
 		return StaticMesh;
+	}
 
 	UE_LOG(LogXRayImporter, Log, TEXT("Import object %S"), Object->GetName());
-	UPackage* AssetPackage = CreatePackage(*LocalPackageName);
-	StaticMesh = NewObject<UStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), ObjectFlags);
+
 	FAssetRegistryModule::AssetCreated(StaticMesh);
 	ObjectCreated.Add(StaticMesh);
 	TArray<FStaticMaterial> Materials;
@@ -830,7 +822,7 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 					const FPolygonID NewPolygonID = MeshDescription->CreatePolygon(CurrentPolygonGroupID, VertexInstanceIDs);
 				}
 				MaterialsIdOfLod[LodIndex].Add(MaterialIndex++);
-				const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
+				const FString SurfacePackageName = UPackageTools::SanitizePackageName(Path / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
 				Materials.AddUnique(FStaticMaterial(ImportSurface(SurfacePackageName, Object->Surfaces()[ElementID]), *FString::Printf(TEXT("mat_%d"), MaterialIndex), *FString::Printf(TEXT("mat_%d"), MaterialIndex)));
 			}
 		}
@@ -889,26 +881,25 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 
 USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Object, bool UseOnlyFullPath /*= false*/)
 {
-	USkeletalMesh* SkeletalMesh = nullptr;
-
 	FString FileName = Object->GetName();
-	FString PackageName;
+	FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+
+	FString NewPath;
+
 	if (UseOnlyFullPath)
 	{
-		FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
+		NewPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false));
 	}
 	else
 	{
-		PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
+		NewPath = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(FileName));
 	}
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	SkeletalMesh = LoadObject<USkeletalMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (SkeletalMesh)
-		return SkeletalMesh;
 
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	SkeletalMesh = NewObject<USkeletalMesh>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	USkeletalMesh* SkeletalMesh = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset<USkeletalMesh>(NewPath,ObjectFlags,SkeletalMesh))
+	{
+		return SkeletalMesh;
+	}
 
 	TArray<SkeletalMeshImportData::FBone> Bones;
 	Bones.AddDefaulted(Object->Bones().size());
@@ -975,7 +966,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 			{
 				continue;
 			}
-			const FString SurfacePackageName = UPackageTools::SanitizePackageName(PackageName / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
+			const FString SurfacePackageName = UPackageTools::SanitizePackageName(NewPath / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
 
 
 			SkeletalMeshImportData::FMaterial Material;
@@ -1043,7 +1034,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 	SkeletalMesh->SetMaterials(InMaterials);
 	SkeletalMesh->PostEditChange();
 
-	USkeleton* Skeleton = FindOrCreateSkeleton(PackageName + "_Skeleton", SkeletalMesh);
+	USkeleton* Skeleton = FindOrCreateSkeleton(NewPath + "_Skeleton", SkeletalMesh);
 
 	Skeleton->SetPreviewMesh(SkeletalMesh);
 	SkeletalMesh->SetSkeleton(Skeleton);
@@ -1054,8 +1045,8 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 	{
 		BonesPtr.Add(Bone);
 	}
-	CreatePhysicsAsset(PackageName + "_PhysicsAsset", SkeletalMesh, BonesPtr);
-	CreateAnims(PackageName / FPaths::GetBaseFilename(PackageName) / TEXT("Anims"), Skeleton, Object);
+	CreatePhysicsAsset(NewPath + "_PhysicsAsset", SkeletalMesh, BonesPtr);
+	CreateAnims(NewPath / FPaths::GetBaseFilename(NewPath) / TEXT("Anims"), Skeleton, Object);
 	return SkeletalMesh;
 }
 
@@ -1066,384 +1057,16 @@ UMaterialInterface* FRBMKEngineFactory::ImportSurface(const FString& Path, CSurf
 
 UMaterialInterface* FRBMKEngineFactory::ImportSurface(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
 {
-	auto LoadGameMaterial = [](shared_str GameMaterial)
+	if(!ShadersManager)
 	{
-		if(GameMaterial.size() == 0)
-		{
-			GameMaterial = "default";
-		}
-		FString NameGameMtl = GameMaterial.c_str();
-		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
-		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
-		return LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
-	};
-
-	if(GetDefault<UStalkerGameSettings>()->ReplaceShaderWhenImport.Contains(ShaderName.c_str()))
-	{
-		ShaderName = TCHAR_TO_ANSI(*GetDefault<UStalkerGameSettings>()->ReplaceShaderWhenImport[ShaderName.c_str()]);
+		ShadersManager = MakeUnique<FRBMKShadersManager>(this);
 	}
-
-	if (ShaderName.size() == 0)
-		return nullptr;
-
-	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
-	{
-		return ImportSurfaceSOC(Path, ShaderName, TextureName, GameMaterial,HudMode);
-	}
-
-	UMaterialInterface* LocalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(Path + TEXT(".") + FPaths::GetBaseFilename(Path)), nullptr, LOAD_NoWarn);
-	if (LocalMaterialInstance)
-	{
-		return LocalMaterialInstance;
-	}
-
-
-	ETextureThumbnail THM(TextureName.c_str());
-	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
-	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
-
-	UMaterialInterface* GlobalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
-	if (!GlobalMaterialInstance)
-	{
-		UMaterialInterface* ParentMaterial = nullptr;
-		{
-			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-		}
-		if (!IsValid(ParentMaterial))
-		{
-			const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
-			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-		}
-		if (!IsValid(ParentMaterial))
-		{
-			UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
-			check(IsValid(UnkownMaterial));
-			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-
-			UPackage* AssetPackage = CreatePackage(*ParentPackageName);
-			UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
-			NewParentMaterial->Parent = UnkownMaterial;
-			FAssetRegistryModule::AssetCreated(NewParentMaterial);
-			ObjectCreated.Add(NewParentMaterial);
-			NewParentMaterial->Modify();
-			NewParentMaterial->PostEditChange();
-			ParentMaterial = NewParentMaterial;
-		}
-
-		UMaterialInstanceConstant* NewGlobalMaterialInstance = NewObject<UMaterialInstanceConstant>(CreatePackage(*GlobalMaterialInstanceName), *FPaths::GetBaseFilename(GlobalMaterialInstanceName), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(NewGlobalMaterialInstance);
-		ObjectCreated.Add(NewGlobalMaterialInstance);
-		NewGlobalMaterialInstance->Parent = ParentMaterial;
-		NewGlobalMaterialInstance->PhysMaterial = LoadGameMaterial(GameMaterial);
-		
-		FStaticParameterSet NewStaticParameterSet;
-
-		TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
-		if (BaseTexture)
-		{
-			NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Diffuse")), BaseTexture);
-		}
-		if (THM.Load(TextureName.c_str()))
-		{
-			TObjectPtr<UTexture2D> NormalMapTexture;
-			TObjectPtr<UTexture2D> HeightGlossTexture;
-			NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), ((static_cast<float>(THM._Format().material) + static_cast<float>(THM._Format().material_weight)) + .5f) / 4.f);
-
-			if (THM._Format().bump_mode == STextureParams::tbmUse || THM._Format().bump_mode == STextureParams::tbmUseParallax)
-			{
-				{
-					FStaticSwitchParameter SwitchParameter;
-					SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
-					SwitchParameter.Value = true;
-					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-				}
-
-				{
-					FStaticSwitchParameter SwitchParameter;
-					SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
-					SwitchParameter.Value = THM._Format().bump_mode == STextureParams::tbmUseParallax;
-					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-				}
-
-				ImportBump2D(THM._Format().bump_name.c_str(), NormalMapTexture, HeightGlossTexture);
-				if (NormalMapTexture)
-				{
-					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
-				}
-				if (HeightGlossTexture)
-				{
-					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGloss")), HeightGlossTexture);
-				}
-				NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), THM._Format().bump_virtual_height / 5.f);
-			}
-			if (THM._Format().detail_name.size())
-			{
-				TObjectPtr<UTexture2D> DetailTexture = ImportTexture(THM._Format().detail_name.c_str());
-				TObjectPtr<UTexture2D> NormalMapTextureDetail;
-				TObjectPtr<UTexture2D> HeightGlossTextureDetail;
-
-				ETextureThumbnail THMDetail(THM._Format().detail_name.c_str());
-				if (THMDetail.Load(THM._Format().detail_name.c_str()))
-				{
-					FStaticSwitchParameter SwitchParameter;
-					SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
-					SwitchParameter.Value = true;
-					SwitchParameter.bOverride = true;
-					NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-					if (DetailTexture)
-					{
-						NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDiffuse")), DetailTexture);
-					}
-					if (THMDetail._Format().bump_mode == STextureParams::tbmUse || THMDetail._Format().bump_mode == STextureParams::tbmUse)
-					{
-						SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
-						SwitchParameter.Value = true;
-						SwitchParameter.bOverride = true;
-						NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-						ImportBump2D(THMDetail._Format().bump_name.c_str(), NormalMapTextureDetail, HeightGlossTextureDetail);
-
-						if (NormalMapTextureDetail)
-						{
-							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
-						}
-
-						if (HeightGlossTextureDetail)
-						{
-							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGlossDetail")), HeightGlossTextureDetail);
-						}
-
-						NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), THM._Format().detail_scale);
-					}
-				}
-			}
-		}
-		else
-		{
-			UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
-		}
-		NewGlobalMaterialInstance->UpdateStaticPermutation(NewStaticParameterSet);
-		NewGlobalMaterialInstance->InitStaticPermutation();
-		NewGlobalMaterialInstance->Modify();
-		NewGlobalMaterialInstance->PostEditChange();
-		if(!HudMode)return NewGlobalMaterialInstance;
-		GlobalMaterialInstance = NewGlobalMaterialInstance;
-	}
-	if(GlobalMaterialInstance->GetPhysicalMaterial()!=LoadGameMaterial(GameMaterial)||HudMode)
-	{
-		FStaticParameterSet NewStaticParameterSet;
-		UMaterialInstanceConstant*LocalMaterialInstanceNew = NewObject<UMaterialInstanceConstant>(CreatePackage(*Path), *FPaths::GetBaseFilename(Path), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(LocalMaterialInstanceNew);
-		ObjectCreated.Add(LocalMaterialInstanceNew);
-		LocalMaterialInstanceNew->Parent = GlobalMaterialInstance;
-		LocalMaterialInstanceNew->PhysMaterial = LoadGameMaterial(GameMaterial);
-		if(HudMode)
-		{
-			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("HUD Mode");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-		}
-		LocalMaterialInstanceNew->UpdateStaticPermutation(NewStaticParameterSet);
-		LocalMaterialInstanceNew->InitStaticPermutation();
-		LocalMaterialInstanceNew->Modify();
-		LocalMaterialInstanceNew->PostEditChange();
-		return LocalMaterialInstanceNew;
-	}
-	return GlobalMaterialInstance;
+	return ShadersManager->ImportSurface(Path,ShaderName.c_str(),TextureName.c_str(),GameMaterial.c_str(),HudMode);
 }
 
-UMaterialInterface* FRBMKEngineFactory::ImportSurfaceSOC(const FString& Path, shared_str ShaderName, shared_str TextureName, shared_str GameMaterial,bool HudMode )
-{
-	if (ShaderName.size() == 0)
-		return nullptr;
-	auto LoadGameMaterial = [](shared_str GameMaterial)
-	{
-		if(GameMaterial.size() == 0)
-		{
-			GameMaterial = "default";
-		}
-		FString NameGameMtl = GameMaterial.c_str();
-		NameGameMtl.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-		const FString PhysicalMaterialsPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials") / NameGameMtl);
-		const FString PhysicalMaterialsObjectPath = PhysicalMaterialsPackageName + TEXT(".") + FPaths::GetBaseFilename(PhysicalMaterialsPackageName);
-		return LoadObject<UStalkerPhysicalMaterial>(nullptr, *PhysicalMaterialsObjectPath, nullptr, 0);
-	};
-	UMaterialInterface* LocalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(Path + TEXT(".") + FPaths::GetBaseFilename(Path)), nullptr, LOAD_NoWarn);
-	if (LocalMaterialInstance)
-	{
-		return LocalMaterialInstance;
-	}
-
-	FString ParentName = FString(ShaderName.c_str()).Replace(TEXT("\\"), TEXT("/"));
-	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName.c_str(), TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
-
-	UMaterialInterface* GlobalMaterialInstance = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
-	if (!GlobalMaterialInstance)
-	{
-		UMaterialInterface* ParentMaterial = nullptr;
-		{
-			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-		}
-		if (!IsValid(ParentMaterial))
-		{
-			const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
-			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-			ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-		}
-		if (!IsValid(ParentMaterial))
-		{
-			UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Unkown.Unkown"));
-			check(IsValid(UnkownMaterial));
-			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-
-			UPackage* AssetPackage = CreatePackage(*ParentPackageName);
-			UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), ObjectFlags);
-			NewParentMaterial->Parent = UnkownMaterial;
-			FAssetRegistryModule::AssetCreated(NewParentMaterial);
-			ObjectCreated.Add(NewParentMaterial);
-			NewParentMaterial->Modify();
-			NewParentMaterial->PostEditChange();
-			ParentMaterial = NewParentMaterial;
-		}
-
-		UMaterialInstanceConstant* NewGlobalMaterialInstance = NewObject<UMaterialInstanceConstant>(CreatePackage(*GlobalMaterialInstanceName), *FPaths::GetBaseFilename(GlobalMaterialInstanceName), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(NewGlobalMaterialInstance);
-		ObjectCreated.Add(NewGlobalMaterialInstance);
-		NewGlobalMaterialInstance->Parent = ParentMaterial;
-
-		NewGlobalMaterialInstance->PhysMaterial = LoadGameMaterial(GameMaterial);
-		FStaticParameterSet NewStaticParameterSet;
-
-		TObjectPtr<UTexture2D> BaseTexture = ImportTexture(TextureName.c_str());
-		if (BaseTexture)
-		{
-			NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Diffuse")), BaseTexture);
-		}
-		if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Details().Contains(TextureName))
-		{
-			const TPair<shared_str, float>& Detail = GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName];
-			TObjectPtr<UTexture2D> DetailTexture = ImportTexture(Detail.Key.c_str());
-
-			TObjectPtr<UTexture2D> NormalMapTextureDetail;
-			TObjectPtr<UTexture2D>  HeightGlossTextureDetail;
-			{
-				FStaticSwitchParameter SwitchParameter;
-				SwitchParameter.ParameterInfo.Name = TEXT("UseDetail");
-				SwitchParameter.Value = true;
-				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-				if (DetailTexture)
-				{
-					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailDiffuse")), DetailTexture);
-				}
-				if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(Detail.Key))
-				{
-					const TPair<shared_str, float>& DetailBump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[Detail.Key];
-					if (DetailBump.Key.size())
-					{
-						SwitchParameter.ParameterInfo.Name = TEXT("UseDetailBump");
-						SwitchParameter.Value = true;
-						SwitchParameter.bOverride = true;
-						NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-
-
-
-						ImportBump2D(DetailBump.Key.c_str(), NormalMapTextureDetail, HeightGlossTextureDetail);
-
-						if (NormalMapTextureDetail)
-						{
-							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailNormalMap")), NormalMapTextureDetail);
-						}
-
-						if (HeightGlossTextureDetail)
-						{
-							NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGlossDetail")), HeightGlossTextureDetail);
-						}
-					}
-					NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("DetailScale")), GStalkerEditorManager->GetSOCMaterials().GetTexture2Details()[TextureName].Value);
-				}
-			}
-		}
-
-		if (GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps().Contains(TextureName))
-		{
-			const TPair<shared_str, float>& Bump = GStalkerEditorManager->GetSOCMaterials().GetTexture2Bumps()[TextureName];
-			TObjectPtr<UTexture2D> NormalMapTexture;
-			TObjectPtr<UTexture2D> HeightGlossTexture;
-			NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("Material")), (Bump.Value + .5f) / 4.f);
-
-			if (Bump.Key.size())
-			{
-				FStaticSwitchParameter SwitchParameter;
-				SwitchParameter.ParameterInfo.Name = TEXT("UseBump");
-				SwitchParameter.Value = true;
-				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-				SwitchParameter.ParameterInfo.Name = TEXT("UseParallax");
-				SwitchParameter.Value = true;
-				SwitchParameter.bOverride = true;
-				NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-
-				ImportBump2D(Bump.Key.c_str(), NormalMapTexture, HeightGlossTexture);
-				if (NormalMapTexture)
-				{
-					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("NormalMap")), NormalMapTexture);
-				}
-				if (HeightGlossTexture)
-				{
-					NewGlobalMaterialInstance->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(TEXT("HeightGloss")), HeightGlossTexture);
-				}
-				NewGlobalMaterialInstance->SetScalarParameterValueEditorOnly(FMaterialParameterInfo(TEXT("ParallaxHeight")), 0.05f / 5.f);
-			}
-		}
-		else
-		{
-			UE_LOG(LogXRayImporter, Warning, TEXT("Can't found thm %S"), TextureName.c_str());
-		}
-		NewGlobalMaterialInstance->UpdateStaticPermutation(NewStaticParameterSet);
-		NewGlobalMaterialInstance->InitStaticPermutation();
-		NewGlobalMaterialInstance->Modify();
-		NewGlobalMaterialInstance->PostEditChange();
-		if(!HudMode)return NewGlobalMaterialInstance;
-		GlobalMaterialInstance = NewGlobalMaterialInstance;
-	}
-	if(GlobalMaterialInstance->GetPhysicalMaterial()!=LoadGameMaterial(GameMaterial)||HudMode)
-	{
-		FStaticParameterSet NewStaticParameterSet;
-		UMaterialInstanceConstant*LocalMaterialInstanceNew = NewObject<UMaterialInstanceConstant>(CreatePackage(*Path), *FPaths::GetBaseFilename(Path), ObjectFlags);
-		FAssetRegistryModule::AssetCreated(LocalMaterialInstanceNew);
-		ObjectCreated.Add(LocalMaterialInstanceNew);
-		LocalMaterialInstanceNew->Parent = GlobalMaterialInstance;
-		LocalMaterialInstanceNew->PhysMaterial = LoadGameMaterial(GameMaterial);
-		if(HudMode)
-		{
-			FStaticSwitchParameter SwitchParameter;
-			SwitchParameter.ParameterInfo.Name = TEXT("HUD Mode");
-			SwitchParameter.Value = true;
-			SwitchParameter.bOverride = true;
-			NewStaticParameterSet.StaticSwitchParameters.Add(SwitchParameter);
-		}
-		LocalMaterialInstanceNew->UpdateStaticPermutation(NewStaticParameterSet);
-		LocalMaterialInstanceNew->InitStaticPermutation();
-		LocalMaterialInstanceNew->Modify();
-		LocalMaterialInstanceNew->PostEditChange();
-		return LocalMaterialInstanceNew;
-	}
-	return GlobalMaterialInstance;
-}
 
 UTexture2D* FRBMKEngineFactory::ImportTextureTHM(const FString& InFileName)
 {
-
 	string_path TexturesGamedataPath;
 	FCStringAnsi::Strcpy(TexturesGamedataPath, FS.get_path(_game_textures_)->m_Path);
 	FString FileName = InFileName;
@@ -1513,17 +1136,15 @@ UObject* FRBMKEngineFactory::ImportPhysicsMaterials(const FString& FileName)
 		}
 	}
 	{
-		const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") /TEXT("MaterialPairs"));
-		const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+		const FString Path = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials") /TEXT("MaterialPairs"));
 
-		UStalkerPhysicalMaterialPairsData* PhysicalMaterialPairs = LoadObject<UStalkerPhysicalMaterialPairsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-		if (!PhysicalMaterialPairs)
+		UStalkerPhysicalMaterialPairsData* PhysicalMaterialPairs = nullptr;
+		if(LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,PhysicalMaterialPairs))
 		{
-			UPackage* AssetPackage = CreatePackage(*PackageName);
-			PhysicalMaterialPairs = NewObject<UStalkerPhysicalMaterialPairsData>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
 			FAssetRegistryModule::AssetCreated(PhysicalMaterialPairs);
 			ObjectCreated.Add(PhysicalMaterialPairs);
 		}
+
 
 		PhysicalMaterialPairs->Pairs.Empty();
 
@@ -1546,15 +1167,14 @@ UStalkerPhysicalMaterial* FRBMKEngineFactory::ImportPhysicsMaterial(class SGameM
 {
 	FString Name =  Materials->m_Name.c_str();
 	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials")/ TEXT("Materials") / Name);
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	const FString Path = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("PhysicalMaterials")/ TEXT("Materials") / Name);
 
-	UStalkerPhysicalMaterial* PhysicalMaterial = LoadObject<UStalkerPhysicalMaterial>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (PhysicalMaterial)
+	UStalkerPhysicalMaterial* PhysicalMaterial = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,PhysicalMaterial))
+	{
 		return PhysicalMaterial;
-		
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	PhysicalMaterial = NewObject<UStalkerPhysicalMaterial>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	}
+
 	FAssetRegistryModule::AssetCreated(PhysicalMaterial);
 	ObjectCreated.Add(PhysicalMaterial);
 
@@ -1567,49 +1187,49 @@ UStalkerPhysicalMaterial* FRBMKEngineFactory::ImportPhysicsMaterial(class SGameM
 
 UTexture2D* FRBMKEngineFactory::ImportTextureDDS(const FString& InFileName)
 {
-	const FString PackageName = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(InFileName));
+	const FString NewPath = UPackageTools::SanitizePackageName(ParentPackage->GetName() / FPaths::GetBaseFilename(InFileName));
 
-	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(InFileName, PackageName);
+	TObjectPtr<UTexture2D> BaseTexture = ImportTexture(InFileName, NewPath);
 
 	return BaseTexture;
 }
 
 UTexture2D* FRBMKEngineFactory::ImportTexture(const FString& FileName,bool bIsUI)
 {
-	UTexture2D*   Texture2D = nullptr;
 	 
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileName);
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-
-	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (Texture2D)
+	const FString Path = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileName);
+	
+	UTexture2D*   Texture2D = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,Texture2D))
+	{
 		return Texture2D;
+	}
+	
+	FAssetRegistryModule::AssetCreated(Texture2D);
+	ObjectCreated.Add(Texture2D);
 
 	RedImageTool::RedImage Image;
 	string_path DDSFileName;
 	FS.update_path(DDSFileName, _game_textures_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), ".dds").c_str());
-	if (!Image.LoadFromFile(DDSFileName))
+	if (!ensure(Image.LoadFromFile(DDSFileName)))
 	{
-		return nullptr;
+		Image.Create(1,1);
+		Image.Fill(RedImageTool::RedColor(0,0,0));
 	}
 
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	Texture2D = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
-	FAssetRegistryModule::AssetCreated(Texture2D);
-	ObjectCreated.Add(Texture2D);
 	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
-	size_t CountPixel = Image.GetSizeInMemory()/4;
+	const size_t CountPixel = Image.GetSizeInMemory()/4;
 	bool UseAlpha = false;
 	for (size_t x = 0; x < CountPixel; x++)
 	{
-		uint8*Pixel = ((uint8*)*Image) + x*4;
+		uint8*Pixel = static_cast<uint8*>(*Image) + x*4;
 		Swap(Pixel[0], Pixel[2]);
 		UseAlpha = UseAlpha || Pixel[3] <255;
 	}
-	ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
-	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, (uint8*)*Image);
+	constexpr ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
+	Texture2D->Source.Init(Image.GetWidth(), Image.GetHeight(), 1, Image.GetMips(), SourceFormat, static_cast<uint8*>(*Image));
 	Texture2D->LODGroup = TEXTUREGROUP_World;
 	Texture2D->SRGB = false;
 	if(bIsUI)
@@ -1621,28 +1241,25 @@ UTexture2D* FRBMKEngineFactory::ImportTexture(const FString& FileName,bool bIsUI
 	Texture2D->CompressionNoAlpha = !UseAlpha;
 	Texture2D->Modify();
 	Texture2D->PostEditChange();
+
 	return Texture2D;
 }
 
-UTexture2D* FRBMKEngineFactory::ImportTexture(const FString& FileName, const FString& PacketName)
+UTexture2D* FRBMKEngineFactory::ImportTexture(const FString& FileName, const FString& NewPath)
 {
 	UTexture2D* Texture2D = nullptr;
-
-	const FString PackageName = UPackageTools::SanitizePackageName(PacketName);
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-
-	Texture2D = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (Texture2D)
-		return Texture2D;
-
-	RedImageTool::RedImage Image;
-	if (!Image.LoadFromFile(TCHAR_TO_ANSI(*FileName)))
+	if(!LoadOrCreateOrOverwriteAsset(NewPath,ObjectFlags,Texture2D))
 	{
-		return nullptr;
+		return Texture2D;
 	}
 
-	UPackage* AssetPackage = CreatePackage(*PackageName);
-	Texture2D = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
+	RedImageTool::RedImage Image;
+	if (!ensure(Image.LoadFromFile(TCHAR_TO_ANSI(*FileName))))
+	{
+		Image.Create(1,1);
+		Image.Fill(RedImageTool::RedColor(0,0,0));
+	}
+
 	FAssetRegistryModule::AssetCreated(Texture2D);
 	ObjectCreated.Add(Texture2D);
 	Image.Convert(RedImageTool::RedTexturePixelFormat::R8G8B8A8);
@@ -1662,35 +1279,50 @@ UTexture2D* FRBMKEngineFactory::ImportTexture(const FString& FileName, const FSt
 	return Texture2D;
 }
 
-void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& HeightGloss)
+void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& OutNormalMap, TObjectPtr<UTexture2D>& OutHeightGloss)
 {
-	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
-	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath()/TEXT("Textures") / PackageFileName);
-	const FString NewObjectPath = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	FString NewFileName = FPaths::ChangeExtension(FileName, TEXT(""));
+	NewFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString NormalMapPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath()/TEXT("Textures") / NewFileName);
 
+	const FString HeightGlossPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / NewFileName+TEXT("_height_gloss"));
 
-	FString PackageFileNameGloss = FPaths::ChangeExtension(FileName, TEXT(""))+TEXT("_height_gloss");
-	PackageFileNameGloss.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-	const FString PackageNameGloss = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Textures") / PackageFileNameGloss);
-	const FString NewObjectPathGloss = PackageNameGloss + TEXT(".") + FPaths::GetBaseFilename(PackageNameGloss);
+	bool NeedFillNormalMap = false;
+	UTexture2D*NormalMap = nullptr;
+	if(LoadOrCreateOrOverwriteAsset(NormalMapPath,ObjectFlags,NormalMap))
+	{
+		NeedFillNormalMap = true;
+	}
 
-	NormalMap = LoadObject<UTexture2D>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	HeightGloss = LoadObject<UTexture2D>(nullptr, *NewObjectPathGloss, nullptr, LOAD_NoWarn);
-	if (NormalMap&& HeightGloss)
-		return;
+	bool NeedFillHeightGloss = false;
+	UTexture2D*HeightGloss = nullptr;
+	if(LoadOrCreateOrOverwriteAsset(HeightGlossPath,ObjectFlags,HeightGloss))
+	{
+		NeedFillHeightGloss = true;
+	}
+	OutNormalMap = NormalMap;
+	OutHeightGloss = HeightGloss;
 
-	RedImageTool::RedImage ImageBump, ImageBumpError;
-	string_path DDSFileName;
-	FS.update_path(DDSFileName, _game_textures_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), ".dds").c_str());
-	if (!ImageBump.LoadFromFile(DDSFileName))
+	if(!NeedFillNormalMap&&!NeedFillHeightGloss)
 	{
 		return;
 	}
 
-	FS.update_path(DDSFileName, _game_textures_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), "#.dds").c_str());
-	if (!ImageBumpError.LoadFromFile(DDSFileName))
+	RedImageTool::RedImage ImageBump, ImageBumpError;
+	string_path DDSFileName;
+	FS.update_path(DDSFileName, _game_textures_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), ".dds").c_str());
+	if (!ensure(ImageBump.LoadFromFile(DDSFileName)))
 	{
+		ImageBump.Create(1,1);
+		ImageBump.Fill(RedImageTool::RedColor(0,1,0,0));
+		return;
+	}
+
+	FS.update_path(DDSFileName, _game_textures_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), "#.dds").c_str());
+	if (!ensure(ImageBumpError.LoadFromFile(DDSFileName)))
+	{
+		ImageBump.Create(1,1);
+		ImageBump.Fill(RedImageTool::RedColor(0.5f,0.5f,0.5f,0.5f));
 		return;
 	}
 	if (ImageBump.GetWidth() != ImageBumpError.GetWidth())return;
@@ -1747,10 +1379,8 @@ void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextu
 	NormalMapImage.SwapRB();
 	HeightGlossImage.SwapRB();
 	//HeightImage.SwapRB();
-	if (!NormalMap)
+	if (NeedFillNormalMap)
 	{
-		UPackage* AssetPackage = CreatePackage(*PackageName);
-		NormalMap = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageName), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(NormalMap);
 		ObjectCreated.Add(NormalMap);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
@@ -1762,10 +1392,8 @@ void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextu
 		NormalMap->Modify();
 		NormalMap->PostEditChange();
 	}
-	if (!HeightGloss)
+	if (NeedFillHeightGloss)
 	{
-		UPackage* AssetPackage = CreatePackage(*PackageNameGloss);
-		HeightGloss = NewObject<UTexture2D>(AssetPackage, *FPaths::GetBaseFilename(PackageNameGloss), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(HeightGloss);
 		ObjectCreated.Add(HeightGloss);
 		ETextureSourceFormat SourceFormat = ETextureSourceFormat::TSF_BGRA8;
@@ -1777,6 +1405,82 @@ void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextu
 		HeightGloss->Modify();
 		HeightGloss->PostEditChange();
 	}
+}
+
+bool FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(UClass* InClass, const FString& Path, EObjectFlags InFlags,UObject*& OutNewObject)
+{
+
+	UObject* ExistingAsset = nullptr;
+	const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>();
+
+	if(!SGSettings->AlwaysOverwriteAssetsWhenImport)
+	{
+		const FString ObjectPath = Path + TEXT(".") + FPaths::GetBaseFilename(Path);
+		ExistingAsset = StaticLoadObject(InClass,nullptr, *ObjectPath, nullptr, LOAD_NoWarn);
+		if(ExistingAsset)
+		{
+			OutNewObject = ExistingAsset;
+			return false;
+		}
+	}
+	
+	UPackage* InParent = CreatePackage(*Path);
+	FName InName = *FPaths::GetBaseFilename(Path);
+	// create an asset if it doesn't exist
+	ExistingAsset = StaticFindObject(nullptr, InParent, *InName.ToString());
+	
+	if (!ExistingAsset)
+	{
+		OutNewObject = NewObject<UObject>(InParent, InClass, InName, InFlags, nullptr);
+		return true;
+	}
+
+	// overwrite existing asset, if possible
+	if (ExistingAsset->GetClass()->IsChildOf(InClass))
+	{
+		OutNewObject = NewObject<UObject>(InParent, InClass, InName, InFlags, nullptr);
+		return true;
+	}
+	
+	// otherwise delete and replace
+	if (!ObjectTools::DeleteSingleObject(ExistingAsset))
+	{
+		UE_LOG(LogXRayImporter, Warning, TEXT("Could not delete existing asset %s"), *ExistingAsset->GetFullName());
+		OutNewObject = nullptr;
+		return false;
+	}
+
+	// keep InPackage alive through the GC, in case ExistingAsset was the only reason it was around
+	const bool bRootedPackage = InParent->IsRooted();
+
+	if (!bRootedPackage)
+	{
+		InParent->AddToRoot();
+	}
+
+	// force GC so we can cleanly create a new asset (and not do an 'in place' replacement)
+	CollectGarbage(GARBAGE_COLLECTION_KEEPFLAGS);
+
+	if (!bRootedPackage)
+	{
+		InParent->RemoveFromRoot();
+	}
+
+	// try to find the existing asset again now that the GC has occurred
+	ExistingAsset = StaticFindObject(nullptr, InParent, *InName.ToString());
+
+	// if the object is still around after GC, fail this operation
+	if (ExistingAsset)
+	{
+
+		OutNewObject = nullptr;
+		return false;
+	}
+
+	// create the asset in the package
+	OutNewObject = NewObject<UObject>(InParent, InClass, InName, InFlags, nullptr);
+	return true;
+
 }
 
 int32 FRBMKEngineFactory::FindBoneIDOrAdd(TArray<CBone*>& InBones, CBone* InBone)
@@ -1959,7 +1663,7 @@ bool FRBMKEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<
 	return true;
 }
 
-USkeleton* FRBMKEngineFactory::FindOrCreateSkeleton(const FString& FullName, USkeletalMesh* InMesh)
+USkeleton* FRBMKEngineFactory::FindOrCreateSkeleton(const FString& Path, USkeletalMesh* InMesh)
 {
 	for (USkeleton* Skeleton : GStalkerEditorManager->Skeletons)
 	{
@@ -1992,14 +1696,13 @@ USkeleton* FRBMKEngineFactory::FindOrCreateSkeleton(const FString& FullName, USk
 			return Skeleton;
 		}
 	}
-	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
-	USkeleton* Skeleton = LoadObject<USkeleton>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (Skeleton)
+
+	USkeleton* Skeleton = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,Skeleton))
 	{
 		return Skeleton;
 	}
-	UPackage* AssetPackage = CreatePackage(*FullName);
-	Skeleton = NewObject<USkeleton>(AssetPackage, *FPaths::GetBaseFilename(FullName), ObjectFlags);
+
 	Skeleton->MergeAllBonesToBoneTree(InMesh);
 	ObjectCreated.Add(Skeleton);
 	FAssetRegistryModule::AssetCreated(Skeleton);
@@ -2018,14 +1721,12 @@ void FRBMKEngineFactory::CreateAnims(const FString& FullName, USkeleton* InMesh,
 void FRBMKEngineFactory::CreateAnims(const FString& FullName, USkeleton* Skeleton, CSMotion* InMotion)
 {
 	const FString MotionPath = UPackageTools::SanitizePackageName(FullName / FString( InMotion->name.c_str()));
-	const FString MotionFullPath = MotionPath + TEXT(".") + FPaths::GetBaseFilename(MotionPath);
-	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
-	if (IsValid(Anim))
+
+	UAnimSequence* AnimSequence = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset(MotionPath,ObjectFlags,AnimSequence))
 	{
 		return;
 	}
-	UPackage* AssetPackage = CreatePackage(*MotionPath);
-	UAnimSequence* AnimSequence = NewObject<UAnimSequence>(AssetPackage, *FPaths::GetBaseFilename(MotionPath), ObjectFlags);
 
 	AnimSequence->SetSkeleton(Skeleton);
 	AnimSequence->SetPreviewMesh(Skeleton->GetPreviewMesh());
@@ -2179,21 +1880,18 @@ void FRBMKEngineFactory::CreateAnims(const FString& Name, USkeletalMesh* InMesh,
 	else
 	{
 		UStalkerKinematicsAssetUserData*StalkerKinematicsAssetUserData = InMesh->GetAssetUserDataChecked<UStalkerKinematicsAssetUserData>();
-		const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
-		const FString NewObjectPath = CorrectName + TEXT(".") + FPaths::GetBaseFilename(CorrectName);
-		UStalkerKinematicsAnimsData* StalkerKinematicsAnimsData = LoadObject<UStalkerKinematicsAnimsData>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-		if (StalkerKinematicsAnimsData)
+		const FString& Path = UPackageTools::SanitizePackageName(Name);
+		UStalkerKinematicsAnimsData* StalkerKinematicsAnimsData = nullptr;
+		if(!LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,StalkerKinematicsAnimsData))
 		{
 			StalkerKinematicsAssetUserData->Anims.Add(StalkerKinematicsAnimsData);
 			return;
 		}
-		UPackage* AssetPackage = CreatePackage(*CorrectName);
-		StalkerKinematicsAnimsData = NewObject<UStalkerKinematicsAnimsData>(AssetPackage, *FPaths::GetBaseFilename(CorrectName), ObjectFlags);
 		FAssetRegistryModule::AssetCreated(StalkerKinematicsAnimsData);
 		ObjectCreated.Add(StalkerKinematicsAnimsData);
 
 		string_path	nm;
-		strconcat(sizeof(nm), nm, TCHAR_TO_ANSI(*CorrectName), ".ogf");
+		strconcat(sizeof(nm), nm, TCHAR_TO_ANSI(*Path), ".ogf");
 		xr_vector<CBoneData*> bones;
 		for (size_t i = 0; i < BonesData.Num(); i++)
 		{
@@ -2234,16 +1932,14 @@ void FRBMKEngineFactory::CreateAnims(const FString& Name, USkeletalMesh* InMesh,
 UAnimSequence* FRBMKEngineFactory::CreateAnim(const FString& Name, USkeleton* InMesh, TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion, u16 ID)
 {
 
-	const FString& CorrectName = UPackageTools::SanitizePackageName(Name);
-	const FString MotionFullPath = CorrectName + TEXT(".") + FPaths::GetBaseFilename(CorrectName);
-	UAnimSequence* Anim = LoadObject<UAnimSequence>(nullptr, *MotionFullPath, nullptr, LOAD_NoWarn);
-	if (IsValid(Anim))
+	const FString& Path = UPackageTools::SanitizePackageName(Name);
+
+	UAnimSequence* AnimSequence = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,AnimSequence))
 	{
-		return Anim;
+		return AnimSequence;
 	}
 
-	UPackage* AssetPackage = CreatePackage(*CorrectName);
-	UAnimSequence* AnimSequence = NewObject<UAnimSequence>(AssetPackage, *FPaths::GetBaseFilename(CorrectName), ObjectFlags);
 	AnimSequence->SetSkeleton(InMesh);
 	AnimSequence->SetPreviewMesh(InMesh->GetPreviewMesh());
 
@@ -2344,15 +2040,11 @@ UAnimSequence* FRBMKEngineFactory::CreateAnim(const FString& Name, USkeleton* In
 
 void FRBMKEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMesh* InMesh,const TArray<IBoneData*>&Bones)
 {
-	const FString NewObjectPath = FullName + TEXT(".") + FPaths::GetBaseFilename(FullName);
-	UPhysicsAsset* PhysicsAsset = LoadObject<UPhysicsAsset>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-	if (PhysicsAsset)
+	UPhysicsAsset* PhysicsAsset = nullptr;
+	if(!LoadOrCreateOrOverwriteAsset(FullName,ObjectFlags,PhysicsAsset))
 	{
 		return;
 	}
-	UPackage* AssetPackage = CreatePackage(*FullName);
-	PhysicsAsset = NewObject<UPhysicsAsset>(AssetPackage, *FPaths::GetBaseFilename(FullName), ObjectFlags);
-
 	for (IBoneData* Bone:Bones)
 	{
 

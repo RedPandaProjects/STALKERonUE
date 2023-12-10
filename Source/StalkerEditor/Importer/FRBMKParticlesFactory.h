@@ -1,4 +1,5 @@
 #pragma once
+#include "FRBMKEngineFactory.h"
 #include "Resources/Particle/StalkerParticleDomain.h"
 namespace PS
 {
@@ -38,7 +39,7 @@ enum class ENiagaraScriptUsage : uint8;
 class FRBMKParticlesFactory
 {
 public:
-	FRBMKParticlesFactory			();
+	FRBMKParticlesFactory			(UObject* InParentPackage, EObjectFlags InFlags);
 	~FRBMKParticlesFactory			();	
 	void							ImportParticles					();
 	class UNiagaraSystem*			ImportParticle					(PS::CPEDef*PEDef);		
@@ -95,11 +96,10 @@ private:
 	class UNiagaraNodeFunctionCall*	FindModuleInScript				(UNiagaraScript* SystemUpdateScript,FSoftObjectPath FunctionPath);
 	void							XRayDomainToUnreal				(const PAPI::pDomain&InDomain,EStalkerParticleDomainType&OutTypeDomain,FStalkerParticleDomain&OutDomain,bool LocationSpace = false,bool UnrealTangent = true);
 	
-	UMaterialInterface*				ImportSurface					(const FString& Path, shared_str ShaderName, shared_str TextureName,bool HudMode);
 	void							Flush							();
 	TArray<PAPI::PActionEnum>		TypesNotImplemented;
 	class CPSLibrary				*MyLibrary = nullptr;
 	FScopedSlowTask*				CurrentSlowTask = nullptr;
-	
+	FRBMKEngineFactory				EngineFactory;
 	TArray<TSharedPtr<FNiagaraSystemViewModel>> NiagaraSystemViewModels;
 };

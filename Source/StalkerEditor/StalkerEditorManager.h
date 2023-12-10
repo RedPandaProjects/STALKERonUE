@@ -1,5 +1,4 @@
 #pragma once
-#include "Importer/FRBMKSOCMaterials.h"
 #include "StalkerEditorManager.generated.h"
 
 UCLASS()
@@ -9,7 +8,6 @@ class UStalkerEditorManager : public UObject
 public:
 	void											Initialized					();
 	void											Destroy						();
-	inline const FRBMKSOCMaterials&					GetSOCMaterials				() const { return SOCMaterials; }
 	FString											GetGamePath					();
 	void											ReloadConfigs				();
 	void											ImportUITextures			();
@@ -37,7 +35,6 @@ private:
 	void											OnReInitialized				();
 	void											ScanSkeletons				();
 	void											OnPostWorldInitialization(UWorld* World, const UWorld::InitializationValues);
-	FRBMKSOCMaterials								SOCMaterials;
 
 };
 

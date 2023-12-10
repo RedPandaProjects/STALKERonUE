@@ -63,7 +63,22 @@ public:
 	TMap<FString,FString> ReplaceShaderWhenImport;
 	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
-	TSet<FString> DisableDistanceFieldOfCompilerShaderWhenImport; 
+	TSet<FString> DisableDistanceFieldOfCompilerShaderWhenImport;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	bool	AlwaysOverwriteAssetsWhenImport  = false;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TSoftObjectPtr<UMaterialInterface>		DefaultUnknownMaterial;
+
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TSoftObjectPtr<UMaterialInterface>		DefaultDecalUnknownMaterial;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TSoftObjectPtr<UMaterialInterface>		DefaultParticleUnknownMaterial;
+		
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TSoftObjectPtr<UMaterialInterface>		DefaultTerrainMaterial;
 
 #endif
 #if WITH_EDITOR

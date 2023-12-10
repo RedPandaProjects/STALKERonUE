@@ -109,6 +109,7 @@ bool FRBMKSceneWallmarkTool::LoadSelection(IReader&F)
 
 void FRBMKSceneWallmarkTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
 {
+	FRBMKEngineFactory EngineFactory(nullptr,InFlags);
 	for( FRBMKSceneWallmarkItem&Item:Items)
 	{
 		FQuat Rotation = FQuat(Item.Plane.ToOrientationQuat())*FRotator(-90,0,0).Quaternion();
@@ -116,68 +117,6 @@ void FRBMKSceneWallmarkTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,c
 		ADecalActor* DecalActor = World->SpawnActor<ADecalActor>(FVector(Item.Position), Rotation.Rotator());
 		DecalActor->SetFolderPath(TEXT("Decals"));
 		DecalActor->GetDecal()->DecalSize = FVector(FMath::Max(Item.Width,Item.Hieght)*12.5f,Item.Hieght*50,Item.Width*50);
-		DecalActor->SetDecalMaterial(ImportSurfaceForDecal(Item.ShaderName,Item.TextureName,InFlags));
+		DecalActor->SetDecalMaterial(EngineFactory.ImportSurface(TEXT(""), TCHAR_TO_ANSI(*Item.ShaderName), TCHAR_TO_ANSI(*Item.TextureName), ""));
 	}
 }
-
-UMaterialInterface* FRBMKSceneWallmarkTool::ImportSurfaceForDecal(const FString& ShaderName, const FString& TextureName,EObjectFlags InFlags)
-{
-    if (ShaderName.IsEmpty())
-		return nullptr;
-	FString ParentName = ShaderName.Replace(TEXT("\\"), TEXT("/"));
-	FString GlobalMaterialInstanceName =  UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("MaterialsInstance") / ParentName/( FPaths::ChangeExtension(TextureName, TEXT("")).Replace(TEXT("\\"), TEXT("/"))));
-
-	UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, *(GlobalMaterialInstanceName + TEXT(".") + FPaths::GetBaseFilename(GlobalMaterialInstanceName)), nullptr, LOAD_NoWarn);
-	if (Material)
-	{
-		return Material;
-	}
-
-	UMaterialInterface* ParentMaterial = nullptr;
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(TEXT("/Game/Base/Materials") / ParentName);
-		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
-		ParentMaterial = LoadObject<UMaterialInterface>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
-	}
-	if (!IsValid(ParentMaterial))
-	{
-		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/Decals/Unkown.Unkown"));
-		check(IsValid(UnkownMaterial));
-		const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
-		UPackage* AssetPackage = CreatePackage(*ParentPackageName);
-		UMaterialInstanceConstant* NewParentMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(ParentPackageName), RF_Standalone|RF_Public);
-		NewParentMaterial->Parent = UnkownMaterial;
-		FAssetRegistryModule::AssetCreated(NewParentMaterial);
-		NewParentMaterial->Modify();
-		NewParentMaterial->PostEditChange();
-		ParentMaterial = NewParentMaterial;
-	}
-	UPackage* AssetPackage = CreatePackage(*GlobalMaterialInstanceName);
-
-	UMaterialInstanceConstant* NewMaterial = NewObject<UMaterialInstanceConstant>(AssetPackage, *FPaths::GetBaseFilename(GlobalMaterialInstanceName), RF_Standalone|RF_Public);
-	FAssetRegistryModule::AssetCreated(NewMaterial);
-	NewMaterial->Parent = ParentMaterial;
-	FRBMKEngineFactory	EngineFactory(nullptr,InFlags);
-	FStaticParameterSet NewStaticParameterSet;
-
-	TObjectPtr<UTexture2D> BaseTexture = EngineFactory.ImportTexture(TextureName);
-	static FName NAME_Diffuse = "Diffuse";
-	if (BaseTexture)
-	{
-		NewMaterial->SetTextureParameterValueEditorOnly(FMaterialParameterInfo(NAME_Diffuse), BaseTexture);
-	}
-
-	
-	NewMaterial->UpdateStaticPermutation(NewStaticParameterSet);
-	NewMaterial->InitStaticPermutation();
-	NewMaterial->Modify();
-	NewMaterial->PostEditChange();
-	return NewMaterial;
-}
-

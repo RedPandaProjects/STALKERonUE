@@ -28,6 +28,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrRender/Public/Kinematics.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerMath.h"
+#include "Kernel/StalkerGlobal.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 
 DECLARE_STATS_GROUP(TEXT("XRayEngine"), STATGROUP_XRayEngine, STATCAT_Advanced);

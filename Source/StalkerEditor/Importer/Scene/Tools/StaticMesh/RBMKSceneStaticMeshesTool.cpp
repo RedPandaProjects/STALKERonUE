@@ -85,11 +85,9 @@ void FRBMKSceneStaticMeshesTool::ExportToWorld(UWorld*World,EObjectFlags InFlags
 				}
 				else
 				{
-					
 					UStaticMesh* StaticMesh = EngineFactory.ImportObjectAsStaticMesh(EditableObject, true);
 					if (StaticMesh)
 					{
-
 						AStaticMeshActor* StaticMeshActor = World->SpawnActor<AStaticMeshActor>(AStaticMeshActor::StaticClass(),SceneObject->GetTransform());
 						StaticMeshActor->GetStaticMeshComponent()->SetStaticMesh(StaticMesh);
 						StaticMeshActor->SetFolderPath(TEXT("StaticMeshes"));
@@ -141,13 +139,10 @@ void FRBMKSceneStaticMeshesTool::ExportToWorld(UWorld*World,EObjectFlags InFlags
 		{
 			FString FileName = Mesh->GetName();
 			FileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
-			FString LocalPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false))+TEXT("_FoliageType");
-			const FString NewObjectPath = LocalPackageName + TEXT(".") + FPaths::GetBaseFilename(LocalPackageName);
-			UFoliageType_InstancedStaticMesh *FoliageType = LoadObject<UFoliageType_InstancedStaticMesh>(nullptr, *NewObjectPath, nullptr, LOAD_NoWarn);
-			if (!FoliageType)
+			FString NewObjectPath = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Maps") / TEXT("Meshes") / FPaths::GetBaseFilename(FileName, false))+TEXT("_FoliageType");
+			UFoliageType_InstancedStaticMesh *FoliageType = nullptr;
+			if (FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(NewObjectPath,InFlags,FoliageType))
 			{
-				UPackage* AssetPackage = CreatePackage(*LocalPackageName);
-				FoliageType = NewObject<UFoliageType_InstancedStaticMesh>(AssetPackage, *FPaths::GetBaseFilename(LocalPackageName), InFlags);
 			    FAssetRegistryModule::AssetCreated(FoliageType);
 				FoliageType->BodyInstance.SetCollisionProfileName(UCollisionProfile::BlockAll_ProfileName);
 				FoliageType->SetStaticMesh(StaticMesh);

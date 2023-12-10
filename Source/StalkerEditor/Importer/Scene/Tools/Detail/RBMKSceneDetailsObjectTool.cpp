@@ -65,7 +65,7 @@ void FRBMKSceneDetailsObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlag
 	{
         if(Instances[i].Num())
         {
-			AddInstances(World,Objects[i]->GetOrCreateFoliageType(), Instances[i]);
+			AddInstances(World,Objects[i]->GetOrCreateFoliageType(InFlags), Instances[i]);
         }
 	}
 }

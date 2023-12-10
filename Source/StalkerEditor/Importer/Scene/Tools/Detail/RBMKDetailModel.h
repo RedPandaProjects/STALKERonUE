@@ -22,8 +22,8 @@ public:
 
 	bool											Load					(IReader&Reader);
     FString											GetName					() const;
-	UStaticMesh*									GetOrCreateStaticMesh	();
-	UFoliageType_InstancedStaticMesh*				GetOrCreateFoliageType	();
+	UStaticMesh*									GetOrCreateStaticMesh	(EObjectFlags InFlags);
+	UFoliageType_InstancedStaticMesh*				GetOrCreateFoliageType	(EObjectFlags InFlags);
 
 	FBoxSphereBounds3f								Bound;
 	TArray<FRBMKDetailVertex>						Vertices;

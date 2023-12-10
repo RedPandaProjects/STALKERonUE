@@ -2,6 +2,7 @@
 #include "../Commands/StalkerEditorCommands.h"
 #include "../StalkerEditorStyle.h"
 #include "../../StalkerEditorManager.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 
 void StalkerToolsMenu::Initialize()
 {
@@ -33,6 +34,23 @@ void StalkerToolsMenu::Initialize()
 			FText::FromString(TEXT("Import Particles")),
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
+
+		FUIAction Action(FExecuteAction::CreateLambda(
+		[]()
+		{
+			UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+			SGSettings->AlwaysOverwriteAssetsWhenImport = !SGSettings->AlwaysOverwriteAssetsWhenImport;
+			SGSettings->PostEditChange(); 
+			SGSettings->SaveConfig(); 
+		}),
+		FCanExecuteAction(),
+		FIsActionChecked::CreateLambda([]() 
+		{
+			UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+			return SGSettings->AlwaysOverwriteAssetsWhenImport;
+		}));
+		Section.AddMenuEntry("AlwaysOverwriteAssetsWhenImport", FText::FromString(TEXT("Always overwrite assets")), FText::FromString(TEXT("Always overwrite assets when import")), FSlateIcon(), Action, EUserInterfaceActionType::Check);
+	
 
 	}
 	else

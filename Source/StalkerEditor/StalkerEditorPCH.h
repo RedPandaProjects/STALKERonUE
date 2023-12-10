@@ -112,6 +112,7 @@ THIRD_PARTY_INCLUDES_END
 #include "Importer\Scene\Tools\Base\RBMKSceneObjectsToolBase.h"
 #include "Importer/Scene/RBMKScene.h"
 #include "Kernel/StalkerMath.h"
+#include "Kernel/StalkerGlobal.h"
 #include "ScopedTransaction.h"
 DECLARE_LOG_CATEGORY_EXTERN(LogXRayImporter, Log, All);
 DECLARE_LOG_CATEGORY_EXTERN(LogStalkerEditor, Log, All);

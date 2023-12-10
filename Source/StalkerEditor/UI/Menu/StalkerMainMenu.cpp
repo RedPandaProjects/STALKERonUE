@@ -113,6 +113,22 @@ void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportPhysicalMaterials, "ImportPhysicalMaterials", FText::FromString("Import Physical Materials"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportMeshes, "ImportMeshes", FText::FromString("Import Meshes"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportParticles, "ImportParticles", FText::FromString("Import Particles"));
+		FUIAction Action(FExecuteAction::CreateLambda(
+		[]()
+		{
+			UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+			SGSettings->AlwaysOverwriteAssetsWhenImport = !SGSettings->AlwaysOverwriteAssetsWhenImport;
+			SGSettings->PostEditChange(); 
+			SGSettings->SaveConfig(); 
+		}),
+		FCanExecuteAction(),
+		FIsActionChecked::CreateLambda([]() 
+		{
+			UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+			return SGSettings->AlwaysOverwriteAssetsWhenImport;
+		}));
+		InMenuBuilder.AddMenuEntry(FText::FromString(TEXT("Always overwrite assets")), FText::FromString(TEXT("Always overwrite assets when import")), FSlateIcon(), Action, NAME_None,EUserInterfaceActionType::Check);
+
 	}
 
 	InMenuBuilder.EndSection();
@@ -150,6 +166,8 @@ void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 			FText::GetEmpty(),
 			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.BuildGameSpawn")
 		);
+		
+	
 	}
 
 	InMenuBuilder.EndSection();

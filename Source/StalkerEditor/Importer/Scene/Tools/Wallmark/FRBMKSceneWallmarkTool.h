@@ -27,6 +27,4 @@ public:
 
 	TArray<FRBMKSceneWallmarkItem>	Items;
 private:
-	
-	UMaterialInterface*				ImportSurfaceForDecal	(const FString& ShaderName,const FString& TextureName,EObjectFlags InFlags);
 };
