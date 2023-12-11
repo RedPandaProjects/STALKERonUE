@@ -57,7 +57,7 @@ bool FRBMKSceneParticleSystemsTool::LoadSelection(IReader& F)
     return FRBMKSceneObjectsToolBase::LoadSelection(F);
 }
 
-void FRBMKSceneParticleSystemsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneParticleSystemsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
 	for (const TSharedPtr<FRBMKSceneObjectBase>& Object : Objects)
 	{

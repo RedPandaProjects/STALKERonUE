@@ -1,7 +1,7 @@
 #pragma once
-#include "XRayOGFImporterFactory.generated.h"
+#include "RBMKObjectImporterFactory.generated.h"
 UCLASS(transient)
-class UXRayOGFImporterFactory : public UFactory
+class URBMKObjectImporterFactory : public UFactory
 {
 	GENERATED_UCLASS_BODY()
 
@@ -10,6 +10,5 @@ public:
 	virtual void		CleanUp() override;
 	virtual bool		FactoryCanImport(const FString& Filename) override;
 
-	virtual  TArray<FString> GetFormats() const override;
 
 };

@@ -1,19 +1,20 @@
-#include "XRayDDSImporterFactory.h"
+#include "RBMKTextureTHMImporterFactory.h"
 #include "../FRBMKEngineFactory.h"
-UXRayDDSImporterFactory::UXRayDDSImporterFactory(const FObjectInitializer& ObjectInitializer)
+URBMKTextureTHMImporterFactory::URBMKTextureTHMImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bCreateNew = false;
 	bEditAfterNew = false;
 	bEditorImport = true;   // binary / general file source
 	bText = false;  // text source
-	SupportedClass = UTexture2D::StaticClass();
-	ImportPriority = ImportPriority + 1;
-	Formats.Add(TEXT("dds;Red Image DDS"));
-}
-  
 
-UObject* UXRayDDSImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
+	SupportedClass = ULevel::StaticClass();
+
+	Formats.Add(TEXT("thm;XRay Texture THM"));
+}
+
+
+UObject* URBMKTextureTHMImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 {
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();
@@ -26,7 +27,7 @@ UObject* UXRayDDSImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
 	FRBMKEngineFactory Factory(ParentPackage, Flags);
-	Object = Factory.ImportTextureDDS(Filename);
+	Object = Factory.ImportTextureTHM(Filename);
 	if (!IsValid(Object))
 	{
 		return nullptr;
@@ -35,22 +36,17 @@ UObject* UXRayDDSImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 	return Object;
 }
 
-void UXRayDDSImporterFactory::CleanUp()
+void URBMKTextureTHMImporterFactory::CleanUp()
 {
 
 }
 
-bool UXRayDDSImporterFactory::FactoryCanImport(const FString& Filename)
+bool URBMKTextureTHMImporterFactory::FactoryCanImport(const FString& Filename)
 {
 	const FString Extension = FPaths::GetExtension(Filename);
-	if (Extension == TEXT("dds"))
+	if (Extension == TEXT("thm"))
 	{
 		return true;
 	}
 	return false;
-}
-
-TArray<FString> UXRayDDSImporterFactory::GetFormats() const
-{
-	return Formats;
 }

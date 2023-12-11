@@ -76,7 +76,7 @@ bool FRBMKDetail::Update	(const FString&Name)
         {
             FRBMKDetailVertex Vertex;
 
-    		Vertex.Position = StalkerMath::XRayLocationToUnreal( Mesh->GetVertices()[Face.pv[VertexID].pindex]);
+    		Vertex.Position = StalkerMath::RBMKLocationToUnreal( Mesh->GetVertices()[Face.pv[VertexID].pindex]);
 
             const st_VMapPt&VertexMap = Mesh->GetVMRefs()[Face.pv[VertexID].vmref].pts[0];
             const Fvector2 InUV = Mesh->GetVMaps()[VertexMap.vmap_index]->getUV(VertexMap.index);

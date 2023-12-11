@@ -176,8 +176,8 @@ void AStalkerSpawnObject::Tick(float DeltaSeconds)
 						Fmatrix		Matrix = XRayEntity->visual_collection()[i].matrix;
 						UStalkerKinematicsComponent* Visual = Visuals[i];
 						Visual->InitilizeEditor();
-						Visual->SetRelativeLocation(FVector(StalkerMath::XRayLocationToUnreal(Matrix.c)));
-						Visual->SetRelativeRotation(FQuat(StalkerMath::XRayQuatToUnreal(Matrix)));
+						Visual->SetRelativeLocation(FVector(StalkerMath::RBMKLocationToUnreal(Matrix.c)));
+						Visual->SetRelativeRotation(FQuat(StalkerMath::RBMKQuaternionToUnreal(Matrix)));
 					}
 
 				}

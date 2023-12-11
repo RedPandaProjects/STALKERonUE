@@ -19,7 +19,7 @@ FRBMKSceneDetailsObjectTool::~FRBMKSceneDetailsObjectTool()
 }
 
 
-void FRBMKSceneDetailsObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneDetailsObjectTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
     auto AddInstances = [](UWorld* World, const UFoliageType* InFoliageType, const TArray<FTransform>& InTransforms)
 	{
@@ -362,7 +362,7 @@ void		FRBMKSceneDetailsObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTra
 		{
 			if(SceneObject->GetReferenceObject())
 			{
-				SceneObject->GetReferenceObject()->BoxPick(SceneObject, BoundBox,StalkerMath::UnrealMatrixToXRay(SceneObject->GetTransform().ToMatrixWithScale()), PickInfos);
+				SceneObject->GetReferenceObject()->BoxPick(SceneObject, BoundBox,StalkerMath::UnrealMatrixToRBMK(SceneObject->GetTransform().ToMatrixWithScale()), PickInfos);
 			}
 		}
 	}
@@ -438,7 +438,7 @@ void		FRBMKSceneDetailsObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTra
 				{
 					Fvector Vertices[3];
 					checkSlow(I.s_obj);
-					I.e_obj->GetFaceWorld(StalkerMath::UnrealMatrixToXRay(I.s_obj->GetTransform().ToMatrixWithScale()),I.e_mesh,I.inf[k].id,Vertices);
+					I.e_obj->GetFaceWorld(StalkerMath::UnrealMatrixToRBMK(I.s_obj->GetTransform().ToMatrixWithScale()),I.e_mesh,I.inf[k].id,Vertices);
 					if (CDB::TestRayTri(WorldPosition,RayDirection,Vertices,RayU,RayV,RayRange,TRUE))
 					{
 						if (RayRange>=0)	
@@ -462,7 +462,7 @@ void		FRBMKSceneDetailsObjectTool::RenderSlot(int32 X,int32 Z,TArray<TArray<FTra
 			XForm.mul_43(MatrixRotate,MatrixScale);
 	
 			FTransform Transform;
-			Transform.SetFromMatrix(StalkerMath::XRayMatrixToUnreal(XForm));
+			Transform.SetFromMatrix(StalkerMath::RBMKMatrixToUnreal(XForm));
 			OutInstances[ObjectIndex].Add(Transform);
 		}
 	}

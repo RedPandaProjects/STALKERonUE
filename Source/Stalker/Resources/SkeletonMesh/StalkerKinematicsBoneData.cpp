@@ -8,15 +8,15 @@ void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& BoneData)
 {
 	Mass  =  BoneData.mass;
 	PhysicsMaterialName = BoneData.game_mtl_name.c_str();
-	CenterOfMass = StalkerMath::XRayLocationToUnreal(BoneData.center_of_mass);
+	CenterOfMass = StalkerMath::RBMKLocationToUnreal(BoneData.center_of_mass);
 
-	Obb.Center = FVector( StalkerMath::XRayLocationToUnreal(BoneData.obb.m_translate));
+	Obb.Center = FVector( StalkerMath::RBMKLocationToUnreal(BoneData.obb.m_translate));
 	Obb.X = BoneData.obb.m_halfsize.x * 200;
 	Obb.Y = BoneData.obb.m_halfsize.z * 200;
 	Obb.Z = BoneData.obb.m_halfsize.y * 200;
 	Fmatrix InRotation;
 	BoneData.obb.xform_get(InRotation);
-	Obb.Rotation = FRotator(FQuat(StalkerMath::XRayQuatToUnreal(InRotation)));
+	Obb.Rotation = FRotator(FQuat(StalkerMath::RBMKQuaternionToUnreal(InRotation)));
 	
 	//shape
 	{
@@ -49,15 +49,15 @@ void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& BoneData)
 		if (BoneData.shape.flags.test(int32(SBoneShape::sfRemoveAfterBreak)))
 			Shape.Flags |= int32(EStalkerShapeFlags::ESF_RemoveAfterBreak);
 
-		Shape.Obb.Center = FVector(StalkerMath::XRayLocationToUnreal(BoneData.shape.box.m_translate));
+		Shape.Obb.Center = FVector(StalkerMath::RBMKLocationToUnreal(BoneData.shape.box.m_translate));
 		Shape.Obb.X = BoneData.shape.box.m_halfsize.x * 200;
 		Shape.Obb.Y = BoneData.shape.box.m_halfsize.z * 200;
 		Shape.Obb.Z = BoneData.shape.box.m_halfsize.y * 200;
 		BoneData.shape.box.xform_get(InRotation);
-		Shape.Obb.Rotation = FRotator(FQuat(StalkerMath::XRayQuatToUnreal(InRotation)));
+		Shape.Obb.Rotation = FRotator(FQuat(StalkerMath::RBMKQuaternionToUnreal(InRotation)));
 
 
-		Shape.Cylinder.Center = FVector(StalkerMath::XRayLocationToUnreal(BoneData.shape.cylinder.m_center));
+		Shape.Cylinder.Center = FVector(StalkerMath::RBMKLocationToUnreal(BoneData.shape.cylinder.m_center));
 		Shape.Cylinder.Radius = BoneData.shape.cylinder.m_radius * 100;
 		Shape.Cylinder.Length = BoneData.shape.cylinder.m_height * 100;
 		InRotation.identity();
@@ -68,7 +68,7 @@ void FStalkerKinematicsBone::BuildFromLegacy(const CBoneData& BoneData)
 		FRotator OutRotation(FQuat(InQuat.x, -InQuat.z, -InQuat.y, InQuat.w) * FQuat(RotationToUnreal));
 		Shape.Cylinder.Rotation = OutRotation;
 
-		Shape.Sphere.Center = FVector(StalkerMath::XRayLocationToUnreal(BoneData.shape.sphere.P));
+		Shape.Sphere.Center = FVector(StalkerMath::RBMKLocationToUnreal(BoneData.shape.sphere.P));
 		Shape.Sphere.Radius = BoneData.shape.sphere.R * 100;
 	}
 	{
@@ -109,16 +109,16 @@ void FStalkerKinematicsBone::Build(StalkerKinematicsBone& BoneData)
 {
 	BoneData.Mass = Mass;
 	BoneData.GameMaterialID = GameMaterialLibrary->GetMaterialIdx(TCHAR_TO_ANSI(*PhysicsMaterialName.ToString()));
-	BoneData.CenterOfMass = StalkerMath::UnrealLocationToXRay(CenterOfMass);
+	BoneData.CenterOfMass = StalkerMath::UnrealLocationToRBMK(CenterOfMass);
 	
 	BoneData.Obb.m_halfsize.x = Obb.X / 200.f;
 	BoneData.Obb.m_halfsize.y = Obb.Z / 200.f;
 	BoneData.Obb.m_halfsize.z = Obb.Y / 200.f;
 
 	Fmatrix InRotation;
-	InRotation.rotation(StalkerMath::UnrealQuatToXRay(FQuat(Obb.Rotation)));
+	InRotation.rotation(StalkerMath::UnrealQuaternionToRBMK(FQuat(Obb.Rotation)));
 	BoneData.Obb.xform_set(InRotation);
-	BoneData.Obb.m_translate = StalkerMath::UnrealLocationToXRay(Obb.Center);
+	BoneData.Obb.m_translate = StalkerMath::UnrealLocationToRBMK(Obb.Center);
 	
 	//shape
 	{
@@ -151,19 +151,19 @@ void FStalkerKinematicsBone::Build(StalkerKinematicsBone& BoneData)
 		BoneData.Shape.box.m_halfsize.y = Shape.Obb.Z / 200.f;
 		BoneData.Shape.box.m_halfsize.z = Shape.Obb.Y / 200.f;
 
-		InRotation.rotation(StalkerMath::UnrealQuatToXRay(FQuat(Shape.Obb.Rotation)));
+		InRotation.rotation(StalkerMath::UnrealQuaternionToRBMK(FQuat(Shape.Obb.Rotation)));
 		BoneData.Shape.box.xform_set(InRotation);
-		BoneData.Shape.box.m_translate = StalkerMath::UnrealLocationToXRay(Shape.Obb.Center);
-		BoneData.Shape.cylinder.m_center = StalkerMath::UnrealLocationToXRay(Shape.Cylinder.Center);
+		BoneData.Shape.box.m_translate = StalkerMath::UnrealLocationToRBMK(Shape.Obb.Center);
+		BoneData.Shape.cylinder.m_center = StalkerMath::UnrealLocationToRBMK(Shape.Cylinder.Center);
 		BoneData.Shape.cylinder.m_radius = Shape.Cylinder.Radius / 100.f;
 		BoneData.Shape.cylinder.m_height = Shape.Cylinder.Length / 100.f;
 
 		FRotator RotationToXRay(0, 0, 90);
-		Fquaternion CylinderQuat = StalkerMath::UnrealQuatToXRay(FQuat(Shape.Cylinder.Rotation) * FQuat(RotationToXRay));
+		Fquaternion CylinderQuat = StalkerMath::UnrealQuaternionToRBMK(FQuat(Shape.Cylinder.Rotation) * FQuat(RotationToXRay));
 		InRotation.rotation(CylinderQuat);
 		BoneData.Shape.cylinder.m_direction = InRotation.k;
 
-		BoneData.Shape.sphere.P = StalkerMath::UnrealLocationToXRay(Shape.Sphere.Center);
+		BoneData.Shape.sphere.P = StalkerMath::UnrealLocationToRBMK(Shape.Sphere.Center);
 		BoneData.Shape.sphere.R  = Shape.Sphere.Radius / 100.f;
 	}
 	{

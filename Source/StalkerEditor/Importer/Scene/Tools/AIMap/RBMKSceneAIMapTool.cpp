@@ -80,7 +80,7 @@ void FRBMKSceneAIMapTool::UnpackPosition(const FRBMKSceneAINodePosition& InNodeP
 	InRBMKPosition.x = static_cast<float>(InNodePosition.X) * AIMapParameters.PatchSize;
 	InRBMKPosition.y = (static_cast<float>(InNodePosition.Y) / 65535) * (AIBBox.max.y - AIBBox.min.y) + AIBBox.min.y;
 	InRBMKPosition.z = static_cast<float>(InNodePosition.Z) * AIMapParameters.PatchSize;
-	OutPosition = StalkerMath::XRayLocationToUnreal(InRBMKPosition);
+	OutPosition = StalkerMath::RBMKLocationToUnreal(InRBMKPosition);
 }
 
 bool FRBMKSceneAIMapTool::LoadLTX(CInifile&)
@@ -128,13 +128,13 @@ void FRBMKSceneAINode::LoadStream(IReader&F, const FRBMKSceneAIMapTool* SceneAIM
 	FRBMKSceneAINodePosition 	InAINodePosition;
 	F.r(&InAINodePosition, sizeof(InAINodePosition));
 	SceneAIMapTool->UnpackPosition(InAINodePosition,Position);
-	Plane = FPlane4f(Position,StalkerMath::XRayNormalToUnreal(InPlaneNormal));
+	Plane = FPlane4f(Position,StalkerMath::RBMKNormalToUnreal(InPlaneNormal));
 	F.r_u8();
 }
 
 
 
-void FRBMKSceneAIMapTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneAIMapTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
 	if (AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings()))
 	{

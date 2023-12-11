@@ -1,22 +1,23 @@
-#include "XRayGameMtlImporterFactory.h"
+#include "RBMKDDSImporterFactory.h"
 #include "../FRBMKEngineFactory.h"
-#include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
-UXRayGameMtlImporterFactory::UXRayGameMtlImporterFactory(const FObjectInitializer& ObjectInitializer)
+URBMKDDSImporterFactory::URBMKDDSImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bCreateNew = false;
 	bEditAfterNew = false;
 	bEditorImport = true;   // binary / general file source
 	bText = false;  // text source
-	SupportedClass = UStalkerPhysicalMaterial::StaticClass();
-	Formats.Add(TEXT("xr;XRay Resource Package"));
+	SupportedClass = UTexture2D::StaticClass();
+	ImportPriority = ImportPriority + 1;
+	Formats.Add(TEXT("dds;Red Image DDS"));
 }
   
 
-UObject* UXRayGameMtlImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
+UObject* URBMKDDSImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 {
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();
+
 	Warn->Log(Filename);
 	UObject* Object = nullptr;
 	// show import options window
@@ -25,32 +26,31 @@ UObject* UXRayGameMtlImporterFactory::FactoryCreateFile(UClass* InClass, UObject
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
 	FRBMKEngineFactory Factory(ParentPackage, Flags);
-	Object = Factory.ImportPhysicsMaterials(Filename);
+	Object = Factory.ImportTextureDDS(Filename);
 	if (!IsValid(Object))
 	{
-		bOutOperationCanceled = true;
 		return nullptr;
 	}
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPostImport(this, Object);
 	return Object;
 }
 
-void UXRayGameMtlImporterFactory::CleanUp()
+void URBMKDDSImporterFactory::CleanUp()
 {
 
 }
 
-bool UXRayGameMtlImporterFactory::FactoryCanImport(const FString& Filename)
+bool URBMKDDSImporterFactory::FactoryCanImport(const FString& Filename)
 {
-	const FString FileName = FPaths::GetCleanFilename(Filename).ToLower();
-	if (FileName == TEXT("gamemtl.xr"))
+	const FString Extension = FPaths::GetExtension(Filename);
+	if (Extension == TEXT("dds"))
 	{
 		return true;
 	}
 	return false;
 }
 
-TArray<FString> UXRayGameMtlImporterFactory::GetFormats() const
+TArray<FString> URBMKDDSImporterFactory::GetFormats() const
 {
 	return Formats;
 }

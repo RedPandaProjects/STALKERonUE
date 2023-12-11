@@ -10,16 +10,16 @@ THIRD_PARTY_INCLUDES_END
 /**
  * 
  */
-class STALKER_API XRayConsole : public XRayConsoleInterface
+class STALKER_API FRBMKConsole : public XRayConsoleInterface
 {
 private:
-	static void		ExecuteCommandUE(IConsole_Command* cc, const TArray< FString >& Args);
+	static void									ExecuteCommandUE(IConsole_Command* cc, const TArray< FString >& Args);
 public:
-	XRayConsole();
-	virtual ~XRayConsole();
+												FRBMKConsole	();
+												~FRBMKConsole	() override;
 
-	void			AddCommand(IConsole_Command* cc) override;
-	void			RemoveCommand(IConsole_Command* cc) override;
+	void										AddCommand		(IConsole_Command* cc) override;
+	void										RemoveCommand	(IConsole_Command* cc) override;
 private:
 	TMap<IConsole_Command*, IConsoleCommand*>	UEConsoleCommands;
 };

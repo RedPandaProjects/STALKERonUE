@@ -98,7 +98,7 @@ bool FRBMKSceneStaticMesh::LoadStream(IReader& F)
 				MTransformP.translate	(Position);
 				MTransformRP.mul		(MTransformP,MTransformR);
 				MTransform.mul			(MTransformRP,MTransformS);
-				Transform = FTransform(StalkerMath::XRayMatrixToUnreal(MTransform));
+				Transform = FTransform(StalkerMath::RBMKMatrixToUnreal(MTransform));
 			}; 
 		}
 	}

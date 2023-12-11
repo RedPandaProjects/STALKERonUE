@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "XRayConsole.h"
+#include "RBMKConsole.h"
 #include "Framework/Commands/Commands.h"
 
-void XRayConsole::ExecuteCommandUE(IConsole_Command* cc, const TArray<FString>& Args)
+void FRBMKConsole::ExecuteCommandUE(IConsole_Command* cc, const TArray<FString>& Args)
 {
 	if (cc && cc->bEnabled)
 	{
@@ -43,12 +43,12 @@ void XRayConsole::ExecuteCommandUE(IConsole_Command* cc, const TArray<FString>& 
 }
 
 
-XRayConsole::XRayConsole()
+FRBMKConsole::FRBMKConsole()
 {
 
 }
 
-XRayConsole::~XRayConsole()
+FRBMKConsole::~FRBMKConsole()
 {
 	for (auto&[Key,Var]: UEConsoleCommands)
 	{
@@ -57,16 +57,16 @@ XRayConsole::~XRayConsole()
 	UEConsoleCommands.Empty();
 }
 
-void XRayConsole::AddCommand(IConsole_Command* cc)
+void FRBMKConsole::AddCommand(IConsole_Command* cc)
 {
 	FString name = "xray." + FString(cc->Name());
-	auto pUECommand = IConsoleManager::Get().RegisterConsoleCommand(*name, *name, FConsoleCommandWithArgsDelegate::CreateLambda([cc](const TArray<FString>& Args) {XRayConsole::ExecuteCommandUE(cc, Args); }));
+	auto pUECommand = IConsoleManager::Get().RegisterConsoleCommand(*name, *name, FConsoleCommandWithArgsDelegate::CreateLambda([cc](const TArray<FString>& Args) {FRBMKConsole::ExecuteCommandUE(cc, Args); }));
 	UEConsoleCommands.Add(cc, pUECommand);
 
 	XRayConsoleInterface::AddCommand(cc);
 }
 
-void XRayConsole::RemoveCommand(IConsole_Command* cc)
+void FRBMKConsole::RemoveCommand(IConsole_Command* cc)
 {
 	auto pUECommand = UEConsoleCommands.FindAndRemoveChecked(cc);
 	IConsoleManager::Get().UnregisterConsoleObject(pUECommand);

@@ -84,7 +84,7 @@ void AStalkerLight::set_shadow(bool InShadow)
 
 void AStalkerLight::set_position(const Fvector& P)
 {
-	StartPosition = FVector(StalkerMath::XRayLocationToUnreal(P));
+	StartPosition = FVector(StalkerMath::RBMKLocationToUnreal(P));
 	SetActorLocation(StartPosition);
 }
 
@@ -119,7 +119,7 @@ void AStalkerLight::set_rotation(const Fvector& D, const Fvector& R)
 	mR.k = L_dir;	mR._34 = 0;
 	mR.c.set(0,0,0);	mR._44 = 1;
 
-	FQuat4f Quat = StalkerMath::XRayQuatToUnreal(mR);
+	FQuat4f Quat = StalkerMath::RBMKQuaternionToUnreal(mR);
 	SetActorRotation(FQuat(Quat));
 }
 

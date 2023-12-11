@@ -65,7 +65,7 @@ bool FRBMKSceneWallmarkTool::LoadStream(IReader&F)
                     ChunkItem->r(&InBox,sizeof(Fbox));
                     Fvector InPosition;
                     InBox.getcenter(InPosition);
-                    Item.Position = StalkerMath::XRayLocationToUnreal(InPosition);
+                    Item.Position = StalkerMath::RBMKLocationToUnreal(InPosition);
 
                     ChunkItem->advance(16);
 					Item.Width  = ChunkItem->r_float();
@@ -80,7 +80,7 @@ bool FRBMKSceneWallmarkTool::LoadStream(IReader&F)
                         {
 							ChunkItem->r(&InVertexPosition,sizeof(Fvector));
 							ChunkItem->advance(12);
-	                        Vertices[j] = StalkerMath::XRayLocationToUnreal(InVertexPosition);  
+	                        Vertices[j] = StalkerMath::RBMKLocationToUnreal(InVertexPosition);  
                         }
 	                    VertexCount-=3;
                         Item.Plane = FPlane4f(Vertices[0],Vertices[1],Vertices[2]);
@@ -107,7 +107,7 @@ bool FRBMKSceneWallmarkTool::LoadSelection(IReader&F)
 }
 
 
-void FRBMKSceneWallmarkTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneWallmarkTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
 	FRBMKEngineFactory EngineFactory(nullptr,InFlags);
 	for( FRBMKSceneWallmarkItem&Item:Items)

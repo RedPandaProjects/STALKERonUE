@@ -1,10 +1,10 @@
 #pragma once
 #include "XrEngine/XrDeviceInterface.h"
-class XRayDevice :public XrDeviceInterface
+class FRBMKDevice :public XrDeviceInterface
 {
 public:
-						XRayDevice		();
-						~XRayDevice		() override;
+						FRBMKDevice		();
+						~FRBMKDevice		() override;
 	bool				IsEditorMode	() override;
 	bool				Paused			() const override;
 	void				Reset			(bool precache = false) override;

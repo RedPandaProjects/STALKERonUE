@@ -55,7 +55,7 @@ bool FRBMKSceneWayObjectsTool::LoadSelection(IReader& F)
 	return FRBMKSceneObjectsToolBase::LoadSelection(F);
 }
 
-void FRBMKSceneWayObjectsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneWayObjectsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
 	for (TSharedPtr<FRBMKSceneObjectBase>& Object : Objects)
 	{

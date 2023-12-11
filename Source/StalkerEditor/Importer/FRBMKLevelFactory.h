@@ -5,7 +5,7 @@ class FRBMKLevelFactory
 public:
 	FRBMKLevelFactory(UObject* InParentPackage, EObjectFlags InFlags);
 	~FRBMKLevelFactory();
-	bool ImportLevel(const FString& FileName,class UXRayLevelImportOptions&LevelImportOptions);
+	bool ImportLevel(const FString& FileName,class URBMKLevelImportOptions&LevelImportOptions);
 	inline UObject* GetCreatedObject() { return EngineFactory.GetCreatedObject(); }
 private:
 	FRBMKEngineFactory EngineFactory;

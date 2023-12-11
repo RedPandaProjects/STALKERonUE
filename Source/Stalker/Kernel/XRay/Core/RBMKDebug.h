@@ -2,9 +2,9 @@
 THIRD_PARTY_INCLUDES_START
 #include "XrCore/stdafx.h"
 THIRD_PARTY_INCLUDES_END
-class XRayDebug :public XRayDebugInterface
+class FRBMKDebug :public XRayDebugInterface
 {
 public:
-	XRayDebug();
+	FRBMKDebug();
 	void CriticalError(const char* Text) override;
 };

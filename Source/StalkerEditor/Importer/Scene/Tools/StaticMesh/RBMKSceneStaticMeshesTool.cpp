@@ -67,7 +67,7 @@ TSharedPtr<FRBMKSceneObjectBase> FRBMKSceneStaticMeshesTool::CreateObject(const 
     return MakeShared<FRBMKSceneStaticMesh>(Name);
 }
 
-void FRBMKSceneStaticMeshesTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSceneStaticMeshesTool::ExportToWorld(UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
 	FRBMKEngineFactory EngineFactory(nullptr,InFlags);
 

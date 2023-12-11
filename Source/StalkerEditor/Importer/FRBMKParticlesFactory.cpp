@@ -777,7 +777,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 	UNiagaraNodeFunctionCall* StalkerGravityNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerGravity.StalkerGravity"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerGravityNode))
 	{
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerGravityNode, "Direction" ,StalkerMath::XRayLocationToUnreal(InSourceAction->direction));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerGravityNode, "Direction" ,StalkerMath::RBMKLocationToUnreal(InSourceAction->direction));
 	}
 }
 
@@ -790,7 +790,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTurbulenceNode, "Frequency",InSourceAction->frequency);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTurbulenceNode, "Magnitude",InSourceAction->magnitude);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTurbulenceNode, "Octaves",InSourceAction->octaves);
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTurbulenceNode, "Offset",StalkerMath::XRayNormalToUnreal(InSourceAction->offset));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTurbulenceNode, "Offset",StalkerMath::RBMKNormalToUnreal(InSourceAction->offset));
 		
 	}
 }
@@ -812,7 +812,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 	{
 		SetModuleParameter(InEmiter,*StalkerTargetVelocityNode,TEXT("AllowRotate"),InSourceAction->m_Flags.test(PAPI::ParticleAction::ALLOW_ROTATE));
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTargetVelocityNode, "Scale" ,InSourceAction->scale);
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTargetVelocityNode, "Velocity" ,StalkerMath::XRayLocationToUnreal(InSourceAction->velocity));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerTargetVelocityNode, "Velocity" ,StalkerMath::RBMKLocationToUnreal(InSourceAction->velocity));
 	}
 }
 
@@ -831,7 +831,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 	UNiagaraNodeFunctionCall* StalkerScatterNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerScatter.StalkerScatter"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerScatterNode))
 	{
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerScatterNode, "Center" ,StalkerMath::XRayLocationToUnreal(InSourceAction->center));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerScatterNode, "Center" ,StalkerMath::RBMKLocationToUnreal(InSourceAction->center));
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerScatterNode, "Epsilon" ,InSourceAction->epsilon);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerScatterNode, "Magnitude" ,InSourceAction->magnitude);
 		if (InSourceAction->max_radius*InSourceAction->max_radius < P_MAXFLOAT)
@@ -906,7 +906,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 		SetModuleParameter(InEmiter,*StalkerOrbitPointNode,TEXT("AllowRotate"),InSourceAction->m_Flags.test(PAPI::ParticleAction::ALLOW_ROTATE));
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerOrbitPointNode, "Epsilon" ,InSourceAction->epsilon);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerOrbitPointNode, "Magnitude" ,InSourceAction->magnitude);
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerOrbitPointNode, "Center" ,StalkerMath::XRayLocationToUnreal(InSourceAction->center));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerOrbitPointNode, "Center" ,StalkerMath::RBMKLocationToUnreal(InSourceAction->center));
 		if (InSourceAction->max_radius*InSourceAction->max_radius < P_MAXFLOAT)
 		{
 			SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerOrbitPointNode, "MaxRadius" ,InSourceAction->max_radius);
@@ -955,8 +955,8 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 		}
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerVortexNode, "Magnitude" ,InSourceAction->magnitude);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerVortexNode, "Epsilon" ,InSourceAction->epsilon);
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerVortexNode, "Axis" ,StalkerMath::XRayNormalToUnreal(InSourceAction->axis));
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerVortexNode, "Center" ,StalkerMath::XRayNormalToUnreal(InSourceAction->center));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerVortexNode, "Axis" ,StalkerMath::RBMKNormalToUnreal(InSourceAction->axis));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerVortexNode, "Center" ,StalkerMath::RBMKNormalToUnreal(InSourceAction->center));
 
 
 	}
@@ -967,7 +967,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 	UNiagaraNodeFunctionCall* StalkerDampingNode = AddModuleFromAssetPath(TEXT("/Game/Base/Particles/Modules/StalkerDamping.StalkerDamping"), *ParticleUpdateOutputNode);
 	if (ensure(StalkerDampingNode))
 	{
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerDampingNode, "Damping" ,StalkerMath::XRayNormalToUnreal(InSourceAction->damping));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerDampingNode, "Damping" ,StalkerMath::RBMKNormalToUnreal(InSourceAction->damping));
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerDampingNode, "Low" ,InSourceAction->vlowSqr*100.f);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerDampingNode, "High" ,InSourceAction->vhighSqr*100.f);
 	}
@@ -1063,7 +1063,7 @@ void FRBMKParticlesFactory::ImportActionToEmitter(PS::CPEDef* InParticleEffect, 
 			SetModuleEnum(InEmiter,*StalkerJetNode,TEXT("AccType"),StaticEnum<EStalkerParticleDomainType>(),static_cast<int32>(DomainType),false);
 		}
 		
-		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerJetNode, "Center",StalkerMath::XRayNormalToUnreal(InSourceAction->center));
+		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerJetNode, "Center",StalkerMath::RBMKNormalToUnreal(InSourceAction->center));
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerJetNode, "Magnitude" ,InSourceAction->magnitude);
 		SetModuleParameter(Emitter->GetUniqueEmitterName(), *EmitterData->UpdateScriptProps.Script, *StalkerJetNode, "Epsilon" ,InSourceAction->epsilon);
 		if (InSourceAction->max_radius*InSourceAction->max_radius < P_MAXFLOAT)
@@ -1197,8 +1197,8 @@ void FRBMKParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, ES
 	}
 	if (UnrealTangent)
 	{
-		OutDomain.Position1 = StalkerMath::XRayNormalToUnreal(InDomain.p1);
-		OutDomain.Position2 = StalkerMath::XRayNormalToUnreal(InDomain.p2);
+		OutDomain.Position1 = StalkerMath::RBMKNormalToUnreal(InDomain.p1);
+		OutDomain.Position2 = StalkerMath::RBMKNormalToUnreal(InDomain.p2);
 		switch ( InDomain.type)
 		{
 			case PAPI::PDBox:
@@ -1206,8 +1206,8 @@ void FRBMKParticlesFactory::XRayDomainToUnreal(const PAPI::pDomain& InDomain, ES
 			case PAPI::PDCylinder:
 			Swap(OutDomain.Position1.X,OutDomain.Position2.X);
 		}
-		OutDomain.U = StalkerMath::XRayNormalToUnreal(InDomain.u);
-		OutDomain.V = StalkerMath::XRayNormalToUnreal(InDomain.v);
+		OutDomain.U = StalkerMath::RBMKNormalToUnreal(InDomain.u);
+		OutDomain.V = StalkerMath::RBMKNormalToUnreal(InDomain.v);
 	}
 	else
 	{

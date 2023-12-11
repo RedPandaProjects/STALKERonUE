@@ -137,9 +137,9 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 		}
 		AactorItr->XRayEntity->unreal_soft_refence = TCHAR_TO_ANSI(*AactorItr->GetPathName());
 		AactorItr->XRayEntity->set_name_replace(TCHAR_TO_ANSI(*Name));
-		AactorItr->XRayEntity->position().set(StalkerMath::UnrealLocationToXRay(AactorItr->GetActorLocation()));
+		AactorItr->XRayEntity->position().set(StalkerMath::UnrealLocationToRBMK(AactorItr->GetActorLocation()));
 		{
-			Fquaternion XRayQuat = StalkerMath::UnrealQuatToXRay(FQuat(AactorItr->GetActorRotation()));
+			Fquaternion XRayQuat = StalkerMath::UnrealQuaternionToRBMK(FQuat(AactorItr->GetActorRotation()));
 			Fmatrix XRayMatrix;
 			XRayMatrix.rotation(XRayQuat);
 			XRayMatrix.getHPB(AactorItr->XRayEntity->angle());
@@ -156,7 +156,7 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 				FTransform Transform = SphereShape->GetComponentToWorld();
 				Shape.type = CShapeData::cfSphere;
 				Shape.data.sphere.R = Transform.GetScale3D().X * SphereShape->SphereRadius / 100.f;
-				Shape.data.sphere.P = StalkerMath::UnrealLocationToXRay(Transform.GetLocation()- AactorItr->GetActorLocation());
+				Shape.data.sphere.P = StalkerMath::UnrealLocationToRBMK(Transform.GetLocation()- AactorItr->GetActorLocation());
 			}
 			AactorItr->GetComponents<UStalkerSpawnObjectBoxShapeComponent>(BoxShapeComponents, false);
 			for (UStalkerSpawnObjectBoxShapeComponent* BoxShape : BoxShapeComponents)
@@ -167,12 +167,12 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 				{
 					FVector InScale = BoxShape->GetComponentToWorld().GetScale3D();
 					Fmatrix FTransformR, FTransformS;
-					FTransformR.rotation(StalkerMath::UnrealQuatToXRay(Transform.GetRotation()));
+					FTransformR.rotation(StalkerMath::UnrealQuaternionToRBMK(Transform.GetRotation()));
 					Fvector		Scale;
 					Scale.set(InScale.X* BoxShape->BoxExtent.X/100.f*2.f, InScale.Z * BoxShape->BoxExtent.Z / 100.f * 2.f, InScale.Y * BoxShape->BoxExtent.Y / 100.f * 2.f);
 					FTransformS.scale(Scale);
 					Shape.data.box.mul(FTransformR, FTransformS);
-					Shape.data.box.translate_over(StalkerMath::UnrealLocationToXRay(Transform.GetLocation()));
+					Shape.data.box.translate_over(StalkerMath::UnrealLocationToRBMK(Transform.GetLocation()));
 				}
 				{
 					Fmatrix xform;
@@ -191,7 +191,7 @@ class UStalkerLevelSpawn* UStalkerEditorSpawn::BuildLevelSpawn()
 					Shape.data.box.transform(V1);
 					Fvector V2 = du_box_vertices[du_box_lines[i++]];
 					Shape.data.box.transform(V2);
-					DrawDebugLine(World,FVector(StalkerMath::XRayLocationToUnreal(V1)), FVector(StalkerMath::XRayLocationToUnreal(V2)), FColor::Red);
+					DrawDebugLine(World,FVector(StalkerMath::RBMKLocationToUnreal(V1)), FVector(StalkerMath::RBMKLocationToUnreal(V2)), FColor::Red);
 				}*/
 			}
 		

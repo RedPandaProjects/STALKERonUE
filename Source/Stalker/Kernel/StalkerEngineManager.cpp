@@ -5,11 +5,11 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XRayEngineInterface.h"
 THIRD_PARTY_INCLUDES_END
 #include "Unreal/GameViewportClient/StalkerGameViewportClient.h"
-#include "XRay/Core/XRayMemory.h"
-#include "XRay/Core/XRayDebug.h"
-#include "XRay/Core/XRayLog.h"
-#include "XRay/Core/XRayInput.h"
-#include "XRay/Core/XRayEngine.h"
+#include "XRay/Core/RBMKMemory.h"
+#include "XRay/Core/RBMKDebug.h"
+#include "XRay/Core/RBMKLog.h"
+#include "XRay/Core/RBMKInput.h"
+#include "XRay/Core/RBMKEngine.h"
 #include "Unreal/GameSettings/StalkerGameSettings.h"
 #include "GameDelegates.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
@@ -25,9 +25,9 @@ THIRD_PARTY_INCLUDES_END
 #include "../Resources/Particle/StalkerParticleDomain.h"
 
 STALKER_API FStalkerEngineManager* GStalkerEngineManager = nullptr;
-static XRayMemory	GXRayMemory;
-static XRayLog	GXRayLog;
-static XRayDebug	GXRayDebug;
+static FRBMKMemory	GXRayMemory;
+static FRBMKLog	GXRayLog;
+static FRBMKDebug	GXRayDebug;
 
 FStalkerEngineManager::FStalkerEngineManager()
 {
@@ -99,7 +99,7 @@ void FStalkerEngineManager::Initialize()
 	FSName = FPaths::Combine(FPaths::ProjectDir(), FSName);
 	Core.Initialize(&GXRayMemory, &GXRayLog, &GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
 
-	MyXRayEngine = new XRayEngine;
+	MyXRayEngine = new FRBMKEngine;
 	g_Engine = MyXRayEngine;
 	GameMaterialLibrary = PhysicalMaterialsManager;
 	g_Engine->Initialize();
@@ -264,14 +264,14 @@ void FStalkerEngineManager::ReInitialized(EStalkerGame Game)
 	FSName = FPaths::Combine(FPaths::ProjectDir(), FSName);
 
 	Core.Initialize(&GXRayMemory, &GXRayLog, &GXRayDebug, TCHAR_TO_ANSI(*FSName), GIsEditor, GamePath);
-	MyXRayEngine = new XRayEngine;
+	MyXRayEngine = new FRBMKEngine;
 	g_Engine = MyXRayEngine;
 	g_Engine->Initialize();
 
 	PostReInitializedMulticastDelegate.Broadcast();
 }
 
-void FStalkerEngineManager::SetInput(class XRayInput* InXRayInput)
+void FStalkerEngineManager::SetInput(class FRBMKInput* InXRayInput)
 {
 	if (InXRayInput == nullptr) 
 	{ 

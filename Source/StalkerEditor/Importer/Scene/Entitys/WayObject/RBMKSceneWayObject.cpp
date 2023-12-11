@@ -75,7 +75,7 @@ bool FRBMKSceneWayObject::LoadLTX(CInifile& INIFile, const FString&SectionName)
         FString InName = ANSI_TO_TCHAR(INIFile.r_string(TCHAR_TO_ANSI(*SectionName), TCHAR_TO_ANSI(*KeyName)));
         const TSharedPtr<FRBMKSceneWayPoint>& WayPoint = WayPoints.Add_GetRef(MakeShared<FRBMKSceneWayPoint>(TCHAR_TO_ANSI(*InName)));
     	FString KeyPosition = FString::Printf(TEXT("wp_%u_pos"),i);
-        WayPoint->Position = FVector(StalkerMath::XRayLocationToUnreal(INIFile.r_fvector3(TCHAR_TO_ANSI(*SectionName), TCHAR_TO_ANSI(*KeyPosition))));
+        WayPoint->Position = FVector(StalkerMath::RBMKLocationToUnreal(INIFile.r_fvector3(TCHAR_TO_ANSI(*SectionName), TCHAR_TO_ANSI(*KeyPosition))));
     	FString KeyFlags = FString::Printf(TEXT("wp_%u_flags"),i);
         WayPoint->Flags = INIFile.r_u32(TCHAR_TO_ANSI(*SectionName), TCHAR_TO_ANSI(*KeyFlags));
     }
@@ -146,7 +146,7 @@ bool FRBMKSceneWayObject::LoadStream(IReader& F)
 	    const TSharedPtr<FRBMKSceneWayPoint>& WayPoint = WayPoints.Add_GetRef(MakeShared<FRBMKSceneWayPoint>(TEXT("")));
 		Fvector3 InPosition;
 		F.r_fvector3(InPosition);
-        WayPoint->Position  = FVector(StalkerMath::XRayLocationToUnreal(InPosition));
+        WayPoint->Position  = FVector(StalkerMath::RBMKLocationToUnreal(InPosition));
         WayPoint->Flags = F.r_s32();
         F.r_u16();// bSelected
         shared_str InName;

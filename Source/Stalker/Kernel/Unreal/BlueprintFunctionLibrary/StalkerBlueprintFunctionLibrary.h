@@ -15,9 +15,9 @@ class STALKER_API UStalkerBlueprintFunctionLibrary : public UBlueprintFunctionLi
 	GENERATED_BODY()
 public:
 	UFUNCTION(BlueprintCallable, Category = "XRay", meta = (WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))
-	static void XRayConnect(const UObject* WorldContextObject, const FString& Server = TEXT("editor/single/alife/new"), const FString& Client = TEXT("localhost"));
+	static void StalkerConnect(const UObject* WorldContextObject, const FString& Server = TEXT("editor/single/alife/new"), const FString& Client = TEXT("localhost"));
 	UFUNCTION(BlueprintCallable, Category = "XRay", meta = (WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))
-	static void XRayShowMenu(const UObject* WorldContextObject, bool Show);
+	static void StalkerShowMenu(const UObject* WorldContextObject, bool Show);
 	UFUNCTION(BlueprintCallable, Category = "Stalker|Level Script",meta = (WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))
 	static void StalkerActorTransferInfo(const FString&Name,bool Value = true);
 	UFUNCTION(BlueprintCallable, Category = "Stalker|Level Script", meta = (Latent, LatentInfo = "LatentInfo",WorldContext = "WorldContextObject", UnsafeDuringActorConstruction = "true"))

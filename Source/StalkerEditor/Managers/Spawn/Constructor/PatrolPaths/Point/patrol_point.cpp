@@ -47,7 +47,7 @@ CPatrolPoint::CPatrolPoint									(const ILevelGraph *level_graph, const IGameL
 
 CPatrolPoint& CPatrolPoint::load_editor(const ILevelGraph* level_graph, const IGameLevelCrossTable* cross, const IGameGraph* game_graph, const FStalkerLevelSpawnWay& way,const FStalkerLevelSpawnWayPoint& object, size_t id)
 {
-	m_position = StalkerMath::UnrealLocationToXRay(object.Position);
+	m_position = StalkerMath::UnrealLocationToRBMK(object.Position);
 	m_flags = object.Flags;
 	m_name = TCHAR_TO_ANSI(*object.Name);
 	m_level_vertex_id = 0xFFFFFFFF;

@@ -41,7 +41,7 @@ void AStalkerProxy::Tick(float DeltaTime)
 	{
 		return;
 	}
-	SetActorTransform(FTransform(StalkerMath::XRayMatrixToUnreal( XRayObject->XFORM())));
+	SetActorTransform(FTransform(StalkerMath::RBMKMatrixToUnreal( XRayObject->XFORM())));
 }
 
 void AStalkerProxy::BeginDestroy()
@@ -97,7 +97,7 @@ void AStalkerProxy::Detach()
 
 void AStalkerProxy::SetOffset(const Fmatrix& offset)
 {
-	GetRootComponent()->SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal(offset)));
+	GetRootComponent()->SetRelativeTransform(FTransform(StalkerMath::RBMKMatrixToUnreal(offset)));
 }
 
 void* AStalkerProxy::CastUnrealObject(EXRayUnrealObjectType ObjectType)
@@ -135,7 +135,7 @@ void AStalkerProxy::SetOnlyOwnerSee(bool Enable)
 
 void AStalkerProxy::GetWorldTransform(Fmatrix& OutXForm)
 {
-	OutXForm = StalkerMath::UnrealMatrixToXRay(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
+	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
 bool AStalkerProxy::IsAttached(XRayUnrealAttachableInterface* Attach)

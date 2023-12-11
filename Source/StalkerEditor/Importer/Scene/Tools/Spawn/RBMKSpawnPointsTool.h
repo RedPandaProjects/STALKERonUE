@@ -14,7 +14,7 @@ public:
 
     TSharedPtr<FRBMKSceneObjectBase>    CreateObject	        (const FString&Name) override;
 
-    void                                ExportToWorld           (UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) override;
+    void                                ExportToWorld           (UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions) override;
 private:
     static constexpr uint32             ToolVersion             = 0x0000;
 	static constexpr uint32             ChunkVersion            = 0x1001ul;

@@ -1,5 +1,5 @@
 #pragma once
-#include "Importer/ImporterFactory/XRayLevelImportOptions.h"
+#include "Importer/ImporterFactory/RBMKLevelImportOptions.h"
 
 class FRBMKSceneToolBase
 {
@@ -13,7 +13,7 @@ public:
     virtual bool                            CanUseInifile			() {return true;}
 	virtual const TCHAR*                    ClassName               () = 0;
 
-    virtual void                            ExportToWorld           (UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) {};
+    virtual void                            ExportToWorld           (UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions) {};
     virtual class FRBMKSceneObjectsToolBase*CastToSceneCustomOTool  () {return nullptr;}
     
     ERBMKSceneObjectType                    ObjectType;

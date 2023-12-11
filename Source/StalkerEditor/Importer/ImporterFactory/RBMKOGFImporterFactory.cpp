@@ -1,7 +1,7 @@
-#include "XRayOGFImporterFactory.h"
+#include "RBMKOGFImporterFactory.h"
 #include "../FRBMKEngineFactory.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAssetUserData.h"
-UXRayOGFImporterFactory::UXRayOGFImporterFactory(const FObjectInitializer& ObjectInitializer)
+URBMKOGFImporterFactory::URBMKOGFImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bCreateNew = false;
@@ -14,7 +14,7 @@ UXRayOGFImporterFactory::UXRayOGFImporterFactory(const FObjectInitializer& Objec
 }
   
 
-UObject* UXRayOGFImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
+UObject* URBMKOGFImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 {
 	GEditor->GetEditorSubsystem<UImportSubsystem>()->BroadcastAssetPreImport(this, InClass, InParent, InName, Parms);
 	AdditionalImportedObjects.Empty();
@@ -36,12 +36,12 @@ UObject* UXRayOGFImporterFactory::FactoryCreateFile(UClass* InClass, UObject* In
 	return Object;
 }
 
-void UXRayOGFImporterFactory::CleanUp()
+void URBMKOGFImporterFactory::CleanUp()
 {
 
 }
 
-bool UXRayOGFImporterFactory::FactoryCanImport(const FString& Filename)
+bool URBMKOGFImporterFactory::FactoryCanImport(const FString& Filename)
 {
 	const FString Extension = FPaths::GetExtension(Filename);
 	if (Extension == TEXT("ogf"))
@@ -51,7 +51,7 @@ bool UXRayOGFImporterFactory::FactoryCanImport(const FString& Filename)
 	return false;
 }
 
-TArray<FString> UXRayOGFImporterFactory::GetFormats() const
+TArray<FString> URBMKOGFImporterFactory::GetFormats() const
 {
 	TArray<FString> FormatArray;
 	const bool bUseLegacyOgf = true;

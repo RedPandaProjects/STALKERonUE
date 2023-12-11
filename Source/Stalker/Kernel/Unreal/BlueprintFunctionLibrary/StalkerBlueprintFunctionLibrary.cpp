@@ -3,12 +3,12 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XR_IOConsole.h"
 #include "XrEngine/XRayEngineInterface.h"
 THIRD_PARTY_INCLUDES_END
-void UStalkerBlueprintFunctionLibrary::XRayConnect(const UObject* WorldContextObject,const FString& Server, const FString& Client)
+void UStalkerBlueprintFunctionLibrary::StalkerConnect(const UObject* WorldContextObject,const FString& Server, const FString& Client)
 {
 	Engine->Event.Defer("KERNEL:start", u64(xr_strdup(TCHAR_TO_ANSI(*Server))), u64(xr_strdup(TCHAR_TO_ANSI(*Client))));
 }
 
-void UStalkerBlueprintFunctionLibrary::XRayShowMenu(const UObject* WorldContextObject, bool Show)
+void UStalkerBlueprintFunctionLibrary::StalkerShowMenu(const UObject* WorldContextObject, bool Show)
 {
 	if (Show)
 	{

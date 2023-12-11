@@ -38,7 +38,7 @@ void AStalkerDebugRender::BeginPlay()
 //			FTransform.transform_tiny(V1);
 //			Fvector V2 = du_box_vertices[du_box_lines[i++]];
 //			FTransform.transform_tiny(V2);
-//			DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(V1)), FVector(StalkerMath::XRayLocationToUnreal(V2)), FColor::Red,false, 10000.f);
+//			DrawDebugLine(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(V1)), FVector(StalkerMath::RBMKLocationToUnreal(V2)), FColor::Red,false, 10000.f);
 //		}
 //	}
 //	GXRayEngineManager->DebugShapes.Empty();

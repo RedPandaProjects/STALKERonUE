@@ -1,8 +1,8 @@
-#include "XRayLevelImporterFactory.h"
+#include "RBMKLevelImporterFactory.h"
 #include "../FRBMKLevelFactory.h"
 #include "UI/StalkerImporterOptionsWindow.h"
-#include "XRayLevelImportOptions.h"
-UXRayLevelImporterFactory::UXRayLevelImporterFactory(const FObjectInitializer& ObjectInitializer)
+#include "RBMKLevelImportOptions.h"
+URBMKLevelImporterFactory::URBMKLevelImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bCreateNew = false;
@@ -14,10 +14,10 @@ UXRayLevelImporterFactory::UXRayLevelImporterFactory(const FObjectInitializer& O
 
 	Formats.Add(TEXT("level;XRaySDKLevel"));
 }
-UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
+UObject* URBMKLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 { 
 
-	auto ShowOptionsWindow = [](const FString& FileName, const FString& PackagePath, UXRayLevelImportOptions& ImporterOptions)->bool
+	auto ShowOptionsWindow = [](const FString& FileName, const FString& PackagePath, URBMKLevelImportOptions& ImporterOptions)->bool
 	{
 		TSharedPtr<SWindow> ParentWindow;
 		if (FModuleManager::Get().IsModuleLoaded("MainFrame"))
@@ -45,7 +45,7 @@ UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* 
 
 	Warn->Log(Filename);
 	// show import options window
-	TStrongObjectPtr<UXRayLevelImportOptions> ImporterOptions(NewObject<UXRayLevelImportOptions>(GetTransientPackage(),TEXT("XRay Level Importer Options")));
+	TStrongObjectPtr<URBMKLevelImportOptions> ImporterOptions(NewObject<URBMKLevelImportOptions>(GetTransientPackage(),TEXT("XRay Level Importer Options")));
 	
 	const FString NewPackageName = UPackageTools::SanitizePackageName(*(FPaths::GetPath(InParent->GetName())));
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
@@ -69,12 +69,12 @@ UObject* UXRayLevelImporterFactory::FactoryCreateFile(UClass* InClass, UObject* 
 	return Object;
 }
 
-void UXRayLevelImporterFactory::CleanUp()
+void URBMKLevelImporterFactory::CleanUp()
 {
 
 }
 
-bool UXRayLevelImporterFactory::FactoryCanImport(const FString& Filename)
+bool URBMKLevelImporterFactory::FactoryCanImport(const FString& Filename)
 {
 	const FString Extension = FPaths::GetExtension(Filename);
 	if (Extension == TEXT("level"))

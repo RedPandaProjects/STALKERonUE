@@ -17,7 +17,7 @@ public:
 
     bool							        CanUseInifile			    () override {return false;}
 
-    void						            ExportToWorld               (UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) override;
+    void						            ExportToWorld               (UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions) override;
 
     void 							        InitRender				    ();
 

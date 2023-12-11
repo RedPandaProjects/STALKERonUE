@@ -146,10 +146,10 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 					{
 						TempBoneTransforms.Last().NormalizeRotation();
 					}
-					BoneInstance.Transform = StalkerMath::UnrealMatrixToXRay(TempBoneTransforms.Last().ToMatrixWithScale());*/
+					BoneInstance.Transform = StalkerMath::UnrealMatrixToRBMK(TempBoneTransforms.Last().ToMatrixWithScale());*/
 
-					BoneInstance.Transform.rotation(StalkerMath::UnrealQuatToXRay(TempBoneTransforms.Last().GetRotation()));
-					BoneInstance.Transform.translate_over(StalkerMath::UnrealLocationToXRay(TempBoneTransforms.Last().GetLocation()));
+					BoneInstance.Transform.rotation(StalkerMath::UnrealQuaternionToRBMK(TempBoneTransforms.Last().GetRotation()));
+					BoneInstance.Transform.translate_over(StalkerMath::UnrealLocationToRBMK(TempBoneTransforms.Last().GetLocation()));
 
 					if (BoneInstance.callback() && (AnimMode != EStalkerKinematicsAnimMode::GetAnimPose || !GetAnimPosIgnoreCallbacks))
 					{
@@ -160,7 +160,7 @@ void FStalkerAnimNode_Kinematics::Evaluate_AnyThread(FPoseContext& Output)
 				if(BoneInstance.bUpdated|| BoneInstance.callback_overwrite())
 				{
 					BoneInstance.bUpdated = false;
-					BoneTM.SetFromMatrix(StalkerMath::XRayMatrixToUnreal(BoneInstance.Transform));
+					BoneTM.SetFromMatrix(StalkerMath::RBMKMatrixToUnreal(BoneInstance.Transform));
 					if (BoneInstance.callback_overwrite())
 					{
 						TempBoneTransforms.Add(BoneTM);

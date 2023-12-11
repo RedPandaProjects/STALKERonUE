@@ -1,7 +1,7 @@
 #pragma once
-#include "XRayTextureTHMImporterFactory.generated.h"
+#include "RBMKTextureTHMImporterFactory.generated.h"
 UCLASS(transient)
-class UXRayTextureTHMImporterFactory : public UFactory
+class URBMKTextureTHMImporterFactory : public UFactory
 {
 	GENERATED_UCLASS_BODY()
 

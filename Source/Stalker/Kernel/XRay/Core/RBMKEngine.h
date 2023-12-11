@@ -3,10 +3,10 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XRayEngineInterface.h"
 THIRD_PARTY_INCLUDES_END
 
-class XRayEngine :public XRayEngineInterface
+class FRBMKEngine :public XRayEngineInterface
 {
 public:
-									XRayEngine					();
+									FRBMKEngine					();
 	void							Initialize					() override;
 	void							Destroy						() override;
 

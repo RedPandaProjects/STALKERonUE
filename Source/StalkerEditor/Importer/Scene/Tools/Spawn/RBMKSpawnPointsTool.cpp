@@ -26,7 +26,7 @@ TSharedPtr<FRBMKSceneObjectBase> FRBMKSpawnPointsTool::CreateObject(const FStrin
 	return MakeShared<FRBMKSceneSpawnPoint>(Name);
 }
 
-void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions)
+void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions)
 {
 	for (TSharedPtr<FRBMKSceneObjectBase>& Object : Objects)
 	{
@@ -63,7 +63,7 @@ void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,con
 							NewShapeComponent->OnComponentCreated();
 							NewShapeComponent->RegisterComponent();
 							FTransform ShapeTransform;
-							ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(ShapeData.data.sphere.P)) + Shape->GetTransform().GetLocation());
+							ShapeTransform.SetLocation(FVector(StalkerMath::RBMKLocationToUnreal(ShapeData.data.sphere.P)) + Shape->GetTransform().GetLocation());
 							NewShapeComponent->SphereRadius = ShapeData.data.sphere.R * 100.f;
 							NewShapeComponent->SetWorldTransform(ShapeTransform);
 							NewShapeComponent->UpdateBounds();
@@ -78,10 +78,10 @@ void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,con
 							NewShapeComponent->RegisterComponent();
 
 							Fmatrix MBox = ShapeData.data.box;
-							MBox.mulA_43(StalkerMath::UnrealMatrixToXRay(FMatrix(Shape->GetTransform().ToMatrixWithScale())));
+							MBox.mulA_43(StalkerMath::UnrealMatrixToRBMK(FMatrix(Shape->GetTransform().ToMatrixWithScale())));
 
 							FTransform ShapeTransform;
-							ShapeTransform.SetLocation(FVector(StalkerMath::XRayLocationToUnreal(MBox.c)));
+							ShapeTransform.SetLocation(FVector(StalkerMath::RBMKLocationToUnreal(MBox.c)));
 							{
 								Fvector A, B[8];
 								A.set(-.5f, -.5f, -.5f);	MBox.transform_tiny(B[0], A);
@@ -102,9 +102,9 @@ void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,con
 								TangetY.normalize_safe();
 								TangetZ.sub(B[0], B[1]);
 								TangetZ.normalize_safe();
-								FVector UnrealTangetX = FVector(StalkerMath::XRayNormalToUnreal(TangetX));
-								FVector UnrealTangetZ = FVector(StalkerMath::XRayNormalToUnreal(TangetY));
-								FVector UnrealTangetY = FVector(StalkerMath::XRayNormalToUnreal(TangetZ));
+								FVector UnrealTangetX = FVector(StalkerMath::RBMKNormalToUnreal(TangetX));
+								FVector UnrealTangetZ = FVector(StalkerMath::RBMKNormalToUnreal(TangetY));
+								FVector UnrealTangetY = FVector(StalkerMath::RBMKNormalToUnreal(TangetZ));
 
 								FMatrix MatrixRotate(UnrealTangetX, UnrealTangetY, UnrealTangetZ, FVector(0, 0, 0));
 								ShapeTransform.SetRotation(MatrixRotate.ToQuat());
@@ -212,7 +212,7 @@ void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,con
 				if (StaticMesh->IsStatic())
 				{
 					CEditableObject *MeshObject = StaticMesh->GetReferenceObject();
-					const Fmatrix XForm = StalkerMath::UnrealMatrixToXRay(StaticMesh->GetTransform().ToMatrixWithScale());
+					const Fmatrix XForm = StalkerMath::UnrealMatrixToRBMK(StaticMesh->GetTransform().ToMatrixWithScale());
             
 					for(EditMeshIt MeshPart =MeshObject->FirstMesh(); MeshPart!=MeshObject->LastMesh(); ++MeshPart)
 					{
@@ -252,7 +252,7 @@ void FRBMKSpawnPointsTool::ExportToWorld(UWorld* World, EObjectFlags InFlags,con
 					{
 						Fmatrix WorldMatrix;
 						WorldMatrix.set(Part->m_OBB.m_rotate.i,Part->m_OBB.m_rotate.j,Part->m_OBB.m_rotate.k,Part->m_OBB.m_translate);
-						FMatrix InM = StalkerMath::XRayMatrixToUnreal(WorldMatrix);
+						FMatrix InM = StalkerMath::RBMKMatrixToUnreal(WorldMatrix);
 						AStalkerSpawnObject* SpawnObjectActor = World->SpawnActor<AStalkerSpawnObject>();
 						SpawnObjectActor->SetActorTransform(FTransform(InM));
 						SpawnObjectActor->SetFolderPath(TEXT("Spawns"));

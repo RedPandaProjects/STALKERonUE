@@ -26,7 +26,7 @@ void UStalkerAttachable::Detach()
 
 void UStalkerAttachable::SetOffset(const Fmatrix& offset)
 {
-	OwnerComponent->SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal(offset)));
+	OwnerComponent->SetRelativeTransform(FTransform(StalkerMath::RBMKMatrixToUnreal(offset)));
 }
 
 void UStalkerAttachable::SetOwnerNoSee(bool Enable)
@@ -80,7 +80,7 @@ void UStalkerAttachable::SetVisibility(bool NewVisibility)
 
 void UStalkerAttachable::GetWorldTransform(Fmatrix& OutXForm)
 {
-	OutXForm = StalkerMath::UnrealMatrixToXRay(OwnerComponent->GetComponentToWorld().ToMatrixWithScale());
+	OutXForm = StalkerMath::UnrealMatrixToRBMK(OwnerComponent->GetComponentToWorld().ToMatrixWithScale());
 }
 
 bool UStalkerAttachable::IsAttached(XRayUnrealAttachableInterface* Attach)

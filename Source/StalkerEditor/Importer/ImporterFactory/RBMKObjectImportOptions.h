@@ -1,5 +1,5 @@
 #pragma once
-#include "XRayObjectImportOptions.generated.h"
+#include "RBMKObjectImportOptions.generated.h"
 
 UENUM(BlueprintType)
 enum class  EXRayObjectImportGameFormat : uint8
@@ -9,11 +9,11 @@ enum class  EXRayObjectImportGameFormat : uint8
 	CS_COP UMETA(DisplayName = "CS/COP"),
 };
 UCLASS(Config = EditorPerProjectUserSettings, HideCategories = (DebugProperty))
-class UXRayObjectImportOptions : public UObject
+class URBMKObjectImportOptions : public UObject
 {
 	GENERATED_BODY()
 public:
-	UXRayObjectImportOptions()
+	URBMKObjectImportOptions()
 	{
 		ObjectImportGameFormat = EXRayObjectImportGameFormat::AUTO;
 		AngleNormalSmoth = 75;

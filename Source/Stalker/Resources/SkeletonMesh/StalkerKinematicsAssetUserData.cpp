@@ -37,8 +37,8 @@ void UStalkerKinematicsAssetUserData::BuildBones(TArray<StalkerKinematicsBone>& 
 			FMatrix BindTransformation =  Mesh->GetRefPoseMatrix(i);
 			FQuat BoneRotation =  BindTransformation.ToQuat();
 			FVector BonePosition = BindTransformation.GetOrigin();
-			InBones[i].BindTransformation.rotation(StalkerMath::UnrealQuatToXRay(BoneRotation));
-			InBones[i].BindTransformation.translate_over(StalkerMath::UnrealLocationToXRay(BonePosition));
+			InBones[i].BindTransformation.rotation(StalkerMath::UnrealQuaternionToRBMK(BoneRotation));
+			InBones[i].BindTransformation.translate_over(StalkerMath::UnrealLocationToRBMK(BonePosition));
 		}
 	}
 }

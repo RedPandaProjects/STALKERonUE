@@ -23,7 +23,7 @@ bool  FRBMKSceneObjectBase::LoadLTX(CInifile& INIFile, const FString&SectionName
 	MTransformP.translate	(Position);
 	MTransformRP.mul		(MTransformP,MTransformR);
 	MTransform.mul			(MTransformRP,MTransformS);
-    Transform = FTransform(StalkerMath::XRayMatrixToUnreal(MTransform));
+    Transform = FTransform(StalkerMath::RBMKMatrixToUnreal(MTransform));
 	return true;
 }
 
@@ -60,7 +60,7 @@ bool FRBMKSceneObjectBase::LoadStream(IReader& F)
 			MTransformP.translate	(Position);
 			MTransformRP.mul		(MTransformP,MTransformR);
 			MTransform.mul			(MTransformRP,MTransformS);
-		    Transform = FTransform(StalkerMath::XRayMatrixToUnreal(MTransform));
+		    Transform = FTransform(StalkerMath::RBMKMatrixToUnreal(MTransform));
 	    }
     }
 	return true;

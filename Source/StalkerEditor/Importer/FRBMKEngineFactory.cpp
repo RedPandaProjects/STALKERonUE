@@ -474,8 +474,8 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 			Bone.ParentIndex = FindBoneIDOrAdd(OutBones, Bones, Bones[BoneData.GetParentID()].Get());
 			UBones[Bone.ParentIndex].NumChildren++;
 		}
-		Bone.BonePos.Transform.SetRotation(StalkerMath::XRayQuatToUnreal(BoneData.bind_transform));
-		Bone.BonePos.Transform.SetLocation(StalkerMath::XRayLocationToUnreal(BoneData.bind_transform.c));
+		Bone.BonePos.Transform.SetRotation(StalkerMath::RBMKQuaternionToUnreal(BoneData.bind_transform));
+		Bone.BonePos.Transform.SetLocation(StalkerMath::RBMKLocationToUnreal(BoneData.bind_transform.c));
 		Bone.Name = BoneData.name.c_str();
 	}
 
@@ -2012,12 +2012,12 @@ UAnimSequence* FRBMKEngineFactory::CreateAnim(const FString& Name, USkeleton* In
 			else
 				InLocation.set(Motion._initT);
 
-			FVector3f PosKey = StalkerMath::XRayLocationToUnreal(InLocation);
+			FVector3f PosKey = StalkerMath::RBMKLocationToUnreal(InLocation);
 			if(!ensure(!PosKey.ContainsNaN()))
 			{
 				PosKey = FVector3f(0,0,0);
 			}
-			FQuat4f   RotKey = StalkerMath::XRayQuatToUnreal(InQuat);
+			FQuat4f   RotKey = StalkerMath::RBMKQuaternionToUnreal(InQuat);
 			FVector3f ScaleKey(1, 1, 1);
 			PosKeys.Add(FVector(PosKey.X, PosKey.Y, PosKey.Z));
 			RotKeys.Add(FQuat(RotKey.X, RotKey.Y, RotKey.Z, RotKey.W));

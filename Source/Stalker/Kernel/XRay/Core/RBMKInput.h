@@ -2,13 +2,13 @@
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_input.h"
 THIRD_PARTY_INCLUDES_END
-class XRayInput:public XRayInputInterface
+class FRBMKInput:public XRayInputInterface
 {
 
 public:
-	XRayInput();
+	FRBMKInput();
 
-	~XRayInput() override;
+	~FRBMKInput() override;
 
 	bool GetDikName(int dik, LPSTR dest, int dest_sz) override;
 

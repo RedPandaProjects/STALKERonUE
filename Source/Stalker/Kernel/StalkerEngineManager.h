@@ -32,8 +32,8 @@ public:
 	void												ReInitialized						(EStalkerGame Game);
 	inline class FStalkerResourcesManager*				GetResourcesManager					()								{return ResourcesManager;	}
 
-	void												SetInput							(class XRayInput* InXRayInput);
-	inline class XRayInput*								GetInput							()								{return MyXRayInput;}
+	void												SetInput							(class FRBMKInput* InXRayInput);
+	inline class FRBMKInput*								GetInput							()								{return MyXRayInput;}
 
 	inline class UStalkerGameViewportClient*			GetGameViewportClient				()								{return GameViewportClient;}
 
@@ -67,8 +67,8 @@ private:
 	TObjectPtr<class  UStalkerGameViewportClient>		GameViewportClient;
 	TObjectPtr<class  UStalkerPhysicalMaterialsManager>	PhysicalMaterialsManager;
 	TObjectPtr<class  UStalkerAIMap>					CurrentAIMap;
-	class XRayEngine*									MyXRayEngine = nullptr;
-	class XRayInput*									MyXRayInput = nullptr;
+	class FRBMKEngine*									MyXRayEngine = nullptr;
+	class FRBMKInput*									MyXRayInput = nullptr;
 	EStalkerGame										CurrentGame;
 
 	EStalkerWorldStatus									WorldStatus = EStalkerWorldStatus::None;

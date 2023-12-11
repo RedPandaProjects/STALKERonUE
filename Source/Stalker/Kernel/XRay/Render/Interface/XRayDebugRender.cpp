@@ -36,8 +36,8 @@ void XRayDebugRender::add_lines(Fvector const* vertices, u32 const& vertex_count
 		{
 			continue;
 		}
-		FVector Start = FVector(StalkerMath::XRayLocationToUnreal(vertices[pairs[i * 2]]));
-		FVector End = FVector(StalkerMath::XRayLocationToUnreal(vertices[pairs[i * 2 + 1]]));
+		FVector Start = FVector(StalkerMath::RBMKLocationToUnreal(vertices[pairs[i * 2]]));
+		FVector End = FVector(StalkerMath::RBMKLocationToUnreal(vertices[pairs[i * 2 + 1]]));
 		StalkerWorldSettings->DebugRender->LineBatchComponent->DrawLine(Start, End, FColor(color), 0,3, 1.f);;
 	}
 }
@@ -112,5 +112,5 @@ void XRayDebugRender::dbg_DrawTRI(Fmatrix& T, Fvector& Inp1, Fvector& Inp2, Fvec
 		return;
 	}
 
-	StalkerWorldSettings->DebugRender->AddTriangle(FVector(StalkerMath::XRayLocationToUnreal(p1)), FVector(StalkerMath::XRayLocationToUnreal(p2)),FVector( StalkerMath::XRayLocationToUnreal(p3)),FColor(C) );
+	StalkerWorldSettings->DebugRender->AddTriangle(FVector(StalkerMath::RBMKLocationToUnreal(p1)), FVector(StalkerMath::RBMKLocationToUnreal(p2)),FVector( StalkerMath::RBMKLocationToUnreal(p3)),FColor(C) );
 }

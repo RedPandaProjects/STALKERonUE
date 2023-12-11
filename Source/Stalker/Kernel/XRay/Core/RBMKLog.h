@@ -2,9 +2,9 @@
 THIRD_PARTY_INCLUDES_START
 #include "XrCore/stdafx.h"
 THIRD_PARTY_INCLUDES_END
-class XRayLog:public XRayLogInterface
+class FRBMKLog:public XRayLogInterface
 {
 public:
-	XRayLog();
+	FRBMKLog();
 	void Log(const char* Text) override;
 };

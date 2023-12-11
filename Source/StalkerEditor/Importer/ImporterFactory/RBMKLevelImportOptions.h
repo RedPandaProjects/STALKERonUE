@@ -1,13 +1,13 @@
 #pragma once
-#include "XRayObjectImportOptions.h"
-#include "XRayLevelImportOptions.generated.h"
+#include "RBMKObjectImportOptions.h"
+#include "RBMKLevelImportOptions.generated.h"
 
 UCLASS(Config = EditorPerProjectUserSettings, HideCategories = (DebugProperty))
-class UXRayLevelImportOptions : public UObject
+class URBMKLevelImportOptions : public UObject
 {
 	GENERATED_BODY()
 public:
-	UXRayLevelImportOptions()
+	URBMKLevelImportOptions()
 	{
 		ImportStaticMeshes = true;
 		ImportSpawnObjects = true;

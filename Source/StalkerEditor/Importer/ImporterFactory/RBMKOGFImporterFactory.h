@@ -1,7 +1,7 @@
 #pragma once
-#include "XRayGameMtlImporterFactory.generated.h"
+#include "RBMKOGFImporterFactory.generated.h"
 UCLASS(transient)
-class UXRayGameMtlImporterFactory : public UFactory
+class URBMKOGFImporterFactory : public UFactory
 {
 	GENERATED_UCLASS_BODY()
 

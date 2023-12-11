@@ -50,7 +50,7 @@ public:
 	bool						LoadLTX						(CInifile&) override;
 	bool						LoadSelection				(IReader&) override;
 
-    void						ExportToWorld               (UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) override;
+    void						ExportToWorld               (UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions) override;
 	
 	void 						UnpackPosition				(const FRBMKSceneAINodePosition& InNodePosition,FVector3f& Position) const;
 	Flags32						Flags;

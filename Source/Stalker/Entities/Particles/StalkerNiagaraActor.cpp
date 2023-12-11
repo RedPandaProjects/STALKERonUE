@@ -141,8 +141,8 @@ vis_data& AStalkerNiagaraActor::getVisData()
 		FVector Origin,BoxExtent;
 		GetActorBounds(false,Origin,BoxExtent);
 		FBox Box = FBox::BuildAABB(Origin,BoxExtent);
-		Fvector Min = StalkerMath::UnrealLocationToXRay(Box.Min);
-		Fvector Max = StalkerMath::UnrealLocationToXRay(Box.Max);
+		Fvector Min = StalkerMath::UnrealLocationToRBMK(Box.Min);
+		Fvector Max = StalkerMath::UnrealLocationToRBMK(Box.Max);
 		if (Min.x > Max.x)
 		{
 			Swap(Min.x,Max.x);
@@ -167,11 +167,11 @@ shared_str AStalkerNiagaraActor::getDebugName()
 
 void AStalkerNiagaraActor::UpdateParent(const Fmatrix& m, const Fvector& velocity, BOOL bXFORM)
 {
-	SetActorTransform(FTransform(StalkerMath::XRayMatrixToUnreal(m)));
+	SetActorTransform(FTransform(StalkerMath::RBMKMatrixToUnreal(m)));
 	if (!bXFORM)
 	{
 		static FName NAME_UserVelocity = "User.Velocity";
-		FVector3f VelocityUnrealSpace = StalkerMath::XRayLocationToUnreal(velocity);
+		FVector3f VelocityUnrealSpace = StalkerMath::RBMKLocationToUnreal(velocity);
 		GetNiagaraComponent()->SetVariableVec3(NAME_UserVelocity,FVector(VelocityUnrealSpace));
 	}
 }
@@ -237,7 +237,7 @@ bool AStalkerNiagaraActor::Alive()
 
 void AStalkerNiagaraActor::SetOffset(const Fmatrix& offset)
 {
-	GetNiagaraComponent()->SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal(offset)));
+	GetNiagaraComponent()->SetRelativeTransform(FTransform(StalkerMath::RBMKMatrixToUnreal(offset)));
 }
 
 void AStalkerNiagaraActor::SetEnableVelocity(bool EnableVelocity)
@@ -278,7 +278,7 @@ void AStalkerNiagaraActor::SetOnlyOwnerSee(bool Enable)
 
 void AStalkerNiagaraActor::GetWorldTransform(Fmatrix& OutXForm)
 {
-	OutXForm = StalkerMath::UnrealMatrixToXRay(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
+	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
 bool AStalkerNiagaraActor::IsAttached(XRayUnrealAttachableInterface* Attach)

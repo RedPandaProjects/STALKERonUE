@@ -911,8 +911,8 @@ void UStalkerEditorAIMap::Build()
 	};
 	auto	Compress = [low_cover_height, high_cover_height, CompressCover, CompressNode, CNodePositionCompressor](NodeCompressed & Dest, FStalkerAIMapNode * Src, hdrNODES & H)
 	{
-		Dest.plane = pvCompress(StalkerMath::UnrealNormalToXRay(Src->Plane.GetNormal()));
-		CNodePositionCompressor(Dest.p, StalkerMath::UnrealLocationToXRay(Src->Position), H);
+		Dest.plane = pvCompress(StalkerMath::UnrealNormalToRBMK(Src->Plane.GetNormal()));
+		CNodePositionCompressor(Dest.p, StalkerMath::UnrealLocationToRBMK(Src->Position), H);
 		CompressNode(Dest, Src);
 		Dest.high.cover0 = CompressCover(high_cover_height, 15);
 		Dest.high.cover1 = CompressCover(high_cover_height, 15);
@@ -984,7 +984,7 @@ void UStalkerEditorAIMap::Build()
 		BB.invalidate();
 		for (int32 i = 0; i < AIMap->Nodes.Num(); i++)
 		{
-			BB.modify(StalkerMath::UnrealLocationToXRay(AIMap->Nodes[i]->Position));
+			BB.modify(StalkerMath::UnrealLocationToRBMK(AIMap->Nodes[i]->Position));
 		}
 		return BB.max.y - BB.min.y + EPS_L;
 	};

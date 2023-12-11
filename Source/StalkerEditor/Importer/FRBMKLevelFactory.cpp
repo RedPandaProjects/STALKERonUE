@@ -1,7 +1,7 @@
 #include "FRBMKLevelFactory.h"
 
 #include "InstancedFoliageActor.h"
-#include "ImporterFactory/XRayLevelImportOptions.h"
+#include "ImporterFactory/RBMKLevelImportOptions.h"
 
 
 FRBMKLevelFactory::FRBMKLevelFactory(UObject* InParentPackage, EObjectFlags InFlags):EngineFactory(InParentPackage, InFlags),ParentPackage(InParentPackage),ObjectFlags(InFlags)
@@ -14,7 +14,7 @@ FRBMKLevelFactory::~FRBMKLevelFactory()
 
 }
 
-bool FRBMKLevelFactory::ImportLevel(const FString& FileName,UXRayLevelImportOptions&LevelImportOptions)
+bool FRBMKLevelFactory::ImportLevel(const FString& FileName,URBMKLevelImportOptions&LevelImportOptions)
 {
 	FWorldContext* WorldContext = GEngine->GetWorldContextFromGameViewport(GEngine->GameViewport);
 	if (!WorldContext)

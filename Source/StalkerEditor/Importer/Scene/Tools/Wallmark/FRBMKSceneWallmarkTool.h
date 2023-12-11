@@ -23,7 +23,7 @@ public:
 	bool   							LoadStream				(IReader&) override;
 	bool							LoadLTX					(CInifile&) override;
 	bool							LoadSelection			(IReader&) override;
-    void							ExportToWorld			(UWorld*World,EObjectFlags InFlags,const UXRayLevelImportOptions&LevelImportOptions) override;
+    void							ExportToWorld			(UWorld*World,EObjectFlags InFlags,const URBMKLevelImportOptions&LevelImportOptions) override;
 
 	TArray<FRBMKSceneWallmarkItem>	Items;
 private:

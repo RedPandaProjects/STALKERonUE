@@ -1,9 +1,9 @@
-#include "XRayObjectImporterFactory.h"
+#include "RBMKObjectImporterFactory.h"
 #include "../FRBMKEngineFactory.h"
-#include "XRayObjectImportOptions.h"
+#include "RBMKObjectImportOptions.h"
 #include "UI/StalkerImporterOptionsWindow.h"
 
-UXRayObjectImporterFactory::UXRayObjectImporterFactory(const FObjectInitializer& ObjectInitializer)
+URBMKObjectImporterFactory::URBMKObjectImporterFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 	bCreateNew = false;
@@ -17,10 +17,10 @@ UXRayObjectImporterFactory::UXRayObjectImporterFactory(const FObjectInitializer&
 }
   
 
-UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
+UObject* URBMKObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 {
 
-	auto ShowOptionsWindow = [](const FString& FileName, const FString& PackagePath, UXRayObjectImportOptions& ImporterOptions)->bool
+	auto ShowOptionsWindow = [](const FString& FileName, const FString& PackagePath, URBMKObjectImportOptions& ImporterOptions)->bool
 	{
 		TSharedPtr<SWindow> ParentWindow;
 		if (FModuleManager::Get().IsModuleLoaded("MainFrame"))
@@ -56,7 +56,7 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 	UObject* ParentPackage = NewPackageName == InParent->GetName() ? InParent : CreatePackage(*NewPackageName);
 
 
-	TStrongObjectPtr<UXRayObjectImportOptions> ImporterOptions(NewObject<UXRayObjectImportOptions>(GetTransientPackage(),TEXT("XRay Object Importer Options")));
+	TStrongObjectPtr<URBMKObjectImportOptions> ImporterOptions(NewObject<URBMKObjectImportOptions>(GetTransientPackage(),TEXT("XRay Object Importer Options")));
 	if(IsAutomatedImport()||ShowOptionsWindow(Filename, NewPackageName,*ImporterOptions))
 	{
 		GXRayObjectLibrary->AngleSmooth = ImporterOptions->AngleNormalSmoth;
@@ -89,12 +89,12 @@ UObject* UXRayObjectImporterFactory::FactoryCreateFile(UClass* InClass, UObject*
 	return Object;
 }
 
-void UXRayObjectImporterFactory::CleanUp()
+void URBMKObjectImporterFactory::CleanUp()
 {
 
 }
 
-bool UXRayObjectImporterFactory::FactoryCanImport(const FString& Filename)
+bool URBMKObjectImporterFactory::FactoryCanImport(const FString& Filename)
 {
 	const FString Extension = FPaths::GetExtension(Filename);
 	if (Extension == TEXT("object"))

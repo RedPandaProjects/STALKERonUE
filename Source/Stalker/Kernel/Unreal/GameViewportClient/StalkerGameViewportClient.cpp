@@ -9,7 +9,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IGame_Level.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerEngineManager.h"
-#include "Kernel/XRay/Core/XRayInput.h"
+#include "Kernel/XRay/Core/RBMKInput.h"
 #include "../GameMode/StalkerGameMode.h"
 #include "../WorldSettings/StalkerWorldSettings.h"
 #include "../LevelScriptActor/StalkerLevelScriptActor.h"

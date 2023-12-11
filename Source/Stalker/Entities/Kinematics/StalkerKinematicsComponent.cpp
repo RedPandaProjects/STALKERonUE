@@ -181,8 +181,8 @@ void UStalkerKinematicsComponent::Initilize(class USkeletalMesh* InKinematics)
 		FBox Box = Kinematics->GetBounds().GetBox();
 
 		VisData.box.invalidate();
-		VisData.box.modify(StalkerMath::UnrealLocationToXRay(Box.Min));
-		VisData.box.modify(StalkerMath::UnrealLocationToXRay(Box.Max));
+		VisData.box.modify(StalkerMath::UnrealLocationToRBMK(Box.Min));
+		VisData.box.modify(StalkerMath::UnrealLocationToRBMK(Box.Max));
 		Fvector Center;
 		VisData.box.getcenter(Center);
 		VisData.sphere.set(Center, VisData.box.getradius());
@@ -316,12 +316,12 @@ void UStalkerKinematicsComponent::SetOnlyOwnerSee(bool Enable)
 
 void UStalkerKinematicsComponent::SetOffset(const Fmatrix& offset)
 {
-	SetRelativeTransform(FTransform(StalkerMath::XRayMatrixToUnreal( offset)));
+	SetRelativeTransform(FTransform(StalkerMath::RBMKMatrixToUnreal( offset)));
 }
 
 void UStalkerKinematicsComponent::GetWorldTransform(Fmatrix& OutXForm)
 {
-	OutXForm = StalkerMath::UnrealMatrixToXRay(GetComponentToWorld().ToMatrixWithScale());
+	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetComponentToWorld().ToMatrixWithScale());
 }
 
 void UStalkerKinematicsComponent::Lock(void* InXRayParent)
@@ -484,8 +484,8 @@ void UStalkerKinematicsComponent::GetBoneInMotion(Fmatrix& OutPosition, u16 Bone
 
 	PerformAnimationProcessing(SkeletalMesh, KinematicsAnimInstanceForCompute,true, BonesTransform, OutBoneSpaceTransforms, OutRootBoneTranslation, OutCurve);
 
-	OutPosition.rotation(StalkerMath::UnrealQuatToXRay(BonesTransform[BoneID].GetRotation()));
-	OutPosition.translate_over(StalkerMath::UnrealLocationToXRay(BonesTransform[BoneID].GetTranslation()));
+	OutPosition.rotation(StalkerMath::UnrealQuaternionToRBMK(BonesTransform[BoneID].GetRotation()));
+	OutPosition.translate_over(StalkerMath::UnrealLocationToRBMK(BonesTransform[BoneID].GetTranslation()));
 }
 
 void UStalkerKinematicsComponent::LL_IterateBlends(IterateBlendsCallback& callback)
@@ -893,8 +893,8 @@ void UStalkerKinematicsComponent::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 chann
 
 	MeshComponent->PerformAnimationProcessing(MeshComponent->SkeletalMesh, KinematicsAnimInstanceForCompute,true, BonesTransform, OutBoneSpaceTransforms, OutRootBoneTranslation, OutCurve);
 
-	pos.rotation(StalkerMath::UnrealQuatToXRay(BonesTransform[id].GetRotation()));
-	pos.translate_over(StalkerMath::UnrealLocationToXRay(BonesTransform[id].GetTranslation()));*/
+	pos.rotation(StalkerMath::UnrealQuaternionToRBMK(BonesTransform[id].GetRotation()));
+	pos.translate_over(StalkerMath::UnrealLocationToRBMK(BonesTransform[id].GetTranslation()));*/
 }
 
 bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id)
@@ -913,20 +913,20 @@ bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_res
 
 	//FName BoneName = Bones[bone_id].GetName().c_str();
 	//FHitResult HitResult;
-	//if (GetWorld()->LineTraceSingleByChannel(HitResult, FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), ECC_WorldDynamic, CollisionQueryParams, CollisionResponseParams))
+	//if (GetWorld()->LineTraceSingleByChannel(HitResult, FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), ECC_WorldDynamic, CollisionQueryParams, CollisionResponseParams))
 	//{
 	//	if (HitResult.GetActor() == this&& HitResult.BoneName == BoneName)
 	//	{
-	//	//	DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Green, false, 10000.f);
-	//		//DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Green, false, 1000);
+	//	//	DrawDebugLine(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Green, false, 10000.f);
+	//		//DrawDebugSphere(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), 1000, 0, FColor::Green, false, 1000);
 
 	//		r.dist = HitResult.Distance /100.f;
 	//		r.normal = Fvector().set(- HitResult.Normal.X, HitResult.Normal.Z, HitResult.Normal.Y);
 	//		return true;
 	//	}
 	//}
-	////DrawDebugLine(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
-	////DrawDebugSphere(GetWorld(), FVector(StalkerMath::XRayLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
+	////DrawDebugLine(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
+	////DrawDebugSphere(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
 
 	return false;
 }
@@ -948,7 +948,7 @@ void UStalkerKinematicsComponent::EnumBoneVertices(SEnumVerticesCallback& C, u16
 				if (SkinWeightInfo.InfluenceBones[a] == bone_id)
 				{
 					FVector3f InVertex = PositionVertexBuffer->VertexPosition(i);
-					C(StalkerMath::UnrealLocationToXRay(InVertex));
+					C(StalkerMath::UnrealLocationToRBMK(InVertex));
 				}
 			}
 		}

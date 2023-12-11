@@ -1,9 +1,9 @@
-#include "XRayInput.h"
+#include "RBMKInput.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IInputReceiver.h"
 THIRD_PARTY_INCLUDES_END
 
-XRayInput::XRayInput()
+FRBMKInput::FRBMKInput()
 {
 	MouseWheelDelta = 0;
 	MouseDelta.Set(0, 0);
@@ -18,12 +18,12 @@ XRayInput::XRayInput()
 	InitKeyMap();
 }
 
-XRayInput::~XRayInput()
+FRBMKInput::~FRBMKInput()
 {
 
 }
 
-bool XRayInput::GetDikName(int dik, LPSTR dest, int dest_sz)
+bool FRBMKInput::GetDikName(int dik, LPSTR dest, int dest_sz)
 {
 	auto Iterator = VKToFKey.Find(dik);
 	if (Iterator)
@@ -39,12 +39,12 @@ bool XRayInput::GetDikName(int dik, LPSTR dest, int dest_sz)
 	return false;
 }
 
-void XRayInput::SetAllAcquire(BOOL bAcquire /*= TRUE*/)
+void FRBMKInput::SetAllAcquire(BOOL bAcquire /*= TRUE*/)
 {
 	
 }
 
-void XRayInput::iCapture(IInputReceiver* pc)
+void FRBMKInput::iCapture(IInputReceiver* pc)
 {
 	if (Stack.Num())
 	{
@@ -54,7 +54,7 @@ void XRayInput::iCapture(IInputReceiver* pc)
 	Stack.Last()->IR_OnActivate();
 }
 
-void XRayInput::iRelease(IInputReceiver* pc)
+void FRBMKInput::iRelease(IInputReceiver* pc)
 {
 	if (pc == Stack.Last())
 	{
@@ -71,22 +71,22 @@ void XRayInput::iRelease(IInputReceiver* pc)
 	}
 }
 
-BOOL XRayInput::iGetAsyncKeyState(int dik)
+BOOL FRBMKInput::iGetAsyncKeyState(int dik)
 {
 	return KeysState[dik]==KS_Down || KeysState[dik] == KS_Hold;
 }
 
-BOOL XRayInput::iGetAsyncBtnState(int dik)
+BOOL FRBMKInput::iGetAsyncBtnState(int dik)
 {
 	return MouseState[dik] == KS_Down || MouseState[dik] == KS_Hold;
 }
 
-void XRayInput::iGetLastMouseDelta(Ivector2& p)
+void FRBMKInput::iGetLastMouseDelta(Ivector2& p)
 {
 	 p.set(MouseDelta.X, MouseDelta.Y);
 }
 
-void XRayInput::OnFrame(void)
+void FRBMKInput::OnFrame(void)
 {
 	if (CurrentIR()&&MouseDelta.X+MouseDelta.Y!=0.f)
 	{
@@ -155,24 +155,24 @@ void XRayInput::OnFrame(void)
 	MouseDelta.Set(0, 0);
 }
 
-void XRayInput::OnAppActivate(void)
+void FRBMKInput::OnAppActivate(void)
 {
 	ClearStates();
 }
 
-void XRayInput::OnAppDeactivate(void)
+void FRBMKInput::OnAppDeactivate(void)
 {
 	ClearStates();
 }
 
-IInputReceiver* XRayInput::CurrentIR()
+IInputReceiver* FRBMKInput::CurrentIR()
 {
 	if(Stack.Num())
 	return Stack.Last();
 	return nullptr;
 }
 
-void XRayInput::KeyEvent(const FInputKeyEventArgs& InEvent)
+void FRBMKInput::KeyEvent(const FInputKeyEventArgs& InEvent)
 {
 	if (InEvent.Key == EKeys::LeftMouseButton && (InEvent.Event == IE_Pressed || InEvent.Event == IE_Released))
 	{
@@ -202,17 +202,17 @@ void XRayInput::KeyEvent(const FInputKeyEventArgs& InEvent)
 	
 }
 
-void XRayInput::MouseEvent(float x, float y)
+void FRBMKInput::MouseEvent(float x, float y)
 {
 	MouseDelta+=FVector2f(x,-y);
 }
 
-void XRayInput::MouseWheelEvent(float x)
+void FRBMKInput::MouseWheelEvent(float x)
 {
 	MouseWheelDelta+=x;
 }
 
-void XRayInput::ClearStates()
+void FRBMKInput::ClearStates()
 {
 	for (int32 i = 0; i < COUNT_KB_BUTTONS; i++)
 	{
@@ -226,7 +226,7 @@ void XRayInput::ClearStates()
 	MouseWheelDelta = 0;
 }
 
-void XRayInput::InitKeyMap()
+void FRBMKInput::InitKeyMap()
 {
 	uint32 KeyCodes[COUNT_KB_BUTTONS];
 	FString KeyNames[COUNT_KB_BUTTONS];

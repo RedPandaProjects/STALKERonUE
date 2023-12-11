@@ -1,9 +1,9 @@
-#include "XRayDevice.h"
+#include "RBMKDevice.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IGame_Persistent.h"
 THIRD_PARTY_INCLUDES_END
 
-XRayDevice::XRayDevice()
+FRBMKDevice::FRBMKDevice()
 {
 	psDeviceFlags.assign(0);
 	// default initialization
@@ -33,26 +33,26 @@ XRayDevice::XRayDevice()
 	IsTimerPaused = false;
 }
 
-XRayDevice::~XRayDevice()
+FRBMKDevice::~FRBMKDevice()
 {
 
 }
 
-bool XRayDevice::IsEditorMode()
+bool FRBMKDevice::IsEditorMode()
 {
 	return GIsEditor;
 }
 
-bool XRayDevice::Paused() const
+bool FRBMKDevice::Paused() const
 {
 	return IsTimerPaused;
 }
 
-void XRayDevice::Reset(bool precache /*= false*/)
+void FRBMKDevice::Reset(bool precache /*= false*/)
 {
 }
 
-void XRayDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
+void FRBMKDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
 {	
 	if(bOn)
 	{
@@ -84,34 +84,34 @@ void XRayDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
 	}
 }
 
-void XRayDevice::PreCache(u32 amount, bool b_draw_loadscreen, bool b_wait_user_input)
+void FRBMKDevice::PreCache(u32 amount, bool b_draw_loadscreen, bool b_wait_user_input)
 {
 }
 
-void XRayDevice::Clear()
+void FRBMKDevice::Clear()
 {
 }
 
-bool XRayDevice::Begin()
+bool FRBMKDevice::Begin()
 {	
 	return true;
 }
 
-void XRayDevice::End()
+void FRBMKDevice::End()
 {
 }
 
-CStatsPhysics* _BCL XRayDevice::StatPhysics()
+CStatsPhysics* _BCL FRBMKDevice::StatPhysics()
 {
 	return Statistic;
 }
 
-void _BCL XRayDevice::AddSeqFrame(pureFrame* f, bool mt)
+void _BCL FRBMKDevice::AddSeqFrame(pureFrame* f, bool mt)
 {
 	seqFrameMT.Add(f, REG_PRIORITY_LOW);
 }
 
-void _BCL XRayDevice::RemoveSeqFrame(pureFrame* f)
+void _BCL FRBMKDevice::RemoveSeqFrame(pureFrame* f)
 {
 	seqFrameMT.Remove(f);
 }

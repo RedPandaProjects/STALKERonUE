@@ -1,13 +1,13 @@
-#include "XRayEngine.h"
-#include "XRayDevice.h"
+#include "RBMKEngine.h"
+#include "RBMKDevice.h"
 #include "../Render/Interface/XRayRenderInterface.h"
 #include "../Render/Interface/XRayRenderFactory.h"
 #include "../Render/Interface/XRayDUInterface.h"
 #include "../Render/Interface/XRayDebugRender.h"
 #include "../Render/Interface/UI/XRayUIRender.h"
-#include "XRayInput.h"
+#include "RBMKInput.h"
 #include "../../StalkerEngineManager.h"
-#include "XRayConsole.h"
+#include "RBMKConsole.h"
 #include "Entities/Levels/Proxy/StalkerProxy.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "../../Unreal/WorldSettings/StalkerWorldSettings.h"
@@ -23,17 +23,17 @@ THIRD_PARTY_INCLUDES_END
 XRayRenderFactory GRenderFactory;
 XRayDUInterface  GDUInterface;
 XRayDebugRender GDebugRender;
-XRayEngine::XRayEngine()
+FRBMKEngine::FRBMKEngine()
 {
 
 }
 
-void XRayEngine::Initialize()
+void FRBMKEngine::Initialize()
 {
-	Device = new XRayDevice;
-	Console = new  XRayConsole;
+	Device = new FRBMKDevice;
+	Console = new  FRBMKConsole;
 
-	XRayInput* MyInput = new XRayInput;
+	FRBMKInput* MyInput = new FRBMKInput;
 	GStalkerEngineManager->SetInput(MyInput);
 	GXRayInput = MyInput;
 	::Render = &GRenderInterface;
@@ -44,7 +44,7 @@ void XRayEngine::Initialize()
 	XRayEngineInterface::Initialize();
 }
 
-void XRayEngine::Destroy()
+void FRBMKEngine::Destroy()
 {
 	GStalkerEngineManager->SetInput(nullptr);
 	XRayEngineInterface::Destroy();
@@ -56,7 +56,7 @@ void XRayEngine::Destroy()
 	GXRayInput = nullptr;
 }
 
-void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
+void FRBMKEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
 {
 	if (!InProxy)
 	{
@@ -66,12 +66,12 @@ void XRayEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
 	StalkerProxy->Destroy();
 }
 
-class ILevelGraph* XRayEngine::GetLevelGraph(const char* Name)
+class ILevelGraph* FRBMKEngine::GetLevelGraph(const char* Name)
 {
 	return GStalkerEngineManager->GetLevelGraph(Name);
 }
 
-class IGameGraph* XRayEngine::GetGameGraph()
+class IGameGraph* FRBMKEngine::GetGameGraph()
 {
 	UStalkerGameSpawn*GameSpawn =  GStalkerEngineManager->GetResourcesManager()->GetGameSpawn();
 	if (IsValid(GameSpawn))
@@ -82,7 +82,7 @@ class IGameGraph* XRayEngine::GetGameGraph()
 	return nullptr;
 }
 
-IReader XRayEngine::GetGameSpawn()
+IReader FRBMKEngine::GetGameSpawn()
 {
 	UStalkerGameSpawn* GameSpawn = GStalkerEngineManager->GetResourcesManager()->GetGameSpawn();
 	if (IsValid(GameSpawn))
@@ -92,19 +92,19 @@ IReader XRayEngine::GetGameSpawn()
 	return {nullptr,0};
 }
 
-bool XRayEngine::LoadWorld(const char* Name)
+bool FRBMKEngine::LoadWorld(const char* Name)
 {
 	return GStalkerEngineManager->LoadWorld(Name);
 }
 
-class XRayUnrealProxyInterface* XRayEngine::CreateUnrealProxy()
+class XRayUnrealProxyInterface* FRBMKEngine::CreateUnrealProxy()
 {
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(SpawnParameters);
 	return Result;
 }
-void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback)
+void FRBMKEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback)
 {
 	UWorld*World = GWorld;
 	check(World);
@@ -151,12 +151,12 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 	LegacyCFormVertices.Empty(CForm->Vertices.Num());
 	for (FVector3f& Vertex : CForm->Vertices)
 	{
-		LegacyCFormVertices.Add(StalkerMath::UnrealLocationToXRay(Vertex));
+		LegacyCFormVertices.Add(StalkerMath::UnrealLocationToRBMK(Vertex));
 	}
 	hdrCFORM LegacyCFormHeader={};
 	LegacyCFormHeader.aabb.invalidate();
-	LegacyCFormHeader.aabb.modify(StalkerMath::UnrealLocationToXRay(CForm->AABB.Max));
-	LegacyCFormHeader.aabb.modify(StalkerMath::UnrealLocationToXRay(CForm->AABB.Min));
+	LegacyCFormHeader.aabb.modify(StalkerMath::UnrealLocationToRBMK(CForm->AABB.Max));
+	LegacyCFormHeader.aabb.modify(StalkerMath::UnrealLocationToRBMK(CForm->AABB.Min));
 	LegacyCFormHeader.vertcount = LegacyCFormVertices.Num();
 	LegacyCFormHeader.facecount = LegacyCFormTriangles.Num();
 	LegacyCFormHeader.version = CFORM_CURRENT_VERSION;
@@ -164,7 +164,7 @@ void XRayEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB:
 	ObjectSpace.Create(LegacyCFormVertices.GetData(), LegacyCFormTriangles.GetData(), LegacyCFormHeader, build_callback);
 }
 
-EXRayWorldStatus XRayEngine::GetWorldStatus()
+EXRayWorldStatus FRBMKEngine::GetWorldStatus()
 {
 	switch (GStalkerEngineManager->GetWorldStatus())
 	{
@@ -186,7 +186,7 @@ EXRayWorldStatus XRayEngine::GetWorldStatus()
 	} 
 }
 
-class XRayUnrealProxyInterface* XRayEngine::GetUnrealPlayerCharacter()
+class XRayUnrealProxyInterface* FRBMKEngine::GetUnrealPlayerCharacter()
 {
 	if (IsValid(GWorld))
 	{
@@ -199,18 +199,18 @@ class XRayUnrealProxyInterface* XRayEngine::GetUnrealPlayerCharacter()
 	return nullptr;
 }
 
-shared_str XRayEngine::GetUnrealVersion()
+shared_str FRBMKEngine::GetUnrealVersion()
 {
 	return TCHAR_TO_ANSI(FApp::GetBuildVersion()); 
 }
 
-void XRayEngine::LoadDefaultWorld()
+void FRBMKEngine::LoadDefaultWorld()
 {	
 	GStalkerEngineManager->LoadDefaultWorld();
 	
 }
 
-void XRayEngine::Exit()
+void FRBMKEngine::Exit()
 {	
 	GEngine->Exec(nullptr, TEXT( "Exit" ) );
 }

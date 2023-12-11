@@ -47,11 +47,11 @@ void AStalkerPlayerCharacter::Tick(float DeltaTime)
 	{
 		return;
 	}
-	SetActorTransform(FTransform(StalkerMath::XRayMatrixToUnreal(XRayObject->XFORM())));
+	SetActorTransform(FTransform(StalkerMath::RBMKMatrixToUnreal(XRayObject->XFORM())));
 
 	Fmatrix InView = Device->mView;
 	InView.c.set(Device->vCameraPosition);
-	FTransform View = FTransform(StalkerMath::XRayMatrixToUnreal(InView));
+	FTransform View = FTransform(StalkerMath::RBMKMatrixToUnreal(InView));
 
 	View.SetRotation(View.GetRotation().Inverse());
 	FirstPersonCameraComponent->SetWorldTransform(View);
@@ -172,7 +172,7 @@ void AStalkerPlayerCharacter::SetVisibility(bool NewVisibility)
 
 void AStalkerPlayerCharacter::GetWorldTransform(Fmatrix& OutXForm)
 {
-	OutXForm = StalkerMath::UnrealMatrixToXRay(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
+	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
 void AStalkerPlayerCharacter::AttachTo(XRayUnrealAttachableInterface* Attach, const char* BoneName)
