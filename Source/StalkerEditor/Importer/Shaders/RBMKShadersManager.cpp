@@ -9,7 +9,7 @@
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 
-FRBMKShadersManager::FRBMKShadersManager(FRBMKEngineFactory* InOwner):Owner(InOwner)
+FRBMKShadersManager::FRBMKShadersManager(FRBMKEngineFactory* InOwner) :Owner(InOwner)
 {
 	Load();
 }
@@ -23,41 +23,41 @@ void FRBMKShadersManager::Load()
 	string_path ShaderFilePath;
 	FS.update_path(ShaderFilePath, "$game_data$", "shaders.xr");
 
-	if(FPaths::FileExists(ShaderFilePath))
+	if (FPaths::FileExists(ShaderFilePath))
 	{
 		FArrayReader Ar;
-		FFileHelper::LoadFileToArray(Ar,ANSI_TO_TCHAR(ShaderFilePath));
-		FArrayReader MainAr = FStalkerFileSystem::ReadChunk(Ar,2);
+		FFileHelper::LoadFileToArray(Ar, ANSI_TO_TCHAR(ShaderFilePath));
+		FArrayReader MainAr = FStalkerFileSystem::ReadChunk(Ar, 2);
 
-		for(uint32 i = 0;FStalkerFileSystem::FindChunk(MainAr,i);i++)
+		for (uint32 i = 0; FStalkerFileSystem::FindChunk(MainAr, i); i++)
 		{
-			FArrayReader ShaderChunk = FStalkerFileSystem::ReadChunk(MainAr,i);
+			FArrayReader ShaderChunk = FStalkerFileSystem::ReadChunk(MainAr, i);
 			FRBMKShaderDescription ShaderDescription;
-			ShaderChunk<<ShaderDescription;
+			ShaderChunk << ShaderDescription;
 			ShaderChunk.Seek(0);
 			TUniquePtr<FRBMKShaderBase> Shader = CreateShader(ShaderDescription.ClassID);
 			Shader->Serialize(ShaderChunk);
-			Shaders.Add(ShaderDescription.Name,MoveTemp(Shader));
+			Shaders.Add(ShaderDescription.Name, MoveTemp(Shader));
 		}
 	}
 
-	AddShader(MakeUnique<FRBMKShaderWallmark>(TEXT("effects\\wallmarkblend"),this));
-	AddShader(MakeUnique<FRBMKShaderWallmark>(TEXT("effects\\wallmarkmult"),this));
-	AddShader(MakeUnique<FRBMKShaderWallmark>(TEXT("effects\\wallmarkset"),this));
-	AddShader(MakeUnique<FRBMKShaderParticle>(TEXT("particles\\xadd"),this));
-	AddShader(MakeUnique<FRBMKShaderParticle>(TEXT("particles\\xdistort"),this));
+	AddShader(MakeUnique<FRBMKShaderWallmark>(TEXT("effects\\wallmarkblend"), this));
+	AddShader(MakeUnique<FRBMKShaderWallmark>(TEXT("effects\\wallmarkmult"), this));
+	AddShader(MakeUnique<FRBMKShaderWallmark>(TEXT("effects\\wallmarkset"), this));
+	AddShader(MakeUnique<FRBMKShaderParticle>(TEXT("particles\\xadd"), this));
+	AddShader(MakeUnique<FRBMKShaderParticle>(TEXT("particles\\xdistort"), this));
 }
 
-UMaterialInterface* FRBMKShadersManager::ImportSurface(const FString& Path, const FString&ShaderName, const FString& TextureName, const FString& GameMaterial,bool HudMode)
+UMaterialInterface* FRBMKShadersManager::ImportSurface(const FString& Path, const FString& ShaderName, const FString& TextureName, const FString& GameMaterial, bool HudMode)
 {
 	const UStalkerGameSettings* StalkerGameSettings = GetDefault<UStalkerGameSettings>();
 	FString NewShaderName = ShaderName;
-	if(const FString* InShaderName = StalkerGameSettings->ReplaceShaderWhenImport.Find(ShaderName))
+	if (const FString* InShaderName = StalkerGameSettings->ReplaceShaderWhenImport.Find(ShaderName))
 	{
 		NewShaderName = *InShaderName;
 	}
 	FRBMKShaderBase* Shader = GetOrCreateShader(NewShaderName);
-	return Shader->ImportSurface(Path,TextureName,GameMaterial,HudMode);
+	return Shader->ImportSurface(Path, TextureName, GameMaterial, HudMode);
 }
 
 UMaterialInterface* FRBMKShadersManager::GetOrCreateMasterMaterial(const FString& Name, const TSoftObjectPtr<UMaterialInterface>& UnknownMaterial) const
@@ -79,7 +79,7 @@ UMaterialInterface* FRBMKShadersManager::GetOrCreateMasterMaterial(const FString
 	if (!IsValid(ParentMaterial))
 	{
 		UMaterialInterface* InUnknownMaterial = UnknownMaterial.LoadSynchronous();
-		if(ensure(IsValid(InUnknownMaterial)))
+		if (ensure(IsValid(InUnknownMaterial)))
 		{
 			const FString ParentPackageName = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Materials") / ParentName);
 			UPackage* AssetPackage = CreatePackage(*ParentPackageName);
@@ -105,8 +105,19 @@ FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTexture(const FString& Te
 		return GetOrImportTextureLegacy(TextureName);
 	}
 
+	const UStalkerGameSettings* StalkerGameSettings = GetDefault<UStalkerGameSettings>();
+
+	bool IsUI = false;
+	for (const FString& Prefix : StalkerGameSettings->UITexturesPrefix)
+	{
+		if (TextureName.Find(*Prefix) == 0)
+		{
+			IsUI = true;
+			break;
+		}
+	}
 	FRBMKShaderTextureInfo Result;
-	Result.BaseTexture = Owner->ImportTexture(TextureName);
+	Result.BaseTexture = Owner->ImportTexture(TextureName, IsUI);
 
 	ETextureThumbnail MainTHM(TCHAR_TO_ANSI(*TextureName));
 	if (MainTHM.Load(TCHAR_TO_ANSI(*TextureName)))
@@ -120,13 +131,13 @@ FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTexture(const FString& Te
 			Owner->ImportBump2D(MainTHM._Format().bump_name.c_str(), NormalMap, HeightGloss);
 			Result.NormalMapTexture = NormalMap;
 			Result.HeightGlossTexture = HeightGloss;
-			if(MainTHM._Format().bump_mode == STextureParams::tbmUseParallax)
+			if (MainTHM._Format().bump_mode == STextureParams::tbmUseParallax)
 			{
 				Result.UseParallax = true;
 				Result.ParallaxHeight = MainTHM._Format().bump_virtual_height / 5.f;
 			}
 		}
-		if(MainTHM._Format().detail_name.size())
+		if (MainTHM._Format().detail_name.size())
 		{
 			Result.DetailTexture = Owner->ImportTexture(ANSI_TO_TCHAR(MainTHM._Format().detail_name.c_str()));
 			Result.DetailScale = MainTHM._Format().detail_scale;
@@ -134,7 +145,7 @@ FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTexture(const FString& Te
 			ETextureThumbnail THMDetail(MainTHM._Format().detail_name.c_str());
 			if (THMDetail.Load(MainTHM._Format().detail_name.c_str()))
 			{
-				if (THMDetail._Format().bump_mode == STextureParams::tbmUse )
+				if (THMDetail._Format().bump_mode == STextureParams::tbmUse)
 				{
 					TObjectPtr<UTexture2D> NormalMapTextureDetail;
 					TObjectPtr<UTexture2D> HeightGlossTextureDetail;
@@ -153,16 +164,109 @@ FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTexture(const FString& Te
 
 }
 
+void FRBMKShadersManager::ImportTextures(const TArray<FString>& Prefixes,const TArray<FString>& IgnorePrefixes)
+{
+	const UStalkerGameSettings* StalkerGameSettings = GetDefault<UStalkerGameSettings>();
+	TArray<FString> Textures;
+
+	if (GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC)
+	{
+		LegacyTexturesInfoInitialize();
+		for (auto& [Key, Value] : LegacyTexture2Bumps)
+		{
+			if (Prefixes.Num())
+			{
+				for (const FString& Prefix : Prefixes)
+				{
+					if (Key.Find(*Prefix) == 0)
+					{
+						Textures.Add(Key);
+					}
+				}
+			}
+			else
+			{
+				Textures.Add(Key);
+			}
+		}
+	}
+	else
+	{
+		string_path	GameTexturePath;
+		FS.update_path(GameTexturePath, "$game_textures$", "");
+		TArray<FString> Files;
+		FString TexturePath = GameTexturePath;
+		TexturePath.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+		IFileManager::Get().FindFilesRecursive(Files, *TexturePath, TEXT("*.thm"), true, false);
+		for (const FString& File : Files)
+		{
+			FString NewName;
+			if(ensure(File.StartsWith(*TexturePath)))
+			{
+				NewName = File.RightChop(TexturePath.Len());
+				NewName.ReplaceCharInline(TEXT('/'), TEXT('\\'));
+			}
+			if (Prefixes.Num())
+			{
+				for (const FString& Prefix : Prefixes)
+				{
+					if (NewName.Find(*Prefix) == 0)
+					{
+						Textures.Add(NewName);
+					}
+				}
+			}
+			else
+			{
+				Textures.Add(NewName);
+			}
+		}
+	}
+	FScopedSlowTask Progress(Textures.Num(), FText::FromString(TEXT("Import Textures")), true);
+	Progress.MakeDialog(true);
+	for (const FString& Texture : Textures)
+	{
+		bool NeedSkip = false;
+		for (const FString& Prefix : IgnorePrefixes)
+		{
+			if (Texture.Find(*Prefix) == 0)
+			{
+				NeedSkip = true;break;
+			}
+		}
+		if(NeedSkip)
+		{
+			Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Skip texture:%s"),*Texture)));
+			continue;
+		}
+		Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import texture:%s"),*Texture)));
+		GetOrImportTexture(Texture);
+	}
+
+}
+
 FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTextureLegacy(const FString& TextureName)
 {
 	LegacyTexturesInfoInitialize();
+	const UStalkerGameSettings* StalkerGameSettings = GetDefault<UStalkerGameSettings>();
+
+	bool IsUI = false;
+	for (const FString& Prefix : StalkerGameSettings->UITexturesPrefix)
+	{
+		if (TextureName.Find(*Prefix) == 0)
+		{
+			IsUI = true;
+			break;
+		}
+	}
+
 	FRBMKShaderTextureInfo Result;
-	Result.BaseTexture = Owner->ImportTexture(TextureName);
+	Result.BaseTexture = Owner->ImportTexture(TextureName, IsUI);
 	if (LegacyTexture2Bumps.Contains(TextureName))
 	{
 		const TPair<FString, float>& Bump = LegacyTexture2Bumps[TextureName];
 		Result.Material = (Bump.Value + .5f) / 4.f;
-		if(!Bump.Key.IsEmpty())
+		if (!Bump.Key.IsEmpty())
 		{
 			Result.UseBump = true;
 			TObjectPtr<UTexture2D> NormalMap;
@@ -183,7 +287,7 @@ FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTextureLegacy(const FStri
 		if (LegacyTexture2Bumps.Contains(Detail.Key))
 		{
 			const TPair<FString, float>& DetailBump = LegacyTexture2Bumps[Detail.Key];
-			if(!DetailBump.Key.IsEmpty())
+			if (!DetailBump.Key.IsEmpty())
 			{
 				Result.UseDetailBump = true;
 				TObjectPtr<UTexture2D> NormalMapTextureDetail;
@@ -199,7 +303,7 @@ FRBMKShaderTextureInfo FRBMKShadersManager::GetOrImportTextureLegacy(const FStri
 
 void FRBMKShadersManager::LegacyTexturesInfoInitialize()
 {
-	if(LegacyHasInitialized)
+	if (LegacyHasInitialized)
 	{
 		return;
 	}
@@ -236,15 +340,15 @@ void FRBMKShadersManager::LegacyTexturesInfoInitialize()
 
 				string_path				BumpMode;
 				float					Material;
-				const int32 Result = sscanf_s(item.second.c_str(), "bump_mode[%[^]]], material[%f]", BumpMode,static_cast<uint32>(sizeof(string_path)), &Material);
+				const int32 Result = sscanf_s(item.second.c_str(), "bump_mode[%[^]]], material[%f]", BumpMode, static_cast<uint32>(sizeof(string_path)), &Material);
 				check(Result == 2);
 				if ((BumpMode[0] == 'u') && (BumpMode[1] == 's') && (BumpMode[2] == 'e') && (BumpMode[3] == ':'))
 				{
-					LegacyTexture2Bumps.Add(ANSI_TO_TCHAR(item.first.c_str()), TPair<FString, float>(ANSI_TO_TCHAR(BumpMode+4), Material));
+					LegacyTexture2Bumps.Add(ANSI_TO_TCHAR(item.first.c_str()), TPair<FString, float>(ANSI_TO_TCHAR(BumpMode + 4), Material));
 				}
 				else
 				{
-					LegacyTexture2Bumps.Add(ANSI_TO_TCHAR(item.first.c_str()), TPair<FString, float>(TEXT(""),Material));
+					LegacyTexture2Bumps.Add(ANSI_TO_TCHAR(item.first.c_str()), TPair<FString, float>(TEXT(""), Material));
 				}
 			}
 		}
@@ -253,22 +357,22 @@ void FRBMKShadersManager::LegacyTexturesInfoInitialize()
 
 FRBMKShaderBase* FRBMKShadersManager::GetOrCreateShader(const FString& ShaderName)
 {
-	if(const TUniquePtr<FRBMKShaderBase>* Shader = Shaders.Find(ShaderName))
+	if (const TUniquePtr<FRBMKShaderBase>* Shader = Shaders.Find(ShaderName))
 	{
 		return Shader->Get();
 	}
 	TUniquePtr<FRBMKShaderBase> Shader = CreateShader();
 	Shader->Description.Name = ShaderName;
-	return Shaders.Add(ShaderName,MoveTemp(Shader)).Get();
+	return Shaders.Add(ShaderName, MoveTemp(Shader)).Get();
 }
 
 TUniquePtr<FRBMKShaderBase> FRBMKShadersManager::CreateShader(uint64 ClassID)
 {
 	switch (ClassID)
 	{
-	case FStalkerTools::MakeClassID('B','m','m','D','o','l','d',' '):
+	case FStalkerTools::MakeClassID('B', 'm', 'm', 'D', 'o', 'l', 'd', ' '):
 		return MakeUnique<FRBMKShaderTerrain>(this);
-	case FStalkerTools::MakeClassID('P','A','R','T','I','C','L','E'):
+	case FStalkerTools::MakeClassID('P', 'A', 'R', 'T', 'I', 'C', 'L', 'E'):
 		return MakeUnique<FRBMKShaderParticle>(this);
 	default:
 		return MakeUnique<FRBMKShaderBase>(this);
@@ -277,5 +381,5 @@ TUniquePtr<FRBMKShaderBase> FRBMKShadersManager::CreateShader(uint64 ClassID)
 
 void FRBMKShadersManager::AddShader(TUniquePtr<FRBMKShaderBase> Shader)
 {
-	Shaders.Add(Shader->Description.Name,MoveTemp(Shader));
+	Shaders.Add(Shader->Description.Name, MoveTemp(Shader));
 }

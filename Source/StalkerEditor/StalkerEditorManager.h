@@ -11,6 +11,8 @@ public:
 	FString											GetGamePath					();
 	void											ReloadConfigs				();
 	void											ImportUITextures			();
+	void											ImportAllTextures			();
+	void											ImportWMTextures			();
 	void											ImportMeshes				();
 	void											ImportPhysicalMaterials		();
 	void											ImportParticles				();

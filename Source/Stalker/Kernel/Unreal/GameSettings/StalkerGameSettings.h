@@ -69,6 +69,12 @@ public:
 	TArray<FString> MeshesDivideSubObjectWhenImportLevel;
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TArray<FString> UITexturesPrefix;
+
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TArray<FString> IgnoreTexturesWithPrefixWhenImport;
+
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	bool	AlwaysOverwriteAssetsWhenImport  = false;
 	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")

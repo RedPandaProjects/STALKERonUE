@@ -68,7 +68,9 @@ void UStalkerEditorManager::Initialized()
 		FEditorDelegates::EndPIE.AddUObject(this, &UStalkerEditorManager::OnEndPIE);
 
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ReloadConfigsAndScript, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ReloadConfigs));
+		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportAllTextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportAllTextures));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportUITextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportUITextures));
+		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportWMTextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportWMTextures));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportMeshes, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportMeshes));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportPhysicalMaterials, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportPhysicalMaterials));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportParticles, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportParticles));
@@ -147,50 +149,23 @@ void UStalkerEditorManager::ReloadConfigs()
 
 void UStalkerEditorManager::ImportUITextures()
 {
-	auto CaclImportFromPath = [](const char*PathName)
-	{
-		string_path	GameTexturePath;
-		FS.update_path(GameTexturePath, "$game_textures$", PathName);
-		TArray<FString> Files;
-		FString TexturePath = GameTexturePath;
-		TexturePath.ReplaceCharInline(TEXT('\\'),TEXT('/'));
-		IFileManager::Get().FindFilesRecursive(Files,*TexturePath,TEXT("*.dds"),true,false);
-		return Files.Num();
-	};
+	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
+	EngineFactory.ImportTextures(GetDefault<UStalkerGameSettings>()->UITexturesPrefix,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
+}
 
-	FScopedSlowTask Progress(CaclImportFromPath("ui")+CaclImportFromPath("map")+CaclImportFromPath("controller"), FText::FromString(TEXT("Import UI Textures")), true);
-	Progress.MakeDialog(true);
+void UStalkerEditorManager::ImportAllTextures()
+{
+	const TArray<FString> Prefixes;
+	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
+	EngineFactory.ImportTextures(Prefixes,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
+}
 
-	auto ImportFromPath = [&Progress](const char*PathName)
-	{
-		string_path	GameTexturePath;
-		FS.update_path(GameTexturePath, "$game_textures$", PathName);
-		TArray<FString> Files;
-		FString TexturePath = GameTexturePath;
-		TexturePath.ReplaceCharInline(TEXT('\\'),TEXT('/'));
-		IFileManager::Get().FindFilesRecursive(Files,*TexturePath,TEXT("*.dds"),true,false);
-	
-		FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
-		for(FString FileName:Files)
-		{
-			FileName = FPaths::GetPath(FileName) / FPaths::GetBaseFilename(FileName);
-			if(FCString::Strstr((*FileName) + TexturePath.Len() - FCStringAnsi::Strlen(PathName),TEXT("ui_font"))!=nullptr)
-			{
-				Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Skip UI texture:%S"),*FileName)));
-				continue;
-			}
-			EngineFactory.ImportTexture((*FileName)+ TexturePath.Len() - FCStringAnsi::Strlen(PathName),true);
-			Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import UI texture:%s"),*FileName)));
-			if (GWarn->ReceivedUserCancel())
-			{
-				break;
-			}
-		}
-	};
-	ImportFromPath("ui");
-	ImportFromPath("map");
-	ImportFromPath("controller");
-
+void UStalkerEditorManager::ImportWMTextures()
+{
+	TArray<FString> Prefixes;
+	Prefixes.Add(TEXT("wm\\"));
+	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
+	EngineFactory.ImportTextures(Prefixes,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
 }
 
 void UStalkerEditorManager::ImportMeshes()

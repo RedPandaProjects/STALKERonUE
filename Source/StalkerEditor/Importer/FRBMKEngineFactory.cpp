@@ -1293,6 +1293,15 @@ UTexture2D* FRBMKEngineFactory::ImportTexture(const FString& FileName, const FSt
 	return Texture2D;
 }
 
+void FRBMKEngineFactory::ImportTextures(const TArray<FString>& Prefixes,const TArray<FString>& IgnorePrefixes)
+{
+	if(!ShadersManager)
+	{
+		ShadersManager = MakeUnique<FRBMKShadersManager>(this);
+	}
+	ShadersManager->ImportTextures(Prefixes,IgnorePrefixes);
+}
+
 void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTexture2D>& OutNormalMap, TObjectPtr<UTexture2D>& OutHeightGloss)
 {
 	FString NewFileName = FPaths::ChangeExtension(FileName, TEXT(""));

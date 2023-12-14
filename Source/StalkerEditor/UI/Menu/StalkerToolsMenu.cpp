@@ -11,26 +11,39 @@ void StalkerToolsMenu::Initialize()
 	if (UToolMenu* ProfileMenu = UToolMenus::Get()->ExtendMenu(TEXT("LevelEditor.MainMenu.Tools")))
 	{
 		FToolMenuSection& Section = ProfileMenu->AddSection("Stalker Tools", FText::FromString(TEXT("Stalker Tools")));
+
+		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportAllTextures,
+			FText::FromString(TEXT("1  Import All Textures")),
+			FText::FromString(TEXT("Import All Textures")),
+			FSlateIcon()
+		).SetCommandList(GStalkerEditorManager->UICommandList);
+
 		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportUITextures,
-			FText::FromString(TEXT("Import UI Textures")),
+			FText::FromString(TEXT("1a Import UI Textures")),
 			FText::FromString(TEXT("Import UI Textures")),
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
 
+		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportWMTextures,
+			FText::FromString(TEXT("1b Import Wallmark Textures")),
+			FText::FromString(TEXT("Import Wallmark Textures")),
+			FSlateIcon()
+		).SetCommandList(GStalkerEditorManager->UICommandList);
+
 		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportPhysicalMaterials,
-			FText::FromString(TEXT("Import Physical Materials")),
+			FText::FromString(TEXT("2  Import Physical Materials")),
 			FText::FromString(TEXT("Import Physical Materials")),
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
 
 		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportMeshes,
-			FText::FromString(TEXT("Import Meshes")),
+			FText::FromString(TEXT("3  Import Meshes")),
 			FText::FromString(TEXT("Import Meshes")),
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
 
 		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportParticles,
-			FText::FromString(TEXT("Import Particles")),
+			FText::FromString(TEXT("4  Import Particles")),
 			FText::FromString(TEXT("Import Particles")),
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);

@@ -24,6 +24,7 @@ public:
 	UTexture2D*						ImportTextureDDS			(const FString& FileName);
 	UTexture2D*						ImportTexture				(const FString& FileName, bool IsUI = false);
 	UTexture2D*						ImportTexture				(const FString& FileName,const FString& NewPath);
+	void							ImportTextures				(const TArray<FString>&Prefixes,const TArray<FString>& IgnorePrefixes);
 	void							ImportBump2D				(const FString& FileName, TObjectPtr<UTexture2D>& NormalMap, TObjectPtr<UTexture2D>& HeightGloss);
 	
 	static bool						LoadOrCreateOrOverwriteAsset(UClass* InClass, const FString&Path, EObjectFlags InFlags, UObject*&OutNewObject);

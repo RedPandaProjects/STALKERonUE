@@ -11,7 +11,9 @@ public:
 	TSharedPtr< FUICommandInfo > BuildLevelSpawn;
 	TSharedPtr< FUICommandInfo > BuildGameSpawn;
 	TSharedPtr< FUICommandInfo > ReloadConfigsAndScript;
+	TSharedPtr< FUICommandInfo > ImportAllTextures;
 	TSharedPtr< FUICommandInfo > ImportUITextures;
+	TSharedPtr< FUICommandInfo > ImportWMTextures;
 	TSharedPtr< FUICommandInfo > ImportMeshes;
 	TSharedPtr< FUICommandInfo > ImportPhysicalMaterials;
 	TSharedPtr< FUICommandInfo > ImportParticles;

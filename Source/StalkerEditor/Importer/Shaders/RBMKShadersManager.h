@@ -31,6 +31,7 @@ public:
 	UMaterialInterface*							ImportSurface					(const FString& Path, const FString&ShaderName, const FString& TextureName, const FString& GameMaterial,bool HudMode = false);
 	UMaterialInterface*							GetOrCreateMasterMaterial		(const FString&Name,const TSoftObjectPtr<UMaterialInterface>&UnknownMaterial) const;
 	FRBMKShaderTextureInfo						GetOrImportTexture				(const FString& TextureName);
+	void										ImportTextures					(const TArray<FString>&Prefixes,const TArray<FString>& IgnorePrefixes);
 	FRBMKEngineFactory*							Owner;
 private:
 	void										Load							();
