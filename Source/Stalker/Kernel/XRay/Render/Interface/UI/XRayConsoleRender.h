@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/ConsoleRender.h"
+#include "XrEngine/Render/ConsoleRender.h"
 class XRayConsoleRender :public IConsoleRender
 {
 public:

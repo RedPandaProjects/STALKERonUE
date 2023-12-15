@@ -8,7 +8,7 @@
 #include "Resources/StalkerResourcesManager.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 THIRD_PARTY_INCLUDES_START
-#include "XrRender/Public/RenderVisual.h"
+#include "XrEngine/Render/RenderVisual.h"
 #include "XrEngine/IRenderable.h"
 #include "XrCDB/ISpatial.h"
 #include "XrEngine/EnnumerateVertices.h"

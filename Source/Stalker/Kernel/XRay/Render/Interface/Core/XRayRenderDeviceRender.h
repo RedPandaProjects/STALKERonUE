@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/RenderDeviceRender.h"
+#include "XrEngine/Render/RenderDeviceRender.h"
 
 class XRayRenderDeviceRender: public IRenderDeviceRender
 {

@@ -23,9 +23,9 @@ THIRD_PARTY_INCLUDES_START
 #include "xrEngine/FMesh.h"
 #include "xrEngine/bone.h"
 #include "xrCDB/xrCDB.h"
-#include "XrRender/Public/RenderVisual.h"
-#include "XrRender/Public/KinematicsAnimated.h"
-#include "XrRender/Public/Kinematics.h"
+#include "XrEngine/Render/RenderVisual.h"
+#include "XrEngine/Render/KinematicsAnimated.h"
+#include "XrEngine/Render/Kinematics.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerMath.h"
 #include "Kernel/StalkerGlobal.h"

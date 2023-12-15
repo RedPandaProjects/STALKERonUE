@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/LensFlareRender.h"
+#include "XrEngine/Render/LensFlareRender.h"
 class XRayFlareRender:public IFlareRender
 {
 public:

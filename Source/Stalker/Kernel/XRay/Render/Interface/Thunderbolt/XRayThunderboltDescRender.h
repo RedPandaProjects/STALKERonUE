@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/ThunderboltDescRender.h"
+#include "XrEngine/Render/ThunderboltDescRender.h"
 
 class XRayThunderboltDescRender:public IThunderboltDescRender
 {

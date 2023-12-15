@@ -2,7 +2,7 @@
 #ifdef RENDER_FACTORY_INTERFACE
 #undef RENDER_FACTORY_INTERFACE
 #endif
-#include "XrRender/Public/RenderFactory.h"
+#include "XrEngine/Render/RenderFactory.h"
 #define RENDER_FACTORY_INTERFACE(Class) \
 virtual I ## Class* Create ## Class(); \
 virtual void Destroy##Class(I ## Class *pObject);

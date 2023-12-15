@@ -4,7 +4,7 @@
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimsData.h"
 THIRD_PARTY_INCLUDES_START
-#include "XrRender/Public/animation_blend.h"
+#include "XrEngine/Render/animation_blend.h"
 #include "XrEngine/vis_common.h"
 THIRD_PARTY_INCLUDES_END
 #include "StalkerKinematicsComponent.generated.h"

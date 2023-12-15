@@ -1,6 +1,6 @@
 #pragma once
-#include "XrRender/Public/UIShader.h"
-#include "XrRender/Public/UIRender.h"
+#include "XrEngine/Render/UIShader.h"
+#include "XrEngine/Render/UIRender.h"
 class XRayUIShader :public IUIShader
 {
 public:

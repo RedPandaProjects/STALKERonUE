@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/DebugRender.h"
+#include "XrEngine/Render/DebugRender.h"
 class XRayDebugRender :public IDebugRender
 {
 public:

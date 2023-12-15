@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/ObjectSpaceRender.h"
+#include "XrEngine/Render/ObjectSpaceRender.h"
 class XRayObjectSpaceRender:public IObjectSpaceRender
 {
 public:

@@ -1,7 +1,7 @@
 #pragma once
 #include "NiagaraActor.h"
 THIRD_PARTY_INCLUDES_START
-#include "XrRender/Public/ParticleCustom.h"
+#include "XrEngine/Render/ParticleCustom.h"
 THIRD_PARTY_INCLUDES_END
 #include "StalkerNiagaraActor.generated.h"
 

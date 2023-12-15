@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/UISequenceVideoItem.h"
+#include "XrEngine/Render/UISequenceVideoItem.h"
 class XRayUISequenceVideoItem:public IUISequenceVideoItem
 {
 public:

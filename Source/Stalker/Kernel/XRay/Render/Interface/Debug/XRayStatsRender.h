@@ -1,5 +1,5 @@
 #pragma once
-#include "XrRender/Public/StatsRender.h"
+#include "XrEngine/Render/StatsRender.h"
 class XRayStatsRender:public IStatsRender
 {
 public:
