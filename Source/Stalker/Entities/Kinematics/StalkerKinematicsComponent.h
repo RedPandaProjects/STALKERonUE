@@ -45,7 +45,6 @@ public:
 	void											Bone_Calculate						(const IBoneData* bd, const Fmatrix* parent) override;
 	void											Bone_GetAnimPos						(Fmatrix& pos, u16 id, u8 channel_mask, bool ignore_callbacks) override;
 	bool											PickBone							(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id) override;
-	void											EnumBoneVertices					(SEnumVerticesCallback& C, u16 bone_id) override;
 	u16												LL_BoneID							(LPCSTR B) override;
 	u16												LL_BoneID							(const shared_str& B) override;
 	LPCSTR											LL_BoneName_dbg						(u16 ID) override;
@@ -55,7 +54,6 @@ public:
 	u16												LL_BoneCount						() const override;
 	u16												LL_VisibleBoneCount					() override;
 	const Fmatrix&									LL_GetTransform						(u16 bone_id) const override;
-	const Fmatrix&									LL_GetTransform_R					(u16 bone_id) override;
 	void											LL_SetTransform						(u16 bone_id, const Fmatrix& Matrix) override;
 	Fobb&											LL_GetBox							(u16 bone_id) override;
 	const Fbox&										GetBox								() const override;
@@ -68,14 +66,8 @@ public:
 	void											LL_SetBonesVisible					(BonesVisible mask) override;
 	void											CalculateBones						(BOOL bForceExact = FALSE) override;
 	void											CalculateBones_Invalidate			() override;
-	void											Callback							(UpdateCallback C, void* Param) override;
-	void											SetUpdateCallback					(UpdateCallback pCallback) override;
-	void											SetUpdateCallbackParam				(void* pCallbackParam) override;
-	UpdateCallback									GetUpdateCallback					() override;
-	void*											GetUpdateCallbackParam				() override;
 	IRenderVisual*									dcast_RenderVisual					() override;
 	IKinematicsAnimated*							dcast_PKinematicsAnimated			() override;
-	void											DebugRender							(Fmatrix& XFORM) override;
 	shared_str										getDebugName						() override;
 	vis_data& _BCL									getVisData							() override;
 
@@ -188,9 +180,6 @@ private:
 
 	IBlendDestroyCallback*							BlendDestroyCallback;
 	IUpdateTracksCallback*							UpdateTracksCallback;
-
-	UpdateCallback									MyUpdateCallback;
-	void*											UpdateCallbackParam;
 
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent*								SceneComponent;

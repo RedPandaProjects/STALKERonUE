@@ -19,8 +19,6 @@ UStalkerKinematicsComponent::UStalkerKinematicsComponent()
 {
 	BlendDestroyCallback = nullptr;
 	UpdateTracksCallback = nullptr;
-	MyUpdateCallback = nullptr;
-	UpdateCallbackParam = nullptr;
 	SetAnimationMode(EAnimationMode::Type::AnimationBlueprint);
 	AnimClass = UStalkerKinematicsAnimInstance_Default::StaticClass();
 	SkipDeltaTime = 0;
@@ -68,8 +66,6 @@ void UStalkerKinematicsComponent::Initilize(class USkeletalMesh* InKinematics)
 #endif
 		BlendDestroyCallback  = nullptr;
 		UpdateTracksCallback = nullptr;
-		MyUpdateCallback = nullptr;
-		UpdateCallbackParam = nullptr;
 		if (KinematicsAnimInstanceForCompute)
 		{
 			KinematicsAnimInstanceForCompute->MarkAsGarbage();
@@ -931,31 +927,6 @@ bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_res
 	return false;
 }
 
-void UStalkerKinematicsComponent::EnumBoneVertices(SEnumVerticesCallback& C, u16 bone_id)
-{
-	FSkeletalMeshRenderData* RenderResource = Kinematics->GetResourceForRendering();
-	FStaticMeshVertexBuffers* StaticVertexBuffers = &RenderResource->LODRenderData[0].StaticVertexBuffers;
-	FPositionVertexBuffer* PositionVertexBuffer = &StaticVertexBuffers->PositionVertexBuffer;
-	FSkinWeightVertexBuffer* SkinWeightVertexBuffer = RenderResource->LODRenderData[0].GetSkinWeightVertexBuffer();
-	for (uint32 i = 0; SkinWeightVertexBuffer->GetNumVertices() > i; i++)
-	{
-		FSkinWeightInfo SkinWeightInfo = SkinWeightVertexBuffer->GetVertexSkinWeights(i);
-	
-		for (int32 a = 0;12 > a; a++)
-		{
-			if (SkinWeightInfo.InfluenceWeights[a]>30)
-			{
-				if (SkinWeightInfo.InfluenceBones[a] == bone_id)
-				{
-					FVector3f InVertex = PositionVertexBuffer->VertexPosition(i);
-					C(StalkerMath::UnrealLocationToRBMK(InVertex));
-				}
-			}
-		}
-	}
-
-}
-
 u16 UStalkerKinematicsComponent::LL_BoneID(LPCSTR B)
 {
 #if WITH_EDITORONLY_DATA
@@ -1027,11 +998,6 @@ const Fmatrix& UStalkerKinematicsComponent::LL_GetTransform(u16 bone_id) const
 	return BonesInstance[bone_id].GetTransform();
 }
 
-const Fmatrix& UStalkerKinematicsComponent::LL_GetTransform_R(u16 bone_id)
-{
-	return BonesInstance[bone_id].GetTransform();
-}
-
 void UStalkerKinematicsComponent::LL_SetTransform(u16 bone_id, const Fmatrix& Matrix)
 {
 	if (BonesInstance[bone_id].callback_overwrite())
@@ -1092,62 +1058,12 @@ void UStalkerKinematicsComponent::LL_SetBonesVisible(BonesVisible mask)
 }
 
 void UStalkerKinematicsComponent::CalculateBones(BOOL bForceExact /*= FALSE*/)
-{
-	if (bForceExact)
-	{
-		for (int32 BoneID = 0; BoneID < Bones.Num(); BoneID++)
-		{
-			if (LL_GetBoneVisible(u16(BoneID)))
-			{
-				StalkerKinematicsBoneInstance& BoneInstance = BonesInstance[BoneID];
-				if (BoneInstance.callback_overwrite())
-				{
-					if (BoneInstance.callback())
-						BoneInstance.callback()(&BoneInstance);
-				}
-				else
-				{
-					if (BoneInstance.callback())
-					{
-						BoneInstance.callback()(&BoneInstance);
-					}
-				}
-			}
-		}
-		if (MyUpdateCallback)	MyUpdateCallback(this);
-	}
-	
+{	
 }
 
 void UStalkerKinematicsComponent::CalculateBones_Invalidate()
 {
 
-}
-
-void UStalkerKinematicsComponent::Callback(UpdateCallback C, void* Param)
-{
-	MyUpdateCallback = C;
-	UpdateCallbackParam = Param;
-}
-
-void UStalkerKinematicsComponent::SetUpdateCallback(UpdateCallback pCallback)
-{
-	MyUpdateCallback = pCallback;
-}
-
-void UStalkerKinematicsComponent::SetUpdateCallbackParam(void* pCallbackParam)
-{
-	UpdateCallbackParam = pCallbackParam;
-}
-
-UpdateCallback UStalkerKinematicsComponent::GetUpdateCallback()
-{
-	return MyUpdateCallback;
-}
-
-void* UStalkerKinematicsComponent::GetUpdateCallbackParam()
-{
-	return UpdateCallbackParam;
 }
 
 IRenderVisual* UStalkerKinematicsComponent::dcast_RenderVisual()
@@ -1158,11 +1074,6 @@ IRenderVisual* UStalkerKinematicsComponent::dcast_RenderVisual()
 IKinematicsAnimated* UStalkerKinematicsComponent::dcast_PKinematicsAnimated()
 {
 	return  Anims.Num() ? this : nullptr;
-}
-
-void UStalkerKinematicsComponent::DebugRender(Fmatrix& XFORM)
-{
-	
 }
 
 shared_str UStalkerKinematicsComponent::getDebugName()
@@ -1236,6 +1147,5 @@ false
 	, false);
 	SkipDeltaTime = 0;
 
-	if (MyUpdateCallback)	MyUpdateCallback(this);
 
 }
