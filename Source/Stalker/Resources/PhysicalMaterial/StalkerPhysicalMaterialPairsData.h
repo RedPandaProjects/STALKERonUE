@@ -14,6 +14,9 @@ struct STALKER_API FStalkerPhysicalMaterialPair
 	TArray<FString> CollideSounds;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TArray<FString> CollideParticles;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FString> CollideMarks;
 
 	void BuildFromLegacy(const class SGameMtlPair& Legacy);
 	void BuildToLegacy(class SGameMtlPair& Legacy);

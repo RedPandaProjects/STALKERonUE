@@ -278,7 +278,7 @@ USkeletalMesh* FStalkerResourcesManager::GetKinematics(const char* InName)
 	
 		Name.ReplaceInline(TEXT("\\"), TEXT("/"));
 		Name.ReplaceInline(TEXT("#"), TEXT("_"));
-		switch (xrGameManager::GetGame())
+		switch (GStalkerEngineManager->GetCurrentGame())
 		{
 		default:
 		{
@@ -298,7 +298,7 @@ USkeletalMesh* FStalkerResourcesManager::GetKinematics(const char* InName)
 			}
 		}
 		break;
-		case EGame::CS:
+		case EStalkerGame::CS:
 		{
 			const FString ParentPackageName = TEXT("/Game/CS/Meshes") / Name;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
@@ -316,7 +316,7 @@ USkeletalMesh* FStalkerResourcesManager::GetKinematics(const char* InName)
 			}
 		}
 		break;
-		case EGame::SHOC:
+		case EStalkerGame::SHOC:
 		{
 			const FString ParentPackageName = TEXT("/Game/SHOC/Meshes") / Name;
 			const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);

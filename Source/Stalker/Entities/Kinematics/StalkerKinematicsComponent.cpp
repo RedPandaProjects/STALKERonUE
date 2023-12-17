@@ -183,7 +183,8 @@ void UStalkerKinematicsComponent::Initilize(class USkeletalMesh* InKinematics)
 		VisData.box.getcenter(Center);
 		VisData.sphere.set(Center, VisData.box.getradius());
 	}
-	SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	static FName NAME_Kinematics = "Kinematics";
+	SetCollisionProfileName(NAME_Kinematics);
 	FString InDataName;
 	Kinematics->GetName(InDataName);
 	DataName = TCHAR_TO_ANSI(*InDataName);
@@ -359,7 +360,6 @@ void UStalkerKinematicsComponent::AttachTo(XRayUnrealAttachableInterface* Attach
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
 	AttachToComponent(InSceneComponent,AttachmentTransformRules,BoneName);
 	SetSimulatePhysics(false);
-	SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	RegisterComponent();
 	
 	if (UPrimitiveComponent* PrimitiveComponen = Cast<UPrimitiveComponent>(InSceneComponent))
@@ -1058,7 +1058,30 @@ void UStalkerKinematicsComponent::LL_SetBonesVisible(BonesVisible mask)
 }
 
 void UStalkerKinematicsComponent::CalculateBones(BOOL bForceExact /*= FALSE*/)
-{	
+{
+	if (bForceExact)
+	{
+		for (int32 BoneID = 0; BoneID < Bones.Num(); BoneID++)
+		{
+			if (LL_GetBoneVisible(u16(BoneID)))
+			{
+				StalkerKinematicsBoneInstance& BoneInstance = BonesInstance[BoneID];
+				if (BoneInstance.callback_overwrite())
+				{
+					if (BoneInstance.callback())
+						BoneInstance.callback()(&BoneInstance);
+				}
+				else
+				{
+					if (BoneInstance.callback())
+					{
+						BoneInstance.callback()(&BoneInstance);
+					}
+				}
+			}
+		}
+	}
+	
 }
 
 void UStalkerKinematicsComponent::CalculateBones_Invalidate()

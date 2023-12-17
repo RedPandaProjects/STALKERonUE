@@ -36,18 +36,21 @@ bool FRBMKLevelFactory::ImportLevel(const FString& FileName,URBMKLevelImportOpti
 		GXRayObjectLibrary->LoadAsGame = EGame::COP;
 		break;
 	}
-
+	
+	FScopedSlowTask Progress(7, FText::FromString(FString::Printf(TEXT("Impot Level:%s"),*FileName)), true);
+	Progress.MakeDialog(true);
+	
+	Progress.EnterProgressFrame(0, FText::FromString(FString::Printf(TEXT("Loading ..."))));
 	GXRayObjectLibrary->ReloadObjects();
 
 	FRBMKScene CurrentScene;
 	GRBMKScene = &CurrentScene;
-
 	if (!CurrentScene.Load(FileName))
 	{
 		return false;
 	}
-
-	auto  ExportToWorldLamda = [&CurrentScene,World,this,&LevelImportOptions](bool NeedExport,ERBMKSceneObjectType ObjectType)
+	
+	auto  ExportToWorldLambda = [&CurrentScene,World,this,&LevelImportOptions](bool NeedExport,ERBMKSceneObjectType ObjectType)
 	{
 		if (NeedExport)
 		{
@@ -58,14 +61,21 @@ bool FRBMKLevelFactory::ImportLevel(const FString& FileName,URBMKLevelImportOpti
 		}
 	};
 
-
-	ExportToWorldLamda(LevelImportOptions.ImportStaticMeshes,ERBMKSceneObjectType::StaticMesh);
-	ExportToWorldLamda(LevelImportOptions.ImportWayObjects,ERBMKSceneObjectType::Way);
-	ExportToWorldLamda(LevelImportOptions.ImportAIMap,ERBMKSceneObjectType::AIMap);
-	ExportToWorldLamda(LevelImportOptions.ImportSpawnObjects,ERBMKSceneObjectType::SpawnPoint);
-	ExportToWorldLamda(LevelImportOptions.ImportParticles,ERBMKSceneObjectType::ParticleSystem);
-	ExportToWorldLamda(LevelImportOptions.ImportWallmark,ERBMKSceneObjectType::Wallmark);
-	ExportToWorldLamda(LevelImportOptions.ImportDetails,ERBMKSceneObjectType::DetailObject);
+	
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting StaticMeshes ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportStaticMeshes,ERBMKSceneObjectType::StaticMesh);
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting Ways ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportWayObjects,ERBMKSceneObjectType::Way);
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting AIMap ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportAIMap,ERBMKSceneObjectType::AIMap);
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting SpawnPoints ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportSpawnObjects,ERBMKSceneObjectType::SpawnPoint);
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting ParticleSystems ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportParticles,ERBMKSceneObjectType::ParticleSystem);
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting Decals ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportWallmark,ERBMKSceneObjectType::Wallmark);
+	Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Impoting DetailObjects ..."))));
+	ExportToWorldLambda(LevelImportOptions.ImportDetails,ERBMKSceneObjectType::DetailObject);
 
 	if(LevelImportOptions.ImportDetails||(LevelImportOptions.ImportStaticMeshes&&LevelImportOptions.ImportMultipleUsageMeshesAsFoliage))
 	{

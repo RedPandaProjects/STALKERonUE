@@ -1,75 +1,22 @@
 #include "XRayRenderInterface.h"
+
+#include "IDetailTreeNode.h"
 #include "XRayRenderTarget.h"
 #include "../../../StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "Entities/Levels/Light/StalkerLight.h"
 #include "Entities/Particles/StalkerNiagaraActor.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
+#include "Kismet/KismetMaterialLibrary.h"
+THIRD_PARTY_INCLUDES_START
+#include "XrEngine/Render/RenderVisual.h"
+THIRD_PARTY_INCLUDES_END
+
 XRayRenderInterface GRenderInterface;
 
 XRayRenderInterface::XRayRenderInterface()
 {
-	InMatrix = nullptr;
-	InVisible = false;
-}
-
-bool XRayRenderInterface::is_sun_static()
-{
-	return false;
-}
-
-DWORD XRayRenderInterface::get_dx_level()
-{
-	return 0;
-}
-
-void XRayRenderInterface::create()
-{
-}
-
-void XRayRenderInterface::destroy()
-{
-}
-
-void XRayRenderInterface::reset_begin()
-{
-}
-
-void XRayRenderInterface::reset_end()
-{
-}
-
-void XRayRenderInterface::level_Load(IReader*)
-{
-}
-
-void XRayRenderInterface::level_Unload()
-{
-}
-
-HRESULT XRayRenderInterface::shader_compile(LPCSTR name, DWORD const* pSrcData, UINT SrcDataLen, LPCSTR pFunctionName, LPCSTR pTarget, DWORD Flags, void*& result)
-{
-	return E_NOTIMPL;
-}
-
-LPCSTR XRayRenderInterface::getShaderPath()
-{
-	return LPCSTR();
-}
-
-IRender_Sector* XRayRenderInterface::getSector(int id)
-{
-	return nullptr;
-}
-
-IRenderVisual* XRayRenderInterface::getVisual(int id)
-{
-	return nullptr;
-}
-
-IRender_Sector* XRayRenderInterface::detectSector(const Fvector& P)
-{
-	return nullptr;
 }
 
 IRender_Target* XRayRenderInterface::getTarget()
@@ -77,67 +24,8 @@ IRender_Target* XRayRenderInterface::getTarget()
 	return &GRenderTarget;
 }
 
-void XRayRenderInterface::set_Transform(Fmatrix* M)
-{
-	InMatrix = M;
-}
-
-void XRayRenderInterface::set_HUD(BOOL V)
-{
-}
-
-BOOL XRayRenderInterface::get_HUD()
-{
-	return 0;
-}
-
-void XRayRenderInterface::set_Invisible(BOOL V)
-{
-	InVisible = V;
-}
-
-void XRayRenderInterface::set_Object(IRenderable* O)
-{
-}
-
-void XRayRenderInterface::add_Occluder(Fbox2& bb_screenspace)
-{
-}
-
-void XRayRenderInterface::add_Visual(IRenderVisual* V)
-{
-	if (InVisible)
-	{
-		return;
-	}
-}
-
-void XRayRenderInterface::add_Geometry(IRenderVisual* V)
-{
-}
-
-void XRayRenderInterface::add_StaticWallmark(const wm_shader& S, const Fvector& P, float s, CDB::TRI* T, Fvector* V)
-{
-}
-
-void XRayRenderInterface::add_StaticWallmark(IWallMarkArray* pArray, const Fvector& P, float s, CDB::TRI* T, Fvector* V)
-{
-}
-
-void XRayRenderInterface::add_SkeletonWallmark(const Fmatrix* xf, IKinematics* obj, IWallMarkArray* pArray, const Fvector& start, const Fvector& dir, float size)
-{
-}
-
-void XRayRenderInterface::clear_static_wallmarks()
-{
-}
-
-void XRayRenderInterface::flush()
-{
-}
 class XRayRenderObjectSpecific :public IRender_ObjectSpecific
 {
-
 public:
 	XRayRenderObjectSpecific(){}
 	~XRayRenderObjectSpecific() override {}
@@ -244,16 +132,6 @@ IRenderVisual* XRayRenderInterface::model_Create(LPCSTR name, IReader* data)
 	return Kinematics;
 }
 
-IRenderVisual* XRayRenderInterface::model_CreateChild(LPCSTR name, IReader* data)
-{
-	return nullptr;
-}
-
-IRenderVisual* XRayRenderInterface::model_Duplicate(IRenderVisual* V)
-{
-	return nullptr;
-}
-
 void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 {
 	if (V)
@@ -274,99 +152,6 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 	}
 }
 
-void XRayRenderInterface::model_Logging(BOOL bEnable)
-{
-}
-
-void XRayRenderInterface::models_Prefetch()
-{
-}
-
-void XRayRenderInterface::models_Clear(BOOL b_complete)
-{
-}
-
-BOOL XRayRenderInterface::occ_visible(vis_data& V)
-{
-	return 0;
-}
-
-BOOL XRayRenderInterface::occ_visible(Fbox& B)
-{
-	return 0;
-}
-
-BOOL XRayRenderInterface::occ_visible(sPoly& P)
-{
-	return 0;
-}
-
-void XRayRenderInterface::Screenshot(ScreenshotMode mode, LPCSTR name)
-{
-}
-
-void XRayRenderInterface::Screenshot(ScreenshotMode mode, CMemoryWriter& memory_writer)
-{
-}
-
-void XRayRenderInterface::ScreenshotAsyncBegin()
-{
-}
-
-void XRayRenderInterface::ScreenshotAsyncEnd(CMemoryWriter& memory_writer)
-{
-}
-
-void XRayRenderInterface::rmNear()
-{
-}
-
-void XRayRenderInterface::rmFar()
-{
-}
-
-void XRayRenderInterface::rmNormal()
-{
-}
-
-u32 XRayRenderInterface::memory_usage()
-{
-	return u32();
-}
-
-void XRayRenderInterface::BeforeWorldRender()
-{
-}
-
-void XRayRenderInterface::AfterWorldRender()
-{
-}
-
-void XRayRenderInterface::ChangeMark(LPCSTR mark)
-{
-}
-
-u32 XRayRenderInterface::active_phase()
-{
-	return u32();
-}
-
-void XRayRenderInterface::Render()
-{
-}
-
-void XRayRenderInterface::OnFrame()
-{
-}
-
-void XRayRenderInterface::Calculate()
-{
-}
-
-void XRayRenderInterface::ScreenshotImpl(ScreenshotMode mode, LPCSTR name, CMemoryWriter* memory_writer)
-{
-}
-
 void XRayRenderInterface::light_destroy(IRender_Light* p_)
 {
 	if (p_)
@@ -383,5 +168,79 @@ void XRayRenderInterface::glow_destroy(IRender_Glow* p_)
 		delete p_;
 	}
 	p_ = nullptr;
+}
+
+void XRayRenderInterface::SpawnStaticDecal(const shared_str& InTextureName, const Fvector& Point, const Fvector& Normal, float Size)
+{
+	FString TextureName = ANSI_TO_TCHAR(*InTextureName);TextureName.ReplaceCharInline(TEXT('\\'),TEXT('/'));
+	const FString ParentPackageName =GStalkerEngineManager->GetResourcesManager()->GetGamePath() /TEXT("Textures") / TextureName;
+	const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+	if(UTexture2D * Texture2D = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn))
+	{
+		FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+		SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+		
+		FQuat Rotation = FQuat(StalkerMath::RBMKNormalToUnreal(Normal).ToOrientationQuat())*FRotator(-90,0,0).Quaternion();
+		Rotation = Rotation*FRotator(0,FMath::FRandRange(0.f,360.f),0).Quaternion();
+		ADecalActor* DecalActor = GWorld->SpawnActor<ADecalActor>(FVector(StalkerMath::RBMKLocationToUnreal(Point)), Rotation.Rotator(),SpawnParameters);
+		DecalActor->SetFolderPath(TEXT("Decals"));
+		DecalActor->GetDecal()->DecalSize = FVector(Size*12.5f,Size*75,Size*75);
+		{
+			UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultStaticDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
+			static FName NAME_Diffuse = "Diffuse";
+			Material->SetTextureParameterValue(NAME_Diffuse,Texture2D);
+			DecalActor->SetDecalMaterial(Material);
+		}
+		DecalActor->GetDecal()->SetFadeOut(20.f,2.f);
+	}
+}
+
+void XRayRenderInterface::SpawnSkeletalDecal(const IRenderVisual* InObject, const shared_str& InTextureName,	const Fvector& StartPoint, const Fvector& EndPoint, float Size)
+{
+	FString TextureName = ANSI_TO_TCHAR(*InTextureName);TextureName.ReplaceCharInline(TEXT('\\'),TEXT('/'));
+	const FString ParentPackageName =GStalkerEngineManager->GetResourcesManager()->GetGamePath() /TEXT("Textures") / TextureName;
+	const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
+	if(UTexture2D * Texture2D = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn))
+	{
+		if(UStalkerKinematicsComponent *SceneComponent = reinterpret_cast<UStalkerKinematicsComponent*>(const_cast< IRenderVisual*>(InObject)->CastUnrealObject(EXRayUnrealObjectType::StalkerKinematicsComponent)))
+		{
+			
+			FCollisionQueryParams CollisionQueryParams;
+			CollisionQueryParams.bTraceComplex = false;
+			CollisionQueryParams.MobilityType = EQueryMobilityType::Dynamic;
+			FHitResult HitResult;
+			//if(GWorld->LineTraceSingleByChannel(HitResult,FVector(StalkerMath::RBMKLocationToUnreal(StartPoint)),FVector(StalkerMath::RBMKLocationToUnreal(EndPoint)),ECC_Kinematics,CollisionQueryParams))
+			if(SceneComponent->LineTraceComponent(HitResult,FVector(StalkerMath::RBMKLocationToUnreal(StartPoint)),FVector(StalkerMath::RBMKLocationToUnreal(EndPoint)),CollisionQueryParams))
+			{
+				
+				FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
+				SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
+				
+				FQuat Rotation = FQuat(HitResult.Normal.ToOrientationQuat())*FRotator(-90,0,0).Quaternion();
+				Rotation = Rotation*FRotator(0,FMath::FRandRange(0.f,360.f),0).Quaternion();
+				ADecalActor* DecalActor = GWorld->SpawnActor<ADecalActor>(HitResult.Location, Rotation.Rotator(),SpawnParameters);
+				DecalActor->SetFolderPath(TEXT("Decals"));
+				DecalActor->GetDecal()->DecalSize = FVector(Size*50.f,Size*50,Size*50);
+				{
+					UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultStaticDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
+					static FName NAME_Diffuse = "Diffuse";
+					static FName NAME_CustomDepth = "CustomDepth";
+					Material->SetTextureParameterValue(NAME_Diffuse,Texture2D);
+					Material->SetScalarParameterValue(NAME_CustomDepth,1);
+					DecalActor->SetDecalMaterial(Material);
+
+				}
+				DecalActor->GetDecal()->SetFadeOut(30.f,2.f);
+				DecalActor->AttachToComponent(SceneComponent,FAttachmentTransformRules(EAttachmentRule::KeepWorld,false),HitResult.BoneName);
+
+			}
+			else
+			{
+				DrawDebugLine(GWorld,FVector(StalkerMath::RBMKLocationToUnreal(StartPoint)),FVector(StalkerMath::RBMKLocationToUnreal(EndPoint)),FColor::Red,false,10.f);
+			}
+
+		}
+	
+	}
 }
 

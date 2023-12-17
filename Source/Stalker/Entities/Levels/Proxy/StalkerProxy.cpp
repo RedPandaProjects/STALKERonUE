@@ -80,7 +80,6 @@ void AStalkerProxy::SetAsRoot(XRayUnrealAttachableInterface* AttachableInterface
 		StalkerKinematicsComponent->Rename(nullptr,this);
 		SetRootComponent(StalkerKinematicsComponent);
 		StalkerKinematicsComponent->SetSimulatePhysics(false);
-		StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		StalkerKinematicsComponent->RegisterComponent();
 	}
 	else

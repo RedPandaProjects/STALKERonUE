@@ -10,7 +10,6 @@ THIRD_PARTY_INCLUDES_END
 AStalkerPlayerCharacter::AStalkerPlayerCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	GetCapsuleComponent()->SetEnableGravity(false);
 	GetMovementComponent()->bAutoActivate = false;
 
@@ -133,7 +132,6 @@ void AStalkerPlayerCharacter::SetAsRoot(XRayUnrealAttachableInterface* Attachabl
 		FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
 		StalkerKinematicsComponent->AttachToComponent(GetMesh(),AttachmentTransformRules);
 		StalkerKinematicsComponent->SetSimulatePhysics(false);
-		StalkerKinematicsComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		StalkerKinematicsComponent->RegisterComponent();
 	}
 	else

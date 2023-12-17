@@ -24,6 +24,12 @@ void FStalkerPhysicalMaterialPair::BuildFromLegacy(const SGameMtlPair& Legacy)
 	{
 		CollideParticles.Add(name.c_str());
 	}
+
+	CollideMarks.Empty();
+	for (const shared_str& name : Legacy.CollideMarksLegacy)
+	{
+		CollideMarks.Add(name.c_str());
+	}
 }
 
 void FStalkerPhysicalMaterialPair::BuildToLegacy(SGameMtlPair& Legacy)
@@ -51,5 +57,11 @@ void FStalkerPhysicalMaterialPair::BuildToLegacy(SGameMtlPair& Legacy)
 	for (const FString& name : CollideParticles)
 	{
 		Legacy.CollideParticles.push_back(TCHAR_TO_ANSI(*name));
+	}
+	checkSlow(Legacy.CollideMarks->IsEmpty());
+	Legacy.CollideMarks->Clear();
+	for (const FString& name : CollideMarks)
+	{
+		Legacy.CollideMarks->AppendMark(TCHAR_TO_ANSI(*name));
 	}
 }

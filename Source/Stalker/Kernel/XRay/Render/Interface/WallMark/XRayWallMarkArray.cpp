@@ -7,22 +7,26 @@ XRayWallMarkArray::XRayWallMarkArray()
 
 void XRayWallMarkArray::Copy(IWallMarkArray & _in)
 {
+	Textures = static_cast<XRayWallMarkArray*>(&_in)->Textures;
 }
 
-void XRayWallMarkArray::AppendMark(LPCSTR s_textures)
+void XRayWallMarkArray::AppendMark(const char* Texture)
 {
+	Textures.Add(Texture);
 }
 
-void XRayWallMarkArray::clear()
+void XRayWallMarkArray::Clear()
 {
+	Textures.Empty();
 }
 
-bool XRayWallMarkArray::empty()
+bool XRayWallMarkArray::IsEmpty()
 {
-	return false;
+	return Textures.IsEmpty();
 }
 
-wm_shader XRayWallMarkArray::GenerateWallmark()
+shared_str XRayWallMarkArray::GenerateWallmark()
 {
-	return wm_shader();
+	check(!Textures.IsEmpty());
+	return Textures[FMath::RandRange(0,Textures.Num()-1)];
 }

@@ -162,10 +162,8 @@ void UStalkerEditorManager::ImportAllTextures()
 
 void UStalkerEditorManager::ImportWMTextures()
 {
-	TArray<FString> Prefixes;
-	Prefixes.Add(TEXT("wm\\"));
 	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
-	EngineFactory.ImportTextures(Prefixes,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
+	EngineFactory.ImportTextures(GetDefault<UStalkerGameSettings>()->WMTexturesPrefix,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
 }
 
 void UStalkerEditorManager::ImportMeshes()

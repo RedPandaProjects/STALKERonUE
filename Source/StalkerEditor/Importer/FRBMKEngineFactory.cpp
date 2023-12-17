@@ -1330,7 +1330,6 @@ void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextu
 	{
 		return;
 	}
-
 	RedImageTool::RedImage ImageBump, ImageBumpError;
 	string_path DDSFileName;
 	FS.update_path(DDSFileName, _game_textures_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), ".dds").c_str());
