@@ -186,7 +186,7 @@ void XRayRenderInterface::SpawnStaticDecal(const shared_str& InTextureName, cons
 		DecalActor->SetFolderPath(TEXT("Decals"));
 		DecalActor->GetDecal()->DecalSize = FVector(Size*12.5f,Size*75,Size*75);
 		{
-			UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultStaticDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
+			UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
 			static FName NAME_Diffuse = "Diffuse";
 			Material->SetTextureParameterValue(NAME_Diffuse,Texture2D);
 			DecalActor->SetDecalMaterial(Material);
@@ -222,7 +222,7 @@ void XRayRenderInterface::SpawnSkeletalDecal(const IRenderVisual* InObject, cons
 				DecalActor->SetFolderPath(TEXT("Decals"));
 				DecalActor->GetDecal()->DecalSize = FVector(Size*50.f,Size*50,Size*50);
 				{
-					UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultStaticDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
+					UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
 					static FName NAME_Diffuse = "Diffuse";
 					static FName NAME_CustomDepth = "CustomDepth";
 					Material->SetTextureParameterValue(NAME_Diffuse,Texture2D);

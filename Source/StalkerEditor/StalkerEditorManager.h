@@ -13,6 +13,7 @@ public:
 	void											ImportUITextures			();
 	void											ImportAllTextures			();
 	void											ImportWMTextures			();
+	void											ImportGradTextures			();
 	void											ImportMeshes				();
 	void											ImportPhysicalMaterials		();
 	void											ImportParticles				();

@@ -31,10 +31,10 @@ public:
 	EStalkerGame EditorStartupGame;
 	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
-	TSoftObjectPtr<UMaterialInterface>	DefaultStaticDecalMaterial;
+	TSoftObjectPtr<UMaterialInterface>	DefaultDecalMaterial;
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
-	TSoftObjectPtr<UMaterialInterface>	DefaultSkeletalDecalMaterial;
+	TSoftObjectPtr<UMaterialInterface>	PostProcessMaterial;
 
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game",meta = (DisplayName = "Levels Of Shadow of Chernobyl"))
@@ -78,6 +78,9 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TArray<FString> WMTexturesPrefix;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TArray<FString> GradTexturesPrefix;
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TArray<FString> IgnoreTexturesWithPrefixWhenImport;

@@ -14,6 +14,7 @@ public:
 	TSharedPtr< FUICommandInfo > ImportAllTextures;
 	TSharedPtr< FUICommandInfo > ImportUITextures;
 	TSharedPtr< FUICommandInfo > ImportWMTextures;
+	TSharedPtr< FUICommandInfo > ImportGradTextures;
 	TSharedPtr< FUICommandInfo > ImportMeshes;
 	TSharedPtr< FUICommandInfo > ImportPhysicalMaterials;
 	TSharedPtr< FUICommandInfo > ImportParticles;

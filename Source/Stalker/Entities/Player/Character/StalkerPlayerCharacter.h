@@ -45,6 +45,16 @@ public:
 
 private:
 	class CObject*				XRayObject;
+
 	UPROPERTY()
 	USceneComponent			*	StalkerRootComponent;
+
+	UPROPERTY(Transient,VisibleAnywhere)
+	UMaterialInstanceDynamic*	PostProcessMaterial;
+
+	UPROPERTY(Transient)
+	float NoiseTime;
+
+	UPROPERTY(Transient)
+	FVector2f	NoiseShift;
 };

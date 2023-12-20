@@ -71,6 +71,7 @@ void UStalkerEditorManager::Initialized()
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportAllTextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportAllTextures));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportUITextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportUITextures));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportWMTextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportWMTextures));
+		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportGradTextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportGradTextures));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportMeshes, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportMeshes));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportPhysicalMaterials, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportPhysicalMaterials));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportParticles, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportParticles));
@@ -164,6 +165,12 @@ void UStalkerEditorManager::ImportWMTextures()
 {
 	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
 	EngineFactory.ImportTextures(GetDefault<UStalkerGameSettings>()->WMTexturesPrefix,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
+}
+
+void UStalkerEditorManager::ImportGradTextures()
+{
+	FRBMKEngineFactory EngineFactory(nullptr, RF_Standalone | RF_Public);
+	EngineFactory.ImportTextures(GetDefault<UStalkerGameSettings>()->GradTexturesPrefix,GetDefault<UStalkerGameSettings>()->IgnoreTexturesWithPrefixWhenImport);
 }
 
 void UStalkerEditorManager::ImportMeshes()

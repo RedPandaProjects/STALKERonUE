@@ -112,6 +112,7 @@ void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportAllTextures, "ImportAllTextures", FText::FromString("1 Import All Textures"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportUITextures, "ImportUITextures", FText::FromString("1a Import UI Textures"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportWMTextures, "ImportWMTextures", FText::FromString("1b Import Wallmarks Textures"));
+		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportGradTextures, "ImportGradTextures", FText::FromString("1c Import Grad Textures"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportPhysicalMaterials, "ImportPhysicalMaterials", FText::FromString("2 Import Physical Materials"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportMeshes, "ImportMeshes", FText::FromString("3  Import Meshes"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportParticles, "ImportParticles", FText::FromString("4  Import Particles"));

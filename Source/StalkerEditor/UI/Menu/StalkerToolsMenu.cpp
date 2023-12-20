@@ -30,6 +30,12 @@ void StalkerToolsMenu::Initialize()
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
 
+		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportGradTextures,
+			FText::FromString(TEXT("1c Import Grad Textures")),
+			FText::FromString(TEXT("Import Grad Textures")),
+			FSlateIcon()
+		).SetCommandList(GStalkerEditorManager->UICommandList);
+
 		Section.AddMenuEntry(StalkerEditorCommands::Get().ImportPhysicalMaterials,
 			FText::FromString(TEXT("2  Import Physical Materials")),
 			FText::FromString(TEXT("Import Physical Materials")),

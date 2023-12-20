@@ -2,6 +2,9 @@
 #include "../Controller/StalkerPlayerController.h"
 #include "../../Kinematics/StalkerKinematicsComponent.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
+#include "Kernel/XRay/Render/Interface/XRayRenderTarget.h"
+#include "Kismet/KismetMaterialLibrary.h"
 #include "Resources/StalkerAttachable.h"
 #include "Resources/StalkerResourcesManager.h"
 THIRD_PARTY_INCLUDES_START
@@ -15,8 +18,11 @@ AStalkerPlayerCharacter::AStalkerPlayerCharacter()
 
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetRootComponent());
-	FirstPersonCameraComponent->bUsePawnControlRotation = true; 
+	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 	XRayObject = nullptr;
+	NoiseTime = -1;
+	NoiseShift.X = 0;
+	NoiseShift.Y = 0;
 }
 
 void AStalkerPlayerCharacter::PossessedBy(AController* NewController)
@@ -35,7 +41,11 @@ void AStalkerPlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 	FirstPersonCameraAttachable = NewObject<UStalkerAttachable>(this);
 	FirstPersonCameraAttachable->OwnerComponent = FirstPersonCameraComponent;
-	
+	PostProcessMaterial = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->PostProcessMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
+
+	FWeightedBlendable& WeightedBlendable = FirstPersonCameraComponent->PostProcessSettings.WeightedBlendables.Array. AddDefaulted_GetRef();
+	WeightedBlendable.Object = PostProcessMaterial;
+	WeightedBlendable.Weight = 1;	NoiseTime = -1;
 }
 
 // Called every frame
@@ -55,10 +65,79 @@ void AStalkerPlayerCharacter::Tick(float DeltaTime)
 	View.SetRotation(View.GetRotation().Inverse());
 	FirstPersonCameraComponent->SetWorldTransform(View);
 	FirstPersonCameraComponent->FieldOfView = Device->fFOV;
-	FRotator RotationToUnreal(0,90,0);
-	FRotator Rotation(FQuat(View.GetRotation())*FQuat(RotationToUnreal));
+	const FRotator RotationToUnreal(0,90,0);
+	const FRotator Rotation(FQuat(View.GetRotation())*FQuat(RotationToUnreal));
 	CastChecked<APlayerController>(GetController())->SetControlRotation(Rotation);
 
+	static FName NAME_Brightness = "Brightness";
+	PostProcessMaterial->SetVectorParameterValue(NAME_Brightness,GRenderTarget.AddColor);
+
+	static FName NAME_Gray = "Gray";
+	FLinearColor GrayColor = GRenderTarget.GrayColor;
+	GrayColor.A = FMath::Clamp(1 - GRenderTarget.Gray,0,1);
+	PostProcessMaterial->SetVectorParameterValue(NAME_Gray,GrayColor);
+
+	FLinearColor BaseColor = GRenderTarget.BaseColor;
+	BaseColor.A = FMath::Clamp(1 - GRenderTarget.Noise,0,1);
+	PostProcessMaterial->SetVectorParameterValue(NAME_Color,BaseColor);
+
+	const FVector2f MagicTextureSize = {128,128};
+	auto CalculateUVNoiseLambda = [this,DeltaTime,MagicTextureSize]()
+	{
+		const FVector2f VirtualTextureSize = MagicTextureSize*GRenderTarget.NoiseScale+EPS_S;
+		NoiseTime -= DeltaTime;
+		if(NoiseTime<0)
+		{
+			int32 Width = FMath::CeilToInt(VirtualTextureSize.X);
+			Width = FMath::RandHelper(Width?Width:1);
+			int32 Height = FMath::CeilToInt(VirtualTextureSize.Y);
+			Height = FMath::RandHelper(Height?Height:1);
+			if(FMath::IsNearlyZero(GRenderTarget.NoiseFPS))
+			{
+				NoiseTime = 1;
+			}
+			else
+			{
+				while (NoiseTime<0)		
+				{
+					NoiseTime += 1.f/GRenderTarget.NoiseFPS;
+				}
+			}
+			NoiseShift.X = static_cast<float>(Width);
+			NoiseShift.Y = static_cast<float>(Height);
+		}
+		const FVector2f ScreenSize = {static_cast<float>(GRenderTarget.get_width()),static_cast<float>(GRenderTarget.get_height())};
+		const FVector2f StartUV = (NoiseShift+0.5f)/VirtualTextureSize;
+		const FVector2f EndUV = StartUV + (VirtualTextureSize/ScreenSize) + 1.f;
+		return FVector4f{StartUV.X,StartUV.Y,EndUV.X,EndUV.Y};
+	};
+	
+	static FName NAME_NoiseUV = "NoiseUV";
+	PostProcessMaterial->SetVectorParameterValue(NAME_NoiseUV,CalculateUVNoiseLambda());
+
+	auto CalculateUVDualityLambda = [this](FVector4f&OutUV1,FVector4f&OutUV2)
+	{
+		const FVector2f ScreenSize = {static_cast<float>(GRenderTarget.get_width()),static_cast<float>(GRenderTarget.get_height())};
+		const FVector2f Shift = (FVector2f(0.5f) / ScreenSize)*GRenderTarget.Blur;
+		const FVector2f Blur0 = (FVector2f(0.5f) / ScreenSize) + Shift;
+		const FVector2f Blur1 = (FVector2f(0.5f) + ScreenSize)/ScreenSize + Shift;
+		const FVector2f ShiftDuality = GRenderTarget.Duality*0.5f;
+		OutUV1.X = Blur0.X;
+		OutUV1.Y = Blur0.Y;
+		OutUV1.Z = Blur1.X - ShiftDuality.X;
+		OutUV1.W = Blur1.Y - ShiftDuality.Y;
+		
+		OutUV2.X = Blur0.X + ShiftDuality.X;
+		OutUV2.Y = Blur0.Y + ShiftDuality.Y;
+		OutUV2.Z = Blur1.X;
+		OutUV2.W = Blur1.Y;
+	};
+	FVector4f ScreenUV1,ScreenUV2;
+	CalculateUVDualityLambda(ScreenUV1,ScreenUV2);
+	static FName NAME_SceenUV1 = "SceenUV1";
+	PostProcessMaterial->SetVectorParameterValue(NAME_SceenUV1,ScreenUV1);
+	static FName NAME_SceenUV2 = "SceenUV2";
+	PostProcessMaterial->SetVectorParameterValue(NAME_SceenUV2,ScreenUV2);
 }
 
 void AStalkerPlayerCharacter::BeginDestroy()
