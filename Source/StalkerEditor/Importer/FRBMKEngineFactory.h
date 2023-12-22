@@ -60,6 +60,7 @@ private:
 	UAnimSequence*					CreateAnim					(const FString& Name, USkeleton* InMesh,TArray<TSharedPtr<CBoneData>>&BoneData, shared_motions&InMotion,u16 ID);
 	void							CreatePhysicsAsset			(const FString& Name, USkeletalMesh* InMesh, const TArray<IBoneData*>& Bones);
 	void							ReadOGGSound				(FArchive&Ar,TArray<uint16>&OutData,int32&OutSampleRate,int32&OutNumChannels,FRBMKOGGComment&OutOGGComment);
+	USoundCue*						CreateSoundLoopCue			(USoundWave* InSound,	const FString& Path);
 	UObject*						ParentPackage;
 	EObjectFlags					ObjectFlags;
 	TArray< CEditableObject*>		Objects;

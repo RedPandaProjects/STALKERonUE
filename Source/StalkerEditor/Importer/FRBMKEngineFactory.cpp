@@ -15,6 +15,8 @@
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
 #include "Resources/SoundWave/StalkerSoundWaveAssetUserData.h"
+#include "Sound/SoundNodeLooping.h"
+#include "Sound/SoundNodeWavePlayer.h"
 THIRD_PARTY_INCLUDES_START
 #include "Editors/XrECore/Engine/GameMtlLib.h"
 THIRD_PARTY_INCLUDES_END
@@ -1509,6 +1511,10 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 		ObjectCreated.Add(SoundWave);
 		FAssetRegistryModule::AssetCreated(SoundWave);
 	}
+	if(IsValid(SoundWave))
+	{
+		CreateSoundLoopCue(SoundWave,Path);
+	}
 	return SoundWave;
 }
 
@@ -1618,6 +1624,10 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 
 		ObjectCreated.Add(SoundWave);
 		FAssetRegistryModule::AssetCreated(SoundWave);
+	}
+	if(IsValid(SoundWave))
+	{
+		CreateSoundLoopCue(SoundWave,Path);
 	}
 	return SoundWave;
 }
@@ -2461,5 +2471,54 @@ void FRBMKEngineFactory::ReadOGGSound(FArchive& Ar, TArray<uint16>& OutData, int
 }
 
 	ov_clear(&OggVorbisFileData);
+}
+
+USoundCue* FRBMKEngineFactory::CreateSoundLoopCue(USoundWave* InSound, const FString& Path)
+{
+	auto InsertSoundNodeLambda = [](USoundCue* SoundCue, UClass* NodeClass, int32 NodeIndex)
+	{
+		USoundNode* SoundNode = SoundCue->ConstructSoundNode<USoundNode>(NodeClass);
+
+		// If this node allows >0 children but by default has zero - create a connector for starters
+		if (SoundNode->GetMaxChildNodes() > 0 && SoundNode->ChildNodes.Num() == 0)
+		{
+			SoundNode->CreateStartingConnectors();
+		}
+
+		SoundNode->GraphNode->NodePosX = -150 * NodeIndex - 100;
+		SoundNode->GraphNode->NodePosY = -35;
+
+		// Link the node to the cue.
+		SoundNode->ChildNodes[0] = SoundCue->FirstNode;
+
+		// Link the attenuation node to root.
+		SoundCue->FirstNode = SoundNode;
+
+		SoundCue->LinkGraphNodesFromSoundNodes();
+		return SoundCue;
+	};
+
+	USoundCue* SoundCue = nullptr;
+	if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_LoopCue"), ObjectFlags, SoundCue))
+	{
+		USoundNodeWavePlayer* WavePlayer = SoundCue->ConstructSoundNode<USoundNodeWavePlayer>();
+
+
+		int32 NodeIndex = 0;
+
+		WavePlayer->GraphNode->NodePosX = -150 * (NodeIndex++) - 100;
+		WavePlayer->GraphNode->NodePosY = -35;
+		WavePlayer->bLooping = true;
+		WavePlayer->SetSoundWave(InSound);
+
+		SoundCue->VolumeMultiplier = 1;
+		SoundCue->FirstNode = WavePlayer;
+		SoundCue->LinkGraphNodesFromSoundNodes();
+		SoundCue->AttenuationSettings = InSound->AttenuationSettings;
+		//InsertSoundNode(SoundCue,USoundNodeLooping::StaticClass(),NodeIndex);
+		FAssetRegistryModule::AssetCreated(SoundCue);
+	}
+
+	return SoundCue;
 }
 #undef LOCTEXT_NAMESPACE 
