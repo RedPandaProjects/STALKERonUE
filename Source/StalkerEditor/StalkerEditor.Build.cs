@@ -49,7 +49,12 @@ public class StalkerEditor : ModuleRules
                 "Sequencer",
                 "RHI",
                 "Foliage"
-            }
-            );
+            });
+
+        AddEngineThirdPartyPrivateStaticDependencies(Target,
+            "UEOgg",
+            "Vorbis",
+            "VorbisFile"
+        );
     }
 }

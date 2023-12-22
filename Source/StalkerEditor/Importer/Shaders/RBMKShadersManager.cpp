@@ -241,6 +241,10 @@ void FRBMKShadersManager::ImportTextures(const TArray<FString>& Prefixes,const T
 		}
 		Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import texture:%s"),*Texture)));
 		GetOrImportTexture(Texture);
+		if (GWarn->ReceivedUserCancel())
+		{
+			break;
+		}
 	}
 
 }

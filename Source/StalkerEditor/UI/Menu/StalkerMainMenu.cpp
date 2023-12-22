@@ -123,6 +123,7 @@ void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportPhysicalMaterials, "ImportPhysicalMaterials", FText::FromString("2. Import Physical Materials"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportMeshes, "ImportMeshes", FText::FromString("3. Import Meshes"));
 		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportParticles, "ImportParticles", FText::FromString("4. Import Particles"));
+		InMenuBuilder.AddMenuEntry(StalkerEditorCommands::Get().ImportSounds, "ImportSounds", FText::FromString("5. Import Sounds"));
 		FUIAction Action(FExecuteAction::CreateLambda(
 		[]()
 		{

@@ -64,6 +64,12 @@ void StalkerToolsMenu::Initialize()
 			FSlateIcon()
 		).SetCommandList(GStalkerEditorManager->UICommandList);
 
+    	Section.AddMenuEntry(StalkerEditorCommands::Get().ImportSounds,
+			FText::FromString(TEXT("5. Import Sounds")),
+			FText::FromString(TEXT("Import Sounds")),
+			FSlateIcon()
+		).SetCommandList(GStalkerEditorManager->UICommandList);
+
 		FUIAction Action(FExecuteAction::CreateLambda(
 		[]()
 		{

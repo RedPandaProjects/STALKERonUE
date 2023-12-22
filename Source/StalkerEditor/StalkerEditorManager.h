@@ -15,6 +15,7 @@ public:
 	void											ImportWMTextures			();
 	void											ImportGradTextures			();
 	void											ImportMeshes				();
+	void											ImportSounds				();
 	void											ImportPhysicalMaterials		();
 	void											ImportParticles				();
 

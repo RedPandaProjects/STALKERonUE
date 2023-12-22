@@ -2,6 +2,7 @@
 
 #include <Resources/StaticMesh/StalkerStaticMeshAssetUserData.h>
 
+#include "AudioCompressionSettingsUtils.h"
 #include "ObjectTools.h"
 #include "PhysicsEngine/PhysicsAsset.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsBoneData.h"
@@ -13,11 +14,21 @@
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
+#include "Resources/SoundWave/StalkerSoundWaveAssetUserData.h"
 THIRD_PARTY_INCLUDES_START
 #include "Editors/XrECore/Engine/GameMtlLib.h"
 THIRD_PARTY_INCLUDES_END
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialPairsData.h"
+
+#include "VorbisAudioInfo.h"
+#if WITH_OGGVORBIS
+	#pragma pack(push, 8)
+	#include "vorbis/vorbisenc.h"
+	#include "vorbis/vorbisfile.h"
+	#pragma pack(pop)
+#endif
+
 #define LOCTEXT_NAMESPACE "XRayImporterModule"
 
 
@@ -1429,6 +1440,189 @@ void FRBMKEngineFactory::ImportBump2D(const FString& FileName, TObjectPtr<UTextu
 	}
 }
 
+
+USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
+{
+	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
+	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString Path = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Sounds") / PackageFileName);
+	
+	USoundWave* SoundWave = nullptr;
+	if(LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,SoundWave))
+	{
+		string_path OGGFileName;
+		FS.update_path(OGGFileName, _game_sounds_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), ".ogg").c_str());
+
+		FArrayReader OGGReader;
+		if(!ensure(FFileHelper::LoadFileToArray(OGGReader,ANSI_TO_TCHAR(OGGFileName))))
+		{
+			return nullptr;
+		}
+		TArray<uint16> PCMData;
+		int32 SampleRate,NumChannels;
+		FRBMKOGGComment OGGComment;
+		ReadOGGSound(OGGReader,PCMData,SampleRate,NumChannels,OGGComment);
+
+		TArray<uint8> RawWaveData;
+		SerializeWaveFile(RawWaveData, reinterpret_cast<uint8*>(PCMData.GetData()), PCMData.Num()*2, NumChannels, SampleRate);
+
+		FSharedBuffer Buffer = FSharedBuffer::Clone(RawWaveData.GetData(), RawWaveData.Num());
+
+		SoundWave->RawData.UpdatePayload(Buffer);
+
+		SoundWave->RawPCMDataSize = PCMData.Num()*2;
+		SoundWave->RawPCMData = static_cast<uint8*>(FMemory::Malloc(SoundWave->RawPCMDataSize));
+		FMemory::Memcpy(SoundWave->RawPCMData, PCMData.GetData(), SoundWave->RawPCMDataSize);
+
+		SoundWave->Duration = static_cast<float>(PCMData.Num())/static_cast<float>(NumChannels*SampleRate);
+		SoundWave->SetSampleRate(SampleRate);
+		SoundWave->NumChannels = NumChannels;
+		SoundWave->Volume = OGGComment.BaseVolume;
+		SoundWave->SetSoundAssetCompressionType(ESoundAssetCompressionType::BinkAudio);
+		const bool bRebuildStreamingChunks = FPlatformCompressionUtilities::IsCurrentPlatformUsingStreamCaching();
+		SoundWave->InvalidateCompressedData(true /* bFreeResources */, bRebuildStreamingChunks);
+
+		// If stream caching is enabled, we need to make sure this asset is ready for playback.
+		if (bRebuildStreamingChunks && SoundWave->IsStreaming(nullptr))
+		{
+			SoundWave->LoadZerothChunk();
+		}
+
+		SoundWave->PostImport();
+		USoundAttenuation* SoundAttenuation = nullptr;
+		if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
+		{
+			SoundAttenuation->Attenuation.FalloffDistance = OGGComment.MaxDistance*100.f - OGGComment.MinDistance*100.f;
+			SoundAttenuation->Attenuation.AttenuationShapeExtents.X = OGGComment.MinDistance*100.f;
+			SoundAttenuation->Modify();
+			ObjectCreated.Add(SoundAttenuation);
+			FAssetRegistryModule::AssetCreated(SoundAttenuation);
+		}
+		SoundWave->AttenuationSettings = SoundAttenuation;
+		UStalkerSoundWaveAssetUserData*UserData =	NewObject<UStalkerSoundWaveAssetUserData>(SoundWave);
+		UserData->Flags = OGGComment.Flags;
+		UserData->AIRatioToDistance = OGGComment.MaxAIDistance/OGGComment.MaxDistance;
+		UserData->AIRatioToDistance = FMath::Clamp(UserData->AIRatioToDistance,0,1);
+		SoundWave->AddAssetUserData(UserData);
+		SoundWave->Modify();
+
+		ObjectCreated.Add(SoundWave);
+		FAssetRegistryModule::AssetCreated(SoundWave);
+	}
+	return SoundWave;
+}
+
+USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName)
+{
+	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
+	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
+	const FString Path = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Sounds") / PackageFileName);
+	
+	USoundWave* SoundWave = nullptr;
+	if(LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,SoundWave))
+	{
+		TArray<uint16> PCMData;
+		int32 SampleRate,NumChannels = 2;
+		FRBMKOGGComment OGGComment;
+		{
+			TArray<uint16> InPCMData;
+			string_path OGGFileName;
+			FS.update_path(OGGFileName, _game_sounds_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), "_l.ogg").c_str());
+
+			FArrayReader OGGReader;
+			if(!ensure(FFileHelper::LoadFileToArray(OGGReader,ANSI_TO_TCHAR(OGGFileName))))
+			{
+				return nullptr;
+			}
+			int32 InNumChannels;
+			ReadOGGSound(OGGReader,InPCMData,SampleRate,InNumChannels,OGGComment);
+			if(!ensure(InNumChannels==1))
+			{
+				return nullptr;
+			}
+			PCMData.AddUninitialized(InPCMData.Num()*2);
+			for(int32 i = 0; i<InPCMData.Num();i++)
+			{
+				PCMData[i*2] = InPCMData[i];
+			}
+		}
+		{
+			TArray<uint16> InPCMData;
+			string_path OGGFileName;
+			FS.update_path(OGGFileName, _game_sounds_, ChangeFileExt(TCHAR_TO_ANSI(*FileName), "_r.ogg").c_str());
+
+			FArrayReader OGGReader;
+			if(!ensure(FFileHelper::LoadFileToArray(OGGReader,ANSI_TO_TCHAR(OGGFileName))))
+			{
+				return nullptr;
+			}
+			int32 InNumChannels;
+			int32 InSampleRate;
+			ReadOGGSound(OGGReader,InPCMData,InSampleRate,InNumChannels,OGGComment);
+			if(!ensure(InNumChannels==1))
+			{
+				return nullptr;
+			}
+			if(!ensure(SampleRate==InSampleRate))
+			{
+				return nullptr;
+			}
+			for(int32 i = 0; i<InPCMData.Num();i++)
+			{
+				PCMData[i*2 + 1] = InPCMData[i];
+			}
+		}
+
+		TArray<uint8> RawWaveData;
+		SerializeWaveFile(RawWaveData, reinterpret_cast<uint8*>(PCMData.GetData()), PCMData.Num()*2, NumChannels, SampleRate);
+
+		FSharedBuffer Buffer = FSharedBuffer::Clone(RawWaveData.GetData(), RawWaveData.Num());
+
+		SoundWave->RawData.UpdatePayload(Buffer);
+
+		SoundWave->RawPCMDataSize = PCMData.Num()*2;
+		SoundWave->RawPCMData = static_cast<uint8*>(FMemory::Malloc(SoundWave->RawPCMDataSize));
+		FMemory::Memcpy(SoundWave->RawPCMData, PCMData.GetData(), SoundWave->RawPCMDataSize);
+
+		SoundWave->Duration = static_cast<float>(PCMData.Num())/static_cast<float>(NumChannels*SampleRate);
+		SoundWave->SetSampleRate(SampleRate);
+		SoundWave->NumChannels = NumChannels;
+		SoundWave->Volume = OGGComment.BaseVolume;
+		SoundWave->SetSoundAssetCompressionType(ESoundAssetCompressionType::BinkAudio);
+		const bool bRebuildStreamingChunks = FPlatformCompressionUtilities::IsCurrentPlatformUsingStreamCaching();
+		SoundWave->InvalidateCompressedData(true /* bFreeResources */, bRebuildStreamingChunks);
+
+		// If stream caching is enabled, we need to make sure this asset is ready for playback.
+		if (bRebuildStreamingChunks && SoundWave->IsStreaming(nullptr))
+		{
+			SoundWave->LoadZerothChunk();
+		}
+
+		SoundWave->PostImport();
+		USoundAttenuation* SoundAttenuation = nullptr;
+		if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
+		{
+			SoundAttenuation->Attenuation.FalloffDistance = OGGComment.MaxDistance*100.f - OGGComment.MinDistance*100.f;
+			SoundAttenuation->Attenuation.AttenuationShapeExtents.X = OGGComment.MinDistance*100.f;
+			SoundAttenuation->Modify();
+			ObjectCreated.Add(SoundAttenuation);
+			FAssetRegistryModule::AssetCreated(SoundAttenuation);
+		}
+		SoundWave->AttenuationSettings = SoundAttenuation;
+		UStalkerSoundWaveAssetUserData*UserData =	NewObject<UStalkerSoundWaveAssetUserData>(SoundWave);
+		UserData->Flags = OGGComment.Flags;
+		UserData->AIRatioToDistance = OGGComment.MaxAIDistance/OGGComment.MaxDistance;
+		UserData->AIRatioToDistance = FMath::Clamp(UserData->AIRatioToDistance,0,1);
+		SoundWave->AddAssetUserData(UserData);
+		SoundWave->Modify();
+
+		ObjectCreated.Add(SoundWave);
+		FAssetRegistryModule::AssetCreated(SoundWave);
+	}
+	return SoundWave;
+}
+
+
 bool FRBMKEngineFactory::LoadOrCreateOrOverwriteAsset(UClass* InClass, const FString& Path, EObjectFlags InFlags,UObject*& OutNewObject)
 {
 
@@ -2156,5 +2350,116 @@ void FRBMKEngineFactory::CreatePhysicsAsset(const FString& FullName, USkeletalMe
 	PhysicsAsset->PostEditChange();
 	ObjectCreated.Add(PhysicsAsset);
 	FAssetRegistryModule::AssetCreated(PhysicsAsset);
+}
+
+
+static int OGGSeekFunction(void* DataSource, ogg_int64_t Offset, int Type)
+{
+	switch (Type)
+	{
+	case SEEK_SET:
+		static_cast<FArchive*>(DataSource)->Seek((int64)Offset);
+		break;
+	case SEEK_CUR:
+		static_cast<FArchive*>(DataSource)->Seek((int64)Offset+ static_cast<FArchive*>(DataSource)->Tell());
+		break;
+	case SEEK_END:
+		static_cast<FArchive*>(DataSource)->Seek((int64)Offset + ((FArchive*)DataSource)->TotalSize());
+		break;
+	}
+	return 0;
+}
+static size_t OGGReadFunction(void* Pointer, size_t Size, size_t NumBlocks, void* DataSource)
+{
+	FArchive* F = static_cast<FArchive*>(DataSource);
+	const size_t Elapsed = F->TotalSize()-F->Tell();
+	const size_t ExistBlock = FMath::Max(static_cast<int64>(0), static_cast<int64>(Elapsed / Size));
+	const size_t ReadBlock =  FMath::Min(ExistBlock, NumBlocks);
+	F->Serialize(Pointer, static_cast<size_t>(ReadBlock * Size));
+	return ReadBlock;
+}
+
+static int OGGCloseFunction(void* DataSource)
+{
+	return 0;
+}
+
+static long OGGTellFunction(void* DataSource)
+{
+	return static_cast<FArchive*>(DataSource)->Tell();
+}
+
+void FRBMKEngineFactory::ReadOGGSound(FArchive& Ar, TArray<uint16>& OutData, int32& OutSampleRate, int32& OutNumChannels,FRBMKOGGComment& OutOGGComment)
+{
+	OggVorbis_File OggVorbisFileData = {};
+	ov_callbacks OGGCallbacks = { OGGReadFunction, OGGSeekFunction, OGGCloseFunction, OGGTellFunction };
+	ov_open_callbacks(&Ar, &OggVorbisFileData, nullptr, 0, OGGCallbacks);
+	vorbis_info* ovi = ov_info(&OggVorbisFileData, -1);
+	OutSampleRate = ovi->rate;
+	OutNumChannels = ovi->channels;
+	ogg_int64_t PCMTotal = ov_pcm_total(&OggVorbisFileData, -1)*2* ovi->channels;
+
+	vorbis_comment*	ovm		= ov_comment(&OggVorbisFileData,-1);
+	if (ovm->comments)
+	{
+		FArrayReader InComment;
+		InComment.AddUninitialized(ovm->comment_lengths[0]);
+		FMemory::Memcpy(InComment.GetData(),ovm->user_comments[0],ovm->comment_lengths[0]);
+		int32 Version;
+		InComment<<Version;
+		switch (Version)
+		{
+		case 1:
+			InComment<<OutOGGComment.MinDistance;
+			InComment<<OutOGGComment.MaxDistance;
+			InComment<<OutOGGComment.Flags;
+			OutOGGComment.MaxAIDistance = OutOGGComment.MaxDistance;
+			break;
+		case 2:
+			InComment<<OutOGGComment.MinDistance;
+			InComment<<OutOGGComment.MaxDistance;
+			InComment<<OutOGGComment.BaseVolume;
+			InComment<<OutOGGComment.Flags;
+			OutOGGComment.MaxAIDistance = OutOGGComment.MaxDistance;
+			break;
+		case 3:
+			InComment<<OutOGGComment.MinDistance;
+			InComment<<OutOGGComment.MaxDistance;
+			InComment<<OutOGGComment.BaseVolume;
+			InComment<<OutOGGComment.Flags;
+			InComment<<OutOGGComment.MaxAIDistance;
+			break;
+		default: ;
+		}
+		OutOGGComment.MaxAIDistance = FMath::Min(OutOGGComment.MaxAIDistance,OutOGGComment.MaxDistance);
+
+	}
+
+	OutData.AddUninitialized(PCMTotal/2);
+
+	int64 CurrentOffset = 0;
+	int32 CurrentSection = 0;
+	
+	//m_Duration = static_cast<float>(PCMTotal) / static_cast<float>(OutSampleRate* OutNumChannels*2);
+	while (CurrentOffset <PCMTotal)
+	{
+		
+		int32 Result = ov_read(&OggVorbisFileData, reinterpret_cast<char*>(OutData.GetData()) + CurrentOffset, PCMTotal - CurrentOffset, 0, 2, 1, &CurrentSection);
+
+		if (Result == 0)
+		{
+			break;
+		}
+		else if (!ensure(Result >= 0)) 
+		{
+			
+		}
+		else
+		{
+			CurrentOffset += Result;
+		}
+}
+
+	ov_clear(&OggVorbisFileData);
 }
 #undef LOCTEXT_NAMESPACE 

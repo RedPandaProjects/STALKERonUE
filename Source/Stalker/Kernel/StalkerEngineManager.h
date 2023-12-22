@@ -33,7 +33,7 @@ public:
 	inline class FStalkerResourcesManager*				GetResourcesManager					()								{return ResourcesManager;	}
 
 	void												SetInput							(class FRBMKInput* InXRayInput);
-	inline class FRBMKInput*								GetInput							()								{return MyXRayInput;}
+	inline class FRBMKInput*							GetInput							()								{return MyXRayInput;}
 
 	inline class UStalkerGameViewportClient*			GetGameViewportClient				()								{return GameViewportClient;}
 

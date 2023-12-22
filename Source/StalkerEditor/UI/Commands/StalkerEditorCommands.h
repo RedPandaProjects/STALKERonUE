@@ -18,4 +18,5 @@ public:
 	TSharedPtr< FUICommandInfo > ImportMeshes;
 	TSharedPtr< FUICommandInfo > ImportPhysicalMaterials;
 	TSharedPtr< FUICommandInfo > ImportParticles;
+	TSharedPtr< FUICommandInfo > ImportSounds;
 };

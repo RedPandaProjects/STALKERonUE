@@ -237,13 +237,12 @@ void UStalkerEditorManager::ImportSounds()
 				continue;
 			}
 		}
-		FString BaseFilePath = FPaths::GetBaseFilename(FileName,false);
-		FString GameFilePath = BaseFilePath.RightChop(SoundPath.Len());
 		if(IgnoreFiles.Contains(FileName))
 		{
-			Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Skip Sounds:%s"),*GameFilePath)));
 			continue;
 		}
+		FString BaseFilePath = FPaths::GetBaseFilename(FileName,false);
+		FString GameFilePath = BaseFilePath.RightChop(SoundPath.Len());
 		EngineFactory.ImportSound(GameFilePath);
 		Progress.EnterProgressFrame(1, FText::FromString(FString::Printf(TEXT("Import Sounds:%s"),*GameFilePath)));
 		if (GWarn->ReceivedUserCancel())

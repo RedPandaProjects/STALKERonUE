@@ -1,0 +1,2 @@
+#include "StalkerSoundWaveAssetUserData.h"
+
