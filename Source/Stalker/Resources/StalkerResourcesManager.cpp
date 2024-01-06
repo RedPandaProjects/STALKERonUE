@@ -5,6 +5,7 @@
 #include "../Entities/Levels/Light/StalkerLight.h"
 #include "../Entities/Levels/Proxy/StalkerProxy.h"
 #include "../Entities/Particles/StalkerNiagaraActor.h"
+#include "Sound/StalkerSoundManager.h"
 #include "Spawn/StalkerGameSpawn.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/xr_object.h"
@@ -243,6 +244,9 @@ void FStalkerResourcesManager::Reload()
 
 class AStalkerLight* FStalkerResourcesManager::CreateLight()
 {
+#if WITH_EDITORONLY_DATA
+	check(GWorld&&GWorld->IsGameWorld());
+#endif
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerLight* Result = GWorld->SpawnActor< AStalkerLight>(SpawnParameters);
@@ -404,6 +408,9 @@ void FStalkerResourcesManager::UnregisterKinematics(class UStalkerKinematicsComp
 
 AStalkerNiagaraActor* FStalkerResourcesManager::CreateParticles(const char* Name)
 {
+#if WITH_EDITORONLY_DATA
+	check(GWorld&&GWorld->IsGameWorld());
+#endif
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerNiagaraActor* Result = GWorld->SpawnActor< AStalkerNiagaraActor>(SpawnParameters);
@@ -488,6 +495,7 @@ void FStalkerResourcesManager::AddReferencedObjects(FReferenceCollector& Collect
 		Collector.AddReferencedObject(Value);
 	}
 	Collector.AddReferencedObject(GameSpawn);
+	Collector.AddReferencedObject(SoundManager);
 }
 
 FString FStalkerResourcesManager::GetReferencerName() const
@@ -497,12 +505,12 @@ FString FStalkerResourcesManager::GetReferencerName() const
 
 FStalkerResourcesManager::FStalkerResourcesManager()
 {
-
+	SoundManager = NewObject<UStalkerSoundManager>();
 }
 
 FStalkerResourcesManager::~FStalkerResourcesManager()
 {
-
+	SoundManager->MarkAsGarbage();
 }
 
 

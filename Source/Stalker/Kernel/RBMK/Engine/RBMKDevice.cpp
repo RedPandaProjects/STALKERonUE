@@ -1,4 +1,8 @@
 #include "RBMKDevice.h"
+
+#include "Kernel/StalkerEngineManager.h"
+#include "Resources/StalkerResourcesManager.h"
+#include "Resources/Sound/StalkerSoundManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IGame_Persistent.h"
 THIRD_PARTY_INCLUDES_END
@@ -60,10 +64,18 @@ void FRBMKDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
 		{
 			IsTimerPaused = true;
 		}
-	
-		if (bSound && ::Sound)
+		if(bSound)
 		{
-			SndEmitters =					::Sound->pause_emitters(true);
+			if(UStalkerSoundManager* StalkerSoundManager = GStalkerEngineManager->GetResourcesManager()->GetSoundManager())
+			{
+				for(UStalkerSoundSource*SoundSource:StalkerSoundManager->SoundSources)
+				{
+					if(IsValid(SoundSource))
+					{
+						SoundSource->Pause(true);
+					}
+				}
+			}
 		}
 	}
 	else
@@ -73,14 +85,20 @@ void FRBMKDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
 			fTimeDelta						= EPS_S + EPS_S;
 			IsTimerPaused = false;
 		}
-		
 		if(bSound)
 		{
-			if(SndEmitters>0) 
+			if(UStalkerSoundManager* StalkerSoundManager = GStalkerEngineManager->GetResourcesManager()->GetSoundManager())
 			{
-				SndEmitters =			::Sound->pause_emitters(false);
+				for(UStalkerSoundSource*SoundSource:StalkerSoundManager->SoundSources)
+				{
+					if(IsValid(SoundSource))
+					{
+						SoundSource->Pause(false);
+					}
+				}
 			}
 		}
+	
 	}
 }
 

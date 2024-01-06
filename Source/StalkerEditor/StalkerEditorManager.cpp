@@ -21,10 +21,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 #include "UI/Commands/StalkerEditorCommands.h"
 #include "Importer/FRBMKParticlesFactory.h"
-THIRD_PARTY_INCLUDES_START
-#include "XrEngine/XRayEngineInterface.h"
 #include "Importer/FRBMKEngineFactory.h"
-THIRD_PARTY_INCLUDES_END
 
 UStalkerEditorManager* GStalkerEditorManager = nullptr;
 #define LOCTEXT_NAMESPACE "StalkerEditor"
@@ -66,6 +63,7 @@ void UStalkerEditorManager::Initialized()
 		FEditorDelegates::PreBeginPIE.AddUObject(this, &UStalkerEditorManager::OnPreBeginPIE);
 		FEditorDelegates::PostPIEStarted.AddUObject(this, &UStalkerEditorManager::OnPostPIEStarted);
 		FEditorDelegates::EndPIE.AddUObject(this, &UStalkerEditorManager::OnEndPIE);
+		FEditorDelegates::PrePIEEnded.AddUObject(this, &UStalkerEditorManager::OnPrePIEEnded);
 
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ReloadConfigsAndScript, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ReloadConfigs));
 		GStalkerEditorManager->UICommandList->MapAction(StalkerEditorCommands::Get().ImportAllTextures, FExecuteAction::CreateUObject(this, &UStalkerEditorManager::ImportAllTextures));
@@ -120,15 +118,7 @@ void UStalkerEditorManager::Destroy()
 
 FString UStalkerEditorManager::GetGamePath()
 {
-	switch (GStalkerEngineManager->GetCurrentGame())
-	{
-	case EStalkerGame::CS:
-		return TEXT("/Game/CS");
-	case EStalkerGame::SHOC:
-		return TEXT("/Game/SHOC");
-	default:
-		return TEXT("/Game/COP");
-	}
+	return GStalkerEngineManager->GetGamePath();
 }
 
 void UStalkerEditorManager::ReloadConfigs()
@@ -345,9 +335,17 @@ void UStalkerEditorManager::OnPostPIEStarted(const bool)
 
 void UStalkerEditorManager::OnEndPIE(const bool)
 {
-	g_Engine->StopGame();
 	GStalkerEngineManager->AppEnd();
 }
+
+void UStalkerEditorManager::OnPrePIEEnded(const bool)
+{
+	UWorld*ThisWorld = GWorld;
+	GWorld = GEditor->GetPIEWorldContext()->World();
+	g_Engine->StopGame();
+	GWorld = ThisWorld;
+}	
+
 
 void UStalkerEditorManager::OnReInitialized()
 {

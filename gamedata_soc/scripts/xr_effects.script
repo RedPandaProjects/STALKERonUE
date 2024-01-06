@@ -1410,11 +1410,8 @@ function agr_knockdown ()
 end
 
 function agr_contuz (actor, npc)
-		local sound_obj_l		= xr_sound.get_safe_sound_object( [[affects\psy_blackout_l]] )
-        local sound_obj_r		= xr_sound.get_safe_sound_object( [[affects\psy_blackout_r]] )
-        
-		sound_obj_l:play_no_feedback(actor, sound_object.s2d, 0, vector():set(-1, 0, 1), 1.0)
-		sound_obj_r:play_no_feedback(actor, sound_object.s2d, 0, vector():set( 1, 0, 1), 1.0)
+		local sound_obj		= xr_sound.get_safe_sound_object( [[affects\psy_blackout]] )
+		sound_obj:play_no_feedback(actor, sound_object.s2d, 0, vector(), 1.0)
 end
 
 function agr_cam_effect ()
@@ -1853,31 +1850,24 @@ function yan_actor_sleep_1 (actor, npc)
 end
 
 function yan_dream_voices (actor, npc)
-        local sound_obj_l		= xr_sound.get_safe_sound_object( [[characters_voice\scenario\yantar\dream_talk_l]] )
-        local sound_obj_r		= xr_sound.get_safe_sound_object( [[characters_voice\scenario\yantar\dream_talk_r]] )
-        
-		sound_obj_l:play_no_feedback(actor, sound_object.s2d, 0, vector():set(-1, 0, 1), 1.0)
-		sound_obj_r:play_no_feedback(actor, sound_object.s2d, 0, vector():set( 1, 0, 1), 1.0)
+        local sound_obj		= xr_sound.get_safe_sound_object( [[characters_voice\scenario\yantar\dream_talk]] )
+		sound_obj:play_no_feedback(actor, sound_object.s2d, 0, vector(), 1.0)
 end
 
 function yan_gluk (actor, npc)
 		
-		local sound_obj_l		= xr_sound.get_safe_sound_object( [[affects\psy_blackout_l]] )
-        local sound_obj_r		= xr_sound.get_safe_sound_object( [[affects\psy_blackout_r]] )
-        
-		sound_obj_l:play_no_feedback(actor, sound_object.s2d, 0, vector():set(-1, 0, 1), 1.0)
-		sound_obj_r:play_no_feedback(actor, sound_object.s2d, 0, vector():set( 1, 0, 1), 1.0)
+	local sound_obj		= xr_sound.get_safe_sound_object( [[affects\psy_blackout]] )
+	sound_obj:play_no_feedback(actor, sound_object.s2d, 0, vector(), 1.0)
+
 	level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
 
 end
 function x18_gluk (actor, npc)
 		level.add_pp_effector ("blink.ppe", 234, false)
-		local sound_obj_l		= xr_sound.get_safe_sound_object( [[affects\psy_blackout_l]] )
-        local sound_obj_r		= xr_sound.get_safe_sound_object( [[affects\psy_blackout_r]] )
+		local sound_obj		= xr_sound.get_safe_sound_object( [[affects\psy_blackout]] )
         local snd_obj			= xr_sound.get_safe_sound_object( [[affects\tinnitus3a]] )
 		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
-		sound_obj_l:play_no_feedback(actor, sound_object.s2d, 0, vector():set(-1, 0, 1), 1.0)
-		sound_obj_r:play_no_feedback(actor, sound_object.s2d, 0, vector():set( 1, 0, 1), 1.0)
+		sound_obj:play_no_feedback(actor, sound_object.s2d, 0, vector(), 1.0)
 	level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
 
 end

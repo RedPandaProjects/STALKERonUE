@@ -7,7 +7,7 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/CustomHUD.h"
 #include "XrEngine/IGame_Level.h"
 THIRD_PARTY_INCLUDES_END
-#include "Kernel/XRay/Render/Interface/UI/XRayUIRender.h"
+#include "Kernel/RBMK/Render/Interface/UI/XRayUIRender.h"
 ENGINE_API BOOL g_bRendering;
 bool UStalkerUIWidget::Initialize()
 {

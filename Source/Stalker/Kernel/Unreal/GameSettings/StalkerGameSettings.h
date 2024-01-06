@@ -35,7 +35,12 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
 	TSoftObjectPtr<UMaterialInterface>	PostProcessMaterial;
-
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
+	TSoftObjectPtr<USoundClass> MasterSoundClass;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
+	TSoftObjectPtr<USoundMix> ShockEffectorMix;
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game",meta = (DisplayName = "Levels Of Shadow of Chernobyl"))
 	TMap<FName, FStalkerLevelInfo> LevelsSOC;
@@ -98,7 +103,13 @@ public:
 	TSoftObjectPtr<UMaterialInterface>		DefaultParticleUnknownMaterial;
 		
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
-	TSoftObjectPtr<UMaterialInterface>		DefaultTerrainMaterial;
+	TSoftObjectPtr<UMaterialInterface> DefaultTerrainMaterial;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TSoftObjectPtr<USoundClass> DefaultSoundClass;
+	
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
+	TMap<FString,TSoftObjectPtr<USoundClass>> SoundClassByPrefixWhenImport;
 
 #endif
 #if WITH_EDITOR

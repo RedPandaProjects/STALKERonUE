@@ -1,18 +1,19 @@
 #pragma once
 THIRD_PARTY_INCLUDES_START
-#include "XrEngine/XRayEngineInterface.h"
+#include "XrEngine/Interfaces/Core/RBMKEngine.h"
 THIRD_PARTY_INCLUDES_END
 
-class FRBMKEngine :public XRayEngineInterface
+class FRBMKEngine :public IRBMKEngine
 {
 public:
 									FRBMKEngine					();
 	void							Initialize					() override;
 	void							Destroy						() override;
+	void							OnFrame						() override;
 
 
-	class XRayUnrealProxyInterface* CreateUnrealProxy			() override;
-	void							Destroy						(class XRayUnrealProxyInterface*) override;
+	class IRBMKUnrealProxy*			CreateUnrealProxy			() override;
+	void							Destroy						(class IRBMKUnrealProxy*) override;
 
 	class ILevelGraph*				GetLevelGraph				(const char*Name) override;
 	class IGameGraph*				GetGameGraph				() override;
@@ -22,14 +23,13 @@ public:
 
 	bool							LoadWorld					(const char* Name) override;
 	void							LoadCFormFormCurrentWorld	(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback);
-	EXRayWorldStatus				GetWorldStatus				() override;
+	ERBMKWorldStatus				GetWorldStatus				() override;
 
 
-	class XRayUnrealProxyInterface* GetUnrealPlayerCharacter	() override;
+	class IRBMKUnrealProxy*			GetUnrealPlayerCharacter	() override;
 
 
 	shared_str						GetUnrealVersion			() override;
-
-
-
+	IRBMKSoundManager*				GetSoundManager				() override;
+	IRBMKEnvironment*				GetEnvironment				() override;
 };

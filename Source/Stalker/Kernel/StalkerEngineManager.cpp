@@ -1,15 +1,15 @@
 #include "StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
+#include "Resources/Sound/StalkerSoundManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
-#include "XrEngine/XRayEngineInterface.h"
 THIRD_PARTY_INCLUDES_END
 #include "Unreal/GameViewportClient/StalkerGameViewportClient.h"
-#include "XRay/Core/RBMKMemory.h"
-#include "XRay/Core/RBMKDebug.h"
-#include "XRay/Core/RBMKLog.h"
-#include "XRay/Core/RBMKInput.h"
-#include "XRay/Core/RBMKEngine.h"
+#include "RBMK/Core/RBMKMemory.h"
+#include "RBMK/Core/RBMKDebug.h"
+#include "RBMK/Core/RBMKLog.h"
+#include "RBMK/Engine/RBMKInput.h"
+#include "RBMK/Engine/RBMKEngine.h"
 #include "Unreal/GameSettings/StalkerGameSettings.h"
 #include "GameDelegates.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
@@ -120,6 +120,7 @@ void FStalkerEngineManager::Initialize()
 void FStalkerEngineManager::AppStart()
 { 
 	PhysicalMaterialsManager->Build();
+	GetResourcesManager()->GetSoundManager()->Build();
 	Device->seqAppStart.Process(rp_AppStart);
 	Device->b_is_Active = TRUE;
 }
@@ -195,6 +196,19 @@ void FStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameView
 FString FStalkerEngineManager::GetCurrentWorldName()
 {
 	return CurrentWorldName;
+}
+
+FString FStalkerEngineManager::GetGamePath()
+{
+	switch (GStalkerEngineManager->GetCurrentGame())
+	{
+	case EStalkerGame::CS:
+		return TEXT("/Game/CS");
+	case EStalkerGame::SHOC:
+		return TEXT("/Game/SHOC");
+	default:
+		return TEXT("/Game/COP");
+	}
 }
 
 class UStalkerAIMap* FStalkerEngineManager::GetLevelGraph(FString LevelName)

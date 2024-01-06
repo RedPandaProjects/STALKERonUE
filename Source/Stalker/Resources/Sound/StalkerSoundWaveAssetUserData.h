@@ -30,7 +30,9 @@ enum class EStalkerSoundTypes:uint32
 	ObjectColliding			= 0x00000200,
 	ObjectExploding			= 0x00000100,
 	Ambient					= 0x00000080,
+	FromSource				= 0xFFFFFFFF UMETA(Hidden),
 };
+ENUM_CLASS_FLAGS(EStalkerSoundTypes);
 
 UCLASS()
 class STALKER_API UStalkerSoundWaveAssetUserData : public UAssetUserData

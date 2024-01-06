@@ -47,6 +47,8 @@ public:
 	class UStalkerAIMap*								GetLevelGraph						(FString LevelName);
 	//TArray< CShapeData::shape_def> DebugShapes;
 
+	FString												GetGamePath							();
+	
 	FSimpleMulticastDelegate							PreReInitializedMulticastDelegate;
 	FSimpleMulticastDelegate							PostReInitializedMulticastDelegate;
 

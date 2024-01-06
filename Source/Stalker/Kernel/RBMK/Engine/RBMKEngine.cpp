@@ -11,12 +11,14 @@
 #include "Entities/Levels/Proxy/StalkerProxy.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "../../Unreal/WorldSettings/StalkerWorldSettings.h"
+#include "Entities/Levels/Environment/StalkerEnvironment.h"
 #include "Resources/CFrom/StalkerCForm.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterial.h"
 #include "Resources/AIMap/StalkerAIMap.h"
 #include "Resources/Spawn/StalkerGameSpawn.h"
 #include "Entities/Player/Character/StalkerPlayerCharacter.h"
+#include "Resources/Sound/StalkerSoundManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -41,13 +43,13 @@ void FRBMKEngine::Initialize()
 	::DU = &GDUInterface;
 	UIRender = &GXRayUIRender;
 	DRender = &GDebugRender;
-	XRayEngineInterface::Initialize();
+	IRBMKEngine::Initialize();
 }
 
 void FRBMKEngine::Destroy()
 {
 	GStalkerEngineManager->SetInput(nullptr);
-	XRayEngineInterface::Destroy();
+	IRBMKEngine::Destroy();
 	delete GXRayInput;
 	delete Console;
 	delete Device;
@@ -56,13 +58,18 @@ void FRBMKEngine::Destroy()
 	GXRayInput = nullptr;
 }
 
-void FRBMKEngine::Destroy(class XRayUnrealProxyInterface*InProxy)
+void FRBMKEngine::OnFrame()
+{
+	IRBMKEngine::OnFrame();
+}
+
+void FRBMKEngine::Destroy(class IRBMKUnrealProxy*InProxy)
 {
 	if (!InProxy)
 	{
 		return;
 	}
-	AStalkerProxy * StalkerProxy =  reinterpret_cast<	AStalkerProxy *>(InProxy->CastUnrealObject(EXRayUnrealObjectType::StalkerProxy));
+	AStalkerProxy * StalkerProxy =  reinterpret_cast<	AStalkerProxy *>(InProxy->CastUnrealObject(ERBMKUnrealObjectType::StalkerProxy));
 	StalkerProxy->Destroy();
 }
 
@@ -97,8 +104,11 @@ bool FRBMKEngine::LoadWorld(const char* Name)
 	return GStalkerEngineManager->LoadWorld(Name);
 }
 
-class XRayUnrealProxyInterface* FRBMKEngine::CreateUnrealProxy()
+class IRBMKUnrealProxy* FRBMKEngine::CreateUnrealProxy()
 {
+#if WITH_EDITORONLY_DATA
+	check(GWorld&&GWorld->IsGameWorld());
+#endif
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
 	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(SpawnParameters);
@@ -106,6 +116,9 @@ class XRayUnrealProxyInterface* FRBMKEngine::CreateUnrealProxy()
 }
 void FRBMKEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback)
 {
+#if WITH_EDITORONLY_DATA
+	check(GWorld&&GWorld->IsGameWorld());
+#endif
 	UWorld*World = GWorld;
 	check(World);
 	AStalkerWorldSettings* StalkerWorldSettings = Cast<AStalkerWorldSettings>(World->GetWorldSettings());
@@ -164,32 +177,35 @@ void FRBMKEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB
 	ObjectSpace.Create(LegacyCFormVertices.GetData(), LegacyCFormTriangles.GetData(), LegacyCFormHeader, build_callback);
 }
 
-EXRayWorldStatus FRBMKEngine::GetWorldStatus()
+ERBMKWorldStatus FRBMKEngine::GetWorldStatus()
 {
 	switch (GStalkerEngineManager->GetWorldStatus())
 	{
 	default:
-		return EXRayWorldStatus::Failure;
+		return ERBMKWorldStatus::Failure;
 		break;
 	case EStalkerWorldStatus::None:
-		return EXRayWorldStatus::None;
+		return ERBMKWorldStatus::None;
 		break;
 	case EStalkerWorldStatus::Ready:
-		return EXRayWorldStatus::Ready;
+		return ERBMKWorldStatus::Ready;
 		break;
 	case EStalkerWorldStatus::Loading:
-		return EXRayWorldStatus::Loading;
+		return ERBMKWorldStatus::Loading;
 		break;
 	case EStalkerWorldStatus::Failure:
-		return EXRayWorldStatus::Failure;
+		return ERBMKWorldStatus::Failure;
 		break;
 	} 
 }
 
-class XRayUnrealProxyInterface* FRBMKEngine::GetUnrealPlayerCharacter()
+class IRBMKUnrealProxy* FRBMKEngine::GetUnrealPlayerCharacter()
 {
 	if (IsValid(GWorld))
 	{
+#if WITH_EDITORONLY_DATA
+		check(GWorld->IsGameWorld());
+#endif
 		if (APlayerController* PC = GWorld->GetFirstPlayerController())
 		{
 			return Cast<AStalkerPlayerCharacter>(PC->GetPawn());
@@ -202,6 +218,27 @@ class XRayUnrealProxyInterface* FRBMKEngine::GetUnrealPlayerCharacter()
 shared_str FRBMKEngine::GetUnrealVersion()
 {
 	return TCHAR_TO_ANSI(FApp::GetBuildVersion()); 
+}
+
+IRBMKSoundManager* FRBMKEngine::GetSoundManager()
+{
+	return GStalkerEngineManager->GetResourcesManager()->GetSoundManager();
+}
+
+IRBMKEnvironment* FRBMKEngine::GetEnvironment()
+{
+#if WITH_EDITORONLY_DATA
+	check(GWorld&&GWorld->IsGameWorld());
+#endif
+	if(AStalkerWorldSettings*WorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings()))
+	{
+		if(!WorldSettings->Environment)
+		{
+			UE_DEBUG_BREAK();
+		}
+		return WorldSettings->Environment;
+	}
+	return nullptr;
 }
 
 void FRBMKEngine::LoadDefaultWorld()

@@ -136,9 +136,9 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 {
 	if (V)
 	{	
-		if (V->CastUnrealObject(EXRayUnrealObjectType::StalkerKinematicsComponent))
+		if (V->CastUnrealObject(ERBMKUnrealObjectType::StalkerKinematicsComponent))
 		{
-			GStalkerEngineManager->GetResourcesManager()->Destroy(reinterpret_cast<UStalkerKinematicsComponent*>(V->CastUnrealObject(EXRayUnrealObjectType::StalkerKinematicsComponent)));
+			GStalkerEngineManager->GetResourcesManager()->Destroy(reinterpret_cast<UStalkerKinematicsComponent*>(V->CastUnrealObject(ERBMKUnrealObjectType::StalkerKinematicsComponent)));
 		}
 		else if (V->dcast_ParticleCustom())
 		{
@@ -202,7 +202,7 @@ void XRayRenderInterface::SpawnSkeletalDecal(const IRenderVisual* InObject, cons
 	const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 	if(UTexture2D * Texture2D = LoadObject<UTexture2D>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn))
 	{
-		if(UStalkerKinematicsComponent *SceneComponent = reinterpret_cast<UStalkerKinematicsComponent*>(const_cast< IRenderVisual*>(InObject)->CastUnrealObject(EXRayUnrealObjectType::StalkerKinematicsComponent)))
+		if(UStalkerKinematicsComponent *SceneComponent = reinterpret_cast<UStalkerKinematicsComponent*>(const_cast< IRenderVisual*>(InObject)->CastUnrealObject(ERBMKUnrealObjectType::StalkerKinematicsComponent)))
 		{
 			
 			FCollisionQueryParams CollisionQueryParams;
@@ -236,7 +236,7 @@ void XRayRenderInterface::SpawnSkeletalDecal(const IRenderVisual* InObject, cons
 			}
 			else
 			{
-				DrawDebugLine(GWorld,FVector(StalkerMath::RBMKLocationToUnreal(StartPoint)),FVector(StalkerMath::RBMKLocationToUnreal(EndPoint)),FColor::Red,false,10.f);
+				//DrawDebugLine(GWorld,FVector(StalkerMath::RBMKLocationToUnreal(StartPoint)),FVector(StalkerMath::RBMKLocationToUnreal(EndPoint)),FColor::Red,false,10.f);
 			}
 
 		}

@@ -2,14 +2,16 @@
 
 
 #include "StalkerGameViewportClient.h"
+
+#include "Resources/StalkerResourcesManager.h"
+#include "Resources/Sound/StalkerSoundManager.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
-#include "XrEngine/XRayEngineInterface.h"
 #include "XrEngine/CustomHUD.h"
 #include "XrEngine/IGame_Level.h"
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/StalkerEngineManager.h"
-#include "Kernel/XRay/Core/RBMKInput.h"
+#include "Kernel/RBMK/Engine/RBMKInput.h"
 #include "../GameMode/StalkerGameMode.h"
 #include "../WorldSettings/StalkerWorldSettings.h"
 #include "../LevelScriptActor/StalkerLevelScriptActor.h"
@@ -157,5 +159,6 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 			Device->seqParallel.clear();
 			Device->seqFrameMT.Process(rp_Frame);
 		}
+		GStalkerEngineManager->GetResourcesManager()->GetSoundManager()->Tick(DeltaTime);
 	}
 }

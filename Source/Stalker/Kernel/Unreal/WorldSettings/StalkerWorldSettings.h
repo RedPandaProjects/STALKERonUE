@@ -18,6 +18,9 @@ public:
 	void						PostInitProperties	() override;
 	UPROPERTY(Transient)
 	class AStalkerDebugRender*	DebugRender;
+	
+	UPROPERTY(Transient)
+	class AStalkerEnvironment*	Environment;
 #if WITH_EDITORONLY_DATA
 	UPROPERTY()
 	UMaterialInterface*			EditorMaterialAIMap;

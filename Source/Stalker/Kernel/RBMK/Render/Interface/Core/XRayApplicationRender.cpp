@@ -24,7 +24,7 @@ void XRayApplicationRender::setLevelLogo(LPCSTR pszLogoName)
 {
 }
 
-void XRayApplicationRender::load_draw_internal(XRayEngineInterface & owner)
+void XRayApplicationRender::load_draw_internal(IRBMKEngine & owner)
 {
 }
 

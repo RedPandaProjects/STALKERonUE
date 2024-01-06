@@ -28,15 +28,15 @@ public:
 	void											Lock								(void* Parent) override;
 	void											Unlock								(void* Parent) override;
 	void											Detach								() override;
-	void											AttachTo							(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
-	void*											CastUnrealObject					(EXRayUnrealObjectType ObjectType) override;
-	void*											QueryInterface						(EXRayUnrealInterfaceType AttachableType) override;
+	void											AttachTo							(IRBMKUnrealAttachable* Attach, const char* BoneName) override;
+	void*											CastUnrealObject					(ERBMKUnrealObjectType ObjectType) override;
+	void*											QueryInterface						(ERBMKUnrealInterfaceType AttachableType) override;
 	void											SetVisibility						(bool NewVisibility) override;
 	void											SetOwnerNoSee						(bool Enable) override;
 	void											SetOnlyOwnerSee						(bool Enable) override;
 	void											SetOffset							(const Fmatrix&offset) override;
 	void											GetWorldTransform					(Fmatrix& OutXForm) override;
-	bool											IsAttached							(XRayUnrealAttachableInterface* Attach) override;
+	bool											IsAttached							(IRBMKUnrealAttachable* Attach) override;
 
 
 	void											TickComponent						(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

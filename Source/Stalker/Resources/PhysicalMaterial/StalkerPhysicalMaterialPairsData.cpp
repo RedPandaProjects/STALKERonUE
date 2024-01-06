@@ -35,22 +35,22 @@ void FStalkerPhysicalMaterialPair::BuildFromLegacy(const SGameMtlPair& Legacy)
 void FStalkerPhysicalMaterialPair::BuildToLegacy(SGameMtlPair& Legacy)
 {
 	checkSlow(Legacy.BreakingSounds.empty());
-	Legacy.BreakingSounds.resize(BreakingSounds.Num());
+	Legacy.BreakingSoundsNames.resize(BreakingSounds.Num());
 	for (int32 i = 0; i < BreakingSounds.Num(); i++)
 	{
-		Legacy.BreakingSounds[i].create(TCHAR_TO_ANSI(*BreakingSounds[i]), st_Effect, sg_SourceType);
+		Legacy.BreakingSoundsNames[i] = TCHAR_TO_ANSI(*BreakingSounds[i]);
 	}
 	checkSlow(Legacy.CollideSounds.empty());
-	Legacy.CollideSounds.resize(CollideSounds.Num());
+	Legacy.CollideSoundsNames.resize(CollideSounds.Num());
 	for (int32 i = 0; i < CollideSounds.Num(); i++)
 	{
-		Legacy.CollideSounds[i].create(TCHAR_TO_ANSI(*CollideSounds[i]), st_Effect, sg_SourceType);
+		Legacy.CollideSoundsNames[i] = TCHAR_TO_ANSI(*CollideSounds[i]);
 	}
 	checkSlow(Legacy.StepSounds.empty());
-	Legacy.StepSounds.resize(StepSounds.Num());
+	Legacy.StepSoundsNames.resize(StepSounds.Num());
 	for (int32 i = 0; i < StepSounds.Num(); i++)
 	{
-		Legacy.StepSounds[i].create(TCHAR_TO_ANSI(*StepSounds[i]), st_Effect, sg_SourceType);
+		Legacy.StepSoundsNames[i] = TCHAR_TO_ANSI(*StepSounds[i]);
 	}
 	checkSlow(Legacy.CollideParticles.empty());
 	Legacy.CollideParticles.clear();

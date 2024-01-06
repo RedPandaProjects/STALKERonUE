@@ -1,5 +1,6 @@
 #include "StalkerNiagaraActor.h"
 #include "NiagaraComponent.h"
+#include "Kernel/StalkerEngineManager.h"
 #include "Resources/Particle/StalkerNiagaraSystem.h"
 
 AStalkerNiagaraActor::AStalkerNiagaraActor(const FObjectInitializer& ObjectInitializer):Super(ObjectInitializer)
@@ -8,9 +9,9 @@ AStalkerNiagaraActor::AStalkerNiagaraActor(const FObjectInitializer& ObjectIniti
 	StalkerNiagaraSystem = nullptr;
 }
 
-void AStalkerNiagaraActor::AttachTo(XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName)
+void AStalkerNiagaraActor::AttachTo(IRBMKUnrealAttachable* AttachableInterface, const char* BoneName)
 {
-	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(SceneComponent);
 	check(GetRootComponent());
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
@@ -43,28 +44,28 @@ void AStalkerNiagaraActor::Unlock(void* Pointer)
 	Locked = nullptr;
 }
 
-void* AStalkerNiagaraActor::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+void* AStalkerNiagaraActor::CastUnrealObject(ERBMKUnrealObjectType ObjectType)
 {
 	switch (ObjectType)
 	{
-	case EXRayUnrealObjectType::Object:
+	case ERBMKUnrealObjectType::Object:
 		return static_cast<UObject*>(this);
-	case EXRayUnrealObjectType::Actor:
+	case ERBMKUnrealObjectType::Actor:
 		return static_cast<AActor*>(this);
-	case EXRayUnrealObjectType::StalkerNiagaraActor:
+	case ERBMKUnrealObjectType::StalkerNiagaraActor:
 		return this;
-	case EXRayUnrealObjectType::SceneComponent:
+	case ERBMKUnrealObjectType::SceneComponent:
 		return static_cast<USceneComponent*>(GetNiagaraComponent());
 	default:
 		return nullptr;
 	}
 }
 
-void* AStalkerNiagaraActor::QueryInterface(EXRayUnrealInterfaceType AttachableType)
+void* AStalkerNiagaraActor::QueryInterface(ERBMKUnrealInterfaceType AttachableType)
 {
 	switch (AttachableType)
 	{
-	case EXRayUnrealInterfaceType::ParticleCustom:
+	case ERBMKUnrealInterfaceType::ParticleCustom:
 		return static_cast<IParticleCustom*>(this);
 	}
 	return IRenderVisual::QueryInterface(AttachableType);
@@ -82,7 +83,7 @@ void AStalkerNiagaraActor::Initialize(shared_str InName)
 	FString Name =  ParticlesName.c_str();
 	Name.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	UNiagaraSystem*System = nullptr;
-	switch (xrGameManager::GetGame())
+	switch (GStalkerEngineManager->GetCurrentGame())
 	{
 	default:
 	{
@@ -91,14 +92,14 @@ void AStalkerNiagaraActor::Initialize(shared_str InName)
 		System = LoadObject<UNiagaraSystem>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
 	break;
-	case EGame::SHOC:
+	case EStalkerGame::SHOC:
 	{
 		const FString ParentPackageName = TEXT("/Game/SHOC/Particles") / Name;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
 		System = LoadObject<UNiagaraSystem>(nullptr, *ParentObjectPath, nullptr, LOAD_NoWarn);
 	}
 	break;
-	case EGame::CS:
+	case EStalkerGame::CS:
 	{
 		const FString ParentPackageName = TEXT("/Game/CS/Particles") / Name;
 		const FString ParentObjectPath = ParentPackageName + TEXT(".") + FPaths::GetBaseFilename(ParentPackageName);
@@ -281,9 +282,9 @@ void AStalkerNiagaraActor::GetWorldTransform(Fmatrix& OutXForm)
 	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
-bool AStalkerNiagaraActor::IsAttached(XRayUnrealAttachableInterface* Attach)
+bool AStalkerNiagaraActor::IsAttached(IRBMKUnrealAttachable* Attach)
 {
-	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent)))
 	{
 		return RootComponent->IsAttachedTo(RootComp);
 	}

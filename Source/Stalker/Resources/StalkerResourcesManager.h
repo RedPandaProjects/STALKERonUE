@@ -26,6 +26,7 @@ public:
 	void												Refresh						();
 	FString												GetGamePath					();
 	class UStalkerGameSpawn*							GetGameSpawn				();
+	class UStalkerSoundManager*							GetSoundManager				() {return SoundManager;}
 #if WITH_EDITORONLY_DATA
 	class UStalkerGameSpawn*							GetOrCreateGameSpawn		();
 #endif
@@ -52,4 +53,5 @@ private:
 	TSet<UStalkerKinematicsComponent*>					Meshes;
 
 	class UStalkerGameSpawn*							GameSpawn = nullptr;
+	class UStalkerSoundManager*							SoundManager = nullptr;
 };

@@ -55,9 +55,9 @@ void AStalkerProxy::Lock(void* InXRayObject)
 	unimplemented();
 }
 
-void AStalkerProxy::AttachTo(XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName)
+void AStalkerProxy::AttachTo(IRBMKUnrealAttachable* AttachableInterface, const char* BoneName)
 {
-	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(SceneComponent);
 	check(GetRootComponent());
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
@@ -69,10 +69,10 @@ void AStalkerProxy::AttachTo(XRayUnrealAttachableInterface* AttachableInterface,
 	}
 }
 
-void AStalkerProxy::SetAsRoot(XRayUnrealAttachableInterface* AttachableInterface)
+void AStalkerProxy::SetAsRoot(IRBMKUnrealAttachable* AttachableInterface)
 {
-	check(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::Actor)==nullptr);
-	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	check(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::Actor)==nullptr);
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(SceneComponent);
 	if(	UStalkerKinematicsComponent* StalkerKinematicsComponent = Cast<UStalkerKinematicsComponent>(SceneComponent))
 	{
@@ -99,17 +99,17 @@ void AStalkerProxy::SetOffset(const Fmatrix& offset)
 	GetRootComponent()->SetRelativeTransform(FTransform(StalkerMath::RBMKMatrixToUnreal(offset)));
 }
 
-void* AStalkerProxy::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+void* AStalkerProxy::CastUnrealObject(ERBMKUnrealObjectType ObjectType)
 {
 	switch (ObjectType)
 	{
-	case EXRayUnrealObjectType::Object:
+	case ERBMKUnrealObjectType::Object:
 		return static_cast<UObject*>(this);
-	case EXRayUnrealObjectType::Actor:
+	case ERBMKUnrealObjectType::Actor:
 		return static_cast<AActor*>(this);
-	case EXRayUnrealObjectType::StalkerProxy:
+	case ERBMKUnrealObjectType::StalkerProxy:
 		return this;
-	case EXRayUnrealObjectType::SceneComponent:
+	case ERBMKUnrealObjectType::SceneComponent:
 		return GetRootComponent();
 	default: 
 		return nullptr;
@@ -137,9 +137,9 @@ void AStalkerProxy::GetWorldTransform(Fmatrix& OutXForm)
 	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
-bool AStalkerProxy::IsAttached(XRayUnrealAttachableInterface* Attach)
+bool AStalkerProxy::IsAttached(IRBMKUnrealAttachable* Attach)
 {
-	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent)))
 	{
 		return RootComponent->IsAttachedTo(RootComp);
 	}

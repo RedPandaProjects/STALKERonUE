@@ -36,6 +36,7 @@ private:
 	void											OnPreBeginPIE				(const bool);
 	void											OnPostPIEStarted			(const bool);
 	void											OnEndPIE					(const bool);
+	void											OnPrePIEEnded				(const bool);
 	void											OnReInitialized				();
 	void											ScanSkeletons				();
 	void											OnPostWorldInitialization(UWorld* World, const UWorld::InitializationValues);

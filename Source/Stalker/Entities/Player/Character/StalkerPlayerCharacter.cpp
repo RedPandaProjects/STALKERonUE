@@ -2,8 +2,8 @@
 #include "../Controller/StalkerPlayerController.h"
 #include "../../Kinematics/StalkerKinematicsComponent.h"
 #include "Kernel/StalkerEngineManager.h"
+#include "Kernel/RBMK/Render/Interface/XRayRenderTarget.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
-#include "Kernel/XRay/Render/Interface/XRayRenderTarget.h"
 #include "Kismet/KismetMaterialLibrary.h"
 #include "Resources/StalkerAttachable.h"
 #include "Resources/StalkerResourcesManager.h"
@@ -175,17 +175,17 @@ void AStalkerPlayerCharacter::Lock(class CObject* InXRayObject)
 #endif
 }
 
-void* AStalkerPlayerCharacter::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+void* AStalkerPlayerCharacter::CastUnrealObject(ERBMKUnrealObjectType ObjectType)
 {
 	switch (ObjectType)
 	{
-	case EXRayUnrealObjectType::Object:
+	case ERBMKUnrealObjectType::Object:
 		return static_cast<UObject*>(this);
-	case EXRayUnrealObjectType::Actor:
+	case ERBMKUnrealObjectType::Actor:
 		return static_cast<AActor*>(this);
-	case EXRayUnrealObjectType::StalkerPlayerCharacter:
+	case ERBMKUnrealObjectType::StalkerPlayerCharacter:
 		return static_cast<AStalkerPlayerCharacter*>(this);
-	case EXRayUnrealObjectType::SceneComponent:
+	case ERBMKUnrealObjectType::SceneComponent:
 		{
 			const TArray<TObjectPtr<USceneComponent>>& Components = GetMesh()->GetAttachChildren();
 			if(ensure(Components.Num() == 1))
@@ -199,10 +199,10 @@ void* AStalkerPlayerCharacter::CastUnrealObject(EXRayUnrealObjectType ObjectType
 	}
 }
 
-void AStalkerPlayerCharacter::SetAsRoot(XRayUnrealAttachableInterface* AttachableInterface)
+void AStalkerPlayerCharacter::SetAsRoot(IRBMKUnrealAttachable* AttachableInterface)
 {
-	check(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::Actor)==nullptr);
-	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	check(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::Actor)==nullptr);
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(SceneComponent);
 	if(	UStalkerKinematicsComponent* StalkerKinematicsComponent = Cast<UStalkerKinematicsComponent>(SceneComponent))
 	{
@@ -228,14 +228,14 @@ void AStalkerPlayerCharacter::Unlock(void*InXRayObject)
 	XRayObject = nullptr;
 }
 
-XRayUnrealAttachableInterface* AStalkerPlayerCharacter::GetCameraComponent()
+IRBMKUnrealAttachable* AStalkerPlayerCharacter::GetCameraComponent()
 {
 	return FirstPersonCameraAttachable;
 }
 
-bool AStalkerPlayerCharacter::IsAttached(XRayUnrealAttachableInterface* Attach)
+bool AStalkerPlayerCharacter::IsAttached(IRBMKUnrealAttachable* Attach)
 {
-	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent)))
 	{
 		return RootComponent->IsAttachedTo(RootComp);
 	}
@@ -252,7 +252,7 @@ void AStalkerPlayerCharacter::GetWorldTransform(Fmatrix& OutXForm)
 	OutXForm = StalkerMath::UnrealMatrixToRBMK(GetRootComponent()->GetComponentToWorld().ToMatrixWithScale());
 }
 
-void AStalkerPlayerCharacter::AttachTo(XRayUnrealAttachableInterface* Attach, const char* BoneName)
+void AStalkerPlayerCharacter::AttachTo(IRBMKUnrealAttachable* Attach, const char* BoneName)
 {
 	unimplemented();
 }

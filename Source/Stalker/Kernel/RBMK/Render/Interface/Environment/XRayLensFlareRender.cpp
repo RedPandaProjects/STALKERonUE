@@ -1,5 +1,4 @@
 #include "XRayLensFlareRender.h"
-#include "XrEngine/xr_efflensflare.h"
 
 XRayLensFlareRender::XRayLensFlareRender()
 {

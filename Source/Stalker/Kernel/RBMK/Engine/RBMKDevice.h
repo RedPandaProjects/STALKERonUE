@@ -4,7 +4,7 @@ class FRBMKDevice :public XrDeviceInterface
 {
 public:
 						FRBMKDevice		();
-						~FRBMKDevice		() override;
+						~FRBMKDevice	() override;
 	bool				IsEditorMode	() override;
 	bool				Paused			() const override;
 	void				Reset			(bool precache = false) override;
@@ -13,9 +13,9 @@ public:
 	void				Clear			() override;
 	bool				Begin			() override;
 	void				End				() override;
-	CStatsPhysics*		StatPhysics() override;
-	void				AddSeqFrame(pureFrame* f, bool mt) override;
-	void				RemoveSeqFrame(pureFrame* f) override;
+	CStatsPhysics*		StatPhysics		() override;
+	void				AddSeqFrame		(pureFrame* f, bool mt) override;
+	void				RemoveSeqFrame	(pureFrame* f) override;
 private:
 	bool				IsTimerPaused;
 	int32				SndEmitters = -1;

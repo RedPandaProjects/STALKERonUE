@@ -14,7 +14,7 @@
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
 #include "Resources/SkeletonMesh/StalkerKinematicsAnimAssetUserData.h"
-#include "Resources/SoundWave/StalkerSoundWaveAssetUserData.h"
+#include "Resources/Sound/StalkerSoundWaveAssetUserData.h"
 #include "Sound/SoundNodeLooping.h"
 #include "Sound/SoundNodeWavePlayer.h"
 THIRD_PARTY_INCLUDES_START
@@ -1448,7 +1448,8 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 	FString PackageFileName = FPaths::ChangeExtension(FileName, TEXT(""));
 	PackageFileName.ReplaceCharInline(TEXT('\\'), TEXT('/'));
 	const FString Path = UPackageTools::SanitizePackageName(GStalkerEditorManager->GetGamePath() / TEXT("Sounds") / PackageFileName);
-	
+
+
 	USoundWave* SoundWave = nullptr;
 	if(LoadOrCreateOrOverwriteAsset(Path,ObjectFlags,SoundWave))
 	{
@@ -1483,7 +1484,20 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 		SoundWave->SetSoundAssetCompressionType(ESoundAssetCompressionType::BinkAudio);
 		const bool bRebuildStreamingChunks = FPlatformCompressionUtilities::IsCurrentPlatformUsingStreamCaching();
 		SoundWave->InvalidateCompressedData(true /* bFreeResources */, bRebuildStreamingChunks);
-
+		
+		const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>(); 
+		for(auto&[Key,Value]:SGSettings->SoundClassByPrefixWhenImport)
+		{
+			FString CheckPath = Key.Replace(TEXT("\\"), TEXT("/"));
+			if(PackageFileName.StartsWith(CheckPath))
+			{
+				SoundWave->SoundClassObject = Value.LoadSynchronous();
+			}
+		}
+		if(!IsValid(SoundWave->SoundClassObject))
+		{
+			SoundWave->SoundClassObject = SGSettings->DefaultSoundClass.LoadSynchronous();
+		}
 		// If stream caching is enabled, we need to make sure this asset is ready for playback.
 		if (bRebuildStreamingChunks && SoundWave->IsStreaming(nullptr))
 		{
@@ -1494,11 +1508,20 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 		USoundAttenuation* SoundAttenuation = nullptr;
 		if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
 		{
+			SoundAttenuation->Attenuation.DistanceAlgorithm = EAttenuationDistanceModel::NaturalSound;
 			SoundAttenuation->Attenuation.FalloffDistance = OGGComment.MaxDistance*100.f - OGGComment.MinDistance*100.f;
 			SoundAttenuation->Attenuation.AttenuationShapeExtents.X = OGGComment.MinDistance*100.f;
 			SoundAttenuation->Modify();
 			ObjectCreated.Add(SoundAttenuation);
 			FAssetRegistryModule::AssetCreated(SoundAttenuation);
+			if(EnumHasAllFlags(static_cast<EStalkerSoundTypes>(OGGComment.Flags), EStalkerSoundTypes::Ambient|EStalkerSoundTypes::World))
+			{
+				SoundAttenuation->Attenuation.bEnableOcclusion = true;
+				SoundAttenuation->Attenuation.OcclusionLowPassFilterFrequency = 1000;
+				SoundAttenuation->Attenuation.OcclusionTraceChannel = ECC_WorldStatic;
+				SoundAttenuation->Attenuation.OcclusionInterpolationTime = 3;
+				SoundAttenuation->Attenuation.OcclusionVolumeAttenuation = 0.4f;
+			}
 		}
 		SoundWave->AttenuationSettings = SoundAttenuation;
 		UStalkerSoundWaveAssetUserData*UserData =	NewObject<UStalkerSoundWaveAssetUserData>(SoundWave);
@@ -1598,6 +1621,19 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 		const bool bRebuildStreamingChunks = FPlatformCompressionUtilities::IsCurrentPlatformUsingStreamCaching();
 		SoundWave->InvalidateCompressedData(true /* bFreeResources */, bRebuildStreamingChunks);
 
+		const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>(); 
+		for(auto&[Key,Value]:SGSettings->SoundClassByPrefixWhenImport)
+		{
+			FString CheckPath = Key.Replace(TEXT("\\"), TEXT("/"));
+			if(PackageFileName.StartsWith(CheckPath))
+			{
+				SoundWave->SoundClassObject = Value.LoadSynchronous();
+			}
+		}
+		if(!IsValid(SoundWave->SoundClassObject))
+		{
+			SoundWave->SoundClassObject = SGSettings->DefaultSoundClass.LoadSynchronous();
+		}
 		// If stream caching is enabled, we need to make sure this asset is ready for playback.
 		if (bRebuildStreamingChunks && SoundWave->IsStreaming(nullptr))
 		{
@@ -1608,11 +1644,20 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 		USoundAttenuation* SoundAttenuation = nullptr;
 		if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
 		{
+			SoundAttenuation->Attenuation.DistanceAlgorithm = EAttenuationDistanceModel::NaturalSound;
 			SoundAttenuation->Attenuation.FalloffDistance = OGGComment.MaxDistance*100.f - OGGComment.MinDistance*100.f;
 			SoundAttenuation->Attenuation.AttenuationShapeExtents.X = OGGComment.MinDistance*100.f;
 			SoundAttenuation->Modify();
 			ObjectCreated.Add(SoundAttenuation);
 			FAssetRegistryModule::AssetCreated(SoundAttenuation);
+			if(EnumHasAllFlags(static_cast<EStalkerSoundTypes>(OGGComment.Flags), EStalkerSoundTypes::Ambient|EStalkerSoundTypes::World))
+			{
+				SoundAttenuation->Attenuation.bEnableOcclusion = true;
+				SoundAttenuation->Attenuation.OcclusionLowPassFilterFrequency = 1000;
+				SoundAttenuation->Attenuation.OcclusionTraceChannel = ECC_WorldStatic;
+				SoundAttenuation->Attenuation.OcclusionInterpolationTime = 3;
+				SoundAttenuation->Attenuation.OcclusionVolumeAttenuation = 0.4f;
+			}
 		}
 		SoundWave->AttenuationSettings = SoundAttenuation;
 		UStalkerSoundWaveAssetUserData*UserData =	NewObject<UStalkerSoundWaveAssetUserData>(SoundWave);
@@ -2502,15 +2547,12 @@ USoundCue* FRBMKEngineFactory::CreateSoundLoopCue(USoundWave* InSound, const FSt
 	if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_LoopCue"), ObjectFlags, SoundCue))
 	{
 		USoundNodeWavePlayer* WavePlayer = SoundCue->ConstructSoundNode<USoundNodeWavePlayer>();
-
-
 		int32 NodeIndex = 0;
-
 		WavePlayer->GraphNode->NodePosX = -150 * (NodeIndex++) - 100;
 		WavePlayer->GraphNode->NodePosY = -35;
 		WavePlayer->bLooping = true;
 		WavePlayer->SetSoundWave(InSound);
-
+		SoundCue->SoundClassObject = InSound->SoundClassObject;
 		SoundCue->VolumeMultiplier = 1;
 		SoundCue->FirstNode = WavePlayer;
 		SoundCue->LinkGraphNodesFromSoundNodes();

@@ -268,28 +268,28 @@ void UStalkerKinematicsComponent::DestroyBlend(TSharedPtr<CBlend>& Blend)
 	BlendsPool.Add(Blend);
 }
 
-void* UStalkerKinematicsComponent::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+void* UStalkerKinematicsComponent::CastUnrealObject(ERBMKUnrealObjectType ObjectType)
 {
 	switch (ObjectType)
 	{
-	case EXRayUnrealObjectType::Object:
+	case ERBMKUnrealObjectType::Object:
 		return static_cast<UObject*>(this);
-	case EXRayUnrealObjectType::SceneComponent:
+	case ERBMKUnrealObjectType::SceneComponent:
 		return static_cast<USceneComponent*>(this);
-	case EXRayUnrealObjectType::StalkerKinematicsComponent:
+	case ERBMKUnrealObjectType::StalkerKinematicsComponent:
 		return this;
 	default: 
 		return nullptr;
 	}
 }
 
-void* UStalkerKinematicsComponent::QueryInterface(EXRayUnrealInterfaceType AttachableType)
+void* UStalkerKinematicsComponent::QueryInterface(ERBMKUnrealInterfaceType AttachableType)
 {
 	switch (AttachableType)
 	{
-	case EXRayUnrealInterfaceType::Kinematics:
+	case ERBMKUnrealInterfaceType::Kinematics:
 		return static_cast<IKinematics*>(this);
-	case EXRayUnrealInterfaceType::KinematicsAnimated:
+	case ERBMKUnrealInterfaceType::KinematicsAnimated:
 		return Anims.Num()>0? static_cast<IKinematicsAnimated*>(this):nullptr;
 	default: ;
 		return IRenderVisual::QueryInterface(AttachableType);
@@ -348,9 +348,9 @@ void UStalkerKinematicsComponent::Detach()
 	GStalkerEngineManager->GetResourcesManager()->RegisterKinematics(this);
 }
 
-void UStalkerKinematicsComponent::AttachTo(XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName)
+void UStalkerKinematicsComponent::AttachTo(IRBMKUnrealAttachable* AttachableInterface, const char* BoneName)
 {
-	USceneComponent* InSceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	USceneComponent* InSceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(InSceneComponent);
 	AActor* ActorOwner = InSceneComponent->GetOwner();
 	check(ActorOwner);
@@ -586,7 +586,7 @@ CBlend* UStalkerKinematicsComponent::LL_PlayCycle(u16 BonesPartID, MotionID InMo
 				}
 				Blend->set_falloff_state();
 				Blend->blendFalloff = blendFalloff;
-				if (Blend->stop_at_end) Blend->stop_at_end_callback = FALSE;		// callback íå äîëæåí ïðèõîäèòü!
+				if (Blend->stop_at_end) Blend->stop_at_end_callback = FALSE;		// callback ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!
 			}
 		}
 		else			
@@ -895,7 +895,7 @@ void UStalkerKinematicsComponent::Bone_GetAnimPos(Fmatrix& pos, u16 id, u8 chann
 
 bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_result& r, float dist, const Fvector& start, const Fvector& dir, u16 bone_id)
 {
-	//ÍÀÄÎ ÍÀÑÒÐÎÈÒÜ !!!!
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ !!!!
 	return false;
 	//FCollisionQueryParams CollisionQueryParams;
 	//FCollisionResponseParams CollisionResponseParams = FCollisionResponseParams::DefaultResponseParam;
@@ -1106,9 +1106,9 @@ shared_str UStalkerKinematicsComponent::getDebugName()
 	return shared_str(TCHAR_TO_ANSI(*Name));
 }
 
-bool UStalkerKinematicsComponent::IsAttached(XRayUnrealAttachableInterface* Attach)
+bool UStalkerKinematicsComponent::IsAttached(IRBMKUnrealAttachable* Attach)
 {
-	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent)))
 	{
 		return IsAttachedTo(RootComp);
 	}

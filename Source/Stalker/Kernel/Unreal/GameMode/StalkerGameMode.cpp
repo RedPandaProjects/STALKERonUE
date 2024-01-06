@@ -1,4 +1,6 @@
 #include "StalkerGameMode.h"
+
+#include "Entities/Levels/Environment/StalkerEnvironment.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XR_IOConsole.h"
 #include "XrEngine/IGame_Level.h"
@@ -35,6 +37,9 @@ void AStalkerGameMode::InitGame(const FString& MapName, const FString& Options, 
 			SpawnInfo.Instigator = GetInstigator();
 			SpawnInfo.ObjectFlags |= RF_Transient;
 			WorldSettings->DebugRender = World->SpawnActor<AStalkerDebugRender>(AStalkerDebugRender::StaticClass(), SpawnInfo);
+
+			
+			WorldSettings->Environment = World->SpawnActor<AStalkerEnvironment>(AStalkerEnvironment::StaticClass(), SpawnInfo);
 		}
 	}
 }

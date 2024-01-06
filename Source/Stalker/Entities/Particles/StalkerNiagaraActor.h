@@ -14,14 +14,14 @@ public:
 								AStalkerNiagaraActor		(const FObjectInitializer& ObjectInitializer);
 	void						Initialize					(shared_str Name);
 
-	void						AttachTo					(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
+	void						AttachTo					(IRBMKUnrealAttachable* Attach, const char* BoneName) override;
 	void						Detach						() override;
 	void						Lock						(CObject*) override;
 	void						Lock						(void*) override;
 	void						Unlock						(void*) override;
 
-	void*						CastUnrealObject			(EXRayUnrealObjectType ObjectType) override;
-	void*						QueryInterface				(EXRayUnrealInterfaceType AttachableType) override;
+	void*						CastUnrealObject			(ERBMKUnrealObjectType ObjectType) override;
+	void*						QueryInterface				(ERBMKUnrealInterfaceType AttachableType) override;
 
 	void						BeginDestroy				() override;
 	vis_data&					getVisData					() override;
@@ -43,7 +43,7 @@ public:
 	void						SetOwnerNoSee				(bool Enable) override;
 	void						SetOnlyOwnerSee				(bool Enable) override;
 	void						GetWorldTransform			(Fmatrix& OutXForm) override;
-	bool						IsAttached					(XRayUnrealAttachableInterface* Attach) override;
+	bool						IsAttached					(IRBMKUnrealAttachable* Attach) override;
 	void						SetVisibility				(bool NewVisibility) override;
 
 	shared_str					ParticlesName;

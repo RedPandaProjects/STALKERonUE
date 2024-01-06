@@ -4,9 +4,9 @@ UStalkerAttachable::UStalkerAttachable()
 {
 }
 
-void UStalkerAttachable::AttachTo(XRayUnrealAttachableInterface* AttachableInterface, const char* BoneName)
+void UStalkerAttachable::AttachTo(IRBMKUnrealAttachable* AttachableInterface, const char* BoneName)
 {
-	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(EXRayUnrealObjectType::SceneComponent));
+	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(SceneComponent);
 	check(OwnerComponent);
 	FAttachmentTransformRules AttachmentTransformRules(EAttachmentRule::SnapToTarget, false);
@@ -60,13 +60,13 @@ void UStalkerAttachable::Unlock(void*)
 	unimplemented();
 }
 
-void* UStalkerAttachable::CastUnrealObject(EXRayUnrealObjectType ObjectType)
+void* UStalkerAttachable::CastUnrealObject(ERBMKUnrealObjectType ObjectType)
 {
 	switch (ObjectType)
 	{
-	case EXRayUnrealObjectType::Object:
+	case ERBMKUnrealObjectType::Object:
 		return static_cast<UObject*>(OwnerComponent);
-	case EXRayUnrealObjectType::SceneComponent:
+	case ERBMKUnrealObjectType::SceneComponent:
 		return OwnerComponent;
 	default: 
 		return nullptr;
@@ -83,9 +83,9 @@ void UStalkerAttachable::GetWorldTransform(Fmatrix& OutXForm)
 	OutXForm = StalkerMath::UnrealMatrixToRBMK(OwnerComponent->GetComponentToWorld().ToMatrixWithScale());
 }
 
-bool UStalkerAttachable::IsAttached(XRayUnrealAttachableInterface* Attach)
+bool UStalkerAttachable::IsAttached(IRBMKUnrealAttachable* Attach)
 {
-	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(EXRayUnrealObjectType::SceneComponent)))
+	if(USceneComponent*RootComp = reinterpret_cast<USceneComponent*>(Attach->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent)))
 	{
 		return OwnerComponent->IsAttachedTo(RootComp);
 	}

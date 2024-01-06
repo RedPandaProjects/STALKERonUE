@@ -2,13 +2,13 @@
 #include "StalkerAttachable.generated.h"
 
 UCLASS()
-class STALKER_API UStalkerAttachable :public UObject, public XRayUnrealAttachableInterface
+class STALKER_API UStalkerAttachable :public UObject, public IRBMKUnrealAttachable
 {
 	GENERATED_BODY()
 
 public:
 			UStalkerAttachable	();
-	void	AttachTo			(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
+	void	AttachTo			(IRBMKUnrealAttachable* Attach, const char* BoneName) override;
 	void	Detach				() override;
 	void	SetOffset			(const Fmatrix& offset) override;
 	void	SetOwnerNoSee		(bool Enable) override;
@@ -16,11 +16,11 @@ public:
 	void	Lock				(CObject*) override;
 	void	Lock				(void*) override;
 	void	Unlock				(void*) override;
-	void*	CastUnrealObject	(EXRayUnrealObjectType ObjectType) override;
+	void*	CastUnrealObject	(ERBMKUnrealObjectType ObjectType) override;
 	void	SetVisibility		(bool NewVisibility) override;
 	
 	void	GetWorldTransform	(Fmatrix& OutXForm) override;
-	bool	IsAttached			(XRayUnrealAttachableInterface* Attach) override;
+	bool	IsAttached			(IRBMKUnrealAttachable* Attach) override;
 	UPROPERTY(Transient)
 	USceneComponent* OwnerComponent;
 };

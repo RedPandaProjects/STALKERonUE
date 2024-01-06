@@ -1,7 +1,6 @@
 #include "StalkerBlueprintFunctionLibrary.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XR_IOConsole.h"
-#include "XrEngine/XRayEngineInterface.h"
 THIRD_PARTY_INCLUDES_END
 void UStalkerBlueprintFunctionLibrary::StalkerConnect(const UObject* WorldContextObject,const FString& Server, const FString& Client)
 {
@@ -22,7 +21,7 @@ void UStalkerBlueprintFunctionLibrary::StalkerShowMenu(const UObject* WorldConte
 
 void UStalkerBlueprintFunctionLibrary::StalkerActorTransferInfo(const FString& Name, bool Value /*= true*/)
 {
-	XRayLevelToBlueprint*LevelToBlueprint =   g_Engine->GetLevelScript();
+	IRBMKLevelToBlueprint*LevelToBlueprint =   g_Engine->GetLevelScript();
 	if (LevelToBlueprint)
 	{
 		LevelToBlueprint->ActorTransferInfo(TCHAR_TO_ANSI(*Name),Value);
@@ -53,7 +52,7 @@ void UStalkerBlueprintFunctionLibrary::StalkerActorWaitInfoList(const TMap<FStri
 
 		virtual void UpdateOperation(FLatentResponse& Response) override
 		{
-			XRayLevelToBlueprint* LevelToBlueprint =  g_Engine->GetLevelScript();
+			IRBMKLevelToBlueprint* LevelToBlueprint =  g_Engine->GetLevelScript();
 			if (LevelToBlueprint)
 			{
 				if (!LevelToBlueprint->GetActor())
@@ -78,7 +77,7 @@ void UStalkerBlueprintFunctionLibrary::StalkerActorWaitInfoList(const TMap<FStri
 		{
 			FString Result;
 			Result += TEXT("Check Values(");
-			XRayLevelToBlueprint* LevelToBlueprint =  g_Engine->GetLevelScript();
+			IRBMKLevelToBlueprint* LevelToBlueprint =  g_Engine->GetLevelScript();
 			if (LevelToBlueprint)
 			{
 				int32 Counter = 0;
@@ -121,7 +120,7 @@ void UStalkerBlueprintFunctionLibrary::StalkerActorWaitInfo(const FString& Name,
 
 bool UStalkerBlueprintFunctionLibrary::StalkerActorGetInfo(const FString& Name)
 {
-	XRayLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
+	IRBMKLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
 	if (LevelToBlueprint)
 	{
 		return LevelToBlueprint->ActorHasInfo(TCHAR_TO_ANSI(*Name));
@@ -131,7 +130,7 @@ bool UStalkerBlueprintFunctionLibrary::StalkerActorGetInfo(const FString& Name)
 
 void UStalkerBlueprintFunctionLibrary::StalkerSpawnObject(const FString& SectionName, const FString& WayObjectName,int32 PointIndex,  float Angle)
 {
-	XRayLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
+	IRBMKLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
 	if (LevelToBlueprint)
 	{
 		LevelToBlueprint->SpawnObject(TCHAR_TO_ANSI(*SectionName),TCHAR_TO_ANSI(*WayObjectName),PointIndex,Angle);
@@ -140,7 +139,7 @@ void UStalkerBlueprintFunctionLibrary::StalkerSpawnObject(const FString& Section
 
 float UStalkerBlueprintFunctionLibrary::StalkerGetGameTime()
 {
-	XRayLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
+	IRBMKLevelToBlueprint* LevelToBlueprint = g_Engine->GetLevelScript();
 	if (LevelToBlueprint)
 	{
 		return LevelToBlueprint->GetGameTimeAsFloat();

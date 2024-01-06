@@ -1,12 +1,9 @@
 #pragma once
-THIRD_PARTY_INCLUDES_START
-#include "XrEngine/XRayUnrealProxyInterface.h"
-THIRD_PARTY_INCLUDES_END
 
 #include "StalkerPlayerCharacter.generated.h"
 
 UCLASS()
-class AStalkerPlayerCharacter : public ACharacter, public XRayUnrealPlayerCharacterInterface
+class AStalkerPlayerCharacter : public ACharacter, public IRBMKUnrealPlayerCharacter
 {
 	GENERATED_BODY()
 
@@ -21,16 +18,16 @@ public:
 	void							SetOffset					(const Fmatrix& offset) override;
 	void							SetOwnerNoSee				(bool Enable) override;
 	void							SetOnlyOwnerSee				(bool Enable) override;
-	void							AttachTo					(XRayUnrealAttachableInterface* Attach, const char* BoneName) override;
+	void							AttachTo					(IRBMKUnrealAttachable* Attach, const char* BoneName) override;
 	void							Detach						() override;
 	void							Lock						(void*) override;
 	void							Lock						(class CObject*) override;
 	void							Unlock						(void*) override;
-	void*							CastUnrealObject			(EXRayUnrealObjectType ObjectType) override;
-	void							SetAsRoot					(XRayUnrealAttachableInterface* Attachable) override;
-	XRayUnrealAttachableInterface*	GetCameraComponent			() override;
+	void*							CastUnrealObject			(ERBMKUnrealObjectType ObjectType) override;
+	void							SetAsRoot					(IRBMKUnrealAttachable* Attachable) override;
+	IRBMKUnrealAttachable*			GetCameraComponent			() override;
 	void							GetWorldTransform			(Fmatrix& OutXForm) override;
-	bool							IsAttached					(XRayUnrealAttachableInterface* Attach) override;
+	bool							IsAttached					(IRBMKUnrealAttachable* Attach) override;
 	void							SetVisibility				(bool NewVisibility) override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Stalker|Player", meta = (AllowPrivateAccess = "true"))
