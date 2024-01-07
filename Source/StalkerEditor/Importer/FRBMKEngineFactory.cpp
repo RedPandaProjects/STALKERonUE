@@ -1528,15 +1528,15 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 		UserData->Flags = OGGComment.Flags;
 		UserData->AIRatioToDistance = OGGComment.MaxAIDistance/OGGComment.MaxDistance;
 		UserData->AIRatioToDistance = FMath::Clamp(UserData->AIRatioToDistance,0,1);
+		if(IsValid(SoundWave))
+		{
+			UserData->LoopingSound = CreateSoundLoopCue(SoundWave,Path);
+		}
 		SoundWave->AddAssetUserData(UserData);
 		SoundWave->Modify();
 
 		ObjectCreated.Add(SoundWave);
 		FAssetRegistryModule::AssetCreated(SoundWave);
-	}
-	if(IsValid(SoundWave))
-	{
-		CreateSoundLoopCue(SoundWave,Path);
 	}
 	return SoundWave;
 }
@@ -1664,16 +1664,17 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 		UserData->Flags = OGGComment.Flags;
 		UserData->AIRatioToDistance = OGGComment.MaxAIDistance/OGGComment.MaxDistance;
 		UserData->AIRatioToDistance = FMath::Clamp(UserData->AIRatioToDistance,0,1);
+		if(IsValid(SoundWave))
+		{
+			UserData->LoopingSound = CreateSoundLoopCue(SoundWave,Path);
+		}
 		SoundWave->AddAssetUserData(UserData);
 		SoundWave->Modify();
 
 		ObjectCreated.Add(SoundWave);
 		FAssetRegistryModule::AssetCreated(SoundWave);
 	}
-	if(IsValid(SoundWave))
-	{
-		CreateSoundLoopCue(SoundWave,Path);
-	}
+	
 	return SoundWave;
 }
 

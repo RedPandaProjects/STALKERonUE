@@ -8,6 +8,7 @@ class STALKER_API UStalkerSoundManager : public UObject,public IRBMKSoundManager
 public:
 	IRBMKSoundSource*					CreateSource			(const char* Name) override;
 	IRBMKSoundSource*					CreateSource			(const char* Name, s32 CustomFlags) override;
+	IRBMKSoundSource*					CreateSource			(const TSoftObjectPtr<USoundBase>& SoftSoundPtr, s32 CustomFlags = -1);
 	void								Destroy					(IRBMKSoundSource* SoundSource) override;
 	IRBMKSoundSource*					AddReference			(IRBMKSoundSource*SoundSource) override;
 	IRBMKSoundSource*					Duplicate				(IRBMKSoundSource* SoundSource) override;

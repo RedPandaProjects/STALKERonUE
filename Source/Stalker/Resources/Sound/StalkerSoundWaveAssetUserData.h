@@ -44,4 +44,7 @@ public:
 
 	UPROPERTY(EditAnywhere,Meta = (Bitmask, BitmaskEnum = "/Script/Stalker.EStalkerSoundTypes"))
 	int32 Flags;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase*LoopingSound;
 };

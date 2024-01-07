@@ -18,22 +18,22 @@ IRBMKSoundSource* UStalkerSoundManager::CreateSource(const char* InName, s32 Cus
 		return nullptr;
 	}
 	const FString PackageName = GStalkerEngineManager->GetGamePath() / TEXT("Sounds") / Name;
-	const FString ObjectName = PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
-	USoundBase*Sound = LoadObject<USoundBase>(nullptr, *ObjectName, nullptr, LOAD_NoWarn);
+	const FSoftObjectPath SoftObjectPath =  PackageName + TEXT(".") + FPaths::GetBaseFilename(PackageName);
+	return CreateSource(TSoftObjectPtr<USoundBase>(SoftObjectPath),CustomFlags);
+
+}
+
+IRBMKSoundSource* UStalkerSoundManager::CreateSource(const TSoftObjectPtr<USoundBase>& SoftSoundPtr, s32 CustomFlags)
+{
+	USoundBase*Sound =  SoftSoundPtr.LoadSynchronous();
 	if(!Sound)
 	{
 		return nullptr;
 	}
-
-	const FString LoopCuePackageName = GStalkerEngineManager->GetGamePath() / TEXT("Sounds") / Name + TEXT("_LoopCue");
-	const FString LoopCueObjectName = LoopCuePackageName + TEXT(".") + FPaths::GetBaseFilename(LoopCuePackageName);
-	USoundBase*LoopCueSound = LoadObject<USoundBase>(nullptr, *LoopCueObjectName, nullptr, LOAD_NoWarn);
-	
 	UStalkerSoundSource*StalkerSoundSource = NewObject<UStalkerSoundSource>(this);
 	SoundSources.Add(StalkerSoundSource);
-	StalkerSoundSource->RBMKName = InName;
+	StalkerSoundSource->RBMKName = TCHAR_TO_ANSI(*SoftSoundPtr.ToString());
 	StalkerSoundSource->Sound = Sound;
-	StalkerSoundSource->LoopingSound = LoopCueSound;
 	if(const UStalkerSoundWaveAssetUserData*StalkerSoundWaveAssetUserData = Sound->GetAssetUserData<UStalkerSoundWaveAssetUserData>())
 	{
 		if(static_cast<s32>(EStalkerSoundTypes::FromSource) == CustomFlags)
@@ -44,6 +44,7 @@ IRBMKSoundSource* UStalkerSoundManager::CreateSource(const char* InName, s32 Cus
 		{
 			StalkerSoundSource->Flags = CustomFlags;
 		}
+		StalkerSoundSource->LoopingSound = StalkerSoundSource->LoopingSound;
 		StalkerSoundSource->AIRatioToDistance = StalkerSoundWaveAssetUserData->AIRatioToDistance;
 	}
 	return StalkerSoundSource;
@@ -56,6 +57,10 @@ void UStalkerSoundManager::Destroy(IRBMKSoundSource* SoundSource)
 		if(--StalkerSoundSource->ReferenceCounter == 0)
 		{
 			SoundSources.Remove(StalkerSoundSource);
+			if(StalkerSoundSource->RBMKSource)
+			{
+				RBMKObject2SoundSource.Remove(StalkerSoundSource->RBMKSource);
+			}
 			StalkerSoundSource->MarkAsGarbage();
 		}
 	}
@@ -82,7 +87,7 @@ IRBMKSoundSource* UStalkerSoundManager::Duplicate(IRBMKSoundSource* InSoundSourc
 	{
 		return nullptr;
 	}
-	UStalkerSoundSource*SoundSource = static_cast<UStalkerSoundSource*>(InSoundSource);
+	const UStalkerSoundSource*SoundSource = static_cast<UStalkerSoundSource*>(InSoundSource);
 	UStalkerSoundSource*NewSoundSource = NewObject<UStalkerSoundSource>(this);
 	SoundSources.Add(NewSoundSource);
 	NewSoundSource->RBMKName = SoundSource->RBMKName;
@@ -159,7 +164,7 @@ void UStalkerSoundManager::Tick(float DeltaTime)
 			{
 				Iterator.RemoveCurrent(); continue;
 			}
-			float Range = FMath::Clamp(Iterator.Value()->GetMaxDistance()*Iterator.Value()->AIRatioToDistance,0.1,500.f);
+			const float Range = FMath::Clamp(Iterator.Value()->GetMaxDistance()*Iterator.Value()->AIRatioToDistance,0.1,500.f);
 	
 			Fvector WorldPosition = Iterator.Value()->GetWorldPosition();
 			if(Iterator.Value()->IsRelative())
@@ -172,7 +177,7 @@ void UStalkerSoundManager::Tick(float DeltaTime)
 			{
 				if(IRBMKSoundActorListener*SoundActorListener = Spatial->CastToSoundActorListener())
 				{
-					CObject* CO = Spatial->dcast_CObject();
+					const CObject* CO = Spatial->dcast_CObject();
 					if(!ensure(CO)) continue;
 					if (CO->getDestroy()) continue;
 					

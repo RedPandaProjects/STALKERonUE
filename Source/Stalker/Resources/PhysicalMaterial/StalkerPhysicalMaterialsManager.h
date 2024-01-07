@@ -9,19 +9,19 @@ class STALKER_API UStalkerPhysicalMaterialsManager : public UObject,public XrGam
 {
 	GENERATED_BODY()
 public:
-	u32				GetMaterialID		(LPCSTR name) override;
-	SGameMtl*		GetMaterialByID		(s32 id) override;
-	u16				GetMaterialIdx		(int ID) override;
-	u16				GetMaterialIdx		(LPCSTR name) override;
-	SGameMtl*		GetMaterialByIdx	(u16 idx) override;
-	u32				CountMaterial		() override;
-	SGameMtlPair*	GetMaterialPair		(u16 idx0, u16 idx1) override;
-	void			Load() override;
-	bool			Save() override;
-	void			Unload() override;
-
-	void			Build();
-	void			Clear();
+	u32										GetMaterialID		(LPCSTR name) override;
+	SGameMtl*								GetMaterialByID		(s32 id) override;
+	u16										GetMaterialIdx		(int ID) override;
+	u16										GetMaterialIdx		(LPCSTR name) override;
+	SGameMtl*								GetMaterialByIdx	(u16 idx) override;
+	u32										CountMaterial		() override;
+	SGameMtlPair*							GetMaterialPair		(u16 idx0, u16 idx1) override;
+	void									Load				() override;
+	bool									Save				() override;
+	void									Unload				() override;
+						
+	void									Build				();
+	void									Clear				();
 	UPROPERTY(Transient)
 	class UStalkerPhysicalMaterial*			DefaultPhysicalMaterial;
 	UPROPERTY(Transient)
