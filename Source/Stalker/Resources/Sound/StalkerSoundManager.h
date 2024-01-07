@@ -19,7 +19,7 @@ public:
 	bool								ExistSoundWave			(const char* Name) const override;
 	void								Tick					(float DeltaTime);
 	void								Build					();
-	
+	void								Clear					();
 	UPROPERTY(Transient)	
 	TSet<UStalkerSoundSource*>			SoundSources;
 	

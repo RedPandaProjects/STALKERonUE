@@ -127,6 +127,7 @@ void FStalkerEngineManager::AppStart()
 
 void FStalkerEngineManager::AppEnd()
 {
+	GetResourcesManager()->GetSoundManager()->Clear();
 	Device->seqParallel.clear();
 	Device->b_is_Active = FALSE;
 	Device->seqAppEnd.Process(rp_AppEnd);
@@ -323,6 +324,7 @@ void FStalkerEngineManager::LoadDefaultWorld()
 
 bool FStalkerEngineManager::LoadWorld(FString LevelName)
 {
+	GetResourcesManager()->GetSoundManager()->Clear();
 	CurrentWorldName.Empty();
 	CurrentWorldPath.Reset();
 	UWorld* CurrentWorld = GWorld;

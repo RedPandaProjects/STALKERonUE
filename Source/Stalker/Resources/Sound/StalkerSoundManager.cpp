@@ -230,6 +230,7 @@ void UStalkerSoundManager::Build()
 	const FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
 	TArray<FAssetData> AssetData;
 	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData, true);
+	SoundsList.Empty();
 	for (FAssetData& Data : AssetData)
 	{
 		if(Data.IsInstanceOf(USoundBase::StaticClass()))
@@ -239,4 +240,16 @@ void UStalkerSoundManager::Build()
 			SoundsList.Add(Name);
 		}
 	}
+}
+
+void UStalkerSoundManager::Clear()
+{
+#if WITH_EDITOR
+	check(RBMKObject2SoundSource.Num() == 0);
+	check(SoundSources.Num() == 0);
+#else
+	RBMKObject2SoundSource.Empty();
+	SoundSources.Empty();
+#endif
+	SoundSourcesWithFeedback.Empty();
 }
