@@ -1230,7 +1230,7 @@ if mode == "weather" then
 		level.set_weather_fx(itmname)
             god.save_var("god_weather_fx",true)
          else
-	      level.set_weather(itmname,true)
+	     -- level.set_weather(itmname,true)
             god.save_var("god_weather_fx",false)
         end
             god.save_var("god_weather_type",itmname)

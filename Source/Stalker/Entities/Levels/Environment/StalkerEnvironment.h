@@ -8,15 +8,27 @@ class STALKER_API AStalkerEnvironment : public AActor,public IRBMKEnvironment
 
 public:
 				AStalkerEnvironment		();
-	void		SetWeather				(const char* Name, bool Force) override;
 	bool		SetEffect				(const char* Name) override;
-	void		SetGameTime				(float InTime, float InTimeFactor) override;
-	void		SetWindStrengthFactor	(float InFactor) override;
-	bool		IsEffectPlaying			() const override;
-	float		GetGameTime				() const override;
-	float		GetRainDensity			() const override;
-	shared_str	GetWeather				() const override;
-	float		GetFogDensity			() const override;
-	float		GetFogPlane				() const override;
-	float		GetWindStrengthFactor	() const override;
+public:
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetGameTime(float InTime, float InTimeFactor) override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	bool IsEffectPlaying() const override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	float GetGameTime() const override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	float GetRainDensity() const override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	float GetFogDensity() const override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	float GetFogPlane() const override;
+protected:
+	UFUNCTION(BlueprintImplementableEvent, meta=(DisplayName = "SetEffect"))
+	bool K2_SetEffect(const FString&Name);
+	
 };

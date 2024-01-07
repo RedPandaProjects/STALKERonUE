@@ -18,5 +18,7 @@ public:
 	void Reset() override;
 
 	bool ReadyToStartMatch_Implementation() override;
-
+	
+	UPROPERTY(EditAnywhere, NoClear, BlueprintReadOnly, Category=Classes)
+	TSubclassOf<class AStalkerEnvironment> StalkerEnvironmentClass;
 };

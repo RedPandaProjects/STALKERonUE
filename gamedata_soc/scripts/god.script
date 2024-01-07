@@ -49,7 +49,7 @@ if load_var("weather_state",false)==true then
  local wt = load_var("god_weather_type","none")
  if wt~="none" then
   if load_var("god_weather_fx",false)==false then
- 	      level.set_weather(wt,true)
+ 	    --  level.set_weather(wt,true)
   else
 		level.set_weather_fx(wt)
   end

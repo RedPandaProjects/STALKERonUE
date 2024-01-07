@@ -22,7 +22,7 @@ class "actor_binder" (object_binder)
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:__init (obj) super(obj)
 	self.bCheckStart = false
-	self.weather_manager = level_weathers.WeatherManager()
+--	self.weather_manager = level_weathers.WeatherManager()
 	self.actor_detector = xr_detector.actor_detector()
 end
 ----------------------------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ function actor_binder:net_spawn(data)
 		level.enable_input()
 	end
 
-	self.weather_manager:reset()
+	--self.weather_manager:reset()
 --	game_stats.initialize ()
 
 	if(actor_stats.add_to_ranking~=nil)then
@@ -222,7 +222,7 @@ function actor_binder:update(delta)
 	game_stats.update (delta, self.object)
 
 	-- апдейт погоды
-	self.weather_manager:update()
+	--self.weather_manager:update()
 	
 	-- апдейт схемы детектора
 	self.actor_detector:update()
@@ -361,7 +361,7 @@ function actor_binder:save(packet)
 	end
 
 	xr_logic.pstor_save_all(self.object, packet)
-	self.weather_manager:save(packet)
+	--self.weather_manager:save(packet)
 
 	sr_psy_antenna.save( packet )
 	
@@ -400,7 +400,7 @@ function actor_binder:load(reader)
 	end
 
 	xr_logic.pstor_load_all(self.object, reader)
-	self.weather_manager:load(reader)
+	--self.weather_manager:load(reader)
 
 	sr_psy_antenna.load(reader)
 	

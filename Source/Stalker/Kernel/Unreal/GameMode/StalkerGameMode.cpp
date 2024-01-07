@@ -16,7 +16,7 @@ AStalkerGameMode::AStalkerGameMode(const FObjectInitializer& ObjectInitializer):
 	PrimaryActorTick.bCanEverTick = true;
 	DefaultPawnClass = AStalkerPlayerCharacter::StaticClass();
 	PlayerControllerClass = AStalkerPlayerController::StaticClass();
-
+	StalkerEnvironmentClass = AStalkerEnvironment::StaticClass();
 }
 
 void AStalkerGameMode::Tick(float DeltaSeconds)
@@ -39,7 +39,7 @@ void AStalkerGameMode::InitGame(const FString& MapName, const FString& Options, 
 			WorldSettings->DebugRender = World->SpawnActor<AStalkerDebugRender>(AStalkerDebugRender::StaticClass(), SpawnInfo);
 
 			
-			WorldSettings->Environment = World->SpawnActor<AStalkerEnvironment>(AStalkerEnvironment::StaticClass(), SpawnInfo);
+			WorldSettings->Environment = World->SpawnActor<AStalkerEnvironment>(StalkerEnvironmentClass, SpawnInfo);
 		}
 	}
 }
