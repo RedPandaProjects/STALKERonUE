@@ -228,6 +228,12 @@ void UStalkerSoundManager::Build()
 {
 	const FString PackageName = GStalkerEngineManager->GetResourcesManager()->GetGamePath() / TEXT("Sounds");
 	const FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+#if WITH_EDITOR
+	if(!GIsEditor)
+	{
+		AssetRegistryModule.Get().ScanPathsSynchronous({PackageName},true);
+	}
+#endif
 	TArray<FAssetData> AssetData;
 	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData, true);
 	SoundsList.Empty();

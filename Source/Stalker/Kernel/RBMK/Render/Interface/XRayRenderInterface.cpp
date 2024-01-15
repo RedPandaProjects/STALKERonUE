@@ -142,7 +142,7 @@ void XRayRenderInterface::model_Delete(IRenderVisual*& V, BOOL bDiscard)
 		}
 		else if (V->dcast_ParticleCustom())
 		{
-			GStalkerEngineManager->GetResourcesManager()->Desotry(V->dcast_ParticleCustom());
+			GStalkerEngineManager->GetResourcesManager()->Destroy(V->dcast_ParticleCustom());
 		}
 		else
 		{
@@ -156,7 +156,7 @@ void XRayRenderInterface::light_destroy(IRender_Light* p_)
 {
 	if (p_)
 	{
-		GStalkerEngineManager->GetResourcesManager()->Desotry(p_);
+		GStalkerEngineManager->GetResourcesManager()->Destroy(p_);
 	}
 	p_ = nullptr;
 }

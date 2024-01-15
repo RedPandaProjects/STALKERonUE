@@ -3,7 +3,6 @@
 #include "../Entities/Kinematics/StalkerKinematicsComponent.h"
 #include "SkeletonMesh/StalkerKinematicsAssetUserData.h"
 #include "../Entities/Levels/Light/StalkerLight.h"
-#include "../Entities/Levels/Proxy/StalkerProxy.h"
 #include "../Entities/Particles/StalkerNiagaraActor.h"
 #include "Sound/StalkerSoundManager.h"
 #include "Spawn/StalkerGameSpawn.h"
@@ -80,9 +79,9 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 	if (!IsValid(ParentMaterial))
 	{
 		UE_LOG(LogStalker, Warning, TEXT("Can't found ui material:%s"), *NameMaterial);
-		UMaterialInterface* UnkownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/UIUnkown.UIUnkown"));
-		check(IsValid(UnkownMaterial));
-		ParentMaterial = UnkownMaterial;
+		UMaterialInterface* UnknownMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Base/Materials/UIUnkown.UIUnkown"));
+		check(IsValid(UnknownMaterial));
+		ParentMaterial = UnknownMaterial;
 	}
 
 	UTexture* Texture = nullptr;
@@ -122,9 +121,9 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		if (!IsValid(Texture))
 		{
 			UE_LOG(LogStalker, Warning, TEXT("Can't found texture:%s"), *NameTexture);
-			UTexture* UnkownTextuer = LoadObject<UTexture>(nullptr, TEXT("/Game/Base/Textures/Unkown.Unkown"));
-			check(IsValid(UnkownTextuer));
-			Texture = UnkownTextuer;
+			UTexture* UnknownTexture = LoadObject<UTexture>(nullptr, TEXT("/Game/Base/Textures/Unkown.Unkown"));
+			check(IsValid(UnknownTexture));
+			Texture = UnknownTexture;
 		}
 	}
 	UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(ParentMaterial,nullptr,NAME_None);
@@ -138,7 +137,7 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 		USlateBrushAsset* NewSlateBrushAsset = Brushes[InNameMaterial][InNameTexture];
 		NewSlateBrushAsset->SetFlags(RF_Transient);
 		FVector2D TextureSize = FVector2D(32, 32);
-		NewSlateBrushAsset->Brush = FSlateMaterialBrush(*Material, TextureSize);
+		NewSlateBrushAsset->Brush = static_cast<FSlateBrush>(FSlateMaterialBrush(*Material, TextureSize));
 		BrushesMaterials.Add(NewSlateBrushAsset, Material);
 		if (InNameTexture != NAME_None)
 		{
@@ -153,7 +152,7 @@ USlateBrushAsset* FStalkerResourcesManager::GetBrush(FName InNameMaterial, FName
 	USlateBrushAsset* NewSlateBrushAsset = NewObject<USlateBrushAsset>();
 	NewSlateBrushAsset->SetFlags(RF_Transient);
 	FVector2D TextureSize = FVector2D(32,32);
-	NewSlateBrushAsset->Brush =  FSlateMaterialBrush(*Material, TextureSize);
+	NewSlateBrushAsset->Brush =  static_cast<FSlateBrush>(FSlateMaterialBrush(*Material, TextureSize));
 	Brushes.FindOrAdd(InNameMaterial).Add(InNameTexture, NewSlateBrushAsset);
 	BrushesCounter.Add(NewSlateBrushAsset,1);
 	BrushesMaterials.Add(NewSlateBrushAsset, Material);
@@ -172,9 +171,8 @@ UFont* FStalkerResourcesManager::GetFont(FName Name)
 	{
 		return Fonts[Name];
 	}
-	FString FontPath;
-	FString DefaultFontPath = TEXT("/Engine/EngineFonts/Roboto.Roboto");
-	FontPath = DefaultFontPath;
+	const FString DefaultFontPath = TEXT("/Engine/EngineFonts/Roboto.Roboto");
+	FString FontPath = DefaultFontPath;
 	if (Name != TEXT("default"))
 	{
 		const FString NameFont = Name.ToString();
@@ -196,7 +194,7 @@ UFont* FStalkerResourcesManager::GetFont(FName Name)
 	return Font;
 }
 
-void FStalkerResourcesManager::Free(USlateBrushAsset* Brush)
+void FStalkerResourcesManager::Free(const USlateBrushAsset* Brush)
 {
 	int32*Counter = BrushesCounter.Find(Brush);
 	check(Counter);
@@ -226,7 +224,7 @@ USlateBrushAsset* FStalkerResourcesManager::Copy(USlateBrushAsset* Brush)
 	return Brush;
 }
 
-void FStalkerResourcesManager::CheckLeak()
+void FStalkerResourcesManager::CheckLeak() const
 {
 	check(Meshes.Num() == 0);
 }
@@ -254,14 +252,14 @@ class AStalkerLight* FStalkerResourcesManager::CreateLight()
 	return Result;
 }
 
-void FStalkerResourcesManager::Desotry(class IRender_Light* InLight)
+void FStalkerResourcesManager::Destroy(class IRender_Light* InLight)
 {
 	AStalkerLight*Light =  static_cast<AStalkerLight*>(InLight);
 	Light->Unlock();
 	Light->Destroy();
 }
 
-void FStalkerResourcesManager::Desotry(class IParticleCustom* InParticles)
+void FStalkerResourcesManager::Destroy(class IParticleCustom* InParticles)
 {
 	AStalkerNiagaraActor*Particles =  static_cast<AStalkerNiagaraActor*>(InParticles);
 	Particles->Destroy();
@@ -372,13 +370,13 @@ class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(cl
 	return Result;
 }
 
-class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(const char* InName, bool NeedRefence)
+class UStalkerKinematicsComponent* FStalkerResourcesManager::CreateKinematics(const char* InName, bool NeedReference)
 {
 	USkeletalMesh* Kinematics = GetKinematics(InName);
 	if (IsValid(Kinematics))
 	{
 		UStalkerKinematicsComponent* Result = CreateKinematics(Kinematics);
-		if (NeedRefence)
+		if (NeedReference)
 		{
 			Meshes.Add(Result);
 		}
@@ -401,7 +399,7 @@ void FStalkerResourcesManager::RegisterKinematics(class UStalkerKinematicsCompon
 	Meshes.Add(Mesh);
 }
 
-void FStalkerResourcesManager::UnregisterKinematics(class UStalkerKinematicsComponent* Mesh)
+void FStalkerResourcesManager::UnregisterKinematics(const class UStalkerKinematicsComponent* Mesh)
 {
 	Meshes.Remove(Mesh);
 }
@@ -453,7 +451,7 @@ UStalkerGameSpawn* FStalkerResourcesManager::GetOrCreateGameSpawn()
 	GetGameSpawn();
 	auto CreatePackageSpawn = [this]()
 	{
-		FString PackageName = GetGamePath() /TEXT("Spawns") / TEXT("GlobalSpawn");
+		const FString PackageName = GetGamePath() /TEXT("Spawns") / TEXT("GlobalSpawn");
 		UPackage* BuiltDataPackage = CreatePackage(*PackageName);
 		return BuiltDataPackage;
 	};
@@ -467,7 +465,7 @@ UStalkerGameSpawn* FStalkerResourcesManager::GetOrCreateGameSpawn()
 
 		UPackage* BuiltDataPackage = CreatePackageSpawn();
 
-		FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
+		const FName ShortPackageName = FPackageName::GetShortFName(BuiltDataPackage->GetFName());
 		GameSpawn = NewObject<UStalkerGameSpawn>(BuiltDataPackage, ShortPackageName, RF_Standalone | RF_Public);
 	}
 	return GameSpawn;
@@ -510,7 +508,6 @@ FStalkerResourcesManager::FStalkerResourcesManager()
 
 FStalkerResourcesManager::~FStalkerResourcesManager()
 {
-	SoundManager->MarkAsGarbage();
 }
 
 

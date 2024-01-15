@@ -15,9 +15,15 @@ void UStalkerPhysicalMaterialsManager::Build()
 	LegacyPhysicalMaterials.Num()||
 	LegacyPhysicalMaterialPairs.Num()||
 	Name2ID.Num())==false);
-
 	const FString PackageName = GStalkerEngineManager->GetResourcesManager()->GetGamePath() / TEXT("PhysicalMaterials") / TEXT("Materials");
 	FAssetRegistryModule& AssetRegistryModule = FModuleManager::LoadModuleChecked<FAssetRegistryModule>("AssetRegistry");
+#if WITH_EDITOR
+	if(!GIsEditor)
+	{
+		AssetRegistryModule.Get().ScanPathsSynchronous({PackageName},true);
+	}
+#endif
+
 	TArray<FAssetData> AssetData;
 	AssetRegistryModule.Get().GetAssetsByPath(FName(*PackageName), AssetData, true);
 	for (FAssetData& Data : AssetData)

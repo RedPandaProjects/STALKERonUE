@@ -1,4 +1,6 @@
 #include "StalkerEngineManager.h"
+
+#include "AssetRegistry/AssetRegistryModule.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Resources/Sound/StalkerSoundManager.h"
 THIRD_PARTY_INCLUDES_START
@@ -111,14 +113,13 @@ void FStalkerEngineManager::Initialize()
 #endif
 	FCoreUObjectDelegates::PostLoadMapWithWorld.AddRaw(this, &FStalkerEngineManager::OnPostLoadMap);
 	FCoreDelegates::OnPostEngineInit.AddRaw(this, &FStalkerEngineManager::OnPostEngineInit);
-	if (!GIsEditor)
-	{
-		AppStart();
-	}
+#if !WITH_EDITOR
+	AppStart();
+#endif
 }
 
 void FStalkerEngineManager::AppStart()
-{ 
+{
 	PhysicalMaterialsManager->Build();
 	GetResourcesManager()->GetSoundManager()->Build();
 	Device->seqAppStart.Process(rp_AppStart);
@@ -127,12 +128,12 @@ void FStalkerEngineManager::AppStart()
 
 void FStalkerEngineManager::AppEnd()
 {
-	GetResourcesManager()->GetSoundManager()->Clear();
 	Device->seqParallel.clear();
 	Device->b_is_Active = FALSE;
 	Device->seqAppEnd.Process(rp_AppEnd);
 	MyXRayInput->ClearStates();
 	PhysicalMaterialsManager->Clear();
+	GetResourcesManager()->GetSoundManager()->Clear();
 }
 
 void FStalkerEngineManager::AddReferencedObjects(FReferenceCollector& Collector)
@@ -533,6 +534,12 @@ void FStalkerEngineManager::OnPostEngineInit()
 	FNiagaraTypeRegistry::Register(FStalkerParticleDomain::StaticStruct(), 	ENiagaraTypeRegistryFlags::AllowAnyVariable |ENiagaraTypeRegistryFlags::AllowParameter|ENiagaraTypeRegistryFlags::AllowPayload);
 	FNiagaraTypeRegistry::Register(StaticEnum<EStalkerParticleDomainType>(), ENiagaraTypeRegistryFlags::AllowAnyVariable | ENiagaraTypeRegistryFlags::AllowParameter);
 	FNiagaraTypeRegistry::Register(FNiagaraTypeDefinition(StaticEnum<EStalkerParticleDomainType>()).ToStaticDef(), ENiagaraTypeRegistryFlags::AllowAnyVariable | ENiagaraTypeRegistryFlags::AllowParameter);
+#if WITH_EDITOR
+	if (!GIsEditor)
+	{
+		AppStart();
+	}
+#endif
 }
 
 void FStalkerEngineManager::OnPostLoadMap(UWorld* World)
