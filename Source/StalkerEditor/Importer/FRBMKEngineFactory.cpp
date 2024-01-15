@@ -731,6 +731,22 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 			{
 				continue;
 			}
+			
+			xr_vector< st_MeshVertex> Vertices;
+			for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
+			{
+				if(InMeshID	!= -1&&InMeshID != MeshID)
+				{
+					continue;
+				}
+				Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
+			}
+
+			if (Vertices.size() == 0)
+			{
+				continue;
+			}
+			
 			NeedLodForCollision |= ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bCollision&&!ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;
 			NeedLodForRender |= ShaderXRLC.Get(Object->Surfaces()[ElementID]->_ShaderXRLCName())->flags.bRendering;;
 		}
@@ -745,6 +761,7 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 	TMap<int32,TArray<bool>> AffectDistanceFieldLightingEnableIdOfLod;
 	auto CreateLod = [&](bool OnlyCollsion)
 	{
+		int32 VerticesCount = 0;
 		MaterialsIdOfLod.Add(LodIndex);
 		CollisionEnableIdOfLod.Add(LodIndex);
 		RenderingEnableIdOfLod.Add(LodIndex);
@@ -799,7 +816,7 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 				{
 					continue;
 				}
-
+				VerticesCount += Vertices.size();
 				if(ShaderLC)
 				{
 					CollisionEnableIdOfLod[LodIndex].Add(!!ShaderLC->flags.bCollision);
@@ -859,15 +876,23 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 		SourceModel.BuildSettings.bGenerateLightmapUVs = true;
 		SourceModel.BuildSettings.DstLightmapIndex = 1;
 		SourceModel.BuildSettings.MinLightmapResolution = 128;
+		return VerticesCount;
 	};
+	int32 VerticesCount = 0;
 	if(NeedLodForCollision)
 	{
-		CreateLod(true);
+		VerticesCount += CreateLod(true);
 	}
 	if(NeedLodForRender)
 	{
-		CreateLod(false);
+		VerticesCount += CreateLod(false);
 	}
+	if(VerticesCount == 0)
+	{
+		ObjectTools::DeleteSingleObject(StaticMesh);
+		return nullptr;
+	}
+	
 	StaticMesh->SetStaticMaterials(Materials);
 	StaticMesh->Build();
 	for(auto&[Key,Value]:MaterialsIdOfLod)
