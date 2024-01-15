@@ -38,8 +38,14 @@ void AStalkerGameMode::InitGame(const FString& MapName, const FString& Options, 
 			SpawnInfo.ObjectFlags |= RF_Transient;
 			WorldSettings->DebugRender = World->SpawnActor<AStalkerDebugRender>(AStalkerDebugRender::StaticClass(), SpawnInfo);
 
-			
-			WorldSettings->Environment = World->SpawnActor<AStalkerEnvironment>(StalkerEnvironmentClass, SpawnInfo);
+			if(UClass* InStalkerEnvironmentClass = StalkerEnvironmentClass.LoadSynchronous())
+			{
+				WorldSettings->Environment = World->SpawnActor<AStalkerEnvironment>(InStalkerEnvironmentClass, SpawnInfo);
+			}
+			else
+			{
+				WorldSettings->Environment = World->SpawnActor<AStalkerEnvironment>(SpawnInfo);
+			}
 		}
 	}
 }

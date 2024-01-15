@@ -20,5 +20,5 @@ public:
 	bool ReadyToStartMatch_Implementation() override;
 	
 	UPROPERTY(EditAnywhere, NoClear, BlueprintReadOnly, Category=Classes)
-	TSubclassOf<class AStalkerEnvironment> StalkerEnvironmentClass;
+	TSoftClassPtr<class AStalkerEnvironment> StalkerEnvironmentClass;
 };

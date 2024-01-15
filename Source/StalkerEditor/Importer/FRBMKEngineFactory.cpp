@@ -1011,7 +1011,6 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 					SkeletalMeshImportData::FVertex Wedge;
 					static size_t VirtualVertices[3] = { 0,2,1 };
 					size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
-
 					FVector3f VertexPositions;
 					VertexPositions.X = -Vertices[VertexID].Position.x * 100;
 					VertexPositions.Y = Vertices[VertexID].Position.z * 100;
