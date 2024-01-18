@@ -2,7 +2,9 @@
     <img src="Resources/Media/LogoText.png" alt="STALKER on UE Logo" />
 </p>
 
-# STALKER on UE ![Unreal Engine 5.3.2](https://img.shields.io/badge/Unreal_Engine-5.3.2-blue) [![Discord](https://img.shields.io/discord/530968529311367178?style=social&logo=Discord&label=Discord)](https://discord.gg/dbBdK2GxKf) 
+# STALKER on UE 
+
+![Unreal Engine 5.3.2](https://img.shields.io/badge/Unreal_Engine-5.3.2-blue) [![Discord](https://img.shields.io/discord/530968529311367178?style=social&logo=Discord&label=Discord)](https://discord.gg/dbBdK2GxKf) 
 
 Welcome to the world of STALKER on UE - a revolutionary modification that ports the original STALKER trilogy and the X-Ray Engine logic onto the incredibly powerful Unreal Engine 5!
 As a bonus, it provides the ability to create new and port existing mods for the original X-Ray.
@@ -73,7 +75,9 @@ After successfully building X-Ray Engine, return to the repository's root folder
 ### 2. Compiling Files to Launch the Unreal Engine Project
 After generating the Visual Studio project, open it and select the desired build configuration.
 
-The generated file can be found at `{src}/Stalker.sln`
+The generated file can be found at `{src}/Stalker.sln`.
+
+**Warning!!!** Select "Games / Stalker" in the project explorer and press "Build".
 
 <p>
     <img src="Resources/Media/ue-build.png" alt="UE Build" />
