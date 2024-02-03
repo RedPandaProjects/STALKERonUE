@@ -25,7 +25,7 @@ In the future, it will be possible to build for all other platforms, including m
 > [!NOTE]
 > Pay attention to the order. It is crucial to build X-Ray Engine first and then Unreal Engine!
 
-## Cloning the Project
+### Cloning the Project
 You need to do this recursively using the `--recursive` parameter
 
 ```bash
@@ -36,7 +36,20 @@ git clone https://git.s2ue.org/RedProjects/SonUE.git --recursive
     <img src="Resources/Media/git-clone.png" alt="Terminal" />
 </p>
 
-## Building X-Ray Engine
+### Automatic build
+
+#### 1. Run build script
+
+Run `build.bat` and just wait.
+
+#### 2. Launching the Project
+After a successful build, you can launch the editor either by clicking the `Launch` button in VS or through the `{src}/Stalker.uproject` file. 
+
+---
+
+### Manual Build
+
+#### 1. Building X-Ray Engine
 X-Ray is located at the following path:
 
 ```path
@@ -45,9 +58,7 @@ X-Ray is located at the following path:
 
 You need to open this project and compile it with the required [configuration](https://s2ue.org/docs/install-and-build/build).
 
----
-
-### Build Example
+##### Build Example
 Building `DebugGame Editor` in the Unreal project. To do this, I need to build all solutions with the `Debug` configuration.
 
 > [!WARNING]
@@ -57,9 +68,9 @@ Building `DebugGame Editor` in the Unreal project. To do this, I need to build a
     <img src="Resources/Media/xray-build.png" alt="Visual Studio" />
 </p>
 
-## Building the UE Project
+#### 2. Building the UE Project
 
-### 1. Creating a Visual Studio Project for UE Build
+##### 2.1. Creating a Visual Studio Project for UE Build
 After successfully building X-Ray Engine, return to the repository's root folder and generate the project.
 
 <p>
@@ -72,7 +83,7 @@ After successfully building X-Ray Engine, return to the repository's root folder
 
 ---
 
-### 2. Compiling Files to Launch the Unreal Engine Project
+##### 2.2. Compiling Files to Launch the Unreal Engine Project
 After generating the Visual Studio project, open it and select the desired build configuration.
 
 The generated file can be found at `{src}/Stalker.sln`.
@@ -89,7 +100,7 @@ The generated file can be found at `{src}/Stalker.sln`.
 
 ---
 
-### 3. Launching the Project
+#### 3. Launching the Project
 After a successful build, you can launch the editor either by clicking the `Launch` button in VS or through the `{src}/Stalker.uproject` file. 
 
 ## Documentation:
