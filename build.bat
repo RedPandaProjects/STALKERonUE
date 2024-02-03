@@ -59,15 +59,15 @@ call "!VSPath!\Common7\Tools\VsDevCmd.bat" >nul
 
 :: Configuration selection
 echo Choose build configuration:
-echo [1] Debug (DebugGame Editor)
-echo [2] Development (Development Editor)
+echo [1] Development (Development Editor) *Recommended
+echo [2] Debug (DebugGame Editor)
 set /p ConfigChoice="Enter configuration number: "
 if "!ConfigChoice!"=="1" (
-    set "EngineConfig=Debug"
-    set "StalkerConfig=DebugGame Editor"
-) else if "!ConfigChoice!"=="2" (
     set "EngineConfig=Release"
     set "StalkerConfig=Development Editor"
+) else if "!ConfigChoice!"=="2" (
+    set "EngineConfig=Debug"
+    set "StalkerConfig=DebugGame Editor"
 ) else (
     echo Invalid choice.
     exit /b 1
