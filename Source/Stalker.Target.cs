@@ -8,7 +8,8 @@ public class StalkerTarget : TargetRules
 	public StalkerTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-        DefaultBuildSettings = BuildSettingsVersion.Latest;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "Stalker" } );
 	}
 }

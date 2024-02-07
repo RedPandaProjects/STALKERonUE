@@ -3,7 +3,7 @@
 #include "../StalkerEditorStyle.h"
 #include "../../StalkerEditorManager.h"
 
-void StalkerBuildMenu::Initialize()
+void FStalkerBuildMenu::Initialize()
 {
 	FToolMenuOwnerScoped OwnerScoped(this);
 
@@ -41,7 +41,7 @@ void StalkerBuildMenu::Initialize()
 	}
 }
 
-void StalkerBuildMenu::Destroy()
+void FStalkerBuildMenu::Destroy()
 {
 
 }

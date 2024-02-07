@@ -15,6 +15,10 @@
 #include "Animation/AnimSequence.h"
 #include "Components/BrushComponent.h"
 #include "GameFramework/Volume.h"
+#include "Engine/GameInstance.h"
+#include "PhysicsEngine/BoxElem.h"
+#include "PhysicsEngine/SphereElem.h"
+#include "PhysicsEngine/SphylElem.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrAPI/xrGameManager.h"
 #include "XrCore/stdafx.h"

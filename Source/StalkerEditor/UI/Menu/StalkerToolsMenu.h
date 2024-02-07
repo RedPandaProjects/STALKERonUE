@@ -1,5 +1,5 @@
 #pragma once
-class StalkerToolsMenu
+class FStalkerToolsMenu
 {
 public:
 	void Initialize();

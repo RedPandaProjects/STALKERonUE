@@ -4,7 +4,7 @@
 #include "../../StalkerEditorManager.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 
-void StalkerToolsMenu::Initialize()
+void FStalkerToolsMenu::Initialize()
 {
     FToolMenuOwnerScoped OwnerScoped(this);
 
@@ -94,7 +94,7 @@ void StalkerToolsMenu::Initialize()
 	}
 }
 
-void StalkerToolsMenu::Destroy()
+void FStalkerToolsMenu::Destroy()
 {
 
 }

@@ -2,7 +2,7 @@
 #include "../StalkerEditorStyle.h"
 #include "../Commands/StalkerEditorCommands.h"
 #include "../../StalkerEditorManager.h"
-void StalkerToolbarMenu::Initialize()
+void FStalkerToolbarMenu::Initialize()
 {
 	FToolMenuOwnerScoped OwnerScoped(this);
 
@@ -46,7 +46,7 @@ void StalkerToolbarMenu::Initialize()
 	}
 }
 
-void StalkerToolbarMenu::Destroy()
+void FStalkerToolbarMenu::Destroy()
 {
 
 }

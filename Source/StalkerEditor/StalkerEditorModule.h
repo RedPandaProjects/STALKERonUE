@@ -15,9 +15,9 @@ public:
 private:
 	void				OnPostEngineInit();
 	void				OnPreExit		();
-	StalkerMainMenu		MainMenu;
-	StalkerToolbarMenu	ToolBarMenu;
-	StalkerBuildMenu	BuildMenu;
-	StalkerPlayMenu		PlayMenu;
-	StalkerToolsMenu	ToolsMenu;
+	FStalkerMainMenu		MainMenu;
+	FStalkerToolbarMenu	ToolBarMenu;
+	FStalkerBuildMenu	BuildMenu;
+	FStalkerPlayMenu		PlayMenu;
+	FStalkerToolsMenu	ToolsMenu;
 };

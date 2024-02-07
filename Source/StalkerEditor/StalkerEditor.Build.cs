@@ -9,9 +9,7 @@ public class StalkerEditor : ModuleRules
         CppStandard = CppStandardVersion.Cpp20;
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PrivatePCHHeaderFile = "StalkerEditorPCH.h";
-
         PublicIncludePaths.Add(ModuleDirectory);
-
         PrivateDependencyModuleNames.AddRange(
             new string[]
             {

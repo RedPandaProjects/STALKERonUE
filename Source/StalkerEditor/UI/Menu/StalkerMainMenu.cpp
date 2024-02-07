@@ -5,34 +5,34 @@
 #include "../../StalkerEditorManager.h"
 #include "../Commands/StalkerEditorCommands.h"
 
-void StalkerMainMenu::Initialize()
+void FStalkerMainMenu::Initialize()
 {
 	if (!IsRunningCommandlet())
 	{
 		FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
 		auto LevelEditorMenuExtensibilityManager = LevelEditorModule.GetMenuExtensibilityManager();
 		MenuExtender = MakeShareable(new FExtender);
-		MenuExtender->AddMenuBarExtension("Help", EExtensionHook::After, GStalkerEditorManager->UICommandList, FMenuBarExtensionDelegate::CreateRaw(this, &StalkerMainMenu::MakePulldownMenu));
+		MenuExtender->AddMenuBarExtension("Help", EExtensionHook::After, GStalkerEditorManager->UICommandList, FMenuBarExtensionDelegate::CreateRaw(this, &FStalkerMainMenu::MakePulldownMenu));
 		LevelEditorMenuExtensibilityManager->AddExtender(MenuExtender);
 	}
 }
 
-void StalkerMainMenu::Destroy()
+void FStalkerMainMenu::Destroy()
 {
 
 }
 
-void StalkerMainMenu::MakePulldownMenu(FMenuBarBuilder& InMenuBuilder)
+void FStalkerMainMenu::MakePulldownMenu(FMenuBarBuilder& InMenuBuilder)
 {
 	InMenuBuilder.AddPullDownMenu(
 		FText::FromString("Stalker"),
 		FText::FromString("Open the Stalker menu"),
-		FNewMenuDelegate::CreateRaw(this, &StalkerMainMenu::FillPulldownMenu),
+		FNewMenuDelegate::CreateRaw(this, &FStalkerMainMenu::FillPulldownMenu),
 		"Stalker"
 	);
 }
 
-void StalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
+void FStalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 {
 	InMenuBuilder.BeginSection(NAME_None, FText::FromString("Games"));
 	{

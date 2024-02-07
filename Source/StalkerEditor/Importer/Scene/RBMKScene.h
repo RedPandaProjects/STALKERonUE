@@ -1,6 +1,8 @@
 #pragma once
+#include "RBMKSceneObjectType.h"
+#include "Tools/Base/RBMKSceneToolBase.h"
 
-DECLARE_DELEGATE_OneParam( FRMBKSceneAppendObjectDelegate,TSharedPtr<FRBMKSceneObjectBase>);
+DECLARE_DELEGATE_OneParam(FRMBKSceneAppendObjectDelegate, TSharedPtr<FRBMKSceneObjectBase>);
 
 class FRBMKScene 
 {

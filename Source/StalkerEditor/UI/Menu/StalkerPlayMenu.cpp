@@ -4,7 +4,7 @@
 #include "../../StalkerEditorManager.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 
-void StalkerPlayMenu::Initialize()
+void FStalkerPlayMenu::Initialize()
 {
 	FToolMenuOwnerScoped OwnerScoped(this);
 
@@ -15,7 +15,7 @@ void StalkerPlayMenu::Initialize()
 			"Auto build",
 			FText::FromString(TEXT("Auto build")),
 			FText::FromString(TEXT("Auto build")),
-			FNewToolMenuDelegate::CreateRaw(this, &StalkerPlayMenu::CreateAutoBuildSubMenu)
+			FNewToolMenuDelegate::CreateRaw(this, &FStalkerPlayMenu::CreateAutoBuildSubMenu)
 		);
 
 	
@@ -96,12 +96,12 @@ void StalkerPlayMenu::Initialize()
 	}
 }
 
-void StalkerPlayMenu::Destroy()
+void FStalkerPlayMenu::Destroy()
 {
 
 }
 
-void StalkerPlayMenu::CreateAutoBuildSubMenu(UToolMenu* InToolMenu)
+void FStalkerPlayMenu::CreateAutoBuildSubMenu(UToolMenu* InToolMenu)
 {
 
 

@@ -2,6 +2,7 @@
 
 
 #include "StalkerAIMapEditMode.h"
+
 #include "StalkerAIMapEditorCommands.h"
 #include "StalkerAIMapEdModeToolkit.h"
 #include "EditorViewportClient.h"

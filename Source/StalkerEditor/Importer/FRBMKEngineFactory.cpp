@@ -10,6 +10,7 @@
 #include "Engine/EngineTypes.h"
 #include "ImportUtils/StaticMeshImportUtils.h"
 #include "../StalkerEditorManager.h"
+#include "Engine/SkinnedAssetCommon.h"
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Resources/PhysicalMaterial/StalkerPhysicalMaterialsManager.h"
@@ -1518,7 +1519,7 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 				SoundWave->SoundClassObject = Value.LoadSynchronous();
 			}
 		}
-		if(!IsValid(SoundWave->SoundClassObject))
+		if(!SoundWave->SoundClassObject)
 		{
 			SoundWave->SoundClassObject = SGSettings->DefaultSoundClass.LoadSynchronous();
 		}
@@ -1654,7 +1655,7 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 				SoundWave->SoundClassObject = Value.LoadSynchronous();
 			}
 		}
-		if(!IsValid(SoundWave->SoundClassObject))
+		if(!SoundWave->SoundClassObject)
 		{
 			SoundWave->SoundClassObject = SGSettings->DefaultSoundClass.LoadSynchronous();
 		}
