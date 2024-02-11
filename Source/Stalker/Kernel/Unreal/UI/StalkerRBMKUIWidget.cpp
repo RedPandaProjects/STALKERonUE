@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "StalkerUIWidget.h"
+#include "StalkerRBMKUIWidget.h"
 
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/IGame_Persistent.h"
@@ -9,13 +9,13 @@ THIRD_PARTY_INCLUDES_START
 THIRD_PARTY_INCLUDES_END
 #include "Kernel/RBMK/Render/Interface/UI/XRayUIRender.h"
 ENGINE_API BOOL g_bRendering;
-bool UStalkerUIWidget::Initialize()
+bool UStalkerRBMKUIWidget::Initialize()
 {
 	LastFrame = Device->dwFrame+1;
 	return Super::Initialize();
 }
 
-int32 UStalkerUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& AllottedGeometry, const FSlateRect& MyCullingRect, FSlateWindowElementList& OutDrawElements, int32 LayerId, const FWidgetStyle& InWidgetStyle, bool bParentEnabled) const
+int32 UStalkerRBMKUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& AllottedGeometry, const FSlateRect& MyCullingRect, FSlateWindowElementList& OutDrawElements, int32 LayerId, const FWidgetStyle& InWidgetStyle, bool bParentEnabled) const
 {
 	if(Device->dwFrame>LastFrame)
 	{

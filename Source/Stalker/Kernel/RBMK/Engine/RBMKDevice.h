@@ -18,6 +18,6 @@ public:
 	void				RemoveSeqFrame	(pureFrame* f) override;
 private:
 	bool				IsTimerPaused;
-	int32				SndEmitters = -1;
+	int32				SoundEmittersPaused = -1;
 
 };

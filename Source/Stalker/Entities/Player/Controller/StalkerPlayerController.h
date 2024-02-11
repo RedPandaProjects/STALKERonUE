@@ -13,5 +13,5 @@ protected:
 
 private:
 	UPROPERTY(Transient)
-	TObjectPtr<class UStalkerUIWidget> UIWidget;
+	TObjectPtr<class UStalkerRBMKUIWidget> UIWidget;
 };

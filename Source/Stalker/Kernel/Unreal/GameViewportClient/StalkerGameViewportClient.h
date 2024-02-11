@@ -3,10 +3,6 @@
 #pragma once
 #include "Engine/GameViewportClient.h"
 #include "StalkerGameViewportClient.generated.h"
-
-/**
- * 
- */
 UCLASS()
 class UStalkerGameViewportClient : public UGameViewportClient
 {

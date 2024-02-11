@@ -54,7 +54,6 @@ void UStalkerSoundSource::Play(CObject* ActorSource, bool Looping, float Delay)
 			GWorld->GetTimerManager().SetTimer(TimerHandle_DelayPlay, Delegate, Delay, false);
 		}
 	}
-	PausedCounter = 0;
 	if(ActorSource)
 	{
 		UStalkerSoundManager*SoundManager = CastChecked<UStalkerSoundManager>(GetOuter());
@@ -114,7 +113,6 @@ void UStalkerSoundSource::Play(CObject* ActorSource, const Fvector& InPosition, 
 		}
 	}
 
-	PausedCounter = 0;
 	if(ActorSource)
 	{
 		UStalkerSoundManager*SoundManager = CastChecked<UStalkerSoundManager>(GetOuter());
@@ -194,7 +192,6 @@ void UStalkerSoundSource::PlayWithoutFeedback(CObject* ActorSource, bool Looping
 			GWorld->GetTimerManager().SetTimer(TimerHandle_DelayPlay, Delegate, Delay, false);
 		}
 	}
-	PausedCounter = 0;
 }
 
 void UStalkerSoundSource::PlayWithoutFeedback(CObject* ActorSource, const Fvector& InPosition, bool Looping,float Delay, float* Volume)
@@ -265,7 +262,6 @@ void UStalkerSoundSource::PlayWithoutFeedback(CObject* ActorSource, const Fvecto
 		}
 	}
 
-	PausedCounter = 0;
 }
 
 void UStalkerSoundSource::Stop()
@@ -288,42 +284,42 @@ void UStalkerSoundSource::StopWithFade()
 	}
 }
 
-void UStalkerSoundSource::Pause(bool Paused)
+void UStalkerSoundSource::Pause(bool Paused,int32 InPausedID)
 {
 	if(IsValid(AudioComponent))
 	{
-		if(!ensure(PausedCounter>=0))
+		if(Paused)
 		{
-			PausedCounter = 0;
-		}
-		if(!Paused)
-		{
-			PausedCounter--;
-		}
-		if(PausedCounter == 0)
-		{
-			if(TimerHandle_DelayPlay.IsValid())
+			if(PausedID == 0)
 			{
-				if(Paused)
+				PausedID = InPausedID;
+				if(TimerHandle_DelayPlay.IsValid())
 				{
 					GWorld->GetTimerManager().PauseTimer(TimerHandle_DelayPlay);
 				}
 				else
 				{
-					GWorld->GetTimerManager().UnPauseTimer(TimerHandle_DelayPlay);
+					AudioComponent->SetPaused(Paused);
 				}
 			}
-			else
+			
+		}
+		else
+		{
+			if(PausedID == InPausedID)
 			{
-				AudioComponent->SetPaused(Paused);
+				if(TimerHandle_DelayPlay.IsValid())
+				{
+					GWorld->GetTimerManager().UnPauseTimer(TimerHandle_DelayPlay);
+				}
+				else
+				{
+					AudioComponent->SetPaused(Paused);
+				}
+				PausedID = 0;
 			}
 		}
-		if(Paused)
-		{
-			PausedCounter++;
-		}
 	}
-
 }
 
 void UStalkerSoundSource::SetVolume(float NewVolume)

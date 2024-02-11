@@ -1,4 +1,7 @@
 #include "RBMKEngine.h"
+
+#include "MoviePlayer.h"
+#include "MoviePlayerProxy.h"
 #include "RBMKDevice.h"
 #include "../Render/Interface/XRayRenderInterface.h"
 #include "../Render/Interface/XRayRenderFactory.h"
@@ -239,6 +242,24 @@ IRBMKEnvironment* FRBMKEngine::GetEnvironment()
 		return WorldSettings->Environment;
 	}
 	return nullptr;
+}
+
+void FRBMKEngine::RunGame(const char* ServerParams, const char* ClientParams)
+{
+	GStalkerEngineManager->SetupLoadingScreen();
+	GetMoviePlayer()->PlayMovie();
+	IRBMKEngine::RunGame(ServerParams, ClientParams);
+	while (g_loading_events->size())
+	{
+		if (g_loading_events->front()())
+		{
+			g_loading_events->pop_front();
+		}
+		else
+		{
+			GEngine->Tick(FApp::GetDeltaTime(), false);
+		}
+	}
 }
 
 void FRBMKEngine::LoadDefaultWorld()

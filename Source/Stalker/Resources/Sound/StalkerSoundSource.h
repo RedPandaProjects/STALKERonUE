@@ -15,7 +15,7 @@ public:
 
 	void		Stop							() override;
 	void		StopWithFade					() override;
-	void		Pause							(bool Paused) override;
+	void		Pause							(bool Paused,int32 PausedID) ;
 	void		SetVolume						(float NewVolume) override;
 	void		SetFrequency					(float NewFrequency) override;
 	void		SetPosition						(const Fvector&InPosition) override;
@@ -54,7 +54,7 @@ public:
 	UAudioComponent* AudioComponent;
 	
 	UPROPERTY(VisibleAnywhere,Transient)
-	int32	PausedCounter = 0;
+	int32	PausedID = 0;
 	
 	UPROPERTY(Transient)
 	FTimerHandle TimerHandle_DelayPlay;

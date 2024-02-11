@@ -1,8 +1,10 @@
 #include "StalkerEngineManager.h"
 
+#include "MoviePlayer.h"
 #include "AssetRegistry/AssetRegistryModule.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Resources/Sound/StalkerSoundManager.h"
+#include "Kernel/Unreal/UI/LoadingScreen/StalkerBaseLoadingScreen.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
 THIRD_PARTY_INCLUDES_END
@@ -116,6 +118,7 @@ void FStalkerEngineManager::Initialize()
 #if !WITH_EDITOR
 	AppStart();
 #endif
+	
 }
 
 void FStalkerEngineManager::AppStart()
@@ -446,6 +449,18 @@ void FStalkerEngineManager::OnEndPlayMap()
 	ReInitialized(GetDefault<UStalkerGameSettings>()->EditorStartupGame);
 #endif
 
+}
+
+void FStalkerEngineManager::SetupLoadingScreen()
+{
+	if (!IsRunningDedicatedServer())
+	{
+		FLoadingScreenAttributes LoadingScreen;
+		LoadingScreen.WidgetLoadingScreen = SNew(SStalkerBaseLoadingScreen);
+		LoadingScreen.bAllowEngineTick = true;
+		LoadingScreen.bAutoCompleteWhenLoadingCompletes = false;
+		GetMoviePlayer()->SetupLoadingScreen(LoadingScreen);
+	}
 }
 #if WITH_EDITORONLY_DATA
 void FStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessageMap& Out)

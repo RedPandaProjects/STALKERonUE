@@ -4,6 +4,7 @@
 #include "Kernel/StalkerEngineManager.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 #include "Resources/StalkerResourcesManager.h"
+#include "Sound/SoundClass.h"
 
 IRBMKSoundSource* UStalkerSoundManager::CreateSource(const char* InName)
 {
@@ -134,8 +135,8 @@ void UStalkerSoundManager::SetShockEffectorVolume(float NewVolume)
 		return;
 	}
 	
-	USoundClass* MasterSoundClass = StalkerGameSettings->MasterSoundClass.LoadSynchronous();
-	if(!ensure(MasterSoundClass))
+	 USoundClass* MasterSoundClass = StalkerGameSettings->MasterSoundClass.LoadSynchronous();
+	if(!MasterSoundClass)
 	{
 		return;
 	}
@@ -250,12 +251,21 @@ void UStalkerSoundManager::Build()
 
 void UStalkerSoundManager::Clear()
 {
-#if WITH_EDITOR
-	check(RBMKObject2SoundSource.Num() == 0);
-	check(SoundSources.Num() == 0);
-#else
-	RBMKObject2SoundSource.Empty();
-	SoundSources.Empty();
-#endif
+	// RBMKObject2SoundSource.Empty();
+	// SoundSources.Empty();
 	SoundSourcesWithFeedback.Empty();
+}
+
+int32 UStalkerSoundManager::PauseEmitters(bool Paused)
+{
+	PauseCounter += Paused?+1:-1;
+	check(PauseCounter>=0);
+	for(UStalkerSoundSource*SoundSource:SoundSources)
+	{
+		if(IsValid(SoundSource))
+		{
+			SoundSource->Pause(Paused,Paused?PauseCounter:PauseCounter+1);
+		}
+	}
+	return PauseCounter;
 }

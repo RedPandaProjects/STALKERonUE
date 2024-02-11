@@ -68,13 +68,7 @@ void FRBMKDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
 		{
 			if(UStalkerSoundManager* StalkerSoundManager = GStalkerEngineManager->GetResourcesManager()->GetSoundManager())
 			{
-				for(UStalkerSoundSource*SoundSource:StalkerSoundManager->SoundSources)
-				{
-					if(IsValid(SoundSource))
-					{
-						SoundSource->Pause(true);
-					}
-				}
+				SoundEmittersPaused = StalkerSoundManager->PauseEmitters(true);
 			}
 		}
 	}
@@ -89,12 +83,9 @@ void FRBMKDevice::Pause(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason)
 		{
 			if(UStalkerSoundManager* StalkerSoundManager = GStalkerEngineManager->GetResourcesManager()->GetSoundManager())
 			{
-				for(UStalkerSoundSource*SoundSource:StalkerSoundManager->SoundSources)
+				if(SoundEmittersPaused > 0)
 				{
-					if(IsValid(SoundSource))
-					{
-						SoundSource->Pause(false);
-					}
+					SoundEmittersPaused = StalkerSoundManager->PauseEmitters(false);
 				}
 			}
 		}

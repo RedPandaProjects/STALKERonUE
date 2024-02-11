@@ -49,9 +49,10 @@ public:
 
 	FString												GetGamePath							();
 	
+	void												SetupLoadingScreen					();
+	
 	FSimpleMulticastDelegate							PreReInitializedMulticastDelegate;
 	FSimpleMulticastDelegate							PostReInitializedMulticastDelegate;
-
 
 private:
 
@@ -62,6 +63,7 @@ private:
 	void												OnViewportCloseRequested			(FViewport* InViewport);
 	void												OnViewportResized					(FViewport* InViewport, uint32);
 	void												OnEndPlayMap						();
+	
 #if WITH_EDITORONLY_DATA
 	void												OnGetOnScreenMessages				(FCoreDelegates::FSeverityMessageMap& Out);
 #endif

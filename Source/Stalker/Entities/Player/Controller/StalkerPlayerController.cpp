@@ -1,7 +1,7 @@
 #include "StalkerPlayerController.h"
 
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
-#include "Kernel/Unreal/UI/StalkerUIWidget.h"
+#include "..\..\..\Kernel\Unreal\UI\StalkerRBMKUIWidget.h"
 
 void AStalkerPlayerController::CreateHUD()
 {
@@ -13,7 +13,7 @@ void AStalkerPlayerController::CreateHUD()
 	{
 		return;
 	}
-	UIWidget = CreateWidget<UStalkerUIWidget>(this, UStalkerUIWidget::StaticClass());
+	UIWidget = CreateWidget<UStalkerRBMKUIWidget>(this, UStalkerRBMKUIWidget::StaticClass());
 	UIWidget->AddToViewport();
 }
 

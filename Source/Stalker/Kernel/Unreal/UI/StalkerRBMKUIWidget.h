@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-#include "StalkerUIWidget.generated.h"
+#include "StalkerRBMKUIWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class UStalkerUIWidget : public UUserWidget
+class UStalkerRBMKUIWidget : public UUserWidget
 {
 	GENERATED_BODY()
 public:

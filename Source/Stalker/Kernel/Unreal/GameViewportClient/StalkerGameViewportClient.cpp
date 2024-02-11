@@ -142,11 +142,9 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 
 	if (g_loading_events->size())
 	{
-		if (g_loading_events->front()())
-			g_loading_events->pop_front();
 		return;
 	}
-	else
+	
 	{
 		SCOPE_CYCLE_COUNTER(STAT_XRayEngineFrame);
 		Device->mFullTransform.mul(Device->mProject, Device->mView);

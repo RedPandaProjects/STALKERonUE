@@ -20,6 +20,7 @@ public:
 	void								Tick					(float DeltaTime);
 	void								Build					();
 	void								Clear					();
+	int32								PauseEmitters			(bool Paused);
 	UPROPERTY(Transient)	
 	TSet<UStalkerSoundSource*>			SoundSources;
 	
@@ -32,4 +33,7 @@ public:
 	TSet<FString>						SoundsList;			
 	
 	xr_vector<ISpatial*>				TempSpatial;
+
+	UPROPERTY(Transient)
+	int32								PauseCounter = -1;
 };
