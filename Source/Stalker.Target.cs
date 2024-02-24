@@ -11,5 +11,6 @@ public class StalkerTarget : TargetRules
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "Stalker" } );
+		ExtraModuleNames.AddRange(new string[] { "StalkerLoading" });
 	}
 }

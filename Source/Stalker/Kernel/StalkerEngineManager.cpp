@@ -4,7 +4,6 @@
 #include "AssetRegistry/AssetRegistryModule.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Resources/Sound/StalkerSoundManager.h"
-#include "Kernel/Unreal/UI/LoadingScreen/StalkerBaseLoadingScreen.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrEngine/XrDeviceInterface.h"
 THIRD_PARTY_INCLUDES_END
@@ -107,6 +106,8 @@ void FStalkerEngineManager::Initialize()
 	g_Engine = MyXRayEngine;
 	GameMaterialLibrary = PhysicalMaterialsManager;
 	g_Engine->Initialize();
+	GetResourcesManager()->LoadingScreenManager.Initialize();
+
 #if WITH_EDITOR
 	FGameDelegates::Get().GetEndPlayMapDelegate().AddRaw(this, &FStalkerEngineManager::OnEndPlayMap);
 #endif
@@ -127,6 +128,7 @@ void FStalkerEngineManager::AppStart()
 	GetResourcesManager()->GetSoundManager()->Build();
 	Device->seqAppStart.Process(rp_AppStart);
 	Device->b_is_Active = TRUE;
+	GetMoviePlayer()->WaitForMovieToFinish();
 }
 
 void FStalkerEngineManager::AppEnd()
@@ -347,6 +349,9 @@ bool FStalkerEngineManager::LoadWorld(FString LevelName)
 		WorldStatus = EStalkerWorldStatus::Failure;
 		return false;
 	}
+	
+	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.SetMapImage(LevelName);
+
     CurrentWorldPath = 	UWorld::RemovePIEPrefix(*CurrentWorld->GetPathName());
 	if (LevelInfo->Map == CurrentWorldPath)
 	{
@@ -451,17 +456,6 @@ void FStalkerEngineManager::OnEndPlayMap()
 
 }
 
-void FStalkerEngineManager::SetupLoadingScreen()
-{
-	if (!IsRunningDedicatedServer())
-	{
-		FLoadingScreenAttributes LoadingScreen;
-		LoadingScreen.WidgetLoadingScreen = SNew(SStalkerBaseLoadingScreen);
-		LoadingScreen.bAllowEngineTick = true;
-		LoadingScreen.bAutoCompleteWhenLoadingCompletes = false;
-		GetMoviePlayer()->SetupLoadingScreen(LoadingScreen);
-	}
-}
 #if WITH_EDITORONLY_DATA
 void FStalkerEngineManager::OnGetOnScreenMessages(FCoreDelegates::FSeverityMessageMap& Out)
 {

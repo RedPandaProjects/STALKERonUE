@@ -162,6 +162,9 @@
 	<string id="st_loading_geometry">
 		<text>Загрузка геометрии</text>
 	</string>
+	<string id="st_loading_map">
+		<text>Загрузка UWorld</text>
+	</string>
 	<string id="st_loading_spatial_db">
 		<text>Загрузка базы пространств</text>
 	</string>

@@ -12,5 +12,6 @@ public class StalkerEditorTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "Stalker" } );
 		ExtraModuleNames.AddRange( new string[] { "StalkerEditor" } );
+		ExtraModuleNames.AddRange(new string[] { "StalkerLoading" });
 	}
 }

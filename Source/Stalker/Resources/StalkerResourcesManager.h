@@ -1,4 +1,5 @@
 #pragma once
+#include "LoadingScreen/StalkerLoadingScreenManager.h"
 class USlateBrushAsset;
 class STALKER_API FStalkerResourcesManager	: public FGCObject
 {
@@ -32,7 +33,7 @@ public:
 #endif
 	TMap<USlateBrushAsset*, UTexture*>					BrushesTextures;
 
-
+	FStalkerLoadingScreenManager						LoadingScreenManager;
 private:
 
 	TMap<FName, UFont*>									Fonts;

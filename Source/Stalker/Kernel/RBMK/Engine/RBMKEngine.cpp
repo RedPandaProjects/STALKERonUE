@@ -244,11 +244,11 @@ IRBMKEnvironment* FRBMKEngine::GetEnvironment()
 	return nullptr;
 }
 
-void FRBMKEngine::RunGame(const char* ServerParams, const char* ClientParams)
+void FRBMKEngine::OnRunGame(const char* ServerParams, const char* ClientParams)
 {
-	GStalkerEngineManager->SetupLoadingScreen();
-	GetMoviePlayer()->PlayMovie();
-	IRBMKEngine::RunGame(ServerParams, ClientParams);
+	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Play(FCStringAnsi::Strstr(ServerParams,"/load") == nullptr,9);
+
+	IRBMKEngine::OnRunGame(ServerParams, ClientParams);
 	while (g_loading_events->size())
 	{
 		if (g_loading_events->front()())
@@ -260,12 +260,19 @@ void FRBMKEngine::RunGame(const char* ServerParams, const char* ClientParams)
 			GEngine->Tick(FApp::GetDeltaTime(), false);
 		}
 	}
+	GEngine->Tick(FApp::GetDeltaTime(), false);
+	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Wait();
+	
+}
+
+IRBMKLoadingScreenManager* FRBMKEngine::GetLoadingScreen()
+{
+	return &GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager;
 }
 
 void FRBMKEngine::LoadDefaultWorld()
 {	
 	GStalkerEngineManager->LoadDefaultWorld();
-	
 }
 
 void FRBMKEngine::Exit()

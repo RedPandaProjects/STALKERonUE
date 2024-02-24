@@ -32,5 +32,6 @@ public:
 	shared_str						GetUnrealVersion			() override;
 	IRBMKSoundManager*				GetSoundManager				() override;
 	IRBMKEnvironment*				GetEnvironment				() override;
-	virtual void					RunGame						(const char* ServerParams, const char* ClientParams) override;
+	void							OnRunGame					(const char* ServerParams, const char* ClientParams) override;
+	IRBMKLoadingScreenManager*		GetLoadingScreen			() override;
 };

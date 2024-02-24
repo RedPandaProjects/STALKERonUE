@@ -171,6 +171,9 @@
 	<string id="st_loading_sectors_portals">
 		<text>Loading sectors & portals</text>
 	</string>
+	<string id="st_loading_map">
+		<text>Loading UWorld</text>
+	</string>
 	<string id="ui_st_conn_version_differs">
 		<text>Connection error: Different version.</text>
 	</string>

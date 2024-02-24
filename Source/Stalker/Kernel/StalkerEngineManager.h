@@ -49,8 +49,6 @@ public:
 
 	FString												GetGamePath							();
 	
-	void												SetupLoadingScreen					();
-	
 	FSimpleMulticastDelegate							PreReInitializedMulticastDelegate;
 	FSimpleMulticastDelegate							PostReInitializedMulticastDelegate;
 
