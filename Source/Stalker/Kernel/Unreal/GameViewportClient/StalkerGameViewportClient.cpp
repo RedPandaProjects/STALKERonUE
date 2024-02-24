@@ -140,10 +140,22 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 	Device->fTimeGlobal += 	Device->fTimeDelta;
 	Device->dwTimeGlobal = static_cast<u32>(Device->fTimeGlobal * 1000);
 
-	if (g_loading_events->size())
+	if(g_loading_events)
 	{
-		return;
+		if(GIsEditor)
+		{
+			if (g_loading_events->size()&&g_loading_events->front()())
+			{
+				g_loading_events->pop_front();
+				return;
+			}
+		}
+		else if (g_loading_events->size())
+		{
+			return;
+		}
 	}
+
 	
 	{
 		SCOPE_CYCLE_COUNTER(STAT_XRayEngineFrame);

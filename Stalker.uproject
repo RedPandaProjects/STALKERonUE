@@ -22,6 +22,11 @@
 				"Stalker",
 				"Engine"
 			]
+		},
+		{
+			"Name": "StalkerLoading",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
 		}
 	],
 	"Plugins": [
@@ -39,6 +44,14 @@
 		{
 			"Name": "RenderDocPlugin",
 			"Enabled": true
+		},
+		{
+			"Name": "WindowsMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "WmfMedia",
+			"Enabled": false
 		}
 	]
 }

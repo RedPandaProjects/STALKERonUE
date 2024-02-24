@@ -249,18 +249,21 @@ void FRBMKEngine::OnRunGame(const char* ServerParams, const char* ClientParams)
 	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Play(FCStringAnsi::Strstr(ServerParams,"/load") == nullptr,9);
 
 	IRBMKEngine::OnRunGame(ServerParams, ClientParams);
-	while (g_loading_events->size())
+	if(!GIsEditor)
 	{
-		if (g_loading_events->front()())
+		while (g_loading_events->size())
 		{
-			g_loading_events->pop_front();
+			if (g_loading_events->front()())
+			{
+				g_loading_events->pop_front();
+			}
+			else
+			{
+				GEngine->Tick(FApp::GetDeltaTime(), false);
+			}
 		}
-		else
-		{
-			GEngine->Tick(FApp::GetDeltaTime(), false);
-		}
+		GEngine->Tick(FApp::GetDeltaTime(), false);
 	}
-	GEngine->Tick(FApp::GetDeltaTime(), false);
 	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Wait();
 	
 }
