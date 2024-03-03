@@ -48,39 +48,41 @@ void XRayUIShader::destroy()
 	}
 }
 
-XRayUIRender::XRayUIRender()
+FRBMKUIRender::FRBMKUIRender()
 {
 	CurrentScissor = -1;
+	CurrentLayerType = ERBMKUILayer::Main;
 }
 
-XRayUIRender::~XRayUIRender()
+FRBMKUIRender::~FRBMKUIRender()
 {
 }
 
-void XRayUIRender::CreateUIGeom()
+void FRBMKUIRender::CreateUIGeom()
 {
 }
 
-void XRayUIRender::DestroyUIGeom()
+void FRBMKUIRender::DestroyUIGeom()
 {
 	
 
 }
 
-void XRayUIRender::SetShader(IUIShader& shader)
+void FRBMKUIRender::SetShader(IUIShader& shader)
 {
 	CurrentShader.Copy(shader);
 }
 
-void XRayUIRender::SetAlphaRef(int aref)
+void FRBMKUIRender::SetAlphaRef(int aref)
 {
 }
 
-void XRayUIRender::SetScissor(Irect* rect)
+void FRBMKUIRender::SetScissor(Irect* rect)
 {
 	if (rect)
 	{
-		CurrentScissor = Scissors.AddUnique(FVector4f(rect->x1, rect->y1, rect->x2, rect->y2));
+		FVector4f Scale( 1,1,1,1);
+		CurrentScissor = Scissors.AddUnique(FVector4f(rect->x1, rect->y1, rect->x2, rect->y2)*Scale);
 	}
 	else
 	{
@@ -88,7 +90,7 @@ void XRayUIRender::SetScissor(Irect* rect)
 	}
 }
 
-void XRayUIRender::GetActiveTextureResolution(Fvector2& res)
+void FRBMKUIRender::GetActiveTextureResolution(Fvector2& res)
 {
 	if(!CurrentShader.Brush)return;
 	UTexture**Texture =  GStalkerEngineManager->GetResourcesManager()->BrushesTextures .Find(CurrentShader.Brush);
@@ -102,9 +104,9 @@ void XRayUIRender::GetActiveTextureResolution(Fvector2& res)
 	res.y =  (*Texture)->GetSurfaceHeight();
 }
 
-void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
+void FRBMKUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
 {
-	Vertex InVertex;
+	FRBMKUIRenderVertex InVertex;
 	InVertex.Position.Set(x,y);
 	InVertex.Color = FColor(color_rgba(color_get_R(C), color_get_G(C), color_get_B(C), color_get_A(C)));
 	InVertex.UV.Set(u,v);
@@ -112,64 +114,111 @@ void XRayUIRender::PushPoint(float x, float y, float z, u32 C, float u, float v)
 	
 }
 
-void XRayUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, float FontSize, const TCHAR* String)
+void FRBMKUIRender::PushText(float x, float y, float Scale, u32 C, UFont* Font, float FontSize, const TCHAR* String)
 {
-	Text InText;
-	InText.Position.Set(FMath::Floor(x), FMath::Floor(y));
-	InText.Color = FColor(color_rgba(color_get_R(C), color_get_G(C), color_get_B(C), color_get_A(C)));
-	InText.Data = String;
-	InText.Scale = Scale;
-	InText.Font = Font;
-	InText.FontSize = FontSize;
-	Texts.Push(InText);
+	if(ensure(CurrentLayer))
+	{
+		FRBMKUIRenderText InText;
+		InText.Position.Set(FMath::Floor(x), FMath::Floor(y));
+		InText.Color = FColor(color_rgba(color_get_R(C), color_get_G(C), color_get_B(C), color_get_A(C)));
+		InText.Data = String;
+		InText.Scale = Scale;
+		InText.Font = Font;
+		InText.FontSize = FontSize;
+		CurrentLayer->Texts.Push(InText);
 
-	Items.AddDefaulted();
-	Items.Last().StartVertex = Vertices.Num();
-	Items.Last().EndVertex = Vertices.Num();
-	Items.Last().ScissorsID = CurrentScissor;
-	Items.Last().TextID = Texts.Num()-1;
+		CurrentLayer->Items.AddDefaulted();
+		CurrentLayer->Items.Last().StartVertex = Vertices.Num();
+		CurrentLayer->Items.Last().EndVertex = Vertices.Num();
+		CurrentLayer->Items.Last().ScissorsID = CurrentScissor;
+		CurrentLayer->Items.Last().TextID = CurrentLayer->Texts.Num()-1;
+	}
 }
 
-void XRayUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType)
+void FRBMKUIRender::StartPrimitive(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType)
 {
-	Items.AddDefaulted();
-	Items.Last().StartVertex = Vertices.Num();
-	Items.Last().EndVertex = Vertices.Num();
-	Items.Last().ScissorsID = CurrentScissor;
-	Items.Last().PrimitiveType = primType;
-	Items.Last().PointType = pointType;
-	Items.Last().Brush = CurrentShader.Brush ? GStalkerEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush) : nullptr;
+	if(ensure(CurrentLayer))
+	{
+		CurrentLayer->Items.AddDefaulted();
+		CurrentLayer->Items.Last().StartVertex = Vertices.Num();
+		CurrentLayer->Items.Last().EndVertex = Vertices.Num();
+		CurrentLayer->Items.Last().ScissorsID = CurrentScissor;
+		CurrentLayer->Items.Last().PrimitiveType = primType;
+		CurrentLayer->Items.Last().PointType = pointType;
+		CurrentLayer->Items.Last().Brush = CurrentShader.Brush ? GStalkerEngineManager->GetResourcesManager()->Copy(CurrentShader.Brush) : nullptr;
+	}
 }
-void XRayUIRender::FlushPrimitive()
+void FRBMKUIRender::FlushPrimitive()
 {
-	check(Items.Last().TextID==-1);
-	Items.Last().EndVertex = Vertices.Num();
+	if(ensure(CurrentLayer))
+	{
+		check(CurrentLayer->Items.Last().TextID==-1);
+		CurrentLayer->Items.Last().EndVertex = Vertices.Num();
+	}
 	CurrentShader.destroy();
 }
 
-void XRayUIRender::Flush()
+void FRBMKUIRender::Flush()
 {
-	Items.Empty(Items.Num());
+	for(auto&[Key,Value]:Layers)
+	{
+		Value->Items.Empty(Value->Items.Num());
+		Value->Texts.Empty(Value->Texts.Num());
+	}
 	Scissors.Empty(Scissors.Num());
 	Vertices.Empty(Vertices.Num());
-	Texts.Empty(Texts.Num());
+
+	if(TUniquePtr<FRBMKUIRenderLayer>*Layer = Layers.Find(ERBMKUILayer::Main))
+	{
+		CurrentLayer = Layer->Get();
+	}
+	else
+	{
+		CurrentLayer = Layers.Add(ERBMKUILayer::Main, MakeUnique<FRBMKUIRenderLayer>()).Get();
+	}
+	CurrentLayerType = ERBMKUILayer::Main;
+	if(!ensure(!LayersStack.Num()))
+	{
+		LayersStack.Empty(LayersStack.Num());
+	}
 	CurrentScissor = -1;
 	CurrentShader.destroy();
-
 }
 
-LPCSTR XRayUIRender::UpdateShaderName(LPCSTR tex_name, LPCSTR sh_name)
+LPCSTR FRBMKUIRender::UpdateShaderName(LPCSTR tex_name, LPCSTR sh_name)
 {
 	string_path buff;
-
 	return  FS.exist(buff, "$game_textures$", tex_name, ".ogm") ? "hud\\movie" : sh_name;
 }
 
-void XRayUIRender::CacheSetXformWorld(const Fmatrix& M)
+void FRBMKUIRender::PushLayer(ERBMKUILayer NewLayer)
 {
+	CurrentScissor = -1;
+	CurrentShader.destroy();
+	LayersStack.Add(CurrentLayerType);
+	if(TUniquePtr<FRBMKUIRenderLayer>*Layer = Layers.Find(NewLayer))
+	{
+		CurrentLayer = Layer->Get();
+	}
+	else
+	{
+		CurrentLayer = Layers.Add(NewLayer, MakeUnique<FRBMKUIRenderLayer>()).Get();
+	}
+	CurrentLayerType = NewLayer;
 }
 
-void XRayUIRender::CacheSetCullMode(CullMode)
+void FRBMKUIRender::PopLayer()
 {
+	CurrentLayerType = LayersStack.Pop();
+	if(TUniquePtr<FRBMKUIRenderLayer>*Layer = Layers.Find(CurrentLayerType))
+	{
+		CurrentLayer = Layer->Get();
+	}
+	else
+	{
+		ensure(false);
+		CurrentLayer = Layers.Add(CurrentLayerType, MakeUnique<FRBMKUIRenderLayer>()).Get();
+	}
 }
-XRayUIRender GXRayUIRender;
+
+FRBMKUIRender GXRayUIRender;

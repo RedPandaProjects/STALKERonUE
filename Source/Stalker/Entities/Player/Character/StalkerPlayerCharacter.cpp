@@ -28,11 +28,6 @@ AStalkerPlayerCharacter::AStalkerPlayerCharacter()
 void AStalkerPlayerCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
-	AStalkerPlayerController *PC = Cast<AStalkerPlayerController>(NewController);
-	if (PC)
-	{
-		PC->CreateHUD();
-	}
 }
 
 // Called when the game starts or when spawned

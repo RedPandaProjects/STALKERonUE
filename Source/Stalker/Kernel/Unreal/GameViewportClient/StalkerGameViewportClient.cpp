@@ -3,6 +3,7 @@
 
 #include "StalkerGameViewportClient.h"
 
+#include "Kernel/RBMK/Render/Interface/UI/XRayUIRender.h"
 #include "Resources/StalkerResourcesManager.h"
 #include "Resources/Sound/StalkerSoundManager.h"
 THIRD_PARTY_INCLUDES_START
@@ -144,9 +145,12 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 	{
 		if(GIsEditor)
 		{
-			if (g_loading_events->size()&&g_loading_events->front()())
+			if(g_loading_events->size())
 			{
-				g_loading_events->pop_front();
+				if (g_loading_events->front()())
+				{
+					g_loading_events->pop_front();
+				}
 				return;
 			}
 		}
@@ -161,11 +165,14 @@ void UStalkerGameViewportClient::Tick(float DeltaTime)
 		SCOPE_CYCLE_COUNTER(STAT_XRayEngineFrame);
 		Device->mFullTransform.mul(Device->mProject, Device->mView);
 		Device->dwFrame++;
+		GXRayUIRender.Flush();
 		g_Engine->OnFrame();
 		{
 			SCOPE_CYCLE_COUNTER(STAT_XRayEngineMTFrame);
 			for (u32 pit = 0; pit < Device->seqParallel.size(); pit++)
+			{
 				Device->seqParallel[pit]();
+			}
 			Device->seqParallel.clear();
 			Device->seqFrameMT.Process(rp_Frame);
 		}

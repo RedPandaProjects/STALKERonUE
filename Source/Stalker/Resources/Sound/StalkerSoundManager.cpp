@@ -269,3 +269,19 @@ int32 UStalkerSoundManager::PauseEmitters(bool Paused)
 	}
 	return PauseCounter;
 }
+
+void UStalkerSoundManager::Replace(IRBMKSoundSource* InSoundSource, CObject* Object)
+{
+	if(InSoundSource == nullptr)
+	{
+		return;
+	}
+	UStalkerSoundSource*SoundSource = static_cast<UStalkerSoundSource*>(InSoundSource);
+	check(SoundSources.Contains(SoundSource));
+	if(SoundSource->RBMKSource)
+	{
+		RBMKObject2SoundSource.Remove(SoundSource->RBMKSource);
+	}
+	SoundSource->RBMKSource = Object;
+	RBMKObject2SoundSource.Add(SoundSource->RBMKSource,SoundSource);
+}

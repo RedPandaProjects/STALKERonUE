@@ -8,7 +8,7 @@ class STALKER_API AStalkerEnvironment : public AActor,public IRBMKEnvironment
 
 public:
 				AStalkerEnvironment		();
-	bool		SetEffect				(const char* Name) override;
+	bool		SetEffect				(const char* Name,float StartTime) override;
 public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void SetGameTime(float InTime, float InTimeFactor) override;
@@ -27,8 +27,13 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	float GetFogPlane() const override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	bool StopEffect() override;
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	float GetEffectTime() const override;
 protected:
 	UFUNCTION(BlueprintImplementableEvent, meta=(DisplayName = "SetEffect"))
-	bool K2_SetEffect(const FString&Name);
-	
+	bool K2_SetEffect(const FString&Name,float StartTime);
 };

@@ -1,47 +1,21 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "StalkerRBMKUIWidget.h"
-
-THIRD_PARTY_INCLUDES_START
-#include "XrEngine/IGame_Persistent.h"
-#include "XrEngine/CustomHUD.h"
-#include "XrEngine/IGame_Level.h"
-THIRD_PARTY_INCLUDES_END
 #include "Kernel/RBMK/Render/Interface/UI/XRayUIRender.h"
-ENGINE_API BOOL g_bRendering;
-bool UStalkerRBMKUIWidget::Initialize()
-{
-	LastFrame = Device->dwFrame+1;
-	return Super::Initialize();
-}
 
 int32 UStalkerRBMKUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry& AllottedGeometry, const FSlateRect& MyCullingRect, FSlateWindowElementList& OutDrawElements, int32 LayerId, const FWidgetStyle& InWidgetStyle, bool bParentEnabled) const
 {
-	if(Device->dwFrame>LastFrame)
-	{
-		LastFrame = Device->dwFrame;
-		g_bRendering = true;
-		GXRayUIRender.Flush();
-		if(g_hud&& g_pGameLevel)
-		g_hud->RenderUI();
-		if (g_pGamePersistent)	
-		{
-			g_pGamePersistent->OnRenderPPUI_main();
-			bool bTest = psDeviceFlags.is_any(rsCameraPos) || psDeviceFlags.is_any(rsStatistic) || !Device->Statistic->errors.empty();
-			if (bTest)
-				Device->Statistic->Show();
-		}
-		Device->seqRenderUI.Process(rp_RenderUI);
-		g_bRendering = false;
-	}
-
 	FVector2D ScreenSize(Device->dwWidth, Device->dwHeight);
 	FVector2D MultiplerSize = AllottedGeometry.GetLocalSize() / ScreenSize;
-	for (XRayUIRender::Item& Item : GXRayUIRender.Items)
+
+	TUniquePtr<FRBMKUIRenderLayer> *Layer =  GXRayUIRender.Layers.Find(static_cast<ERBMKUILayer>(IndexLayer));
+	if(!Layer)
+	{
+		return LayerId;
+	}
+	for (FRBMKUIRenderPrimitive& Item : Layer->Get()->Items)
 	{
 		if (Item.TextID >= 0)
 		{
-			XRayUIRender::Text& TextItem = GXRayUIRender.Texts[Item.TextID];
+			FRBMKUIRenderText& TextItem = Layer->Get()->Texts[Item.TextID];
 			FSlateFontInfo FontInfo = TextItem.Font->GetLegacySlateFontInfo();
 			FontInfo.OutlineSettings.OutlineColor = TextItem.Color.ReinterpretAsLinear();
 
@@ -89,7 +63,7 @@ int32 UStalkerRBMKUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry&
 				for (uint32 i = Item.StartVertex; i < Item.EndVertex-1; i++)
 				{
 					VerticesLineCahce.Empty(2);
-					XRayUIRender::Vertex Vertex = GXRayUIRender.Vertices[i];
+					FRBMKUIRenderVertex Vertex = GXRayUIRender.Vertices[i];
 					VerticesLineCahce.Add(FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position) * MultiplerSize)));
 					Vertex = GXRayUIRender.Vertices[i+1];
 					VerticesLineCahce.Add(FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position) * MultiplerSize)));
@@ -104,7 +78,7 @@ int32 UStalkerRBMKUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry&
 			for (uint32 i = Item.StartVertex; i < Item.EndVertex; i++)
 			{
 				VerticesLineCahce.Empty(2);
-				XRayUIRender::Vertex Vertex = GXRayUIRender.Vertices[i++];
+				FRBMKUIRenderVertex Vertex = GXRayUIRender.Vertices[i++];
 				VerticesLineCahce.Add(FVector2f(FVector2D(Vertex.Position) * MultiplerSize));
 				Vertex = GXRayUIRender.Vertices[i];
 				VerticesLineCahce.Add(FVector2f(FVector2D(Vertex.Position) * MultiplerSize));
@@ -129,7 +103,7 @@ int32 UStalkerRBMKUIWidget::NativePaint(const FPaintArgs& Args, const FGeometry&
 		VerticesCahce.Empty();
 		for (uint32 i = Item.StartVertex; i < Item.EndVertex; i++)
 		{
-			XRayUIRender::Vertex Vertex = GXRayUIRender.Vertices[i];
+			FRBMKUIRenderVertex Vertex = GXRayUIRender.Vertices[i];
 			VerticesCahce.AddDefaulted();
 			FSlateVertex& NewVert = VerticesCahce.Last();
 			NewVert.Position = FVector2f(AllottedGeometry.LocalToAbsolute(FVector2D(Vertex.Position) * MultiplerSize));

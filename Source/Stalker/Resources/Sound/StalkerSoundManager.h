@@ -21,6 +21,7 @@ public:
 	void								Build					();
 	void								Clear					();
 	int32								PauseEmitters			(bool Paused);
+	void								Replace					(IRBMKSoundSource* SoundSource, CObject* Object) override;
 	UPROPERTY(Transient)	
 	TSet<UStalkerSoundSource*>			SoundSources;
 	

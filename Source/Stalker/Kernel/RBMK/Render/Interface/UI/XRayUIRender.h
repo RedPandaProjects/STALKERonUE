@@ -14,63 +14,70 @@ public:
 	 FName TextureName;
 	 TObjectPtr<USlateBrushAsset> Brush;
 };
-class XRayUIRender:public IUIRender
+struct FRBMKUIRenderText
 {
-public:
-			XRayUIRender				() ;
-			~XRayUIRender				() ;
-	 void	CreateUIGeom				() override;
-	 void	DestroyUIGeom				() override;
+	FString	Data;
+	FVector2f	Position;
+	FColor		Color;
+	float		Scale;
+	float		FontSize;
+	UFont*		Font;
 
-	 void	SetShader					(IUIShader &shader) override;
-	 void	SetAlphaRef					(int aref) override;
-	 void	SetScissor					(Irect* rect = NULL) override;
-	 void	GetActiveTextureResolution	(Fvector2 &res) override;
-	 void	PushPoint					(float x, float y, float z, u32 C, float u, float v) override;
-	 void	PushText					(float x, float y, float Scale, u32 C, UFont* Font,float FontSize, const TCHAR* String);
-
-	 void	StartPrimitive				(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType) override;
-	 void	FlushPrimitive				() override;
-	 void	Flush						() ;
-	 LPCSTR	UpdateShaderName			(LPCSTR tex_name, LPCSTR sh_name) override;
-	 void	CacheSetXformWorld			(const Fmatrix& M) override;
-	 void	CacheSetCullMode			(CullMode) override;
-
-
-	 XRayUIShader	  CurrentShader;
-	 TArray<FVector4f> Scissors;
-	 struct Text
-	 {
-		 FString	Data;
-		 FVector2f	Position;
-		 FColor		Color;
-		 float		Scale;
-		 float		FontSize;
-		 UFont*		Font;
-
-	 };
-	 TArray<Text> Texts;
-	 struct Item
-	 {
-		int32							TextID = -1;
-		TObjectPtr<USlateBrushAsset>	Brush;
-		uint32							StartVertex;
-		uint32							EndVertex;
-		int32							ScissorsID;
-		ePrimitiveType					PrimitiveType;
-		ePointType						PointType;
-	 };
-	 TArray<Item> Items;
-	 struct Vertex
-	 {
-		FVector2f						Position;
-		FColor							Color;
-		FVector2f						UV;
-	 };
-
-	 TArray<Vertex> Vertices;
-private:
-	int32 CurrentScissor;
+};
+struct FRBMKUIRenderPrimitive
+{
+	int32							TextID = -1;
+	TObjectPtr<USlateBrushAsset>	Brush;
+	uint32							StartVertex;
+	uint32							EndVertex;
+	int32							ScissorsID;
+	IUIRender::ePrimitiveType		PrimitiveType;
+	IUIRender::ePointType			PointType;
 };
 
-extern XRayUIRender GXRayUIRender;
+struct FRBMKUIRenderVertex
+{
+	FVector2f						Position;
+	FColor							Color;
+	FVector2f						UV;
+};
+struct FRBMKUIRenderLayer
+{
+	TArray<FRBMKUIRenderText>		Texts;
+	TArray<FRBMKUIRenderPrimitive>	Items;
+};
+class FRBMKUIRender:public IUIRender
+{
+public:
+														FRBMKUIRender				() ;
+														~FRBMKUIRender				() ;
+	void												CreateUIGeom				() override;
+	void												DestroyUIGeom				() override;
+											
+	void												SetShader					(IUIShader &shader) override;
+	void												SetAlphaRef					(int aref) override;
+	void												SetScissor					(Irect* rect = NULL) override;
+	void												GetActiveTextureResolution	(Fvector2 &res) override;
+	void												PushPoint					(float x, float y, float z, u32 C, float u, float v) override;
+	void												PushText					(float x, float y, float Scale, u32 C, UFont* Font,float FontSize, const TCHAR* String);
+											
+	void												StartPrimitive				(u32 iMaxVerts, ePrimitiveType primType, ePointType pointType) override;
+	void												FlushPrimitive				() override;
+	void												Flush						() ;
+	LPCSTR												UpdateShaderName			(LPCSTR tex_name, LPCSTR sh_name) override;
+	void												PushLayer					(ERBMKUILayer NewLayer) override;
+	void												PopLayer					() override;
+			
+			
+	XRayUIShader										CurrentShader;
+	TArray<FVector4f>									Scissors;
+	TArray<FRBMKUIRenderVertex>							Vertices;
+	FRBMKUIRenderLayer*									CurrentLayer;
+	ERBMKUILayer										CurrentLayerType;
+	TMap<ERBMKUILayer,TUniquePtr<FRBMKUIRenderLayer>>	Layers;
+	TArray<ERBMKUILayer>								LayersStack;
+private:
+	int32												CurrentScissor;
+};
+
+extern FRBMKUIRender GXRayUIRender;

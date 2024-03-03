@@ -208,7 +208,7 @@ void UStalkerEditorManager::ImportSounds()
 	TSet<FString> IgnoreFiles;
 	for(FString FileName:Files)
 	{
-		if(GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC &&  FileName.EndsWith(TEXT("_l.ogg")))
+		if(/*GStalkerEngineManager->GetCurrentGame() == EStalkerGame::SHOC && */ FileName.EndsWith(TEXT("_l.ogg")))
 		{
 			const FString FileNameL = FileName;
 			const FString FileNameR = FileNameL.Left(FileNameL.Len() - 6) + TEXT("_r.ogg");
