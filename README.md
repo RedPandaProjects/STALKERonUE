@@ -29,7 +29,7 @@ In the future, it will be possible to build for all other platforms, including m
 You need to do this recursively using the `--recursive` parameter
 
 ```bash
-git clone https://git.s2ue.org/RedProjects/SonUE.git --recursive
+git clone https://github.com/RedPandaProjects/STALKERonUE.git --recursive
 ```
 
 <p>
@@ -112,7 +112,7 @@ More information can be found on our [website](https://s2ue.org/) and [Discord s
 It is a place to share ideas on what to implement, gather people that want to work on the engine,
 and work on the source code.
 
-If you find a bug or have an enhancement request, file an [Issue](https://git.s2ue.org/RedProjects/SonUE/issues).
+If you find a bug or have an enhancement request, file an [Issue](https://github.com/RedPandaProjects/STALKERonUE/issues).
 
 Pull requests appreciated! However, the following things should be taken into consideration:
 * Major changes should be discussed before implementation
