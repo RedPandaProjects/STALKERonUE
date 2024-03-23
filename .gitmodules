@@ -1,6 +1,7 @@
 [submodule "Plugins/XRayEngine/Source/ThirdParty"]
 	path = Source/XRayEngine
 	url = https://github.com/RedPandaProjects/XRayEngine
+	branch = ue5
 [submodule "Plugins/VisualStudioTools"]
 	path = Plugins/VisualStudioTools
 	url = https://github.com/microsoft/vc-ue-extensions.git
