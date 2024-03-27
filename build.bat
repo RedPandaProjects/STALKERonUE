@@ -9,10 +9,12 @@ for /f "tokens=2,3,4 delims=. " %%b in ("!ver!") do set /a "maj=%%b, min=%%c, bu
 :: Windows 10 20H2 has version 10.0.19042. Windows 11 starts with version 10.0.22000
 if !maj! lss 10 (
     echo Windows 10 or higher is required.
+    pause
     exit /b 1
 ) else if !maj! equ 10 (
     if !build! lss 19042 (
         echo Windows 10 version 20H2 or higher is required.
+        pause
         exit /b 1
     )
 )
@@ -23,6 +25,7 @@ set "RegistryKey=HKEY_LOCAL_MACHINE\SOFTWARE\EpicGames\Unreal Engine\%UEVersion%
 reg query "%RegistryKey%" >nul 2>&1
 if %errorlevel% neq 0 (
     echo Unreal Engine %UEVersion% is not installed.
+    pause
     exit /b 1
 )
 
@@ -39,6 +42,7 @@ for /f "tokens=*" %%i in ('"%VSWHERE%" -version 17 -property installationPath') 
 )
 if "!VSPath!"=="" (
     echo Visual Studio 2022 not found.
+    pause
     exit /b 1
 )
 echo Path to Visual Studio: !VSPath! >nul
@@ -51,6 +55,7 @@ for /f "tokens=*" %%i in ('"%VSWHERE%" -version 17 -products * -requires Microso
 )
 if "!FOUND!"=="0" (
     echo "Game development with C++" package not found.
+    pause
     exit /b 1
 )
 
@@ -70,20 +75,21 @@ if "!ConfigChoice!"=="1" (
     set "StalkerConfig=DebugGame Editor"
 ) else (
     echo Invalid choice.
+    pause
     exit /b 1
 )
 
 :: Build execution
 echo Building project...
 
-call msbuild "./Source/XRayEngine/Source/External/RedImage/RedImageTool/RedImageTool.vcxproj" /p:Configuration=Release /p:Platform=x64 /maxCpuCount /nologo 
+call msbuild "./Source/XRayEngine/Source/External/RedImage/RedImageTool/RedImageTool.vcxproj" /p:Configuration=Release /p:Platform=x64 /maxCpuCount /nologo
 if errorlevel 1 (
     echo Build of External\RedImage failed.
     pause
     exit /b 1
 )
 
-call msbuild "./Source/XRayEngine/Source/EngineSOC.sln" /p:Configuration=%EngineConfig% /p:Platform=x64 /maxCpuCount /nologo 
+call msbuild "./Source/XRayEngine/Source/EngineSOC.sln" /p:Configuration=%EngineConfig% /p:Platform=x64 /maxCpuCount /nologo
 if errorlevel 1 (
     echo Build of EngineSOC failed.
     pause
@@ -108,7 +114,6 @@ if errorlevel 1 (
 )
 
 echo Project successfully built.
-
 pause
 
 endlocal
