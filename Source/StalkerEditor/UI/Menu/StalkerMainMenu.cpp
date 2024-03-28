@@ -71,14 +71,14 @@ void FStalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 					}
 				}
 			),
-			FCanExecuteAction(),
-					FIsActionChecked::CreateLambda([]()
-						{
-							const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>();
-							return SGSettings->EditorStartupGame == EStalkerGame::CS;
-						}
-					)
-					);
+			FCanExecuteAction::CreateLambda([](){ return false; }),
+			FIsActionChecked::CreateLambda([]()
+				{
+					const UStalkerGameSettings* SGSettings = GetDefault<UStalkerGameSettings>();
+					return SGSettings->EditorStartupGame == EStalkerGame::CS;
+				}
+			)
+		);
 		InMenuBuilder.AddMenuEntry(FText::FromString("Clear Sky"), FText::GetEmpty(), FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.CS"), Action, NAME_None, EUserInterfaceActionType::RadioButton);
 	}
 	{
@@ -129,11 +129,11 @@ void FStalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 		{
 			UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
 			SGSettings->AlwaysOverwriteAssetsWhenImport = !SGSettings->AlwaysOverwriteAssetsWhenImport;
-			SGSettings->PostEditChange(); 
-			SGSettings->SaveConfig(); 
+			SGSettings->PostEditChange();
+			SGSettings->SaveConfig();
 		}),
 		FCanExecuteAction(),
-		FIsActionChecked::CreateLambda([]() 
+		FIsActionChecked::CreateLambda([]()
 		{
 			UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
 			return SGSettings->AlwaysOverwriteAssetsWhenImport;
@@ -177,8 +177,8 @@ void FStalkerMainMenu::FillPulldownMenu(FMenuBuilder& InMenuBuilder)
 			FText::GetEmpty(),
 			FSlateIcon(FStalkerEditorStyle::GetStyleSetName(), "StalkerEditor.BuildGameSpawn")
 		);
-		
-	
+
+
 	}
 
 	InMenuBuilder.EndSection();
