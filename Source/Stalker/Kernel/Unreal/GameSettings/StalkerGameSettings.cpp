@@ -2,7 +2,7 @@
 
 UStalkerGameSettings::UStalkerGameSettings()
 {
-	EditorStartupGame = EStalkerGame::COP;
+	EditorStartupGame = EStalkerGame::SHOC;
 }
 #if WITH_EDITOR
 const TMap<FName, FStalkerLevelInfo>& UStalkerGameSettings::GetCurrentLevels() const
