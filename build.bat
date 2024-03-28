@@ -80,21 +80,25 @@ if "!ConfigChoice!"=="1" (
 )
 
 :: Build execution
-echo Building project...
+echo Building SOC project with %EngineConfig% (%StalkerConfig%)...
 
+echo Start Build RedImage...
 call msbuild "./Source/XRayEngine/Source/External/RedImage/RedImageTool/RedImageTool.vcxproj" /p:Configuration=Release /p:Platform=x64 /maxCpuCount /nologo
 if errorlevel 1 (
-    echo Build of External\RedImage failed.
+    echo Build of RedImage failed.
     pause
     exit /b 1
 )
+echo RedImage successfully built.
 
+echo Start Build EngineSOC with %EngineConfig%...
 call msbuild "./Source/XRayEngine/Source/EngineSOC.sln" /p:Configuration=%EngineConfig% /p:Platform=x64 /maxCpuCount /nologo
 if errorlevel 1 (
     echo Build of EngineSOC failed.
     pause
     exit /b 1
 )
+echo EngineSOC successfully built.
 
 if exist "%~dp0Stalker.sln" (
     echo Project detected, skipping project generation.
@@ -104,14 +108,17 @@ if exist "%~dp0Stalker.sln" (
         pause
         exit /b 1
     )
+    echo Project successfully generated.
 )
 
+echo Start Build Stalker with %StalkerConfig%...
 call msbuild "./Stalker.sln" /t:Games\Stalker /p:Configuration="%StalkerConfig%" /p:Platform=Win64 /maxCpuCount /nologo
 if errorlevel 1 (
     echo Build of Stalker failed.
     pause
     exit /b 1
 )
+echo Stalker successfully built.
 
 echo Project successfully built.
 pause
