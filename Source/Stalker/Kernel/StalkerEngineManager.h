@@ -48,12 +48,21 @@ public:
 	//TArray< CShapeData::shape_def> DebugShapes;
 
 	FString												GetGamePath							();
-	
+
 	FSimpleMulticastDelegate							PreReInitializedMulticastDelegate;
 	FSimpleMulticastDelegate							PostReInitializedMulticastDelegate;
 
-private:
+	static bool IsFileExists(const FString& BaseFileName)
+	{
+		FString ReleaseFilePath = FPaths::Combine(FPaths::ProjectDir(), TEXT("Binaries"), TEXT("Win64"), BaseFileName + TEXT("_Release.dll"));
+		FString DebugFilePath = FPaths::Combine(FPaths::ProjectDir(), TEXT("Binaries"), TEXT("Win64"), BaseFileName + TEXT("_Debug.dll"));
 
+		return FPaths::FileExists(ReleaseFilePath) || FPaths::FileExists(DebugFilePath);
+	};
+
+private:
+	void												CheckGameModuleExist();
+	EStalkerGame										GetExistGame(EStalkerGame game);
 	void												OnPostEngineInit					();
 	void												OnPostLoadMap						(UWorld* World);
 	void												OnTravelFailure						(UWorld*NextWorld, ETravelFailure::Type FailureType, const FString& Name);
@@ -61,7 +70,7 @@ private:
 	void												OnViewportCloseRequested			(FViewport* InViewport);
 	void												OnViewportResized					(FViewport* InViewport, uint32);
 	void												OnEndPlayMap						();
-	
+
 #if WITH_EDITORONLY_DATA
 	void												OnGetOnScreenMessages				(FCoreDelegates::FSeverityMessageMap& Out);
 #endif

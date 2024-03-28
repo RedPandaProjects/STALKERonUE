@@ -19,7 +19,7 @@ struct FStalkerLevelInfo
 
 
 
-UCLASS(Config = Game, defaultconfig, meta = (DisplayName = "Stalker Game Settings")) 
+UCLASS(Config = Game, defaultconfig, meta = (DisplayName = "Stalker Game Settings"))
 class STALKER_API UStalkerGameSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()
@@ -29,16 +29,16 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	EStalkerGame EditorStartupGame;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
 	TSoftObjectPtr<UMaterialInterface>	DefaultDecalMaterial;
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
 	TSoftObjectPtr<UMaterialInterface>	PostProcessMaterial;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
 	TSoftObjectPtr<USoundClass> MasterSoundClass;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
 	TSoftObjectPtr<USoundMix> ShockEffectorMix;
 #if WITH_EDITORONLY_DATA
@@ -65,13 +65,13 @@ public:
 	bool	IgnoreIncludeInBuildSpawn = false;
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
 	bool	VerifySpaceRestrictorBorders = true;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
-	TArray<FString> ParticlesUsingHudMode; 
-	
+	TArray<FString> ParticlesUsingHudMode;
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TMap<FString,FString> ReplaceShaderWhenImport;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSet<FString> DisableDistanceFieldOfCompilerShaderWhenImport;
 
@@ -83,7 +83,7 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TArray<FString> WMTexturesPrefix;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TArray<FString> GradTexturesPrefix;
 
@@ -92,22 +92,22 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	bool	AlwaysOverwriteAssetsWhenImport  = false;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSoftObjectPtr<UMaterialInterface>		DefaultUnknownMaterial;
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSoftObjectPtr<UMaterialInterface>		DefaultDecalUnknownMaterial;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSoftObjectPtr<UMaterialInterface>		DefaultParticleUnknownMaterial;
-		
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSoftObjectPtr<UMaterialInterface> DefaultTerrainMaterial;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TSoftObjectPtr<USoundClass> DefaultSoundClass;
-	
+
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TMap<FString,TSoftObjectPtr<USoundClass>> SoundClassByPrefixWhenImport;
 
@@ -119,4 +119,9 @@ public:
 #if WITH_EDITOR
 	void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
 #endif
+
+private:
+	int GetActualGame();
+
+
 };

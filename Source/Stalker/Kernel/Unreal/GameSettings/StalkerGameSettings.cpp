@@ -1,8 +1,40 @@
 #include "StalkerGameSettings.h"
+#include "Misc/MessageDialog.h"
+#include "..\Stalker\Kernel\StalkerEngineManager.h"
+
+int UStalkerGameSettings::GetActualGame()
+{
+
+	if (FStalkerEngineManager::IsFileExists("xrGameSOC"))
+		return 0;
+	else if (FStalkerEngineManager::IsFileExists("xrGame"))
+		return 1;
+	else if (FStalkerEngineManager::IsFileExists("xrGameCS"))
+		return 2;
+	else
+		return 3;
+
+}
 
 UStalkerGameSettings::UStalkerGameSettings()
 {
-	EditorStartupGame = EStalkerGame::SHOC;
+	switch (GetActualGame())
+	{
+	case 0:
+	{
+		EditorStartupGame = EStalkerGame::SHOC;
+	}break;
+	case 1:
+	{
+		EditorStartupGame = EStalkerGame::COP;
+	}break;
+	case 2:
+	{
+		EditorStartupGame = EStalkerGame::CS;
+	}break;
+	default:
+		break;
+	}
 }
 #if WITH_EDITOR
 const TMap<FName, FStalkerLevelInfo>& UStalkerGameSettings::GetCurrentLevels() const

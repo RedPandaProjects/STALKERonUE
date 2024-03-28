@@ -34,7 +34,7 @@ static FRBMKDebug	GXRayDebug;
 
 FStalkerEngineManager::FStalkerEngineManager()
 {
-	
+
 }
 
 FStalkerEngineManager::~FStalkerEngineManager()
@@ -65,6 +65,30 @@ FStalkerEngineManager::~FStalkerEngineManager()
 	delete ResourcesManager;
 }
 
+EStalkerGame FStalkerEngineManager::GetExistGame(EStalkerGame game)
+{
+	if ((game == EStalkerGame::SHOC) && IsFileExists("xrGameSoc"))
+		return EStalkerGame::SHOC;
+	else if ((game == EStalkerGame::COP) && IsFileExists("xrGame"))
+		return EStalkerGame::COP;
+	else if ((game == EStalkerGame::CS) && IsFileExists("xrGameCs"))
+		return EStalkerGame::CS;
+	else if (IsFileExists("xrGameSOC"))
+		return EStalkerGame::SHOC;
+	else if (IsFileExists("xrGame"))
+		return EStalkerGame::COP;
+	else if (IsFileExists("xrGameCS"))
+		return EStalkerGame::CS;
+	else
+	{
+		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString("Can't find anyone XrGame"));
+		Debug.fatal(__FILE__, 85, __FUNCTION__, "Can't find anyone XrGame");
+
+		return EStalkerGame::Unkown;
+	}
+
+}
+
 void FStalkerEngineManager::Initialize()
 {
 	FString GameShaderDir = FPaths::Combine(FPaths::ProjectDir(), TEXT("Shaders"));
@@ -74,22 +98,32 @@ void FStalkerEngineManager::Initialize()
 	PhysicalMaterialsManager = NewObject<UStalkerPhysicalMaterialsManager>();
 	MyXRayInput = nullptr;
 	FString FSName;
-	EGamePath GamePath = EGamePath::COP_1602;
+	EGamePath GamePath;
 	if (GIsEditor)
 	{
-		FSName = TEXT("fs");
-		switch (GetDefault<UStalkerGameSettings>()->EditorStartupGame)
-		{
-		case EStalkerGame::CS:
-			GamePath = EGamePath::CS_1510;
-			FSName += TEXT("_cs");
-			break;
-		case EStalkerGame::SHOC:
-			GamePath = EGamePath::SHOC_10006;
-			FSName += TEXT("_soc");
-			break;
-		}
-		CurrentGame = GetDefault<UStalkerGameSettings>()->EditorStartupGame;
+		  UStalkerGameSettings* SGSettings = GetMutableDefault<UStalkerGameSettings>();
+			switch (GetExistGame(GetDefault<UStalkerGameSettings>()->EditorStartupGame))
+        {
+        case EStalkerGame::COP:
+            SGSettings->EditorStartupGame = EStalkerGame::COP;
+            GamePath = EGamePath::COP_1602;
+            FSName = TEXT("fs");
+            CurrentGame = EStalkerGame::COP;
+            break;
+        case EStalkerGame::CS:
+            SGSettings->EditorStartupGame = EStalkerGame::CS;
+            GamePath = EGamePath::CS_1510;
+            FSName = TEXT("fs_cs");
+            CurrentGame = EStalkerGame::CS;
+            break;
+        case EStalkerGame::SHOC:
+            SGSettings->EditorStartupGame = EStalkerGame::SHOC;
+            GamePath = EGamePath::SHOC_10006;
+            FSName = TEXT("fs_soc");
+            CurrentGame = EStalkerGame::SHOC;
+            break;
+        }
+		SGSettings->TryUpdateDefaultConfigFile();
 	}
 	else
 	{
@@ -119,7 +153,7 @@ void FStalkerEngineManager::Initialize()
 #if !WITH_EDITOR
 	AppStart();
 #endif
-	
+
 }
 
 void FStalkerEngineManager::AppStart()
@@ -196,7 +230,7 @@ void FStalkerEngineManager::DetachViewport(class UGameViewportClient* InGameView
 		FViewport::ViewportResizedEvent.RemoveAll(this);
 		GameViewportClient->OnCloseRequested().RemoveAll(this);
 		GameViewportClient = nullptr	;
-	
+
 	}
 }
 
@@ -294,8 +328,8 @@ void FStalkerEngineManager::ReInitialized(EStalkerGame Game)
 
 void FStalkerEngineManager::SetInput(class FRBMKInput* InXRayInput)
 {
-	if (InXRayInput == nullptr) 
-	{ 
+	if (InXRayInput == nullptr)
+	{
 		MyXRayInput = nullptr;
 		return;
 	}
@@ -349,7 +383,7 @@ bool FStalkerEngineManager::LoadWorld(FString LevelName)
 		WorldStatus = EStalkerWorldStatus::Failure;
 		return false;
 	}
-	
+
 	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.SetMapImage(LevelName);
 
     CurrentWorldPath = 	UWorld::RemovePIEPrefix(*CurrentWorld->GetPathName());
