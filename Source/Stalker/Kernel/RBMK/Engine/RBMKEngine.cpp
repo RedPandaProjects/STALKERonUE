@@ -246,7 +246,9 @@ void FRBMKEngine::ChangeUeSettings(int setting, int value)
 	default:
 		break;
 	}
+	UserSettings->ApplyNonResolutionSettings();
 	UserSettings->SaveSettings();
+	UserSettings->TryUpdateDefaultConfigFile();
 }
 
 int FRBMKEngine::GetSetting(int setting)
