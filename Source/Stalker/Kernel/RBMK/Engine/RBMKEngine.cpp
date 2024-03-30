@@ -244,7 +244,7 @@ void FRBMKEngine::ChangeUeSettings(int setting, int value)
 	default:
 		break;
 	}
-	UserSettings->ApplySettings(false);
+	UserSettings->ApplySettings(true);
 }
 
 int FRBMKEngine::GetSetting(int setting)
