@@ -82,7 +82,7 @@ EStalkerGame FStalkerEngineManager::GetExistGame(EStalkerGame game)
 	else
 	{
 		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString("Can't find anyone XrGame"));
-		Debug.fatal(__FILE__, 85, __FUNCTION__, "Can't find anyone XrGame");
+		GEngine->Exec(NULL, TEXT("Exit"));
 
 		return EStalkerGame::Unkown;
 	}

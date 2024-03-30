@@ -61,7 +61,6 @@ public:
 	};
 
 private:
-	void												CheckGameModuleExist();
 	EStalkerGame										GetExistGame(EStalkerGame game);
 	void												OnPostEngineInit					();
 	void												OnPostLoadMap						(UWorld* World);
