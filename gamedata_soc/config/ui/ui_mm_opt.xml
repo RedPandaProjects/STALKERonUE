@@ -228,8 +228,8 @@
 		<cap_particles_distance x="20" y="0" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">ui_mm_sun_quality</text>
 		</cap_particles_distance>
-		<track_particles_distance x="194" y="0" width="245" height="21" step="0.1">
-			<options_item entry="r2_ls_squality" group="mm_opt_video_adv"/>
+		<track_particles_distance x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="1"/>
 		</track_particles_distance>
 		
 		<cap_vsync x="20" y="0" width="143" height="21">

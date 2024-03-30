@@ -218,6 +218,49 @@ class IRBMKUnrealProxy* FRBMKEngine::GetUnrealPlayerCharacter()
 	return nullptr;
 }
 
+void FRBMKEngine::ExecUeCmd(const char* cmd)
+{
+	GEngine->Exec(NULL, ANSI_TO_TCHAR(cmd));
+}
+
+void FRBMKEngine::ChangeUeSettings(int setting, int value)
+{
+	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
+
+	switch (setting)
+	{
+	case 1:
+	{
+		UserSettings->SetShadowQuality(value);
+	}break;
+	case 2:
+	{
+
+	}break;
+	case 3:
+	{
+
+	}break;
+	default:
+		break;
+	}
+	UserSettings->ApplySettings(false);
+}
+
+int FRBMKEngine::GetSetting(int setting)
+{
+	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
+	switch (setting)
+	{
+	case 1:
+	{
+		return UserSettings->GetShadowQuality();
+	}break;
+	default:
+		break;
+	}
+}
+
 shared_str FRBMKEngine::GetUnrealVersion()
 {
 	return TCHAR_TO_ANSI(FApp::GetBuildVersion()); 

@@ -30,6 +30,9 @@ public:
 
 
 	shared_str						GetUnrealVersion			() override;
+	void							ExecUeCmd					(const char* cmd) override;
+	void							ChangeUeSettings(int setting, int value) override;
+	int								GetSetting(int setting) override;
 	IRBMKSoundManager*				GetSoundManager				() override;
 	IRBMKEnvironment*				GetEnvironment				() override;
 	void							OnRunGame					(const char* ServerParams, const char* ClientParams) override;
