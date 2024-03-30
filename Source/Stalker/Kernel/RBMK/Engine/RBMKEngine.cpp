@@ -227,6 +227,8 @@ void FRBMKEngine::ChangeUeSettings(int setting, int value)
 {
 	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
 
+	UE_LOG(LogStalker, Error, TEXT("ChangeUeSettings: %d, %d"), setting, value);
+
 	switch (setting)
 	{
 	case 1:
@@ -235,28 +237,39 @@ void FRBMKEngine::ChangeUeSettings(int setting, int value)
 	}break;
 	case 2:
 	{
-
+		UserSettings->SetViewDistanceQuality(value);
 	}break;
 	case 3:
 	{
-
+		UserSettings->SetGlobalIlluminationQuality(value);
 	}break;
 	default:
 		break;
 	}
-	UserSettings->ApplySettings(true);
+	UserSettings->SaveSettings();
 }
 
 int FRBMKEngine::GetSetting(int setting)
 {
 	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
+
+	UE_LOG(LogStalker, Error, TEXT("GetSetting: %d"), setting);
 	switch (setting)
 	{
 	case 1:
 	{
 		return UserSettings->GetShadowQuality();
 	}break;
+	case 2:
+	{
+		return UserSettings->GetViewDistanceQuality();
+	}break;
+	case 3:
+	{
+		return UserSettings->GetGlobalIlluminationQuality();
+	}
 	default:
+		return 0;
 		break;
 	}
 }
