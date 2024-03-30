@@ -154,13 +154,6 @@
 					vert_interval="0" always_show_scroll="0"/>
 
 		<templ_item width="450" height="30"/>
-
-		<cap_particles_distance x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_sun_quality</text>
-		</cap_particles_distance>
-		<track_particles_distance x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
-			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="1"/>
-		</track_particles_distance>
 		
 		<cap_shadow_quality x="20" y="0" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">shadow_quality</text>
@@ -182,6 +175,55 @@
 		<track_global_ilumination_quality x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
 			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="3"/>
 		</track_global_ilumination_quality>
+		
+		<cap_aa x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">anti_aliasing</text>
+		</cap_aa>
+		<track_aa x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="4"/>
+		</track_aa>
+		
+		<cap_reflections x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">reflections</text>
+		</cap_reflections>
+		<track_reflections x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="5"/>
+		</track_reflections>
+		
+		<cap_post_process x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">post_process</text>
+		</cap_post_process>
+		<track_post_process x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="6"/>
+		</track_post_process>
+		
+		<cap_texture x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">textures</text>
+		</cap_texture>
+		<track_texture x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="7"/>
+		</track_texture>
+		
+		<cap_visual_eff x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">visual_eff</text>
+		</cap_visual_eff>
+		<track_visual_eff x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="8"/>
+		</track_visual_eff>
+		
+		<cap_foliage x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">foliage</text>
+		</cap_foliage>
+		<track_foliage x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="9"/>
+		</track_foliage>
+		
+		<cap_shading x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">shading</text>
+		</cap_shading>
+		<track_shading x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="10"/>
+		</track_shading>
 		
 		<btn_to_simply x="342" y="325" width="111" height="29">
 			<text align="c" font="letterica16" r="227" g="199" b="178">ui_mm_simply</text>	

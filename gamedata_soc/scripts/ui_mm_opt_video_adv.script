@@ -36,6 +36,34 @@ function opt_video_adv:InitControls(x, y, xml, handler)
 	xml:InitStatic								("video_adv:cap_global_ilumination_quality",				_st)
 	xml:InitTrackBar							("video_adv:track_global_ilumination_quality",				_st)
 	
+		_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_aa",				_st)
+	xml:InitTrackBar							("video_adv:track_aa",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_reflections",				_st)
+	xml:InitTrackBar							("video_adv:track_reflections",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_post_process",				_st)
+	xml:InitTrackBar							("video_adv:track_post_process",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_texture",				_st)
+	xml:InitTrackBar							("video_adv:track_texture",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_visual_eff",				_st)
+	xml:InitTrackBar							("video_adv:track_visual_eff",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_foliage",				_st)
+	xml:InitTrackBar							("video_adv:track_foliage",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_shading",				_st)
+	xml:InitTrackBar							("video_adv:track_shading",				_st)
+	
 	btn		= xml:Init3tButton					("video_adv:btn_to_simply",	self)	
 	handler:Register							(btn, "btn_simply_graphic")	
 end

@@ -242,6 +242,34 @@ void FRBMKEngine::ChangeUeSettings(int setting, int value)
 	{
 		GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(value);
 	}break;
+	case 4:
+	{
+		GEngine->GetGameUserSettings()->SetAntiAliasingQuality(value);
+	}break;
+	case 5:
+	{
+		GEngine->GetGameUserSettings()->SetReflectionQuality(value);
+	}break;
+	case 6:
+	{
+		GEngine->GetGameUserSettings()->SetPostProcessingQuality(value);
+	}break;
+	case 7:
+	{
+		GEngine->GetGameUserSettings()->SetTextureQuality(value);
+	}break;
+	case 8:
+	{
+		GEngine->GetGameUserSettings()->SetVisualEffectQuality(value);
+	}break;
+	case 9:
+	{
+		GEngine->GetGameUserSettings()->SetFoliageQuality(value);
+	}break;
+	case 10:
+	{
+		GEngine->GetGameUserSettings()->SetShadingQuality(value);
+	}break;
 	default:
 		break;
 	}
@@ -264,7 +292,35 @@ int FRBMKEngine::GetSetting(int setting)
 	case 3:
 	{
 		return GEngine->GetGameUserSettings()->GetGlobalIlluminationQuality();
-	}
+	}break;
+	case 4:
+	{
+		return GEngine->GetGameUserSettings()->GetAntiAliasingQuality();
+	}break;
+	case 5:
+	{
+		return GEngine->GetGameUserSettings()->GetReflectionQuality();
+	}break;
+	case 6:
+	{
+		return GEngine->GetGameUserSettings()->GetPostProcessingQuality();
+	}break;
+	case 7:
+	{
+		return GEngine->GetGameUserSettings()->GetTextureQuality();
+	}break;
+	case 8:
+	{
+		return GEngine->GetGameUserSettings()->GetVisualEffectQuality();
+	}break;
+	case 9:
+	{
+		return GEngine->GetGameUserSettings()->GetFoliageQuality();
+	}break;
+	case 10:
+	{
+		return GEngine->GetGameUserSettings()->GetShadingQuality();
+	}break;
 	default:
 		return 0;
 		break;
