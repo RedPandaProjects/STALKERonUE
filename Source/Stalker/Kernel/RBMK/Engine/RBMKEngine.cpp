@@ -225,7 +225,6 @@ void FRBMKEngine::ExecUeCmd(const char* cmd)
 
 void FRBMKEngine::ChangeUeSettings(int setting, int value)
 {
-	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
 
 	UE_LOG(LogStalker, Error, TEXT("ChangeUeSettings: %d, %d"), setting, value);
 
@@ -233,42 +232,38 @@ void FRBMKEngine::ChangeUeSettings(int setting, int value)
 	{
 	case 1:
 	{
-		UserSettings->SetShadowQuality(value);
+		GEngine->GetGameUserSettings()->SetShadowQuality(value);
 	}break;
 	case 2:
 	{
-		UserSettings->SetViewDistanceQuality(value);
+		GEngine->GetGameUserSettings()->SetViewDistanceQuality(value);
 	}break;
 	case 3:
 	{
-		UserSettings->SetGlobalIlluminationQuality(value);
+		GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(value);
 	}break;
 	default:
 		break;
 	}
-	UserSettings->ApplyNonResolutionSettings();
-	UserSettings->SaveSettings();
-	UserSettings->TryUpdateDefaultConfigFile();
+	GEngine->GetGameUserSettings()->ApplySettings(true);
 }
 
 int FRBMKEngine::GetSetting(int setting)
 {
-	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
-
 	UE_LOG(LogStalker, Error, TEXT("GetSetting: %d"), setting);
 	switch (setting)
 	{
 	case 1:
 	{
-		return UserSettings->GetShadowQuality();
+		return GEngine->GetGameUserSettings()->GetShadowQuality();
 	}break;
 	case 2:
 	{
-		return UserSettings->GetViewDistanceQuality();
+		return GEngine->GetGameUserSettings()->GetViewDistanceQuality();
 	}break;
 	case 3:
 	{
-		return UserSettings->GetGlobalIlluminationQuality();
+		return GEngine->GetGameUserSettings()->GetGlobalIlluminationQuality();
 	}
 	default:
 		return 0;
