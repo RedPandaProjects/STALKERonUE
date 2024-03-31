@@ -23,6 +23,7 @@
 #include "Entities/Player/Character/StalkerPlayerCharacter.h"
 #include "Resources/Sound/StalkerSoundManager.h"
 #include "Sound/SoundClass.h"
+#include "RHI.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -451,6 +452,32 @@ float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
 		return 0.0f;
 		break;
 	}
+}
+
+void FRBMKEngine::GetCurrentResolution(u32& w, u32& h)
+{
+	FIntPoint res = GEngine->GetGameUserSettings()->GetScreenResolution();
+	w = res.X;
+	h = res.Y;
+}
+
+void	FRBMKEngine::GetAvaliableResolution(std::map<u32, u32> &ResolutionsMap)
+{
+	FScreenResolutionArray Res;
+	RHIGetAvailableResolutions(Res, true);
+	for (auto tmp : Res)
+	{
+		ResolutionsMap[tmp.Height] = tmp.Width;
+	}
+}
+
+void FRBMKEngine::SetResolution(u32 w, u32 h)
+{
+	FIntPoint res;
+	res.X = w;
+	res.Y = h;
+	GEngine->GetGameUserSettings()->SetScreenResolution(res);
+	GEngine->GetGameUserSettings()->ApplySettings(true);
 }
 
 shared_str FRBMKEngine::GetUnrealVersion()

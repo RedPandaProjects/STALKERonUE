@@ -40,6 +40,10 @@ public:
 	int								GetSettingInt				(int setting, int& min, int& max) override;
 	void							ChangeUeSettingsFloat(const std::map<int, float>& settinglist) override;
 	float							GetSettingFloat(int setting, float& min, float& max) override;
+
+	void				GetAvaliableResolution(std::map<u32, u32> &ResolutionsMap) override;
+	void				GetCurrentResolution(u32& w, u32& h) override;
+	void				SetResolution(u32 w, u32 h) override;
 private:
 	enum ESettingsListInt
 	{
