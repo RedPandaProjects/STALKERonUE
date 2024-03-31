@@ -30,11 +30,26 @@ public:
 
 
 	shared_str						GetUnrealVersion			() override;
-	void							ExecUeCmd					(const char* cmd) override;
-	void							ChangeUeSettings(int setting, int value) override;
-	int								GetSetting(int setting) override;
 	IRBMKSoundManager*				GetSoundManager				() override;
 	IRBMKEnvironment*				GetEnvironment				() override;
 	void							OnRunGame					(const char* ServerParams, const char* ClientParams) override;
 	IRBMKLoadingScreenManager*		GetLoadingScreen			() override;
+
+	void							ExecUeCmd					(const char* cmd) override;
+	void							ChangeUeSettings			(std::map<int, int> settinglist) override;
+	int								GetSetting					(int setting, int& min, int& max) override;
+private:
+	enum ESettingsList
+	{
+		ShadowQuality = 1,
+		ViewDistanceQuality,
+		GlobalIlluminationQuality,
+		AntiAliasingQuality,
+		ReflectionQuality,
+		PostProcessingQuality,
+		TextureQuality,
+		VisualEffectsQuality,
+		FoliageQuality,
+		ShadingQuality
+	};
 };

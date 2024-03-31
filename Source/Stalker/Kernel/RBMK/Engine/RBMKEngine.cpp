@@ -223,105 +223,132 @@ void FRBMKEngine::ExecUeCmd(const char* cmd)
 	GEngine->Exec(NULL, ANSI_TO_TCHAR(cmd));
 }
 
-void FRBMKEngine::ChangeUeSettings(int setting, int value)
+void FRBMKEngine::ChangeUeSettings(std::map<int, int> settinglist)
 {
 
-	UE_LOG(LogStalker, Error, TEXT("ChangeUeSettings: %d, %d"), setting, value);
+	for (const auto& ref : settinglist)
+	{
+		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettings: %d, %d"), ref.first, ref.second);
 
-	switch (setting)
-	{
-	case 1:
-	{
-		GEngine->GetGameUserSettings()->SetShadowQuality(value);
-	}break;
-	case 2:
-	{
-		GEngine->GetGameUserSettings()->SetViewDistanceQuality(value);
-	}break;
-	case 3:
-	{
-		GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(value);
-	}break;
-	case 4:
-	{
-		GEngine->GetGameUserSettings()->SetAntiAliasingQuality(value);
-	}break;
-	case 5:
-	{
-		GEngine->GetGameUserSettings()->SetReflectionQuality(value);
-	}break;
-	case 6:
-	{
-		GEngine->GetGameUserSettings()->SetPostProcessingQuality(value);
-	}break;
-	case 7:
-	{
-		GEngine->GetGameUserSettings()->SetTextureQuality(value);
-	}break;
-	case 8:
-	{
-		GEngine->GetGameUserSettings()->SetVisualEffectQuality(value);
-	}break;
-	case 9:
-	{
-		GEngine->GetGameUserSettings()->SetFoliageQuality(value);
-	}break;
-	case 10:
-	{
-		GEngine->GetGameUserSettings()->SetShadingQuality(value);
-	}break;
-	default:
-		break;
+		switch (ref.first)
+		{
+		case ShadowQuality:
+		{
+			GEngine->GetGameUserSettings()->SetShadowQuality(ref.second);
+		}break;
+		case ViewDistanceQuality:
+		{
+			GEngine->GetGameUserSettings()->SetViewDistanceQuality(ref.second);
+		}break;
+		case GlobalIlluminationQuality:
+		{
+			GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(ref.second);
+		}break;
+		case AntiAliasingQuality:
+		{
+			GEngine->GetGameUserSettings()->SetAntiAliasingQuality(ref.second);
+		}break;
+		case ReflectionQuality:
+		{
+			GEngine->GetGameUserSettings()->SetReflectionQuality(ref.second);
+		}break;
+		case PostProcessingQuality:
+		{
+			GEngine->GetGameUserSettings()->SetPostProcessingQuality(ref.second);
+		}break;
+		case TextureQuality:
+		{
+			GEngine->GetGameUserSettings()->SetTextureQuality(ref.second);
+		}break;
+		case VisualEffectsQuality:
+		{
+			GEngine->GetGameUserSettings()->SetVisualEffectQuality(ref.second);
+		}break;
+		case FoliageQuality:
+		{
+			GEngine->GetGameUserSettings()->SetFoliageQuality(ref.second);
+		}break;
+		case ShadingQuality:
+		{
+			GEngine->GetGameUserSettings()->SetShadingQuality(ref.second);
+		}break;
+		default:
+			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
+			break;
+		}
 	}
 	GEngine->GetGameUserSettings()->ApplySettings(true);
 }
 
-int FRBMKEngine::GetSetting(int setting)
+int FRBMKEngine::GetSetting(int setting, int& min, int& max)
 {
-	UE_LOG(LogStalker, Error, TEXT("GetSetting: %d"), setting);
+	UE_LOG(LogStalker, Display, TEXT("GetSetting: %d"), setting);
 	switch (setting)
 	{
-	case 1:
+	case ShadowQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetShadowQuality();
 	}break;
-	case 2:
+	case ViewDistanceQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetViewDistanceQuality();
 	}break;
-	case 3:
+	case GlobalIlluminationQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetGlobalIlluminationQuality();
 	}break;
-	case 4:
+	case AntiAliasingQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetAntiAliasingQuality();
 	}break;
-	case 5:
+	case ReflectionQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetReflectionQuality();
 	}break;
-	case 6:
+	case PostProcessingQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetPostProcessingQuality();
 	}break;
-	case 7:
+	case TextureQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetTextureQuality();
 	}break;
-	case 8:
+	case VisualEffectsQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetVisualEffectQuality();
 	}break;
-	case 9:
+	case FoliageQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetFoliageQuality();
 	}break;
-	case 10:
+	case ShadingQuality:
 	{
+		min = 0;
+		max = 4;
 		return GEngine->GetGameUserSettings()->GetShadingQuality();
 	}break;
 	default:
+		min = 0;
+		max = 1;
+		UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 		return 0;
 		break;
 	}
