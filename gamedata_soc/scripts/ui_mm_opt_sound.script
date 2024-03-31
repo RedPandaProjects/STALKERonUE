@@ -13,28 +13,14 @@ function opt_sound:InitControls(x, y, xml, handler)
 	self:SetAutoDelete(true)
 	
 	self.bk = xml:InitFrame("frame", self)
-	
---	local c
 
 	xml:InitStatic("tab_sound:cap_mastervolume",		self)
-	xml:InitStatic("tab_sound:cap_musicvolume",		self)
---	xml:InitStatic("tab_sound:cap_sfxvolume",		self)
---	xml:InitStatic("tab_sound:cap_voicevolume",		self)
---	xml:InitStatic("tab_sound:cap_soundquality",		self)	
+	xml:InitStatic("tab_sound:cap_musicvolume",			self)
+	xml:InitStatic("tab_sound:cap_effectsvolume", 		self)
 	
---	c = xml:InitCheck("tab_sound:check_reverse",	self)
---	c:Enable(false)
-	xml:InitCheck("tab_sound:check_eax",			self)
+	xml:InitTrackBar("tab_sound:track_effectsvolume", 	self)
+	xml:InitTrackBar("tab_sound:track_musicvolume",		self)
+	xml:InitTrackBar("tab_sound:track_mastervolume",	self)
 
---	c = xml:InitSpinText("tab_sound:list_speakersetup",	self)
---	c:Enable(false)
---	xml:InitSpinText("tab_sound:list_soundquality",	self)
-	
-	xml:InitTrackBar("tab_sound:track_musicvolume",	self)
-	xml:InitTrackBar("tab_sound:track_mastervolume",self)
---	c = xml:InitTrackBar("tab_sound:track_voice",	self)
---	c:Enable(false)
 
---	btn = xml:Init3tButton("tab_sound:btn_default_set",	self)	
---	handler:Register(btn, "btn_default_sound")
 end

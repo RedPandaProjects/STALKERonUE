@@ -366,19 +366,40 @@ int FRBMKEngine::GetSettingInt(int setting, int& min, int& max)
 
 void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 {
+	USoundClass* Sound;
 	for (const auto& ref : settinglist)
 	{
 		switch (ref.first)
 		{
 		case EffectsVolume:
 		{
-
+			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+				Sound->TryUpdateDefaultConfigFile();
+			}
 		}break;
 		case MusicVolume:
 		{
-
+			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MusicClass.MusicClass"));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+				Sound->TryUpdateDefaultConfigFile();
+			}
+		}break;
+		case MasterVolume:
+		{
+			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+				Sound->TryUpdateDefaultConfigFile();
+			}
 		}break;
 		default:
+			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 			break;
 		}
 	}
@@ -386,15 +407,38 @@ void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 
 float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
 {
+	USoundClass* Sound;
 	switch (setting)
 	{
 	case EffectsVolume:
 	{
-		return 1.f;
+		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
+		if(Sound)
+		{
+			return Sound->Properties.Volume;
+		}
+		else
+			return 0.f;
 	}break;
 	case MusicVolume:
 	{
-		return 1.f;
+		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MusicClass.MusicClass"));
+		if (Sound)
+		{
+			return Sound->Properties.Volume;
+		}
+		else
+			return 0.f;
+	}break;
+	case MasterVolume:
+	{
+		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
+		if (Sound)
+		{
+			return Sound->Properties.Volume;
+		}
+		else
+			return 0.f;
 	}break;
 	default:
 		return 0.0f;

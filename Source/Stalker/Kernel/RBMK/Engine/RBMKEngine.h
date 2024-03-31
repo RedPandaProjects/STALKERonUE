@@ -57,6 +57,7 @@ private:
 	enum ESettingsListFloat
 	{
 		EffectsVolume = 1,
-		MusicVolume
+		MusicVolume,
+		MasterVolume
 	};
 };
