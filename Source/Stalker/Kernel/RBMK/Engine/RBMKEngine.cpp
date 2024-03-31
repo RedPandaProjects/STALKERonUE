@@ -415,6 +415,8 @@ float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
 		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
 		if(Sound)
 		{
+			min = 0.f;
+			max = 1.f;
 			return Sound->Properties.Volume;
 		}
 		else
@@ -425,6 +427,8 @@ float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
 		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MusicClass.MusicClass"));
 		if (Sound)
 		{
+			min = 0.f;
+			max = 1.f;
 			return Sound->Properties.Volume;
 		}
 		else
@@ -435,6 +439,8 @@ float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
 		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
 		if (Sound)
 		{
+			min = 0.f;
+			max = 1.f;
 			return Sound->Properties.Volume;
 		}
 		else
