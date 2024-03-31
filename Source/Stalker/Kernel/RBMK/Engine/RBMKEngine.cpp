@@ -467,7 +467,7 @@ void	FRBMKEngine::GetAvaliableResolution(std::map<u32, u32> &ResolutionsMap)
 	RHIGetAvailableResolutions(Res, true);
 	for (auto tmp : Res)
 	{
-		ResolutionsMap[tmp.Height] = tmp.Width;
+		ResolutionsMap[tmp.Width] = tmp.Height;
 	}
 }
 
