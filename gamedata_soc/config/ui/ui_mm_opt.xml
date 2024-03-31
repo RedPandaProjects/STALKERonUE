@@ -247,10 +247,10 @@
 			<options_item entry="snd_volume_music" group="mm_opt_sound" ue_value="2"/>
 		</track_musicvolume>		
 
-		<cap_effectsvolume x="20" y="45" width="143" height="21">
+		<cap_effectsvolume x="20" y="70" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">ui_mm_effects_volume</text>
 		</cap_effectsvolume>
-		<track_effectsvolume x="194" y="45" width="245" height="21" is_ue="1">
+		<track_effectsvolume x="194" y="70" width="245" height="21" is_ue="1">
 			<options_item entry="snd_volume_music" group="mm_opt_sound" ue_value="1"/>
 		</track_effectsvolume>	
 

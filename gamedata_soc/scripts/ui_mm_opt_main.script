@@ -198,7 +198,7 @@ function options_dialog:OnBtnAccept()
 	opt:SaveValues("mm_opt_video")
 	opt:SaveValues("mm_opt_video_adv", true)
 	opt:SaveValues("mm_opt_gameplay")
-	opt:SaveValues("mm_opt_sound")	
+	opt:SaveValues("mm_opt_sound", true)	
 	opt:SaveValues("mm_opt_controls")
 	opt:OptionsPostAccept()	
 

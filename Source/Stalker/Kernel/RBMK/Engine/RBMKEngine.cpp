@@ -369,6 +369,7 @@ void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 	USoundClass* Sound;
 	for (const auto& ref : settinglist)
 	{
+		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettingsFloat: %d, %f"), ref.first, ref.second);
 		switch (ref.first)
 		{
 		case EffectsVolume:
