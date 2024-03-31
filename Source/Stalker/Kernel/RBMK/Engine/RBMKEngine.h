@@ -36,10 +36,12 @@ public:
 	IRBMKLoadingScreenManager*		GetLoadingScreen			() override;
 
 	void							ExecUeCmd					(const char* cmd) override;
-	void							ChangeUeSettings			(std::map<int, int> settinglist) override;
-	int								GetSetting					(int setting, int& min, int& max) override;
+	void							ChangeUeSettingsInt			(const std::map<int, int>& settinglist) override;
+	int								GetSettingInt				(int setting, int& min, int& max) override;
+	void							ChangeUeSettingsFloat(const std::map<int, float>& settinglist) override;
+	float							GetSettingFloat(int setting, float& min, float& max) override;
 private:
-	enum ESettingsList
+	enum ESettingsListInt
 	{
 		ShadowQuality = 1,
 		ViewDistanceQuality,
@@ -51,5 +53,10 @@ private:
 		VisualEffectsQuality,
 		FoliageQuality,
 		ShadingQuality
+	};
+	enum ESettingsListFloat
+	{
+		EffectsVolume = 1,
+		MusicVolume
 	};
 };

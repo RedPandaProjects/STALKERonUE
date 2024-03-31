@@ -22,6 +22,7 @@
 #include "Resources/Spawn/StalkerGameSpawn.h"
 #include "Entities/Player/Character/StalkerPlayerCharacter.h"
 #include "Resources/Sound/StalkerSoundManager.h"
+#include "Sound/SoundClass.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -223,7 +224,7 @@ void FRBMKEngine::ExecUeCmd(const char* cmd)
 	GEngine->Exec(NULL, ANSI_TO_TCHAR(cmd));
 }
 
-void FRBMKEngine::ChangeUeSettings(std::map<int, int> settinglist)
+void FRBMKEngine::ChangeUeSettingsInt(const std::map<int, int> &settinglist)
 {
 
 	for (const auto& ref : settinglist)
@@ -272,6 +273,15 @@ void FRBMKEngine::ChangeUeSettings(std::map<int, int> settinglist)
 		{
 			GEngine->GetGameUserSettings()->SetShadingQuality(ref.second);
 		}break;
+		case 11:
+		{
+			USoundClass* Sound = LoadObject<USoundClass>(nullptr, TEXT(""));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+			}
+
+		}break;
 		default:
 			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 			break;
@@ -280,7 +290,7 @@ void FRBMKEngine::ChangeUeSettings(std::map<int, int> settinglist)
 	GEngine->GetGameUserSettings()->ApplySettings(true);
 }
 
-int FRBMKEngine::GetSetting(int setting, int& min, int& max)
+int FRBMKEngine::GetSettingInt(int setting, int& min, int& max)
 {
 	UE_LOG(LogStalker, Display, TEXT("GetSetting: %d"), setting);
 	switch (setting)
@@ -350,6 +360,44 @@ int FRBMKEngine::GetSetting(int setting, int& min, int& max)
 		max = 1;
 		UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 		return 0;
+		break;
+	}
+}
+
+void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
+{
+	for (const auto& ref : settinglist)
+	{
+		switch (ref.first)
+		{
+		case EffectsVolume:
+		{
+
+		}break;
+		case MusicVolume:
+		{
+
+		}break;
+		default:
+			break;
+		}
+	}
+}
+
+float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
+{
+	switch (setting)
+	{
+	case EffectsVolume:
+	{
+		return 1.f;
+	}break;
+	case MusicVolume:
+	{
+		return 1.f;
+	}break;
+	default:
+		return 0.0f;
 		break;
 	}
 }
