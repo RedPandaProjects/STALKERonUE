@@ -23,7 +23,8 @@
 #include "Entities/Player/Character/StalkerPlayerCharacter.h"
 #include "Resources/Sound/StalkerSoundManager.h"
 #include "Sound/SoundClass.h"
-#include "RHI.h"
+#include "DynamicRHI.h"
+#include "RHIDefinitions.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -461,14 +462,11 @@ void FRBMKEngine::GetCurrentResolution(u32& w, u32& h)
 	h = res.Y;
 }
 
-void	FRBMKEngine::GetAvaliableResolution(std::map<u32, u32> &ResolutionsMap)
+void	FRBMKEngine::GetResolutions(std::map<u32, u32> &ResolutionsMap)
 {
-	FScreenResolutionArray Res;
-	RHIGetAvailableResolutions(Res, true);
-	for (auto tmp : Res)
-	{
-		ResolutionsMap[tmp.Width] = tmp.Height;
-	}
+	ResolutionsMap[2560] = 1440;
+	ResolutionsMap[1920] = 1440;
+	ResolutionsMap[1920] = 1200;
 }
 
 void FRBMKEngine::SetResolution(u32 w, u32 h)
