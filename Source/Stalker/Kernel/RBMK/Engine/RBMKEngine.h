@@ -41,7 +41,7 @@ public:
 	void							ChangeUeSettingsFloat(const std::map<int, float>& settinglist) override;
 	float							GetSettingFloat(int setting, float& min, float& max) override;
 
-	void				GetResolutions(std::map<u32, u32> &ResolutionsMap) override;
+	void				GetResolutions(std::vector<LPCSTR>& ResVec) override;
 	void				GetCurrentResolution(u32& w, u32& h) override;
 	void				SetResolution(u32 w, u32 h) override;
 private:

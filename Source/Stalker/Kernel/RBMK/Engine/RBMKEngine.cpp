@@ -462,11 +462,11 @@ void FRBMKEngine::GetCurrentResolution(u32& w, u32& h)
 	h = res.Y;
 }
 
-void	FRBMKEngine::GetResolutions(std::map<u32, u32> &ResolutionsMap)
+void	FRBMKEngine::GetResolutions(std::vector<LPCSTR>& ResVec)
 {
-	ResolutionsMap[2560] = 1440;
-	ResolutionsMap[1920] = 1440;
-	ResolutionsMap[1920] = 1200;
+	ResVec.push_back("2560x1440");
+	ResVec.push_back("1920x1440");
+	ResVec.push_back("1920x1200");
 }
 
 void FRBMKEngine::SetResolution(u32 w, u32 h)
