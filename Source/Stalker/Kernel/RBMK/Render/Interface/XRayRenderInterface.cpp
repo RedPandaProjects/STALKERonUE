@@ -1,6 +1,8 @@
 #include "XRayRenderInterface.h"
 
+#if WITH_EDITOR
 #include "IDetailTreeNode.h"
+#endif
 #include "XRayRenderTarget.h"
 #include "../../../StalkerEngineManager.h"
 #include "Resources/StalkerResourcesManager.h"
@@ -183,7 +185,10 @@ void XRayRenderInterface::SpawnStaticDecal(const shared_str& InTextureName, cons
 		FQuat Rotation = FQuat(StalkerMath::RBMKNormalToUnreal(Normal).ToOrientationQuat())*FRotator(-90,0,0).Quaternion();
 		Rotation = Rotation*FRotator(0,FMath::FRandRange(0.f,360.f),0).Quaternion();
 		ADecalActor* DecalActor = GWorld->SpawnActor<ADecalActor>(FVector(StalkerMath::RBMKLocationToUnreal(Point)), Rotation.Rotator(),SpawnParameters);
+		
+#if WITH_EDITOR
 		DecalActor->SetFolderPath(TEXT("Decals"));
+#endif
 		DecalActor->GetDecal()->DecalSize = FVector(Size*12.5f,Size*75,Size*75);
 		{
 			UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);
@@ -219,7 +224,10 @@ void XRayRenderInterface::SpawnSkeletalDecal(const IRenderVisual* InObject, cons
 				FQuat Rotation = FQuat(HitResult.Normal.ToOrientationQuat())*FRotator(-90,0,0).Quaternion();
 				Rotation = Rotation*FRotator(0,FMath::FRandRange(0.f,360.f),0).Quaternion();
 				ADecalActor* DecalActor = GWorld->SpawnActor<ADecalActor>(HitResult.Location, Rotation.Rotator(),SpawnParameters);
+				
+#if WITH_EDITOR
 				DecalActor->SetFolderPath(TEXT("Decals"));
+#endif
 				DecalActor->GetDecal()->DecalSize = FVector(Size*50.f,Size*50,Size*50);
 				{
 					UMaterialInstanceDynamic*Material = UKismetMaterialLibrary::CreateDynamicMaterialInstance(GWorld,GetDefault<UStalkerGameSettings>()->DefaultDecalMaterial.LoadSynchronous(),NAME_None,EMIDCreationFlags::Transient);

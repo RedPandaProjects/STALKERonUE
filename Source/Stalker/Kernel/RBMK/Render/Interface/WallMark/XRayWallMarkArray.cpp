@@ -1,6 +1,7 @@
 #include "XRayWallMarkArray.h"
-
+#if !(UE_BUILD_SHIPPING||UE_BUILD_TEST)
 FACTORY_PTR_INSTANCIATE(UIShader)
+#endif
 XRayWallMarkArray::XRayWallMarkArray()
 {
 }

@@ -5,7 +5,9 @@ class FRBMKDevice :public XrDeviceInterface
 public:
 						FRBMKDevice		();
 						~FRBMKDevice	() override;
+#if !(UE_BUILD_SHIPPING||UE_BUILD_TEST)
 	bool				IsEditorMode	() override;
+#endif
 	bool				Paused			() const override;
 	void				Reset			(bool precache = false) override;
 	void				Pause			(BOOL bOn, BOOL bTimer, BOOL bSound, LPCSTR reason) override;

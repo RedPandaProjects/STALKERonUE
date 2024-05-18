@@ -7,7 +7,7 @@
 
 void FStalkerLoadingModule::StartupModule()
 {
-	if (!IsRunningDedicatedServer())
+	if (!IsRunningDedicatedServer()&&IsRunningGame())
 	{
 		FLoadingScreenAttributes LoadingScreen;
 		LoadingScreen.WidgetLoadingScreen = SNew(SStalkerStartupScreen);

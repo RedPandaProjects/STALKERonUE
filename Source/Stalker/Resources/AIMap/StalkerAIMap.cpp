@@ -85,6 +85,7 @@ void UStalkerAIMap::Serialize(FArchive& Ar)
 void UStalkerAIMap::PostInitProperties()
 {
 	Super::PostInitProperties();
+#if WITH_EDITOR
 	NodesHash.SetNum(NodesHashSize+1);
 	NodesHashSelected.SetNum(NodesHashSize+1);
 	for(int32 i = 0;i<=NodesHashSize;i++)
@@ -92,6 +93,7 @@ void UStalkerAIMap::PostInitProperties()
 		NodesHash[i].SetNum(NodesHashSize+1);
 		NodesHashSelected[i].SetNum(NodesHashSize+1);
 	}
+#endif
 }
 
 

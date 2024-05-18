@@ -32,6 +32,21 @@ static FRBMKMemory	GXRayMemory;
 static FRBMKLog	GXRayLog;
 static FRBMKDebug	GXRayDebug;
 
+#if UE_BUILD_SHIPPING||UE_BUILD_TEST
+void*xr_malloc	(size_t size)
+{
+	return FMemory::Malloc(size);
+}
+void	xr_mfree		(void*P)
+{
+	return FMemory::Free(P);
+}
+void*xr_realloc	(void* P, size_t size)
+{
+	return FMemory::Realloc(P,size);
+}
+#endif
+
 FStalkerEngineManager::FStalkerEngineManager()
 {
 
@@ -601,7 +616,7 @@ void FStalkerEngineManager::OnPostLoadMap(UWorld* World)
 	{
 		FSoftObjectPath CurrentPostLoadWorldPath = UWorld::RemovePIEPrefix(*World->GetPathName());
 		check(CurrentPostLoadWorldPath == CurrentWorldPath);
-#if !UE_BUILD_SHIPPING
+#if !(UE_BUILD_SHIPPING||UE_BUILD_TEST)
 		if (!CheckCurrentWorld())
 		{
 			CurrentWorldName.Empty();

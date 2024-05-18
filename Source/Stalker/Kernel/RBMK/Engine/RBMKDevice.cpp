@@ -41,11 +41,12 @@ FRBMKDevice::~FRBMKDevice()
 {
 
 }
-
+#if !(UE_BUILD_SHIPPING||UE_BUILD_TEST)
 bool FRBMKDevice::IsEditorMode()
 {
 	return GIsEditor;
 }
+#endif
 
 bool FRBMKDevice::Paused() const
 {
