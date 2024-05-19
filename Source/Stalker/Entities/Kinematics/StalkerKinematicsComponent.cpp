@@ -924,7 +924,6 @@ bool UStalkerKinematicsComponent::PickBone(const Fmatrix& parent_xform, pick_res
 	////DrawDebugLine(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)) + FVector(-InStartRotation.x, InStartRotation.z, InStartRotation.y) * (dist * 100.f), FColor::Red, false, 10000.f);
 	////DrawDebugSphere(GetWorld(), FVector(StalkerMath::RBMKLocationToUnreal(InStartLocation)), 1000, 0, FColor::Red, false, 1000);
 
-	return false;
 }
 
 u16 UStalkerKinematicsComponent::LL_BoneID(LPCSTR B)

@@ -111,6 +111,15 @@ THIRD_PARTY_INCLUDES_START
 #include "XrEngine/graph_abstract.h"
 #include "XrEngine/graph_vertex.h"
 #include "XrEngine/level_graph.h"
+#ifdef GetObject
+#undef GetObject
+#endif
+#ifdef Yield
+#undef Yield
+#endif
+#ifdef UpdateResource
+#undef UpdateResource
+#endif
 THIRD_PARTY_INCLUDES_END
 #include "ScopedTransaction.h"
 #include "Importer/Scene/RBMKScene.h"

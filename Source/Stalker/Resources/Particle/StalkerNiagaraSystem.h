@@ -18,7 +18,10 @@ UCLASS()
 class STALKER_API UStalkerNiagaraSystem : public UNiagaraSystem
 {
 	GENERATED_BODY()
+
 public:
+	virtual void PreSave(FObjectPreSaveContext TargetPlatform) override;
+
 	/** Metadata for xrgame **/
 	UPROPERTY(EditAnywhere,Category = "Stalker")
 	bool IsLooping = false;

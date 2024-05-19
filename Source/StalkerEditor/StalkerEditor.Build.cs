@@ -46,7 +46,8 @@ public class StalkerEditor : ModuleRules
                 "NiagaraEditor",
                 "Sequencer",
                 "RHI",
-                "Foliage"
+                "Foliage",
+                "VorbisAudioDecoder"
             });
 
         AddEngineThirdPartyPrivateStaticDependencies(Target,
