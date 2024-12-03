@@ -34,4 +34,34 @@ public:
 	IRBMKEnvironment*				GetEnvironment				() override;
 	void							OnRunGame					(const char* ServerParams, const char* ClientParams) override;
 	IRBMKLoadingScreenManager*		GetLoadingScreen			() override;
+
+	void							ExecUeCmd					(const char* cmd) override;
+	void							ChangeUeSettingsInt			(const std::map<int, int>& settinglist) override;
+	int								GetSettingInt				(int setting, int& min, int& max) override;
+	void							ChangeUeSettingsFloat(const std::map<int, float>& settinglist) override;
+	float							GetSettingFloat(int setting, float& min, float& max) override;
+
+	void				GetResolutions(std::vector<LPCSTR>& ResVec) override;
+	void				GetCurrentResolution(u32& w, u32& h) override;
+	void				SetResolution(u32 w, u32 h) override;
+private:
+	enum ESettingsListInt
+	{
+		ShadowQuality = 1,
+		ViewDistanceQuality,
+		GlobalIlluminationQuality,
+		AntiAliasingQuality,
+		ReflectionQuality,
+		PostProcessingQuality,
+		TextureQuality,
+		VisualEffectsQuality,
+		FoliageQuality,
+		ShadingQuality
+	};
+	enum ESettingsListFloat
+	{
+		EffectsVolume = 1,
+		MusicVolume,
+		MasterVolume
+	};
 };

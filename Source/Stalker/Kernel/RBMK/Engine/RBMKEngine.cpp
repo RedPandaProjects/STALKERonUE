@@ -22,6 +22,9 @@
 #include "Resources/Spawn/StalkerGameSpawn.h"
 #include "Entities/Player/Character/StalkerPlayerCharacter.h"
 #include "Resources/Sound/StalkerSoundManager.h"
+#include "Sound/SoundClass.h"
+#include "DynamicRHI.h"
+#include "RHIDefinitions.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -216,6 +219,263 @@ class IRBMKUnrealProxy* FRBMKEngine::GetUnrealPlayerCharacter()
 	}
 
 	return nullptr;
+}
+
+void FRBMKEngine::ExecUeCmd(const char* cmd)
+{
+	GEngine->Exec(NULL, ANSI_TO_TCHAR(cmd));
+}
+
+void FRBMKEngine::ChangeUeSettingsInt(const std::map<int, int> &settinglist)
+{
+
+	for (const auto& ref : settinglist)
+	{
+		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettings: %d, %d"), ref.first, ref.second);
+
+		switch (ref.first)
+		{
+		case ShadowQuality:
+		{
+			GEngine->GetGameUserSettings()->SetShadowQuality(ref.second);
+		}break;
+		case ViewDistanceQuality:
+		{
+			GEngine->GetGameUserSettings()->SetViewDistanceQuality(ref.second);
+		}break;
+		case GlobalIlluminationQuality:
+		{
+			GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(ref.second);
+		}break;
+		case AntiAliasingQuality:
+		{
+			GEngine->GetGameUserSettings()->SetAntiAliasingQuality(ref.second);
+		}break;
+		case ReflectionQuality:
+		{
+			GEngine->GetGameUserSettings()->SetReflectionQuality(ref.second);
+		}break;
+		case PostProcessingQuality:
+		{
+			GEngine->GetGameUserSettings()->SetPostProcessingQuality(ref.second);
+		}break;
+		case TextureQuality:
+		{
+			GEngine->GetGameUserSettings()->SetTextureQuality(ref.second);
+		}break;
+		case VisualEffectsQuality:
+		{
+			GEngine->GetGameUserSettings()->SetVisualEffectQuality(ref.second);
+		}break;
+		case FoliageQuality:
+		{
+			GEngine->GetGameUserSettings()->SetFoliageQuality(ref.second);
+		}break;
+		case ShadingQuality:
+		{
+			GEngine->GetGameUserSettings()->SetShadingQuality(ref.second);
+		}break;
+		case 11:
+		{
+			USoundClass* Sound = LoadObject<USoundClass>(nullptr, TEXT(""));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+			}
+
+		}break;
+		default:
+			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
+			break;
+		}
+	}
+	GEngine->GetGameUserSettings()->ApplySettings(true);
+}
+
+int FRBMKEngine::GetSettingInt(int setting, int& min, int& max)
+{
+	UE_LOG(LogStalker, Display, TEXT("GetSetting: %d"), setting);
+	switch (setting)
+	{
+	case ShadowQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetShadowQuality();
+	}break;
+	case ViewDistanceQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetViewDistanceQuality();
+	}break;
+	case GlobalIlluminationQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetGlobalIlluminationQuality();
+	}break;
+	case AntiAliasingQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetAntiAliasingQuality();
+	}break;
+	case ReflectionQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetReflectionQuality();
+	}break;
+	case PostProcessingQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetPostProcessingQuality();
+	}break;
+	case TextureQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetTextureQuality();
+	}break;
+	case VisualEffectsQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetVisualEffectQuality();
+	}break;
+	case FoliageQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetFoliageQuality();
+	}break;
+	case ShadingQuality:
+	{
+		min = 0;
+		max = 4;
+		return GEngine->GetGameUserSettings()->GetShadingQuality();
+	}break;
+	default:
+		min = 0;
+		max = 1;
+		UE_LOG(LogStalker, Error, TEXT("unknown setting"));
+		return 0;
+		break;
+	}
+}
+
+void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
+{
+	USoundClass* Sound;
+	for (const auto& ref : settinglist)
+	{
+		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettingsFloat: %d, %f"), ref.first, ref.second);
+		switch (ref.first)
+		{
+		case EffectsVolume:
+		{
+			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+				Sound->TryUpdateDefaultConfigFile();
+			}
+		}break;
+		case MusicVolume:
+		{
+			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MusicClass.MusicClass"));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+				Sound->TryUpdateDefaultConfigFile();
+			}
+		}break;
+		case MasterVolume:
+		{
+			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
+			if (Sound)
+			{
+				Sound->Properties.Volume = ref.second;
+				Sound->TryUpdateDefaultConfigFile();
+			}
+		}break;
+		default:
+			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
+			break;
+		}
+	}
+}
+
+float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
+{
+	USoundClass* Sound;
+	switch (setting)
+	{
+	case EffectsVolume:
+	{
+		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
+		if(Sound)
+		{
+			min = 0.f;
+			max = 1.f;
+			return Sound->Properties.Volume;
+		}
+		else
+			return 0.f;
+	}break;
+	case MusicVolume:
+	{
+		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MusicClass.MusicClass"));
+		if (Sound)
+		{
+			min = 0.f;
+			max = 1.f;
+			return Sound->Properties.Volume;
+		}
+		else
+			return 0.f;
+	}break;
+	case MasterVolume:
+	{
+		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
+		if (Sound)
+		{
+			min = 0.f;
+			max = 1.f;
+			return Sound->Properties.Volume;
+		}
+		else
+			return 0.f;
+	}break;
+	default:
+		return 0.0f;
+		break;
+	}
+}
+
+void FRBMKEngine::GetCurrentResolution(u32& w, u32& h)
+{
+	FIntPoint res = GEngine->GetGameUserSettings()->GetScreenResolution();
+	w = res.X;
+	h = res.Y;
+}
+
+void	FRBMKEngine::GetResolutions(std::vector<LPCSTR>& ResVec)
+{
+	ResVec.push_back("2560x1440");
+	ResVec.push_back("1920x1440");
+	ResVec.push_back("1920x1200");
+}
+
+void FRBMKEngine::SetResolution(u32 w, u32 h)
+{
+	FIntPoint res;
+	res.X = w;
+	res.Y = h;
+	GEngine->GetGameUserSettings()->SetScreenResolution(res);
+	GEngine->GetGameUserSettings()->ApplySettings(true);
 }
 
 shared_str FRBMKEngine::GetUnrealVersion()

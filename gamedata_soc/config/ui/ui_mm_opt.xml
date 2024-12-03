@@ -73,18 +73,6 @@
 		</tab>
 	</main_dialog>
 	<tab_video>
-		<cap_renderer x="20" y="20" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_renderer</text>			
-		</cap_renderer>
-		<list_renderer x="194" y="20" width="261" height="21" list_length="3">
-			<options_item entry="renderer" group="mm_opt_video"/>
-			<text_color>
-				<e r="216" g="186" b="140"/>
-				<d r="227" g="199" b="178"/>
-			</text_color>
-			<list_font_s r="240" g="217" b="182"/>
-			<list_font	 r="216" g="186" b="140" font="letterica16"/>
-		</list_renderer>
 
 		<cap_preset x="20" y="50" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">ui_mm_quality_presets</text>			
@@ -154,97 +142,76 @@
 					vert_interval="0" always_show_scroll="0"/>
 
 		<templ_item width="450" height="30"/>
-
-		<cap_vis_dist x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_vis_distance</text>
-		</cap_vis_dist>
-		<track_vis_dist x="194" y="0" width="245" height="21" step="0.1">
-			<options_item entry="rs_vis_distance" group="mm_opt_video_adv"/>
-		</track_vis_dist>
 		
-		<cap_geometry_lod x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_geometry_lod</text>
-		</cap_geometry_lod>
-		<track_geometry_lod x="194" y="0" width="245" height="21" step="0.1">
-			<options_item entry="r__geometry_lod" group="mm_opt_video_adv"/>
-		</track_geometry_lod>
+		<cap_shadow_quality x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">shadow_quality</text>
+		</cap_shadow_quality>
+		<track_shadow_quality x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="1"/>
+		</track_shadow_quality>
 		
-		<cap_detail_density x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_detail_density</text>
-		</cap_detail_density>
-		<track_detail_density x="194" y="0" width="245" height="21" invert="1" step="0.02">
-			<options_item entry="r__detail_density" group="mm_opt_video_adv"/>
-		</track_detail_density>
-
-		<cap_texture_lod x="20" y="0" width="143" height="21" >
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_texture_quality</text>
-		</cap_texture_lod>
-		<track_texture_lod x="194" y="0" width="245" height="21" invert="1" step="1" is_integer="1">
-			<options_item entry="texture_lod" group="mm_opt_video_adv"/>
-		</track_texture_lod>
-	
-		<cap_aniso x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_anisotropic</text>
-		</cap_aniso>
-		<track_aniso x="194" y="0" width="245" height="21" step="1" is_integer="1">
-			<options_item entry="r__tf_aniso" group="mm_opt_video_adv"/>
-		</track_aniso>
+		<cap_view_distance_quality x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">view_distance_quality</text>
+		</cap_view_distance_quality>
+		<track_view_distance_quality x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="2"/>
+		</track_view_distance_quality>
 		
-		<cap_ssample x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_supersample</text>
-		</cap_ssample>
-		<track_ssample x="194" y="0" width="245" height="21" step="1" is_integer="1">
-			<options_item entry="r__supersample" group="mm_opt_video_adv"/>
-		</track_ssample>
-
-		<cap_r2_sun x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_r2_sun</text>
-		</cap_r2_sun>
-		<check_r2_sun x="194" y="0" width="30" height="21">
-			<options_item entry="r2_sun" group="mm_opt_video"/>
-		</check_r2_sun>
+		<cap_global_ilumination_quality x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">global_ilum_quality</text>
+		</cap_global_ilumination_quality>
+		<track_global_ilumination_quality x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="3"/>
+		</track_global_ilumination_quality>
 		
-		<cap_r2_sun_details x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_r2_sun_details</text>
-		</cap_r2_sun_details>
-		<check_r2_sun_details x="194" y="0" width="30" height="21">
-			<options_item entry="r2_sun_details" group="mm_opt_video"/>
-		</check_r2_sun_details>
-
-		<cap_light_distance x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_light_distance</text>
-		</cap_light_distance>
-		<track_light_distance x="194" y="0" width="245" height="21">
-			<options_item entry="r2_slight_fade" group="mm_opt_video_adv"/>
-		</track_light_distance>
+		<cap_aa x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">anti_aliasing</text>
+		</cap_aa>
+		<track_aa x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="4"/>
+		</track_aa>
 		
-		<cap_npc_torch x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_npc_torch</text>
-		</cap_npc_torch>
-		<check_npc_torch x="194" y="0" width="243" height="21">
-			<options_item entry="ai_use_torch_dynamic_lights" group="mm_opt_video_adv"/>
-		</check_npc_torch>
+		<cap_reflections x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">reflections</text>
+		</cap_reflections>
+		<track_reflections x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="5"/>
+		</track_reflections>
 		
-		<cap_particles_distance x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_sun_quality</text>
-		</cap_particles_distance>
-		<track_particles_distance x="194" y="0" width="245" height="21" step="0.1">
-			<options_item entry="r2_ls_squality" group="mm_opt_video_adv"/>
-		</track_particles_distance>
+		<cap_post_process x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">post_process</text>
+		</cap_post_process>
+		<track_post_process x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="6"/>
+		</track_post_process>
 		
-		<cap_vsync x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_vsync</text>
-		</cap_vsync>
-		<check_vsync x="194" y="0" width="30" height="21">
-			<options_item entry="rs_v_sync" group="mm_opt_video_adv"/>
-		</check_vsync>
-
-		<cap_60hz x="20" y="0" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_60_hz</text>
-		</cap_60hz>
-		<check_60hz x="194" y="0" width="30" height="21">
-			<options_item entry="rs_refresh_60hz" group="mm_opt_video_adv"/>
-		</check_60hz>
+		<cap_texture x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">textures</text>
+		</cap_texture>
+		<track_texture x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="7"/>
+		</track_texture>
+		
+		<cap_visual_eff x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">visual_eff</text>
+		</cap_visual_eff>
+		<track_visual_eff x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="8"/>
+		</track_visual_eff>
+		
+		<cap_foliage x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">foliage</text>
+		</cap_foliage>
+		<track_foliage x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="9"/>
+		</track_foliage>
+		
+		<cap_shading x="20" y="0" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">shading</text>
+		</cap_shading>
+		<track_shading x="194" y="0" width="245" height="21" step="1" is_integer="1" is_ue="1">
+			<options_item entry="r2_ls_squality" group="mm_opt_video_adv" ue_value="10"/>
+		</track_shading>
 		
 		<btn_to_simply x="342" y="325" width="111" height="29">
 			<text align="c" font="letterica16" r="227" g="199" b="178">ui_mm_simply</text>	
@@ -256,28 +223,25 @@
 		<cap_mastervolume x="20" y="20" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">ui_mm_master_volume</text>
 		</cap_mastervolume>
+		<track_mastervolume x="194" y="20" width="245" height="21" is_ue="1">
+			<options_item entry="snd_volume_eff" group="mm_opt_sound" ue_value="3"/>
+		</track_mastervolume>
+		
+		
 		<cap_musicvolume x="20" y="45" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">ui_mm_music_volume</text>
 		</cap_musicvolume>
-		<_cap_soundquality x="20" y="70" width="143" height="21">
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_sound_quality</text>
-		</_cap_soundquality>
-		
-		<check_eax x="20" y="70" width="143" height="21">
-			<options_item entry="snd_efx" group="mm_opt_sound"/>
-			<text font="letterica16" r="215" g="195" b="170">ui_mm_eax</text>
-		</check_eax>
-		
-		<track_mastervolume x="194" y="20" width="245" height="21">
-			<options_item entry="snd_volume_eff" group="mm_opt_sound"/>
-		</track_mastervolume>
-		<track_musicvolume x="194" y="45" width="245" height="21">
-			<options_item entry="snd_volume_music" group="mm_opt_sound"/>
+		<track_musicvolume x="194" y="45" width="245" height="21" is_ue="1">
+			<options_item entry="snd_volume_music" group="mm_opt_sound" ue_value="2"/>
 		</track_musicvolume>		
-		<_list_soundquality x="194" y="70" width="245" height="21">
-			<options_item entry="snd_freq" group="mm_opt_sound"/>
-		</_list_soundquality>
-		
+
+		<cap_effectsvolume x="20" y="70" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">ui_mm_effects_volume</text>
+		</cap_effectsvolume>
+		<track_effectsvolume x="194" y="70" width="245" height="21" is_ue="1">
+			<options_item entry="snd_volume_music" group="mm_opt_sound" ue_value="1"/>
+		</track_effectsvolume>	
+
 		<btn_default_set x="342" y="325" width="111" height="29">
 			<text align="c" font="letterica16" r="188" g="153" b="123">ui_mm_default</text>	
 			<texture>ui_button_ordinary</texture>			

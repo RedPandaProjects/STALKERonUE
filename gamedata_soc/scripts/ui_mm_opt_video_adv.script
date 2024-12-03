@@ -24,63 +24,46 @@ function opt_video_adv:InitControls(x, y, xml, handler)
 	self.bk			= xml:InitFrame				("frame_videoadv", self)
 	self.scroll_v	= xml:InitScrollView		("video_adv:scroll_v", self)
 
-	local _st		= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_vis_dist",				_st)
-	xml:InitTrackBar							("video_adv:track_vis_dist",			_st)
-
 	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_geometry_lod",			_st)
-	xml:InitTrackBar							("video_adv:track_geometry_lod",		_st)
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_detail_density",		_st)
-	xml:InitTrackBar							("video_adv:track_detail_density",		_st)
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_texture_lod",			_st)
-	xml:InitTrackBar							("video_adv:track_texture_lod",			_st)
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_aniso",					_st)
-	xml:InitTrackBar							("video_adv:track_aniso",				_st)
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_ssample",				_st)
-	xml:InitTrackBar							("video_adv:track_ssample",				_st)
-
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_r2_sun",				_st)
-	ctl			= xml:InitCheck					("video_adv:check_r2_sun",				_st)
-	handler.m_preconditions[ctl]		= only_2_mode
+	xml:InitStatic								("video_adv:cap_shadow_quality",				_st)
+	xml:InitTrackBar							("video_adv:track_shadow_quality",				_st)
 	
 	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_r2_sun_details",		_st)
-	ctl			= xml:InitCheck		("video_adv:check_r2_sun_details",		_st)
-	handler.m_preconditions[ctl]		= only_2_mode
+	xml:InitStatic								("video_adv:cap_view_distance_quality",				_st)
+	xml:InitTrackBar							("video_adv:track_view_distance_quality",				_st)
 
 	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_light_distance",		_st)
-	ctl				= xml:InitTrackBar			("video_adv:track_light_distance",		_st)
-	handler.m_preconditions[ctl]		= only_12_mode
-
-	_st											= xml:InitStatic						("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_npc_torch",				_st)
-	xml:InitCheck								("video_adv:check_npc_torch",			_st)
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_particles_distance",	_st)
-	ctl				= xml:InitTrackBar			("video_adv:track_particles_distance",	_st)
-	handler.m_preconditions[ctl]		= only_12_mode
-
-	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_vsync",					_st)
-	xml:InitCheck								("video_adv:check_vsync",				_st)
+	xml:InitStatic								("video_adv:cap_global_ilumination_quality",				_st)
+	xml:InitTrackBar							("video_adv:track_global_ilumination_quality",				_st)
+	
+		_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_aa",				_st)
+	xml:InitTrackBar							("video_adv:track_aa",				_st)
 	
 	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
-	xml:InitStatic								("video_adv:cap_60hz",					_st)
-	xml:InitCheck								("video_adv:check_60hz",				_st)
-
+	xml:InitStatic								("video_adv:cap_reflections",				_st)
+	xml:InitTrackBar							("video_adv:track_reflections",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_post_process",				_st)
+	xml:InitTrackBar							("video_adv:track_post_process",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_texture",				_st)
+	xml:InitTrackBar							("video_adv:track_texture",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_visual_eff",				_st)
+	xml:InitTrackBar							("video_adv:track_visual_eff",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_foliage",				_st)
+	xml:InitTrackBar							("video_adv:track_foliage",				_st)
+	
+	_st				= xml:InitStatic			("video_adv:templ_item",				self.scroll_v)
+	xml:InitStatic								("video_adv:cap_shading",				_st)
+	xml:InitTrackBar							("video_adv:track_shading",				_st)
+	
 	btn		= xml:Init3tButton					("video_adv:btn_to_simply",	self)	
 	handler:Register							(btn, "btn_simply_graphic")	
 end
