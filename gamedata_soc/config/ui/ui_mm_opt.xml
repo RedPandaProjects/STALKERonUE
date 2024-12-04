@@ -73,7 +73,18 @@
 		</tab>
 	</main_dialog>
 	<tab_video>
-
+		<cap_renderer x="20" y="20" width="143" height="21">
+			<text font="letterica16" r="215" g="195" b="170">ui_mm_renderer</text>			
+		</cap_renderer>
+		<list_renderer x="194" y="20" width="261" height="21" list_length="3">
+			<options_item entry="renderer" group="mm_opt_video"/>
+			<text_color>
+				<e r="216" g="186" b="140"/>
+				<d r="227" g="199" b="178"/>
+			</text_color>
+			<list_font_s r="240" g="217" b="182"/>
+			<list_font	 r="216" g="186" b="140" font="letterica16"/>
+		</list_renderer>
 		<cap_preset x="20" y="50" width="143" height="21">
 			<text font="letterica16" r="215" g="195" b="170">ui_mm_quality_presets</text>			
 		</cap_preset>
