@@ -592,6 +592,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 			}
 
 		}
+		InSkeletalMeshImportData.bHasNormals = true;
 		InSkeletalMeshImportData.MaxMaterialIndex = MaterialIndex;
 	}
 	//FSkeleto
@@ -1884,6 +1885,7 @@ bool FRBMKEngineFactory::CreateSkeletalMesh(USkeletalMesh* SkeletalMesh, TArray<
 		NewLODInfo.ReductionSettings.NumOfTrianglesPercentage = 1.0f;
 		NewLODInfo.ReductionSettings.NumOfVertPercentage = 1.0f;
 		NewLODInfo.ReductionSettings.MaxDeviationPercentage = 0.0f;
+		NewLODInfo.BuildSettings.bRecomputeNormals = false;
 		NewLODInfo.LODHysteresis = 0.02f;
 
 		bHasVertexColors |= LODImportData.bHasVertexColors;
