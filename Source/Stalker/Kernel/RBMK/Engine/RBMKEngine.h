@@ -12,7 +12,7 @@ public:
 	void							OnFrame						() override;
 
 
-	class IRBMKUnrealProxy*			CreateUnrealProxy			() override;
+	class IRBMKUnrealProxy*			CreateUnrealProxy			(const char*UnrealProxyClass) override;
 	void							Destroy						(class IRBMKUnrealProxy*) override;
 
 	class ILevelGraph*				GetLevelGraph				(const char*Name) override;

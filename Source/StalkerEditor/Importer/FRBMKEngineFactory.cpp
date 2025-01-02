@@ -279,7 +279,8 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 	IKD->close();
 
 	TArray<TPair<shared_str, shared_str>> MaterialsAndTextures;
-	TArray<TArray<st_MeshVertex>>  Vertices;
+	TArray<TArray<st_MeshVertex2>>  VerticesInstance;
+	TArray<Fvector>  Vertices;
 	if (!FileData->find_chunk(OGF_CHILDREN))
 	{
 		UE_LOG(LogXRayImporter, Warning, TEXT("Can't load ogf %s no found OGF_CHILDREN"), *FileName);
@@ -296,7 +297,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 			IReader* O = OBJ->open_chunk(0);
 			for (int32 CountElement = 1; O; CountElement++)
 			{
-				TArray<st_MeshVertex> ElementVertices;
+				TArray<st_MeshVertex2> ElementVertices;
 				TArray<u16> Indicies;
 				check(O->find_chunk(OGF_INDICES));
 				uint32 IndiciesCount = O->r_u32();
@@ -306,7 +307,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 				check(O->find_chunk(OGF_VERTICES));
 				uint32 dwVertType = O->r_u32();
 				uint32 dwVertCount = O->r_u32();
-
+				uint32 MaxVertex = 0;
 				switch (dwVertType)
 				{
 				case OGF_VERTEXFORMAT_FVF_1L: // 1-Link
@@ -316,18 +317,25 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 					for (uint32 i = 0; i < IndiciesCount; i++)
 					{
 						XRayVertBoned1W InVertex = InVertices[Indicies[i]];
-						st_MeshVertex OutVertex;
+						st_MeshVertex2 OutVertex;
 
 						for (uint32 a = 0; a < 4; a++)
 							OutVertex.BoneID[a] = BI_NONE;
 
-						OutVertex.Position = InVertex.P;
+						OutVertex.Index = Indicies[i];
+						MaxVertex = FMath::Max(MaxVertex,OutVertex.Index);
+						OutVertex.Index +=Vertices.Num();
 						OutVertex.Normal = InVertex.N;
 						OutVertex.UV.set(InVertex.u, InVertex.v);
 						OutVertex.BoneID[0] = InVertex.matrix;
 						OutVertex.BoneWeight[0] = 1;
 						ElementVertices.Add(OutVertex);
 					}
+						
+						for (uint32 i = 0; i <= MaxVertex; i++)
+						{
+							Vertices.Add(InVertices[i].P);
+						}
 				}
 				break;
 				case OGF_VERTEXFORMAT_FVF_2L: // 2-Link
@@ -337,12 +345,14 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 					for (uint32 i = 0; i < IndiciesCount; i++)
 					{
 						XRayVertBoned2W InVertex = InVertices[Indicies[i]];
-						st_MeshVertex OutVertex;
+						st_MeshVertex2 OutVertex;
 
 						for (uint32 a = 0; a < 4; a++)
 							OutVertex.BoneID[a] = BI_NONE;
 
-						OutVertex.Position = InVertex.P;
+						OutVertex.Index = Indicies[i];
+						MaxVertex = FMath::Max(MaxVertex,OutVertex.Index);
+						OutVertex.Index +=Vertices.Num();
 						OutVertex.Normal = InVertex.N;
 						OutVertex.UV.set(InVertex.u, InVertex.v);
 						if (InVertex.matrix0 != InVertex.matrix1)
@@ -359,6 +369,11 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 						}
 						ElementVertices.Add(OutVertex);
 					}
+						
+						for (uint32 i = 0; i <= MaxVertex; i++)
+						{
+							Vertices.Add(InVertices[i].P);
+						}
 				}break;
 				case OGF_VERTEXFORMAT_FVF_3L: // 3-Link
 				case 3:
@@ -367,12 +382,14 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 					for (uint32 i = 0; i < IndiciesCount; i++)
 					{
 						XRayVertBoned3W InVertex = InVertices[Indicies[i]];
-						st_MeshVertex OutVertex;
+						st_MeshVertex2 OutVertex;
 
 						for (uint32 a = 0; a < 4; a++)
 							OutVertex.BoneID[a] = BI_NONE;
 
-						OutVertex.Position = InVertex.P;
+						OutVertex.Index = Indicies[i];
+						MaxVertex = FMath::Max(MaxVertex,OutVertex.Index);
+						OutVertex.Index +=Vertices.Num();
 						OutVertex.Normal = InVertex.N;
 						OutVertex.UV.set(InVertex.u, InVertex.v);
 						OutVertex.BoneID[0] = InVertex.m[0];
@@ -383,6 +400,11 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.BoneWeight[2] = 1 - InVertex.w[1] - InVertex.w[0];
 						ElementVertices.Add(OutVertex);
 					}
+						
+						for (uint32 i = 0; i <= MaxVertex; i++)
+						{
+							Vertices.Add(InVertices[i].P);
+						}
 				}break;
 				case OGF_VERTEXFORMAT_FVF_4L: // 4-Link
 				case 4:
@@ -391,12 +413,14 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 					for (uint32 i = 0; i < IndiciesCount; i++)
 					{
 						XRayVertBoned4W InVertex = InVertices[Indicies[i]];
-						st_MeshVertex OutVertex;
+						st_MeshVertex2 OutVertex;
 
 						for (uint32 a = 0; a < 4; a++)
 							OutVertex.BoneID[a] = BI_NONE;
 
-						OutVertex.Position = InVertex.P;
+						OutVertex.Index = Indicies[i];
+						MaxVertex = FMath::Max(MaxVertex,OutVertex.Index);
+						OutVertex.Index +=Vertices.Num();
 						OutVertex.Normal = InVertex.N;
 						OutVertex.UV.set(InVertex.u, InVertex.v);
 						OutVertex.BoneID[0] = InVertex.m[0];
@@ -409,11 +433,15 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 						OutVertex.BoneWeight[3] = 1 - InVertex.w[2] - InVertex.w[1] - InVertex.w[0];
 						ElementVertices.Add(OutVertex);
 					}
+					for (uint32 i = 0; i <= MaxVertex; i++)
+					{
+						Vertices.Add(InVertices[i].P);
+					}
 				}break;
 				default:
 					break;
 				}
-
+				
 				IReader* LodData = O->open_chunk(OGF_SWIDATA);
 				if (LodData)
 				{
@@ -427,15 +455,15 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 					LodData->r(SlideWindows.GetData(), SlideWindows.Num() * sizeof(FSlideWindow));
 					LodData->close();
 
-					Vertices.AddDefaulted();
+					VerticesInstance.AddDefaulted();
 					for (uint32 i = 0; i < static_cast<uint32>(SlideWindows[0].num_tris * 3); i++)
 					{
-						Vertices.Last().Add(ElementVertices[i + SlideWindows[0].offset]);
+						VerticesInstance.Last().Add(ElementVertices[i + SlideWindows[0].offset]);
 					}
 				}
 				else
 				{
-					Vertices.Add(ElementVertices);
+					VerticesInstance.Add(ElementVertices);
 				}
 				if (O->find_chunk(OGF_TEXTURE))
 				{
@@ -457,7 +485,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 		}
 
 	}
-	check(MaterialsAndTextures.Num() == Vertices.Num());
+	check(MaterialsAndTextures.Num() == VerticesInstance.Num());
 	TArray<SkeletalMeshImportData::FBone> UBones;
 	UBones.AddDefaulted(Bones.Num());
 	for (int32 BoneIndex = 0; BoneIndex < Bones.Num(); BoneIndex++)
@@ -493,12 +521,12 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 		Bone.Name = BoneData.name.c_str();
 	}
 
-	TArray<st_MeshVertex> Bone7;
-	TArray<st_MeshVertex> Bone3;
+	TArray<st_MeshVertex2> Bone7;
+	TArray<st_MeshVertex2> Bone3;
 
 	for (size_t ElementID = 0; ElementID < MaterialsAndTextures.Num(); ElementID++)
 	{
-		TArray< st_MeshVertex>& OutVertices = Vertices[ElementID];
+		TArray< st_MeshVertex2>& OutVertices = VerticesInstance[ElementID];
 		if (OutVertices.Num() == 0)
 		{
 			continue;
@@ -536,7 +564,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 
 		for (size_t ElementID = 0; ElementID < MaterialsAndTextures.Num(); ElementID++)
 		{
-			TArray< st_MeshVertex>& OutVertices = Vertices[ElementID];
+			TArray< st_MeshVertex2>& OutVertices = VerticesInstance[ElementID];
 			if (OutVertices.Num() == 0)
 			{
 				continue;
@@ -549,6 +577,15 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 			InMaterials.Add(FSkeletalMaterial(Material.Material.Get(), true, false, FName(Material.MaterialImportName), FName(Material.MaterialImportName)));
 			int32 MaterialID = InSkeletalMeshImportData.Materials.Add(Material);
 
+			TMap<int32,int32> ID2VertexIDs;
+			for (int32 VertexID = 0; VertexID < Vertices.Num() ; VertexID++)
+			{
+				FVector3f VertexPositions;
+				VertexPositions = StalkerMath::RBMKLocationToUnreal(Vertices[VertexID]);
+				ID2VertexIDs.Add(VertexID, InSkeletalMeshImportData.Points.Add(VertexPositions));
+			}
+
+			
 			for (size_t FaceID = 0; FaceID < OutVertices.Num() / 3; FaceID++)
 			{
 				SkeletalMeshImportData::FTriangle Triangle;
@@ -559,11 +596,7 @@ USkeletalMesh* FRBMKEngineFactory::ImportOGF(const FString& FileName)
 					static size_t VirtualVertices[3] = { 0,2,1 };
 					size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
 
-					FVector3f VertexPositions;
-					VertexPositions.X = -OutVertices[VertexID].Position.x * 100;
-					VertexPositions.Y = OutVertices[VertexID].Position.z * 100;
-					VertexPositions.Z = OutVertices[VertexID].Position.y * 100;
-					int32 OutVertexID = InSkeletalMeshImportData.Points.Add(VertexPositions);
+					int32 OutVertexID = ID2VertexIDs[OutVertices[VertexID].Index];
 
 					for (size_t InfluencesID = 0; InfluencesID < 4; InfluencesID++)
 					{
@@ -734,17 +767,18 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 				continue;
 			}
 			
-			xr_vector< st_MeshVertex> Vertices;
+			xr_vector< Fvector> Vertices;
+			xr_vector< st_MeshVertex2> VerticesInstances;
 			for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 			{
 				if(InMeshID	!= -1&&InMeshID != MeshID)
 				{
 					continue;
 				}
-				Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
+				Object->Meshes()[MeshID]->GenerateVertices(Vertices,VerticesInstances, Object->Surfaces()[ElementID]);
 			}
 
-			if (Vertices.size() == 0)
+			if (VerticesInstances.size() == 0)
 			{
 				continue;
 			}
@@ -778,10 +812,7 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 			TEdgeAttributesRef<bool>  EdgeHardnesses = StaticMeshAttributes.GetEdgeHardnesses();
 			TPolygonGroupAttributesRef<FName> PolygonGroupImportedMaterialSlotNames = StaticMeshAttributes.GetPolygonGroupMaterialSlotNames();
 			TVertexInstanceAttributesRef<FVector3f> VertexInstanceNormals = StaticMeshAttributes.GetVertexInstanceNormals();
-			TVertexInstanceAttributesRef<FVector3f> VertexInstanceTangents = StaticMeshAttributes.GetVertexInstanceTangents();
-			TVertexInstanceAttributesRef<float> VertexInstanceBinormalSigns = StaticMeshAttributes.GetVertexInstanceBinormalSigns();
 			TVertexInstanceAttributesRef<FVector2f> VertexInstanceUVs = StaticMeshAttributes.GetVertexInstanceUVs();
-			TVertexInstanceAttributesRef<FVector4f> VertexInstanceColors = StaticMeshAttributes.GetVertexInstanceColors();
 			
 			for (size_t ElementID = 0; ElementID < Object->SurfaceCount(); ElementID++)
 			{
@@ -804,21 +835,22 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 					}
 				}
 			
-				xr_vector< st_MeshVertex> Vertices;
+				xr_vector< st_MeshVertex2> VerticesInstances;
+				xr_vector<Fvector> Vertices;
 				for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 				{
 					if(InMeshID	!= -1&&InMeshID != MeshID)
 					{
 						continue;
 					}
-					Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
+					Object->Meshes()[MeshID]->GenerateVertices(Vertices,VerticesInstances, Object->Surfaces()[ElementID]);
 				}
 
-				if (Vertices.size() == 0)
+				if (VerticesInstances.size() == 0)
 				{
 					continue;
 				}
-				VerticesCount += Vertices.size();
+				VerticesCount += VerticesInstances.size();
 				if(ShaderLC)
 				{
 					CollisionEnableIdOfLod[LodIndex].Add(!!ShaderLC->flags.bCollision);
@@ -840,32 +872,41 @@ UStaticMesh* FRBMKEngineFactory::ImportObjectAsStaticMesh(CEditableObject* Objec
 					CastShadowEnableIdOfLod[LodIndex].Add(true);
 					AffectDistanceFieldLightingEnableIdOfLod[LodIndex].Add(true);
 				}
-
+				TMap<int32,FVertexID> ID2VertexIDs;
+				for (int32 VertexID = 0; VertexID < Vertices.size() ; VertexID++)
+				{
+					FVertexID VertexIDs = MeshDescription->CreateVertex();
+					VertexPositions[VertexIDs] = StalkerMath::RBMKLocationToUnreal(Vertices[VertexID]);
+					ID2VertexIDs.Add(VertexID,VertexIDs);
+				}
+				
 				VertexInstanceUVs.SetNumChannels(1);
 				FPolygonGroupID CurrentPolygonGroupID = MeshDescription->CreatePolygonGroup();
 				PolygonGroupImportedMaterialSlotNames[CurrentPolygonGroupID] = *FString::Printf(TEXT("mat_%d"), MaterialIndex);
 				TArray<FVertexInstanceID> VertexInstanceIDs;
 				VertexInstanceIDs.SetNum(3);
-				for (size_t FaceID = 0; FaceID < Vertices.size() / 3; FaceID++)
+				for (size_t FaceID = 0; FaceID < VerticesInstances.size() / 3; FaceID++)
 				{
 					for (size_t VirtualVertexID = 0; VirtualVertexID < 3; VirtualVertexID++)
 					{
 						static size_t VirtualVertices[3] = { 0,2,1 };
 						size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
-						FVertexID VertexIDs = MeshDescription->CreateVertex();
-						VertexPositions[VertexIDs].X = -Vertices[VertexID].Position.x * 100;
-						VertexPositions[VertexIDs].Y = Vertices[VertexID].Position.z * 100;
-						VertexPositions[VertexIDs].Z = Vertices[VertexID].Position.y * 100;
-						VertexInstanceIDs[VirtualVertexID] = MeshDescription->CreateVertexInstance(VertexIDs);
+						
+						VertexInstanceIDs[VirtualVertexID] = MeshDescription->CreateVertexInstance(ID2VertexIDs[VerticesInstances[VertexID].Index] );
 						FVector2f UV;
-						UV.X = Vertices[VertexID].UV.x;
-						UV.Y = Vertices[VertexID].UV.y;
+						UV.X = VerticesInstances[VertexID].UV.x;
+						UV.Y = VerticesInstances[VertexID].UV.y;
 						VertexInstanceUVs.Set(VertexInstanceIDs[VirtualVertexID], 0, UV);
-						VertexInstanceNormals[VertexInstanceIDs[VirtualVertexID]].X = -Vertices[VertexID].Normal.x;
-						VertexInstanceNormals[VertexInstanceIDs[VirtualVertexID]].Y = Vertices[VertexID].Normal.z;
-						VertexInstanceNormals[VertexInstanceIDs[VirtualVertexID]].Z = Vertices[VertexID].Normal.y;
+						VertexInstanceNormals[VertexInstanceIDs[VirtualVertexID]].X = -VerticesInstances[VertexID].Normal.x;
+						VertexInstanceNormals[VertexInstanceIDs[VirtualVertexID]].Y = VerticesInstances[VertexID].Normal.z;
+						VertexInstanceNormals[VertexInstanceIDs[VirtualVertexID]].Z = VerticesInstances[VertexID].Normal.y;
 					}
-					const FPolygonID NewPolygonID = MeshDescription->CreatePolygon(CurrentPolygonGroupID, VertexInstanceIDs);
+					TArray<FEdgeID> NewEdgeIDs;
+					const FPolygonID NewPolygonID = MeshDescription->CreatePolygon(CurrentPolygonGroupID, VertexInstanceIDs,&NewEdgeIDs);
+					for (const FEdgeID& NewEdgeID : NewEdgeIDs)
+					{
+						EdgeHardnesses[NewEdgeID] = false;
+					}
 				}
 				MaterialsIdOfLod[LodIndex].Add(MaterialIndex++);
 				const FString SurfacePackageName = UPackageTools::SanitizePackageName(Path / TEXT("Materials") / FPaths::GetBaseFilename(FString(Object->Surfaces()[ElementID]->_Name())));
@@ -1011,10 +1052,11 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 
 		for (size_t ElementID = 0; ElementID < Object->SurfaceCount(); ElementID++)
 		{
-			xr_vector< st_MeshVertex> Vertices;
+			xr_vector< Fvector> Vertices;
+			xr_vector< st_MeshVertex2> VerticesInstances;
 			for (size_t MeshID = 0; MeshID < Object->MeshCount(); MeshID++)
 			{
-				Object->Meshes()[MeshID]->GenerateVertices(Vertices, Object->Surfaces()[ElementID]);
+				Object->Meshes()[MeshID]->GenerateVertices(Vertices,VerticesInstances, Object->Surfaces()[ElementID]);
 			}
 			if (Vertices.size() == 0)
 			{
@@ -1028,8 +1070,13 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 			Material.MaterialImportName = Object->Surfaces()[ElementID]->_Name();
 			InMaterials.Add(FSkeletalMaterial(Material.Material.Get(), true, false, FName(Material.MaterialImportName), FName(Material.MaterialImportName)));
 			int32 MaterialID = InSkeletalMeshImportData.Materials.Add(Material);
-
-			for (size_t FaceID = 0; FaceID < Vertices.size() / 3; FaceID++)
+			
+			for (const Fvector& Vertex : Vertices)
+			{
+				InSkeletalMeshImportData.Points.Add(StalkerMath::RBMKLocationToUnreal(Vertex));
+			}
+			
+			for (size_t FaceID = 0; FaceID < VerticesInstances.size() / 3; FaceID++)
 			{
 				SkeletalMeshImportData::FTriangle Triangle;
 				Triangle.MatIndex = MaterialID;
@@ -1038,36 +1085,29 @@ USkeletalMesh* FRBMKEngineFactory::ImportObjectAsDynamicMesh(CEditableObject* Ob
 					SkeletalMeshImportData::FVertex Wedge;
 					static size_t VirtualVertices[3] = { 0,2,1 };
 					size_t VertexID = VirtualVertices[VirtualVertexID] + FaceID * 3;
-					FVector3f VertexPositions;
-					VertexPositions.X = -Vertices[VertexID].Position.x * 100;
-					VertexPositions.Y = Vertices[VertexID].Position.z * 100;
-					VertexPositions.Z = Vertices[VertexID].Position.y * 100;
-					int32 OutVertexID = InSkeletalMeshImportData.Points.Add(VertexPositions);
+					int32 OutVertexID = VerticesInstances[VertexID].Index;
 
 					for (size_t InfluencesID = 0; InfluencesID < 4; InfluencesID++)
 					{
-						if (Vertices[VertexID].BoneID[InfluencesID] == 0xFFFF)
+						if (VerticesInstances[VertexID].BoneID[InfluencesID] == 0xFFFF)
 						{
 							break;
 						}
 						SkeletalMeshImportData::FRawBoneInfluence BoneInfluence;
-						BoneInfluence.BoneIndex = FindBoneIDOrAdd(InBones, Object->Bones()[Vertices[VertexID].BoneID[InfluencesID]]);
-						BoneInfluence.Weight = Vertices[VertexID].BoneWeight[InfluencesID];
+						BoneInfluence.BoneIndex = FindBoneIDOrAdd(InBones, Object->Bones()[VerticesInstances[VertexID].BoneID[InfluencesID]]);
+						BoneInfluence.Weight = VerticesInstances[VertexID].BoneWeight[InfluencesID];
 						BoneInfluence.VertexIndex = OutVertexID;
 						InSkeletalMeshImportData.Influences.Add(BoneInfluence);
 					}
 					Wedge.VertexIndex = OutVertexID;
 					Wedge.MatIndex = MaterialID;
-					Wedge.UVs[0] = FVector2f(Vertices[VertexID].UV.x, Vertices[VertexID].UV.y);
+					Wedge.UVs[0] = FVector2f(VerticesInstances[VertexID].UV.x, VerticesInstances[VertexID].UV.y);
 					Triangle.WedgeIndex[VirtualVertexID] = InSkeletalMeshImportData.Wedges.Add(Wedge);
-					Triangle.TangentZ[VirtualVertexID].X = -Vertices[VertexID].Normal.x;
-					Triangle.TangentZ[VirtualVertexID].Y = Vertices[VertexID].Normal.z;
-					Triangle.TangentZ[VirtualVertexID].Z = Vertices[VertexID].Normal.y;
+					Triangle.TangentZ[VirtualVertexID].X = -VerticesInstances[VertexID].Normal.x;
+					Triangle.TangentZ[VirtualVertexID].Y = VerticesInstances[VertexID].Normal.z;
+					Triangle.TangentZ[VirtualVertexID].Z = VerticesInstances[VertexID].Normal.y;
 				}
 				InSkeletalMeshImportData.Faces.Add(Triangle);;
-
-
-
 			}
 
 		}
@@ -1489,7 +1529,7 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 		}
 		TArray<uint16> PCMData;
 		int32 SampleRate,NumChannels;
-		FRBMKOGGComment OGGComment;
+		FRbmkOGGComment OGGComment;
 		ReadOGGSound(OGGReader,PCMData,SampleRate,NumChannels,OGGComment);
 
 		TArray<uint8> RawWaveData;
@@ -1532,12 +1572,17 @@ USoundWave* FRBMKEngineFactory::ImportSound(const FString& FileName)
 
 		SoundWave->PostImport();
 		USoundAttenuation* SoundAttenuation = nullptr;
-		if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
+		if(USoundAttenuation** Item = SoundAttenuationsCached.Find(OGGComment))
+		{
+			SoundAttenuation = *Item;
+		}
+		else if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
 		{
 			SoundAttenuation->Attenuation.DistanceAlgorithm = EAttenuationDistanceModel::NaturalSound;
 			SoundAttenuation->Attenuation.FalloffDistance = OGGComment.MaxDistance*100.f - OGGComment.MinDistance*100.f;
 			SoundAttenuation->Attenuation.AttenuationShapeExtents.X = OGGComment.MinDistance*100.f;
 			SoundAttenuation->Modify();
+			SoundAttenuationsCached.Add(OGGComment,SoundAttenuation);
 			ObjectCreated.Add(SoundAttenuation);
 			FAssetRegistryModule::AssetCreated(SoundAttenuation);
 			if(EnumHasAllFlags(static_cast<EStalkerSoundTypes>(OGGComment.Flags), EStalkerSoundTypes::Ambient|EStalkerSoundTypes::World))
@@ -1578,7 +1623,7 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 	{
 		TArray<uint16> PCMData;
 		int32 SampleRate,NumChannels = 2;
-		FRBMKOGGComment OGGComment;
+		FRbmkOGGComment OGGComment;
 		{
 			TArray<uint16> InPCMData;
 			string_path OGGFileName;
@@ -1668,7 +1713,11 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 
 		SoundWave->PostImport();
 		USoundAttenuation* SoundAttenuation = nullptr;
-		if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
+		if(USoundAttenuation** Item = SoundAttenuationsCached.Find(OGGComment))
+		{
+			SoundAttenuation = *Item;
+		}
+		else if(LoadOrCreateOrOverwriteAsset(Path + TEXT("_ATT"), ObjectFlags, SoundAttenuation))
 		{
 			SoundAttenuation->Attenuation.DistanceAlgorithm = EAttenuationDistanceModel::NaturalSound;
 			SoundAttenuation->Attenuation.FalloffDistance = OGGComment.MaxDistance*100.f - OGGComment.MinDistance*100.f;
@@ -1676,6 +1725,7 @@ USoundWave* FRBMKEngineFactory::ImportSoundWithCombineLR(const FString& FileName
 			SoundAttenuation->Modify();
 			ObjectCreated.Add(SoundAttenuation);
 			FAssetRegistryModule::AssetCreated(SoundAttenuation);
+			SoundAttenuationsCached.Add(OGGComment,SoundAttenuation);
 			if(EnumHasAllFlags(static_cast<EStalkerSoundTypes>(OGGComment.Flags), EStalkerSoundTypes::Ambient|EStalkerSoundTypes::World))
 			{
 				SoundAttenuation->Attenuation.bEnableOcclusion = true;
@@ -2472,7 +2522,7 @@ static long OGGTellFunction(void* DataSource)
 	return static_cast<FArchive*>(DataSource)->Tell();
 }
 
-void FRBMKEngineFactory::ReadOGGSound(FArchive& Ar, TArray<uint16>& OutData, int32& OutSampleRate, int32& OutNumChannels,FRBMKOGGComment& OutOGGComment)
+void FRBMKEngineFactory::ReadOGGSound(FArchive& Ar, TArray<uint16>& OutData, int32& OutSampleRate, int32& OutNumChannels,FRbmkOGGComment& OutOGGComment)
 {
 	OggVorbis_File OggVorbisFileData = {};
 	ov_callbacks OGGCallbacks = { OGGReadFunction, OGGSeekFunction, OGGCloseFunction, OGGTellFunction };

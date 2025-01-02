@@ -25,6 +25,7 @@
 #include "Sound/SoundClass.h"
 #include "DynamicRHI.h"
 #include "RHIDefinitions.h"
+#include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
 THIRD_PARTY_INCLUDES_END
@@ -110,14 +111,27 @@ bool FRBMKEngine::LoadWorld(const char* Name)
 	return GStalkerEngineManager->LoadWorld(Name);
 }
 
-class IRBMKUnrealProxy* FRBMKEngine::CreateUnrealProxy()
+class IRBMKUnrealProxy* FRBMKEngine::CreateUnrealProxy(const char*UnrealProxyClass)
 {
 #if WITH_EDITORONLY_DATA
 	check(GWorld&&GWorld->IsGameWorld());
 #endif
+	UClass* ProxyClass = nullptr;
+	if (UnrealProxyClass)
+	{
+		ProxyClass = LoadObject<UClass>(nullptr,ANSI_TO_TCHAR(UnrealProxyClass));
+	}
+	if (!ProxyClass)
+	{
+		ProxyClass = GetDefault<UStalkerGameSettings>()->ProxyClass.LoadSynchronous();
+	}
+	if (!ProxyClass)
+	{
+		ProxyClass = AStalkerProxy::StaticClass();
+	}
 	FActorSpawnParameters SpawnParameters = FActorSpawnParameters();
 	SpawnParameters.ObjectFlags = EObjectFlags::RF_Transient;
-	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(SpawnParameters);
+	AStalkerProxy* Result = GWorld->SpawnActor< AStalkerProxy>(ProxyClass,SpawnParameters);
 	return Result;
 }
 void FRBMKEngine::LoadCFormFormCurrentWorld(class CObjectSpace& ObjectSpace, CDB::build_callback build_callback)

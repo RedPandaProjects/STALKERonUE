@@ -71,6 +71,12 @@ void AStalkerProxy::AttachTo(IRBMKUnrealAttachable* AttachableInterface, const c
 
 void AStalkerProxy::SetAsRoot(IRBMKUnrealAttachable* AttachableInterface)
 {
+	TArray<USceneComponent*> InChildren;
+	if (GetRootComponent())
+	{
+		InChildren = GetRootComponent()->GetAttachChildren();
+	}
+	
 	check(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::Actor)==nullptr);
 	USceneComponent* SceneComponent = reinterpret_cast<USceneComponent*>(AttachableInterface->CastUnrealObject(ERBMKUnrealObjectType::SceneComponent));
 	check(SceneComponent);
@@ -86,6 +92,12 @@ void AStalkerProxy::SetAsRoot(IRBMKUnrealAttachable* AttachableInterface)
 	{
 		SetRootComponent(SceneComponent);
 	}
+
+	for (USceneComponent*Component:InChildren)
+	{
+		Component->AttachToComponent(GetRootComponent(),FAttachmentTransformRules::KeepRelativeTransform);
+	}
+	K2_PostSetAsRoot();
 }
 
 void AStalkerProxy::Detach()
@@ -149,4 +161,13 @@ bool AStalkerProxy::IsAttached(IRBMKUnrealAttachable* Attach)
 void AStalkerProxy::SetVisibility(bool NewVisibility)
 {
 	SetActorHiddenInGame(!NewVisibility);
+}
+
+bool AStalkerProxy::IsStalker()
+{
+	if (XRayObject)
+	{
+		return XRayObject->IsStalker();
+	}
+	return false;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "../../StalkerEngineManager.h"
+#include "Entities/Levels/Proxy/StalkerProxy.h"
 #include "StalkerGameSettings.generated.h"
 
 
@@ -51,6 +52,9 @@ public:
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game", meta = (DisplayName = "Levels Of Call of Pripyat"))
 	TMap<FName, FStalkerLevelInfo> LevelsCOP;
 
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Game")
+	TSoftClassPtr<AStalkerProxy> ProxyClass;
+	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
 	bool	NeedAutoBuildCForm		= true;
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Play In Editor")
@@ -111,6 +115,7 @@ public:
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Editor")
 	TMap<FString,TSoftObjectPtr<USoundClass>> SoundClassByPrefixWhenImport;
 
+	
 #endif
 #if WITH_EDITOR
 	const TMap<FName, FStalkerLevelInfo> & GetCurrentLevels() const;
