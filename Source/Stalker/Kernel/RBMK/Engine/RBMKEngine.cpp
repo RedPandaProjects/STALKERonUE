@@ -235,12 +235,78 @@ class IRBMKUnrealProxy* FRBMKEngine::GetUnrealPlayerCharacter()
 	return nullptr;
 }
 
+shared_str FRBMKEngine::GetUnrealVersion()
+{
+	return TCHAR_TO_ANSI(FApp::GetBuildVersion()); 
+}
+
+IRBMKSoundManager* FRBMKEngine::GetSoundManager()
+{
+	return GStalkerEngineManager->GetResourcesManager()->GetSoundManager();
+}
+
+IRBMKEnvironment* FRBMKEngine::GetEnvironment()
+{
+#if WITH_EDITORONLY_DATA
+	check(GWorld&&GWorld->IsGameWorld());
+#endif
+	if(AStalkerWorldSettings*WorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings()))
+	{
+		if(!WorldSettings->Environment)
+		{
+			UE_DEBUG_BREAK();
+		}
+		return WorldSettings->Environment;
+	}
+	return nullptr;
+}
+
+void FRBMKEngine::OnRunGame(const char* ServerParams, const char* ClientParams)
+{
+	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Play(FCStringAnsi::Strstr(ServerParams,"/load") == nullptr,9);
+
+	IRBMKEngine::OnRunGame(ServerParams, ClientParams);
+	if(!GIsEditor)
+	{
+		while (g_loading_events->size())
+		{
+			if (g_loading_events->front()())
+			{
+				g_loading_events->pop_front();
+			}
+			else
+			{
+				GEngine->Tick(FApp::GetDeltaTime(), false);
+			}
+		}
+		GEngine->Tick(FApp::GetDeltaTime(), false);
+	}
+	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Wait();
+	
+}
+
+IRBMKLoadingScreenManager* FRBMKEngine::GetLoadingScreen()
+{
+	return &GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager;
+}
+
+void FRBMKEngine::LoadDefaultWorld()
+{	
+	GStalkerEngineManager->LoadDefaultWorld();
+}
+
+void FRBMKEngine::Exit()
+{	
+	GEngine->Exec(nullptr, TEXT( "Exit" ) );
+}
+
+
 void FRBMKEngine::ExecUeCmd(const char* cmd)
 {
 	GEngine->Exec(NULL, ANSI_TO_TCHAR(cmd));
 }
 
-void FRBMKEngine::ChangeUeSettingsInt(const std::map<int, int> &settinglist)
+void FRBMKEngine::ChangeUeSettingsInt(const std::map<int, int>& settinglist)
 {
 
 	for (const auto& ref : settinglist)
@@ -422,7 +488,7 @@ void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 	}
 }
 
-float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
+float FRBMKEngine::GetSettingFloat(int setting, float& min, float& max)
 {
 	USoundClass* Sound;
 	switch (setting)
@@ -430,7 +496,7 @@ float FRBMKEngine::GetSettingFloat(int setting, float&min, float&max)
 	case EffectsVolume:
 	{
 		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
-		if(Sound)
+		if (Sound)
 		{
 			min = 0.f;
 			max = 1.f;
@@ -490,69 +556,4 @@ void FRBMKEngine::SetResolution(u32 w, u32 h)
 	res.Y = h;
 	GEngine->GetGameUserSettings()->SetScreenResolution(res);
 	GEngine->GetGameUserSettings()->ApplySettings(true);
-}
-
-shared_str FRBMKEngine::GetUnrealVersion()
-{
-	return TCHAR_TO_ANSI(FApp::GetBuildVersion()); 
-}
-
-IRBMKSoundManager* FRBMKEngine::GetSoundManager()
-{
-	return GStalkerEngineManager->GetResourcesManager()->GetSoundManager();
-}
-
-IRBMKEnvironment* FRBMKEngine::GetEnvironment()
-{
-#if WITH_EDITORONLY_DATA
-	check(GWorld&&GWorld->IsGameWorld());
-#endif
-	if(AStalkerWorldSettings*WorldSettings = Cast<AStalkerWorldSettings>(GWorld->GetWorldSettings()))
-	{
-		if(!WorldSettings->Environment)
-		{
-			UE_DEBUG_BREAK();
-		}
-		return WorldSettings->Environment;
-	}
-	return nullptr;
-}
-
-void FRBMKEngine::OnRunGame(const char* ServerParams, const char* ClientParams)
-{
-	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Play(FCStringAnsi::Strstr(ServerParams,"/load") == nullptr,9);
-
-	IRBMKEngine::OnRunGame(ServerParams, ClientParams);
-	if(!GIsEditor)
-	{
-		while (g_loading_events->size())
-		{
-			if (g_loading_events->front()())
-			{
-				g_loading_events->pop_front();
-			}
-			else
-			{
-				GEngine->Tick(FApp::GetDeltaTime(), false);
-			}
-		}
-		GEngine->Tick(FApp::GetDeltaTime(), false);
-	}
-	GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager.Wait();
-	
-}
-
-IRBMKLoadingScreenManager* FRBMKEngine::GetLoadingScreen()
-{
-	return &GStalkerEngineManager->GetResourcesManager()->LoadingScreenManager;
-}
-
-void FRBMKEngine::LoadDefaultWorld()
-{	
-	GStalkerEngineManager->LoadDefaultWorld();
-}
-
-void FRBMKEngine::Exit()
-{	
-	GEngine->Exec(nullptr, TEXT( "Exit" ) );
 }
