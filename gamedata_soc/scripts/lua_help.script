@@ -6894,8 +6894,7 @@ C++ class COptionsManager {
     function IsGroupChanged(string);
     function SaveValues(string);
     function SetCurrentValues(string);
-    function UndoGroup(string);
-    function OptionsPostAccept();
+    function UndoGroup(string);;
 };
 
 C++ class CUIProgressBar : CUIWindow {

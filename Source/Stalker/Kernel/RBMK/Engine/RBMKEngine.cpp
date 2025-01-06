@@ -24,7 +24,6 @@
 #include "Resources/Sound/StalkerSoundManager.h"
 #include "Sound/SoundClass.h"
 #include "DynamicRHI.h"
-#include "RHIDefinitions.h"
 #include "Kernel/Unreal/GameSettings/StalkerGameSettings.h"
 THIRD_PARTY_INCLUDES_START
 #include "XrCDB/xr_area.h"
@@ -306,61 +305,59 @@ void FRBMKEngine::ExecUeCmd(const char* cmd)
 	GEngine->Exec(NULL, ANSI_TO_TCHAR(cmd));
 }
 
-void FRBMKEngine::ChangeUeSettingsInt(const std::map<int, int>& settinglist)
+void FRBMKEngine::ChangeUeSettingsInt(const std::pair<int, int>& settinglist)
 {
 
-	for (const auto& ref : settinglist)
-	{
-		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettings: %d, %d"), ref.first, ref.second);
+		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettings: %d, %d"), settinglist.first, settinglist.second);
 
-		switch (ref.first)
+		switch (settinglist.first)
 		{
 		case ShadowQuality:
 		{
-			GEngine->GetGameUserSettings()->SetShadowQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetShadowQuality(settinglist.second);
 		}break;
 		case ViewDistanceQuality:
 		{
-			GEngine->GetGameUserSettings()->SetViewDistanceQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetViewDistanceQuality(settinglist.second);
 		}break;
 		case GlobalIlluminationQuality:
 		{
-			GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(settinglist.second);
 		}break;
 		case AntiAliasingQuality:
 		{
-			GEngine->GetGameUserSettings()->SetAntiAliasingQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetAntiAliasingQuality(settinglist.second);
 		}break;
 		case ReflectionQuality:
 		{
-			GEngine->GetGameUserSettings()->SetReflectionQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetReflectionQuality(settinglist.second);
 		}break;
 		case PostProcessingQuality:
 		{
-			GEngine->GetGameUserSettings()->SetPostProcessingQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetPostProcessingQuality(settinglist.second);
 		}break;
 		case TextureQuality:
 		{
-			GEngine->GetGameUserSettings()->SetTextureQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetTextureQuality(settinglist.second);
 		}break;
 		case VisualEffectsQuality:
 		{
-			GEngine->GetGameUserSettings()->SetVisualEffectQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetVisualEffectQuality(settinglist.second);
 		}break;
 		case FoliageQuality:
 		{
-			GEngine->GetGameUserSettings()->SetFoliageQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetFoliageQuality(settinglist.second);
 		}break;
 		case ShadingQuality:
 		{
-			GEngine->GetGameUserSettings()->SetShadingQuality(ref.second);
+			GEngine->GetGameUserSettings()->SetShadingQuality(settinglist.second);
 		}break;
 		case 11:
 		{
 			USoundClass* Sound = LoadObject<USoundClass>(nullptr, TEXT(""));
 			if (Sound)
 			{
-				Sound->Properties.Volume = ref.second;
+				Sound->Properties.Volume = settinglist.second;
 			}
 
 		}break;
@@ -368,7 +365,7 @@ void FRBMKEngine::ChangeUeSettingsInt(const std::map<int, int>& settinglist)
 			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 			break;
 		}
-	}
+
 	GEngine->GetGameUserSettings()->ApplySettings(true);
 }
 
@@ -446,20 +443,19 @@ int FRBMKEngine::GetSettingInt(int setting, int& min, int& max)
 	}
 }
 
-void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
+void FRBMKEngine::ChangeUeSettingsFloat(const std::pair<int, float>& settinglist)
 {
 	USoundClass* Sound;
-	for (const auto& ref : settinglist)
-	{
-		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettingsFloat: %d, %f"), ref.first, ref.second);
-		switch (ref.first)
+
+		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettingsFloat: %d, %f"), settinglist.first, settinglist.second);
+		switch (settinglist.first)
 		{
 		case EffectsVolume:
 		{
 			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/EffectClass.EffectClass"));
 			if (Sound)
 			{
-				Sound->Properties.Volume = ref.second;
+				Sound->Properties.Volume = settinglist.second;
 				Sound->TryUpdateDefaultConfigFile();
 			}
 		}break;
@@ -468,7 +464,7 @@ void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MusicClass.MusicClass"));
 			if (Sound)
 			{
-				Sound->Properties.Volume = ref.second;
+				Sound->Properties.Volume = settinglist.second;
 				Sound->TryUpdateDefaultConfigFile();
 			}
 		}break;
@@ -477,7 +473,7 @@ void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 			Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
 			if (Sound)
 			{
-				Sound->Properties.Volume = ref.second;
+				Sound->Properties.Volume = settinglist.second;
 				Sound->TryUpdateDefaultConfigFile();
 			}
 		}break;
@@ -485,7 +481,6 @@ void FRBMKEngine::ChangeUeSettingsFloat(const std::map<int, float>& settinglist)
 			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 			break;
 		}
-	}
 }
 
 float FRBMKEngine::GetSettingFloat(int setting, float& min, float& max)
@@ -542,11 +537,21 @@ void FRBMKEngine::GetCurrentResolution(u32& w, u32& h)
 	h = res.Y;
 }
 
-void	FRBMKEngine::GetResolutions(std::vector<LPCSTR>& ResVec)
+void	FRBMKEngine::GetResolutions(std::vector<xr_string>& ResVec)
 {
-	ResVec.push_back("2560x1440");
-	ResVec.push_back("1920x1440");
-	ResVec.push_back("1920x1200");
+	FScreenResolutionArray ResList;
+	RHIGetAvailableResolutions(ResList, true);
+
+
+	for (FScreenResolutionRHI element : ResList)
+	{
+		u32 w = element.Width;
+		u32 h = element.Height;
+
+		xr_string Comb;
+		Comb.Printf("%dx%d", w, h);
+		ResVec.push_back(Comb);
+	}
 }
 
 void FRBMKEngine::SetResolution(u32 w, u32 h)
