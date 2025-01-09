@@ -36,12 +36,12 @@ public:
 	IRBMKLoadingScreenManager*		GetLoadingScreen			() override;
 
 	void							ExecUeCmd					(const char* cmd) override;
-	void							ChangeUeSettingsInt			(const std::map<int, int>& settinglist) override;
+	void							ChangeUeSettingsInt			(const std::pair<int, int>& settinglist) override;
 	int								GetSettingInt				(int setting, int& min, int& max) override;
-	void							ChangeUeSettingsFloat(const std::map<int, float>& settinglist) override;
+	void							ChangeUeSettingsFloat(const std::pair<int, float>& settinglist) override;
 	float							GetSettingFloat(int setting, float& min, float& max) override;
 
-	void				GetResolutions(std::vector<LPCSTR>& ResVec) override;
+	void				GetResolutions(std::vector<xr_string>& ResVec) override;
 	void				GetCurrentResolution(u32& w, u32& h) override;
 	void				SetResolution(u32 w, u32 h) override;
 private:
