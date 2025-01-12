@@ -310,136 +310,141 @@ void FRBMKEngine::ChangeUeSettingsInt(const std::pair<int, int>& settinglist)
 
 		UE_LOG(LogStalker, Display, TEXT("ChangeUeSettings: %d, %d"), settinglist.first, settinglist.second);
 
+		UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
+
 		switch (settinglist.first)
 		{
 		case ShadowQuality:
 		{
-			GEngine->GetGameUserSettings()->SetShadowQuality(settinglist.second);
+			UserSettings->SetShadowQuality(settinglist.second);
 		}break;
 		case ViewDistanceQuality:
 		{
-			GEngine->GetGameUserSettings()->SetViewDistanceQuality(settinglist.second);
+			UserSettings->SetViewDistanceQuality(settinglist.second);
 		}break;
 		case GlobalIlluminationQuality:
 		{
-			GEngine->GetGameUserSettings()->SetGlobalIlluminationQuality(settinglist.second);
+			UserSettings->SetGlobalIlluminationQuality(settinglist.second);
 		}break;
 		case AntiAliasingQuality:
 		{
-			GEngine->GetGameUserSettings()->SetAntiAliasingQuality(settinglist.second);
+			UserSettings->SetAntiAliasingQuality(settinglist.second);
 		}break;
 		case ReflectionQuality:
 		{
-			GEngine->GetGameUserSettings()->SetReflectionQuality(settinglist.second);
+			UserSettings->SetReflectionQuality(settinglist.second);
 		}break;
 		case PostProcessingQuality:
 		{
-			GEngine->GetGameUserSettings()->SetPostProcessingQuality(settinglist.second);
+			UserSettings->SetPostProcessingQuality(settinglist.second);
 		}break;
 		case TextureQuality:
 		{
-			GEngine->GetGameUserSettings()->SetTextureQuality(settinglist.second);
+			UserSettings->SetTextureQuality(settinglist.second);
 		}break;
 		case VisualEffectsQuality:
 		{
-			GEngine->GetGameUserSettings()->SetVisualEffectQuality(settinglist.second);
+			UserSettings->SetVisualEffectQuality(settinglist.second);
 		}break;
 		case FoliageQuality:
 		{
-			GEngine->GetGameUserSettings()->SetFoliageQuality(settinglist.second);
+			UserSettings->SetFoliageQuality(settinglist.second);
 		}break;
 		case ShadingQuality:
 		{
-			GEngine->GetGameUserSettings()->SetShadingQuality(settinglist.second);
+			UserSettings->SetShadingQuality(settinglist.second);
 		}break;
-		case 11:
+		case FrameLimit:
 		{
-			USoundClass* Sound = LoadObject<USoundClass>(nullptr, TEXT(""));
-			if (Sound)
-			{
-				Sound->Properties.Volume = settinglist.second;
-			}
-
+			UserSettings->SetFrameRateLimit(settinglist.second);
 		}break;
 		default:
 			UE_LOG(LogStalker, Error, TEXT("unknown setting"));
-			break;
+			return;
 		}
 
-	GEngine->GetGameUserSettings()->ApplySettings(true);
+		UserSettings->ApplySettings(true);
 }
 
 int FRBMKEngine::GetSettingInt(int setting, int& min, int& max)
 {
 	UE_LOG(LogStalker, Display, TEXT("GetSetting: %d"), setting);
+
+	UGameUserSettings* UserSettings = GEngine->GetGameUserSettings();
+
 	switch (setting)
 	{
 	case ShadowQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetShadowQuality();
-	}break;
+		return UserSettings->GetShadowQuality();
+	}
 	case ViewDistanceQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetViewDistanceQuality();
-	}break;
+		return UserSettings->GetViewDistanceQuality();
+	}
 	case GlobalIlluminationQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetGlobalIlluminationQuality();
-	}break;
+		return UserSettings->GetGlobalIlluminationQuality();
+	}
 	case AntiAliasingQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetAntiAliasingQuality();
-	}break;
+		return UserSettings->GetAntiAliasingQuality();
+	}
 	case ReflectionQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetReflectionQuality();
-	}break;
+		return UserSettings->GetReflectionQuality();
+	}
 	case PostProcessingQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetPostProcessingQuality();
-	}break;
+		return UserSettings->GetPostProcessingQuality();
+	}
 	case TextureQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetTextureQuality();
-	}break;
+		return UserSettings->GetTextureQuality();
+	}
 	case VisualEffectsQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetVisualEffectQuality();
-	}break;
+		return UserSettings->GetVisualEffectQuality();
+	}
 	case FoliageQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetFoliageQuality();
-	}break;
+		return UserSettings->GetFoliageQuality();
+	}
 	case ShadingQuality:
 	{
 		min = 0;
 		max = 4;
-		return GEngine->GetGameUserSettings()->GetShadingQuality();
-	}break;
+		return UserSettings->GetShadingQuality();
+	}
+	case FrameLimit:
+	{
+		min = 0;
+		max = 300;
+		return UserSettings->GetFrameRateLimit();
+	}
 	default:
 		min = 0;
 		max = 1;
 		UE_LOG(LogStalker, Error, TEXT("unknown setting"));
 		return 0;
-		break;
 	}
 }
 
@@ -517,7 +522,7 @@ float FRBMKEngine::GetSettingFloat(int setting, float& min, float& max)
 		Sound = LoadObject<USoundClass>(nullptr, TEXT("/Game/Base/Sounds/MasterClass.MasterClass"));
 		if (Sound)
 		{
-			min = 0.f;
+			min = 0.f; 
 			max = 1.f;
 			return Sound->Properties.Volume;
 		}
