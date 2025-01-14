@@ -56,7 +56,8 @@ private:
 		TextureQuality,
 		VisualEffectsQuality,
 		FoliageQuality,
-		ShadingQuality
+		ShadingQuality,
+		FrameLimit
 	};
 	enum ESettingsListFloat
 	{
